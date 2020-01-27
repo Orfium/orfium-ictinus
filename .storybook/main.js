@@ -16,7 +16,7 @@ module.exports = {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [path.resolve(__dirname, '../src')],
-      use: [require.resolve('ts-loader'), require.resolve('react-docgen-typescript-loader')],
+      use: ['ts-loader', 'react-docgen-typescript-loader'],
     });
 
     if (Array.isArray(config.resolve.plugins)) {
