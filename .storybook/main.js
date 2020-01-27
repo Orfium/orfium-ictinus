@@ -9,12 +9,9 @@ module.exports = {
     'storybook-readme/register',
   ],
   webpackFinal: async (config, { configType }) => {
-    // console.dir(config, { depth: null }) || config;
-
-    config.module.rules.push({
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader'],
-    });
+    // Edit config with care. Make sure to preserve the following config options:
+    // * entry
+    // * output
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
@@ -22,9 +19,15 @@ module.exports = {
       use: [require.resolve('ts-loader'), require.resolve('react-docgen-typescript-loader')],
     });
 
-    config.resolve.plugins = [
-      new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, '../tsconfig.json') }),
-    ];
+    if (Array.isArray(config.resolve.plugins)) {
+      config.resolve.plugins.push(
+        new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, '../tsconfig.json') })
+      );
+    } else {
+      config.resolve.plugins = [
+        new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, '../tsconfig.json') }),
+      ];
+    }
 
     config.resolve.extensions.push('.ts', '.tsx', '.js', '.md');
 
