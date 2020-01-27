@@ -1,0 +1,20 @@
+# USAGE
+
+### Installation
+
+Start by installing the plugin to your codebase
+
+```npm
+yarn add ---
+```
+
+In order to use orfium design system you need to wrap your project with our theme provider component.
+
+<!-- prettier-ignore -->
+```javascript
+<ThemeProvider>
+  <OtherProvider>
+    <Routes />
+  </OtherProvider>
+</ThemeProvider>
+```
