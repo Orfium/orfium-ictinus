@@ -1,9 +1,11 @@
-import React from 'react';
-import { configure, addDecorator, addParameters } from '@storybook/react';
+// THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 import { withInfo } from '@storybook/addon-info';
-import ThemeProvider from '../src/components/ThemeProvider';
+// Add prop tables to components (based on component type interfaces)
+import { addDecorator, addParameters } from '@storybook/react';
+import React from 'react';
+import ThemeProvider from 'src/components/ThemeProvider';
+import defaultTheme from 'src/theme/globals';
 import { addReadme } from 'storybook-readme';
-import defaultTheme from '../src/theme/globals';
 
 const viewPorts = [
   {
@@ -35,7 +37,7 @@ const viewPorts = [
 
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
-addDecorator(withInfo());
+addDecorator(withInfo);
 
 // wrap all components with theme provider by default
 addDecorator(storyFn => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>);
@@ -47,13 +49,3 @@ addParameters({
   options: { showPanel: true },
 });
 addDecorator(addReadme);
-
-// automatically import all files ending in *.stories.tsx
-const req = require.context('../src', true, /.stories.tsx$/);
-function loadStories() {
-  // ensure the welcome is always on top
-  require('../src/components/Welcome/welcome.stories');
-  req.keys().forEach(filename => req(filename));
-}
-
-configure(loadStories, module);
