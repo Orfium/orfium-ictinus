@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
+import { css, Global } from '@emotion/core';
 import { assign, pick, keys } from 'lodash';
 import theme, { Theme } from 'src/theme/globals';
 
@@ -10,8 +11,17 @@ type Props = {
 
 const deepMergeTheme = (newTheme: Theme): Theme => assign(theme, pick(newTheme, keys(theme)));
 
+const globalStyles = css`
+  @import url('https://fonts.googleapis.com/css?family=Lato');
+`;
+
 const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
-  return <EmotionThemeProvider theme={deepMergeTheme(theme)}>{children}</EmotionThemeProvider>;
+  return (
+    <EmotionThemeProvider theme={deepMergeTheme(theme)}>
+      {children}
+      <Global styles={globalStyles} />
+    </EmotionThemeProvider>
+  );
 };
 
 export default ThemeProvider;

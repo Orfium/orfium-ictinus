@@ -48,10 +48,10 @@ const typography = (): Typography => {
   };
 
   const weights = {
-    bold: '600',
-    light: '400',
+    bold: '700',
+    light: '300',
     regular: '400',
-    bolder: '400',
+    bolder: '900',
   };
 
   return {
