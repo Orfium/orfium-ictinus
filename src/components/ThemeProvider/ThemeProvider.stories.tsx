@@ -7,7 +7,7 @@ export default {
 };
 
 export const settingUpAButtonExample = () => (
-  <ThemeProvider theme={{ colors: { primary: 'red' } }}>
+  <ThemeProvider theme={{ palette: { primary: 'red' } }}>
     <Button bg={'green'}>Hello world</Button>
   </ThemeProvider>
 );

@@ -1,30 +1,34 @@
-import { convertPointstoPixels } from 'src/theme/utils';
+import { convertPointsToPixels } from 'src/theme/utils';
 
-const defaultFontFamily = '"Lato"';
+const defaultFontFamily = 'Lato';
+
+export type fontItem = {
+  fontStyle: string;
+  fontWeight: string;
+  fontSize: number;
+  fontFamily: string;
+};
 
 export type Typography = {
   globalFontSize: number;
   font: {
-    800: string;
-    650: string;
-    600: string;
-    500: string;
-    350: string;
-    300: string;
-    250: string;
-    200: string;
-    150: string;
-    100: string;
+    h1: fontItem;
+    h2: fontItem;
+    h3: fontItem;
+    h4: fontItem;
+    h5: fontItem;
+    h6: fontItem;
+    h7: fontItem;
   };
   fontSizes: {
-    800: number;
-    500: number;
-    400: number;
-    350: number;
-    300: number;
-    200: number;
-    150: number;
-    100: number;
+    xxxLarge: number;
+    xxLarge: number;
+    xLarge: number;
+    normal: number;
+    small: number;
+    xSmall: number;
+    xxSmall: number;
+    xxxSmall: number;
   };
   weights: {
     bold: string;
@@ -35,43 +39,77 @@ export type Typography = {
   fontFamily: string;
 };
 
-const typography = (): Typography => {
-  const fontSizes = {
-    800: convertPointstoPixels(32),
-    500: convertPointstoPixels(20),
-    400: convertPointstoPixels(18),
-    350: convertPointstoPixels(16),
-    300: convertPointstoPixels(15),
-    200: convertPointstoPixels(13),
-    150: convertPointstoPixels(12),
-    100: convertPointstoPixels(11),
-  };
-
-  const weights = {
-    bold: '700',
-    light: '300',
-    regular: '400',
-    bolder: '900',
-  };
-
-  return {
-    globalFontSize: 16,
-    font: {
-      800: `normal ${weights.light} ${fontSizes[800]}px ${defaultFontFamily}`,
-      650: `normal ${weights.bold} ${fontSizes[500]}px ${defaultFontFamily}`,
-      600: `normal ${weights.regular} ${fontSizes[500]}px ${defaultFontFamily}`,
-      500: `normal ${weights.regular} ${fontSizes[400]}px ${defaultFontFamily}`,
-      350: `normal ${weights.regular} ${fontSizes[350]}px ${defaultFontFamily}`,
-      300: `normal ${weights.bolder} ${fontSizes[300]}px ${defaultFontFamily}`,
-      250: `normal ${weights.regular} ${fontSizes[200]}px ${defaultFontFamily}`,
-      200: `normal ${weights.bolder} ${fontSizes[150]}px ${defaultFontFamily}`,
-      150: `normal ${weights.bold} ${fontSizes[150]}px ${defaultFontFamily}`,
-      100: `normal ${weights.bold} ${fontSizes[100]}px ${defaultFontFamily}`,
-    },
-    fontSizes,
-    weights,
-    fontFamily: defaultFontFamily,
-  };
+const fontSizes = {
+  xxxLarge: convertPointsToPixels(32),
+  xxLarge: convertPointsToPixels(20),
+  xLarge: convertPointsToPixels(18),
+  normal: convertPointsToPixels(16),
+  small: convertPointsToPixels(15),
+  xSmall: convertPointsToPixels(13),
+  xxSmall: convertPointsToPixels(12),
+  xxxSmall: convertPointsToPixels(11),
 };
 
-export default typography();
+const weights = {
+  bold: '700',
+  light: '300',
+  regular: '400',
+  bolder: '900',
+};
+
+export default {
+  globalFontSize: 16,
+  font: {
+    h1: {
+      fontStyle: 'normal',
+      fontWeight: weights.light,
+      fontSize: fontSizes.xxxLarge,
+      fontFamily: defaultFontFamily,
+    },
+
+    h2: {
+      fontStyle: 'normal',
+      fontWeight: weights.bold,
+      fontSize: fontSizes.xxLarge,
+      fontFamily: defaultFontFamily,
+    },
+
+    h3: {
+      fontStyle: 'normal',
+      fontWeight: weights.regular,
+      fontSize: fontSizes.xxLarge,
+      fontFamily: defaultFontFamily,
+    },
+
+    h4: {
+      fontStyle: 'normal',
+      fontWeight: weights.regular,
+      fontSize: fontSizes.xLarge,
+      fontFamily: defaultFontFamily,
+    },
+
+    h5: {
+      fontStyle: 'normal',
+      fontWeight: weights.regular,
+      fontSize: fontSizes.normal,
+      fontFamily: defaultFontFamily,
+    },
+
+    h6: {
+      fontStyle: 'normal',
+      fontWeight: weights.bolder,
+      fontSize: fontSizes.small,
+      fontFamily: defaultFontFamily,
+    },
+
+    h7: {
+      fontStyle: 'normal',
+      fontWeight: weights.regular,
+      fontSize: fontSizes.xSmall,
+      fontFamily: defaultFontFamily,
+    },
+  },
+  fontSizes,
+  weights,
+  fontFamily: defaultFontFamily,
+};

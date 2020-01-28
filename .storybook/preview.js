@@ -4,8 +4,8 @@ import { withInfo } from '@storybook/addon-info';
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from 'src/components/ThemeProvider';
-import defaultTheme from 'src/theme/globals';
 import { addReadme } from 'storybook-readme';
+import defaultTheme from 'theme';
 
 const viewPorts = [
   {

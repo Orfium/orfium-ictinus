@@ -1,15 +1,15 @@
-import colors, { Colors } from './pallete';
+import palette, { Palette } from './palette';
 import typography, { Typography } from './typography';
 import spacing, { Spacing } from './spacing';
 
 export type Theme = {
-  colors: Colors;
+  palette: Palette;
   typography: Typography;
   spacing: Spacing;
 };
 
 const defaultTheme: Theme = {
-  colors,
+  palette,
   typography,
   spacing,
 };
