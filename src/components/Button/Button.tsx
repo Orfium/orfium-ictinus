@@ -11,6 +11,7 @@ const Button: React.FC<Props> = ({ bg, children, ...rest }) => (
   <button
     css={theme => ({
       color: theme.colors.primary,
+      font: theme.typography.font['500'],
       width: 131,
       height: 56,
       borderRadius: 4,
