@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "./dist/",
+    "emitDeclarationOnly": true,
     "module": "commonjs",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
@@ -9,7 +10,7 @@
     "jsx": "react",
     "moduleResolution": "node",
     "strict": true,
-    "rootDir": "",
+    "rootDir": ".",
     "baseUrl": "./src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -20,10 +21,7 @@
     "noUnusedLocals": true,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "paths": {
-      "src/*": ["./*"]
-    }
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "dist", "scripts", "src/**/*.stories.tsx"]

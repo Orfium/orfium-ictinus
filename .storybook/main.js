@@ -1,35 +1,39 @@
+// const projectConfig = require('../webpack.config.js');
+// const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const tsConfig = require('../tsconfig');
 
 module.exports = {
   stories: ['../src/**/welcome.stories.[tj](s|sx)', '../src/**/*.stories.[tj](s|sx)'],
   addons: [
+    '@storybook/addon-actions/register',
+    '@storybook/addon-links',
     '@storybook/addon-viewport/register',
     '@storybook/addon-knobs/register',
+    '@storybook/addon-a11y/register',
+    '@storybook/addon-storysource/register',
     'storybook-readme/register',
   ],
-  webpackFinal: async (config, { configType }) => {
+  webpackFinal: async config => {
+    // do mutation to the config
     // Edit config with care. Make sure to preserve the following config options:
     // * entry
     // * output
 
+    console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
+
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [path.resolve(__dirname, '../src')],
-      use: ['ts-loader', 'react-docgen-typescript-loader'],
+      use: ['ts-loader'],
     });
 
-    if (Array.isArray(config.resolve.plugins)) {
-      config.resolve.plugins.push(
-        new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, '../tsconfig.json') })
-      );
-    } else {
-      config.resolve.plugins = [
-        new TsconfigPathsPlugin({ configFile: path.resolve(__dirname, '../tsconfig.json') }),
-      ];
-    }
-
     config.resolve.extensions.push('.ts', '.tsx', '.js', '.md');
+
+    // resolve the src directory so that we can import directly from it
+    // https://webpack.js.org/configuration/resolve/#resolvemodules
+    // path.relative(__dirname, tsConfig.compilerOptions.baseUrl) === path.relative('...../ictinus/.storybook, './src')
+    config.resolve.modules.push(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
 
     return config;
   },

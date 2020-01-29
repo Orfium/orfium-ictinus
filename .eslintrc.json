@@ -1,0 +1,86 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jasmine": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    /* React rules */
+    "react/no-direct-mutation-state": "error",
+    "react/no-unused-prop-types": "warn",
+    "react/self-closing-comp": [
+      "warn",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+    "react/prop-types": "warn",
+    "react/button-has-type": "warn",
+    "react/no-array-index-key": "error",
+    "react/no-render-return-value": 0,
+
+    /* JSX rules */
+    "react/jsx-key": "error",
+
+    /* eslint basic rules */
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^__",
+        "varsIgnorePattern": "^__|React"
+      }
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "function",
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "function"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      }
+    ],
+    "no-unused-expressions": "warn",
+    "no-debugger": "warn",
+    "no-console": "warn",
+
+    /* Prettier rules */
+    "prettier/prettier": ["error", { "singleQuote": true }],
+
+    /* Typescript rules */
+    "@typescript-eslint/ban-ts-ignore": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/prefer-interface": 0,
+    "@typescript-eslint/no-inferrable-types": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": 0
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser"
+}
