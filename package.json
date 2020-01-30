@@ -58,7 +58,7 @@
     "build:lib": "cross-env NODE_ENV=production BABEL_ENV=production babel src --extensions '.ts,.tsx' --out-dir ./dist --ignore '**/*.stories.tsx'",
     "build:types": "tsc",
     "build:svg": "cpx \"./src/**/*.svg\" ./dist/lib",
-    "build-storybook": "build-storybook",
+    "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'"
   }
 }
