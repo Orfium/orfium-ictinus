@@ -1,4 +1,4 @@
-import { convertPointsToPixels } from 'src/theme/utils';
+import { convertPointsToPixels } from 'theme/utils';
 
 const defaultFontFamily = 'Lato';
 
