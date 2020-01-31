@@ -1,11 +1,12 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
+import { withA11y } from '@storybook/addon-a11y';
 import { withInfo } from '@storybook/addon-info';
 // Add prop tables to components (based on component type interfaces)
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
-import ThemeProvider from 'src/components/ThemeProvider';
-import defaultTheme from 'src/theme/globals';
 import { addReadme } from 'storybook-readme';
+import ThemeProvider from '../src/components/ThemeProvider';
+import defaultTheme from '../src/theme';
 
 const viewPorts = [
   {
@@ -49,3 +50,4 @@ addParameters({
   options: { showPanel: true },
 });
 addDecorator(addReadme);
+addDecorator(withA11y);

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { assign, pick, keys } from 'lodash';
-import theme, { Theme } from 'src/theme/globals';
+import { assign, keys, pick } from 'lodash';
+import theme, { Theme } from 'theme';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */

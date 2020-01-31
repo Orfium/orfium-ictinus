@@ -1,18 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/dist
-
-# Webstorm
-.idea
-.idea/
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 # dependencies
 /node_modules
 /.pnp
@@ -23,6 +10,8 @@
 
 # production
 /build
+/dist
+/storybook-static
 
 # misc
 .DS_Store
@@ -35,4 +24,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.docz
+# IDE files
+.idea/*
