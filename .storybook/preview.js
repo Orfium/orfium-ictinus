@@ -1,6 +1,5 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 import { withA11y } from '@storybook/addon-a11y';
-import { withInfo } from '@storybook/addon-info';
 // Add prop tables to components (based on component type interfaces)
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
@@ -35,10 +34,6 @@ const viewPorts = [
     type: 'tablet',
   },
 ];
-
-// THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
-// Add prop tables to components (based on component type interfaces)
-addDecorator(withInfo);
 
 // wrap all components with theme provider by default
 addDecorator(storyFn => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>);

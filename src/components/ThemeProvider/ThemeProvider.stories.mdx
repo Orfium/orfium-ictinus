@@ -1,0 +1,33 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, color } from "@storybook/addon-knobs";
+import ThemeProvider from './ThemeProvider';
+
+<Meta title="Design System|ThemeProvider" component={ThemeProvider} />
+
+# ThemeProvider
+
+A component that will hold all components as childs. These component is the first one you will use and is responsible to setup the theme.
+
+
+# Usage
+
+```js
+import { ThemeProvider } from 'orfium-design-system';
+
+<ThemeProvider theme={{ colors: { primary: 'red' } }}>
+  ...
+</ThemeProvider>
+```
+
+# Props
+
+<Props of={ThemeProvider} />
+
+# Theme with button
+<Preview>
+  <Story name="Setting up a button example">
+    <ThemeProvider theme={{ colors: { primary: 'red' } }}>
+        <Button bg={'green'}>Hello world</Button>
+      </ThemeProvider>
+  </Story>
+</Preview>
