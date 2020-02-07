@@ -30,10 +30,12 @@ module.exports = {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [path.resolve(__dirname, '../src')],
-      use: ['ts-loader',
+      use: [
+        'ts-loader',
         {
           loader: require.resolve('react-docgen-typescript-loader'),
-        },],
+        },
+      ],
     });
 
     config.resolve.extensions.push('.ts', '.tsx', '.js', '.md', '.mdx');
