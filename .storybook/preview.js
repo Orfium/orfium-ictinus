@@ -3,7 +3,6 @@ import { withA11y } from '@storybook/addon-a11y';
 // Add prop tables to components (based on component type interfaces)
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
-import { addReadme } from 'storybook-readme';
 import ThemeProvider from '../src/components/ThemeProvider';
 import defaultTheme from '../src/theme';
 
@@ -44,5 +43,4 @@ addParameters({
   },
   options: { showPanel: true },
 });
-addDecorator(addReadme);
 addDecorator(withA11y);
