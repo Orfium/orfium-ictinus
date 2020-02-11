@@ -4,7 +4,11 @@ const path = require('path');
 const tsConfig = require('../tsconfig');
 
 module.exports = {
-  stories: ['../src/**/welcome.stories.[tj](s|sx)', '../src/**/*.stories.[tj](s|sx)'],
+  stories: [
+    '../guides/INTRODUCTION.stories.(md|mdx)',
+    '../guides/*.stories.(md|mdx)',
+    '../src/**/*.stories.(ts|tsx|mdx)',
+  ],
   addons: [
     '@storybook/addon-actions/register',
     '@storybook/addon-links',
@@ -12,7 +16,7 @@ module.exports = {
     '@storybook/addon-knobs/register',
     '@storybook/addon-a11y/register',
     '@storybook/addon-storysource/register',
-    'storybook-readme/register',
+    '@storybook/addon-docs',
   ],
   webpackFinal: async config => {
     // do mutation to the config
@@ -25,10 +29,15 @@ module.exports = {
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [path.resolve(__dirname, '../src')],
-      use: ['ts-loader'],
+      use: [
+        'ts-loader',
+        {
+          loader: require.resolve('react-docgen-typescript-loader'),
+        },
+      ],
     });
 
-    config.resolve.extensions.push('.ts', '.tsx', '.js', '.md');
+    config.resolve.extensions.push('.ts', '.tsx', '.js', '.md', '.mdx');
 
     // resolve the src directory so that we can import directly from it
     // https://webpack.js.org/configuration/resolve/#resolvemodules
