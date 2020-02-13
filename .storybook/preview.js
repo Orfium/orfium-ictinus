@@ -36,6 +36,7 @@ const viewPorts = [
 
 // wrap all components with theme provider by default
 addDecorator(storyFn => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>);
+addDecorator(storyFn => <div style={{ margin: 5 }}>{storyFn()}</div>);
 addParameters({
   viewport: {
     viewports: viewPorts,
