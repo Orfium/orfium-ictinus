@@ -15,6 +15,10 @@ const deepMergeTheme = (newTheme?: Theme): Theme => assign(theme, pick(newTheme,
 const globalStyles = css`
   ${normalize()};
   @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+  #root {
+    display: 'flex';
+  }
 `;
 
 const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {

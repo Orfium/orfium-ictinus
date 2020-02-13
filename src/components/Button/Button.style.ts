@@ -16,9 +16,10 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
 export const buttonStyle = ({ type, filled, size }: Props) => ({
   fontSize: theme.typography.fontSizes['16'],
   color: colorPickerBasedOnType(type),
-  minWidth: 130,
+  paddingLeft: theme.spacing.md,
+  paddingRight: theme.spacing.md,
   height: heightBasedOnSize(size),
-  borderRadius: 4,
+  borderRadius: theme.spacing.xsm,
   backgroundColor: filled ? '#dfdfdf' : 'transparent',
   border: filled ? 'none' : 'solid 1px #979797',
 });
