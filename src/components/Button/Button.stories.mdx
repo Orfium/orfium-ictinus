@@ -29,10 +29,24 @@ Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default i
 
 <Preview>
   <Story name="Button Sizes">
-    <Stack vertical>
+    <Stack>
         <Button size={'lg'}>Hello world</Button>
         <Button size={'md'}>Hello world</Button>
         <Button size={'sm'}>Hello world</Button>
+    </Stack>
+  </Story>
+</Preview>
+
+# Button Colors
+Button colors based on the system approved literals for `success, error, info, warning`
+
+<Preview>
+  <Story name="Button Colors">
+    <Stack>
+        <Button size={'sm'} type='success'>Hello world</Button>
+        <Button size={'sm'} type='error'>Hello world</Button>
+        <Button size={'sm'} type='info'>Hello world</Button>
+        <Button size={'sm'} type='warning'>Hello world</Button>
     </Stack>
   </Story>
 </Preview>

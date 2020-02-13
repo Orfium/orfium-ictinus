@@ -1,47 +1,53 @@
+const grayPalette = {
+  gray: '#F5F5F6',
+  gray50: '#DFDFDF',
+  gray100: '#9B9B9B',
+  gray200: '#4A4A4A',
+  gray300: '#232323',
+};
+
 const palette: Palette = {
   // Primary Palette
-  primary: 'blue',
-  primary50: '',
-  primary100: '',
-  primary200: '',
-  primary300: '',
-  primary400: '',
-  primary500: '',
-  primary600: '',
-  primary700: '',
+  primary: '',
+  secondary: '',
+
+  ...grayPalette,
 
   //rest
-  secondary: '',
-  success: '',
-  error: '',
-  warning: '',
-  info: '',
+  success: '#6bbc15',
+  error: '#D40000',
+  warning: '#F5781B',
+  info: '#18AED2',
+  light: '#FFFFFF',
+
   text: {
-    primary: '',
-    secondary: '',
+    primary: grayPalette.gray300,
+    secondary: grayPalette.gray200,
+    light: '#FFFFFF',
   },
 };
 
 export type Palette = {
   // Primary Palette
   primary: string;
-  primary50: string;
-  primary100: string;
-  primary200: string;
-  primary300: string;
-  primary400: string;
-  primary500: string;
-  primary600: string;
-  primary700: string;
-
   secondary: string;
+
+  gray: string;
+  gray50: string;
+  gray100: string;
+  gray200: string;
+  gray300: string;
+
   success: string;
   error: string;
   warning: string;
   info: string;
+  light: string;
+
   text: {
     primary: string;
     secondary: string;
+    light: string;
   };
 };
 
