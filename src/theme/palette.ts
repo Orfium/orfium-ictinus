@@ -1,4 +1,4 @@
-const palette = {
+const palette: Palette = {
   // Primary Palette
   primary: 'blue',
   primary50: '',
