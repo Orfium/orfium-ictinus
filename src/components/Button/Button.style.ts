@@ -2,6 +2,8 @@ import theme from 'theme';
 import { colorPickerBasedOnType, backgroundPickerBasedOnType } from 'utils/themeFunctions';
 import { Props } from 'src/components/Button/Button';
 
+/** Calculates the button specific height based on the size passed to it
+ * These sizes are specific to this button thus these are placed here and not in the config **/
 const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   switch (size) {
     case 'lg':
