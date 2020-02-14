@@ -23,5 +23,5 @@ export const buttonStyle = ({ type, filled, size }: Props) => ({
   paddingRight: theme.spacing.md,
   height: heightBasedOnSize(size),
   borderRadius: theme.spacing.xsm,
-  border: filled ? 'none' : 'solid 1px #979797',
+  border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
 });
