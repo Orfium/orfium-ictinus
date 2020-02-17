@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select } from "@storybook/addon-knobs";
+import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import Button from './Button';
 import Stack from '../Stack';
 
@@ -58,6 +58,13 @@ Button colors based on the system approved literals for `success, error, info, w
   </Story>
 </Preview>
 
+# Button with icon
+<Preview>
+  <Story name="Button with icon">
+    <Button filled={true} size={'lg'} icon={<div>icon</div>}>Hello world</Button>
+  </Story>
+</Preview>
+
 # Non Filled Button
 <Preview>
   <Story name="Non Filled Button">
@@ -75,6 +82,6 @@ Button colors based on the system approved literals for `success, error, info, w
 # Dynamic Button Props - Knobs
 <Preview>
   <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
-    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'branded1', 'branded2'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')}>Hello world</Button>
+    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'branded1', 'branded2'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')}>{text('text', 'change me!')}</Button>
   </Story>
 </Preview>
