@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { buttonStyle } from './Button.style';
+import { buttonStyle, buttonSpanStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
 
@@ -28,8 +28,10 @@ const Button: React.FC<Props> = ({
 
   return (
     <button css={buttonStyle({ type, filled, size, icon })(theme)} {...rest}>
-      {icon && icon}
-      {children}
+      <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
+        {icon && icon}
+        <span>{children}</span>
+      </span>
     </button>
   );
 };

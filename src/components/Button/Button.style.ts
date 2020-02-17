@@ -2,6 +2,7 @@ import { colorPickerBasedOnType, backgroundPickerBasedOnType } from 'utils/theme
 import { Props } from 'src/components/Button/Button';
 import { RequiredProperties } from 'src/utils/common';
 import { Theme } from 'src/theme';
+import { FlexDirectionProperty } from 'csstype';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -16,7 +17,7 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   }
 };
 
-export const buttonStyle = ({ type, filled, size, icon }: RequiredProperties<Props>) => (
+export const buttonStyle = ({ type, filled, size }: RequiredProperties<Props>) => (
   theme: Theme
 ) => ({
   fontSize: theme.typography.fontSizes['16'],
@@ -27,6 +28,13 @@ export const buttonStyle = ({ type, filled, size, icon }: RequiredProperties<Pro
   height: heightBasedOnSize(size),
   borderRadius: theme.spacing.xsm,
   border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
+});
+
+export const buttonSpanStyle = ({ icon }: RequiredProperties<Props>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
-  // flexDirection: icon ? 'row' : 'column',
+  flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
+  alignItems: icon ? 'center' : 'flex-start',
+  '> span': {
+    marginLeft: theme.spacing.sm,
+  },
 });
