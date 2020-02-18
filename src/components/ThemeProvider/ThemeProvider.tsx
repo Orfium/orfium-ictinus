@@ -4,6 +4,8 @@ import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { css, Global } from '@emotion/core';
 import { assign, keys, pick } from 'lodash';
 import theme, { Theme } from 'theme';
+import palette from 'theme/palette';
+import { useThemeSwitch } from 'hooks/useThemeSwitch';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
@@ -22,8 +24,21 @@ const globalStyles = css`
 `;
 
 const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
+  const themeSwitchState = useThemeSwitch();
+
+  debugger;
+
   return (
-    <EmotionThemeProvider theme={deepMergeTheme(theme)}>
+    <EmotionThemeProvider
+      theme={deepMergeTheme({
+        ...theme,
+        isDark: themeSwitchState.dark,
+        palette: {
+          ...palette,
+          // success: themeSwitchState.dark ? 'yellow' : palette.success,
+        },
+      })}
+    >
       {children}
       <Global styles={globalStyles} />
     </EmotionThemeProvider>

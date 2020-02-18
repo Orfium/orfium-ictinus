@@ -1,4 +1,4 @@
-import theme from 'theme';
+import { Theme } from 'theme';
 
 export type AcceptedColorComponentTypes =
   | 'primary'
@@ -10,7 +10,9 @@ export type AcceptedColorComponentTypes =
   | 'branded1'
   | 'branded2';
 
-export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => {
+export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (
+  theme: Theme
+) => {
   switch (type) {
     case 'success':
       return theme.palette.success;
@@ -25,7 +27,7 @@ export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) =
   }
 };
 
-export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => {
+export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
   switch (type) {
     case 'primary':
       return theme.palette.text.primary;

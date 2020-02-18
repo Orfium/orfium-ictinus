@@ -5,6 +5,7 @@ import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import defaultTheme from '../src/theme';
+import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
 
 const viewPorts = [
   {
@@ -35,8 +36,29 @@ const viewPorts = [
 ];
 
 // wrap all components with theme provider by default
-addDecorator(storyFn => <ThemeProvider theme={defaultTheme}>{storyFn()}</ThemeProvider>);
+addDecorator(storyFn => {
+  const themeSwitchState = useThemeSwitch();
+
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+        <button
+          onClick={() => {
+            console.log('toggle button');
+            themeSwitchState.toggle();
+          }}
+        >
+          toggle dark/light
+        </button>
+        <span>current theme: {themeSwitchState.dark ? 'dark' : 'light'}</span>
+      </div>
+      {storyFn()}
+    </ThemeProvider>
+  );
+});
+addDecorator(storyFn => <ThemeSwitchProvider>{storyFn()}</ThemeSwitchProvider>);
 addDecorator(storyFn => <div style={{ margin: 5 }}>{storyFn()}</div>);
+
 addParameters({
   viewport: {
     viewports: viewPorts,

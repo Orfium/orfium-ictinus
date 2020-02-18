@@ -21,8 +21,8 @@ export const buttonStyle = ({ type, filled, size }: RequiredProperties<Props>) =
   theme: Theme
 ) => ({
   fontSize: theme.typography.fontSizes['16'],
-  color: colorPickerBasedOnType(type),
-  backgroundColor: filled ? backgroundPickerBasedOnType(type) : 'transparent',
+  color: colorPickerBasedOnType(type)(theme),
+  backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
   paddingLeft: theme.spacing.md,
   paddingRight: theme.spacing.md,
   height: heightBasedOnSize(size),
