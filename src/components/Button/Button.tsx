@@ -30,7 +30,7 @@ const Button: React.FC<Props> = ({
     <button css={buttonStyle({ type, filled, size, icon })(theme)} {...rest}>
       <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
         {icon && icon}
-        <span>{children}</span>
+        {children}
       </span>
     </button>
   );

@@ -18,24 +18,29 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   }
 };
 
-export const buttonStyle = ({ type, filled, size }: RequiredProperties<Props>) => (
+export const buttonStyle = ({ type, filled, size, icon }: RequiredProperties<Props>) => (
   theme: Theme
-) => ({
-  fontSize: theme.typography.fontSizes['16'],
-  color: colorPickerBasedOnType(type)(theme),
-  backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
-  paddingLeft: theme.spacing.md,
-  paddingRight: theme.spacing.md,
-  height: heightBasedOnSize(size),
-  borderRadius: theme.spacing.xsm,
-  border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
-});
+) => {
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
 
-export const buttonSpanStyle = ({ icon }: RequiredProperties<Props>) => (theme: Theme) => ({
+  return {
+    fontSize: theme.typography.fontSizes['16'],
+    color: colorPickerBasedOnType(type)(theme),
+    backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
+    paddingLeft: icon ? 0 : calculatedPaddingSpace,
+    paddingRight: calculatedPaddingSpace,
+    height: heightBasedOnSize(size),
+    borderRadius: theme.spacing.xsm,
+    border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
+  };
+};
+
+export const buttonSpanStyle = ({ icon, size }: RequiredProperties<Props>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
   flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
   alignItems: icon ? 'center' : 'flex-start',
-  '> span': {
-    marginLeft: theme.spacing.sm,
+  '> :first-child': {
+    marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
+    marginRight: theme.spacing.sm,
   },
 });
