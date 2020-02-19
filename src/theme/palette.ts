@@ -6,7 +6,28 @@ const grayPalette = {
   gray300: '#232323',
 };
 
-const palette: Palette = {
+export const lightPalette: Palette = {
+  // Primary Palette
+  primary: '',
+  secondary: '',
+
+  ...grayPalette,
+
+  //rest
+  success: '#6bbc15',
+  error: '#D40000',
+  warning: '#F5781B',
+  info: '#18AED2',
+  light: '#FFFFFF',
+
+  text: {
+    primary: grayPalette.gray300,
+    secondary: grayPalette.gray200,
+    light: '#FFFFFF',
+  },
+};
+
+export const darkPalette: Palette = {
   // Primary Palette
   primary: '',
   secondary: '',
@@ -50,5 +71,3 @@ export type Palette = {
     light: string;
   };
 };
-
-export default palette;

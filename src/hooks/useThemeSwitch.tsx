@@ -2,9 +2,7 @@ import * as React from 'react';
 
 const defaultContextData = {
   dark: false,
-  toggle: () => {
-    console.log('toggle with no provider');
-  },
+  toggle: () => {},
 };
 
 const ThemeContext = React.createContext(defaultContextData);
@@ -22,7 +20,6 @@ const ThemeSwitchProvider: React.FC<{}> = ({ children }) => {
       value={{
         dark: themeState.dark,
         toggle: () => {
-          console.log('toggle theme');
           setThemeState((themeState: any) => ({ dark: !themeState.dark }));
         },
       }}

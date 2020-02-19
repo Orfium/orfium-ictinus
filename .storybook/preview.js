@@ -4,7 +4,6 @@ import { withA11y } from '@storybook/addon-a11y';
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
-import defaultTheme from '../src/theme';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
 
 const viewPorts = [
@@ -35,23 +34,30 @@ const viewPorts = [
   },
 ];
 
+const ThemeSwitcher = () => {
+  const themeSwitchState = useThemeSwitch();
+  return (
+    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <button
+        onClick={themeSwitchState.toggle}
+        css={{
+          backgroundColor: themeSwitchState.dark ? '#000' : 'transparent',
+          color: themeSwitchState.dark ? '#fff' : '#000',
+          outline: 'none',
+          borderRadius: 4,
+        }}
+      >
+        turn {themeSwitchState.dark ? 'light' : 'dark'} on
+      </button>
+    </div>
+  );
+};
+
 // wrap all components with theme provider by default
 addDecorator(storyFn => {
-  const themeSwitchState = useThemeSwitch();
-
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <button
-          onClick={() => {
-            console.log('toggle button');
-            themeSwitchState.toggle();
-          }}
-        >
-          toggle dark/light
-        </button>
-        <span>current theme: {themeSwitchState.dark ? 'dark' : 'light'}</span>
-      </div>
+    <ThemeProvider theme={{}}>
+      <ThemeSwitcher />
       {storyFn()}
     </ThemeProvider>
   );
