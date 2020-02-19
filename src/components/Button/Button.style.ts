@@ -3,17 +3,18 @@ import { Props } from 'src/components/Button/Button';
 import { RequiredProperties } from 'src/utils/common';
 import { Theme } from 'src/theme';
 import { FlexDirectionProperty } from 'csstype';
+import { rem } from 'polished';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
 const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   switch (size) {
     case 'lg':
-      return 56;
+      return rem(56);
     case 'sm':
-      return 40;
+      return rem(40);
     default:
-      return 46;
+      return rem(46);
   }
 };
 
