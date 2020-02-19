@@ -12,7 +12,7 @@ const useThemeSwitch = () => {
 
 const ThemeSwitchProvider: React.FC<{}> = ({ children }) => {
   const [themeState, setThemeState] = React.useState({
-    dark: true,
+    dark: false,
   });
 
   return (
