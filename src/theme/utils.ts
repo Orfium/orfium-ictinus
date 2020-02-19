@@ -1,1 +1,1 @@
-export const convertPointstoPixels = (pt: number) => (96 / 72) * pt;
+export const convertPointsToPixels = (pt: number) => (96 / 72) * pt;

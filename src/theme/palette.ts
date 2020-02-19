@@ -1,4 +1,4 @@
-const pallete = {
+const palette: Palette = {
   // Primary Palette
   primary: 'blue',
   primary50: '',
@@ -22,7 +22,7 @@ const pallete = {
   },
 };
 
-export type Colors = {
+export type Palette = {
   // Primary Palette
   primary: string;
   primary50: string;
@@ -45,4 +45,4 @@ export type Colors = {
   };
 };
 
-export default pallete;
+export default palette;
