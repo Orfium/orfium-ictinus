@@ -1,0 +1,75 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import TextField from './TextField';
+import Stack from '../Stack';
+
+<Meta title="Design System|TextField" component={TextField} />
+
+# Button
+
+A universal Button component that is a clickable element that can hold many forms.
+
+# Usage
+
+```js
+import { TextField } from 'orfium-design-system';
+
+<TextField label={'label'} />;
+```
+
+# Props
+
+<Props of={TextField} />
+
+# Text Field with Label
+
+Regular TextField with label
+
+<Preview>
+  <Story name="Text Field with Label">
+    <Stack>
+      <TextField label={'Label'} />
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Field without Label
+
+Regular TextField without label
+
+<Preview>
+  <Story name="Text Field without Label">
+    <Stack>
+      <TextField />
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Field with Placeholder
+
+Regular TextField with placeholder
+
+<Preview>
+  <Story name="Text Field with Placeholder">
+    <Stack>
+      <TextField placeholder="placeholder" />
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Field with Placeholder and icon
+
+Regular TextField with placeholder and icon
+
+<Preview>
+  <Story name="Text Field with Placeholder and icon">
+    <Stack>
+      <TextField
+        placeholder="placeholder"
+        leftIcon={
+          <img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
+        }
+      />
+    </Stack>
+  </Story>
+</Preview>
