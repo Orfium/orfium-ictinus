@@ -5,8 +5,7 @@ import { rem } from 'polished';
 
 export const wrapperStyle = ({ label }: Props) => (theme: Theme) => css`
   background-color: ${theme.palette.gray};
-  padding: ${label ? '19px' : theme.spacing.md} ${theme.spacing.md}
-    ${label ? theme.spacing.sm : theme.spacing.md};
+  padding: ${label ? rem(19) : rem(12)} ${rem(12)} ${label ? theme.spacing.sm : rem(12)};
   border-radius: ${theme.spacing.xsm};
 `;
 
