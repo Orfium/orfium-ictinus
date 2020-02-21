@@ -1,28 +1,39 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { buttonStyle } from './Button.style';
+import { buttonStyle, buttonSpanStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import useTheme from 'hooks/useTheme';
 
 export type Props = {
   /** Type indicating the type of the button */
-  type: AcceptedColorComponentTypes;
+  type?: AcceptedColorComponentTypes;
   /** This property define the size of the button. Defaults to 'md' */
-  size: 'lg' | 'md' | 'sm';
+  size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
-  filled: boolean;
+  filled?: boolean;
+  /** An optional icon to turn the button to icon button with text/children */
+  icon?: string | null;
 };
 
 const Button: React.FC<Props> = ({
   size = 'md',
   type = 'primary',
   filled = true,
+  icon = null,
   children,
   ...rest
-}) => (
-  <button css={buttonStyle({ type, filled, size })} {...rest}>
-    {children}
-  </button>
-);
+}) => {
+  const theme = useTheme();
+
+  return (
+    <button css={buttonStyle({ type, filled, size, icon })(theme)} {...rest}>
+      <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
+        {icon && icon}
+        {children}
+      </span>
+    </button>
+  );
+};
 
 export default Button;

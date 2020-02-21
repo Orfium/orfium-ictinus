@@ -1,24 +1,46 @@
-import theme from 'theme';
-import { colorPickerBasedOnType } from 'utils/themeFunctions';
+import { colorPickerBasedOnType, backgroundPickerBasedOnType } from 'utils/themeFunctions';
 import { Props } from 'src/components/Button/Button';
+import { RequiredProperties } from 'src/utils/common';
+import { Theme } from 'src/theme';
+import { FlexDirectionProperty } from 'csstype';
+import { rem } from 'polished';
 
+/** Calculates the button specific height based on the size passed to it
+ * These sizes are specific to this button thus these are placed here and not in the config **/
 const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   switch (size) {
     case 'lg':
-      return 56;
+      return rem(56);
     case 'sm':
-      return 40;
+      return rem(40);
     default:
-      return 46;
+      return rem(46);
   }
 };
 
-export const buttonStyle = ({ type, filled, size }: Props) => ({
-  fontSize: theme.typography.fontSizes['16'],
-  color: colorPickerBasedOnType(type),
-  minWidth: 130,
-  height: heightBasedOnSize(size),
-  borderRadius: 4,
-  backgroundColor: filled ? '#dfdfdf' : 'transparent',
-  border: filled ? 'none' : 'solid 1px #979797',
+export const buttonStyle = ({ type, filled, size, icon }: RequiredProperties<Props>) => (
+  theme: Theme
+) => {
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
+
+  return {
+    fontSize: theme.typography.fontSizes['16'],
+    color: colorPickerBasedOnType(type)(theme),
+    backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
+    paddingLeft: icon ? 0 : calculatedPaddingSpace,
+    paddingRight: calculatedPaddingSpace,
+    height: heightBasedOnSize(size),
+    borderRadius: theme.spacing.xsm,
+    border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
+  };
+};
+
+export const buttonSpanStyle = ({ icon, size }: RequiredProperties<Props>) => (theme: Theme) => ({
+  display: icon ? 'flex' : 'block',
+  flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
+  alignItems: icon ? 'center' : 'flex-start',
+  '> :first-child': {
+    marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
+    marginRight: theme.spacing.sm,
+  },
 });

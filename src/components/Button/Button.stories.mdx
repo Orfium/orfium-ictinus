@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, color } from "@storybook/addon-knobs";
+import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import Button from './Button';
+import Stack from '../Stack';
 
 <Meta title="Design System|Button" component={Button} />
 
@@ -22,17 +23,71 @@ import { Button } from 'orfium-design-system';
 
 <Props of={Button} />
 
-# With Background
+
+# Icon Button Sizes
+Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
+
 <Preview>
-  <Story name="With Background">
-    <Button type={'secondary'}>Hello world</Button>
+  <Story name="Icon Button Sizes">
+    <Stack>
+        <Button size={'lg'} icon={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
+        <Button size={'md'} icon={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
+        <Button size={'sm'} icon={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
+    </Stack>
   </Story>
 </Preview>
 
-# withBackgroundKnobs
+# Icon Button Sizes
+Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
 
 <Preview>
-  <Story name="With Background Knobs" parameters={{ decorators: [withKnobs] }}>
-    <Button>Hello world2</Button>;
+  <Story name="Button Sizes">
+    <Stack>
+        <Button size={'lg'}>Hello world</Button>
+        <Button size={'md'}>Hello world</Button>
+        <Button size={'sm'}>Hello world</Button>
+    </Stack>
+  </Story>
+</Preview>
+
+# Button Colors
+Button colors based on the system approved literals for `success, error, info, warning`
+
+<Preview>
+  <Story name="Button Colors">
+    <Stack>
+        <Button size={'sm'} type='success'>Hello world</Button>
+        <Button size={'sm'} type='error'>Hello world</Button>
+        <Button size={'sm'} type='info'>Hello world</Button>
+        <Button size={'sm'} type='warning'>Hello world</Button>
+    </Stack>
+  </Story>
+</Preview>
+
+# Regular Button
+<Preview>
+  <Story name="Regular Button">
+    <Button filled={true} size={'lg'}>Hello world</Button>
+  </Story>
+</Preview>
+
+# Button with icon
+<Preview>
+  <Story name="Button with icon">
+    <Button filled={true} size={'lg'} icon={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
+  </Story>
+</Preview>
+
+# Non Filled Button
+<Preview>
+  <Story name="Non Filled Button">
+    <Button filled={false} size={'lg'}>Hello world</Button>;
+  </Story>
+</Preview>
+
+# Dynamic Button Props - Knobs
+<Preview>
+  <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
+    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'branded1', 'branded2'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')}>{text('text', 'change me!')}</Button>
   </Story>
 </Preview>

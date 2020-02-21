@@ -1,15 +1,17 @@
+import { rem } from 'polished';
+
 const spacing: Spacing = {
-  xsm: 4,
-  sm: 8,
-  md: 16,
-  lg: 32,
+  xsm: rem(4),
+  sm: rem(8),
+  md: rem(16),
+  lg: rem(32),
 };
 
 export type Spacing = {
-  xsm: number;
-  sm: number;
-  md: number;
-  lg: number;
+  xsm: string;
+  sm: string;
+  md: string;
+  lg: string;
 };
 
 export default spacing;
