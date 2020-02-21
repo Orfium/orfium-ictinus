@@ -13,6 +13,8 @@ export type Props = {
   leftIcon?: string | null;
   /** An optional icon to show to the right */
   rightIcon?: string | null;
+  /** If the text field value is required */
+  required?: boolean;
 };
 
 const TextField: React.FC<Props> = ({
@@ -20,6 +22,7 @@ const TextField: React.FC<Props> = ({
   leftIcon = null,
   label,
   placeholder = '',
+  required = false,
   ...rest
 }) => {
   const theme = useTheme();
@@ -30,11 +33,16 @@ const TextField: React.FC<Props> = ({
         {leftIcon && leftIcon}
         <input
           css={inputStyle({ label, placeholder })(theme)}
-          placeholder={!label && placeholder ? placeholder : label}
+          placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
+          required={required}
           {...rest}
         />
         {rightIcon && rightIcon}
-        {label && <label css={labelStyle()(theme)}>{label}</label>}
+        {label && (
+          <label css={labelStyle()(theme)}>
+            {label} {required && '*'}
+          </label>
+        )}
       </div>
     </div>
   );
