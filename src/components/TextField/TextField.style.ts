@@ -1,12 +1,15 @@
 import { Theme } from 'src/theme';
 import { css } from '@emotion/core';
 import { Props } from './TextField';
-import { rem } from 'polished';
+import { rem, transparentize } from 'polished';
 
-export const wrapperStyle = ({ label }: Props) => (theme: Theme) => css`
-  background-color: ${theme.palette.gray};
+export const wrapperStyle = ({ label, error, disabled }: Props) => (theme: Theme) => css`
+  transition: background-color 0.25s, border 0.25s;
+  background-color: ${error ? transparentize(0.85, theme.palette.error) : theme.palette.gray};
   padding: ${label ? rem(19) : rem(12)} ${rem(12)} ${label ? theme.spacing.sm : rem(12)};
   border-radius: ${theme.spacing.xsm};
+  border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
+  cursor: ${disabled ? 'not-allowed' : 'auto'};
 `;
 
 export const textFieldStyle = () => (theme: Theme) => css`
@@ -44,6 +47,10 @@ export const inputStyle = ({ label, placeholder }: Props) => (theme: Theme) => c
     & + label {
       transform: translate(1%, -65%) scale(0.8);
     }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 `;
 
