@@ -10,6 +10,7 @@ export const wrapperStyle = ({ label, error, disabled }: Props) => (theme: Theme
   border-radius: ${theme.spacing.xsm};
   border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
+  user-select: none;
 `;
 
 export const textFieldStyle = () => (theme: Theme) => css`
