@@ -1,0 +1,44 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Select from './Select';
+import Stack from '../Stack';
+
+<Meta title="Design System|Select" component={Select} />
+
+# Select
+
+A universal Select component that is a clickable element that can hold many forms.
+
+# Usage
+
+```js
+import { Select } from 'orfium-design-system';
+
+<Select onClick={() => {}})}>
+  Click Me
+</Select>
+```
+
+# Props
+
+<Props of={Select} />
+
+# Simple Select
+
+Simple Select
+
+<Preview>
+  <Story name="Simple Select">
+    <Select isClearable />
+  </Story>
+</Preview>
+
+# Simple Select
+
+Multi Select
+
+<Preview>
+  <Story name="Multi Select">
+    <Select multi />
+  </Story>
+</Preview>
