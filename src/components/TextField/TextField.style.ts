@@ -65,7 +65,7 @@ export const labelStyle = () => (theme: Theme) => css`
   user-select: none;
   z-index: 1500;
   transform: translate(1%, 0);
-  font-size: ${theme.typography.fontSizes['12']};
+  font-size: ${theme.typography.fontSizes['14']};
   font-weight: ${theme.typography.weights.black};
   color: ${theme.palette.gray100};
 `;
