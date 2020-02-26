@@ -1,57 +1,40 @@
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core';
 import * as React from 'react';
-import ReactSelect, { Styles, components } from 'react-select';
-// import { textFieldStyle, wrapperStyle } from 'components/TextField/TextField.style';
-// import TextField from 'components/TextField';
-// import { buttonStyle, buttonSpanStyle } from './Select.style';
+import ReactSelect, { components, ControlProps, Styles } from 'react-select';
 import useTheme from 'hooks/useTheme';
 import { rem } from 'polished';
+import Label from 'components/Label';
+
+type SelectOption = { value: string; label: string; isDisabled?: boolean };
 
 export type Props = {
+  /** The label that is going to be displayed */
+  label: string;
+  /** Options for the select dropdown */
+  options: SelectOption[];
+  /** If the select is going to be disabled or not */
   disabled?: boolean;
+  /** if the select is loading data */
   isLoading?: boolean;
+  /** if the select value is searchable */
   isSearchable?: boolean;
+  /** if the select value can be clearable */
   isClearable?: boolean;
+  /** if the select has tags */
   multi?: boolean;
+  /** if the select is required */
+  required?: boolean;
 };
 
-const Control: React.FC<{}> = ({ children, ...props }) => {
-  const theme = useTheme();
-
-  // @ts-ignore
-  console.log(props, props.getValue());
-
+const Control: React.FC<ControlProps<{}> & { label?: string }> = ({ children, ...props }) => {
   return (
-    <div>
-      {/*
-      //@ts-ignore */}
-      <components.Control {...props}>
-        <label
-          css={css`
-            transition: 0.25s, opacity 0.25s ease-in-out;
-            // @ts-ignore
-            transform: ${!props.hasValue ? 'translate(1%, 0)' : 'translate(1%, -65%) scale(0.8);'};
-            transform-origin: 0 0;
-            width: 100%;
-            height: ${theme.typography.fontSizes['14']};
-            user-select: none;
-            z-index: 1500;
-
-            font-size: ${theme.typography.fontSizes['14']};
-            font-weight: ${theme.typography.weights.black};
-            color: ${theme.palette.gray100};
-
-            position: absolute;
-            top: 1.3rem;
-            left: 0.7rem;
-          `}
-        >
-          {'Label'} *
-        </label>
+    <components.Control {...props}>
+      <React.Fragment>
+        {props.selectProps.label && (
+          <Label label={props.selectProps.label} required animateToTop={props.hasValue} />
+        )}
         {children}
-      </components.Control>
-    </div>
+      </React.Fragment>
+    </components.Control>
   );
 };
 
@@ -61,72 +44,60 @@ const Select: React.FC<Props> = ({
   isSearchable = false,
   isClearable = false,
   multi = false,
+  required = false,
+  options,
+  label,
 }) => {
   const theme = useTheme();
-
-  const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'banana', label: 'Banana' },
-    { value: 'citrus', label: 'Citrus' },
-    { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-  ];
 
   const customStyles: Styles = {
     option: (provided, state) => ({
       ...provided,
-      // borderBottom: '1px dotted pink',
       backgroundColor: state.isSelected ? '#ededed' : '#ffffff',
-      color: state.isDisabled ? theme.palette.gray100 : '#231f20',
-      padding: 16,
+      color: state.isDisabled ? theme.palette.gray100 : theme.palette.text.primary,
+      padding: rem(16),
       '&:hover': {
         backgroundColor: '#f8f8f9',
       },
     }),
     control: base => ({
       ...base,
-      minHeight: 56,
+      minHeight: rem(56),
       backgroundColor: '#f5f5f6',
       border: 0,
-      // none of react-select's styles are passed to <Control />
       width: 200,
-      paddingLeft: 3,
+      paddingLeft: rem(3),
       '&:hover svg': {
         backgroundColor: 'rgba(176, 176, 176, 0.23)',
       },
       '> div:first-of-type': {
-        margin: '18px 4px 2px',
-        padding: '2px 4px',
-        // marginTop: 15,
-        // position: 'relative',
-        // top: 15,
+        margin: `${rem(18)} ${rem(4)} ${rem(2)}`,
+        padding: `${rem(2)} ${rem(4)}`,
       },
     }),
     indicatorsContainer: base => ({
-      // right: 12,
-      // position: 'absolute',
       ...base,
       marginRight: rem(16),
     }),
     indicatorSeparator: () => ({
-      opacity: 0,
+      display: 'none',
     }),
     dropdownIndicator: () => ({
-      color: '#231f20',
+      color: theme.palette.text.primary,
       borderRadius: '100%',
-      width: 20,
-      height: 20,
+      width: rem(20),
+      height: rem(20),
       position: 'relative',
       svg: {
         transition: 'background 0.2s ease-in-out',
-        marginTop: -2,
-        padding: 2,
+        marginTop: -rem(2),
+        padding: rem(2),
         borderRadius: '100%',
       },
     }),
     singleValue: base => ({
       ...base,
-      color: '#231f20',
+      color: theme.palette.text.primary,
       fontSize: theme.typography.fontSizes[16],
     }),
     multiValue: base => ({
@@ -141,7 +112,7 @@ const Select: React.FC<Props> = ({
         width: theme.spacing.md,
         height: theme.spacing.md,
         borderRadius: theme.spacing.md,
-        top: 3,
+        top: rem(3),
         position: 'relative',
         '&:hover': {
           backgroundColor: '#cecece',
@@ -166,11 +137,11 @@ const Select: React.FC<Props> = ({
         isMulti={multi}
         options={options}
         placeholder={false}
-        // @ts-ignore
         components={{
           Control,
         }}
-        label={'asdasd'}
+        label={label}
+        required={required}
       />
     </div>
   );

@@ -29,7 +29,17 @@ Simple Select
 
 <Preview>
   <Story name="Simple Select">
-    <Select isClearable />
+    <Select
+      isClearable
+      label={'Flavour'}
+      options={[
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'citrus', label: 'Citrus' },
+        { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+      ]}
+    />
   </Story>
 </Preview>
 
@@ -39,6 +49,16 @@ Multi Select
 
 <Preview>
   <Story name="Multi Select">
-    <Select multi />
+    <Select
+      multi
+      label={'Flavour'}
+      options={[
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'citrus', label: 'Citrus' },
+        { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+      ]}
+    />
   </Story>
 </Preview>
