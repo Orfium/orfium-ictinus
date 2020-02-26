@@ -18,6 +18,13 @@ const globalStyles = css`
   ${normalize()};
   @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
+  body,
+  html {
+    font-family: 'Lato', Tahoma;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
   #root {
     display: 'flex';
   }
