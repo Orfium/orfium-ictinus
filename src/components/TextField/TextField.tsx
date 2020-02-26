@@ -15,6 +15,10 @@ export type Props = {
   rightIcon?: string | null;
   /** If the text field value is required */
   required?: boolean;
+  /** If the text field is disabled */
+  disabled?: boolean;
+  /** If the text field has errors */
+  error?: boolean;
 };
 
 const TextField: React.FC<Props> = ({
@@ -23,18 +27,21 @@ const TextField: React.FC<Props> = ({
   label,
   placeholder = '',
   required = false,
+  error,
+  disabled,
   ...rest
 }) => {
   const theme = useTheme();
 
   return (
-    <div css={wrapperStyle({ label })(theme)}>
+    <div css={wrapperStyle({ label, error, disabled })(theme)}>
       <div css={textFieldStyle()(theme)}>
         {leftIcon && leftIcon}
         <input
           css={inputStyle({ label, placeholder })(theme)}
           placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
           required={required}
+          disabled={disabled}
           {...rest}
         />
         {rightIcon && rightIcon}
