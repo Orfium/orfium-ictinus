@@ -40,7 +40,7 @@ const Control: React.FC<ControlProps<SelectOption>> = ({ children, ...props }) =
           <Label
             htmlFor={props.selectProps.inputId}
             label={props.selectProps.label}
-            required
+            required={props.selectProps.required}
             animateToTop={props.hasValue}
           />
         )}
@@ -75,7 +75,7 @@ const Select: React.FC<Props> = ({
         backgroundColor: '#f8f8f9',
       },
     }),
-    control: base => ({
+    control: (base, state) => ({
       ...base,
       minHeight: rem(56),
       width: 200,
@@ -89,6 +89,9 @@ const Select: React.FC<Props> = ({
       '> div:first-of-type': {
         margin: `${rem(18)} ${rem(4)} ${rem(2)}`,
         padding: `${rem(2)} ${rem(4)}`,
+      },
+      label: {
+        transform: state.isFocused || state.hasValue ? 'translate(1%, -65%) scale(0.8)' : 'initial',
       },
     }),
     indicatorsContainer: base => ({
@@ -159,6 +162,7 @@ const Select: React.FC<Props> = ({
         }}
         label={label}
         required={required}
+        inputProps={{ required }}
       />
     </div>
   );

@@ -25,40 +25,74 @@ import { Select } from 'orfium-design-system';
 
 # Simple Select
 
-Simple Select
+Simple select component with clearable data and searchable input
 
 <Preview>
   <Story name="Simple Select">
-    <Select
-      isClearable
-      label={'Flavour'}
-      options={[
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'banana', label: 'Banana' },
-        { value: 'citrus', label: 'Citrus' },
-        { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-      ]}
-    />
+    <Stack>
+      <Select
+        isClearable
+        label={'Flavour'}
+        isSearchable
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+      />
+      <Select
+        isClearable
+        label={'Flavour'}
+        isSearchable
+        error
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+      />
+    </Stack>
   </Story>
 </Preview>
 
-# Simple Select
+# Multi Tag Select
 
-Multi Select
+Multi Tag Select
 
 <Preview>
-  <Story name="Multi Select">
-    <Select
-      multi
-      label={'Flavour'}
-      options={[
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'banana', label: 'Banana' },
-        { value: 'citrus', label: 'Citrus' },
-        { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-      ]}
-    />
+  <Story name="Multi Tag Select">
+    <Stack>
+      <Select
+        isClearable
+        multi
+        label={'Flavour'}
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+      />
+      <Select
+        isClearable
+        multi
+        label={'Flavour'}
+        error
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+      />
+    </Stack>
   </Story>
 </Preview>
