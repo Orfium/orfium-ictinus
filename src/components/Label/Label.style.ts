@@ -1,9 +1,7 @@
 import { Theme } from 'src/theme';
 import { css } from '@emotion/core';
-import { Props } from './Label';
-import { RequiredProperties } from 'src/utils/common';
 
-export const labelStyle = ({ animateToTop }: RequiredProperties<Props>) => (theme: Theme) => css`
+export const labelStyle = ({ animateToTop }: { animateToTop: boolean }) => (theme: Theme) => css`
   transition: transform 0.25s, opacity 0.25s ease-in-out;
   transform-origin: 0 0;
   width: 100%;

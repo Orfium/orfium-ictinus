@@ -11,13 +11,14 @@ export type Props = {
   required: boolean;
   /** If the label must be moved to the top */
   animateToTop?: boolean;
+  htmlFor?: string;
 };
 
-const Label: React.FC<Props> = ({ label, required = false, animateToTop = false }) => {
+const Label: React.FC<Props> = ({ htmlFor, label, required = false, animateToTop = false }) => {
   const theme = useTheme();
 
   return (
-    <label css={labelStyle({ animateToTop, required, label })(theme)}>
+    <label htmlFor={htmlFor} css={labelStyle({ animateToTop })(theme)}>
       {label} {required && '*'}
     </label>
   );

@@ -1,16 +1,21 @@
 import * as React from 'react';
-import ReactSelect, { components, ControlProps, Styles } from 'react-select';
+import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
 import useTheme from 'hooks/useTheme';
-import { rem } from 'polished';
+import { rem, transparentize } from 'polished';
 import Label from 'components/Label';
+import { generateUniqueID } from 'utils/helpers';
 
-type SelectOption = { value: string; label: string; isDisabled?: boolean };
+export type SelectOption = { value: string; label: string; isDisabled?: boolean };
 
 export type Props = {
   /** The label that is going to be displayed */
   label: string;
   /** Options for the select dropdown */
   options: SelectOption[];
+  /** The function that is used to return the selected options */
+  onChange?: (value: ValueType<SelectOption>) => void;
+  /** the default value of the select if needed */
+  defaultValue?: SelectOption;
   /** If the select is going to be disabled or not */
   disabled?: boolean;
   /** if the select is loading data */
@@ -23,14 +28,21 @@ export type Props = {
   multi?: boolean;
   /** if the select is required */
   required?: boolean;
+  /** If the text field has errors */
+  error?: boolean;
 };
 
-const Control: React.FC<ControlProps<{}> & { label?: string }> = ({ children, ...props }) => {
+const Control: React.FC<ControlProps<SelectOption>> = ({ children, ...props }) => {
   return (
     <components.Control {...props}>
       <React.Fragment>
         {props.selectProps.label && (
-          <Label label={props.selectProps.label} required animateToTop={props.hasValue} />
+          <Label
+            htmlFor={props.selectProps.inputId}
+            label={props.selectProps.label}
+            required
+            animateToTop={props.hasValue}
+          />
         )}
         {children}
       </React.Fragment>
@@ -39,6 +51,7 @@ const Control: React.FC<ControlProps<{}> & { label?: string }> = ({ children, ..
 };
 
 const Select: React.FC<Props> = ({
+  defaultValue = undefined,
   disabled = false,
   isLoading = false,
   isSearchable = false,
@@ -46,7 +59,9 @@ const Select: React.FC<Props> = ({
   multi = false,
   required = false,
   options,
+  error,
   label,
+  onChange = () => {},
 }) => {
   const theme = useTheme();
 
@@ -63,10 +78,11 @@ const Select: React.FC<Props> = ({
     control: base => ({
       ...base,
       minHeight: rem(56),
-      backgroundColor: '#f5f5f6',
-      border: 0,
       width: 200,
       paddingLeft: rem(3),
+      backgroundColor: error ? transparentize(0.85, theme.palette.error) : theme.palette.gray,
+      border: error ? `1px solid ${theme.palette.error}` : '0',
+      '&:hover': {},
       '&:hover svg': {
         backgroundColor: 'rgba(176, 176, 176, 0.23)',
       },
@@ -90,9 +106,8 @@ const Select: React.FC<Props> = ({
       position: 'relative',
       svg: {
         transition: 'background 0.2s ease-in-out',
-        marginTop: -rem(2),
-        padding: rem(2),
         borderRadius: '100%',
+        padding: 0,
       },
     }),
     singleValue: base => ({
@@ -128,8 +143,9 @@ const Select: React.FC<Props> = ({
   return (
     <div style={{ position: 'relative' }}>
       <ReactSelect
+        inputId={`select-${generateUniqueID()}`}
         styles={customStyles}
-        defaultValue={options[0]}
+        defaultValue={defaultValue}
         isDisabled={disabled}
         isLoading={isLoading}
         isClearable={isClearable}
@@ -137,6 +153,7 @@ const Select: React.FC<Props> = ({
         isMulti={multi}
         options={options}
         placeholder={false}
+        onChange={onChange}
         components={{
           Control,
         }}
