@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { wrapperStyle, textFieldStyle, inputStyle, labelStyle } from './TextField.style';
+import { inputStyle, textFieldStyle, wrapperStyle } from './TextField.style';
 import useTheme from 'hooks/useTheme';
+import Label from 'components/Label';
 
 export type Props = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -19,6 +20,8 @@ export type Props = {
   disabled?: boolean;
   /** If the text field has errors */
   error?: boolean;
+  /** value of the input */
+  value?: string | number;
 };
 
 const TextField: React.FC<Props> = ({
@@ -45,11 +48,7 @@ const TextField: React.FC<Props> = ({
           {...rest}
         />
         {rightIcon && rightIcon}
-        {label && (
-          <label css={labelStyle()(theme)}>
-            {label} {required && '*'}
-          </label>
-        )}
+        {label && <Label label={label} required={required} animateToTop={Boolean(rest.value)} />}
       </div>
     </div>
   );

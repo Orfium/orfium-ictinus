@@ -1,0 +1,98 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Select from './Select';
+import Stack from '../Stack';
+
+<Meta title="Design System|Select" component={Select} />
+
+# Select
+
+A universal Select component that is a clickable element that can hold many forms.
+
+# Usage
+
+```js
+import { Select } from 'orfium-design-system';
+
+<Select onClick={() => {}})}>
+  Click Me
+</Select>
+```
+
+# Props
+
+<Props of={Select} />
+
+# Simple Select
+
+Simple select component with clearable data and searchable input
+
+<Preview>
+  <Story name="Simple Select">
+    <Stack>
+      <Select
+        isClearable
+        label={'Flavour'}
+        isSearchable
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+      />
+      <Select
+        isClearable
+        label={'Flavour'}
+        isSearchable
+        error
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Multi Tag Select
+
+Multi Tag Select
+
+<Preview>
+  <Story name="Multi Tag Select">
+    <Stack>
+      <Select
+        isClearable
+        multi
+        label={'Flavour'}
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+      />
+      <Select
+        isClearable
+        multi
+        label={'Flavour'}
+        error
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+      />
+    </Stack>
+  </Story>
+</Preview>
