@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
 import useTheme from 'hooks/useTheme';
 import { rem, transparentize } from 'polished';

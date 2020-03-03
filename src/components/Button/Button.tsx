@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
-import { buttonStyle, buttonSpanStyle } from './Button.style';
+import React from 'react';
+import { buttonSpanStyle, buttonStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
 

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
+import React from 'react';
 import { labelStyle } from './Label.style';
 import useTheme from 'hooks/useTheme';
 
