@@ -2,30 +2,26 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import useTheme from 'hooks/useTheme';
+import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import iconSelector from './assets/iconSelector';
+import { AcceptedIconNames } from './types';
+import { iconStyle } from './Icon.style';
 
 export type Props = {
   /** This property defines witch icon to use */
-  name?: string;
-  /** Property indicating the color of the icon */
-  color?: string;
-  /** Property indicating the size of the icon */
+  name: AcceptedIconNames;
+  /** Property indicating the color of the icon. Defaults to primary */
+  color?: AcceptedColorComponentTypes;
+  /** Property indicating the size of the icon. Defaults to 16 */
   size?: number;
 };
 
-const Icon: React.FC<Props> = ({ name, color, size }) => {
+const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16 }) => {
   const theme = useTheme();
-  console.log(theme);
-
-  if (!name) return null;
 
   const Icon = iconSelector[name];
 
-  return (
-    <span>
-      <Icon fill={color} />
-    </span>
-  );
+  return <Icon css={iconStyle({ color, size })(theme)} />;
 };
 
 export default Icon;
