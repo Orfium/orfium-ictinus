@@ -1,4 +1,4 @@
-import { Theme } from 'src/theme';
+import { Theme } from 'theme';
 import { css } from '@emotion/core';
 import { Props } from './TextField';
 import { rem, transparentize } from 'polished';
