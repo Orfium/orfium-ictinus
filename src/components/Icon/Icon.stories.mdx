@@ -1,0 +1,34 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Icon from './Icon';
+import Stack from '../Stack';
+
+<Meta title="Design System|Icon" component={Icon} />
+
+# Icon
+
+Icon component.
+
+# Usage
+
+```js
+import { Icon } from 'orfium-design-system';
+
+<Icon onClick={() => {}})} />
+```
+
+# Props
+
+<Props of={Icon} />
+
+# Icon
+
+Lorem
+
+<Preview>
+  <Story name="Icon Develop">
+    <Stack>
+      <Icon name={'add'} color={'red'} />
+    </Stack>
+  </Story>
+</Preview>
