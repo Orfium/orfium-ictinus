@@ -18,7 +18,7 @@ export type Props = {
 };
 
 export type TestProps = {
-  testDataId?: string;
+  dataTestId?: string;
 };
 
 const Button: React.FC<Props & TestProps> = ({
@@ -27,14 +27,14 @@ const Button: React.FC<Props & TestProps> = ({
   filled = true,
   icon = null,
   children,
-  testDataId = '',
+  dataTestId = '',
   ...rest
 }) => {
   const theme = useTheme();
 
   return (
     <button
-      test-data-id={generateTestDataId('ict-button', testDataId)}
+      data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({ type, filled, size, icon })(theme)}
       {...rest}
     >
