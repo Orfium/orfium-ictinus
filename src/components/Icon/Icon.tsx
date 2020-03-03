@@ -5,7 +5,7 @@ import useTheme from 'hooks/useTheme';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import iconSelector from './assets/iconSelector';
 import { AcceptedIconNames } from './types';
-import { iconStyle } from './Icon.style';
+import { iconStyle, iconContainerStyle } from './Icon.style';
 
 export type Props = {
   /** This property defines witch icon to use */
@@ -21,7 +21,11 @@ const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16 }) => {
 
   const Icon = iconSelector[name];
 
-  return <Icon css={iconStyle({ color, size })(theme)} />;
+  return (
+    <span css={iconContainerStyle()}>
+      <Icon css={iconStyle({ color, size })(theme)} />
+    </span>
+  );
 };
 
 export default Icon;
