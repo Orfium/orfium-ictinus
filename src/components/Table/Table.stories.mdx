@@ -1,0 +1,39 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Table from './Table';
+import Stack from '../Stack';
+
+<Meta title="Design System|Table" component={Table} />
+
+# Table
+
+A universal Table component.
+
+# Usage
+
+```js
+import { Table } from 'orfium-design-system';
+
+<Table />;
+```
+
+# Props
+
+<Props of={Table} />
+
+# Regular Table with label
+
+Regular Table with label
+
+<Preview>
+  <Story name="Regular Table with label">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      data={[
+        { title: 'title', firstname: 'firstname', lastname: 'lastname', age: 4.221 },
+        { title: 'title', firstname: 'firstname', lastname: 'lastname', age: 4.221 },
+        { title: 'title', firstname: 'firstname', lastname: 'lastname', age: 4.221 },
+      ]}
+    />
+  </Story>
+</Preview>
