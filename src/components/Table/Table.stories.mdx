@@ -30,9 +30,35 @@ Regular Table with label
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
       data={[
-        { title: 'title', firstname: 'firstname', lastname: 'lastname', age: 4.221 },
-        { title: 'title', firstname: 'firstname', lastname: 'lastname', age: 4.221 },
-        { title: 'title', firstname: 'firstname', lastname: 'lastname', age: 4.221 },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+          expanded: () => (
+            <div>
+              hello expanded<div>another div</div>
+            </div>
+          ),
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
       ]}
     />
   </Story>
