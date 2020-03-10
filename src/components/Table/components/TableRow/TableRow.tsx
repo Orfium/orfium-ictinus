@@ -4,7 +4,6 @@ import React from 'react';
 import useTheme from 'hooks/useTheme';
 
 type Props = {
-  onClick?: () => void;
   nested?: boolean;
 };
 

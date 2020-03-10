@@ -7,14 +7,16 @@ type Props = {
   align?: 'left' | 'right';
   component?: 'td' | 'th';
   sticky?: boolean;
-  colspan?: number;
+  colSpan?: number;
+  rowSpan?: number;
 };
 
 const TableCell: React.FC<Props> = ({
   align: textAlign = 'left',
   component = 'td',
   sticky = false,
-  colspan = 0,
+  colSpan,
+  rowSpan,
   children,
 }) => {
   const theme = useTheme();
@@ -24,9 +26,15 @@ const TableCell: React.FC<Props> = ({
     // @ts-ignore
     <Component
       // @ts-ignore
-      colspan={colspan}
+      colSpan={colSpan}
+      rowSpan={rowSpan}
       css={[
-        { textAlign, paddingTop: theme.spacing.xsm, paddingBottom: theme.spacing.xsm },
+        {
+          position: 'relative',
+          textAlign,
+          paddingTop: theme.spacing.xsm,
+          paddingBottom: theme.spacing.xsm,
+        },
         component === 'th' && {
           paddingTop: theme.spacing.md,
           paddingBottom: theme.spacing.md,

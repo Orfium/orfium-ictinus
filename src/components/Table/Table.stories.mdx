@@ -29,6 +29,8 @@ Regular Table with label
   <Story name="Regular Table with label">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
+      type="nested-header"
+      fixedHeader
       data={[
         {
           cells: [
@@ -37,11 +39,6 @@ Regular Table with label
             { content: 'lastname' },
             { content: 4.221 },
           ],
-          expanded: () => (
-            <div>
-              hello expanded<div>another div</div>
-            </div>
-          ),
         },
         {
           cells: [
@@ -50,6 +47,49 @@ Regular Table with label
             { content: 'lastname' },
             { content: 4.221 },
           ],
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          cells: [{ colSpan: 2, content: 'Sum' }, { content: 'title2' }, { content: 4.221 }],
         },
         {
           cells: [
