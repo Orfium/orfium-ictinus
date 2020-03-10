@@ -29,7 +29,6 @@ type Props<T> = {
   columns: string[];
   fixedHeader?: boolean;
   type?: 'normal' | 'nested-header';
-  sorting?: boolean;
   selecting?: boolean;
 };
 
