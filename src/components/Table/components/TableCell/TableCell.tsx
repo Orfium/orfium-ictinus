@@ -4,16 +4,18 @@ import React from 'react';
 import useTheme from '../../../../hooks/useTheme';
 
 type Props = {
-  align?: 'left' | 'right';
+  textAlign?: 'left' | 'right';
   component?: 'td' | 'th';
+  width?: number;
   sticky?: boolean;
   colSpan?: number;
   rowSpan?: number;
 };
 
 const TableCell: React.FC<Props> = ({
-  align: textAlign = 'left',
+  textAlign = 'left',
   component = 'td',
+  width,
   sticky = false,
   colSpan,
   rowSpan,
@@ -34,6 +36,7 @@ const TableCell: React.FC<Props> = ({
           textAlign,
           paddingTop: theme.spacing.xsm,
           paddingBottom: theme.spacing.xsm,
+          width,
         },
         component === 'th' && {
           paddingTop: theme.spacing.md,
