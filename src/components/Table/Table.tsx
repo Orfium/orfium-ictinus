@@ -13,7 +13,6 @@ import useToggle from '../../hooks/useToggle';
 type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 type Cell<T> = {
   content: number | string | ContentComponent<T>;
-  rowSpan?: number;
   colSpan?: number;
 };
 
@@ -22,7 +21,6 @@ type Row<T> = {
   cells: Cell<T>[];
   expanded?: (data: Row<T>) => React.Component;
   rowSpan?: number;
-  colSpan?: number;
 };
 
 type Selection = string | number;
@@ -35,13 +33,7 @@ type Props<T> = {
   onCheck?: (data: Selection[]) => void;
 };
 
-function Table<T extends object>({
-  data,
-  columns,
-  type = 'normal',
-  fixedHeader = false,
-  onCheck,
-}: Props<T>) {
+function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck }: Props<T>) {
   const theme = useTheme();
   const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
@@ -92,7 +84,7 @@ function Table<T extends object>({
               />
             </TableCell>
           )}
-          {row.cells.map(({ content, rowSpan, colSpan }, index) => {
+          {row.cells.map(({ content, colSpan }, index) => {
             cellCounter = prevCellColSpan ? prevCellColSpan - 1 + index : index;
             prevCellColSpan = colSpan || prevCellColSpan ? prevCellColSpan + (colSpan || 0) : 0;
 
@@ -103,7 +95,6 @@ function Table<T extends object>({
                 textAlign={
                   columnsHasNumberArr && columnsHasNumberArr[cellCounter] ? 'right' : 'left'
                 }
-                rowSpan={rowSpan}
                 colSpan={colSpan}
               >
                 {type === 'nested-header' && (

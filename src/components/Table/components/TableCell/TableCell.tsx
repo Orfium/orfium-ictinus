@@ -9,7 +9,6 @@ type Props = {
   width?: number;
   sticky?: boolean;
   colSpan?: number;
-  rowSpan?: number;
 };
 
 const TableCell: React.FC<Props> = ({
@@ -18,18 +17,14 @@ const TableCell: React.FC<Props> = ({
   width,
   sticky = false,
   colSpan,
-  rowSpan,
   children,
 }) => {
   const theme = useTheme();
   const Component = component;
 
   return (
-    // @ts-ignore
     <Component
-      // @ts-ignore
       colSpan={colSpan}
-      rowSpan={rowSpan}
       css={[
         {
           position: 'relative',
