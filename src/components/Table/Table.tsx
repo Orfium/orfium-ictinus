@@ -8,6 +8,7 @@ import head from 'lodash/head';
 import useTheme from 'hooks/useTheme';
 import rem from 'polished/lib/helpers/rem';
 import { isComponentFunctionType } from 'utils/helpers';
+import useToggle from '../../hooks/useToggle';
 
 type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 type Cell<T> = {
@@ -172,7 +173,7 @@ function Table<T extends object>({
         {data.map((row, index) => {
           const { expanded } = row;
           const ExpandedComponent = expanded ? expanded(row) : null;
-          const [toggled, setToggled] = useState(false);
+          const [checked, toggleChecked] = useToggle(false);
 
           return (
             <React.Fragment key={row.id}>
@@ -192,7 +193,7 @@ function Table<T extends object>({
                             selectingIds
                           )}
 
-                          {toggled && (
+                          {checked && (
                             <TableRow nested>
                               <TableCell colSpan={columnCount}>{ExpandedComponent}</TableCell>
                             </TableRow>
@@ -206,7 +207,7 @@ function Table<T extends object>({
                           width: 25,
                           overflow: 'hidden',
                         }}
-                        onClick={() => setToggled(toggle => !toggle)}
+                        onClick={() => toggleChecked()}
                       >
                         toggle
                       </div>
