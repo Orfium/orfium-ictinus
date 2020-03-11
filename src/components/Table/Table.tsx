@@ -204,13 +204,14 @@ function Table<T extends object>({
                         css={{
                           padding: theme.spacing.sm,
                           marginLeft: theme.spacing.lg,
-                          width: 25,
                           overflow: 'hidden',
+                          width: 25,
+                          height: 25,
+                          borderRadius: 20,
+                          backgroundColor: '#f5f5f6',
                         }}
                         onClick={() => toggleChecked()}
-                      >
-                        toggle
-                      </div>
+                      />
                     </div>
                   </TableCell>
                 </TableRow>
