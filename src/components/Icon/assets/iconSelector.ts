@@ -1,9 +1,11 @@
 import AddIcon from './add.svg';
-import FatArrowDwwn from './fat-arrow-down.svg';
+import FatArrowDown from './fat-arrow-down.svg';
+import ArrowDownIcon from './dd-arrow.svg';
 
 const iconSelector = {
   add: AddIcon,
-  fatArrowDown: FatArrowDwwn,
+  fatArrowDown: FatArrowDown,
+  arrowDown: ArrowDownIcon,
 };
 
 export default iconSelector;
