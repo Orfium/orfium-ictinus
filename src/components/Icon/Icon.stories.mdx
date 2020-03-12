@@ -1,0 +1,99 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Icon from './Icon';
+import Stack from '../storyUtils/Stack';
+import PresentComponent from '../storyUtils/PresentComponent';
+
+<Meta title="Design System|Icon" component={Icon} />
+
+# Icon
+
+A universal Icon component to select and style the icons encapsulated in the design system.
+
+# Usage
+
+```js
+import { Icon } from 'orfium-design-system';
+
+<Icon name={'add'} color={'primary'} size={14} />;
+```
+
+# Props
+
+<Props of={Icon} />
+
+# Icons Gallery
+
+All the icons available for use.
+
+<Preview>
+  <Story name="Icons Gallery">
+    <Stack>
+      <PresentComponent name={'add'}>
+        <Icon name={'add'} />
+      </PresentComponent>
+      <PresentComponent name={'fatArrowDown'}>
+        <Icon name={'fatArrowDown'} />
+       </PresentComponent>
+      <PresentComponent name={'arrowDown'}>
+        <Icon name={'arrowDown'} />
+       </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
+
+# Icon with color
+
+Icon with color.
+
+<Preview>
+  <Story name="Icon with color">
+    <Stack>
+       <PresentComponent name={'primary'}>
+        <Icon name={'add'} color={'primary'} />
+       </PresentComponent>
+       <PresentComponent name={'secondary'}>
+         <Icon name={'add'} color={'secondary'} />
+       </PresentComponent>
+       <PresentComponent name={'success'}>
+         <Icon name={'add'} color={'success'} />
+       </PresentComponent>
+       <PresentComponent name={'error'}>
+         <Icon name={'add'} color={'error'} />
+       </PresentComponent>
+       <PresentComponent name={'info'}>
+         <Icon name={'add'} color={'info'} />
+       </PresentComponent>
+       <PresentComponent name={'warning'}>
+         <Icon name={'add'} color={'warning'} />
+       </PresentComponent>
+       <PresentComponent name={'branded1'}>
+         <Icon name={'add'} color={'branded1'} />
+       </PresentComponent>
+       <PresentComponent name={'branded2'}>
+         <Icon name={'add'} color={'branded2'} />
+       </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
+
+
+# Icon with size
+
+Icon with size.
+
+<Preview>
+  <Story name="Icon with size">
+    <Stack>
+       <PresentComponent name={'default'}>
+         <Icon name={'add'} />
+       </PresentComponent>
+       <PresentComponent name={'20'}>
+         <Icon name={'add'} size={20} />
+       </PresentComponent>
+       <PresentComponent name={'46'}>
+         <Icon name={'add'} size={46} />
+       </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>

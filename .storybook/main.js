@@ -2,6 +2,7 @@
 // const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
 const tsConfig = require('../tsconfig');
+const pathToInlineSvg = path.resolve(__dirname, '../src/components/Icon/assets');
 
 module.exports = {
   stories: [
@@ -25,6 +26,23 @@ module.exports = {
     // * output
 
     console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
+
+    // modify storybook's file-loader rule to avoid conflicts with svgr
+    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
+    fileLoaderRule.exclude = pathToInlineSvg;
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      include: pathToInlineSvg,
+      use: [
+        {
+          loader: '@svgr/webpack',
+          options: {
+            icon: true,
+          },
+        },
+      ],
+    });
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,

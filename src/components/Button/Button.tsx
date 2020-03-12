@@ -4,6 +4,7 @@ import React from 'react';
 import { buttonSpanStyle, buttonStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
+import { generateTestDataId } from 'utils/helpers';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -16,18 +17,27 @@ export type Props = {
   icon?: string | null;
 };
 
-const Button: React.FC<Props> = ({
+export type TestProps = {
+  dataTestId?: string;
+};
+
+const Button: React.FC<Props & TestProps> = ({
   size = 'md',
   type = 'primary',
   filled = true,
   icon = null,
   children,
+  dataTestId = '',
   ...rest
 }) => {
   const theme = useTheme();
 
   return (
-    <button css={buttonStyle({ type, filled, size, icon })(theme)} {...rest}>
+    <button
+      data-testid={generateTestDataId('button', dataTestId)}
+      css={buttonStyle({ type, filled, size, icon })(theme)}
+      {...rest}
+    >
       <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
         {icon && icon}
         {children}
