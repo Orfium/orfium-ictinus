@@ -26,5 +26,6 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "dist", "scripts", "src/**/*.stories.tsx"]
+  "exclude": ["node_modules", "build", "dist", "scripts", "src/**/*.stories.tsx"],
+  "files": ["globals.d.ts"]
 }

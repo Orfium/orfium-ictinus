@@ -37,3 +37,22 @@ export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (th
       return theme.palette.text.light;
   }
 };
+
+export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
+  switch (type) {
+    case 'primary':
+      return theme.palette.primary;
+    case 'secondary':
+      return theme.palette.secondary;
+    case 'success':
+      return theme.palette.success;
+    case 'error':
+      return theme.palette.error;
+    case 'info':
+      return theme.palette.info;
+    case 'warning':
+      return theme.palette.warning;
+    default:
+      return theme.palette.primary;
+  }
+};
