@@ -9,6 +9,7 @@ import useTheme from 'hooks/useTheme';
 import rem from 'polished/lib/helpers/rem';
 import { isComponentFunctionType } from 'utils/helpers';
 import useToggle from 'hooks/useToggle';
+import Icon from '../Icon';
 
 type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 type Cell<T> = {
@@ -196,13 +197,23 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
                           padding: theme.spacing.sm,
                           marginLeft: theme.spacing.lg,
                           overflow: 'hidden',
-                          width: 25,
-                          height: 25,
+                          width: 20,
+                          height: 20,
                           borderRadius: 20,
                           backgroundColor: '#f5f5f6',
+                          marginTop: rem(8),
                         }}
                         onClick={() => toggleChecked()}
-                      />
+                      >
+                        <div
+                          css={{
+                            transition: '0.3s ease-in-out',
+                            transform: `rotate(${checked ? '180' : '0'}deg)`,
+                          }}
+                        >
+                          <Icon name={'arrowDown'} size={15} />
+                        </div>
+                      </div>
                     </div>
                   </TableCell>
                 </TableRow>

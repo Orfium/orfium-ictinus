@@ -17,4 +17,7 @@ export const iconStyle = ({ color, size }: iconStyleProps) => (theme: Theme) => 
 
 export const iconContainerStyle = () => ({
   padding: rem(2),
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 });
