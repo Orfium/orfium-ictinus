@@ -8,7 +8,7 @@ import head from 'lodash/head';
 import useTheme from 'hooks/useTheme';
 import rem from 'polished/lib/helpers/rem';
 import { isComponentFunctionType } from 'utils/helpers';
-import useToggle from '../../hooks/useToggle';
+import useToggle from 'hooks/useToggle';
 
 type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 type Cell<T> = {
