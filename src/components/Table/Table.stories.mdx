@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
-import Table, { Custom } from './Table';
+import Table from './Table';
 import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System|Table" component={Table} />
@@ -32,16 +32,17 @@ Regular Table with label
       // type="nested-header"
       // fixedHeader
       onCheck
+      padded
       data={[
         {
           id: 1,
           cells: [
-            { content: () => <div>custom component</div> },
+            { content: 'title' },
             { content: 'firstname' },
-            { content: 'lastname' },
-            { content: 4.221 },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
           ],
-          expanded: () => <div>hey</div>,
+          // expanded: () => <div>hey</div>,
         },
         {
           id: 2,

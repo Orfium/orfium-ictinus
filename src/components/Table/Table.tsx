@@ -15,6 +15,7 @@ type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 type Cell<T> = {
   content: number | string | ContentComponent<T>;
   colSpan?: number;
+  type?: 'financial' | 'normal';
 };
 
 type Row<T> = {
@@ -31,10 +32,18 @@ type Props<T> = {
   columns: string[];
   fixedHeader?: boolean;
   type?: 'normal' | 'nested-header';
+  padded?: boolean;
   onCheck?: (data: Selection[]) => void;
 };
 
-function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck }: Props<T>) {
+function Table<T>({
+  data,
+  columns,
+  type = 'normal',
+  fixedHeader = false,
+  onCheck,
+  padded = false,
+}: Props<T>) {
   const theme = useTheme();
   const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
@@ -63,7 +72,8 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
       type: 'normal' | 'nested-header',
       onSelectionChangeExist: boolean,
       setSelectingIds: (data: (state: Selection[]) => Selection[]) => void,
-      selectingIds: Selection[]
+      selectingIds: Selection[],
+      padded: boolean
     ) => {
       let cellCounter = 0;
       let prevCellColSpan = 0;
@@ -71,7 +81,7 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
       return (
         <TableRow>
           {onSelectionChangeExist && (
-            <TableCell component={'th'} sticky={fixedHeader} width={30}>
+            <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
               <input
                 type="checkbox"
                 checked={selectingIds.indexOf(row.id) > -1}
@@ -85,7 +95,7 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
               />
             </TableCell>
           )}
-          {row.cells.map(({ content, colSpan }, index) => {
+          {row.cells.map(({ content, colSpan, type: cellType }, index) => {
             cellCounter = prevCellColSpan ? prevCellColSpan - 1 + index : index;
             prevCellColSpan = colSpan || prevCellColSpan ? prevCellColSpan + (colSpan || 0) : 0;
 
@@ -97,6 +107,8 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
                   columnsHasNumberArr && columnsHasNumberArr[cellCounter] ? 'right' : 'left'
                 }
                 colSpan={colSpan}
+                type={cellType}
+                padded={padded}
               >
                 {type === 'nested-header' && (
                   <div
@@ -134,7 +146,7 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
             ]}
           >
             {onCheck && (
-              <TableCell component={'th'} sticky={fixedHeader} width={30}>
+              <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
                 <input
                   type="checkbox"
                   checked={selectingIds.length > 0}
@@ -154,6 +166,7 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
                 component={'th'}
                 key={`${item}`}
                 sticky={fixedHeader}
+                padded={padded}
               >
                 {item}
               </TableCell>
@@ -170,10 +183,17 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
           return (
             <React.Fragment key={row.id}>
               {!expanded ? (
-                renderRowWithCells(row, type, Boolean(onCheck), onSelectionChange, selectingIds)
+                renderRowWithCells(
+                  row,
+                  type,
+                  Boolean(onCheck),
+                  onSelectionChange,
+                  selectingIds,
+                  padded
+                )
               ) : (
                 <TableRow nested>
-                  <TableCell colSpan={columnCount}>
+                  <TableCell colSpan={columnCount} padded={padded}>
                     <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
                       <table css={tableStyle()(theme)}>
                         <tbody>
@@ -182,7 +202,8 @@ function Table<T>({ data, columns, type = 'normal', fixedHeader = false, onCheck
                             type,
                             Boolean(onCheck),
                             onSelectionChange,
-                            selectingIds
+                            selectingIds,
+                            padded
                           )}
 
                           {checked && (

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import useTheme from '../../../../hooks/useTheme';
+import useTheme from 'hooks/useTheme';
 
 type Props = {
   textAlign?: 'left' | 'right';
@@ -9,6 +9,8 @@ type Props = {
   width?: number;
   sticky?: boolean;
   colSpan?: number;
+  type?: 'financial' | 'normal';
+  padded?: boolean;
 };
 
 const TableCell: React.FC<Props> = ({
@@ -18,6 +20,8 @@ const TableCell: React.FC<Props> = ({
   sticky = false,
   colSpan,
   children,
+  type = 'normal',
+  padded = false,
 }) => {
   const theme = useTheme();
   const Component = component;
@@ -29,8 +33,7 @@ const TableCell: React.FC<Props> = ({
         {
           position: 'relative',
           textAlign,
-          paddingTop: theme.spacing.xsm,
-          paddingBottom: theme.spacing.xsm,
+          padding: `${theme.spacing.xsm} ${padded ? theme.spacing.sm : 0}`,
           width,
         },
         component === 'th' && {
@@ -45,6 +48,9 @@ const TableCell: React.FC<Props> = ({
           zIndex: 2,
           position: 'sticky',
           background: '#fff',
+        },
+        type === 'financial' && {
+          borderLeft: `1px solid ${theme.palette.gray50}`,
         },
       ]}
     >
