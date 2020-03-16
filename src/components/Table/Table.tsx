@@ -36,6 +36,7 @@ type Props<T> = {
   padded?: boolean;
   onCheck?: (data: Selection[]) => void;
   topLeftText?: string;
+  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => any;
 };
 
 function Table<T>({
@@ -46,6 +47,7 @@ function Table<T>({
   onCheck,
   padded = false,
   topLeftText = '',
+  topRightArea,
 }: Props<T>) {
   const theme = useTheme();
   const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
@@ -153,7 +155,7 @@ function Table<T>({
                 />
               </TableCell>
             )}
-            <TableCell colSpan={columnCount - (onCheck ? 2 : 1)} padded={padded}>
+            <TableCell padded={padded}>
               {selectingIds.length > 0 ? (
                 <span>
                   <b>{selectingIds.length}</b> {pluralize('item', selectingIds.length)} selected
@@ -162,9 +164,15 @@ function Table<T>({
                 topLeftText
               )}
             </TableCell>
-            <TableCell textAlign={'right'} padded={padded}>
-              asdads
-            </TableCell>
+            {topRightArea && (
+              <TableCell
+                textAlign={'right'}
+                padded={padded}
+                colSpan={columnCount - (onCheck ? 2 : 1)}
+              >
+                {topRightArea(data, selectingIds)}
+              </TableCell>
+            )}
           </TableRow>
           <TableRow
             css={[
@@ -195,7 +203,7 @@ function Table<T>({
         </thead>
       )}
       <tbody>
-        {data.map((row, index) => {
+        {data.map(row => {
           const { expanded } = row;
           const ExpandedComponent = expanded ? expanded(row) : null;
           const [checked, toggleChecked] = useToggle(false);
