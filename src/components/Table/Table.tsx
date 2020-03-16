@@ -36,7 +36,7 @@ type Props<T> = {
   padded?: boolean;
   onCheck?: (data: Selection[]) => void;
   topLeftText?: string;
-  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => any;
+  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component;
 };
 
 function Table<T>({
