@@ -9,6 +9,7 @@ import useTheme from 'hooks/useTheme';
 import rem from 'polished/lib/helpers/rem';
 import { isComponentFunctionType } from 'utils/helpers';
 import useToggle from 'hooks/useToggle';
+import pluralize from 'pluralize';
 import Icon from '../Icon';
 
 type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
@@ -34,6 +35,7 @@ type Props<T> = {
   type?: 'normal' | 'nested-header';
   padded?: boolean;
   onCheck?: (data: Selection[]) => void;
+  topLeftText?: string;
 };
 
 function Table<T>({
@@ -43,6 +45,7 @@ function Table<T>({
   fixedHeader = false,
   onCheck,
   padded = false,
+  topLeftText = '',
 }: Props<T>) {
   const theme = useTheme();
   const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
@@ -134,17 +137,7 @@ function Table<T>({
     <table css={tableStyle()(theme)}>
       {type === 'normal' && (
         <thead>
-          <TableRow
-            css={[
-              {
-                paddingTop: theme.spacing.md,
-                paddingBottom: theme.spacing.md,
-                borderBottomWidth: rem(1),
-                borderBottomStyle: 'solid',
-                borderBottomColor: theme.palette.gray100,
-              },
-            ]}
-          >
+          <TableRow>
             {onCheck && (
               <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
                 <input
@@ -159,6 +152,33 @@ function Table<T>({
                   }}
                 />
               </TableCell>
+            )}
+            <TableCell colSpan={columnCount - (onCheck ? 2 : 1)} padded={padded}>
+              {selectingIds.length > 0 ? (
+                <span>
+                  <b>{selectingIds.length}</b> {pluralize('item', selectingIds.length)} selected
+                </span>
+              ) : (
+                topLeftText
+              )}
+            </TableCell>
+            <TableCell textAlign={'right'} padded={padded}>
+              asdads
+            </TableCell>
+          </TableRow>
+          <TableRow
+            css={[
+              {
+                paddingTop: theme.spacing.md,
+                paddingBottom: theme.spacing.md,
+                borderBottomWidth: rem(1),
+                borderBottomStyle: 'solid',
+                borderBottomColor: theme.palette.gray100,
+              },
+            ]}
+          >
+            {onCheck && (
+              <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded} />
             )}
             {columns.map((item, index) => (
               <TableCell
