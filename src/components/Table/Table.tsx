@@ -82,9 +82,10 @@ function Table<T>({
     ) => {
       let cellCounter = 0;
       let prevCellColSpan = 0;
+      const isRowSelected = selectingIds.indexOf(row.id) !== -1;
 
       return (
-        <TableRow>
+        <TableRow selected={isRowSelected}>
           {onSelectionChangeExist && (
             <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
               <input
@@ -207,6 +208,7 @@ function Table<T>({
           const { expanded } = row;
           const ExpandedComponent = expanded ? expanded(row) : null;
           const [checked, toggleChecked] = useToggle(false);
+          const isRowSelected = selectingIds.indexOf(row.id) !== -1;
 
           return (
             <React.Fragment key={row.id}>
@@ -220,7 +222,7 @@ function Table<T>({
                   padded
                 )
               ) : (
-                <TableRow nested>
+                <TableRow nested selected={isRowSelected}>
                   <TableCell colSpan={columnCount} padded={padded}>
                     <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
                       <table css={tableStyle()(theme)}>
@@ -249,18 +251,19 @@ function Table<T>({
                           width: 20,
                           height: 20,
                           borderRadius: 20,
-                          backgroundColor: '#f5f5f6',
+                          backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
                           marginTop: rem(8),
+                          transition: '0.2s all ease-in-out',
                         }}
                         onClick={() => toggleChecked()}
                       >
                         <div
                           css={{
-                            transition: '0.3s ease-in-out',
+                            transition: '0.3s all ease-in-out',
                             transform: `rotate(${checked ? '180' : '0'}deg)`,
                           }}
                         >
-                          <Icon name={'arrowDown'} size={15} />
+                          <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
                         </div>
                       </div>
                     </div>
