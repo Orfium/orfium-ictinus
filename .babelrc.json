@@ -9,5 +9,14 @@
     "@babel/preset-react",
     "@babel/preset-typescript",
     "@emotion/babel-preset-css-prop"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [".ts", ".tsx", ".js", ".jsx"],
+        "root": ["./src"]
+      }
+    ]
   ]
 }
