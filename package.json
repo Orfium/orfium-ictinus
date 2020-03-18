@@ -57,7 +57,6 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "install": "yarn build",
     "start": "start-storybook -p 6006",
     "prebuild": "rm -rf dist",
     "prepare": "yarn build",
