@@ -67,7 +67,7 @@
     "install": "yarn build",
     "start": "start-storybook -p 6006",
     "prebuild": "rm -rf dist",
-    "build": "yarn run lint && yarn build:lib && yarn build:types && yarn build:svg",
+    "build": "yarn build:lib && yarn build:types && yarn build:svg",
     "build:lib": "cross-env NODE_ENV=production BABEL_ENV=production babel src --extensions '.ts,.tsx' --out-dir ./dist --ignore '**/*.stories.tsx'",
     "build:types": "tsc --emitDeclarationOnly",
     "build:svg": "cpx \"./src/**/*.svg\" ./dist",
