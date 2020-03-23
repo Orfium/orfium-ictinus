@@ -11,6 +11,9 @@ export const lightPalette: Palette = {
   primary: '',
   secondary: '',
 
+  brand1: 'orange',
+  brand2: 'yellow',
+
   ...grayPalette,
 
   //rest
@@ -32,6 +35,9 @@ export const darkPalette: Palette = {
   primary: '',
   secondary: '',
 
+  brand1: 'orange',
+  brand2: 'yellow',
+
   ...grayPalette,
 
   //rest
@@ -52,6 +58,9 @@ export type Palette = {
   // Primary Palette
   primary: string;
   secondary: string;
+
+  brand1: string;
+  brand2: string;
 
   gray: string;
   gray50: string;

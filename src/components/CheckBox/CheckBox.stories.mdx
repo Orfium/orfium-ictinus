@@ -1,0 +1,55 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import CheckBox from './CheckBox';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System|CheckBox" component={CheckBox} />
+
+# CheckBox
+
+A universal CheckBox component that the input component for any forms.
+
+# Usage
+
+```js
+import { CheckBox } from 'orfium-design-system';
+
+<CheckBox />;
+```
+
+# Props
+
+<Props of={CheckBox} />
+
+# CheckBox without
+
+Regular CheckBox without
+
+<Preview>
+  <Story name="CheckBox without">
+    <Stack>
+      <CheckBox checked={true} />
+      <CheckBox checked={false} />
+      <CheckBox checked={true} multi />
+      <CheckBox checked={false} multi />
+      <CheckBox checked={false} multi disabled />
+    </Stack>
+  </Story>
+</Preview>
+
+# CheckBox with Label
+
+Regular CheckBox with label
+
+<Preview>
+  <Story name="CheckBox with Label">
+    <Stack>
+      <CheckBox checked={false} label={'Not Checked Single'} />
+      <CheckBox checked label={'Checked Single'} />
+      <CheckBox checked={true} label={'Disabled Single'} disabled />
+      <CheckBox checked={true} multi label={'Checked Multi'} />
+      <CheckBox checked={false} multi label={'Not Checked Multi'} />
+      <CheckBox checked={true} multi label={'Disabled Checked Multi'} disabled />
+    </Stack>
+  </Story>
+</Preview>
