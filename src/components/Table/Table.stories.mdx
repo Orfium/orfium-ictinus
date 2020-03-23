@@ -7,7 +7,7 @@ import Stack from '../storyUtils/Stack';
 
 # Table
 
-A universal Table component.
+A universal Table component that applies Orfium basic usages. Check inline data structure for more.
 
 # Usage
 
@@ -112,14 +112,13 @@ Regular Table with simple rows
 
 # Expandable Table
 
-Table with expandable rows
+Table with expandable rows and nested header
 
 <Preview>
   <Story name="Table with expandable rows">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
       type="nested-header"
-      // fixedHeader
       onCheck
       padded
       topLeftText={'topLeftText'}
@@ -156,7 +155,7 @@ Table with expandable rows
 
 # Financial Table
 
-Financial Table
+Financial Table that has lines at the end as it requires a financial Orfium table
 
 <Preview>
   <Story name="Financial Table">
@@ -203,6 +202,110 @@ Financial Table
           cells: [
             { content: 'title' },
             { colSpan: 2, content: 'Sum' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Fixed Header Table
+
+Fixed Header Table
+
+<Preview>
+  <Story name="Fixed Header Table">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      onCheck
+      padded
+      fixedHeader
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 3,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 12,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 13,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 22,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 23,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 32,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 33,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
             { type: 'financial', content: 4.221 },
           ],
         },
