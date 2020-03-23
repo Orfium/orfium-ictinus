@@ -1,13 +1,17 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "shippedProposals": true
-      }
-    ],
+    "@babel/preset-env",
     "@babel/preset-react",
     "@babel/preset-typescript",
     "@emotion/babel-preset-css-prop"
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "extensions": [".ts", ".tsx", ".js", ".jsx"],
+        "root": ["./src"]
+      }
+    ]
   ]
 }
