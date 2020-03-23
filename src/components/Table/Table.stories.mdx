@@ -21,16 +21,14 @@ import { Table } from 'orfium-design-system';
 
 <Props of={Table} />
 
-# Regular Table with label
+# Regular Table
 
-Regular Table with label
+Regular Table with simple rows
 
 <Preview>
-  <Story name="Regular Table with label">
+  <Story name="Regular Table with simple rows">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
-      // type="nested-header"
-      // fixedHeader
       onCheck
       padded
       topLeftText={'topLeftText'}
@@ -45,10 +43,9 @@ Regular Table with label
           cells: [
             { content: 'title' },
             { content: 'firstname' },
-            { type: 'financial', content: 'lastname' },
-            { type: 'financial', content: 4.221 },
+            { content: 'lastname' },
+            { content: 4.221 },
           ],
-          expanded: () => <div>hey</div>,
         },
         {
           id: 2,
@@ -101,14 +98,112 @@ Regular Table with label
           ],
         },
         {
-          cells: [{ content: 'title2' }, { colSpan: 2, content: 'Sum' }, { content: 4.221 }],
-        },
-        {
           cells: [
             { content: 'title' },
             { content: 'firstname' },
             { content: 'lastname' },
             { content: 4.221 },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Expandable Table
+
+Table with expandable rows
+
+<Preview>
+  <Story name="Table with expandable rows">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      // type="nested-header"
+      // fixedHeader
+      onCheck
+      padded
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+          expanded: () => <div>Hey i am an expandable content</div>,
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+          expanded: () => <div>Hey i am an expandable content</div>,
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Financial Table
+
+Financial Table
+
+<Preview>
+  <Story name="Financial Table">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      onCheck
+      padded
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 3,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 4,
+          cells: [
+            { content: 'title' },
+            { colSpan: 2, content: 'Sum' },
+            { type: 'financial', content: 4.221 },
           ],
         },
       ]}

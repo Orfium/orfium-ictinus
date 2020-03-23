@@ -223,7 +223,7 @@ function Table<T>({
                 )
               ) : (
                 <TableRow nested selected={isRowSelected}>
-                  <TableCell colSpan={columnCount} padded={padded}>
+                  <TableCell colSpan={columnCount} padded={false}>
                     <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
                       <table css={tableStyle()(theme)}>
                         <tbody>
