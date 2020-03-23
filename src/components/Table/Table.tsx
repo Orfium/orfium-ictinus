@@ -138,7 +138,7 @@ function Table<T>({
 
   return (
     <table css={tableStyle()(theme)}>
-      {type === 'normal' && (
+      {onCheck && topRightArea && (
         <thead>
           <TableRow>
             {onCheck && (
@@ -175,32 +175,34 @@ function Table<T>({
               </TableCell>
             )}
           </TableRow>
-          <TableRow
-            css={[
-              {
-                paddingTop: theme.spacing.md,
-                paddingBottom: theme.spacing.md,
-                borderBottomWidth: rem(1),
-                borderBottomStyle: 'solid',
-                borderBottomColor: theme.palette.gray100,
-              },
-            ]}
-          >
-            {onCheck && (
-              <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded} />
-            )}
-            {columns.map((item, index) => (
-              <TableCell
-                textAlign={columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'}
-                component={'th'}
-                key={`${item}`}
-                sticky={fixedHeader}
-                padded={padded}
-              >
-                {item}
-              </TableCell>
-            ))}
-          </TableRow>
+          {type === 'normal' && (
+            <TableRow
+              css={[
+                {
+                  paddingTop: theme.spacing.md,
+                  paddingBottom: theme.spacing.md,
+                  borderBottomWidth: rem(1),
+                  borderBottomStyle: 'solid',
+                  borderBottomColor: theme.palette.gray100,
+                },
+              ]}
+            >
+              {onCheck && (
+                <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded} />
+              )}
+              {columns.map((item, index) => (
+                <TableCell
+                  textAlign={columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'}
+                  component={'th'}
+                  key={`${item}`}
+                  sticky={fixedHeader}
+                  padded={padded}
+                >
+                  {item}
+                </TableCell>
+              ))}
+            </TableRow>
+          )}
         </thead>
       )}
       <tbody>
