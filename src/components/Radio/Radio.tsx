@@ -1,8 +1,8 @@
-import React, { ReactEventHandler } from 'react';
+import * as React from 'react';
 // import PropTypes from 'prop-types';
 
 export type Props = {
-  onChange: ReactEventHandler;
+  onChange: React.ReactEventHandler;
 };
 
 function Radio(props: Props) {
