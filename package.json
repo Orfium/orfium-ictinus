@@ -50,6 +50,7 @@
     "react-docgen-typescript-loader": "^3.6.0",
     "react-select": "^3.0.8",
     "react-testing-library": "^8.0.1",
+    "rimraf": "^3.0.2",
     "storybook-addon-react-docgen": "^1.2.28",
     "ts-jest": "^25.1.0",
     "ts-loader": "^6.2.1",
@@ -66,7 +67,7 @@
   "scripts": {
     "install": "yarn build",
     "start": "start-storybook -p 6006",
-    "prebuild": "rm -rf dist",
+    "prebuild": "rimraf dist",
     "build": "yarn build:lib && yarn build:types && yarn build:svg",
     "build:lib": "cross-env NODE_ENV=production BABEL_ENV=production babel src --extensions '.ts,.tsx' --out-dir ./dist --ignore '**/*.stories.tsx'",
     "build:types": "tsc --emitDeclarationOnly",
