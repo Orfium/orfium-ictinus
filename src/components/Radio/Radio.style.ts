@@ -1,6 +1,10 @@
 import { css } from '@emotion/core';
 import { Props } from './Radio';
 
+const focusedRadio = css`
+  box-shadow: 0px 0px 0px 11px rgba(0, 0, 0, 0.04);
+`;
+
 export const inputStyles = css`
   top: 0;
   left: 0;
@@ -18,11 +22,7 @@ export const inputStyles = css`
   }
 `;
 
-const focusedRadio = css`
-  box-shadow: 0px 0px 0px 11px rgba(0, 0, 0, 0.04);
-`;
-
-export const radioWrapperStyles = (focused: boolean, disabled: boolean) => css`
+export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) => css`
   position: relative;
   border-radius: 50%;
   width: 28px;
@@ -55,7 +55,7 @@ export const customRadioStyles = (props: Props) => {
   `;
 };
 
-export const wrapperStyles = (__focused: boolean, disabled: boolean) => css`
+export const wrapperStyles = (disabled: boolean) => css`
   position: relative;
 
   border-radius: 50%;

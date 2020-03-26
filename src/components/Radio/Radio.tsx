@@ -2,7 +2,12 @@
 import { jsx } from '@emotion/core';
 import { ReactEventHandler, SyntheticEvent, useState } from 'react';
 // import PropTypes from 'prop-types';
-import { customRadioStyles, inputStyles, radioWrapperStyles, wrapperStyles } from './Radio.style';
+import {
+  customRadioStyles,
+  customRadioWrapperStyles,
+  inputStyles,
+  wrapperStyles,
+} from './Radio.style';
 
 export type Props = {
   checked: boolean;
@@ -36,7 +41,7 @@ function Radio(props: Props) {
   }
 
   return (
-    <span css={wrapperStyles(focused, disabled)}>
+    <span css={wrapperStyles(disabled)}>
       <input
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -51,7 +56,7 @@ function Radio(props: Props) {
         required={required}
         checked={checked}
       />
-      <span css={radioWrapperStyles(focused, disabled)}>
+      <span css={customRadioWrapperStyles(focused, disabled)}>
         <span css={customRadioStyles(props)} />
       </span>
     </span>
@@ -63,7 +68,7 @@ Radio.propTypes = {};
 // export default Radio;
 
 export default function Group() {
-  const [selectedValue, setSelectedValue] = useState('a');
+  const [selectedValue, setSelectedValue] = useState('b');
 
   const handleChange = (event: SyntheticEvent<HTMLInputElement>) => {
     setSelectedValue((event.target as HTMLInputElement).value);
