@@ -34,7 +34,6 @@ const RenderRowWithCells = React.memo(() => {
   const theme = useTheme();
   let cellCounter = 0;
   let prevCellColSpan = 0;
-  console.log('render cell', row.id);
 
   return (
     <TableRow selected={isRowSelected}>
@@ -80,7 +79,6 @@ const RenderRowOrNestedRow = ({ row }) => {
   const { expanded } = row;
   const ExpandedComponent = expanded ? expanded(row) : null;
   const [checked, toggleChecked] = useToggle(false);
-  console.log('row render', row.id);
 
   return (
     <TableRowContext.Consumer>
