@@ -179,12 +179,12 @@ function Table<T>({
               key={row.id}
               value={{
                 row,
-                columnsHasNumberArr, // for context
-                onSelectionChangeExist: Boolean(onCheck), // for context
-                padded, // for context
-                columns, // for context
-                fixedHeader, // for context
-                tChange, // for context
+                columnsHasNumberArr,
+                onSelectionChangeExist: Boolean(onCheck),
+                padded,
+                columns,
+                fixedHeader,
+                tChange,
                 type,
                 columnCount,
                 isRowSelected,
