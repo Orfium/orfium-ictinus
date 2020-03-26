@@ -29,7 +29,6 @@ Regular Table with simple rows
   <Story name="Regular Table with simple rows">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
-      onCheck={console.log}
       padded
       topLeftText={'topLeftText'}
       topRightArea={() => (
@@ -119,7 +118,7 @@ Table with expandable rows and nested header
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
       type="nested-header"
-      onCheck
+      onCheck={console.log}
       padded
       topLeftText={'topLeftText'}
       topRightArea={() => (
@@ -161,7 +160,7 @@ Financial Table that has lines at the end as it requires a financial Orfium tabl
   <Story name="Financial Table">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
-      onCheck
+      onCheck={console.log}
       padded
       topLeftText={'topLeftText'}
       topRightArea={() => (
@@ -218,7 +217,7 @@ Fixed Header Table
   <Story name="Fixed Header Table">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
-      onCheck
+      onCheck={console.log}
       padded
       fixedHeader
       topLeftText={'topLeftText'}

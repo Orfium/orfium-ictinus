@@ -1,34 +1,33 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState, useCallback } from 'react';
+import React, { useCallback, useState } from 'react';
 import TableRow from './components/TableRow';
 import TableCell from './components/TableCell';
 import { tableStyle } from './Table.style';
 import head from 'lodash/head';
 import useTheme from 'hooks/useTheme';
 import rem from 'polished/lib/helpers/rem';
-import { isComponentFunctionType } from 'utils/helpers';
-import useToggle from 'hooks/useToggle';
 import pluralize from 'pluralize';
-import Icon from '../Icon';
+import RenderRowOrNestedRow from './components/RenderRowOrNestedRow';
+import { TableRowContext } from './TableRowContext';
 
-type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
-type Cell<T> = {
+export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
+export type Cell<T> = {
   content: number | string | ContentComponent<T>;
   colSpan?: number;
   type?: 'financial' | 'normal';
 };
 
-type Row<T> = {
+export type Row<T> = {
   id: string | number;
   cells: Cell<T>[];
   expanded?: (data: Row<T>) => React.Component;
   rowSpan?: number;
 };
 
-type Selection = string | number;
+export type Selection = string | number;
 
-type TableType = 'normal' | 'nested-header';
+export type TableType = 'normal' | 'nested-header';
 
 type Props<T> = {
   /** The data for the table that needs to display. */
@@ -63,93 +62,43 @@ function Table<T>({
   const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
-  const onSelectionChange = (data: Selection[]) => {
-    setSelectingIds(data);
+  const onSelectionChange = (selections: Selection[]) => {
+    setSelectingIds(selections);
 
     if (onCheck) {
-      onCheck(data);
+      onCheck(selections);
     }
 
     return data;
   };
 
-  const columnsHasNumberArr = head(
-    data.map(({ cells }) =>
-      cells.map(({ content }) => {
-        return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
-      })
-    )
+  const onSelectionAdd = useCallback(
+    (rowId: Selection) => {
+      const selections =
+        selectingIds.indexOf(rowId) === -1
+          ? [...selectingIds, rowId]
+          : selectingIds.filter(item => item !== rowId);
+
+      return onSelectionChange(selections);
+    },
+    [selectingIds]
   );
 
-  const renderRowWithCells = useCallback(
-    (
-      row: Row<T>,
-      type: TableType,
-      onSelectionChangeExist: boolean,
-      onSelectionChange: (selections: Selection[]) => void,
-      selectingIds: Selection[],
-      padded: boolean
-    ) => {
-      let cellCounter = 0;
-      let prevCellColSpan = 0;
-      const isRowSelected = selectingIds.indexOf(row.id) !== -1;
-
-      return (
-        <TableRow selected={isRowSelected}>
-          {onSelectionChangeExist && (
-            <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
-              <input
-                type="checkbox"
-                checked={selectingIds.indexOf(row.id) > -1}
-                onClick={() => {
-                  const selections =
-                    selectingIds.indexOf(row.id) === -1
-                      ? [...selectingIds, row.id]
-                      : selectingIds.filter(item => item !== row.id);
-
-                  onSelectionChange(selections);
-                }}
-              />
-            </TableCell>
-          )}
-          {row.cells.map(({ content, colSpan, type: cellType }, index) => {
-            cellCounter = prevCellColSpan ? prevCellColSpan - 1 + index : index;
-            prevCellColSpan = colSpan || prevCellColSpan ? prevCellColSpan + (colSpan || 0) : 0;
-
-            return (
-              <TableCell
-                // eslint-disable-next-line react/no-array-index-key
-                key={`${row.id}-${index}`}
-                textAlign={
-                  columnsHasNumberArr && columnsHasNumberArr[cellCounter] ? 'right' : 'left'
-                }
-                colSpan={colSpan}
-                type={cellType}
-                padded={padded}
-              >
-                {type === 'nested-header' && (
-                  <div
-                    css={{
-                      color: theme.palette.gray100,
-                      fontSize: theme.typography.fontSizes['14'],
-                    }}
-                  >
-                    {columns[cellCounter]}
-                  </div>
-                )}
-                {isComponentFunctionType(content) ? content({ content, colSpan }) : content}
-              </TableCell>
-            );
-          })}
-        </TableRow>
-      );
-    },
+  const columnsHasNumberArr = React.useMemo(
+    () =>
+      head(
+        data.map(({ cells }) =>
+          cells.map(({ content }) => {
+            return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
+          })
+        )
+      ),
     []
   );
 
   return (
     <table css={tableStyle()(theme)}>
-      {onCheck && topRightArea && (
+      {(onCheck || topRightArea || type === 'normal') && (
         <thead>
           <TableRow>
             {onCheck && (
@@ -218,77 +167,38 @@ function Table<T>({
       )}
       <tbody>
         {data.map(row => {
-          const { expanded } = row;
-          const ExpandedComponent = expanded ? expanded(row) : null;
-          const [checked, toggleChecked] = useToggle(false);
-          const isRowSelected = selectingIds.indexOf(row.id) !== -1;
+          const isRowSelected = React.useMemo(() => selectingIds.indexOf(row.id) !== -1, [
+            selectingIds,
+          ]);
+          const tChange = useCallback(() => {
+            onSelectionAdd(row.id);
+          }, [row.id]);
 
           return (
-            <React.Fragment key={row.id}>
-              {!expanded ? (
-                renderRowWithCells(
-                  row,
-                  type,
-                  Boolean(onCheck),
-                  onSelectionChange,
-                  selectingIds,
-                  padded
-                )
-              ) : (
-                <TableRow nested selected={isRowSelected}>
-                  <TableCell colSpan={columnCount} padded={false}>
-                    <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
-                      <table css={tableStyle()(theme)}>
-                        <tbody>
-                          {renderRowWithCells(
-                            row,
-                            type,
-                            Boolean(onCheck),
-                            onSelectionChange,
-                            selectingIds,
-                            padded
-                          )}
-
-                          {checked && (
-                            <TableRow nested>
-                              <TableCell colSpan={columnCount}>{ExpandedComponent}</TableCell>
-                            </TableRow>
-                          )}
-                        </tbody>
-                      </table>
-                      <div
-                        css={{
-                          padding: theme.spacing.sm,
-                          marginLeft: theme.spacing.lg,
-                          overflow: 'hidden',
-                          width: 20,
-                          height: 20,
-                          borderRadius: 20,
-                          backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
-                          marginTop: rem(8),
-                          transition: '0.2s all ease-in-out',
-                        }}
-                        onClick={() => toggleChecked()}
-                      >
-                        <div
-                          css={{
-                            transition: '0.3s all ease-in-out',
-                            transform: `rotate(${checked ? '180' : '0'}deg)`,
-                          }}
-                        >
-                          <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
-                        </div>
-                      </div>
-                    </div>
-                  </TableCell>
-                </TableRow>
-              )}
-            </React.Fragment>
+            <TableRowContext.Provider
+              key={row.id}
+              value={{
+                row,
+                columnsHasNumberArr, // for context
+                onSelectionChangeExist: Boolean(onCheck), // for context
+                padded, // for context
+                columns, // for context
+                fixedHeader, // for context
+                tChange, // for context
+                type,
+                columnCount,
+                isRowSelected,
+              }}
+            >
+              <RenderRowOrNestedRow {...{ row }} />
+            </TableRowContext.Provider>
           );
         })}
       </tbody>
     </table>
   );
 }
+
+Table.whyDidYouRender = true;
 
 export default Table;
