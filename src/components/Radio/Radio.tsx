@@ -40,6 +40,7 @@ function Radio(props: Props) {
       <input
         onFocus={handleFocus}
         onBlur={handleBlur}
+        onMouseLeave={handleBlur}
         type={'radio'}
         onChange={onChange}
         css={inputStyles}
