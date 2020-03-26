@@ -28,6 +28,8 @@ type Row<T> = {
 
 type Selection = string | number;
 
+type TableType = 'normal' | 'nested-header';
+
 type Props<T> = {
   /** The data for the table that needs to display. */
   data: Row<T>[];
@@ -36,7 +38,7 @@ type Props<T> = {
   /** Boolean defining if the header is fixed or not. */
   fixedHeader?: boolean;
   /** Type of the table which determine the headers display. */
-  type?: 'normal' | 'nested-header';
+  type?: TableType;
   /** Boolean defining the padding all over the table cells and rows. */
   padded?: boolean;
   /** Function that once provided on each check will return the selection. */
@@ -82,7 +84,7 @@ function Table<T>({
   const renderRowWithCells = useCallback(
     (
       row: Row<T>,
-      type: 'normal' | 'nested-header',
+      type: TableType,
       onSelectionChangeExist: boolean,
       setSelectingIds: (data: (state: Selection[]) => Selection[]) => void,
       selectingIds: Selection[],
