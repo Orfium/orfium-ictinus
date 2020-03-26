@@ -3,41 +3,56 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { wrapperStyle, checkboxStyle, labelStyle, checkboxWrapperStyle } from './CheckBox.style';
 import useTheme from 'hooks/useTheme';
-import Icon from 'components/Icon';
 import { useState } from 'react';
+import { generateUniqueID } from 'utils/helpers';
+import { ChangeEvent } from 'react';
 
 export type Props = {
   /** The label of the checkbox. */
   label?: string;
-  /** Boolean defining if the checkbox is checked. */
+  /** Boolean defining if the checkbox is checked. Defaults to false */
   checked?: boolean;
-  /** Callback function for onClick. */
-  onClick?(): void;
-  /** Boolean defining if the checkbox is checked. */
+  /** Callback function for onClick. Returns the new value and the change event. */
+  onClick?(val: boolean, e: ChangeEvent): void;
+  /** Boolean defining if the checkbox is checked. Defaults to false */
   disabled?: boolean;
-  /** Boolean defining if the checkbox is checked. */
+  /** Boolean defining if the checkbox is checked. Defaults to false */
   multi?: boolean;
 };
 
-const CheckBox: React.FC<Props> = ({ label, checked, onClick, disabled, multi }) => {
-  const [hovered, setHovered] = useState(false);
+const CheckBox: React.FC<Props> = ({
+  label,
+  checked = false,
+  onClick,
+  disabled = false,
+  multi = false,
+}) => {
+  const [isChecked, setIsChecked] = useState(checked);
   const theme = useTheme();
-  const selectedIconName = multi ? 'minus' : 'check';
+  const id = generateUniqueID();
+
+  const handleInputChange = (event: ChangeEvent) => {
+    const newChecked = !isChecked;
+
+    setIsChecked(newChecked);
+
+    if (!disabled && onClick) {
+      onClick(newChecked, event);
+    }
+  };
 
   return (
     <span css={wrapperStyle({ disabled })(theme)}>
-      <span css={checkboxWrapperStyle(hovered)(theme)}>
-        <button
+      <span css={checkboxWrapperStyle()(theme)}>
+        <input
           css={checkboxStyle({ multi, checked })(theme)}
-          onClick={onClick && onClick}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
+          id={`styled-checkbox-${id}`}
+          type="checkbox"
+          onChange={handleInputChange}
           disabled={disabled}
-          role="checkbox"
-          aria-checked={checked}
-        >
-          <div>{checked && <Icon name={selectedIconName} color={'white'} />}</div>
-        </button>
+          checked={isChecked}
+        />
+        <label htmlFor={`styled-checkbox-${id}`} />
       </span>
       {label && <span css={labelStyle()(theme)}>{label}</span>}
     </span>
