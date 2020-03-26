@@ -29,13 +29,21 @@ type Row<T> = {
 type Selection = string | number;
 
 type Props<T> = {
+  /** The data for the table that needs to display. */
   data: Row<T>[];
+  /** An array of titles to define columns. */
   columns: string[];
+  /** Boolean defining if the header is fixed or not. */
   fixedHeader?: boolean;
+  /** Type of the table which determine the headers display. */
   type?: 'normal' | 'nested-header';
+  /** Boolean defining the padding all over the table cells and rows. */
   padded?: boolean;
+  /** Function that once provided on each check will return the selection. */
   onCheck?: (data: Selection[]) => void;
+  /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string;
+  /** Top right area to define a custom component for buttons or other usage. */
   topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component;
 };
 
