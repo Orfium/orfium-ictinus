@@ -172,7 +172,7 @@ function Table<T>({
           ]);
           const tChange = useCallback(() => {
             onSelectionAdd(row.id);
-          }, [row.id]);
+          }, [row.id, selectingIds]);
 
           return (
             <TableRowContext.Provider
