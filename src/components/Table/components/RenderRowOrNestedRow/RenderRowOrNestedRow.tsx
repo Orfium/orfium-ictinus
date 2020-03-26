@@ -75,62 +75,59 @@ const RenderRowWithCells = React.memo(() => {
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
 const RenderRowOrNestedRow = ({ row }) => {
+  const { isRowSelected, columnCount } = useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;
   const ExpandedComponent = expanded ? expanded(row) : null;
   const [checked, toggleChecked] = useToggle(false);
 
   return (
-    <TableRowContext.Consumer>
-      {({ isRowSelected, columnCount }) => (
-        <React.Fragment>
-          {!expanded ? (
-            <RenderRowWithCells {...{}} />
-          ) : (
-            <TableRow nested selected={isRowSelected}>
-              <TableCell colSpan={columnCount} padded={false}>
-                <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
-                  <table css={tableStyle()(theme)}>
-                    <tbody>
-                      <RenderRowWithCells />
+    <React.Fragment>
+      {!expanded ? (
+        <RenderRowWithCells {...{}} />
+      ) : (
+        <TableRow nested selected={isRowSelected}>
+          <TableCell colSpan={columnCount} padded={false}>
+            <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
+              <table css={tableStyle()(theme)}>
+                <tbody>
+                  <RenderRowWithCells />
 
-                      {checked && (
-                        <TableRow nested>
-                          <TableCell colSpan={columnCount}>{ExpandedComponent}</TableCell>
-                        </TableRow>
-                      )}
-                    </tbody>
-                  </table>
-                  <div
-                    css={{
-                      padding: theme.spacing.sm,
-                      marginLeft: theme.spacing.lg,
-                      overflow: 'hidden',
-                      width: 20,
-                      height: 20,
-                      borderRadius: 20,
-                      backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
-                      marginTop: rem(8),
-                      transition: '0.2s all ease-in-out',
-                    }}
-                    onClick={() => toggleChecked()}
-                  >
-                    <div
-                      css={{
-                        transition: '0.3s all ease-in-out',
-                        transform: `rotate(${checked ? '180' : '0'}deg)`,
-                      }}
-                    >
-                      <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
-                    </div>
-                  </div>
+                  {checked && (
+                    <TableRow nested>
+                      <TableCell colSpan={columnCount}>{ExpandedComponent}</TableCell>
+                    </TableRow>
+                  )}
+                </tbody>
+              </table>
+              <div
+                css={{
+                  padding: theme.spacing.sm,
+                  marginLeft: theme.spacing.lg,
+                  overflow: 'hidden',
+                  width: 20,
+                  height: 20,
+                  borderRadius: 20,
+                  backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
+                  marginTop: rem(8),
+                  transition: '0.2s all ease-in-out',
+                }}
+                onClick={() => toggleChecked()}
+              >
+                <div
+                  css={{
+                    transition: '0.3s all ease-in-out',
+                    transform: `rotate(${checked ? '180' : '0'}deg)`,
+                  }}
+                >
+                  <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
                 </div>
-              </TableCell>
-            </TableRow>
-          )}
-        </React.Fragment>
+              </div>
+            </div>
+          </TableCell>
+        </TableRow>
       )}
-    </TableRowContext.Consumer>
+    </React.Fragment>
   );
 };
 
