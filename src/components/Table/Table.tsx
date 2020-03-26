@@ -63,11 +63,11 @@ function Table<T>({
   const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
-  const onSelectionChange = (data: (state: Selection[]) => Selection[]) => {
+  const onSelectionChange = (data: Selection[]) => {
     setSelectingIds(data);
 
     if (onCheck) {
-      onCheck(selectingIds);
+      onCheck(data);
     }
 
     return data;
@@ -86,7 +86,7 @@ function Table<T>({
       row: Row<T>,
       type: TableType,
       onSelectionChangeExist: boolean,
-      setSelectingIds: (data: (state: Selection[]) => Selection[]) => void,
+      onSelectionChange: (selections: Selection[]) => void,
       selectingIds: Selection[],
       padded: boolean
     ) => {
@@ -101,13 +101,14 @@ function Table<T>({
               <input
                 type="checkbox"
                 checked={selectingIds.indexOf(row.id) > -1}
-                onClick={() =>
-                  setSelectingIds(state =>
+                onClick={() => {
+                  const selections =
                     selectingIds.indexOf(row.id) === -1
-                      ? [...state, row.id]
-                      : state.filter(item => item !== row.id)
-                  )
-                }
+                      ? [...selectingIds, row.id]
+                      : selectingIds.filter(item => item !== row.id);
+
+                  onSelectionChange(selections);
+                }}
               />
             </TableCell>
           )}
