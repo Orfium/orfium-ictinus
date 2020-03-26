@@ -5,14 +5,6 @@ import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
-import whyDidYouRender from '@welldone-software/why-did-you-render';
-
-console.log('why did you render loaded');
-whyDidYouRender(React, {
-  onlyLogs: true,
-  titleColor: 'green',
-  diffNameColor: 'aqua',
-});
 
 const viewPorts = [
   {
