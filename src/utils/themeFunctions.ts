@@ -58,7 +58,7 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
     case 'branded2':
       return theme.palette.brand2;
     case 'white':
-      return theme.palette.light;
+      return theme.palette.white;
     default:
       return theme.palette.primary;
   }

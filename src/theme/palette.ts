@@ -23,6 +23,8 @@ export const lightPalette: Palette = {
   info: '#18AED2',
   light: '#FFFFFF',
 
+  white: '#FFFFFF',
+
   text: {
     primary: grayPalette.gray300,
     secondary: grayPalette.gray200,
@@ -46,6 +48,8 @@ export const darkPalette: Palette = {
   warning: '#F5781B',
   info: '#18AED2',
   light: '#FFFFFF',
+
+  white: '#FFFFFF',
 
   text: {
     primary: grayPalette.gray300,
@@ -73,6 +77,8 @@ export type Palette = {
   warning: string;
   info: string;
   light: string;
+
+  white: string;
 
   text: {
     primary: string;
