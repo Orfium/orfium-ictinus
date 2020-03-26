@@ -73,7 +73,6 @@ const RenderRowWithCells = React.memo(() => {
     </TableRow>
   );
 });
-RenderRowWithCells.whyDidYouRender = true;
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
 const RenderRowOrNestedRow = ({ row }) => {
@@ -137,7 +136,6 @@ const RenderRowOrNestedRow = ({ row }) => {
   );
 };
 
-RenderRowOrNestedRow.whyDidYouRender = true;
 RenderRowOrNestedRow.displayName = 'RenderRowOrNestedRow';
 
 export default React.memo(RenderRowOrNestedRow);
