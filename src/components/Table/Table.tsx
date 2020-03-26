@@ -159,10 +159,10 @@ function Table<T>({
                   checked={selectingIds.length > 0}
                   onClick={() => {
                     if (selectingIds.length === data.length) {
-                      return setSelectingIds([]);
+                      return onSelectionChange([]);
                     }
 
-                    return setSelectingIds(data.map(({ id }) => id));
+                    return onSelectionChange(data.map(({ id }) => id));
                   }}
                 />
               </TableCell>
