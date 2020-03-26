@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import { ReactEventHandler, SyntheticEvent, useState } from 'react';
 // import PropTypes from 'prop-types';
-import { customRadioStyles, inputStyles, wrapperStyles } from './Radio.style';
+import { customRadioStyles, inputStyles, radioWrapperStyles, wrapperStyles } from './Radio.style';
 
 export type Props = {
   checked: boolean;
@@ -20,14 +20,26 @@ function Radio(props: Props) {
     name = 'yolo',
     value,
     checked = false,
-    disabled,
+    disabled = false,
     id,
     required,
   } = props;
 
+  const [focused, setFocused] = useState(false);
+
+  function handleFocus() {
+    setFocused(true);
+  }
+
+  function handleBlur() {
+    setFocused(false);
+  }
+
   return (
-    <span css={wrapperStyles}>
+    <span css={wrapperStyles(focused, disabled)}>
       <input
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         type={'radio'}
         onChange={onChange}
         css={inputStyles}
@@ -38,7 +50,9 @@ function Radio(props: Props) {
         required={required}
         checked={checked}
       />
-      <span css={customRadioStyles(props)} />
+      <span css={radioWrapperStyles(focused, disabled)}>
+        <span css={customRadioStyles(props)} />
+      </span>
     </span>
   );
 }

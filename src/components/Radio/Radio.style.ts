@@ -12,6 +12,23 @@ export const inputStyles = css`
   z-index: 1;
   position: absolute;
   opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+`;
+
+const focusedRadio = css`
+  box-shadow: 0px 0px 0px 11px rgba(0, 0, 0, 0.04);
+`;
+
+export const radioWrapperStyles = (focused: boolean, disabled: boolean) => css`
+  position: relative;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  transition: box-shadow 0.3s ease;
+  ${focused && !disabled && focusedRadio};
 `;
 
 export const customRadioStyles = (props: Props) => {
@@ -30,14 +47,15 @@ export const customRadioStyles = (props: Props) => {
   return css`
     transition: all 0.2s ease;
     border-radius: 50%;
-    width: 28px;
-    height: 28px;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     box-shadow: ${determineBoxShadow(props)};
+    position: absolute;
   `;
 };
 
-export const wrapperStyles = css`
+export const wrapperStyles = (__focused: boolean, disabled: boolean) => css`
   position: relative;
 
   border-radius: 50%;
@@ -62,9 +80,9 @@ export const wrapperStyles = css`
 
   transition: background-color 0.2s ease;
 
-  background-color: transparent;
-
   &:hover {
-    background-color: rgba(0, 0, 0, 0.04);
+    > span {
+      ${!disabled && focusedRadio}
+    }
   }
 `;
