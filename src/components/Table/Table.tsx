@@ -59,11 +59,11 @@ function Table<T>({
   topRightArea,
 }: Props<T>) {
   const theme = useTheme();
-  const [selectingIds, setSelectingIds] = useState<Selection[]>([]);
+  const [selectedIds, setSelectedIds] = useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
   const onSelectionChange = (selections: Selection[]) => {
-    setSelectingIds(selections);
+    setSelectedIds(selections);
 
     if (onCheck) {
       onCheck(selections);
@@ -75,13 +75,13 @@ function Table<T>({
   const onSelectionAdd = useCallback(
     (rowId: Selection) => {
       const selections =
-        selectingIds.indexOf(rowId) === -1
-          ? [...selectingIds, rowId]
-          : selectingIds.filter(item => item !== rowId);
+        selectedIds.indexOf(rowId) === -1
+          ? [...selectedIds, rowId]
+          : selectedIds.filter(item => item !== rowId);
 
       return onSelectionChange(selections);
     },
-    [selectingIds]
+    [selectedIds]
   );
 
   const columnsHasNumberArr = React.useMemo(
@@ -105,21 +105,21 @@ function Table<T>({
               <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
                 <input
                   type="checkbox"
-                  checked={selectingIds.length > 0}
+                  checked={selectedIds.length > 0}
                   onClick={() => {
-                    if (selectingIds.length === data.length) {
-                      return onSelectionChange([]);
+                    if (selectedIds.length === data.length) {
+                      onSelectionChange([]);
+                    } else {
+                      onSelectionChange(data.map(({ id }) => id));
                     }
-
-                    return onSelectionChange(data.map(({ id }) => id));
                   }}
                 />
               </TableCell>
             )}
             <TableCell padded={padded}>
-              {selectingIds.length > 0 ? (
+              {selectedIds.length > 0 ? (
                 <span>
-                  <b>{selectingIds.length}</b> {pluralize('item', selectingIds.length)} selected
+                  <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
                 </span>
               ) : (
                 topLeftText
@@ -131,7 +131,7 @@ function Table<T>({
                 padded={padded}
                 colSpan={columnCount - (onCheck ? 2 : 1)}
               >
-                {topRightArea(data, selectingIds)}
+                {topRightArea(data, selectedIds)}
               </TableCell>
             )}
           </TableRow>
@@ -167,12 +167,12 @@ function Table<T>({
       )}
       <tbody>
         {data.map(row => {
-          const isRowSelected = React.useMemo(() => selectingIds.indexOf(row.id) !== -1, [
-            selectingIds,
+          const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [
+            selectedIds,
           ]);
           const tChange = useCallback(() => {
             onSelectionAdd(row.id);
-          }, [row.id, selectingIds]);
+          }, [row.id, selectedIds]);
 
           return (
             <TableRowContext.Provider
