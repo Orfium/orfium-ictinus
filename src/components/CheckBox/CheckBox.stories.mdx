@@ -30,9 +30,9 @@ Regular CheckBox without
     <Stack>
       <CheckBox checked={true} />
       <CheckBox checked={false} />
-      <CheckBox checked={true} multi />
-      <CheckBox checked={false} multi />
-      <CheckBox checked={false} multi disabled />
+      <CheckBox checked={true} intermediate />
+      <CheckBox checked={false} intermediate />
+      <CheckBox checked={false} intermediate disabled />
     </Stack>
   </Story>
 </Preview>
@@ -44,12 +44,12 @@ Regular CheckBox with label
 <Preview>
   <Story name="CheckBox with Label">
     <Stack>
-      <CheckBox checked={false} label={'Not Checked Single'} />
+      <CheckBox checked={false} label={'Not checked single'} />
       <CheckBox checked label={'Checked Single'} />
-      <CheckBox checked={true} label={'Disabled Single'} disabled />
-      <CheckBox checked={true} multi label={'Checked Multi'} />
-      <CheckBox checked={false} multi label={'Not Checked Multi'} />
-      <CheckBox checked={true} multi label={'Disabled Checked Multi'} disabled />
+      <CheckBox checked={true} label={'Disabled single'} disabled />
+      <CheckBox checked={true} intermediate label={'Checked intermediate'} />
+      <CheckBox checked={false} intermediate label={'Not checked intermediate'} />
+      <CheckBox checked={true} intermediate label={'Disabled checked intermediate'} disabled />
     </Stack>
   </Story>
 </Preview>

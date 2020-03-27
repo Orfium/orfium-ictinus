@@ -14,10 +14,10 @@ export type Props = {
   checked?: boolean;
   /** Callback function for onClick. Returns the new value and the change event. */
   onClick?(val: boolean, e: ChangeEvent): void;
-  /** Boolean defining if the checkbox is checked. Defaults to false */
+  /** Boolean defining if the checkbox is disabled. Defaults to false */
   disabled?: boolean;
-  /** Boolean defining if the checkbox is checked. Defaults to false */
-  multi?: boolean;
+  /** Boolean defining if the checkbox is in intermediate state when checked ( - instead of ✓ ). Defaults to false */
+  intermediate?: boolean;
 };
 
 const CheckBox: React.FC<Props> = ({
@@ -25,7 +25,7 @@ const CheckBox: React.FC<Props> = ({
   checked = false,
   onClick,
   disabled = false,
-  multi = false,
+  intermediate = false,
 }) => {
   const [isChecked, setIsChecked] = useState(checked);
   const theme = useTheme();
@@ -45,7 +45,7 @@ const CheckBox: React.FC<Props> = ({
     <span css={wrapperStyle({ disabled })(theme)}>
       <span css={checkboxWrapperStyle()(theme)}>
         <input
-          css={checkboxStyle({ multi, checked })(theme)}
+          css={checkboxStyle({ intermediate, checked })(theme)}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}

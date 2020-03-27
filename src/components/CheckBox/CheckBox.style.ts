@@ -17,15 +17,16 @@ export const checkboxWrapperStyle = () => (theme: Theme) => css`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s;
 
   &:hover {
     background: ${transparentize(0.7, theme.palette.gray50)};
   }
 `;
 
-export const checkboxStyle = ({ multi, checked }: Props) => (theme: Theme) => css`
+export const checkboxStyle = ({ intermediate, checked }: Props) => (theme: Theme) => css`
   background: ${checked
-    ? multi
+    ? intermediate
       ? theme.palette.gray200
       : theme.palette.brand1
     : theme.palette.gray50};
@@ -46,7 +47,7 @@ export const checkboxStyle = ({ multi, checked }: Props) => (theme: Theme) => cs
   // Box.
   & + label:before {
     content: '';
-
+    transition: all 0.2s;
     display: inline-block;
     vertical-align: text-top;
     width: ${rem(26)};
@@ -57,7 +58,7 @@ export const checkboxStyle = ({ multi, checked }: Props) => (theme: Theme) => cs
 
   // Box checked
   &:checked + label:before {
-    background: ${multi ? theme.palette.gray200 : theme.palette.brand1};
+    background: ${intermediate ? theme.palette.gray200 : theme.palette.brand1};
   }
 
   // Disabled state label.
@@ -72,7 +73,7 @@ export const checkboxStyle = ({ multi, checked }: Props) => (theme: Theme) => cs
     left: ${rem(7)};
     top: ${rem(13)};
     height: ${rem(2)};
-    ${multi
+    ${intermediate
       ? `width: ${rem(10)};`
       : `width: ${rem(2)};
       box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
