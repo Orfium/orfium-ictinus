@@ -68,8 +68,6 @@ function Table<T>({
     if (onCheck) {
       onCheck(selections);
     }
-
-    return data;
   };
 
   const onSelectionAdd = useCallback(
