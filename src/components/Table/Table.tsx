@@ -165,7 +165,7 @@ function Table<T>({
       )}
       <tbody>
         {data.map(row => (
-          <TableBody<T>
+          <TableRowWrapper<T>
             key={row.id}
             {...{
               row,
@@ -186,7 +186,7 @@ function Table<T>({
   );
 }
 
-type TableBodyProps<T> = {
+type TableRowWrapperProps<T> = {
   row: Row<T>;
   selectedIds: Selection[];
   onSelectionAdd: (selection: Selection) => void;
@@ -199,7 +199,7 @@ type TableBodyProps<T> = {
   type: TableType;
 };
 
-const TableBody = <T extends {}>({
+const TableRowWrapper = <T extends {}>({
   row,
   selectedIds,
   onSelectionAdd,
@@ -210,7 +210,7 @@ const TableBody = <T extends {}>({
   columnsHasNumberArr,
   columnCount,
   onSelectionChangeExist,
-}: TableBodyProps<T>) => {
+}: TableRowWrapperProps<T>) => {
   const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [selectedIds]);
   const tChange = useCallback(() => {
     onSelectionAdd(row.id);
