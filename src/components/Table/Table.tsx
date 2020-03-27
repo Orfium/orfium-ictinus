@@ -79,7 +79,7 @@ function Table<T>({
           ? [...selectedIds, rowId]
           : selectedIds.filter(item => item !== rowId);
 
-      return onSelectionChange(selections);
+      onSelectionChange(selections);
     },
     [selectedIds]
   );
@@ -166,39 +166,76 @@ function Table<T>({
         </thead>
       )}
       <tbody>
-        {data.map(row => {
-          const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [
-            selectedIds,
-          ]);
-          const tChange = useCallback(() => {
-            onSelectionAdd(row.id);
-          }, [row.id, selectedIds]);
-
-          return (
-            <TableRowContext.Provider
-              key={row.id}
-              value={{
-                row,
-                columnsHasNumberArr,
-                onSelectionChangeExist: Boolean(onCheck),
-                padded,
-                columns,
-                fixedHeader,
-                tChange,
-                type,
-                columnCount,
-                isRowSelected,
-              }}
-            >
-              <RenderRowOrNestedRow<T> {...{ row }} />
-            </TableRowContext.Provider>
-          );
-        })}
+        {data.map(row => (
+          <TableBody<T>
+            key={row.id}
+            {...{
+              row,
+              selectedIds,
+              onSelectionAdd,
+              padded,
+              columns,
+              fixedHeader,
+              type,
+              columnCount,
+              columnsHasNumberArr,
+              onSelectionChangeExist: Boolean(onCheck),
+            }}
+          />
+        ))}
       </tbody>
     </table>
   );
 }
 
-Table.whyDidYouRender = true;
+type TableBodyProps<T> = {
+  row: Row<T>;
+  selectedIds: Selection[];
+  onSelectionAdd: (selection: Selection) => void;
+  columnsHasNumberArr: boolean[];
+  padded: boolean;
+  onSelectionChangeExist: boolean;
+  columnCount: number;
+  columns: string[];
+  fixedHeader: boolean;
+  type: TableType;
+};
+
+const TableBody = <T extends {}>({
+  row,
+  selectedIds,
+  onSelectionAdd,
+  padded,
+  columns,
+  fixedHeader,
+  type,
+  columnsHasNumberArr,
+  columnCount,
+  onSelectionChangeExist,
+}: TableBodyProps<T>) => {
+  const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [selectedIds]);
+  const tChange = useCallback(() => {
+    onSelectionAdd(row.id);
+  }, [row.id, selectedIds]);
+
+  return (
+    <TableRowContext.Provider
+      value={{
+        row,
+        columnsHasNumberArr,
+        onSelectionChangeExist,
+        padded,
+        columns,
+        fixedHeader,
+        tChange,
+        type,
+        columnCount,
+        isRowSelected,
+      }}
+    >
+      <RenderRowOrNestedRow<T> {...{ row }} />
+    </TableRowContext.Provider>
+  );
+};
 
 export default Table;

@@ -1,8 +1,8 @@
 import { createContext } from 'react';
 import { Row, TableType } from './Table';
 
-type TableRowContextProps = {
-  row: Row<{}>;
+export type TableRowContextProps<T extends {}> = {
+  row: Row<T>;
   columnsHasNumberArr: boolean[];
   padded: boolean;
   onSelectionChangeExist: boolean;
@@ -14,7 +14,7 @@ type TableRowContextProps = {
   type: TableType;
 };
 
-export const TableRowContext = createContext<TableRowContextProps>({
+export const TableRowContext = createContext<TableRowContextProps<{}>>({
   row: {
     id: 0,
     cells: [],
