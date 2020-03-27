@@ -1,4 +1,3 @@
-// @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React, { useContext } from 'react';
@@ -11,13 +10,7 @@ import rem from 'polished/lib/helpers/rem';
 import Icon from 'components/Icon';
 import { isComponentFunctionType } from 'utils/helpers';
 import { TableRowContext } from '../../TableRowContext';
-
-// row: Row<T>,
-//   type: TableType,
-//   onSelectionChangeExist: boolean,
-//   onSelectionChange: (selections: Selection[]) => void,
-//   selectingIds: Selection[],
-//   padded: boolean
+import { Row } from '../../Table';
 
 const RenderRowWithCells = React.memo(() => {
   const {
@@ -74,7 +67,8 @@ const RenderRowWithCells = React.memo(() => {
 });
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
-const RenderRowOrNestedRow = ({ row }) => {
+const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
+  console.log('render');
   const { isRowSelected, columnCount } = useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;
@@ -133,4 +127,4 @@ const RenderRowOrNestedRow = ({ row }) => {
 
 RenderRowOrNestedRow.displayName = 'RenderRowOrNestedRow';
 
-export default React.memo(RenderRowOrNestedRow);
+export default RenderRowOrNestedRow;

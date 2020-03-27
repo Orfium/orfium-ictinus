@@ -92,7 +92,7 @@ function Table<T>({
             return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
           })
         )
-      ),
+      ) || [],
     []
   );
 
@@ -190,7 +190,7 @@ function Table<T>({
                 isRowSelected,
               }}
             >
-              <RenderRowOrNestedRow {...{ row }} />
+              <RenderRowOrNestedRow<T> {...{ row }} />
             </TableRowContext.Provider>
           );
         })}
