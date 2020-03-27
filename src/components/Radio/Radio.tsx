@@ -11,9 +11,9 @@ import {
 
 export type Props = {
   checked: boolean;
-  onChange: ReactEventHandler;
+  onSelect: ReactEventHandler;
   value: string | number;
-  name?: string;
+  name: string;
   disabled?: boolean;
   id?: string;
   required?: boolean;
@@ -21,8 +21,8 @@ export type Props = {
 
 function Radio(props: Props) {
   const {
-    onChange = () => {},
-    name = 'yolo',
+    onSelect = () => {},
+    name,
     value,
     checked = false,
     disabled = false,
@@ -43,12 +43,12 @@ function Radio(props: Props) {
   return (
     <span css={wrapperStyles(disabled)}>
       <input
+        css={inputStyles}
         onFocus={handleFocus}
         onBlur={handleBlur}
         onMouseLeave={handleBlur}
         type={'radio'}
-        onChange={onChange}
-        css={inputStyles}
+        onChange={onSelect}
         name={name}
         value={value}
         disabled={disabled}
@@ -76,11 +76,17 @@ export default function Group() {
 
   return (
     <div>
-      <Radio checked={selectedValue === 'a'} value={'a'} onChange={handleChange} />
-      <Radio checked={selectedValue === 'b'} value={'b'} onChange={handleChange} />
-      <Radio checked={selectedValue === 'c'} value={'c'} onChange={handleChange} />
-      <Radio checked={selectedValue === 'd'} value={'d'} onChange={handleChange} />
-      <Radio checked={selectedValue === 'e'} value={'e'} onChange={handleChange} disabled />
+      <Radio name="same" checked={selectedValue === 'a'} value={'a'} onSelect={handleChange} />
+      <Radio name="same" checked={selectedValue === 'b'} value={'b'} onSelect={handleChange} />
+      <Radio name="same" checked={selectedValue === 'c'} value={'c'} onSelect={handleChange} />
+      <Radio name="same" checked={selectedValue === 'd'} value={'d'} onSelect={handleChange} />
+      <Radio
+        name="same"
+        checked={selectedValue === 'e'}
+        value={'e'}
+        onSelect={handleChange}
+        disabled
+      />
     </div>
   );
 }
