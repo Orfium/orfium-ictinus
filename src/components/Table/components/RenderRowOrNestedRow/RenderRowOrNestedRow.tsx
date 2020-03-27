@@ -68,7 +68,6 @@ const RenderRowWithCells = React.memo(() => {
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
 const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
-  console.log('render');
   const { isRowSelected, columnCount } = useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;
