@@ -1,7 +1,7 @@
-import { colorPickerBasedOnType, backgroundPickerBasedOnType } from 'utils/themeFunctions';
-import { Props } from 'src/components/Button/Button';
-import { RequiredProperties } from 'src/utils/common';
-import { Theme } from 'src/theme';
+import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
+import { Props } from 'components/Button/Button';
+import { RequiredProperties } from 'utils/common';
+import { Theme } from 'theme';
 import { FlexDirectionProperty } from 'csstype';
 import { rem } from 'polished';
 
