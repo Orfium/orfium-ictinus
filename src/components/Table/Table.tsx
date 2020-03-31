@@ -45,7 +45,7 @@ type Props<T> = {
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string;
   /** Top right area to define a custom component for buttons or other usage. */
-  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component;
+  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component | JSX.Element;
 };
 
 function Table<T>({
