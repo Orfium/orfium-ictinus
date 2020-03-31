@@ -21,7 +21,7 @@ export type Cell<T> = {
 export type Row<T> = {
   id: string | number;
   cells: Cell<T>[];
-  expanded?: (data: Row<T>) => React.Component;
+  expanded?: (data: Row<T>) => React.Component | JSX.Element;
   rowSpan?: number;
 };
 
