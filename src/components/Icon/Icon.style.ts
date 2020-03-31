@@ -1,3 +1,4 @@
+/** @jsx jsx */
 import { Theme } from 'theme';
 import { rem } from 'polished';
 import { AcceptedColorComponentTypes, fillPickerBasedOnType } from 'utils/themeFunctions';
