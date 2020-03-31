@@ -1,4 +1,3 @@
-/** @jsx jsx */
 import { Theme } from 'theme';
 import { css } from '@emotion/core';
 import { Props } from './TextField';
