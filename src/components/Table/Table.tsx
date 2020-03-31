@@ -104,7 +104,7 @@ function Table<T>({
                 <input
                   type="checkbox"
                   checked={selectedIds.length > 0}
-                  onClick={() => {
+                  onChange={() => {
                     if (selectedIds.length === data.length) {
                       onSelectionChange([]);
                     } else {
