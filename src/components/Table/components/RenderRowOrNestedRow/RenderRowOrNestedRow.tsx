@@ -32,7 +32,7 @@ const RenderRowWithCells = React.memo(() => {
     <TableRow selected={isRowSelected}>
       {onSelectionChangeExist && (
         <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
-          <input type="checkbox" checked={isRowSelected} onClick={tChange} />
+          <input type="checkbox" checked={isRowSelected} onChange={tChange} />
         </TableCell>
       )}
       {row.cells.map(({ content, colSpan, type: cellType }, index) => {
