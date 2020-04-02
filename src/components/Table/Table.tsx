@@ -21,7 +21,7 @@ export type Cell<T> = {
 export type Row<T> = {
   id: string | number;
   cells: Cell<T>[];
-  expanded?: (data: Row<T>) => React.Component;
+  expanded?: (data: Row<T>) => React.Component | JSX.Element;
   rowSpan?: number;
 };
 
@@ -45,7 +45,7 @@ type Props<T> = {
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string;
   /** Top right area to define a custom component for buttons or other usage. */
-  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component;
+  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component | JSX.Element;
 };
 
 function Table<T>({
@@ -104,7 +104,7 @@ function Table<T>({
                 <input
                   type="checkbox"
                   checked={selectedIds.length > 0}
-                  onClick={() => {
+                  onChange={() => {
                     if (selectedIds.length === data.length) {
                       onSelectionChange([]);
                     } else {
