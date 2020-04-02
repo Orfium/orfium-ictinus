@@ -7,8 +7,11 @@ export type AcceptedColorComponentTypes =
   | 'error'
   | 'info'
   | 'warning'
+  | 'light'
+  | 'dark'
   | 'branded1'
-  | 'branded2';
+  | 'branded2'
+  | 'white';
 
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (
   theme: Theme
@@ -52,6 +55,16 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
       return theme.palette.info;
     case 'warning':
       return theme.palette.warning;
+    case 'branded1':
+      return theme.palette.brand1;
+    case 'branded2':
+      return theme.palette.brand2;
+    case 'white':
+      return theme.palette.white;
+    case 'dark':
+      return theme.palette.gray300;
+    case 'light':
+      return theme.palette.text.light;
     default:
       return theme.palette.primary;
   }

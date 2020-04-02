@@ -21,10 +21,10 @@ export type Typography = {
     32: string;
   };
   weights: {
-    bold: string;
-    light: string;
-    regular: string;
-    black: string;
+    bold: number;
+    light: number;
+    regular: number;
+    black: number;
   };
   fontFamily: string;
 };
@@ -47,10 +47,10 @@ const fontSizes = {
 };
 
 const weights = {
-  bold: '700',
-  light: '300',
-  regular: '400',
-  black: '900',
+  bold: 700,
+  light: 300,
+  regular: 400,
+  black: 900,
 };
 
 const typography: Typography = {

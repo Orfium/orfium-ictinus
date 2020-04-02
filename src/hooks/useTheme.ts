@@ -1,5 +1,5 @@
 import { useTheme as EmotionUseTheme } from 'emotion-theming';
-import { Theme } from 'src/theme';
+import { Theme } from 'theme';
 
 const useTheme = () => {
   return EmotionUseTheme<Theme>();

@@ -1,4 +1,4 @@
-import { Theme } from 'src/theme';
+import { Theme } from 'theme';
 import { css } from '@emotion/core';
 
 export const labelStyle = ({ animateToTop }: { animateToTop: boolean }) => (theme: Theme) => css`
