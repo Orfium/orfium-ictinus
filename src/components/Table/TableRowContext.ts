@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, Context } from 'react';
 import { Row, TableType } from './Table';
 
 export type TableRowContextProps<T extends {}> = {
@@ -28,4 +28,4 @@ export const TableRowContext = createContext<TableRowContextProps<{}>>({
   fixedHeader: false,
   tChange: () => {},
   type: 'normal',
-});
+}) as Context<TableRowContextProps<{}>>;

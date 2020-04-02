@@ -1,9 +1,11 @@
 import { Theme } from 'theme';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 import { Props } from './TextField';
 import { rem, transparentize } from 'polished';
 
-export const wrapperStyle = ({ label, error, disabled }: Props) => (theme: Theme) => css`
+export const wrapperStyle = ({ label, error, disabled }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
   transition: background-color 0.25s, border 0.25s;
   background-color: ${error ? transparentize(0.85, theme.palette.error) : theme.palette.gray};
   padding: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
@@ -14,7 +16,7 @@ export const wrapperStyle = ({ label, error, disabled }: Props) => (theme: Theme
   position: relative;
 `;
 
-export const textFieldStyle = () => (theme: Theme) => css`
+export const textFieldStyle = () => (theme: Theme): SerializedStyles => css`
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -25,7 +27,9 @@ export const textFieldStyle = () => (theme: Theme) => css`
   }
 `;
 
-export const inputStyle = ({ label, placeholder }: Props) => (theme: Theme) => css`
+export const inputStyle = ({ label, placeholder }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
   display: block;
   width: 100%;
   position: relative;
