@@ -1,1 +1,1 @@
-export type AcceptedIconNames = 'add' | 'fatArrowDown' | 'arrowDown';
+export type AcceptedIconNames = 'add' | 'fatArrowDown' | 'arrowDown' | 'check' | 'minus';

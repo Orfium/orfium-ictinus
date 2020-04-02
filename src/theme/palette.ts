@@ -11,6 +11,9 @@ export const lightPalette: Palette = {
   primary: '',
   secondary: '',
 
+  brand1: 'orange',
+  brand2: 'yellow',
+
   ...grayPalette,
 
   //rest
@@ -19,6 +22,8 @@ export const lightPalette: Palette = {
   warning: '#F5781B',
   info: '#18AED2',
   light: '#FFFFFF',
+
+  white: '#FFFFFF',
 
   text: {
     primary: grayPalette.gray300,
@@ -32,6 +37,9 @@ export const darkPalette: Palette = {
   primary: '',
   secondary: '',
 
+  brand1: 'orange',
+  brand2: 'yellow',
+
   ...grayPalette,
 
   //rest
@@ -40,6 +48,8 @@ export const darkPalette: Palette = {
   warning: '#F5781B',
   info: '#18AED2',
   light: '#FFFFFF',
+
+  white: '#FFFFFF',
 
   text: {
     primary: grayPalette.gray300,
@@ -53,6 +63,9 @@ export type Palette = {
   primary: string;
   secondary: string;
 
+  brand1: string;
+  brand2: string;
+
   gray: string;
   gray50: string;
   gray100: string;
@@ -64,6 +77,8 @@ export type Palette = {
   warning: string;
   info: string;
   light: string;
+
+  white: string;
 
   text: {
     primary: string;
