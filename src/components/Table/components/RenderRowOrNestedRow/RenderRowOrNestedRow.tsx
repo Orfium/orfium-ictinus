@@ -93,27 +93,28 @@ const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
                   )}
                 </tbody>
               </table>
-              <div
-                css={{
-                  padding: theme.spacing.sm,
-                  marginLeft: theme.spacing.lg,
-                  overflow: 'hidden',
-                  width: 20,
-                  height: 20,
-                  borderRadius: 20,
-                  backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
-                  marginTop: rem(8),
-                  transition: '0.2s all ease-in-out',
-                }}
-                onClick={() => toggleChecked()}
-              >
+              <div>
                 <div
                   css={{
-                    transition: '0.3s all ease-in-out',
-                    transform: `rotate(${checked ? '180' : '0'}deg)`,
+                    padding: theme.spacing.sm,
+                    marginLeft: theme.spacing.lg,
+                    overflow: 'hidden',
+                    borderRadius: rem(20),
+                    backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
+                    marginTop: rem(8),
+                    transition: '0.2s all ease-in-out',
+                    cursor: 'pointer',
                   }}
+                  onClick={() => toggleChecked()}
                 >
-                  <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
+                  <div
+                    css={{
+                      transition: '0.3s all ease-in-out',
+                      transform: `rotate(${checked ? '180' : '0'}deg)`,
+                    }}
+                  >
+                    <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
+                  </div>
                 </div>
               </div>
             </div>
