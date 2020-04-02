@@ -1,9 +1,9 @@
 import { Theme } from 'theme';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 import { Props } from './CheckBox';
 import { rem, transparentize } from 'polished';
 
-export const wrapperStyle = ({ disabled }: Props) => (theme: Theme) => css`
+export const wrapperStyle = ({ disabled }: Props) => (theme: Theme): SerializedStyles => css`
   opacity: ${disabled ? 0.3 : 1};
   justify-content: center;
   align-items: center;
@@ -24,7 +24,9 @@ export const checkboxWrapperStyle = () => (theme: Theme) => css`
   }
 `;
 
-export const checkboxStyle = ({ intermediate, checked }: Props) => (theme: Theme) => css`
+export const checkboxStyle = ({ intermediate, checked }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
   background: ${checked
     ? intermediate
       ? theme.palette.gray200
@@ -82,7 +84,7 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (theme: Theme
   }
 `;
 
-export const labelStyle = () => (theme: Theme) => css`
+export const labelStyle = () => (theme: Theme): SerializedStyles => css`
   padding-left: ${rem(4)};
   font-size: ${theme.typography.fontSizes['15']};
   font-weight: ${theme.typography.weights.regular};
