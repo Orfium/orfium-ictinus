@@ -1,6 +1,6 @@
-import { ReactComponent as AddIcon } from './add.svg';
-import { ReactComponent as FatArrowDown } from './fat-arrow-down.svg';
-import { ReactComponent as ArrowDownIcon } from './dd-arrow.svg';
+import AddIcon from './add.svg';
+import FatArrowDown from './fat-arrow-down.svg';
+import ArrowDownIcon from './dd-arrow.svg';
 
 const iconSelector = {
   add: AddIcon,

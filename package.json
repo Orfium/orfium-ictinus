@@ -30,8 +30,8 @@
     "@typescript-eslint/eslint-plugin": "^2.18.0",
     "@typescript-eslint/parser": "^2.18.0",
     "babel-loader": "^8.0.6",
+    "babel-plugin-inline-react-svg": "^1.1.1",
     "babel-plugin-module-resolver": "^4.0.0",
-    "cpx": "^1.5.0",
     "cross-env": "^7.0.0",
     "emotion-theming": "^10.0.27",
     "eslint": "^6.8.0",
@@ -53,8 +53,7 @@
     "storybook-addon-react-docgen": "^1.2.28",
     "ts-jest": "^25.1.0",
     "ts-loader": "^6.2.1",
-    "typescript": "^3.7.5",
-    "url-loader": "^4.0.0"
+    "typescript": "^3.7.5"
   },
   "peerDependencies": {
     "react": "^16.0.0",
@@ -70,10 +69,9 @@
     "install": "yarn build",
     "start": "start-storybook -p 6006",
     "prebuild": "rm -rf dist",
-    "build": "yarn build:lib && yarn build:svg && yarn build:types",
+    "build": "yarn build:lib && yarn build:types",
     "build:lib": "cross-env NODE_ENV=production BABEL_ENV=production babel src --extensions '.ts,.tsx' --out-dir ./dist --ignore '**/*.stories.tsx'",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:svg": "cpx \"./src/**/*.svg\" ./dist",
     "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'"
   }
