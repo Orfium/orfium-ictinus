@@ -43,7 +43,7 @@ type Props<T> = {
   /** Function that once provided on each check will return the selection. */
   onCheck?: (data: Selection[]) => void;
   /** Top left text on the table - showing a counter, text etc. */
-  topLeftText?: string;
+  topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
   topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component | JSX.Element;
 };
@@ -178,6 +178,7 @@ function Table<T>({
               columnCount,
               columnsHasNumberArr,
               onSelectionChangeExist: Boolean(onCheck),
+              expanded: !!row?.expanded,
             }}
           />
         ))}
@@ -197,6 +198,7 @@ type TableRowWrapperProps<T> = {
   columns: string[];
   fixedHeader: boolean;
   type: TableType;
+  expanded: boolean;
 };
 
 const TableRowWrapper = <T extends {}>({
@@ -210,6 +212,7 @@ const TableRowWrapper = <T extends {}>({
   columnsHasNumberArr,
   columnCount,
   onSelectionChangeExist,
+  expanded,
 }: TableRowWrapperProps<T>) => {
   const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [selectedIds]);
   const tChange = useCallback(() => {
@@ -229,6 +232,7 @@ const TableRowWrapper = <T extends {}>({
         type,
         columnCount,
         isRowSelected,
+        bordered: !expanded,
       }}
     >
       <RenderRowOrNestedRow<T> {...{ row }} />

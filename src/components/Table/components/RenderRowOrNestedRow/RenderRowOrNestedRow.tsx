@@ -23,13 +23,17 @@ const RenderRowWithCells = React.memo(() => {
     row,
     type,
     isRowSelected,
+    bordered,
   } = useContext(TableRowContext);
   const theme = useTheme();
   let cellCounter = 0;
   let prevCellColSpan = 0;
 
   return (
-    <TableRow selected={isRowSelected}>
+    <TableRow
+      selected={isRowSelected}
+      css={bordered && { borderBottom: `${rem(1)} solid ${theme.palette.gray50}` }}
+    >
       {onSelectionChangeExist && (
         <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
           <input type="checkbox" checked={isRowSelected} onChange={tChange} />
@@ -81,7 +85,14 @@ const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
       ) : (
         <TableRow nested selected={isRowSelected}>
           <TableCell colSpan={columnCount} padded={false}>
-            <div css={{ flex: 1, flexDirection: 'row', display: 'flex' }}>
+            <div
+              css={{
+                flex: 1,
+                flexDirection: 'row',
+                display: 'flex',
+                borderBottom: `${rem(1)} solid ${theme.palette.gray50}`,
+              }}
+            >
               <table css={tableStyle()(theme)}>
                 <tbody>
                   <RenderRowWithCells />
