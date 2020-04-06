@@ -29,7 +29,8 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
   icon = null,
   children,
   dataTestId = '',
-  ...rest
+  onClick,
+  onBlur,
 }) => {
   const theme = useTheme();
 
@@ -37,7 +38,8 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
     <button
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({ type, filled, size, icon })(theme)}
-      {...rest}
+      onClick={onClick}
+      onBlur={onBlur}
     >
       <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
         {icon && icon}
