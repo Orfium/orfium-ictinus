@@ -178,7 +178,7 @@ function Table<T>({
               columnCount,
               columnsHasNumberArr,
               onSelectionChangeExist: Boolean(onCheck),
-              expanded: !!row?.expanded,
+              expanded: !!row.expanded,
             }}
           />
         ))}
