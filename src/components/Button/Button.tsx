@@ -5,6 +5,7 @@ import { buttonSpanStyle, buttonStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
 import { generateTestDataId } from 'utils/helpers';
+import { EventProps } from 'utils/common';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -21,7 +22,7 @@ export type TestProps = {
   dataTestId?: string;
 };
 
-const Button: React.FC<Props & TestProps> = ({
+const Button: React.FC<Props & TestProps & EventProps> = ({
   size = 'md',
   type = 'primary',
   filled = true,
