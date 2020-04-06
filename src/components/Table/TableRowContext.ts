@@ -12,6 +12,7 @@ export type TableRowContextProps<T extends {}> = {
   fixedHeader: boolean;
   tChange: () => void;
   type: TableType;
+  bordered: boolean;
 };
 
 export const TableRowContext = createContext<TableRowContextProps<{}>>({
@@ -28,4 +29,5 @@ export const TableRowContext = createContext<TableRowContextProps<{}>>({
   fixedHeader: false,
   tChange: () => {},
   type: 'normal',
+  bordered: false,
 }) as Context<TableRowContextProps<{}>>;
