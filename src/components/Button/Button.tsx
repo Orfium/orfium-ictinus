@@ -5,6 +5,7 @@ import { buttonSpanStyle, buttonStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
 import { generateTestDataId } from 'utils/helpers';
+import { EventProps } from 'utils/common';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -21,14 +22,15 @@ export type TestProps = {
   dataTestId?: string;
 };
 
-const Button: React.FC<Props & TestProps> = ({
+const Button: React.FC<Props & TestProps & EventProps> = ({
   size = 'md',
   type = 'primary',
   filled = true,
   icon = null,
   children,
   dataTestId = '',
-  ...rest
+  onClick,
+  onBlur,
 }) => {
   const theme = useTheme();
 
@@ -36,7 +38,8 @@ const Button: React.FC<Props & TestProps> = ({
     <button
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({ type, filled, size, icon })(theme)}
-      {...rest}
+      onClick={onClick}
+      onBlur={onBlur}
     >
       <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
         {icon && icon}
