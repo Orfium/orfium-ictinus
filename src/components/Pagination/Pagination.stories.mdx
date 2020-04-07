@@ -1,0 +1,31 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Pagination from './Pagination';
+
+<Meta title="Design System|Pagination" component={Pagination} />
+
+# Pagination
+
+The pagination component that will be controlled by the parent on any product
+
+# Usage
+
+```js
+import { Pagination } from 'orfium-design-system';
+
+<Pagination count={3} page={1} />;
+```
+
+# Props
+
+<Props of={Pagination} />
+
+# Pagination
+
+Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
+
+<Preview>
+  <Story name="Pagination">
+    <Pagination count={3} page={1} />
+  </Story>
+</Preview>
