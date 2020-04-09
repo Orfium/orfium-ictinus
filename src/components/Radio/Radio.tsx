@@ -11,10 +11,10 @@ import {
 } from './Radio.style';
 
 export type Props = {
-  /** Whether the radio input is selected or not */
-  checked: boolean;
-  /** The value of the radio input */
-  value: string | number;
+  /** The value of the radio input. If no value is passed the default value, according to spec, is "on" */
+  value?: string | number;
+  /** Whether the radio input is selected or not. Defining this prop means the radio input is controlled */
+  checked?: boolean;
   /** The onChange event handler for the radio input */
   onChange?: ReactEventHandler;
   /** The name of the radio input, in case you want to manually form a radio group */
@@ -28,8 +28,18 @@ export type Props = {
 };
 
 function Radio(props: Props, ref: Ref<HTMLInputElement>) {
-  const { checked, onChange, value, name, disabled = false, id, required } = props;
+  const {
+    checked: externallyControlledChecked,
+    onChange,
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
+    value = 'on',
+    name,
+    disabled = false,
+    id,
+    required = false,
+  } = props;
   const [focused, setFocused] = useState(false);
+  const [internallyControlledChecked, setInternallyControlledChecked] = useState(false);
   const radioGroup = useRadioGroup();
 
   function handleFocus() {
@@ -41,6 +51,10 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
   }
 
   function handleChange(e: SyntheticEvent) {
+    if (externallyControlledChecked === undefined) {
+      setInternallyControlledChecked((e.target as HTMLInputElement).checked);
+    }
+
     if (onChange) {
       onChange(e);
     }
@@ -50,7 +64,12 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
     }
   }
 
-  const checkedValue = checked ?? (radioGroup && radioGroup.value) === value;
+  // Checked value is either the externally controlled value,
+  // or based on the radioGroup provided values,
+  // or the internally controlled value
+  const checkedValue =
+    externallyControlledChecked ??
+    (radioGroup ? (radioGroup && radioGroup.value) === value : internallyControlledChecked);
   const nameValue = name ?? (radioGroup && radioGroup.name);
 
   return (
@@ -83,13 +102,21 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
 }
 
 Radio.propTypes = {
-  checked: PropTypes.bool.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  checked: PropTypes.bool,
   onChange: PropTypes.func,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   name: PropTypes.string,
   disabled: PropTypes.bool,
   id: PropTypes.string,
   required: PropTypes.bool,
 };
 
+Radio.defaultProps = {
+  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
+  value: 'on',
+  disabled: false,
+  required: false,
+};
+
+export const RadioWithoutForwardRef = Radio;
 export default React.forwardRef(Radio);

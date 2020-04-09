@@ -1,13 +1,14 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
-import Radio from './Radio';
+import Radio, { RadioWithoutForwardRef } from './Radio';
 import RadioButtonsShowcase from '../storyUtils/RadioButtonsShowcase';
 
 <Meta title="Design System|Radio" component={Radio} />
 
 # Radio
 
-Placeholder
+A custom made radio input based on the Orfium design system. Passing a `ref` will return the actual input element.
+If the `checked` prop is defined it means the radio input is self controlled.
 
 # Usage
 
@@ -19,18 +20,31 @@ import { Radio } from 'orfium-design-system';
 
 # Props
 
-<Props of={Radio} />
+<Props of={RadioWithoutForwardRef} />
 
-# Not selected Radio
+# Showcase
+<br />
+<br />
+
+## Not selected Radio (`checked === undefined`)
 <Preview>
-  <Story name="Not selected Radio">
+  <Story name="Not selected Radio  (`checked === undefined`)">
+    <div style={{ color: '#82e616' }}>
+      <Radio/>
+    </div>
+  </Story>
+</Preview>
+
+## Not selected Radio (`checked === false`)
+<Preview>
+  <Story name="Not selected Radio (`checked === false`)">
     <div style={{ color: '#82e616' }}>
       <Radio checked={false}/>
     </div>
   </Story>
 </Preview>
 
-# Selected Radio
+## Selected Radio
 <Preview>
   <Story name="Selected Radio">
     <div style={{ color: '#82e616' }}>
@@ -39,7 +53,7 @@ import { Radio } from 'orfium-design-system';
   </Story>
 </Preview>
 
-# Disabled not selected Radio
+## Disabled not selected Radio
 <Preview>
   <Story name="Disabled not selected Radio">
     <div style={{ color: '#82e616' }}>
@@ -48,7 +62,7 @@ import { Radio } from 'orfium-design-system';
   </Story>
 </Preview>
 
-# Disabled selected Radio
+## Disabled selected Radio
 <Preview>
   <Story name="Disabled selected Radio">
     <div style={{ color: '#82e616' }}>
@@ -57,7 +71,7 @@ import { Radio } from 'orfium-design-system';
   </Story>
 </Preview>
 
-# Radio showcase
+## Radio group
 <Preview>
   <Story name="Radio showcase">
     <div style={{ color: '#82e616' }}>
