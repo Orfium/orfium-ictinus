@@ -31,7 +31,8 @@ export const buttonStyle = ({
   return {
     fontSize: theme.typography.fontSizes['16'],
     color: colorPickerBasedOnType(type)(theme),
-    backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
+    backgroundColor:
+      filled && childrenCount !== 0 ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
     paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
     paddingRight: icon && !childrenCount ? calculatedPaddingSpaceIfIcon : calculatedPaddingSpace,
     height: heightBasedOnSize(size),

@@ -11,6 +11,8 @@ import Icon from '../Icon';
 export type Props = {
   /** Type indicating the type of the button. Defaults to 'primary' */
   type?: AcceptedColorComponentTypes;
+  /** Property indicating the size of the icon. Defaults to 16 */
+  iconSize?: number;
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
@@ -25,6 +27,7 @@ export type TestProps = {
 
 const IconButton: React.FC<Props & TestProps & EventProps> = ({
   size = 'md',
+  iconSize,
   type = 'primary',
   filled = true,
   name,
@@ -40,7 +43,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
       size={size}
       type={type}
       filled={filled}
-      icon={<Icon name={name} />}
+      icon={<Icon name={name} color={type} size={iconSize} />}
     />
   );
 };
