@@ -15,7 +15,7 @@ export type Props = {
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
   /** An optional icon to turn the button to icon button with text/children */
-  icon?: string | null;
+  icon?: React.Component | JSX.Element | null;
 };
 
 export type TestProps = {
@@ -37,11 +37,25 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
   return (
     <button
       data-testid={generateTestDataId('button', dataTestId)}
-      css={buttonStyle({ type, filled, size, icon })(theme)}
+      css={buttonStyle({
+        type,
+        filled,
+        size,
+        icon,
+        childrenCount: React.Children.count(children),
+      })(theme)}
       onClick={onClick}
       onBlur={onBlur}
     >
-      <span css={buttonSpanStyle({ type, filled, size, icon })(theme)}>
+      <span
+        css={buttonSpanStyle({
+          type,
+          filled,
+          size,
+          icon,
+          hasChildren: Boolean(React.Children.count(children)),
+        })(theme)}
+      >
         {icon && icon}
         {children}
       </span>
