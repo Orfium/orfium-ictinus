@@ -12,11 +12,16 @@ type Props = {
   count: number;
   /** An onChange callback that will return the page on navigation **/
   onChange?: (page: number) => void;
-  /** Hide the double button functionality, this way the jump to first and last page will be hidden **/
-  hideDoubleButtons?: boolean;
+  /** Hide the enhanced button functionality, this way the jump to first and last page will be hidden **/
+  hideEnhancedPaginationButtons?: boolean;
 };
 
-const Pagination = ({ page = 1, count, onChange = () => {}, hideDoubleButtons = false }: Props) => {
+const Pagination = ({
+  page = 1,
+  count,
+  onChange = () => {},
+  hideEnhancedPaginationButtons = false,
+}: Props) => {
   const theme = useTheme();
   const {
     currentPage,
@@ -37,7 +42,7 @@ const Pagination = ({ page = 1, count, onChange = () => {}, hideDoubleButtons = 
         '> *': { padding: theme.spacing.sm },
       }}
     >
-      {!hideDoubleButtons && (
+      {!hideEnhancedPaginationButtons && (
         <IconButton
           name={'arrowToLeft'}
           onClick={navigateToFirstPage}
@@ -62,7 +67,7 @@ const Pagination = ({ page = 1, count, onChange = () => {}, hideDoubleButtons = 
         onClick={navigateToNextPage}
         disabled={!hasNextPage}
       />
-      {!hideDoubleButtons && (
+      {!hideEnhancedPaginationButtons && (
         <IconButton
           name={'arrowToRight'}
           iconSize={24}
