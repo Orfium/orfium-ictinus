@@ -1,3 +1,4 @@
+// @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import useTheme from 'hooks/useTheme';
@@ -11,9 +12,11 @@ type Props = {
   count: number;
   /** An onChange callback that will return the page on navigation **/
   onChange?: (page: number) => void;
+  /** Hide the double button functionality, this way the jump to first and last page will be hidden **/
+  hideDoubleButtons?: boolean;
 };
 
-const Pagination = ({ page = 1, count, onChange = () => {} }: Props) => {
+const Pagination = ({ page = 1, count, onChange = () => {}, hideDoubleButtons = false }: Props) => {
   const theme = useTheme();
   const {
     currentPage,
@@ -34,12 +37,14 @@ const Pagination = ({ page = 1, count, onChange = () => {} }: Props) => {
         '> *': { padding: theme.spacing.sm },
       }}
     >
-      <IconButton
-        name={'arrowToLeft'}
-        onClick={navigateToFirstPage}
-        iconSize={24}
-        disabled={!hasPrevPage}
-      />
+      {!hideDoubleButtons && (
+        <IconButton
+          name={'arrowToLeft'}
+          onClick={navigateToFirstPage}
+          iconSize={24}
+          disabled={!hasPrevPage}
+        />
+      )}
       <IconButton
         name={'arrowLeft'}
         iconSize={24}
@@ -57,12 +62,14 @@ const Pagination = ({ page = 1, count, onChange = () => {} }: Props) => {
         onClick={navigateToNextPage}
         disabled={!hasNextPage}
       />
-      <IconButton
-        name={'arrowToRight'}
-        iconSize={24}
-        onClick={navigateToLastPage}
-        disabled={!hasNextPage}
-      />
+      {!hideDoubleButtons && (
+        <IconButton
+          name={'arrowToRight'}
+          iconSize={24}
+          onClick={navigateToLastPage}
+          disabled={!hasNextPage}
+        />
+      )}
     </div>
   );
 };

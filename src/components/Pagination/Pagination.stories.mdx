@@ -22,10 +22,20 @@ import { Pagination } from 'orfium-design-system';
 
 # Pagination
 
-Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
+Simple pagination with all buttons
 
 <Preview>
   <Story name="Pagination">
     <Pagination count={3} page={1} />
+  </Story>
+</Preview>
+
+# Pagination
+
+Simple pagination without jumping on first or last page
+
+<Preview>
+  <Story name="Pagination without all buttons">
+    <Pagination count={3} page={1} hideDoubleButtons />
   </Story>
 </Preview>
