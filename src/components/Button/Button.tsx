@@ -16,6 +16,8 @@ export type Props = {
   filled?: boolean;
   /** An optional icon to turn the button to icon button with text/children */
   icon?: React.Component | JSX.Element | null;
+  /** Define if the button is in disabled state */
+  disabled?: boolean;
 };
 
 export type TestProps = {
@@ -27,6 +29,7 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
   type = 'primary',
   filled = true,
   icon = null,
+  disabled = false,
   children,
   dataTestId = '',
   onClick,
@@ -42,10 +45,12 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
         filled,
         size,
         icon,
+        disabled,
         childrenCount: React.Children.count(children),
       })(theme)}
       onClick={onClick}
       onBlur={onBlur}
+      disabled={disabled}
     >
       <span
         css={buttonSpanStyle({
@@ -53,6 +58,7 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
           filled,
           size,
           icon,
+          disabled,
           hasChildren: Boolean(React.Children.count(children)),
         })(theme)}
       >

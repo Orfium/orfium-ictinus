@@ -19,6 +19,8 @@ export type Props = {
   filled?: boolean;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
+  /** Define if the button is in disabled state */
+  disabled?: boolean;
 };
 
 export type TestProps = {
@@ -34,6 +36,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
   dataTestId = '',
   onClick,
   onBlur,
+  disabled,
 }) => {
   return (
     <Button
@@ -43,7 +46,8 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
       size={size}
       type={type}
       filled={filled}
-      icon={<Icon name={name} color={type} size={iconSize} />}
+      disabled={disabled}
+      icon={<Icon name={name} color={disabled ? 'gray50' : type} size={iconSize} />}
     />
   );
 };

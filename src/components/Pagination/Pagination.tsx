@@ -3,7 +3,6 @@
 import { jsx } from '@emotion/core';
 import useTheme from 'hooks/useTheme';
 import usePagination from 'hooks/usePagination';
-import Icon from 'components/Icon';
 import IconButton from '../IconButton';
 
 type Props = {
@@ -37,13 +36,17 @@ const Pagination = ({ page = 1, count, onChange = () => {} }: Props) => {
         '> *': { padding: theme.spacing.sm },
       }}
     >
-      <IconButton name={'arrowToLeft'} onClick={navigateToFirstPage} iconSize={24} />
+      <IconButton
+        name={'arrowToLeft'}
+        onClick={navigateToFirstPage}
+        iconSize={24}
+        disabled={!hasPrevPage}
+      />
       <IconButton
         name={'arrowLeft'}
         iconSize={24}
         onClick={navigateToPrevPage}
-        aria-disabled={hasPrevPage}
-        css={{ color: !hasPrevPage ? theme.palette.gray50 : 'initial' }}
+        disabled={!hasPrevPage}
       />
 
       <div>
@@ -52,13 +55,16 @@ const Pagination = ({ page = 1, count, onChange = () => {} }: Props) => {
 
       <IconButton
         name={'arrowRight'}
-        type={'error'}
         iconSize={24}
         onClick={navigateToNextPage}
-        aria-disabled={hasNextPage}
-        css={{ color: !hasNextPage ? theme.palette.gray50 : 'initial' }}
+        disabled={!hasNextPage}
       />
-      <IconButton name={'arrowToRight'} iconSize={24} onClick={navigateToLastPage} />
+      <IconButton
+        name={'arrowToRight'}
+        iconSize={24}
+        onClick={navigateToLastPage}
+        disabled={!hasNextPage}
+      />
     </div>
   );
 };
