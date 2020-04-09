@@ -11,7 +11,9 @@ import {
 } from './Radio.style';
 
 export type Props = {
-  /** The value of the radio input. If no value is passed the default value, according to spec, is "on" */
+  /** The value of the radio input. If no value is passed the default value, according to spec, is "on"
+   *  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
+   * */
   value?: string | number;
   /** Whether the radio input is selected or not. Defining this prop means the radio input is controlled */
   checked?: boolean;
