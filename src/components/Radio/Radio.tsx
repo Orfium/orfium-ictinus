@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import useRadioGroup from 'components/RadioGroup/useRadioGroup';
 import PropTypes from 'prop-types';
-import React, { ReactEventHandler, Ref, useState } from 'react';
+import React, { ReactEventHandler, Ref, SyntheticEvent, useState } from 'react';
 import {
   customRadioStyles,
   customRadioWrapperStyles,
@@ -11,7 +12,7 @@ import {
 
 export type Props = {
   checked: boolean;
-  onChange: ReactEventHandler;
+  onChange?: ReactEventHandler;
   value: string | number;
   name?: string;
   disabled?: boolean;
@@ -20,9 +21,9 @@ export type Props = {
 };
 
 function Radio(props: Props, ref: Ref<HTMLInputElement>) {
-  const { checked, onChange = () => {}, value, name, disabled = false, id, required } = props;
-
+  const { checked, onChange, value, name, disabled = false, id, required } = props;
   const [focused, setFocused] = useState(false);
+  const radioGroup = useRadioGroup();
 
   function handleFocus() {
     setFocused(true);
@@ -32,6 +33,19 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
     setFocused(false);
   }
 
+  function handleChange(e: SyntheticEvent) {
+    if (onChange) {
+      onChange(e);
+    }
+
+    if (radioGroup) {
+      radioGroup.onChange(e);
+    }
+  }
+
+  const checkedValue = checked ?? (radioGroup && radioGroup.value) === value;
+  const nameValue = name ?? (radioGroup && radioGroup.name);
+
   return (
     <span css={wrapperStyles(disabled)}>
       <input
@@ -39,18 +53,23 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
         onBlur={handleBlur}
         onMouseLeave={handleBlur}
         type={'radio'}
-        onChange={onChange}
+        onChange={handleChange}
         css={inputStyles}
-        name={name}
+        name={nameValue}
         value={value}
         disabled={disabled}
         id={id}
         required={required}
-        checked={checked}
+        checked={checkedValue}
         ref={ref}
       />
       <span css={customRadioWrapperStyles(focused, disabled)}>
-        <span css={customRadioStyles(props)} />
+        <span
+          css={customRadioStyles({
+            checked: checkedValue,
+            disabled,
+          })}
+        />
       </span>
     </span>
   );
@@ -58,7 +77,7 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
 
 Radio.propTypes = {
   checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   name: PropTypes.string,
   disabled: PropTypes.bool,

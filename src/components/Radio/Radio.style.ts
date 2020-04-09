@@ -31,8 +31,8 @@ export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) =>
   ${focused && !disabled && focusedRadio};
 `;
 
-export const customRadioStyles = (props: Props) => {
-  function determineBoxShadow({ checked, disabled }: Props) {
+export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) => {
+  function determineBoxShadow({ checked, disabled }: Pick<Props, 'checked' | 'disabled'>) {
     if (disabled) {
       return 'inset 0px 0px 0px 14px #efefef';
     }
