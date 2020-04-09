@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { ReactEventHandler, SyntheticEvent, useState } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import React, { ReactEventHandler, Ref, useState } from 'react';
 import {
   customRadioStyles,
   customRadioWrapperStyles,
@@ -19,16 +19,8 @@ export type Props = {
   required?: boolean;
 };
 
-function Radio(props: Props) {
-  const {
-    onChange = () => {},
-    name = 'yolo',
-    value,
-    checked = false,
-    disabled = false,
-    id,
-    required,
-  } = props;
+function Radio(props: Props, ref: Ref<HTMLInputElement>) {
+  const { checked, onChange = () => {}, value, name, disabled = false, id, required } = props;
 
   const [focused, setFocused] = useState(false);
 
@@ -55,6 +47,7 @@ function Radio(props: Props) {
         id={id}
         required={required}
         checked={checked}
+        ref={ref}
       />
       <span css={customRadioWrapperStyles(focused, disabled)}>
         <span css={customRadioStyles(props)} />
@@ -63,15 +56,14 @@ function Radio(props: Props) {
   );
 }
 
-Radio.propTypes = {};
-
-// export default Radio;
-
-export default function Group() {
-  const [selectedValue, setSelectedValue] = useState('b');
-
-  const handleChange = (event: SyntheticEvent<HTMLInputElement>) => {
-    setSelectedValue((event.target as HTMLInputElement).value);
-  };
+Radio.propTypes = {
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  name: PropTypes.string,
+  disabled: PropTypes.bool,
+  id: PropTypes.string,
+  required: PropTypes.bool,
+};
 
 export default React.forwardRef(Radio);
