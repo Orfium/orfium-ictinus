@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { ReactEventHandler, ReactNode, useRef, useState } from 'react';
 import RadioGroupContext from './RadioGroupContext';
 
@@ -40,13 +39,5 @@ function RadioGroup(props: RadioGroupProps) {
     </RadioGroupContext.Provider>
   );
 }
-
-RadioGroup.propTypes = {
-  children: PropTypes.node.isRequired,
-  onChange: PropTypes.func,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  name: PropTypes.string,
-};
 
 export default RadioGroup;

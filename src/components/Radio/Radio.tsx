@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import useRadioGroup from 'components/RadioGroup/useRadioGroup';
-import PropTypes from 'prop-types';
 import React, { ReactEventHandler, Ref, SyntheticEvent, useState } from 'react';
+import { generateTestDataId } from 'utils/helpers';
 import {
   customRadioStyles,
   customRadioWrapperStyles,
@@ -13,6 +13,8 @@ import {
 export type Props = {
   /** The value of the radio input. If no value is passed the default value, according to spec, is "on"
    *  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
+   *
+   *  @default on
    * */
   value?: string | number;
   /** Whether the radio input is selected or not. Defining this prop means the radio input is controlled */
@@ -21,12 +23,19 @@ export type Props = {
   onChange?: ReactEventHandler;
   /** The name of the radio input, in case you want to manually form a radio group */
   name?: string;
-  /** Whether the radio input is disabled */
+  /** Whether the radio input is disabled
+   *
+   *  @default false
+   * */
   disabled?: boolean;
   /** ID property of the radio input */
   id?: string;
-  /** Whether the radio input is required to be selected in the context of a form */
+  /** Whether the radio input is required to be selected in the context of a form
+   *
+   * @default false
+   * */
   required?: boolean;
+  dataTestId?: string;
 };
 
 function Radio(props: Props, ref: Ref<HTMLInputElement>) {
@@ -39,6 +48,7 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
     disabled = false,
     id,
     required = false,
+    dataTestId,
   } = props;
   const [focused, setFocused] = useState(false);
   const [internallyControlledChecked, setInternallyControlledChecked] = useState(false);
@@ -75,7 +85,7 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
   const nameValue = name ?? (radioGroup && radioGroup.name);
 
   return (
-    <span css={wrapperStyles(disabled)}>
+    <span css={wrapperStyles(disabled)} data-testid={generateTestDataId('radio-input', dataTestId)}>
       <input
         css={inputStyles}
         onFocus={handleFocus}
@@ -102,23 +112,6 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
     </span>
   );
 }
-
-Radio.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  checked: PropTypes.bool,
-  onChange: PropTypes.func,
-  name: PropTypes.string,
-  disabled: PropTypes.bool,
-  id: PropTypes.string,
-  required: PropTypes.bool,
-};
-
-Radio.defaultProps = {
-  // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
-  value: 'on',
-  disabled: false,
-  required: false,
-};
 
 export const RadioWithoutForwardRef = Radio;
 export default React.forwardRef(Radio);
