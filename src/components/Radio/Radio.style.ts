@@ -3,7 +3,7 @@ import { rem } from 'polished';
 import { Props } from './Radio';
 
 const focusedRadio = css`
-  box-shadow: 0px 0px 0px ${rem('11px')} rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0 0 ${rem('11px')} rgba(0, 0, 0, 0.04);
 `;
 
 export const inputStyles = css`
