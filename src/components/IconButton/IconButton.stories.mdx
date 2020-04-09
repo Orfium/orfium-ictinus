@@ -1,0 +1,50 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import IconButton from './IconButton';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System|IconButton" component={IconButton} />
+
+# IconButton
+
+A universal IconButton component that with the help of Button hold the icon inside it and makes it clickable and easily accessible.
+
+# Usage
+
+```js
+import { IconButton } from 'orfium-design-system';
+
+<IconButton onClick={() => {}})} name={'add'} />
+```
+
+# Props
+
+<Props of={IconButton} />
+
+# IconButton Colors
+
+IconButton with different types
+
+<Preview>
+  <Story name="IconButton Types">
+    <Stack>
+      <IconButton size={'sm'} name="add" dataTestId={'size-lg'} />
+      <IconButton size={'sm'} type="success" name="add" dataTestId={'size-lg'} />
+      <IconButton size={'sm'} type="error" name="add" dataTestId={'size-lg'} />
+    </Stack>
+  </Story>
+</Preview>
+
+# IconButton Sizes
+
+IconButton with different acceptable sizes
+
+<Preview>
+  <Story name="IconButton Sizes">
+    <Stack>
+      <IconButton size={'sm'} name="add" dataTestId={'size-lg'} />
+      <IconButton size={'md'} name="fatArrowDown" />
+      <IconButton size={'lg'} name="check" />
+    </Stack>
+  </Story>
+</Preview>
