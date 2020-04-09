@@ -1,0 +1,43 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Radio from '../Radio';
+import RadioGroup from './RadioGroup';
+
+<Meta title="Design System|RadioGroup" component={RadioGroup} />
+
+# RadioGroup
+
+Placeholder
+
+# Usage
+
+```js
+import { RadioGroup } from 'orfium-design-system';
+
+<RadioGroup>
+    <Radio />
+    <Radio />
+    <Radio />
+</RadioGroup>
+```
+
+# Props
+
+<Props of={RadioGroup} />
+
+# Eimai ena skoupidi
+
+Kai den ntrepomai
+
+
+<Preview>
+  <Story name="Radio with options">
+    <div style={{ color: '#82e616' }}>
+      <RadioGroup defaultValue="b">
+          <Radio value="a" />
+          <Radio value="b" />
+          <Radio value="c" />
+      </RadioGroup>
+    </div>
+  </Story>
+</Preview>
