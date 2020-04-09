@@ -1,4 +1,3 @@
-// @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import useTheme from 'hooks/useTheme';
@@ -6,13 +5,12 @@ import usePagination from 'hooks/usePagination';
 import IconButton from '../IconButton';
 
 type Props = {
+  /** The current page you are on if you need to control it, defaults to 1 **/
   page: number;
+  /** The total pages **/
   count: number;
+  /** An onChange callback that will return the page on navigation **/
   onChange?: (page: number) => void;
-  hideNextButton?: boolean;
-  hidePrevButton?: boolean;
-  showFirstButton?: boolean;
-  showLastButton?: boolean;
 };
 
 const Pagination = ({ page = 1, count, onChange = () => {} }: Props) => {
