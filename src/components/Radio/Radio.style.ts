@@ -1,8 +1,9 @@
 import { css } from '@emotion/core';
+import { rem } from 'polished';
 import { Props } from './Radio';
 
 const focusedRadio = css`
-  box-shadow: 0px 0px 0px 11px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 0px ${rem('11px')} rgba(0, 0, 0, 0.04);
 `;
 
 export const inputStyles = css`
@@ -25,8 +26,8 @@ export const inputStyles = css`
 export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) => css`
   position: relative;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: ${rem('28px')};
+  height: ${rem('28px')};
   transition: box-shadow 0.3s ease;
   ${focused && !disabled && focusedRadio};
 `;
@@ -34,18 +35,22 @@ export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) =>
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) => {
   function determineBoxShadow({ checked, disabled }: Pick<Props, 'checked' | 'disabled'>) {
     if (disabled && checked) {
-      return 'inset 0px 0px 0px 2px #efefef, inset 0px 0px 0px 7px #efefef, inset 0px 0px 0px 14px currentColor';
+      return `inset 0px 0px 0px ${rem('2px')} #efefef, inset 0px 0px 0px${rem(
+        '7px'
+      )} #efefef, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
     if (disabled) {
-      return 'inset 0px 0px 0px 14px #efefef';
+      return `inset 0px 0px 0px ${rem('14px')} #efefef`;
     }
 
     if (checked) {
-      return 'inset 0px 0px 0px 2px currentColor, inset 0px 0px 0px 7px #fff, inset 0px 0px 0px 14px currentColor';
+      return `inset 0px 0px 0px ${rem('2px')} currentColor, inset 0px 0px 0px ${rem(
+        '7px'
+      )} #fff, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
-    return 'inset 0px 0px 0px 14px #dfdfdf';
+    return `inset 0px 0px 0px ${rem('14px')} #dfdfdf`;
   }
 
   return css`
@@ -64,8 +69,8 @@ export const wrapperStyles = (disabled: boolean) => css`
 
   border-radius: 50%;
 
-  width: 50px;
-  height: 50px;
+  width: ${rem('50px')};
+  height: ${rem('50px')};
 
   color: inherit;
   border: 0;
