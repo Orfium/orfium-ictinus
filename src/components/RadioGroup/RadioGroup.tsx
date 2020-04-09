@@ -16,8 +16,8 @@ export type RadioGroupProps = {
 
 function RadioGroup(props: RadioGroupProps) {
   const { children, onChange, value: externallyControlledValue, defaultValue, name } = props;
-  const { current: nameValue } = useRef(name ?? `radio-name-${Math.round(Math.random() * 1000)}`);
   const [internallyControlledValue, setInternallyControlledValue] = useState(defaultValue);
+  const { current: nameValue } = useRef(name ?? `radio-${Math.round(Math.random() * 1000)}`);
   const value =
     externallyControlledValue === undefined ? internallyControlledValue : externallyControlledValue;
 
