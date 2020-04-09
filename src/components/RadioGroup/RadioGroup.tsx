@@ -2,11 +2,16 @@ import PropTypes from 'prop-types';
 import React, { ReactEventHandler, ReactNode, useRef, useState } from 'react';
 import RadioGroupContext from './RadioGroupContext';
 
-type RadioGroupProps = {
+export type RadioGroupProps = {
+  /** A list of Radio elements */
   children: ReactNode;
+  /** The onChange event handler for the radio group */
   onChange?: ReactEventHandler;
+  /** The current value of the radio group. Defining this prop means the radio group is controlled */
   value?: string | number;
+  /** A default value for the radio group. Defining this prop means the radio group is not controlled */
   defaultValue?: string | number;
+  /** A name value for all the radio inputs of the radio group */
   name?: string;
 };
 
