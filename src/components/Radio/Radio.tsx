@@ -11,12 +11,19 @@ import {
 } from './Radio.style';
 
 export type Props = {
+  /** Whether the radio input is selected or not */
   checked: boolean;
-  onChange?: ReactEventHandler;
+  /** The value of the radio input */
   value: string | number;
+  /** The onChange event handler for the radio input */
+  onChange?: ReactEventHandler;
+  /** The name of the radio input, in case you want to manually form a radio group */
   name?: string;
+  /** Whether the radio input is disabled */
   disabled?: boolean;
+  /** ID property of the radio input */
   id?: string;
+  /** Whether the radio input is required to be selected in the context of a form */
   required?: boolean;
 };
 

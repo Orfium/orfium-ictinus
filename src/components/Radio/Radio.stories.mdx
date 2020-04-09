@@ -11,24 +11,55 @@ Placeholder
 
 # Usage
 
-```js
+```jsx
 import { Radio } from 'orfium-design-system';
 
-<Radio />;
+<Radio checked={value === 'a'} value={'a'} onChange={() => {}}/>;
 ```
 
 # Props
 
 <Props of={Radio} />
 
-# Eimai ena skoupidi
-
-Kai den ntrepomai
-
-
-
+# Not selected Radio
 <Preview>
-  <Story name="Radio with options">
+  <Story name="Not selected Radio">
+    <div style={{ color: '#82e616' }}>
+      <Radio checked={false}/>
+    </div>
+  </Story>
+</Preview>
+
+# Selected Radio
+<Preview>
+  <Story name="Selected Radio">
+    <div style={{ color: '#82e616' }}>
+      <Radio checked={true}/>
+    </div>
+  </Story>
+</Preview>
+
+# Disabled not selected Radio
+<Preview>
+  <Story name="Disabled not selected Radio">
+    <div style={{ color: '#82e616' }}>
+      <Radio checked={false} disabled={true}/>
+    </div>
+  </Story>
+</Preview>
+
+# Disabled selected Radio
+<Preview>
+  <Story name="Disabled selected Radio">
+    <div style={{ color: '#82e616' }}>
+      <Radio checked={true} disabled={true}/>
+    </div>
+  </Story>
+</Preview>
+
+# Radio showcase
+<Preview>
+  <Story name="Radio showcase">
     <div style={{ color: '#82e616' }}>
       <RadioButtonsShowcase />
     </div>
