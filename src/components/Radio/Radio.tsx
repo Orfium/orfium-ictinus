@@ -77,12 +77,12 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
   return (
     <span css={wrapperStyles(disabled)}>
       <input
+        css={inputStyles}
         onFocus={handleFocus}
         onBlur={handleBlur}
         onMouseLeave={handleBlur}
         type={'radio'}
         onChange={handleChange}
-        css={inputStyles}
         name={nameValue}
         value={value}
         disabled={disabled}

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { normalize } from 'polished';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { css, Global } from '@emotion/core';

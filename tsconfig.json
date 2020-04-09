@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "sourceMap": true,
+    "skipLibCheck": true,
     "allowJs": false,
     "jsx": "react",
     "esModuleInterop": true,
@@ -21,12 +22,9 @@
     "noUnusedLocals": true,
     "declaration": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "paths": {
-      "src/*": ["./*"]
-    }
+    "experimentalDecorators": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "dist", "scripts", "src/**/*.stories.tsx"],
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "build", "dist", "scripts", "./src/**/*.stories.tsx"],
   "files": ["globals.d.ts"]
 }

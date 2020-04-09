@@ -1,0 +1,319 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Table from './Table';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System|Table" component={Table} />
+
+# Table
+
+A universal Table component that applies Orfium basic usages. Check inline data structure for more.
+
+# Usage
+
+```js
+import { Table } from 'orfium-design-system';
+
+<Table />;
+```
+
+# Props
+
+<Props of={Table} />
+
+# Regular Table
+
+Regular Table with simple rows
+
+<Preview>
+  <Story name="Regular Table with simple rows">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      padded
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 3,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 4,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 5,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 6,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 7,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 8,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Expandable Table
+
+Table with expandable rows and nested header
+
+<Preview>
+  <Story name="Table with expandable rows">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      type="nested-header"
+      onCheck={console.log}
+      padded
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+          expanded: () => <div>Hey i am an expandable content</div>,
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+          expanded: () => <div>Hey i am an expandable content</div>,
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Financial Table
+
+Financial Table that has lines at the end as it requires a financial Orfium table
+
+<Preview>
+  <Story name="Financial Table">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      onCheck={console.log}
+      padded
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 3,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 4,
+          cells: [
+            { content: 'title' },
+            { colSpan: 2, content: 'Sum' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# Fixed Header Table
+
+Fixed Header Table
+
+<Preview>
+  <Story name="Fixed Header Table">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      onCheck={console.log}
+      padded
+      fixedHeader
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 3,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 12,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 13,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 22,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 23,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 32,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+        {
+          id: 33,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { type: 'financial', content: 'lastname' },
+            { type: 'financial', content: 4.221 },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Preview>

@@ -1,4 +1,4 @@
-import { Theme } from 'src/theme';
+import { Theme } from 'theme';
 import { rem } from 'polished';
 import { AcceptedColorComponentTypes, fillPickerBasedOnType } from 'utils/themeFunctions';
 
@@ -17,4 +17,7 @@ export const iconStyle = ({ color, size }: iconStyleProps) => (theme: Theme) => 
 
 export const iconContainerStyle = () => ({
   padding: rem(2),
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 });
