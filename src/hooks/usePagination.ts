@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 type Props = {
   page: number;
@@ -13,15 +13,17 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
   const hasNextPage = nextPage <= count;
   const hasPrevPage = prevPage >= 1;
 
+  useEffect(() => {
+    handleChange(currentPage);
+  }, [currentPage]);
+
   const navigateToFirstPage = useCallback(() => {
     const page = 1;
     setCurrentPage(page);
-    handleChange(page);
-  }, []);
+  }, [currentPage]);
 
   const navigateToLastPage = useCallback(() => {
     setCurrentPage(count);
-    handleChange(count);
   }, [count]);
 
   const navigateToNextPage = useCallback(() => {
@@ -34,7 +36,6 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
 
       return page;
     });
-    handleChange(currentPage);
   }, [count]);
 
   const navigateToPrevPage = useCallback(() => {
