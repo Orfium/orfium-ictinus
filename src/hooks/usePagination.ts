@@ -20,7 +20,7 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
   const navigateToFirstPage = useCallback(() => {
     const page = 1;
     setCurrentPage(page);
-  }, [currentPage]);
+  }, []);
 
   const navigateToLastPage = useCallback(() => {
     setCurrentPage(count);
