@@ -11,12 +11,16 @@ import Icon from '../Icon';
 export type Props = {
   /** Type indicating the type of the button. Defaults to 'primary' */
   type?: AcceptedColorComponentTypes;
+  /** Property indicating the size of the icon. Defaults to 16 */
+  iconSize?: number;
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
+  /** Define if the button is in disabled state */
+  disabled?: boolean;
 };
 
 export type TestProps = {
@@ -25,12 +29,14 @@ export type TestProps = {
 
 const IconButton: React.FC<Props & TestProps & EventProps> = ({
   size = 'md',
+  iconSize,
   type = 'primary',
   filled = true,
   name,
   dataTestId = '',
   onClick,
   onBlur,
+  disabled,
 }) => {
   return (
     <Button
@@ -40,7 +46,8 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
       size={size}
       type={type}
       filled={filled}
-      icon={<Icon name={name} />}
+      disabled={disabled}
+      icon={<Icon name={name} color={disabled ? 'gray50' : type} size={iconSize} />}
     />
   );
 };

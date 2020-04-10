@@ -23,15 +23,32 @@ export const buttonStyle = ({
   filled,
   size,
   icon,
+  disabled,
   childrenCount,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
   const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
   const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
 
+  const defineBackgroundColor = () => {
+    if (childrenCount === 0 && icon) {
+      return 'transparent';
+    }
+
+    if (disabled) {
+      return theme.palette.gray50;
+    }
+
+    if (filled && childrenCount !== 0) {
+      return backgroundPickerBasedOnType(type)(theme);
+    }
+
+    return 'transparent';
+  };
+
   return {
     fontSize: theme.typography.fontSizes['16'],
-    color: colorPickerBasedOnType(type)(theme),
-    backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
+    color: disabled ? theme.palette.gray100 : colorPickerBasedOnType(type)(theme),
+    backgroundColor: defineBackgroundColor(),
     paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
     paddingRight: icon && !childrenCount ? calculatedPaddingSpaceIfIcon : calculatedPaddingSpace,
     height: heightBasedOnSize(size),

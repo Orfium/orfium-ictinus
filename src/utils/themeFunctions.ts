@@ -11,7 +11,12 @@ export type AcceptedColorComponentTypes =
   | 'dark'
   | 'branded1'
   | 'branded2'
-  | 'white';
+  | 'white'
+  | 'gray'
+  | 'gray50'
+  | 'gray100'
+  | 'gray200'
+  | 'gray300';
 
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (
   theme: Theme
@@ -65,6 +70,12 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
       return theme.palette.gray300;
     case 'light':
       return theme.palette.text.light;
+    case 'gray50':
+      return theme.palette.gray50;
+    case 'gray100':
+      return theme.palette.gray100;
+    case 'gray200':
+      return theme.palette.gray200;
     default:
       return theme.palette.primary;
   }
