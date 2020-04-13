@@ -67,7 +67,7 @@
     "@types/react-dom": "^16.0.0"
   },
   "scripts": {
-    "install": "yarn build",
+    "postinstall": "yarn build",
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
     "build": "yarn build:lib && yarn build:types",
