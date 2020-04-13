@@ -101,9 +101,9 @@ function Table<T>({
         <thead>
           <TableRow>
             {onCheck && (
-              <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
+              <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
                 <CheckBox
-                  checked={selectedIds.length === data.length}
+                  checked={Boolean(selectedIds.length > 0)}
                   intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
                   onClick={() => {
                     if (selectedIds.length === data.length) {
