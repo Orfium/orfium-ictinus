@@ -8,7 +8,7 @@ type Props = {
 
 const Stack: React.FC<Props> = ({ vertical = false, children }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: vertical ? 'column' : 'row' }}>
+    <div style={{ display: 'flex', flexDirection: vertical ? 'column' : 'row', flexWrap: 'wrap' }}>
       {React.Children.toArray(children).map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <div key={index} style={{ margin: 5 }}>
