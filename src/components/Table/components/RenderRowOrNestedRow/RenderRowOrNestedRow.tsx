@@ -7,12 +7,12 @@ import TableRow from '../TableRow';
 import TableCell from '../TableCell';
 import { tableStyle } from '../../Table.style';
 import rem from 'polished/lib/helpers/rem';
-import Icon from 'components/Icon';
 import { isComponentFunctionType } from 'utils/helpers';
 import { TableRowContext } from '../../TableRowContext';
 import { Row } from '../../Table';
+import Icon from '../../../Icon';
 
-const RenderRowWithCells = React.memo(() => {
+const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => {} }: any) => {
   const {
     columnsHasNumberArr,
     onSelectionChangeExist,
@@ -28,6 +28,7 @@ const RenderRowWithCells = React.memo(() => {
   const theme = useTheme();
   let cellCounter = 0;
   let prevCellColSpan = 0;
+  const { expanded } = row;
 
   return (
     <TableRow
@@ -66,6 +67,35 @@ const RenderRowWithCells = React.memo(() => {
           </TableCell>
         );
       })}
+
+      {expanded && (
+        <TableCell width={67}>
+          <div>
+            <div
+              css={{
+                padding: theme.spacing.sm,
+                marginLeft: theme.spacing.lg,
+                overflow: 'hidden',
+                borderRadius: rem(20),
+                backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
+                marginTop: rem(8),
+                transition: '0.2s all ease-in-out',
+                cursor: 'pointer',
+              }}
+              onClick={() => toggleChecked()}
+            >
+              <div
+                css={{
+                  transition: '0.3s all ease-in-out',
+                  transform: `rotate(${checked ? '180' : '0'}deg)`,
+                }}
+              >
+                <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
+              </div>
+            </div>
+          </div>
+        </TableCell>
+      )}
     </TableRow>
   );
 });
@@ -81,7 +111,7 @@ const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
   return (
     <React.Fragment>
       {!expanded ? (
-        <RenderRowWithCells {...{}} />
+        <RenderRowWithCells />
       ) : (
         <TableRow nested selected={isRowSelected}>
           <TableCell colSpan={columnCount} padded={false}>
@@ -95,39 +125,15 @@ const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
             >
               <table css={tableStyle()(theme)}>
                 <tbody>
-                  <RenderRowWithCells />
-
+                  <RenderRowWithCells {...{ checked, toggleChecked }} />
                   {checked && (
                     <TableRow nested>
-                      <TableCell colSpan={columnCount}>{ExpandedComponent}</TableCell>
+                      {/* colSpan is +1 because of the tableCell added for the arrow icon */}
+                      <TableCell colSpan={columnCount + 1}>{ExpandedComponent}</TableCell>
                     </TableRow>
                   )}
                 </tbody>
               </table>
-              <div>
-                <div
-                  css={{
-                    padding: theme.spacing.sm,
-                    marginLeft: theme.spacing.lg,
-                    overflow: 'hidden',
-                    borderRadius: rem(20),
-                    backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
-                    marginTop: rem(8),
-                    transition: '0.2s all ease-in-out',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => toggleChecked()}
-                >
-                  <div
-                    css={{
-                      transition: '0.3s all ease-in-out',
-                      transform: `rotate(${checked ? '180' : '0'}deg)`,
-                    }}
-                  >
-                    <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
-                  </div>
-                </div>
-              </div>
             </div>
           </TableCell>
         </TableRow>

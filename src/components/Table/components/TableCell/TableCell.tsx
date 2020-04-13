@@ -6,7 +6,7 @@ import useTheme from 'hooks/useTheme';
 type Props = {
   textAlign?: 'left' | 'right';
   component?: 'td' | 'th';
-  width?: number;
+  width?: number | string;
   sticky?: boolean;
   colSpan?: number;
   type?: 'financial' | 'normal';
