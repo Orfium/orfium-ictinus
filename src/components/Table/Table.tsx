@@ -10,6 +10,7 @@ import rem from 'polished/lib/helpers/rem';
 import pluralize from 'pluralize';
 import RenderRowOrNestedRow from './components/RenderRowOrNestedRow';
 import { TableRowContext } from './TableRowContext';
+import CheckBox from '../CheckBox';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -101,10 +102,10 @@ function Table<T>({
           <TableRow>
             {onCheck && (
               <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
-                <input
-                  type="checkbox"
-                  checked={selectedIds.length > 0}
-                  onChange={() => {
+                <CheckBox
+                  checked={selectedIds.length === data.length}
+                  intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
+                  onClick={() => {
                     if (selectedIds.length === data.length) {
                       onSelectionChange([]);
                     } else {

@@ -11,6 +11,7 @@ import { isComponentFunctionType } from 'utils/helpers';
 import { TableRowContext } from '../../TableRowContext';
 import { Row } from '../../Table';
 import Icon from '../../../Icon';
+import CheckBox from '../../../CheckBox';
 
 const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => {} }: any) => {
   const {
@@ -37,7 +38,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
     >
       {onSelectionChangeExist && (
         <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
-          <input type="checkbox" checked={isRowSelected} onChange={tChange} />
+          <CheckBox checked={isRowSelected} onClick={tChange} />
         </TableCell>
       )}
       {row.cells.map(({ content, colSpan, type: cellType }, index) => {
