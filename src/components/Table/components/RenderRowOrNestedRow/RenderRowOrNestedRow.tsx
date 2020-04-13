@@ -37,7 +37,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
       css={bordered && { borderBottom: `${rem(1)} solid ${theme.palette.gray50}` }}
     >
       {onSelectionChangeExist && (
-        <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
+        <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
           <CheckBox checked={isRowSelected} onClick={tChange} />
         </TableCell>
       )}
@@ -106,8 +106,10 @@ const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
   const { isRowSelected, columnCount } = useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;
-  const ExpandedComponent = expanded ? expanded(row) : null;
   const [checked, toggleChecked] = useToggle(false);
+  const ExpandedComponent = expanded
+    ? expanded({ row, selected: isRowSelected, expanded: checked })
+    : null;
 
   return (
     <React.Fragment>
