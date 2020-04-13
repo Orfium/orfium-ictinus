@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Props } from './Radio';
 
@@ -6,7 +6,7 @@ const focusedRadio = css`
   box-shadow: 0 0 0 ${rem('11px')} rgba(0, 0, 0, 0.04);
 `;
 
-export const inputStyles = css`
+export const inputStyles: SerializedStyles = css`
   top: 0;
   left: 0;
   width: 100%;
@@ -23,7 +23,10 @@ export const inputStyles = css`
   }
 `;
 
-export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) => css`
+export const customRadioWrapperStyles = (
+  focused: boolean,
+  disabled: boolean
+): SerializedStyles => css`
   position: relative;
   border-radius: 50%;
   width: ${rem('28px')};
@@ -32,7 +35,7 @@ export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) =>
   ${focused && !disabled && focusedRadio};
 `;
 
-export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) => {
+export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>): SerializedStyles => {
   function determineBoxShadow({ checked, disabled }: Pick<Props, 'checked' | 'disabled'>) {
     if (disabled && checked) {
       return `inset 0px 0px 0px ${rem('2px')} #efefef, inset 0px 0px 0px ${rem(
@@ -64,7 +67,7 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) =>
   `;
 };
 
-export const wrapperStyles = (disabled: boolean) => css`
+export const wrapperStyles = (disabled: boolean): SerializedStyles => css`
   position: relative;
 
   border-radius: 50%;
