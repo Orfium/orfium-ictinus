@@ -10,6 +10,7 @@ import rem from 'polished/lib/helpers/rem';
 import pluralize from 'pluralize';
 import RenderRowOrNestedRow from './components/RenderRowOrNestedRow';
 import { TableRowContext } from './TableRowContext';
+import CheckBox from '../CheckBox';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -21,7 +22,15 @@ export type Cell<T> = {
 export type Row<T> = {
   id: string | number;
   cells: Cell<T>[];
-  expanded?: (data: Row<T>) => React.Component | JSX.Element;
+  expanded?: ({
+    row,
+    selected,
+    expanded,
+  }: {
+    row: Row<T>;
+    selected: boolean;
+    expanded: boolean;
+  }) => React.Component | JSX.Element;
   rowSpan?: number;
 };
 
@@ -100,11 +109,11 @@ function Table<T>({
         <thead>
           <TableRow>
             {onCheck && (
-              <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded}>
-                <input
-                  type="checkbox"
-                  checked={selectedIds.length > 0}
-                  onChange={() => {
+              <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
+                <CheckBox
+                  checked={Boolean(selectedIds.length > 0)}
+                  intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
+                  onClick={() => {
                     if (selectedIds.length === data.length) {
                       onSelectionChange([]);
                     } else {

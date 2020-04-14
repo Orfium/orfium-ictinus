@@ -34,7 +34,9 @@ const CheckBox: React.FC<Props> = ({
   const handleInputChange = (event: ChangeEvent) => {
     const newChecked = !isChecked;
 
-    setIsChecked(newChecked);
+    if (checked === undefined) {
+      setIsChecked(newChecked);
+    }
 
     if (!disabled && onClick) {
       onClick(newChecked, event);
@@ -50,7 +52,7 @@ const CheckBox: React.FC<Props> = ({
           type="checkbox"
           onChange={handleInputChange}
           disabled={disabled}
-          checked={isChecked}
+          checked={checked}
         />
         <label htmlFor={`styled-checkbox-${id}`} />
       </span>

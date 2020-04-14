@@ -7,7 +7,6 @@ export const wrapperStyle = ({ disabled }: Props) => (theme: Theme): SerializedS
   opacity: ${disabled ? 0.3 : 1};
   justify-content: center;
   align-items: center;
-  display: flex;
 `;
 
 export const checkboxWrapperStyle = () => (theme: Theme) => css`
