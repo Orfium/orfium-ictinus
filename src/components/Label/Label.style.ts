@@ -11,7 +11,6 @@ export const labelStyle = ({ animateToTop }: { animateToTop: boolean }) => (
   top: 1.3rem;
   left: 0.7rem;
   user-select: none;
-  z-index: 1500;
   transform: ${!animateToTop ? 'translate(1%, 0)' : 'translate(1%, -65%) scale(0.8);'};
   font-size: ${theme.typography.fontSizes['14']};
   font-weight: ${theme.typography.weights.black};
