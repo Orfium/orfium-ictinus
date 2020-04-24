@@ -29,7 +29,7 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
   background: ${checked
     ? intermediate
       ? theme.palette.gray200
-      : theme.palette.brand1
+      : theme.palette.branded1
     : theme.palette.gray50};
   border: 0;
   border-radius: ${rem(2)};
@@ -59,7 +59,7 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
 
   // Box checked
   &:checked + label:before {
-    background: ${intermediate ? theme.palette.gray200 : theme.palette.brand1};
+    background: ${intermediate ? theme.palette.gray200 : theme.palette.branded1};
   }
 
   // Disabled state label.

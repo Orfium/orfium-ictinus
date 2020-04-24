@@ -2,7 +2,7 @@ import React from 'react';
 import { normalize } from 'polished';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { css, Global } from '@emotion/core';
-import { assign, keys, pick } from 'lodash';
+import { merge, keys, pick } from 'lodash';
 import theme, { Theme } from 'theme';
 import { useThemeSwitch } from 'hooks/useThemeSwitch';
 
@@ -12,7 +12,7 @@ type Props = {
 };
 
 const deepMergeTheme = (newTheme: Theme, theming: 'dark' | 'light'): Theme =>
-  assign(theme(theming), pick(newTheme, keys(theme(theming))));
+  merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
 const globalStyles = css`
   ${normalize()};

@@ -29,7 +29,7 @@ export const buttonStyle = ({
   const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
   const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
 
-  const defineBackgroundColor = () => {
+  const defineBackgroundColor = (): string => {
     if (childrenCount === 0 && icon) {
       return 'transparent';
     }
