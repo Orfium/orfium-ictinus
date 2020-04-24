@@ -8,10 +8,10 @@ import { useThemeSwitch } from 'hooks/useThemeSwitch';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
-  theme?: any;
+  theme?: DeepPartial<Theme>;
 };
 
-const deepMergeTheme = (newTheme: Theme, theming: 'dark' | 'light'): Theme =>
+const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light'): Theme =>
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
 const globalStyles = css`
