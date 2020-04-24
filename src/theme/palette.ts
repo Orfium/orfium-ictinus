@@ -8,11 +8,11 @@ const grayPalette = {
 
 export const lightPalette: Palette = {
   // Primary Palette
-  primary: '',
+  primary: '#DFDFDF',
   secondary: '',
 
-  brand1: 'orange',
-  brand2: 'yellow',
+  branded1: 'orange',
+  branded2: 'yellow',
 
   ...grayPalette,
 
@@ -37,8 +37,8 @@ export const darkPalette: Palette = {
   primary: '',
   secondary: '',
 
-  brand1: 'orange',
-  brand2: 'yellow',
+  branded1: 'orange',
+  branded2: 'yellow',
 
   ...grayPalette,
 
@@ -63,8 +63,8 @@ export type Palette = {
   primary: string;
   secondary: string;
 
-  brand1: string;
-  brand2: string;
+  branded1: string;
+  branded2: string;
 
   gray: string;
   gray50: string;

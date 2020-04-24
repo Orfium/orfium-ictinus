@@ -1,4 +1,5 @@
 import { Theme } from 'theme';
+import { get } from 'lodash';
 
 export type AcceptedColorComponentTypes =
   | 'primary'
@@ -21,18 +22,11 @@ export type AcceptedColorComponentTypes =
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (
   theme: Theme
 ) => {
-  switch (type) {
-    case 'success':
-      return theme.palette.success;
-    case 'error':
-      return theme.palette.error;
-    case 'info':
-      return theme.palette.info;
-    case 'warning':
-      return theme.palette.warning;
-    default:
-      return theme.palette.gray50;
+  if (type) {
+    return get(theme.palette, [type]);
   }
+
+  return theme.palette.gray50;
 };
 
 export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
@@ -61,9 +55,9 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
     case 'warning':
       return theme.palette.warning;
     case 'branded1':
-      return theme.palette.brand1;
+      return theme.palette.branded1;
     case 'branded2':
-      return theme.palette.brand2;
+      return theme.palette.branded2;
     case 'white':
       return theme.palette.white;
     case 'dark':

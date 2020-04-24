@@ -56,7 +56,7 @@ const ThemeSwitcher = () => {
 // wrap all components with theme provider by default
 addDecorator(storyFn => {
   return (
-    <ThemeProvider theme={{}}>
+    <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
       <ThemeSwitcher />
       {storyFn()}
     </ThemeProvider>
