@@ -5,7 +5,7 @@ import { rem, transparentize } from 'polished';
 import Label from 'components/Label';
 import { generateUniqueID } from 'utils/helpers';
 
-export type SelectOption = { value: string; label: string; isDisabled?: boolean };
+export type SelectOption = { value: string | number; label: string; isDisabled?: boolean };
 
 export type Props = {
   /** The label that is going to be displayed */
