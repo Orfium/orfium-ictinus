@@ -17,6 +17,7 @@ export type Cell<T> = {
   content: number | string | ContentComponent<T>;
   colSpan?: number;
   type?: 'financial' | 'normal';
+  align?: 'left' | 'right';
 };
 
 export type Row<T> = {
