@@ -48,6 +48,7 @@ const Pagination = ({
           onClick={navigateToFirstPage}
           iconSize={24}
           disabled={!hasPrevPage}
+          type={'dark'}
         />
       )}
       <IconButton
@@ -55,6 +56,7 @@ const Pagination = ({
         iconSize={24}
         onClick={navigateToPrevPage}
         disabled={!hasPrevPage}
+        type={'dark'}
       />
 
       <div>
@@ -66,6 +68,7 @@ const Pagination = ({
         iconSize={24}
         onClick={navigateToNextPage}
         disabled={!hasNextPage}
+        type={'dark'}
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
@@ -73,6 +76,7 @@ const Pagination = ({
           iconSize={24}
           onClick={navigateToLastPage}
           disabled={!hasNextPage}
+          type={'dark'}
         />
       )}
     </div>
