@@ -41,7 +41,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
           <CheckBox checked={isRowSelected} onClick={tChange} />
         </TableCell>
       )}
-      {row.cells.map(({ content, colSpan, type: cellType }, index) => {
+      {row.cells.map(({ content, colSpan, type: cellType, align }, index) => {
         cellCounter = prevCellColSpan ? prevCellColSpan - 1 + index : index;
         prevCellColSpan = colSpan || prevCellColSpan ? prevCellColSpan + (colSpan || 0) : 0;
 
@@ -49,7 +49,13 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
           <TableCell
             // eslint-disable-next-line react/no-array-index-key
             key={`${row.id}-${index}`}
-            textAlign={columnsHasNumberArr && columnsHasNumberArr[cellCounter] ? 'right' : 'left'}
+            textAlign={
+              align
+                ? align
+                : columnsHasNumberArr && columnsHasNumberArr[cellCounter]
+                ? 'right'
+                : 'left'
+            }
             colSpan={colSpan}
             type={cellType}
             padded={padded}
