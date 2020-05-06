@@ -16,6 +16,8 @@ export type Props = {
   onChange?: (value: ValueType<SelectOption>) => void;
   /** the default value of the select if needed */
   defaultValue?: SelectOption;
+  /** the value of the select if select is controlled */
+  value?: SelectOption;
   /** If the select is going to be disabled or not */
   disabled?: boolean;
   /** if the select is loading data */
@@ -61,6 +63,7 @@ const Select: React.FC<Props> = ({
   options,
   error,
   label,
+  value,
   onChange = () => {},
 }) => {
   const theme = useTheme();
@@ -154,6 +157,7 @@ const Select: React.FC<Props> = ({
         isClearable={isClearable}
         isSearchable={isSearchable}
         isMulti={multi}
+        value={value}
         options={options}
         placeholder={false}
         onChange={onChange}
