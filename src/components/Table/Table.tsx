@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import TableRow from './components/TableRow';
 import TableCell from './components/TableCell';
 import { tableStyle } from './Table.style';
@@ -71,6 +71,11 @@ function Table<T>({
   const theme = useTheme();
   const [selectedIds, setSelectedIds] = useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
+
+  useEffect(() => {
+    // when changing data reset the selecting ids since it might have changed
+    setSelectedIds([]);
+  }, [data]);
 
   const onSelectionChange = (selections: Selection[]) => {
     setSelectedIds(selections);
