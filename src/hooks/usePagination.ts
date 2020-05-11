@@ -14,12 +14,9 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
   const hasPrevPage = prevPage >= 1;
 
   useEffect(() => {
-    handleChange(currentPage);
-  }, [currentPage]);
-
-  useEffect(() => {
-    if (page !== currentPage) setCurrentPage(page);
-  }, [page]);
+    if (page === 1) setCurrentPage(page);
+    else handleChange(currentPage);
+  }, [currentPage, page]);
 
   const navigateToFirstPage = useCallback(() => {
     const page = 1;
