@@ -17,6 +17,10 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
     handleChange(currentPage);
   }, [currentPage]);
 
+  useEffect(() => {
+    if (page !== currentPage) setCurrentPage(page);
+  }, [page]);
+
   const navigateToFirstPage = useCallback(() => {
     const page = 1;
     setCurrentPage(page);
