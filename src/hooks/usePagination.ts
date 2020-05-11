@@ -14,40 +14,38 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
   const hasPrevPage = prevPage >= 1;
 
   useEffect(() => {
-    handleChange(currentPage);
-  }, [currentPage]);
+    setCurrentPage(page);
+  }, [page]);
 
   const navigateToFirstPage = useCallback(() => {
     const page = 1;
     setCurrentPage(page);
+    handleChange(page);
   }, []);
 
   const navigateToLastPage = useCallback(() => {
     setCurrentPage(count);
+    handleChange(count);
   }, [count]);
 
   const navigateToNextPage = useCallback(() => {
-    setCurrentPage(page => {
-      const nextPage = page + 1;
+    let nextPage = currentPage;
 
-      if (nextPage <= count) {
-        return nextPage;
-      }
-
-      return page;
-    });
+    if (nextPage + 1 <= count) {
+      nextPage = nextPage + 1;
+    }
+    setCurrentPage(nextPage);
+    handleChange(nextPage);
   }, [count]);
 
   const navigateToPrevPage = useCallback(() => {
-    setCurrentPage(page => {
-      const prevPage = page - 1;
+    let prevPage = currentPage;
 
-      if (prevPage >= 1) {
-        return prevPage;
-      }
-
-      return page;
-    });
+    if (prevPage - 1 >= 1) {
+      prevPage = prevPage - 1;
+    }
+    setCurrentPage(prevPage);
+    handleChange(prevPage);
   }, []);
 
   return {
