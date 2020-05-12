@@ -4,6 +4,7 @@ import { Row, TableType } from './Table';
 export type TableRowContextProps<T extends {}> = {
   row: Row<T>;
   columnsHasNumberArr: boolean[];
+  columnsWithWidth: number[];
   padded: boolean;
   onSelectionChangeExist: boolean;
   isRowSelected: boolean;
@@ -21,6 +22,7 @@ export const TableRowContext = createContext<TableRowContextProps<{}>>({
     cells: [],
   },
   columnsHasNumberArr: [],
+  columnsWithWidth: [],
   padded: false,
   onSelectionChangeExist: false,
   isRowSelected: false,
