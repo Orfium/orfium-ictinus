@@ -16,6 +16,7 @@ import CheckBox from '../../../CheckBox';
 const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => {} }: any) => {
   const {
     columnsHasNumberArr,
+    columnsWithWidth,
     onSelectionChangeExist,
     padded,
     columns,
@@ -59,6 +60,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
             colSpan={colSpan}
             type={cellType}
             padded={padded}
+            width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
           >
             {type === 'nested-header' && (
               <div

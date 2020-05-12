@@ -1,3 +1,4 @@
+// @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React, { useCallback, useEffect, useState } from 'react';
@@ -18,6 +19,7 @@ export type Cell<T> = {
   colSpan?: number;
   type?: 'financial' | 'normal';
   align?: 'left' | 'right';
+  widthPercentage?: number;
 };
 
 export type Row<T> = {
@@ -109,96 +111,118 @@ function Table<T>({
     []
   );
 
+  const columnsWithWidth = React.useMemo(
+    () =>
+      head(
+        data.map(({ cells }) =>
+          cells.map(({ widthPercentage }) => {
+            return widthPercentage;
+          })
+        )
+      ) || [],
+    []
+  );
+
   return (
-    <table css={tableStyle()(theme)}>
-      {(onCheck || topRightArea || type === 'normal') && (
-        <thead>
-          <TableRow>
-            {onCheck && (
-              <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
-                <CheckBox
-                  checked={Boolean(selectedIds.length > 0)}
-                  intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
-                  onClick={() => {
-                    if (selectedIds.length === data.length) {
-                      onSelectionChange([]);
-                    } else {
-                      onSelectionChange(data.map(({ id }) => id));
-                    }
-                  }}
-                />
-              </TableCell>
-            )}
-            <TableCell padded={padded}>
-              {selectedIds.length > 0 ? (
-                <span>
-                  <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
-                </span>
-              ) : (
-                topLeftText
-              )}
-            </TableCell>
-            {topRightArea && (
-              <TableCell
-                textAlign={'right'}
-                padded={padded}
-                colSpan={columnCount - (onCheck ? 2 : 1)}
-              >
-                {topRightArea(data, selectedIds)}
-              </TableCell>
-            )}
-          </TableRow>
-          {type === 'normal' && (
-            <TableRow
-              css={[
-                {
-                  paddingTop: theme.spacing.md,
-                  paddingBottom: theme.spacing.md,
-                  borderBottomWidth: rem(1),
-                  borderBottomStyle: 'solid',
-                  borderBottomColor: theme.palette.gray100,
-                },
-              ]}
-            >
+    <>
+      <table css={tableStyle()(theme)}>
+        {(onCheck || topRightArea || type === 'normal') && (
+          <thead>
+            <TableRow>
               {onCheck && (
-                <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded} />
-              )}
-              {columns.map((item, index) => (
-                <TableCell
-                  textAlign={columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'}
-                  component={'th'}
-                  key={`${item}`}
-                  sticky={fixedHeader}
-                  padded={padded}
-                >
-                  {item}
+                <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
+                  <CheckBox
+                    checked={Boolean(selectedIds.length > 0)}
+                    intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
+                    onClick={() => {
+                      if (selectedIds.length === data.length) {
+                        onSelectionChange([]);
+                      } else {
+                        onSelectionChange(data.map(({ id }) => id));
+                      }
+                    }}
+                  />
                 </TableCell>
-              ))}
+              )}
+              <TableCell padded={padded}>
+                {selectedIds.length > 0 ? (
+                  <span>
+                    <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
+                  </span>
+                ) : (
+                  topLeftText
+                )}
+              </TableCell>
+              {topRightArea && (
+                <TableCell
+                  textAlign={'right'}
+                  padded={padded}
+                  colSpan={columnCount - (onCheck ? 2 : 1)}
+                >
+                  {topRightArea(data, selectedIds)}
+                </TableCell>
+              )}
             </TableRow>
-          )}
-        </thead>
-      )}
-      <tbody>
-        {data.map(row => (
-          <TableRowWrapper<T>
-            key={row.id}
-            {...{
-              row,
-              selectedIds,
-              onSelectionAdd,
-              padded,
-              columns,
-              fixedHeader,
-              type,
-              columnCount,
-              columnsHasNumberArr,
-              onSelectionChangeExist: Boolean(onCheck),
-              expanded: !!row.expanded,
-            }}
-          />
-        ))}
-      </tbody>
-    </table>
+          </thead>
+        )}
+      </table>
+      <table css={tableStyle()(theme)}>
+        {(onCheck || topRightArea || type === 'normal') && (
+          <thead>
+            {type === 'normal' && (
+              <TableRow
+                css={[
+                  {
+                    paddingTop: theme.spacing.md,
+                    paddingBottom: theme.spacing.md,
+                    borderBottomWidth: rem(1),
+                    borderBottomStyle: 'solid',
+                    borderBottomColor: theme.palette.gray100,
+                  },
+                ]}
+              >
+                {onCheck && (
+                  <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded} />
+                )}
+                {columns.map((item, index) => (
+                  <TableCell
+                    textAlign={columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'}
+                    component={'th'}
+                    key={`${item}`}
+                    sticky={fixedHeader}
+                    padded={padded}
+                    width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
+                  >
+                    {item}
+                  </TableCell>
+                ))}
+              </TableRow>
+            )}
+          </thead>
+        )}
+        <tbody>
+          {data.map(row => (
+            <TableRowWrapper<T>
+              key={row.id}
+              {...{
+                row,
+                selectedIds,
+                onSelectionAdd,
+                padded,
+                columns,
+                fixedHeader,
+                type,
+                columnCount,
+                columnsHasNumberArr,
+                columnsWithWidth,
+                onSelectionChangeExist: Boolean(onCheck),
+                expanded: !!row.expanded,
+              }}
+            />
+          ))}
+        </tbody>
+      </table>
+    </>
   );
 }
 
@@ -207,6 +231,7 @@ type TableRowWrapperProps<T> = {
   selectedIds: Selection[];
   onSelectionAdd: (selection: Selection) => void;
   columnsHasNumberArr: boolean[];
+  columnsWithWidth: number[];
   padded: boolean;
   onSelectionChangeExist: boolean;
   columnCount: number;
@@ -225,6 +250,7 @@ const TableRowWrapper = <T extends {}>({
   fixedHeader,
   type,
   columnsHasNumberArr,
+  columnsWithWidth,
   columnCount,
   onSelectionChangeExist,
   expanded,
@@ -239,6 +265,7 @@ const TableRowWrapper = <T extends {}>({
       value={{
         row,
         columnsHasNumberArr,
+        columnsWithWidth,
         onSelectionChangeExist,
         padded,
         columns,
