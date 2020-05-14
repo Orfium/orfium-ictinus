@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.2...v1.1.3) (2020-05-14)
+
+
+### Bug Fixes
+
+* removed deploy step and merged it  build step ([ff40c4b](https://github.com/abdelrahmanahmed/semantic-release-example/commit/ff40c4bfe4bb1f28e8a9170b817a5893c6889dff))
+
 ## [1.1.2](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.1...v1.1.2) (2020-05-14)
 
 
