@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.3...v1.2.0) (2020-05-14)
+
+
+### Features
+
+* added github actions deployment ([f3db3a7](https://github.com/abdelrahmanahmed/semantic-release-example/commit/f3db3a7c13831b54f2192be25b986a02d91da967))
+
 ## [1.1.3](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.2...v1.1.3) (2020-05-14)
 
 
