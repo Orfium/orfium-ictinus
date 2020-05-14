@@ -42,11 +42,11 @@ jobs:
 
     - name: configure git to deploy to Github Pages
       run: |
-      git config --local user.email $user_email
-      git config --local user.name $user_name
-    env:
-      user_email: ${{ secrets.user_email }}
-      user_name: ${{ secrets.user_name }} 
+        git config --local user.email $user_email
+        git config --local user.name $user_name
+      env:
+        user_email: ${{ secrets.user_email }}
+        user_name: ${{ secrets.user_name }} 
 
 
     - name: Deploy to Github Pages
