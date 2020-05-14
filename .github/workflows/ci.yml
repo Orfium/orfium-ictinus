@@ -8,11 +8,14 @@ on:
     branches: [ master ]
 
 jobs:
-  build_and_deploy:
+  build-and-deploy:
     runs-on: ubuntu-18.04
     
     steps:
     - uses: actions/checkout@v2
+      with:
+        ssh-key: ${{ secrets.CI_SSH }}
+        persist-credentials: false
       
     - name: Use Node.js (12.16.2)
       uses: actions/setup-node@v1
@@ -33,11 +36,9 @@ jobs:
         GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }} 
-
-    - name: Deploy to github pages
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+        
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        ACCESS_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
-        BRANCH: master
-        FOLDER: build
-        CLEAN: true
+        personal_token: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
+        publish_dir: ./build
