@@ -40,5 +40,14 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }} 
 
+    - name: configure git to deploy to Github Pages
+      run: |
+      git config --local user.email $user_email
+      git config --local user.name $user_name
+    env:
+      user_email: ${{ secrets.user_email }}
+      user_name: ${{ secrets.user_name }} 
+
+
     - name: Deploy to Github Pages
       run: npm run deploy
