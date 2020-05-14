@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.0.0...v1.0.1) (2020-05-14)
+
+
+### Bug Fixes
+
+* added npm publish config to releaserc ([b6d601a](https://github.com/abdelrahmanahmed/semantic-release-example/commit/b6d601a8e3d5249cc14bcfbbb8a4cb9155cd61f9))
+
 # 1.0.0 (2020-05-14)
 
 
