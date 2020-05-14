@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.0...v1.2.1) (2020-05-14)
+
+
+### Bug Fixes
+
+* removed build files ([373cd10](https://github.com/abdelrahmanahmed/semantic-release-example/commit/373cd10f37dcd9913cdc577372d249bdb399d702))
+
 # [1.2.0](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.3...v1.2.0) (2020-05-14)
 
 
