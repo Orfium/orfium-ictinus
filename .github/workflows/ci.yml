@@ -8,7 +8,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-18.04
     
     steps:
@@ -39,14 +39,6 @@ jobs:
         GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }} 
-        
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@master
-        
-      - name: Deploy to Github Pages
-        run: npm run deploy 
+
+    - name: Deploy to Github Pages
+      run: npm run deploy
