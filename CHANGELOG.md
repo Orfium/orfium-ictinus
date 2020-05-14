@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.1...v1.1.2) (2020-05-14)
+
+
+### Bug Fixes
+
+* removed artifact step ([0a174d0](https://github.com/abdelrahmanahmed/semantic-release-example/commit/0a174d08994eb4738495fb84762d81c0e5ea10c6))
+
 ## [1.1.1](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.0...v1.1.1) (2020-05-14)
 
 
