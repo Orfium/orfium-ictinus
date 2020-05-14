@@ -26,12 +26,6 @@ jobs:
       env: 
         CI: "" 
       run: npm run build
-      
-    - name: Store Artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: build
-        path: build
 
     - name: Run Semantic Release
       run: npx semantic-release
@@ -46,3 +40,4 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         BRANCH: master
         FOLDER: build
+        CLEAN: true
