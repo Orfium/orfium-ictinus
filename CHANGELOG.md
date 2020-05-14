@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.1.0...v1.1.1) (2020-05-14)
+
+
+### Bug Fixes
+
+* added missing steps for deployment ([8d7d3d8](https://github.com/abdelrahmanahmed/semantic-release-example/commit/8d7d3d8afa673d4ce0b1299c1caa857f845db6cc))
+
 # [1.1.0](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.0.2...v1.1.0) (2020-05-14)
 
 
