@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.1...v1.2.2) (2020-05-14)
+
+
+### Bug Fixes
+
+* deploymeny with github pages ([6b93674](https://github.com/abdelrahmanahmed/semantic-release-example/commit/6b936740f66c37ceb91a1a3a16684206f089a950))
+
 ## [1.2.1](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.0...v1.2.1) (2020-05-14)
 
 
