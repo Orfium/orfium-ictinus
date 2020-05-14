@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.0.1...v1.0.2) (2020-05-14)
+
+
+### Bug Fixes
+
+* fixed merge issues ([f76c297](https://github.com/abdelrahmanahmed/semantic-release-example/commit/f76c2976cf0aa4dff470de4b2c15947451b26cc8))
+* fixed publish issues ([7a8d318](https://github.com/abdelrahmanahmed/semantic-release-example/commit/7a8d31862774370bd17f6ea164da5d6f1b30b979))
+
 ## [1.0.1](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.0.0...v1.0.1) (2020-05-14)
 
 
