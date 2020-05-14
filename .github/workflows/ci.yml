@@ -47,11 +47,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      
-      - name: Download Bundle
-        uses: actions/download-artifact@v1.0.0
-        with:
-          name: build
-
+        
       - name: Deploy to Github Pages
         run: npm run deploy 
