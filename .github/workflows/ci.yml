@@ -40,10 +40,9 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
         NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_NPM_TOKEN }} 
 
-    - name: configure git to deploy to Github Pages
-      run: |
-        git config --local user.email "abdelrahman.wahdan@outlook.com"
-        git config --local user.name "abdelrahmanahmed"
-        
-    - name: Deploy to Github Pages
-      run: npm run deploy
+    - name: Deploy to github pages
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.SEMANTIC_RELEASE_GH_TOKEN }}
+        BRANCH: master
+        FOLDER: build
