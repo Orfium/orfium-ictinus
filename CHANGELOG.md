@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.2...v1.2.3) (2020-05-14)
+
+
+### Bug Fixes
+
+* ignore CI if a commit contains skip ci ([68adfc5](https://github.com/abdelrahmanahmed/semantic-release-example/commit/68adfc5006658652888f9ebc827e8583353a4e29))
+
 ## [1.2.2](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.1...v1.2.2) (2020-05-14)
 
 
