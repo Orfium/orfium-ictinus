@@ -32,21 +32,21 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
     let nextPage = currentPage;
 
     if (nextPage + 1 <= count) {
-      nextPage = nextPage + 1;
+      nextPage += 1;
     }
     setCurrentPage(nextPage);
     handleChange(nextPage);
-  }, [count]);
+  }, [count, currentPage]);
 
   const navigateToPrevPage = useCallback(() => {
     let prevPage = currentPage;
 
     if (prevPage - 1 >= 1) {
-      prevPage = prevPage - 1;
+      prevPage -= 1;
     }
     setCurrentPage(prevPage);
     handleChange(prevPage);
-  }, []);
+  }, [currentPage]);
 
   return {
     currentPage,
