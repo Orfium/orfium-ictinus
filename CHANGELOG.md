@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.3...v1.2.4) (2020-05-22)
+
+
+### Bug Fixes
+
+* added article in readme ([147d59c](https://github.com/abdelrahmanahmed/semantic-release-example/commit/147d59cd7e068d9d721e70a9436aaccd0d1f8bb5))
+
 ## [1.2.3](https://github.com/abdelrahmanahmed/semantic-release-example/compare/v1.2.2...v1.2.3) (2020-05-14)
 
 
