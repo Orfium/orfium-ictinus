@@ -4,7 +4,7 @@
 # Purpose
 This repo is a simple demosnatration to show an integration between ( [semantic-release](https://github.com/semantic-release/semantic-release), [Github Actions](https://github.com/features/actions), [Github Packages](https://github.com/features/packages), [Github Pages](https://pages.github.com/)).
 
-I will put an article soon to explain the beninfts of these integarions.
+Here is an [article](https://dev.to/abdelrahmanahmed/semantic-release-automation-part-2-setup-semantic-release-package-2b8j)
 
 
 
