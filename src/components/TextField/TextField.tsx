@@ -54,7 +54,7 @@ const TextField: React.FC<Props> = ({
         {rightIcon && rightIcon}
         {label && (
           <Label
-            aria-labelledby={id}
+            htmlFor={id}
             label={label}
             required={required}
             animateToTop={Boolean(rest.value)}
