@@ -7,13 +7,22 @@ export const wrapperStyle = ({ label, error, disabled }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   transition: background-color 0.25s, border 0.25s;
-  background-color: ${error ? transparentize(0.85, theme.palette.error) : theme.palette.gray};
+  background-color: ${theme.palette.gray};
   padding: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
   border-radius: ${theme.spacing.xsm};
   border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
   user-select: none;
   position: relative;
+
+  &:before {
+    background-color: ${error ? transparentize(0.85, theme.palette.error) : 'transparent'};
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const textFieldStyle = () => (theme: Theme): SerializedStyles => css`

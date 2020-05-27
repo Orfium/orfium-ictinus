@@ -24,6 +24,8 @@ export type Props = {
   error?: boolean;
   /** value of the input */
   value?: string | number;
+  /** type of the input */
+  type?: string;
 };
 
 const TextField: React.FC<Props> = ({
