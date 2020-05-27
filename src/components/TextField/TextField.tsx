@@ -6,6 +6,8 @@ import useTheme from 'hooks/useTheme';
 import Label from 'components/Label';
 
 export type Props = {
+  /** The id of the text field that will be used as for in label too */
+  id?: string;
   /** The label of the text field that will be used as a placeholder and a label */
   label?: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
@@ -27,6 +29,7 @@ export type Props = {
 };
 
 const TextField: React.FC<Props> = ({
+  id = undefined,
   rightIcon = null,
   leftIcon = null,
   label,
@@ -46,11 +49,19 @@ const TextField: React.FC<Props> = ({
           css={inputStyle({ label, placeholder })(theme)}
           placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
           required={required}
+          id={id}
           disabled={disabled}
           {...rest}
         />
         {rightIcon && rightIcon}
-        {label && <Label label={label} required={required} animateToTop={Boolean(rest.value)} />}
+        {label && (
+          <Label
+            htmlFor={id}
+            label={label}
+            required={required}
+            animateToTop={Boolean(rest.value)}
+          />
+        )}
       </div>
     </div>
   );
