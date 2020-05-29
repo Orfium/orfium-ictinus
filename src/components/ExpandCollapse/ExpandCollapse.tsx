@@ -1,8 +1,14 @@
-//@ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ReactComponentLike } from 'prop-types';
-import { ReactElement, ReactEventHandler, useLayoutEffect, useRef, useState } from 'react';
+import {
+  ReactElement,
+  ReactEventHandler,
+  SyntheticEvent,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import { contentStyles } from './ExpandCollapse.style';
 
@@ -67,10 +73,6 @@ function ExpandCollapse(props: Props) {
     dataTestId,
   } = props;
 
-  if (content === undefined && children === undefined) {
-    throw new Error('Either content or children must be defined');
-  }
-
   if (
     (externallyControlledExpanded === undefined && onChange) ||
     (onChange === undefined && typeof externallyControlledExpanded === 'boolean')
@@ -85,12 +87,21 @@ function ExpandCollapse(props: Props) {
 
   const Component = component;
 
+  const renderFunction = content ?? children;
+
+  if (renderFunction === undefined) {
+    throw new Error('Either content or children must be defined');
+  }
+
   const expanded = externallyControlledExpanded ?? internallyControlledExpanded;
 
-  function handleStateChange(e) {
+  function handleStateChange(e: SyntheticEvent) {
     if (typeof externallyControlledExpanded !== 'boolean') {
       setInternallyControlledExpanded(state => !state);
     } else {
+      if (!onChange) {
+        throw new Error('onChange function must be defined');
+      }
       onChange(e);
     }
   }
@@ -108,12 +119,19 @@ function ExpandCollapse(props: Props) {
   }
 
   function manageContentVisibility() {
-    let timeout;
+    if (contentRef.current === null) {
+      throw new Error('Uninitialised element ref');
+    }
+
+    let timeout: number;
 
     if (expanded) {
       contentRef.current.style.visibility = '';
     } else {
-      timeout = setTimeout(() => {
+      timeout = window.setTimeout(() => {
+        if (contentRef.current === null) {
+          throw new Error('Uninitialised element ref');
+        }
         contentRef.current.style.visibility = 'hidden';
       }, transitionDuration);
     }
@@ -130,7 +148,7 @@ function ExpandCollapse(props: Props) {
     <Component data-testid={generateTestDataId('expand-collapse', dataTestId)}>
       <div>{textAndControl(handleStateChange)}</div>
       <div css={contentStyles(expanded, transitionDuration)} ref={contentRef}>
-        {content ? content(expanded) : children(expanded)}
+        {renderFunction(expanded)}
       </div>
     </Component>
   );
