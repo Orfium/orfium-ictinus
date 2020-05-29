@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
-import { buttonSpanStyle, buttonStyle } from './Button.style';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
-import { generateTestDataId } from 'utils/helpers';
+import React from 'react';
 import { EventProps } from 'utils/common';
+import { generateTestDataId } from 'utils/helpers';
+import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import { buttonSpanStyle, buttonStyle } from './Button.style';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -21,7 +21,7 @@ export type Props = {
 };
 
 export type TestProps = {
-  dataTestId?: string;
+  dataTestId?: TestId;
 };
 
 const Button: React.FC<Props & TestProps & EventProps> = ({
