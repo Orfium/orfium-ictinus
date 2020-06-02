@@ -22,7 +22,25 @@ export type TestProps = {
   dataTestId?: string;
 };
 
-const Menu: React.FC<Props & TestProps & EventProps> = props => {
+function composeRef(...args: any) {
+  return (ref: any) => {
+    args.forEach((arg: any) => {
+      if (!arg) {
+        return;
+      }
+
+      if (typeof arg === 'function') {
+        arg(ref);
+
+        return;
+      }
+
+      arg.current = ref;
+    });
+  };
+}
+
+const Menu: React.FC<Props & TestProps & EventProps> = React.forwardRef((props, ref) => {
   const { items, onSelect, autoAdjust = true, buttonText = null } = props;
   // const theme = useTheme();
 
@@ -65,13 +83,13 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
       >
         {({ triggerRef, toggle }) => (
           // @ts-ignore
-          <Button ref={triggerRef} onClick={toggle}>
+          <Button ref={composeRef(triggerRef, ref)} onClick={toggle}>
             {buttonText}
           </Button>
         )}
       </ToggleLayer>
     </div>
   );
-};
+});
 
 export default Menu;
