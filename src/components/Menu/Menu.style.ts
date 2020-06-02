@@ -18,7 +18,7 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   }
 };
 
-export const buttonStyle = ({
+export const menuStyle = ({
   type,
   filled,
   size,
@@ -59,25 +59,14 @@ export const buttonStyle = ({
 
 export const buttonSpanStyle = ({
   icon,
-  iconAlign,
-  size,
-}: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
-  display: icon ? 'flex' : 'block',
-  flexDirection: (iconAlign === 'right' ? 'row-reverse' : 'row') as FlexDirectionProperty,
-  alignItems: icon ? 'center' : 'flex-start',
-  marginLeft: iconAlign === 'right' ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
-});
-
-export const iconStyle = ({
-  icon,
   size,
   hasChildren,
-  iconAlign,
-}: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
-  const margin = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
-
-  return {
-    marginLeft: margin,
-    marginRight: iconAlign === 'right' ? margin : theme.spacing.sm,
-  };
-};
+}: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
+  display: icon ? 'flex' : 'block',
+  flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
+  alignItems: icon ? 'center' : 'flex-start',
+  '> :first-child': {
+    marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
+    marginRight: hasChildren ? theme.spacing.sm : 0,
+  },
+});

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { buttonSpanStyle, buttonStyle } from './Button.style';
+import { buttonSpanStyle, buttonStyle, iconStyle } from './Button.style';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
 import { generateTestDataId } from 'utils/helpers';
@@ -18,27 +18,32 @@ export type Props = {
   icon?: React.Component | JSX.Element | null;
   /** Define if the button is in disabled state */
   disabled?: boolean;
+  /** Define the position of the icon - left or right - default to left */
+  iconAlign?: 'left' | 'right';
 };
 
 export type TestProps = {
   dataTestId?: string;
 };
 
-const Button: React.FC<Props & TestProps & EventProps> = ({
-  size = 'md',
-  type = 'primary',
-  filled = true,
-  icon = null,
-  disabled = false,
-  children,
-  dataTestId = '',
-  onClick,
-  onBlur,
-}) => {
+const Button = React.forwardRef<HTMLButtonElement, Props & TestProps & EventProps>((props, ref) => {
+  const {
+    size = 'md',
+    type = 'primary',
+    iconAlign = 'left',
+    filled = true,
+    icon = null,
+    disabled = false,
+    children,
+    dataTestId = '',
+    onClick,
+    onBlur,
+  } = props;
   const theme = useTheme();
 
   return (
     <button
+      ref={ref}
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({
         type,
@@ -47,6 +52,7 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
         icon,
         disabled,
         childrenCount: React.Children.count(children),
+        iconAlign,
       })(theme)}
       onClick={onClick}
       onBlur={onBlur}
@@ -60,13 +66,28 @@ const Button: React.FC<Props & TestProps & EventProps> = ({
           icon,
           disabled,
           hasChildren: Boolean(React.Children.count(children)),
+          iconAlign,
         })(theme)}
       >
-        {icon && icon}
+        {icon && (
+          <div
+            style={iconStyle({
+              type,
+              filled,
+              size,
+              icon,
+              disabled,
+              hasChildren: Boolean(React.Children.count(children)),
+              iconAlign,
+            })(theme)}
+          >
+            {icon}
+          </div>
+        )}
         {children}
       </span>
     </button>
   );
-};
+});
 
 export default Button;

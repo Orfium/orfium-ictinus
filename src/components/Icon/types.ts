@@ -28,4 +28,5 @@ export type AcceptedIconNames =
   | 'youtube'
   | 'checkedList'
   | 'hourglass'
-  | 'ticTacToeArrow';
+  | 'ticTacToeArrow'
+  | 'dotsVertical';
