@@ -26,7 +26,7 @@ export type TestProps = {
   dataTestId?: string;
 };
 
-const Button = React.forwardRef<HTMLButtonElement, Props & TestProps & EventProps>((props, ref) => {
+const Button: React.FC<Props & TestProps & EventProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -43,7 +43,6 @@ const Button = React.forwardRef<HTMLButtonElement, Props & TestProps & EventProp
 
   return (
     <button
-      ref={ref}
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({
         type,
@@ -88,6 +87,6 @@ const Button = React.forwardRef<HTMLButtonElement, Props & TestProps & EventProp
       </span>
     </button>
   );
-});
+};
 
 export default Button;

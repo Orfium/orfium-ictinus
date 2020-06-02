@@ -7,11 +7,7 @@ const MenuShowcase = () => {
   const [selectedItem, setSelectedItem] = React.useState('');
 
   return (
-    <div
-      css={{
-        minHeight: 300,
-      }}
-    >
+    <div>
       <div>{selectedItem || '-'}</div>
       <Menu
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}

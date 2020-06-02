@@ -1,95 +1,85 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import React from 'react';
 // import { buttonSpanStyle, menuStyle } from './Menu.style';
 // import useTheme from 'hooks/useTheme';
-import { ToggleLayer } from 'react-laag';
-import Button from '../Button';
+import Button from 'components/Button';
 // import Icon from '../Icon';
 import { EventProps } from 'utils/common';
-import MenuWrapper from './MenuWrapper';
-import { MenuItem } from './index';
+import ClickAwayListener from 'components/utils/ClickAwayListener';
+import { rem } from 'polished';
 
 export type Props = {
   items: string[];
   selectedItem: string | null;
   onSelect: (option: string) => void;
-  autoAdjust?: boolean;
-  buttonText: string;
+  buttonText: React.ReactNode;
+  menuPosition?: 'left' | 'right';
 };
 
 export type TestProps = {
   dataTestId?: string;
 };
 
-function composeRef(...args: any) {
-  return (ref: any) => {
-    args.forEach((arg: any) => {
-      if (!arg) {
-        return;
-      }
-
-      if (typeof arg === 'function') {
-        arg(ref);
-
-        return;
-      }
-
-      arg.current = ref;
-    });
-  };
-}
-
-const Menu: React.FC<Props & TestProps & EventProps> = React.forwardRef((props, ref) => {
-  const { items, onSelect, autoAdjust = true, buttonText = null } = props;
+const Menu: React.FC<Props & TestProps & EventProps> = props => {
+  const { items, onSelect, buttonText = 'More', menuPosition = 'left' } = props;
+  const [open, setOpen] = React.useState(false);
   // const theme = useTheme();
 
   return (
-    <div style={{ position: 'relative' }}>
-      <ToggleLayer
-        renderLayer={props => {
-          function handleClick(option: string) {
-            onSelect(option);
-            props.close();
-          }
+    <ClickAwayListener onClick={() => setOpen(false)}>
+      <div css={{ position: 'relative', display: 'inline-block' }}>
+        <Button onClick={() => setOpen(!open)}>{buttonText}</Button>
+        {open && (
+          <div
+            css={css`
+              position: absolute;
+              top: ${rem(48)};
+              left: ${menuPosition === 'left' ? 0 : 'initial'};
+              right 0;
+              width: ${rem(148)};
+              height: auto;
+              background-color: #fff;
+              box-shadow: 0px 0px ${rem(16)} grey;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              text-align: center;
+              border-radius: ${rem(4)};
+              z-index: 1;
 
-          return props.isOpen ? (
-            // @ts-ignore
-            <MenuWrapper
-              ref={props.layerProps.ref}
-              style={props.layerProps.style}
-              arrowStyle={props.arrowStyle}
-              layerSide={props.layerSide}
-            >
-              {items.map((option, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <MenuItem key={`${option}-${index}`} onClick={() => handleClick(option)}>
-                  {option}
-                </MenuItem>
-              ))}
-            </MenuWrapper>
-          ) : null;
-        }}
-        closeOnOutsideClick
-        closeOnDisappear="partial"
-        placement={{
-          anchor: 'BOTTOM_LEFT',
-          autoAdjust,
-          snapToAnchor: false,
-          triggerOffset: 12,
-          scrollOffset: 16,
-          possibleAnchors: ['BOTTOM_CENTER', 'LEFT_CENTER', 'RIGHT_CENTER', 'TOP_CENTER'],
-        }}
-      >
-        {({ triggerRef, toggle }) => (
-          // @ts-ignore
-          <Button ref={composeRef(triggerRef, ref)} onClick={toggle}>
-            {buttonText}
-          </Button>
+              & > button {
+                padding: ${rem(8)} 0;
+                height: ${rem(48)};
+                margin-left: 0;
+                font-size: 14px;
+              }
+
+              & > button:hover {
+                background-color: #c3ced9;
+              }
+            `}
+          >
+            {items.map((option, index) => (
+              <button
+                css={{
+                  backgroundColor: '#fff',
+                  border: 0,
+                }}
+                key={`${option}-${index}`}
+                onClick={() => {
+                  setOpen(false);
+                  onSelect(option);
+                }}
+              >
+                {option}
+              </button>
+            ))}
+          </div>
         )}
-      </ToggleLayer>
-    </div>
+      </div>
+    </ClickAwayListener>
   );
-});
+};
 
 export default Menu;
