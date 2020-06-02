@@ -5,4 +5,5 @@ export { default as TextField } from './components/TextField';
 export { default as ThemeProvider } from './components/ThemeProvider';
 export { default as Icon } from './components/Icon';
 export { default as Pagination } from './components/Pagination';
+export { default as Menu } from './components/Menu';
 export { default as useTheme } from './hooks/useTheme';
