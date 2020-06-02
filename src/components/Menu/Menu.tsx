@@ -15,6 +15,7 @@ export type Props = {
   selectedItem: string | null;
   onSelect: (option: string) => void;
   autoAdjust?: boolean;
+  buttonText: string;
 };
 
 export type TestProps = {
@@ -22,7 +23,7 @@ export type TestProps = {
 };
 
 const Menu: React.FC<Props & TestProps & EventProps> = props => {
-  const { items, onSelect, autoAdjust = true } = props;
+  const { items, onSelect, autoAdjust = true, buttonText = null } = props;
   // const theme = useTheme();
 
   return (
@@ -62,10 +63,10 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           possibleAnchors: ['BOTTOM_CENTER', 'LEFT_CENTER', 'RIGHT_CENTER', 'TOP_CENTER'],
         }}
       >
-        {({ isOpen, triggerRef, toggle }) => (
+        {({ triggerRef, toggle }) => (
           // @ts-ignore
           <Button ref={triggerRef} onClick={toggle}>
-            {isOpen ? 'Hide' : 'Show'}
+            {buttonText}
           </Button>
         )}
       </ToggleLayer>
