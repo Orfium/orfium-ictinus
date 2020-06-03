@@ -8,6 +8,7 @@ import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { rem, darken } from 'polished';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 
 export type Props = {
   items: string[];
@@ -15,6 +16,8 @@ export type Props = {
   onSelect: (option: string) => void;
   buttonText: React.ReactNode;
   menuPosition?: 'left' | 'right';
+  optionIcon?: boolean;
+  buttonType?: AcceptedColorComponentTypes;
 };
 
 export type TestProps = {
@@ -22,7 +25,14 @@ export type TestProps = {
 };
 
 const Menu: React.FC<Props & TestProps & EventProps> = props => {
-  const { items, onSelect, buttonText = 'More', menuPosition = 'left' } = props;
+  const {
+    items,
+    onSelect,
+    buttonText = 'More',
+    menuPosition = 'left',
+    optionIcon = false,
+    buttonType = 'primary',
+  } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
 
@@ -31,9 +41,9 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
       <div css={{ position: 'relative', display: 'inline-block' }}>
         <Button
           onClick={() => setOpen(!open)}
-          type={'warning'}
-          iconAlign={'right'}
-          icon={<Icon name={'dotsVertical'} color={'white'} />}
+          type={buttonType}
+          iconAlign={optionIcon ? 'right' : undefined}
+          icon={optionIcon ? <Icon name={'dotsVertical'} color={'white'} /> : null}
         >
           <span>{buttonText}</span>
         </Button>
