@@ -23,12 +23,27 @@ import { Menu } from 'orfium-design-system';
 
 <Props of={Menu} />
 
-# Icon Menu Sizes
+# Menu with selection handler
 
-Menu sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
+A menu with a selection handler to return selection on change and to pass selection callback
 
 <Preview>
-  <Story name="Icon Menu Sizes">
+  <Story name="Menu with selection handler">
     <MenuShowcase />
+  </Story>
+</Preview>
+
+# Menu with option icon and different colour
+
+Menu with option icon (dots) and different button colour
+
+<Preview>
+  <Story name="Menu with option icon and different colour">
+    <Menu
+      items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+      buttonText={'More'}
+      buttonType={'warning'}
+      showOptionIcon
+    />
   </Story>
 </Preview>

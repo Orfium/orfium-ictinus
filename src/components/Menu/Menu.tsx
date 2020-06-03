@@ -11,12 +11,19 @@ import { rem, darken } from 'polished';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 
 export type Props = {
+  /** Items that are being declared as menu options */
   items: string[];
+  /** Returns the items selected on the menu */
   selectedItem: string | null;
+  /** A callback that is being triggered when an items has been clicked */
   onSelect: (option: string) => void;
+  /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
+  /** Menu position when open */
   menuPosition?: 'left' | 'right';
-  optionIcon?: boolean;
+  /** Indicator to show dots icon */
+  showOptionIcon?: boolean;
+  /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;
 };
 
@@ -30,7 +37,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     onSelect,
     buttonText = 'More',
     menuPosition = 'left',
-    optionIcon = false,
+    showOptionIcon = false,
     buttonType = 'primary',
   } = props;
   const [open, setOpen] = React.useState(false);
@@ -42,8 +49,8 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}
-          iconAlign={optionIcon ? 'right' : undefined}
-          icon={optionIcon ? <Icon name={'dotsVertical'} color={'white'} /> : null}
+          iconAlign={showOptionIcon ? 'right' : undefined}
+          icon={showOptionIcon ? <Icon name={'dotsVertical'} color={'white'} /> : null}
         >
           <span>{buttonText}</span>
         </Button>

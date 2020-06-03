@@ -8,7 +8,9 @@ const MenuShowcase = () => {
 
   return (
     <div>
-      <div>{selectedItem || '-'}</div>
+      <div>
+        Selected: <b>{selectedItem || '-'}</b>
+      </div>
       <Menu
         items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
         selectedItem={selectedItem}
