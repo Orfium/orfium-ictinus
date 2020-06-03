@@ -2,12 +2,12 @@
 import { jsx, css } from '@emotion/core';
 import React from 'react';
 // import { buttonSpanStyle, menuStyle } from './Menu.style';
-// import useTheme from 'hooks/useTheme';
+import useTheme from 'hooks/useTheme';
 import Button from 'components/Button';
 import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import { rem } from 'polished';
+import { rem, darken } from 'polished';
 
 export type Props = {
   items: string[];
@@ -24,7 +24,7 @@ export type TestProps = {
 const Menu: React.FC<Props & TestProps & EventProps> = props => {
   const { items, onSelect, buttonText = 'More', menuPosition = 'left' } = props;
   const [open, setOpen] = React.useState(false);
-  // const theme = useTheme();
+  const theme = useTheme();
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
@@ -59,11 +59,11 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
                 padding: ${rem(8)} 0;
                 height: ${rem(48)};
                 margin-left: 0;
-                font-size: 14px;
+                font-size: ${theme.typography.fontSizes['14']};
               }
 
               & > button:hover {
-                background-color: #c3ced9;
+                background-color: ${darken(0.05, '#fff')};
               }
             `}
           >
