@@ -25,6 +25,7 @@ export const buttonStyle = ({
   icon,
   disabled,
   childrenCount,
+  iconAlign,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
   const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
   const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
@@ -50,7 +51,12 @@ export const buttonStyle = ({
     color: disabled ? theme.palette.gray100 : colorPickerBasedOnType(type)(theme),
     backgroundColor: defineBackgroundColor(),
     paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
-    paddingRight: icon && !childrenCount ? calculatedPaddingSpaceIfIcon : calculatedPaddingSpace,
+    paddingRight:
+      iconAlign === 'left'
+        ? icon && !childrenCount
+          ? calculatedPaddingSpaceIfIcon
+          : calculatedPaddingSpace
+        : 0,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
     border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
@@ -77,7 +83,7 @@ export const iconStyle = ({
   const margin = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
 
   return {
-    marginLeft: margin,
+    marginLeft: iconAlign === 'left' ? margin : theme.spacing.sm,
     marginRight: iconAlign === 'right' ? margin : theme.spacing.sm,
   };
 };

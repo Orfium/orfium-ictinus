@@ -4,7 +4,7 @@ import React from 'react';
 // import { buttonSpanStyle, menuStyle } from './Menu.style';
 // import useTheme from 'hooks/useTheme';
 import Button from 'components/Button';
-// import Icon from '../Icon';
+import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { rem } from 'polished';
@@ -29,7 +29,14 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
       <div css={{ position: 'relative', display: 'inline-block' }}>
-        <Button onClick={() => setOpen(!open)}>{buttonText}</Button>
+        <Button
+          onClick={() => setOpen(!open)}
+          type={'warning'}
+          iconAlign={'right'}
+          icon={<Icon name={'dotsVertical'} color={'white'} />}
+        >
+          <span>{buttonText}</span>
+        </Button>
         {open && (
           <div
             css={css`
