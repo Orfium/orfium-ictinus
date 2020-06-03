@@ -8,7 +8,7 @@ import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { rem, darken } from 'polished';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 export type Props = {
   /** Items that are being declared as menu options */
@@ -50,7 +50,14 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           onClick={() => setOpen(!open)}
           type={buttonType}
           iconAlign={showOptionIcon ? 'right' : undefined}
-          icon={showOptionIcon ? <Icon name={'dotsVertical'} color={'white'} /> : null}
+          icon={
+            showOptionIcon ? (
+              <Icon
+                name={'dotsVertical'}
+                color={buttonType === ('primary' || 'secondary') ? 'dark' : 'light'}
+              />
+            ) : null
+          }
         >
           <span>{buttonText}</span>
         </Button>

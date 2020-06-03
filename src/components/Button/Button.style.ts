@@ -75,9 +75,7 @@ export const buttonSpanStyle = ({
 });
 
 export const iconStyle = ({
-  icon,
   size,
-  hasChildren,
   iconAlign,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
   const margin = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
