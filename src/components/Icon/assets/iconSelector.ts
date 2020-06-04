@@ -29,6 +29,7 @@ import YoutubeIcon from './youtube.svg';
 import CheckedListIcon from './checked-list.svg';
 import HourglassIcon from './hourglass.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
+import DotsVerticalIcon from './dots-vertical.svg';
 
 const iconSelector = {
   add: AddIcon,
@@ -61,6 +62,7 @@ const iconSelector = {
   checkedList: CheckedListIcon,
   hourglass: HourglassIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
+  dotsVertical: DotsVerticalIcon,
 };
 
 export default iconSelector;
