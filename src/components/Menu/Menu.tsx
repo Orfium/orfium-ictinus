@@ -64,6 +64,8 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         {open && (
           <div
             css={css`
+              max-height: 400px;
+              overflow-y: scroll;
               position: absolute;
               top: ${rem(48)};
               left: ${menuPosition === 'left' ? 0 : 'initial'};
