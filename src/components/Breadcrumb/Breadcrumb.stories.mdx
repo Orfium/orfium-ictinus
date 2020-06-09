@@ -1,8 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
+import Breadcrump from './Breadcrumb';
 import Stack from '../storyUtils/Stack';
 
-<Meta title="Design System|Breadcrumb" component={() => <div>Breadcrumb</div>} />
+<Meta title="Design System|Breadcrumb" component={() => true} />
 
 # Breadcrumb
 
@@ -18,7 +19,7 @@ import { Breadcrumb } from 'orfium-design-system';
 
 # Props
 
-<Props of={() => <div>Breadcrumb</div>} />
+<Props of={() => true} />
 
 
 # Simple Breadcrumbs (up to 3 levels)
@@ -27,7 +28,11 @@ A simple Breadcrumb example
 <Preview>
   <Story name="Simple Breadcrumbs">
     <Stack>
-      <div>Breadcrumb Placeholer</div>
+        <Breadcrump label={"Breadcrumb placeholer"}>
+          <div>home</div>
+          <div>path</div>
+          <div> <div><div>nested</div></div> </div>
+        </Breadcrump>
     </Stack>
   </Story>
 </Preview>
@@ -38,7 +43,7 @@ A simple Breadcrumb with n levels example
 <Preview>
   <Story name="Simple Breadcrumbs with options">
     <Stack>
-       <div>Breadcrumb Placeholer</div>
+       <div>Breadcrumb placeholer</div>
     </Stack>
   </Story>
 </Preview>
@@ -49,7 +54,7 @@ A advanced Breadcrumb with dd levels example
 <Preview>
   <Story name="Advanced Breadcrumbs">
     <Stack>
-        <div>Breadcrumb Placeholer</div>
+        <div>Breadcrumb placeholer</div>
     </Stack>
   </Story>
 </Preview>
