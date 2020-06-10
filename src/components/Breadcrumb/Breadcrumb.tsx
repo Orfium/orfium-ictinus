@@ -27,13 +27,9 @@ const Breadcrumb: React.FC<Props> = props => {
     );
   };
 
-  const breadcrumb: JSX.Element[] = childrenCollection.map(getBreadcrumbItem);
+  const breadcrumbItems: JSX.Element[] = childrenCollection.map(getBreadcrumbItem);
 
-  return (
-    <div>
-      <ul css={breadcrumbStyles()(theme)}>{breadcrumb}</ul>
-    </div>
-  );
+  return <ul css={breadcrumbStyles()(theme)}>{breadcrumbItems}</ul>;
 };
 
 export default Breadcrumb;
