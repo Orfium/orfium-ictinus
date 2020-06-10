@@ -4,15 +4,16 @@ import React from 'react';
 import Separator from 'components/Breadcrumb/Separator/Separator';
 import { breadcrumbItemStyles } from './BreadcrumbItem.style';
 import useTheme from 'hooks/useTheme';
+import { BreadcrumbItemData } from '../Breadcrumb';
 
-interface Props {
-  childComponent: React.ReactNode;
+type Props<T> = {
+  childComponent: T;
   isLastItem: boolean;
   separatorContent: '*' | '>' | '/';
   clickHandler?: () => void;
-}
+};
 
-const BreadcrumbItem: React.FC<Props> = props => {
+const BreadcrumbItem: React.FC<Props<BreadcrumbItemData | React.ReactNode>> = props => {
   const { childComponent, isLastItem, separatorContent, clickHandler } = props;
   const theme = useTheme();
 

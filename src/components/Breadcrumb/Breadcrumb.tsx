@@ -13,7 +13,7 @@ export type Props = {
   data: [];
 };
 
-export type BreadcrumbElement = {
+export type BreadcrumbItemData = {
   to: string;
   label: string;
 };
@@ -25,7 +25,7 @@ const Breadcrumb: React.FC<Props> = props => {
   const isLastItem = (indicator: number, array: [] | React.ReactNode[]) =>
     indicator === (Array.isArray(array) && array.length - 1);
 
-  const getBreadcrumbItem = (child: React.ReactNode | BreadcrumbElement, index: number) => {
+  const getBreadcrumbItem = (child: React.ReactNode | BreadcrumbItemData, index: number) => {
     const itemKey = uniqueId('data_item_');
 
     return (
@@ -38,7 +38,7 @@ const Breadcrumb: React.FC<Props> = props => {
     );
   };
 
-  const enhanceIncomingDataWithLink = ({ to, label }: BreadcrumbElement) => (
+  const enhanceIncomingDataWithLink = ({ to, label }: BreadcrumbItemData) => (
     <Link key={to} to={to}>
       {label}
     </Link>
