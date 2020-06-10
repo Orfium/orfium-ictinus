@@ -1,33 +1,31 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import React, { Fragment as Aux } from 'react';
+import { breadcrumbStyles, breadcrumbItemStyles } from './Breadcrumb.style';
 import uniqueId from 'lodash/uniqueId';
+import useTheme from 'hooks/useTheme';
+import Separator from 'components/Breadcrumb/Separator/Separator';
 
 export type Props = {
-  separatorContent?: string;
+  separatorContent?: '*' | '>' | '/';
+  active?: boolean;
+  // flexWrap?: 'nowrap' | 'wrap-reverse';
 };
 
 const Breadcrumb: React.FC<Props> = props => {
   const { children } = props;
+  const theme = useTheme();
+
   const getBreadcrumbItem = (child: any, index: number): JSX.Element => {
-    const { separatorContent = '/' } = props;
+    const { separatorContent = '>', active = false } = props;
     const BreadcrumbItem = child.props.originalType;
     const innerText = child.props.children;
     const isLastItem = index === React.Children.toArray(children).length - 1;
-    const separator: JSX.Element | boolean = !isLastItem && (
-      <span
-        css={css`
-          margin: auto 4px;
-        `}
-      >
-        {separatorContent}
-      </span>
-    );
 
     return (
       <Aux key={uniqueId('breadcrumb_')}>
-        <BreadcrumbItem>{innerText}</BreadcrumbItem>
-        {separator}
+        <BreadcrumbItem css={breadcrumbItemStyles({ active })(theme)}>{innerText}</BreadcrumbItem>
+        <Separator isLastItem={isLastItem} separatorContent={separatorContent} />
       </Aux>
     );
   };
@@ -36,15 +34,7 @@ const Breadcrumb: React.FC<Props> = props => {
 
   return (
     <div>
-      <span
-        css={css`
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-        `}
-      >
-        {breadcrumb}
-      </span>
+      <span css={breadcrumbStyles()(theme)}>{breadcrumb}</span>
     </div>
   );
 };
