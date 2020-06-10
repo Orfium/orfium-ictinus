@@ -2,6 +2,11 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import Breadcrump from './Breadcrumb';
 import Stack from '../storyUtils/Stack';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 <Meta title="Design System|Breadcrumb" component={() => true} />
 
@@ -41,15 +46,35 @@ A simple Breadcrumb example
 A simple Breadcrumb with n levels example
 
 <Preview>
+  
   <Story name="Simple Breadcrumbs with options">
     <Stack>
-      <Breadcrump separatorContent={"/"}>
-        <div>First Level</div>
-        <div>Second Level</div>
-        <div>Current Level</div>
-      </Breadcrump>
+      <Router>
+          <Breadcrump separatorContent={"/"} data={[
+            { to: '/', label: 'Home' },
+            { to: '/first-level', label: 'First Level' },
+            { to: '/second-level', label: 'Second Level' },
+            { to: '/third-level', label: 'Third Level' },
+            { to: '/forth-level', label: 'Forth Level' },
+          ]}/>
+          <Switch>
+                <Route path="/first-level">
+                  {() => <div>first level</div>}
+                </Route>
+                <Route path="/second-level">
+                  {() => <div>second level</div>}
+                </Route>
+                <Route path="/third-level">
+                  {() => <div>third level</div>}
+                </Route>
+                <Route path="/forth-level">
+                  {() => <div>forth level</div>}
+                </Route>
+          </Switch>
+      </Router>
     </Stack>
   </Story>
+ 
 </Preview>
 
 # Advanced Breadcrumbs (with dd in levels)
