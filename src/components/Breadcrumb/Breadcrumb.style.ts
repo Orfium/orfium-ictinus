@@ -8,3 +8,8 @@ export const breadcrumbStyles = () => (theme: Theme) => css`
   list-style: none;
   padding: ${rem(28)} 0;
 `;
+
+export const breadcrumbLinkStyles = () => (theme: Theme) => css`
+  text-decoration: none;
+  color: inherit;
+`;

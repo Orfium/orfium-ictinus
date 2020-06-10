@@ -14,11 +14,11 @@ type Props<T> = {
 };
 
 const BreadcrumbItem: React.FC<Props<BreadcrumbItemData | React.ReactNode>> = props => {
-  const { childComponent, isLastItem, separatorContent, clickHandler } = props;
+  const { childComponent, isLastItem, separatorContent = '>', clickHandler } = props;
   const theme = useTheme();
 
   return (
-    <li onClick={clickHandler} css={breadcrumbItemStyles({ active: false })(theme)}>
+    <li onClick={clickHandler} css={breadcrumbItemStyles({ active: isLastItem })(theme)}>
       {childComponent}
       <Separator isLastItem={isLastItem} separatorContent={separatorContent} />
     </li>

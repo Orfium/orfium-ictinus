@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { breadcrumbStyles } from './Breadcrumb.style';
+import { breadcrumbStyles, breadcrumbLinkStyles } from './Breadcrumb.style';
 import useTheme from 'hooks/useTheme';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
 import isEmpty from 'lodash/isEmpty';
@@ -22,8 +22,8 @@ const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [], separatorContent = '>' } = props;
   const theme = useTheme();
   const childrenCollection = React.Children.toArray(children);
-  const isLastItem = (indicator: number, array: [] | React.ReactNode[]) =>
-    indicator === (Array.isArray(array) && array.length - 1);
+  const isLastItem = (itemIndex: number) =>
+    itemIndex === childrenCollection.length - 1 || itemIndex === data.length - 1;
 
   const getBreadcrumbItem = (child: React.ReactNode | BreadcrumbItemData, index: number) => {
     const itemKey = uniqueId('data_item_');
@@ -32,14 +32,14 @@ const Breadcrumb: React.FC<Props> = props => {
       <BreadcrumbItem
         key={itemKey}
         childComponent={child}
-        isLastItem={isLastItem(index, childrenCollection)}
+        isLastItem={isLastItem(index)}
         separatorContent={separatorContent}
       />
     );
   };
 
   const enhanceIncomingDataWithLink = ({ to, label }: BreadcrumbItemData) => (
-    <Link key={to} to={to}>
+    <Link css={breadcrumbLinkStyles()(theme)} key={to} to={to}>
       {label}
     </Link>
   );
