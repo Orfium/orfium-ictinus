@@ -1,24 +1,33 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
+import React, { Fragment as Aux } from 'react';
 
-type Props = {
-  label: string;
+export type Props = {
+  separatorContent?: string;
 };
 
 const Breadcrumb: React.FC<Props> = props => {
   const { children } = props;
   const getBreadcrumbItem = (child: any, index: number): JSX.Element => {
+    const { separatorContent = '/' } = props;
     const WrapperComp = child.props.originalType;
     const innerText = child.props.children;
     const isLastItem = index === React.Children.toArray(children).length - 1;
     const separator: JSX.Element | boolean = !isLastItem && (
-      <span style={{ margin: 'auto 4px' }}> / </span>
+      <span
+        css={css`
+          margin: auto 4px;
+        `}
+      >
+        {separatorContent}
+      </span>
     );
 
     return (
-      <>
+      <Aux>
         <WrapperComp key={`${index}_brd`}>{innerText}</WrapperComp>
         {separator}
-      </>
+      </Aux>
     );
   };
 
@@ -26,7 +35,14 @@ const Breadcrumb: React.FC<Props> = props => {
 
   return (
     <div>
-      <span style={{ display: 'flex', flexDirection: 'row' }}>{breadcrumb}</span>
+      <span
+        css={css`
+          display: flex;
+          flex-direction: row;
+        `}
+      >
+        {breadcrumb}
+      </span>
     </div>
   );
 };

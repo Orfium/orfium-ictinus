@@ -14,7 +14,7 @@ Description of Breadcrumb component
 ```js
 import { Breadcrumb } from 'orfium-design-system';
 
-<div>Breadcrumb placeholer</div>
+<Breadcrumb><div>content</div></Breadcrumb>
 ```
 
 # Props
@@ -28,7 +28,7 @@ A simple Breadcrumb example
 <Preview>
   <Story name="Simple Breadcrumbs">
     <Stack>
-        <Breadcrump label={"Breadcrumb placeholer"}>
+        <Breadcrump>
           <div>home</div>
           <div>path</div>
           <div> <div><div>nested</div></div> </div>
@@ -43,7 +43,11 @@ A simple Breadcrumb with n levels example
 <Preview>
   <Story name="Simple Breadcrumbs with options">
     <Stack>
-       <div>Breadcrumb placeholer</div>
+      <Breadcrump separatorContent={">"}>
+        <div>home</div>
+        <div>path</div>
+        <div> <div><div>nested</div></div> </div>
+      </Breadcrump>
     </Stack>
   </Story>
 </Preview>
