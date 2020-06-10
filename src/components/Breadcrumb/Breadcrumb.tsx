@@ -48,7 +48,11 @@ const Breadcrumb: React.FC<Props> = props => {
     ? childrenCollection.map(getBreadcrumbItem)
     : data.map(enhanceIncomingDataWithLink).map(getBreadcrumbItem);
 
-  return <ul css={breadcrumbStyles()(theme)}>{breadcrumbItems}</ul>;
+  return (
+    <ol aria-label="Breadcrumb" css={breadcrumbStyles()(theme)}>
+      {breadcrumbItems}
+    </ol>
+  );
 };
 
 export default Breadcrumb;
