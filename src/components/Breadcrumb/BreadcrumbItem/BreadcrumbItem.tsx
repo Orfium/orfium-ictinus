@@ -10,14 +10,19 @@ interface Props {
   childComponent: JSX.Element;
   isLastItem: boolean;
   separatorContent: '*' | '>' | '/';
+  clickHandler?: () => void;
 }
 
 const BreadcrumbItem: React.FC<Props> = props => {
-  const { childComponent, isLastItem, separatorContent } = props;
+  const { childComponent, isLastItem, separatorContent, clickHandler } = props;
   const theme = useTheme();
 
   return (
-    <li key={uniqueId('breadcrumb_item_')} css={breadcrumbItemStyles({ active: false })(theme)}>
+    <li
+      key={uniqueId('breadcrumb_item_')}
+      onClick={clickHandler}
+      css={breadcrumbItemStyles({ active: false })(theme)}
+    >
       {childComponent}
       <Separator isLastItem={isLastItem} separatorContent={separatorContent} />
     </li>
