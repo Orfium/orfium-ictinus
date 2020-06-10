@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { Fragment as Aux } from 'react';
+import React from 'react';
 import { breadcrumbStyles, breadcrumbItemStyles } from './Breadcrumb.style';
 import uniqueId from 'lodash/uniqueId';
 import useTheme from 'hooks/useTheme';
@@ -8,33 +8,35 @@ import Separator from 'components/Breadcrumb/Separator/Separator';
 
 export type Props = {
   separatorContent?: '*' | '>' | '/';
-  active?: boolean;
   // flexWrap?: 'nowrap' | 'wrap-reverse';
 };
 
 const Breadcrumb: React.FC<Props> = props => {
   const { children } = props;
   const theme = useTheme();
+  const childrenCollection = React.Children.toArray(children);
 
   const getBreadcrumbItem = (child: any, index: number): JSX.Element => {
-    const { separatorContent = '>', active = false } = props;
+    const { separatorContent = '>' } = props;
     const BreadcrumbItem = child.props.originalType;
     const innerText = child.props.children;
-    const isLastItem = index === React.Children.toArray(children).length - 1;
+    const isLastItem = index === childrenCollection.length - 1;
+
+    if (!React.isValidElement(<BreadcrumbItem />)) throw new Error('Child element is not valid.');
 
     return (
-      <Aux key={uniqueId('breadcrumb_')}>
-        <BreadcrumbItem css={breadcrumbItemStyles({ active })(theme)}>{innerText}</BreadcrumbItem>
+      <li key={uniqueId('breadcrumb_')} css={breadcrumbItemStyles({ active: false })(theme)}>
+        <BreadcrumbItem>{innerText}</BreadcrumbItem>
         <Separator isLastItem={isLastItem} separatorContent={separatorContent} />
-      </Aux>
+      </li>
     );
   };
 
-  const breadcrumb: JSX.Element[] = React.Children.toArray(children).map(getBreadcrumbItem);
+  const breadcrumb: JSX.Element[] = childrenCollection.map(getBreadcrumbItem);
 
   return (
     <div>
-      <span css={breadcrumbStyles()(theme)}>{breadcrumb}</span>
+      <ul css={breadcrumbStyles()(theme)}>{breadcrumb}</ul>
     </div>
   );
 };
