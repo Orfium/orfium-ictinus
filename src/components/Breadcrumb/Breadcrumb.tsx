@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 export type Props = {
   separatorContent?: '*' | '>' | '/';
   data: [];
+  breadcrumbItemClickHandler: () => void;
 };
 
 export type BreadcrumbItemData = {
@@ -19,7 +20,7 @@ export type BreadcrumbItemData = {
 };
 
 const Breadcrumb: React.FC<Props> = props => {
-  const { children, data = [], separatorContent = '>' } = props;
+  const { children, data = [], separatorContent = '>', breadcrumbItemClickHandler } = props;
   const theme = useTheme();
   const childrenCollection = React.Children.toArray(children);
   const isLastItem = (itemIndex: number) =>
@@ -31,6 +32,7 @@ const Breadcrumb: React.FC<Props> = props => {
     return (
       <BreadcrumbItem
         key={itemKey}
+        clickHandler={breadcrumbItemClickHandler}
         childComponent={child}
         isLastItem={isLastItem(index)}
         separatorContent={separatorContent}

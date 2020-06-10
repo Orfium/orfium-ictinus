@@ -14,12 +14,24 @@ import {
 
 Description of Breadcrumb component
 
-# Usage
+# Usage 1
 
 ```js
 import { Breadcrumb } from 'orfium-design-system';
 
-<Breadcrumb><div>content</div></Breadcrumb>
+<Breadcrumb>
+  <div>content 1</div>
+  <div>content 2</div>
+  <div>content 3</div>
+</Breadcrumb>
+```
+
+# Usage 2
+
+```js
+import { Breadcrumb } from 'orfium-design-system';
+
+<Breadcrumb data=[{to:"/path", label: "label"}]/>
 ```
 
 # Props
@@ -46,7 +58,6 @@ A simple Breadcrumb example
 A simple Breadcrumb with n levels example
 
 <Preview>
-  
   <Story name="Simple Breadcrumbs with options">
     <Stack>
       <Router>
