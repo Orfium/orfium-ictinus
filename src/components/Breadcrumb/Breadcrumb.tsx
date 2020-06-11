@@ -21,7 +21,7 @@ export type BreadcrumbItemData = {
 };
 
 type BreadcrumbItem = React.ReactNode | BreadcrumbItemData;
-
+//TODO: improve perf of the component
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [], separatorContent = '>', breadcrumbItemClickHandler } = props;
   const theme = useTheme();
@@ -46,7 +46,7 @@ const Breadcrumb: React.FC<Props> = props => {
     if (shouldCollapse(child, index)) {
       return index === 1 ? (
         <BreadcrumbCollapsed
-          collapsedItems={collapsedItems()}
+          collapsedItems={collapsedItems}
           key={itemKey}
           separatorContent={separatorContent}
         />
