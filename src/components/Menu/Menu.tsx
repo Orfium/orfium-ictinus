@@ -1,13 +1,13 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import React from 'react';
 // import { buttonSpanStyle, menuStyle } from './Menu.style';
+import { optionsStyle } from './Menu.style';
 import useTheme from 'hooks/useTheme';
 import Button from 'components/Button';
 import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import { rem, darken } from 'polished';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 export type Props = {
@@ -62,37 +62,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           <span>{buttonText}</span>
         </Button>
         {open && (
-          <div
-            css={css`
-              max-height: 400px;
-              overflow-y: scroll;
-              position: absolute;
-              top: ${rem(48)};
-              left: ${menuPosition === 'left' ? 0 : 'initial'};
-              right 0;
-              width: ${rem(148)};
-              height: auto;
-              background-color: #fff;
-              box-shadow: 0px 0px ${rem(16)} grey;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-evenly;
-              text-align: center;
-              border-radius: ${rem(4)};
-              z-index: 1;
-
-              & > button {
-                padding: ${rem(8)} 0;
-                height: ${rem(48)};
-                margin-left: 0;
-                font-size: ${theme.typography.fontSizes['14']};
-              }
-
-              & > button:hover {
-                background-color: ${darken(0.05, '#fff')};
-              }
-            `}
-          >
+          <div css={optionsStyle(menuPosition)(theme)}>
             {items.map((option, index) => (
               <button
                 css={{
