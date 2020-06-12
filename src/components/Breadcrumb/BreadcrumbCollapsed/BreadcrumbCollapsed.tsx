@@ -31,13 +31,13 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
       </span>
       <Separator separatorContent={separatorContent} />
       {opened ? (
-        <div css={optionsStyle('left')(theme)}>
+        <ul style={{ padding: 0 }} css={optionsStyle({ menuPosition: 'left' })(theme)}>
           {collapsedItems.map(item => (
-            <div key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
+            <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
               {item}
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
       ) : null}
     </li>
   );
