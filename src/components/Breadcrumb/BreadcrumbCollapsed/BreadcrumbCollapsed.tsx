@@ -13,7 +13,7 @@ import useTheme from 'hooks/useTheme';
 
 type Props = {
   separatorContent: '*' | '>' | '/';
-  collapsedItems: () => React.ReactNode[];
+  collapsedItems: React.ReactNode[];
 };
 
 const BreadcrumbCollapsed: React.FC<Props> = props => {
@@ -32,7 +32,7 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
       <Separator separatorContent={separatorContent} />
       {opened ? (
         <div css={optionsStyle('left')(theme)}>
-          {collapsedItems().map(item => (
+          {collapsedItems.map(item => (
             <div key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
               {item}
             </div>

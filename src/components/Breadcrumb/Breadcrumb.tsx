@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback } from 'react';
+import React, { useMemo } from 'react';
 import { breadcrumbStyles, breadcrumbLinkStyles } from './Breadcrumb.style';
 import useTheme from 'hooks/useTheme';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
@@ -38,7 +38,7 @@ const Breadcrumb: React.FC<Props> = props => {
   const shouldCollapse = (item: BreadcrumbItem, itemIndex: number) =>
     item && dataItems.length > 4 && itemIndex > 0 && itemIndex < dataItems.length - 2;
 
-  const collapsedItems = useCallback(() => dataItems.filter(shouldCollapse), [dataItems]);
+  const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), []);
 
   const getBreadcrumbItem = (child: BreadcrumbItem, index: number) => {
     const itemKey = uniqueId('data_item_');
