@@ -72,8 +72,11 @@ export const buttonSpanStyle = ({
   },
 });
 
-// TODO: add specific type for optionsStyle
-export const optionsStyle = (menuPosition?: 'left' | 'right') => (theme: Theme) => css`
+type MenuOptions = {
+  menuPosition?: 'left' | 'right';
+};
+
+export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) => css`
     max-height: 400px;
     overflow-y: scroll;
     position: absolute;
@@ -90,7 +93,6 @@ export const optionsStyle = (menuPosition?: 'left' | 'right') => (theme: Theme) 
     text-align: center;
     border-radius: ${rem(4)};
     z-index: 1;
-
     & > button {
       padding: ${rem(8)} 0;
       height: ${rem(48)};

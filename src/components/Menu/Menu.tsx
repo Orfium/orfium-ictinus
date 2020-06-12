@@ -62,7 +62,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           <span>{buttonText}</span>
         </Button>
         {open && (
-          <div css={optionsStyle(menuPosition)(theme)}>
+          <div css={optionsStyle({ menuPosition })(theme)}>
             {items.map((option, index) => (
               <button
                 css={{
