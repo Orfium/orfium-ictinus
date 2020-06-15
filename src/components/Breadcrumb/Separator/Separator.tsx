@@ -4,10 +4,11 @@ import React from 'react';
 import { separatorStyles } from './Separator.style';
 import useTheme from 'hooks/useTheme';
 
-interface Props {
-  separatorContent?: '*' | '>' | '/';
+export type SeparatorStyle = '*' | '>' | '/';
+type Props = {
+  separatorContent?: SeparatorStyle;
   isLastItem?: boolean;
-}
+};
 
 const Separator: React.FC<Props> = props => {
   const { separatorContent = '/', isLastItem = false } = props;

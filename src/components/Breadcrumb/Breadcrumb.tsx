@@ -8,9 +8,10 @@ import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import { Link } from 'react-router-dom';
 import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
+import { SeparatorStyle } from './Separator/Separator';
 
 export type Props = {
-  separatorContent?: '*' | '>' | '/';
+  separatorContent?: SeparatorStyle;
   data: BreadcrumbItemData[];
 };
 
@@ -20,6 +21,7 @@ export type BreadcrumbItemData = {
 };
 
 type BreadcrumbItem = React.ReactNode | BreadcrumbItemData;
+
 //TODO: improve perf of the component
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [], separatorContent = '>' } = props;

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import Separator from 'components/Breadcrumb/Separator/Separator';
+import Separator, { SeparatorStyle } from 'components/Breadcrumb/Separator/Separator';
 import { breadcrumbItemStyles } from './BreadcrumbItem.style';
 import useTheme from 'hooks/useTheme';
 import { BreadcrumbItemData } from '../Breadcrumb';
@@ -9,7 +9,7 @@ import { BreadcrumbItemData } from '../Breadcrumb';
 type Props<T> = {
   childComponent: T;
   isLastItem: boolean;
-  separatorContent: '*' | '>' | '/';
+  separatorContent: SeparatorStyle;
 };
 
 const BreadcrumbItem: React.FC<Props<BreadcrumbItemData | React.ReactNode>> = props => {

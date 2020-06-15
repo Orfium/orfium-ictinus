@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import React, { useState } from 'react';
 import { optionsStyle } from '../../Menu/Menu.style';
 import uniqueId from 'lodash/uniqueId';
-import Separator from 'components/Breadcrumb/Separator/Separator';
+import Separator, { SeparatorStyle } from 'components/Breadcrumb/Separator/Separator';
 import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,
@@ -14,7 +14,7 @@ import useTheme from 'hooks/useTheme';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 type Props = {
-  separatorContent: '*' | '>' | '/';
+  separatorContent: SeparatorStyle;
   collapsedItems: React.ReactNode[];
 };
 
