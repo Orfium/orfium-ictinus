@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
-import Breadcrump from './Breadcrumb';
+import Breadcrumb from './Breadcrumb';
 import Stack from '../storyUtils/Stack';
 import {
   BrowserRouter as Router,
@@ -37,7 +37,7 @@ import { Breadcrumb } from 'orfium-design-system';
 
 # Props
 
-<Props of={() => true} />
+<Props of={Breadcrumb} />
 
 
 # Simple Breadcrumbs (up to 3 levels)
@@ -46,13 +46,13 @@ A simple Breadcrumb example
 <Preview>
   <Story name="Simple Breadcrumbs">
     <Stack>
-        <Breadcrump>
+        <Breadcrumb>
           <div>First Level</div>
           <div>Second Level</div>
           <div>Third Level</div>
           <div>Forth Level</div>
           <div>Current Level</div>
-        </Breadcrump>
+        </Breadcrumb>
     </Stack>
   </Story>
 </Preview>
@@ -64,7 +64,7 @@ A simple Breadcrumb with n levels example
   <Story name="Simple Breadcrumbs with options">
     <Stack>
       <Router>
-          <Breadcrump data={[
+          <Breadcrumb data={[
             { to: '/', label: 'Home' },
             { to: '/first-level', label: 'First Level' },
             { to: '/second-level', label: 'Second Level' },
