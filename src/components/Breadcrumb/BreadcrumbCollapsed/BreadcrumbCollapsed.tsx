@@ -8,6 +8,7 @@ import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,
   collapsedItemStyles,
+  inlineBreadcrumbWrapperStyles,
 } from './BreadcrumbCollapsed.style';
 import useTheme from 'hooks/useTheme';
 
@@ -31,7 +32,10 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
       </span>
       <Separator separatorContent={separatorContent} />
       {opened ? (
-        <ul style={{ padding: 0 }} css={optionsStyle({ menuPosition: 'left' })(theme)}>
+        <ul
+          style={inlineBreadcrumbWrapperStyles}
+          css={optionsStyle({ menuPosition: 'left' })(theme)}
+        >
           {collapsedItems.map(item => (
             <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
               {item}
