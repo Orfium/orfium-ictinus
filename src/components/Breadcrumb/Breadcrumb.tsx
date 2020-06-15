@@ -20,8 +20,6 @@ export type BreadcrumbItemData = {
   label: string;
 };
 
-type BreadcrumbItem = React.ReactNode | BreadcrumbItemData;
-
 //TODO: improve perf of the component
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [], separatorContent = '>' } = props;
@@ -36,12 +34,12 @@ const Breadcrumb: React.FC<Props> = props => {
   const dataItems = isEmpty(data) ? childrenCollection : data.map(passDataToRouterLink);
 
   const isLastItem = (itemIndex: number) => itemIndex === dataItems.length - 1;
-  const shouldCollapse = (item: BreadcrumbItem, itemIndex: number) =>
+  const shouldCollapse = (item: React.ReactNode, itemIndex: number) =>
     item && dataItems.length > 4 && itemIndex > 0 && itemIndex < dataItems.length - 2;
 
   const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), [data, children]);
 
-  const getBreadcrumbItem = (child: BreadcrumbItem, index: number) => {
+  const getBreadcrumbItem = (child: React.ReactNode, index: number) => {
     const itemKey = uniqueId('data_item_');
 
     if (shouldCollapse(child, index)) {
