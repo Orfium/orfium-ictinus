@@ -11,8 +11,7 @@ import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
 
 export type Props = {
   separatorContent?: '*' | '>' | '/';
-  data: [];
-  breadcrumbItemClickHandler: () => void;
+  data: BreadcrumbItemData[];
 };
 
 export type BreadcrumbItemData = {
@@ -23,7 +22,7 @@ export type BreadcrumbItemData = {
 type BreadcrumbItem = React.ReactNode | BreadcrumbItemData;
 //TODO: improve perf of the component
 const Breadcrumb: React.FC<Props> = props => {
-  const { children, data = [], separatorContent = '>', breadcrumbItemClickHandler } = props;
+  const { children, data = [], separatorContent = '>' } = props;
   const theme = useTheme();
   const passDataToRouterLink = ({ to, label }: BreadcrumbItemData) => (
     <Link css={breadcrumbLinkStyles()(theme)} key={to} to={to}>
@@ -38,7 +37,7 @@ const Breadcrumb: React.FC<Props> = props => {
   const shouldCollapse = (item: BreadcrumbItem, itemIndex: number) =>
     item && dataItems.length > 4 && itemIndex > 0 && itemIndex < dataItems.length - 2;
 
-  const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), []);
+  const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), [data, children]);
 
   const getBreadcrumbItem = (child: BreadcrumbItem, index: number) => {
     const itemKey = uniqueId('data_item_');
@@ -56,7 +55,6 @@ const Breadcrumb: React.FC<Props> = props => {
     return (
       <BreadcrumbItem
         key={itemKey}
-        clickHandler={breadcrumbItemClickHandler}
         childComponent={child}
         isLastItem={isLastItem(index)}
         separatorContent={separatorContent}
