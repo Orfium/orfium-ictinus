@@ -63,11 +63,11 @@ A simple Breadcrumb with n levels example
     <Stack>
       <Router>
           <Breadcrumb data={[
-            { to: '/', label: 'Home' },
-            { to: '/first-level', label: 'First Level' },
+            { to: '/first-level', label: 'First Level'},
             { to: '/second-level', label: 'Second Level' },
             { to: '/third-level', label: 'Third Level' },
             { to: '/forth-level', label: 'Forth Level' },
+            { to: '/fifth-level', label: 'Fifth Level' },
           ]}/>
           <Switch>
                 <Route path="/first-level">
@@ -81,6 +81,9 @@ A simple Breadcrumb with n levels example
                 </Route>
                 <Route path="/forth-level">
                   {() => <div>forth level</div>}
+                </Route>
+                <Route path="/fifth-level">
+                  {() => <div>fifth level</div>}
                 </Route>
           </Switch>
       </Router>
