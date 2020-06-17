@@ -14,7 +14,9 @@ import useTheme from 'hooks/useTheme';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 type Props = {
+  /** Defines the separator's content */
   separatorContent: SeparatorStyle;
+  /** Defines the react nodes that will be included in the breadcrumb's collapsed view */
   collapsedItems: React.ReactNode[];
 };
 

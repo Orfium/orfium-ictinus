@@ -6,7 +6,9 @@ import useTheme from 'hooks/useTheme';
 
 export type SeparatorStyle = '*' | '>' | '/';
 type Props = {
+  /** Defines the separator's content */
   separatorContent?: SeparatorStyle;
+  /** Defines if the current item of the breadcrumb is the last one */
   isLastItem?: boolean;
 };
 

@@ -6,8 +6,11 @@ import { breadcrumbItemStyles } from './BreadcrumbItem.style';
 import useTheme from 'hooks/useTheme';
 
 type Props = {
+  /** Defines the child element that will be rendered inside the list element */
   childComponent: React.ReactNode;
+  /** Defines if the current item of the breadcrumb is the last one */
   isLastItem: boolean;
+  /** Defines the separator's content */
   separatorContent: SeparatorStyle;
 };
 

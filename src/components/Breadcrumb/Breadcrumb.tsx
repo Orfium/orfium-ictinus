@@ -11,7 +11,9 @@ import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
 import { SeparatorStyle } from './Separator/Separator';
 
 export type Props = {
+  /** Defines the separator's content */
   separatorContent?: SeparatorStyle;
+  /** Defines the data for constructing the related breadcrumb items */
   data: BreadcrumbItemData[];
 };
 
@@ -20,7 +22,6 @@ export type BreadcrumbItemData = {
   label: string;
 };
 
-//TODO: improve perf of the component
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [], separatorContent = '>' } = props;
   const theme = useTheme();
