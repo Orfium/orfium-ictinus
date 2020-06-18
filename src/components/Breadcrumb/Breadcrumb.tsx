@@ -20,6 +20,10 @@ export type Props = {
 export type BreadcrumbItemData = {
   to: string;
   label: string;
+  /** Defines the options used to render a Menu button */
+  options?: string[];
+  /** Defines the method where a developer can manipulate the selection of an menu item */
+  onChangeHandler: (selectedItem: string) => void;
 };
 
 const Breadcrumb: React.FC<Props> = props => {
@@ -35,6 +39,16 @@ const Breadcrumb: React.FC<Props> = props => {
   const dataItems = isEmpty(data) ? childrenCollection : data.map(passDataToRouterLink);
 
   const isLastItem = (itemIndex: number) => itemIndex === dataItems.length - 1;
+  const getDataItemPropertyValue = (index: number, property: string) => {
+    const dataItem = data[index];
+    const shouldGetProperty = dataItem && isLastItem(index);
+    if (shouldGetProperty) {
+      return dataItem[property] || undefined;
+    }
+
+    return undefined;
+  };
+
   const shouldCollapse = (item: React.ReactNode, itemIndex: number) =>
     item && dataItems.length > 4 && itemIndex > 0 && itemIndex < dataItems.length - 2;
 
@@ -42,6 +56,8 @@ const Breadcrumb: React.FC<Props> = props => {
 
   const getBreadcrumbItem = (child: React.ReactNode, index: number) => {
     const itemKey = uniqueId('data_item_');
+    const lastItemOnChangeHandler = getDataItemPropertyValue(index, 'onChangeHandler');
+    const lastItemOptions = getDataItemPropertyValue(index, 'options');
 
     if (shouldCollapse(child, index)) {
       return index === 1 ? (
@@ -56,6 +72,8 @@ const Breadcrumb: React.FC<Props> = props => {
     return (
       <BreadcrumbItem
         key={itemKey}
+        onChangeHandler={lastItemOnChangeHandler}
+        options={lastItemOptions}
         childComponent={child}
         isLastItem={isLastItem(index)}
         separatorContent={separatorContent}

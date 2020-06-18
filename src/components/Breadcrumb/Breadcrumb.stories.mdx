@@ -104,7 +104,7 @@ A advanced Breadcrumb with dd levels example
             { to: '/second-level', label: 'Second Level', options: ['ITEM 1', 'ITEM 2'] },
             { to: '/third-level', label: 'Third Level', options: ['ITEM 1', 'ITEM 2'] },
             { to: '/forth-level', label: 'Forth Level', options: ['ITEM 1', 'ITEM 2'] },
-            { to: '', label: 'Fifth Level', options: ['ITEM 1', 'ITEM 2'], changeHandler: (text) => text && alert(text) },
+            { to: '', label: 'Fifth Level', options: ['ITEM 1', 'ITEM 2'], onChangeHandler: (text) => text && alert(text) },
           ]}/>
           <Switch>
                 <Route path="/first-level">

@@ -12,7 +12,7 @@ import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 export type Props = {
   /** Items that are being declared as menu options */
-  items: string[];
+  items?: string[];
   /** Returns the items selected on the menu */
   selectedItem: string | null;
   /** A callback that is being triggered when an items has been clicked */
@@ -63,21 +63,22 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         </Button>
         {open && (
           <div css={optionsStyle({ menuPosition })(theme)}>
-            {items.map((option, index) => (
-              <button
-                css={{
-                  backgroundColor: '#fff',
-                  border: 0,
-                }}
-                key={`${option}-${index}`}
-                onClick={() => {
-                  setOpen(false);
-                  onSelect(option);
-                }}
-              >
-                {option}
-              </button>
-            ))}
+            {items &&
+              items.map((option, index) => (
+                <button
+                  css={{
+                    backgroundColor: '#fff',
+                    border: 0,
+                  }}
+                  key={`${option}-${index}`}
+                  onClick={() => {
+                    setOpen(false);
+                    onSelect(option);
+                  }}
+                >
+                  {option}
+                </button>
+              ))}
           </div>
         )}
       </div>
