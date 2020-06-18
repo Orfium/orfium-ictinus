@@ -63,7 +63,7 @@ A simple Breadcrumb with n levels example
     <Stack>
       <Router>
           <Breadcrumb data={[
-            { to: '/first-level', label: 'First Level'},
+            { to: '/first-level', label: 'First Level' },
             { to: '/second-level', label: 'Second Level' },
             { to: '/third-level', label: 'Third Level' },
             { to: '/forth-level', label: 'Forth Level' },
@@ -96,9 +96,31 @@ A simple Breadcrumb with n levels example
 A advanced Breadcrumb with dd levels example
 
 <Preview>
-  <Story name="Advanced Breadcrumbs">
+  <Story name="Advanced Breadcrumbs with options per data item">
     <Stack>
-        <div>Breadcrumb placeholer</div>
+      <Router>
+          <Breadcrumb data={[
+            { to: '/first-level', label: 'First Level', options: ['ITEM 1', 'ITEM 2']},
+            { to: '/second-level', label: 'Second Level', options: ['ITEM 1', 'ITEM 2'] },
+            { to: '/third-level', label: 'Third Level', options: ['ITEM 1', 'ITEM 2'] },
+            { to: '/forth-level', label: 'Forth Level', options: ['ITEM 1', 'ITEM 2'] },
+            { to: '', label: 'Fifth Level', options: ['ITEM 1', 'ITEM 2'], changeHandler: (text) => text && alert(text) },
+          ]}/>
+          <Switch>
+                <Route path="/first-level">
+                  {() => <div>first level</div>}
+                </Route>
+                <Route path="/second-level">
+                  {() => <div>second level</div>}
+                </Route>
+                <Route path="/third-level">
+                  {() => <div>third level</div>}
+                </Route>
+                <Route path="/forth-level">
+                  {() => <div>forth level</div>}
+                </Route>
+          </Switch>
+      </Router>
     </Stack>
   </Story>
 </Preview>
