@@ -8,7 +8,8 @@ export const breadcrumbStyles = () => (theme: Theme) => css`
   padding: ${theme.spacing.md} 0;
 
   & > li {
-    padding: ${theme.spacing.sm} 0;
+    padding: ${theme.spacing.md} 0;
+    margin: auto;
   }
 `;
 
