@@ -9,6 +9,7 @@ import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import { AcceptedIconNames } from '../Icon/types';
 
 export type Props = {
   /** Items that are being declared as menu options */
@@ -25,6 +26,10 @@ export type Props = {
   showOptionIcon?: boolean;
   /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;
+  /** The name of the icon on the menu button */
+  menuIconName?: AcceptedIconNames;
+  /** The size of the icon on the menu button */
+  menuIconSize?: number;
 };
 
 export type TestProps = {
@@ -39,6 +44,8 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     menuPosition = 'left',
     showOptionIcon = false,
     buttonType = 'primary',
+    menuIconName = 'dotsVertical',
+    menuIconSize = 16,
   } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -53,8 +60,9 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           icon={
             showOptionIcon ? (
               <Icon
-                name={'dotsVertical'}
+                name={menuIconName}
                 color={buttonType === ('primary' || 'secondary') ? 'dark' : 'light'}
+                size={menuIconSize}
               />
             ) : null
           }

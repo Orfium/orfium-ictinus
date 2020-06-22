@@ -16,7 +16,13 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
 
   & button {
     height: auto;
+    background-color: white;
+    &:focus {
+      outline: none;
+      background-color: ${theme.palette.gray};
+    }
   }
+
   & > div > div > div {
     top: 2rem;
     box-shadow: #8080802b 0px 0px ${rem(16)};

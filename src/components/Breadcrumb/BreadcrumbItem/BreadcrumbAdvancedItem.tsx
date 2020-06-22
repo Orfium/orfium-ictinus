@@ -27,6 +27,8 @@ const BreadcrumbAdvancedItem: React.FC<Props> = props => {
       onSelect={option => setSelectedItem(option)}
       buttonText={'More'}
       showOptionIcon
+      menuIconName="arrowDown"
+      menuIconSize={12}
     />
   );
 };
