@@ -21,6 +21,10 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
       outline: none;
       background-color: ${theme.palette.gray};
     }
+
+    & > span {
+      margin-left: 0;
+    }
   }
 
   & > div > div > div {
