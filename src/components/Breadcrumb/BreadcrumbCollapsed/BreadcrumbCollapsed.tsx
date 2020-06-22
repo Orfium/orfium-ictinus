@@ -12,6 +12,7 @@ import {
 } from './BreadcrumbCollapsed.style';
 import useTheme from 'hooks/useTheme';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
+import Icon from 'components/Icon';
 
 type Props = {
   /** Defines the separator's content */
@@ -30,23 +31,25 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <li css={breadcrumbCollapsedWrapperStyles()}>
-        <span css={breadcrumbCollapsedStyles()(theme)} onClick={expandHandler}>
-          ...
-        </span>
-        <Separator separatorContent={separatorContent} />
-        {open ? (
-          <ul
-            style={inlineBreadcrumbWrapperStyles}
-            css={optionsStyle({ menuPosition: 'left' })(theme)}
-          >
-            {collapsedItems.map(item => (
-              <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
-                {item}
-              </li>
-            ))}
-          </ul>
-        ) : null}
+      <li>
+        <div css={breadcrumbCollapsedWrapperStyles()}>
+          <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
+            <Icon name="dotsVertical" size={22} color={open ? 'white' : 'gray100'} />
+          </span>
+          <Separator separatorContent={separatorContent} />
+          {open ? (
+            <ul
+              style={inlineBreadcrumbWrapperStyles}
+              css={optionsStyle({ menuPosition: 'left' })(theme)}
+            >
+              {collapsedItems.map(item => (
+                <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          ) : null}
+        </div>
       </li>
     </ClickAwayListener>
   );

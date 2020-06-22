@@ -7,6 +7,10 @@ export const breadcrumbStyles = () => (theme: Theme) => css`
   flex-wrap: nowrap;
   list-style: none;
   padding: ${rem(28)} 0;
+
+  & > li {
+    padding: 0.4rem;
+  }
 `;
 
 export const breadcrumbLinkStyles = () => (theme: Theme) => css`

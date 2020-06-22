@@ -35,9 +35,11 @@ const BreadcrumbItem: React.FC<Props> = props => {
   );
 
   return (
-    <li css={breadcrumbItemStyles({ active: isLastItem })(theme)}>
-      {renderComponentBasedOnOptions}
-      <Separator isLastItem={isLastItem} separatorContent={separatorContent} />
+    <li>
+      <div css={breadcrumbItemStyles({ active: isLastItem })(theme)}>
+        {renderComponentBasedOnOptions}
+        <Separator isLastItem={isLastItem} separatorContent={separatorContent} />
+      </div>
     </li>
   );
 };

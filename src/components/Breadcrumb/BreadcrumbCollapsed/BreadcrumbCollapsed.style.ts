@@ -2,20 +2,19 @@ import { Theme } from 'theme';
 import { css } from '@emotion/core';
 import { rem } from 'polished';
 
-export const breadcrumbCollapsedStyles = () => (theme: Theme) => css`
+type BreadcrumbIconStyle = {
+  open: boolean;
+};
+
+export const breadcrumbCollapsedStyles = ({ open }: BreadcrumbIconStyle) => (theme: Theme) => css`
+  padding: 0.1rem;
+  transform: rotate(90deg);
   border-radius: 1rem;
-  padding: 5px 10px;
-  color: ${theme.palette.gray200};
-  background-color: ${theme.palette.gray};
-  font-size: ${theme.typography.fontSizes['18']};
-  &:hover {
-    color: ${theme.palette.white};
-    transition: 0.5s background-color;
-    background-color: ${theme.palette.gray50};
-  }
+  background-color: ${open ? theme.palette.gray100 : theme.palette.gray};
 `;
 
 export const breadcrumbCollapsedWrapperStyles = () => css`
+  display: flex;
   cursor: pointer;
   position: relative;
 `;
