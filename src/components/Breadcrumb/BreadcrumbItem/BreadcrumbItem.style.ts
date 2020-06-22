@@ -29,7 +29,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
   }
 
   & > div > div > div {
-    top: 2rem;
+    top: 3rem;
     box-shadow: #8080802b 0px 0px ${rem(16)};
   }
 `;
