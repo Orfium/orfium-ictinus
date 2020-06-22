@@ -17,6 +17,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
   & button {
     height: auto;
     background-color: white;
+    padding: ${theme.spacing.sm};
     &:focus {
       outline: none;
       background-color: ${theme.palette.gray};
