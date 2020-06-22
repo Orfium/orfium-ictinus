@@ -6,10 +6,14 @@ type BreadcrumbIconStyle = {
   open: boolean;
 };
 
+export const ClickAwayListenerStyle = {
+  margin: 'auto',
+};
 export const breadcrumbCollapsedStyles = ({ open }: BreadcrumbIconStyle) => (theme: Theme) => css`
-  padding: 0.1rem;
+  padding: ${rem(2)};
+  margin-top: ${rem(1)};
   transform: rotate(90deg);
-  border-radius: 1rem;
+  border-radius: 3rem;
   background-color: ${open ? theme.palette.gray100 : theme.palette.gray};
 `;
 

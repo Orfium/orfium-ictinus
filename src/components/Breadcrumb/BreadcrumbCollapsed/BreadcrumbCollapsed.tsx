@@ -9,6 +9,7 @@ import {
   breadcrumbCollapsedWrapperStyles,
   collapsedItemStyles,
   inlineBreadcrumbWrapperStyles,
+  ClickAwayListenerStyle,
 } from './BreadcrumbCollapsed.style';
 import useTheme from 'hooks/useTheme';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
@@ -28,7 +29,7 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
   };
 
   return (
-    <ClickAwayListener onClick={() => setOpen(false)}>
+    <ClickAwayListener onClick={() => setOpen(false)} cssStyles={ClickAwayListenerStyle}>
       <li>
         <div css={breadcrumbCollapsedWrapperStyles()}>
           <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
