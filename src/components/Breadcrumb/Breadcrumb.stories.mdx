@@ -3,6 +3,7 @@ import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs'
 import Breadcrumb from './Breadcrumb';
 import Stack from '../storyUtils/Stack';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase.tsx';
 
 <Meta title="Design System|Breadcrumb" component={() => true} />
 
@@ -109,6 +110,31 @@ A advanced Breadcrumb with dd levels example
           <Route path="/forth-level">{() => <div>forth level</div>}</Route>
         </Switch>
       </Router>
+    </Stack>
+  </Story>
+</Preview>
+
+# Breadcrumb showcase (with dd in levels)
+
+A Breadcrumb showcase with dd levels example
+
+<Preview>
+  <Story name="Breadcrumb showcase">
+    <Stack>
+      <BreadcrumbShowcase
+        initData={[
+          { to: '/first-level', label: 'First Level', options: ['ITEM 1', 'ITEM 2'] },
+          { to: '/second-level', label: 'Second Level', options: ['ITEM 1', 'ITEM 2'] },
+          { to: '/third-level', label: 'Third Level', options: ['ITEM 1', 'ITEM 2'] },
+          { to: '/forth-level', label: 'Forth Level', options: ['ITEM 1', 'ITEM 2'] },
+          {
+            to: '/fifth-level',
+            label: 'Fifth Level',
+            options: ['ITEM 1', 'ITEM 2'],
+            onChangeHandler: text => text && alert(text),
+          },
+        ]}
+      />
     </Stack>
   </Story>
 </Preview>
