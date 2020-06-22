@@ -61,7 +61,7 @@ const Breadcrumb: React.FC<Props> = props => {
           isLastItem={isLast}
         />
       ) : (
-        <BreadcrumbItem key={itemKey} childComponent={child} isLastItem={isLast} />
+        <BreadcrumbItem key={itemKey} childComponent={child} />
       );
     },
     [dataItems]
