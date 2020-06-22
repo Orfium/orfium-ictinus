@@ -28,26 +28,29 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
     setOpen(prevState => !prevState);
   };
 
+  const listItems = collapsedItems.map(item => (
+    <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
+      {item}
+    </li>
+  ));
+
+  const collapsedItemsList = (
+    <ul style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })(theme)}>
+      {listItems}
+    </ul>
+  );
+
+  const iconColor = open ? 'white' : 'gray100';
+
   return (
     <ClickAwayListener onClick={() => setOpen(false)} cssStyles={ClickAwayListenerStyle}>
       <li>
         <div css={breadcrumbCollapsedWrapperStyles()}>
           <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
-            <Icon name="dotsVertical" size={22} color={open ? 'white' : 'gray100'} />
+            <Icon name="dotsVertical" size={22} color={iconColor} />
           </span>
           <Separator />
-          {open ? (
-            <ul
-              style={inlineBreadcrumbWrapperStyles}
-              css={optionsStyle({ menuPosition: 'left' })(theme)}
-            >
-              {collapsedItems.map(item => (
-                <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          {open && collapsedItemsList}
         </div>
       </li>
     </ClickAwayListener>

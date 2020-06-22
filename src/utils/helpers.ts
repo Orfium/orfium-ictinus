@@ -1,4 +1,6 @@
 import React from 'react';
+import { BreadcrumbItemData } from 'components/Breadcrumb/types';
+import { get, last } from 'lodash';
 
 /** A function that generates a unique id by making a value randomly based on time also */
 export const generateUniqueID = () => '_' + (Date.now() + Math.random()).toString(36).substr(2, 9);
@@ -13,3 +15,7 @@ export function isComponentFunctionType(
 ): element is Function {
   return typeof element === 'function' && React.isValidElement(element());
 }
+
+export const getLastDataItemProperty = (data: BreadcrumbItemData[], propertyPath: string) => {
+  return get(last(data), propertyPath, undefined);
+};
