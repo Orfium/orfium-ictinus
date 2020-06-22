@@ -36,6 +36,6 @@ export const collapsedItemStyles = () => (theme: Theme) => css`
 export const inlineBreadcrumbWrapperStyles = {
   padding: 0,
   boxShadow: `#8080802b 0px 0px ${rem(16)}`,
-  top: rem(32),
+  top: rem(40),
   width: rem(164),
 };

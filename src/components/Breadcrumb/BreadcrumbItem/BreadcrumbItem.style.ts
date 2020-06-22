@@ -13,9 +13,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
   display: flex;
   cursor: default;
   color: ${active ? theme.palette.gray200 : theme.palette.gray100};
-  &:hover {
-    color: ${theme.palette.gray200};
-  }
+
   & button {
     height: auto;
   }

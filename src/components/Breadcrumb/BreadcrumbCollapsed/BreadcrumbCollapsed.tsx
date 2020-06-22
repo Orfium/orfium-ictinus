@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import React, { useState } from 'react';
 import { optionsStyle } from '../../Menu/Menu.style';
 import uniqueId from 'lodash/uniqueId';
-import Separator, { SeparatorStyle } from 'components/Breadcrumb/Separator/Separator';
+import Separator from 'components/Breadcrumb/Separator/Separator';
 import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,
@@ -15,15 +15,13 @@ import ClickAwayListener from 'components/utils/ClickAwayListener';
 import Icon from 'components/Icon';
 
 type Props = {
-  /** Defines the separator's content */
-  separatorContent: SeparatorStyle;
   /** Defines the react nodes that will be included in the breadcrumb's collapsed view */
   collapsedItems: React.ReactNode[];
 };
 
 const BreadcrumbCollapsed: React.FC<Props> = props => {
   const [open, setOpen] = useState<boolean>(false);
-  const { separatorContent = '>', collapsedItems } = props;
+  const { collapsedItems } = props;
   const theme = useTheme();
   const expandHandler = () => {
     setOpen(prevState => !prevState);
@@ -36,7 +34,7 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
           <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
             <Icon name="dotsVertical" size={22} color={open ? 'white' : 'gray100'} />
           </span>
-          <Separator separatorContent={separatorContent} />
+          <Separator />
           {open ? (
             <ul
               style={inlineBreadcrumbWrapperStyles}

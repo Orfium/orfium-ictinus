@@ -16,4 +16,7 @@ export const breadcrumbStyles = () => (theme: Theme) => css`
 export const breadcrumbLinkStyles = () => (theme: Theme) => css`
   text-decoration: none;
   color: inherit;
+  &:hover {
+    color: ${theme.palette.gray200};
+  }
 `;

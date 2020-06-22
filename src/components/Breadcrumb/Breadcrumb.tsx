@@ -8,11 +8,8 @@ import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import { Link } from 'react-router-dom';
 import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
-import { SeparatorStyle } from './Separator/Separator';
 
 export type Props = {
-  /** Defines the separator's content */
-  separatorContent?: SeparatorStyle;
   /** Defines the data for constructing the related breadcrumb items */
   data: BreadcrumbItemData[];
 };
@@ -27,7 +24,7 @@ export type BreadcrumbItemData = {
 };
 
 const Breadcrumb: React.FC<Props> = props => {
-  const { children, data = [], separatorContent = '>' } = props;
+  const { children, data = [] } = props;
   const theme = useTheme();
   const passDataToRouterLink = ({ to, label }: BreadcrumbItemData) => (
     <Link css={breadcrumbLinkStyles()(theme)} key={to} to={to}>
@@ -61,11 +58,7 @@ const Breadcrumb: React.FC<Props> = props => {
 
     if (shouldCollapse(child, index)) {
       return index === 1 ? (
-        <BreadcrumbCollapsed
-          collapsedItems={collapsedItems}
-          key={itemKey}
-          separatorContent={separatorContent}
-        />
+        <BreadcrumbCollapsed collapsedItems={collapsedItems} key={itemKey} />
       ) : null;
     }
 
@@ -76,7 +69,6 @@ const Breadcrumb: React.FC<Props> = props => {
         options={lastItemOptions}
         childComponent={child}
         isLastItem={isLastItem(index)}
-        separatorContent={separatorContent}
       />
     );
   };

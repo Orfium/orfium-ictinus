@@ -3,22 +3,23 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import { separatorStyles } from './Separator.style';
 import useTheme from 'hooks/useTheme';
+import Icon from 'components/Icon';
 
-export type SeparatorStyle = '*' | '>' | '/';
 type Props = {
-  /** Defines the separator's content */
-  separatorContent?: SeparatorStyle;
   /** Defines if the current item of the breadcrumb is the last one */
   isLastItem?: boolean;
 };
 
 const Separator: React.FC<Props> = props => {
-  const { separatorContent = '/', isLastItem = false } = props;
+  const { isLastItem = false } = props;
   const theme = useTheme();
-
   if (isLastItem) return null;
 
-  return <span css={separatorStyles()(theme)}>{separatorContent}</span>;
+  return (
+    <span css={separatorStyles()(theme)}>
+      <Icon name={'arrowRight'} color="gray100" />
+    </span>
+  );
 };
 
 export default Separator;
