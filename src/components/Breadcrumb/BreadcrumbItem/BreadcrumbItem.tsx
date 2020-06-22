@@ -15,13 +15,19 @@ type Props = {
   options?: string[];
   /** Defines the method where a developer can manipulate the selection of an menu item */
   onChangeHandler?: (selectedItem: string) => void;
+  /** the label of the current level of breadcrumb */
+  lastItemLabel?: string;
 };
 
 const BreadcrumbItem: React.FC<Props> = props => {
-  const { childComponent, isLastItem, options = undefined, onChangeHandler } = props;
+  const { childComponent, isLastItem, options = undefined, onChangeHandler, lastItemLabel } = props;
   const theme = useTheme();
   const renderComponentBasedOnOptions = options ? (
-    <BreadcrumbAdvancedItem onChangeHandler={onChangeHandler} options={options} />
+    <BreadcrumbAdvancedItem
+      onChangeHandler={onChangeHandler}
+      options={options}
+      label={lastItemLabel}
+    />
   ) : (
     childComponent
   );

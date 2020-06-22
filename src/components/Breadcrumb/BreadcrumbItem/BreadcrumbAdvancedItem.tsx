@@ -8,10 +8,12 @@ type Props = {
   options?: string[];
   /** Defines the method where a developer can manipulate the selection of an menu item */
   onChangeHandler?: (selectedItem: string) => void;
+  /** the label of the current level of breadcrumb */
+  label?: string;
 };
 
 const BreadcrumbAdvancedItem: React.FC<Props> = props => {
-  const { options = undefined, onChangeHandler } = props;
+  const { options = undefined, onChangeHandler, label } = props;
   const [selectedItem, setSelectedItem] = React.useState('');
 
   useEffect(() => {
@@ -25,7 +27,7 @@ const BreadcrumbAdvancedItem: React.FC<Props> = props => {
       items={options}
       selectedItem={selectedItem}
       onSelect={option => setSelectedItem(option)}
-      buttonText={'More'}
+      buttonText={label}
       showOptionIcon
       menuIconName="arrowDown"
       menuIconSize={12}

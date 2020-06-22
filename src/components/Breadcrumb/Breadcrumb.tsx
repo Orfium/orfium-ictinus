@@ -55,7 +55,7 @@ const Breadcrumb: React.FC<Props> = props => {
     const itemKey = uniqueId('data_item_');
     const lastItemOnChangeHandler = getDataItemPropertyValue(index, 'onChangeHandler');
     const lastItemOptions = getDataItemPropertyValue(index, 'options');
-
+    const lastItemLabel = getDataItemPropertyValue(index, 'label');
     if (shouldCollapse(child, index)) {
       return index === 1 ? (
         <BreadcrumbCollapsed collapsedItems={collapsedItems} key={itemKey} />
@@ -65,6 +65,7 @@ const Breadcrumb: React.FC<Props> = props => {
     return (
       <BreadcrumbItem
         key={itemKey}
+        lastItemLabel={lastItemLabel}
         onChangeHandler={lastItemOnChangeHandler}
         options={lastItemOptions}
         childComponent={child}
