@@ -30,13 +30,13 @@ const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
   };
 
   useEffect(() => {
-    const unRegister = browserHistory.listen(match => {
+    const unregister = browserHistory.listen(match => {
       const currentIndex = data.findIndex(item => item.to === match.pathname);
       const updatedBreadcrumbData = data.slice(0, currentIndex + 1);
       setData(updatedBreadcrumbData);
     });
 
-    return () => unRegister();
+    return () => unregister();
   });
 
   const routes = data.map(item => {
