@@ -11,6 +11,8 @@ import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import { AcceptedIconNames } from '../Icon/types';
 
+type MenuPositionAllowed = 'left' | 'right';
+
 export type Props = {
   /** Items that are being declared as menu options */
   items?: string[];
@@ -21,7 +23,7 @@ export type Props = {
   /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
   /** Menu position when open */
-  menuPosition?: 'left' | 'right';
+  menuPosition?: MenuPositionAllowed;
   /** Indicator to show dots icon */
   showOptionIcon?: boolean;
   /** The type of the button - defaults to "primary" */
