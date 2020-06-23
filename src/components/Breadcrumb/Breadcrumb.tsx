@@ -8,7 +8,7 @@ import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import { Link } from 'react-router-dom';
 import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
-import { getLastDataItemProperty } from '../../utils/helpers';
+import { last, pick } from 'lodash';
 import { BreadcrumbItemData } from './types';
 
 export type Props = {
@@ -33,11 +33,7 @@ const Breadcrumb: React.FC<Props> = props => {
     item && dataItems.length > 4 && itemIndex > 0 && itemIndex < dataItems.length - 2;
 
   const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), [dataItems]);
-  const lastItem = {
-    label: getLastDataItemProperty(data, 'label'),
-    onChangeHandler: getLastDataItemProperty(data, 'onChangeHandler'),
-    options: getLastDataItemProperty(data, 'options'),
-  };
+  const lastItem = pick(last(data), ['label', 'onChangeHandler', 'options']);
 
   const getBreadcrumbItem = useMemo(
     () => (child: React.ReactNode, index: number) => {
