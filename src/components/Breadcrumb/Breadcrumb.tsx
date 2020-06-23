@@ -16,6 +16,10 @@ export type Props = {
   data: BreadcrumbItemData[];
 };
 
+const MAX_LIMIT_BREADCRUMB_LENGTH = 4;
+const MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE = 2;
+const MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE = 1;
+
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [] } = props;
   const theme = useTheme();
@@ -29,35 +33,43 @@ const Breadcrumb: React.FC<Props> = props => {
 
   const isLastItem = (dataItems: React.ReactNode[], itemIndex: number) =>
     itemIndex === dataItems.length - 1;
+
+  //Checks if an item is in collapsed area and if should break the breadcrumb items with a collapsed view
   const shouldCollapse = (item: React.ReactNode, itemIndex: number) =>
-    item && dataItems.length > 4 && itemIndex > 0 && itemIndex < dataItems.length - 2;
+    item &&
+    dataItems.length > MAX_LIMIT_BREADCRUMB_LENGTH &&
+    itemIndex >= MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE &&
+    itemIndex < dataItems.length - MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE;
 
   const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), [dataItems]);
-  const lastItem = pick(last(data), ['label', 'onChangeHandler', 'options']);
+
+  const {
+    label: lastItemLabel,
+    onChangeHandler: lastItemOnChangeHandler,
+    options: lastItemOptions,
+  } = pick(last(data), ['label', 'onChangeHandler', 'options']);
 
   const getBreadcrumbItem = useMemo(
     () => (child: React.ReactNode, index: number) => {
       const itemKey = uniqueId('data_item_');
 
       if (shouldCollapse(child, index)) {
-        return index === 1 ? (
+        return index === MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE ? (
           <BreadcrumbCollapsed collapsedItems={collapsedItems} key={itemKey} />
         ) : null;
       }
 
       const isLast = isLastItem(dataItems, index);
 
-      return isLast ? (
+      return (
         <BreadcrumbItem
           key={itemKey}
-          lastItemLabel={lastItem.label}
-          onChangeHandler={lastItem.onChangeHandler}
-          options={lastItem.options}
+          lastItemLabel={lastItemLabel}
+          onChangeHandler={lastItemOnChangeHandler}
+          options={lastItemOptions}
           childComponent={child}
           isLastItem={isLast}
         />
-      ) : (
-        <BreadcrumbItem key={itemKey} childComponent={child} />
       );
     },
     [dataItems]
