@@ -10,8 +10,7 @@ import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import { AcceptedIconNames } from '../Icon/types';
-
-type MenuPositionAllowed = 'left' | 'right';
+import { MenuPositionAllowed } from './Menu.style';
 
 export type Props = {
   /** Items that are being declared as menu options */

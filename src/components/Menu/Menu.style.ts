@@ -72,8 +72,10 @@ export const buttonSpanStyle = ({
   },
 });
 
-type MenuOptions = {
-  menuPosition?: 'left' | 'right';
+export type MenuPositionAllowed = 'left' | 'right';
+
+export type MenuOptions = {
+  menuPosition?: MenuPositionAllowed;
 };
 
 export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) => css`
