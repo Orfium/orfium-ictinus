@@ -1,18 +1,20 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import React from 'react';
 // import { buttonSpanStyle, menuStyle } from './Menu.style';
+import { optionsStyle } from './Menu.style';
 import useTheme from 'hooks/useTheme';
 import Button from 'components/Button';
 import Icon from '../Icon';
 import { EventProps } from 'utils/common';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
-import { rem, darken } from 'polished';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import { AcceptedIconNames } from '../Icon/types';
+import { MenuPositionAllowed } from './Menu.style';
 
 export type Props = {
   /** Items that are being declared as menu options */
-  items: string[];
+  items?: string[];
   /** Returns the items selected on the menu */
   selectedItem: string | null;
   /** A callback that is being triggered when an items has been clicked */
@@ -20,11 +22,15 @@ export type Props = {
   /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
   /** Menu position when open */
-  menuPosition?: 'left' | 'right';
+  menuPosition?: MenuPositionAllowed;
   /** Indicator to show dots icon */
   showOptionIcon?: boolean;
   /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;
+  /** The name of the icon on the menu button */
+  menuIconName?: AcceptedIconNames;
+  /** The size of the icon on the menu button */
+  menuIconSize?: number;
 };
 
 export type TestProps = {
@@ -39,6 +45,8 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     menuPosition = 'left',
     showOptionIcon = false,
     buttonType = 'primary',
+    menuIconName = 'dotsVertical',
+    menuIconSize = 16,
   } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -53,8 +61,9 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           icon={
             showOptionIcon ? (
               <Icon
-                name={'dotsVertical'}
+                name={menuIconName}
                 color={buttonType === ('primary' || 'secondary') ? 'dark' : 'light'}
+                size={menuIconSize}
               />
             ) : null
           }
@@ -62,52 +71,23 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           <span>{buttonText}</span>
         </Button>
         {open && (
-          <div
-            css={css`
-              max-height: 400px;
-              overflow-y: scroll;
-              position: absolute;
-              top: ${rem(48)};
-              left: ${menuPosition === 'left' ? 0 : 'initial'};
-              right 0;
-              width: ${rem(148)};
-              height: auto;
-              background-color: #fff;
-              box-shadow: 0px 0px ${rem(16)} grey;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-evenly;
-              text-align: center;
-              border-radius: ${rem(4)};
-              z-index: 1;
-
-              & > button {
-                padding: ${rem(8)} 0;
-                height: ${rem(48)};
-                margin-left: 0;
-                font-size: ${theme.typography.fontSizes['14']};
-              }
-
-              & > button:hover {
-                background-color: ${darken(0.05, '#fff')};
-              }
-            `}
-          >
-            {items.map((option, index) => (
-              <button
-                css={{
-                  backgroundColor: '#fff',
-                  border: 0,
-                }}
-                key={`${option}-${index}`}
-                onClick={() => {
-                  setOpen(false);
-                  onSelect(option);
-                }}
-              >
-                {option}
-              </button>
-            ))}
+          <div css={optionsStyle({ menuPosition })(theme)}>
+            {items &&
+              items.map((option, index) => (
+                <button
+                  css={{
+                    backgroundColor: '#fff',
+                    border: 0,
+                  }}
+                  key={`${option}-${index}`}
+                  onClick={() => {
+                    setOpen(false);
+                    onSelect(option);
+                  }}
+                >
+                  {option}
+                </button>
+              ))}
           </div>
         )}
       </div>

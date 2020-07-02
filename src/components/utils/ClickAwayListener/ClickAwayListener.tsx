@@ -18,13 +18,18 @@ const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => v
 
 type Props = {
   onClick: () => void;
+  cssStyles?: {};
 };
 
-const ClickAwayListener: React.FC<Props> = ({ onClick, ...props }) => {
+const ClickAwayListener: React.FC<Props> = ({ onClick, cssStyles, ...props }) => {
   const wrapperRef = useRef(null);
   useClickAwayListener(wrapperRef, onClick);
 
-  return <div ref={wrapperRef}>{props.children}</div>;
+  return (
+    <div ref={wrapperRef} style={cssStyles}>
+      {props.children}
+    </div>
+  );
 };
 
 export default ClickAwayListener;
