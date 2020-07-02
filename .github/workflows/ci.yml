@@ -18,7 +18,7 @@ jobs:
 
       - name: Push to Staging
         if: (github.ref == 'refs/heads/staging')
-        run: git push --force https://heroku:$HEROKU_API_KEY@https://git.heroku.com/ictinus-staging.git HEAD:master
+        run: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/ictinus-staging.git HEAD:master
       - name: Push to Production
         if: (github.ref == 'refs/heads/master')
-        run: git push --force https://heroku:$HEROKU_API_KEY@https://git.heroku.com/ictinus.git HEAD:master
+        run: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/ictinus.git HEAD:master
