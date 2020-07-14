@@ -108,7 +108,7 @@ function Table<T>({
           })
         )
       ) || [],
-    []
+    [data]
   );
 
   const columnsWithWidth = React.useMemo(
@@ -120,7 +120,7 @@ function Table<T>({
           })
         )
       ) || [],
-    []
+    [data]
   );
 
   return (
