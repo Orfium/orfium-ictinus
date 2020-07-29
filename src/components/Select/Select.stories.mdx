@@ -96,3 +96,27 @@ Multi Tag Select
     </Stack>
   </Story>
 </Preview>
+
+# Disabled Select
+
+Disabled Select
+
+<Preview>
+  <Story name="Disabled Select">
+    <Stack>
+      <Select
+        disabled
+        isClearable
+        label={'Flavour'}
+        options={[
+          { value: 'chocolate', label: 'Chocolate' },
+          { value: 'strawberry', label: 'Strawberry' },
+          { value: 'banana', label: 'Banana' },
+          { value: 'citrus', label: 'Citrus' },
+          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+        ]}
+        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+      />
+    </Stack>
+  </Story>
+</Preview>
