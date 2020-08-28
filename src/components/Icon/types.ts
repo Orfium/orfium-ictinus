@@ -1,6 +1,8 @@
 export type AcceptedIconNames =
   | 'add'
   | 'fatArrowDown'
+  | 'fatArrowLeft'
+  | 'fatArrowRight'
   | 'arrowDown'
   | 'check'
   | 'minus'
@@ -29,4 +31,5 @@ export type AcceptedIconNames =
   | 'checkedList'
   | 'hourglass'
   | 'ticTacToeArrow'
-  | 'dotsVertical';
+  | 'dotsVertical'
+  | 'calendarEmpty';
