@@ -3,19 +3,18 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import useTheme from '../../../hooks/useTheme';
 import { optionStyle } from '../DatePicker.style';
-import { DayPickerInputProps } from 'react-day-picker';
 import { ExtraOption } from '../DatePicker';
+import { InputClassNames } from 'react-day-picker/types/ClassNames';
 
 type Props = {
-  selectedDay: { from: string; to: string };
-  selectedOption: any;
-  setSelectedOption: any;
+  classNames: InputClassNames;
+  selectedOption: string;
+  setSelectedOption: Function;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
 };
-const OverlayComponent: React.FC<DayPickerInputProps & Props> = ({
+const OverlayComponent: React.FC<Props> = ({
   classNames,
-  selectedDay,
   selectedOption,
   setSelectedOption,
   isRangePicker,
@@ -26,9 +25,8 @@ const OverlayComponent: React.FC<DayPickerInputProps & Props> = ({
   const theme = useTheme();
 
   return (
-    //@ts-ignore
-    <div className={classNames?.overlayWrapper} style={{ marginTop: 3 }} {...props}>
-      <div className={classNames?.overlay}>
+    <div className={classNames.overlayWrapper} style={{ marginTop: 3 }} {...props}>
+      <div className={classNames.overlay}>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           {isRangePicker && (
             <div css={{ borderRight: '1px solid #dfdfdf' }}>
