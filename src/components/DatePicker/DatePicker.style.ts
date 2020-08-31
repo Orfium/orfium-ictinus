@@ -9,7 +9,9 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
   font-weight: ${selected ? 'bold' : 'initial'};
 `;
 
-export const datePickerStyles = () => (theme: Theme): SerializedStyles => css`
+export const datePickerStyles = ({ isRangePicker }: { isRangePicker: boolean }) => (
+  theme: Theme
+): SerializedStyles => css`
   .DayPickerInput-Overlay {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     border: 1px solid #dfdfdf;
@@ -62,13 +64,18 @@ export const datePickerStyles = () => (theme: Theme): SerializedStyles => css`
     border-radius: 100% !important;
   }
 
-  .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
-    background-color: #f5f5f5 !important;
-    border-radius: 0;
-  }
-  .DayPicker-Day {
-    border-radius: 0 !important;
-  }
+  ${isRangePicker &&
+    `
+    .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+      background-color: #f5f5f5 !important;
+      border-radius: 0;
+    }
+    
+    .DayPicker-Day {
+      border-radius: 0 !important;
+    }
+  `}
+
   .DayPicker-Day--start {
     border-top-left-radius: 50% !important;
     border-bottom-left-radius: 50% !important;

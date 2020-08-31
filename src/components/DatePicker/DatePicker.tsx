@@ -1,7 +1,7 @@
 // @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { optionStyle, datePickerStyles } from './DatePicker.style';
 import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -23,6 +23,7 @@ function CustomOverlay({
   selectedDay,
   selectedOption,
   setSelectedOption,
+  isRangePicker,
   extraOptions = [],
   children,
   ...props
@@ -33,17 +34,19 @@ function CustomOverlay({
     <div className={classNames.overlayWrapper} style={{ marginTop: 3 }} {...props}>
       <div className={classNames.overlay}>
         <div style={{ display: 'flex', flexDirection: 'row' }}>
-          <div css={{ borderRight: '1px solid #dfdfdf' }}>
-            {extraOptions.map(option => (
-              <div
-                key={option.value}
-                css={optionStyle({ selected: selectedOption === option.value })(theme)}
-                onClick={() => setSelectedOption(option.value)}
-              >
-                {option.label}
-              </div>
-            ))}
-          </div>
+          {isRangePicker && (
+            <div css={{ borderRight: '1px solid #dfdfdf' }}>
+              {extraOptions.map(option => (
+                <div
+                  key={option.value}
+                  css={optionStyle({ selected: selectedOption === option.value })(theme)}
+                  onClick={() => setSelectedOption(option.value)}
+                >
+                  {option.label}
+                </div>
+              ))}
+            </div>
+          )}
           {children}
         </div>
       </div>
@@ -51,7 +54,7 @@ function CustomOverlay({
   );
 }
 
-const DatePicker: React.FC<Props> = ({ disableFutureDates = false }) => {
+const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker = true }) => {
   const theme = useTheme();
   const dayPickerRef = useRef(null);
   const daysInitialState = { from: undefined, to: undefined };
@@ -86,20 +89,32 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false }) => {
     },
   ];
 
-  const handleDayClick = day => {
-    const aboutToCompleteBothDates = selectedDay.from && !selectedDay.to;
-    const range = DateUtils.addDayToRange(
-      day,
-      aboutToCompleteBothDates ? selectedDay : daysInitialState
-    );
+  const handleDayRangeClick = useCallback(
+    day => {
+      const aboutToCompleteBothDates = selectedDay.from && !selectedDay.to;
+      const range = DateUtils.addDayToRange(
+        day,
+        aboutToCompleteBothDates ? selectedDay : daysInitialState
+      );
 
-    if (aboutToCompleteBothDates) {
+      if (aboutToCompleteBothDates) {
+        dayPickerRef.current.hideDayPicker();
+      }
+
+      setSelectedDay(range);
+      setSelectedOption('custom');
+    },
+    [selectedDay, setSelectedDay, setSelectedOption, dayPickerRef.current]
+  );
+
+  const handleDayClick = useCallback(
+    day => {
+      setSelectedDay({ from: day, to: day });
+      setSelectedOption('custom');
       dayPickerRef.current.hideDayPicker();
-    }
-
-    setSelectedDay(range);
-    setSelectedOption('custom');
-  };
+    },
+    [setSelectedDay, setSelectedOption, dayPickerRef.current]
+  );
 
   const handleSelectedOptions = option => {
     const foundOption = extraOptions.find(optionItem => optionItem.value === option);
@@ -116,7 +131,7 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false }) => {
   const getDateFormatted = date => (date ? dayjs(date).format('MM/DD/YYYY') : '');
 
   return (
-    <div css={datePickerStyles()(theme)}>
+    <div css={datePickerStyles({ isRangePicker })(theme)}>
       <DayPickerInput
         ref={dayPickerRef}
         overlayComponent={props => (
@@ -124,13 +139,14 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false }) => {
             selectedOption={selectedOption}
             setSelectedOption={handleSelectedOptions}
             extraOptions={extraOptions}
+            isRangePicker={isRangePicker}
             {...props}
           />
         )}
         dayPickerProps={{
-          onDayClick: handleDayClick,
+          onDayClick: isRangePicker ? handleDayRangeClick : handleDayClick,
           selectedDays: selectedDay,
-          modifiers,
+          modifiers: isRangePicker ? modifiers : undefined,
           // modifiersStyles: {
           //   thursdays: {
           //     color: '#ffc107',
@@ -138,7 +154,7 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false }) => {
           //   },
           // },
           firstDayOfWeek: 1,
-          numberOfMonths: 2,
+          numberOfMonths: isRangePicker ? 2 : 1,
           disabledDays: [
             disableFutureDates && {
               after: new Date(),
@@ -152,31 +168,40 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false }) => {
         //       }`
         //     : ''
         // }
-        component={props => (
-          <div
-            css={[
-              wrapperStyle({ label: true })(theme),
-              flex,
-              {
-                width: 275,
-              },
-            ]}
-          >
+        component={props =>
+          isRangePicker ? (
+            <div
+              css={[
+                wrapperStyle({ label: true })(theme),
+                flex,
+                {
+                  width: 275,
+                },
+              ]}
+            >
+              <TextField
+                label="Date (Start)"
+                lean={true}
+                {...props}
+                value={getDateFormatted(selectedDay.from)}
+              />
+              <TextField
+                rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
+                label={`Date (End)`}
+                {...props}
+                lean={true}
+                value={getDateFormatted(selectedDay.to)}
+              />
+            </div>
+          ) : (
             <TextField
-              label="Date (Start)"
-              lean={true}
+              label="Date"
               {...props}
               value={getDateFormatted(selectedDay.from)}
-            />
-            <TextField
               rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-              label={`Date (End)`}
-              {...props}
-              lean={true}
-              value={getDateFormatted(selectedDay.to)}
             />
-          </div>
-        )}
+          )
+        }
         hideOnDayClick={false}
         keepFocus={false}
       />
