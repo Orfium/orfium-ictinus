@@ -7,9 +7,10 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
   white-space: nowrap;
   padding: 15px;
   font-weight: ${selected ? 'bold' : 'initial'};
+  cursor: pointer;
 `;
 
-export const datePickerStyles = ({ isRangePicker }: { isRangePicker: boolean }) => (
+export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean }) => (
   theme: Theme
 ): SerializedStyles => css`
   .DayPickerInput-Overlay {

@@ -1,11 +1,10 @@
-// @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React, { useCallback, useRef, useState } from 'react';
-import { optionStyle, datePickerStyles } from './DatePicker.style';
+import { datePickerStyles } from './DatePicker.style';
 import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { DateUtils } from 'react-day-picker';
+import { DateUtils, RangeModifier } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
 
@@ -13,60 +12,35 @@ import TextField from '../TextField';
 import Icon from '../Icon';
 import { wrapperStyle } from '../TextField/TextField.style';
 import { flex } from '../../theme/functions';
+import OverlayComponent from './OverlayComponent/OverlayComponent';
 
 export type Props = {
   disableFutureDates?: boolean;
+  isRangePicker?: boolean;
 };
 
-function CustomOverlay({
-  classNames,
-  selectedDay,
-  selectedOption,
-  setSelectedOption,
-  isRangePicker,
-  extraOptions = [],
-  children,
-  ...props
-}) {
-  const theme = useTheme();
+export type DateRange =
+  | RangeModifier
+  | {
+      from: undefined;
+      to: undefined;
+    };
 
-  return (
-    <div className={classNames.overlayWrapper} style={{ marginTop: 3 }} {...props}>
-      <div className={classNames.overlay}>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
-          {isRangePicker && (
-            <div css={{ borderRight: '1px solid #dfdfdf' }}>
-              {extraOptions.map(option => (
-                <div
-                  key={option.value}
-                  css={optionStyle({ selected: selectedOption === option.value })(theme)}
-                  onClick={() => setSelectedOption(option.value)}
-                >
-                  {option.label}
-                </div>
-              ))}
-            </div>
-          )}
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
+export type ExtraOption = { value: string; label: string; dates: Date | Date[] };
 
 const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker = true }) => {
   const theme = useTheme();
-  const dayPickerRef = useRef(null);
+  const dayPickerRef = useRef<DayPickerInput>(null);
   const daysInitialState = { from: undefined, to: undefined };
   const [selectedOption, setSelectedOption] = useState();
-  const [selectedDay, setSelectedDay] = useState({ from: undefined, to: undefined });
-  const extraOptions = [
+  const [selectedDay, setSelectedDay] = useState<DateRange>({ from: undefined, to: undefined });
+  const extraOptions: ExtraOption[] = [
     {
       value: 'last-7-days',
       label: 'Last 7 days',
       dates: [
         dayjs()
-          .subtract(7, 'days')
+          .subtract(7, 'day')
           .toDate(),
         dayjs().toDate(),
       ],
@@ -76,7 +50,7 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker
       label: 'Last 30 days',
       dates: [
         dayjs()
-          .subtract(30, 'days')
+          .subtract(30, 'day')
           .toDate(),
         dayjs().toDate(),
       ],
@@ -94,11 +68,13 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker
       const aboutToCompleteBothDates = selectedDay.from && !selectedDay.to;
       const range = DateUtils.addDayToRange(
         day,
+        // @TODO problem with the library as they define RangeModifiers as not null or undefined when they use it like this
+        // @ts-ignore
         aboutToCompleteBothDates ? selectedDay : daysInitialState
       );
 
       if (aboutToCompleteBothDates) {
-        dayPickerRef.current.hideDayPicker();
+        dayPickerRef.current?.hideDayPicker();
       }
 
       setSelectedDay(range);
@@ -111,31 +87,38 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker
     day => {
       setSelectedDay({ from: day, to: day });
       setSelectedOption('custom');
-      dayPickerRef.current.hideDayPicker();
+      dayPickerRef.current?.hideDayPicker();
     },
     [setSelectedDay, setSelectedOption, dayPickerRef.current]
   );
 
-  const handleSelectedOptions = option => {
+  const handleSelectedOptions = (option: string) => {
     const foundOption = extraOptions.find(optionItem => optionItem.value === option);
-    dayPickerRef.current.hideDayPicker();
-    setSelectedDay(
-      Array.isArray(foundOption.dates)
-        ? { from: foundOption.dates[0], to: foundOption.dates[1] }
-        : { from: foundOption.dates, to: foundOption.dates }
-    );
+    dayPickerRef.current?.hideDayPicker();
+
+    if (foundOption) {
+      setSelectedDay(
+        Array.isArray(foundOption.dates)
+          ? { from: foundOption.dates[0], to: foundOption.dates[1] }
+          : { from: foundOption.dates, to: foundOption.dates }
+      );
+    }
+
     setSelectedOption(option);
   };
 
   const modifiers = { start: selectedDay.from, end: selectedDay.to };
-  const getDateFormatted = date => (date ? dayjs(date).format('MM/DD/YYYY') : '');
+  const getDateFormatted = useCallback(
+    (date: Date | undefined) => (date ? dayjs(date).format('MM/DD/YYYY') : ''),
+    []
+  );
 
   return (
     <div css={datePickerStyles({ isRangePicker })(theme)}>
       <DayPickerInput
         ref={dayPickerRef}
-        overlayComponent={props => (
-          <CustomOverlay
+        overlayComponent={(props: any) => (
+          <OverlayComponent
             selectedOption={selectedOption}
             setSelectedOption={handleSelectedOptions}
             extraOptions={extraOptions}
@@ -145,34 +128,23 @@ const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker
         )}
         dayPickerProps={{
           onDayClick: isRangePicker ? handleDayRangeClick : handleDayClick,
-          selectedDays: selectedDay,
+          selectedDays: selectedDay as RangeModifier,
           modifiers: isRangePicker ? modifiers : undefined,
-          // modifiersStyles: {
-          //   thursdays: {
-          //     color: '#ffc107',
-          //     backgroundColor: '#fffdee',
-          //   },
-          // },
           firstDayOfWeek: 1,
           numberOfMonths: isRangePicker ? 2 : 1,
-          disabledDays: [
-            disableFutureDates && {
-              after: new Date(),
-            },
-          ],
+          disabledDays: disableFutureDates
+            ? [
+                {
+                  after: new Date(),
+                },
+              ]
+            : undefined,
         }}
-        // value={
-        //   selectedDay.from
-        //     ? `${selectedDay.from?.toLocaleDateString()}  ${
-        //         selectedDay.to ? selectedDay.to.toLocaleDateString() : ''
-        //       }`
-        //     : ''
-        // }
-        component={props =>
+        component={(props: any) =>
           isRangePicker ? (
             <div
               css={[
-                wrapperStyle({ label: true })(theme),
+                wrapperStyle({})(theme),
                 flex,
                 {
                   width: 275,
