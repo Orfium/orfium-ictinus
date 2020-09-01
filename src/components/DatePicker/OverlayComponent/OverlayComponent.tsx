@@ -25,9 +25,9 @@ const OverlayComponent: React.FC<Props> = ({
   const theme = useTheme();
 
   return (
-    <div className={classNames.overlayWrapper} style={{ marginTop: 3 }} {...props}>
+    <div className={classNames.overlayWrapper} css={{ marginTop: 3 }} {...props}>
       <div className={classNames.overlay}>
-        <div style={{ display: 'flex', flexDirection: 'row' }}>
+        <div css={{ display: 'flex', flexDirection: 'row' }}>
           {isRangePicker && (
             <div css={{ borderRight: '1px solid #dfdfdf' }}>
               {extraOptions.map(option => (

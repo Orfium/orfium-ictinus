@@ -1,5 +1,7 @@
 import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
+import FatArrowLeft from '../Icon/assets/fat-arrow-left.svg';
+import FatArrowRight from '../Icon/assets/fat-arrow-right.svg';
 
 export const optionStyle = ({ selected }: { selected?: boolean }) => (
   theme: Theme
@@ -24,14 +26,23 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
   .DayPicker-Caption {
     text-align: center;
     font-size: ${theme.typography[14]};
-    margin: ${theme.spacing.xsm} 0 ${theme.spacing.md} 0;
+    margin: ${theme.spacing.sm} 0 ${theme.spacing.md} 0;
   }
 
   .DayPicker-NavButton {
-    top: ${theme.spacing.md};
+    top: ${theme.spacing.sm};
+    background-color: #f5f5f5;
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
 
     &.DayPicker-NavButton--prev {
       left: ${theme.spacing.md};
+      background-image: url(${FatArrowLeft});
+    }
+
+    &.DayPicker-NavButton--next {
+      background-image: url(${FatArrowRight});
     }
   }
 

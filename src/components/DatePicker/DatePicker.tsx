@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -15,8 +15,12 @@ import { flex } from '../../theme/functions';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
 
 export type Props = {
+  /** This boolean shows if the date picker will have the future dates available to select. Default: false */
   disableFutureDates?: boolean;
+  /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
+  /** A callback to return user selection */
+  onChange?: (date: DateRange) => DateRange;
 };
 
 export type DateRange =
@@ -28,40 +32,51 @@ export type DateRange =
 
 export type ExtraOption = { value: string; label: string; dates: Date | Date[] };
 
-const DatePicker: React.FC<Props> = ({ disableFutureDates = false, isRangePicker = true }) => {
+const extraOptions: ExtraOption[] = [
+  {
+    value: 'last-7-days',
+    label: 'Last 7 days',
+    dates: [
+      dayjs()
+        .subtract(7, 'day')
+        .toDate(),
+      dayjs().toDate(),
+    ],
+  },
+  {
+    value: 'last-30-days',
+    label: 'Last 30 days',
+    dates: [
+      dayjs()
+        .subtract(30, 'day')
+        .toDate(),
+      dayjs().toDate(),
+    ],
+  },
+
+  {
+    value: 'custom',
+    label: 'Custom',
+    dates: dayjs().toDate(),
+  },
+];
+
+const DatePicker: React.FC<Props> = ({
+  disableFutureDates = false,
+  isRangePicker = false,
+  onChange,
+}) => {
   const theme = useTheme();
   const dayPickerRef = useRef<DayPickerInput>(null);
   const daysInitialState = { from: undefined, to: undefined };
   const [selectedOption, setSelectedOption] = useState();
   const [selectedDay, setSelectedDay] = useState<DateRange>({ from: undefined, to: undefined });
-  const extraOptions: ExtraOption[] = [
-    {
-      value: 'last-7-days',
-      label: 'Last 7 days',
-      dates: [
-        dayjs()
-          .subtract(7, 'day')
-          .toDate(),
-        dayjs().toDate(),
-      ],
-    },
-    {
-      value: 'last-30-days',
-      label: 'Last 30 days',
-      dates: [
-        dayjs()
-          .subtract(30, 'day')
-          .toDate(),
-        dayjs().toDate(),
-      ],
-    },
 
-    {
-      value: 'custom',
-      label: 'Custom',
-      dates: dayjs().toDate(),
-    },
-  ];
+  useEffect(() => {
+    if (onChange) {
+      onChange(selectedDay);
+    }
+  }, [onChange, selectedDay]);
 
   const handleDayRangeClick = useCallback(
     day => {
