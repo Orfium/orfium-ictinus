@@ -30,6 +30,7 @@ import CheckedListIcon from './checked-list.svg';
 import HourglassIcon from './hourglass.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import DotsVerticalIcon from './dots-vertical.svg';
+import KeywordIcon from './keyword.svg';
 
 const iconSelector = {
   add: AddIcon,
@@ -63,6 +64,7 @@ const iconSelector = {
   hourglass: HourglassIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
   dotsVertical: DotsVerticalIcon,
+  keyword: KeywordIcon,
 };
 
 export default iconSelector;
