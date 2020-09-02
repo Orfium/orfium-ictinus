@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { DateUtils, RangeModifier } from 'react-day-picker';
+import { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
 
@@ -132,7 +132,7 @@ const DatePicker: React.FC<Props> = ({
     <div css={datePickerStyles({ isRangePicker })(theme)}>
       <DayPickerInput
         ref={dayPickerRef}
-        overlayComponent={(props: any) => (
+        overlayComponent={(props: DayPickerInputProps) => (
           <OverlayComponent
             selectedOption={selectedOption}
             setSelectedOption={handleSelectedOptions}
@@ -155,7 +155,7 @@ const DatePicker: React.FC<Props> = ({
               ]
             : undefined,
         }}
-        component={(props: any) =>
+        component={(props: DayPickerInput) =>
           isRangePicker ? (
             <div
               css={[

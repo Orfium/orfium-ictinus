@@ -4,16 +4,16 @@ import React from 'react';
 import useTheme from '../../../hooks/useTheme';
 import { optionStyle } from '../DatePicker.style';
 import { ExtraOption } from '../DatePicker';
-import { InputClassNames } from 'react-day-picker/types/ClassNames';
+import { DayPickerInputProps } from 'react-day-picker';
+import omit from 'lodash/omit';
 
 type Props = {
-  classNames: InputClassNames;
   selectedOption: string;
   setSelectedOption: Function;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
 };
-const OverlayComponent: React.FC<Props> = ({
+const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
   classNames,
   selectedOption,
   setSelectedOption,
@@ -25,8 +25,12 @@ const OverlayComponent: React.FC<Props> = ({
   const theme = useTheme();
 
   return (
-    <div className={classNames.overlayWrapper} css={{ marginTop: 3 }} {...props}>
-      <div className={classNames.overlay}>
+    <div
+      className={classNames?.overlayWrapper}
+      css={{ marginTop: 3 }}
+      {...omit(props, ['onKeyUp', 'onClick'])}
+    >
+      <div className={classNames?.overlay}>
         <div css={{ display: 'flex', flexDirection: 'row' }}>
           {isRangePicker && (
             <div css={{ borderRight: '1px solid #dfdfdf' }}>

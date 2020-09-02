@@ -13,9 +13,9 @@ export type Props = {
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
   /** An optional icon to show to the left */
-  leftIcon?: string | null;
+  leftIcon?: string | JSX.Element | null;
   /** An optional icon to show to the right */
-  rightIcon?: string | null;
+  rightIcon?: string | JSX.Element | null;
   /** If the text field value is required */
   required?: boolean;
   /** If the text field is disabled */
