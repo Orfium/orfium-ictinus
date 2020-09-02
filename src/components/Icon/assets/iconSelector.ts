@@ -34,6 +34,7 @@ import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import DotsVerticalIcon from './dots-vertical.svg';
 import CalendarEmptyIcon from './calendar-empty.svg';
 import { AcceptedIconNames } from '../types';
+import KeywordIcon from './keyword.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   add: AddIcon,
@@ -69,6 +70,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   hourglass: HourglassIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
   dotsVertical: DotsVerticalIcon,
+  keyword: KeywordIcon,
   calendarEmpty: CalendarEmptyIcon,
 };
 

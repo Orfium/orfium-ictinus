@@ -1,6 +1,6 @@
 {
-  "name": "ictinus",
-  "version": "1.0.0",
+  "name": "@orfium/ictinus",
+  "version": "0.5.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
@@ -42,7 +42,6 @@
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.1",
-    "jest": "^25.1.0",
     "lint-staged": "^10.0.3",
     "lodash": "^4.17.15",
     "pluralize": "^8.0.0",
@@ -65,7 +64,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0"
+    "react-router-dom": "^5.0.0",
+    "jest": "^25.1.0"
   },
   "resolutions": {
     "@emotion/core": "^10.0.20",
@@ -82,5 +82,15 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orfium/orfium-ictinus.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
+  "homepage": "https://github.com/Orfium/orfium-ictinus#readme",
+  "description": ""
 }
