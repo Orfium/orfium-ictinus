@@ -16,19 +16,29 @@ const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => v
   });
 };
 
+export type HTMLTagsAllowed = 'div' | 'li' | 'span';
+
 type Props = {
   onClick: () => void;
+  CustomHtmlTag?: HTMLTagsAllowed;
+  ariaRole?: string;
   cssStyles?: {};
 };
 
-const ClickAwayListener: React.FC<Props> = ({ onClick, cssStyles, ...props }) => {
+const ClickAwayListener: React.FC<Props> = ({
+  onClick,
+  CustomHtmlTag = 'div',
+  ariaRole = 'button',
+  cssStyles,
+  ...props
+}) => {
   const wrapperRef = useRef(null);
   useClickAwayListener(wrapperRef, onClick);
 
   return (
-    <div ref={wrapperRef} style={cssStyles}>
+    <CustomHtmlTag role={ariaRole} ref={wrapperRef} style={cssStyles}>
       {props.children}
-    </div>
+    </CustomHtmlTag>
   );
 };
 

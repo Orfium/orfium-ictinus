@@ -1,6 +1,6 @@
 {
-  "name": "ictinus",
-  "version": "1.0.0",
+  "name": "@orfium/ictinus",
+  "version": "0.5.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
@@ -80,5 +80,15 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orfium/orfium-ictinus.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Orfium/orfium-ictinus/issues"
+  },
+  "homepage": "https://github.com/Orfium/orfium-ictinus#readme",
+  "description": ""
 }

@@ -43,16 +43,19 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
   const iconColor = open ? 'white' : 'gray100';
 
   return (
-    <ClickAwayListener onClick={() => setOpen(false)} cssStyles={ClickAwayListenerStyle}>
-      <li>
-        <div css={breadcrumbCollapsedWrapperStyles()}>
-          <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
-            <Icon name="dotsVertical" size={22} color={iconColor} />
-          </span>
-          <Separator />
-          {open && collapsedItemsList}
-        </div>
-      </li>
+    <ClickAwayListener
+      CustomHtmlTag="li"
+      ariaRole="listitem"
+      onClick={() => setOpen(false)}
+      cssStyles={ClickAwayListenerStyle}
+    >
+      <div css={breadcrumbCollapsedWrapperStyles()}>
+        <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
+          <Icon name="dotsVertical" size={22} color={iconColor} />
+        </span>
+        <Separator />
+        {open && collapsedItemsList}
+      </div>
     </ClickAwayListener>
   );
 };
