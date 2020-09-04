@@ -1,5 +1,4 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
-import { withA11y } from '@storybook/addon-a11y';
 // Add prop tables to components (based on component type interfaces)
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
@@ -72,4 +71,3 @@ addParameters({
   },
   options: { showPanel: true },
 });
-addDecorator(withA11y);
