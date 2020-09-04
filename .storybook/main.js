@@ -19,23 +19,22 @@ module.exports = {
     '@storybook/addon-storysource/register',
     '@storybook/addon-docs',
   ],
-  webpackFinal: async config => {
+  webpack: async config => {
     // do mutation to the config
     // Edit config with care. Make sure to preserve the following config options:
     // * entry
     // * output
 
     console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
-
-    // modify storybook's file-loader rule to avoid conflicts with svgr
-    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
-    fileLoaderRule.exclude = pathToInlineSvg;
-
     config.module.rules.push({
       test: /\.svg$/,
       include: pathToInlineSvg,
       use: ['@svgr/webpack'],
     });
+
+    // modify storybook's file-loader rule to avoid conflicts with svgr
+    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
+    fileLoaderRule.exclude = pathToInlineSvg;
 
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
