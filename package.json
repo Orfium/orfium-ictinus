@@ -81,8 +81,7 @@
     "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "test:run": "jest",
-    "test:update": "jest -u",
-    "test:verbose": "jest -u -- --verbose"
+    "test:update": "jest -u"
   },
   "repository": {
     "type": "git",
