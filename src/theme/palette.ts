@@ -1,13 +1,36 @@
-const grayPalette = {
-  gray: '#F5F5F6',
-  gray50: '#DFDFDF',
-  gray100: '#9B9B9B',
-  gray200: '#4A4A4A',
-  gray250: '#8080802b',
-  gray300: '#232323',
+export const flatPaletteConfig: flatPaletteConfigType = {
+  white: '#ffffff',
+
+  coolGray: '#a3a9ac',
+
+  warmGray: '#afa6a3',
+
+  neutralGray: '#9b9b9b',
+
+  black: '#232323',
+
+  magenta: '#d21e75',
+
+  red: '#d40000',
+
+  orange: '#f5781b',
+
+  yellow: '#ffc700',
+
+  olive: '#545c15',
+
+  green: '#6bbc15',
+
+  teal: '#27dcbd',
+
+  blue: '#18aed2',
+
+  darkBlue: '#232d7d',
+
+  purple: '#71458f',
 };
 
-export const lightPalette: Palette = {
+export const lightPalette: PaletteConfig = {
   // Primary Palette
   primary: '#DFDFDF',
   secondary: '',
@@ -15,25 +38,25 @@ export const lightPalette: Palette = {
   branded1: 'orange',
   branded2: 'yellow',
 
-  ...grayPalette,
-
   //rest
-  success: '#6bbc15',
-  error: '#D40000',
-  warning: '#F5781B',
-  info: '#18AED2',
-  light: '#FFFFFF',
+  success: flatPaletteConfig.green,
+  error: flatPaletteConfig.red,
+  warning: flatPaletteConfig.orange,
+  info: flatPaletteConfig.blue,
+  light: flatPaletteConfig.white,
 
-  white: '#FFFFFF',
+  flat: {
+    ...flatPaletteConfig,
+  },
 
   text: {
-    primary: grayPalette.gray300,
-    secondary: grayPalette.gray200,
-    light: '#FFFFFF',
+    primary: flatPaletteConfig.black,
+    secondary: flatPaletteConfig.neutralGray,
+    light: flatPaletteConfig.white,
   },
 };
 
-export const darkPalette: Palette = {
+export const darkPalette: PaletteConfig = {
   // Primary Palette
   primary: '',
   secondary: '',
@@ -41,50 +64,139 @@ export const darkPalette: Palette = {
   branded1: 'orange',
   branded2: 'yellow',
 
-  ...grayPalette,
-
   //rest
-  success: '#6bbc15',
-  error: '#D40000',
-  warning: '#F5781B',
-  info: '#18AED2',
-  light: '#FFFFFF',
+  success: flatPaletteConfig.green,
+  error: flatPaletteConfig.red,
+  warning: flatPaletteConfig.orange,
+  info: flatPaletteConfig.blue,
+  light: flatPaletteConfig.white,
 
-  white: '#FFFFFF',
+  flat: {
+    ...flatPaletteConfig,
+  },
 
   text: {
-    primary: grayPalette.gray300,
-    secondary: grayPalette.gray200,
-    light: '#FFFFFF',
+    primary: flatPaletteConfig.black,
+    secondary: flatPaletteConfig.neutralGray,
+    light: flatPaletteConfig.white,
   },
 };
 
-export type Palette = {
+type flatPaletteConfigType = {
+  white?: string;
+
+  coolGray?: string;
+
+  warmGray?: string;
+
+  neutralGray?: string;
+
+  black?: string;
+
+  magenta?: string;
+
+  red?: string;
+
+  orange?: string;
+
+  yellow?: string;
+
+  olive?: string;
+
+  green?: string;
+
+  teal?: string;
+
+  blue?: string;
+
+  darkBlue?: string;
+
+  purple?: string;
+};
+
+export type flatPalette = {
+  white: generatedColorShades;
+
+  coolGray: generatedColorShades;
+
+  warmGray: generatedColorShades;
+
+  neutralGray: generatedColorShades;
+
+  black: generatedColorShades;
+
+  magenta: generatedColorShades;
+
+  red: generatedColorShades;
+
+  orange: generatedColorShades;
+
+  yellow: generatedColorShades;
+
+  olive: generatedColorShades;
+
+  green: generatedColorShades;
+
+  teal: generatedColorShades;
+
+  blue: generatedColorShades;
+
+  darkBlue: generatedColorShades;
+
+  purple: generatedColorShades;
+};
+
+export type PaletteConfig = {
   // Primary Palette
-  primary: string;
-  secondary: string;
+  primary?: string;
+  secondary?: string;
 
-  branded1: string;
-  branded2: string;
+  branded1?: string;
+  branded2?: string;
 
-  gray: string;
-  gray50: string;
-  gray100: string;
-  gray200: string;
-  gray250: string;
-  gray300: string;
+  success?: string;
+  error?: string;
+  warning?: string;
+  info?: string;
+  light?: string;
 
-  success: string;
-  error: string;
-  warning: string;
-  info: string;
-  light: string;
+  text?: {
+    primary?: string;
+    secondary?: string;
+    light?: string;
+  };
 
-  white: string;
+  flat?: flatPaletteConfigType;
+};
+
+type generatedColorShades = {
+  100: string;
+  200: string;
+  300: string;
+  400: string;
+  500: string;
+  600: string;
+  700: string;
+};
+
+export type Palette = {
+  primary: generatedColorShades;
+  secondary: generatedColorShades;
+
+  branded1: generatedColorShades;
+  branded2: generatedColorShades;
+
+  success: generatedColorShades;
+  error: generatedColorShades;
+  warning: generatedColorShades;
+  info: generatedColorShades;
+  light: generatedColorShades;
 
   text: {
-    primary: string;
-    secondary: string;
-    light: string;
+    primary: generatedColorShades;
+    secondary: generatedColorShades;
+    light: generatedColorShades;
   };
+
+  flat: flatPalette;
 };
