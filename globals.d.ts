@@ -1,6 +1,7 @@
 declare module '*.md';
 
 declare module '*.svg' {
-  const content: string;
+  const content: any;
+  export const ReactComponent: any;
   export default content;
 }

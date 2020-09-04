@@ -5,12 +5,11 @@ module.exports = {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
     '^.+\\.mdx?$': '@storybook/addon-docs/jest-transform-mdx',
+    '.+\\.svg?.+$': 'jest-transform-stub',
   },
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'mdx'],
   moduleDirectories: ['<rootDir>/src', 'node_modules'],
+  moduleNameMapper: {
+    '\\.svg$': '<rootDir>/__mocks__/fileMock.ts',
+  },
 };
-
-// transform: {
-//   '^.+\\.mdx?$': '@storybook/addon-docs/jest-transform-mdx',
-//   '.(ts|tsx)': '<rootDir>/node_modules/ts-jest/preprocessor.js',
-// },
