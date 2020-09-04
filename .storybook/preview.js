@@ -52,22 +52,32 @@ const ThemeSwitcher = () => {
   );
 };
 
-// wrap all components with theme provider by default
-addDecorator(storyFn => {
-  return (
-    <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
-      <ThemeSwitcher />
-      {storyFn()}
-    </ThemeProvider>
-  );
-});
-addDecorator(storyFn => <ThemeSwitchProvider>{storyFn()}</ThemeSwitchProvider>);
-addDecorator(storyFn => <div style={{ margin: 5 }}>{storyFn()}</div>);
-
-addParameters({
+export const decorators = [
+  Story => {
+    return (
+      <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
+        <ThemeSwitcher />
+        <Story />
+      </ThemeProvider>
+    );
+  },
+  Story => {
+    return (
+      <ThemeSwitchProvider>
+        <Story />
+      </ThemeSwitchProvider>
+    );
+  },
+  Story => (
+    <div style={{ margin: 5 }}>
+      <Story />
+    </div>
+  ),
+];
+export const parameters = {
   viewport: {
     viewports: viewPorts,
     defaultViewport: 'someDefault',
   },
   options: { showPanel: true },
-});
+};
