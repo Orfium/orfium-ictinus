@@ -5,6 +5,7 @@ import useTheme from '../../../hooks/useTheme';
 import { optionStyle } from '../DatePicker.style';
 import { ExtraOption } from '../DatePicker';
 import { DayPickerInputProps } from 'react-day-picker';
+import Button from 'components/Button';
 import omit from 'lodash/omit';
 
 type Props = {
@@ -12,6 +13,7 @@ type Props = {
   setSelectedOption: Function;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
+  hideDatePicker: (() => void) | undefined;
 };
 const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
   classNames,
@@ -20,6 +22,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
   isRangePicker,
   extraOptions = [],
   children,
+  hideDatePicker = () => {},
   ...props
 }) => {
   const theme = useTheme();
@@ -31,7 +34,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
       {...omit(props, ['onKeyUp', 'onClick'])}
     >
       <div className={classNames?.overlay}>
-        <div css={{ display: 'flex', flexDirection: 'row' }}>
+        <div css={{ display: 'flex' }}>
           {isRangePicker && (
             <div css={{ borderRight: '1px solid #dfdfdf' }}>
               {extraOptions.map(option => (
@@ -45,7 +48,28 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
               ))}
             </div>
           )}
-          {children}
+          <div css={{ display: 'flex', flexDirection: 'column' }}>
+            {children}
+            <div
+              css={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+                marginBottom: theme.spacing.md,
+                marginRight: theme.spacing.lg,
+                alignItems: 'space-between',
+                '> button': {
+                  margin: theme.spacing.sm,
+                },
+              }}
+            >
+              <Button filled={false} size={'sm'} onClick={hideDatePicker}>
+                Cancel
+              </Button>
+              <Button size={'sm'} onClick={hideDatePicker}>
+                Apply
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

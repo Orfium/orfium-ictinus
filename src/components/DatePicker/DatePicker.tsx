@@ -144,6 +144,7 @@ const DatePicker: React.FC<Props> = ({
             setSelectedOption={handleSelectedOptions}
             extraOptions={extraOptions}
             isRangePicker={isRangePicker}
+            hideDatePicker={() => dayPickerRef.current?.hideDayPicker()}
             {...props}
           />
         )}
