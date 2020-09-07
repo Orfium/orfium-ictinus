@@ -119,6 +119,20 @@ const DatePicker: React.FC<Props> = ({
   };
 
   const modifiers = { start: selectedDay.from, end: selectedDay.to };
+  const dayPickerProps = {
+    onDayClick: isRangePicker ? handleDayRangeClick : handleDayClick,
+    selectedDays: selectedDay as RangeModifier,
+    modifiers: isRangePicker ? modifiers : undefined,
+    firstDayOfWeek: 1,
+    numberOfMonths: isRangePicker ? 2 : 1,
+    disabledDays: disableFutureDates
+      ? [
+          {
+            after: new Date(),
+          },
+        ]
+      : undefined,
+  };
 
   return (
     <div css={datePickerStyles({ isRangePicker })(theme)}>
@@ -133,20 +147,7 @@ const DatePicker: React.FC<Props> = ({
             {...props}
           />
         )}
-        dayPickerProps={{
-          onDayClick: isRangePicker ? handleDayRangeClick : handleDayClick,
-          selectedDays: selectedDay as RangeModifier,
-          modifiers: isRangePicker ? modifiers : undefined,
-          firstDayOfWeek: 1,
-          numberOfMonths: isRangePicker ? 2 : 1,
-          disabledDays: disableFutureDates
-            ? [
-                {
-                  after: new Date(),
-                },
-              ]
-            : undefined,
-        }}
+        dayPickerProps={dayPickerProps}
         component={(props: DayPickerInputProps) => (
           <DatePickInput {...props} selectedDay={selectedDay} isRangePicker={isRangePicker} />
         )}
