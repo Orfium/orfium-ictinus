@@ -7,7 +7,7 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
   theme: Theme
 ): SerializedStyles => css`
   white-space: nowrap;
-  padding: 15px;
+  padding: ${theme.spacing.md};
   font-weight: ${selected ? 'bold' : 'initial'};
   cursor: pointer;
 `;

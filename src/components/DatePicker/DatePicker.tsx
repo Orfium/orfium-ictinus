@@ -7,12 +7,8 @@ import DayPickerInput from 'react-day-picker/DayPickerInput';
 import { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
-
-import TextField from '../TextField';
-import Icon from '../Icon';
-import { wrapperStyle } from '../TextField/TextField.style';
-import { flex } from '../../theme/functions';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
+import DatePickInput from './DatePickInput/DatePickInput';
 
 export type Props = {
   /** This boolean shows if the date picker will have the future dates available to select. Default: false */
@@ -123,10 +119,6 @@ const DatePicker: React.FC<Props> = ({
   };
 
   const modifiers = { start: selectedDay.from, end: selectedDay.to };
-  const getDateFormatted = useCallback(
-    (date: Date | undefined) => (date ? dayjs(date).format('MM/DD/YYYY') : ''),
-    []
-  );
 
   return (
     <div css={datePickerStyles({ isRangePicker })(theme)}>
@@ -155,40 +147,9 @@ const DatePicker: React.FC<Props> = ({
               ]
             : undefined,
         }}
-        component={(props: DayPickerInput) =>
-          isRangePicker ? (
-            <div
-              css={[
-                wrapperStyle({})(theme),
-                flex,
-                {
-                  width: 275,
-                },
-              ]}
-            >
-              <TextField
-                label="Date (Start)"
-                lean={true}
-                {...props}
-                value={getDateFormatted(selectedDay.from)}
-              />
-              <TextField
-                rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-                label={`Date (End)`}
-                {...props}
-                lean={true}
-                value={getDateFormatted(selectedDay.to)}
-              />
-            </div>
-          ) : (
-            <TextField
-              label="Date"
-              {...props}
-              value={getDateFormatted(selectedDay.from)}
-              rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-            />
-          )
-        }
+        component={(props: DayPickerInputProps) => (
+          <DatePickInput {...props} selectedDay={selectedDay} isRangePicker={isRangePicker} />
+        )}
         hideOnDayClick={false}
         keepFocus={false}
       />
