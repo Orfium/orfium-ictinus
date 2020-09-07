@@ -91,7 +91,7 @@ const DatePicker: React.FC<Props> = ({
       setSelectedDay(range);
       setSelectedOption('custom');
     },
-    [selectedDay, setSelectedDay, setSelectedOption, dayPickerRef.current]
+    [selectedDay, setSelectedDay, setSelectedOption, dayPickerRef, daysInitialState]
   );
 
   const handleDayClick = useCallback(
@@ -100,7 +100,7 @@ const DatePicker: React.FC<Props> = ({
       setSelectedOption('custom');
       dayPickerRef.current?.hideDayPicker();
     },
-    [setSelectedDay, setSelectedOption, dayPickerRef.current]
+    [setSelectedDay, setSelectedOption, dayPickerRef]
   );
 
   const handleSelectedOptions = (option: string) => {
