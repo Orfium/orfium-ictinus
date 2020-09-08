@@ -3,6 +3,7 @@ const grayPalette = {
   gray50: '#DFDFDF',
   gray100: '#9B9B9B',
   gray200: '#4A4A4A',
+  gray250: '#8080802b',
   gray300: '#232323',
 };
 
@@ -70,6 +71,7 @@ export type Palette = {
   gray50: string;
   gray100: string;
   gray200: string;
+  gray250: string;
   gray300: string;
 
   success: string;

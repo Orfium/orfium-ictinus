@@ -72,7 +72,11 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
                 {columns[cellCounter]}
               </div>
             )}
-            {isComponentFunctionType(content) ? content({ content, colSpan }) : content}
+            {isComponentFunctionType(content) ? (
+              content({ content, colSpan })
+            ) : (
+              <span data-column={columns[cellCounter]}>{content}</span>
+            )}
           </TableCell>
         );
       })}

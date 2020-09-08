@@ -80,6 +80,7 @@ const Select: React.FC<Props> = ({
     }),
     control: (base, state) => ({
       ...base,
+      opacity: disabled ? 0.5 : 1,
       minHeight: rem(56),
       width: 200,
       paddingLeft: rem(3),

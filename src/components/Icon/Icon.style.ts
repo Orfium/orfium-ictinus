@@ -13,6 +13,9 @@ export const iconStyle = ({ color, size }: iconStyleProps) => (theme: Theme) => 
   fill: fillPickerBasedOnType(color)(theme),
   width: rem(size),
   height: rem(size),
+  path: {
+    fill: fillPickerBasedOnType(color)(theme),
+  },
 });
 
 export const iconContainerStyle = () => ({
