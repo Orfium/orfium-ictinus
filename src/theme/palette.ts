@@ -1,13 +1,11 @@
 export const flatPaletteConfig: flatPaletteConfigType = {
-  white: '#ffffff',
+  lightGray: '#cfcfcf',
+
+  darkGray: '#494949',
 
   coolGray: '#a3a9ac',
 
   warmGray: '#afa6a3',
-
-  neutralGray: '#9b9b9b',
-
-  black: '#232323',
 
   magenta: '#d21e75',
 
@@ -30,6 +28,15 @@ export const flatPaletteConfig: flatPaletteConfigType = {
   purple: '#71458f',
 };
 
+/*
+gray -> lightGray02
+gray50 —> lightGray04
+  gray100 —> lightGray07
+  gray200 -> darkGray04
+  gray250 -> darkGray05
+  gray300 —> darkGray06
+ */
+
 export const lightPalette: PaletteConfig = {
   // Primary Palette
   primary: '#DFDFDF',
@@ -43,16 +50,16 @@ export const lightPalette: PaletteConfig = {
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.blue,
-  light: flatPaletteConfig.white,
+  light: flatPaletteConfig.lightGray,
 
   flat: {
     ...flatPaletteConfig,
   },
 
   text: {
-    primary: flatPaletteConfig.black,
-    secondary: flatPaletteConfig.neutralGray,
-    light: flatPaletteConfig.white,
+    primary: flatPaletteConfig.darkGray,
+    secondary: flatPaletteConfig.coolGray,
+    light: flatPaletteConfig.lightGray,
   },
 };
 
@@ -69,29 +76,27 @@ export const darkPalette: PaletteConfig = {
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.blue,
-  light: flatPaletteConfig.white,
+  light: flatPaletteConfig.lightGray,
 
   flat: {
     ...flatPaletteConfig,
   },
 
   text: {
-    primary: flatPaletteConfig.black,
-    secondary: flatPaletteConfig.neutralGray,
-    light: flatPaletteConfig.white,
+    primary: flatPaletteConfig.darkGray,
+    secondary: flatPaletteConfig.coolGray,
+    light: flatPaletteConfig.lightGray,
   },
 };
 
 type flatPaletteConfigType = {
-  white?: string;
+  lightGray?: string;
+
+  darkGray?: string;
 
   coolGray?: string;
 
   warmGray?: string;
-
-  neutralGray?: string;
-
-  black?: string;
 
   magenta?: string;
 

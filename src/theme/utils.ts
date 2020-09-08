@@ -1,20 +1,26 @@
 import { shade, tint } from 'polished';
 import { Palette, PaletteConfig } from './palette';
 
+const BASE_PERCENTAGE = 0.25;
+
+const SPECIAL_GRAY_PERCENTAGE = 0.8;
+
+const SPECIAL_GRAY = ['lightGray', 'darkGray'];
+
 export const convertPointsToPixels = (pt: number) => (96 / 72) * pt;
 
-export const colorShadesCreator = (base: string) => {
+export const colorShadesCreator = (base: string, per: number) => {
   const darker = new Array(4)
     .fill(null)
     .reduce((acc, _, index) => {
-      acc.push(shade(0.25 * index, base));
+      acc.push(shade(per * index, base));
 
       return acc;
     }, [])
     .reverse();
 
   const lighter = new Array(4).fill(null).reduce((acc, _, index) => {
-    acc.push(tint(0.25 * index, base));
+    acc.push(tint(per * index, base));
 
     return acc;
   }, []);
@@ -29,11 +35,11 @@ export const colorShadesCreator = (base: string) => {
     }, []);
 };
 
-export const iterateObject = (obj: any, func: (base: string) => any) =>
+export const iterateObject = (obj: any, func: (base: string, per: number) => any) =>
   Object.keys(obj).reduce((acc, value, arr) => {
     acc[value] =
       typeof obj[value] === 'string'
-        ? func(obj[value])
+        ? func(obj[value], SPECIAL_GRAY.includes(value) ? SPECIAL_GRAY_PERCENTAGE : BASE_PERCENTAGE)
         : typeof obj[value] === undefined
         ? undefined
         : iterateObject(obj[value], func);
