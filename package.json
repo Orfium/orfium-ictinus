@@ -76,7 +76,7 @@
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
     "build": "yarn build:lib && yarn build:types",
-    "build:lib": "cross-env NODE_ENV=production BABEL_ENV=production babel src --extensions '.ts,.tsx' --out-dir ./dist --ignore '**/*.stories.tsx'",
+    "build:lib": "cross-env NODE_ENV=production BABEL_ENV=production babel src --extensions '.ts,.tsx' --out-dir ./dist",
     "build:types": "tsc --emitDeclarationOnly",
     "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'",
