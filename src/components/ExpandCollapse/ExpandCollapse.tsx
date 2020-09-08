@@ -57,8 +57,7 @@ export type Props = {
    * collapsible/expandable content. Mutually exclusive with content.
    */
   children?: (x: boolean) => ReactElement;
-  dataTestId?: TestId;
-};
+} & TestProps;
 
 function ExpandCollapse(props: Props) {
   const {
