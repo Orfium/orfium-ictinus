@@ -31,6 +31,8 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
     <div
       className={classNames?.overlayWrapper}
       css={{ marginTop: 3 }}
+      // These were omitted due to type miss-match. Also these events on the overlayWrapper don't
+      // do anything and with future keyboard support will still do nothing
       {...omit(props, ['onKeyUp', 'onClick'])}
     >
       <div className={classNames?.overlay}>
