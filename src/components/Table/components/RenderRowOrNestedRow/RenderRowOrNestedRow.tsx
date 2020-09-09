@@ -114,7 +114,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
 });
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
-const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
+const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { row: Row<T> }) => {
   const { isRowSelected, columnCount } = useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;

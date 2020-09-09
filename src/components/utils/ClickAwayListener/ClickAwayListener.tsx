@@ -22,7 +22,7 @@ type Props = {
   onClick: () => void;
   CustomHtmlTag?: HTMLTagsAllowed;
   ariaRole?: string;
-  cssStyles?: {};
+  cssStyles?: { [key: string]: unknown };
 };
 
 const ClickAwayListener: React.FC<Props> = ({

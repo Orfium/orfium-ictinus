@@ -10,7 +10,7 @@ import omit from 'lodash/omit';
 
 type Props = {
   selectedOption: string;
-  setSelectedOption: Function;
+  setSelectedOption: (x: string) => void;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
   hideDatePicker: (() => void) | undefined;

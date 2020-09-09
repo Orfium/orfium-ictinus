@@ -241,7 +241,7 @@ type TableRowWrapperProps<T> = {
   expanded: boolean;
 };
 
-const TableRowWrapper = <T extends {}>({
+const TableRowWrapper = <T extends { [key: string]: unknown }>({
   row,
   selectedIds,
   onSelectionAdd,
