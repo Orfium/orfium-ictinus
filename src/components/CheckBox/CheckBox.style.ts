@@ -19,7 +19,7 @@ export const checkboxWrapperStyle = () => (theme: Theme) => css`
   transition: all 0.2s;
 
   &:hover {
-    background: ${transparentize(0.7, theme.palette.gray50)};
+    background: ${transparentize(0.7, theme.palette.flat.lightGray[400])};
   }
 `;
 
@@ -28,9 +28,9 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
 ): SerializedStyles => css`
   background: ${checked
     ? intermediate
-      ? theme.palette.gray200
-      : theme.palette.branded1
-    : theme.palette.gray50};
+      ? theme.palette.flat.darkGray[400]
+      : theme.palette.branded1[400]
+    : theme.palette.flat.lightGray[400]};
   border: 0;
   border-radius: ${rem(2)};
   width: ${rem(26)};
@@ -53,13 +53,13 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
     vertical-align: text-top;
     width: ${rem(26)};
     height: ${rem(26)};
-    background: ${theme.palette.gray50};
+    background: ${theme.palette.flat.lightGray[400]};
     border-radius: ${rem(2)};
   }
 
   // Box checked
   &:checked + label:before {
-    background: ${intermediate ? theme.palette.gray200 : theme.palette.branded1};
+    background: ${intermediate ? theme.palette.flat.darkGray[400] : theme.palette.branded1[400]};
   }
 
   // Disabled state label.
@@ -87,6 +87,6 @@ export const labelStyle = () => (theme: Theme): SerializedStyles => css`
   padding-left: ${rem(4)};
   font-size: ${theme.typography.fontSizes['15']};
   font-weight: ${theme.typography.weights.regular};
-  color: ${theme.palette.gray300};
+  color: ${theme.palette.flat.darkGray[600]};
   white-space: nowrap;
 `;

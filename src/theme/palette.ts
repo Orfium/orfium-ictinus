@@ -120,15 +120,13 @@ type flatPaletteConfigType = {
 };
 
 export type flatPalette = {
-  white: generatedColorShades;
+  lightGray: generatedColorShades;
+
+  darkGray: generatedColorShades;
 
   coolGray: generatedColorShades;
 
   warmGray: generatedColorShades;
-
-  neutralGray: generatedColorShades;
-
-  black: generatedColorShades;
 
   magenta: generatedColorShades;
 

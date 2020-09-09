@@ -36,7 +36,7 @@ export const buttonStyle = ({
     }
 
     if (disabled) {
-      return theme.palette.gray50;
+      return theme.palette.flat.lightGray[400];
     }
 
     if (filled && childrenCount !== 0) {
@@ -48,7 +48,7 @@ export const buttonStyle = ({
 
   return {
     fontSize: theme.typography.fontSizes['16'],
-    color: disabled ? theme.palette.gray100 : colorPickerBasedOnType(type)(theme),
+    color: disabled ? theme.palette.flat.lightGray[700] : colorPickerBasedOnType(type)(theme),
     backgroundColor: defineBackgroundColor(),
     paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
     paddingRight:
@@ -60,7 +60,7 @@ export const buttonStyle = ({
     height: heightBasedOnSize(size),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
-    border: filled ? 'none' : `solid 1px ${theme.palette.gray100}`,
+    border: filled ? 'none' : `solid 1px ${theme.palette.flat.lightGray[700]}`,
   };
 };
 

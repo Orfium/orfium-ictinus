@@ -72,7 +72,7 @@ const Select: React.FC<Props> = ({
     option: (provided, state) => ({
       ...provided,
       backgroundColor: state.isSelected ? '#ededed' : '#ffffff',
-      color: state.isDisabled ? theme.palette.gray100 : theme.palette.text.primary,
+      color: state.isDisabled ? theme.palette.flat.lightGray[700] : theme.palette.text.primary[400],
       padding: rem(16),
       '&:hover': {
         backgroundColor: '#f8f8f9',
@@ -84,8 +84,10 @@ const Select: React.FC<Props> = ({
       minHeight: rem(56),
       width: 200,
       paddingLeft: rem(3),
-      backgroundColor: error ? transparentize(0.85, theme.palette.error) : theme.palette.gray,
-      border: error ? `1px solid ${theme.palette.error}` : '0',
+      backgroundColor: error
+        ? transparentize(0.85, theme.palette.error[400])
+        : theme.palette.flat.lightGray[200],
+      border: error ? `1px solid ${theme.palette.error[400]}` : '0',
       '&:hover': {},
       '&:hover svg': {
         backgroundColor: 'rgba(176, 176, 176, 0.23)',
@@ -106,7 +108,7 @@ const Select: React.FC<Props> = ({
       display: 'none',
     }),
     dropdownIndicator: () => ({
-      color: theme.palette.text.primary,
+      color: theme.palette.text.primary[400],
       borderRadius: '100%',
       width: rem(20),
       height: rem(20),
@@ -119,7 +121,7 @@ const Select: React.FC<Props> = ({
     }),
     singleValue: base => ({
       ...base,
-      color: theme.palette.text.primary,
+      color: theme.palette.text.primary[400],
       fontSize: theme.typography.fontSizes[16],
     }),
     multiValue: base => ({
@@ -130,7 +132,7 @@ const Select: React.FC<Props> = ({
         paddingLeft: 0,
       },
       'div:last-of-type': {
-        backgroundColor: theme.palette.gray100,
+        backgroundColor: theme.palette.flat.lightGray[700],
         width: theme.spacing.md,
         height: theme.spacing.md,
         borderRadius: theme.spacing.md,

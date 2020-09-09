@@ -50,7 +50,7 @@ const TableCell: React.FC<Props> = ({
           background: '#fff',
         },
         type === 'financial' && {
-          borderLeft: `1px solid ${theme.palette.gray50}`,
+          borderLeft: `1px solid ${theme.palette.flat.lightGray[400]}`,
         },
       ]}
     >

@@ -7,16 +7,16 @@ export const wrapperStyle = ({ label, error, disabled }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   transition: background-color 0.25s, border 0.25s;
-  background-color: ${theme.palette.gray};
+  background-color: ${theme.palette.flat.lightGray[200]};
   padding: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
   border-radius: ${theme.spacing.xsm};
-  border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
+  border: ${error ? `1px solid ${theme.palette.error[400]}` : 'none'};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
   user-select: none;
   position: relative;
 
   &:before {
-    background-color: ${error ? transparentize(0.85, theme.palette.error) : 'transparent'};
+    background-color: ${error ? transparentize(0.85, theme.palette.error[400]) : 'transparent'};
     position: absolute;
     left: 0;
     top: 0;
@@ -52,7 +52,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.palette.gray100 : 'transparent'};
+    color: ${!label && placeholder ? theme.palette.flat.lightGray[700] : 'transparent'};
   }
 
   &:focus,
