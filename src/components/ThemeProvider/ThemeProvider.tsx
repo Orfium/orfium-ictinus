@@ -1,11 +1,12 @@
-import React from 'react';
-import { normalize } from 'polished';
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
+// import theme, { Theme } from 'theme';
 import { css, Global } from '@emotion/core';
+import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { keys, merge, pick } from 'lodash';
-import theme, { Theme } from 'theme';
-import { useThemeSwitch } from 'hooks/useThemeSwitch';
-import { DeepPartial } from 'utils/types';
+import { normalize } from 'polished';
+import * as React from 'react';
+import { useThemeSwitch } from '../../hooks/useThemeSwitch';
+import theme, { Theme } from '../../theme';
+import { DeepPartial } from '../../utils/types';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */

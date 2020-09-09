@@ -1,9 +1,9 @@
 import { css } from '@emotion/core';
-import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
-import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
-import { Theme } from 'theme';
 import { darken, rem } from 'polished';
+import { Theme } from '../../theme';
+import { RequiredProperties } from '../../utils/common';
+import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
+import { Props } from '../Button/Button';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/

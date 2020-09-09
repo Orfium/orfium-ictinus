@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback } from 'react';
-import { wrapperStyle } from 'components/TextField/TextField.style';
-import { flex } from 'theme/functions';
-import TextField from 'components/TextField';
-import Icon from 'components/Icon';
-import { DayPickerInputProps } from 'react-day-picker';
-import useTheme from 'hooks/useTheme';
-import { DateRange } from '../DatePicker';
 import dayjs from 'dayjs';
+import * as React from 'react';
+import { DayPickerInputProps } from 'react-day-picker';
+import useTheme from '../../../hooks/useTheme';
+import { flex } from '../../../theme/functions';
+import Icon from '../../Icon';
+import TextField from '../../TextField';
+import { wrapperStyle } from '../../TextField/TextField.style';
+import { DateRange } from '../DatePicker';
 
 type Props = {
   isRangePicker: boolean;
@@ -17,7 +17,7 @@ type Props = {
 
 const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, ...props }) => {
   const theme = useTheme();
-  const getDateFormatted = useCallback(
+  const getDateFormatted = React.useCallback(
     (date: Date | undefined) => (date ? dayjs(date).format('MM/DD/YYYY') : ''),
     []
   );

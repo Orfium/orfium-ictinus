@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useEffect } from 'react';
-import Menu from 'components/Menu/index';
+import * as React from 'react';
+import Menu from '../../Menu/index';
 
 type Props = {
   /** Defines the options used to render a Menu button */
@@ -16,7 +16,7 @@ const BreadcrumbAdvancedItem: React.FC<Props> = props => {
   const { options = undefined, onChangeHandler, label } = props;
   const [selectedItem, setSelectedItem] = React.useState('');
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (onChangeHandler) {
       onChangeHandler(selectedItem);
     }

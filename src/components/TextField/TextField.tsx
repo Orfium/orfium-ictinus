@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
+import * as React from 'react';
+import useTheme from '../../hooks/useTheme';
+import Label from '../Label';
 import { iconWrapperStyle, inputStyle, textFieldStyle, wrapperStyle } from './TextField.style';
-import useTheme from 'hooks/useTheme';
-import Label from 'components/Label';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */

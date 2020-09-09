@@ -1,24 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { ReactComponentLike } from 'prop-types';
-import {
-  ReactElement,
-  ReactEventHandler,
-  SyntheticEvent,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from 'react';
-import { generateTestDataId } from 'utils/helpers';
+import * as React from 'react';
+import { generateTestDataId } from '../../utils/helpers';
+import { TestProps } from '../../utils/types';
 import { contentStyles } from './ExpandCollapse.style';
-import { TestProps } from 'utils/types';
 
 export type Props = {
   /**
    * A function accepting a click handler. Returns the elements containing the text and the
    * expand/collapse button
    * */
-  textAndControl: (x: ReactEventHandler) => ReactElement;
+  textAndControl: (x: React.ReactEventHandler) => React.ReactElement;
   /**
    * The type of the component that wraps the action and content. Must be able to hold a
    * `data-testid` prop
@@ -41,7 +34,7 @@ export type Props = {
   /**
    * Change handler for the case when the component is controlled
    */
-  onChange?: ReactEventHandler;
+  onChange?: React.ReactEventHandler;
   /**
    * The duration for the appear transition
    *
@@ -52,12 +45,12 @@ export type Props = {
    * A function accepting a boolean representing the current expansion state. Returns the
    * collapsible/expandable content. Mutually exclusive with children.
    */
-  content?: (x: boolean) => ReactElement;
+  content?: (x: boolean) => React.ReactElement;
   /**
    * A function accepting a boolean representing the current expansion state. Returns the
    * collapsible/expandable content. Mutually exclusive with content.
    */
-  children?: (x: boolean) => ReactElement;
+  children?: (x: boolean) => React.ReactElement;
 } & TestProps;
 
 function ExpandCollapse(props: Props) {
@@ -80,10 +73,10 @@ function ExpandCollapse(props: Props) {
     throw new Error('If expanded is defined onChange must be defined too and vice versa');
   }
 
-  const [internallyControlledExpanded, setInternallyControlledExpanded] = useState(
+  const [internallyControlledExpanded, setInternallyControlledExpanded] = React.useState(
     initiallyExpanded
   );
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
 
   const Component = component;
 
@@ -95,7 +88,7 @@ function ExpandCollapse(props: Props) {
 
   const expanded = externallyControlledExpanded ?? internallyControlledExpanded;
 
-  function handleStateChange(e: SyntheticEvent) {
+  function handleStateChange(e: React.SyntheticEvent) {
     if (typeof externallyControlledExpanded !== 'boolean') {
       setInternallyControlledExpanded(state => !state);
     } else {
@@ -141,8 +134,8 @@ function ExpandCollapse(props: Props) {
     };
   }
 
-  useLayoutEffect(manageContentHeight, [expanded]);
-  useLayoutEffect(manageContentVisibility, [expanded, transitionDuration]);
+  React.useLayoutEffect(manageContentHeight, [expanded]);
+  React.useLayoutEffect(manageContentVisibility, [expanded, transitionDuration]);
 
   return (
     <Component data-testid={generateTestDataId('expand-collapse', dataTestId)}>

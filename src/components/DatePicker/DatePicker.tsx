@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { datePickerStyles } from './DatePicker.style';
-import useTheme from 'hooks/useTheme';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
-import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
-import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
-import OverlayComponent from './OverlayComponent/OverlayComponent';
+import * as React from 'react';
+import DayPicker, { DateUtils, DayPickerInputProps, RangeModifier } from 'react-day-picker';
+import DayPickerInput from 'react-day-picker/DayPickerInput';
+import 'react-day-picker/lib/style.css';
+import useTheme from '../../hooks/useTheme';
+import { datePickerStyles } from './DatePicker.style';
 import DatePickInput from './DatePickInput/DatePickInput';
+import OverlayComponent from './OverlayComponent/OverlayComponent';
 
 export type Props = {
   /** This boolean shows if the date picker will have the future dates available to select. Default: false */
@@ -63,19 +63,22 @@ const DatePicker: React.FC<Props> = ({
   onChange,
 }) => {
   const theme = useTheme();
-  const dayPickerInputRef = useRef<DayPickerInput>(null);
-  const dayPickerRef = useRef<DayPicker>(null);
+  const dayPickerInputRef = React.useRef<DayPickerInput>(null);
+  const dayPickerRef = React.useRef<DayPicker>(null);
   const daysInitialState = { from: undefined, to: undefined };
-  const [selectedOption, setSelectedOption] = useState();
-  const [selectedDay, setSelectedDay] = useState<DateRange>({ from: undefined, to: undefined });
+  const [selectedOption, setSelectedOption] = React.useState();
+  const [selectedDay, setSelectedDay] = React.useState<DateRange>({
+    from: undefined,
+    to: undefined,
+  });
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (onChange) {
       onChange(selectedDay);
     }
   }, [onChange, selectedDay]);
 
-  const handleDayRangeClick = useCallback(
+  const handleDayRangeClick = React.useCallback(
     day => {
       const aboutToCompleteBothDates = selectedDay.from && !selectedDay.to;
       const range = DateUtils.addDayToRange(
@@ -95,7 +98,7 @@ const DatePicker: React.FC<Props> = ({
     [selectedDay, setSelectedDay, setSelectedOption, dayPickerInputRef, daysInitialState]
   );
 
-  const handleDayClick = useCallback(
+  const handleDayClick = React.useCallback(
     day => {
       setSelectedDay({ from: day, to: day });
       setSelectedOption('custom');

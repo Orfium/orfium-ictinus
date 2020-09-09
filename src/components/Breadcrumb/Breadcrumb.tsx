@@ -1,14 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useMemo } from 'react';
-import { breadcrumbStyles, breadcrumbLinkStyles } from './Breadcrumb.style';
-import useTheme from 'hooks/useTheme';
-import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
+import { last, pick } from 'lodash';
 import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
+import useTheme from '../../hooks/useTheme';
+import { breadcrumbLinkStyles, breadcrumbStyles } from './Breadcrumb.style';
 import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
-import { last, pick } from 'lodash';
+import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
 import { BreadcrumbItemData } from './types';
 
 export type Props = {
@@ -41,7 +41,7 @@ const Breadcrumb: React.FC<Props> = props => {
     itemIndex >= MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE &&
     itemIndex < dataItems.length - MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE;
 
-  const collapsedItems = useMemo(() => dataItems.filter(shouldCollapse), [dataItems]);
+  const collapsedItems = React.useMemo(() => dataItems.filter(shouldCollapse), [dataItems]);
 
   const {
     label: lastItemLabel,
@@ -49,7 +49,7 @@ const Breadcrumb: React.FC<Props> = props => {
     options: lastItemOptions,
   } = pick(last(data), ['label', 'onChangeHandler', 'options']);
 
-  const getBreadcrumbItem = useMemo(
+  const getBreadcrumbItem = React.useMemo(
     () => (child: React.ReactNode, index: number) => {
       const itemKey = uniqueId('data_item_');
 

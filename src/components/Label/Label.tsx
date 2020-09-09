@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
+import * as React from 'react';
+import useTheme from '../../hooks/useTheme';
 import { labelStyle } from './Label.style';
-import useTheme from 'hooks/useTheme';
 
 export type Props = {
   /** The label that is going to be displayed */

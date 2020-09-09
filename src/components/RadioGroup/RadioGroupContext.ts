@@ -1,9 +1,9 @@
-import React, { ReactEventHandler } from 'react';
+import * as React from 'react';
 
 type DefaultContext = undefined;
 type ProviderContext = {
   name: string;
-  onChange: ReactEventHandler;
+  onChange: React.ReactEventHandler;
   value: string | number | undefined;
 };
 

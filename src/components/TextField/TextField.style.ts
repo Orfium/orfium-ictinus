@@ -1,7 +1,7 @@
-import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './TextField';
 import { rem, transparentize } from 'polished';
+import { Theme } from '../../theme';
+import { Props } from './TextField';
 
 /**
  * this wrapper must remain simple and not mess with children properties as it will be used
