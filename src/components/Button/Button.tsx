@@ -6,6 +6,7 @@ import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import useTheme from 'hooks/useTheme';
 import { generateTestDataId } from 'utils/helpers';
 import { EventProps } from 'utils/common';
+import { TestId } from 'utils/types';
 
 export type Props = {
   /** Type indicating the type of the button */

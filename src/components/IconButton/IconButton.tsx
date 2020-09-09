@@ -7,6 +7,7 @@ import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { TestId } from 'utils/types';
 
 export type Props = {
   /** Type indicating the type of the button. Defaults to 'primary' */

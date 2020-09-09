@@ -9,6 +9,7 @@ import {
   inputStyles,
   wrapperStyles,
 } from './Radio.style';
+import { TestId } from 'utils/types';
 
 export type Props = {
   /** The value of the radio input. If no value is passed the default value, according to spec, is "on"

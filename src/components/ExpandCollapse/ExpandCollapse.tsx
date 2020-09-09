@@ -11,6 +11,7 @@ import {
 } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import { contentStyles } from './ExpandCollapse.style';
+import { TestProps } from 'utils/types';
 
 export type Props = {
   /**

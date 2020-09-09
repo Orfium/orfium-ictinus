@@ -5,6 +5,7 @@ import { css, Global } from '@emotion/core';
 import { keys, merge, pick } from 'lodash';
 import theme, { Theme } from 'theme';
 import { useThemeSwitch } from 'hooks/useThemeSwitch';
+import { DeepPartial } from 'utils/types';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
