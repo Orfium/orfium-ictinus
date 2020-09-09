@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
+import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
@@ -63,7 +63,8 @@ const DatePicker: React.FC<Props> = ({
   onChange,
 }) => {
   const theme = useTheme();
-  const dayPickerRef = useRef<DayPickerInput>(null);
+  const dayPickerInputRef = useRef<DayPickerInput>(null);
+  const dayPickerRef = useRef<DayPicker>(null);
   const daysInitialState = { from: undefined, to: undefined };
   const [selectedOption, setSelectedOption] = useState();
   const [selectedDay, setSelectedDay] = useState<DateRange>({ from: undefined, to: undefined });
@@ -85,27 +86,27 @@ const DatePicker: React.FC<Props> = ({
       );
 
       if (aboutToCompleteBothDates) {
-        dayPickerRef.current?.hideDayPicker();
+        dayPickerInputRef.current?.hideDayPicker();
       }
 
       setSelectedDay(range);
       setSelectedOption('custom');
     },
-    [selectedDay, setSelectedDay, setSelectedOption, dayPickerRef, daysInitialState]
+    [selectedDay, setSelectedDay, setSelectedOption, dayPickerInputRef, daysInitialState]
   );
 
   const handleDayClick = useCallback(
     day => {
       setSelectedDay({ from: day, to: day });
       setSelectedOption('custom');
-      dayPickerRef.current?.hideDayPicker();
+      dayPickerInputRef.current?.hideDayPicker();
     },
-    [setSelectedDay, setSelectedOption, dayPickerRef]
+    [setSelectedDay, setSelectedOption, dayPickerInputRef]
   );
 
   const handleSelectedOptions = (option: string) => {
     const foundOption = extraOptions.find(optionItem => optionItem.value === option);
-    dayPickerRef.current?.hideDayPicker();
+    dayPickerInputRef.current?.hideDayPicker();
 
     if (foundOption) {
       setSelectedDay(
@@ -120,6 +121,7 @@ const DatePicker: React.FC<Props> = ({
 
   const modifiers = { start: selectedDay.from, end: selectedDay.to };
   const dayPickerProps = {
+    ref: dayPickerRef,
     onDayClick: isRangePicker ? handleDayRangeClick : handleDayClick,
     selectedDays: selectedDay as RangeModifier,
     modifiers: isRangePicker ? modifiers : undefined,
@@ -137,14 +139,17 @@ const DatePicker: React.FC<Props> = ({
   return (
     <div css={datePickerStyles({ isRangePicker })(theme)}>
       <DayPickerInput
-        ref={dayPickerRef}
+        ref={dayPickerInputRef}
+        onDayPickerShow={() => {
+          dayPickerRef.current?.showMonth(selectedDay.from || dayjs().toDate());
+        }}
         overlayComponent={(props: DayPickerInputProps) => (
           <OverlayComponent
             selectedOption={selectedOption}
             setSelectedOption={handleSelectedOptions}
             extraOptions={extraOptions}
             isRangePicker={isRangePicker}
-            hideDatePicker={() => dayPickerRef.current?.hideDayPicker()}
+            hideDatePicker={() => dayPickerInputRef.current?.hideDayPicker()}
             {...props}
           />
         )}
