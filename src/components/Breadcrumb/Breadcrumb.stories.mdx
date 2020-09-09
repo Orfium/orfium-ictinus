@@ -1,9 +1,8 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
-import Breadcrumb from './Breadcrumb';
-import Stack from '../storyUtils/Stack';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase.tsx';
+import Stack from '../storyUtils/Stack';
+import Breadcrumb from './Breadcrumb';
 
 <Meta title="Design System|Breadcrumb" component={() => true} />
 
@@ -29,7 +28,7 @@ import { Breadcrumb } from 'orfium-design-system';
 ```js
 import { Breadcrumb } from 'orfium-design-system';
 
-<Breadcrumb data=[{to:"/path", label: "label"}]/>
+<Breadcrumb data={[{ to: '/path', label: 'label' }]} />;
 ```
 
 # Props
