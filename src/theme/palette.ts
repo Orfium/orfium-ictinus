@@ -39,11 +39,11 @@ gray50 —> lightGray04
 
 export const lightPalette: PaletteConfig = {
   // Primary Palette
-  primary: '#DFDFDF',
-  secondary: '',
+  primary: flatPaletteConfig.lightGray,
+  secondary: flatPaletteConfig.darkGray,
 
-  branded1: 'orange',
-  branded2: 'yellow',
+  branded1: flatPaletteConfig.orange,
+  branded2: flatPaletteConfig.yellow,
 
   //rest
   success: flatPaletteConfig.green,
@@ -65,11 +65,11 @@ export const lightPalette: PaletteConfig = {
 
 export const darkPalette: PaletteConfig = {
   // Primary Palette
-  primary: '',
-  secondary: '',
+  primary: flatPaletteConfig.darkGray,
+  secondary: flatPaletteConfig.lightGray,
 
-  branded1: 'orange',
-  branded2: 'yellow',
+  branded1: flatPaletteConfig.orange,
+  branded2: flatPaletteConfig.yellow,
 
   //rest
   success: flatPaletteConfig.green,

@@ -47,7 +47,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
       type={type}
       filled={filled}
       disabled={disabled}
-      icon={<Icon name={name} color={disabled ? 'gray50' : type} size={iconSize} />}
+      icon={<Icon name={name} color={disabled ? 'lightGray400' : type} size={iconSize} />}
     />
   );
 };

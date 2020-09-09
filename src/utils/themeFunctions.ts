@@ -12,12 +12,12 @@ export type AcceptedColorComponentTypes =
   | 'dark'
   | 'branded1'
   | 'branded2'
-  | 'white'
-  | 'gray'
-  | 'gray50'
-  | 'gray100'
-  | 'gray200'
-  | 'gray300';
+  | 'lightGray100'
+  | 'lightGray200'
+  | 'lightGray400'
+  | 'lightGray700'
+  | 'darkGray400'
+  | 'darkGray600';
 
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (
   theme: Theme
@@ -58,17 +58,17 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
       return theme.palette.branded1[400];
     case 'branded2':
       return theme.palette.branded2[400];
-    case 'white':
+    case 'lightGray100':
       return theme.palette.flat.lightGray[100];
     case 'dark':
       return theme.palette.flat.darkGray[600];
     case 'light':
       return theme.palette.text.light[400];
-    case 'gray50':
+    case 'lightGray400':
       return theme.palette.flat.lightGray[400];
-    case 'gray100':
+    case 'lightGray700':
       return theme.palette.flat.lightGray[700];
-    case 'gray200':
+    case 'darkGray400':
       return theme.palette.flat.darkGray[400];
     default:
       return theme.palette.primary[400];
