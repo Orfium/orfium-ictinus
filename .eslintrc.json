@@ -1,13 +1,12 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "prettier",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "emotion", "@typescript-eslint"],
   "env": {
     "node": true,
     "browser": true,
@@ -64,13 +63,10 @@
     // Disable this in favour of @typescript-eslint/no-unused-expressions
     // so that function calls with optional chaining do not throw warnings
     // https://github.com/facebook/create-react-app/issues/8107#issuecomment-565365982
-//    "no-unused-expressions": "warn",
+    //    "no-unused-expressions": "warn",
     "@typescript-eslint/no-unused-expressions": "warn",
     "no-debugger": "warn",
     "no-console": "warn",
-
-    /* Prettier rules */
-    "prettier/prettier": ["error", { "singleQuote": true }],
 
     /* Typescript rules */
     "@typescript-eslint/ban-ts-ignore": 0,
