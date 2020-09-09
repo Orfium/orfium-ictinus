@@ -4,7 +4,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
@@ -34,25 +34,16 @@
     "babel-plugin-inline-react-svg": "^1.1.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "cross-env": "^7.0.0",
-    "dayjs": "^1.8.34",
-    "emotion-theming": "^10.0.27",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.1",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.3",
-    "lodash": "^4.17.19",
-    "pluralize": "^8.0.0",
-    "polished": "^3.4.4",
     "prettier": "^1.19.1",
-    "prop-types": "^15.7.2",
-    "react-day-picker": "^7.4.8",
     "react-docgen-typescript-loader": "^3.6.0",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-select": "^3.0.8",
     "react-testing-library": "^8.0.1",
     "rimraf": "^3.0.2",
     "storybook-addon-react-docgen": "^1.2.28",
@@ -60,12 +51,21 @@
     "ts-loader": "^6.2.1",
     "typescript": "^3.7.5"
   },
+  "dependencies": {
+    "dayjs": "^1.8.34",
+    "emotion-theming": "^10.0.27",
+    "lodash": "^4.17.19",
+    "pluralize": "^8.0.0",
+    "polished": "^3.4.4",
+    "react-day-picker": "^7.4.8",
+    "react-select": "^3.0.8"
+  },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "jest": "^25.1.0"
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
   },
   "resolutions": {
     "@emotion/core": "^10.0.20",
