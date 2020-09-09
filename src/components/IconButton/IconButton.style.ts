@@ -39,7 +39,7 @@ export const buttonSpanStyle = ({ icon, size }: RequiredProperties<Props>) => (t
   // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
   // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
   // definition. So we cast this as something it will accept.
-  flexDirection: icon ? ('row' as 'row') : ('column' as 'column'),
+  flexDirection: icon ? ('row' as const) : ('column' as const),
   alignItems: icon ? 'center' : 'flex-start',
   '> :first-child': {
     marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,

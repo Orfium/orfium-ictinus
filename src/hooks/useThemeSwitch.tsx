@@ -10,7 +10,7 @@ const useThemeSwitch = () => {
   return React.useContext(ThemeContext);
 };
 
-const ThemeSwitchProvider: React.FC<{}> = ({ children }) => {
+const ThemeSwitchProvider: React.FC<{ [key: string]: unknown }> = ({ children }) => {
   const [themeState, setThemeState] = React.useState({
     dark: false,
   });

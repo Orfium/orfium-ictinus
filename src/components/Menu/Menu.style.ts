@@ -64,7 +64,7 @@ export const buttonSpanStyle = ({
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
   flexDirection: icon ? 'row' : 'column',
-  alignItems: icon ? ('center' as 'center') : ('flex-start' as 'flex-start'),
+  alignItems: icon ? ('center' as const) : ('flex-start' as const),
   '> :first-child': {
     marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
     marginRight: hasChildren ? theme.spacing.sm : 0,

@@ -72,7 +72,7 @@ export const buttonSpanStyle = ({
   // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
   // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
   // definition. So we cast this as something it will accept.
-  flexDirection: iconAlign === 'right' ? ('row-reverse' as 'row-reverse') : ('row' as 'row'),
+  flexDirection: iconAlign === 'right' ? ('row-reverse' as const) : ('row' as const),
   alignItems: icon ? 'center' : 'flex-start',
   marginLeft: iconAlign === 'right' ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
 });
