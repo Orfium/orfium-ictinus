@@ -35,7 +35,7 @@ export type Props = {
    * @default false
    * */
   required?: boolean;
-  dataTestId?: string;
+  dataTestId?: TestId;
 };
 
 function Radio(props: Props, ref: Ref<HTMLInputElement>) {
