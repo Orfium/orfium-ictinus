@@ -34,7 +34,15 @@ module.exports = {
     config.module.rules.push({
       test: /\.svg$/,
       include: pathToInlineSvg,
+      issuer: /\.tsx?$/,
       use: ['@svgr/webpack'],
+    });
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      include: pathToInlineSvg,
+      issuer: /\.style.ts?$/,
+      use: ['url-loader'],
     });
 
     config.module.rules.push({

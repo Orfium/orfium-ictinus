@@ -1,0 +1,43 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import DatePicker from './DatePicker';
+import Stack from '../storyUtils/Stack';
+import PresentComponent from '../storyUtils/PresentComponent';
+
+<Meta title="Design System|DatePicker" component={DatePicker} />
+
+# DatePicker
+
+A universal DatePicker component to select and style the icons encapsulated in the design system.
+
+# Usage
+
+```js
+import { DatePicker } from 'ictinus';
+
+<DatePicker disableFutureDates={false} disableFutureDates={false} onChange={console.log} />;
+```
+
+# Props
+
+<Props of={DatePicker} />
+
+# DatePicker
+
+Implementation of the regular DatePicker
+
+<Preview>
+  <Story name="DatePicker">
+    <DatePicker isRangePicker />
+  </Story>
+</Preview>
+
+# DayPicker
+
+Implementation of the simple DayPicker
+
+<Preview>
+  <Story name="DayPicker">
+    <DatePicker />
+  </Story>
+</Preview>

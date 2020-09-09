@@ -1,5 +1,7 @@
 import AddIcon from './add.svg';
 import FatArrowDown from './fat-arrow-down.svg';
+import FatArrowLeft from './fat-arrow-left.svg';
+import FatArrowRight from './fat-arrow-right.svg';
 import ArrowDownIcon from './dd-arrow.svg';
 import CheckIcon from './check.svg';
 import MinusIcon from './minus.svg';
@@ -30,11 +32,15 @@ import CheckedListIcon from './checked-list.svg';
 import HourglassIcon from './hourglass.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import DotsVerticalIcon from './dots-vertical.svg';
+import CalendarEmptyIcon from './calendar-empty.svg';
+import { AcceptedIconNames } from '../types';
 import KeywordIcon from './keyword.svg';
 
-const iconSelector = {
+const iconSelector: { [key in AcceptedIconNames]: string } = {
   add: AddIcon,
   fatArrowDown: FatArrowDown,
+  fatArrowLeft: FatArrowLeft,
+  fatArrowRight: FatArrowRight,
   arrowDown: ArrowDownIcon,
   check: CheckIcon,
   minus: MinusIcon,
@@ -65,6 +71,7 @@ const iconSelector = {
   ticTacToeArrow: TicTacToeArrowIcon,
   dotsVertical: DotsVerticalIcon,
   keyword: KeywordIcon,
+  calendarEmpty: CalendarEmptyIcon,
 };
 
 export default iconSelector;

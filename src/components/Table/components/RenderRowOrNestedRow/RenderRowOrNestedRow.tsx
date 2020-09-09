@@ -87,7 +87,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
             <div
               css={{
                 padding: theme.spacing.sm,
-                marginLeft: theme.spacing.lg,
+                marginLeft: theme.spacing.xl,
                 overflow: 'hidden',
                 borderRadius: rem(20),
                 backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
