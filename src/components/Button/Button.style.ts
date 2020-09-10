@@ -27,8 +27,8 @@ export const buttonStyle = ({
   childrenCount,
   iconAlign,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
-  const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
+  const calculatedPaddingSpaceIfIcon = size === 'sm' ? 0 : theme.spacing.sm;
 
   const defineBackgroundColor = (): string => {
     if (childrenCount === 0 && icon) {

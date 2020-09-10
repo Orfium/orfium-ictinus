@@ -4,7 +4,7 @@ import { Props } from 'components/Button/Button';
 import { RequiredProperties } from 'utils/common';
 import { Theme } from 'theme';
 import { FlexDirectionProperty } from 'csstype';
-import { rem, darken } from 'polished';
+import { darken, rem } from 'polished';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -27,7 +27,7 @@ export const menuStyle = ({
   disabled,
   childrenCount,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
   const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
 
   const defineBackgroundColor = (): string => {

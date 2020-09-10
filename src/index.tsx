@@ -8,3 +8,4 @@ export { default as Pagination } from './components/Pagination';
 export { default as Menu } from './components/Menu';
 export { default as useTheme } from './hooks/useTheme';
 export { default as Breadcrumb } from './components/Breadcrumb';
+export { default as DatePicker } from './components/DatePicker';

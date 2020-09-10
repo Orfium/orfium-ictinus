@@ -21,7 +21,7 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
 export const iconButtonStyle = ({ type, filled, size, icon }: RequiredProperties<Props>) => (
   theme: Theme
 ) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
 
   return {
     fontSize: theme.typography.fontSizes['16'],

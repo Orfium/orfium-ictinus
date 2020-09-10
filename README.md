@@ -9,10 +9,10 @@ A React UI kit library with custom components that fits [Orfium](https://github.
 
 ## 📦 Installation
 
-
 ```text
 $ npm install @orfium/ictinus
 ```
+
 ```text
 $ yarn add @orfium/ictinus
 ```
@@ -39,7 +39,8 @@ const App = () => (
 import { Select, Button } from 'ictinus';
 ```
 
-## ✨  Extra 
+## ✨ Extra
+
 ### Theme usage
 
 Now you can can have access to the library's theme config by using the hook provided
@@ -48,10 +49,12 @@ Now you can can have access to the library's theme config by using the hook prov
 import { useTheme } from 'ictinus';
 
 const theme = useTheme();
-````
+```
 
 ### Theme config
+
 You can apply your own branded colours for each product at the definition of the ThemeProvider. This way you can have access everywhere.
+
 ```
 <ThemeProvider
     theme={{
@@ -64,4 +67,3 @@ You can apply your own branded colours for each product at the definition of the
     ...
 </ThemeProvider>
 ```
-

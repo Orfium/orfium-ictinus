@@ -1,40 +1,46 @@
-import { ReactComponent as AddIcon } from './add.svg';
-import { ReactComponent as FatArrowDown } from './fat-arrow-down.svg';
-import { ReactComponent as ArrowDownIcon } from './dd-arrow.svg';
-import { ReactComponent as CheckIcon } from './check.svg';
-import { ReactComponent as MinusIcon } from './minus.svg';
-import { ReactComponent as ArrowLeft } from './arrow-left.svg';
-import { ReactComponent as ArrowRight } from './arrow-right.svg';
-import { ReactComponent as ArrowToRight } from './pagination-end.svg';
-import { ReactComponent as ArrowToLeft } from './pagination-start.svg';
+import AddIcon from './add.svg';
+import FatArrowDown from './fat-arrow-down.svg';
+import FatArrowLeft from './fat-arrow-left.svg';
+import FatArrowRight from './fat-arrow-right.svg';
+import ArrowDownIcon from './dd-arrow.svg';
+import CheckIcon from './check.svg';
+import MinusIcon from './minus.svg';
+import ArrowLeft from './arrow-left.svg';
+import ArrowRight from './arrow-right.svg';
+import ArrowToRight from './pagination-end.svg';
+import ArrowToLeft from './pagination-start.svg';
 
-import { ReactComponent as AncientIcon } from './ancient-building.svg';
-import { ReactComponent as ExpensesIcon } from './expenses.svg';
-import { ReactComponent as FinancialChartIcon } from './financial-chart.svg';
-import { ReactComponent as GlobalItemIcon } from './global-item.svg';
-import { ReactComponent as IncomeIcon } from './income.svg';
-import { ReactComponent as LinkedIcon } from './linked.svg';
-import { ReactComponent as MusicNoteIcon } from './music-note.svg';
-import { ReactComponent as PercentageIcon } from './percentage.svg';
-import { ReactComponent as RestoreIcon } from './restore.svg';
-import { ReactComponent as SearchMusicIcon } from './search-music.svg';
-import { ReactComponent as SearchThunderIcon } from './search-thunder.svg';
-import { ReactComponent as StampIcon } from './stamp.svg';
-import { ReactComponent as ThunderIcon } from './thunder.svg';
-import { ReactComponent as TimeOutIcon } from './time-out.svg';
-import { ReactComponent as TrainingIcon } from './training.svg';
-import { ReactComponent as TrophyIcon } from './trophy.svg';
-import { ReactComponent as UserIcon } from './user.svg';
-import { ReactComponent as YoutubeIcon } from './youtube.svg';
-import { ReactComponent as CheckedListIcon } from './checked-list.svg';
-import { ReactComponent as HourglassIcon } from './hourglass.svg';
-import { ReactComponent as TicTacToeArrowIcon } from './tic-tac-toe-arrow.svg';
-import { ReactComponent as DotsVerticalIcon } from './dots-vertical.svg';
-import { ReactComponent as KeywordIcon } from './keyword.svg';
+import AncientIcon from './ancient-building.svg';
+import ExpensesIcon from './expenses.svg';
+import FinancialChartIcon from './financial-chart.svg';
+import GlobalItemIcon from './global-item.svg';
+import IncomeIcon from './income.svg';
+import LinkedIcon from './linked.svg';
+import MusicNoteIcon from './music-note.svg';
+import PercentageIcon from './percentage.svg';
+import RestoreIcon from './restore.svg';
+import SearchMusicIcon from './search-music.svg';
+import SearchThunderIcon from './search-thunder.svg';
+import StampIcon from './stamp.svg';
+import ThunderIcon from './thunder.svg';
+import TimeOutIcon from './time-out.svg';
+import TrainingIcon from './training.svg';
+import TrophyIcon from './trophy.svg';
+import UserIcon from './user.svg';
+import YoutubeIcon from './youtube.svg';
+import CheckedListIcon from './checked-list.svg';
+import HourglassIcon from './hourglass.svg';
+import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
+import DotsVerticalIcon from './dots-vertical.svg';
+import CalendarEmptyIcon from './calendar-empty.svg';
+import { AcceptedIconNames } from '../types';
+import KeywordIcon from './keyword.svg';
 
-const iconSelector = {
+const iconSelector: { [key in AcceptedIconNames]: string } = {
   add: AddIcon,
   fatArrowDown: FatArrowDown,
+  fatArrowLeft: FatArrowLeft,
+  fatArrowRight: FatArrowRight,
   arrowDown: ArrowDownIcon,
   check: CheckIcon,
   minus: MinusIcon,
@@ -65,6 +71,7 @@ const iconSelector = {
   ticTacToeArrow: TicTacToeArrowIcon,
   dotsVertical: DotsVerticalIcon,
   keyword: KeywordIcon,
+  calendarEmpty: CalendarEmptyIcon,
 };
 
 export default iconSelector;
