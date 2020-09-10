@@ -25,12 +25,10 @@ $ yarn add @orfium/ictinus
 import { ThemeProvider } from '@orfium/ictinus';
 
 const App = () => (
-    <ThemeProvider>
-       <Router>
-         ...
-       </Router
-    </ThemeProvider>
-)
+  <ThemeProvider>
+    <Router>...</Router>
+  </ThemeProvider>
+);
 ```
 
 2.  That's it, now you are ready to go.
