@@ -57,15 +57,20 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
   .DayPicker-Day {
     padding: 0.7em;
     font-size: ${theme.typography[14]};
+    border-radius: 0;
   }
   .DayPicker-Day--today {
     color: initial;
   }
 
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside),
+  .DayPicker-Day--selected:not(.DayPicker-Day--outside),
   .DayPicker-Day--start:not(.DayPicker-Day--outside) {
     background-color: #dfdfdf;
     color: #000;
+  }
+
+  .DayPicker-Day--selected.DayPicker-Day--disabled:not(.DayPicker-Day--outside) {
+    opacity: 0.5;
   }
 
   .DayPicker-Day:hover {

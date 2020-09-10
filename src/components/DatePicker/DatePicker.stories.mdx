@@ -3,6 +3,7 @@ import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs'
 import DatePicker from './DatePicker';
 import Stack from '../storyUtils/Stack';
 import PresentComponent from '../storyUtils/PresentComponent';
+import dayjs from 'dayjs';
 
 <Meta title="Design System|DatePicker" component={DatePicker} />
 
@@ -39,5 +40,42 @@ Implementation of the simple DayPicker
 <Preview>
   <Story name="DayPicker">
     <DatePicker />
+  </Story>
+</Preview>
+
+# DayPicker with disabled dates
+
+Some disable dates functionality
+
+<Preview>
+  <Story name="DayPicker with disabled dates">
+    <DatePicker
+      disableDates={[
+        dayjs()
+          .add(1, 'day')
+          .toDate(),
+        { daysOfWeek: [0, 6] },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# DayPicker with predefined values
+
+This datepicker has a predefined initial value that can be used both for initial definition and to handle values externally
+
+<Preview>
+  <Story name="DayPicker with predefined values">
+    <DatePicker
+      value={{
+        to: dayjs()
+          .add(11, 'day')
+          .toDate(),
+        from: dayjs()
+          .add(1, 'day')
+          .toDate(),
+      }}
+      disableDates={[{ daysOfWeek: [0, 2, 3, 4, 5, 6] }]}
+    />
   </Story>
 </Preview>
