@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 
 type Props = {
-  vertical: boolean;
+  vertical?: boolean;
 };
 
 const Stack: React.FC<Props> = ({ vertical = false, children }) => {
