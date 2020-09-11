@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer';
 import { styleSheetSerializer } from 'jest-styled-components';
 import { addSerializer } from 'jest-specific-snapshot';
 import { crawlTreeChildrenProps } from './utils/storyshots';
+import { ReactElement } from 'react';
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.
@@ -17,12 +18,33 @@ import { crawlTreeChildrenProps } from './utils/storyshots';
 addSerializer(styleSheetSerializer);
 registerRequireContextHook();
 
+function createNodeMock(element: ReactElement) {
+  const isExpandCollapseComponent = element.props.className?.includes('ExpandCollapse');
+  if (isExpandCollapseComponent) {
+    //Mocking useRef<HTMLDivElement> for ExpandCollapse component.
+    const htmlDivElementRefMock = {
+      style: {
+        visibility: 0,
+        height: 0,
+      },
+    };
+
+    return htmlDivElementRefMock;
+  }
+
+  // You can return any object from this method for any type of DOM component.
+  // React will use it as a ref instead of a DOM node when snapshot testing.
+  return null;
+}
+
 initStoryshots({
   test: ({ story, context }) => {
     const converter = new Stories2SnapsConverter();
+    const options = { createNodeMock };
+
     const snapshotFilename = converter.getSnapshotFileName(context);
     const storyElement = story.render(context);
-    const tree = renderer.create(storyElement).toJSON();
+    const tree = renderer.create(storyElement, options).toJSON();
     crawlTreeChildrenProps(tree);
 
     expect(tree).toMatchSpecificSnapshot(snapshotFilename);

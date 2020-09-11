@@ -31,7 +31,6 @@ export type AcceptedIconNames =
   | 'checkedList'
   | 'hourglass'
   | 'ticTacToeArrow'
-  | 'dotsVertical'
   | 'calendarEmpty'
   | 'dotsVertical'
   | 'keyword';
