@@ -2,7 +2,6 @@ import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/theme
 import { Props } from 'components/Button/Button';
 import { RequiredProperties } from 'utils/common';
 import { Theme } from 'theme';
-import { FlexDirectionProperty } from 'csstype';
 import { rem } from 'polished';
 
 /** Calculates the button specific height based on the size passed to it
@@ -37,7 +36,7 @@ export const iconButtonStyle = ({ type, filled, size, icon }: RequiredProperties
 
 export const buttonSpanStyle = ({ icon, size }: RequiredProperties<Props>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
-  flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
+  flexDirection: icon ? ('row' as 'row') : ('column' as 'column'),
   alignItems: icon ? 'center' : 'flex-start',
   '> :first-child': {
     marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,

@@ -66,7 +66,7 @@ const DatePicker: React.FC<Props> = ({
   const dayPickerInputRef = useRef<DayPickerInput>(null);
   const dayPickerRef = useRef<DayPicker>(null);
   const daysInitialState = { from: undefined, to: undefined };
-  const [selectedOption, setSelectedOption] = useState();
+  const [selectedOption, setSelectedOption] = useState<string>('');
   const [selectedDay, setSelectedDay] = useState<DateRange>({ from: undefined, to: undefined });
 
   useEffect(() => {
