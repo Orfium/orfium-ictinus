@@ -4,9 +4,11 @@ import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import { css, Global } from '@emotion/core';
+import { normalize } from 'polished';
 
-const viewPorts = [
-  {
+const viewPorts = {
+  laptopLg: {
     name: 'Laptop Large',
     styles: {
       width: '1440px',
@@ -14,7 +16,7 @@ const viewPorts = [
     },
     type: 'desktop',
   },
-  {
+  laptopSm: {
     name: 'Laptop Small',
     styles: {
       width: '1200px',
@@ -22,8 +24,7 @@ const viewPorts = [
     },
     type: 'desktop',
   },
-
-  {
+  tablet: {
     name: 'Tablet',
     styles: {
       width: '750px',
@@ -31,7 +32,23 @@ const viewPorts = [
     },
     type: 'tablet',
   },
-];
+};
+
+const globalStyles = css`
+  ${normalize()};
+  @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+  body,
+  html {
+    font-family: 'Lato', Tahoma;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  #root {
+    display: 'flex';
+  }
+`;
 
 const ThemeSwitcher = () => {
   const themeSwitchState = useThemeSwitch();
@@ -58,6 +75,7 @@ export const decorators = [
       <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
         <ThemeSwitcher />
         <Story />
+        <Global styles={globalStyles} />
       </ThemeProvider>
     );
   },
@@ -77,7 +95,7 @@ export const decorators = [
 export const parameters = {
   viewport: {
     viewports: viewPorts,
-    defaultViewport: 'someDefault',
+    defaultViewport: 'laptopLg',
   },
   options: { showPanel: true },
 };
