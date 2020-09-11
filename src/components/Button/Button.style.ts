@@ -1,6 +1,6 @@
 import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
 import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
+import { FlexDirectionProperty, RequiredProperties } from 'utils/common';
 import { Theme } from 'theme';
 import { rem } from 'polished';
 
@@ -69,7 +69,7 @@ export const buttonSpanStyle = ({
   size,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
-  flexDirection: iconAlign === 'right' ? ('row-reverse' as 'row-reverse') : ('row' as 'row'),
+  flexDirection: (iconAlign === 'right' ? 'row-reverse' : 'row') as FlexDirectionProperty,
   alignItems: icon ? 'center' : 'flex-start',
   marginLeft: iconAlign === 'right' ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
 });
