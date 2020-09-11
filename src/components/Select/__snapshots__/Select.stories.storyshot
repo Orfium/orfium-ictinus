@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System|Select Disabled Select 1`] = `
+exports[`Storyshots Design System/Select Disabled Select 1`] = `
 <div
   style={
     Object {
@@ -72,7 +72,7 @@ exports[`Storyshots Design System|Select Disabled Select 1`] = `
                
             </label>
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-5gnida-singleValue"
@@ -80,6 +80,7 @@ exports[`Storyshots Design System|Select Disabled Select 1`] = `
                 Chocolate
               </div>
               <input
+                aria-autocomplete="list"
                 className="css-62g3xt-dummyInput"
                 disabled={true}
                 id="select-"
@@ -125,7 +126,7 @@ exports[`Storyshots Design System|Select Disabled Select 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System|Select Multi Tag Select 1`] = `
+exports[`Storyshots Design System/Select Multi Tag Select 1`] = `
 <div
   style={
     Object {
@@ -197,12 +198,13 @@ exports[`Storyshots Design System|Select Multi Tag Select 1`] = `
                
             </label>
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-1wa3eu0-placeholder"
               />
               <input
+                aria-autocomplete="list"
                 className="css-62g3xt-dummyInput"
                 disabled={false}
                 id="select-"
@@ -275,12 +277,13 @@ exports[`Storyshots Design System|Select Multi Tag Select 1`] = `
                
             </label>
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-1wa3eu0-placeholder"
               />
               <input
+                aria-autocomplete="list"
                 className="css-62g3xt-dummyInput"
                 disabled={false}
                 id="select-"
@@ -326,7 +329,7 @@ exports[`Storyshots Design System|Select Multi Tag Select 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System|Select Simple Select 1`] = `
+exports[`Storyshots Design System/Select Simple Select 1`] = `
 <div
   style={
     Object {
@@ -398,7 +401,7 @@ exports[`Storyshots Design System|Select Simple Select 1`] = `
                
             </label>
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-5gnida-singleValue"
@@ -543,7 +546,7 @@ exports[`Storyshots Design System|Select Simple Select 1`] = `
                
             </label>
             <div
-              className=" css-1hwfws3"
+              className=" css-g1d714-ValueContainer"
             >
               <div
                 className=" css-5gnida-singleValue"
