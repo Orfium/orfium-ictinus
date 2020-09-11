@@ -73,7 +73,11 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
     opacity: 0.5;
   }
 
-  .DayPicker-Day:hover {
+  .DayPicker-Day:focus {
+    outline: none;
+  }
+
+  .DayPicker-Day:not(.DayPicker-Day--disabled):hover {
     background-color: #f5f5f5 !important;
   }
   .DayPicker:not(.DayPicker--interactionDisabled)
