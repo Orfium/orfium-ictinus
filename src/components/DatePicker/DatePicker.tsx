@@ -1,14 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import dayjs from 'dayjs';
-import * as React from 'react';
-import DayPicker, { DateUtils, DayPickerInputProps, RangeModifier } from 'react-day-picker';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { datePickerStyles } from './DatePicker.style';
+import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
-import useTheme from '../../hooks/useTheme';
-import { datePickerStyles } from './DatePicker.style';
+import dayjs from 'dayjs';
+import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
 import DatePickInput from './DatePickInput/DatePickInput';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
+import { Modifier } from 'react-day-picker/types/Modifiers';
 
 export type Props = {
   /** This boolean shows if the date picker will have the future dates available to select. Default: false */
@@ -17,6 +18,10 @@ export type Props = {
   isRangePicker?: boolean;
   /** A callback to return user selection */
   onChange?: (date: DateRange) => DateRange;
+  /** Option to disable some dates */
+  disableDates?: Modifier[];
+  /** Value to define if needed an initial state or to handle it externally */
+  value?: RangeModifier;
 };
 
 export type DateRange =
@@ -61,25 +66,30 @@ const DatePicker: React.FC<Props> = ({
   disableFutureDates = false,
   isRangePicker = false,
   onChange,
-}) => {
-  const theme = useTheme();
-  const dayPickerInputRef = React.useRef<DayPickerInput>(null);
-  const dayPickerRef = React.useRef<DayPicker>(null);
-  const daysInitialState = { from: undefined, to: undefined };
-  const [selectedOption, setSelectedOption] = React.useState();
-  const [selectedDay, setSelectedDay] = React.useState<DateRange>({
+  disableDates = [],
+  value = {
     from: undefined,
     to: undefined,
-  });
+  },
+}) => {
+  const theme = useTheme();
+  const dayPickerInputRef = useRef<DayPickerInput>(null);
+  const dayPickerRef = useRef<DayPicker>(null);
+  const daysInitialState = { from: undefined, to: undefined };
+  const [selectedOption, setSelectedOption] = useState();
+  const [selectedDay, setSelectedDay] = useState<DateRange>(value);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (onChange) {
       onChange(selectedDay);
     }
   }, [onChange, selectedDay]);
 
-  const handleDayRangeClick = React.useCallback(
-    day => {
+  const handleDayRangeClick = useCallback(
+    (day, { disabled }) => {
+      if (disabled) {
+        return;
+      }
       const aboutToCompleteBothDates = selectedDay.from && !selectedDay.to;
       const range = DateUtils.addDayToRange(
         day,
@@ -98,8 +108,11 @@ const DatePicker: React.FC<Props> = ({
     [selectedDay, setSelectedDay, setSelectedOption, dayPickerInputRef, daysInitialState]
   );
 
-  const handleDayClick = React.useCallback(
-    day => {
+  const handleDayClick = useCallback(
+    (day, { disabled }) => {
+      if (disabled) {
+        return;
+      }
       setSelectedDay({ from: day, to: day });
       setSelectedOption('custom');
       dayPickerInputRef.current?.hideDayPicker();
@@ -127,7 +140,7 @@ const DatePicker: React.FC<Props> = ({
     ref: dayPickerRef,
     onDayClick: isRangePicker ? handleDayRangeClick : handleDayClick,
     selectedDays: selectedDay as RangeModifier,
-    modifiers: isRangePicker ? modifiers : undefined,
+    modifiers,
     firstDayOfWeek: 1,
     numberOfMonths: isRangePicker ? 2 : 1,
     disabledDays: disableFutureDates
@@ -135,8 +148,9 @@ const DatePicker: React.FC<Props> = ({
           {
             after: new Date(),
           },
+          ...disableDates,
         ]
-      : undefined,
+      : disableDates,
   };
 
   return (
