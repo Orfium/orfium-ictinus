@@ -30,7 +30,9 @@
     "dist",
     "scripts",
     "./src/components/storyUtils",
-    "./src/**/*.stories.tsx",
+    "**/*.stories.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
     "__mocks__",
     "./jest.config.js"
   ]
