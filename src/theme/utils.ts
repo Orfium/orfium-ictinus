@@ -1,5 +1,11 @@
 import { shade, tint } from 'polished';
-import { Palette, PaletteConfig } from './palette';
+import {
+  flatPaletteConfigType,
+  generatedColorShades,
+  Palette,
+  PaletteConfig,
+  TextPaletteConfigType,
+} from './palette';
 
 const BASE_PERCENTAGE = 0.25;
 
@@ -35,18 +41,20 @@ export const colorShadesCreator = (base: string, per: number) => {
     }, {});
 };
 
-export const iterateObject = (obj: any, func: (obj: any, value: any) => any) =>
+export const iterateObject = <T>(obj: T, func: (value: string) => generatedColorShades) =>
   Object.keys(obj).reduce((acc, value) => {
     acc[value] =
-      typeof obj[value] !== 'object' ? func(obj, value) : iterateObject(obj[value], func);
+      typeof obj[value] !== 'object'
+        ? func(value)
+        : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
 
     return acc;
   }, {});
 
 export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
-  iterateObject(obj, (obj: any, value: string) =>
+  iterateObject<PaletteConfig>(obj, (value: string) =>
     colorShadesCreator(
-      obj[value],
+      value,
       SPECIAL_GRAY.includes(value) ? SPECIAL_GRAY_PERCENTAGE : BASE_PERCENTAGE
     )
   ) as Palette;

@@ -89,7 +89,7 @@ export const darkPalette: PaletteConfig = {
   },
 };
 
-type flatPaletteConfigType = {
+export type flatPaletteConfigType = {
   lightGray?: string;
 
   darkGray?: string;
@@ -149,6 +149,12 @@ export type flatPalette = {
   purple: generatedColorShades;
 };
 
+export type TextPaletteConfigType = {
+  primary?: string;
+  secondary?: string;
+  light?: string;
+};
+
 export type PaletteConfig = {
   // Primary Palette
   primary?: string;
@@ -163,16 +169,12 @@ export type PaletteConfig = {
   info?: string;
   light?: string;
 
-  text?: {
-    primary?: string;
-    secondary?: string;
-    light?: string;
-  };
+  text?: TextPaletteConfigType;
 
   flat?: flatPaletteConfigType;
 };
 
-type generatedColorShades = {
+export type generatedColorShades = {
   100: string;
   200: string;
   300: string;
