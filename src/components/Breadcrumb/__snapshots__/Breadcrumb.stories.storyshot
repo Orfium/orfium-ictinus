@@ -1,0 +1,643 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options per data item 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <ol
+        aria-label="Breadcrumb"
+        className="css-fih44h-Breadcrumb"
+      >
+        <li>
+          <div
+            className="css-d1kv4x-BreadcrumbItem"
+          >
+            <a
+              className="css-s90ypk"
+              href="/first-level"
+              onClick={[Function]}
+            >
+              First Level
+            </a>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          role="listitem"
+          style={
+            Object {
+              "margin": "auto",
+            }
+          }
+        >
+          <div
+            className="css-1w7gjlo-BreadcrumbCollapsed"
+          >
+            <span
+              className="css-t8jraz-BreadcrumbCollapsed"
+              onClick={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1ub818h-Icon"
+                />
+              </span>
+            </span>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="css-d1kv4x-BreadcrumbItem"
+          >
+            <a
+              className="css-s90ypk"
+              href="/forth-level"
+              onClick={[Function]}
+            >
+              Forth Level
+            </a>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="css-1eji0ff-BreadcrumbItem"
+          >
+            <div
+              role="button"
+            >
+              <div
+                className="css-4yevxh-Menu"
+              >
+                <button
+                  className="css-1o6o6q2-Button"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-1ndrhvc-Button"
+                  >
+                    <div
+                      style={
+                        Object {
+                          "marginLeft": "0.5rem",
+                          "marginRight": "1rem",
+                        }
+                      }
+                    >
+                      <span
+                        className="css-1gnbc76-Icon"
+                      >
+                        <SvgrURL
+                          className="css-1vu224h-Icon"
+                        />
+                      </span>
+                    </div>
+                    <span>
+                      Fifth Level
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Add data to Breadcrumb
+        </button>
+        <ol
+          aria-label="Breadcrumb"
+          className="css-fih44h-Breadcrumb"
+        >
+          <li>
+            <div
+              className="css-d1kv4x-BreadcrumbItem"
+            >
+              <a
+                className="css-s90ypk"
+                href="/first-level"
+                onClick={[Function]}
+              >
+                First Level
+              </a>
+              <span
+                className="css-11ztcdu-Separator"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <SvgrURL
+                    className="css-1203f8q-Icon"
+                  />
+                </span>
+              </span>
+            </div>
+          </li>
+          <li
+            role="listitem"
+            style={
+              Object {
+                "margin": "auto",
+              }
+            }
+          >
+            <div
+              className="css-1w7gjlo-BreadcrumbCollapsed"
+            >
+              <span
+                className="css-t8jraz-BreadcrumbCollapsed"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <SvgrURL
+                    className="css-1ub818h-Icon"
+                  />
+                </span>
+              </span>
+              <span
+                className="css-11ztcdu-Separator"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <SvgrURL
+                    className="css-1203f8q-Icon"
+                  />
+                </span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="css-d1kv4x-BreadcrumbItem"
+            >
+              <a
+                className="css-s90ypk"
+                href="/forth-level"
+                onClick={[Function]}
+              >
+                Forth Level
+              </a>
+              <span
+                className="css-11ztcdu-Separator"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <SvgrURL
+                    className="css-1203f8q-Icon"
+                  />
+                </span>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div
+              className="css-1eji0ff-BreadcrumbItem"
+            >
+              <div
+                role="button"
+              >
+                <div
+                  className="css-4yevxh-Menu"
+                >
+                  <button
+                    className="css-1o6o6q2-Button"
+                    data-testid="button"
+                    disabled={false}
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-1ndrhvc-Button"
+                    >
+                      <div
+                        style={
+                          Object {
+                            "marginLeft": "0.5rem",
+                            "marginRight": "1rem",
+                          }
+                        }
+                      >
+                        <span
+                          className="css-1gnbc76-Icon"
+                        >
+                          <SvgrURL
+                            className="css-1vu224h-Icon"
+                          />
+                        </span>
+                      </div>
+                      <span>
+                        Fifth Level
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <ol
+        aria-label="Breadcrumb"
+        className="css-fih44h-Breadcrumb"
+      >
+        <li>
+          <div
+            className="css-d1kv4x-BreadcrumbItem"
+          >
+            <div>
+              First Level
+            </div>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="css-d1kv4x-BreadcrumbItem"
+          >
+            <div>
+              Second Level
+            </div>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="css-1eji0ff-BreadcrumbItem"
+          >
+            <div>
+              Third Level
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <ol
+        aria-label="Breadcrumb"
+        className="css-fih44h-Breadcrumb"
+      >
+        <li>
+          <div
+            className="css-d1kv4x-BreadcrumbItem"
+          >
+            <a
+              className="css-s90ypk"
+              href="/first-level"
+              onClick={[Function]}
+            >
+              First Level
+            </a>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li
+          role="listitem"
+          style={
+            Object {
+              "margin": "auto",
+            }
+          }
+        >
+          <div
+            className="css-1w7gjlo-BreadcrumbCollapsed"
+          >
+            <span
+              className="css-t8jraz-BreadcrumbCollapsed"
+              onClick={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1ub818h-Icon"
+                />
+              </span>
+            </span>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="css-d1kv4x-BreadcrumbItem"
+          >
+            <a
+              className="css-s90ypk"
+              href="/forth-level"
+              onClick={[Function]}
+            >
+              Forth Level
+            </a>
+            <span
+              className="css-11ztcdu-Separator"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1203f8q-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </li>
+        <li>
+          <div
+            className="css-1eji0ff-BreadcrumbItem"
+          >
+            <a
+              className="css-s90ypk"
+              href="/fifth-level"
+              onClick={[Function]}
+            >
+              Fifth Level
+            </a>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+`;
