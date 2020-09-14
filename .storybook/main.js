@@ -6,37 +6,36 @@ const pathToInlineSvg = path.resolve(__dirname, '../src/components/Icon/assets')
 
 module.exports = {
   stories: [
-    '../guides/INTRODUCTION.stories.(md|mdx)',
-    '../guides/*.stories.(md|mdx)',
-    '../src/**/*.stories.(ts|tsx|mdx)',
+    '../guides/INTRODUCTION.stories.@(md|mdx)',
+    '../guides/*.stories.@(md|mdx)',
+    '../src/**/*.stories.@(ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-actions/register',
     '@storybook/addon-links',
-    '@storybook/addon-viewport/register',
+    '@storybook/addon-viewport',
     '@storybook/addon-knobs/register',
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-a11y',
     '@storybook/addon-storysource/register',
     '@storybook/addon-docs',
   ],
-  webpackFinal: async config => {
+  webpack: async config => {
     // do mutation to the config
     // Edit config with care. Make sure to preserve the following config options:
     // * entry
     // * output
 
     console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
-
-    // modify storybook's file-loader rule to avoid conflicts with svgr
-    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
-    fileLoaderRule.exclude = pathToInlineSvg;
-
     config.module.rules.push({
       test: /\.svg$/,
       include: pathToInlineSvg,
       issuer: /\.tsx?$/,
       use: ['@svgr/webpack'],
     });
+
+    // modify storybook's file-loader rule to avoid conflicts with svgr
+    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
+    fileLoaderRule.exclude = pathToInlineSvg;
 
     config.module.rules.push({
       test: /\.svg$/,

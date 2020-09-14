@@ -6,3 +6,5 @@ export type EventProps = {
   onClick?: () => void;
   onBlur?: () => void;
 };
+
+export type FlexDirectionProperty = 'row' | 'column' | 'row-reverse' | 'column-reverse';

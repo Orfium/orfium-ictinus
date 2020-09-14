@@ -1,0 +1,585 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Button Button Colors 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1adpxfn-Button"
+        data-testid="button"
+        disabled={true}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Disabled
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1ns0f99-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-4xp5gz-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-8bvtpa-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-ytjm4k-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Button Sizes 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-19qcklm-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1v5f9mm-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1rza1i4-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-9nhvja-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Button with icon 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <button
+    className="css-mvzjmd-Button"
+    data-testid="button"
+    disabled={false}
+  >
+    <span
+      className="css-1yy8u54-Button"
+    >
+      <div
+        style={
+          Object {
+            "marginLeft": "1rem",
+            "marginRight": "0.5rem",
+          }
+        }
+      >
+        <img
+          height="16"
+          src="https://brandmark.io/logo-rank/random/pepsi.png"
+          width="16"
+        />
+      </div>
+      Hello world
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <button
+    className="css-pk238k-Button"
+    data-testid="button"
+    disabled={false}
+  >
+    <span
+      className="css-9nhvja-Button"
+    >
+      change me!
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-mvzjmd-Button"
+        data-testid="button-size-lg"
+        disabled={false}
+      >
+        <span
+          className="css-1yy8u54-Button"
+        >
+          <div
+            style={
+              Object {
+                "marginLeft": "1rem",
+                "marginRight": "0.5rem",
+              }
+            }
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </div>
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1v0omza-Button"
+        data-testid="button-size-md"
+        disabled={false}
+      >
+        <span
+          className="css-1yy8u54-Button"
+        >
+          <div
+            style={
+              Object {
+                "marginLeft": "1rem",
+                "marginRight": "0.5rem",
+              }
+            }
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </div>
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-x4ue9c-Button"
+        data-testid="button-size-sm"
+        disabled={false}
+      >
+        <span
+          className="css-1yy8u54-Button"
+        >
+          <div
+            style={
+              Object {
+                "marginLeft": "0.5rem",
+                "marginRight": "0.5rem",
+              }
+            }
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </div>
+          Hello world
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Non Filled Button 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <button
+    className="css-1qna06b-Button"
+    data-testid="button"
+    disabled={false}
+  >
+    <span
+      className="css-9nhvja-Button"
+    >
+      Hello world
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Regular Button 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <button
+    className="css-19qcklm-Button"
+    data-testid="button"
+    disabled={false}
+  >
+    <span
+      className="css-9nhvja-Button"
+    >
+      Hello world
+    </span>
+  </button>
+</div>
+`;

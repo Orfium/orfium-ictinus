@@ -1,8 +1,7 @@
 import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
 import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
+import { FlexDirectionProperty, RequiredProperties } from 'utils/common';
 import { Theme } from 'theme';
-import { FlexDirectionProperty } from 'csstype';
 import { rem } from 'polished';
 
 /** Calculates the button specific height based on the size passed to it
