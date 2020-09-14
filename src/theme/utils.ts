@@ -35,17 +35,18 @@ export const colorShadesCreator = (base: string, per: number) => {
     }, {});
 };
 
-export const iterateObject = (obj: any, func: (base: string, per: number) => any) =>
-  Object.keys(obj).reduce((acc, value, arr) => {
+export const iterateObject = (obj: any, func: (obj: any, value: any) => any) =>
+  Object.keys(obj).reduce((acc, value) => {
     acc[value] =
-      typeof obj[value] === 'string'
-        ? func(obj[value], SPECIAL_GRAY.includes(value) ? SPECIAL_GRAY_PERCENTAGE : BASE_PERCENTAGE)
-        : typeof obj[value] === undefined
-        ? undefined
-        : iterateObject(obj[value], func);
+      typeof obj[value] !== 'object' ? func(obj, value) : iterateObject(obj[value], func);
 
     return acc;
   }, {});
 
 export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
-  iterateObject(obj, colorShadesCreator) as Palette;
+  iterateObject(obj, (obj: any, value: string) =>
+    colorShadesCreator(
+      obj[value],
+      SPECIAL_GRAY.includes(value) ? SPECIAL_GRAY_PERCENTAGE : BASE_PERCENTAGE
+    )
+  ) as Palette;
