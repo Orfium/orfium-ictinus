@@ -29,10 +29,10 @@ export const colorShadesCreator = (base: string, per: number) => {
     .filter((value, index, arr) => arr.indexOf(value) === index)
     .reverse()
     .reduce((acc, _, index) => {
-      acc.push({ [`${index + 1}00`]: _ });
+      acc[`${index + 1}00`] = _;
 
       return acc;
-    }, []);
+    }, {});
 };
 
 export const iterateObject = (obj: any, func: (base: string, per: number) => any) =>
