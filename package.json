@@ -59,11 +59,11 @@
     "typescript": "^3.7.5"
   },
   "peerDependencies": {
+    "jest": "^25.1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^5.0.0",
-    "react-router-dom": "^5.0.0",
-    "jest": "^25.1.0"
+    "react-router-dom": "^5.0.0"
   },
   "resolutions": {
     "@emotion/core": "^10.0.20",
@@ -72,6 +72,7 @@
     "@types/react-dom": "^16.0.0"
   },
   "scripts": {
+    "test": "jest",
     "postinstall": "yarn build",
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
@@ -80,5 +81,8 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:storybook": "build-storybook",
     "lint": "eslint './src/**/*.{ts,tsx}'"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2"
   }
 }
