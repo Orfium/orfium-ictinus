@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
-import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
+import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
 import DatePickInput from './DatePickInput/DatePickInput';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
 import { Modifier } from 'react-day-picker/types/Modifiers';
@@ -76,14 +76,28 @@ const DatePicker: React.FC<Props> = ({
   const dayPickerInputRef = useRef<DayPickerInput>(null);
   const dayPickerRef = useRef<DayPicker>(null);
   const daysInitialState = { from: undefined, to: undefined };
-  const [selectedOption, setSelectedOption] = useState();
+  const [selectedOption, setSelectedOption] = useState<string>('');
   const [selectedDay, setSelectedDay] = useState<DateRange>(value);
 
   useEffect(() => {
-    if (onChange) {
-      onChange(selectedDay);
+    if (value.from && value.to) {
+      setSelectedDay(value);
     }
-  }, [onChange, selectedDay]);
+  }, [value]);
+
+  const handleCalendarValueChange = useCallback(
+    (range, hideDatePicker = false) => {
+      setSelectedDay(range);
+      setSelectedOption('custom');
+      if (onChange) {
+        onChange(range);
+      }
+      if (hideDatePicker) {
+        dayPickerInputRef.current?.hideDayPicker();
+      }
+    },
+    [onChange, dayPickerRef, selectedOption, setSelectedDay]
+  );
 
   const handleDayRangeClick = useCallback(
     (day, { disabled }) => {
@@ -98,12 +112,7 @@ const DatePicker: React.FC<Props> = ({
         aboutToCompleteBothDates ? selectedDay : daysInitialState
       );
 
-      if (aboutToCompleteBothDates) {
-        dayPickerInputRef.current?.hideDayPicker();
-      }
-
-      setSelectedDay(range);
-      setSelectedOption('custom');
+      handleCalendarValueChange(range, aboutToCompleteBothDates);
     },
     [selectedDay, setSelectedDay, setSelectedOption, dayPickerInputRef, daysInitialState]
   );
@@ -113,9 +122,8 @@ const DatePicker: React.FC<Props> = ({
       if (disabled) {
         return;
       }
-      setSelectedDay({ from: day, to: day });
-      setSelectedOption('custom');
-      dayPickerInputRef.current?.hideDayPicker();
+      const newValue = { from: day, to: day };
+      handleCalendarValueChange(newValue, true);
     },
     [setSelectedDay, setSelectedOption, dayPickerInputRef]
   );
