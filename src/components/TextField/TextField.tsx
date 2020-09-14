@@ -85,6 +85,7 @@ const TextField: React.FC<Props> = ({
             />
             {label && (
               <Label
+                error={error}
                 htmlFor={id}
                 label={label}
                 required={required}
