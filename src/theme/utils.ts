@@ -3,7 +3,7 @@ import { Palette, PaletteConfig } from './palette';
 
 const BASE_PERCENTAGE = 0.25;
 
-const SPECIAL_GRAY_PERCENTAGE = 0.8;
+const SPECIAL_GRAY_PERCENTAGE = 0.08;
 
 const SPECIAL_GRAY = ['lightGray', 'darkGray'];
 
