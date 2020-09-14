@@ -3,6 +3,7 @@ import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs'
 import Icon from './Icon';
 import Stack from '../storyUtils/Stack';
 import PresentComponent from '../storyUtils/PresentComponent';
+import iconSelector from './assets/iconSelector';
 
 <Meta title="Design System/Icon" component={Icon} />
 
@@ -29,111 +30,11 @@ All the icons available for use.
 <Preview>
   <Story name="Icons Gallery">
     <Stack>
-        <PresentComponent name={'add'}>
-            <Icon name={'add'} />
+      {Object.keys(iconSelector).map((iconName) => (
+        <PresentComponent name={iconName}>
+          <Icon name={iconName} />
         </PresentComponent>
-        <PresentComponent name={'fatArrowDown'}>
-            <Icon name={'fatArrowDown'} />
-        </PresentComponent>
-        <PresentComponent name={'arrowDown'}>
-            <Icon name={'arrowDown'} />
-        </PresentComponent>
-        <PresentComponent name={'check'}>
-            <Icon name={'check'} />
-        </PresentComponent>
-        <PresentComponent name={'minus'}>
-            <Icon name={'minus'} />
-        </PresentComponent>
-        <PresentComponent name={'arrowLeft'}>
-            <Icon name={'arrowLeft'} />
-        </PresentComponent>
-        <PresentComponent name={'arrowRight'}>
-            <Icon name={'arrowRight'} />
-        </PresentComponent>
-        <PresentComponent name={'arrowToRight'}>
-            <Icon name={'arrowToRight'} />
-        </PresentComponent>
-        <PresentComponent name={'arrowToLeft'}>
-            <Icon name={'arrowToLeft'} />
-        </PresentComponent>
-        <PresentComponent name={'ancient'}>
-            <Icon name={'ancient'} />
-        </PresentComponent>
-        <PresentComponent name={'expenses'}>
-            <Icon name={'expenses'} />
-        </PresentComponent>
-        <PresentComponent name={'financialChart'}>
-            <Icon name={'financialChart'} />
-        </PresentComponent>
-        <PresentComponent name={'globalItem'}>
-            <Icon name={'globalItem'} />
-        </PresentComponent>
-        <PresentComponent name={'income'}>
-            <Icon name={'income'} />
-        </PresentComponent>
-        <PresentComponent name={'linked'}>
-            <Icon name={'linked'} />
-        </PresentComponent>
-        <PresentComponent name={'musicNote'}>
-            <Icon name={'musicNote'} />
-        </PresentComponent>
-        <PresentComponent name={'percentage'}>
-            <Icon name={'percentage'} />
-        </PresentComponent>
-        <PresentComponent name={'restore'}>
-            <Icon name={'restore'} />
-        </PresentComponent>
-        <PresentComponent name={'searchMusic'}>
-            <Icon name={'searchMusic'} />
-        </PresentComponent>
-        <PresentComponent name={'searchThunder'}>
-            <Icon name={'searchThunder'} />
-        </PresentComponent>
-        <PresentComponent name={'stamp'}>
-            <Icon name={'stamp'} />
-        </PresentComponent>
-        <PresentComponent name={'thunder'}>
-            <Icon name={'thunder'} />
-        </PresentComponent>
-        <PresentComponent name={'timeOut'}>
-            <Icon name={'timeOut'} />
-        </PresentComponent>
-        <PresentComponent name={'training'}>
-            <Icon name={'training'} />
-        </PresentComponent>
-        <PresentComponent name={'trophy'}>
-            <Icon name={'trophy'} />
-        </PresentComponent>
-        <PresentComponent name={'user'}>
-            <Icon name={'user'} />
-        </PresentComponent>
-        <PresentComponent name={'youtube'}>
-            <Icon name={'youtube'} />
-        </PresentComponent>
-        <PresentComponent name={'ticTacToeArrow'}>
-            <Icon name={'ticTacToeArrow'} />
-        </PresentComponent>
-        <PresentComponent name={'hourglass'}>
-            <Icon name={'hourglass'} />
-        </PresentComponent>
-        <PresentComponent name={'checkedList'}>
-            <Icon name={'checkedList'} />
-        </PresentComponent>
-        <PresentComponent name={'hourglass'}>
-            <Icon name={'hourglass'} />
-        </PresentComponent>
-        <PresentComponent name={'ticTacToeArrow'}>
-            <Icon name={'ticTacToeArrow'} />
-        </PresentComponent>
-        <PresentComponent name={'dotsVertical'}>
-            <Icon name={'dotsVertical'} />
-        </PresentComponent>
-        <PresentComponent name={'calendarEmpty'}>
-            <Icon name={'calendarEmpty'} />
-        </PresentComponent>
-        <PresentComponent name={'keyword'}>
-            <Icon name={'keyword'} />
-        </PresentComponent>
+      ))}
     </Stack>
   </Story>
 </Preview>
@@ -145,30 +46,30 @@ Icon with color.
 <Preview>
   <Story name="Icon with color">
     <Stack>
-       <PresentComponent name={'primary'}>
+      <PresentComponent name={'primary'}>
         <Icon name={'add'} color={'primary'} />
-       </PresentComponent>
-       <PresentComponent name={'secondary'}>
-         <Icon name={'add'} color={'secondary'} />
-       </PresentComponent>
-       <PresentComponent name={'success'}>
-         <Icon name={'add'} color={'success'} />
-       </PresentComponent>
-       <PresentComponent name={'error'}>
-         <Icon name={'add'} color={'error'} />
-       </PresentComponent>
-       <PresentComponent name={'info'}>
-         <Icon name={'add'} color={'info'} />
-       </PresentComponent>
-       <PresentComponent name={'warning'}>
-         <Icon name={'add'} color={'warning'} />
-       </PresentComponent>
-       <PresentComponent name={'branded1'}>
-         <Icon name={'add'} color={'branded1'} />
-       </PresentComponent>
-       <PresentComponent name={'branded2'}>
-         <Icon name={'add'} color={'branded2'} />
-       </PresentComponent>
+      </PresentComponent>
+      <PresentComponent name={'secondary'}>
+        <Icon name={'add'} color={'secondary'} />
+      </PresentComponent>
+      <PresentComponent name={'success'}>
+        <Icon name={'add'} color={'success'} />
+      </PresentComponent>
+      <PresentComponent name={'error'}>
+        <Icon name={'add'} color={'error'} />
+      </PresentComponent>
+      <PresentComponent name={'info'}>
+        <Icon name={'add'} color={'info'} />
+      </PresentComponent>
+      <PresentComponent name={'warning'}>
+        <Icon name={'add'} color={'warning'} />
+      </PresentComponent>
+      <PresentComponent name={'branded1'}>
+        <Icon name={'add'} color={'branded1'} />
+      </PresentComponent>
+      <PresentComponent name={'branded2'}>
+        <Icon name={'add'} color={'branded2'} />
+      </PresentComponent>
     </Stack>
   </Story>
 </Preview>
@@ -181,15 +82,15 @@ Icon with size.
 <Preview>
   <Story name="Icon with size">
     <Stack>
-       <PresentComponent name={'default'}>
-         <Icon name={'add'} />
-       </PresentComponent>
-       <PresentComponent name={'20'}>
-         <Icon name={'add'} size={20} />
-       </PresentComponent>
-       <PresentComponent name={'46'}>
-         <Icon name={'add'} size={46} />
-       </PresentComponent>
+    <PresentComponent name={'default'}>
+      <Icon name={'add'} />
+    </PresentComponent>
+    <PresentComponent name={'20'}>
+      <Icon name={'add'} size={20} />
+    </PresentComponent>
+    <PresentComponent name={'46'}>
+      <Icon name={'add'} size={46} />
+    </PresentComponent>
     </Stack>
   </Story>
 </Preview>
