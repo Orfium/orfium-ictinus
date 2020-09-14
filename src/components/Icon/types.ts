@@ -29,4 +29,5 @@ export type AcceptedIconNames =
   | 'checkedList'
   | 'hourglass'
   | 'ticTacToeArrow'
-  | 'dotsVertical';
+  | 'dotsVertical'
+  | 'keyword';
