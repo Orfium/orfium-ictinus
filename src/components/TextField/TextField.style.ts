@@ -80,3 +80,10 @@ export const inputStyle = ({ label, placeholder }: Props) => (
     cursor: not-allowed;
   }
 `;
+
+export const indicatorStyle = (): SerializedStyles => css`
+  display: inline-flex;
+  padding-left: ${rem(16)};
+  position: absolute;
+  left: 100%;
+`;

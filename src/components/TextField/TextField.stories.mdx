@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
+import TextFieldShowcase from '../storyUtils/TextFieldShowcase';
 
 <Meta title="Design System/TextField" component={TextField} />
 
@@ -94,6 +95,18 @@ Regular TextField with label and error
   <Story name="TextField with label and error">
     <Stack>
       <TextField label={'Label'} error />
+    </Stack>
+  </Story>
+</Preview>
+
+# TextField with label and indicator
+
+Regular TextField with label and indicator
+
+<Preview>
+  <Story name="TextField with label and indicator" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <TextFieldShowcase label={'Label'} withIndicator status={select('status', ['success', 'error'], 'success')} />
     </Stack>
   </Story>
 </Preview>
