@@ -87,26 +87,20 @@ Regular TextField disabled with label
   </Story>
 </Preview>
 
-# TextField with label and error
+# TextField with Label and Error Handling Options
 
-Regular TextField with label and error
-
-<Preview>
-  <Story name="TextField with label and error">
-    <Stack>
-      <TextField label={'Label'} error />
-    </Stack>
-  </Story>
-</Preview>
-
-# TextField with label and indicator
-
-Regular TextField with label and indicator
+Regular TextField with Label and Error Handling Options
 
 <Preview>
-  <Story name="TextField with label and indicator" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextField with label and error handling options" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <TextFieldShowcase label={'Label'} withIndicator status={select('status', ['success', 'error'], 'success')} />
+      <TextFieldShowcase
+        errorMsg={text('custom error message', '')}
+        label={'Label'}
+        status={select('status', ['success', 'error'], 'error')}
+        withErrorMsg={boolean('with error message', false)}
+        withIndicator={boolean('with indicator', false)}
+      />
     </Stack>
   </Story>
 </Preview>

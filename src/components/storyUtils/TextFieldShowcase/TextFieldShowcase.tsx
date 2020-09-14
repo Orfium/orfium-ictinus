@@ -2,22 +2,38 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import TextField from 'components/TextField';
+import { Props as TextFieldProps } from 'components/TextField/TextField';
 
 type Props = {
+  errorMsg?: React.ReactNode | string;
   label?: string;
   status?: string;
+  withErrorMsg?: boolean;
   withIndicator?: boolean;
 };
 
-const TextFieldShowcase: React.FC<Props> = ({ label, status = '', withIndicator = false }) => {
+const TextFieldShowcase: React.FC<Props> = ({
+  errorMsg,
+  label,
+  status = '',
+  withErrorMsg = true,
+  withIndicator = true,
+}) => {
+  const TextFieldProps: TextFieldProps = {
+    error: Boolean(status === 'error'),
+    label,
+    success: Boolean(status === 'success'),
+    withErrorMsg,
+    withIndicator,
+  };
+
+  if (errorMsg) {
+    TextFieldProps.errorMsg = errorMsg;
+  }
+
   return (
     <div>
-      <TextField
-        error={Boolean(status === 'error')}
-        label={label}
-        success={Boolean(status === 'success')}
-        withIndicator={withIndicator}
-      />
+      <TextField {...TextFieldProps} />
     </div>
   );
 };

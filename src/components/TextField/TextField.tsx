@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import {
+  errorMsgStyle,
   iconWrapperStyle,
   indicatorStyle,
   inputStyle,
@@ -29,6 +30,8 @@ export type Props = {
   disabled?: boolean;
   /** If the text field has errors */
   error?: boolean;
+  /** Error message */
+  errorMsg?: React.ReactNode | string;
   /** value of the input */
   value?: string | number;
   /** type of the input */
@@ -37,6 +40,8 @@ export type Props = {
   lean?: boolean;
   /** If the text field status is success */
   success?: boolean;
+  /** If the text field has an error message */
+  withErrorMsg?: boolean;
   /** If the text field has an indicator */
   withIndicator?: boolean;
 };
@@ -49,46 +54,56 @@ const TextField: React.FC<Props> = ({
   placeholder = '',
   required = false,
   lean = false,
-  error,
+  error = false,
   disabled,
+  errorMsg = (
+    <React.Fragment>
+      <Icon color="error" name="alert" size={12} />
+      Error in Text Field
+    </React.Fragment>
+  ),
   success = false,
+  withErrorMsg = false,
   withIndicator = false,
   ...rest
 }) => {
   const theme = useTheme();
 
   return (
-    <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-      <div css={wrapperStyle({ error, disabled, lean })(theme)}>
-        <div css={textFieldStyle({ label, leftIcon })(theme)}>
-          {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })(theme)}>{leftIcon}</div>}
-          <input
-            css={inputStyle({ label, placeholder })(theme)}
-            placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
-            required={required}
-            id={id}
-            disabled={disabled}
-            {...rest}
-          />
-          {label && (
-            <Label
-              htmlFor={id}
-              label={label}
+    <React.Fragment>
+      <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+        <div css={wrapperStyle({ error, disabled, lean })(theme)}>
+          <div css={textFieldStyle({ label, leftIcon })(theme)}>
+            {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })(theme)}>{leftIcon}</div>}
+            <input
+              css={inputStyle({ label, placeholder })(theme)}
+              placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
               required={required}
-              animateToTop={Boolean(rest.value)}
+              id={id}
+              disabled={disabled}
+              {...rest}
             />
-          )}
-          {rightIcon && (
-            <div css={iconWrapperStyle({ label, rightIcon, leftIcon })(theme)}>{rightIcon}</div>
-          )}
+            {label && (
+              <Label
+                htmlFor={id}
+                label={label}
+                required={required}
+                animateToTop={Boolean(rest.value)}
+              />
+            )}
+            {rightIcon && (
+              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })(theme)}>{rightIcon}</div>
+            )}
+          </div>
         </div>
+        {withIndicator && (success || error) && (
+          <div css={indicatorStyle}>
+            <Icon color={error ? 'error' : 'teal'} name={error ? 'alert' : 'success'} size={20} />
+          </div>
+        )}
       </div>
-      {withIndicator && (success || error) && (
-        <div css={indicatorStyle}>
-          <Icon color={error ? 'error' : 'teal'} name={error ? 'error' : 'success'} size={20} />
-        </div>
-      )}
-    </div>
+      {withErrorMsg && error && <div css={errorMsgStyle()(theme)}>{errorMsg}</div>}
+    </React.Fragment>
   );
 };
 
