@@ -7,7 +7,6 @@ function copyFolderSync(from, to) {
     fs.mkdirSync(to);
   }
   fs.readdirSync(from).forEach(element => {
-    console.log(element);
     if (fs.lstatSync(path.join(from, element)).isFile()) {
       if (path.extname(element) === '.svg') {
         fs.copyFileSync(path.join(from, element), path.join(to, element));
