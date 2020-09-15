@@ -20,9 +20,9 @@ const TextFieldShowcase: React.FC<Props> = ({
   withIndicator = true,
 }) => {
   const TextFieldProps: TextFieldProps = {
-    error: Boolean(status === 'error'),
+    error: status === 'error',
     label,
-    success: Boolean(status === 'success'),
+    success: status === 'success',
     withErrorMsg,
     withIndicator,
   };
