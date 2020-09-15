@@ -5,6 +5,7 @@ export type AcceptedColorComponentTypes =
   | 'primary'
   | 'secondary'
   | 'success'
+  | 'teal'
   | 'error'
   | 'info'
   | 'warning'
@@ -48,6 +49,8 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
       return theme.palette.secondary[400];
     case 'success':
       return theme.palette.success[400];
+    case 'teal':
+      return theme.palette.flat.teal[400];
     case 'error':
       return theme.palette.error[400];
     case 'info':
