@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
-import { generateTestDataId } from 'utils/helpers';
 import { EventProps } from 'utils/common';
-import { AcceptedIconNames } from '../Icon/types';
+import { generateTestDataId } from 'utils/helpers';
+import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import Button from '../Button';
 import Icon from '../Icon';
+import { AcceptedIconNames } from '../Icon/types';
 
 export type Props = {
   /** Type indicating the type of the button. Defaults to 'primary' */
@@ -24,7 +24,7 @@ export type Props = {
 };
 
 export type TestProps = {
-  dataTestId?: string;
+  dataTestId?: TestId;
 };
 
 const IconButton: React.FC<Props & TestProps & EventProps> = ({

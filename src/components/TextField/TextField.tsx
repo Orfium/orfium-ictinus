@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import { inputStyle, textFieldStyle, wrapperStyle } from './TextField.style';
+import { iconWrapperStyle, inputStyle, textFieldStyle, wrapperStyle } from './TextField.style';
 import useTheme from 'hooks/useTheme';
 import Label from 'components/Label';
 
@@ -13,9 +13,9 @@ export type Props = {
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
   /** An optional icon to show to the left */
-  leftIcon?: string | null;
+  leftIcon?: string | JSX.Element | null;
   /** An optional icon to show to the right */
-  rightIcon?: string | null;
+  rightIcon?: string | JSX.Element | null;
   /** If the text field value is required */
   required?: boolean;
   /** If the text field is disabled */
@@ -26,6 +26,8 @@ export type Props = {
   value?: string | number;
   /** type of the input */
   type?: string;
+  /** if the input will be without default style for use inside the library */
+  lean?: boolean;
 };
 
 const TextField: React.FC<Props> = ({
@@ -35,6 +37,7 @@ const TextField: React.FC<Props> = ({
   label,
   placeholder = '',
   required = false,
+  lean = false,
   error,
   disabled,
   ...rest
@@ -42,9 +45,9 @@ const TextField: React.FC<Props> = ({
   const theme = useTheme();
 
   return (
-    <div css={wrapperStyle({ label, error, disabled })(theme)}>
-      <div css={textFieldStyle()(theme)}>
-        {leftIcon && leftIcon}
+    <div css={wrapperStyle({ error, disabled, lean })(theme)}>
+      <div css={textFieldStyle({ label, leftIcon })(theme)}>
+        {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })(theme)}>{leftIcon}</div>}
         <input
           css={inputStyle({ label, placeholder })(theme)}
           placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
@@ -53,7 +56,6 @@ const TextField: React.FC<Props> = ({
           disabled={disabled}
           {...rest}
         />
-        {rightIcon && rightIcon}
         {label && (
           <Label
             htmlFor={id}
@@ -61,6 +63,9 @@ const TextField: React.FC<Props> = ({
             required={required}
             animateToTop={Boolean(rest.value)}
           />
+        )}
+        {rightIcon && (
+          <div css={iconWrapperStyle({ label, rightIcon, leftIcon })(theme)}>{rightIcon}</div>
         )}
       </div>
     </div>

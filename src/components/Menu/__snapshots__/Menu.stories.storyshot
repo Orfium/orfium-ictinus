@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Menu Menu with option icon and different colour 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    role="button"
+  >
+    <div
+      className="css-4yevxh-Menu"
+    >
+      <button
+        className="css-8l1bm9-Button"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="css-1ndrhvc-Button"
+        >
+          <div
+            style={
+              Object {
+                "marginLeft": "0.5rem",
+                "marginRight": "1rem",
+              }
+            }
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <SvgrURL
+                className="css-1r0bq2o-Icon"
+              />
+            </span>
+          </div>
+          <span>
+            More
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div>
+    <div>
+      Selected: 
+      <b>
+        -
+      </b>
+    </div>
+    <div
+      role="button"
+    >
+      <div
+        className="css-4yevxh-Menu"
+      >
+        <button
+          className="css-1jzdve4-Button"
+          data-testid="button"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <span
+            className="css-1ndrhvc-Button"
+          >
+            <div
+              style={
+                Object {
+                  "marginLeft": "0.5rem",
+                  "marginRight": "1rem",
+                }
+              }
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <SvgrURL
+                  className="css-1ej672q-Icon"
+                />
+              </span>
+            </div>
+            <span>
+              More
+            </span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

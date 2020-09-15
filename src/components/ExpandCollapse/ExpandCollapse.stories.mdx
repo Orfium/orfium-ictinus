@@ -1,0 +1,129 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import ExpandCollapse from './ExpandCollapse';
+
+<Meta title="Design System/ExpandCollapse" component={ExpandCollapse} />
+
+# ExpandCollapse
+
+A minimally visual component that allows to expand and collapse content
+
+# Usage
+
+```jsx
+import { ExpandCollapse } from 'orfium-design-system';
+
+<ExpandCollapse
+   textAndControl={handleClick => {
+     return (
+       <Fragment>
+         <span>Text</span>
+         <button onClick={handleClick}>expand/collapse</button>
+       </Fragment>
+     );
+   }}
+ >
+   {expand => {
+     return (
+       <div>
+         <div>Some</div>
+         <div>content</div>
+         <div>here</div>
+       </div>
+     );
+   }}
+ </ExpandCollapse>
+```
+
+# Props
+
+<Props of={ExpandCollapse} />
+
+# ExpandCollapse
+
+<Preview>
+  <Story name="ExpandCollapse">
+    <div>
+     <ExpandCollapse
+           textAndControl={handleClick => {
+             return (
+               <Fragment>
+                 <span>Text</span>
+                 <button onClick={handleClick}>expand/collapse</button>
+               </Fragment>
+             );
+           }}
+         >
+           {expand => {
+             return (
+               <div>
+                 <div>Some</div>
+                 <div>content</div>
+                 <div>here</div>
+               </div>
+             );
+           }}
+         </ExpandCollapse>
+         <ExpandCollapse
+                    textAndControl={handleClick => {
+                      return (
+                        <Fragment>
+                          <span>Text</span>
+                          <button onClick={handleClick}>expand/collapse</button>
+                        </Fragment>
+                      );
+                    }}
+                  >
+                    {expand => {
+                      return (
+                        <div>
+                          <div>Some</div>
+                          <div>content</div>
+                          <div>here</div>
+                          <ExpandCollapse
+                                     textAndControl={handleClick => {
+                                       return (
+                                         <Fragment>
+                                           <span>Text</span>
+                                           <button onClick={handleClick}>expand/collapse</button>
+                                         </Fragment>
+                                       );
+                                     }}
+                                   >
+                                     {expand => {
+                                       return (
+                                         <div>
+                                           <div>Some</div>
+                                           <div>content</div>
+                                           <div>here</div>
+                                         </div>
+                                       );
+                                     }}
+                                   </ExpandCollapse>
+                        </div>
+                      );
+                    }}
+                  </ExpandCollapse>
+                  <ExpandCollapse
+                                                       textAndControl={handleClick => {
+                                                         return (
+                                                           <Fragment>
+                                                             <span>Text</span>
+                                                             <button onClick={handleClick}>expand/collapse</button>
+                                                           </Fragment>
+                                                         );
+                                                       }}
+                                                     >
+                                                       {expand => {
+                                                         return (
+                                                           <div>
+                                                             <div>Some</div>
+                                                             <div>content</div>
+                                                             <div>here</div>
+                                                           </div>
+                                                         );
+                                                       }}
+                                                     </ExpandCollapse>
+    </div>
+  </Story>
+</Preview>

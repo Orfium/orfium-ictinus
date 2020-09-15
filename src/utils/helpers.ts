@@ -4,7 +4,7 @@ import React from 'react';
 export const generateUniqueID = () => '_' + (Date.now() + Math.random()).toString(36).substr(2, 9);
 
 /** A function that takes two strings to generate a test data id by combining them if both exist */
-export const generateTestDataId = (defaultId: string, customId?: string) =>
+export const generateTestDataId = (defaultId: TestId, customId?: TestId) =>
   customId ? `${defaultId}-${customId}` : defaultId;
 
 /** A function that determines if the element passed is a function and a react element */

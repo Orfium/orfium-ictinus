@@ -45,7 +45,7 @@ export const iterateObject = <T>(obj: T, func: (value: string) => generatedColor
   Object.keys(obj).reduce((acc, value) => {
     acc[value] =
       typeof obj[value] !== 'object'
-        ? func(value)
+        ? func(obj[value])
         : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
 
     return acc;

@@ -1,8 +1,7 @@
 import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
 import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
+import { FlexDirectionProperty, RequiredProperties } from 'utils/common';
 import { Theme } from 'theme';
-import { FlexDirectionProperty } from 'csstype';
 import { rem } from 'polished';
 
 /** Calculates the button specific height based on the size passed to it
@@ -27,8 +26,8 @@ export const buttonStyle = ({
   childrenCount,
   iconAlign,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
-  const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
+  const calculatedPaddingSpaceIfIcon = size === 'sm' ? 0 : theme.spacing.sm;
 
   const defineBackgroundColor = (): string => {
     if (childrenCount === 0 && icon) {

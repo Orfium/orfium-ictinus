@@ -1,13 +1,14 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
-import { withA11y } from '@storybook/addon-a11y';
 // Add prop tables to components (based on component type interfaces)
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import { css, Global } from '@emotion/core';
+import { normalize } from 'polished';
 
-const viewPorts = [
-  {
+const viewPorts = {
+  laptopLg: {
     name: 'Laptop Large',
     styles: {
       width: '1440px',
@@ -15,7 +16,7 @@ const viewPorts = [
     },
     type: 'desktop',
   },
-  {
+  laptopSm: {
     name: 'Laptop Small',
     styles: {
       width: '1200px',
@@ -23,8 +24,7 @@ const viewPorts = [
     },
     type: 'desktop',
   },
-
-  {
+  tablet: {
     name: 'Tablet',
     styles: {
       width: '750px',
@@ -32,7 +32,23 @@ const viewPorts = [
     },
     type: 'tablet',
   },
-];
+};
+
+const globalStyles = css`
+  ${normalize()};
+  @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+  body,
+  html {
+    font-family: 'Lato', Tahoma;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  #root {
+    display: 'flex';
+  }
+`;
 
 const ThemeSwitcher = () => {
   const themeSwitchState = useThemeSwitch();
@@ -53,23 +69,33 @@ const ThemeSwitcher = () => {
   );
 };
 
-// wrap all components with theme provider by default
-addDecorator(storyFn => {
-  return (
-    <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
-      <ThemeSwitcher />
-      {storyFn()}
-    </ThemeProvider>
-  );
-});
-addDecorator(storyFn => <ThemeSwitchProvider>{storyFn()}</ThemeSwitchProvider>);
-addDecorator(storyFn => <div style={{ margin: 5 }}>{storyFn()}</div>);
-
-addParameters({
+export const decorators = [
+  Story => {
+    return (
+      <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
+        <ThemeSwitcher />
+        <Story />
+        <Global styles={globalStyles} />
+      </ThemeProvider>
+    );
+  },
+  Story => {
+    return (
+      <ThemeSwitchProvider>
+        <Story />
+      </ThemeSwitchProvider>
+    );
+  },
+  Story => (
+    <div style={{ margin: 5 }}>
+      <Story />
+    </div>
+  ),
+];
+export const parameters = {
   viewport: {
     viewports: viewPorts,
-    defaultViewport: 'someDefault',
+    defaultViewport: 'laptopLg',
   },
   options: { showPanel: true },
-});
-addDecorator(withA11y);
+};

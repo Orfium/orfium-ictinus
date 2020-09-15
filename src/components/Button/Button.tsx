@@ -23,7 +23,7 @@ export type Props = {
 };
 
 export type TestProps = {
-  dataTestId?: string;
+  dataTestId?: TestId;
 };
 
 const Button: React.FC<Props & TestProps & EventProps> = props => {
