@@ -80,3 +80,22 @@ export const inputStyle = ({ label, placeholder }: Props) => (
     cursor: not-allowed;
   }
 `;
+
+export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
+  display: flex;
+  align-items: center;
+  color: ${theme.palette.error};
+  font-size: ${theme.typography.fontSizes['12']};
+  line-height: 1;
+  padding: ${rem(8)} 0 0 ${rem(8)};
+  svg {
+    padding: 0 ${rem(2)};
+  }
+`;
+
+export const indicatorStyle = (): SerializedStyles => css`
+  display: inline-flex;
+  padding-left: ${rem(16)};
+  position: absolute;
+  left: 100%;
+`;

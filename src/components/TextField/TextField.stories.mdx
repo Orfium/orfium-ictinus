@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
+import TextFieldShowcase from '../storyUtils/TextFieldShowcase';
 
 <Meta title="Design System/TextField" component={TextField} />
 
@@ -86,14 +87,20 @@ Regular TextField disabled with label
   </Story>
 </Preview>
 
-# TextField with label and error
+# TextField with Label and Error Handling Options
 
-Regular TextField with label and error
+Regular TextField with Label and Error Handling Options
 
 <Preview>
-  <Story name="TextField with label and error">
+  <Story name="TextField with label and error handling options" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <TextField label={'Label'} error />
+      <TextFieldShowcase
+        errorMsg={text('custom error message', '')}
+        label={'Label'}
+        status={select('status', ['success', 'error'], 'error')}
+        withErrorMsg={boolean('with error message', false)}
+        withIndicator={boolean('with indicator', false)}
+      />
     </Stack>
   </Story>
 </Preview>
