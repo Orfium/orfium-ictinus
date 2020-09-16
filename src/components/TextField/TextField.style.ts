@@ -15,6 +15,7 @@ export const wrapperStyle = ({ error, disabled, lean }: Props) => (
   border-radius: ${theme.spacing.xsm};
   border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
+  flex: 1 1 100%;
   user-select: none;
   position: relative;
 
