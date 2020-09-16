@@ -26,39 +26,6 @@ module.exports = {
     // * entry
     // * output
 
-    // console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
-    config.module.rules.push({
-      test: /\.svg$/,
-      include: pathToInlineSvg,
-      issuer: /\.tsx?$/,
-      use: ['@svgr/webpack'],
-    });
-
-    // // modify storybook's file-loader rule to avoid conflicts with svgr
-    // const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
-    // fileLoaderRule.exclude = pathToInlineSvg;
-
-    // config.module.rules = config.module.rules.map(rule => {
-    //   if (
-    //     String(rule.test) ===
-    //     String(/\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/)
-    //   ) {
-    //     return {
-    //       ...rule,
-    //       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/,
-    //     };
-    //   }
-    //
-    //   return rule;
-    // });
-    // use svgr for svg files
-    // config.module.rules.push({
-    //   test: /\.svg$/,
-    //   include: pathToInlineSvg,
-    //   issuer: /\.style.ts?$/,
-    //   use: ['svg-url-loader'],
-    // });
-    //
     const babelLoader = config.module.rules[0].use[0];
 
     babelLoader.options.plugins = [
@@ -74,41 +41,6 @@ module.exports = {
         },
       ],
     ];
-
-    // console.log({ rules: config.module });
-    // console.log(util.inspect(config.module, false, null, true /* enable colors */));
-    // debugger;
-
-    // config.module.rules.push({
-    //   test: /\.svg$/,
-    //   include: pathToInlineSvg,
-    //   // issuer: /\.style.ts?$/,
-    //   use: ['svg-url-loader'],
-    // });
-
-    // config.module.rules.push({
-    //   test: /\.(ts|tsx)$/,
-    //   include: [path.resolve(__dirname, '../src')],
-    //   use: [
-    //     'ts-loader',
-    //     {
-    //       loader: require.resolve('react-docgen-typescript-loader'),
-    //       options: {
-    //         // Provide the path to your tsconfig.json so that your stories can
-    //         // display types from outside each individual story.
-    //         tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
-    //         shouldExtractLiteralValuesFromEnum: true,
-    //       },
-    //     },
-    //   ],
-    // });
-
-    // config.resolve.extensions.push('.ts', '.tsx', '.js', '.md', '.mdx');
-
-    // resolve the src directory so that we can import directly from it
-    // https://webpack.js.org/configuration/resolve/#resolvemodules
-    // path.relative(__dirname, tsConfig.compilerOptions.baseUrl) === path.relative('...../ictinus/.storybook, './src')
-    // config.resolve.modules.push(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
 
     return config;
   },
