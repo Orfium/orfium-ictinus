@@ -1,19 +1,19 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState } from 'react';
-import { optionsStyle } from '../../Menu/Menu.style';
 import uniqueId from 'lodash/uniqueId';
-import Separator from 'components/Breadcrumb/Separator/Separator';
+import * as React from 'react';
+import useTheme from '../../../hooks/useTheme';
+import Separator from '../../Breadcrumb/Separator/Separator';
+import Icon from '../../Icon';
+import { optionsStyle } from '../../Menu/Menu.style';
+import ClickAwayListener from '../../utils/ClickAwayListener';
 import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,
+  ClickAwayListenerStyle,
   collapsedItemStyles,
   inlineBreadcrumbWrapperStyles,
-  ClickAwayListenerStyle,
 } from './BreadcrumbCollapsed.style';
-import useTheme from 'hooks/useTheme';
-import ClickAwayListener from 'components/utils/ClickAwayListener';
-import Icon from 'components/Icon';
 
 type Props = {
   /** Defines the react nodes that will be included in the breadcrumb's collapsed view */
@@ -21,7 +21,7 @@ type Props = {
 };
 
 const BreadcrumbCollapsed: React.FC<Props> = props => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = React.useState<boolean>(false);
   const { collapsedItems } = props;
   const theme = useTheme();
   const expandHandler = () => {

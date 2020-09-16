@@ -1,4 +1,4 @@
-const grayPalette = {
+export const grayPalette = {
   gray: '#F5F5F6',
   gray50: '#DFDFDF',
   gray100: '#9B9B9B',

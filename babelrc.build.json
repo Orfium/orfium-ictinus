@@ -14,5 +14,12 @@
       }
     ]
   ],
-  "ignore": ["./src/storybook.test.ts", "**/*.stories.tsx", "**/*.stories.storyshot"]
+  "ignore": [
+    "**/storyUtils",
+    "**/__snapshots__",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.stories.tsx",
+    "**/*.mdx"
+  ]
 }

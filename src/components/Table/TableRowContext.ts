@@ -1,7 +1,7 @@
-import { createContext, Context } from 'react';
+import * as React from 'react';
 import { Row, TableType } from './Table';
 
-export type TableRowContextProps<T extends {}> = {
+export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   row: Row<T>;
   columnsHasNumberArr: boolean[];
   columnsWithWidth: number[];
@@ -16,7 +16,9 @@ export type TableRowContextProps<T extends {}> = {
   bordered: boolean;
 };
 
-export const TableRowContext = createContext<TableRowContextProps<{}>>({
+export const TableRowContext = React.createContext<
+  TableRowContextProps<{ [key: string]: unknown }>
+>({
   row: {
     id: 0,
     cells: [],
@@ -32,4 +34,4 @@ export const TableRowContext = createContext<TableRowContextProps<{}>>({
   tChange: () => {},
   type: 'normal',
   bordered: false,
-}) as Context<TableRowContextProps<{}>>;
+}) as React.Context<TableRowContextProps<{ [key: string]: unknown }>>;

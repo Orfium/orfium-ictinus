@@ -1,9 +1,9 @@
 import { css } from '@emotion/core';
-import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
-import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
-import { Theme } from 'theme';
 import { darken, rem } from 'polished';
+import { Theme } from '../../theme';
+import { RequiredProperties } from '../../utils/common';
+import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
+import { Props } from '../Button/Button';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -64,7 +64,7 @@ export const buttonSpanStyle = ({
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
   flexDirection: icon ? 'row' : 'column',
-  alignItems: icon ? 'center' : 'flex-start',
+  alignItems: icon ? ('center' as const) : ('flex-start' as const),
   '> :first-child': {
     marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
     marginRight: hasChildren ? theme.spacing.sm : 0,
