@@ -15,6 +15,7 @@ export const wrapperStyle = ({ error, disabled, lean }: Props) => (
   border-radius: ${theme.spacing.xsm};
   border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
+  flex: 1 1 100%;
   user-select: none;
   position: relative;
 
@@ -36,6 +37,7 @@ export const textFieldStyle = ({ label, leftIcon }: Props) => (
   align-items: center;
   vertical-align: top;
   margin: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
+  width: fill-available;
 
   label {
     left: ${leftIcon ? '1.9rem' : 'inherit'};
