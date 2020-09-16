@@ -26,21 +26,21 @@ module.exports = {
     // * entry
     // * output
 
-    const babelLoader = config.module.rules[0].use[0];
+    const rules = config.module.rules;
+    const fileLoaderRule = rules.find(rule => rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
 
-    babelLoader.options.plugins = [
-      ...babelLoader.options.plugins,
-      [
-        require.resolve('babel-plugin-named-asset-import'),
-        {
-          loaderMap: {
-            svg: {
-              ReactComponent: '@svgr/webpack?-svgo,+titleProp,+ref![path]',
-            },
-          },
-        },
-      ],
-    ];
+    rules.push({
+      test: /\.svg$/,
+      issuer: /\.tsx?$/,
+      use: ['@svgr/webpack'],
+    });
+
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: /\.style.ts?$/,
+      use: ['url-loader'],
+    });
 
     return config;
   },
