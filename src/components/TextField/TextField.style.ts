@@ -10,10 +10,11 @@ import { Props } from './TextField';
 export const wrapperStyle = ({ error, disabled, lean }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
-  transition: background-color 0.25s, border 0.25s;
-  background-color: ${lean ? 'transparent' : theme.palette.flat.lightGray[200]};
+  transition: background-color 0.25s, box-shadow 0.25s;
+  background-color: ${lean ? 'transparent' : error ? 'rgba(253, 242, 242)' : theme.palette.flat.lightGray[200]};
   border-radius: ${theme.spacing.xsm};
-  border: ${error ? `1px solid ${theme.palette.error[400]}` : 'none'};
+  box-shadow: inset 0 0 0 1px
+    ${lean ? 'transparent' : error ? theme.palette.error[400] : theme.palette.flat.lightGray[200]};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
   flex: 1 1 100%;
   user-select: none;
@@ -26,6 +27,12 @@ export const wrapperStyle = ({ error, disabled, lean }: Props) => (
     top: 0;
     width: 100%;
     height: 100%;
+  }
+
+  &:focus-within {
+    box-shadow: inset 0 0 0 1px
+        ${error ? theme.palette.error : lean ? 'transparent' : theme.palette.gray},
+      0px 2px 6px 0px rgba(67, 67, 67, 0.15);
   }
 `;
 
@@ -55,13 +62,14 @@ export const iconWrapperStyle = ({ label, rightIcon }: Props) => (
 export const inputStyle = ({ label, placeholder }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
-  display: block;
-  width: 100%;
-  position: relative;
-  z-index: 2000;
-  border: none;
   background: transparent;
+  border: none;
+  color: ${theme.palette.gray300};
+  display: block;
   padding-top: ${label ? rem(5) : 0};
+  position: relative;
+  width: 100%;
+  z-index: 2000;
 
   &:focus {
     outline: none;
@@ -69,6 +77,12 @@ export const inputStyle = ({ label, placeholder }: Props) => (
 
   &::placeholder {
     color: ${!label && placeholder ? theme.palette.flat.lightGray[700] : 'transparent'};
+  }
+
+  &:not(:focus):placeholder-shown {
+    & + label {
+      font-weight: normal;
+    }
   }
 
   &:focus,
