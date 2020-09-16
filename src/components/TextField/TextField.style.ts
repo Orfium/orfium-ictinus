@@ -37,6 +37,7 @@ export const textFieldStyle = ({ label, leftIcon }: Props) => (
   align-items: center;
   vertical-align: top;
   margin: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
+  width: fill-available;
 
   label {
     left: ${leftIcon ? '1.9rem' : 'inherit'};
