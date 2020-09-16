@@ -27,12 +27,12 @@ module.exports = {
     // * output
 
     // console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
-    // config.module.rules.push({
-    //   test: /\.svg$/,
-    //   include: pathToInlineSvg,
-    //   issuer: /\.tsx?$/,
-    //   use: ['@svgr/webpack'],
-    // });
+    config.module.rules.push({
+      test: /\.svg$/,
+      include: pathToInlineSvg,
+      issuer: /\.tsx?$/,
+      use: ['@svgr/webpack'],
+    });
 
     // // modify storybook's file-loader rule to avoid conflicts with svgr
     // const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
@@ -59,19 +59,21 @@ module.exports = {
     //   use: ['svg-url-loader'],
     // });
     //
-    // config.module.rules[0].use[0].options.plugins = [
-    //   ...config.module.rules[0].use[0].options.plugins,
-    //   [
-    //     require.resolve('babel-plugin-named-asset-import'),
-    //     {
-    //       loaderMap: {
-    //         svg: {
-    //           ReactComponent: '@svgr/webpack?-svgo,+titleProp,+ref![path]',
-    //         },
-    //       },
-    //     },
-    //   ],
-    // ];
+    const babelLoader = config.module.rules[0].use[0];
+
+    babelLoader.options.plugins = [
+      ...babelLoader.options.plugins,
+      [
+        require.resolve('babel-plugin-named-asset-import'),
+        {
+          loaderMap: {
+            svg: {
+              ReactComponent: '@svgr/webpack?-svgo,+titleProp,+ref![path]',
+            },
+          },
+        },
+      ],
+    ];
 
     // console.log({ rules: config.module });
     // console.log(util.inspect(config.module, false, null, true /* enable colors */));

@@ -12,16 +12,6 @@
         "extensions": [".ts", ".tsx", ".js", ".jsx"],
         "root": ["./src"]
       }
-    ],
-    [
-      "named-asset-import",
-      {
-        "loaderMap": {
-          "svg": {
-            "ReactComponent": "@svgr/webpack?-svgo,+titleProp,+ref![path]"
-          }
-        }
-      }
     ]
   ],
   "ignore": ["./src/storybook.test.ts", "**/*.stories.tsx", "**/*.stories.storyshot"]
