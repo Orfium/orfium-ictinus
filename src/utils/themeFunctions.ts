@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import { Theme } from '../theme';
 
 export type AcceptedColorComponentTypes =
@@ -20,28 +19,11 @@ export type AcceptedColorComponentTypes =
   | 'darkGray400'
   | 'darkGray600';
 
-export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (
+const getColorFromType = (
+  type: AcceptedColorComponentTypes,
+  defaultValue: string,
   theme: Theme
 ) => {
-  if (type) {
-    return get(theme.palette, [type]);
-  }
-
-  return theme.palette.flat.lightGray[400];
-};
-
-export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
-  switch (type) {
-    case 'primary':
-      return theme.palette.text.primary[400];
-    case 'secondary':
-      return theme.palette.text.primary[400];
-    default:
-      return theme.palette.text.light[400];
-  }
-};
-
-export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
   switch (type) {
     case 'primary':
       return theme.palette.primary[400];
@@ -74,6 +56,23 @@ export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (the
     case 'darkGray400':
       return theme.palette.flat.darkGray[400];
     default:
-      return theme.palette.primary[400];
+      return defaultValue;
   }
 };
+
+export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
+  getColorFromType(type, theme.palette.flat.lightGray[400], theme);
+
+export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
+  switch (type) {
+    case 'primary':
+      return theme.palette.text.primary[400];
+    case 'secondary':
+      return theme.palette.text.secondary[400];
+    default:
+      return theme.palette.text.light[100];
+  }
+};
+
+export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
+  getColorFromType(type, theme.palette.primary[400], theme);
