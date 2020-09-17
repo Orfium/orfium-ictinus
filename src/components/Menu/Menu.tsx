@@ -1,16 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
-// import { buttonSpanStyle, menuStyle } from './Menu.style';
-import { optionsStyle } from './Menu.style';
-import useTheme from 'hooks/useTheme';
-import Button from 'components/Button';
+import * as React from 'react';
+import useTheme from '../../hooks/useTheme';
+import { EventProps } from '../../utils/common';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import Button from '../Button';
 import Icon from '../Icon';
-import { EventProps } from 'utils/common';
-import ClickAwayListener from 'components/utils/ClickAwayListener';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import { AcceptedIconNames } from '../Icon/types';
-import { MenuPositionAllowed } from './Menu.style';
+import ClickAwayListener from '../utils/ClickAwayListener';
+// import { buttonSpanStyle, menuStyle } from './Menu.style';
+import { MenuPositionAllowed, optionsStyle } from './Menu.style';
 
 export type Props = {
   /** Items that are being declared as menu options */

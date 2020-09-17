@@ -22,21 +22,19 @@ $ yarn add @orfium/ictinus
 1. Start by wrapping your App with ictinus `ThemeProvider` component like below
 
 ```jsx
-import { ThemeProvider } from 'ictinus';
+import { ThemeProvider } from '@orfium/ictinus';
 
 const App = () => (
-    <ThemeProvider>
-       <Router>
-         ...
-       </Router
-    </ThemeProvider>
-)
+  <ThemeProvider>
+    <Router>...</Router>
+  </ThemeProvider>
+);
 ```
 
 2.  That's it, now you are ready to go.
 
 ```js
-import { Select, Button } from 'ictinus';
+import { Select, Button } from '@orfium/ictinus';
 ```
 
 ## ✨ Extra
@@ -46,7 +44,7 @@ import { Select, Button } from 'ictinus';
 Now you can can have access to the library's theme config by using the hook provided
 
 ```
-import { useTheme } from 'ictinus';
+import { useTheme } from '@orfium/ictinus';
 
 const theme = useTheme();
 ```

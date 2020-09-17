@@ -1,17 +1,16 @@
-// @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useEffect, useState } from 'react';
-import TableRow from './components/TableRow';
-import TableCell from './components/TableCell';
-import { tableStyle } from './Table.style';
 import head from 'lodash/head';
-import useTheme from 'hooks/useTheme';
-import rem from 'polished/lib/helpers/rem';
 import pluralize from 'pluralize';
-import RenderRowOrNestedRow from './components/RenderRowOrNestedRow';
-import { TableRowContext } from './TableRowContext';
+import rem from 'polished/lib/helpers/rem';
+import * as React from 'react';
+import useTheme from '../../hooks/useTheme';
 import CheckBox from '../CheckBox';
+import RenderRowOrNestedRow from './components/RenderRowOrNestedRow';
+import TableCell from './components/TableCell';
+import TableRow from './components/TableRow';
+import { tableStyle } from './Table.style';
+import { TableRowContext } from './TableRowContext';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -71,10 +70,10 @@ function Table<T>({
   topRightArea,
 }: Props<T>) {
   const theme = useTheme();
-  const [selectedIds, setSelectedIds] = useState<Selection[]>([]);
+  const [selectedIds, setSelectedIds] = React.useState<Selection[]>([]);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
-  useEffect(() => {
+  React.useEffect(() => {
     // when changing data reset the selecting ids since it might have changed
     setSelectedIds([]);
   }, [data]);
@@ -87,7 +86,7 @@ function Table<T>({
     }
   };
 
-  const onSelectionAdd = useCallback(
+  const onSelectionAdd = React.useCallback(
     (rowId: Selection) => {
       const selections =
         selectedIds.indexOf(rowId) === -1
@@ -124,7 +123,7 @@ function Table<T>({
   );
 
   return (
-    <>
+    <React.Fragment>
       <table css={tableStyle()(theme)}>
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
@@ -202,6 +201,7 @@ function Table<T>({
         )}
         <tbody>
           {data.map(row => (
+            // @ts-ignore
             <TableRowWrapper<T>
               key={row.id}
               {...{
@@ -222,7 +222,7 @@ function Table<T>({
           ))}
         </tbody>
       </table>
-    </>
+    </React.Fragment>
   );
 }
 
@@ -241,7 +241,7 @@ type TableRowWrapperProps<T> = {
   expanded: boolean;
 };
 
-const TableRowWrapper = <T extends {}>({
+const TableRowWrapper = <T extends { [key: string]: unknown }>({
   row,
   selectedIds,
   onSelectionAdd,
@@ -256,7 +256,7 @@ const TableRowWrapper = <T extends {}>({
   expanded,
 }: TableRowWrapperProps<T>) => {
   const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [selectedIds]);
-  const tChange = useCallback(() => {
+  const tChange = React.useCallback(() => {
     onSelectionAdd(row.id);
   }, [row.id, selectedIds]);
 

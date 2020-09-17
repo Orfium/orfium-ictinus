@@ -1,28 +1,10 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# See https://docs.npmjs.com/misc/developers#keeping-files-out-of-your-package
+# for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Ignore everything
+# (except package.json, README (and its variants), CHANGELOG (and its variants), LICENSE / LICENCE
+# https://git-scm.com/docs/gitignore#_examples:~:text=Example%20to%20exclude%20everything%20except%20a%20specific%20directory
+/*
 
-# testing
-/coverage
-
-# production
-/build
-/dist
-/storybook-static
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE files
-.idea/*
+# Do not ignore the dist dir
+!/dist

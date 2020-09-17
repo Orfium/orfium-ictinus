@@ -6,7 +6,6 @@ import { Meta, Preview } from '@storybook/addon-docs/blocks';
 
 ### PALETTE
 
-
 All the colors in palette are created with the same principle.
 
 Each colour includes seven shades, the base colour (color400) and six shades deriving from color400,
@@ -14,27 +13,21 @@ three darker and three lighter.
 
 All new shades are calculated with colour percentages (25%, 50%, 75%) on white background for the lighter shades and black background for the darker ones (75%, 50%, 25%).
 
-For example magenta #d21e75, and we take 3 darker shades and 3 lighter shades, all with a 25% step.
+For example magenta `#d21e75`, and we take 3 darker shades and 3 lighter shades, all with a 25% step.
 
 This way we get the following colors for magenta
 
+```
 {
-
-100: "#f3c6dc",
-
-200: "#e88eba",
-
-300: "#dd5697",
-
-400: "#d21e75",
-
-500: "#9d1657",
-
-600: "#690f3a",
-
-700: "#34071d"
-
+  100: "#f3c6dc",
+  200: "#e88eba",
+  300: "#dd5697",
+  400: "#d21e75",
+  500: "#9d1657",
+  600: "#690f3a",
+  700: "#34071d"
 }
+```
 
 lightGray and darkGray palettes are excluded from the above rule.
 Their base colours are lightGray100 (white) and darkGray700 (black). These two base colours create 12 new shades of gray (6 for the LightGray and 6 DarkGray palette). These 12 new shades are created on a DarkGray700(black) background and are calculated by applying to LightGray01 (white) an escalated opacity of 8%.

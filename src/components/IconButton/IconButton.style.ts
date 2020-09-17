@@ -1,8 +1,8 @@
-import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
-import { Props } from 'components/Button/Button';
-import { FlexDirectionProperty, RequiredProperties } from 'utils/common';
-import { Theme } from 'theme';
 import { rem } from 'polished';
+import { Theme } from '../../theme';
+import { RequiredProperties } from '../../utils/common';
+import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
+import { Props } from '../Button/Button';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -36,7 +36,10 @@ export const iconButtonStyle = ({ type, filled, size, icon }: RequiredProperties
 
 export const buttonSpanStyle = ({ icon, size }: RequiredProperties<Props>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
-  flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
+  // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
+  // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
+  // definition. So we cast this as something it will accept.
+  flexDirection: icon ? ('row' as const) : ('column' as const),
   alignItems: icon ? 'center' : 'flex-start',
   '> :first-child': {
     marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,

@@ -1,7 +1,7 @@
-import { Theme } from 'theme';
 import { css } from '@emotion/core';
 import { rem } from 'polished';
-import { RequiredProperties } from 'utils/common';
+import { Theme } from '../../../theme';
+import { RequiredProperties } from '../../../utils/common';
 
 type StyleProps = {
   active: boolean;

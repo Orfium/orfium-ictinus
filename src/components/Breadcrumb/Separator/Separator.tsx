@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
+import * as React from 'react';
+import useTheme from '../../../hooks/useTheme';
+import Icon from '../../Icon';
 import { separatorStyles } from './Separator.style';
-import useTheme from 'hooks/useTheme';
-import Icon from 'components/Icon';
 
 type Props = {
   /** Defines if the current item of the breadcrumb is the last one */

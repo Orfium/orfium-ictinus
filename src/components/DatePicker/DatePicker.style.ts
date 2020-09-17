@@ -1,5 +1,5 @@
-import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
+import { Theme } from '../../theme';
 import FatArrowLeft from '../Icon/assets/fat-arrow-left.svg';
 import FatArrowRight from '../Icon/assets/fat-arrow-right.svg';
 

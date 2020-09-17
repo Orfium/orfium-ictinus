@@ -1,6 +1,6 @@
-import { Theme } from 'theme';
 import { css } from '@emotion/core';
 import { rem } from 'polished';
+import { Theme } from '../../../theme';
 
 type BreadcrumbIconStyle = {
   open: boolean;

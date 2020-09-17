@@ -1,16 +1,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
-import useTheme from '../../../hooks/useTheme';
-import { optionStyle } from '../DatePicker.style';
-import { ExtraOption } from '../DatePicker';
-import { DayPickerInputProps } from 'react-day-picker';
-import Button from 'components/Button';
 import omit from 'lodash/omit';
+import * as React from 'react';
+import { DayPickerInputProps } from 'react-day-picker';
+import useTheme from '../../../hooks/useTheme';
+import Button from '../../Button';
+import { ExtraOption } from '../DatePicker';
+import { optionStyle } from '../DatePicker.style';
 
 type Props = {
   selectedOption: string;
-  setSelectedOption: Function;
+  setSelectedOption: (x: string) => void;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
   hideDatePicker: (() => void) | undefined;

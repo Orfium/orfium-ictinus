@@ -1,5 +1,5 @@
-import { Theme } from 'theme';
 import { get } from 'lodash';
+import { Theme } from '../theme';
 
 export type AcceptedColorComponentTypes =
   | 'primary'

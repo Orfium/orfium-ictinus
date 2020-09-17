@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { EventProps } from 'utils/common';
-import { generateTestDataId } from 'utils/helpers';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import { EventProps } from '../../utils/common';
+import { generateTestDataId } from '../../utils/helpers';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { TestId } from '../../utils/types';
 import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';

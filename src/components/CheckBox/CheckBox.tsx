@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { wrapperStyle, checkboxStyle, labelStyle, checkboxWrapperStyle } from './CheckBox.style';
-import useTheme from 'hooks/useTheme';
-import { useState } from 'react';
-import { generateUniqueID } from 'utils/helpers';
 import { ChangeEvent } from 'react';
+import useTheme from '../../hooks/useTheme';
+import { generateUniqueID } from '../../utils/helpers';
+import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -27,7 +26,7 @@ const CheckBox: React.FC<Props> = ({
   disabled = false,
   intermediate = false,
 }) => {
-  const [isChecked, setIsChecked] = useState(checked);
+  const [isChecked, setIsChecked] = React.useState(checked);
   const theme = useTheme();
   const id = generateUniqueID();
 

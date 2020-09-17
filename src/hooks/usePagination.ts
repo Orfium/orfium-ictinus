@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import * as React from 'react';
 
 type Props = {
   page: number;
@@ -7,28 +7,28 @@ type Props = {
 };
 
 const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) => {
-  const [currentPage, setCurrentPage] = useState(page);
+  const [currentPage, setCurrentPage] = React.useState(page);
   const nextPage = currentPage + 1;
   const prevPage = currentPage - 1;
   const hasNextPage = nextPage <= count;
   const hasPrevPage = prevPage >= 1;
 
-  useEffect(() => {
+  React.useEffect(() => {
     setCurrentPage(page);
   }, [page]);
 
-  const navigateToFirstPage = useCallback(() => {
+  const navigateToFirstPage = React.useCallback(() => {
     const page = 1;
     setCurrentPage(page);
     handleChange(page);
   }, []);
 
-  const navigateToLastPage = useCallback(() => {
+  const navigateToLastPage = React.useCallback(() => {
     setCurrentPage(count);
     handleChange(count);
   }, [count]);
 
-  const navigateToNextPage = useCallback(() => {
+  const navigateToNextPage = React.useCallback(() => {
     let nextPage = currentPage;
 
     if (nextPage + 1 <= count) {
@@ -38,7 +38,7 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
     handleChange(nextPage);
   }, [count, currentPage]);
 
-  const navigateToPrevPage = useCallback(() => {
+  const navigateToPrevPage = React.useCallback(() => {
     let prevPage = currentPage;
 
     if (prevPage - 1 >= 1) {
