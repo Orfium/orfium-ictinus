@@ -13,9 +13,10 @@ import { DateRange } from '../DatePicker';
 type Props = {
   isRangePicker: boolean;
   selectedDay: DateRange;
+  inputLabel: string;
 } & DayPickerInputProps;
 
-const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, ...props }) => {
+const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, inputLabel, ...props }) => {
   const theme = useTheme();
   const getDateFormatted = React.useCallback(
     (date: Date | undefined) => (date ? dayjs(date).format('MM/DD/YYYY') : ''),
@@ -33,14 +34,14 @@ const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, ...props }
       ]}
     >
       <TextField
-        label="Date (Start)"
+        label={`${inputLabel} (Start)`}
         lean={true}
         {...props}
         value={getDateFormatted(selectedDay.from)}
       />
       <TextField
         rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-        label={`Date (End)`}
+        label={`${inputLabel} (End)`}
         {...props}
         lean={true}
         value={getDateFormatted(selectedDay.to)}
@@ -48,7 +49,7 @@ const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, ...props }
     </div>
   ) : (
     <TextField
-      label="Date"
+      label={inputLabel}
       {...props}
       value={getDateFormatted(selectedDay.from)}
       rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}

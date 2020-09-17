@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, select } from '@storybook/addon-knobs';
+import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import dayjs from 'dayjs';
 const options = {
@@ -85,10 +85,9 @@ This datepicker has a predefined initial value that can be used both for initial
   </Story>
 </Preview>
 
-
-# Dynamic disableDates with all options available - Knobs
+# Dynamic disableDates with all options available and custom label - Knobs
 <Preview>
   <Story name="Dynamic disableDates with all options available - Knobs" parameters={{ decorators: [withKnobs] }}>
-    <DatePicker disableDates={select('disableDates', options, options[0])} />
+    <DatePicker disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
   </Story>
 </Preview>
