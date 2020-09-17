@@ -1,10 +1,11 @@
-import React from 'react';
-import { normalize } from 'polished';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { css, Global } from '@emotion/core';
 import { keys, merge, pick } from 'lodash';
-import theme, { Theme } from 'theme';
-import { useThemeSwitch } from 'hooks/useThemeSwitch';
+import * as React from 'react';
+import { useThemeSwitch } from '../../hooks/useThemeSwitch';
+import theme, { Theme } from '../../theme';
+import { DeepPartial } from '../../utils/types';
+import { css, Global } from '@emotion/core';
+import { normalize } from 'polished';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
@@ -14,7 +15,7 @@ type Props = {
 const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light'): Theme =>
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
-const globalStyles = css`
+export const globalStyles = css`
   ${normalize()};
   @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
@@ -42,8 +43,8 @@ const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
         themeSwitchState.dark ? 'dark' : 'light'
       )}
     >
-      {children}
       <Global styles={globalStyles} />
+      {children}
     </EmotionThemeProvider>
   );
 };

@@ -1,13 +1,13 @@
 {
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/react",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended"
   ],
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "emotion", "@typescript-eslint"],
   "env": {
     "node": true,
     "browser": true,
@@ -35,14 +35,6 @@
     "react/jsx-key": "error",
 
     /* eslint basic rules */
-    "no-unused-vars": [
-      "warn",
-      {
-        "args": "all",
-        "argsIgnorePattern": "^__",
-        "varsIgnorePattern": "^__|React"
-      }
-    ],
     "padding-line-between-statements": [
       "error",
       {
@@ -61,21 +53,32 @@
         "next": "return"
       }
     ],
-    "no-unused-expressions": "warn",
+    // Disable this in favour of @typescript-eslint/no-unused-expressions
+    // so that function calls with optional chaining do not throw warnings
+    // https://github.com/facebook/create-react-app/issues/8107#issuecomment-565365982
+    //    "no-unused-expressions": "warn",
+    "no-unused-vars": "off",
     "no-debugger": "warn",
     "no-console": "warn",
 
-    /* Prettier rules */
-    "prettier/prettier": ["error", { "singleQuote": true }],
-
     /* Typescript rules */
+    "@typescript-eslint/no-unused-expressions": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "all",
+        "argsIgnorePattern": "^__",
+        "varsIgnorePattern": "^__|React"
+      }
+    ],
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/camelcase": 0,
     "@typescript-eslint/prefer-interface": 0,
     "@typescript-eslint/no-inferrable-types": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
-    "@typescript-eslint/explicit-function-return-type": 0
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/ban-ts-comment": "warn"
   },
   "settings": {
     "react": {
@@ -83,5 +86,12 @@
       "version": "detect"
     }
   },
-  "parser": "@typescript-eslint/parser"
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  }
 }

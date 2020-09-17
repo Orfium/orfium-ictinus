@@ -1,0 +1,94 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, select } from '@storybook/addon-knobs';
+import DatePicker from './DatePicker';
+import dayjs from 'dayjs';
+const options = {
+  'Disable days of week (only Monday)': { daysOfWeek: [0, 2, 3, 4, 5, 6] },
+  'Disable dates after this day': { after: new Date() },
+  'Disable dates before this day': { before: new Date() },
+  'Disable dates before and after a date (-/+ 7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
+  'Enable dates from/to a date (7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
+}
+
+<Meta title="Design System/DatePicker" component={DatePicker} />
+
+# DatePicker
+
+A universal DatePicker component to select and style the icons encapsulated in the design system.
+
+# Usage
+
+```js
+import { DatePicker } from '@orfium/ictinus';
+
+<DatePicker disableFutureDates={false} disableFutureDates={false} onChange={console.log} />;
+```
+
+# Props
+
+<Props of={DatePicker} />
+
+# DatePicker
+
+Implementation of the regular DatePicker
+
+<Preview>
+  <Story name="DatePicker">
+    <DatePicker isRangePicker />
+  </Story>
+</Preview>
+
+# DayPicker
+
+Implementation of the simple DayPicker
+
+<Preview>
+  <Story name="DayPicker">
+    <DatePicker />
+  </Story>
+</Preview>
+
+# DayPicker with disabled dates
+
+Some disable dates functionality
+
+<Preview>
+  <Story name="DayPicker with disabled dates">
+    <DatePicker
+      disableDates={[
+        dayjs()
+          .add(1, 'day')
+          .toDate(),
+        { daysOfWeek: [0, 6] },
+      ]}
+    />
+  </Story>
+</Preview>
+
+# DayPicker with predefined values
+
+This datepicker has a predefined initial value that can be used both for initial definition and to handle values externally
+
+<Preview>
+  <Story name="DayPicker with predefined values">
+    <DatePicker
+      value={{
+        to: dayjs()
+          .add(11, 'day')
+          .toDate(),
+        from: dayjs()
+          .add(1, 'day')
+          .toDate(),
+      }}
+      disableDates={[{ daysOfWeek: [0, 2, 3, 4, 5, 6] }]}
+    />
+  </Story>
+</Preview>
+
+
+# Dynamic disableDates with all options available - Knobs
+<Preview>
+  <Story name="Dynamic disableDates with all options available - Knobs" parameters={{ decorators: [withKnobs] }}>
+    <DatePicker disableDates={select('disableDates', options, options[0])} />
+  </Story>
+</Preview>

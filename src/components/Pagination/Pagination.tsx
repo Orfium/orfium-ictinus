@@ -1,8 +1,8 @@
 // @ts-nocheck
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import useTheme from 'hooks/useTheme';
-import usePagination from 'hooks/usePagination';
+import usePagination from '../../hooks/usePagination';
+import useTheme from '../../hooks/useTheme';
 import IconButton from '../IconButton';
 
 type Props = {

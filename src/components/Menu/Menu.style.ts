@@ -1,10 +1,9 @@
 import { css } from '@emotion/core';
-import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
-import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
-import { Theme } from 'theme';
-import { FlexDirectionProperty } from 'csstype';
-import { rem, darken } from 'polished';
+import { darken, rem } from 'polished';
+import { Theme } from '../../theme';
+import { RequiredProperties } from '../../utils/common';
+import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
+import { Props } from '../Button/Button';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -27,7 +26,7 @@ export const menuStyle = ({
   disabled,
   childrenCount,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
   const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
 
   const defineBackgroundColor = (): string => {
@@ -64,8 +63,8 @@ export const buttonSpanStyle = ({
   hasChildren,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
-  flexDirection: (icon ? 'row' : 'column') as FlexDirectionProperty,
-  alignItems: icon ? 'center' : 'flex-start',
+  flexDirection: icon ? 'row' : 'column',
+  alignItems: icon ? ('center' as const) : ('flex-start' as const),
   '> :first-child': {
     marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
     marginRight: hasChildren ? theme.spacing.sm : 0,

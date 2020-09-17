@@ -1,9 +1,9 @@
-import React from 'react';
-import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
-import useTheme from 'hooks/useTheme';
 import { rem, transparentize } from 'polished';
-import Label from 'components/Label';
-import { generateUniqueID } from 'utils/helpers';
+import * as React from 'react';
+import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
+import useTheme from '../../hooks/useTheme';
+import { generateUniqueID } from '../../utils/helpers';
+import Label from '../Label';
 
 export type SelectOption = { value: string | number; label: string; isDisabled?: boolean };
 

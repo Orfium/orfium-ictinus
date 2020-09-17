@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import useTheme from 'hooks/useTheme';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import useTheme from '../../hooks/useTheme';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import iconSelector from './assets/iconSelector';
+import { iconContainerStyle, iconStyle } from './Icon.style';
 import { AcceptedIconNames } from './types';
-import { iconStyle, iconContainerStyle } from './Icon.style';
 
 export type Props = {
   /** This property defines witch icon to use */

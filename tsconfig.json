@@ -6,7 +6,7 @@
     "lib": ["es5", "es6", "es7", "es2017", "dom"],
     "sourceMap": true,
     "skipLibCheck": true,
-    "allowJs": false,
+    "allowJs": true,
     "jsx": "react",
     "esModuleInterop": true,
     "moduleResolution": "node",
@@ -24,7 +24,18 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true
   },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules", "build", "dist", "scripts", "./src/**/*.stories.tsx"],
-  "files": ["globals.d.ts"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist",
+    "scripts",
+    "**/storyUtils",
+    "**/__snapshots__",
+    "**/*.stories.tsx",
+    "**/*.stories.mdx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "__mocks__",
+    "./jest.config.js"
+  ]
 }

@@ -3,19 +3,20 @@
 const path = require('path');
 const tsConfig = require('../tsconfig');
 const pathToInlineSvg = path.resolve(__dirname, '../src/components/Icon/assets');
+const util = require('util');
 
 module.exports = {
   stories: [
-    '../guides/INTRODUCTION.stories.(md|mdx)',
-    '../guides/*.stories.(md|mdx)',
-    '../src/**/*.stories.(ts|tsx|mdx)',
+    '../guides/INTRODUCTION.stories.@(md|mdx)',
+    '../guides/*.stories.@(md|mdx)',
+    '../src/**/*.stories.@(ts|tsx|mdx)',
   ],
   addons: [
     '@storybook/addon-actions/register',
     '@storybook/addon-links',
-    '@storybook/addon-viewport/register',
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-a11y/register',
+    '@storybook/addon-viewport',
+    '@storybook/addon-knobs',
+    '@storybook/addon-a11y',
     '@storybook/addon-storysource/register',
     '@storybook/addon-docs',
   ],
@@ -25,41 +26,21 @@ module.exports = {
     // * entry
     // * output
 
-    console.log(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
+    const rules = config.module.rules;
+    const fileLoaderRule = rules.find(rule => rule.test.test('.svg'));
+    fileLoaderRule.exclude = /\.svg$/;
 
-    // modify storybook's file-loader rule to avoid conflicts with svgr
-    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'));
-    fileLoaderRule.exclude = pathToInlineSvg;
-
-    config.module.rules.push({
+    rules.push({
       test: /\.svg$/,
-      include: pathToInlineSvg,
+      issuer: /\.tsx?$/,
       use: ['@svgr/webpack'],
     });
 
     config.module.rules.push({
-      test: /\.(ts|tsx)$/,
-      include: [path.resolve(__dirname, '../src')],
-      use: [
-        'ts-loader',
-        {
-          loader: require.resolve('react-docgen-typescript-loader'),
-          options: {
-            // Provide the path to your tsconfig.json so that your stories can
-            // display types from outside each individual story.
-            tsconfigPath: path.resolve(__dirname, '../tsconfig.json'),
-            shouldExtractLiteralValuesFromEnum: true,
-          },
-        },
-      ],
+      test: /\.svg$/,
+      issuer: /\.style.ts?$/,
+      use: ['url-loader'],
     });
-
-    config.resolve.extensions.push('.ts', '.tsx', '.js', '.md', '.mdx');
-
-    // resolve the src directory so that we can import directly from it
-    // https://webpack.js.org/configuration/resolve/#resolvemodules
-    // path.relative(__dirname, tsConfig.compilerOptions.baseUrl) === path.relative('...../ictinus/.storybook, './src')
-    config.resolve.modules.push(path.relative(__dirname, tsConfig.compilerOptions.baseUrl));
 
     return config;
   },

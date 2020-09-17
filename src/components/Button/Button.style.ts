@@ -1,9 +1,8 @@
-import { backgroundPickerBasedOnType, colorPickerBasedOnType } from 'utils/themeFunctions';
-import { Props } from 'components/Button/Button';
-import { RequiredProperties } from 'utils/common';
-import { Theme } from 'theme';
-import { FlexDirectionProperty } from 'csstype';
 import { rem } from 'polished';
+import { Theme } from '../../theme';
+import { RequiredProperties } from '../../utils/common';
+import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
+import { Props } from './Button';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -27,8 +26,8 @@ export const buttonStyle = ({
   childrenCount,
   iconAlign,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.lg;
-  const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
+  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
+  const calculatedPaddingSpaceIfIcon = size === 'sm' ? 0 : theme.spacing.sm;
 
   const defineBackgroundColor = (): string => {
     if (childrenCount === 0 && icon) {
@@ -70,7 +69,10 @@ export const buttonSpanStyle = ({
   size,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
   display: icon ? 'flex' : 'block',
-  flexDirection: (iconAlign === 'right' ? 'row-reverse' : 'row') as FlexDirectionProperty,
+  // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
+  // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
+  // definition. So we cast this as something it will accept.
+  flexDirection: iconAlign === 'right' ? ('row-reverse' as const) : ('row' as const),
   alignItems: icon ? 'center' : 'flex-start',
   marginLeft: iconAlign === 'right' ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
 });

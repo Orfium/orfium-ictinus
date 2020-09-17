@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import useRadioGroup from 'components/RadioGroup/useRadioGroup';
-import React, { ReactEventHandler, Ref, SyntheticEvent, useState } from 'react';
-import { generateTestDataId } from 'utils/helpers';
+import * as React from 'react';
+import { generateTestDataId } from '../../utils/helpers';
+import { TestId } from '../../utils/types';
+import useRadioGroup from '../RadioGroup/useRadioGroup';
 import {
   customRadioStyles,
   customRadioWrapperStyles,
@@ -20,7 +21,7 @@ export type Props = {
   /** Whether the radio input is selected or not. Defining this prop means the radio input is controlled */
   checked?: boolean;
   /** The onChange event handler for the radio input */
-  onChange?: ReactEventHandler;
+  onChange?: React.ReactEventHandler;
   /** The name of the radio input, in case you want to manually form a radio group */
   name?: string;
   /** Whether the radio input is disabled
@@ -35,10 +36,10 @@ export type Props = {
    * @default false
    * */
   required?: boolean;
-  dataTestId?: string;
+  dataTestId?: TestId;
 };
 
-function Radio(props: Props, ref: Ref<HTMLInputElement>) {
+function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
   const {
     checked: externallyControlledChecked,
     onChange,
@@ -50,8 +51,8 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
     required = false,
     dataTestId,
   } = props;
-  const [focused, setFocused] = useState(false);
-  const [internallyControlledChecked, setInternallyControlledChecked] = useState(false);
+  const [focused, setFocused] = React.useState(false);
+  const [internallyControlledChecked, setInternallyControlledChecked] = React.useState(false);
   const radioGroup = useRadioGroup();
 
   function handleFocus() {
@@ -62,7 +63,7 @@ function Radio(props: Props, ref: Ref<HTMLInputElement>) {
     setFocused(false);
   }
 
-  function handleChange(e: SyntheticEvent) {
+  function handleChange(e: React.SyntheticEvent) {
     if (externallyControlledChecked === undefined) {
       setInternallyControlledChecked((e.target as HTMLInputElement).checked);
     }

@@ -1,6 +1,6 @@
-import { Theme } from 'theme';
 import { rem } from 'polished';
-import { AcceptedColorComponentTypes, fillPickerBasedOnType } from 'utils/themeFunctions';
+import { Theme } from '../../theme';
+import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';
 
 type iconStyleProps = {
   /** Property indicating the color of the icon. Defaults to primary */

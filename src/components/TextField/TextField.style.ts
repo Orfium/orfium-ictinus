@@ -1,17 +1,21 @@
-import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './TextField';
 import { rem, transparentize } from 'polished';
+import { Theme } from '../../theme';
+import { Props } from './TextField';
 
-export const wrapperStyle = ({ label, error, disabled }: Props) => (
+/**
+ * this wrapper must remain simple and not mess with children properties as it will be used
+ * if custom implementation needed eg: datepicker
+ * */
+export const wrapperStyle = ({ error, disabled, lean }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   transition: background-color 0.25s, border 0.25s;
-  background-color: ${theme.palette.gray};
-  padding: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
+  background-color: ${lean ? 'transparent' : theme.palette.gray};
   border-radius: ${theme.spacing.xsm};
   border: ${error ? `1px solid ${theme.palette.error}` : 'none'};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
+  flex: 1 1 100%;
   user-select: none;
   position: relative;
 
@@ -25,15 +29,27 @@ export const wrapperStyle = ({ label, error, disabled }: Props) => (
   }
 `;
 
-export const textFieldStyle = () => (theme: Theme): SerializedStyles => css`
+export const textFieldStyle = ({ label, leftIcon }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   vertical-align: top;
+  margin: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
+  width: fill-available;
 
-  > img {
-    margin-right: ${rem(5)};
+  label {
+    left: ${leftIcon ? '1.9rem' : 'inherit'};
   }
+`;
+
+export const iconWrapperStyle = ({ label, rightIcon }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
+  margin-top: ${label ? '-' + theme.spacing.md : 0};
+  margin-right: ${!rightIcon ? rem(5) : 0};
+  margin-left: ${rightIcon ? rem(12) : 'inherit'};
 `;
 
 export const inputStyle = ({ label, placeholder }: Props) => (
@@ -65,4 +81,23 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   &:disabled {
     cursor: not-allowed;
   }
+`;
+
+export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
+  display: flex;
+  align-items: center;
+  color: ${theme.palette.error};
+  font-size: ${theme.typography.fontSizes['12']};
+  line-height: 1;
+  padding: ${rem(8)} 0 0 ${rem(8)};
+  svg {
+    padding: 0 ${rem(2)};
+  }
+`;
+
+export const indicatorStyle = (): SerializedStyles => css`
+  display: inline-flex;
+  padding-left: ${rem(16)};
+  position: absolute;
+  left: 100%;
 `;

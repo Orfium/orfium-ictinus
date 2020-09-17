@@ -1,5 +1,5 @@
-import { Theme } from 'theme';
 import { css } from '@emotion/core';
+import { Theme } from '../../theme';
 
 export const breadcrumbStyles = () => (theme: Theme) => css`
   display: flex;

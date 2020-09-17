@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import * as React from 'react';
 
 const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => void) => {
   const handleClickOutside = (event: any) => {
@@ -7,7 +7,7 @@ const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => v
     }
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     document.addEventListener('mousedown', handleClickOutside);
 
     return () => {
@@ -22,7 +22,7 @@ type Props = {
   onClick: () => void;
   CustomHtmlTag?: HTMLTagsAllowed;
   ariaRole?: string;
-  cssStyles?: {};
+  cssStyles?: { [key: string]: unknown };
 };
 
 const ClickAwayListener: React.FC<Props> = ({
@@ -32,7 +32,7 @@ const ClickAwayListener: React.FC<Props> = ({
   cssStyles,
   ...props
 }) => {
-  const wrapperRef = useRef(null);
+  const wrapperRef = React.useRef(null);
   useClickAwayListener(wrapperRef, onClick);
 
   return (

@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
+import * as React from 'react';
+import useTheme from '../../hooks/useTheme';
 import { labelStyle } from './Label.style';
-import useTheme from 'hooks/useTheme';
 
 export type Props = {
+  /** If the label has error */
+  error?: boolean;
   /** The label that is going to be displayed */
   label: string;
   /** If the label value is required */
@@ -14,11 +16,17 @@ export type Props = {
   htmlFor?: string;
 };
 
-const Label: React.FC<Props> = ({ htmlFor, label, required = false, animateToTop = false }) => {
+const Label: React.FC<Props> = ({
+  error = false,
+  htmlFor,
+  label,
+  required = false,
+  animateToTop = false,
+}) => {
   const theme = useTheme();
 
   return (
-    <label htmlFor={htmlFor} css={labelStyle({ animateToTop })(theme)}>
+    <label htmlFor={htmlFor} css={labelStyle({ animateToTop, error })(theme)}>
       {label} {required && '*'}
     </label>
   );

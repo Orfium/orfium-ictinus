@@ -1,17 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useContext } from 'react';
-import useToggle from 'hooks/useToggle';
-import useTheme from 'hooks/useTheme';
-import TableRow from '../TableRow';
-import TableCell from '../TableCell';
-import { tableStyle } from '../../Table.style';
 import rem from 'polished/lib/helpers/rem';
-import { isComponentFunctionType } from 'utils/helpers';
-import { TableRowContext } from '../../TableRowContext';
-import { Row } from '../../Table';
-import Icon from '../../../Icon';
+import * as React from 'react';
+import useTheme from '../../../../hooks/useTheme';
+import useToggle from '../../../../hooks/useToggle';
+import { isComponentFunctionType } from '../../../../utils/helpers';
 import CheckBox from '../../../CheckBox';
+import Icon from '../../../Icon';
+import { Row } from '../../Table';
+import { tableStyle } from '../../Table.style';
+import { TableRowContext } from '../../TableRowContext';
+import TableCell from '../TableCell';
+import TableRow from '../TableRow';
 
 const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => {} }: any) => {
   const {
@@ -26,7 +26,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
     type,
     isRowSelected,
     bordered,
-  } = useContext(TableRowContext);
+  } = React.useContext(TableRowContext);
   const theme = useTheme();
   let cellCounter = 0;
   let prevCellColSpan = 0;
@@ -87,7 +87,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
             <div
               css={{
                 padding: theme.spacing.sm,
-                marginLeft: theme.spacing.lg,
+                marginLeft: theme.spacing.xl,
                 overflow: 'hidden',
                 borderRadius: rem(20),
                 backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
@@ -114,8 +114,8 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
 });
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
-const RenderRowOrNestedRow = <T extends {}>({ row }: { row: Row<T> }) => {
-  const { isRowSelected, columnCount } = useContext(TableRowContext);
+const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { row: Row<T> }) => {
+  const { isRowSelected, columnCount } = React.useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;
   const [checked, toggleChecked] = useToggle(false);

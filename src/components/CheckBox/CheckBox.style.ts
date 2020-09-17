@@ -1,7 +1,7 @@
-import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './CheckBox';
 import { rem, transparentize } from 'polished';
+import { Theme } from '../../theme';
+import { Props } from './CheckBox';
 
 export const wrapperStyle = ({ disabled }: Props) => (theme: Theme): SerializedStyles => css`
   opacity: ${disabled ? 0.3 : 1};

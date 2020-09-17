@@ -12,7 +12,7 @@
         "extensions": [".ts", ".tsx", ".js", ".jsx"],
         "root": ["./src"]
       }
-    ],
-    "inline-react-svg"
-  ]
+    ]
+  ],
+  "ignore": ["./src/storybook.test.ts", "**/*.stories.tsx", "**/*.stories.storyshot"]
 }
