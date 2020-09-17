@@ -1,39 +1,88 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { rem, transparentize } from 'polished';
-import { Theme } from '../../theme';
 import { Props } from './TextField';
+import { Theme } from '../../theme';
 
+const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, styleType?: string) => {
+  if (lean) {
+    return `
+      background-color: transparent;
+      box-shadow: inset 0 0 0 1px transparent;
+    `;
+  }
+
+  switch (styleType) {
+    case 'outlined':
+      return `
+        background-color: white;
+        box-shadow: inset 0 0 0 1px
+          ${error ? theme.palette.error[400] : '#dfdfdf'};
+        
+         &:focus-within {
+          box-shadow: inset 0 0 0 1px
+              ${error ? theme.palette.error[400] : '#dfdfdf'},
+            0px 2px 6px 0px #ebeeee;
+        }
+      `;
+    case 'elevated':
+      return `
+        background-color: white;
+        box-shadow: ${error ? `inset 0 0 0 1px ${theme.palette.error[400]},` : ''}
+          0px 2px 6px 0px #ebeeee;
+        
+        &:focus-within {
+          box-shadow: ${error ? `inset 0 0 0 1px ${theme.palette.error[400]},` : ''}
+            0px 6px 16px 0px #ebeeee;
+        }
+      `;
+    case 'filled':
+    default:
+      return `
+        background-color: ${
+          error ? transparentize(0.85, theme.palette.error[400]) : theme.palette.flat.lightGray[200]
+        };
+        box-shadow: inset 0 0 0 1px ${
+          error ? theme.palette.error[400] : theme.palette.flat.lightGray[200]
+        };
+        
+        &:focus-within {
+          box-shadow: inset 0 0 0 1px ${
+            error ? theme.palette.error[400] : theme.palette.flat.lightGray[200]
+          },
+            0px 2px 6px 0px rgba(67, 67, 67, 0.15);
+        }
+      `;
+  }
+};
 /**
  * this wrapper must remain simple and not mess with children properties as it will be used
- * if custom implementation needed eg: datepicker
+ * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ error, disabled, lean }: Props) => (
+export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   transition: background-color 0.25s, box-shadow 0.25s;
-  background-color: ${lean ? 'transparent' : error ? 'rgba(253, 242, 242)' : theme.palette.flat.lightGray[200]};
   border-radius: ${theme.spacing.xsm};
-  box-shadow: inset 0 0 0 1px
-    ${lean ? 'transparent' : error ? theme.palette.error[400] : theme.palette.flat.lightGray[200]};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
   flex: 1 1 100%;
   user-select: none;
   position: relative;
 
-  &:before {
-    background-color: ${error ? transparentize(0.85, theme.palette.error[400]) : 'transparent'};
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
+  ${wrapperStyleSwitch(theme, lean, error, styleType)}
 
-  &:focus-within {
-    box-shadow: inset 0 0 0 1px
-        ${error ? theme.palette.error : lean ? 'transparent' : theme.palette.gray},
-      0px 2px 6px 0px rgba(67, 67, 67, 0.15);
-  }
+  ${disabled &&
+    `
+      &:before {
+        content: '';
+        background-color: rgba(255, 255, 255, 0.15);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+  `}
 `;
 
 export const textFieldStyle = ({ label, leftIcon }: Props) => (
@@ -64,7 +113,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
 ): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${theme.palette.gray300};
+  color: #232323;
   display: block;
   padding-top: ${label ? rem(5) : 0};
   position: relative;
@@ -100,7 +149,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
 export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;
-  color: ${theme.palette.error};
+  color: ${theme.palette.error[400]};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0 ${rem(8)};

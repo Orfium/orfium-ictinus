@@ -38,6 +38,8 @@ export type Props = {
   type?: string;
   /** if the input will be without default style for use inside the library */
   lean?: boolean;
+  /** Style of input field */
+  styleType?: 'filled' | 'outlined' | 'elevated';
   /** If the text field status is success */
   success?: boolean;
   /** If the text field has an error message */
@@ -62,6 +64,7 @@ const TextField: React.FC<Props> = ({
       Error in Text Field
     </React.Fragment>
   ),
+  styleType = 'filled',
   success = false,
   withErrorMsg = false,
   withIndicator = false,
@@ -72,7 +75,7 @@ const TextField: React.FC<Props> = ({
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ error, disabled, lean })(theme)}>
+        <div css={wrapperStyle({ disabled, error, lean, styleType })(theme)}>
           <div css={textFieldStyle({ label, leftIcon })(theme)}>
             {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })(theme)}>{leftIcon}</div>}
             <input
