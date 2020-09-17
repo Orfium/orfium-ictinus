@@ -22,6 +22,8 @@ export type Props = {
   disableDates?: Modifier[];
   /** Value to define if needed an initial state or to handle it externally */
   value?: RangeModifier;
+  /** The label that the input will use to show it. Default: Date */
+  inputLabel?: string;
 };
 
 export type DateRange =
@@ -71,6 +73,7 @@ const DatePicker: React.FC<Props> = ({
     from: undefined,
     to: undefined,
   },
+  inputLabel = 'Date',
 }) => {
   const theme = useTheme();
   const dayPickerInputRef = useRef<DayPickerInput>(null);
@@ -180,7 +183,12 @@ const DatePicker: React.FC<Props> = ({
         )}
         dayPickerProps={dayPickerProps}
         component={(props: DayPickerInputProps) => (
-          <DatePickInput {...props} selectedDay={selectedDay} isRangePicker={isRangePicker} />
+          <DatePickInput
+            {...props}
+            inputLabel={inputLabel}
+            selectedDay={selectedDay}
+            isRangePicker={isRangePicker}
+          />
         )}
         hideOnDayClick={false}
         keepFocus={false}
