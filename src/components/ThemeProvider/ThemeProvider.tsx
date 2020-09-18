@@ -1,15 +1,16 @@
+import React from 'react';
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
 import { keys, merge, pick } from 'lodash';
-import * as React from 'react';
-import { useThemeSwitch } from '../../hooks/useThemeSwitch';
-import theme, { Theme } from '../../theme';
+import theme, { Theme, ThemeConfig } from 'theme';
+import { useThemeSwitch } from 'hooks/useThemeSwitch';
+import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';
 import { css, Global } from '@emotion/core';
 import { normalize } from 'polished';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
-  theme?: DeepPartial<Theme>;
+  theme?: DeepPartial<ThemeConfig>;
 };
 
 const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light'): Theme =>
@@ -33,15 +34,14 @@ export const globalStyles = css`
 
 const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
+  const newTheme = {
+    ...theme,
+    palette: theme?.palette ? enhancePaletteWithShades(theme.palette) : {},
+  };
 
   return (
     <EmotionThemeProvider
-      theme={deepMergeTheme(
-        {
-          ...theme,
-        },
-        themeSwitchState.dark ? 'dark' : 'light'
-      )}
+      theme={deepMergeTheme(newTheme, themeSwitchState.dark ? 'dark' : 'light')}
     >
       <Global styles={globalStyles} />
       {children}

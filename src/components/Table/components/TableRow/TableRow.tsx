@@ -15,7 +15,7 @@ const TableRow: React.FC<Props> = ({ nested, selected, children, ...rest }) => {
     <tr
       css={[
         {
-          backgroundColor: selected ? theme.palette.gray : undefined,
+          backgroundColor: selected ? theme.palette.flat.lightGray[200] : undefined,
           paddingTop: theme.spacing.xsm,
           paddingBottom: theme.spacing.xsm,
           '> td': {

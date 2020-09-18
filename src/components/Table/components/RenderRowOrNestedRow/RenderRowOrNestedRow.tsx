@@ -35,7 +35,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
   return (
     <TableRow
       selected={isRowSelected}
-      css={bordered && { borderBottom: `${rem(1)} solid ${theme.palette.gray50}` }}
+      css={bordered && { borderBottom: `${rem(1)} solid ${theme.palette.flat.lightGray[400]}` }}
     >
       {onSelectionChangeExist && (
         <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
@@ -65,7 +65,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
             {type === 'nested-header' && (
               <div
                 css={{
-                  color: theme.palette.gray100,
+                  color: theme.palette.flat.lightGray[700],
                   fontSize: theme.typography.fontSizes['14'],
                 }}
               >
@@ -90,7 +90,9 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
                 marginLeft: theme.spacing.xl,
                 overflow: 'hidden',
                 borderRadius: rem(20),
-                backgroundColor: checked ? theme.palette.gray200 : theme.palette.gray,
+                backgroundColor: checked
+                  ? theme.palette.flat.darkGray[400]
+                  : theme.palette.flat.lightGray[200],
                 marginTop: rem(8),
                 transition: '0.2s all ease-in-out',
                 cursor: 'pointer',
@@ -135,7 +137,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { r
                 flex: 1,
                 flexDirection: 'row',
                 display: 'flex',
-                borderBottom: `${rem(1)} solid ${theme.palette.gray50}`,
+                borderBottom: `${rem(1)} solid ${theme.palette.flat.lightGray[400]}`,
               }}
             >
               <table css={tableStyle()(theme)}>

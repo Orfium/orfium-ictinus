@@ -14,5 +14,5 @@ export const labelStyle = ({ animateToTop, error }: { animateToTop: boolean; err
   transform: ${!animateToTop ? 'translate(1%, 0)' : 'translate(1%, -65%) scale(0.8);'};
   font-size: ${theme.typography.fontSizes['14']};
   font-weight: ${theme.typography.weights.black};
-  color: ${error ? theme.palette.error : theme.palette.gray100};
+  color: ${error ? theme.palette.error : theme.palette.flat.lightGray[700]};
 `;
