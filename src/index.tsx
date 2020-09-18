@@ -15,7 +15,6 @@ export { default as DatePicker } from './components/DatePicker';
 export { default as ExpandCollapse } from './components/ExpandCollapse';
 export { default as Icon } from './components/Icon';
 export { default as IconButton } from './components/IconButton';
-export { default as Label } from './components/Label';
 export { default as Menu } from './components/Menu';
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
