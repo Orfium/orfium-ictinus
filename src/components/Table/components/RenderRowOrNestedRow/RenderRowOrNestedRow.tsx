@@ -87,13 +87,13 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
             <div
               css={{
                 padding: theme.spacing.sm,
-                marginLeft: theme.spacing.xl,
                 overflow: 'hidden',
                 borderRadius: rem(20),
+                width: rem(20),
                 backgroundColor: checked
                   ? theme.palette.flat.darkGray[400]
                   : theme.palette.flat.lightGray[200],
-                marginTop: rem(8),
+                margin: `${rem(8)} ${theme.spacing.md}`,
                 transition: '0.2s all ease-in-out',
                 cursor: 'pointer',
               }}
