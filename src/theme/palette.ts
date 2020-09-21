@@ -205,3 +205,5 @@ export type Palette = {
 
   flat: flatPalette;
 };
+
+export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
