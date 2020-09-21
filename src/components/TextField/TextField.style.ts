@@ -96,6 +96,7 @@ export const textFieldStyle = ({ label, leftIcon }: Props) => (
   width: fill-available;
 
   label {
+    color: ${theme.palette.flat.lightGray[500]};
     left: ${leftIcon ? '1.9rem' : 'inherit'};
   }
 `;
@@ -125,7 +126,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.palette.flat.lightGray[700] : 'transparent'};
+    color: ${!label && placeholder ? theme.palette.flat.lightGray[500] : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {
