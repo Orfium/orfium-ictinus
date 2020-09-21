@@ -29,7 +29,11 @@ Regular TextField with label
 <Preview>
   <Story name="Text Field with Label">
     <Stack>
-      <TextField label={'Label'} />
+      <TextField
+        label={'Label'}
+        lean={boolean('lean version', false)}
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -41,7 +45,10 @@ Regular TextField without label
 <Preview>
   <Story name="Text Field without Label">
     <Stack>
-      <TextField />
+      <TextField
+        lean={boolean('lean version', false)}
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -53,7 +60,11 @@ Regular TextField with placeholder
 <Preview>
   <Story name="Text Field with Placeholder">
     <Stack>
-      <TextField placeholder="placeholder" />
+      <TextField
+        lean={boolean('lean version', false)}
+        placeholder="placeholder"
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -66,10 +77,12 @@ Regular TextField with placeholder and icon
   <Story name="Text Field with Placeholder and icon">
     <Stack>
       <TextField
-        placeholder="placeholder"
+        lean={boolean('lean version', false)}
         leftIcon={
           <img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
         }
+        placeholder="placeholder"
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
       />
     </Stack>
   </Story>
@@ -82,7 +95,12 @@ Regular TextField disabled with label
 <Preview>
   <Story name="TextField disabled with label">
     <Stack>
-      <TextField label={'Label'} disabled />
+      <TextField
+        disabled
+        label={'Label'}
+        lean={boolean('lean version', false)}
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -97,7 +115,9 @@ Regular TextField with Label and Error Handling Options
       <TextFieldShowcase
         errorMsg={text('custom error message', '')}
         label={'Label'}
+        lean={boolean('lean version', false)}
         status={select('status', ['success', 'error'], 'error')}
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
         withErrorMsg={boolean('with error message', false)}
         withIndicator={boolean('with indicator', false)}
       />
