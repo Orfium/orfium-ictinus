@@ -25,29 +25,24 @@ const reduceColorShades = (arr: string[]) =>
       return acc;
     }, {} as generatedColorShades);
 
-const createShades = (
-  base: string,
-  per: number,
-  func: (percentage: number, color: string) => string,
-  numOfShades = 4
-) =>
+const createShades = (func: (index: number) => string, numOfShades = 4) =>
   new Array(numOfShades).fill(null).reduce((acc, _, index) => {
-    acc.push(func(per * index, base));
+    acc.push(func(index));
 
     return acc;
   }, []);
 
 export const colorShadesCreator = (base: string, per: number) =>
   reduceColorShades([
-    ...createShades(base, per, shade).reverse(),
-    ...createShades(base, per, tint),
+    ...createShades((index: number) => shade(per * index, base)).reverse(),
+    ...createShades((index: number) => tint(per * index, base)),
   ]);
 
 export const grayShadesCreator = (base: string, name: string, per: number) => {
   return reduceColorShades(
     name === SPECIAL_GRAY[0]
-      ? [...createShades(base, per, tint, 14).slice(7, 13), '#fff']
-      : [...createShades(base, per, tint, 14).slice(0, 7)]
+      ? [...createShades((index: number) => tint(per * index, base), 14).slice(7, 13), '#fff']
+      : [...createShades((index: number) => tint(per * index, base), 14).slice(0, 7)]
   );
 };
 
@@ -65,8 +60,8 @@ export const iterateObject = <T>(
   }, {});
 
 export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
-  iterateObject<PaletteConfig>(obj, (value: string, name: string) => {
-    return SPECIAL_GRAY.includes(name)
+  iterateObject<PaletteConfig>(obj, (value: string, name: string) =>
+    SPECIAL_GRAY.includes(name)
       ? grayShadesCreator(value, name, SPECIAL_GRAY_PERCENTAGE)
-      : colorShadesCreator(value, BASE_PERCENTAGE);
-  }) as Palette;
+      : colorShadesCreator(value, BASE_PERCENTAGE)
+  ) as Palette;
