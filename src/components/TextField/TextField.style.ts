@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { rem, transparentize } from 'polished';
+import { rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
 
@@ -38,17 +38,11 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
     case 'filled':
     default:
       return `
-        background-color: ${
-          error ? transparentize(0.85, theme.palette.error[400]) : theme.palette.flat.lightGray[200]
-        };
-        box-shadow: inset 0 0 0 1px ${
-          error ? theme.palette.error[400] : theme.palette.flat.lightGray[200]
-        };
+        background-color: ${error ? '#fdf2f2' : '#f5f5f5'};
+        box-shadow: inset 0 0 0 1px ${error ? theme.palette.error[400] : '#f5f5f5'};
         
         &:focus-within {
-          box-shadow: inset 0 0 0 1px ${
-            error ? theme.palette.error[400] : theme.palette.flat.lightGray[200]
-          },
+          box-shadow: inset 0 0 0 1px ${error ? theme.palette.error[400] : '#f5f5f5'},
             0px 2px 6px 0px rgba(67, 67, 67, 0.15);
         }
       `;
