@@ -12,6 +12,7 @@ import {
 import useTheme from '../../hooks/useTheme';
 import Label from '../Label';
 import Icon from '../Icon';
+import { formFieldStyles } from 'theme/palette';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -39,7 +40,7 @@ export type Props = {
   /** if the input will be without default style for use inside the library */
   lean?: boolean;
   /** Style of input field */
-  styleType?: 'filled' | 'outlined' | 'elevated';
+  styleType?: formFieldStyles;
   /** If the text field status is success */
   success?: boolean;
   /** If the text field has an error message */

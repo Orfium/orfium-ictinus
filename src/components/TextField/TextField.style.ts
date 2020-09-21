@@ -3,6 +3,8 @@ import { rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
 
+// @todo replace all hex colors with palette colors
+
 const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, styleType?: string) => {
   if (lean) {
     return `
