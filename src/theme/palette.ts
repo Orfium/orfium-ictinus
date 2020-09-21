@@ -1,7 +1,7 @@
 export const flatPaletteConfig: flatPaletteConfigType = {
-  lightGray: '#cfcfcf',
+  lightGray: '#101010',
 
-  darkGray: '#494949',
+  darkGray: '#101010',
 
   coolGray: '#a3a9ac',
 
