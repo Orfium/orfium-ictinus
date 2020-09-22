@@ -26,9 +26,7 @@ jobs:
         run: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/ictinus.git HEAD:master
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install
+        run: yarn install
 
       - name: Release
         env:

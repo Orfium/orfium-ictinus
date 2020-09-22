@@ -16,11 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: install
+        run: yarn install
 
       - name: Run Tests
-        uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: test:run
+        run: yarn test:run
