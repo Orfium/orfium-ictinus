@@ -48,8 +48,11 @@ Implementation of the regular DatePicker
 Implementation of the simple DayPicker
 
 <Preview>
-  <Story name="DayPicker">
-    <DatePicker />
+  <Story name="DayPicker" parameters={{ decorators: [withKnobs] }}>
+    <DatePicker
+      styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
+      disableDates={select('disableDates', options, options[0])}
+    />
   </Story>
 </Preview>
 
