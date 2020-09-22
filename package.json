@@ -1,6 +1,6 @@
 {
   "name": "@orfium/ictinus",
-  "version": "0.5.24-alpha.0",
+  "version": "0.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "MIT",
@@ -10,8 +10,12 @@
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@mdx-js/react": "^1.6.16",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@storybook/addon-a11y": "^6.0.21",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-docs": "^6.0.21",
@@ -100,6 +104,14 @@
     "test:run": "jest",
     "test:update": "jest -u"
   },
+  "keywords": [
+    "Orfium",
+    "typescript",
+    "react",
+    "styled-system",
+    "emotion",
+    "design system"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Orfium/orfium-ictinus.git"

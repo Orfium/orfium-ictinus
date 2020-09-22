@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - 'master'
-      - 'staging'
 
 jobs:
   deploy:
@@ -14,11 +13,23 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-      - name: Push to Staging
-        if: (github.ref == 'refs/heads/staging')
-        run: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/ictinus-staging.git HEAD:master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+
       - name: Push to Production
         if: (github.ref == 'refs/heads/master')
         run: git push --force https://heroku:$HEROKU_API_KEY@git.heroku.com/ictinus.git HEAD:master
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: npx semantic-release
