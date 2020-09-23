@@ -9,14 +9,23 @@ import Icon from '../../Icon';
 import TextField from '../../TextField';
 import { wrapperStyle } from '../../TextField/TextField.style';
 import { DateRange } from '../DatePicker';
+import { formFieldStyles } from '../../../theme/palette';
 
 type Props = {
   isRangePicker: boolean;
   selectedDay: DateRange;
   inputLabel: string;
+  /** Style of input field */
+  styleType: formFieldStyles;
 } & DayPickerInputProps;
 
-const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, inputLabel, ...props }) => {
+const DatePickInput: React.FC<Props> = ({
+  isRangePicker,
+  styleType,
+  selectedDay,
+  inputLabel,
+  ...props
+}) => {
   const theme = useTheme();
   const getDateFormatted = React.useCallback(
     (date: Date | undefined) => (date ? dayjs(date).format('MM/DD/YYYY') : ''),
@@ -26,7 +35,7 @@ const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, inputLabel
   return isRangePicker ? (
     <div
       css={[
-        wrapperStyle({})(theme),
+        wrapperStyle({ styleType })(theme),
         flex,
         {
           width: 275,
@@ -51,6 +60,7 @@ const DatePickInput: React.FC<Props> = ({ isRangePicker, selectedDay, inputLabel
     <TextField
       label={inputLabel}
       {...props}
+      styleType={styleType}
       value={getDateFormatted(selectedDay.from)}
       rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
     />

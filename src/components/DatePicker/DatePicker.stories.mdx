@@ -9,6 +9,7 @@ const options = {
   'Disable dates before and after a date (-/+ 7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
   'Enable dates from/to a date (7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
 }
+const styleTypeOptions = ['filled', 'outlined', 'elevated']
 
 <Meta title="Design System/DatePicker" component={DatePicker} />
 
@@ -33,8 +34,12 @@ import { DatePicker } from '@orfium/ictinus';
 Implementation of the regular DatePicker
 
 <Preview>
-  <Story name="DatePicker">
-    <DatePicker isRangePicker />
+  <Story name="DatePicker" parameters={{ decorators: [withKnobs] }}>
+    <DatePicker
+      isRangePicker
+      styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
+      disableDates={select('disableDates', options, options[0])}
+    />
   </Story>
 </Preview>
 
@@ -43,8 +48,11 @@ Implementation of the regular DatePicker
 Implementation of the simple DayPicker
 
 <Preview>
-  <Story name="DayPicker">
-    <DatePicker />
+  <Story name="DayPicker" parameters={{ decorators: [withKnobs] }}>
+    <DatePicker
+      styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
+      disableDates={select('disableDates', options, options[0])}
+    />
   </Story>
 </Preview>
 
@@ -88,6 +96,6 @@ This datepicker has a predefined initial value that can be used both for initial
 # Dynamic disableDates with all options available and custom label - Knobs
 <Preview>
   <Story name="Dynamic disableDates with all options available - Knobs" parameters={{ decorators: [withKnobs] }}>
-    <DatePicker disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
+    <DatePicker styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])} disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
   </Story>
 </Preview>

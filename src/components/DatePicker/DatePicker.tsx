@@ -10,6 +10,7 @@ import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-
 import DatePickInput from './DatePickInput/DatePickInput';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
 import { Modifier } from 'react-day-picker/types/Modifiers';
+import { formFieldStyles } from '../../theme/palette';
 
 export type Props = {
   /** This boolean shows if the date picker will have the future dates available to select. Default: false */
@@ -24,6 +25,8 @@ export type Props = {
   value?: RangeModifier;
   /** The label that the input will use to show it. Default: Date */
   inputLabel?: string;
+  /** Style of input field */
+  styleType?: formFieldStyles;
 };
 
 export type DateRange =
@@ -74,6 +77,7 @@ const DatePicker: React.FC<Props> = ({
     to: undefined,
   },
   inputLabel = 'Date',
+  styleType = 'filled',
 }) => {
   const theme = useTheme();
   const dayPickerInputRef = useRef<DayPickerInput>(null);
@@ -185,6 +189,7 @@ const DatePicker: React.FC<Props> = ({
         component={(props: DayPickerInputProps) => (
           <DatePickInput
             {...props}
+            styleType={styleType}
             inputLabel={inputLabel}
             selectedDay={selectedDay}
             isRangePicker={isRangePicker}
