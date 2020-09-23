@@ -47,7 +47,7 @@ const TableCell: React.FC<Props> = ({
           left: 0,
           zIndex: 2,
           position: 'sticky',
-          background: '#fff',
+          background: theme.palette.white,
         },
         type === 'financial' && {
           borderLeft: `1px solid ${theme.palette.flat.lightGray[400]}`,

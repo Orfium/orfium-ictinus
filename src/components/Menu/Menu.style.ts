@@ -86,7 +86,7 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
     right 0;
     width: ${rem(148)};
     height: auto;
-    background-color: #fff;
+    background-color: ${theme.palette.white};
     box-shadow: 0px 0px ${rem(16)} grey;
     display: flex;
     flex-direction: column;
@@ -102,6 +102,6 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
     }
 
     & > button:hover {
-      background-color: ${darken(0.05, '#fff')};
+      background-color: ${darken(0.05, theme.palette.white)};
     }
   `;

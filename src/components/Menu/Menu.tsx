@@ -75,7 +75,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
               items.map((option, index) => (
                 <button
                   css={{
-                    backgroundColor: '#fff',
+                    backgroundColor: theme.palette.white,
                     border: 0,
                   }}
                   key={`${option}-${index}`}
