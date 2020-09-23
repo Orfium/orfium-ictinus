@@ -9,9 +9,7 @@ import {
 
 const BASE_PERCENTAGE = 0.25;
 
-const SPECIAL_GRAY_PERCENTAGE = 0.08;
-
-const SPECIAL_GRAY = ['lightGray', 'darkGray'];
+const EXCLUDED = ['white', 'black'];
 
 export const convertPointsToPixels = (pt: number) => (96 / 72) * pt;
 
@@ -38,17 +36,9 @@ export const colorShadesCreator = (base: string, per: number) =>
     ...createShades((index: number) => tint(per * index, base)),
   ]);
 
-export const grayShadesCreator = (base: string, name: string, per: number) => {
-  return reduceColorShades(
-    name === SPECIAL_GRAY[0]
-      ? [...createShades((index: number) => tint(per * index, base), 14).slice(7, 13), '#fff']
-      : [...createShades((index: number) => tint(per * index, base), 14).slice(0, 7)]
-  );
-};
-
 export const iterateObject = <T>(
   obj: T,
-  func: (value: string, name: string) => generatedColorShades
+  func: (value: string, name: string) => generatedColorShades | string
 ) =>
   Object.keys(obj).reduce((acc, value) => {
     acc[value] =
@@ -61,7 +51,5 @@ export const iterateObject = <T>(
 
 export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
   iterateObject<PaletteConfig>(obj, (value: string, name: string) =>
-    SPECIAL_GRAY.includes(name)
-      ? grayShadesCreator(value, name, SPECIAL_GRAY_PERCENTAGE)
-      : colorShadesCreator(value, BASE_PERCENTAGE)
+    EXCLUDED.includes(name) ? value : colorShadesCreator(value, BASE_PERCENTAGE)
   ) as Palette;

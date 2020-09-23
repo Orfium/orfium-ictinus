@@ -1,7 +1,7 @@
 export const flatPaletteConfig: flatPaletteConfigType = {
-  lightGray: '#101010',
+  lightGray: '#cfcfcf',
 
-  darkGray: '#101010',
+  darkGray: '#494949',
 
   coolGray: '#a3a9ac',
 
@@ -61,6 +61,9 @@ export const lightPalette: PaletteConfig = {
     secondary: flatPaletteConfig.coolGray,
     light: flatPaletteConfig.lightGray,
   },
+
+  white: '#fff',
+  black: '#101010',
 };
 
 export const darkPalette: PaletteConfig = {
@@ -87,6 +90,9 @@ export const darkPalette: PaletteConfig = {
     secondary: flatPaletteConfig.coolGray,
     light: flatPaletteConfig.lightGray,
   },
+
+  white: '#fff',
+  black: '#101010',
 };
 
 export type flatPaletteConfigType = {
@@ -172,6 +178,9 @@ export type PaletteConfig = {
   text?: TextPaletteConfigType;
 
   flat?: flatPaletteConfigType;
+
+  white?: string;
+  black?: string;
 };
 
 export type generatedColorShades = {
@@ -204,6 +213,9 @@ export type Palette = {
   };
 
   flat: flatPalette;
+
+  white: string;
+  black: string;
 };
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
