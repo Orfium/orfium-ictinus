@@ -66,7 +66,7 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
   .DayPicker-Day--selected:not(.DayPicker-Day--outside),
   .DayPicker-Day--start:not(.DayPicker-Day--outside) {
     background-color: #dfdfdf;
-    color: #000;
+    color: ${theme.palette.black};
   }
 
   .DayPicker-Day--selected.DayPicker-Day--disabled:not(.DayPicker-Day--outside) {
