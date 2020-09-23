@@ -1,9 +1,11 @@
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from '../../theme';
 import FatArrowLeft from '../Icon/assets/fat-arrow-left.svg';
 import FatArrowRight from '../Icon/assets/fat-arrow-right.svg';
 
-export const optionStyle = ({ selected }: { selected?: boolean }) => (theme: Theme) => css`
+export const optionStyle = ({ selected }: { selected?: boolean }) => (
+  theme: Theme
+): SerializedStyles => css`
   white-space: nowrap;
   padding: ${theme.spacing.md};
   font-weight: ${selected ? 'bold' : 'initial'};
@@ -12,7 +14,7 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (theme: The
 
 export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean }) => (
   theme: Theme
-) => css`
+): SerializedStyles => css`
   .DayPickerInput-Overlay {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     border: 1px solid #dfdfdf;
