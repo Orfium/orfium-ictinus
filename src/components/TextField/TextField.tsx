@@ -9,7 +9,6 @@ import {
   textFieldStyle,
   wrapperStyle,
 } from './TextField.style';
-import useTheme from '../../hooks/useTheme';
 import Label from '../Label';
 import Icon from '../Icon';
 import { formFieldStyles } from 'theme/palette';
@@ -71,16 +70,14 @@ const TextField: React.FC<Props> = ({
   withIndicator = false,
   ...rest
 }) => {
-  const theme = useTheme();
-
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ disabled, error, lean, styleType })(theme)}>
-          <div css={textFieldStyle({ label, leftIcon })(theme)}>
-            {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })(theme)}>{leftIcon}</div>}
+        <div css={wrapperStyle({ disabled, error, lean, styleType })}>
+          <div css={textFieldStyle({ label, leftIcon })}>
+            {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })}>{leftIcon}</div>}
             <input
-              css={inputStyle({ label, placeholder })(theme)}
+              css={inputStyle({ label, placeholder })}
               placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
               required={required}
               id={id}
@@ -97,7 +94,7 @@ const TextField: React.FC<Props> = ({
               />
             )}
             {rightIcon && (
-              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })(theme)}>{rightIcon}</div>
+              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{rightIcon}</div>
             )}
           </div>
         </div>
@@ -107,7 +104,7 @@ const TextField: React.FC<Props> = ({
           </div>
         )}
       </div>
-      {withErrorMsg && error && <div css={errorMsgStyle()(theme)}>{errorMsg}</div>}
+      {withErrorMsg && error && <div css={errorMsgStyle()}>{errorMsg}</div>}
     </React.Fragment>
   );
 };

@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { ChangeEvent } from 'react';
-import useTheme from '../../hooks/useTheme';
 import { generateUniqueID } from '../../utils/helpers';
 import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
 
@@ -27,7 +26,6 @@ const CheckBox: React.FC<Props> = ({
   intermediate = false,
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
-  const theme = useTheme();
   const id = generateUniqueID();
 
   const handleInputChange = (event: ChangeEvent) => {
@@ -43,10 +41,10 @@ const CheckBox: React.FC<Props> = ({
   };
 
   return (
-    <span css={wrapperStyle({ disabled })(theme)}>
-      <span css={checkboxWrapperStyle()(theme)}>
+    <span css={wrapperStyle({ disabled })}>
+      <span css={checkboxWrapperStyle()}>
         <input
-          css={checkboxStyle({ intermediate, checked })(theme)}
+          css={checkboxStyle({ intermediate, checked })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}
@@ -55,7 +53,7 @@ const CheckBox: React.FC<Props> = ({
         />
         <label htmlFor={`styled-checkbox-${id}`} />
       </span>
-      {label && <span css={labelStyle()(theme)}>{label}</span>}
+      {label && <span css={labelStyle()}>{label}</span>}
     </span>
   );
 };

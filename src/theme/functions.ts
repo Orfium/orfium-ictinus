@@ -1,17 +1,17 @@
 // import theme from 'src/theme/globals';
-import { css, SerializedStyles } from '@emotion/core';
+import { css } from '@emotion/core';
 /* Declare mixins in order to further DRY our code. Any reusable and indepedent =  css code bundle
   should become a mixin. Include them using the "@include" command inside a =  css selector
  */
 /* centers a block element */
 
-export const grid: SerializedStyles = css`
+export const grid = css`
   display: grid;
 
   grid-auto-columns: 1fr;
 `;
 
-export const well: SerializedStyles = css`
+export const well = css`
   border-radius: 6px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.08);
   background-color: white;
@@ -25,7 +25,7 @@ export const centerAbsoluteVertical = css`
 `;
 
 /* quick transition declaration */
-export const transition = (s: number, type = 'all'): SerializedStyles => css`
+export const transition = (s: number, type = 'all') => css`
   -webkit-transition: ${type} ${s}s ease-in-out;
   -moz-transition: ${type} ${s}s ease-in-out;
   -ms-transition: ${type} ${s}s ease-in-out;
@@ -34,13 +34,13 @@ export const transition = (s: number, type = 'all'): SerializedStyles => css`
 `;
 
 /* adds a "..." after the line of the text exceeds the width of the component*/
-export const lineEllipsis: SerializedStyles = css`
+export const lineEllipsis = css`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
-export const flex: SerializedStyles = css`
+export const flex = css`
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -48,7 +48,7 @@ export const flex: SerializedStyles = css`
 `;
 
 /* centers flex content */
-export const flexCenter: SerializedStyles = css`
+export const flexCenter = css`
   ${flex};
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -57,7 +57,7 @@ export const flexCenter: SerializedStyles = css`
   justify-content: center;
 `;
 
-export const flexCenterVertical: SerializedStyles = css`
+export const flexCenterVertical = css`
   ${flex};
   -webkit-align-items: center;
   -moz-box-align: center;
@@ -65,7 +65,7 @@ export const flexCenterVertical: SerializedStyles = css`
   align-items: center;
 `;
 
-export const plainTextButton: SerializedStyles = css`
+export const plainTextButton = css`
   ${transition(0.1, 'color')}
   border: none;
   background: transparent;
