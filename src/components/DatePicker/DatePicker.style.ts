@@ -80,9 +80,10 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
   .DayPicker-Day:not(.DayPicker-Day--disabled):hover {
     background-color: #f5f5f5 !important;
   }
-  .DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker:not(.DayPicker--interactionDisabled) {
     .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
-    border-radius: 100% !important;
+      border-radius: 100% !important;
+    }
   }
 
   ${isRangePicker &&

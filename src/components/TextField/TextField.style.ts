@@ -92,7 +92,6 @@ export const textFieldStyle = ({ label, leftIcon }: Props) => (
   width: fill-available;
 
   label {
-    color: ${theme.palette.flat.lightGray[500]};
     left: ${leftIcon ? '1.9rem' : 'inherit'};
   }
 `;
