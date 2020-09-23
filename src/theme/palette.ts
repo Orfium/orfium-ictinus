@@ -63,7 +63,7 @@ export const lightPalette: PaletteConfig = {
   },
 
   white: '#fff',
-  black: '#101010',
+  black: '#000',
 };
 
 export const darkPalette: PaletteConfig = {
@@ -92,7 +92,7 @@ export const darkPalette: PaletteConfig = {
   },
 
   white: '#fff',
-  black: '#101010',
+  black: '#000',
 };
 
 export type flatPaletteConfigType = {
