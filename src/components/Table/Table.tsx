@@ -124,7 +124,7 @@ function Table<T>({
 
   return (
     <React.Fragment>
-      <table css={tableStyle()(theme)}>
+      <table css={tableStyle()}>
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             <TableRow>
@@ -165,7 +165,7 @@ function Table<T>({
           </thead>
         )}
       </table>
-      <table css={tableStyle()(theme)}>
+      <table css={tableStyle()}>
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (

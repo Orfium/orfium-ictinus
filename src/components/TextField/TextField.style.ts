@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css } from '@emotion/core';
 import { rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
@@ -54,9 +54,7 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (theme: Theme) => css`
   transition: background-color 0.25s, box-shadow 0.25s;
   border-radius: ${theme.spacing.xsm};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
@@ -81,9 +79,7 @@ export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
   `}
 `;
 
-export const textFieldStyle = ({ label, leftIcon }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const textFieldStyle = ({ label, leftIcon }: Props) => (theme: Theme) => css`
   display: inline-flex;
   flex-direction: row;
   align-items: center;
@@ -97,17 +93,13 @@ export const textFieldStyle = ({ label, leftIcon }: Props) => (
   }
 `;
 
-export const iconWrapperStyle = ({ label, rightIcon }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const iconWrapperStyle = ({ label, rightIcon }: Props) => (theme: Theme) => css`
   margin-top: ${label ? '-' + theme.spacing.md : 0};
   margin-right: ${!rightIcon ? rem(5) : 0};
   margin-left: ${rightIcon ? rem(12) : 'inherit'};
 `;
 
-export const inputStyle = ({ label, placeholder }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const inputStyle = ({ label, placeholder }: Props) => (theme: Theme) => css`
   background: transparent;
   border: none;
   color: #232323;
@@ -143,7 +135,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   }
 `;
 
-export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
+export const errorMsgStyle = () => (theme: Theme) => css`
   display: flex;
   align-items: center;
   color: ${theme.palette.error[400]};
@@ -155,7 +147,7 @@ export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
   }
 `;
 
-export const indicatorStyle = (): SerializedStyles => css`
+export const indicatorStyle = () => css`
   display: inline-flex;
   padding-left: ${rem(16)};
   position: absolute;

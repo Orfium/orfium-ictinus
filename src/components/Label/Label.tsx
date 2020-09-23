@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import useTheme from '../../hooks/useTheme';
 import { labelStyle } from './Label.style';
 
 export type Props = {
@@ -23,10 +22,8 @@ const Label: React.FC<Props> = ({
   required = false,
   animateToTop = false,
 }) => {
-  const theme = useTheme();
-
   return (
-    <label htmlFor={htmlFor} css={labelStyle({ animateToTop, error })(theme)}>
+    <label htmlFor={htmlFor} css={labelStyle({ animateToTop, error })}>
       {label} {required && '*'}
     </label>
   );

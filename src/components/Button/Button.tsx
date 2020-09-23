@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import useTheme from '../../hooks/useTheme';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
@@ -40,7 +39,6 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     onClick,
     onBlur,
   } = props;
-  const theme = useTheme();
 
   return (
     <button
@@ -53,7 +51,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         disabled,
         childrenCount: React.Children.count(children),
         iconAlign,
-      })(theme)}
+      })}
       onClick={onClick}
       onBlur={onBlur}
       disabled={disabled}
@@ -67,11 +65,11 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
           disabled,
           hasChildren: Boolean(React.Children.count(children)),
           iconAlign,
-        })(theme)}
+        })}
       >
         {icon && (
           <div
-            style={iconStyle({
+            css={iconStyle({
               type,
               filled,
               size,
@@ -79,7 +77,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
               disabled,
               hasChildren: Boolean(React.Children.count(children)),
               iconAlign,
-            })(theme)}
+            })}
           >
             {icon}
           </div>

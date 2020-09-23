@@ -1,9 +1,9 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css } from '@emotion/core';
 import { Theme } from '../../theme';
 
 export const labelStyle = ({ animateToTop, error }: { animateToTop: boolean; error: boolean }) => (
   theme: Theme
-): SerializedStyles => css`
+) => css`
   transition: transform 0.25s, opacity 0.25s ease-in-out;
   transform-origin: 0 0;
   width: 100%;

@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
-import useTheme from '../../../hooks/useTheme';
 import Separator from '../../Breadcrumb/Separator/Separator';
 import Icon from '../../Icon';
 import { optionsStyle } from '../../Menu/Menu.style';
@@ -23,19 +22,18 @@ type Props = {
 const BreadcrumbCollapsed: React.FC<Props> = props => {
   const [open, setOpen] = React.useState<boolean>(false);
   const { collapsedItems } = props;
-  const theme = useTheme();
   const expandHandler = () => {
     setOpen(prevState => !prevState);
   };
 
   const listItems = collapsedItems.map(item => (
-    <li key={uniqueId('collapsed_')} css={collapsedItemStyles()(theme)}>
+    <li key={uniqueId('collapsed_')} css={collapsedItemStyles()}>
       {item}
     </li>
   ));
 
   const collapsedItemsList = (
-    <ul style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })(theme)}>
+    <ul style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })}>
       {listItems}
     </ul>
   );
@@ -50,7 +48,7 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
       cssStyles={ClickAwayListenerStyle}
     >
       <div css={breadcrumbCollapsedWrapperStyles()}>
-        <span css={breadcrumbCollapsedStyles({ open })(theme)} onClick={expandHandler}>
+        <span css={breadcrumbCollapsedStyles({ open })} onClick={expandHandler}>
           <Icon name="dotsVertical" size={22} color={iconColor} />
         </span>
         <Separator />

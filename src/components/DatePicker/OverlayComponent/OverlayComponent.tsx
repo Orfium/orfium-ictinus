@@ -42,7 +42,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
               {extraOptions.map(option => (
                 <div
                   key={option.value}
-                  css={optionStyle({ selected: selectedOption === option.value })(theme)}
+                  css={optionStyle({ selected: selectedOption === option.value })}
                   onClick={() => setSelectedOption(option.value)}
                 >
                   {option.label}
