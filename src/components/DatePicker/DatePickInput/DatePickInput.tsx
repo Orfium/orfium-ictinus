@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import dayjs from 'dayjs';
 import * as React from 'react';
 import { DayPickerInputProps } from 'react-day-picker';
