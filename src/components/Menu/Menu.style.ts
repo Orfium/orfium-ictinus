@@ -35,7 +35,7 @@ export const menuStyle = ({
     }
 
     if (disabled) {
-      return theme.palette.flat.lightGray[400];
+      return theme.palette.flat.lightGray[100];
     }
 
     if (filled && childrenCount !== 0) {

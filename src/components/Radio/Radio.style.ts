@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Props } from './Radio';
+import { Theme } from '../../theme';
 
 const focusedRadio = css`
   box-shadow: 0 0 0 ${rem('11px')} rgba(0, 0, 0, 0.04);
@@ -35,25 +36,29 @@ export const customRadioWrapperStyles = (
   ${focused && !disabled && focusedRadio};
 `;
 
-export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>): SerializedStyles => {
+export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) => (
+  theme: Theme
+): SerializedStyles => {
   function determineBoxShadow({ checked, disabled }: Pick<Props, 'checked' | 'disabled'>) {
     if (disabled && checked) {
-      return `inset 0px 0px 0px ${rem('2px')} #efefef, inset 0px 0px 0px ${rem(
-        '7px'
-      )} #efefef, inset 0px 0px 0px ${rem('14px')} currentColor`;
+      return `inset 0px 0px 0px ${rem('2px')} ${
+        theme.palette.flat.lightGray[400]
+      }, inset 0px 0px 0px ${rem('7px')} ${
+        theme.palette.flat.lightGray[400]
+      }, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
     if (disabled) {
-      return `inset 0px 0px 0px ${rem('14px')} #efefef`;
+      return `inset 0px 0px 0px ${rem('14px')} ${theme.palette.flat.lightGray[200]}`;
     }
 
     if (checked) {
-      return `inset 0px 0px 0px ${rem('2px')} currentColor, inset 0px 0px 0px ${rem(
-        '7px'
-      )} #fff, inset 0px 0px 0px ${rem('14px')} currentColor`;
+      return `inset 0px 0px 0px ${rem('2px')} currentColor, inset 0px 0px 0px ${rem('7px')} ${
+        theme.palette.white
+      }, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
-    return `inset 0px 0px 0px ${rem('14px')} #dfdfdf`;
+    return `inset 0px 0px 0px ${rem('14px')} ${theme.palette.flat.lightGray[400]}`;
   }
 
   return css`

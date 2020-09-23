@@ -86,7 +86,7 @@ const Select: React.FC<Props> = ({
       paddingLeft: rem(3),
       backgroundColor: error
         ? transparentize(0.85, theme.palette.error[400])
-        : theme.palette.flat.lightGray[200],
+        : theme.palette.flat.lightGray[100],
       border: error ? `1px solid ${theme.palette.error[400]}` : '0',
       '&:hover': {},
       '&:hover svg': {
