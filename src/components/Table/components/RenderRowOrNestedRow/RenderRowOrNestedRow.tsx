@@ -89,7 +89,6 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
                 padding: theme.spacing.sm,
                 overflow: 'hidden',
                 borderRadius: rem(20),
-                width: rem(20),
                 backgroundColor: checked
                   ? theme.palette.flat.darkGray[400]
                   : theme.palette.flat.lightGray[200],
