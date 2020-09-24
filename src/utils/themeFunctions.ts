@@ -26,7 +26,7 @@ const getColorFromType = (
 ) => {
   switch (type) {
     case 'primary':
-      return theme.palette.primary[400];
+      return theme.palette.primary[100];
     case 'secondary':
       return theme.palette.secondary[400];
     case 'success':
@@ -61,18 +61,18 @@ const getColorFromType = (
 };
 
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
-  getColorFromType(type, theme.palette.flat.lightGray[400], theme);
+  getColorFromType(type, theme.palette.flat.lightGray[100], theme);
 
 export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
   switch (type) {
     case 'primary':
       return theme.palette.text.primary[400];
     case 'secondary':
-      return theme.palette.text.secondary[400];
+      return theme.palette.text.secondary[100];
     default:
       return theme.palette.text.light[100];
   }
 };
 
 export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
-  getColorFromType(type, theme.palette.primary[400], theme);
+  getColorFromType(type, theme.palette.primary[100], theme);

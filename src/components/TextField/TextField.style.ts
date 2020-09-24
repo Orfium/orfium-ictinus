@@ -40,11 +40,15 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
     case 'filled':
     default:
       return `
-        background-color: ${error ? '#fdf2f2' : '#f5f5f5'};
-        box-shadow: inset 0 0 0 1px ${error ? theme.palette.error[400] : '#f5f5f5'};
+        background-color: ${error ? '#fdf2f2' : theme.palette.flat.lightGray[100]};
+        box-shadow: inset 0 0 0 1px ${
+          error ? theme.palette.error[400] : theme.palette.flat.lightGray[100]
+        };
         
         &:focus-within {
-          box-shadow: inset 0 0 0 1px ${error ? theme.palette.error[400] : '#f5f5f5'},
+          box-shadow: inset 0 0 0 1px ${
+            error ? theme.palette.error[400] : theme.palette.flat.lightGray[100]
+          },
             0px 2px 6px 0px rgba(67, 67, 67, 0.15);
         }
       `;

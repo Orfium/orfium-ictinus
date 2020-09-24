@@ -10,6 +10,7 @@ import {
   inputStyles,
   wrapperStyles,
 } from './Radio.style';
+import useTheme from '../../hooks/useTheme';
 
 export type Props = {
   /** The value of the radio input. If no value is passed the default value, according to spec, is "on"
@@ -54,6 +55,7 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
   const [focused, setFocused] = React.useState(false);
   const [internallyControlledChecked, setInternallyControlledChecked] = React.useState(false);
   const radioGroup = useRadioGroup();
+  const theme = useTheme();
 
   function handleFocus() {
     setFocused(true);
@@ -107,7 +109,7 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
           css={customRadioStyles({
             checked: checkedValue,
             disabled,
-          })}
+          })(theme)}
         />
       </span>
     </span>

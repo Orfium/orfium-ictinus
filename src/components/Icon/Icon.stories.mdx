@@ -1,5 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import Icon from './Icon';
 import Stack from '../storyUtils/Stack';
 import PresentComponent from '../storyUtils/PresentComponent';
@@ -31,8 +30,8 @@ All the icons available for use.
   <Story name="Icons Gallery">
     <Stack>
       {Object.keys(iconSelector).map((iconName) => (
-        <PresentComponent name={iconName}>
-          <Icon name={iconName} />
+        <PresentComponent name={iconName} width={150}>
+          <Icon name={iconName} color={'lightGray700'} />
         </PresentComponent>
       ))}
     </Stack>
