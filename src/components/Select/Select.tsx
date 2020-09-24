@@ -71,11 +71,11 @@ const Select: React.FC<Props> = ({
   const customStyles: Styles = {
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isSelected ? '#ededed' : theme.palette.white,
+      backgroundColor: state.isSelected ? theme.palette.flat.lightGray[200] : theme.palette.white,
       color: state.isDisabled ? theme.palette.flat.lightGray[700] : theme.palette.text.primary[400],
       padding: rem(16),
       '&:hover': {
-        backgroundColor: '#f8f8f9',
+        backgroundColor: theme.palette.flat.lightGray[100],
       },
     }),
     control: (base, state) => ({
@@ -139,7 +139,7 @@ const Select: React.FC<Props> = ({
         top: rem(3),
         position: 'relative',
         '&:hover': {
-          backgroundColor: '#cecece',
+          backgroundColor: theme.palette.flat.lightGray[500],
         },
         svg: {
           fill: theme.palette.white,
