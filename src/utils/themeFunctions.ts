@@ -68,7 +68,7 @@ export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (th
     case 'primary':
       return theme.palette.text.primary[400];
     case 'secondary':
-      return theme.palette.text.secondary[400];
+      return theme.palette.text.secondary[100];
     default:
       return theme.palette.text.light[100];
   }
