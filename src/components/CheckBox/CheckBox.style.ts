@@ -29,7 +29,7 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
   background: ${checked
     ? intermediate
       ? theme.palette.flat.darkGray[400]
-      : theme.palette.branded1[400]
+      : theme.palette.branded1[300]
     : theme.palette.flat.lightGray[300]};
   border: 0;
   border-radius: ${rem(2)};
@@ -53,7 +53,7 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
     vertical-align: text-top;
     width: ${rem(26)};
     height: ${rem(26)};
-    background: ${theme.palette.flat.lightGray[400]};
+    background: ${theme.palette.flat.lightGray[300]};
     border-radius: ${rem(2)};
   }
 
