@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import useTheme from '../../../hooks/useTheme';
 import Icon from '../../Icon';
 import { separatorStyles } from './Separator.style';
 
@@ -12,11 +11,10 @@ type Props = {
 
 const Separator: React.FC<Props> = props => {
   const { isLastItem = false } = props;
-  const theme = useTheme();
   if (isLastItem) return null;
 
   return (
-    <span css={separatorStyles()(theme)}>
+    <span css={separatorStyles()}>
       <Icon name={'arrowRight'} color="lightGray400" />
     </span>
   );

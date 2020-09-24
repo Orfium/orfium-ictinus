@@ -5,7 +5,6 @@ import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import useTheme from '../../hooks/useTheme';
 import { breadcrumbLinkStyles, breadcrumbStyles } from './Breadcrumb.style';
 import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
@@ -22,9 +21,8 @@ const MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE = 1;
 
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [] } = props;
-  const theme = useTheme();
   const passDataToRouterLink = ({ to, label }: BreadcrumbItemData) => (
-    <Link css={breadcrumbLinkStyles()(theme)} key={to} to={to}>
+    <Link css={breadcrumbLinkStyles()} key={to} to={to}>
       {label}
     </Link>
   );
@@ -78,7 +76,7 @@ const Breadcrumb: React.FC<Props> = props => {
   );
 
   return (
-    <ol aria-label="Breadcrumb" css={breadcrumbStyles()(theme)}>
+    <ol aria-label="Breadcrumb" css={breadcrumbStyles()}>
       {dataItems.map(getBreadcrumbItem)}
     </ol>
   );

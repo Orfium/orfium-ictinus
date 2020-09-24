@@ -3,7 +3,6 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import Separator from 'components/Breadcrumb/Separator/Separator';
 import { breadcrumbItemStyles } from './BreadcrumbItem.style';
-import useTheme from 'hooks/useTheme';
 import BreadcrumbAdvancedItem from './BreadcrumbAdvancedItem';
 
 type Props = {
@@ -27,7 +26,6 @@ const BreadcrumbItem: React.FC<Props> = props => {
     onChangeHandler,
     lastItemLabel,
   } = props;
-  const theme = useTheme();
   const renderComponentBasedOnOptions = options ? (
     <BreadcrumbAdvancedItem
       onChangeHandler={onChangeHandler}
@@ -40,7 +38,7 @@ const BreadcrumbItem: React.FC<Props> = props => {
 
   return (
     <li>
-      <div css={breadcrumbItemStyles({ active: isLastItem })(theme)}>
+      <div css={breadcrumbItemStyles({ active: isLastItem })}>
         {renderComponentBasedOnOptions}
         <Separator isLastItem={isLastItem} />
       </div>

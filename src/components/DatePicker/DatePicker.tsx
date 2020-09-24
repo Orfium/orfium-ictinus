@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { datePickerStyles } from './DatePicker.style';
-import useTheme from 'hooks/useTheme';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
@@ -79,7 +78,6 @@ const DatePicker: React.FC<Props> = ({
   inputLabel = 'Date',
   styleType = 'filled',
 }) => {
-  const theme = useTheme();
   const dayPickerInputRef = useRef<DayPickerInput>(null);
   const dayPickerRef = useRef<DayPicker>(null);
   const daysInitialState = { from: undefined, to: undefined };
@@ -169,7 +167,7 @@ const DatePicker: React.FC<Props> = ({
   };
 
   return (
-    <div css={datePickerStyles({ isRangePicker })(theme)}>
+    <div css={datePickerStyles({ isRangePicker })}>
       <DayPickerInput
         ref={dayPickerInputRef}
         onDayPickerShow={() => {

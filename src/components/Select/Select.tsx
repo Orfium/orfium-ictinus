@@ -150,7 +150,7 @@ const Select: React.FC<Props> = ({
   };
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div css={{ position: 'relative' }}>
       <ReactSelect
         inputId={`select-${generateUniqueID()}`}
         styles={customStyles}
