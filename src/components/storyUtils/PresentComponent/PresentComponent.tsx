@@ -4,9 +4,10 @@ import * as React from 'react';
 
 type Props = {
   name: string;
+  width?: string;
 };
 
-const PresentComponent: React.FC<Props> = ({ name, children }) => {
+const PresentComponent: React.FC<Props> = ({ name, width = 'auto', children }) => {
   return (
     <div
       style={{
@@ -15,6 +16,7 @@ const PresentComponent: React.FC<Props> = ({ name, children }) => {
         padding: '1rem',
         justifyContent: 'center',
         alignItems: 'center',
+        width,
       }}
     >
       {children}
