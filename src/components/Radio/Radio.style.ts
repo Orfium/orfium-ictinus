@@ -42,9 +42,9 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) =>
   function determineBoxShadow({ checked, disabled }: Pick<Props, 'checked' | 'disabled'>) {
     if (disabled && checked) {
       return `inset 0px 0px 0px ${rem('2px')} ${
-        theme.palette.flat.lightGray[400]
+        theme.palette.flat.lightGray[300]
       }, inset 0px 0px 0px ${rem('7px')} ${
-        theme.palette.flat.lightGray[400]
+        theme.palette.flat.lightGray[300]
       }, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
@@ -58,7 +58,7 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) =>
       }, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
-    return `inset 0px 0px 0px ${rem('14px')} ${theme.palette.flat.lightGray[400]}`;
+    return `inset 0px 0px 0px ${rem('14px')} ${theme.palette.flat.lightGray[300]}`;
   }
 
   return css`
