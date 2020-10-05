@@ -33,13 +33,19 @@ const Breadcrumb: React.FC<Props> = props => {
     itemIndex === dataItems.length - 1;
 
   //Checks if an item is in collapsed area and if should break the breadcrumb items with a collapsed view
-  const shouldCollapse = (item: React.ReactNode, itemIndex: number) =>
-    item &&
-    dataItems.length > MAX_LIMIT_BREADCRUMB_LENGTH &&
-    itemIndex >= MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE &&
-    itemIndex < dataItems.length - MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE;
+  const shouldCollapse = React.useCallback(
+    (item: React.ReactNode, itemIndex: number) =>
+      item &&
+      dataItems.length > MAX_LIMIT_BREADCRUMB_LENGTH &&
+      itemIndex >= MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE &&
+      itemIndex < dataItems.length - MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE,
+    [dataItems]
+  );
 
-  const collapsedItems = React.useMemo(() => dataItems.filter(shouldCollapse), [dataItems]);
+  const collapsedItems = React.useMemo(() => dataItems.filter(shouldCollapse), [
+    shouldCollapse,
+    dataItems,
+  ]);
 
   const {
     label: lastItemLabel,
@@ -48,6 +54,7 @@ const Breadcrumb: React.FC<Props> = props => {
   } = pick(last(data), ['label', 'onChangeHandler', 'options']);
 
   const getBreadcrumbItem = React.useMemo(
+    // eslint-disable-next-line react/display-name
     () => (child: React.ReactNode, index: number) => {
       const itemKey = uniqueId('data_item_');
 
@@ -72,7 +79,14 @@ const Breadcrumb: React.FC<Props> = props => {
         <BreadcrumbItem key={itemKey} childComponent={child} />
       );
     },
-    [dataItems]
+    [
+      dataItems,
+      collapsedItems,
+      lastItemLabel,
+      lastItemOnChangeHandler,
+      lastItemOptions,
+      shouldCollapse,
+    ]
   );
 
   return (
