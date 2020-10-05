@@ -30,7 +30,7 @@ All the icons available for use.
   <Story name="Icons Gallery">
     <Stack>
       {Object.keys(iconSelector).map((iconName) => (
-        <PresentComponent name={iconName} width={150}>
+        <PresentComponent key={iconName} name={iconName} width={150}>
           <Icon name={iconName} color={'lightGray700'} />
         </PresentComponent>
       ))}
