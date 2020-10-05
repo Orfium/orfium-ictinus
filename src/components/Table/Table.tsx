@@ -255,10 +255,13 @@ const TableRowWrapper = <T extends { [key: string]: unknown }>({
   onSelectionChangeExist,
   expanded,
 }: TableRowWrapperProps<T>) => {
-  const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [selectedIds]);
+  const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [
+    row.id,
+    selectedIds,
+  ]);
   const tChange = React.useCallback(() => {
     onSelectionAdd(row.id);
-  }, [row.id, selectedIds]);
+  }, [onSelectionAdd, row.id, selectedIds]);
 
   return (
     <TableRowContext.Provider
