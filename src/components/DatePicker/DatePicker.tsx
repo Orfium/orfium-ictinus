@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import dayjs from 'dayjs';
-import DayPicker, { DateUtils, RangeModifier, DayPickerInputProps } from 'react-day-picker';
+import DayPicker, { DateUtils, DayPickerInputProps, RangeModifier } from 'react-day-picker';
 import DatePickInput from './DatePickInput/DatePickInput';
 import OverlayComponent from './OverlayComponent/OverlayComponent';
 import { Modifier } from 'react-day-picker/types/Modifiers';
@@ -101,7 +101,7 @@ const DatePicker: React.FC<Props> = ({
         dayPickerInputRef.current?.hideDayPicker();
       }
     },
-    [onChange, dayPickerRef, selectedOption, setSelectedDay]
+    [onChange, setSelectedDay]
   );
 
   const handleDayRangeClick = useCallback(
@@ -119,7 +119,7 @@ const DatePicker: React.FC<Props> = ({
 
       handleCalendarValueChange(range, aboutToCompleteBothDates);
     },
-    [selectedDay, setSelectedDay, setSelectedOption, dayPickerInputRef, daysInitialState]
+    [handleCalendarValueChange, selectedDay, daysInitialState]
   );
 
   const handleDayClick = useCallback(
@@ -130,7 +130,7 @@ const DatePicker: React.FC<Props> = ({
       const newValue = { from: day, to: day };
       handleCalendarValueChange(newValue, true);
     },
-    [setSelectedDay, setSelectedOption, dayPickerInputRef]
+    [handleCalendarValueChange]
   );
 
   const handleSelectedOptions = (option: string) => {

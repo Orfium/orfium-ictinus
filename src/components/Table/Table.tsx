@@ -78,13 +78,16 @@ function Table<T>({
     setSelectedIds([]);
   }, [data]);
 
-  const onSelectionChange = (selections: Selection[]) => {
-    setSelectedIds(selections);
+  const onSelectionChange = React.useCallback(
+    (selections: Selection[]) => {
+      setSelectedIds(selections);
 
-    if (onCheck) {
-      onCheck(selections);
-    }
-  };
+      if (onCheck) {
+        onCheck(selections);
+      }
+    },
+    [onCheck]
+  );
 
   const onSelectionAdd = React.useCallback(
     (rowId: Selection) => {
@@ -95,7 +98,7 @@ function Table<T>({
 
       onSelectionChange(selections);
     },
-    [selectedIds]
+    [onSelectionChange, selectedIds]
   );
 
   const columnsHasNumberArr = React.useMemo(
@@ -261,7 +264,7 @@ const TableRowWrapper = <T extends { [key: string]: unknown }>({
   ]);
   const tChange = React.useCallback(() => {
     onSelectionAdd(row.id);
-  }, [onSelectionAdd, row.id, selectedIds]);
+  }, [onSelectionAdd, row.id]);
 
   return (
     <TableRowContext.Provider

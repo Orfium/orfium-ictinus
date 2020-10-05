@@ -1,17 +1,11 @@
 import { shade, tint } from 'polished';
-import {
-  flatPaletteConfigType,
-  generatedColorShades,
-  Palette,
-  PaletteConfig,
-  TextPaletteConfigType,
-} from './palette';
+import { flatPaletteConfigType, generatedColorShades, Palette, PaletteConfig, TextPaletteConfigType } from './palette';
 
 const BASE_PERCENTAGE = 0.25;
 
 const EXCLUDED = ['white', 'black'];
 
-export const convertPointsToPixels = (pt: number) => (96 / 72) * pt;
+export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
 const reduceColorShades = (arr: string[]) =>
   arr
@@ -24,13 +18,13 @@ const reduceColorShades = (arr: string[]) =>
     }, {} as generatedColorShades);
 
 const createShades = (func: (index: number) => string, numOfShades = 4) =>
-  new Array(numOfShades).fill(null).reduce((acc, _, index) => {
+  new Array(numOfShades).fill(null).reduce((acc, __, index) => {
     acc.push(func(index));
 
     return acc;
   }, []);
 
-export const colorShadesCreator = (base: string, per: number) =>
+export const colorShadesCreator = (base: string, per: number): generatedColorShades =>
   reduceColorShades([
     ...createShades((index: number) => shade(per * index, base)).reverse(),
     ...createShades((index: number) => tint(per * index, base)),
@@ -39,7 +33,7 @@ export const colorShadesCreator = (base: string, per: number) =>
 export const iterateObject = <T>(
   obj: T,
   func: (value: string, name: string) => generatedColorShades | string
-) =>
+): Record<string, unknown> =>
   Object.keys(obj).reduce((acc, value) => {
     acc[value] =
       typeof obj[value] !== 'object'
