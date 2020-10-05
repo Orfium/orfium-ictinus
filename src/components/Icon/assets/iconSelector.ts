@@ -41,6 +41,7 @@ import DotsVerticalIcon from './dots-vertical.svg';
 import DownloadIcon from './download.svg';
 import ErrorIcon from './error.svg';
 import ExpensesIcon from './expenses.svg';
+import RefreshIcon from './refresh.svg';
 /**
  * In the current design system the collection of "FatArrowIcon"
  * has been renamed into "ArrowIcon" collection. For backwards
@@ -195,6 +196,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   userAvatar: UserAvatarIcon, // "user" copy (smaller)
   writer: WriterIcon,
   youtube: YoutubeIcon,
+  refresh: RefreshIcon,
 };
 
 export default iconSelector;
