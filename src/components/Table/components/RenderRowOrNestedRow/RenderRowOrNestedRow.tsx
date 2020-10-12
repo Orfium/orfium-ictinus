@@ -139,7 +139,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { r
                 borderBottom: `${rem(1)} solid ${theme.palette.flat.lightGray[400]}`,
               }}
             >
-              <table css={tableStyle()(theme)}>
+              <table css={tableStyle()()}>
                 <tbody>
                   <RenderRowWithCells {...{ checked, toggleChecked }} />
                   {checked && (

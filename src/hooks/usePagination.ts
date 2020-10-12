@@ -21,12 +21,12 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
     const page = 1;
     setCurrentPage(page);
     handleChange(page);
-  }, []);
+  }, [handleChange]);
 
   const navigateToLastPage = React.useCallback(() => {
     setCurrentPage(count);
     handleChange(count);
-  }, [count]);
+  }, [handleChange, count]);
 
   const navigateToNextPage = React.useCallback(() => {
     let nextPage = currentPage;
@@ -36,7 +36,7 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
     }
     setCurrentPage(nextPage);
     handleChange(nextPage);
-  }, [count, currentPage]);
+  }, [handleChange, count, currentPage]);
 
   const navigateToPrevPage = React.useCallback(() => {
     let prevPage = currentPage;
@@ -46,7 +46,7 @@ const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) =
     }
     setCurrentPage(prevPage);
     handleChange(prevPage);
-  }, [currentPage]);
+  }, [handleChange, currentPage]);
 
   return {
     currentPage,

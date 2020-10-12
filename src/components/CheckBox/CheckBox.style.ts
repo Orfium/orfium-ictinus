@@ -3,13 +3,13 @@ import { rem, transparentize } from 'polished';
 import { Theme } from '../../theme';
 import { Props } from './CheckBox';
 
-export const wrapperStyle = ({ disabled }: Props) => (theme: Theme): SerializedStyles => css`
+export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
   opacity: ${disabled ? 0.3 : 1};
   justify-content: center;
   align-items: center;
 `;
 
-export const checkboxWrapperStyle = () => (theme: Theme) => css`
+export const checkboxWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   border-radius: 100%;
   width: ${rem(50)};
   height: ${rem(50)};
@@ -78,7 +78,7 @@ export const checkboxStyle = ({ intermediate, checked }: Props) => (
       ? `width: ${rem(10)};`
       : `width: ${rem(2)};
       box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
-      transform: rotate(45deg);`}
+      transform: rotate(45deg);`};
     background: white;
   }
 `;
