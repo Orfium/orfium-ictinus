@@ -38,7 +38,7 @@ const RenderRowWithCells = React.memo(({ checked = false, toggleChecked = () => 
       css={bordered && { borderBottom: `${rem(1)} solid ${theme.palette.flat.lightGray[400]}` }}
     >
       {onSelectionChangeExist && (
-        <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
+        <TableCell component={'td'} sticky={fixedHeader} width={50} padded={padded}>
           <CheckBox checked={isRowSelected} onClick={tChange} />
         </TableCell>
       )}

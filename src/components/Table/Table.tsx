@@ -184,7 +184,7 @@ function Table<T>({
                 ]}
               >
                 {onCheck && (
-                  <TableCell component={'th'} sticky={fixedHeader} width={30} padded={padded} />
+                  <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded} />
                 )}
                 {columns.map((item, index) => (
                   <TableCell

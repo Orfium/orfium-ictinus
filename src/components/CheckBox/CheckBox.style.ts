@@ -7,6 +7,7 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   opacity: ${disabled ? 0.3 : 1};
   justify-content: center;
   align-items: center;
+  display: flex;
 `;
 
 export const checkboxWrapperStyle = () => (theme: Theme): SerializedStyles => css`
@@ -16,9 +17,16 @@ export const checkboxWrapperStyle = () => (theme: Theme): SerializedStyles => cs
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.2s;
 
-  &:hover {
+  &:before {
+    border-radius: 100%;
+    transition: all 0.2s;
+    content: ' ';
+    width: ${rem(50)};
+    height: ${rem(50)};
+    position: absolute;
+  }
+  &:hover:before {
     background: ${transparentize(0.7, theme.palette.flat.lightGray[400])};
   }
 `;
