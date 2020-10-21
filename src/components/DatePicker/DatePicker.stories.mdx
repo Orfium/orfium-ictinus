@@ -10,6 +10,7 @@ const options = {
   'Enable dates from/to a date (7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
 }
 const styleTypeOptions = ['filled', 'outlined', 'elevated']
+const dateFormatOptions = ['MM/DD/YYYY', 'MMMM D, YYYY', 'dddd, MMMM D, YYYY', 'M/D/YYYY', 'MMM D, YYYY', 'ddd, MMM D, YYYY']
 
 <Meta title="Design System/DatePicker" component={DatePicker} />
 
@@ -39,6 +40,7 @@ Implementation of the regular DatePicker
       isRangePicker
       styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
       disableDates={select('disableDates', options, options[0])}
+      dateFormat={select('dateFormat', dateFormatOptions, dateFormatOptions[0])}
     />
   </Story>
 </Preview>

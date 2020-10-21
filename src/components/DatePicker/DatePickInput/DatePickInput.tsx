@@ -6,7 +6,7 @@ import { flex } from '../../../theme/functions';
 import Icon from '../../Icon';
 import TextField from '../../TextField';
 import { wrapperStyle } from '../../TextField/TextField.style';
-import { DateRange } from '../DatePicker';
+import { DateFormatType, DateRange } from '../DatePicker';
 import { formFieldStyles } from '../../../theme/palette';
 
 type Props = {
@@ -15,6 +15,7 @@ type Props = {
   inputLabel: string;
   /** Style of input field */
   styleType: formFieldStyles;
+  dateFormat: DateFormatType
 } & DayPickerInputProps;
 
 const DatePickInput: React.FC<Props> = ({
@@ -22,13 +23,16 @@ const DatePickInput: React.FC<Props> = ({
   styleType,
   selectedDay,
   inputLabel,
+  dateFormat ,
   ...props
 }) => {
   const theme = useTheme();
   const getDateFormatted = React.useCallback(
-    (date: Date | undefined) => (date ? dayjs(date).format('MM/DD/YYYY') : ''),
+    (date: Date | undefined) => (date ? dayjs(date).format(dateFormat) : ''),
     []
   );
+
+  console.log(getDateFormatted(selectedDay.from), dateFormat);
 
   return isRangePicker ? (
     <div
