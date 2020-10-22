@@ -69,23 +69,23 @@ function Table<T>({
   topRightArea,
 }: Props<T>) {
   const theme = useTheme();
-  const [selectedIds, setSelectedIds] = React.useState<Selection[]>([]);
+  const [selectedIds, setSelectedIds] = React.useState<Selection[] | undefined>(undefined);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
-  React.useEffect(() => {
-    // when changing data reset the selecting ids since it might have changed
-    setSelectedIds([]);
-  }, [data]);
+  // React.useEffect(() => {
+  //   // when changing data reset the selecting ids since it might have changed
+  //   setSelectedIds([]);
+  // }, [data]);
 
   /** when the selection of ids change then inform the user if onCheck callback provided **/
   React.useEffect(() => {
-    if (onCheck) {
-      onCheck(selectedIds);
+    if (onCheck && selectedIds) {
+      onCheck(selectedIds as Selection[]);
     }
   }, [onCheck, selectedIds]);
 
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
-    setSelectedIds((selectedIds: Selection[]) =>
+    setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
         ? [...selectedIds, rowId]
         : selectedIds.filter(item => item !== rowId)
@@ -125,10 +125,12 @@ function Table<T>({
               {onCheck && (
                 <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
                   <CheckBox
-                    checked={Boolean(selectedIds.length > 0)}
-                    intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
+                    checked={Boolean(selectedIds && selectedIds.length > 0)}
+                    intermediate={
+                      selectedIds && selectedIds.length > 0 && selectedIds?.length !== data.length
+                    }
                     onClick={() => {
-                      if (selectedIds.length === data.length) {
+                      if (selectedIds?.length === data.length) {
                         setSelectedIds([]);
                       } else {
                         setSelectedIds(data.map(({ id }) => id));
@@ -138,7 +140,7 @@ function Table<T>({
                 </TableCell>
               )}
               <TableCell padded={padded}>
-                {selectedIds.length > 0 ? (
+                {selectedIds && selectedIds?.length > 0 ? (
                   <span>
                     <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
                   </span>
@@ -146,7 +148,7 @@ function Table<T>({
                   topLeftText
                 )}
               </TableCell>
-              {topRightArea && (
+              {topRightArea && selectedIds && (
                 <TableCell
                   textAlign={'right'}
                   padded={padded}
@@ -200,7 +202,7 @@ function Table<T>({
               key={row.id}
               {...{
                 row,
-                isRowSelected: selectedIds.indexOf(row.id) !== -1,
+                isRowSelected: selectedIds ? selectedIds.indexOf(row.id) !== -1 : false,
                 onSelectionAdd,
                 padded,
                 columns,

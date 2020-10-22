@@ -15,6 +15,7 @@ const ExpandedButtonCell: React.FC<Props> = ({ isExpandedExists, checked, toggle
     <TableCell width={67}>
       <div>
         <div
+          data-testid="expanded-button"
           css={{
             padding: theme.spacing.sm,
             overflow: 'hidden',
