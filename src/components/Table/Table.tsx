@@ -89,25 +89,17 @@ function Table<T>({
 
   const columnsHasNumberArr = React.useMemo(
     () =>
-      head(
-        data.map(({ cells }) =>
-          cells.map(({ content }) => {
-            return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
-          })
-        )
-      ) || [],
+      head(data)?.cells.map(({ content }) => {
+        return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
+      }) || [],
     [data]
   );
 
   const columnsWithWidth = React.useMemo(
     () =>
-      head(
-        data.map(({ cells }) =>
-          cells.map(({ widthPercentage }) => {
-            return widthPercentage;
-          })
-        )
-      ) || [],
+      head(data)?.cells.map(({ widthPercentage }) => {
+        return widthPercentage;
+      }) || [],
     [data]
   );
 
