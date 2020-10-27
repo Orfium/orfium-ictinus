@@ -72,11 +72,6 @@ function Table<T>({
   const [selectedIds, setSelectedIds] = React.useState<Selection[] | undefined>(undefined);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
-  // React.useEffect(() => {
-  //   // when changing data reset the selecting ids since it might have changed
-  //   setSelectedIds([]);
-  // }, [data]);
-
   /** when the selection of ids change then inform the user if onCheck callback provided **/
   React.useEffect(() => {
     if (onCheck && selectedIds) {
