@@ -27,7 +27,9 @@ export type Props = {
   /** Style of input field */
   styleType?: formFieldStyles;
   /** The format of the date displayed in the input field */
-  dateFormat?: DateFormatType
+  dateFormat?: DateFormatType;
+  /** Indicates if we should use locale system's date for the date picker*/
+  hasLocalizedFormat: boolean;
 };
 
 export type DateRange =
@@ -87,7 +89,8 @@ const DatePicker: React.FC<Props> = ({
   },
   inputLabel = 'Date',
   styleType = 'filled',
-  dateFormat = 'MM/DD/YYYY'
+  dateFormat = 'MM/DD/YYYY',
+  hasLocalizedFormat= true
 }) => {
   const dayPickerInputRef = useRef<DayPickerInput>(null);
   const dayPickerRef = useRef<DayPicker>(null);
@@ -198,6 +201,7 @@ const DatePicker: React.FC<Props> = ({
         component={(props: DayPickerInputProps) => (
           <DatePickInput
             {...props}
+            hasLocalizedFormat={hasLocalizedFormat}
             styleType={styleType}
             inputLabel={inputLabel}
             selectedDay={selectedDay}
