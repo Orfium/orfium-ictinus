@@ -20,10 +20,10 @@ export function isComponentFunctionType(
 }
 
 /**  A function that retrieves the correct date format based on system's locale */
-export const getLocaleFormat = (hasLocalizedFormat: boolean, fallbackDateFormat: string) => {
+export const getLocaleFormat = (dateFormat: string | undefined) => {
   const localeFormat = dayjs()
     ?.localeData()
     ?.longDateFormat('L');
 
-  return hasLocalizedFormat && localeFormat ? localeFormat : fallbackDateFormat;
+  return dateFormat ? dateFormat : localeFormat;
 };

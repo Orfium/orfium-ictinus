@@ -40,10 +40,26 @@ Implementation of the regular DatePicker
       isRangePicker
       styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
       disableDates={select('disableDates', options, options[0])}
-      dateFormat={select('dateFormat', dateFormatOptions, dateFormatOptions[0])}
+      dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[0])}
     />
   </Story>
 </Preview>
+
+
+# DatePicker - locale date format
+
+Implementation of the regular DatePicker with locale date format
+
+<Preview>
+  <Story name="DatePicker with locale date format" parameters={{ decorators: [withKnobs] }}>
+    <DatePicker
+      isRangePicker
+      styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
+      disableDates={select('disableDates', options, options[0])}
+    />
+  </Story>
+</Preview>
+
 
 # DayPicker
 

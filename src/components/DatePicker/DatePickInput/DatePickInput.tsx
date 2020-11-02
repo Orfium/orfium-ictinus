@@ -11,6 +11,8 @@ import { formFieldStyles } from '../../../theme/palette';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
 import localeData from 'dayjs/plugin/localeData';
 import { getLocaleFormat } from '../../../utils/helpers';
+import 'dayjs/locale/en-gb';
+import 'dayjs/locale/en';
 
 type Props = {
   isRangePicker: boolean;
@@ -18,27 +20,34 @@ type Props = {
   inputLabel: string;
   /** Style of input field */
   styleType: formFieldStyles;
-  dateFormat: DateFormatType;
-  hasLocalizedFormat: boolean;
+  dateFormat?: DateFormatType;
 } & DayPickerInputProps;
 
 [localizedFormat, localeData].forEach(dayjs.extend);
+
+(function InitDatePickerLocaleFormat(usLocale: string, euLocale: string) {
+  const browserLanguage = navigator?.language === 'en-GB' ? euLocale : usLocale;
+  dayjs.locale(browserLanguage);
+})('en', 'en-gb');
 
 const DatePickInput: React.FC<Props> = ({
   isRangePicker,
   styleType,
   selectedDay,
   inputLabel,
-  dateFormat,
-  hasLocalizedFormat,
+  dateFormatOverride = undefined,
   ...props
 }) => {
   const theme = useTheme();
   const formatDate = (date: Date | undefined) => {
-    return date ? dayjs(date).format(getLocaleFormat(hasLocalizedFormat, dateFormat)) : '';
+    return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
   };
 
   const getDateFormatted = React.useCallback(formatDate, []);
+
+  console.log(
+    selectedDay.from && dayjs(selectedDay.from).format(getLocaleFormat(dateFormatOverride))
+  );
 
   return isRangePicker ? (
     <div
