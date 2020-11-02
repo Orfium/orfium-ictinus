@@ -20,7 +20,7 @@ type Props = {
   inputLabel: string;
   /** Style of input field */
   styleType: formFieldStyles;
-  dateFormat?: DateFormatType;
+  dateFormatOverride?: DateFormatType;
 } & DayPickerInputProps;
 
 [localizedFormat, localeData].forEach(dayjs.extend);
