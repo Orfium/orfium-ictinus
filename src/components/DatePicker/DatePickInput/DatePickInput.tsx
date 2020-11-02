@@ -23,9 +23,8 @@ type Props = {
   dateFormatOverride?: DateFormatType;
 } & DayPickerInputProps;
 
-[localizedFormat, localeData].forEach(dayjs.extend);
-
 (function InitDatePickerLocaleFormat(usLocale: string, euLocale: string) {
+  [localizedFormat, localeData].forEach(dayjs.extend);
   const browserLanguage = navigator?.language === 'en-GB' ? euLocale : usLocale;
   dayjs.locale(browserLanguage);
 })('en', 'en-gb');
