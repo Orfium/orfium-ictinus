@@ -2,8 +2,9 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { ChangeEvent } from 'react';
-import { generateUniqueID } from '../../utils/helpers';
+import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
 import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
+import { TestId } from '../../utils/types';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -16,6 +17,8 @@ export type Props = {
   disabled?: boolean;
   /** Boolean defining if the checkbox is in intermediate state when checked ( - instead of ✓ ). Defaults to false */
   intermediate?: boolean;
+  /** The data test id if needed */
+  dataTestId?: TestId;
 };
 
 const CheckBox: React.FC<Props> = ({
@@ -24,6 +27,7 @@ const CheckBox: React.FC<Props> = ({
   onClick,
   disabled = false,
   intermediate = false,
+  dataTestId,
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
   const id = generateUniqueID();
@@ -44,6 +48,7 @@ const CheckBox: React.FC<Props> = ({
     <span css={wrapperStyle({ disabled })}>
       <span css={checkboxWrapperStyle()}>
         <input
+          data-testid={generateTestDataId('checkbox', dataTestId)}
           css={checkboxStyle({ intermediate, checked })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
