@@ -1,7 +1,7 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  testRegex: '(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$',
+  testRegex: '(\\.(test|spec))\\.(ts|tsx|js)$',
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
     '^.+\\.mdx?$': '@storybook/addon-docs/jest-transform-mdx',
@@ -10,6 +10,6 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'mdx'],
   moduleDirectories: ['<rootDir>/src', 'node_modules'],
   moduleNameMapper: {
-    '\\.svg$': '<rootDir>/__mocks__/fileMock.ts',
+    '\\.svg$': '<rootDir>/__mocks__/fileMock.tsx',
   },
 };

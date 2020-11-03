@@ -6,11 +6,10 @@ import rem from 'polished/lib/helpers/rem';
 import * as React from 'react';
 import useTheme from '../../hooks/useTheme';
 import CheckBox from '../CheckBox';
-import RenderRowOrNestedRow from './components/RenderRowOrNestedRow';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import { tableStyle } from './Table.style';
-import { TableRowContext } from './TableRowContext';
+import TableRowWrapper from './components/TableRowWrapper';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -70,58 +69,37 @@ function Table<T>({
   topRightArea,
 }: Props<T>) {
   const theme = useTheme();
-  const [selectedIds, setSelectedIds] = React.useState<Selection[]>([]);
+  const [selectedIds, setSelectedIds] = React.useState<Selection[] | undefined>(undefined);
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
+  /** when the selection of ids change then inform the user if onCheck callback provided **/
   React.useEffect(() => {
-    // when changing data reset the selecting ids since it might have changed
-    setSelectedIds([]);
-  }, [data]);
+    if (onCheck && selectedIds) {
+      onCheck(selectedIds as Selection[]);
+    }
+  }, [onCheck, selectedIds]);
 
-  const onSelectionChange = React.useCallback(
-    (selections: Selection[]) => {
-      setSelectedIds(selections);
-
-      if (onCheck) {
-        onCheck(selections);
-      }
-    },
-    [onCheck]
-  );
-
-  const onSelectionAdd = React.useCallback(
-    (rowId: Selection) => {
-      const selections =
-        selectedIds.indexOf(rowId) === -1
-          ? [...selectedIds, rowId]
-          : selectedIds.filter(item => item !== rowId);
-
-      onSelectionChange(selections);
-    },
-    [onSelectionChange, selectedIds]
-  );
+  const onSelectionAdd = React.useCallback((rowId: Selection) => {
+    setSelectedIds((selectedIds: Selection[] = []) =>
+      selectedIds.indexOf(rowId) === -1
+        ? [...selectedIds, rowId]
+        : selectedIds.filter(item => item !== rowId)
+    );
+  }, []);
 
   const columnsHasNumberArr = React.useMemo(
     () =>
-      head(
-        data.map(({ cells }) =>
-          cells.map(({ content }) => {
-            return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
-          })
-        )
-      ) || [],
+      head(data)?.cells.map(({ content }) => {
+        return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
+      }) || [],
     [data]
   );
 
   const columnsWithWidth = React.useMemo(
     () =>
-      head(
-        data.map(({ cells }) =>
-          cells.map(({ widthPercentage }) => {
-            return widthPercentage;
-          })
-        )
-      ) || [],
+      head(data)?.cells.map(({ widthPercentage }) => {
+        return widthPercentage;
+      }) || [],
     [data]
   );
 
@@ -134,20 +112,22 @@ function Table<T>({
               {onCheck && (
                 <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
                   <CheckBox
-                    checked={Boolean(selectedIds.length > 0)}
-                    intermediate={selectedIds.length > 0 && selectedIds.length !== data.length}
+                    checked={Boolean(selectedIds && selectedIds.length > 0)}
+                    intermediate={
+                      selectedIds && selectedIds.length > 0 && selectedIds?.length !== data.length
+                    }
                     onClick={() => {
-                      if (selectedIds.length === data.length) {
-                        onSelectionChange([]);
+                      if (selectedIds?.length === data.length) {
+                        setSelectedIds([]);
                       } else {
-                        onSelectionChange(data.map(({ id }) => id));
+                        setSelectedIds(data.map(({ id }) => id));
                       }
                     }}
                   />
                 </TableCell>
               )}
               <TableCell padded={padded}>
-                {selectedIds.length > 0 ? (
+                {selectedIds && selectedIds?.length > 0 ? (
                   <span>
                     <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
                   </span>
@@ -155,7 +135,7 @@ function Table<T>({
                   topLeftText
                 )}
               </TableCell>
-              {topRightArea && (
+              {topRightArea && selectedIds && (
                 <TableCell
                   textAlign={'right'}
                   padded={padded}
@@ -209,7 +189,7 @@ function Table<T>({
               key={row.id}
               {...{
                 row,
-                selectedIds,
+                isRowSelected: selectedIds ? selectedIds.indexOf(row.id) !== -1 : false,
                 onSelectionAdd,
                 padded,
                 columns,
@@ -228,64 +208,5 @@ function Table<T>({
     </React.Fragment>
   );
 }
-
-type TableRowWrapperProps<T> = {
-  row: Row<T>;
-  selectedIds: Selection[];
-  onSelectionAdd: (selection: Selection) => void;
-  columnsHasNumberArr: boolean[];
-  columnsWithWidth: number[];
-  padded: boolean;
-  onSelectionChangeExist: boolean;
-  columnCount: number;
-  columns: string[];
-  fixedHeader: boolean;
-  type: TableType;
-  expanded: boolean;
-};
-
-const TableRowWrapper = <T extends { [key: string]: unknown }>({
-  row,
-  selectedIds,
-  onSelectionAdd,
-  padded,
-  columns,
-  fixedHeader,
-  type,
-  columnsHasNumberArr,
-  columnsWithWidth,
-  columnCount,
-  onSelectionChangeExist,
-  expanded,
-}: TableRowWrapperProps<T>) => {
-  const isRowSelected = React.useMemo(() => selectedIds.indexOf(row.id) !== -1, [
-    row.id,
-    selectedIds,
-  ]);
-  const tChange = React.useCallback(() => {
-    onSelectionAdd(row.id);
-  }, [onSelectionAdd, row.id]);
-
-  return (
-    <TableRowContext.Provider
-      value={{
-        row,
-        columnsHasNumberArr,
-        columnsWithWidth,
-        onSelectionChangeExist,
-        padded,
-        columns,
-        fixedHeader,
-        tChange,
-        type,
-        columnCount,
-        isRowSelected,
-        bordered: !expanded,
-      }}
-    >
-      <RenderRowOrNestedRow<T> {...{ row }} />
-    </TableRowContext.Provider>
-  );
-};
 
 export default Table;
