@@ -8,11 +8,7 @@ import TextField from '../../TextField';
 import { wrapperStyle } from '../../TextField/TextField.style';
 import { DateFormatType, DateRange } from '../DatePicker';
 import { formFieldStyles } from '../../../theme/palette';
-import localizedFormat from 'dayjs/plugin/localizedFormat';
-import localeData from 'dayjs/plugin/localeData';
 import { getLocaleFormat } from '../../../utils/helpers';
-import 'dayjs/locale/en-gb';
-import 'dayjs/locale/en';
 
 type Props = {
   isRangePicker: boolean;
@@ -22,12 +18,6 @@ type Props = {
   styleType: formFieldStyles;
   dateFormatOverride?: DateFormatType;
 } & DayPickerInputProps;
-
-(function InitDatePickerLocaleFormat(usLocale: string, euLocale: string) {
-  [localizedFormat, localeData].forEach(dayjs.extend);
-  const browserLanguage = navigator?.language === 'en-GB' ? euLocale : usLocale;
-  dayjs.locale(browserLanguage);
-})('en', 'en-gb');
 
 const DatePickInput: React.FC<Props> = ({
   isRangePicker,
