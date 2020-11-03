@@ -26,6 +26,8 @@ export type Props = {
   inputLabel?: string;
   /** Style of input field */
   styleType?: formFieldStyles;
+  /** The format of the date displayed in the input field */
+  dateFormatOverride?: DateFormatType;
 };
 
 export type DateRange =
@@ -36,6 +38,14 @@ export type DateRange =
     };
 
 export type ExtraOption = { value: string; label: string; dates: Date | Date[] };
+
+export type DateFormatType =
+  | 'MM/DD/YYYY'
+  | 'MMMM D, YYYY'
+  | 'dddd, MMMM D, YYYY'
+  | 'M/D/YYYY'
+  | 'MMM D, YYYY'
+  | 'ddd, MMM D, YYYY';
 
 const extraOptions: ExtraOption[] = [
   {
@@ -77,6 +87,7 @@ const DatePicker: React.FC<Props> = ({
   },
   inputLabel = 'Date',
   styleType = 'filled',
+  dateFormatOverride = undefined,
 }) => {
   const dayPickerInputRef = useRef<DayPickerInput>(null);
   const dayPickerRef = useRef<DayPicker>(null);
@@ -191,6 +202,7 @@ const DatePicker: React.FC<Props> = ({
             inputLabel={inputLabel}
             selectedDay={selectedDay}
             isRangePicker={isRangePicker}
+            dateFormatOverride={dateFormatOverride}
           />
         )}
         hideOnDayClick={false}
