@@ -44,10 +44,6 @@ const DatePickInput: React.FC<Props> = ({
 
   const getDateFormatted = React.useCallback(formatDate, []);
 
-  console.log(
-    selectedDay.from && dayjs(selectedDay.from).format(getLocaleFormat(dateFormatOverride))
-  );
-
   return isRangePicker ? (
     <div
       css={[
