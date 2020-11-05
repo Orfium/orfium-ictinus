@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { notificationsContainer } from './Notification.style';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
 
@@ -33,11 +34,11 @@ const Notification: React.FC<Props> = ({
   secondaryAction,
 }) => {
   return (
-    <React.Fragment>
+    <div css={notificationsContainer('success')}>
       <h1>message: {message} </h1>
       <h2>type: {type}</h2>
       <h2>variant: {variant}</h2>
-    </React.Fragment>
+    </div>
   );
 };
 
