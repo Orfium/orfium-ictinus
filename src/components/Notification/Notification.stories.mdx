@@ -1,0 +1,32 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
+import Notification from '../Notification';
+
+<Meta title="Design System/Notification" component={Notification} />
+
+# Notification
+
+# Usage
+
+```js
+import { Notification } from '@orfium/ictinus';
+
+<Notification />
+
+```
+
+# Props
+
+<Props of={Notification} />
+
+# Inline Notification
+
+Inline Notification
+
+<Preview>
+    <Story name="Notification: first attempt" parameters={{ decorators: [withKnobs] }}>
+        <Notification message={text('info', 'This is the info')} 
+            type={select('type', ['success', 'error', 'info', 'warning'], 'info')}  
+            variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')} />
+    </Story>
+</Preview>
