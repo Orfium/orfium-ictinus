@@ -92,4 +92,5 @@ export type AcceptedIconNames =
   | 'userAvatar'
   | 'writer'
   | 'youtube'
-  | 'refresh';
+  | 'refresh'
+  | 'star';
