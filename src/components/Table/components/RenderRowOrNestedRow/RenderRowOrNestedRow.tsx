@@ -45,7 +45,7 @@ const RenderRowWithCells = React.memo(
       >
         {onSelectionChangeExist && (
           <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
-            <CheckBox dataTestId={'row-check'} checked={isRowSelected} onClick={tChange} />
+            <CheckBox dataTestIdSuffix={'row-check'} checked={isRowSelected} onClick={tChange} />
           </TableCell>
         )}
         {row.cells.map(({ content, colSpan, type: cellType, align }, index) => (
