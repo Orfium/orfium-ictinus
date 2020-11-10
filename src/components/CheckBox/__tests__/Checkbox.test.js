@@ -20,7 +20,7 @@ describe('Checkbox Component', () => {
     expect(checkbox.checked).toEqual(true);
   });
 
-  it('should invoke the onClick method', () => {
+  it('should invoke the onClick function', () => {
     const mockOnClick = jest.fn();
     wrapper = render(<CheckBox onClick={mockOnClick} dataTestIdSuffix={'with-on-click'} />);
     const { getByTestId } = wrapper;
@@ -32,7 +32,7 @@ describe('Checkbox Component', () => {
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('should NOT invoke the onClick method if the button is disabled', () => {
+  it('should NOT invoke the onClick function if the button is disabled', () => {
     const mockOnClick = jest.fn();
     wrapper = render(<CheckBox disabled onClick={mockOnClick} dataTestIdSuffix={'disabled'} />);
     const { getByTestId } = wrapper;
