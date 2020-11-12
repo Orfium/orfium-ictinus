@@ -7,6 +7,7 @@ import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';
 import { css, Global } from '@emotion/core';
 import { normalize } from 'polished';
+import 'utils/initLocaleFormat';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */

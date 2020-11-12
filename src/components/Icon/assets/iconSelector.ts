@@ -42,6 +42,8 @@ import DownloadIcon from './download.svg';
 import ErrorIcon from './error.svg';
 import ExpensesIcon from './expenses.svg';
 import RefreshIcon from './refresh.svg';
+import StarIcon from './star.svg';
+
 /**
  * In the current design system the collection of "FatArrowIcon"
  * has been renamed into "ArrowIcon" collection. For backwards
@@ -197,6 +199,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   writer: WriterIcon,
   youtube: YoutubeIcon,
   refresh: RefreshIcon,
+  star: StarIcon,
 };
 
 export default iconSelector;

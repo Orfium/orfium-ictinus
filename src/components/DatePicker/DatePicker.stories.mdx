@@ -10,6 +10,15 @@ const options = {
   'Enable dates from/to a date (7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
 }
 const styleTypeOptions = ['filled', 'outlined', 'elevated']
+const dateFormatOptions = {
+  'Enables system\'s locale format' : undefined,
+  'MM/DD/YYYY':'MM/DD/YYYY',
+  'MMMM D, YYYY': 'MMMM D, YYYY',
+  'dddd, MMMM D, YYYY':'dddd, MMMM D, YYYY',
+  'M/D/YYYY':  'M/D/YYYY',
+  'MMM D, YYYY': 'MMM D, YYYY',
+  'ddd, MMM D, YYYY': 'ddd, MMM D, YYYY'
+}
 
 <Meta title="Design System/DatePicker" component={DatePicker} />
 
@@ -31,7 +40,8 @@ import { DatePicker } from '@orfium/ictinus';
 
 # DatePicker
 
-Implementation of the regular DatePicker
+Implementation of the regular DatePicker.
+
 
 <Preview>
   <Story name="DatePicker" parameters={{ decorators: [withKnobs] }}>
@@ -39,6 +49,7 @@ Implementation of the regular DatePicker
       isRangePicker
       styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
       disableDates={select('disableDates', options, options[0])}
+      dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[0])}
     />
   </Story>
 </Preview>
