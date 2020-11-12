@@ -34,10 +34,8 @@ const Notification: React.FC<Props> = ({
   secondaryAction,
 }) => {
   return (
-    <div css={notificationsContainer('success')}>
-      <h1>message: {message} </h1>
-      <h2>type: {type}</h2>
-      <h2>variant: {variant}</h2>
+    <div css={notificationsContainer(type)}>
+      <p>{message} </p>
     </div>
   );
 };
