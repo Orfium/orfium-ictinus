@@ -55,7 +55,7 @@ type Props<T> = {
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
-  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component | JSX.Element;
+  topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.Component | JSX.Element;
 };
 
 function Table<T>({
@@ -135,7 +135,7 @@ function Table<T>({
                   topLeftText
                 )}
               </TableCell>
-              {topRightArea && selectedIds && (
+              {topRightArea && (
                 <TableCell
                   textAlign={'right'}
                   padded={padded}
