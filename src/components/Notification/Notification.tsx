@@ -66,6 +66,7 @@ const Notification: React.FC<Props> = ({
           css={primaryActionContainer()}
           onClick={e => {
             e.preventDefault();
+            primaryAction();
           }}
         >
           Action

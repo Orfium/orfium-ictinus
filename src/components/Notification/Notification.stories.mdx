@@ -27,6 +27,7 @@ Inline Notification
     <Story name="Notification: first attempt" parameters={{ decorators: [withKnobs] }}>
         <Notification message={text('info', 'This is the info')} 
             type={select('type', ['success', 'error', 'info', 'alert'], 'success')}  
-            variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')} />
+            variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
+            primaryAction={() => console.log('action clicked')} />
     </Story>
 </Preview>
