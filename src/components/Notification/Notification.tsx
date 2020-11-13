@@ -11,6 +11,7 @@ import {
   closeIconContainer,
 } from './Notification.style';
 import Icon from '../Icon';
+import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
 
@@ -23,41 +24,47 @@ export type Props = {
   variant: NotificationVariants;
   /** The type of the Notification */
   type: NotificationTypes;
-  /** The primary action of the Notification */
-  primaryAction: () => void;
+  /** The primary call-to-action label of the Notification */
+  primaryCTALabel: string;
+  /** The primary call-to-action of the Notification */
+  primaryCTA: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
   /** The description of the Notification */
   description?: string;
-  /** The scondary action of the Notification */
-  secondaryAction?: () => void;
+  /** The secondary call-to-action label of the Notification */
+  secondaryCTALabel?: string;
+  /** The secondary call-to-action of the Notification */
+  secondaryCTA?: () => void;
 };
+
+const typeToColor = (type: string): AcceptedColorComponentTypes =>
+  type === 'success'
+    ? 'success'
+    : type === 'error'
+    ? 'error'
+    : type === 'info'
+    ? 'darkBlue400'
+    : type === 'alert'
+    ? 'warning'
+    : 'primary';
 
 const Notification: React.FC<Props> = ({
   message,
   variant,
   type,
-  primaryAction,
+  primaryCTALabel,
+  primaryCTA,
   title,
   description,
-  secondaryAction,
+  secondaryCTALabel,
+  secondaryCTA,
 }) => {
-  const iconColor =
-    type === 'success'
-      ? 'success'
-      : type === 'error'
-      ? 'error'
-      : type === 'info'
-      ? 'info'
-      : type === 'alert'
-      ? 'warning'
-      : 'primary';
-
   return (
-    <div css={notificationsContainer(type)}>
+    <div css={notificationsContainer(variant, type)}>
       <div css={infoContainer()}>
         <div css={infoIconContainer()}>
-          <Icon name={type} color={iconColor} />
+          <Icon name={type} color={typeToColor(type)} />
         </div>
         <div css={infoMessageContainer()}>{message}</div>
       </div>
@@ -66,13 +73,13 @@ const Notification: React.FC<Props> = ({
           css={primaryActionContainer()}
           onClick={e => {
             e.preventDefault();
-            primaryAction();
+            primaryCTA();
           }}
         >
-          Action
+          {primaryCTALabel}
         </span>
         <div css={closeIconContainer()}>
-          <Icon name="close" color="dark" />
+          <Icon name="close" color="lightGray500" />
         </div>
       </div>
     </div>
