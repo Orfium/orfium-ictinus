@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, text, select } from '@storybook/addon-knobs';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
 
 <Meta title="Design System/Notification" component={Notification} />
@@ -25,7 +25,9 @@ Inline Notification
 
 <Preview>
     <Story name="Notification: first attempt" parameters={{ decorators: [withKnobs] }}>
-        <Notification message={text('info', 'This is the info')} 
+        <Notification filling={boolean('filling', false)}
+            icon={boolean('icon', true)}
+            message={text('info', 'This is the info')} 
             type={select('type', ['success', 'error', 'info', 'alert'], 'success')}  
             variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
             primaryCTALabel={text('primaryCTALabel', 'Action')}

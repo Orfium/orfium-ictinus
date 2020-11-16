@@ -18,6 +18,10 @@ export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
 export type NotificationVariants = 'inline' | 'banner' | 'toast' | 'modal';
 
 export type Props = {
+  /** Show notification icon based on the type */
+  icon: boolean;
+  /** Use color filling */
+  filling: boolean;
   /** The (message) informative message of the Notification */
   message: string;
   /** The variant of the Notification */
@@ -50,6 +54,8 @@ const typeToColor = (type: string): AcceptedColorComponentTypes =>
     : 'primary';
 
 const Notification: React.FC<Props> = ({
+  icon,
+  filling,
   message,
   variant,
   type,
@@ -61,11 +67,13 @@ const Notification: React.FC<Props> = ({
   secondaryCTA,
 }) => {
   return (
-    <div css={notificationsContainer(variant, type)}>
+    <div css={notificationsContainer(filling, type)}>
       <div css={infoContainer()}>
-        <div css={infoIconContainer()}>
-          <Icon name={type} color={typeToColor(type)} />
-        </div>
+        {icon && (
+          <div css={infoIconContainer()}>
+            <Icon name={type} color={typeToColor(type)} />
+          </div>
+        )}
         <div css={infoMessageContainer()}>{message}</div>
       </div>
       <div css={actionsContainer()}>
