@@ -11,8 +11,7 @@ import Notification from '../Notification';
 ```js
 import { Notification } from '@orfium/ictinus';
 
-<Notification />
-
+<Notification />;
 ```
 
 # Props
@@ -24,13 +23,16 @@ import { Notification } from '@orfium/ictinus';
 Inline Notification
 
 <Preview>
-    <Story name="Notification: first attempt" parameters={{ decorators: [withKnobs] }}>
-        <Notification filling={boolean('filling', false)}
-            icon={boolean('icon', true)}
-            message={text('info', 'This is the info')} 
-            type={select('type', ['success', 'error', 'info', 'alert'], 'success')}  
-            variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
-            primaryCTALabel={text('primaryCTALabel', 'Action')}
-            primaryCTA={() => console.log('action clicked')} />
-    </Story>
+  <Story name="Compact Notifiction" parameters={{ decorators: [withKnobs] }}>
+    <Notification
+      withFilling={boolean('withFilling', false)}
+      withIcon={boolean('icon', true)}
+      message={text('info', 'This is the info')}
+      type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+      variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
+      primaryCTALabel={text('primaryCTALabel', 'Action')}
+      primaryCTA={() => console.log('action clicked')}
+      title={text('title', 'This is the heading:')}
+    />
+  </Story>
 </Preview>

@@ -1,17 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import {
-  actionsContainer,
-  infoContainer,
-  notificationsContainer,
-  infoIconContainer,
-  infoMessageContainer,
-  primaryActionContainer,
-  closeIconContainer,
-} from './Notification.style';
-import Icon from '../Icon';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+import CompactNotification from './subcomponents/CompactNotification';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
 
@@ -19,9 +9,9 @@ export type NotificationVariants = 'inline' | 'banner' | 'toast' | 'modal';
 
 export type Props = {
   /** Show notification icon based on the type */
-  icon: boolean;
+  withIcon: boolean;
   /** Use color filling */
-  filling: boolean;
+  withFilling: boolean;
   /** The (message) informative message of the Notification */
   message: string;
   /** The variant of the Notification */
@@ -42,20 +32,9 @@ export type Props = {
   secondaryCTA?: () => void;
 };
 
-const typeToColor = (type: string): AcceptedColorComponentTypes =>
-  type === 'success'
-    ? 'success'
-    : type === 'error'
-    ? 'error'
-    : type === 'info'
-    ? 'darkBlue400'
-    : type === 'alert'
-    ? 'warning'
-    : 'primary';
-
 const Notification: React.FC<Props> = ({
-  icon,
-  filling,
+  withIcon,
+  withFilling,
   message,
   variant,
   type,
@@ -67,30 +46,32 @@ const Notification: React.FC<Props> = ({
   secondaryCTA,
 }) => {
   return (
-    <div css={notificationsContainer(filling, type)}>
-      <div css={infoContainer()}>
-        {icon && (
-          <div css={infoIconContainer()}>
-            <Icon name={type} color={typeToColor(type)} />
-          </div>
-        )}
-        <div css={infoMessageContainer()}>{message}</div>
-      </div>
-      <div css={actionsContainer()}>
-        <span
-          css={primaryActionContainer()}
-          onClick={e => {
-            e.preventDefault();
-            primaryCTA();
-          }}
-        >
-          {primaryCTALabel}
-        </span>
-        <div css={closeIconContainer()}>
-          <Icon name="close" color="lightGray500" />
-        </div>
-      </div>
-    </div>
+    <React.Fragment>
+      {variant === 'inline' ? (
+        <CompactNotification
+          withIcon={withIcon}
+          withFilling={withFilling}
+          message={message}
+          variant={variant}
+          type={type}
+          primaryCTALabel={primaryCTALabel}
+          primaryCTA={primaryCTA}
+        />
+      ) : variant === 'banner' ? (
+        <CompactNotification
+          withIcon={withIcon}
+          withFilling={withFilling}
+          message={message}
+          title={title}
+          variant={variant}
+          type={type}
+          primaryCTALabel={primaryCTALabel}
+          primaryCTA={primaryCTA}
+        />
+      ) : (
+        <p>This type is not yet supported</p>
+      )}
+    </React.Fragment>
   );
 };
 
