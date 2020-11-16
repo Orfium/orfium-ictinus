@@ -21,7 +21,9 @@ export const flatPaletteConfig: flatPaletteConfigType = {
 
   teal: '#27dcbd',
 
-  blue: '#18aed2',
+  lightBlue: '#18aed2',
+
+  blue: '#1283d3',
 
   darkBlue: '#232d7d',
 
@@ -49,7 +51,7 @@ export const lightPalette: PaletteConfig = {
   success: flatPaletteConfig.green,
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
-  info: flatPaletteConfig.blue,
+  info: flatPaletteConfig.darkBlue,
   light: flatPaletteConfig.lightGray,
 
   flat: {
@@ -78,7 +80,7 @@ export const darkPalette: PaletteConfig = {
   success: flatPaletteConfig.green,
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
-  info: flatPaletteConfig.blue,
+  info: flatPaletteConfig.darkBlue,
   light: flatPaletteConfig.lightGray,
 
   flat: {
@@ -118,6 +120,8 @@ export type flatPaletteConfigType = {
 
   teal?: string;
 
+  lightBlue?: string;
+
   blue?: string;
 
   darkBlue?: string;
@@ -147,6 +151,8 @@ export type flatPalette = {
   green: generatedColorShades;
 
   teal: generatedColorShades;
+
+  lightBlue: generatedColorShades;
 
   blue: generatedColorShades;
 
