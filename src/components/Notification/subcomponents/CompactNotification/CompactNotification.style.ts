@@ -10,7 +10,7 @@ const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
     : type === 'error'
     ? theme.palette.error['400']
     : type === 'info'
-    ? theme.palette.flat.darkBlue['400']
+    ? theme.palette.info['400']
     : theme.palette.warning['400'];
 
 export const notificationsContainer = (
@@ -68,7 +68,7 @@ export const headMessageContainer = () => (theme: Theme): SerializedStyles => cs
 export const primaryActionContainer = () => (theme: Theme): SerializedStyles => css`
   align-self: center;
   cursor: pointer;
-  color: ${theme.palette.flat.blue[400]};
+  color: ${theme.palette.flat.lightBlue[400]};
 `;
 
 export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`

@@ -37,15 +37,7 @@ export type Props = {
 };
 
 const typeToColor = (type: string): AcceptedColorComponentTypes =>
-  type === 'success'
-    ? 'success'
-    : type === 'error'
-    ? 'error'
-    : type === 'info'
-    ? 'darkBlue400'
-    : type === 'alert'
-    ? 'warning'
-    : 'primary';
+  type === 'alert' ? 'warning' : (type as AcceptedColorComponentTypes);
 
 const CompactNotification: React.FC<Props> = ({
   withIcon,
