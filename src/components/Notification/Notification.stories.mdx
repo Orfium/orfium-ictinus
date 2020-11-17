@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
+import PresentComponent from '../storyUtils/PresentComponent';
 
 <Meta title="Design System/Notification" component={Notification} />
 
@@ -24,15 +25,17 @@ Inline Notification
 
 <Preview>
   <Story name="Compact Notifiction" parameters={{ decorators: [withKnobs] }}>
-    <Notification
-      withFilling={boolean('withFilling', false)}
-      withIcon={boolean('icon', true)}
-      message={text('info', 'This is the info')}
-      type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
-      variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
-      primaryCTALabel={text('primaryCTALabel', 'Action')}
-      primaryCTA={() => console.log('action clicked')}
-      title={text('title', 'This is the heading:')}
-    />
+    <PresentComponent name='' width={600}>
+      <Notification
+        withFilling={boolean('withFilling', false)}
+        withIcon={boolean('icon', true)}
+        message={text('info', 'This is the info')}
+        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
+        primaryCTALabel={text('primaryCTALabel', 'Action')}
+        primaryCTA={() => console.log('action clicked')}
+        title={text('title', 'This is the heading:')}
+      />
+    </PresentComponent>
   </Story>
 </Preview>

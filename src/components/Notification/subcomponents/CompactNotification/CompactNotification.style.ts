@@ -1,8 +1,17 @@
 import { Theme } from '../../../../theme';
-import { rem } from 'polished';
+import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../../Notification';
 import { CompactNotificationVariants } from './CompactNotification';
 import { css, SerializedStyles } from '@emotion/core';
+
+const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
+  type === 'success'
+    ? theme.palette.success['400']
+    : type === 'error'
+    ? theme.palette.error['400']
+    : type === 'info'
+    ? theme.palette.flat.darkBlue['400']
+    : theme.palette.warning['400'];
 
 export const notificationsContainer = (
   withFilling: boolean,
@@ -10,64 +19,39 @@ export const notificationsContainer = (
   type: NotificationTypes
 ) => (theme: Theme): SerializedStyles => css`
   display: grid;
-  grid-gap: ${rem(13)};
+  grid-gap: ${theme.spacing.md};
   justify-content: space-between;
-  width: ${variant === 'inline' ? rem(315) : rem(489)};
+  width: ${variant === 'inline' ? '100%' : rem(489)};
   height: ${rem(56)};
-
-  //without fill
-  border-left: ${withFilling === false
-      ? type === 'success'
-        ? theme.palette.success['400']
-        : type === 'error'
-        ? theme.palette.error['400']
-        : type === 'info'
-        ? theme.palette.flat.darkBlue['400']
-        : theme.palette.warning['400']
-      : 'none'}
-    4px solid;
-
-  //with fill
-  border: ${withFilling === true
-      ? type === 'success'
-        ? theme.palette.success['400']
-        : type === 'error'
-        ? theme.palette.error['400']
-        : type === 'info'
-        ? theme.palette.flat.darkBlue['400']
-        : theme.palette.warning['400']
-      : 'none'}
-    1px solid;
-
-  background: ${withFilling === true
+  border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
+  border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
+  background: ${withFilling
     ? type === 'success'
-      ? 'rgba(107,188,21,0.1)'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
       : type === 'error'
-      ? 'rgba(212,0,0,0.1)'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
       : type === 'info'
-      ? 'rgba(35,45,125,0.1)'
-      : 'rgba(245,120,27,0.1)'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : transparentize(0.9, typeToThemePalette(theme, type))
     : 'none'};
-
-  border-radius: ${rem(4)};
+  border-radius: ${theme.spacing.xsm};
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 `;
 
-export const infoContainer = () => (): SerializedStyles => css`
+export const infoContainer = () => (theme: Theme): SerializedStyles => css`
   grid-column-start: 1;
   display: flex;
-  margin-left: ${rem(16)};
-  margin-right: ${rem(13)};
+  padding: 0 ${theme.spacing.md};
 `;
 
-export const actionsContainer = () => (): SerializedStyles => css`
+export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   grid-column-start: 2;
   display: flex;
-  margin-right: ${rem(16)};
+  padding-right: ${theme.spacing.md};
 `;
 
-export const infoIconContainer = () => (): SerializedStyles => css`
-  margin-right: ${rem(10)};
+export const infoIconContainer = () => (theme: Theme): SerializedStyles => css`
+  padding-right: ${theme.spacing.sm};
   align-self: center;
 `;
 
@@ -76,7 +60,7 @@ export const infoMessageContainer = () => (): SerializedStyles => css`
 `;
 
 export const headMessageContainer = () => (theme: Theme): SerializedStyles => css`
-  margin-right: ${rem(4)};
+  padding-right: ${theme.spacing.xsm};
   align-self: center;
   font-weight: ${theme.typography.weights.bold};
 `;
@@ -87,8 +71,8 @@ export const primaryActionContainer = () => (theme: Theme): SerializedStyles => 
   color: ${theme.palette.flat.blue[400]};
 `;
 
-export const closeIconContainer = () => (): SerializedStyles => css`
+export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
   align-self: center;
   cursor: pointer;
-  margin-left: ${rem(21)};
+  padding-left: ${theme.spacing.lg};
 `;

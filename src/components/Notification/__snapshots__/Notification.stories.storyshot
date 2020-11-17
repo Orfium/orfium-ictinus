@@ -33,49 +33,71 @@ exports[`Storyshots Design System/Notification Compact Notifiction 1`] = `
     </button>
   </div>
   <div
-    className="css-9bvgi1-CompactNotification"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1rem",
+        "width": 600,
+      }
+    }
   >
     <div
-      className="css-1wsq9lh-CompactNotification"
+      className="css-f3sl00-CompactNotification"
     >
       <div
-        className="css-19pfxsp-CompactNotification"
+        className="css-h5ir3b-CompactNotification"
       >
-        <span
-          className="css-1gnbc76-Icon"
+        <div
+          className="css-1a8htue-CompactNotification"
         >
           <span
-            className="css-1atsk5c-Icon"
-          />
-        </span>
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1atsk5c-Icon"
+            />
+          </span>
+        </div>
+        <div
+          className="css-1kpblg6-CompactNotification"
+        >
+          This is the info
+        </div>
       </div>
       <div
-        className="css-1kpblg6-CompactNotification"
+        className="css-mtcmlt-CompactNotification"
       >
-        This is the info
+        <span
+          className="css-14ersna-CompactNotification"
+          onClick={[Function]}
+        >
+          Action
+        </span>
+        <div
+          className="css-soz4s3-CompactNotification"
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1avnyjk-Icon"
+            />
+          </span>
+        </div>
       </div>
     </div>
-    <div
-      className="css-2g6n41-CompactNotification"
+    <p
+      style={
+        Object {
+          "paddingTop": "8px",
+        }
+      }
     >
-      <span
-        className="css-14ersna-CompactNotification"
-        onClick={[Function]}
-      >
-        Action
-      </span>
-      <div
-        className="css-mvu114-CompactNotification"
-      >
-        <span
-          className="css-1gnbc76-Icon"
-        >
-          <span
-            className="css-1avnyjk-Icon"
-          />
-        </span>
-      </div>
-    </div>
+      
+    </p>
   </div>
 </div>
 `;
