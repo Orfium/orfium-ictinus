@@ -79,6 +79,17 @@ function Table<T>({
     }
   }, [onCheck, selectedIds]);
 
+  React.useEffect(() => {
+    // data [1, 2, 3]
+    // selectedIds [1, 2]
+    // hide
+    // data [3]
+    // selectedIds [1, 2]
+    // check
+    // data.filter 
+    setSelectedIds(data.filter(item => selectedIds && selectedIds.indexOf(item.id) !== -1).map(item => item.id));
+  }, [data]);
+
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
