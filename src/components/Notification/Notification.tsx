@@ -5,7 +5,7 @@ import CompactNotification from './subcomponents/CompactNotification';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
 
-export type NotificationVariants = 'inline' | 'banner';
+export type NotificationVariants = 'inline';
 
 export type Props = {
   /** Show notification icon based on the type */
@@ -24,29 +24,25 @@ export type Props = {
   primaryCTA: () => void;
   /** The closing call-to-action of the Notification */
   onCloseCTA: () => void;
-  /** The title (message heading) of the Notification */
-  title?: string;
 };
 
 const Notification: React.FC<Props> = ({
   withIcon = true,
   withFilling = false,
   message,
-  variant = 'inline',
-  type = 'info',
+  variant,
+  type,
   primaryCTALabel,
   primaryCTA,
   onCloseCTA,
-  title,
 }) => {
   return (
     <React.Fragment>
-      {variant === 'inline' || variant === 'banner' ? (
+      {variant === 'inline' ? (
         <CompactNotification
           withIcon={withIcon}
           withFilling={withFilling}
           message={message}
-          title={title}
           variant={variant}
           type={type}
           primaryCTALabel={primaryCTALabel}
