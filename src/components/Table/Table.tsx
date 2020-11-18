@@ -80,14 +80,8 @@ function Table<T>({
   }, [onCheck, selectedIds]);
 
   React.useEffect(() => {
-    // data [1, 2, 3]
-    // selectedIds [1, 2]
-    // hide
-    // data [3]
-    // selectedIds [1, 2]
-    // check
-    // data.filter 
-    setSelectedIds(data.filter(item => selectedIds && selectedIds.indexOf(item.id) !== -1).map(item => item.id));
+    // when data are fresh initialize the selectedIds state
+    setSelectedIds(undefined);
   }, [data]);
 
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
