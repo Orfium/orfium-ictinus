@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Notification Compact Notifiction 1`] = `
+exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
 <div
   style={
     Object {
@@ -45,13 +45,13 @@ exports[`Storyshots Design System/Notification Compact Notifiction 1`] = `
     }
   >
     <div
-      className="css-f3sl00-CompactNotification"
+      className="css-x8geyk-CompactNotification"
     >
       <div
-        className="css-h5ir3b-CompactNotification"
+        className="css-1qxbj8g-CompactNotification"
       >
         <div
-          className="css-1a8htue-CompactNotification"
+          className="css-61cpcu-CompactNotification"
         >
           <span
             className="css-1gnbc76-Icon"
@@ -62,22 +62,228 @@ exports[`Storyshots Design System/Notification Compact Notifiction 1`] = `
           </span>
         </div>
         <div
-          className="css-1kpblg6-CompactNotification"
+          className="css-a0qw3x-CompactNotification"
         >
+          This is the heading:
+        </div>
+        <div>
           This is the info
         </div>
       </div>
       <div
-        className="css-mtcmlt-CompactNotification"
+        className="css-1xih1b5-CompactNotification"
       >
         <span
-          className="css-14ersna-CompactNotification"
+          className="css-172bta1-CompactNotification"
           onClick={[Function]}
         >
           Action
         </span>
         <div
-          className="css-soz4s3-CompactNotification"
+          className="css-1l5e0al-CompactNotification"
+          onClick={[Function]}
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1avnyjk-Icon"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <p
+      style={
+        Object {
+          "paddingTop": "8px",
+        }
+      }
+    >
+      
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1rem",
+        "width": 1024,
+      }
+    }
+  >
+    <div
+      className="css-tzinxz-CompactNotification"
+    >
+      <div
+        className="css-1qxbj8g-CompactNotification"
+      >
+        <div
+          className="css-61cpcu-CompactNotification"
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1atsk5c-Icon"
+            />
+          </span>
+        </div>
+        <div>
+          This is the info
+        </div>
+      </div>
+      <div
+        className="css-1xih1b5-CompactNotification"
+      >
+        <span
+          className="css-172bta1-CompactNotification"
+          onClick={[Function]}
+        >
+          Action
+        </span>
+        <div
+          className="css-1l5e0al-CompactNotification"
+          onClick={[Function]}
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1avnyjk-Icon"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <p
+      style={
+        Object {
+          "paddingTop": "8px",
+        }
+      }
+    >
+      
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1rem",
+        "width": 600,
+      }
+    }
+  >
+    <div
+      className="css-tzinxz-CompactNotification"
+    >
+      <div
+        className="css-1qxbj8g-CompactNotification"
+      >
+        <div
+          className="css-61cpcu-CompactNotification"
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1atsk5c-Icon"
+            />
+          </span>
+        </div>
+        <div>
+          This is the info
+        </div>
+      </div>
+      <div
+        className="css-1xih1b5-CompactNotification"
+      >
+        <span
+          className="css-172bta1-CompactNotification"
+          onClick={[Function]}
+        >
+          Action
+        </span>
+        <div
+          className="css-1l5e0al-CompactNotification"
+          onClick={[Function]}
         >
           <span
             className="css-1gnbc76-Icon"

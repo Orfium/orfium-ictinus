@@ -6,7 +6,6 @@ import {
   infoContainer,
   notificationsContainer,
   infoIconContainer,
-  infoMessageContainer,
   headMessageContainer,
   primaryActionContainer,
   closeIconContainer,
@@ -22,7 +21,7 @@ export type Props = {
   withIcon: boolean;
   /** Use color filling */
   withFilling: boolean;
-  /** The (message) informative message of the Notification */
+  /** The informative message of the Notification */
   message: string;
   /** The variant of the Notification */
   variant: CompactNotificationVariants;
@@ -32,6 +31,8 @@ export type Props = {
   primaryCTALabel: string;
   /** The primary call-to-action of the Notification */
   primaryCTA: () => void;
+  /** The closing call-to-action of the Notification */
+  onCloseCTA: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
 };
@@ -47,6 +48,7 @@ const CompactNotification: React.FC<Props> = ({
   type,
   primaryCTALabel,
   primaryCTA,
+  onCloseCTA,
   title,
 }) => {
   return (
@@ -58,7 +60,7 @@ const CompactNotification: React.FC<Props> = ({
           </div>
         )}
         {variant === 'banner' && <div css={headMessageContainer()}>{title}</div>}
-        <div css={infoMessageContainer()}>{message}</div>
+        <div>{message}</div>
       </div>
       <div css={actionsContainer()}>
         <span
@@ -70,8 +72,15 @@ const CompactNotification: React.FC<Props> = ({
         >
           {primaryCTALabel}
         </span>
-        <div css={closeIconContainer()}>
+        <div
+          css={closeIconContainer()}
+          onClick={e => {
+            e.preventDefault();
+            onCloseCTA();
+          }}
+        >
           <Icon name="close" color="lightGray500" />
+          {/* <IconButton type='lightGray500' size='sm'  name='close'   /> */}
         </div>
       </div>
     </div>

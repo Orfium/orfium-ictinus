@@ -24,17 +24,61 @@ import { Notification } from '@orfium/ictinus';
 Inline Notification
 
 <Preview>
-  <Story name="Compact Notifiction" parameters={{ decorators: [withKnobs] }}>
-    <PresentComponent name='' width={600}>
+  <Story name="Inline Notifiction" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={1024}>
       <Notification
         withFilling={boolean('withFilling', false)}
         withIcon={boolean('icon', true)}
         message={text('info', 'This is the info')}
         type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
-        variant={select('variant', ['inline', 'banner', 'toast', 'modal'], 'inline')}
+        variant="inline"
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
+        onCloseCTA={() => console.log('close action clicked')}
+      />
+    </PresentComponent>
+  </Story>
+</Preview>
+
+# Banner Notification
+
+Banner Notification
+
+<Preview>
+  <Story name="Banner Notifiction" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={600}>
+      <Notification
+        withFilling={boolean('withFilling', false)}
+        withIcon={boolean('icon', true)}
         title={text('title', 'This is the heading:')}
+        message={text('info', 'This is the info')}
+        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        variant="banner"
+        primaryCTALabel={text('primaryCTALabel', 'Action')}
+        primaryCTA={() => console.log('action clicked')}
+        onCloseCTA={() => console.log('close action clicked')}
+      />
+    </PresentComponent>
+  </Story>
+</Preview>
+
+# Playground Notification
+
+Playground Notification
+
+<Preview>
+  <Story name="Playground Notifiction" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={600}>
+      <Notification
+        withFilling={boolean('withFilling', false)}
+        withIcon={boolean('icon', true)}
+        title={text('title', 'This is the heading:')}
+        message={text('info', 'This is the info')}
+        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        variant={select('variant', ['inline', 'banner', 'modal', 'toast'], 'inline')}
+        primaryCTALabel={text('primaryCTALabel', 'Action')}
+        primaryCTA={() => console.log('primary action clicked')}
+        onCloseCTA={() => console.log('close action clicked')}
       />
     </PresentComponent>
   </Story>

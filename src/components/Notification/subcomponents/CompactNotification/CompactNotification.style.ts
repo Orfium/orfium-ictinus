@@ -18,61 +18,59 @@ export const notificationsContainer = (
   variant: CompactNotificationVariants,
   type: NotificationTypes
 ) => (theme: Theme): SerializedStyles => css`
-  display: grid;
-  grid-gap: ${theme.spacing.md};
+  /* position: ${variant === 'inline' ? 'absolute' : 'block'}; */
+  display: flex;
   justify-content: space-between;
+  overflow: hidden;
   width: ${variant === 'inline' ? '100%' : rem(489)};
   height: ${rem(56)};
   border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
-  background: ${withFilling
-    ? type === 'success'
-      ? transparentize(0.9, typeToThemePalette(theme, type))
-      : type === 'error'
-      ? transparentize(0.9, typeToThemePalette(theme, type))
-      : type === 'info'
-      ? transparentize(0.9, typeToThemePalette(theme, type))
-      : transparentize(0.9, typeToThemePalette(theme, type))
-    : 'none'};
+  background: ${
+    withFilling
+      ? type === 'success'
+        ? transparentize(0.9, typeToThemePalette(theme, type))
+        : type === 'error'
+        ? transparentize(0.9, typeToThemePalette(theme, type))
+        : type === 'info'
+        ? transparentize(0.9, typeToThemePalette(theme, type))
+        : transparentize(0.9, typeToThemePalette(theme, type))
+      : 'none'
+  };
   border-radius: ${theme.spacing.xsm};
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); //to change when elevated is introduced
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
-  grid-column-start: 1;
   display: flex;
+  align-items: center;
   padding: 0 ${theme.spacing.md};
 `;
 
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
-  grid-column-start: 2;
   display: flex;
+  align-items: center;
   padding-right: ${theme.spacing.md};
 `;
 
 export const infoIconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
-  align-self: center;
 `;
 
-export const infoMessageContainer = () => (): SerializedStyles => css`
-  align-self: center;
-`;
+// export const infoMessageContainer = () => (): SerializedStyles => css`
+// `;
 
 export const headMessageContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.xsm};
-  align-self: center;
   font-weight: ${theme.typography.weights.bold};
 `;
 
 export const primaryActionContainer = () => (theme: Theme): SerializedStyles => css`
-  align-self: center;
   cursor: pointer;
   color: ${theme.palette.flat.lightBlue[400]};
 `;
 
 export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
-  align-self: center;
   cursor: pointer;
   padding-left: ${theme.spacing.lg};
 `;
