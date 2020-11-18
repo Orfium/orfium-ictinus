@@ -76,15 +76,29 @@ exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
         </span>
         <div
           className="css-xvugv-CompactNotification"
-          onClick={[Function]}
         >
-          <span
-            className="css-1gnbc76-Icon"
+          <button
+            className="css-6gdgef-Button"
+            data-testid="button-button"
+            disabled={false}
+            onClick={[Function]}
           >
             <span
-              className="css-1avnyjk-Icon"
-            />
-          </span>
+              className="css-1yy8u54-Button"
+            >
+              <div
+                className="css-1qy2jjj-Button"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1avnyjk-Icon"
+                  />
+                </span>
+              </div>
+            </span>
+          </button>
         </div>
       </div>
     </div>
@@ -177,15 +191,29 @@ exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
         </span>
         <div
           className="css-xvugv-CompactNotification"
-          onClick={[Function]}
         >
-          <span
-            className="css-1gnbc76-Icon"
+          <button
+            className="css-6gdgef-Button"
+            data-testid="button-button"
+            disabled={false}
+            onClick={[Function]}
           >
             <span
-              className="css-1avnyjk-Icon"
-            />
-          </span>
+              className="css-1yy8u54-Button"
+            >
+              <div
+                className="css-1qy2jjj-Button"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1avnyjk-Icon"
+                  />
+                </span>
+              </div>
+            </span>
+          </button>
         </div>
       </div>
     </div>
