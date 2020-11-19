@@ -27,6 +27,22 @@ export const flatColors = [
  * default variation: 400
  **/
 export const colorShades = [100, 200, 300, 400, 500, 600, 700] as const;
+/**
+ * mainTypes are not colors per se but a type of color
+ * for example error is red but also defines a state that's why is listed here and not in flat colors
+ * Each color has again the above variations (shades)
+ **/
+export const mainTypes = [
+  'primary',
+  'secondary',
+  'branded1',
+  'branded2',
+  'success',
+  'error',
+  'warning',
+  'info',
+  'light',
+];
 
 export type flatPalette = Record<typeof flatColors[number], generatedColorShades>;
 
@@ -34,20 +50,8 @@ export type generatedColorShades = Record<typeof colorShades[number], string>;
 
 /**
  * Palette is end output of what is produced and exported to the client projects
- * primary, secondary are not colors per se but a type of color
- * for example error is red but also defines a state that's why is listed here and not in flat colors
- * Each color has again the above variations (shades)
  **/
 export type Palette = {
-  primary: generatedColorShades;
-  secondary: generatedColorShades;
-  branded1: generatedColorShades;
-  branded2: generatedColorShades;
-  success: generatedColorShades;
-  error: generatedColorShades;
-  warning: generatedColorShades;
-  info: generatedColorShades;
-  light: generatedColorShades;
   text: {
     primary: generatedColorShades;
     secondary: generatedColorShades;
@@ -57,6 +61,6 @@ export type Palette = {
 
   white: string;
   black: string;
-};
+} & Record<typeof mainTypes[number], generatedColorShades>;
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';

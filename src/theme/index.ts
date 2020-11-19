@@ -16,7 +16,11 @@ export type Theme = {
   typography: Typography;
   spacing: Spacing;
   isDark: boolean;
-  getColor: (color: typeof flatColors[number], variant: typeof colorShades[number]) => string;
+  getColor: (
+    color: typeof flatColors[number],
+    variant: typeof colorShades[number],
+    scope?: 'text' | 'flat' | undefined
+  ) => string;
 };
 
 const defaultTheme = (theming: 'dark' | 'light'): Theme => {
@@ -30,12 +34,12 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
     typography,
     spacing,
     isDark: false,
-    getColor: (color, variant) => {
-      if (!palette.flat[color][variant]) {
+    getColor: (color, variant, scope = 'flat') => {
+      if (!palette[scope][color][variant]) {
         throw new Error('No color found with that name');
       }
 
-      return palette.flat[color][variant];
+      return palette[scope][color][variant];
     },
   };
 };
