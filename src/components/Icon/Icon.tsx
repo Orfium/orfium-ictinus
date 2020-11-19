@@ -5,6 +5,7 @@ import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyle, iconStyle } from './Icon.style';
 import { AcceptedIconNames } from './types';
+import { getColor } from '../../theme';
 
 export type Props = {
   /** This property defines witch icon to use */
@@ -20,6 +21,7 @@ const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16 }) => {
 
   return (
     <span css={iconContainerStyle()}>
+      <div style={{ color: getColor('lightBlue', 400) }}>asd</div>
       <Icon css={iconStyle({ color, size })} />
     </span>
   );

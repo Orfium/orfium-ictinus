@@ -11,17 +11,36 @@ export type ThemeConfig = {
   isDark: boolean;
 };
 
+export function getColor(
+  color: typeof flatColors[number],
+  variant: typeof colorShades[number]
+): string;
+export function getColor(
+  color: typeof flatColors[number],
+  variant: typeof colorShades[number],
+  scope: 'flat'
+): string;
+export function getColor(color: Types, variant: typeof colorShades[number], scope: 'text'): string;
+export function getColor(
+  color: typeof flatColors[number] | Types,
+  variant: typeof colorShades[number],
+  scope: 'flat' | 'text' = 'flat'
+) {
+  if (!enhancePaletteWithShades(lightPaletteConfig)[scope][color][variant]) {
+    throw new Error('No color found with that name');
+  }
+
+  return enhancePaletteWithShades(lightPaletteConfig)[scope][color][variant];
+}
+
 export type Theme = {
   palette: Palette;
   typography: Typography;
   spacing: Spacing;
   isDark: boolean;
-  getColor: (
-    color: typeof flatColors[number],
-    variant: typeof colorShades[number],
-    scope?: 'text' | 'flat' | undefined
-  ) => string;
 };
+
+type Types = 'primary' | 'secondary' | 'light';
 
 const defaultTheme = (theming: 'dark' | 'light'): Theme => {
   const palette =
@@ -34,13 +53,6 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
     typography,
     spacing,
     isDark: false,
-    getColor: (color, variant, scope = 'flat') => {
-      if (!palette[scope][color][variant]) {
-        throw new Error('No color found with that name');
-      }
-
-      return palette[scope][color][variant];
-    },
   };
 };
 
