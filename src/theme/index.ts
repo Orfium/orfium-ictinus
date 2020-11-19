@@ -1,4 +1,5 @@
-import { darkPalette, lightPalette, Palette, PaletteConfig } from './palette';
+import { Palette } from './palette';
+import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
 import typography, { Typography } from './typography';
 import spacing, { Spacing } from './spacing';
 import { enhancePaletteWithShades } from './utils';
@@ -20,8 +21,8 @@ export type Theme = {
 const defaultTheme = (theming: 'dark' | 'light'): Theme => ({
   palette:
     theming === 'light'
-      ? enhancePaletteWithShades(lightPalette)
-      : enhancePaletteWithShades(darkPalette),
+      ? enhancePaletteWithShades(lightPaletteConfig)
+      : enhancePaletteWithShades(darkPaletteConfig),
   typography,
   spacing,
   isDark: false,
