@@ -36,6 +36,7 @@ export type generatedColorShades = Record<typeof colorShades[number], string>;
  * Palette is end output of what is produced and exported to the client projects
  * primary, secondary are not colors per se but a type of color
  * for example error is red but also defines a state that's why is listed here and not in flat colors
+ * Each color has again the above variations (shades)
  **/
 export type Palette = {
   primary: generatedColorShades;
