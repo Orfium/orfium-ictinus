@@ -27,14 +27,16 @@ Inline Notification
   <Story name="Inline Notifiction" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
       <Notification
+        withIcon={boolean('withIcon', true)}
         withFilling={boolean('withFilling', false)}
-        withIcon={boolean('icon', true)}
-        message={text('info', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        message={text('info', 'Informative Message')}
         variant="inline"
+        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        withPrimaryCTA={boolean('withPrimaryCTA', false)}
+        withCloseCTA={boolean('withCloseCTA', false)}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
-        onCloseCTA={() => console.log('close action clicked')}
+        closeCTA={() => console.log('close action clicked')}
       />
     </PresentComponent>
   </Story>
@@ -48,15 +50,16 @@ Playground Notification
   <Story name="Playground Notifiction" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
       <Notification
+        withIcon={boolean('withIcon', true)}
         withFilling={boolean('withFilling', false)}
-        withIcon={boolean('icon', true)}
-        title={text('title', 'This is the heading:')}
-        message={text('info', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        message={text('info', 'Informative Message')}
         variant={select('variant', ['inline', 'banner', 'modal', 'toast'], 'inline')}
+        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        withPrimaryCTA={boolean('withPrimaryCTA', false)}
+        withCloseCTA={boolean('withCloseCTA', false)}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
-        primaryCTA={() => console.log('primary action clicked')}
-        onCloseCTA={() => console.log('close action clicked')}
+        primaryCTA={() => console.log('action clicked')}
+        closeCTA={() => console.log('close action clicked')}
       />
     </PresentComponent>
   </Story>

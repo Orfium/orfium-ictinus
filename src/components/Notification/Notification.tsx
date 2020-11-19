@@ -18,12 +18,16 @@ export type Props = {
   variant: NotificationVariants;
   /** The type of the Notification */
   type: NotificationTypes;
+  /** Show Primary CTA */
+  withPrimaryCTA: boolean;
+  /** Show Close CTA */
+  withCloseCTA: boolean;
   /** The primary call-to-action label of the Notification */
-  primaryCTALabel: string;
+  primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
-  primaryCTA: () => void;
+  primaryCTA?: () => void;
   /** The closing call-to-action of the Notification */
-  onCloseCTA: () => void;
+  closeCTA?: () => void;
 };
 
 const Notification: React.FC<Props> = ({
@@ -32,9 +36,11 @@ const Notification: React.FC<Props> = ({
   message,
   variant,
   type,
+  withPrimaryCTA = false,
+  withCloseCTA = false,
   primaryCTALabel,
   primaryCTA,
-  onCloseCTA,
+  closeCTA,
 }) => {
   return (
     <React.Fragment>
@@ -45,9 +51,11 @@ const Notification: React.FC<Props> = ({
           message={message}
           variant={variant}
           type={type}
+          withPrimaryCTA={withPrimaryCTA}
+          withCloseCTA={withCloseCTA}
           primaryCTALabel={primaryCTALabel}
           primaryCTA={primaryCTA}
-          onCloseCTA={onCloseCTA}
+          closeCTA={closeCTA}
         />
       ) : (
         <p>This type is not yet supported</p>

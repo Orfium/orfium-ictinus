@@ -18,7 +18,6 @@ export const notificationsContainer = (
   variant: CompactNotificationVariants,
   type: NotificationTypes
 ) => (theme: Theme): SerializedStyles => css`
-  /* position: ${variant === 'inline' ? 'absolute' : 'block'}; */
   display: flex;
   justify-content: space-between;
   overflow: hidden;
@@ -26,22 +25,17 @@ export const notificationsContainer = (
   height: ${rem(56)};
   border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
-  background: ${
-    withFilling
-      ? type === 'success'
-        ? transparentize(0.9, typeToThemePalette(theme, type))
-        : type === 'error'
-        ? transparentize(0.9, typeToThemePalette(theme, type))
-        : type === 'info'
-        ? transparentize(0.9, typeToThemePalette(theme, type))
-        : transparentize(0.9, typeToThemePalette(theme, type))
-      : 'none'
-  };
+  background: ${withFilling
+    ? type === 'success'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : type === 'error'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : type === 'info'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : transparentize(0.9, typeToThemePalette(theme, type))
+    : 'none'};
   border-radius: ${theme.spacing.xsm};
-  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(
-  0.85,
-  theme.palette.black
-)}; //to change when elevated is introduced
+  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)}; //to change when elevated is introduced
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
@@ -56,7 +50,7 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.md};
 `;
 
-export const IconContainer = () => (theme: Theme): SerializedStyles => css`
+export const iconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
 `;
 
