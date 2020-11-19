@@ -1,64 +1,41 @@
-export type flatPalette = {
-  lightGray: generatedColorShades;
+export const flatColors = [
+  'lightGray',
+  'darkGray',
+  'coolGray',
+  'warmGray',
+  'magenta',
+  'red',
+  'orange',
+  'yellow',
+  'olive',
+  'green',
+  'teal',
+  'lightBlue',
+  'blue',
+  'darkBlue',
+  'purple',
+] as const;
+export const colorShades = [100, 200, 300, 400, 500, 600, 700] as const;
 
-  darkGray: generatedColorShades;
+export type flatPalette = Record<typeof flatColors[number], generatedColorShades>;
 
-  coolGray: generatedColorShades;
-
-  warmGray: generatedColorShades;
-
-  magenta: generatedColorShades;
-
-  red: generatedColorShades;
-
-  orange: generatedColorShades;
-
-  yellow: generatedColorShades;
-
-  olive: generatedColorShades;
-
-  green: generatedColorShades;
-
-  teal: generatedColorShades;
-
-  lightBlue: generatedColorShades;
-
-  blue: generatedColorShades;
-
-  darkBlue: generatedColorShades;
-
-  purple: generatedColorShades;
-};
-
-export type generatedColorShades = {
-  100: string;
-  200: string;
-  300: string;
-  400: string;
-  500: string;
-  600: string;
-  700: string;
-};
+export type generatedColorShades = Record<typeof colorShades[number], string>;
 
 export type Palette = {
   primary: generatedColorShades;
   secondary: generatedColorShades;
-
   branded1: generatedColorShades;
   branded2: generatedColorShades;
-
   success: generatedColorShades;
   error: generatedColorShades;
   warning: generatedColorShades;
   info: generatedColorShades;
   light: generatedColorShades;
-
   text: {
     primary: generatedColorShades;
     secondary: generatedColorShades;
     light: generatedColorShades;
   };
-
   flat: flatPalette;
 
   white: string;
