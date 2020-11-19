@@ -16,20 +16,16 @@ import { NotificationTypes } from '../../Notification';
 export type CompactNotificationVariants = 'inline';
 
 export type Props = {
-  /** Show notification icon based on the type */
-  withIcon: boolean;
-  /** Use color filling */
-  withFilling: boolean;
   /** The informative message of the Notification */
   message: string;
   /** The variant of the Notification */
   variant: CompactNotificationVariants;
   /** The type of the Notification */
   type: NotificationTypes;
-  /** Show Primary CTA */
-  withPrimaryCTA: boolean;
-  /** Show Close CTA */
-  withCloseCTA: boolean;
+  /** Show notification icon based on the type */
+  withIcon: boolean;
+  /** Use color filling */
+  withFilling: boolean;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
@@ -42,13 +38,11 @@ const typeToColor = (type: string): AcceptedColorComponentTypes =>
   type === 'alert' ? 'warning' : (type as AcceptedColorComponentTypes);
 
 const CompactNotification: React.FC<Props> = ({
-  withIcon,
-  withFilling,
   message,
   variant,
   type,
-  withPrimaryCTA,
-  withCloseCTA,
+  withIcon,
+  withFilling,
   primaryCTALabel,
   primaryCTA,
   closeCTA,
@@ -64,12 +58,12 @@ const CompactNotification: React.FC<Props> = ({
         <div>{message}</div>
       </div>
       <div css={actionsContainer()}>
-        {withPrimaryCTA && (
+        {primaryCTA && (
           <span css={primaryActionContainer()} onClick={primaryCTA}>
             {primaryCTALabel}
           </span>
         )}
-        {withCloseCTA && (
+        {closeCTA && (
           <span css={closeActionContainer()} onClick={closeCTA}>
             <Icon name="close" color="lightGray500" />
           </span>

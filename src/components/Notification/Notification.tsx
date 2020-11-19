@@ -8,20 +8,16 @@ export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
 export type NotificationVariants = 'inline';
 
 export type Props = {
-  /** Show notification icon based on the type */
-  withIcon: boolean;
-  /** Use color filling */
-  withFilling: boolean;
   /** The informative message of the Notification */
   message: string;
   /** The variant of the Notification */
   variant: NotificationVariants;
   /** The type of the Notification */
   type: NotificationTypes;
-  /** Show Primary CTA */
-  withPrimaryCTA: boolean;
-  /** Show Close CTA */
-  withCloseCTA: boolean;
+  /** Show notification icon based on the type */
+  withIcon: boolean;
+  /** Use color filling */
+  withFilling: boolean;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
@@ -31,28 +27,24 @@ export type Props = {
 };
 
 const Notification: React.FC<Props> = ({
-  withIcon = true,
-  withFilling = false,
   message,
   variant,
   type,
-  withPrimaryCTA = false,
-  withCloseCTA = false,
+  withIcon = true,
+  withFilling = false,
   primaryCTALabel,
-  primaryCTA,
-  closeCTA,
+  primaryCTA = undefined,
+  closeCTA = undefined,
 }) => {
   return (
     <React.Fragment>
       {variant === 'inline' ? (
         <CompactNotification
-          withIcon={withIcon}
-          withFilling={withFilling}
           message={message}
           variant={variant}
           type={type}
-          withPrimaryCTA={withPrimaryCTA}
-          withCloseCTA={withCloseCTA}
+          withIcon={withIcon}
+          withFilling={withFilling}
           primaryCTALabel={primaryCTALabel}
           primaryCTA={primaryCTA}
           closeCTA={closeCTA}

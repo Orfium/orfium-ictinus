@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
 import PresentComponent from '../storyUtils/PresentComponent';
+import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Notification" component={Notification} />
 
@@ -25,20 +26,50 @@ Inline Notification
 
 <Preview>
   <Story name="Inline Notifiction" parameters={{ decorators: [withKnobs] }}>
-    <PresentComponent name="" width={768}>
-      <Notification
-        withIcon={boolean('withIcon', true)}
-        withFilling={boolean('withFilling', false)}
-        message={text('info', 'Informative Message')}
-        variant="inline"
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
-        withPrimaryCTA={boolean('withPrimaryCTA', false)}
-        withCloseCTA={boolean('withCloseCTA', false)}
-        primaryCTALabel={text('primaryCTALabel', 'Action')}
-        primaryCTA={() => console.log('action clicked')}
-        closeCTA={() => console.log('close action clicked')}
-      />
-    </PresentComponent>
+    <Stack>
+      <PresentComponent name="" width={768}>
+        <Notification
+          message={text('info', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+        />
+      </PresentComponent>
+      <PresentComponent name="" width={768}>
+        <Notification
+          message={text('info', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+      </PresentComponent>
+      <PresentComponent name="" width={768}>
+        <Notification
+          message={text('info', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+        />
+      </PresentComponent>
+      <PresentComponent name="" width={768}>
+        <Notification
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+          message={text('info', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+      </PresentComponent>
+    </Stack>
   </Story>
 </Preview>
 
@@ -55,8 +86,6 @@ Playground Notification
         message={text('info', 'Informative Message')}
         variant={select('variant', ['inline', 'banner', 'modal', 'toast'], 'inline')}
         type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
-        withPrimaryCTA={boolean('withPrimaryCTA', false)}
-        withCloseCTA={boolean('withCloseCTA', false)}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
         closeCTA={() => console.log('close action clicked')}
