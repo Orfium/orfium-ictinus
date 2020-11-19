@@ -19,13 +19,21 @@ export type Props = {
   /** The type of the Notification */
   type: NotificationTypes;
   /** The primary call-to-action label of the Notification */
-  primaryCTALabel: string;
+  primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
-  primaryCTA: () => void;
+  primaryCTA?: () => void;
   /** The closing call-to-action of the Notification */
-  onCloseCTA: () => void;
+  closeCTA?: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
+  /** Banner placed at the top */
+  top?: boolean;
+  /** Banner placed at the bottom */
+  bottom?: boolean;
+  /** Banner placed at the left */
+  left?: boolean;
+  /** Banner placed at the right */
+  right?: boolean;
 };
 
 const Notification: React.FC<Props> = ({
@@ -35,9 +43,13 @@ const Notification: React.FC<Props> = ({
   variant = 'inline',
   type = 'info',
   primaryCTALabel,
-  primaryCTA,
-  onCloseCTA,
+  primaryCTA = undefined,
+  closeCTA = undefined,
   title,
+  top,
+  bottom,
+  left,
+  right,
 }) => {
   return (
     <React.Fragment>
@@ -51,7 +63,11 @@ const Notification: React.FC<Props> = ({
           type={type}
           primaryCTALabel={primaryCTALabel}
           primaryCTA={primaryCTA}
-          onCloseCTA={onCloseCTA}
+          closeCTA={closeCTA}
+          top={top}
+          bottom={bottom}
+          left={left}
+          right={right}
         />
       ) : (
         <p>This type is not yet supported</p>

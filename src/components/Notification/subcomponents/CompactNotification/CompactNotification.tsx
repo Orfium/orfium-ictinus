@@ -28,13 +28,21 @@ export type Props = {
   /** The type of the Notification */
   type: NotificationTypes;
   /** The primary call-to-action label of the Notification */
-  primaryCTALabel: string;
+  primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
-  primaryCTA: () => void;
+  primaryCTA?: () => void;
   /** The closing call-to-action of the Notification */
-  onCloseCTA: () => void;
+  closeCTA?: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
+  /** Banner placed at the top */
+  top?: boolean | undefined;
+  /** Banner placed at the bottom */
+  bottom?: boolean | undefined;
+  /** Banner placed at the left */
+  left?: boolean | undefined;
+  /** Banner placed at the right */
+  right?: boolean | undefined;
 };
 
 const typeToColor = (type: string): AcceptedColorComponentTypes =>
@@ -48,11 +56,17 @@ const CompactNotification: React.FC<Props> = ({
   type,
   primaryCTALabel,
   primaryCTA,
-  onCloseCTA,
+  closeCTA,
   title,
+  top = false,
+  bottom = false,
+  left = false,
+  right = false,
 }) => {
+  const bannerPosition = [top, bottom, left, right];
+
   return (
-    <div css={notificationsContainer(withFilling, variant, type)}>
+    <div css={notificationsContainer(withFilling, variant, type, bannerPosition)}>
       <div css={infoContainer()}>
         {withIcon && (
           <div css={infoIconContainer()}>
@@ -63,25 +77,16 @@ const CompactNotification: React.FC<Props> = ({
         <div>{message}</div>
       </div>
       <div css={actionsContainer()}>
-        <span
-          css={primaryActionContainer()}
-          onClick={e => {
-            e.preventDefault();
-            primaryCTA();
-          }}
-        >
-          {primaryCTALabel}
-        </span>
-        <div
-          css={closeIconContainer()}
-          onClick={e => {
-            e.preventDefault();
-            onCloseCTA();
-          }}
-        >
-          <Icon name="close" color="lightGray500" />
-          {/* <IconButton type='lightGray500' size='sm'  name='close'   /> */}
-        </div>
+        {primaryCTA && (
+          <span css={primaryActionContainer()} onClick={primaryCTA}>
+            {primaryCTALabel}
+          </span>
+        )}
+        {closeCTA && (
+          <div css={closeIconContainer()} onClick={closeCTA}>
+            <Icon name="close" color="lightGray500" />
+          </div>
+        )}
       </div>
     </div>
   );

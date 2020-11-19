@@ -34,7 +34,7 @@ Inline Notification
         variant="inline"
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
-        onCloseCTA={() => console.log('close action clicked')}
+        closeCTA={() => console.log('close action clicked')}
       />
     </PresentComponent>
   </Story>
@@ -56,7 +56,11 @@ Banner Notification
         variant="banner"
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
-        onCloseCTA={() => console.log('close action clicked')}
+        closeCTA={() => console.log('close action clicked')}
+        top={boolean('top', false)}
+        bottom={boolean('bottom', false)}
+        left={boolean('left', false)}
+        right={boolean('right', false)}
       />
     </PresentComponent>
   </Story>

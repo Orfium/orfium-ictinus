@@ -13,30 +13,38 @@ const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
     ? theme.palette.info['400']
     : theme.palette.warning['400'];
 
+const bannerPositionToCss = (bannerPosition: boolean[]): SerializedStyles => css`
+  position: absolute;
+  top: ${bannerPosition[0] ? 0 : 'auto'};
+  bottom: ${bannerPosition[1] ? 0 : 'auto'};
+  left: ${bannerPosition[2] ? 0 : 'auto'};
+  right: ${bannerPosition[3] ? 0 : 'auto'};
+`;
+
 export const notificationsContainer = (
   withFilling: boolean,
   variant: CompactNotificationVariants,
-  type: NotificationTypes
+  type: NotificationTypes,
+  bannerPosition: boolean[]
 ) => (theme: Theme): SerializedStyles => css`
-  /* position: ${variant === 'inline' ? 'absolute' : 'block'}; */
+  ${variant === 'banner' ? bannerPositionToCss(bannerPosition) : null};
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  width: ${variant === 'inline' ? '100%' : rem(489)};
+  width: ${variant === 'inline' ? '100%' : null};
+  min-width: ${variant === 'banner' ? rem(489) : null};
   height: ${rem(56)};
   border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
-  background: ${
-    withFilling
-      ? type === 'success'
-        ? transparentize(0.9, typeToThemePalette(theme, type))
-        : type === 'error'
-        ? transparentize(0.9, typeToThemePalette(theme, type))
-        : type === 'info'
-        ? transparentize(0.9, typeToThemePalette(theme, type))
-        : transparentize(0.9, typeToThemePalette(theme, type))
-      : 'none'
-  };
+  background: ${withFilling
+    ? type === 'success'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : type === 'error'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : type === 'info'
+      ? transparentize(0.9, typeToThemePalette(theme, type))
+      : transparentize(0.9, typeToThemePalette(theme, type))
+    : 'none'};
   border-radius: ${theme.spacing.xsm};
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); //to change when elevated is introduced
 `;
