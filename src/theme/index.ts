@@ -1,8 +1,10 @@
-import { colorShades, flatColors, Palette } from './palette';
+import { colorShades, flatColors, mainTypes, Palette } from './palette';
 import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
 import typography, { Typography } from './typography';
 import spacing, { Spacing } from './spacing';
 import { enhancePaletteWithShades } from './utils';
+
+type TextColorTypes = 'primary' | 'secondary' | 'light';
 
 export type ThemeConfig = {
   palette: PaletteConfig;
@@ -11,36 +13,20 @@ export type ThemeConfig = {
   isDark: boolean;
 };
 
-export function getColor(
-  color: typeof flatColors[number],
-  variant: typeof colorShades[number]
-): string;
-export function getColor(
-  color: typeof flatColors[number],
-  variant: typeof colorShades[number],
-  scope: 'flat'
-): string;
-export function getColor(color: Types, variant: typeof colorShades[number], scope: 'text'): string;
-export function getColor(
-  color: typeof flatColors[number] | Types,
-  variant: typeof colorShades[number],
-  scope: 'flat' | 'text' = 'flat'
-) {
-  if (!enhancePaletteWithShades(lightPaletteConfig)[scope][color][variant]) {
-    throw new Error('No color found with that name');
-  }
-
-  return enhancePaletteWithShades(lightPaletteConfig)[scope][color][variant];
-}
+type GetColor = {
+  (color: typeof flatColors[number], variant: typeof colorShades[number]): string;
+  (color: typeof flatColors[number], variant: typeof colorShades[number], scope: 'flat'): string;
+  (color: TextColorTypes, variant: typeof colorShades[number], scope: 'text'): string;
+  (color: typeof mainTypes[number], variant: typeof colorShades[number], scope: 'normal'): string;
+};
 
 export type Theme = {
   palette: Palette;
   typography: Typography;
   spacing: Spacing;
   isDark: boolean;
+  getColor: GetColor;
 };
-
-type Types = 'primary' | 'secondary' | 'light';
 
 const defaultTheme = (theming: 'dark' | 'light'): Theme => {
   const palette =
@@ -48,11 +34,24 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
       ? enhancePaletteWithShades(lightPaletteConfig)
       : enhancePaletteWithShades(darkPaletteConfig);
 
+  const getColor = (
+    color: typeof flatColors[number] | TextColorTypes | typeof mainTypes[number],
+    variant: typeof colorShades[number],
+    scope: 'flat' | 'text' | 'normal' = 'flat'
+  ) => {
+    if (!palette[scope][color][variant]) {
+      throw new Error('No color found with that name');
+    }
+
+    return palette[scope][color][variant];
+  };
+
   return {
     palette,
     typography,
     spacing,
     isDark: false,
+    getColor,
   };
 };
 

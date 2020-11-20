@@ -42,7 +42,7 @@ export const mainTypes = [
   'warning',
   'info',
   'light',
-];
+] as const;
 
 export type flatPalette = Record<typeof flatColors[number], generatedColorShades>;
 
