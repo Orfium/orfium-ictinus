@@ -159,7 +159,7 @@ function Table<T>({
                     paddingBottom: theme.spacing.md,
                     borderBottomWidth: rem(1),
                     borderBottomStyle: 'solid',
-                    borderBottomColor: theme.getColor('lightGray', 700),
+                    borderBottomColor: theme.utils.getColor('lightGray', 700),
                   },
                 ]}
               >

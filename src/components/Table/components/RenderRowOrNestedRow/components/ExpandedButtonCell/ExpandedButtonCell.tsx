@@ -21,8 +21,8 @@ const ExpandedButtonCell: React.FC<Props> = ({ isExpandedExists, checked, toggle
             overflow: 'hidden',
             borderRadius: rem(20),
             backgroundColor: checked
-              ? theme.getColor('darkGray', 400)
-              : theme.getColor('lightGray', 200),
+              ? theme.utils.getColor('darkGray', 400)
+              : theme.utils.getColor('lightGray', 200),
             margin: `${rem(8)} ${theme.spacing.md}`,
             transition: '0.2s all ease-in-out',
             cursor: 'pointer',

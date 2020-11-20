@@ -13,7 +13,7 @@ export type AcceptedColorComponentTypes =
 const getColorFromType = (type: AcceptedColorComponentTypes | string, theme: Theme) => {
   switch (type) {
     case 'primary':
-      return theme.getColor(type, 100, 'normal');
+      return theme.utils.getColor(type, 100, 'normal');
     case 'secondary':
     case 'success':
     case 'error':
@@ -21,7 +21,7 @@ const getColorFromType = (type: AcceptedColorComponentTypes | string, theme: The
     case 'warning':
     case 'branded1':
     case 'branded2':
-      return theme.getColor(type, 400, 'normal');
+      return theme.utils.getColor(type, 400, 'normal');
     default:
       return type;
   }
@@ -33,11 +33,11 @@ export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) =
 export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
   switch (type) {
     case 'primary':
-      return theme.getColor('primary', 400, 'text');
+      return theme.utils.getColor('primary', 400, 'text');
     case 'secondary':
-      return theme.getColor('secondary', 100, 'text');
+      return theme.utils.getColor('secondary', 100, 'text');
     default:
-      return theme.getColor('light', 100, 'text');
+      return theme.utils.getColor('light', 100, 'text');
   }
 };
 

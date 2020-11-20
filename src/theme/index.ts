@@ -25,7 +25,21 @@ export type Theme = {
   typography: Typography;
   spacing: Spacing;
   isDark: boolean;
-  getColor: GetColor;
+  utils: {
+    getColor: GetColor;
+  };
+};
+
+export const getColor = (palette: Palette) => (
+  color: typeof flatColors[number] | TextColorTypes | typeof mainTypes[number],
+  variant: typeof colorShades[number],
+  scope: 'flat' | 'text' | 'normal' = 'flat'
+) => {
+  if (!palette[scope][color][variant]) {
+    throw new Error('No color found with that name');
+  }
+
+  return palette[scope][color][variant];
 };
 
 const defaultTheme = (theming: 'dark' | 'light'): Theme => {
@@ -34,24 +48,14 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
       ? enhancePaletteWithShades(lightPaletteConfig)
       : enhancePaletteWithShades(darkPaletteConfig);
 
-  const getColor = (
-    color: typeof flatColors[number] | TextColorTypes | typeof mainTypes[number],
-    variant: typeof colorShades[number],
-    scope: 'flat' | 'text' | 'normal' = 'flat'
-  ) => {
-    if (!palette[scope][color][variant]) {
-      throw new Error('No color found with that name');
-    }
-
-    return palette[scope][color][variant];
-  };
-
   return {
     palette,
     typography,
     spacing,
     isDark: false,
-    getColor,
+    utils: {
+      getColor: getColor(palette),
+    },
   };
 };
 

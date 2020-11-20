@@ -71,13 +71,15 @@ const Select: React.FC<Props> = ({
   const customStyles: Styles = {
     option: (provided, state) => ({
       ...provided,
-      backgroundColor: state.isSelected ? theme.getColor('lightGray', 200) : theme.palette.white,
+      backgroundColor: state.isSelected
+        ? theme.utils.getColor('lightGray', 200)
+        : theme.palette.white,
       color: state.isDisabled
-        ? theme.getColor('lightGray', 700)
-        : theme.getColor('primary', 400, 'text'),
+        ? theme.utils.getColor('lightGray', 700)
+        : theme.utils.getColor('primary', 400, 'text'),
       padding: rem(16),
       '&:hover': {
-        backgroundColor: theme.getColor('lightGray', 100),
+        backgroundColor: theme.utils.getColor('lightGray', 100),
       },
     }),
     control: (base, state) => ({
@@ -87,9 +89,9 @@ const Select: React.FC<Props> = ({
       width: 200,
       paddingLeft: rem(3),
       backgroundColor: error
-        ? transparentize(0.85, theme.getColor('error', 400, 'normal'))
-        : theme.getColor('lightGray', 100),
-      border: error ? `1px solid ${theme.getColor('error', 400, 'normal')}` : '0',
+        ? transparentize(0.85, theme.utils.getColor('error', 400, 'normal'))
+        : theme.utils.getColor('lightGray', 100),
+      border: error ? `1px solid ${theme.utils.getColor('error', 400, 'normal')}` : '0',
       '&:hover': {},
       '&:hover svg': {
         backgroundColor: 'rgba(176, 176, 176, 0.23)',
@@ -110,7 +112,7 @@ const Select: React.FC<Props> = ({
       display: 'none',
     }),
     dropdownIndicator: () => ({
-      color: theme.getColor('primary', 400, 'text'),
+      color: theme.utils.getColor('primary', 400, 'text'),
       borderRadius: '100%',
       width: rem(20),
       height: rem(20),
@@ -123,7 +125,7 @@ const Select: React.FC<Props> = ({
     }),
     singleValue: base => ({
       ...base,
-      color: theme.getColor('primary', 400, 'text'),
+      color: theme.utils.getColor('primary', 400, 'text'),
       fontSize: theme.typography.fontSizes[16],
     }),
     multiValue: base => ({
@@ -134,14 +136,14 @@ const Select: React.FC<Props> = ({
         paddingLeft: 0,
       },
       'div:last-of-type': {
-        backgroundColor: theme.getColor('lightGray', 700),
+        backgroundColor: theme.utils.getColor('lightGray', 700),
         width: theme.spacing.md,
         height: theme.spacing.md,
         borderRadius: theme.spacing.md,
         top: rem(3),
         position: 'relative',
         '&:hover': {
-          backgroundColor: theme.getColor('lightGray', 500),
+          backgroundColor: theme.utils.getColor('lightGray', 500),
         },
         svg: {
           fill: theme.palette.white,
