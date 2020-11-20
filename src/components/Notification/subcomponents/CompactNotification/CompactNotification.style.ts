@@ -35,7 +35,8 @@ export const notificationsContainer = (
       : transparentize(0.9, typeToThemePalette(theme, type))
     : 'none'};
   border-radius: ${theme.spacing.xsm};
-  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)}; //to change when elevated is introduced
+  // TODO: box-shadow's last parameter to change when elevated is introduced
+  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
