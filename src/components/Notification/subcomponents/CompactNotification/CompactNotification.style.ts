@@ -1,7 +1,6 @@
 import { Theme } from '../../../../theme';
 import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../../Notification';
-import { CompactNotificationVariants } from './CompactNotification';
 import { css, SerializedStyles } from '@emotion/core';
 
 const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
@@ -13,26 +12,13 @@ const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
     ? theme.palette.info['400']
     : theme.palette.warning['400'];
 
-const bannerPositionToCss = (bannerPosition: boolean[]): SerializedStyles => css`
-  position: absolute;
-  top: ${bannerPosition[0] ? 0 : 'auto'};
-  bottom: ${bannerPosition[1] ? 0 : 'auto'};
-  left: ${bannerPosition[2] ? 0 : 'auto'};
-  right: ${bannerPosition[3] ? 0 : 'auto'};
-`;
-
-export const notificationsContainer = (
-  withFilling: boolean,
-  variant: CompactNotificationVariants,
-  type: NotificationTypes,
-  bannerPosition: boolean[]
-) => (theme: Theme): SerializedStyles => css`
-  ${variant === 'banner' ? bannerPositionToCss(bannerPosition) : null};
+export const notificationsContainer = (withFilling: boolean, type: NotificationTypes) => (
+  theme: Theme
+): SerializedStyles => css`
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  width: ${variant === 'inline' ? '100%' : null};
-  min-width: ${variant === 'banner' ? rem(489) : null};
+  width: 100%;
   height: ${rem(56)};
   border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
@@ -64,9 +50,6 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
 export const infoIconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
 `;
-
-// export const infoMessageContainer = () => (): SerializedStyles => css`
-// `;
 
 export const headMessageContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.xsm};

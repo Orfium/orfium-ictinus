@@ -35,14 +35,6 @@ export type Props = {
   closeCTA?: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
-  /** Banner placed at the top */
-  top?: boolean | undefined;
-  /** Banner placed at the bottom */
-  bottom?: boolean | undefined;
-  /** Banner placed at the left */
-  left?: boolean | undefined;
-  /** Banner placed at the right */
-  right?: boolean | undefined;
 };
 
 const typeToColor = (type: string): AcceptedColorComponentTypes =>
@@ -58,15 +50,9 @@ const CompactNotification: React.FC<Props> = ({
   primaryCTA,
   closeCTA,
   title,
-  top = false,
-  bottom = false,
-  left = false,
-  right = false,
 }) => {
-  const bannerPosition = [top, bottom, left, right];
-
   return (
-    <div css={notificationsContainer(withFilling, variant, type, bannerPosition)}>
+    <div css={notificationsContainer(withFilling, type)}>
       <div css={infoContainer()}>
         {withIcon && (
           <div css={infoIconContainer()}>

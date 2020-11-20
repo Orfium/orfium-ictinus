@@ -1,0 +1,36 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import * as React from 'react';
+import { bannersContainer, bannerWrapper } from './BannersContainer.style';
+
+type Props = {
+  children: React.ReactNode[];
+  /** Banner placed at the top */
+  top?: boolean | undefined;
+  /** Banner placed at the bottom */
+  bottom?: boolean | undefined;
+  /** Banner placed at the left */
+  left?: boolean | undefined;
+  /** Banner placed at the right */
+  right?: boolean | undefined;
+};
+
+const BannersContainer: React.FC<Props> = ({
+  top = false,
+  bottom = false,
+  left = false,
+  right = false,
+  children,
+}) => {
+  const bannersPosition = [top, bottom, left, right];
+
+  return (
+    <div css={bannersContainer(bannersPosition)}>
+      {React.Children.map(children, child => {
+        return <div css={bannerWrapper()}>{child}</div>;
+      })}
+    </div>
+  );
+};
+
+export default BannersContainer;

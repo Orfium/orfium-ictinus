@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
+import BannersContainer from '../Notification/subcomponents/BannersContainer';
 import PresentComponent from '../storyUtils/PresentComponent';
 
 <Meta title="Design System/Notification" component={Notification} />
@@ -46,7 +47,7 @@ Banner Notification
 
 <Preview>
   <Story name="Banner Notifiction" parameters={{ decorators: [withKnobs] }}>
-    <PresentComponent name="" width={600}>
+    <PresentComponent name="" width={1024}>
       <Notification
         withFilling={boolean('withFilling', false)}
         withIcon={boolean('icon', true)}
@@ -57,9 +58,9 @@ Banner Notification
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
         closeCTA={() => console.log('close action clicked')}
-        top={boolean('top', false)}
+        top={boolean('top', true)}
         bottom={boolean('bottom', false)}
-        left={boolean('left', false)}
+        left={boolean('left', true)}
         right={boolean('right', false)}
       />
     </PresentComponent>
