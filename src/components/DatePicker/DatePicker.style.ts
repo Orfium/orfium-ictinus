@@ -31,7 +31,7 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
 
   .DayPicker-NavButton {
     top: ${theme.spacing.sm};
-    background-color: ${theme.palette.flat.lightGray[100]};
+    background-color: ${theme.getColor('lightGray', 100)};
     width: 42px;
     height: 42px;
     border-radius: 5px;
@@ -48,8 +48,8 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
 
   .DayPicker-Weekday {
     color: #9b9b9b;
-    border-top: 1px solid ${theme.palette.flat.lightGray[100]};
-    border-bottom: 1px solid ${theme.palette.flat.lightGray[100]};
+    border-top: 1px solid ${theme.getColor('lightGray', 100)};
+    border-bottom: 1px solid ${theme.getColor('lightGray', 100)};
     font-size: ${theme.typography[12]};
     padding: ${theme.spacing.md} 0;
   }
@@ -78,7 +78,7 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
   }
 
   .DayPicker-Day:not(.DayPicker-Day--disabled):hover {
-    background-color: ${theme.palette.flat.lightGray[100]} !important;
+    background-color: ${theme.getColor('lightGray', 100)} !important;
   }
   .DayPicker:not(.DayPicker--interactionDisabled) {
     .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
@@ -89,7 +89,7 @@ export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean })
   ${isRangePicker &&
     `
     .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
-      background-color: ${theme.palette.flat.lightGray[100]} !important;
+      background-color: ${theme.getColor('lightGray', 100)} !important;
       border-radius: 0;
     }
     

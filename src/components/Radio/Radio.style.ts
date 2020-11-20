@@ -41,15 +41,17 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) =>
 ): SerializedStyles => {
   function determineBoxShadow({ checked, disabled }: Pick<Props, 'checked' | 'disabled'>) {
     if (disabled && checked) {
-      return `inset 0px 0px 0px ${rem('2px')} ${
-        theme.palette.flat.lightGray[300]
-      }, inset 0px 0px 0px ${rem('7px')} ${
-        theme.palette.flat.lightGray[300]
-      }, inset 0px 0px 0px ${rem('14px')} currentColor`;
+      return `inset 0px 0px 0px ${rem('2px')} ${theme.getColor(
+        'lightGray',
+        300
+      )}, inset 0px 0px 0px ${rem('7px')} ${theme.getColor(
+        'lightGray',
+        300
+      )}, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
     if (disabled) {
-      return `inset 0px 0px 0px ${rem('14px')} ${theme.palette.flat.lightGray[200]}`;
+      return `inset 0px 0px 0px ${rem('14px')} ${theme.getColor('lightGray', 200)}`;
     }
 
     if (checked) {
@@ -58,7 +60,7 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled'>) =>
       }, inset 0px 0px 0px ${rem('14px')} currentColor`;
     }
 
-    return `inset 0px 0px 0px ${rem('14px')} ${theme.palette.flat.lightGray[300]}`;
+    return `inset 0px 0px 0px ${rem('14px')} ${theme.getColor('lightGray', 300)}`;
   }
 
   return css`

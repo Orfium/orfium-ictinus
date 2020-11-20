@@ -44,7 +44,7 @@ const ContentCell: React.FC<Props> = ({
       {rowType === 'nested-header' && (
         <div
           css={{
-            color: theme.palette.flat.lightGray[700],
+            color: theme.getColor('lightGray', 700),
             fontSize: theme.typography.fontSizes['14'],
           }}
         >

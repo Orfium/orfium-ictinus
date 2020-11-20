@@ -18,36 +18,36 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
       return `
         background-color: white;
         box-shadow: inset 0 0 0 1px
-          ${error ? theme.palette.error[400] : '#dfdfdf'};
+          ${error ? theme.getColor('error', 400, 'normal') : '#dfdfdf'};
         
          &:focus-within {
           box-shadow: inset 0 0 0 1px
-              ${error ? theme.palette.error[400] : '#dfdfdf'},
+              ${error ? theme.getColor('error', 400, 'normal') : '#dfdfdf'},
             0px 2px 6px 0px #ebeeee;
         }
       `;
     case 'elevated':
       return `
         background-color: white;
-        box-shadow: ${error ? `inset 0 0 0 1px ${theme.palette.error[400]},` : ''}
+        box-shadow: ${error ? `inset 0 0 0 1px ${theme.getColor('error', 400, 'normal')},` : ''}
           0px 2px 6px 0px #ebeeee;
         
         &:focus-within {
-          box-shadow: ${error ? `inset 0 0 0 1px ${theme.palette.error[400]},` : ''}
+          box-shadow: ${error ? `inset 0 0 0 1px ${theme.getColor('error', 400, 'normal')},` : ''}
             0px 6px 16px 0px #ebeeee;
         }
       `;
     case 'filled':
     default:
       return `
-        background-color: ${error ? '#fdf2f2' : theme.palette.flat.lightGray[100]};
+        background-color: ${error ? '#fdf2f2' : theme.getColor('lightGray', 100)};
         box-shadow: inset 0 0 0 1px ${
-          error ? theme.palette.error[400] : theme.palette.flat.lightGray[100]
+          error ? theme.getColor('error', 400, 'normal') : theme.getColor('lightGray', 100)
         };
         
         &:focus-within {
           box-shadow: inset 0 0 0 1px ${
-            error ? theme.palette.error[400] : theme.palette.flat.lightGray[100]
+            error ? theme.getColor('error', 400, 'normal') : theme.getColor('lightGray', 100)
           },
             0px 2px 6px 0px rgba(67, 67, 67, 0.15);
         }
@@ -125,7 +125,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.palette.flat.lightGray[500] : 'transparent'};
+    color: ${!label && placeholder ? theme.getColor('lightGray', 500) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {
@@ -149,7 +149,7 @@ export const inputStyle = ({ label, placeholder }: Props) => (
 export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;
-  color: ${theme.palette.error[400]};
+  color: ${theme.getColor('error', 400, 'normal')};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0 ${rem(8)};

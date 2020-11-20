@@ -30,7 +30,7 @@ export const iconButtonStyle = ({ type, filled, size, icon }: RequiredProperties
     paddingRight: calculatedPaddingSpace,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
-    border: filled ? 'none' : `solid 1px ${theme.palette.flat.lightGray[700]}`,
+    border: filled ? 'none' : `solid 1px ${theme.getColor('lightGray', 700)}`,
   };
 };
 

@@ -12,7 +12,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
 ) => css`
   display: flex;
   cursor: default;
-  color: ${active ? theme.palette.flat.darkGray[400] : theme.palette.flat.lightGray[400]};
+  color: ${active ? theme.getColor('darkGray', 400) : theme.getColor('lightGray', 400)};
 
   & button {
     height: auto;
@@ -20,7 +20,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
     padding: ${theme.spacing.sm};
     &:focus {
       outline: none;
-      background-color: ${theme.palette.flat.lightGray[200]};
+      background-color: ${theme.getColor('lightGray', 200)};
     }
 
     & > span {
@@ -30,6 +30,6 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
 
   & > div > div > div {
     top: 3rem;
-    box-shadow: ${theme.palette.flat.darkGray[500]} 0px 0px ${rem(16)};
+    box-shadow: ${theme.getColor('darkGray', 500)} 0px 0px ${rem(16)};
   }
 `;

@@ -41,7 +41,7 @@ const RenderRowWithCells = React.memo(
     return (
       <TableRow
         selected={isRowSelected}
-        css={bordered && { borderBottom: `${rem(1)} solid ${theme.palette.flat.lightGray[400]}` }}
+        css={bordered && { borderBottom: `${rem(1)} solid ${theme.getColor('lightGray', 400)}` }}
       >
         {onSelectionChangeExist && (
           <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
@@ -96,7 +96,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { r
                 flex: 1,
                 flexDirection: 'row',
                 display: 'flex',
-                borderBottom: `${rem(1)} solid ${theme.palette.flat.lightGray[400]}`,
+                borderBottom: `${rem(1)} solid ${theme.getColor('lightGray', 400)}`,
               }}
             >
               <table css={tableStyle()()}>

@@ -35,7 +35,7 @@ export const menuStyle = ({
     }
 
     if (disabled) {
-      return theme.palette.flat.lightGray[100];
+      return theme.getColor('lightGray', 100);
     }
 
     if (filled && childrenCount !== 0) {
@@ -47,13 +47,13 @@ export const menuStyle = ({
 
   return {
     fontSize: theme.typography.fontSizes['16'],
-    color: disabled ? theme.palette.flat.lightGray[700] : colorPickerBasedOnType(type)(theme),
+    color: disabled ? theme.getColor('lightGray', 700) : colorPickerBasedOnType(type)(theme),
     backgroundColor: defineBackgroundColor(),
     paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
     paddingRight: icon && !childrenCount ? calculatedPaddingSpaceIfIcon : calculatedPaddingSpace,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
-    border: filled ? 'none' : `solid 1px ${theme.palette.flat.lightGray[700]}`,
+    border: filled ? 'none' : `solid 1px ${theme.getColor('lightGray', 700)}`,
   };
 };
 

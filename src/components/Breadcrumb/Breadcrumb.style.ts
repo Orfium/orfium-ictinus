@@ -18,6 +18,6 @@ export const breadcrumbLinkStyles = () => (theme: Theme) => css`
   color: inherit;
   padding: ${theme.spacing.sm};
   &:hover {
-    color: ${theme.palette.flat.darkGray[400]};
+    color: ${theme.getColor('darkGray', 400)};
   }
 `;
