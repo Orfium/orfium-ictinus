@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import CompactNotification from './subcomponents/CompactNotification';
-import BannersContainer from './subcomponents/BannersContainer';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
 
@@ -27,14 +26,6 @@ export type Props = {
   closeCTA?: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
-  /** Banner placed at the top */
-  top?: boolean;
-  /** Banner placed at the bottom */
-  bottom?: boolean;
-  /** Banner placed at the left */
-  left?: boolean;
-  /** Banner placed at the right */
-  right?: boolean;
 };
 
 const Notification: React.FC<Props> = ({
@@ -47,10 +38,6 @@ const Notification: React.FC<Props> = ({
   primaryCTA = undefined,
   closeCTA = undefined,
   title,
-  top,
-  bottom,
-  left,
-  right,
 }) => {
   return (
     <React.Fragment>
@@ -67,30 +54,17 @@ const Notification: React.FC<Props> = ({
           closeCTA={closeCTA}
         />
       ) : variant === 'banner' ? (
-        <BannersContainer top={top} bottom={bottom} left={left} right={right}>
-          <CompactNotification
-            withIcon={withIcon}
-            withFilling={withFilling}
-            message={message}
-            title={title}
-            variant={variant}
-            type={type}
-            primaryCTALabel={primaryCTALabel}
-            primaryCTA={primaryCTA}
-            closeCTA={closeCTA}
-          />
-          <CompactNotification
-            withIcon={withIcon}
-            withFilling={withFilling}
-            message={message}
-            title={title}
-            variant={variant}
-            type={type}
-            primaryCTALabel={primaryCTALabel}
-            primaryCTA={primaryCTA}
-            closeCTA={closeCTA}
-          />
-        </BannersContainer>
+        <CompactNotification
+          withIcon={withIcon}
+          withFilling={withFilling}
+          message={message}
+          title={title}
+          variant={variant}
+          type={type}
+          primaryCTALabel={primaryCTALabel}
+          primaryCTA={primaryCTA}
+          closeCTA={closeCTA}
+        />
       ) : (
         <p>This type is not yet supported</p>
       )}

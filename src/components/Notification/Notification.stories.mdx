@@ -48,21 +48,24 @@ Banner Notification
 <Preview>
   <Story name="Banner Notifiction" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={1024}>
-      <Notification
-        withFilling={boolean('withFilling', false)}
-        withIcon={boolean('icon', true)}
-        title={text('title', 'This is the heading:')}
-        message={text('info', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
-        variant="banner"
-        primaryCTALabel={text('primaryCTALabel', 'Action')}
-        primaryCTA={() => console.log('action clicked')}
-        closeCTA={() => console.log('close action clicked')}
-        top={boolean('top', true)}
+      <BannersContainer
+        top={boolean('top', false)}
         bottom={boolean('bottom', false)}
-        left={boolean('left', true)}
+        left={boolean('left', false)}
         right={boolean('right', false)}
-      />
+      >
+        <Notification
+          withFilling={boolean('withFilling', false)}
+          withIcon={boolean('icon', true)}
+          title={text('title', 'This is the heading:')}
+          message={text('info', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          variant="banner"
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+      </BannersContainer>
     </PresentComponent>
   </Story>
 </Preview>

@@ -14,5 +14,5 @@ export const bannersContainer = (bannersPosition: boolean[]) => (): SerializedSt
 `;
 
 export const bannerWrapper = () => (theme: Theme): SerializedStyles => css`
-  margin: ${theme.spacing.xsm};
+  padding: ${theme.spacing.xsm};
 `;
