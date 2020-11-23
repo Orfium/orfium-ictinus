@@ -34,8 +34,8 @@ export type Props = {
   closeCTA?: () => void;
 };
 
-const typeToIconName = (type: string): AcceptedIconNames =>
-  type === 'warning' ? 'alert' : (type as AcceptedIconNames);
+const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
+  type === 'warning' ? 'alert' : type;
 
 const CompactNotification: React.FC<Props> = ({
   message,
