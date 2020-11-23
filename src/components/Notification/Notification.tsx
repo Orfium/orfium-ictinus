@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import CompactNotification from './subcomponents/CompactNotification';
 
-export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
+export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
 
 export type NotificationVariants = 'inline';
 

@@ -29,18 +29,18 @@ Inline Notification
     <Stack>
       <PresentComponent name="" width={768}>
         <Notification
-          message={text('info', 'Informative Message')}
+          message={text('message', 'Informative Message')}
           variant="inline"
-          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           withIcon={boolean('withIcon', true)}
           withFilling={boolean('withFilling', false)}
         />
       </PresentComponent>
       <PresentComponent name="" width={768}>
         <Notification
-          message={text('info', 'Informative Message')}
+          message={text('message', 'Informative Message')}
           variant="inline"
-          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           withIcon={boolean('withIcon', true)}
           withFilling={boolean('withFilling', false)}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
@@ -50,9 +50,9 @@ Inline Notification
       </PresentComponent>
       <PresentComponent name="" width={768}>
         <Notification
-          message={text('info', 'Informative Message')}
+          message={text('message', 'Informative Message')}
           variant="inline"
-          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           withIcon={boolean('withIcon', true)}
           withFilling={boolean('withFilling', false)}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
@@ -63,9 +63,9 @@ Inline Notification
         <Notification
           withIcon={boolean('withIcon', true)}
           withFilling={boolean('withFilling', false)}
-          message={text('info', 'Informative Message')}
+          message={text('message', 'Informative Message')}
           variant="inline"
-          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           closeCTA={() => console.log('close action clicked')}
         />
       </PresentComponent>
@@ -83,9 +83,9 @@ Playground Notification
       <Notification
         withIcon={boolean('withIcon', true)}
         withFilling={boolean('withFilling', false)}
-        message={text('info', 'Informative Message')}
+        message={text('message', 'Informative Message')}
         variant={select('variant', ['inline', 'banner', 'modal', 'toast'], 'inline')}
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
         closeCTA={() => console.log('close action clicked')}
