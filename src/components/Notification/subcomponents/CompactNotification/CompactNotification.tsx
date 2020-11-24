@@ -12,6 +12,8 @@ import {
 import Icon from '../../../Icon';
 import { NotificationTypes } from '../../Notification';
 import { AcceptedIconNames } from 'components/Icon/types';
+import { generateTestDataId } from '../../../../utils/helpers';
+import { TestId } from '../../../../utils/types';
 
 export type CompactNotificationVariants = 'inline';
 
@@ -32,6 +34,8 @@ export type Props = {
   primaryCTA?: () => void;
   /** The closing call-to-action of the Notification */
   closeCTA?: () => void;
+  /** The data test id if needed */
+  dataTestId?: TestId;
 };
 
 const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
@@ -45,6 +49,7 @@ const CompactNotification: React.FC<Props> = ({
   primaryCTALabel,
   primaryCTA,
   closeCTA,
+  dataTestId,
 }) => {
   return (
     <div css={notificationsContainer(withFilling, type)}>
@@ -58,12 +63,20 @@ const CompactNotification: React.FC<Props> = ({
       </div>
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
-          <span css={primaryActionContainer()} onClick={primaryCTA}>
+          <span
+            css={primaryActionContainer()}
+            onClick={primaryCTA}
+            data-testid={generateTestDataId('notification-primary', dataTestId)}
+          >
             {primaryCTALabel}
           </span>
         )}
         {closeCTA && (
-          <span css={closeActionContainer()} onClick={closeCTA}>
+          <span
+            css={closeActionContainer()}
+            onClick={closeCTA}
+            data-testid={generateTestDataId('notification-close', dataTestId)}
+          >
             <Icon name="close" color="lightGray500" />
           </span>
         )}

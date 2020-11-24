@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import CompactNotification from './subcomponents/CompactNotification';
+import { TestId } from '../../utils/types';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
 
@@ -24,6 +25,8 @@ export type Props = {
   primaryCTA?: () => void;
   /** The closing call-to-action of the Notification */
   closeCTA?: () => void;
+  /** The data test id if needed */
+  dataTestId?: TestId;
 };
 
 const Notification: React.FC<Props> = ({
@@ -35,6 +38,7 @@ const Notification: React.FC<Props> = ({
   primaryCTALabel,
   primaryCTA = undefined,
   closeCTA = undefined,
+  dataTestId,
 }) => {
   return (
     <React.Fragment>
@@ -48,6 +52,7 @@ const Notification: React.FC<Props> = ({
           primaryCTALabel={primaryCTALabel}
           primaryCTA={primaryCTA}
           closeCTA={closeCTA}
+          dataTestId={dataTestId}
         />
       ) : (
         <p>This type is not yet supported</p>
