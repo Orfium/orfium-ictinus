@@ -2,8 +2,9 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import CompactNotification from './subcomponents/CompactNotification';
+import { TestId } from '../../utils/types';
 
-export type NotificationTypes = 'success' | 'error' | 'info' | 'alert';
+export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
 
 export type NotificationVariants = 'inline' | 'banner';
 
@@ -26,6 +27,8 @@ export type Props = {
   closeCTA?: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
+  /** The data test id if needed */
+  dataTestId?: TestId;
 };
 
 const Notification: React.FC<Props> = ({
@@ -38,6 +41,7 @@ const Notification: React.FC<Props> = ({
   primaryCTA = undefined,
   closeCTA = undefined,
   title,
+  dataTestId,
 }) => {
   return (
     <React.Fragment>
@@ -52,6 +56,7 @@ const Notification: React.FC<Props> = ({
           primaryCTALabel={primaryCTALabel}
           primaryCTA={primaryCTA}
           closeCTA={closeCTA}
+          dataTestId={dataTestId}
         />
       ) : variant === 'banner' ? (
         <CompactNotification
@@ -64,6 +69,7 @@ const Notification: React.FC<Props> = ({
           primaryCTALabel={primaryCTALabel}
           primaryCTA={primaryCTA}
           closeCTA={closeCTA}
+          dataTestId={dataTestId}
         />
       ) : (
         <p>This type is not yet supported</p>

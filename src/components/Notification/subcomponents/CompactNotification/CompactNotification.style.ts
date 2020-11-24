@@ -3,14 +3,7 @@ import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../../Notification';
 import { css, SerializedStyles } from '@emotion/core';
 
-const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
-  type === 'success'
-    ? theme.palette.success['400']
-    : type === 'error'
-    ? theme.palette.error['400']
-    : type === 'info'
-    ? theme.palette.info['400']
-    : theme.palette.warning['400'];
+const typeToThemePalette = (theme: Theme, type: NotificationTypes) => theme.palette[type][400];
 
 export const notificationsContainer = (withFilling: boolean, type: NotificationTypes) => (
   theme: Theme
@@ -22,15 +15,7 @@ export const notificationsContainer = (withFilling: boolean, type: NotificationT
   height: ${rem(56)};
   border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
-  background: ${withFilling
-    ? type === 'success'
-      ? transparentize(0.9, typeToThemePalette(theme, type))
-      : type === 'error'
-      ? transparentize(0.9, typeToThemePalette(theme, type))
-      : type === 'info'
-      ? transparentize(0.9, typeToThemePalette(theme, type))
-      : transparentize(0.9, typeToThemePalette(theme, type))
-    : 'none'};
+  background: ${withFilling ? transparentize(0.9, typeToThemePalette(theme, type)) : 'none'};
   border-radius: ${theme.spacing.xsm};
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); //to change when elevated is introduced
 `;

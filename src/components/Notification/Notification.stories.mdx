@@ -31,7 +31,7 @@ Inline Notification
         withFilling={boolean('withFilling', false)}
         withIcon={boolean('icon', true)}
         message={text('info', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         variant="inline"
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
@@ -49,9 +49,9 @@ Banner Notification
   <Story name="Banner Notifiction" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={1024}>
       <BannersContainer
-        top={boolean('top', false)}
+        top={boolean('top', true)}
         bottom={boolean('bottom', false)}
-        left={boolean('left', false)}
+        left={boolean('left', true)}
         right={boolean('right', false)}
       >
         <Notification
@@ -59,7 +59,29 @@ Banner Notification
           withIcon={boolean('icon', true)}
           title={text('title', 'This is the heading:')}
           message={text('info', 'This is the info')}
-          type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          variant="banner"
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+        <Notification
+          withFilling={boolean('withFilling', false)}
+          withIcon={boolean('icon', true)}
+          title={text('title', 'This is the heading:')}
+          message={text('info', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          variant="banner"
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+        <Notification
+          withFilling={boolean('withFilling', false)}
+          withIcon={boolean('icon', true)}
+          title={text('title', 'This is the heading:')}
+          message={text('info', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           variant="banner"
           primaryCTALabel={text('primaryCTALabel', 'Action')}
           primaryCTA={() => console.log('action clicked')}
@@ -82,7 +104,7 @@ Playground Notification
         withIcon={boolean('icon', true)}
         title={text('title', 'This is the heading:')}
         message={text('info', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'alert'], 'success')}
+        type={select('type', ['success', 'error', 'info', 'wanring'], 'success')}
         variant={select('variant', ['inline', 'banner', 'modal', 'toast'], 'inline')}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('primary action clicked')}
