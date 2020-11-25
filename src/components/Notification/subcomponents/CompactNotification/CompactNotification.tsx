@@ -38,7 +38,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
+export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
   type === 'warning' ? 'alert' : type;
 
 const CompactNotification: React.FC<Props> = ({
