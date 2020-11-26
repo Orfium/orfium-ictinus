@@ -35,11 +35,13 @@ export const getColor = (palette: Palette): GetColor => (
   variant: typeof colorShades[number],
   scope: 'flat' | 'text' | 'normal' = 'flat'
 ) => {
-  if (!palette[scope][color][variant]) {
+  const endColor = scope === 'normal' ? palette[color][variant] : palette[scope][color][variant];
+
+  if (!endColor) {
     throw new Error('No color found with that name');
   }
 
-  return palette[scope][color][variant];
+  return endColor;
 };
 
 const defaultTheme = (theming: 'dark' | 'light'): Theme => {
