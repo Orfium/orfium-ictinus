@@ -30,7 +30,7 @@ export type Theme = {
   };
 };
 
-export const getColor = (palette: Palette) => (
+export const getColor = (palette: Palette): GetColor => (
   color: typeof flatColors[number] | TextColorTypes | typeof mainTypes[number],
   variant: typeof colorShades[number],
   scope: 'flat' | 'text' | 'normal' = 'flat'
