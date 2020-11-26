@@ -1,11 +1,12 @@
 import { colorShadesCreator, enhancePaletteWithShades } from '../utils';
-import { flatColors } from '../palette';
 import { magentaShades } from './const';
 import { getColor } from '../index';
-import { lightPaletteConfig } from '../palette.config';
+import { flatPaletteConfig, lightPaletteConfig } from '../palette.config';
 
 test('magenta base color to be shaded correctly', () => {
-  expect(colorShadesCreator(flatColors['magenta'], 0.25)).toStrictEqual(magentaShades);
+  expect(colorShadesCreator(flatPaletteConfig.magenta as string, 0.25)).toStrictEqual(
+    magentaShades
+  );
 });
 
 test('that the getColor fetch the correct colors from what has being requested', () => {
