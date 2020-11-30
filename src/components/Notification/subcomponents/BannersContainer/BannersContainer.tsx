@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { bannersContainer, bannerWrapper } from './BannersContainer.style';
+import { bannersContainer } from './BannersContainer.style';
 
 type Props = {
   children: React.ReactNode[];
@@ -17,18 +17,19 @@ type Props = {
 
 const BannersContainer: React.FC<Props> = ({
   top = false,
-  bottom = false,
+  bottom = true,
   left = false,
-  right = false,
+  right = true,
   children,
 }) => {
   const bannersPosition = [top, bottom, left, right];
 
   return (
     <div css={bannersContainer(bannersPosition)}>
-      {React.Children.map(children, child => {
+      {/* {React.Children.map(children, child => {
         return <div css={bannerWrapper()}>{child}</div>;
-      })}
+      })} */}
+      {children}
     </div>
   );
 };

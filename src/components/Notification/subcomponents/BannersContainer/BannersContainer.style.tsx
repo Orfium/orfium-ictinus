@@ -2,7 +2,9 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Theme } from '../../../../theme';
 
-export const bannersContainer = (bannersPosition: boolean[]) => (): SerializedStyles => css`
+export const bannersContainer = (bannersPosition: boolean[]) => (
+  theme: Theme
+): SerializedStyles => css`
   position: absolute;
   top: ${bannersPosition[0] ? 0 : 'auto'};
   bottom: ${bannersPosition[1] ? 0 : 'auto'};
@@ -11,8 +13,7 @@ export const bannersContainer = (bannersPosition: boolean[]) => (): SerializedSt
   min-width: ${rem(489)};
   display: flex;
   flex-direction: column;
-`;
-
-export const bannerWrapper = () => (theme: Theme): SerializedStyles => css`
-  padding: ${theme.spacing.xsm};
+  div:first-child {
+    margin: ${theme.spacing.xsm};
+  }
 `;
