@@ -60,6 +60,7 @@ export const buttonStyle = ({
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
     border: filled ? 'none' : `solid 1px ${theme.utils.getColor('lightGray', 700)}`,
+    cursor: 'pointer',
   };
 };
 
