@@ -79,6 +79,11 @@ function Table<T>({
     }
   }, [onCheck, selectedIds]);
 
+  React.useEffect(() => {
+    // when data are fresh initialize the selectedIds state
+    setSelectedIds(undefined);
+  }, [data]);
+
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
