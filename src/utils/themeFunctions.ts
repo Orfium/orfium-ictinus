@@ -15,9 +15,11 @@ export type AcceptedColorComponentTypes =
   | 'lightGray100'
   | 'lightGray200'
   | 'lightGray400'
+  | 'lightGray500'
   | 'lightGray700'
   | 'darkGray400'
-  | 'darkGray600';
+  | 'darkGray600'
+  | 'darkBlue400';
 
 const getColorFromType = (
   type: AcceptedColorComponentTypes,
@@ -51,10 +53,14 @@ const getColorFromType = (
       return theme.palette.text.light[400];
     case 'lightGray400':
       return theme.palette.flat.lightGray[400];
+    case 'lightGray500':
+      return theme.palette.flat.lightGray[500];
     case 'lightGray700':
       return theme.palette.flat.lightGray[700];
     case 'darkGray400':
       return theme.palette.flat.darkGray[400];
+    case 'darkBlue400':
+      return theme.palette.flat.darkBlue[400];
     default:
       return defaultValue;
   }
