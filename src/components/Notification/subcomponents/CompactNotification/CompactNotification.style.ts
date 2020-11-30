@@ -17,7 +17,8 @@ export const notificationsContainer = (withFilling: boolean, type: NotificationT
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
   background: ${withFilling ? transparentize(0.9, typeToThemePalette(theme, type)) : 'none'};
   border-radius: ${theme.spacing.xsm};
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15); //to change when elevated is introduced
+  // TODO: box-shadow's last parameter to change when elevated is introduced
+  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
@@ -32,11 +33,11 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.md};
 `;
 
-export const infoIconContainer = () => (theme: Theme): SerializedStyles => css`
+export const iconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
 `;
 
-export const headMessageContainer = () => (theme: Theme): SerializedStyles => css`
+export const headContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.xsm};
   font-weight: ${theme.typography.weights.bold};
 `;
@@ -46,7 +47,7 @@ export const primaryActionContainer = () => (theme: Theme): SerializedStyles => 
   color: ${theme.palette.flat.lightBlue[400]};
 `;
 
-export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
+export const closeActionContainer = () => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  padding-left: ${theme.spacing.lg};
+  margin-left: ${theme.spacing.lg};
 `;

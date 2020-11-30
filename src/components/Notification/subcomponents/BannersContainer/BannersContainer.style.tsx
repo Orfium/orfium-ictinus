@@ -13,7 +13,8 @@ export const bannersContainer = (bannersPosition: boolean[]) => (
   min-width: ${rem(489)};
   display: flex;
   flex-direction: column;
-  div:first-child {
-    margin: ${theme.spacing.xsm};
+  margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};
+  > div {
+    margin: ${theme.spacing.sm} 0;
   }
 `;

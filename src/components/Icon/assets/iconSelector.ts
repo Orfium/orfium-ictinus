@@ -1,8 +1,10 @@
 import { AcceptedIconNames } from '../types';
 
+import AccountIcon from './account.svg';
 import ActionsIcon from './actions.svg';
 import AddIcon from './add.svg';
 import AlertIcon from './alert.svg';
+import AnalyticsIcon from './analytics.svg';
 import AncientIcon from './ancient-building.svg';
 import ArrowLeftIcon from './arrow-left.svg';
 import ArrowRightIcon from './arrow-right.svg';
@@ -11,6 +13,8 @@ import AssetMatchingIcon from './asset-matching.svg';
 import AssetIcon from './asset.svg';
 import AutoIcon from './auto.svg';
 import CalendarEmptyIcon from './calendar-empty.svg';
+import CalendarFilledIcon from './calendar-filled.svg';
+import CatalogFilesIcon from './catalog-files.svg';
 import CatalogOverviewIcon from './catalog-overview.svg';
 import CatalogIcon from './catalog.svg';
 import CheckIcon from './check.svg';
@@ -28,19 +32,27 @@ import ChevronSmallDownIcon from './chevron-small-down.svg';
 import ChevronSmallLeftIcon from './chevron-small-left.svg';
 import ChevronSmallRightIcon from './chevron-small-right.svg';
 import ChevronSmallUpIcon from './chevron-small-up.svg';
+import ClockIcon from './clock.svg';
 import CloseTagIcon from './close-tag.svg';
 import CloseIcon from './close.svg';
 import CmsProcessIcon from './cms-process.svg';
 import CompositionIcon from './composition.svg';
+import ConfirmedMatchesIcon from './confirmed-matches.svg';
 import ConflictsIcon from './conflicts.svg';
+import DashboardIcon from './dashboard.svg';
 import DatasetIcon from './dataset.svg';
 import ArrowDownIcon from './dd-arrow.svg';
+import DeleteIcon from './delete.svg';
 import DeliveryIcon from './delivery.svg';
 import DetailsIcon from './details.svg';
 import DotsVerticalIcon from './dots-vertical.svg';
 import DownloadIcon from './download.svg';
+import DuplicateIcon from './duplicate.svg';
+import EarningsIcon from './earnings.svg';
+import EditIcon from './edit.svg';
 import ErrorIcon from './error.svg';
 import ExpensesIcon from './expenses.svg';
+import ExternalLinkIcon from './external-link.svg';
 import RefreshIcon from './refresh.svg';
 import StarIcon from './star.svg';
 
@@ -54,15 +66,21 @@ import FatArrowDownIcon from './fat-arrow-down.svg';
 import FatArrowLeftIcon from './fat-arrow-left.svg';
 import FatArrowRightIcon from './fat-arrow-right.svg';
 import FatArrowUpIcon from './fat-arrow-up.svg';
+import FileIcon from './file.svg';
 import FinancialChartIcon from './financial-chart.svg';
 import GenericFileIcon from './generic-file.svg';
 import GlobalItemIcon from './global-item.svg';
+import HeartFillIcon from './heart-fill.svg';
+import HeartStrokeIcon from './heart-stroke.svg';
+import HelpIcon from './help.svg';
 import HourglassIcon from './hourglass.svg';
 import IncomeIcon from './income.svg';
 import InfoIcon from './info.svg';
 import KeywordIcon from './keyword.svg';
+import LegalFilesIcon from './legal-files.svg';
 import LinkedIcon from './linked.svg';
 import LockIcon from './lock.svg';
+import MailIcon from './mail.svg';
 import ManualIcon from './manual.svg';
 import MenuIcon from './menu.svg';
 // MinusIcon code has been updated from current design system
@@ -70,6 +88,7 @@ import MinusIcon from './minus.svg';
 import MoreOptionsHorizontalIcon from './more-options-horizontal.svg';
 import MoreOptionsVerticalIcon from './more-options-vertical.svg';
 import MusicNoteIcon from './music-note.svg';
+import NotificationsIcon from './notifications.svg';
 import OthersIcon from './others.svg';
 import OwnershipValidationIcon from './ownership-validation.svg';
 import PageFirstIcon from './page-first.svg';
@@ -89,25 +108,37 @@ import ResultIcon from './result.svg';
 import SearchMusicIcon from './search-music.svg';
 import SearchThunderIcon from './search-thunder.svg';
 import SearchIcon from './search.svg';
+import SettingsIcon from './settings.svg';
 import SightIcon from './sight.svg';
+import SortAscendingIcon from './sort-ascending.svg';
+import SortDescendingIcon from './sort-descending.svg';
 import StampIcon from './stamp.svg';
 import SuccessIcon from './success.svg';
 import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import TimeOutIcon from './time-out.svg';
 import TrainingIcon from './training.svg';
+import TriangleDownIcon from './triangle-down.svg';
+import TriangleLeftIcon from './triangle-left.svg';
+import TriangleRightIcon from './triangle-right.svg';
+import TriangleUpIcon from './triangle-up.svg';
 import TrophyIcon from './trophy.svg';
 import UpdateIcon from './update.svg';
 import UploadIcon from './upload.svg';
 import UserAvatarIcon from './user-avatar.svg';
 import UserIcon from './user.svg';
+import UsersIcon from './users.svg';
+import ViewIcon from './view.svg';
+import WorksIcon from './works.svg';
 import WriterIcon from './writer.svg';
 import YoutubeIcon from './youtube.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
+  account: AccountIcon,
   actions: ActionsIcon,
   add: AddIcon,
   alert: AlertIcon,
+  analytics: AnalyticsIcon,
   ancient: AncientIcon,
   arrowDown: ArrowDownIcon,
   arrowLeft: ArrowLeftIcon,
@@ -119,8 +150,10 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   assetMatching: AssetMatchingIcon,
   auto: AutoIcon,
   calendarEmpty: CalendarEmptyIcon,
+  calendarFilled: CalendarFilledIcon,
   catalog: CatalogIcon,
   catalogOverview: CatalogOverviewIcon,
+  catalogFiles: CatalogFilesIcon,
   check: CheckIcon,
   checkedList: CheckedListIcon,
   checkmark: CheckmarkIcon, // "check" copy (smaller)
@@ -136,37 +169,52 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   chevronSmallLeft: ChevronSmallLeftIcon, // "arrowLeft" copy (smaller)
   chevronSmallRight: ChevronSmallRightIcon, // "arrowRight" copy (smaller)
   chevronSmallUp: ChevronSmallUpIcon,
+  clock: ClockIcon,
   close: CloseIcon,
   closeTag: CloseTagIcon,
   cmsProcess: CmsProcessIcon,
   composition: CompositionIcon,
+  confirmedMatches: ConfirmedMatchesIcon,
   conflicts: ConflictsIcon,
+  dashboard: DashboardIcon,
   dataset: DatasetIcon,
+  delete: DeleteIcon,
   delivery: DeliveryIcon, // "expenses" copy
   details: DetailsIcon,
   dotsVertical: DotsVerticalIcon,
   download: DownloadIcon,
+  duplicate: DuplicateIcon,
+  earnings: EarningsIcon,
+  edit: EditIcon,
   error: ErrorIcon, // "closeTag" copy (larger)
   expenses: ExpensesIcon,
+  externalLink: ExternalLinkIcon,
   fatArrowDown: FatArrowDownIcon,
   fatArrowLeft: FatArrowLeftIcon,
   fatArrowRight: FatArrowRightIcon,
   fatArrowUp: FatArrowUpIcon,
+  file: FileIcon,
   financialChart: FinancialChartIcon,
   genericFile: GenericFileIcon,
   globalItem: GlobalItemIcon,
+  heartFill: HeartFillIcon,
+  heartStroke: HeartStrokeIcon,
+  help: HelpIcon,
   hourglass: HourglassIcon,
   income: IncomeIcon,
   info: InfoIcon,
   keyword: KeywordIcon,
+  legalFiles: LegalFilesIcon,
   linked: LinkedIcon,
   lock: LockIcon,
+  mail: MailIcon,
   manual: ManualIcon,
   menu: MenuIcon,
   minus: MinusIcon,
   moreOptionsHorizontal: MoreOptionsHorizontalIcon,
   moreOptionsVertical: MoreOptionsVerticalIcon, // "dotsVertical" copy (larger)
   musicNote: MusicNoteIcon,
+  notifications: NotificationsIcon,
   others: OthersIcon,
   ownershipValidation: OwnershipValidationIcon,
   pageFirst: PageFirstIcon, // "arrowToLeft" copy
@@ -184,18 +232,28 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   search: SearchIcon,
   searchMusic: SearchMusicIcon,
   searchThunder: SearchThunderIcon,
+  settings: SettingsIcon,
   sight: SightIcon,
+  sortAscending: SortAscendingIcon,
+  sortDescending: SortDescendingIcon,
   stamp: StampIcon,
   success: SuccessIcon,
   thunder: ThunderIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
   timeOut: TimeOutIcon,
   training: TrainingIcon,
+  triangleDown: TriangleDownIcon,
+  triangleLeft: TriangleLeftIcon,
+  triangleRight: TriangleRightIcon,
+  triangleUp: TriangleUpIcon,
   trophy: TrophyIcon,
   update: UpdateIcon,
   upload: UploadIcon,
   user: UserIcon,
+  users: UsersIcon,
   userAvatar: UserAvatarIcon, // "user" copy (smaller)
+  view: ViewIcon,
+  works: WorksIcon,
   writer: WriterIcon,
   youtube: YoutubeIcon,
   refresh: RefreshIcon,

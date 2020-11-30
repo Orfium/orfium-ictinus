@@ -24,14 +24,7 @@ const BannersContainer: React.FC<Props> = ({
 }) => {
   const bannersPosition = [top, bottom, left, right];
 
-  return (
-    <div css={bannersContainer(bannersPosition)}>
-      {/* {React.Children.map(children, child => {
-        return <div css={bannerWrapper()}>{child}</div>;
-      })} */}
-      {children}
-    </div>
-  );
+  return <div css={bannersContainer(bannersPosition)}>{children}</div>;
 };
 
 export default BannersContainer;

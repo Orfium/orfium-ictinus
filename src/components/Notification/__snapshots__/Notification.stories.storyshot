@@ -45,10 +45,10 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
     }
   >
     <div
-      className="css-r3dzqj-BannersContainer"
+      className="css-yehuvi-BannersContainer"
     >
       <div
-        className="css-1trkknq-CompactNotification"
+        className="css-6t1vuy-CompactNotification"
       >
         <div
           className="css-1qxbj8g-CompactNotification"
@@ -83,8 +83,8 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
           >
             Action
           </span>
-          <div
-            className="css-1l5e0al-CompactNotification"
+          <span
+            className="css-xvugv-CompactNotification"
             data-testid="notification-close"
             onClick={[Function]}
           >
@@ -95,11 +95,11 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
                 className="css-1avnyjk-Icon"
               />
             </span>
-          </div>
+          </span>
         </div>
       </div>
       <div
-        className="css-1trkknq-CompactNotification"
+        className="css-6t1vuy-CompactNotification"
       >
         <div
           className="css-1qxbj8g-CompactNotification"
@@ -134,8 +134,8 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
           >
             Action
           </span>
-          <div
-            className="css-1l5e0al-CompactNotification"
+          <span
+            className="css-xvugv-CompactNotification"
             data-testid="notification-close"
             onClick={[Function]}
           >
@@ -146,11 +146,11 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
                 className="css-1avnyjk-Icon"
               />
             </span>
-          </div>
+          </span>
         </div>
       </div>
       <div
-        className="css-1trkknq-CompactNotification"
+        className="css-6t1vuy-CompactNotification"
       >
         <div
           className="css-1qxbj8g-CompactNotification"
@@ -185,8 +185,8 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
           >
             Action
           </span>
-          <div
-            className="css-1l5e0al-CompactNotification"
+          <span
+            className="css-xvugv-CompactNotification"
             data-testid="notification-close"
             onClick={[Function]}
           >
@@ -197,7 +197,7 @@ exports[`Storyshots Design System/Notification Banner Notifiction 1`] = `
                 className="css-1avnyjk-Icon"
               />
             </span>
-          </div>
+          </span>
         </div>
       </div>
     </div>
@@ -247,72 +247,271 @@ exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
     </button>
   </div>
   <div
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "padding": "1rem",
-        "width": 1024,
-      }
-    }
+    className="css-ptimel-Stack"
   >
     <div
-      className="css-1trkknq-CompactNotification"
-    >
-      <div
-        className="css-1qxbj8g-CompactNotification"
-      >
-        <div
-          className="css-61cpcu-CompactNotification"
-        >
-          <span
-            className="css-1gnbc76-Icon"
-          >
-            <span
-              className="css-1atsk5c-Icon"
-            />
-          </span>
-        </div>
-        <div>
-          This is the info
-        </div>
-      </div>
-      <div
-        className="css-1xih1b5-CompactNotification"
-      >
-        <span
-          className="css-172bta1-CompactNotification"
-          data-testid="notification-primary"
-          onClick={[Function]}
-        >
-          Action
-        </span>
-        <div
-          className="css-1l5e0al-CompactNotification"
-          data-testid="notification-close"
-          onClick={[Function]}
-        >
-          <span
-            className="css-1gnbc76-Icon"
-          >
-            <span
-              className="css-1avnyjk-Icon"
-            />
-          </span>
-        </div>
-      </div>
-    </div>
-    <p
       style={
         Object {
-          "paddingTop": "8px",
+          "margin": 5,
         }
       }
     >
-      
-    </p>
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "padding": "1rem",
+            "width": 768,
+          }
+        }
+      >
+        <div
+          className="css-6t1vuy-CompactNotification"
+        >
+          <div
+            className="css-1qxbj8g-CompactNotification"
+          >
+            <div
+              className="css-61cpcu-CompactNotification"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-1atsk5c-Icon"
+                />
+              </span>
+            </div>
+            <div>
+              Informative Message
+            </div>
+          </div>
+          <div
+            className="css-1xih1b5-CompactNotification"
+          />
+        </div>
+        <p
+          style={
+            Object {
+              "paddingTop": "8px",
+            }
+          }
+        >
+          
+        </p>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "padding": "1rem",
+            "width": 768,
+          }
+        }
+      >
+        <div
+          className="css-6t1vuy-CompactNotification"
+        >
+          <div
+            className="css-1qxbj8g-CompactNotification"
+          >
+            <div
+              className="css-61cpcu-CompactNotification"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-1atsk5c-Icon"
+                />
+              </span>
+            </div>
+            <div>
+              Informative Message
+            </div>
+          </div>
+          <div
+            className="css-1xih1b5-CompactNotification"
+          >
+            <span
+              className="css-172bta1-CompactNotification"
+              data-testid="notification-primary"
+              onClick={[Function]}
+            >
+              Action
+            </span>
+            <span
+              className="css-xvugv-CompactNotification"
+              data-testid="notification-close"
+              onClick={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-1avnyjk-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </div>
+        <p
+          style={
+            Object {
+              "paddingTop": "8px",
+            }
+          }
+        >
+          
+        </p>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "padding": "1rem",
+            "width": 768,
+          }
+        }
+      >
+        <div
+          className="css-6t1vuy-CompactNotification"
+        >
+          <div
+            className="css-1qxbj8g-CompactNotification"
+          >
+            <div
+              className="css-61cpcu-CompactNotification"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-1atsk5c-Icon"
+                />
+              </span>
+            </div>
+            <div>
+              Informative Message
+            </div>
+          </div>
+          <div
+            className="css-1xih1b5-CompactNotification"
+          >
+            <span
+              className="css-172bta1-CompactNotification"
+              data-testid="notification-primary"
+              onClick={[Function]}
+            >
+              Action
+            </span>
+          </div>
+        </div>
+        <p
+          style={
+            Object {
+              "paddingTop": "8px",
+            }
+          }
+        >
+          
+        </p>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "padding": "1rem",
+            "width": 768,
+          }
+        }
+      >
+        <div
+          className="css-6t1vuy-CompactNotification"
+        >
+          <div
+            className="css-1qxbj8g-CompactNotification"
+          >
+            <div
+              className="css-61cpcu-CompactNotification"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-1atsk5c-Icon"
+                />
+              </span>
+            </div>
+            <div>
+              Informative Message
+            </div>
+          </div>
+          <div
+            className="css-1xih1b5-CompactNotification"
+          >
+            <span
+              className="css-xvugv-CompactNotification"
+              data-testid="notification-close"
+              onClick={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-1avnyjk-Icon"
+                />
+              </span>
+            </span>
+          </div>
+        </div>
+        <p
+          style={
+            Object {
+              "paddingTop": "8px",
+            }
+          }
+        >
+          
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -357,12 +556,12 @@ exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
         "flexDirection": "column",
         "justifyContent": "center",
         "padding": "1rem",
-        "width": 600,
+        "width": 768,
       }
     }
   >
     <div
-      className="css-1trkknq-CompactNotification"
+      className="css-6t1vuy-CompactNotification"
     >
       <div
         className="css-1qxbj8g-CompactNotification"
@@ -391,6 +590,19 @@ exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
           onClick={[Function]}
         >
           Action
+        </span>
+        <span
+          className="css-xvugv-CompactNotification"
+          data-testid="notification-close"
+          onClick={[Function]}
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-1avnyjk-Icon"
+            />
+          </span>
         </span>
       </div>
     </div>

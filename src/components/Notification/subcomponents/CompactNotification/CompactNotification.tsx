@@ -5,14 +5,14 @@ import {
   actionsContainer,
   infoContainer,
   notificationsContainer,
-  infoIconContainer,
-  headMessageContainer,
+  iconContainer,
+  headContainer,
   primaryActionContainer,
-  closeIconContainer,
+  closeActionContainer,
 } from './CompactNotification.style';
 import Icon from '../../../Icon';
-import { AcceptedIconNames } from 'components/Icon/types';
 import { NotificationTypes } from '../../Notification';
+import { AcceptedIconNames } from 'components/Icon/types';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 
@@ -60,15 +60,15 @@ const CompactNotification: React.FC<Props> = ({
     <div css={notificationsContainer(withFilling, type)}>
       <div css={infoContainer()}>
         {withIcon && (
-          <div css={infoIconContainer()}>
+          <div css={iconContainer()}>
             <Icon name={typeToIconName(type)} color={type} />
           </div>
         )}
-        {variant === 'banner' && <div css={headMessageContainer()}>{title}</div>}
+        {variant === 'banner' && <div css={headContainer()}>{title}</div>}
         <div>{message}</div>
       </div>
       <div css={actionsContainer()}>
-        {primaryCTA && (
+        {primaryCTA && primaryCTALabel && (
           <span
             css={primaryActionContainer()}
             onClick={primaryCTA}
@@ -78,13 +78,13 @@ const CompactNotification: React.FC<Props> = ({
           </span>
         )}
         {closeCTA && (
-          <div
-            css={closeIconContainer()}
+          <span
+            css={closeActionContainer()}
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
             <Icon name="close" color="lightGray500" />
-          </div>
+          </span>
         )}
       </div>
     </div>

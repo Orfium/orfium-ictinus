@@ -6,7 +6,7 @@ import { TestId } from '../../utils/types';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
 
-export type NotificationVariants = 'inline' | 'banner';
+export type NotificationVariants = 'inline';
 
 export type Props = {
   /** Show notification icon based on the type */
@@ -35,8 +35,8 @@ const Notification: React.FC<Props> = ({
   withIcon = true,
   withFilling = false,
   message,
-  variant = 'inline',
-  type = 'info',
+  variant,
+  type,
   primaryCTALabel,
   primaryCTA = undefined,
   closeCTA = undefined,
@@ -50,7 +50,6 @@ const Notification: React.FC<Props> = ({
           withIcon={withIcon}
           withFilling={withFilling}
           message={message}
-          title={title}
           variant={variant}
           type={type}
           primaryCTALabel={primaryCTALabel}
