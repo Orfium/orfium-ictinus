@@ -55,7 +55,7 @@ type Props<T> = {
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
-  topRightArea?: (data: Row<T>[], selectionData: Selection[]) => React.Component | JSX.Element;
+  topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.Component | JSX.Element;
 };
 
 function Table<T>({
@@ -78,6 +78,11 @@ function Table<T>({
       onCheck(selectedIds as Selection[]);
     }
   }, [onCheck, selectedIds]);
+
+  React.useEffect(() => {
+    // when data are fresh initialize the selectedIds state
+    setSelectedIds(undefined);
+  }, [data]);
 
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
@@ -135,7 +140,7 @@ function Table<T>({
                   topLeftText
                 )}
               </TableCell>
-              {topRightArea && selectedIds && (
+              {topRightArea && (
                 <TableCell
                   textAlign={'right'}
                   padded={padded}
