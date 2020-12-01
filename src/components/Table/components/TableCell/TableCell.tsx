@@ -53,7 +53,7 @@ const TableCell: React.FC<Props> = React.memo(
             background: theme.palette.white,
           },
           type === 'financial' && {
-            borderLeft: `1px solid ${theme.palette.flat.lightGray[400]}`,
+            borderLeft: `1px solid ${theme.utils.getColor('lightGray', 400)}`,
           },
         ]}
       >
