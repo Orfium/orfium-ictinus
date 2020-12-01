@@ -1,61 +1,60 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import LineChart from './LineChart';
 
-<Meta title="Design System/LineChart" component={LineChart} />
+<Meta title="Design System/Chart" component={LineChart} />
 
 # LineChart Example
 
 LineChart Example
 
 <Preview>
-  <Story name="LineChart Example">
+  <Story name="LineChart">
     <LineChart
       data={[
         {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
-          amt: 2400,
+          name: 'Aug 1',
+          hidden: 200,
+          claimed: 40,
+          amt: 240,
+          
         },
         {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
-          amt: 5210,
+          name: 'Aug 2',
+          hidden: 120,
+          claimed: 20,
+          amt: 210,
         },
         {
-          name: 'Page C',
-          uv: 2000,
-          pv: 9800,
-          amt: 2290,
+          name: 'Aug 3',
+          hidden: 79,
+          claimed: 38,
         },
         {
-          name: 'Page D',
-          uv: 2780,
-          pv: 3908,
-          amt: 2000,
+          name: 'Aug 4',
+          hidden: 167,
+          claimed: 22,
+          amt: 20,
         },
         {
-          name: 'Page E',
-          uv: 1890,
-          amt: 2781,
-          amt: 1781,
-          amt: 781,
+          name: 'Aug 5',
+          hidden: 179,
+          claimed: 33,
+          amt: 81,
         },
         {
-          name: 'Page F',
-          uv: 2390,
-          pv: 3800,
-          amt: 2500,
+          name: 'Aug 6',
+          hidden: 61,
+          claimed: 5,
+          amt: 250,
         },
         {
-          name: 'Page G',
-          uv: 3490,
-          pv: 4300,
-          amt: 2100,
+          name: 'Aug 7',
+          hidden: 211,
+          claimed: 45,
+          amt: 100,
         },
       ]}
-      labelX="Names"
+      labelX="Dates"
       labelY="Values"
       showTitles={true}
     />
