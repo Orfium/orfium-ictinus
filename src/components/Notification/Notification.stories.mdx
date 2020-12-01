@@ -1,7 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
-import BannersContainer from '../Notification/subcomponents/BannersContainer';
+import NotificationsContainer from '../Notification/subcomponents/NotificationsContainer';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
 
@@ -26,7 +26,7 @@ import { Notification } from '@orfium/ictinus';
 Inline Notification
 
 <Preview>
-  <Story name="Inline Notifiction" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Inline Notification" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <PresentComponent name="" width={768}>
         <Notification
@@ -79,13 +79,14 @@ Inline Notification
 Banner Notification
 
 <Preview>
-  <Story name="Banner Notifiction" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Banner Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={1024}>
-      <BannersContainer
-        top={boolean('top', false)}
-        bottom={boolean('bottom', true)}
-        left={boolean('left', false)}
-        right={boolean('right', true)}
+      <NotificationsContainer
+        position={select(
+          'position',
+          ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
+          'bottom-right'
+        )}
       >
         <Notification
           withFilling={boolean('withFilling', false)}
@@ -120,7 +121,7 @@ Banner Notification
           primaryCTA={() => console.log('action clicked')}
           closeCTA={() => console.log('close action clicked')}
         />
-      </BannersContainer>
+      </NotificationsContainer>
     </PresentComponent>
   </Story>
 </Preview>
@@ -130,7 +131,7 @@ Banner Notification
 Playground Notification
 
 <Preview>
-  <Story name="Playground Notifiction" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Playground Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
       <Notification
         withIcon={boolean('withIcon', true)}

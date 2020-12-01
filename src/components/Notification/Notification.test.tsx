@@ -1,6 +1,6 @@
 import React from 'react';
 import Notification, { NotificationTypes, NotificationVariants } from './Notification';
-import BannersContainer from './subcomponents/BannersContainer';
+import NotificationsContainer from './subcomponents/NotificationsContainer';
 import { render, fireEvent } from '../../test';
 
 describe('Inline Notification', () => {
@@ -59,7 +59,7 @@ describe('Inline Notification', () => {
   });
 });
 
-describe('Banner Container', () => {
+describe('Notifications Container', () => {
   const data1 = {
     title: 'title1',
     message: 'message1',
@@ -80,15 +80,15 @@ describe('Banner Container', () => {
     primaryCTALabel: 'primaryCTALabel2',
   };
 
-  test('Banner Container with 2 Inline Notifications renders correctly', async () => {
+  test('Notifications Container with 2 Banner Notifications renders correctly', async () => {
     const primaryCTA = jest.fn();
     const closeCTA = jest.fn();
 
     const { findByText } = render(
-      <BannersContainer top={true} bottom={false} left={true} right={false}>
+      <NotificationsContainer position="top-right">
         <Notification {...data1} primaryCTA={primaryCTA} closeCTA={closeCTA} />
         <Notification {...data2} primaryCTA={primaryCTA} closeCTA={closeCTA} />
-      </BannersContainer>
+      </NotificationsContainer>
     );
 
     const message1 = await findByText(data1.message);
@@ -104,17 +104,17 @@ describe('Banner Container', () => {
     expect(primaryCTALabel2).toBeTruthy();
   });
 
-  test('Banner Container Inline Notifications primaryCTAs work properly when clicked', async () => {
+  test('Notifications Container Banner Notifications primaryCTAs work properly when clicked', async () => {
     const primaryCTA1 = jest.fn();
     const closeCTA1 = jest.fn();
     const primaryCTA2 = jest.fn();
     const closeCTA2 = jest.fn();
 
     const { findByText } = render(
-      <BannersContainer top={true} bottom={false} left={true} right={false}>
+      <NotificationsContainer position="top-right">
         <Notification {...data1} primaryCTA={primaryCTA1} closeCTA={closeCTA1} />
         <Notification {...data2} primaryCTA={primaryCTA2} closeCTA={closeCTA2} />
-      </BannersContainer>
+      </NotificationsContainer>
     );
 
     const primaryCTALabel1 = await findByText(data1.primaryCTALabel);
@@ -128,17 +128,17 @@ describe('Banner Container', () => {
     expect(primaryCTA2).toHaveBeenCalledTimes(1);
   });
 
-  test('Banner Container Inline Notifications closeCTAs work properly when clicked', async () => {
+  test('Notifications Container Banner Notifications closeCTAs work properly when clicked', async () => {
     const primaryCTA1 = jest.fn();
     const closeCTA1 = jest.fn();
     const primaryCTA2 = jest.fn();
     const closeCTA2 = jest.fn();
 
     const { findAllByTestId } = render(
-      <BannersContainer top={true} bottom={false} left={true} right={false}>
+      <NotificationsContainer position="top-right">
         <Notification {...data1} primaryCTA={primaryCTA1} closeCTA={closeCTA1} />
         <Notification {...data2} primaryCTA={primaryCTA2} closeCTA={closeCTA2} />
-      </BannersContainer>
+      </NotificationsContainer>
     );
 
     const closeButtons = await findAllByTestId('notification-close');
