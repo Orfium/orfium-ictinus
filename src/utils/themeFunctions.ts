@@ -1,30 +1,24 @@
 import { Theme } from '../theme';
+import { flatColors, mainTypes } from '../theme/palette';
 
-export type AcceptedColorComponentTypes =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'error'
-  | 'info'
-  | 'warning'
-  | 'branded1'
-  | 'branded2';
+export type AcceptedColorComponentTypes = typeof mainTypes[number];
 
-const getColorFromType = (type: AcceptedColorComponentTypes | string, theme: Theme) => {
-  switch (type) {
-    case 'primary':
-      return theme.utils.getColor(type, 100, 'normal');
-    case 'secondary':
-    case 'success':
-    case 'error':
-    case 'info':
-    case 'warning':
-    case 'branded1':
-    case 'branded2':
-      return theme.utils.getColor(type, 400, 'normal');
-    default:
-      return type;
+export const getColorFromType = (type: AcceptedColorComponentTypes | string, theme: Theme) => {
+  if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
+    const colorTypeValue = type as AcceptedColorComponentTypes;
+    if (colorTypeValue === 'primary') {
+      return theme.utils.getColor(colorTypeValue, 100, 'normal');
+    }
+
+    return theme.utils.getColor(colorTypeValue, 400, 'normal');
   }
+  if (Object.values(flatColors).includes(type as typeof flatColors[number])) {
+    const colorValue = type as typeof flatColors[number];
+
+    return theme.utils.getColor(colorValue, 400);
+  }
+
+  return type;
 };
 
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
