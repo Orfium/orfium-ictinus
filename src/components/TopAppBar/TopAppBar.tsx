@@ -5,14 +5,18 @@ import { DEFAULT_BG_COLOR_TYPE, TopAppBarProps } from './TopAppBar.types';
 import { SidebarMenuIcon } from './components';
 import LogoWrapper from './components/Logo.wrapper';
 
-const TopAppBar = ({ bgColorType = DEFAULT_BG_COLOR_TYPE, logoIcon }: TopAppBarProps) => {
+const TopAppBar = ({
+  bgColorType = DEFAULT_BG_COLOR_TYPE,
+  logoIcon,
+  onMenuIconClick,
+}: TopAppBarProps) => {
   return (
     <div
       role="banner"
       aria-label="Top Application Banner"
       css={Styles.topAppBarWrapper({ bgColorType })}
     >
-      <SidebarMenuIcon />
+      <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />
       <LogoWrapper logoIcon={logoIcon} />
     </div>
   );

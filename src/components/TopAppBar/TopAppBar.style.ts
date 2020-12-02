@@ -1,13 +1,17 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from '../../theme';
-import { backgroundPickerBasedOnType } from '../../utils/themeFunctions';
-import { TopAppBarStyleProps } from './TopAppBar.types';
+import {
+  AcceptedColorComponentTypes,
+  backgroundPickerBasedOnType,
+} from '../../utils/themeFunctions';
 
 const DEFAULT_NAVBAR_HEIGHT = 62;
 
-const topAppBarWrapper = ({ bgColorType }: TopAppBarStyleProps) => (
-  theme: Theme
-): SerializedStyles => css`
+interface StyleProps {
+  bgColorType: AcceptedColorComponentTypes;
+}
+
+const topAppBarWrapper = ({ bgColorType }: StyleProps) => (theme: Theme): SerializedStyles => css`
   width: 100%;
   display: flex;
   align-items: center;
