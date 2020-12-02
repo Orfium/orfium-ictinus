@@ -8,6 +8,7 @@ import { Palette } from './theme/palette';
 import { Spacing } from './theme/spacing';
 import { Typography } from './theme/typography';
 
+export { default as TopNavBar } from './components/TopAppBar';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
 export { default as CheckBox } from './components/CheckBox';
