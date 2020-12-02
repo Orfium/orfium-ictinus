@@ -1,13 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import Icon from '../../Icon';
-import { IconWrapper } from './SidebarMenuIcon.style';
+import Styles from './SidebarMenuIcon.style';
 
 const SidebarMenuIcon = () => {
   return (
-    <IconWrapper>
+    <div css={Styles.iconWrapper}>
       <Icon color={'primary'} name={'menu'} size={24} />
-    </IconWrapper>
+    </div>
   );
 };
 

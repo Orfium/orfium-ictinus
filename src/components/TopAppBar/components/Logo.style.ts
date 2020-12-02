@@ -8,7 +8,7 @@ interface WrapperProps {
 
 const wrapper = ({ hasLogoIcon }: WrapperProps) => (theme: Theme): SerializedStyles => css`
   background-color: ${hasLogoIcon ? 'transparent' : theme.palette.flat.lightGray[700]};
-  margin: 17px 18px;
+  margin: ${theme.spacing.md} ${theme.spacing.md} ${theme.spacing.md} 0px;
   border-radius: ${theme.spacing.xsm};
   width: 200px;
   max-width: 400px;

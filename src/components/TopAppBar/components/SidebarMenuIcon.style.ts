@@ -1,5 +1,10 @@
-import styled from '@emotion/styled';
+import { Theme } from '../../../theme';
+import { css, SerializedStyles } from '@emotion/core';
 
-export const IconWrapper = styled.div`
-  margin: 25px 19px 25px 3px;
+const iconWrapper = (theme: Theme): SerializedStyles => css`
+  margin: ${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.lg} ${theme.spacing.xsm};
 `;
+
+export default {
+  iconWrapper,
+};
