@@ -12,17 +12,8 @@ type Props = {
   position: Positions;
 };
 
-const positionToBooleans = (position: Positions) =>
-  position === 'top-right'
-    ? [true, false, false, true]
-    : position === 'top-left'
-    ? [true, false, true, false]
-    : position === 'bottom-left'
-    ? [false, true, true, false]
-    : [false, true, false, true];
-
 const NotificationsContainer: React.FC<Props> = ({ children, position }) => {
-  return <div css={notificationsContainer(positionToBooleans(position))}>{children}</div>;
+  return <div css={notificationsContainer(position)}>{children}</div>;
 };
 
 export default NotificationsContainer;
