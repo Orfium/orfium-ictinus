@@ -1,5 +1,6 @@
 import { shade, tint } from 'polished';
-import { flatPaletteConfigType, generatedColorShades, Palette, PaletteConfig, TextPaletteConfigType } from './palette';
+import { generatedColorShades, Palette } from './palette';
+import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
 
 const BASE_PERCENTAGE = 0.25;
 
