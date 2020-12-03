@@ -53,3 +53,17 @@ Regular CheckBox with label
     </Stack>
   </Story>
 </Preview>
+
+<Preview>
+  <Story name="CheckBox with Props" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <CheckBox 
+        checked={boolean('checked', false)} 
+        intermediate={boolean('intermediate', false)} 
+        filled={boolean('filled', true)} 
+        label={text('custom label', '')} 
+        disabled={boolean('disabled', false)} 
+      />
+    </Stack>
+  </Story>
+</Preview>
