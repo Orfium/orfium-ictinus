@@ -7,7 +7,7 @@ type Positions = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right';
 
 type Props = {
   /** Notifications Container children */
-  children: React.ReactNode[];
+  children: React.ReactNode | React.ReactNode[];
   /** Notifications Container position */
   position: Positions;
 };
