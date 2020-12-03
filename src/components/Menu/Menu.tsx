@@ -22,8 +22,6 @@ export type Props = {
   buttonText: React.ReactNode;
   /** Menu position when open */
   menuPosition?: MenuPositionAllowed;
-  /** Indicator to show dots icon */
-  showOptionIcon?: boolean;
   /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;
   /** The name of the icon on the menu button */
@@ -42,9 +40,8 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     onSelect,
     buttonText = 'More',
     menuPosition = 'left',
-    showOptionIcon = false,
     buttonType = 'primary',
-    menuIconName = 'dotsVertical',
+    menuIconName,
     menuIconSize = 16,
   } = props;
   const [open, setOpen] = React.useState(false);
@@ -56,9 +53,9 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}
-          iconAlign={showOptionIcon ? 'right' : undefined}
+          iconAlign={menuIconName ? 'right' : undefined}
           icon={
-            showOptionIcon ? (
+            menuIconName ? (
               <Icon
                 name={menuIconName}
                 color={buttonType === ('primary' || 'secondary') ? 'dark' : 'light'}

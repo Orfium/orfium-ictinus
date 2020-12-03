@@ -26,9 +26,6 @@ export const buttonStyle = ({
   childrenCount,
   iconAlign,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
-  const calculatedPaddingSpaceIfIcon = size === 'sm' ? 0 : theme.spacing.sm;
-
   const defineBackgroundColor = (theme: Theme): string => {
     if (childrenCount === 0 && icon) {
       return 'transparent';
@@ -49,13 +46,10 @@ export const buttonStyle = ({
     fontSize: theme.typography.fontSizes['16'],
     color: disabled ? theme.utils.getColor('lightGray', 700) : colorPickerBasedOnType(type)(theme),
     backgroundColor: defineBackgroundColor(theme),
-    paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
-    paddingRight:
-      iconAlign === 'left'
-        ? icon && !childrenCount
-          ? calculatedPaddingSpaceIfIcon
-          : calculatedPaddingSpace
-        : 0,
+    padding:
+      size === 'sm' || size === 'md'
+        ? `${theme.spacing.sm} ${theme.spacing.md}`
+        : `${theme.spacing.md} ${theme.spacing.lg}`,
     height: heightBasedOnSize(size),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
@@ -82,10 +76,8 @@ export const iconStyle = ({
   size,
   iconAlign,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
-  const margin = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
-
   return {
-    marginLeft: iconAlign === 'left' ? margin : theme.spacing.sm,
-    marginRight: iconAlign === 'right' ? margin : theme.spacing.sm,
+    marginLeft: iconAlign === 'left' ? 0 : theme.spacing.sm,
+    marginRight: iconAlign === 'right' ? 0 : theme.spacing.sm,
   };
 };
