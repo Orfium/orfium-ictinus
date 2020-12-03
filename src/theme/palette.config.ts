@@ -1,4 +1,6 @@
-export const flatPaletteConfig: flatPaletteConfigType = {
+import { flatColors } from './palette';
+
+export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
   lightGray: '#cfcfcf',
   darkGray: '#494949',
   coolGray: '#a3a9ac',
@@ -14,6 +16,7 @@ export const flatPaletteConfig: flatPaletteConfigType = {
   blue: '#1283d3',
   darkBlue: '#232d7d',
   purple: '#71458f',
+  mint: '#2AFFC3',
 };
 
 export const lightPaletteConfig: PaletteConfig = {
@@ -74,23 +77,7 @@ export const darkPaletteConfig: PaletteConfig = {
   black: 'black',
 };
 
-export type flatPaletteConfigType = {
-  lightGray?: string;
-  darkGray?: string;
-  coolGray?: string;
-  warmGray?: string;
-  magenta?: string;
-  red?: string;
-  orange?: string;
-  yellow?: string;
-  olive?: string;
-  green?: string;
-  teal?: string;
-  lightBlue?: string;
-  blue?: string;
-  darkBlue?: string;
-  purple?: string;
-};
+export type flatPaletteConfigType = Partial<Record<typeof flatColors[number], string>>;
 
 export type TextPaletteConfigType = {
   primary?: string;
