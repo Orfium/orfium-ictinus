@@ -5,6 +5,7 @@ import { generateTestDataId } from '../../utils/helpers';
 import { TestId } from '../../utils/types';
 import useRadioGroup from '../RadioGroup/useRadioGroup';
 import {
+  customRadioInnerHover,
   customRadioStyles,
   customRadioWrapperStyles,
   inputStyles,
@@ -37,6 +38,11 @@ export type Props = {
    * @default false
    * */
   required?: boolean;
+  /** Whether the radio input is filled or outlined
+   *
+   * @default true
+   * */
+  filled?: boolean;
   dataTestId?: TestId;
 };
 
@@ -50,6 +56,7 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
     disabled = false,
     id,
     required = false,
+    filled = true,
     dataTestId,
   } = props;
   const [focused, setFocused] = React.useState(false);
@@ -94,6 +101,7 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
         onFocus={handleFocus}
         onBlur={handleBlur}
         onMouseLeave={handleBlur}
+        onMouseOver={handleFocus}
         type={'radio'}
         onChange={handleChange}
         name={nameValue}
@@ -109,8 +117,10 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
           css={customRadioStyles({
             checked: checkedValue,
             disabled,
+            filled,
           })(theme)}
         />
+        <span css={customRadioInnerHover(focused, disabled)} />
       </span>
     </span>
   );

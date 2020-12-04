@@ -3,8 +3,8 @@ import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../../Notification';
 import { css, SerializedStyles } from '@emotion/core';
 
-export const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
-  theme.palette[type][400];
+const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
+  theme.utils.getColor(type, 400, 'normal');
 
 export const notificationsContainer = (withFilling: boolean, type: NotificationTypes) => (
   theme: Theme
@@ -38,9 +38,14 @@ export const iconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
 `;
 
+export const headContainer = () => (theme: Theme): SerializedStyles => css`
+  padding-right: ${theme.spacing.xsm};
+  font-weight: ${theme.typography.weights.bold};
+`;
+
 export const primaryActionContainer = () => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  color: ${theme.palette.flat.lightBlue[400]};
+  color: ${theme.utils.getColor('lightBlue', 400)};
 `;
 
 export const closeActionContainer = () => (theme: Theme): SerializedStyles => css`

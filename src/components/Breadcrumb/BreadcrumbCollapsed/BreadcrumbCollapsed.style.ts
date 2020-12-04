@@ -14,7 +14,9 @@ export const breadcrumbCollapsedStyles = ({ open }: BreadcrumbIconStyle) => (the
   margin-top: ${rem(1)};
   transform: rotate(90deg);
   border-radius: 3rem;
-  background-color: ${open ? theme.palette.flat.lightGray[700] : theme.palette.flat.lightGray[200]};
+  background-color: ${open
+    ? theme.utils.getColor('lightGray', 700)
+    : theme.utils.getColor('lightGray', 200)};
 `;
 
 export const breadcrumbCollapsedWrapperStyles = () => css`
@@ -26,9 +28,11 @@ export const breadcrumbCollapsedWrapperStyles = () => css`
 export const collapsedItemStyles = () => (theme: Theme) => css`
   &:hover {
     transition: 0.5s all;
-    background: ${theme.palette.flat.lightGray[200]};
+    background: ${theme.utils.getColor('lightGray', 200)};
   }
   font-size: ${theme.typography.fontSizes['14']};
+  // getFontSize
+  // getTypography('tahoma') { size, fontFamily }
   list-style-type: none;
   & > a {
     padding: ${rem(16)};

@@ -12,8 +12,11 @@ export const descriptionContainer = () => (theme: Theme): SerializedStyles => cs
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   flex-direction: row;
-  position: absolute;
+  justify-content: flex-end;
+  margin-top: ${theme.spacing.md};
+  position: sticky;
   bottom: ${theme.spacing.md};
+  top: 100%;
 `;
 
 export const actionContainer = () => (theme: Theme): SerializedStyles => css`

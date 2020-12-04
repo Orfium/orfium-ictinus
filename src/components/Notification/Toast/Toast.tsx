@@ -17,12 +17,14 @@ import Icon from '../../Icon';
 import { NotificationTypes } from '../Notification';
 
 export type Props = {
-  /** The informative message of the Notification */
+  /** The informative message of the Toast */
   message: string;
-  /** The type of the Notification */
+  /** The type of the Toast */
   type: NotificationTypes;
-  /** The closing call-to-action of the Notification */
+  /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
+  /** Initialize toast as expanded */
+  expanded: boolean;
   /** Children of the Toast */
   children: React.ReactNode | React.ReactNode[] | undefined;
   //   /** The data test id if needed */
@@ -31,8 +33,8 @@ export type Props = {
 
 // const iconNameToType
 
-const Toast: React.FC<Props> = ({ message, type, closeCTA, children }) => {
-  const [expanded, setExpanded] = useState(true);
+const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, children }) => {
+  const [isExpanded, setExpanded] = useState(expanded);
 
   return (
     <div css={toastContainer()}>
@@ -44,7 +46,7 @@ const Toast: React.FC<Props> = ({ message, type, closeCTA, children }) => {
           <div>{message}</div>
         </div>
         <div css={actionIconsContainer()}>
-          <span css={chevronIconContainer(expanded)} onClick={() => setExpanded(!expanded)}>
+          <span css={chevronIconContainer(isExpanded)} onClick={() => setExpanded(!isExpanded)}>
             <Icon name="chevronLargeDown" color="primary" size={24} />
           </span>
 
@@ -53,7 +55,7 @@ const Toast: React.FC<Props> = ({ message, type, closeCTA, children }) => {
           </span>
         </div>
       </div>
-      {expanded && <div css={expandedContainer()}>{children}</div>}
+      {isExpanded && <div css={expandedContainer()}>{children}</div>}
     </div>
   );
 };

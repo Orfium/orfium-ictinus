@@ -79,6 +79,11 @@ function Table<T>({
     }
   }, [onCheck, selectedIds]);
 
+  React.useEffect(() => {
+    // when data are fresh initialize the selectedIds state
+    setSelectedIds(undefined);
+  }, [data]);
+
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
@@ -159,7 +164,7 @@ function Table<T>({
                     paddingBottom: theme.spacing.md,
                     borderBottomWidth: rem(1),
                     borderBottomStyle: 'solid',
-                    borderBottomColor: theme.palette.flat.lightGray[700],
+                    borderBottomColor: theme.utils.getColor('lightGray', 700),
                   },
                 ]}
               >
