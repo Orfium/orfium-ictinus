@@ -1,9 +1,8 @@
-import { Theme } from '../../../../theme';
+import { Theme } from '../../../theme';
 import { rem, transparentize } from 'polished';
-import { NotificationTypes } from '../../Notification';
+import { NotificationTypes } from '../Notification';
 import { css, SerializedStyles } from '@emotion/core';
-import { typeToThemePalette } from '../CompactNotification/CompactNotification.style';
-import { transition } from '../../../../theme/functions';
+import { transition } from '../../../theme/functions';
 
 export const toastContainer = () => (theme: Theme): SerializedStyles => css`
   overflow: hidden;
@@ -19,7 +18,7 @@ export const topContainer = (type: NotificationTypes) => (theme: Theme): Seriali
   justify-content: space-between;
   overflow: hidden;
   height: ${rem(58)};
-  background: ${typeToThemePalette(theme, type)};
+  background: ${theme.palette[type][400]};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
@@ -56,24 +55,4 @@ export const expandedContainer = () => (theme: Theme): SerializedStyles => css`
   min-height: ${rem(146)};
   font-size: ${theme.typography.fontSizes['14']};
   position: relative;
-`;
-
-export const headingContainer = () => (theme: Theme): SerializedStyles => css`
-  font-weight: ${theme.typography.weights.bold};
-`;
-
-export const descriptionContainer = () => (theme: Theme): SerializedStyles => css`
-  padding-top: ${theme.spacing.sm};
-`;
-
-export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  bottom: ${theme.spacing.md};
-`;
-
-export const actionContainer = () => (theme: Theme): SerializedStyles => css`
-  cursor: pointer;
-  margin-left: ${theme.spacing.md};
 `;

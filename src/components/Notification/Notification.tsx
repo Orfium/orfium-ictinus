@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import CompactNotification from './subcomponents/CompactNotification';
-import Toast from './subcomponents/Toast';
 import { TestId } from '../../utils/types';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
@@ -49,10 +48,6 @@ const Notification: React.FC<Props> = ({
   title,
   primaryCTALabel,
   primaryCTA = undefined,
-  secondaryCTALabel,
-  secondaryCTA = undefined,
-  description,
-  expandable = true,
   closeCTA = undefined,
   dataTestId,
 }) => {
@@ -69,18 +64,6 @@ const Notification: React.FC<Props> = ({
           primaryCTA={primaryCTA}
           closeCTA={closeCTA}
           dataTestId={dataTestId}
-        />
-      ) : variant === 'toast' ? (
-        <Toast
-          message={message}
-          title={title}
-          description={description}
-          type={type}
-          primaryCTALabel={primaryCTALabel}
-          primaryCTA={primaryCTA}
-          secondaryCTALabel={secondaryCTALabel}
-          secondaryCTA={secondaryCTA}
-          closeCTA={closeCTA}
         />
       ) : (
         <p>This type is not yet supported</p>

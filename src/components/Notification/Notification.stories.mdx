@@ -1,6 +1,8 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
+import Toast from '../Notification/Toast';
+import NotificationVisual from '../Notification/subcomponents/NotificationVisual';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
 
@@ -80,21 +82,23 @@ Toast Notification
 <Preview>
   <Story name="Toast Notifiction" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
-      <Notification
+      <Toast
         message={text('message', 'Informative Message')}
-        title={text('title', 'Informative Message')}
-        description={text(
-          'description',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
-        )}
-        primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
-        primaryCTA={() => console.log('primary action clicked')}
-        secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
-        secondaryCTA={() => console.log('secondary action clicked')}
-        variant="toast"
         type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         closeCTA={() => console.log('close action clicked')}
-      />
+      >
+        <NotificationVisual
+          title={text('title', 'Informative Message')}
+          primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+          primaryCTA={() => console.log('primary action clicked')}
+          secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+          secondaryCTA={() => console.log('secondary action clicked')}
+          description={text(
+            'description',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+          )}
+        />
+      </Toast>
     </PresentComponent>
   </Story>
 </Preview>
