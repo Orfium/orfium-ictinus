@@ -4,7 +4,7 @@ import { getColor } from '../index';
 import { flatPaletteConfig, lightPaletteConfig } from '../palette.config';
 import { pickTextColorFromSwatches } from '../palette';
 
-describe('GetColor', () => {
+describe('GetColor functionalities', () => {
   test('magenta base color to be shaded correctly', () => {
     expect(colorShadesCreator(flatPaletteConfig.magenta as string, 0.25)).toStrictEqual(
       magentaShades
@@ -20,8 +20,8 @@ describe('GetColor', () => {
   });
 });
 
-describe('pickTextColorFromSwatches', () => {
-  test('pickTextColorFromSwatches works', () => {
+describe('pickTextColorFromSwatches functionalities', () => {
+  test('pickTextColorFromSwatches works with the given colors and to return the correct color', () => {
     const black = '#000';
     const white = '#fff';
 
