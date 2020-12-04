@@ -55,7 +55,6 @@ const ThemeSwitcher = () => {
 
 export const decorators = [
   Story => {
-    console.log('j');
     return (
       <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
         <ThemeSwitcher />
