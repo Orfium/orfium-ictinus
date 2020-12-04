@@ -1,3 +1,4 @@
+import { rem } from 'polished';
 import { Theme } from '../../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 
@@ -6,7 +7,9 @@ export const headingContainer = () => (theme: Theme): SerializedStyles => css`
 `;
 
 export const descriptionContainer = () => (theme: Theme): SerializedStyles => css`
-  padding-top: ${theme.spacing.sm};
+  margin-top: ${theme.spacing.sm};
+  max-height: ${rem(194)};
+  overflow: auto;
 `;
 
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`

@@ -16,22 +16,26 @@ import { typeToIconName } from '../subcomponents/CompactNotification/CompactNoti
 import Icon from '../../Icon';
 import { NotificationTypes } from '../Notification';
 
+export type ToastType = NotificationTypes | string;
+
 export type Props = {
   /** The informative message of the Toast */
   message: string;
   /** The type of the Toast */
-  type: NotificationTypes;
+  type: ToastType;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
-  expanded: boolean;
+  expanded?: boolean;
   /** Children of the Toast */
   children: React.ReactNode | React.ReactNode[] | undefined;
   //   /** The data test id if needed */
   //   dataTestId?: TestId;
 };
 
-// const iconNameToType
+export const isNotificationTypes = (type: string): type is NotificationTypes => {
+  return ['info', 'error', 'success', 'warning'].includes(type);
+};
 
 const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, children }) => {
   const [isExpanded, setExpanded] = useState(expanded);
@@ -40,9 +44,11 @@ const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, chil
     <div css={toastContainer()}>
       <div css={topContainer(type)}>
         <div css={infoContainer()}>
-          <div css={infoIconContainer()}>
-            <Icon name={typeToIconName(type)} color="primary" size={24} />
-          </div>
+          {isNotificationTypes(type) && (
+            <div css={infoIconContainer()}>
+              <Icon name={typeToIconName(type)} color="primary" size={24} />
+            </div>
+          )}
           <div>{message}</div>
         </div>
         <div css={actionIconsContainer()}>

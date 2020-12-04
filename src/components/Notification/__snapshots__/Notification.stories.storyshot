@@ -664,105 +664,171 @@ exports[`Storyshots Design System/Notification Toast Notifiction 1`] = `
     }
   >
     <div
-      className="css-4uleuc-Toast"
+      className="css-ptimel-Stack"
     >
       <div
-        className="css-1f9jx92-Toast"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="css-1k5ilhh-Toast"
+          className="css-4uleuc-Toast"
         >
           <div
-            className="css-1pas082-Toast"
+            className="css-1ikhmam-Toast"
           >
-            <span
-              className="css-1gnbc76-Icon"
+            <div
+              className="css-1k5ilhh-Toast"
+            >
+              <div>
+                Generic Toast
+              </div>
+            </div>
+            <div
+              className="css-gx89q3-Toast"
             >
               <span
-                className="css-1tbeg9y-Icon"
-              />
-            </span>
+                className="css-b2ukb2-Toast"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1tbeg9y-Icon"
+                  />
+                </span>
+              </span>
+              <span
+                className="css-1ejuyfz-Toast"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1tbeg9y-Icon"
+                  />
+                </span>
+              </span>
+            </div>
           </div>
-          <div>
-            Informative Message
-          </div>
-        </div>
-        <div
-          className="css-gx89q3-Toast"
-        >
-          <span
-            className="css-b2ukb2-Toast"
-            onClick={[Function]}
-          >
-            <span
-              className="css-1gnbc76-Icon"
-            >
-              <span
-                className="css-1tbeg9y-Icon"
-              />
-            </span>
-          </span>
-          <span
-            className="css-1ejuyfz-Toast"
-            onClick={[Function]}
-          >
-            <span
-              className="css-1gnbc76-Icon"
-            >
-              <span
-                className="css-1tbeg9y-Icon"
-              />
-            </span>
-          </span>
+          <div
+            className="css-18g3gm1-Toast"
+          />
         </div>
       </div>
       <div
-        className="css-osq7az-Toast"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="css-yc4ml2-NotificationVisual"
-        >
-          Informative Message
-        </div>
-        <div
-          className="css-tgw523-NotificationVisual"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
-        </div>
-        <div
-          className="css-8gkyu8-NotificationVisual"
+          className="css-4uleuc-Toast"
         >
           <div
-            className="css-16owih8-NotificationVisual"
+            className="css-1f9jx92-Toast"
           >
-            <button
-              className="css-1domea0-Button"
-              data-testid="button"
-              disabled={false}
-              onClick={[Function]}
+            <div
+              className="css-1k5ilhh-Toast"
+            >
+              <div
+                className="css-1pas082-Toast"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1tbeg9y-Icon"
+                  />
+                </span>
+              </div>
+              <div>
+                Informative Message
+              </div>
+            </div>
+            <div
+              className="css-gx89q3-Toast"
             >
               <span
-                className="css-9nhvja-Button"
+                className="css-b2ukb2-Toast"
+                onClick={[Function]}
               >
-                Secondary CTA
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1tbeg9y-Icon"
+                  />
+                </span>
               </span>
-            </button>
+              <span
+                className="css-1ejuyfz-Toast"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1tbeg9y-Icon"
+                  />
+                </span>
+              </span>
+            </div>
           </div>
           <div
-            className="css-16owih8-NotificationVisual"
-            onClick={[Function]}
+            className="css-18g3gm1-Toast"
           >
-            <button
-              className="css-1sfte8f-Button"
-              data-testid="button"
-              disabled={false}
+            <div
+              className="css-yc4ml2-NotificationVisual"
             >
-              <span
-                className="css-9nhvja-Button"
+              Message heading
+            </div>
+            <div
+              className="css-tqh61p-NotificationVisual"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
+            </div>
+            <div
+              className="css-8gkyu8-NotificationVisual"
+            >
+              <div
+                className="css-16owih8-NotificationVisual"
               >
-                Primary CTA
-              </span>
-            </button>
+                <button
+                  className="css-1domea0-Button"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-9nhvja-Button"
+                  >
+                    Secondary CTA
+                  </span>
+                </button>
+              </div>
+              <div
+                className="css-16owih8-NotificationVisual"
+                onClick={[Function]}
+              >
+                <button
+                  className="css-1sfte8f-Button"
+                  data-testid="button"
+                  disabled={false}
+                >
+                  <span
+                    className="css-9nhvja-Button"
+                  >
+                    Primary CTA
+                  </span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
