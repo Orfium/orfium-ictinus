@@ -61,7 +61,7 @@ const CompactNotification: React.FC<Props> = ({
       <div css={infoContainer()}>
         {withIcon && (
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} />
+            <Icon name={typeToIconName(type)} color={type} size={20} />
           </div>
         )}
         {variant === 'banner' && <div css={headContainer()}>{title}</div>}
