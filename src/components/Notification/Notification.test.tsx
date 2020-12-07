@@ -1,15 +1,16 @@
 import React from 'react';
-import Notification, { NotificationTypes, NotificationVariants } from './Notification';
-import NotificationsContainer from './subcomponents/NotificationsContainer';
+import InlineNotification from './InlineNotification';
+import BannerNotification from './BannerNotification';
+import NotificationsContainer from './NotificationsContainer';
+import { NotificationTypes } from './Notification';
 import { render, fireEvent } from '../../test';
 
 describe('Inline Notification', () => {
   const data = {
-    message: 'message',
-    variant: 'inline' as NotificationVariants,
-    type: 'info' as NotificationTypes,
     withIcon: true,
     withFilling: false,
+    message: 'message',
+    type: 'info' as NotificationTypes,
     primaryCTALabel: 'primaryCTALabel',
   };
 
@@ -18,7 +19,7 @@ describe('Inline Notification', () => {
     const closeCTA = jest.fn();
 
     const { findByText } = render(
-      <Notification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
     );
 
     const message = await findByText(data.message);
@@ -33,7 +34,7 @@ describe('Inline Notification', () => {
     const closeCTA = jest.fn();
 
     const { findByText } = render(
-      <Notification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
     );
 
     const primaryCTALabel = await findByText(data.primaryCTALabel);
@@ -49,7 +50,7 @@ describe('Inline Notification', () => {
     const closeCTA = jest.fn();
 
     const { findByTestId } = render(
-      <Notification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+      <InlineNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
     );
 
     const closeButton = await findByTestId('notification-close');
@@ -61,12 +62,11 @@ describe('Inline Notification', () => {
 
 describe('Notifications Container', () => {
   const data = {
-    title: 'title',
-    message: 'message',
-    variant: 'banner' as NotificationVariants,
-    type: 'info' as NotificationTypes,
     withIcon: true,
     withFilling: false,
+    title: 'title',
+    message: 'message',
+    type: 'info' as NotificationTypes,
     primaryCTALabel: 'primaryCTALabel',
   };
 
@@ -76,7 +76,7 @@ describe('Notifications Container', () => {
 
     const { findByText } = render(
       <NotificationsContainer position="top-right">
-        <Notification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+        <BannerNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
       </NotificationsContainer>
     );
 
@@ -93,7 +93,7 @@ describe('Notifications Container', () => {
 
     const { findByText } = render(
       <NotificationsContainer position="top-right">
-        <Notification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+        <BannerNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
       </NotificationsContainer>
     );
 
@@ -109,7 +109,7 @@ describe('Notifications Container', () => {
 
     const { findByTestId } = render(
       <NotificationsContainer position="top-right">
-        <Notification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+        <BannerNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
       </NotificationsContainer>
     );
 
