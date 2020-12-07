@@ -1,5 +1,5 @@
 import { rem } from 'polished';
-import { Theme } from '../../../../theme';
+import { Theme } from '../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 
 export const headingContainer = () => (theme: Theme): SerializedStyles => css`

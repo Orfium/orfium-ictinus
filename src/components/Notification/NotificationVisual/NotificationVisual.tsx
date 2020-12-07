@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import Button from '../../../Button';
+import Button from '../../Button';
 import {
   headingContainer,
   descriptionContainer,
