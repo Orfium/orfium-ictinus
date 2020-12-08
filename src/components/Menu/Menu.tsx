@@ -3,15 +3,17 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import useTheme from '../../hooks/useTheme';
 import { EventProps } from '../../utils/common';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { AcceptedColorComponentTypes, calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
-// import { buttonSpanStyle, menuStyle } from './Menu.style';
 import { MenuPositionAllowed, optionsStyle } from './Menu.style';
+import { pickTextColorFromSwatches } from '../../theme/palette';
 
 export type Props = {
+  /** the color of the button based on our colors eg. red-400 */
+  color?: string;
   /** Items that are being declared as menu options */
   items?: string[];
   /** Returns the items selected on the menu */
@@ -24,10 +26,12 @@ export type Props = {
   menuPosition?: MenuPositionAllowed;
   /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;
-  /** The name of the icon on the menu button */
-  menuIconName?: AcceptedIconNames;
+  /** The name of the icon on the right area of menu button */
+  rightIconName?: AcceptedIconNames;
+  /** The name of the icon on the left area of menu button */
+  leftIconName?: AcceptedIconNames;
   /** The size of the icon on the menu button */
-  menuIconSize?: number;
+  iconSize?: number;
 };
 
 export type TestProps = {
@@ -38,14 +42,18 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
   const {
     items,
     onSelect,
+    color = '',
     buttonText = 'More',
     menuPosition = 'left',
     buttonType = 'primary',
-    menuIconName,
-    menuIconSize = 16,
+    rightIconName,
+    leftIconName,
+    iconSize = 16,
   } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+
+  const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
@@ -53,13 +61,34 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}
-          iconAlign={menuIconName ? 'right' : undefined}
-          icon={
-            menuIconName ? (
+          color={color}
+          iconRight={
+            rightIconName ? (
               <Icon
-                name={menuIconName}
-                color={buttonType === ('primary' || 'secondary') ? 'dark' : 'light'}
-                size={menuIconSize}
+                name={rightIconName}
+                color={
+                  calculatedColor
+                    ? pickTextColorFromSwatches(calculatedColor?.color, calculatedColor?.shade)
+                    : buttonType === ('primary' || 'secondary')
+                    ? 'black'
+                    : 'white'
+                }
+                size={iconSize}
+              />
+            ) : null
+          }
+          iconLeft={
+            leftIconName ? (
+              <Icon
+                name={leftIconName}
+                color={
+                  calculatedColor
+                    ? pickTextColorFromSwatches(calculatedColor?.color, calculatedColor?.shade)
+                    : buttonType === ('primary' || 'secondary')
+                    ? 'black'
+                    : 'white'
+                }
+                size={iconSize}
               />
             ) : null
           }
