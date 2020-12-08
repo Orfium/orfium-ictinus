@@ -24,8 +24,7 @@ export const buttonStyle = ({
   icon,
   disabled,
   childrenCount,
-  iconAlign,
-}: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
+}: RequiredProperties<Props & { icon: boolean; childrenCount: number }>) => (theme: Theme) => {
   const defineBackgroundColor = (theme: Theme): string => {
     if (childrenCount === 0 && icon) {
       return 'transparent';
@@ -58,26 +57,23 @@ export const buttonStyle = ({
   };
 };
 
-export const buttonSpanStyle = ({
-  icon,
-  iconAlign,
-  size,
-}: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
-  display: icon ? 'flex' : 'block',
-  // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
-  // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
-  // definition. So we cast this as something it will accept.
-  flexDirection: iconAlign === 'right' ? ('row-reverse' as const) : ('row' as const),
-  alignItems: icon ? 'center' : 'flex-start',
-  marginLeft: iconAlign === 'right' ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
-});
+export const buttonSpanStyle = () => () => {
+  return {
+    display: 'flex',
+    // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
+    // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
+    // definition. So we cast this as something it will accept.
+    alignItems: 'center',
+  };
+};
 
 export const iconStyle = ({
-  size,
-  iconAlign,
+  iconLeft,
+  iconRight,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
   return {
-    marginLeft: iconAlign === 'left' ? 0 : theme.spacing.sm,
-    marginRight: iconAlign === 'right' ? 0 : theme.spacing.sm,
+    marginLeft: iconRight ? theme.spacing.sm : 0,
+    marginRight: iconLeft ? theme.spacing.sm : 0,
+    display: 'inline-flex',
   };
 };
