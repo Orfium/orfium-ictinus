@@ -2,11 +2,39 @@ import { Theme } from '../../../theme';
 import { rem, transparentize } from 'polished';
 import { css, SerializedStyles } from '@emotion/core';
 import { transition } from '../../../theme/functions';
-import { isNotificationTypes, ToastType } from './Toast';
+import { ToastType } from './Toast';
+import { AcceptedColorComponentTypes } from '../../../utils/themeFunctions';
+import { isNotificationTypes } from './Toast';
 
-export const toastContainer = () => (theme: Theme): SerializedStyles => css`
+const isAcceptedComponentTypes = (type: string): type is AcceptedColorComponentTypes => {
+  return [
+    'primary',
+    'secondary',
+    'branded1',
+    'branded2',
+    'success',
+    'error',
+    'warning',
+    'info',
+    'light',
+  ].includes(type);
+};
+
+const widthOptions = {
+  notification: `width: ${rem(336)};`,
+  generic: `min-width: ${rem(336)};`,
+};
+
+const maxHeightOptions = {
+  notification: `max-height: ${rem(294)};`,
+  generic: `max-height: none;`,
+};
+
+export const toastContainer = (type: string) => (theme: Theme): SerializedStyles => css`
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  width: ${rem(336)};
+  ${isNotificationTypes(type) ? widthOptions['notification'] : widthOptions['generic']}
   border-radius: ${theme.spacing.xsm};
   // TODO: box-shadow's last parameter to change when elevated is introduced
   box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
@@ -18,7 +46,7 @@ export const topContainer = (type: ToastType) => (theme: Theme): SerializedStyle
   justify-content: space-between;
   overflow: hidden;
   height: ${rem(58)};
-  background: ${isNotificationTypes(type)
+  background: ${isAcceptedComponentTypes(type)
     ? theme.utils.getColor(type, 400, 'normal')
     : theme.utils.getColor('darkGray', 700)};
 `;
@@ -50,12 +78,10 @@ export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
   margin-left: ${theme.spacing.md};
 `;
 
-// expanded container css
-
-export const expandedContainer = () => (theme: Theme): SerializedStyles => css`
+export const expandedContainer = (type: string) => (theme: Theme): SerializedStyles => css`
   padding: ${theme.spacing.md};
   min-height: ${rem(146)};
-  max-height: ${rem(294)};
+  ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
   font-size: ${theme.typography.fontSizes['14']};
   position: relative;
 `;

@@ -15,13 +15,14 @@ import {
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import Icon from '../../Icon';
 import { NotificationTypes } from '../Notification';
+import { AcceptedColorComponentTypes } from '../../../utils/themeFunctions';
 
-export type ToastType = NotificationTypes | string;
+export type ToastType = AcceptedColorComponentTypes | string;
 
 export type Props = {
   /** The informative message of the Toast */
   message: string;
-  /** The type of the Toast */
+  /** The type of the Toast, will determine the color and the icon */
   type: ToastType;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
@@ -34,14 +35,14 @@ export type Props = {
 };
 
 export const isNotificationTypes = (type: string): type is NotificationTypes => {
-  return ['info', 'error', 'success', 'warning'].includes(type);
+  return ['success', 'error', 'warning', 'info'].includes(type);
 };
 
 const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, children }) => {
   const [isExpanded, setExpanded] = useState(expanded);
 
   return (
-    <div css={toastContainer()}>
+    <div css={toastContainer(type)}>
       <div css={topContainer(type)}>
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (
@@ -61,7 +62,7 @@ const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, chil
           </span>
         </div>
       </div>
-      {isExpanded && <div css={expandedContainer()}>{children}</div>}
+      {isExpanded && <div css={expandedContainer(type)}>{children}</div>}
     </div>
   );
 };

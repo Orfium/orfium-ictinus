@@ -137,8 +137,8 @@ Toast Notification
     <PresentComponent name="" width={768}>
       <Stack>
         <Toast
-          message="Generic Toast"
-          type="generic"
+          message="Branded2 colored Toast"
+          type="branded2"
           closeCTA={() => console.log('close action clicked')}
         ></Toast>
         <Toast
@@ -157,6 +157,38 @@ Toast Notification
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
             )}
           />
+        </Toast>
+        <Toast
+          message="Default colored Toast"
+          type="generic"
+          closeCTA={() => console.log('close action clicked')}
+        >
+          <div>
+            <h1>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est
+              porttitor
+            </h1>
+            <ul>
+              <li>
+                <h1>Lorem ipsum dolor sit amet</h1>
+              </li>
+              <li>
+                <h1>consectetur adipiscing elit</h1>
+              </li>
+              <li>
+                <h1>Sed viverra neque</h1>
+              </li>
+              <li>
+                <h1>neque nec</h1>
+              </li>
+              <li>
+                <h1>est porttitor</h1>
+              </li>
+              <li>
+                <h1>dolor sit amet</h1>
+              </li>
+            </ul>
+          </div>
         </Toast>
       </Stack>
     </PresentComponent>
