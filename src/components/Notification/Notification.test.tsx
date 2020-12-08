@@ -1,6 +1,6 @@
 import React from 'react';
 import InlineNotification from './InlineNotification';
-import BannerNotification from './BannerNotification';
+import Banner from './Banner';
 import NotificationsContainer from './NotificationsContainer';
 import { NotificationTypes } from './Notification';
 import { render, fireEvent } from '../../test';
@@ -76,7 +76,7 @@ describe('Notifications Container', () => {
 
     const { findByText } = render(
       <NotificationsContainer position="top-right">
-        <BannerNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+        <Banner {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
       </NotificationsContainer>
     );
 
@@ -93,7 +93,7 @@ describe('Notifications Container', () => {
 
     const { findByText } = render(
       <NotificationsContainer position="top-right">
-        <BannerNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+        <Banner {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
       </NotificationsContainer>
     );
 
@@ -109,7 +109,7 @@ describe('Notifications Container', () => {
 
     const { findByTestId } = render(
       <NotificationsContainer position="top-right">
-        <BannerNotification {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
+        <Banner {...data} primaryCTA={primaryCTA} closeCTA={closeCTA} />
       </NotificationsContainer>
     );
 

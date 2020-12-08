@@ -1,7 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import InlineNotification from '../Notification/InlineNotification';
-import BannerNotification from '../Notification/BannerNotification';
+import Banner from '../Notification/Banner';
 import NotificationsContainer from '../Notification/NotificationsContainer';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
@@ -81,15 +81,15 @@ import { InlineNotification } from '@orfium/ictinus';
 
 ### Props
 
-<Props of={BannerNotification} />
+<Props of={Banner} />
 
 ### Usage
 
 ```js
-import { NotificationsContainer, BannerNotification } from '@orfium/ictinus';
+import { NotificationsContainer, Banner } from '@orfium/ictinus';
 
 <NotificationsContainer position='top-left'>
-  <BannerNotification
+  <Banner
     withIcon
     withFilling
     title="Title"
@@ -99,7 +99,7 @@ import { NotificationsContainer, BannerNotification } from '@orfium/ictinus';
     primaryCTA={() => void}
     closeCTA={() => void}
   />
-  // add more BannerNotification components here if needed
+  // add more Banners components here if needed
 </NotificationsContainer>
 ```
 
@@ -113,7 +113,7 @@ import { NotificationsContainer, BannerNotification } from '@orfium/ictinus';
           'bottom-right'
         )}
       >
-        <BannerNotification
+        <Banner
           withIcon={boolean('icon', true)}
           withFilling={boolean('withFilling', false)}
           title={text('title', 'This is the heading:')}
@@ -123,7 +123,7 @@ import { NotificationsContainer, BannerNotification } from '@orfium/ictinus';
           primaryCTA={() => console.log('action clicked')}
           closeCTA={() => console.log('close action clicked')}
         />
-        <BannerNotification
+        <Banner
           withIcon={boolean('icon', true)}
           withFilling={boolean('withFilling', false)}
           title={text('title', 'This is the heading:')}
@@ -133,7 +133,7 @@ import { NotificationsContainer, BannerNotification } from '@orfium/ictinus';
           primaryCTA={() => console.log('action clicked')}
           closeCTA={() => console.log('close action clicked')}
         />
-        <BannerNotification
+        <Banner
           withIcon={boolean('icon', true)}
           withFilling={boolean('withFilling', false)}
           title={text('title', 'This is the heading:')}

@@ -26,7 +26,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const BannerNotification: React.FC<Props> = ({
+const Banner: React.FC<Props> = ({
   withIcon = true,
   withFilling = false,
   title,
@@ -53,4 +53,4 @@ const BannerNotification: React.FC<Props> = ({
   );
 };
 
-export default BannerNotification;
+export default Banner;
