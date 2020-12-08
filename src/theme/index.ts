@@ -35,7 +35,8 @@ export const getColor = (palette: Palette): GetColor => (
   variant: typeof colorShades[number],
   scope: 'flat' | 'text' | 'normal' = 'flat'
 ) => {
-  const endColor = scope === 'normal' ? palette[color][variant] : palette[scope][color][variant];
+  const endColor =
+    scope === 'normal' ? palette[color][variant] : palette?.[scope]?.[color]?.[variant];
 
   if (!endColor) {
     throw new Error('No color found with that name');

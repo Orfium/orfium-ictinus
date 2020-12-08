@@ -3,13 +3,15 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { AcceptedColorComponentTypes, calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
 import { buttonSpanStyle, buttonStyle, iconStyle } from './Button.style';
 
 export type Props = {
   /** Type indicating the type of the button */
   type?: AcceptedColorComponentTypes;
+  /** the color of the button based on our colors eg. red-400 */
+  color?: string;
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
@@ -30,6 +32,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
   const {
     size = 'md',
     type = 'primary',
+    color = '',
     filled = true,
     iconLeft = null,
     iconRight = null,
@@ -40,6 +43,8 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     onBlur,
   } = props;
 
+  const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
+
   return (
     <button
       data-testid={generateTestDataId('button', dataTestId)}
@@ -47,6 +52,8 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         type,
         filled,
         size,
+        color,
+        calculatedColor,
         icon: Boolean(iconLeft || iconRight),
         disabled,
         iconLeft,
@@ -64,6 +71,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
               type,
               filled,
               size,
+              color,
               iconLeft,
               iconRight,
               disabled,
@@ -81,6 +89,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
               type,
               filled,
               size,
+              color,
               iconLeft,
               iconRight,
               disabled,

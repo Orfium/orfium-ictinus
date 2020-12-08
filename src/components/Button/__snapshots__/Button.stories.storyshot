@@ -62,14 +62,14 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-1oxjtrj-Button"
+        className="css-fi3oyt-Button"
         data-testid="button"
         disabled={false}
       >
         <span
           className="css-1xr6sam-Button"
         >
-          Hello world
+          Red 400
         </span>
       </button>
     </div>
@@ -81,52 +81,14 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-1e2xfi2-Button"
+        className="css-1n0o0ns-Button"
         data-testid="button"
         disabled={false}
       >
         <span
           className="css-1xr6sam-Button"
         >
-          Hello world
-        </span>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <button
-        className="css-16m4h8r-Button"
-        data-testid="button"
-        disabled={false}
-      >
-        <span
-          className="css-1xr6sam-Button"
-        >
-          Hello world
-        </span>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <button
-        className="css-glx3xq-Button"
-        data-testid="button"
-        disabled={false}
-      >
-        <span
-          className="css-1xr6sam-Button"
-        >
-          Hello world
+          Magenta 500
         </span>
       </button>
     </div>
@@ -216,6 +178,140 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
     >
       <button
         className="css-1k3pmli-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Button Types 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-bynl8j-Button"
+        data-testid="button"
+        disabled={true}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Disabled
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1oxjtrj-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-1e2xfi2-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-16m4h8r-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-glx3xq-Button"
         data-testid="button"
         disabled={false}
       >
