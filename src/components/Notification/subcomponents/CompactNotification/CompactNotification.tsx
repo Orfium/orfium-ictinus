@@ -16,7 +16,7 @@ import { AcceptedIconNames } from 'components/Icon/types';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 
-export type CompactNotificationVariants = 'inline' | 'banner';
+export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 
 export type Props = {
   /** Show notification icon based on the type */
@@ -39,6 +39,14 @@ export type Props = {
   title?: string;
   /** The data test id if needed */
   dataTestId?: TestId;
+
+  /** The secondary call-to-action label of the Notification */
+  secondaryCTALabel?: string | undefined;
+  /** The secondary call-to-action of the Notification */
+  secondaryCTA?: (() => void) | undefined;
+  /** The description of the Notification (only for toast) */
+  description?: string | undefined;
+  /** The closing call-to-action of the Toast */
 };
 
 export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>

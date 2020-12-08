@@ -4,6 +4,7 @@ import Notification from '../Notification';
 import Toast from '../Notification/Toast';
 import NotificationVisual from '../Notification/NotificationVisual';
 import NotificationsContainer from '../Notification/subcomponents/NotificationsContainer';
+import CardNotification from '../Notification/CardNotification';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
 
@@ -211,6 +212,28 @@ Playground Notification
         type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
+        closeCTA={() => console.log('close action clicked')}
+      />
+    </PresentComponent>
+  </Story>
+</Preview>
+
+# Card Notification
+
+<Preview>
+  <Story name="Card Notification" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={768}>
+      <CardNotification
+        message={text('message', 'This is the info')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+        primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+        primaryCTA={() => console.log('primary action clicked')}
+        secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+        secondaryCTA={() => console.log('secondary action clicked')}
+        description={text(
+          'description',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+        )}
         closeCTA={() => console.log('close action clicked')}
       />
     </PresentComponent>

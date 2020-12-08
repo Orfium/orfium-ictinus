@@ -6,7 +6,7 @@ import { TestId } from '../../utils/types';
 
 export type NotificationTypes = 'success' | 'error' | 'info' | 'warning';
 
-export type NotificationVariants = 'inline' | 'banner';
+export type NotificationVariants = 'inline' | 'banner' | 'card';
 
 export type Props = {
   /** Show notification icon based on the type */
