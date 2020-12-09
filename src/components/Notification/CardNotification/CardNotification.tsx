@@ -1,8 +1,22 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import Icon from 'components/Icon';
 import * as React from 'react';
 import { NotificationTypes } from '../Notification';
-import CompactNotification from '../subcomponents/CompactNotification';
+import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
+import {
+  cardContainer,
+  iconContainer,
+  topContainer,
+  infoContainer,
+  infoMessageContainer,
+  closeActionContainer,
+  descriptionContainer,
+  actionsContainer,
+  actionContainer,
+} from './CardNotification.style';
+import useTheme from '../../../hooks/useTheme';
+import Button from '../../Button';
 
 export type Props = {
   /** The informative message of the Toast */
@@ -35,20 +49,35 @@ const CardNotification: React.FC<Props> = ({
   description,
   closeCTA,
 }) => {
+  const { utils } = useTheme();
+
   return (
-    <CompactNotification
-      withIcon={true}
-      withFilling={false}
-      message={message}
-      variant="card"
-      type={type}
-      primaryCTALabel={primaryCTALabel}
-      primaryCTA={primaryCTA}
-      secondaryCTALabel={secondaryCTALabel}
-      secondaryCTA={secondaryCTA}
-      description={description}
-      closeCTA={closeCTA}
-    />
+    <div css={cardContainer(type)}>
+      <div css={topContainer()}>
+        <div css={infoContainer()}>
+          <div css={iconContainer()}>
+            <Icon name={typeToIconName(type)} color={type} size={20} />
+          </div>
+          <div css={infoMessageContainer()}>{message}</div>
+        </div>
+        <span css={closeActionContainer()} onClick={closeCTA}>
+          <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
+        </span>
+      </div>
+      <div css={descriptionContainer()}>{description}</div>
+      <div css={actionsContainer()}>
+        <div css={actionContainer()}>
+          <Button filled={false} size="sm" onClick={secondaryCTA}>
+            {secondaryCTALabel}
+          </Button>
+        </div>
+        <div css={actionContainer()}>
+          <Button type="branded1" size="sm" onClick={primaryCTA}>
+            {primaryCTALabel}
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 

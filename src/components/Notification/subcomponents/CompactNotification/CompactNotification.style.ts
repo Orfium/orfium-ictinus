@@ -3,7 +3,7 @@ import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../../Notification';
 import { css, SerializedStyles } from '@emotion/core';
 
-const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
+export const typeToThemePalette = (theme: Theme, type: NotificationTypes) =>
   theme.utils.getColor(type, 400, 'normal');
 
 export const notificationsContainer = (withFilling: boolean, type: NotificationTypes) => (

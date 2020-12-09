@@ -45,8 +45,8 @@ const NotificationVisual: React.FC<Props> = ({
             {secondaryCTALabel}
           </Button>
         </div>
-        <div css={actionContainer()} onClick={primaryCTA}>
-          <Button type="secondary" size="sm">
+        <div css={actionContainer()}>
+          <Button type="branded1" size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>

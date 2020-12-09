@@ -259,49 +259,84 @@ exports[`Storyshots Design System/Notification Card Notification 1`] = `
     }
   >
     <div
-      className="css-6t1vuy-CompactNotification"
+      className="css-mjzp6o-CardNotification"
     >
       <div
-        className="css-1qxbj8g-CompactNotification"
+        className="css-13iwjpw-CardNotification"
       >
         <div
-          className="css-61cpcu-CompactNotification"
+          className="css-rojlkl-CardNotification"
+        >
+          <div
+            className="css-v6gssy-CardNotification"
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-c58ujo-Icon"
+              />
+            </span>
+          </div>
+          <div
+            className="css-kpeghs-CardNotification"
+          >
+            This is the info
+          </div>
+        </div>
+        <span
+          className="css-lbl3mb-CardNotification"
+          onClick={[Function]}
         >
           <span
             className="css-1gnbc76-Icon"
           >
             <span
-              className="css-1atsk5c-Icon"
+              className="css-z7hcm5-Icon"
             />
           </span>
-        </div>
-        <div>
-          This is the info
-        </div>
+        </span>
       </div>
       <div
-        className="css-1xih1b5-CompactNotification"
+        className="css-117xndp-CardNotification"
       >
-        <span
-          className="css-172bta1-CompactNotification"
-          data-testid="notification-primary"
-          onClick={[Function]}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
+      </div>
+      <div
+        className="css-pnu9aa-CardNotification"
+      >
+        <div
+          className="css-jv31jy-CardNotification"
         >
-          Primary CTA
-        </span>
-        <span
-          className="css-xvugv-CompactNotification"
-          data-testid="notification-close"
-          onClick={[Function]}
-        >
-          <span
-            className="css-1gnbc76-Icon"
+          <button
+            className="css-1domea0-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
           >
             <span
-              className="css-18cmtjl-Icon"
-            />
-          </span>
-        </span>
+              className="css-9nhvja-Button"
+            >
+              Secondary CTA
+            </span>
+          </button>
+        </div>
+        <div
+          className="css-jv31jy-CardNotification"
+        >
+          <button
+            className="css-2d17v-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span
+              className="css-9nhvja-Button"
+            >
+              Primary CTA
+            </span>
+          </button>
+        </div>
       </div>
     </div>
     <p
@@ -917,12 +952,12 @@ exports[`Storyshots Design System/Notification Toast Notifiction 1`] = `
               </div>
               <div
                 className="css-16owih8-NotificationVisual"
-                onClick={[Function]}
               >
                 <button
-                  className="css-1sfte8f-Button"
+                  className="css-2d17v-Button"
                   data-testid="button"
                   disabled={false}
+                  onClick={[Function]}
                 >
                   <span
                     className="css-9nhvja-Button"
