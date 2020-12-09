@@ -73,15 +73,11 @@ export const chevronIconContainer = (expanded: boolean) => (): SerializedStyles 
   ${transition(0.2)}
 `;
 
-export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
-  cursor: pointer;
-  margin-left: ${theme.spacing.md};
-`;
-
 export const expandedContainer = (type: string) => (theme: Theme): SerializedStyles => css`
   padding: ${theme.spacing.md};
   min-height: ${rem(146)};
   ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
   font-size: ${theme.typography.fontSizes['14']};
   position: relative;
+  background: ${theme.palette.white};
 `;

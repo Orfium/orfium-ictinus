@@ -5,15 +5,17 @@ import * as React from 'react';
 import { NotificationTypes } from '../Notification';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import {
-  cardContainer,
+  actionContainer,
   iconContainer,
+  closeActionContainer,
+  actionsContainer,
+  boldMessageContainer,
+} from '../Notification.style';
+import {
+  cardContainer,
   topContainer,
   infoContainer,
-  infoMessageContainer,
-  closeActionContainer,
   descriptionContainer,
-  actionsContainer,
-  actionContainer,
 } from './CardNotification.style';
 import useTheme from '../../../hooks/useTheme';
 import Button from '../../Button';
@@ -58,7 +60,7 @@ const CardNotification: React.FC<Props> = ({
           <div css={iconContainer()}>
             <Icon name={typeToIconName(type)} color={type} size={20} />
           </div>
-          <div css={infoMessageContainer()}>{message}</div>
+          <div css={boldMessageContainer()}>{message}</div>
         </div>
         <span css={closeActionContainer()} onClick={closeCTA}>
           <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />

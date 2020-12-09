@@ -2,12 +2,8 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import Button from '../../Button';
-import {
-  headingContainer,
-  descriptionContainer,
-  actionsContainer,
-  actionContainer,
-} from './NotificationVisual.style';
+import { actionContainer, actionsContainer, boldMessageContainer } from '../Notification.style';
+import { descriptionContainer } from './NotificationVisual.style';
 
 export type Props = {
   /** The message heading of the Notification */
@@ -37,7 +33,7 @@ const NotificationVisual: React.FC<Props> = ({
 }) => {
   return (
     <React.Fragment>
-      <div css={headingContainer()}>{title}</div>
+      <div css={boldMessageContainer()}>{title}</div>
       <div css={descriptionContainer()}>{description}</div>
       <div css={actionsContainer()}>
         <div css={actionContainer()}>

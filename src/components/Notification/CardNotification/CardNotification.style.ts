@@ -31,37 +31,9 @@ export const infoContainer = () => (): SerializedStyles => css`
   align-items: center;
 `;
 
-export const iconContainer = () => (theme: Theme): SerializedStyles => css`
-  padding-right: ${theme.spacing.sm};
-`;
-
-export const infoMessageContainer = () => (theme: Theme): SerializedStyles => css`
-  font-weight: ${theme.typography.weights.bold};
-`;
-
-export const closeActionContainer = () => (theme: Theme): SerializedStyles => css`
-  cursor: pointer;
-  margin-left: ${theme.spacing.lg};
-`;
-
 export const descriptionContainer = () => (theme: Theme): SerializedStyles => css`
   padding-bottom: ${theme.spacing.md};
   font-size: ${theme.typography.fontSizes['14']};
   max-height: ${rem(194)};
   overflow: auto;
-`;
-
-export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin-top: ${theme.spacing.md};
-  position: sticky;
-  bottom: ${theme.spacing.md};
-  top: 100%;
-`;
-
-export const actionContainer = () => (theme: Theme): SerializedStyles => css`
-  cursor: pointer;
-  margin-left: ${theme.spacing.md};
 `;

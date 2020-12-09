@@ -1,20 +1,20 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { iconContainer, closeActionContainer } from '../../Notification.style';
 import {
   actionsContainer,
   infoContainer,
   notificationsContainer,
-  iconContainer,
   headContainer,
   primaryActionContainer,
-  closeActionContainer,
 } from './CompactNotification.style';
 import Icon from '../../../Icon';
 import { NotificationTypes } from '../../Notification';
 import { AcceptedIconNames } from 'components/Icon/types';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
+import useTheme from '../../../../hooks/useTheme';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 
@@ -64,12 +64,14 @@ const CompactNotification: React.FC<Props> = ({
   title,
   dataTestId,
 }) => {
+  const { utils } = useTheme();
+
   return (
     <div css={notificationsContainer(withFilling, type)}>
       <div css={infoContainer()}>
         {withIcon && (
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} />
+            <Icon name={typeToIconName(type)} color={type} size={20} />
           </div>
         )}
         {variant === 'banner' && <div css={headContainer()}>{title}</div>}
@@ -91,7 +93,7 @@ const CompactNotification: React.FC<Props> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon name="close" color="lightGray500" />
+            <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
           </span>
         )}
       </div>

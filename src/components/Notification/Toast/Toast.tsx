@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { useState } from 'react';
+import { actionContainer } from '../Notification.style';
 import {
   toastContainer,
   topContainer,
@@ -9,7 +10,6 @@ import {
   infoIconContainer,
   actionIconsContainer,
   chevronIconContainer,
-  closeIconContainer,
   expandedContainer,
 } from './Toast.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
@@ -57,7 +57,7 @@ const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, chil
             <Icon name="chevronLargeDown" color="primary" size={24} />
           </span>
 
-          <span css={closeIconContainer()} onClick={closeCTA}>
+          <span css={actionContainer()} onClick={closeCTA}>
             <Icon name="close" color="primary" size={24} />
           </span>
         </div>
