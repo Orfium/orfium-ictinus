@@ -1,13 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-/* eslint-disable @typescript-eslint/no-unused-vars */
+// // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// // @ts-nocheck
+// /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+// /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useMemo } from 'react';
 import {
   AreaChart,
   Area,
-  LineChart,
-  Line,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -16,7 +14,6 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { omit, keys, flatten, uniq, sampleSize } from 'lodash';
-import { rem } from 'polished';
 import useTheme from '../../hooks/useTheme';
 import GradientLine from './components/GradientLine';
 import CustomTooltip from './components/CustomTooltip';
@@ -36,7 +33,6 @@ type Props = {
 
 const Chart = ({ data = [], labelX, labelY, showLegend = false, color }: Props) => {
   const theme = useTheme();
-  console.log('theme', theme);
 
   const uniqueKeyNames = useMemo(() => {
     return uniq(flatten(data.map(object => keys(omit(object, 'name')))));
@@ -51,7 +47,7 @@ const Chart = ({ data = [], labelX, labelY, showLegend = false, color }: Props) 
   const colorPicker = useMemo(() => {
     const colorSample = sampleSize(theme.palette.flat, uniqueKeyNames.length);
 
-    return uniqueKeyNames.reduce((acc, key, index) => {
+    return uniqueKeyNames.reduce<Record<string, string>>((acc, key, index) => {
       const definedColor = color && color(key) ? color(key) : colorSample[index]?.[400];
       acc[key] = definedColor;
 
@@ -99,7 +95,7 @@ const Chart = ({ data = [], labelX, labelY, showLegend = false, color }: Props) 
               <Legend
                 align="left"
                 iconType="circle"
-                iconSize="16"
+                iconSize={16}
                 wrapperStyle={{
                   paddingTop: '50px',
                   paddingLeft: '13px',

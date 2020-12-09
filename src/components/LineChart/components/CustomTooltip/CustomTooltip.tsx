@@ -1,22 +1,16 @@
-import { rem } from 'polished';
 import React from 'react';
-import { tooltipStyle } from './CustomTooltip.style';
+import {
+  tooltipHrStyle,
+  tooltipLiStyle,
+  tooltipStyle,
+  tooltipUlStyle,
+} from './CustomTooltip.style';
+import {TooltipPayload} from 'recharts'
 
-// const divStyle = {
-//   fontSize: '14px',
-//   padding: '8px',
-//   color: 'white',
-//   background: '#232323',
-//   opacity: '90%',
-//   borderRadius: '4px',
-//   minWidth: rem(247),
-//   whiteSpace: 'nowrap',
-//   // height: rem('148px'),
-// };
 
 type Props = {
   label: string;
-  payload: Array<T>;
+  payload: TooltipPayload[];
 };
 
 const CustomTooltip = ({ label, payload }: Props) => {
@@ -27,34 +21,11 @@ const CustomTooltip = ({ label, payload }: Props) => {
       <p className="label" style={{ margin: '0px' }}>
         {`${label}`}{' '}
       </p>
-      {payload.length > 1 && (
-        <hr
-          style={{
-            margin: '17px 0px 13px 0px',
-            height: '1px',
-            borderWidth: 0,
-            backgroundColor: 'rgb(255, 255, 255)',
-            opacity: '10%',
-          }}
-        />
-      )}
+      {payload.length > 1 && <hr css={tooltipHrStyle()} />}
       {payload && (
-        <ul style={{ padding: '0px', margin: '0px' }}>
-          {payload.map(({ name, value, datakey, color }) => (
-            <li
-              key={datakey}
-              style={{
-                listStyleType: 'none',
-                color: color,
-                // color: 'rgb(255, 255, 255)',
-                width: '100%',
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                height: '16px',
-                padding: '2px 0px',
-              }}
-            >
+        <ul css={tooltipUlStyle()}>
+          {payload.map(({ name, value, color }) => (
+            <li key={name} css={tooltipLiStyle(color)}>
               <div>{name}</div> <div>{value}</div>
             </li>
           ))}
