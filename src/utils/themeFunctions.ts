@@ -1,84 +1,40 @@
 import { Theme } from '../theme';
+import { flatColors, mainTypes } from '../theme/palette';
 
-export type AcceptedColorComponentTypes =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'teal'
-  | 'error'
-  | 'info'
-  | 'warning'
-  | 'light'
-  | 'dark'
-  | 'branded1'
-  | 'branded2'
-  | 'lightGray100'
-  | 'lightGray200'
-  | 'lightGray400'
-  | 'lightGray500'
-  | 'lightGray700'
-  | 'darkGray400'
-  | 'darkGray600'
-  | 'darkBlue400';
+export type AcceptedColorComponentTypes = typeof mainTypes[number];
 
-const getColorFromType = (
-  type: AcceptedColorComponentTypes,
-  defaultValue: string,
-  theme: Theme
-) => {
-  switch (type) {
-    case 'primary':
-      return theme.palette.primary[100];
-    case 'secondary':
-      return theme.palette.secondary[400];
-    case 'success':
-      return theme.palette.success[400];
-    case 'teal':
-      return theme.palette.flat.teal[400];
-    case 'error':
-      return theme.palette.error[400];
-    case 'info':
-      return theme.palette.info[400];
-    case 'warning':
-      return theme.palette.warning[400];
-    case 'branded1':
-      return theme.palette.branded1[400];
-    case 'branded2':
-      return theme.palette.branded2[400];
-    case 'lightGray100':
-      return theme.palette.flat.lightGray[100];
-    case 'dark':
-      return theme.palette.flat.darkGray[600];
-    case 'light':
-      return theme.palette.text.light[400];
-    case 'lightGray400':
-      return theme.palette.flat.lightGray[400];
-    case 'lightGray500':
-      return theme.palette.flat.lightGray[500];
-    case 'lightGray700':
-      return theme.palette.flat.lightGray[700];
-    case 'darkGray400':
-      return theme.palette.flat.darkGray[400];
-    case 'darkBlue400':
-      return theme.palette.flat.darkBlue[400];
-    default:
-      return defaultValue;
+export const getColorFromType = (type: AcceptedColorComponentTypes | string, theme: Theme) => {
+  if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
+    const colorTypeValue = type as AcceptedColorComponentTypes;
+    if (colorTypeValue === 'primary') {
+      return theme.utils.getColor(colorTypeValue, 100, 'normal');
+    }
+
+    return theme.utils.getColor(colorTypeValue, 400, 'normal');
   }
+  if (Object.values(flatColors).includes(type as typeof flatColors[number])) {
+    const colorValue = type as typeof flatColors[number];
+
+    return theme.utils.getColor(colorValue, 400);
+  }
+
+  return type;
 };
 
 export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
-  getColorFromType(type, theme.palette.flat.lightGray[100], theme);
+  getColorFromType(type, theme);
 
 export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
   switch (type) {
     case 'primary':
-      return theme.palette.text.primary[400];
+      return theme.utils.getColor('primary', 400, 'text');
     case 'secondary':
-      return theme.palette.text.secondary[100];
+      return theme.utils.getColor('secondary', 100, 'text');
     default:
-      return theme.palette.text.light[100];
+      return theme.utils.getColor('light', 100, 'text');
   }
 };
 
-export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) =>
-  getColorFromType(type, theme.palette.primary[100], theme);
+export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes | string) => (
+  theme: Theme
+) => getColorFromType(type, theme);

@@ -27,6 +27,7 @@ import { Radio } from '@orfium/ictinus';
   <Story name="Not selected Radio  (`checked === undefined`)">
     <div style={{ color: '#82e616' }}>
       <Radio/>
+      <Radio filled={false}/>
     </div>
   </Story>
 </Preview>
@@ -36,6 +37,7 @@ import { Radio } from '@orfium/ictinus';
   <Story name="Not selected Radio (`checked === false`)">
     <div style={{ color: '#82e616' }}>
       <Radio checked={false}/>
+      <Radio filled={false} checked={false}/>
     </div>
   </Story>
 </Preview>
@@ -54,6 +56,7 @@ import { Radio } from '@orfium/ictinus';
   <Story name="Disabled not selected Radio">
     <div style={{ color: '#82e616' }}>
       <Radio checked={false} disabled={true}/>
+      <Radio filled={false} checked={false} disabled={true}/>
     </div>
   </Story>
 </Preview>

@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { rem, transparentize } from 'polished';
+import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { Props } from './CheckBox';
 
@@ -10,10 +10,10 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   display: flex;
 `;
 
-export const checkboxWrapperStyle = () => (theme: Theme): SerializedStyles => css`
+export const checkboxWrapperStyle = () => (): SerializedStyles => css`
   border-radius: 100%;
-  width: ${rem(50)};
-  height: ${rem(50)};
+  width: ${rem(48)};
+  height: ${rem(48)};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,79 +22,93 @@ export const checkboxWrapperStyle = () => (theme: Theme): SerializedStyles => cs
     border-radius: 100%;
     transition: all 0.2s;
     content: ' ';
-    width: ${rem(50)};
-    height: ${rem(50)};
+    width: ${rem(48)};
+    height: ${rem(48)};
     position: absolute;
   }
   &:hover:before {
-    background: ${transparentize(0.7, theme.palette.flat.lightGray[400])};
+    background: rgba(0, 0, 0, 0.05);
   }
 `;
 
-export const checkboxStyle = ({ intermediate, checked }: Props) => (
+const getBackgroundColor = ({ intermediate, checked, filled, theme }: Props & { theme: Theme }) => {
+  // if checked and no intermediate
+  if (checked && !intermediate && filled) {
+    return `background: ${theme.utils.getColor('lightGray', 700)}`;
+  }
+
+  return filled
+    ? `background: ${theme.utils.getColor('lightGray', 400)}`
+    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
+        'darkGray',
+        700
+      )};`;
+};
+
+const getSymbolColor = ({ intermediate, filled, theme }: Props & { theme: Theme }) => {
+  if (!filled) {
+    return theme.utils.getColor('darkGray', 700);
+  } else {
+    return intermediate ? theme.utils.getColor('lightGray', 700) : 'white';
+  }
+};
+
+export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
   theme: Theme
-): SerializedStyles => css`
-  background: ${checked
-    ? intermediate
-      ? theme.palette.flat.darkGray[400]
-      : theme.palette.branded1[300]
-    : theme.palette.flat.lightGray[300]};
-  border: 0;
-  border-radius: ${rem(2)};
-  width: ${rem(26)};
-  height: ${rem(26)};
+): SerializedStyles => {
+  const symbolColor = getSymbolColor({ intermediate, checked, filled, theme });
 
-  position: absolute;
-  opacity: 0; // hide it
-
-  & + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  // Box.
-  & + label:before {
-    content: '';
-    transition: all 0.2s;
-    display: inline-block;
-    vertical-align: text-top;
-    width: ${rem(26)};
-    height: ${rem(26)};
-    background: ${theme.palette.flat.lightGray[300]};
+  return css`
+    border: 0;
     border-radius: ${rem(2)};
-  }
+    width: ${rem(24)};
+    height: ${rem(24)};
 
-  // Box checked
-  &:checked + label:before {
-    background: ${intermediate ? theme.palette.flat.darkGray[400] : theme.palette.branded1[400]};
-  }
-
-  // Disabled state label.
-  &:disabled + label {
-    cursor: not-allowed;
-  }
-
-  // Checkmark.
-  &:checked + label:after {
-    content: '';
     position: absolute;
-    left: ${rem(7)};
-    top: ${rem(13)};
-    height: ${rem(2)};
-    ${intermediate
-      ? `width: ${rem(10)};`
-      : `width: ${rem(2)};
-      box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    opacity: 0; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      transition: all 0.2s;
+      display: inline-block;
+      vertical-align: text-top;
+      width: ${rem(24)};
+      height: ${rem(24)};
+      ${getBackgroundColor({ intermediate, checked, filled, theme })};
+      border-radius: ${rem(2)};
+    }
+
+    // Disabled state label.
+    &:disabled + label {
+      cursor: not-allowed;
+    }
+
+    // Checkmark.
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: ${rem(5.5)};
+      ${intermediate
+        ? `width: ${rem(13)}; top: ${rem(10.5)}; height: ${rem(3)};`
+        : `width: ${rem(2)}; top: ${rem(12)}; height: ${rem(2)};;
+      box-shadow: -2px 0 0 ${symbolColor}, 2px 0 0 ${symbolColor}, 4px 0 0 ${symbolColor}, 4px -2px 0 ${symbolColor}, 4px -4px 0 ${symbolColor}, 4px -6px 0 ${symbolColor}, 4px -8px 0 ${symbolColor}, 4px -10px 0 ${symbolColor};
       transform: rotate(45deg);`};
-    background: white;
-  }
-`;
+      background-color: ${symbolColor};
+    }
+  `;
+};
 
 export const labelStyle = () => (theme: Theme): SerializedStyles => css`
   padding-left: ${rem(4)};
   font-size: ${theme.typography.fontSizes['15']};
   font-weight: ${theme.typography.weights.regular};
-  color: ${theme.palette.flat.darkGray[600]};
+  color: ${theme.utils.getColor('darkGray', 600)};
   white-space: nowrap;
 `;

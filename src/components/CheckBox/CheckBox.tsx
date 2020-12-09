@@ -17,6 +17,11 @@ export type Props = {
   disabled?: boolean;
   /** Boolean defining if the checkbox is in intermediate state when checked ( - instead of ✓ ). Defaults to false */
   intermediate?: boolean;
+  /** Whether the radio input is filled or outlined
+   *
+   * @default true
+   * */
+  filled?: boolean;
   /** The data test id if needed */
   dataTestIdSuffix?: TestId;
 };
@@ -28,6 +33,7 @@ const CheckBox: React.FC<Props> = ({
   disabled = false,
   intermediate = false,
   dataTestIdSuffix,
+  filled = true,
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
 
@@ -51,7 +57,7 @@ const CheckBox: React.FC<Props> = ({
       <span css={checkboxWrapperStyle()}>
         <input
           data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
-          css={checkboxStyle({ intermediate, checked })}
+          css={checkboxStyle({ intermediate, checked, filled })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}

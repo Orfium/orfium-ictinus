@@ -1,6 +1,220 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
+exports[`Storyshots Design System/Notification Banner Notification 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1rem",
+        "width": 1024,
+      }
+    }
+  >
+    <div
+      className="css-tlhr7b-NotificationsContainer"
+    >
+      <div
+        className="css-6t1vuy-CompactNotification"
+      >
+        <div
+          className="css-1qxbj8g-CompactNotification"
+        >
+          <div
+            className="css-61cpcu-CompactNotification"
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-1atsk5c-Icon"
+              />
+            </span>
+          </div>
+          <div
+            className="css-a0qw3x-CompactNotification"
+          >
+            This is the heading:
+          </div>
+          <div>
+            This is the info
+          </div>
+        </div>
+        <div
+          className="css-1xih1b5-CompactNotification"
+        >
+          <span
+            className="css-172bta1-CompactNotification"
+            data-testid="notification-primary"
+            onClick={[Function]}
+          >
+            Action
+          </span>
+          <span
+            className="css-xvugv-CompactNotification"
+            data-testid="notification-close"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-18cmtjl-Icon"
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="css-6t1vuy-CompactNotification"
+      >
+        <div
+          className="css-1qxbj8g-CompactNotification"
+        >
+          <div
+            className="css-61cpcu-CompactNotification"
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-1atsk5c-Icon"
+              />
+            </span>
+          </div>
+          <div
+            className="css-a0qw3x-CompactNotification"
+          >
+            This is the heading:
+          </div>
+          <div>
+            This is the info
+          </div>
+        </div>
+        <div
+          className="css-1xih1b5-CompactNotification"
+        >
+          <span
+            className="css-172bta1-CompactNotification"
+            data-testid="notification-primary"
+            onClick={[Function]}
+          >
+            Action
+          </span>
+          <span
+            className="css-xvugv-CompactNotification"
+            data-testid="notification-close"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-18cmtjl-Icon"
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="css-6t1vuy-CompactNotification"
+      >
+        <div
+          className="css-1qxbj8g-CompactNotification"
+        >
+          <div
+            className="css-61cpcu-CompactNotification"
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-1atsk5c-Icon"
+              />
+            </span>
+          </div>
+          <div
+            className="css-a0qw3x-CompactNotification"
+          >
+            This is the heading:
+          </div>
+          <div>
+            This is the info
+          </div>
+        </div>
+        <div
+          className="css-1xih1b5-CompactNotification"
+        >
+          <span
+            className="css-172bta1-CompactNotification"
+            data-testid="notification-primary"
+            onClick={[Function]}
+          >
+            Action
+          </span>
+          <span
+            className="css-xvugv-CompactNotification"
+            data-testid="notification-close"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-18cmtjl-Icon"
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <p
+      style={
+        Object {
+          "paddingTop": "8px",
+        }
+      }
+    >
+      
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 <div
   style={
     Object {
@@ -149,7 +363,7 @@ exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
                 className="css-1gnbc76-Icon"
               >
                 <span
-                  className="css-1avnyjk-Icon"
+                  className="css-18cmtjl-Icon"
                 />
               </span>
             </span>
@@ -281,7 +495,7 @@ exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
                 className="css-1gnbc76-Icon"
               >
                 <span
-                  className="css-1avnyjk-Icon"
+                  className="css-18cmtjl-Icon"
                 />
               </span>
             </span>
@@ -302,7 +516,7 @@ exports[`Storyshots Design System/Notification Inline Notifiction 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
+exports[`Storyshots Design System/Notification Playground Notification 1`] = `
 <div
   style={
     Object {
@@ -364,7 +578,7 @@ exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
           </span>
         </div>
         <div>
-          Informative Message
+          This is the info
         </div>
       </div>
       <div
@@ -386,7 +600,7 @@ exports[`Storyshots Design System/Notification Playground Notifiction 1`] = `
             className="css-1gnbc76-Icon"
           >
             <span
-              className="css-1avnyjk-Icon"
+              className="css-18cmtjl-Icon"
             />
           </span>
         </span>
