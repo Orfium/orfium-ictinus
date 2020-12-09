@@ -1,0 +1,149 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import Notification from '../Notification';
+import NotificationsContainer from '../Notification/subcomponents/NotificationsContainer';
+import PresentComponent from '../storyUtils/PresentComponent';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/Notification" component={Notification} />
+
+# Notification
+
+# Usage
+
+```js
+import { Notification } from '@orfium/ictinus';
+
+<Notification />;
+```
+
+# Props
+
+<Props of={Notification} />
+
+# Inline Notification
+
+Inline Notification
+
+<Preview>
+  <Story name="Inline Notification" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <PresentComponent name="" width={768}>
+        <Notification
+          message={text('message', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+        />
+      </PresentComponent>
+      <PresentComponent name="" width={768}>
+        <Notification
+          message={text('message', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+      </PresentComponent>
+      <PresentComponent name="" width={768}>
+        <Notification
+          message={text('message', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+        />
+      </PresentComponent>
+      <PresentComponent name="" width={768}>
+        <Notification
+          withIcon={boolean('withIcon', true)}
+          withFilling={boolean('withFilling', false)}
+          message={text('message', 'Informative Message')}
+          variant="inline"
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+      </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
+
+# Banner Notification
+
+Banner Notification
+
+<Preview>
+  <Story name="Banner Notification" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={1024}>
+      <NotificationsContainer
+        position={select(
+          'position',
+          ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
+          'bottom-right'
+        )}
+      >
+        <Notification
+          withFilling={boolean('withFilling', false)}
+          withIcon={boolean('icon', true)}
+          title={text('title', 'This is the heading:')}
+          message={text('message', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          variant="banner"
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+        <Notification
+          withFilling={boolean('withFilling', false)}
+          withIcon={boolean('icon', true)}
+          title={text('title', 'This is the heading:')}
+          message={text('message', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          variant="banner"
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+        <Notification
+          withFilling={boolean('withFilling', false)}
+          withIcon={boolean('icon', true)}
+          title={text('title', 'This is the heading:')}
+          message={text('message', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          variant="banner"
+          primaryCTALabel={text('primaryCTALabel', 'Action')}
+          primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+      </NotificationsContainer>
+    </PresentComponent>
+  </Story>
+</Preview>
+
+# Playground Notification
+
+Playground Notification
+
+<Preview>
+  <Story name="Playground Notification" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={768}>
+      <Notification
+        withIcon={boolean('withIcon', true)}
+        withFilling={boolean('withFilling', false)}
+        title={text('title', 'This is the heading:')}
+        message={text('message', 'This is the info')}
+        variant={select('variant', ['inline', 'banner', 'modal', 'toast'], 'inline')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+        primaryCTALabel={text('primaryCTALabel', 'Action')}
+        primaryCTA={() => console.log('action clicked')}
+        closeCTA={() => console.log('close action clicked')}
+      />
+    </PresentComponent>
+  </Story>
+</Preview>

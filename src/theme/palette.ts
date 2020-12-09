@@ -1,227 +1,140 @@
-export const flatPaletteConfig: flatPaletteConfigType = {
-  lightGray: '#cfcfcf',
-
-  darkGray: '#494949',
-
-  coolGray: '#a3a9ac',
-
-  warmGray: '#afa6a3',
-
-  magenta: '#d21e75',
-
-  red: '#d40000',
-
-  orange: '#f5781b',
-
-  yellow: '#ffc700',
-
-  olive: '#545c15',
-
-  green: '#6bbc15',
-
-  teal: '#27dcbd',
-
-  lightBlue: '#18aed2',
-
-  blue: '#1283d3',
-
-  darkBlue: '#232d7d',
-
-  purple: '#71458f',
-};
-
-/*
-gray -> lightGray02
-gray50 —> lightGray04
-  gray100 —> lightGray07
-  gray200 -> darkGray04
-  gray250 -> darkGray05
-  gray300 —> darkGray06
- */
-
-export const lightPalette: PaletteConfig = {
-  // Primary Palette
-  primary: flatPaletteConfig.lightGray,
-  secondary: flatPaletteConfig.darkGray,
-
-  branded1: flatPaletteConfig.orange,
-  branded2: flatPaletteConfig.yellow,
-
-  //rest
-  success: flatPaletteConfig.green,
-  error: flatPaletteConfig.red,
-  warning: flatPaletteConfig.orange,
-  info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGray,
-
-  flat: {
-    ...flatPaletteConfig,
-  },
-
-  text: {
-    primary: flatPaletteConfig.darkGray,
-    secondary: flatPaletteConfig.coolGray,
-    light: flatPaletteConfig.lightGray,
-  },
-
-  white: 'white',
-  black: 'black',
-};
-
-export const darkPalette: PaletteConfig = {
-  // Primary Palette
-  primary: flatPaletteConfig.darkGray,
-  secondary: flatPaletteConfig.lightGray,
-
-  branded1: flatPaletteConfig.orange,
-  branded2: flatPaletteConfig.yellow,
-
-  //rest
-  success: flatPaletteConfig.green,
-  error: flatPaletteConfig.red,
-  warning: flatPaletteConfig.orange,
-  info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGray,
-
-  flat: {
-    ...flatPaletteConfig,
-  },
-
-  text: {
-    primary: flatPaletteConfig.darkGray,
-    secondary: flatPaletteConfig.coolGray,
-    light: flatPaletteConfig.lightGray,
-  },
-
-  white: 'white',
-  black: 'black',
-};
-
-export type flatPaletteConfigType = {
-  lightGray?: string;
-
-  darkGray?: string;
-
-  coolGray?: string;
-
-  warmGray?: string;
-
-  magenta?: string;
-
-  red?: string;
-
-  orange?: string;
-
-  yellow?: string;
-
-  olive?: string;
-
-  green?: string;
-
-  teal?: string;
-
-  lightBlue?: string;
-
-  blue?: string;
-
-  darkBlue?: string;
-
-  purple?: string;
-};
-
-export type flatPalette = {
-  lightGray: generatedColorShades;
-
-  darkGray: generatedColorShades;
-
-  coolGray: generatedColorShades;
-
-  warmGray: generatedColorShades;
-
-  magenta: generatedColorShades;
-
-  red: generatedColorShades;
-
-  orange: generatedColorShades;
-
-  yellow: generatedColorShades;
-
-  olive: generatedColorShades;
-
-  green: generatedColorShades;
-
-  teal: generatedColorShades;
-
-  lightBlue: generatedColorShades;
-
-  blue: generatedColorShades;
-
-  darkBlue: generatedColorShades;
-
-  purple: generatedColorShades;
-};
-
-export type TextPaletteConfigType = {
-  primary?: string;
-  secondary?: string;
-  light?: string;
-};
-
-export type PaletteConfig = {
-  // Primary Palette
-  primary?: string;
-  secondary?: string;
-
-  branded1?: string;
-  branded2?: string;
-
-  success?: string;
-  error?: string;
-  warning?: string;
-  info?: string;
-  light?: string;
-
-  text?: TextPaletteConfigType;
-
-  flat?: flatPaletteConfigType;
-
-  white?: string;
-  black?: string;
-};
-
-export type generatedColorShades = {
-  100: string;
-  200: string;
-  300: string;
-  400: string;
-  500: string;
-  600: string;
-  700: string;
-};
-
+/**
+ * Here are listed all the colors available for our project
+ * Flat colors are the actual colors of the system
+ **/
+export const flatColors = [
+  'lightGray',
+  'darkGray',
+  'coolGray',
+  'warmGray',
+  'magenta',
+  'red',
+  'orange',
+  'yellow',
+  'olive',
+  'green',
+  'teal',
+  'lightBlue',
+  'blue',
+  'darkBlue',
+  'purple',
+  'mint',
+] as const;
+/**
+ * Here are listed all the color shades
+ * Each colors of the flat palette is generated with these variations
+ * E.g red.100 = color or yellow.500 = color
+ * so there is no yellow but variations of yellow
+ * default variation: 400
+ **/
+export const colorShades = [100, 200, 300, 400, 500, 600, 700] as const;
+/**
+ * mainTypes are not colors per se but a type of color
+ * for example error is red but also defines a state that's why is listed here and not in flat colors
+ * Each color has again the above variations (shades)
+ **/
+export const mainTypes = [
+  'primary',
+  'secondary',
+  'branded1',
+  'branded2',
+  'success',
+  'error',
+  'warning',
+  'info',
+  'light',
+] as const;
+
+export type flatPalette = Record<typeof flatColors[number], generatedColorShades>;
+
+export type generatedColorShades = Record<typeof colorShades[number], string>;
+
+/**
+ * Palette is end output of what is produced and exported to the client projects
+ **/
 export type Palette = {
-  primary: generatedColorShades;
-  secondary: generatedColorShades;
-
-  branded1: generatedColorShades;
-  branded2: generatedColorShades;
-
-  success: generatedColorShades;
-  error: generatedColorShades;
-  warning: generatedColorShades;
-  info: generatedColorShades;
-  light: generatedColorShades;
-
   text: {
     primary: generatedColorShades;
     secondary: generatedColorShades;
     light: generatedColorShades;
   };
-
   flat: flatPalette;
 
   white: string;
   black: string;
-};
+} & Record<typeof mainTypes[number], generatedColorShades>;
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
+
+/**
+ * this function picks either white or black color based on the background that is passed
+ * swatches are calculated based on accessibility by the design team and splited to those two colors
+ **/
+export const pickTextColorFromSwatches = (
+  color: typeof flatColors[number],
+  shade: typeof colorShades[number]
+) => {
+  const colorsForWhiteText: Partial<Record<
+    typeof colorShades[number],
+    typeof flatColors[number][]
+  >> = {
+    700: [
+      'lightGray',
+      'darkGray',
+      'coolGray',
+      'warmGray',
+      'magenta',
+      'red',
+      'orange',
+      'yellow',
+      'olive',
+      'green',
+      'teal',
+      'lightBlue',
+      'blue',
+      'darkBlue',
+      'purple',
+      'mint',
+    ],
+    600: [
+      'lightGray',
+      'darkGray',
+      'coolGray',
+      'warmGray',
+      'magenta',
+      'red',
+      'orange',
+      'yellow',
+      'olive',
+      'green',
+      'teal',
+      'lightBlue',
+      'blue',
+      'darkBlue',
+      'purple',
+      'mint',
+    ],
+    500: [
+      'lightGray',
+      'darkGray',
+      'coolGray',
+      'warmGray',
+      'magenta',
+      'red',
+      'orange',
+      'yellow',
+      'olive',
+      'green',
+      'lightBlue',
+      'blue',
+      'darkBlue',
+      'purple',
+    ],
+    400: ['darkGray', 'magenta', 'red', 'olive', 'darkBlue', 'purple'],
+    300: ['darkGray', 'red', 'olive', 'magenta', 'purple', 'darkBlue'],
+  };
+  const pickedShade = colorsForWhiteText[shade];
+  const pickedColor = pickedShade && pickedShade?.find(item => item === color);
+
+  return pickedColor ? '#fff' : '#000';
+};
