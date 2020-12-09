@@ -13,10 +13,13 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  ResponsiveContainer,
 } from 'recharts';
 import { omit, keys, flatten, uniq, sampleSize } from 'lodash';
+import { rem } from 'polished';
 import useTheme from '../../hooks/useTheme';
 import GradientLine from './components/GradientLine';
+import CustomTooltip from './components/CustomTooltip';
 
 type Data = {
   name: string;
@@ -27,12 +30,13 @@ type Props = {
   data: Data[];
   labelX?: string;
   labelY?: string;
-  showTitles?: boolean;
+  showLegend?: boolean;
   color?: (dataLabel: string) => string;
 };
 
-const Chart = ({ data = [], labelX, labelY, showTitles = false, color }: Props) => {
+const Chart = ({ data = [], labelX, labelY, showLegend = false, color }: Props) => {
   const theme = useTheme();
+  console.log('theme', theme);
 
   const uniqueKeyNames = useMemo(() => {
     return uniq(flatten(data.map(object => keys(omit(object, 'name')))));
@@ -60,51 +64,63 @@ const Chart = ({ data = [], labelX, labelY, showTitles = false, color }: Props) 
   return (
     <>
       {uniqueKeyNames.length <= Object.keys(theme.palette.flat).length ? (
-        <AreaChart
-          width={750}
-          height={400}
-          data={data}
-          margin={{ top: 10, right: 30, left: 30, bottom: 10 }}
-        >
-          <defs>
+        <ResponsiveContainer width="80%" aspect={1.5}>
+          <AreaChart
+            // width={900}
+            // height={500}
+            data={data}
+            margin={{ top: 10, right: 20, left: 20, bottom: 50 }}
+          >
+            <defs>
+              {colors.map(([dataLabel, color]) => (
+                <GradientLine key={`color${dataLabel}`} label={dataLabel} color={color} />
+              ))}
+            </defs>
+            <XAxis
+              // padding={{ left: 100, right: 18 }}
+              dataKey="name"
+              tickMargin={31}
+              axisLine={false}
+              tickLine={false}
+              label={labelX && { value: labelX, angle: 0, position: 'bottom', offset: 35 }}
+            />
+            <YAxis
+              // orientation='right'
+              // tick={{ stroke: 'red', strokeWidth: 2 }}
+              // padding={{ top: 10, bottom: 50 }}
+              tick={{ textAnchor: 'start' }}
+              tickMargin={40}
+              axisLine={false}
+              tickLine={false}
+              label={labelY && { value: labelY, angle: -90, position: 'left', offset: 15 }}
+            />
+            <CartesianGrid vertical={false} />
+            {showLegend && (
+              <Legend
+                align="left"
+                iconType="circle"
+                iconSize="16"
+                wrapperStyle={{
+                  paddingTop: '50px',
+                  paddingLeft: '13px',
+                }}
+              />
+            )}
+            <Tooltip cursor={false} content={<CustomTooltip />} />
             {colors.map(([dataLabel, color]) => (
-              <GradientLine key={`color${dataLabel}`} label={dataLabel} color={color} />
+              <Area
+                key={dataLabel}
+                type="linear"
+                dataKey={dataLabel}
+                stroke={color}
+                fillOpacity={1}
+                fill={`url(#color${dataLabel})`}
+                activeDot={{ r: 3, stroke: 'none' }}
+                dot={{ r: 3, fill: color }}
+              />
             ))}
-          </defs>
-          <XAxis
-            dataKey="name"
-            tickMargin={5}
-            axisLine={false}
-            tickLine={false}
-            label={labelX && { value: labelX, angle: 0, position: 'bottom' }}
-          />
-          <YAxis
-            axisLine={false}
-            tickLine={false}
-            label={labelY && { value: labelY, angle: -90, position: 'insideLeft' }}
-          />
-          <CartesianGrid vertical={false} />
-          {showTitles && (
-            <Legend
-              align="left"
-              iconType="circle"
-              wrapperStyle={{
-                paddingTop: '0px',
-              }}
-            />
-          )}
-          <Tooltip />
-          {colors.map(([dataLabel, color]) => (
-            <Area
-              key={dataLabel}
-              type="linear"
-              dataKey={`${dataLabel}`}
-              stroke={`${color}`}
-              fillOpacity={1}
-              fill={`url(#color${dataLabel})`}
-            />
-          ))}
-        </AreaChart>
+          </AreaChart>
+        </ResponsiveContainer>
       ) : (
         <p>You must define less than {Object.keys(theme.palette.flat).length} different data</p>
       )}

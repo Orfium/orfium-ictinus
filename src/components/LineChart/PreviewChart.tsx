@@ -23,7 +23,7 @@ const initData = [
     name: 'Aug 4',
     hidden: 167,
     claimed: 22,
-    amt: 20,
+    amt: 40,
   },
   {
     name: 'Aug 5',
@@ -47,22 +47,21 @@ const initData = [
 
 type Data = {
   name: string;
-  [prop: string]: number | string ;
+  [prop: string]: number | string;
 };
 
 const PreviewChart = () => {
   const [data, setData] = React.useState<Data[]>(initData);
 
-
-  const color = (dataLabel:string) => {
+  const color = (dataLabel: string) => {
     if (dataLabel === 'hidden') {
-      return 'green'
+      return '#232d7d';
     }
 
-    return ''
-  }
+    return '';
+  };
 
-  return <LineChart data={data} labelX="Dates" labelY="Values" showTitles={true} color={color} />;
+  return <LineChart data={data} labelX="Dates" labelY="Values" showLegend={true} color={color} />;
 };
 
 export default PreviewChart;
