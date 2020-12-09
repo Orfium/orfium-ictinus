@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useEffect } from 'react';
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
 import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
 import { TestId } from '../../utils/types';
@@ -23,7 +23,7 @@ export type Props = {
    * */
   filled?: boolean;
   /** The data test id if needed */
-  dataTestId?: TestId;
+  dataTestIdSuffix?: TestId;
 };
 
 const CheckBox: React.FC<Props> = ({
@@ -32,18 +32,20 @@ const CheckBox: React.FC<Props> = ({
   onClick,
   disabled = false,
   intermediate = false,
+  dataTestIdSuffix,
   filled = true,
-  dataTestId,
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
+
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
+
   const id = generateUniqueID();
 
   const handleInputChange = (event: ChangeEvent) => {
     const newChecked = !isChecked;
-
-    if (checked === undefined) {
-      setIsChecked(newChecked);
-    }
+    setIsChecked(newChecked);
 
     if (!disabled && onClick) {
       onClick(newChecked, event);
@@ -54,13 +56,13 @@ const CheckBox: React.FC<Props> = ({
     <span css={wrapperStyle({ disabled })}>
       <span css={checkboxWrapperStyle()}>
         <input
-          data-testid={generateTestDataId('checkbox', dataTestId)}
+          data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
           css={checkboxStyle({ intermediate, checked, filled })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}
           disabled={disabled}
-          checked={checked}
+          checked={isChecked}
         />
         <label htmlFor={`styled-checkbox-${id}`} />
       </span>
