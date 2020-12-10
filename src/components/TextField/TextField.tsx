@@ -34,8 +34,6 @@ export type Props = {
   errorMsg?: React.ReactNode | string;
   /** value of the input */
   value?: string | number;
-  /** type of the input */
-  type?: string;
   /** if the input will be without default style for use inside the library */
   lean?: boolean;
   /** Style of input field */
