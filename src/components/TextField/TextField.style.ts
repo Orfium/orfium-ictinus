@@ -2,6 +2,7 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
+import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
 
 // @todo replace all hex colors with palette colors
 
@@ -93,27 +94,27 @@ export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
   `}
 `;
 
-export const textFieldStyle = ({ label, leftIcon }: Props) => (
+export const textFieldStyle = ({ size = DEFAULT_SIZE, label, leftIcon }: Props) => (
   theme: Theme
-): SerializedStyles => css`
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  vertical-align: top;
-  margin: ${label ? rem(24) : rem(18.5)} ${rem(12)} ${label ? theme.spacing.sm : rem(18.5)};
-  width: fill-available;
+): SerializedStyles => {
+  return css`
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: top;
+    ${getTextFieldSize(theme, label)[size]}
+    width: fill-available;
 
-  label {
-    left: ${leftIcon ? '1.9rem' : 'inherit'};
-  }
-`;
+    label {
+      left: ${leftIcon ? '1.9rem' : 'inherit'};
+    }
+  `;
+};
 
-export const iconWrapperStyle = ({ label, rightIcon }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
-  margin-top: ${label ? '-' + theme.spacing.md : 0};
-  margin-right: ${!rightIcon ? rem(5) : 0};
-  margin-left: ${rightIcon ? rem(12) : 'inherit'};
+export const iconWrapperStyle = ({ rightIcon }: Props) => (theme: Theme): SerializedStyles => css`
+  line-height: 0.8;
+  margin-right: ${!rightIcon ? theme.spacing.xsm : 0};
+  margin-left: ${rightIcon ? theme.spacing.md : 'inherit'};
 `;
 
 export const inputStyle = ({ label, placeholder }: Props) => (
@@ -123,7 +124,6 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   border: none;
   color: #232323;
   display: block;
-  padding-top: ${label ? rem(5) : 0};
   position: relative;
   width: 100%;
   z-index: 2000;
@@ -139,13 +139,6 @@ export const inputStyle = ({ label, placeholder }: Props) => (
   &:not(:focus):placeholder-shown {
     & + label {
       font-weight: normal;
-    }
-  }
-
-  &:focus,
-  &:not(:placeholder-shown) {
-    & + label {
-      transform: translate(1%, -65%) scale(0.8);
     }
   }
 

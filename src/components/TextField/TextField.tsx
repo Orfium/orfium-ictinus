@@ -12,6 +12,7 @@ import {
 import Label from '../Label';
 import Icon from '../Icon';
 import { formFieldStyles } from 'theme/palette';
+import { DEFAULT_SIZE } from '../../utils/size-utils';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -44,6 +45,8 @@ export type Props = {
   withErrorMsg?: boolean;
   /** If the text field has an indicator */
   withIndicator?: boolean;
+  /** Size of the textField */
+  size?: 'md' | 'sm';
 };
 
 const TextField: React.FC<Props> = ({
@@ -66,15 +69,30 @@ const TextField: React.FC<Props> = ({
   success = false,
   withErrorMsg = false,
   withIndicator = false,
+  size = DEFAULT_SIZE,
   ...rest
 }) => {
+  const [input, setInput] = React.useState<string>('');
+
+  const handleLabelAnimation = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const shouldUpdate = Boolean(event.target.value) !== Boolean(input);
+
+    // Since we don't care about the actual value,
+    // update the component only when the value is change
+    // from falsy to truthy and the other way around
+    if (shouldUpdate) {
+      setInput(event.target.value);
+    }
+  };
+
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
         <div css={wrapperStyle({ disabled, error, lean, styleType })}>
-          <div css={textFieldStyle({ label, leftIcon })}>
-            {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })}>{leftIcon}</div>}
+          <div css={textFieldStyle({ size, label, leftIcon })}>
+            {leftIcon && <div css={iconWrapperStyle({ rightIcon })}>{leftIcon}</div>}
             <input
+              onChange={handleLabelAnimation}
               css={inputStyle({ label, placeholder })}
               placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
               required={required}
@@ -84,11 +102,12 @@ const TextField: React.FC<Props> = ({
             />
             {label && (
               <Label
+                size={size}
                 error={error}
                 htmlFor={id}
                 label={label}
                 required={required}
-                animateToTop={Boolean(rest.value)}
+                animateToTop={Boolean(input)}
               />
             )}
             {rightIcon && (
