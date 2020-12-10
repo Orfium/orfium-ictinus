@@ -2,12 +2,15 @@ import * as themeFunctions from './theme/functions';
 import * as palette from './theme/palette';
 import * as spacing from './theme/spacing';
 import * as typography from './theme/typography';
+import * as elevation from './theme/elevation';
 
 // Types
 import { Palette } from './theme/palette';
 import { Spacing } from './theme/spacing';
 import { Typography } from './theme/typography';
+import { Elevation } from './theme/elevation';
 
+export { default as Card } from './components/Card';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
 export { default as CheckBox } from './components/CheckBox';
@@ -29,4 +32,14 @@ export { default as useTheme } from './hooks/useTheme';
 
 export { Theme, default as themeConfig } from './theme';
 export { AcceptedColorComponentTypes } from './utils/themeFunctions';
-export { themeFunctions, palette, spacing, typography, Spacing, Palette, Typography };
+export {
+  themeFunctions,
+  palette,
+  spacing,
+  typography,
+  elevation,
+  Spacing,
+  Palette,
+  Typography,
+  Elevation,
+};
