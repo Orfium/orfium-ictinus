@@ -94,6 +94,15 @@ Regular TextField with placeholder, icon and size
         placeholder="placeholder"
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
       />
+      <TextField
+        size={select('size', ['md','sm'], 'sm')}
+        lean={boolean('lean version', false)}
+        label={'Label'}
+        leftIcon={
+          <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
+        }
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+      />
     </Stack>
   </Story>
 </Preview>

@@ -21,7 +21,7 @@ export const getTextFieldSize: SizeConfig = (theme, label) => {
 
 export const labelSize = {
   md: `top: 1.7rem;`,
-  sm: `top: 1.3rem;`,
+  sm: `top: 1.1rem;`,
 };
 
 export const getSpacingBySize = (size: Size, theme: Theme) => {

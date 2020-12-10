@@ -17,7 +17,7 @@ export const labelStyle = ({
   position: absolute;
   left: 0.7rem;
   user-select: none;
-  transform: ${!animateToTop ? 'translate(4%, 0)' : 'translate(1%, -95%) scale(0.8);'};
+  transform: ${!animateToTop ? 'translate(1%, 0)' : 'translate(1%, -95%) scale(0.8);'};
   font-size: ${theme.typography.fontSizes['14']};
   font-weight: ${theme.typography.weights.black};
   color: ${error
