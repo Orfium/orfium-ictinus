@@ -1,6 +1,39 @@
-import { getColorFromType } from '../themeFunctions';
+import { getColorFromType, calculateActualColorFromComponentProp } from '../themeFunctions';
 import theme from '../../theme';
 import { lightPaletteConfig } from '../../theme/palette.config';
+
+describe('The usability of calculateActualColorFromComponentProp to be correct', () => {
+  test('that it fails to get a wrong color', () => {
+    const testColor = '#fefefe';
+    const checkFunction = () => calculateActualColorFromComponentProp(testColor);
+
+    expect(checkFunction).toThrowError(
+      `Error trying to translate your component color: ${testColor}`
+    );
+  });
+  test('that it fails to get a wrong first argument', () => {
+    const testColor = 'red2-500';
+    const checkFunction = () => calculateActualColorFromComponentProp(testColor);
+
+    expect(checkFunction).toThrowError(
+      `You passed a wrong color for the first argument: ${testColor} - try something like red-400`
+    );
+  });
+  test('that it fails to get a wrong second argument', () => {
+    const testColor = 'red-501';
+    const checkFunction = () => calculateActualColorFromComponentProp(testColor);
+
+    expect(checkFunction).toThrowError(
+      `You passed a wrong shade for the second argument: ${testColor} - try something like red-400`
+    );
+  });
+  test('get the color correctly', () => {
+    const testColor = 'magenta-200';
+    const color = calculateActualColorFromComponentProp(testColor);
+
+    expect(color).toEqual({ color: 'magenta', shade: 200 });
+  });
+});
 
 describe('The usability of getColorFromType to be correct', () => {
   test('getColorFromType to get a string and return it', () => {
