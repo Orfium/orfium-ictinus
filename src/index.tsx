@@ -18,7 +18,7 @@ export { default as IconButton } from './components/IconButton';
 export { default as Menu } from './components/Menu';
 export { default as Notification } from './components/Notification';
 export { default as NotificationsContainer } from './components/Notification/subcomponents/NotificationsContainer';
-export { default as Toast } from './components/Notification/Toast';
+export { default as Toast } from './components/Toast';
 export { default as NotificationVisual } from './components/Notification/NotificationVisual';
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';

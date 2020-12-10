@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { useState } from 'react';
-import { actionContainer } from '../Notification.style';
+import { actionContainer } from '../Notification/Notification.style';
 import {
   toastContainer,
   topContainer,
@@ -12,10 +12,12 @@ import {
   chevronIconContainer,
   expandedContainer,
 } from './Toast.style';
-import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
-import Icon from '../../Icon';
-import { NotificationTypes } from '../Notification';
-import { AcceptedColorComponentTypes } from '../../../utils/themeFunctions';
+import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
+import Icon from '../Icon';
+import { NotificationTypes } from '../Notification/Notification';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { TestId } from '../../utils/types';
+import { generateTestDataId } from '../../utils/helpers';
 
 export type ToastType = AcceptedColorComponentTypes | string;
 
@@ -30,15 +32,22 @@ export type Props = {
   expanded?: boolean;
   /** Children of the Toast */
   children: React.ReactNode | React.ReactNode[] | undefined;
-  //   /** The data test id if needed */
-  //   dataTestId?: TestId;
+  /** The data test id if needed */
+  dataTestId?: TestId;
 };
 
 export const isNotificationTypes = (type: string): type is NotificationTypes => {
   return ['success', 'error', 'warning', 'info'].includes(type);
 };
 
-const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, children }) => {
+const Toast: React.FC<Props> = ({
+  message,
+  type,
+  closeCTA,
+  expanded = false,
+  children,
+  dataTestId,
+}) => {
   const [isExpanded, setExpanded] = useState(expanded);
 
   return (
@@ -53,16 +62,29 @@ const Toast: React.FC<Props> = ({ message, type, closeCTA, expanded = true, chil
           <div>{message}</div>
         </div>
         <div css={actionIconsContainer()}>
-          <span css={chevronIconContainer(isExpanded)} onClick={() => setExpanded(!isExpanded)}>
+          <span
+            css={chevronIconContainer(isExpanded)}
+            onClick={() => setExpanded(!isExpanded)}
+            data-testid={generateTestDataId('toast-expand', dataTestId)}
+          >
             <Icon name="chevronLargeDown" color="primary" size={24} />
           </span>
 
-          <span css={actionContainer()} onClick={closeCTA}>
+          <span
+            css={actionContainer()}
+            onClick={closeCTA}
+            data-testid={generateTestDataId('toast-close', dataTestId)}
+          >
             <Icon name="close" color="primary" size={24} />
           </span>
         </div>
       </div>
-      {isExpanded && <div css={expandedContainer(type)}>{children}</div>}
+      <div
+        css={expandedContainer(type, isExpanded)}
+        data-testid={generateTestDataId('expanded-container', dataTestId)}
+      >
+        {children}
+      </div>
     </div>
   );
 };

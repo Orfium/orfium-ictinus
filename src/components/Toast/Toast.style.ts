@@ -1,9 +1,9 @@
-import { Theme } from '../../../theme';
+import { Theme } from '../../theme';
 import { rem, transparentize } from 'polished';
 import { css, SerializedStyles } from '@emotion/core';
-import { transition } from '../../../theme/functions';
+import { transition } from '../../theme/functions';
 import { ToastType } from './Toast';
-import { AcceptedColorComponentTypes } from '../../../utils/themeFunctions';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { isNotificationTypes } from './Toast';
 
 const isAcceptedComponentTypes = (type: string): type is AcceptedColorComponentTypes => {
@@ -73,10 +73,13 @@ export const chevronIconContainer = (expanded: boolean) => (): SerializedStyles 
   ${transition(0.2)}
 `;
 
-export const expandedContainer = (type: string) => (theme: Theme): SerializedStyles => css`
-  padding: ${theme.spacing.md};
-  min-height: ${rem(146)};
+export const expandedContainer = (type: string, isExpanded: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
+  padding: ${isExpanded ? theme.spacing.md : 0};
+  min-height: ${isExpanded ? rem(146) : rem(0)};
   ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
+  height: ${!isExpanded ? rem(0) : 'auto'};
   font-size: ${theme.typography.fontSizes['14']};
   position: relative;
   background: ${theme.palette.white};

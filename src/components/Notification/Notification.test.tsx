@@ -1,7 +1,10 @@
 import React from 'react';
+import { render, fireEvent } from '../../test';
 import Notification, { NotificationTypes, NotificationVariants } from './Notification';
 import NotificationsContainer from './subcomponents/NotificationsContainer';
-import { render, fireEvent } from '../../test';
+import Toast from '../Toast';
+import NotificationVisual from './NotificationVisual';
+import Snackbar from './Snackbar';
 
 describe('Inline Notification', () => {
   const data = {
@@ -117,5 +120,163 @@ describe('Notifications Container', () => {
 
     fireEvent.click(closeButton);
     expect(closeCTA).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Toast Notification (Toast with NotificationVisual)', () => {
+  const toastData = {
+    message: 'message',
+    type: 'info' as NotificationTypes,
+    //closeCTA
+  };
+
+  const visualData = {
+    title: 'title',
+    primaryCTALabel: 'primaryCTALabel',
+    secondaryCTALabel: 'secondaryCTALabel',
+    description: 'this is the description',
+    //primaryCTA
+    //secondaryCTA
+  };
+
+  test('Toast with NotificationVisual renders correctly', async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByText } = render(
+      <Toast {...toastData} closeCTA={closeCTA}>
+        <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
+      </Toast>
+    );
+
+    const message = await findByText(toastData.message);
+    expect(message).toBeTruthy();
+  });
+
+  test.skip('Toast with NotificationVisual expands/shrinks correctly', async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByTestId } = render(
+      <Toast {...toastData} closeCTA={closeCTA}>
+        <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
+      </Toast>
+    );
+
+    // Toast is initialized with expanded=false
+
+    const expandButton = await findByTestId('toast-expand');
+    const shrinkedContainer = await findByTestId('expanded-container');
+    expect(shrinkedContainer).toBeTruthy();
+    expect(shrinkedContainer.clientHeight).toBe(0);
+
+    fireEvent.click(expandButton);
+
+    const expandedContainer = await findByTestId('expanded-container');
+    expect(expandedContainer).toBeTruthy();
+    expect(expandedContainer.clientHeight).toBeGreaterThan(0);
+
+    // const message = await findByText(visualData.title);
+    // expect(message).toBeTruthy();
+  });
+
+  test('Toast with NotificationVisual closeCTA works properly', async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByTestId } = render(
+      <Toast {...toastData} expanded closeCTA={closeCTA}>
+        <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
+      </Toast>
+    );
+
+    const closeButton = await findByTestId('toast-close');
+    fireEvent.click(closeButton);
+    expect(closeCTA).toHaveBeenCalledTimes(1);
+  });
+
+  test('Toast with NotificationVisual primaryCTA and secondaryCTA work properly', async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByTestId } = render(
+      <Toast {...toastData} expanded closeCTA={closeCTA}>
+        <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
+      </Toast>
+    );
+
+    const primaryCTALabel = await findByTestId('visual-primary');
+    expect(primaryCTALabel.firstElementChild).not.toBeNull();
+    fireEvent.click(primaryCTALabel.firstElementChild as Element);
+    expect(primaryCTA).toHaveBeenCalledTimes(1);
+
+    const secondaryCTALabel = await findByTestId('visual-secondary');
+    expect(secondaryCTALabel.firstElementChild).not.toBeNull();
+    fireEvent.click(secondaryCTALabel.firstElementChild as Element);
+    expect(secondaryCTA).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe('Snackbar Notification', () => {
+  const data = {
+    message: 'message',
+    type: 'info' as NotificationTypes,
+    primaryCTALabel: 'primaryCTALabel',
+    secondaryCTALabel: 'secondaryCTALabel',
+    description: 'this is the description',
+  };
+
+  test('Snackbar Notification renders correctly', async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByText } = render(
+      <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
+    );
+
+    const message = await findByText(data.message);
+    expect(message).toBeTruthy();
+
+    const description = await findByText(data.description);
+    expect(description).toBeTruthy();
+  });
+
+  test("Snackbar Notification's closeCTA works properly", async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByTestId } = render(
+      <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
+    );
+
+    const closeButton = await findByTestId('snackbar-close');
+    fireEvent.click(closeButton);
+    expect(closeCTA).toHaveBeenCalledTimes(1);
+  });
+
+  test("Snackbar Notification's primaryCTA and secondaryCTA work properly", async () => {
+    const primaryCTA = jest.fn();
+    const secondaryCTA = jest.fn();
+    const closeCTA = jest.fn();
+
+    const { findByTestId } = render(
+      <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
+    );
+
+    const primaryCTALabel = await findByTestId('snackbar-primary');
+    expect(primaryCTALabel.firstElementChild).not.toBeNull();
+    fireEvent.click(primaryCTALabel.firstElementChild as Element);
+    expect(primaryCTA).toHaveBeenCalledTimes(1);
+
+    const secondaryCTALabel = await findByTestId('snackbar-secondary');
+    expect(secondaryCTALabel.firstElementChild).not.toBeNull();
+    fireEvent.click(secondaryCTALabel.firstElementChild as Element);
+    expect(secondaryCTA).toHaveBeenCalledTimes(1);
   });
 });

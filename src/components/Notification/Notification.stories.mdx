@@ -1,10 +1,10 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import Notification from '../Notification';
-import Toast from '../Notification/Toast';
+import Toast from '../Toast';
 import NotificationVisual from '../Notification/NotificationVisual';
 import NotificationsContainer from '../Notification/subcomponents/NotificationsContainer';
-import CardNotification from '../Notification/CardNotification';
+import Snackbar from '../Notification/Snackbar';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
 
@@ -134,64 +134,48 @@ Banner Notification
 Toast Notification
 
 <Preview>
-  <Story name="Toast Notifiction" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Toast Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
-      <Stack>
-        <Toast
-          message="Branded2 colored Toast"
-          type="branded2"
-          closeCTA={() => console.log('close action clicked')}
-        ></Toast>
-        <Toast
-          message={text('message', 'Informative Message')}
-          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
-          closeCTA={() => console.log('close action clicked')}
-        >
-          <NotificationVisual
-            title={text('title', 'Message heading')}
-            primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
-            primaryCTA={() => console.log('primary action clicked')}
-            secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
-            secondaryCTA={() => console.log('secondary action clicked')}
-            description={text(
-              'description',
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
-            )}
-          />
-        </Toast>
-        <Toast
-          message="Default colored Toast"
-          type="generic"
-          closeCTA={() => console.log('close action clicked')}
-        >
-          <div>
-            <h1>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est
-              porttitor
-            </h1>
-            <ul>
-              <li>
-                <h1>Lorem ipsum dolor sit amet</h1>
-              </li>
-              <li>
-                <h1>consectetur adipiscing elit</h1>
-              </li>
-              <li>
-                <h1>Sed viverra neque</h1>
-              </li>
-              <li>
-                <h1>neque nec</h1>
-              </li>
-              <li>
-                <h1>est porttitor</h1>
-              </li>
-              <li>
-                <h1>dolor sit amet</h1>
-              </li>
-            </ul>
-          </div>
-        </Toast>
-      </Stack>
+      <Toast
+        message={text('message', 'Informative Message')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+        expanded
+        closeCTA={() => console.log('close action clicked')}
+      >
+        <NotificationVisual
+          title={text('title', 'Message heading')}
+          primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+          primaryCTA={() => console.log('primary action clicked')}
+          secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+          secondaryCTA={() => console.log('secondary action clicked')}
+          description={text(
+            'description',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+          )}
+        />
+      </Toast>
+    </PresentComponent>
+  </Story>
+</Preview>
+
+# Snackbar Notification
+
+<Preview>
+  <Story name="Snackbar Notification" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={768}>
+      <Snackbar
+        message={text('message', 'This is the info')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+        primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+        primaryCTA={() => console.log('primary action clicked')}
+        secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+        secondaryCTA={() => console.log('secondary action clicked')}
+        description={text(
+          'description',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+        )}
+        closeCTA={() => console.log('close action clicked')}
+      />
     </PresentComponent>
   </Story>
 </Preview>
@@ -212,28 +196,6 @@ Playground Notification
         type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         primaryCTALabel={text('primaryCTALabel', 'Action')}
         primaryCTA={() => console.log('action clicked')}
-        closeCTA={() => console.log('close action clicked')}
-      />
-    </PresentComponent>
-  </Story>
-</Preview>
-
-# Card Notification
-
-<Preview>
-  <Story name="Card Notification" parameters={{ decorators: [withKnobs] }}>
-    <PresentComponent name="" width={768}>
-      <CardNotification
-        message={text('message', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
-        primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
-        primaryCTA={() => console.log('primary action clicked')}
-        secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
-        secondaryCTA={() => console.log('secondary action clicked')}
-        description={text(
-          'description',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
-        )}
         closeCTA={() => console.log('close action clicked')}
       />
     </PresentComponent>

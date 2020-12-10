@@ -11,14 +11,11 @@ import {
   actionsContainer,
   boldMessageContainer,
 } from '../Notification.style';
-import {
-  cardContainer,
-  topContainer,
-  infoContainer,
-  descriptionContainer,
-} from './CardNotification.style';
+import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import useTheme from '../../../hooks/useTheme';
 import Button from '../../Button';
+import { TestId } from '../../../utils/types';
+import { generateTestDataId } from '../../../utils/helpers';
 
 export type Props = {
   /** The informative message of the Toast */
@@ -37,19 +34,20 @@ export type Props = {
   description: string | undefined;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
-  //   /** The data test id if needed */
-  //   dataTestId?: TestId;
+  /** The data test id if needed */
+  dataTestId?: TestId;
 };
 
 const CardNotification: React.FC<Props> = ({
   message,
   type,
-  primaryCTALabel,
+  primaryCTALabel = 'OK',
   primaryCTA,
-  secondaryCTALabel,
+  secondaryCTALabel = 'Cancel',
   secondaryCTA,
   description,
   closeCTA,
+  dataTestId,
 }) => {
   const { utils } = useTheme();
 
@@ -62,18 +60,28 @@ const CardNotification: React.FC<Props> = ({
           </div>
           <div css={boldMessageContainer()}>{message}</div>
         </div>
-        <span css={closeActionContainer()} onClick={closeCTA}>
+        <span
+          css={closeActionContainer()}
+          onClick={closeCTA}
+          data-testid={generateTestDataId('snackbar-close', dataTestId)}
+        >
           <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
         </span>
       </div>
       <div css={descriptionContainer()}>{description}</div>
       <div css={actionsContainer()}>
-        <div css={actionContainer()}>
+        <div
+          css={actionContainer()}
+          data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
+        >
           <Button filled={false} size="sm" onClick={secondaryCTA}>
             {secondaryCTALabel}
           </Button>
         </div>
-        <div css={actionContainer()}>
+        <div
+          css={actionContainer()}
+          data-testid={generateTestDataId('snackbar-primary', dataTestId)}
+        >
           <Button type="branded1" size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
