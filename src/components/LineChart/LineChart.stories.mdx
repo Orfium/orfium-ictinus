@@ -1,16 +1,35 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
-import PreviewChart from './PreviewChart';
+import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import LineChart from './LineChart';
-import Stack from '../storyUtils/Stack';
+import { color, initData } from './story.utils'
 
 <Meta title="Design System/Chart" component={LineChart} />
 
-# LineChart Example
+# LineChart
 
-LineChart Example
+A universal LineChart component for showing both single line and multiple line chart.
 
+# Usage
+
+```js
+import { LineChart } from '@orfium/ictinus';
+
+<LineChart data={[]}/>
+```
+
+# Props
+
+<Props of={LineChart} />
+
+# Dynamic LineChart Props - Knobs
 <Preview>
-  <Story name="LineChart">
-    <PreviewChart />
+  <Story name="Dynamic LineChart  Props" parameters={{ decorators: [withKnobs] }}>
+    <LineChart
+      data={initData}
+      labelX={text('labelX', 'Dates')}
+      labelY={text('labelY', 'Values')}
+      showLegend={boolean('show legend', true)}
+      color={color}
+    />
   </Story>
 </Preview>

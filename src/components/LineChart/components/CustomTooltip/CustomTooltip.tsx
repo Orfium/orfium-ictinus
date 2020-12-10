@@ -5,15 +5,9 @@ import {
   tooltipStyle,
   tooltipUlStyle,
 } from './CustomTooltip.style';
-import {TooltipPayload} from 'recharts'
+import { TooltipProps } from 'recharts';
 
-
-type Props = {
-  label: string;
-  payload: TooltipPayload[];
-};
-
-const CustomTooltip = ({ label, payload }: Props) => {
+const CustomTooltip: React.FC<TooltipProps> = ({ label, payload }) => {
   // console.log(payload);
 
   return (
@@ -21,11 +15,11 @@ const CustomTooltip = ({ label, payload }: Props) => {
       <p className="label" style={{ margin: '0px' }}>
         {`${label}`}{' '}
       </p>
-      {payload.length > 1 && <hr css={tooltipHrStyle()} />}
+      {payload && payload.length > 1 && <hr css={tooltipHrStyle()} />}
       {payload && (
         <ul css={tooltipUlStyle()}>
-          {payload.map(({ name, value, color }) => (
-            <li key={name} css={tooltipLiStyle(color)}>
+          {payload.map(({ name, value }) => (
+            <li key={name} css={tooltipLiStyle()}>
               <div>{name}</div> <div>{value}</div>
             </li>
           ))}

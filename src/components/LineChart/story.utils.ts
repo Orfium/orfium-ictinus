@@ -1,7 +1,4 @@
-import React from 'react';
-import LineChart from './LineChart';
-
-const initData = [
+export const initData = [
   {
     name: 'Aug 1',
     hidden: 200,
@@ -45,23 +42,16 @@ const initData = [
   },
 ];
 
-type Data = {
-  name: string;
-  [prop: string]: number | string;
+export const color = (dataLabel: string) => {
+  if (dataLabel === 'hidden') {
+    return 'darkBlue';
+  }
+  if (dataLabel === 'claimed') {
+    return 'orange';
+  }
+  if (dataLabel === 'amt') {
+    return 'red';
+  }
+
+  return '';
 };
-
-const PreviewChart = () => {
-  const [data, setData] = React.useState<Data[]>(initData);
-
-  const color = (dataLabel: string) => {
-    if (dataLabel === 'hidden') {
-      return '#232d7d';
-    }
-
-    return '';
-  };
-
-  return <LineChart data={data} labelX="Dates" labelY="Values" showLegend={true} color={color} />;
-};
-
-export default PreviewChart;

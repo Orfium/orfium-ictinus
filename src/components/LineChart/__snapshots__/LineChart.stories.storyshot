@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
+exports[`Storyshots Design System/Chart Dynamic LineChart  Props 1`] = `
 <div
   style={
     Object {
@@ -43,34 +43,34 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
     style={
       Object {
         "cursor": "default",
-        "height": 400,
+        "height": 500,
         "position": "relative",
-        "width": 750,
+        "width": 1000,
       }
     }
   >
     <svg
       className="recharts-surface"
-      height={400}
+      height={500}
       version="1.1"
-      viewBox="0 0 750 400"
-      width={750}
+      viewBox="0 0 1000 500"
+      width={1000}
     >
       <defs>
         <clipPath
           id="recharts4-clip"
         >
           <rect
-            height={350}
-            width={630}
-            x={90}
+            height={410}
+            width={900}
+            x={80}
             y={10}
           />
         </clipPath>
       </defs>
       <defs>
         <linearGradient
-          id="coloruv"
+          id="colorhidden"
           x1="0"
           x2="0"
           y1="0"
@@ -78,17 +78,17 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <stop
             offset="5%"
-            stopColor="#ffc700"
-            stopOpacity={0.8}
+            stopColor="darkBlue"
+            stopOpacity={0.4}
           />
           <stop
             offset="95%"
-            stopColor="#ffc700"
+            stopColor="darkBlue"
             stopOpacity={0}
           />
         </linearGradient>
         <linearGradient
-          id="colorpv"
+          id="colorclaimed"
           x1="0"
           x2="0"
           y1="0"
@@ -96,12 +96,12 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <stop
             offset="5%"
-            stopColor="#1283d3"
-            stopOpacity={0.8}
+            stopColor="orange"
+            stopOpacity={0.4}
           />
           <stop
             offset="95%"
-            stopColor="#1283d3"
+            stopColor="orange"
             stopOpacity={0}
           />
         </linearGradient>
@@ -114,12 +114,12 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <stop
             offset="5%"
-            stopColor="#f5781b"
-            stopOpacity={0.8}
+            stopColor="red"
+            stopOpacity={0.4}
           />
           <stop
             offset="95%"
-            stopColor="#f5781b"
+            stopColor="red"
             stopOpacity={0}
           />
         </linearGradient>
@@ -127,257 +127,153 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
       <g
         className="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"
       >
-        <line
-          className="recharts-cartesian-axis-line"
-          fill="none"
-          height={30}
-          stroke="#666"
-          width={630}
-          x={90}
-          x1={90}
-          x2={720}
-          y={360}
-          y1={360}
-          y2={360}
-        />
         <g
           className="recharts-cartesian-axis-ticks"
         >
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={90}
-              x2={90}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={90}
-              y={368}
+              width={900}
+              x={80}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={90}
+                x={80}
               >
-                Page A
+                Aug 1
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={195}
-              x2={195}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={195}
-              y={368}
+              width={900}
+              x={230}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={195}
+                x={230}
               >
-                Page B
+                Aug 2
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={300}
-              x2={300}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={300}
-              y={368}
+              width={900}
+              x={380}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={300}
+                x={380}
               >
-                Page C
+                Aug 3
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={405}
-              x2={405}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={405}
-              y={368}
+              width={900}
+              x={530}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={405}
+                x={530}
               >
-                Page D
+                Aug 4
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={510}
-              x2={510}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={510}
-              y={368}
+              width={900}
+              x={680}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={510}
+                x={680}
               >
-                Page E
+                Aug 5
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={615}
-              x2={615}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={615}
-              y={368}
+              width={900}
+              x={830}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={615}
+                x={830}
               >
-                Page F
+                Aug 6
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={30}
-              stroke="#666"
-              width={630}
-              x={90}
-              x1={720}
-              x2={720}
-              y={360}
-              y1={366}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
               height={30}
               stroke="none"
               textAnchor="middle"
-              width={630}
-              x={720}
-              y={368}
+              width={900}
+              x={980}
+              y={457}
             >
               <tspan
                 dy="0.71em"
-                x={720}
+                x={980}
               >
-                Page G
+                Aug 7
               </tspan>
             </text>
           </g>
@@ -385,65 +281,39 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         <text
           className="recharts-text recharts-label"
           textAnchor="middle"
-          x={405}
-          y={395}
+          x={530}
+          y={485}
         >
           <tspan
             dy="0.71em"
-            x={405}
+            x={530}
           >
-            Names
+            Dates
           </tspan>
         </text>
       </g>
       <g
         className="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"
       >
-        <line
-          className="recharts-cartesian-axis-line"
-          fill="none"
-          height={350}
-          stroke="#666"
-          width={60}
-          x={30}
-          x1={90}
-          x2={90}
-          y={10}
-          y1={10}
-          y2={360}
-        />
         <g
           className="recharts-cartesian-axis-ticks"
         >
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={350}
-              stroke="#666"
-              width={60}
-              x={30}
-              x1={84}
-              x2={90}
-              y={10}
-              y1={360}
-              y2={360}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
-              height={350}
+              height={410}
               stroke="none"
-              textAnchor="end"
+              textAnchor="start"
               width={60}
-              x={82}
-              y={360}
+              x={34}
+              y={420}
             >
               <tspan
                 dy="0.355em"
-                x={82}
+                x={34}
               >
                 0
               </tspan>
@@ -452,150 +322,98 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={350}
-              stroke="#666"
-              width={60}
-              x={30}
-              x1={84}
-              x2={90}
-              y={10}
-              y1={272.5}
-              y2={272.5}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
-              height={350}
+              height={410}
               stroke="none"
-              textAnchor="end"
+              textAnchor="start"
               width={60}
-              x={82}
-              y={272.5}
+              x={34}
+              y={317.5}
             >
               <tspan
                 dy="0.355em"
-                x={82}
+                x={34}
               >
-                2500
+                65
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={350}
-              stroke="#666"
-              width={60}
-              x={30}
-              x1={84}
-              x2={90}
-              y={10}
-              y1={185}
-              y2={185}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
-              height={350}
+              height={410}
               stroke="none"
-              textAnchor="end"
+              textAnchor="start"
               width={60}
-              x={82}
-              y={185}
+              x={34}
+              y={215}
             >
               <tspan
                 dy="0.355em"
-                x={82}
+                x={34}
               >
-                5000
+                130
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={350}
-              stroke="#666"
-              width={60}
-              x={30}
-              x1={84}
-              x2={90}
-              y={10}
-              y1={97.5}
-              y2={97.5}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
-              height={350}
+              height={410}
               stroke="none"
-              textAnchor="end"
+              textAnchor="start"
               width={60}
-              x={82}
-              y={97.5}
+              x={34}
+              y={112.5}
             >
               <tspan
                 dy="0.355em"
-                x={82}
+                x={34}
               >
-                7500
+                195
               </tspan>
             </text>
           </g>
           <g
             className="recharts-layer recharts-cartesian-axis-tick"
           >
-            <line
-              className="recharts-cartesian-axis-tick-line"
-              fill="none"
-              height={350}
-              stroke="#666"
-              width={60}
-              x={30}
-              x1={84}
-              x2={90}
-              y={10}
-              y1={10}
-              y2={10}
-            />
             <text
               className="recharts-text recharts-cartesian-axis-tick-value"
               fill="#666"
-              height={350}
+              height={410}
               stroke="none"
-              textAnchor="end"
+              textAnchor="start"
               width={60}
-              x={82}
+              x={34}
               y={10}
             >
               <tspan
                 dy="0.355em"
-                x={82}
+                x={34}
               >
-                10000
+                260
               </tspan>
             </text>
           </g>
         </g>
         <text
           className="recharts-text recharts-label"
-          textAnchor="start"
-          transform="rotate(-90, 35, 185)"
-          x={35}
-          y={185}
+          textAnchor="end"
+          transform="rotate(-90, 5, 215)"
+          x={5}
+          y={215}
         >
           <tspan
             dy="0.355em"
-            x={35}
+            x={5}
           >
             Values
           </tspan>
@@ -609,163 +427,63 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <line
             fill="none"
-            height={350}
+            height={410}
             stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={90}
-            x2={720}
+            width={900}
+            x={80}
+            x1={80}
+            x2={980}
             y={10}
-            y1={360}
-            y2={360}
+            y1={420}
+            y2={420}
           />
           <line
             fill="none"
-            height={350}
+            height={410}
             stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={90}
-            x2={720}
+            width={900}
+            x={80}
+            x1={80}
+            x2={980}
             y={10}
-            y1={272.5}
-            y2={272.5}
+            y1={317.5}
+            y2={317.5}
           />
           <line
             fill="none"
-            height={350}
+            height={410}
             stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={90}
-            x2={720}
+            width={900}
+            x={80}
+            x1={80}
+            x2={980}
             y={10}
-            y1={185}
-            y2={185}
+            y1={215}
+            y2={215}
           />
           <line
             fill="none"
-            height={350}
+            height={410}
             stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={90}
-            x2={720}
+            width={900}
+            x={80}
+            x1={80}
+            x2={980}
             y={10}
-            y1={97.5}
-            y2={97.5}
+            y1={112.5}
+            y2={112.5}
           />
           <line
             fill="none"
-            height={350}
+            height={410}
             stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={90}
-            x2={720}
+            width={900}
+            x={80}
+            x1={80}
+            x2={980}
             y={10}
             y1={10}
             y2={10}
-          />
-        </g>
-        <g
-          className="recharts-cartesian-grid-vertical"
-        >
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={90}
-            x2={90}
-            y={10}
-            y1={10}
-            y2={360}
-          />
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={195}
-            x2={195}
-            y={10}
-            y1={10}
-            y2={360}
-          />
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={300}
-            x2={300}
-            y={10}
-            y1={10}
-            y2={360}
-          />
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={405}
-            x2={405}
-            y={10}
-            y1={10}
-            y2={360}
-          />
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={510}
-            x2={510}
-            y={10}
-            y1={10}
-            y2={360}
-          />
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={615}
-            x2={615}
-            y={10}
-            y1={10}
-            y2={360}
-          />
-          <line
-            fill="none"
-            height={350}
-            stroke="#ccc"
-            strokeDasharray="3 3"
-            width={630}
-            x={90}
-            x1={720}
-            x2={720}
-            y={10}
-            y1={10}
-            y2={360}
           />
         </g>
       </g>
@@ -780,9 +498,9 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
               id="animationClipPath-recharts-area-5"
             >
               <rect
-                height={361}
+                height={421}
                 width={0}
-                x={90}
+                x={80}
                 y={0}
               />
             </clipPath>
@@ -797,21 +515,21 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
             >
               <path
                 className="recharts-curve recharts-area-area"
-                d="M90,220L195,254.99999999999997L300,290L405,262.7L510,293.84999999999997L615,276.34999999999997L720,237.85000000000002L720,360L615,360L510,360L405,360L300,360L195,360L90,360Z"
-                fill="url(#coloruv)"
+                d="M80,104.6153846153846L230,230.76923076923075L380,295.4230769230769L530,156.65384615384613L680,137.73076923076923L830,323.8076923076923L980,87.26923076923076L980,420L830,420L680,420L530,420L380,420L230,420L80,420Z"
+                fill="url(#colorhidden)"
                 fillOpacity={1}
-                height={350}
+                height={410}
                 stroke="none"
-                width={630}
+                width={900}
               />
               <path
                 className="recharts-curve recharts-area-curve"
-                d="M90,220L195,254.99999999999997L300,290L405,262.7L510,293.84999999999997L615,276.34999999999997L720,237.85000000000002"
+                d="M80,104.6153846153846L230,230.76923076923075L380,295.4230769230769L530,156.65384615384613L680,137.73076923076923L830,323.8076923076923L980,87.26923076923076"
                 fill="none"
                 fillOpacity={1}
-                height={350}
-                stroke="#ffc700"
-                width={630}
+                height={410}
+                stroke="darkBlue"
+                width={900}
               />
             </g>
           </g>
@@ -828,9 +546,9 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
               id="animationClipPath-recharts-area-6"
             >
               <rect
-                height={361}
+                height={421}
                 width={0}
-                x={90}
+                x={80}
                 y={0}
               />
             </clipPath>
@@ -845,21 +563,21 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
             >
               <path
                 className="recharts-curve recharts-area-area"
-                d="M90,276L195,311.07L300,17.000000000000007L405,223.21999999999997L405,360L300,360L195,360L90,360ZM615,227L720,209.50000000000003L720,360L615,360Z"
-                fill="url(#colorpv)"
+                d="M80,356.9230769230769L230,388.4615384615385L380,360.07692307692304L530,385.3076923076923L680,367.96153846153845L830,412.1153846153846L980,349.0384615384615L980,420L830,420L680,420L530,420L380,420L230,420L80,420Z"
+                fill="url(#colorclaimed)"
                 fillOpacity={1}
-                height={350}
+                height={410}
                 stroke="none"
-                width={630}
+                width={900}
               />
               <path
                 className="recharts-curve recharts-area-curve"
-                d="M90,276L195,311.07L300,17.000000000000007L405,223.21999999999997M615,227L720,209.50000000000003"
+                d="M80,356.9230769230769L230,388.4615384615385L380,360.07692307692304L530,385.3076923076923L680,367.96153846153845L830,412.1153846153846L980,349.0384615384615"
                 fill="none"
                 fillOpacity={1}
-                height={350}
-                stroke="#1283d3"
-                width={630}
+                height={410}
+                stroke="orange"
+                width={900}
               />
             </g>
           </g>
@@ -876,9 +594,9 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
               id="animationClipPath-recharts-area-7"
             >
               <rect
-                height={361}
+                height={421}
                 width={0}
-                x={90}
+                x={80}
                 y={0}
               />
             </clipPath>
@@ -893,21 +611,21 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
             >
               <path
                 className="recharts-curve recharts-area-area"
-                d="M90,276L195,177.65L300,279.85L405,290L510,332.66499999999996L615,272.5L720,286.50000000000006L720,360L615,360L510,360L405,360L300,360L195,360L90,360Z"
+                d="M80,41.53846153846152L230,88.84615384615384L230,420L80,420ZM530,356.9230769230769L680,292.2692307692308L830,25.76923076923076L980,262.3076923076923L980,420L830,420L680,420L530,420Z"
                 fill="url(#coloramt)"
                 fillOpacity={1}
-                height={350}
+                height={410}
                 stroke="none"
-                width={630}
+                width={900}
               />
               <path
                 className="recharts-curve recharts-area-curve"
-                d="M90,276L195,177.65L300,279.85L405,290L510,332.66499999999996L615,272.5L720,286.50000000000006"
+                d="M80,41.53846153846152L230,88.84615384615384M530,356.9230769230769L680,292.2692307692308L830,25.76923076923076L980,262.3076923076923"
                 fill="none"
                 fillOpacity={1}
-                height={350}
-                stroke="#f5781b"
-                width={630}
+                height={410}
+                stroke="red"
+                width={900}
               />
             </g>
           </g>
@@ -918,11 +636,13 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
       className="recharts-legend-wrapper"
       style={
         Object {
-          "bottom": 10,
+          "bottom": 50,
           "height": "auto",
-          "left": 30,
+          "left": 20,
+          "paddingLeft": "13px",
+          "paddingTop": "50px",
           "position": "absolute",
-          "width": 690,
+          "width": 960,
         }
       }
     >
@@ -947,7 +667,7 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <svg
             className="recharts-surface"
-            height={14}
+            height={16}
             style={
               Object {
                 "display": "inline-block",
@@ -957,19 +677,19 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
             }
             version="1.1"
             viewBox="0 0 32 32"
-            width={14}
+            width={16}
           >
             <path
               className="recharts-symbols"
               d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"
-              fill="#ffc700"
+              fill="darkBlue"
               transform="translate(16, 16)"
             />
           </svg>
           <span
             className="recharts-legend-item-text"
           >
-            uv
+            hidden
           </span>
         </li>
         <li
@@ -983,7 +703,7 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <svg
             className="recharts-surface"
-            height={14}
+            height={16}
             style={
               Object {
                 "display": "inline-block",
@@ -993,19 +713,19 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
             }
             version="1.1"
             viewBox="0 0 32 32"
-            width={14}
+            width={16}
           >
             <path
               className="recharts-symbols"
               d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"
-              fill="#1283d3"
+              fill="orange"
               transform="translate(16, 16)"
             />
           </svg>
           <span
             className="recharts-legend-item-text"
           >
-            pv
+            claimed
           </span>
         </li>
         <li
@@ -1019,7 +739,7 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
         >
           <svg
             className="recharts-surface"
-            height={14}
+            height={16}
             style={
               Object {
                 "display": "inline-block",
@@ -1029,12 +749,12 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
             }
             version="1.1"
             viewBox="0 0 32 32"
-            width={14}
+            width={16}
           >
             <path
               className="recharts-symbols"
               d="M16,0A16,16,0,1,1,-16,0A16,16,0,1,1,16,0"
-              fill="#f5781b"
+              fill="red"
               transform="translate(16, 16)"
             />
           </svg>
@@ -1063,27 +783,23 @@ exports[`Storyshots Design System/LineChart LineChart Example 1`] = `
       }
     >
       <div
-        className="recharts-default-tooltip"
-        style={
-          Object {
-            "backgroundColor": "#fff",
-            "border": "1px solid #ccc",
-            "margin": 0,
-            "padding": 10,
-            "whiteSpace": "nowrap",
-          }
-        }
+        className="custom-tooltip"
+        css={[Function]}
       >
         <p
-          className="recharts-tooltip-label"
+          className="label"
           style={
             Object {
-              "margin": 0,
+              "margin": "0px",
             }
           }
         >
-          
+          undefined
+           
         </p>
+        <ul
+          css={[Function]}
+        />
       </div>
     </div>
   </div>

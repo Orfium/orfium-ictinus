@@ -1,7 +1,3 @@
-// // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// // @ts-nocheck
-// /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-// /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useMemo } from 'react';
 import {
   AreaChart,
@@ -20,35 +16,35 @@ import CustomTooltip from './components/CustomTooltip';
 
 type Data = {
   name: string;
-  [prop: string]: number | string;
+  [prop: string]: number | string | undefined;
 };
 
-type Props = {
+export type Props = {
+  /** This property defines the data to be shown in the Line Chart */
   data: Data[];
+  /** Property indicating the label name to be displayed for X axis */
   labelX?: string;
+  /** Property indicating the label name to be displayed for Y axis */
   labelY?: string;
+  /**  Define if the legend will be displayed */
   showLegend?: boolean;
+  /** Function passed as property, so that the user can select colors for each line. If no function is passed or no color is picked for one or more lines, color will be selected randomly  */
   color?: (dataLabel: string) => string;
 };
 
-const Chart = ({ data = [], labelX, labelY, showLegend = false, color }: Props) => {
+const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, color }) => {
   const theme = useTheme();
 
   const uniqueKeyNames = useMemo(() => {
     return uniq(flatten(data.map(object => keys(omit(object, 'name')))));
-
-    // return uniq(
-    //   data.reduce((acc, curr) => {
-    //     return [...acc, ...keys(omit(curr, 'name'))];
-    //   }, [])
-    // );
   }, [data]);
 
   const colorPicker = useMemo(() => {
     const colorSample = sampleSize(theme.palette.flat, uniqueKeyNames.length);
 
     return uniqueKeyNames.reduce<Record<string, string>>((acc, key, index) => {
-      const definedColor = color && color(key) ? color(key) : colorSample[index]?.[400];
+      const definedColor =
+        typeof color === 'function' && color(key) ? color(key) : colorSample[index]?.[400];
       acc[key] = definedColor;
 
       return acc;
@@ -57,71 +53,86 @@ const Chart = ({ data = [], labelX, labelY, showLegend = false, color }: Props) 
 
   const colors = Object.entries(colorPicker);
 
-  return (
-    <>
-      {uniqueKeyNames.length <= Object.keys(theme.palette.flat).length ? (
-        <ResponsiveContainer width="80%" aspect={1.5}>
-          <AreaChart
-            // width={900}
-            // height={500}
-            data={data}
-            margin={{ top: 10, right: 20, left: 20, bottom: 50 }}
-          >
-            <defs>
-              {colors.map(([dataLabel, color]) => (
-                <GradientLine key={`color${dataLabel}`} label={dataLabel} color={color} />
-              ))}
-            </defs>
-            <XAxis
-              // padding={{ left: 100, right: 18 }}
-              dataKey="name"
-              tickMargin={31}
-              axisLine={false}
-              tickLine={false}
-              label={labelX && { value: labelX, angle: 0, position: 'bottom', offset: 35 }}
-            />
-            <YAxis
-              // orientation='right'
-              // tick={{ stroke: 'red', strokeWidth: 2 }}
-              // padding={{ top: 10, bottom: 50 }}
-              tick={{ textAnchor: 'start' }}
-              tickMargin={40}
-              axisLine={false}
-              tickLine={false}
-              label={labelY && { value: labelY, angle: -90, position: 'left', offset: 15 }}
-            />
-            <CartesianGrid vertical={false} />
-            {showLegend && (
-              <Legend
-                align="left"
-                iconType="circle"
-                iconSize={16}
-                wrapperStyle={{
-                  paddingTop: '50px',
-                  paddingLeft: '13px',
-                }}
-              />
-            )}
-            <Tooltip cursor={false} content={<CustomTooltip />} />
-            {colors.map(([dataLabel, color]) => (
-              <Area
-                key={dataLabel}
-                type="linear"
-                dataKey={dataLabel}
-                stroke={color}
-                fillOpacity={1}
-                fill={`url(#color${dataLabel})`}
-                activeDot={{ r: 3, stroke: 'none' }}
-                dot={{ r: 3, fill: color }}
-              />
-            ))}
-          </AreaChart>
-        </ResponsiveContainer>
-      ) : (
-        <p>You must define less than {Object.keys(theme.palette.flat).length} different data</p>
+  return uniqueKeyNames.length <= Object.keys(theme.palette.flat).length ? (
+    <Wrapper data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }}>
+      <defs>
+        {colors.map(([dataLabel, color]) => (
+          <GradientLine key={`color${dataLabel}`} dataLabel={dataLabel} color={color} />
+        ))}
+      </defs>
+      <XAxis
+        dataKey="name"
+        tickMargin={31}
+        axisLine={false}
+        tickLine={false}
+        label={labelX && { value: labelX, angle: 0, position: 'bottom', offset: 35 }}
+      />
+      <YAxis
+        tick={{ textAnchor: 'start' }}
+        tickMargin={40}
+        axisLine={false}
+        tickLine={false}
+        label={labelY && { value: labelY, angle: -90, position: 'left', offset: 15 }}
+      />
+      <CartesianGrid vertical={false} />
+      {showLegend && (
+        <Legend
+          align="left"
+          iconType="circle"
+          iconSize={16}
+          wrapperStyle={{
+            paddingTop: '50px',
+            paddingLeft: '13px',
+          }}
+        />
       )}
-    </>
+      <Tooltip
+        cursor={{ stroke: theme.palette.flat.lightGray[300], strokeWidth: 1 }}
+        content={<CustomTooltip />}
+      />
+      {colors.map(([dataLabel, color]) => (
+        <Area
+          key={dataLabel}
+          type="linear"
+          dataKey={dataLabel}
+          stroke={color}
+          fillOpacity={1}
+          fill={`url(#color${dataLabel})`}
+          activeDot={{ r: 3, stroke: 'none' }}
+          dot={{ r: 3, fill: color }}
+        />
+      ))}
+    </Wrapper>
+  ) : (
+    <p>You must define less than {Object.keys(theme.palette.flat).length} different data</p>
   );
 };
 
-export default Chart;
+const Wrapper: React.FC<{
+  data: Data[];
+  margin: { top: number; right: number; left: number; bottom: number };
+}> = ({ data, children }) => {
+  if (process.env.NODE_ENV !== 'test') {
+    return (
+      <ResponsiveContainer aspect={1.5}>
+        <AreaChart data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }}>
+          {children}
+        </AreaChart>
+      </ResponsiveContainer>
+    );
+  }
+
+  // for testing purposes only !!!
+  return (
+    <AreaChart
+      width={1000}
+      height={500}
+      data={data}
+      margin={{ top: 10, right: 20, left: 20, bottom: 50 }}
+    >
+      {children}
+    </AreaChart>
+  );
+};
+
+export default LineChart;

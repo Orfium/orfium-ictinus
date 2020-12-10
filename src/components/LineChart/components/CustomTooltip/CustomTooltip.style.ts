@@ -9,7 +9,7 @@ export const tooltipStyle = () => (theme: Theme) => {
     background: theme.palette.flat.darkGray[600],
     opacity: '90%',
     borderRadius: '4px',
-    minWidth: rem(247),
+    minWidth: rem(200),
     whiteSpace: 'nowrap' as const,
   };
 };
@@ -28,11 +28,10 @@ export const tooltipUlStyle = () => () => {
   return { padding: '0px', margin: '0px' };
 };
 
-export const tooltipLiStyle = (color: string|undefined) => (theme: Theme) => {
+export const tooltipLiStyle = () => (theme: Theme) => {
   return {
     listStyleType: 'none',
-    color: color,
-    // color: theme.palette.white,
+    color: theme.palette.white,
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
