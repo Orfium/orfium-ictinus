@@ -69,14 +69,15 @@ Regular TextField with placeholder
   </Story>
 </Preview>
 
-# Text Field with Placeholder and icon
+# Text Field with Placeholder, icon and size
 
-Regular TextField with placeholder and icon
+Regular TextField with placeholder, icon and size
 
 <Preview>
-  <Story name="Text Field with Placeholder and icon">
+  <Story name="Text Field with Placeholder, icon and size">
     <Stack>
       <TextField
+        size={select('size', ['md','sm'],'sm')}
         lean={boolean('lean version', false)}
         leftIcon={
           <img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
@@ -85,6 +86,7 @@ Regular TextField with placeholder and icon
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
       />
       <TextField
+        size={select('size', ['md','sm'], 'sm')}
         lean={boolean('lean version', false)}
         rightIcon={
           <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
