@@ -1,13 +1,11 @@
 import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { RequiredProperties } from '../../utils/common';
-import {
-  backgroundPickerBasedOnType,
-  colorPickerBasedOnType,
-  ColorShapeFromComponent,
-} from '../../utils/themeFunctions';
+import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './Button';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
+import { pickTextColorFromSwatches } from '../../theme/palette';
+import { TypesShadeAndColors } from '../../hooks/useTypeColorToColorMatch';
+import { defineBackgroundColor, stateBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -27,52 +25,45 @@ export const buttonStyle = ({
   filled,
   calculatedColor,
   size,
-  icon,
+  iconExists,
   disabled,
   childrenCount,
+  typesShadesColor,
 }: RequiredProperties<
   Props & {
-    calculatedColor:
-      | {
-          color: typeof flatColors[number];
-          shade: typeof colorShades[number];
-        }
-      | undefined;
-    icon: boolean;
+    typesShadesColor: TypesShadeAndColors;
+    calculatedColor: ColorShapeFromComponent | undefined;
+    iconExists: boolean;
     childrenCount: number;
   }
 >) => (theme: Theme) => {
-  const defineBackgroundColor = (
-    theme: Theme,
-    color: ColorShapeFromComponent | undefined
-  ): string => {
-    if (childrenCount === 0 && icon) {
-      return 'transparent';
-    }
-
-    if (disabled) {
-      return theme.utils.getColor('lightGray', 400);
-    }
-
-    if (color) {
-      return theme.utils.getColor(color.color, color.shade);
-    }
-
-    if (filled && childrenCount !== 0) {
-      return backgroundPickerBasedOnType(type)(theme);
-    }
-
-    return 'transparent';
-  };
+  const calculatedColorBasedOnColorOrType = calculatedColor
+    ? calculatedColor
+    : typesShadesColor[type];
 
   return {
     fontSize: theme.typography.fontSizes['16'],
-    color: disabled
-      ? theme.utils.getColor('lightGray', 700)
-      : calculatedColor
-      ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-      : colorPickerBasedOnType(type)(theme),
-    backgroundColor: defineBackgroundColor(theme, calculatedColor),
+    color: filled
+      ? pickTextColorFromSwatches(
+          calculatedColorBasedOnColorOrType?.color,
+          calculatedColorBasedOnColorOrType?.shade
+        )
+      : defineBackgroundColor(
+          theme,
+          calculatedColorBasedOnColorOrType,
+          type,
+          iconExists,
+          childrenCount > 0
+        ),
+    backgroundColor: filled
+      ? defineBackgroundColor(
+          theme,
+          calculatedColorBasedOnColorOrType,
+          type,
+          iconExists,
+          childrenCount > 0
+        )
+      : 'transparent',
     padding:
       size === 'sm' || size === 'md'
         ? `${theme.spacing.sm} ${theme.spacing.md}`
@@ -80,17 +71,33 @@ export const buttonStyle = ({
     height: heightBasedOnSize(size),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
-    border: filled ? 'none' : `solid 1px ${theme.utils.getColor('lightGray', 700)}`,
+    border: filled
+      ? 'none'
+      : `solid 1px ${defineBackgroundColor(
+          theme,
+          calculatedColorBasedOnColorOrType,
+          type,
+          iconExists,
+          childrenCount > 0
+        )}`,
     cursor: 'pointer',
+    transition: 'background-color 150ms linear',
+    ':hover': {
+      backgroundColor: !disabled
+        ? stateBackgroundColor(theme, 'hover', calculatedColorBasedOnColorOrType, filled)
+        : undefined,
+    },
+    ':active': {
+      backgroundColor: !disabled
+        ? stateBackgroundColor(theme, 'active', calculatedColorBasedOnColorOrType, filled)
+        : undefined,
+    },
   };
 };
 
 export const buttonSpanStyle = () => () => {
   return {
     display: 'flex',
-    // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
-    // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
-    // definition. So we cast this as something it will accept.
     alignItems: 'center',
   };
 };
@@ -98,10 +105,11 @@ export const buttonSpanStyle = () => () => {
 export const iconStyle = ({
   iconLeft,
   iconRight,
+  hasChildren,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
   return {
-    marginLeft: iconRight ? theme.spacing.sm : 0,
-    marginRight: iconLeft ? theme.spacing.sm : 0,
+    marginLeft: hasChildren && iconRight ? theme.spacing.sm : 0,
+    marginRight: hasChildren && iconLeft ? theme.spacing.sm : 0,
     display: 'inline-flex',
   };
 };

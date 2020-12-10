@@ -6,6 +6,7 @@ import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes, calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
 import { buttonSpanStyle, buttonStyle, iconStyle } from './Button.style';
+import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -44,6 +45,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
   } = props;
 
   const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
+  const { typesShadesColor } = useTypeColorToColorMatch();
 
   return (
     <button
@@ -54,10 +56,11 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         size,
         color,
         calculatedColor,
-        icon: Boolean(iconLeft || iconRight),
+        iconExists: Boolean(iconLeft || iconRight),
         disabled,
         iconLeft,
         iconRight,
+        typesShadesColor,
         childrenCount: React.Children.count(children),
       })}
       onClick={onClick}

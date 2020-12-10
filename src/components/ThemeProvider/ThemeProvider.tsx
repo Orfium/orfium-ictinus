@@ -8,6 +8,7 @@ import { DeepPartial } from '../../utils/types';
 import { css, Global } from '@emotion/core';
 import { normalize } from 'polished';
 import 'utils/initLocaleFormat';
+import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
@@ -17,7 +18,7 @@ type Props = {
 const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light'): Theme =>
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
-export const globalStyles = css`
+export const globalStyles = (theme: Theme) => css`
   ${normalize()};
   @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
@@ -30,6 +31,12 @@ export const globalStyles = css`
 
   #root {
     display: 'flex';
+  }
+
+  // default outline for all focused elements defined by the design team
+  // our lightGray base color (400 shade) with opacity at 50%
+  *:focus {
+    outline: 0;
   }
 `;
 
@@ -44,8 +51,10 @@ const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
     <EmotionThemeProvider
       theme={deepMergeTheme(newTheme, themeSwitchState.dark ? 'dark' : 'light')}
     >
-      <Global styles={globalStyles} />
-      {children}
+      <TypeColorToColorMatchProvider>
+        <Global styles={globalStyles} />
+        {children}
+      </TypeColorToColorMatchProvider>
     </EmotionThemeProvider>
   );
 };
