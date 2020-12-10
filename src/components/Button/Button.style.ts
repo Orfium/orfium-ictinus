@@ -45,8 +45,8 @@ export const buttonStyle = ({
     fontSize: theme.typography.fontSizes['16'],
     color: filled
       ? pickTextColorFromSwatches(
-          calculatedColorBasedOnColorOrType.color,
-          calculatedColorBasedOnColorOrType.shade
+          calculatedColorBasedOnColorOrType?.color,
+          calculatedColorBasedOnColorOrType?.shade
         )
       : defineBackgroundColor(
           theme,
@@ -105,10 +105,11 @@ export const buttonSpanStyle = () => () => {
 export const iconStyle = ({
   iconLeft,
   iconRight,
+  hasChildren,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
   return {
-    marginLeft: iconRight ? theme.spacing.sm : 0,
-    marginRight: iconLeft ? theme.spacing.sm : 0,
+    marginLeft: hasChildren && iconRight ? theme.spacing.sm : 0,
+    marginRight: hasChildren && iconLeft ? theme.spacing.sm : 0,
     display: 'inline-flex',
   };
 };
