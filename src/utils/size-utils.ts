@@ -18,8 +18,7 @@ export const getTextFieldSize: SizeConfig = (theme, label, shouldMoveLeft) => {
     padding: ${paddingMD};
     label {
       left: ${shouldMoveLeft ? '2.4rem' : 'inherit'};
-    };
-    `,
+    };`,
     sm: `
      padding: ${paddingSM};
      label {
