@@ -29,7 +29,7 @@ export const iconStyle = ({ color, size, colorConfig }: iconStyleProps) => (them
   width: rem(size),
   height: rem(size),
   path: {
-    fill: fillPickerBasedOnType(color)(theme),
+    fill: getIconColor(color, theme, colorConfig),
   },
 });
 

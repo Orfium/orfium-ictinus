@@ -56,7 +56,7 @@ export type Props = {
   /** Sets the background color's shade of the textField*/
   fillShade?: typeof colorShades[number];
   /** An optional functional component that will receive a icon color from swatches as prop
-   * Render Props Pattern: LeftIconWithSwatches={({colorConfig}) => <Icon colorConfig={colorConfig} />}
+   * Render Props Pattern: LeftIconWithSwatches={({colorConfig}) => <Icon color={'inherit'} colorConfig={colorConfig} />}
    * */
   LeftIconWithSwatches?: FC<{ colorConfig: ColorConfig }>;
 };

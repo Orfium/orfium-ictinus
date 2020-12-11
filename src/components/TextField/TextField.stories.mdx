@@ -122,7 +122,8 @@ Regular TextField with color type and icon picker
         size={select('size', ['md','sm'], 'sm')}
         lean={boolean('lean version', false)}
         label={'Label'}
-        LeftIconWithSwatches={({colorConfig}) => <Icon name={select('name',Object.keys(iconSelector),'search')} colorConfig={colorConfig} />}
+        LeftIconWithSwatches={({colorConfig}) =>
+          <Icon name={select('name',Object.keys(iconSelector),'search')} colorConfig={colorConfig} />}
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
       />
     </Stack>
@@ -130,7 +131,6 @@ Regular TextField with color type and icon picker
 </Preview>
 
 # TextField disabled with label
-
 Regular TextField disabled with label
 
 <Preview>
