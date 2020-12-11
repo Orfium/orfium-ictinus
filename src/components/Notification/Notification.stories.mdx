@@ -13,7 +13,7 @@ import Stack from '../storyUtils/Stack';
 
 # Notification
 
-# Inline Notification
+## Inline Notification
 
 ### Props
 
@@ -80,7 +80,7 @@ import { InlineNotification } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Banner Notification
+## Banner Notification
 
 ### Props
 
@@ -151,9 +151,32 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Toast Notification
+## Toast Notification
 
-Toast Notification
+### Toast Props
+
+<Props of={Toast} />
+
+### NotificationVisual Props
+
+<Props of={NotificationVisual} />
+
+### Usage
+
+```js
+import { Toast, NotificationVisual } from '@orfium/ictinus';
+
+<Toast message="message" type="info" expanded closeCTA={closeCTA}>
+  <NotificationVisual
+    title="title"
+    primaryCTALabel="Primary CTA Label"
+    primaryCTA={primaryCTA}
+    secondaryCTALabel="Secondary CTA Label"
+    secondaryCTA={secondaryCTA}
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+  />
+</Toast>;
+```
 
 <Preview>
   <Story name="Toast Notification" parameters={{ decorators: [withKnobs] }}>
@@ -180,7 +203,28 @@ Toast Notification
   </Story>
 </Preview>
 
-# Snackbar Notification
+## Snackbar Notification
+
+### Props
+
+<Props of={Snackbar} />
+
+### Usage
+
+```js
+import { Snackbar } from '@orfium/ictinus';
+
+<Snackbar
+  message="message"
+  type="info"
+  primaryCTALabel="Primary CTA Label"
+  primaryCTA={primaryCTA}
+  secondaryCTALabel="Secondary CTA Label"
+  secondaryCTA={secondaryCTA}
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+  closeCTA={closeCTA}
+/>;
+```
 
 <Preview>
   <Story name="Snackbar Notification" parameters={{ decorators: [withKnobs] }}>

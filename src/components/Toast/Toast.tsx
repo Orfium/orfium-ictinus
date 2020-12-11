@@ -56,7 +56,7 @@ const Toast: React.FC<Props> = ({
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (
             <div css={infoIconContainer()}>
-              <Icon name={typeToIconName(type)} color="primary" size={24} />
+              <Icon name={typeToIconName(type)} color="primary" size={20} />
             </div>
           )}
           <div>{message}</div>
@@ -67,7 +67,7 @@ const Toast: React.FC<Props> = ({
             onClick={() => setExpanded(!isExpanded)}
             data-testid={generateTestDataId('toast-expand', dataTestId)}
           >
-            <Icon name="chevronLargeDown" color="primary" size={24} />
+            <Icon name="chevronLargeDown" color="primary" size={20} />
           </span>
 
           <span
@@ -75,7 +75,7 @@ const Toast: React.FC<Props> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('toast-close', dataTestId)}
           >
-            <Icon name="close" color="primary" size={24} />
+            <Icon name="close" color="primary" size={20} />
           </span>
         </div>
       </div>

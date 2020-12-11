@@ -38,7 +38,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const CardNotification: React.FC<Props> = ({
+const Snackbar: React.FC<Props> = ({
   message,
   type,
   primaryCTALabel = 'OK',
@@ -91,4 +91,4 @@ const CardNotification: React.FC<Props> = ({
   );
 };
 
-export default CardNotification;
+export default Snackbar;

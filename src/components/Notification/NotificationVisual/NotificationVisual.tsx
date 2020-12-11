@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import Button from '../../Button';
 import { actionContainer, actionsContainer, boldMessageContainer } from '../Notification.style';
-import { descriptionContainer } from './NotificationVisual.style';
+import { visualContainer, descriptionContainer } from './NotificationVisual.style';
 import { TestId } from '../../../utils/types';
 import { generateTestDataId } from '../../../utils/helpers';
 
@@ -34,7 +34,7 @@ const NotificationVisual: React.FC<Props> = ({
   dataTestId,
 }) => {
   return (
-    <React.Fragment>
+    <div css={visualContainer()}>
       <div css={boldMessageContainer()}>{title}</div>
       <div css={descriptionContainer()}>{description}</div>
       <div css={actionsContainer()}>
@@ -52,7 +52,7 @@ const NotificationVisual: React.FC<Props> = ({
           </Button>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
 };
 

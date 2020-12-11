@@ -76,7 +76,7 @@ export const chevronIconContainer = (expanded: boolean) => (): SerializedStyles 
 export const expandedContainer = (type: string, isExpanded: boolean) => (
   theme: Theme
 ): SerializedStyles => css`
-  padding: ${isExpanded ? theme.spacing.md : 0};
+  ${transition(0.1)};
   min-height: ${isExpanded ? rem(146) : rem(0)};
   ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
   height: ${!isExpanded ? rem(0) : 'auto'};
