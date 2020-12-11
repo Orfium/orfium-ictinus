@@ -46,18 +46,18 @@ exports[`Storyshots Design System/TextField Text Field with Label 1`] = `
         className="css-12qr1pz-TextField"
       >
         <div
-          className="css-1h8k6jp-TextField"
+          className="css-yzthsf-TextField"
         >
           <div
-            className="css-khl0ot-TextField"
+            className="css-5z4erp-TextField"
           >
             <input
-              className="css-1hi3w5j-TextField"
+              className="css-jo6z7m-TextField"
               placeholder="Label"
               required={false}
             />
             <label
-              className="css-196fajj-Label"
+              className="css-1qcp0f-Label"
             >
               Label
                
@@ -116,13 +116,13 @@ exports[`Storyshots Design System/TextField Text Field with Placeholder 1`] = `
         className="css-12qr1pz-TextField"
       >
         <div
-          className="css-1h8k6jp-TextField"
+          className="css-yzthsf-TextField"
         >
           <div
-            className="css-pwsrwq-TextField"
+            className="css-1vddwvw-TextField"
           >
             <input
-              className="css-1wgrvhw-TextField"
+              className="css-18uruj2-TextField"
               placeholder="placeholder "
               required={false}
             />
@@ -134,7 +134,7 @@ exports[`Storyshots Design System/TextField Text Field with Placeholder 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextField Text Field with Placeholder and icon 1`] = `
+exports[`Storyshots Design System/TextField Text Field with Placeholder, icon and size 1`] = `
 <div
   style={
     Object {
@@ -180,13 +180,13 @@ exports[`Storyshots Design System/TextField Text Field with Placeholder and icon
         className="css-12qr1pz-TextField"
       >
         <div
-          className="css-1h8k6jp-TextField"
+          className="css-yzthsf-TextField"
         >
           <div
-            className="css-vomlft-TextField"
+            className="css-wn8fiq-TextField"
           >
             <div
-              className="css-2oohh4-TextField"
+              className="css-8lp52w-IconWrapper"
             >
               <img
                 height="16"
@@ -195,10 +195,175 @@ exports[`Storyshots Design System/TextField Text Field with Placeholder and icon
               />
             </div>
             <input
-              className="css-1wgrvhw-TextField"
+              className="css-18uruj2-TextField"
               placeholder="placeholder "
               required={false}
             />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="css-12qr1pz-TextField"
+      >
+        <div
+          className="css-yzthsf-TextField"
+        >
+          <div
+            className="css-1vddwvw-TextField"
+          >
+            <input
+              className="css-18uruj2-TextField"
+              placeholder="placeholder "
+              required={false}
+            />
+            <div
+              className="css-zozr1j-TextField"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+                width="16"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="css-12qr1pz-TextField"
+      >
+        <div
+          className="css-yzthsf-TextField"
+        >
+          <div
+            className="css-11hzh72-TextField"
+          >
+            <div
+              className="css-8lp52w-IconWrapper"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+                width="16"
+              />
+            </div>
+            <input
+              className="css-jo6z7m-TextField"
+              placeholder="Label"
+              required={false}
+            />
+            <label
+              className="css-1qcp0f-Label"
+            >
+              Label
+               
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/TextField Text Field with color type and icon picker 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="css-12qr1pz-TextField"
+      >
+        <div
+          className="css-yzthsf-TextField"
+        >
+          <div
+            className="css-11hzh72-TextField"
+          >
+            <div
+              className="css-8lp52w-IconWrapper"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-tyn11f-Icon"
+                />
+              </span>
+            </div>
+            <input
+              className="css-jo6z7m-TextField"
+              placeholder="Label"
+              required={false}
+            />
+            <label
+              className="css-1qcp0f-Label"
+            >
+              Label
+               
+            </label>
           </div>
         </div>
       </div>
@@ -253,13 +418,13 @@ exports[`Storyshots Design System/TextField Text Field without Label 1`] = `
         className="css-12qr1pz-TextField"
       >
         <div
-          className="css-1h8k6jp-TextField"
+          className="css-yzthsf-TextField"
         >
           <div
-            className="css-pwsrwq-TextField"
+            className="css-1vddwvw-TextField"
           >
             <input
-              className="css-9qa453-TextField"
+              className="css-jo6z7m-TextField"
               required={false}
             />
           </div>
@@ -316,19 +481,19 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
         className="css-12qr1pz-TextField"
       >
         <div
-          className="css-8zc4ck-TextField"
+          className="css-1vz5wb-TextField"
         >
           <div
-            className="css-khl0ot-TextField"
+            className="css-5z4erp-TextField"
           >
             <input
-              className="css-1hi3w5j-TextField"
+              className="css-jo6z7m-TextField"
               disabled={true}
               placeholder="Label"
               required={false}
             />
             <label
-              className="css-196fajj-Label"
+              className="css-1qcp0f-Label"
             >
               Label
                
@@ -388,18 +553,18 @@ exports[`Storyshots Design System/TextField TextField with label and error handl
           className="css-12qr1pz-TextField"
         >
           <div
-            className="css-kba2bb-TextField"
+            className="css-nqebvk-TextField"
           >
             <div
-              className="css-khl0ot-TextField"
+              className="css-5z4erp-TextField"
             >
               <input
-                className="css-1hi3w5j-TextField"
+                className="css-jo6z7m-TextField"
                 placeholder="Label"
                 required={false}
               />
               <label
-                className="css-2bpqy0-Label"
+                className="css-1nebu9e-Label"
               >
                 Label
                  
