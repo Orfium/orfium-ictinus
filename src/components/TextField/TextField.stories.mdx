@@ -2,7 +2,8 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
-import TextFieldShowcase from '../storyUtils/TextFieldShowcase';
+import TextFieldShowcase from '../storyUtils/TextFieldShowcase'; import { colorShades, flatColors } from '../../theme/palette'; import Icon
+  from '../Icon'; import iconSelector from '../Icon/assets/iconSelector';
 
 <Meta title="Design System/TextField" component={TextField} />
 
@@ -101,6 +102,27 @@ Regular TextField with placeholder, icon and size
         leftIcon={
           <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
         }
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+
+# Text Field with color type and icon picker
+
+Regular TextField with color type and icon picker
+
+<Preview>
+  <Story name="Text Field with color type and icon picker">
+    <Stack>
+      <TextField
+        fill={select('fill', flatColors, 'lightGray')}
+        fillShade={select('fillShade', colorShades, 100)}
+        size={select('size', ['md','sm'], 'sm')}
+        lean={boolean('lean version', false)}
+        label={'Label'}
+        LeftIconWithSwatches={({colorConfig}) => <Icon name={select('name',Object.keys(iconSelector),'search')} colorConfig={colorConfig} />}
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
       />
     </Stack>
