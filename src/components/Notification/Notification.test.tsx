@@ -7,6 +7,7 @@ import Snackbar from './Snackbar';
 import InlineNotification from './InlineNotification';
 import Banner from './Banner';
 import NotificationsContainer from './NotificationsContainer';
+import '@testing-library/jest-dom';
 
 describe('Inline Notification', () => {
   const data = {
@@ -67,8 +68,8 @@ describe('Notifications Container', () => {
   const data = {
     withIcon: true,
     withFilling: false,
-    title: 'title',
-    message: 'message',
+    title: 'Message heading',
+    message: 'Informative Message',
     type: 'info' as NotificationTypes,
     primaryCTALabel: 'primaryCTALabel',
   };
@@ -127,16 +128,14 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
   const toastData = {
     message: 'message',
     type: 'info' as NotificationTypes,
-    //closeCTA
   };
 
   const visualData = {
     title: 'title',
     primaryCTALabel: 'primaryCTALabel',
     secondaryCTALabel: 'secondaryCTALabel',
-    description: 'this is the description',
-    //primaryCTA
-    //secondaryCTA
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor',
   };
 
   test('Toast with NotificationVisual renders correctly', async () => {
@@ -150,36 +149,45 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
       </Toast>
     );
 
+    // Toast is initialized with expanded=false
+
     const message = await findByText(toastData.message);
     expect(message).toBeTruthy();
   });
 
-  test.skip('Toast with NotificationVisual expands/shrinks correctly', async () => {
+  test('Toast with NotificationVisual expands/shrinks correctly', async () => {
     const primaryCTA = jest.fn();
     const secondaryCTA = jest.fn();
     const closeCTA = jest.fn();
 
-    const { findByTestId } = render(
+    const { findByTestId, findByText } = render(
       <Toast {...toastData} closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
       </Toast>
     );
 
     // Toast is initialized with expanded=false
+    // Note: The NotificationVisual is rendered regardless of the isExpanded value, so it can be always found in document
+    // If isExpanded=true, the min-height of the NotificationVisual is 0, else > 0.
+    // So to test if the visual is visible or not, the only way to check it is check the min-height
 
     const expandButton = await findByTestId('toast-expand');
-    const shrinkedContainer = await findByTestId('expanded-container');
-    expect(shrinkedContainer).toBeTruthy();
-    expect(shrinkedContainer.clientHeight).toBe(0);
-
-    fireEvent.click(expandButton);
-
     const expandedContainer = await findByTestId('expanded-container');
-    expect(expandedContainer).toBeTruthy();
-    expect(expandedContainer.clientHeight).toBeGreaterThan(0);
+    expect(expandedContainer).toHaveStyle('min-height: 0rem;');
+    fireEvent.click(expandButton);
+    expect(expandedContainer).toHaveStyle('min-height: 9.125rem;');
 
-    // const message = await findByText(visualData.title);
-    // expect(message).toBeTruthy();
+    const title = await findByText(visualData.title);
+    expect(title).toBeTruthy();
+
+    const primaryCTALabel = await findByText(visualData.primaryCTALabel);
+    expect(primaryCTALabel).toBeTruthy();
+
+    const secondaryCTALabel = await findByText(visualData.secondaryCTALabel);
+    expect(secondaryCTALabel).toBeTruthy();
+
+    const description = await findByText(visualData.description);
+    expect(description).toBeTruthy();
   });
 
   test('Toast with NotificationVisual closeCTA works properly', async () => {
@@ -225,9 +233,9 @@ describe('Snackbar Notification', () => {
   const data = {
     message: 'message',
     type: 'info' as NotificationTypes,
+    description: 'this is the description',
     primaryCTALabel: 'primaryCTALabel',
     secondaryCTALabel: 'secondaryCTALabel',
-    description: 'this is the description',
   };
 
   test('Snackbar Notification renders correctly', async () => {
@@ -244,6 +252,12 @@ describe('Snackbar Notification', () => {
 
     const description = await findByText(data.description);
     expect(description).toBeTruthy();
+
+    const primaryCTALabel = await findByText(data.primaryCTALabel);
+    expect(primaryCTALabel).toBeTruthy();
+
+    const secondaryCTALabel = await findByText(data.secondaryCTALabel);
+    expect(secondaryCTALabel).toBeTruthy();
   });
 
   test("Snackbar Notification's closeCTA works properly", async () => {

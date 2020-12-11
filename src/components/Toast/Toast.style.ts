@@ -79,7 +79,7 @@ export const expandedContainer = (type: string, isExpanded: boolean) => (
   ${transition(0.1)};
   min-height: ${isExpanded ? rem(146) : rem(0)};
   ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
-  height: ${!isExpanded ? rem(0) : 'auto'};
+  height: ${!isExpanded ? rem(0) : 'inherit'};
   font-size: ${theme.typography.fontSizes['14']};
   position: relative;
   background: ${theme.palette.white};
