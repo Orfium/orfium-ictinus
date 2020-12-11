@@ -142,6 +142,13 @@ export const inputStyle = ({ label, placeholder }: Props) => (
     }
   }
 
+  &:focus,
+  &:not(:placeholder-shown) {
+    & + label {
+      transform: translate(1%, -95%) scale(0.8);
+    }
+  }
+
   &:disabled {
     cursor: not-allowed;
   }

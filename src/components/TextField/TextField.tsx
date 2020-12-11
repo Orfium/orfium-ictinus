@@ -72,19 +72,6 @@ const TextField: React.FC<Props> = ({
   size = DEFAULT_SIZE,
   ...rest
 }) => {
-  const [input, setInput] = React.useState<string>('');
-
-  const handleLabelAnimation = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const shouldUpdate = Boolean(event.target.value) !== Boolean(input);
-
-    // Since we don't care about the actual value,
-    // update the component only when the value is change
-    // from falsy to truthy and the other way around
-    if (shouldUpdate) {
-      setInput(event.target.value);
-    }
-  };
-
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
@@ -92,7 +79,6 @@ const TextField: React.FC<Props> = ({
           <div css={textFieldStyle({ size, label, leftIcon })}>
             {leftIcon && <div css={iconWrapperStyle({ rightIcon })}>{leftIcon}</div>}
             <input
-              onChange={handleLabelAnimation}
               css={inputStyle({ label, placeholder })}
               placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
               required={required}
@@ -107,7 +93,7 @@ const TextField: React.FC<Props> = ({
                 htmlFor={id}
                 label={label}
                 required={required}
-                animateToTop={Boolean(input)}
+                animateToTop={Boolean(rest.value)}
               />
             )}
             {rightIcon && (
