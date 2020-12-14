@@ -35,7 +35,7 @@ describe('Generic Toast', () => {
 
     // Toast is initialized with expanded=false
     // Note: The visual is rendered regardless of the isExpanded value, so it can be always found in document
-    // If isExpanded=true, the min-height of the visual is 0, else > 0.
+    // If isExpanded=false, the min-height of the visual is 0, else > 0.
     // So to test if the visual is visible or not, the only way to check it is check the min-height
 
     const expandButton = await findByTestId('toast-expand');
