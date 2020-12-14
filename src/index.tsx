@@ -21,6 +21,7 @@ export { default as IconButton } from './components/IconButton';
 export { default as Menu } from './components/Menu';
 export { default as InlineNotification } from './components/Notification/InlineNotification';
 export { default as Banner } from './components/Notification/Banner';
+export { default as LineChart } from './components/LineChart';
 export { default as NotificationsContainer } from './components/Notification/NotificationsContainer';
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';

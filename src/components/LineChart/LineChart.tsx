@@ -87,7 +87,7 @@ const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, 
         />
       )}
       <Tooltip
-        cursor={{ stroke: theme.palette.flat.lightGray[300], strokeWidth: 1 }}
+        cursor={{ stroke: theme.utils.getColor('lightGray', 300), strokeWidth: 1 }}
         content={<CustomTooltip />}
       />
       {colors.map(([dataLabel, color]) => (

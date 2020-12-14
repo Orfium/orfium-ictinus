@@ -6,7 +6,7 @@ export const tooltipStyle = () => (theme: Theme) => {
     fontSize: theme.typography.fontSizes['14'],
     padding: rem(8),
     color: theme.palette.white,
-    background: theme.palette.flat.darkGray[600],
+    background: theme.utils.getColor('darkGray', 600),
     opacity: '90%',
     borderRadius: '4px',
     minWidth: rem(200),
