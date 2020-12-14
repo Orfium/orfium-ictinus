@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import React from 'react';
 import {
   tooltipHrStyle,
@@ -8,8 +10,6 @@ import {
 import { TooltipProps } from 'recharts';
 
 const CustomTooltip: React.FC<TooltipProps> = ({ label, payload }) => {
-  // console.log(payload);
-
   return (
     <div className="custom-tooltip" css={tooltipStyle()}>
       <p className="label" style={{ margin: '0px' }}>
