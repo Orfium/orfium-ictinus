@@ -45,8 +45,8 @@ export const buttonStyle = ({
     fontSize: theme.typography.fontSizes['16'],
     color: filled
       ? pickTextColorFromSwatches(
-          calculatedColorBasedOnColorOrType?.color,
-          calculatedColorBasedOnColorOrType?.shade
+          calculatedColorBasedOnColorOrType.color,
+          calculatedColorBasedOnColorOrType.shade
         )
       : defineBackgroundColor(
           theme,
