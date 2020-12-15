@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
-import { Theme } from '../../../../theme';
+import { Theme } from '../../../theme';
 
 const getPositionStyle = (styleLiteral: string) => {
   return css`
