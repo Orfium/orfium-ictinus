@@ -22,7 +22,8 @@ export const menuStyle = ({
   type,
   filled,
   size,
-  icon,
+  iconLeft,
+  iconRight,
   disabled,
   childrenCount,
 }: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
@@ -30,7 +31,7 @@ export const menuStyle = ({
   const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
 
   const defineBackgroundColor = (): string => {
-    if (childrenCount === 0 && icon) {
+    if (childrenCount === 0 && (iconRight || iconLeft)) {
       return 'transparent';
     }
 
@@ -49,8 +50,11 @@ export const menuStyle = ({
     fontSize: theme.typography.fontSizes['16'],
     color: disabled ? theme.utils.getColor('lightGray', 700) : colorPickerBasedOnType(type)(theme),
     backgroundColor: defineBackgroundColor(),
-    paddingLeft: icon || childrenCount === 0 ? 0 : calculatedPaddingSpace,
-    paddingRight: icon && !childrenCount ? calculatedPaddingSpaceIfIcon : calculatedPaddingSpace,
+    paddingLeft: iconRight || iconLeft || childrenCount === 0 ? 0 : calculatedPaddingSpace,
+    paddingRight:
+      (iconRight || iconLeft) && !childrenCount
+        ? calculatedPaddingSpaceIfIcon
+        : calculatedPaddingSpace,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
     border: filled ? 'none' : `solid 1px ${theme.utils.getColor('lightGray', 700)}`,
@@ -58,15 +62,16 @@ export const menuStyle = ({
 };
 
 export const buttonSpanStyle = ({
-  icon,
+  iconLeft,
+  iconRight,
   size,
   hasChildren,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => ({
-  display: icon ? 'flex' : 'block',
-  flexDirection: icon ? 'row' : 'column',
-  alignItems: icon ? ('center' as const) : ('flex-start' as const),
+  display: iconRight || iconLeft ? 'flex' : 'block',
+  flexDirection: iconRight || iconLeft ? 'row' : 'column',
+  alignItems: iconRight || iconLeft ? ('center' as const) : ('flex-start' as const),
   '> :first-child': {
-    marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
+    marginLeft: iconRight || iconLeft ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
     marginRight: hasChildren ? theme.spacing.sm : 0,
   },
 });

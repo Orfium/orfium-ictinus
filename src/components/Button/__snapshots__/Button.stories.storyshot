@@ -43,12 +43,12 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-19piv82-Button"
+        className="css-guhh2k-Button"
         data-testid="button"
         disabled={true}
       >
         <span
-          className="css-9nhvja-Button"
+          className="css-1xr6sam-Button"
         >
           Disabled
         </span>
@@ -62,14 +62,14 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-rzul1v-Button"
+        className="css-18ow94r-Button"
         data-testid="button"
         disabled={false}
       >
         <span
-          className="css-9nhvja-Button"
+          className="css-1xr6sam-Button"
         >
-          Hello world
+          Red 600
         </span>
       </button>
     </div>
@@ -81,52 +81,14 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-1aci5jp-Button"
+        className="css-17gv3xz-Button"
         data-testid="button"
         disabled={false}
       >
         <span
-          className="css-9nhvja-Button"
+          className="css-1xr6sam-Button"
         >
-          Hello world
-        </span>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <button
-        className="css-1npfjgt-Button"
-        data-testid="button"
-        disabled={false}
-      >
-        <span
-          className="css-9nhvja-Button"
-        >
-          Hello world
-        </span>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <button
-        className="css-9usu1j-Button"
-        data-testid="button"
-        disabled={false}
-      >
-        <span
-          className="css-9nhvja-Button"
-        >
-          Hello world
+          Magenta 200
         </span>
       </button>
     </div>
@@ -177,12 +139,12 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
       }
     >
       <button
-        className="css-1xdbx2g-Button"
+        className="css-gajiax-Button"
         data-testid="button"
         disabled={false}
       >
         <span
-          className="css-9nhvja-Button"
+          className="css-1xr6sam-Button"
         >
           Hello world
         </span>
@@ -196,12 +158,12 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
       }
     >
       <button
-        className="css-1i0lxzi-Button"
+        className="css-199vak6-Button"
         data-testid="button"
         disabled={false}
       >
         <span
-          className="css-9nhvja-Button"
+          className="css-1xr6sam-Button"
         >
           Hello world
         </span>
@@ -215,12 +177,146 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
       }
     >
       <button
-        className="css-poqihd-Button"
+        className="css-isvu07-Button"
         data-testid="button"
         disabled={false}
       >
         <span
-          className="css-9nhvja-Button"
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Button Types 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-n6xd71-Button"
+        data-testid="button"
+        disabled={true}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Disabled
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-41v6xr-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-cbt92p-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-isvu07-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-3r514x-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
         >
           Hello world
         </span>
@@ -262,26 +358,103 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
        on
     </button>
   </div>
-  <button
-    className="css-1pid8fm-Button"
-    data-testid="button"
-    disabled={false}
+  <div
+    className="css-ptimel-Stack"
   >
-    <span
-      className="css-1yy8u54-Button"
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
-      <div
-        className="css-hy13us-Button"
+      <button
+        className="css-gajiax-Button"
+        data-testid="button"
+        disabled={false}
       >
-        <img
-          height="16"
-          src="https://brandmark.io/logo-rank/random/pepsi.png"
-          width="16"
-        />
-      </div>
-      Hello world
-    </span>
-  </button>
+        <span
+          className="css-1xr6sam-Button"
+        >
+          <span
+            className="css-1rxmeo4-Button"
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </span>
+          Hello world
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-gajiax-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          Hello world
+          <span
+            className="css-18427g8-Button"
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-gajiax-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          <span
+            className="css-ozs6eh-Button"
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </span>
+          Hello world
+          <span
+            className="css-ozs6eh-Button"
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
@@ -318,12 +491,12 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
     </button>
   </div>
   <button
-    className="css-usr5zn-Button"
+    className="css-dosqfx-Button"
     data-testid="button"
     disabled={false}
   >
     <span
-      className="css-9nhvja-Button"
+      className="css-1xr6sam-Button"
     >
       change me!
     </span>
@@ -374,22 +547,22 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       }
     >
       <button
-        className="css-1pid8fm-Button"
+        className="css-gajiax-Button"
         data-testid="button-size-lg"
         disabled={false}
       >
         <span
-          className="css-1yy8u54-Button"
+          className="css-1xr6sam-Button"
         >
-          <div
-            className="css-hy13us-Button"
+          <span
+            className="css-1rxmeo4-Button"
           >
             <img
               height="16"
               src="https://brandmark.io/logo-rank/random/pepsi.png"
               width="16"
             />
-          </div>
+          </span>
           Hello world
         </span>
       </button>
@@ -402,22 +575,22 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       }
     >
       <button
-        className="css-19cl32s-Button"
+        className="css-199vak6-Button"
         data-testid="button-size-md"
         disabled={false}
       >
         <span
-          className="css-1yy8u54-Button"
+          className="css-1xr6sam-Button"
         >
-          <div
-            className="css-hy13us-Button"
+          <span
+            className="css-1rxmeo4-Button"
           >
             <img
               height="16"
               src="https://brandmark.io/logo-rank/random/pepsi.png"
               width="16"
             />
-          </div>
+          </span>
           Hello world
         </span>
       </button>
@@ -430,22 +603,22 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       }
     >
       <button
-        className="css-1qxrlsw-Button"
+        className="css-isvu07-Button"
         data-testid="button-size-sm"
         disabled={false}
       >
         <span
-          className="css-1yy8u54-Button"
+          className="css-1xr6sam-Button"
         >
-          <div
-            className="css-1qy2jjj-Button"
+          <span
+            className="css-1rxmeo4-Button"
           >
             <img
               height="16"
               src="https://brandmark.io/logo-rank/random/pepsi.png"
               width="16"
             />
-          </div>
+          </span>
           Hello world
         </span>
       </button>
@@ -487,12 +660,12 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
     </button>
   </div>
   <button
-    className="css-b5nte3-Button"
+    className="css-123k3g3-Button"
     data-testid="button"
     disabled={false}
   >
     <span
-      className="css-9nhvja-Button"
+      className="css-1xr6sam-Button"
     >
       Hello world
     </span>
@@ -533,12 +706,12 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
     </button>
   </div>
   <button
-    className="css-1xdbx2g-Button"
+    className="css-gajiax-Button"
     data-testid="button"
     disabled={false}
   >
     <span
-      className="css-9nhvja-Button"
+      className="css-1xr6sam-Button"
     >
       Hello world
     </span>

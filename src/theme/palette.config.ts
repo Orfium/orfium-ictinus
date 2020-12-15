@@ -21,8 +21,8 @@ export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
 
 export const lightPaletteConfig: PaletteConfig = {
   // Primary Palette
-  primary: flatPaletteConfig.lightGray,
-  secondary: flatPaletteConfig.darkGray,
+  primary: flatPaletteConfig.darkBlue,
+  secondary: flatPaletteConfig.yellow,
 
   branded1: flatPaletteConfig.orange,
   branded2: flatPaletteConfig.yellow,
