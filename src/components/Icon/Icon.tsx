@@ -5,7 +5,6 @@ import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyle, iconStyle } from './Icon.style';
 import { AcceptedIconNames } from './types';
-import { ColorConfig } from '../TextField/TextField.style';
 
 export type Props = {
   /** This property defines witch icon to use */
@@ -14,16 +13,14 @@ export type Props = {
   color?: AcceptedColorComponentTypes | string;
   /** Property indicating the size of the icon. Defaults to 16 */
   size?: number;
-  /** Property indicating the color type and the variant to pick icon color  from swatches*/
-  colorConfig?: ColorConfig;
 };
 
-const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16, colorConfig }) => {
+const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16 }) => {
   const Icon = iconSelector[name];
 
   return (
     <span css={iconContainerStyle()}>
-      <Icon css={iconStyle({ color, size, colorConfig })} />
+      <Icon css={iconStyle({ color, size })} />
     </span>
   );
 };

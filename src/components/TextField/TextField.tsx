@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import {
-  ColorConfig,
   DEFAULT_COLOR_CONFIG,
   errorMsgStyle,
   generateTextFieldColors,
@@ -55,10 +54,6 @@ export type Props = {
   fill?: typeof flatColors[number];
   /** Sets the background color's shade of the textField*/
   fillShade?: typeof colorShades[number];
-  /** An optional functional component that will receive a icon color from swatches as prop
-   * Render Props Pattern: LeftIconWithSwatches={({colorConfig}) => <Icon color={'inherit'} colorConfig={colorConfig} />}
-   * */
-  LeftIconWithSwatches?: FC<{ colorConfig: ColorConfig }>;
 };
 
 const TextField: React.FC<Props> = ({
@@ -84,7 +79,6 @@ const TextField: React.FC<Props> = ({
   size = DEFAULT_SIZE,
   fill = DEFAULT_COLOR_CONFIG.fill,
   fillShade = DEFAULT_COLOR_CONFIG.fillShade,
-  LeftIconWithSwatches,
   ...rest
 }) => {
   const textFieldColors = generateTextFieldColors({ fill, fillShade });
@@ -96,13 +90,8 @@ const TextField: React.FC<Props> = ({
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
         <div css={wrapperStyle({ textFieldColors, disabled, error, lean, styleType })}>
-          <div css={textFieldStyle({ size, label, leftIcon, LeftIconWithSwatches })}>
+          <div css={textFieldStyle({ size, label, leftIcon })}>
             {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
-            {LeftIconWithSwatches && (
-              <IconWrapper>
-                <LeftIconWithSwatches colorConfig={{ fill, fillShade }} />
-              </IconWrapper>
-            )}
             <input
               css={inputStyle({ textFieldColors, label, placeholder })}
               placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}

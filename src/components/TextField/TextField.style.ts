@@ -5,7 +5,7 @@ import { Theme } from '../../theme';
 import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
 
-export type ColorConfig = {
+type ColorConfig = {
   fill: typeof flatColors[number];
   fillShade: typeof colorShades[number];
 };
@@ -127,19 +127,16 @@ export const wrapperStyle = ({
   `}
 `;
 
-export const textFieldStyle = ({
-  size = DEFAULT_SIZE,
-  label = '',
-  leftIcon,
-  LeftIconWithSwatches,
-}: Props) => (theme: Theme): SerializedStyles => {
+export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Props) => (
+  theme: Theme
+): SerializedStyles => {
   return css`
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     vertical-align: top;
     width: fill-available;
-    ${getTextFieldSize(theme, label, Boolean(leftIcon || LeftIconWithSwatches))[size]}
+    ${getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
   `;
 };
 
