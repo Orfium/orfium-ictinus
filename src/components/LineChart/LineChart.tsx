@@ -29,7 +29,7 @@ export type Props = {
 
 const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, color }) => {
   const theme = useTheme();
-  console.log(theme);
+
   const uniqueKeyNames = useMemo(() => getKeyNames(data), [data]);
 
   const colorsPicked = useMemo(

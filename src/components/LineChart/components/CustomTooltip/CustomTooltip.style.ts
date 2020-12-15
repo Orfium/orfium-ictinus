@@ -4,11 +4,11 @@ import { Theme } from 'theme';
 export const tooltipStyle = () => (theme: Theme) => {
   return {
     fontSize: theme.typography.fontSizes['14'],
-    padding: rem(8),
+    padding: theme.spacing.sm,
     color: theme.palette.white,
     background: theme.utils.getColor('darkGray', 600),
     opacity: '90%',
-    borderRadius: '4px',
+    borderRadius: theme.spacing.xsm,
     minWidth: rem(200),
     whiteSpace: 'nowrap' as const,
   };
@@ -16,7 +16,7 @@ export const tooltipStyle = () => (theme: Theme) => {
 
 export const tooltipHrStyle = () => (theme: Theme) => {
   return {
-    margin: '17px 0px 13px 0px',
+    margin: `${theme.spacing.md} 0px`,
     height: '1px',
     borderWidth: 0,
     backgroundColor: theme.palette.white,
@@ -35,7 +35,7 @@ export const tooltipLiStyle = () => (theme: Theme) => {
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
-    height: '16px',
-    padding: '2px 0px',
+    height: theme.spacing.md,
+    padding: `0px 0px 2px`,
   };
 };
