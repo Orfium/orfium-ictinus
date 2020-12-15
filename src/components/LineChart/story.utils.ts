@@ -44,13 +44,13 @@ export const initData = [
 
 export const color = (dataLabel: string) => {
   if (dataLabel === 'hidden') {
-    return 'darkBlue';
+    return '#00008B';
   }
   if (dataLabel === 'claimed') {
-    return 'orange';
+    return '#FFA500';
   }
   if (dataLabel === 'amt') {
-    return 'red';
+    return '#FF0000';
   }
 
   return '';

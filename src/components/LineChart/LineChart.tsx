@@ -9,15 +9,10 @@ import {
   Legend,
   ResponsiveContainer,
 } from 'recharts';
-import { omit, keys, flatten, uniq, sampleSize } from 'lodash';
 import useTheme from '../../hooks/useTheme';
 import GradientLine from './components/GradientLine';
 import CustomTooltip from './components/CustomTooltip';
-
-type Data = {
-  name: string;
-  [prop: string]: number | string | undefined;
-};
+import { Data, getKeyNames, colorPicker } from './utils';
 
 export type Props = {
   /** This property defines the data to be shown in the Line Chart */
@@ -34,24 +29,16 @@ export type Props = {
 
 const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, color }) => {
   const theme = useTheme();
+  console.log(theme);
+  const uniqueKeyNames = useMemo(() => getKeyNames(data), [data]);
 
-  const uniqueKeyNames = useMemo(() => {
-    return uniq(flatten(data.map(object => keys(omit(object, 'name')))));
-  }, [data]);
+  const colorsPicked = useMemo(
+    () => colorPicker({ theme, uniqueKeyNames, color }),
 
-  const colorPicker = useMemo(() => {
-    const colorSample = sampleSize(theme.palette.flat, uniqueKeyNames.length);
+    [theme, uniqueKeyNames, color]
+  );
 
-    return uniqueKeyNames.reduce<Record<string, string>>((acc, key, index) => {
-      const definedColor =
-        typeof color === 'function' && color(key) ? color(key) : colorSample[index]?.[400];
-      acc[key] = definedColor;
-
-      return acc;
-    }, {});
-  }, [uniqueKeyNames, theme, color]);
-
-  const colors = Object.entries(colorPicker);
+  const colors = Object.entries(colorsPicked);
 
   return uniqueKeyNames.length <= Object.keys(theme.palette.flat).length ? (
     <Wrapper data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }}>
