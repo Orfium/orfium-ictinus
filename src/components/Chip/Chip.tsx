@@ -3,7 +3,6 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import { iconWrapperStyle, wrapperStyle } from './Chip.style';
 import { colorShades, flatColors } from 'theme/palette';
-import { flexCenterVertical } from 'theme/functions';
 import { TestId } from 'utils/types';
 import { generateTestDataId } from 'utils/helpers';
 
@@ -49,23 +48,21 @@ const Chip: React.FC<Props & TestProps> = ({
   children,
 }) => {
   return (
-    <div css={[flexCenterVertical]}>
-      <div
-        data-testid={generateTestDataId('chip', dataTestId)}
-        css={wrapperStyle({ styleType, size, fill, shade, leftIcon, rightIcon })}
-      >
-        {leftIcon && (
-          <div onClick={leftIconHandler} css={iconWrapperStyle(size, leftIconHandler)}>
-            {leftIcon}
-          </div>
-        )}
-        <div>{children}</div>
-        {rightIcon && (
-          <div onClick={rightIconHandler} css={iconWrapperStyle(size, rightIconHandler)}>
-            {rightIcon}
-          </div>
-        )}
-      </div>
+    <div
+      data-testid={generateTestDataId('chip', dataTestId)}
+      css={wrapperStyle({ styleType, size, fill, shade, leftIcon, rightIcon })}
+    >
+      {leftIcon && (
+        <div onClick={leftIconHandler} css={iconWrapperStyle(size, leftIconHandler)}>
+          {leftIcon}
+        </div>
+      )}
+      <div>{children}</div>
+      {rightIcon && (
+        <div onClick={rightIconHandler} css={iconWrapperStyle(size, rightIconHandler)}>
+          {rightIcon}
+        </div>
+      )}
     </div>
   );
 };

@@ -73,6 +73,7 @@ export const wrapperStyle = ({ styleType, size, fill, shade, leftIcon, rightIcon
   padding-left: ${leftIcon ? 'inherit' : rem(8)};
   padding-right: ${rightIcon ? 'inherit' : rem(8)};
   ${wrapperStyleSwitch(theme, styleType, fill, shade)};
+  width: fit-content;
 `;
 
 export const iconWrapperStyle = (
