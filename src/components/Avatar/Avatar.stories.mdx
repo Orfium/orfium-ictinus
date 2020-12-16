@@ -1,0 +1,63 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import Avatar from './Avatar';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/Avatar" component={Avatar} />
+
+# Avatar
+
+A universal Avatar component cam be found around ictinus on menus or can be a standalone component as well. It renders either images, letter or icon from our library
+
+# Usage
+
+```js
+import { Avatar } from '@orfium/ictinus';
+
+<Avatar src={'https://material-ui.com/static/images/avatar/1.jpg'}>PV</Avatar>;
+```
+
+# Props
+
+<Props of={Avatar} />
+
+# Avatar with icon
+
+Avatar with icon
+
+<Preview>
+  <Story name="Avatar with icon">
+    <Stack>
+      <Avatar size={'sm'} fill={'magenta'} iconName={'user'} />
+      <Avatar size={'md'} fill={'lightBlue'} fillShade={100} iconName={'user'} />
+      <Avatar size={'lg'} iconName={'user'} />
+    </Stack>
+  </Story>
+</Preview>
+
+# Avatar with letter
+
+Avatar with letter
+
+<Preview>
+  <Story name="Avatar with letter">
+    <Stack>
+      <Avatar size={'sm'} fill={'magenta'}>CZ</Avatar>
+      <Avatar size={'md'} fill={'lightBlue'} fillShade={100}>GR</Avatar>
+      <Avatar size={'lg'}>G</Avatar>
+    </Stack>
+  </Story>
+</Preview>
+
+# Avatar with src
+
+Avatar with src
+
+<Preview>
+  <Story name="Avatar with src">
+    <Stack>
+      <Avatar size={'sm'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
+      <Avatar size={'md'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>GR</Avatar>
+      <Avatar size={'lg'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>G</Avatar>
+    </Stack>
+  </Story>
+</Preview>
