@@ -1,5 +1,217 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/Menu Menu with avatar and different button colour 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-6mpaj4-Menu"
+        >
+          <button
+            className="css-8yaow6-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span
+              className="css-1xr6sam-Button"
+            >
+              <span
+                className="css-1kner5m-Button"
+              >
+                <div
+                  className="css-t06fj3-Avatar"
+                >
+                  
+                  TC
+                </div>
+              </span>
+              <span
+                className="css-1qy2jjj-Button"
+              >
+                <span>
+                  Tom Cruise
+                </span>
+              </span>
+              <span
+                className="css-1kner5m-Button"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-14m0jd5-Icon"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-6mpaj4-Menu"
+        >
+          <button
+            className="css-8yaow6-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span
+              className="css-1xr6sam-Button"
+            >
+              <span
+                className="css-1kner5m-Button"
+              >
+                <div
+                  className="css-t06fj3-Avatar"
+                >
+                  <img
+                    src="https://material-ui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+              </span>
+              <span
+                className="css-1qy2jjj-Button"
+              >
+                <span>
+                  Tom Cruise
+                </span>
+              </span>
+              <span
+                className="css-1kner5m-Button"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-14m0jd5-Icon"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-6mpaj4-Menu"
+        >
+          <button
+            className="css-8yaow6-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span
+              className="css-1xr6sam-Button"
+            >
+              <span
+                className="css-1kner5m-Button"
+              >
+                <div
+                  className="css-t06fj3-Avatar"
+                >
+                  
+                  <span
+                    className="css-1gnbc76-Icon"
+                  >
+                    <span
+                      className="css-lhv1r1-Icon"
+                    />
+                  </span>
+                  
+                </div>
+              </span>
+              <span
+                className="css-1qy2jjj-Button"
+              >
+                <span>
+                  Tom Cruise
+                </span>
+              </span>
+              <span
+                className="css-1kner5m-Button"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-14m0jd5-Icon"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Menu Menu with option icon and different colour 1`] = `
 <div
   style={
@@ -36,10 +248,10 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
     role="button"
   >
     <div
-      className="css-4yevxh-Menu"
+      className="css-6mpaj4-Menu"
     >
       <button
-        className="css-7uez01-Button"
+        className="css-8yaow6-Button"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
@@ -47,17 +259,38 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
         <span
           className="css-1xr6sam-Button"
         >
-          <span>
-            More
+          <span
+            className="css-1kner5m-Button"
+          >
+            <div
+              className="css-t06fj3-Avatar"
+            >
+              
+              <span
+                className="css-1gnbc76-Icon"
+              >
+                <span
+                  className="css-lhv1r1-Icon"
+                />
+              </span>
+              
+            </div>
           </span>
           <span
-            className="css-18427g8-Button"
+            className="css-1qy2jjj-Button"
+          >
+            <span>
+              More
+            </span>
+          </span>
+          <span
+            className="css-1kner5m-Button"
           >
             <span
               className="css-1gnbc76-Icon"
             >
               <span
-                className="css-1liof1h-Icon"
+                className="css-14m0jd5-Icon"
               />
             </span>
           </span>
@@ -111,7 +344,7 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
       role="button"
     >
       <div
-        className="css-4yevxh-Menu"
+        className="css-6mpaj4-Menu"
       >
         <button
           className="css-199vak6-Button"
@@ -122,8 +355,12 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
           <span
             className="css-1xr6sam-Button"
           >
-            <span>
-              More
+            <span
+              className="css-l730ys-Button"
+            >
+              <span>
+                More
+              </span>
             </span>
           </span>
         </button>

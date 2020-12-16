@@ -3,7 +3,10 @@ import useTheme from 'hooks/useTheme';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import { flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
-import { calculateActualColorFromComponentProp, ColorShapeFromComponent } from '../utils/themeFunctions';
+import {
+  calculateActualColorFromComponentProp,
+  ColorShapeFromComponent,
+} from '../utils/themeFunctions';
 
 const defaultContextData = {
   typesShadesColor: {},

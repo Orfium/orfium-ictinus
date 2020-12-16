@@ -5,6 +5,11 @@ import { RequiredProperties } from '../../utils/common';
 import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
 import { Props } from '../Button/Button';
 
+export const wrapperStyle = () => () => css`
+  position: relative;
+  display: inline-block;
+`;
+
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
 const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {

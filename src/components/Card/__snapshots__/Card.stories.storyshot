@@ -32,22 +32,32 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
        on
     </button>
   </div>
-  <div>
+  <div
+    className="css-ptimel-Stack"
+  >
     <div
-      className="css-1o29upc-CardShowcase"
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
       <div
-        className="css-1ctmbk5-Card"
+        className="css-1o29upc-CardShowcase"
       >
         <div
-          className="css-1phqqj5-CardContent"
+          className="css-1ctmbk5-Card"
         >
-          <div>
-            Card with 01 elevation
+          <div
+            className="css-1phqqj5-CardContent"
+          >
+            <div>
+              Card with 01 elevation
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod
+            </p>
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod
-          </p>
         </div>
       </div>
     </div>

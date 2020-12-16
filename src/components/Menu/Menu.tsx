@@ -3,13 +3,16 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import useTheme from '../../hooks/useTheme';
 import { EventProps } from '../../utils/common';
-import { AcceptedColorComponentTypes, calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { MenuPositionAllowed, optionsStyle } from './Menu.style';
+import { MenuPositionAllowed, optionsStyle, wrapperStyle } from './Menu.style';
 import { pickTextColorFromSwatches } from '../../theme/palette';
+import isEmpty from 'lodash/isEmpty';
+import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import Avatar from '../Avatar';
 
 export type Props = {
   /** the color of the button based on our colors eg. red-400 */
@@ -32,6 +35,10 @@ export type Props = {
   leftIconName?: AcceptedIconNames;
   /** The size of the icon on the menu button */
   iconSize?: number;
+  avatar?: {
+    src: string;
+    letter: string;
+  };
 };
 
 export type TestProps = {
@@ -49,15 +56,16 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     rightIconName,
     leftIconName,
     iconSize = 16,
+    avatar,
   } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
-
-  const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={{ position: 'relative', display: 'inline-block' }}>
+      <div css={wrapperStyle()}>
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}
@@ -66,28 +74,20 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
             rightIconName ? (
               <Icon
                 name={rightIconName}
-                color={
-                  calculatedColor
-                    ? pickTextColorFromSwatches(calculatedColor?.color, calculatedColor?.shade)
-                    : buttonType === ('primary' || 'secondary')
-                    ? 'black'
-                    : 'white'
-                }
+                color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
                 size={iconSize}
               />
             ) : null
           }
           iconLeft={
-            leftIconName ? (
+            !isEmpty(avatar) ? (
+              <Avatar size={'xs'} src={avatar?.src} iconName={'user'}>
+                {avatar?.letter}
+              </Avatar>
+            ) : leftIconName ? (
               <Icon
                 name={leftIconName}
-                color={
-                  calculatedColor
-                    ? pickTextColorFromSwatches(calculatedColor?.color, calculatedColor?.shade)
-                    : buttonType === ('primary' || 'secondary')
-                    ? 'black'
-                    : 'white'
-                }
+                color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
                 size={iconSize}
               />
             ) : null

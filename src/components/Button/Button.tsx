@@ -3,7 +3,7 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes, calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
 import { buttonSpanStyle, buttonStyle, childrenWrapperStyle, iconStyle } from './Button.style';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
@@ -44,8 +44,8 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     onBlur,
   } = props;
 
-  const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
-  const { typesShadesColor } = useTypeColorToColorMatch();
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType(color, type);
 
   return (
     <button
@@ -60,7 +60,6 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         disabled,
         iconLeft,
         iconRight,
-        typesShadesColor,
         childrenCount: React.Children.count(children),
       })}
       onClick={onClick}
