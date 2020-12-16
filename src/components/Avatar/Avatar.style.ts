@@ -47,7 +47,7 @@ export const avatarStyle = ({
   background: ${theme.utils.getColor(fill, fillShade)};
   overflow: hidden;
   position: relative;
-  font-size: ${theme.typography.fontSizes[size === 'xs' ? '14' : '18']};
+  font-size: ${theme.typography.fontSizes[size === 'xs' ? '13' : '18']};
   align-items: center;
   flex-shrink: 0;
   line-height: 1;
