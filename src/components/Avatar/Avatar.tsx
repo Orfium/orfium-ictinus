@@ -18,25 +18,28 @@ export type Props = {
    * */
   size?: 'sm' | 'md' | 'lg';
   /** The color to pick from our palette
-   *  @default 'lightGray'
+   *  @default 'darkGray'
    * */
   fill?: typeof flatColors[number];
   /** The shade of the color that is picked
-   *  @default '400'
+   *  @default '300'
    * */
   fillShade?: typeof colorShades[number];
+  /** The class name of the avatar component if its styled **/
+  className?: string;
 };
 
 const Avatar: React.FC<Props> = ({
   src = '',
   iconName = 'user',
   size = 'md',
-  fill = 'lightGray',
-  fillShade = 400,
+  fill = 'darkGray',
+  fillShade = 300,
   children,
+  className,
 }) => {
   return (
-    <div css={avatarStyle({ src, iconName, size, fill, fillShade })}>
+    <div className={className} css={avatarStyle({ size, fill, fillShade })}>
       {src && <img src={src} />}
       {!src && !children && iconName && (
         <Icon color={pickTextColorFromSwatches(fill, fillShade)} name={iconName} size={20} />

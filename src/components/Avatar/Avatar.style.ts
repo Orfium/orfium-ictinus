@@ -1,10 +1,8 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './Avatar';
 import { Theme } from '../../theme';
 import { rem } from 'polished';
-import { RequiredProperties } from '../../utils/common';
 import { flex } from '../../theme/functions';
-import { pickTextColorFromSwatches } from '../../theme/palette';
+import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
 
 const sizeBasedOnProp = (size: 'sm' | 'md' | 'lg') => {
   if (size === 'sm') {
@@ -16,9 +14,15 @@ const sizeBasedOnProp = (size: 'sm' | 'md' | 'lg') => {
 
   return rem(56);
 };
-export const avatarStyle = ({ size, fill, fillShade }: RequiredProperties<Props>) => (
-  theme: Theme
-): SerializedStyles => css`
+export const avatarStyle = ({
+  size,
+  fill,
+  fillShade,
+}: {
+  size: 'sm' | 'md' | 'lg';
+  fill: typeof flatColors[number];
+  fillShade: typeof colorShades[number];
+}) => (theme: Theme): SerializedStyles => css`
   ${flex};
   width: ${sizeBasedOnProp(size)};
   height: ${sizeBasedOnProp(size)};
