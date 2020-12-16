@@ -2,9 +2,10 @@
 import { jsx } from '@emotion/core';
 import React from 'react';
 import { avatarStyle } from './Avatar.style';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
+import { pickTextColorFromSwatches } from '../../theme/palette';
 import { AcceptedIconNames } from '../Icon/types';
 import Icon from '../Icon';
+import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 
 export type Props = {
   /** the src of the image to show **/
@@ -16,33 +17,50 @@ export type Props = {
   /** The size of the avatar
    *  @default 'md'
    * */
-  size?: 'sm' | 'md' | 'lg';
-  /** The color to pick from our palette
-   *  @default 'darkGray'
+  size?: AvatarSizes;
+  /** the color of the button based on our colors eg. red-400
+   *  @default 'darkGray-400'
    * */
-  fill?: typeof flatColors[number];
-  /** The shade of the color that is picked
-   *  @default '300'
+  color?: string;
+  /** the shape of the avatar
+   *  @default 'circular'
    * */
-  fillShade?: typeof colorShades[number];
+  shape?: AvatarShapes;
   /** The class name of the avatar component if its styled **/
   className?: string;
 };
+
+export type AvatarSizes = 'xs' | 'sm' | 'md' | 'lg';
+export type AvatarShapes = 'regular' | 'rounded' | 'circular';
 
 const Avatar: React.FC<Props> = ({
   src = '',
   iconName = 'user',
   size = 'md',
-  fill = 'darkGray',
-  fillShade = 300,
+  color = 'lightGray-600',
+  shape = 'circular',
   children,
   className,
 }) => {
+  const calculatedColor = calculateActualColorFromComponentProp(color);
+
   return (
-    <div className={className} css={avatarStyle({ size, fill, fillShade })}>
+    <div
+      className={className}
+      css={avatarStyle({
+        shape,
+        size,
+        fill: calculatedColor.color,
+        fillShade: calculatedColor.shade,
+      })}
+    >
       {src && <img src={src} />}
       {!src && !children && iconName && (
-        <Icon color={pickTextColorFromSwatches(fill, fillShade)} name={iconName} size={20} />
+        <Icon
+          color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
+          name={iconName}
+          size={20}
+        />
       )}
       {!src && children}
     </div>
