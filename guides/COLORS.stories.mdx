@@ -1,4 +1,4 @@
-import { Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Meta } from '@storybook/addon-docs/blocks';
 import PaletteShowcase from '../src/components/storyUtils/PaletteShowcase';
 import ThemeWrapper from '../src/components/storyUtils/ThemeWrapper';
 
@@ -42,3 +42,26 @@ The color palette have some text color for each shade either black or white. Thi
 <ThemeWrapper>
   <PaletteShowcase />
 </ThemeWrapper>
+
+### COLOR STATES
+
+Each color state must follow some rules for lighten or darken the basic color. Rules are as follows
+
+- filled component with color
+
+  - for shades: 500 - 700 = we are lighten the basic color
+  - for shades: 100 - 400 = we are darken the basic color
+
+  based on the above we lighten or darken by these
+
+  - hover : 10%
+  - pressed: 20%
+
+- non filled component
+
+  - we are always using lighten
+
+  based on the above we lighten or darken by these
+
+  - hover: 60%
+  - pressed: 50%

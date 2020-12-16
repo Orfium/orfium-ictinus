@@ -56,8 +56,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}
-          iconAlign={showOptionIcon ? 'right' : undefined}
-          icon={
+          iconRight={
             showOptionIcon ? (
               <Icon
                 name={menuIconName}
