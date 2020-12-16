@@ -102,14 +102,20 @@ export const buttonSpanStyle = () => () => {
   };
 };
 
-export const iconStyle = ({
+export const iconStyle = () => () => ({
+  display: 'inline-flex',
+});
+
+export const childrenWrapperStyle = ({
   iconLeft,
   iconRight,
   hasChildren,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
+  const rightIconExists = hasChildren && iconRight;
+  const leftIconExists = hasChildren && iconLeft;
+
   return {
-    marginLeft: hasChildren && iconRight ? theme.spacing.sm : 0,
-    marginRight: hasChildren && iconLeft ? theme.spacing.sm : 0,
-    display: 'inline-flex',
+    marginLeft: leftIconExists ? theme.spacing.sm : 0,
+    marginRight: rightIconExists ? theme.spacing.sm : 0,
   };
 };
