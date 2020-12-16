@@ -1,24 +1,27 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import useTheme from '../../hooks/useTheme';
-import { EventProps } from '../../utils/common';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import useTheme from 'hooks/useTheme';
+import { EventProps } from 'utils/common';
+import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { MenuPositionAllowed, optionsStyle, wrapperStyle } from './Menu.style';
-import { pickTextColorFromSwatches } from '../../theme/palette';
+import { pickTextColorFromSwatches } from 'theme/palette';
 import isEmpty from 'lodash/isEmpty';
-import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import Avatar from '../Avatar';
+import { defineBackgroundColor } from '../Button/utils';
 
 export type Props = {
   /** the color of the button based on our colors eg. red-400 */
   color?: string;
   /** Items that are being declared as menu options */
   items?: string[];
+  /** Property indicating if the component is filled with a color based on the type */
+  filled?: boolean;
   /** Returns the items selected on the menu */
   selectedItem: string | null;
   /** A callback that is being triggered when an items has been clicked */
@@ -35,6 +38,7 @@ export type Props = {
   leftIconName?: AcceptedIconNames;
   /** The size of the icon on the menu button */
   iconSize?: number;
+  /** You can define the avatar properties here for src or letter if none then the user icon will be displayed if the object is not empty */
   avatar?: {
     src: string;
     letter: string;
@@ -54,6 +58,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     menuPosition = 'left',
     buttonType = 'primary',
     rightIconName,
+    filled = true,
     leftIconName,
     iconSize = 16,
     avatar,
@@ -62,6 +67,9 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
+  const iconColor = filled
+    ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+    : defineBackgroundColor(theme, calculatedColor, buttonType, true, true);
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
@@ -70,14 +78,9 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           onClick={() => setOpen(!open)}
           type={buttonType}
           color={color}
+          filled={filled}
           iconRight={
-            rightIconName ? (
-              <Icon
-                name={rightIconName}
-                color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
-                size={iconSize}
-              />
-            ) : null
+            rightIconName ? <Icon name={rightIconName} color={iconColor} size={iconSize} /> : null
           }
           iconLeft={
             !isEmpty(avatar) ? (
@@ -85,11 +88,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
                 {avatar?.letter}
               </Avatar>
             ) : leftIconName ? (
-              <Icon
-                name={leftIconName}
-                color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
-                size={iconSize}
-              />
+              <Icon name={leftIconName} color={iconColor} size={iconSize} />
             ) : null
           }
         >

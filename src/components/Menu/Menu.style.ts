@@ -2,66 +2,12 @@ import { css } from '@emotion/core';
 import { darken, rem } from 'polished';
 import { Theme } from '../../theme';
 import { RequiredProperties } from '../../utils/common';
-import { backgroundPickerBasedOnType, colorPickerBasedOnType } from '../../utils/themeFunctions';
 import { Props } from '../Button/Button';
 
 export const wrapperStyle = () => () => css`
   position: relative;
   display: inline-block;
 `;
-
-/** Calculates the button specific height based on the size passed to it
- * These sizes are specific to this button thus these are placed here and not in the config **/
-const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
-  switch (size) {
-    case 'lg':
-      return rem(56);
-    case 'sm':
-      return rem(40);
-    default:
-      return rem(46);
-  }
-};
-
-export const menuStyle = ({
-  type,
-  filled,
-  size,
-  iconLeft,
-  iconRight,
-  disabled,
-  childrenCount,
-}: RequiredProperties<Props & { childrenCount: number }>) => (theme: Theme) => {
-  const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
-  const calculatedPaddingSpaceIfIcon = size === 'sm' ? theme.spacing.sm : theme.spacing.md;
-
-  const defineBackgroundColor = (): string => {
-    if (childrenCount === 0 && (iconLeft || iconRight)) {
-      return 'transparent';
-    }
-
-    if (disabled) {
-      return theme.utils.getColor('lightGray', 100);
-    }
-
-    if (filled && childrenCount !== 0) {
-      return backgroundPickerBasedOnType(type)(theme);
-    }
-
-    return 'transparent';
-  };
-
-  return {
-    fontSize: theme.typography.fontSizes['16'],
-    color: disabled ? theme.utils.getColor('lightGray', 700) : colorPickerBasedOnType(type)(theme),
-    backgroundColor: defineBackgroundColor(),
-    paddingLeft: childrenCount === 0 ? 0 : calculatedPaddingSpace,
-    paddingRight: !childrenCount ? calculatedPaddingSpaceIfIcon : calculatedPaddingSpace,
-    height: heightBasedOnSize(size),
-    borderRadius: theme.spacing.xsm,
-    border: filled ? 'none' : `solid 1px ${theme.utils.getColor('lightGray', 700)}`,
-  };
-};
 
 export const buttonSpanStyle = ({
   size,

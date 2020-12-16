@@ -37,14 +37,33 @@ Menu with option icon (dots) and different button colour
 
 <Preview>
   <Story name="Menu with option icon and different colour">
-    <Menu
-      items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
-      buttonText={'More'}
-      buttonType={'warning'}
-      color={'darkGray-600'}
-      rightIconName={'dotsVertical'}
-      avatar={{ src: '', letter: '' }}
-    />
+    <Stack>
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'More'}
+        buttonType={'warning'}
+        color={'darkGray-600'}
+        rightIconName={'dotsVertical'}
+        avatar={{ src: '', letter: '' }}
+      />
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'More'}
+        buttonType={'warning'}
+        color={'darkGray-100'}
+        rightIconName={'dotsVertical'}
+        avatar={{ src: '', letter: '' }}
+      />
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'More'}
+        buttonType={'warning'}
+        filled={false}
+        color={'darkGray-600'}
+        rightIconName={'dotsVertical'}
+        avatar={{ src: '', letter: '' }}
+      />
+    </Stack>
   </Story>
 </Preview>
 

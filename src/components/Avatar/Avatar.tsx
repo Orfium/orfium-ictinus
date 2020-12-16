@@ -59,7 +59,7 @@ const Avatar: React.FC<Props> = ({
         <Icon
           color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
           name={iconName}
-          size={20}
+          size={size === 'xs' ? 18 : 20}
         />
       )}
       {!src && children}
