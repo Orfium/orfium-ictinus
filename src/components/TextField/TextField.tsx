@@ -2,7 +2,9 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import {
+  DEFAULT_COLOR_CONFIG,
   errorMsgStyle,
+  generateTextFieldColors,
   iconWrapperStyle,
   indicatorStyle,
   inputStyle,
@@ -11,7 +13,9 @@ import {
 } from './TextField.style';
 import Label from '../Label';
 import Icon from '../Icon';
-import { formFieldStyles } from 'theme/palette';
+import { colorShades, flatColors, formFieldStyles } from 'theme/palette';
+import { DEFAULT_SIZE } from '../../utils/size-utils';
+import { FC } from 'react';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -34,8 +38,6 @@ export type Props = {
   errorMsg?: React.ReactNode | string;
   /** value of the input */
   value?: string | number;
-  /** type of the input */
-  type?: string;
   /** if the input will be without default style for use inside the library */
   lean?: boolean;
   /** Style of input field */
@@ -46,6 +48,12 @@ export type Props = {
   withErrorMsg?: boolean;
   /** If the text field has an indicator */
   withIndicator?: boolean;
+  /** Sets the size of the textField */
+  size?: 'md' | 'sm';
+  /** Sets the background color of the textField*/
+  fill?: typeof flatColors[number];
+  /** Sets the background color's shade of the textField*/
+  fillShade?: typeof colorShades[number];
 };
 
 const TextField: React.FC<Props> = ({
@@ -68,16 +76,24 @@ const TextField: React.FC<Props> = ({
   success = false,
   withErrorMsg = false,
   withIndicator = false,
+  size = DEFAULT_SIZE,
+  fill = DEFAULT_COLOR_CONFIG.fill,
+  fillShade = DEFAULT_COLOR_CONFIG.fillShade,
   ...rest
 }) => {
+  const textFieldColors = generateTextFieldColors({ fill, fillShade });
+  const IconWrapper: FC = ({ children }) => (
+    <div css={iconWrapperStyle({ textFieldColors, rightIcon })}>{children}</div>
+  );
+
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ disabled, error, lean, styleType })}>
-          <div css={textFieldStyle({ label, leftIcon })}>
-            {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })}>{leftIcon}</div>}
+        <div css={wrapperStyle({ textFieldColors, disabled, error, lean, styleType })}>
+          <div css={textFieldStyle({ size, label, leftIcon })}>
+            {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
             <input
-              css={inputStyle({ label, placeholder })}
+              css={inputStyle({ textFieldColors, label, placeholder })}
               placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
               required={required}
               id={id}
@@ -86,6 +102,7 @@ const TextField: React.FC<Props> = ({
             />
             {label && (
               <Label
+                size={size}
                 error={error}
                 htmlFor={id}
                 label={label}
@@ -94,7 +111,9 @@ const TextField: React.FC<Props> = ({
               />
             )}
             {rightIcon && (
-              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{rightIcon}</div>
+              <div css={iconWrapperStyle({ textFieldColors, label, rightIcon, leftIcon })}>
+                {rightIcon}
+              </div>
             )}
           </div>
         </div>
