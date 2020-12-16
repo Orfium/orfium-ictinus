@@ -89,7 +89,7 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
   width: ${rem(148)};
   height: auto;
   background-color: ${theme.palette.white};
-  box-shadow: 0px 0px ${rem(16)} grey;
+  box-shadow: ${theme.elevation['02']};
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
