@@ -1,5 +1,88 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          className="css-12qr1pz-TextField"
+        >
+          <div
+            className="css-yzthsf-TextField"
+          >
+            <div
+              className="css-11hzh72-TextField"
+            >
+              <div
+                className="css-8lp52w-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                >
+                  <span
+                    className="css-1k5aruc-Icon"
+                  />
+                </span>
+              </div>
+              <input
+                className="css-jo6z7m-TextField"
+                placeholder="label"
+                required={false}
+              />
+              <label
+                className="css-1qcp0f-Label"
+              >
+                label
+                 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/TextField Text Field with Label 1`] = `
 <div
   style={
