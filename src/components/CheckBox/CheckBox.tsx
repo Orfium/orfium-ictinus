@@ -24,6 +24,8 @@ export type Props = {
   filled?: boolean;
   /** The data test id if needed */
   dataTestIdSuffix?: TestId;
+  /** Disables auto generated id for snapshots*/
+  mockId?: string;
 };
 
 const CheckBox: React.FC<Props> = ({
@@ -34,6 +36,7 @@ const CheckBox: React.FC<Props> = ({
   intermediate = false,
   dataTestIdSuffix,
   filled = true,
+  mockId,
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
 
@@ -41,7 +44,7 @@ const CheckBox: React.FC<Props> = ({
     setIsChecked(checked);
   }, [checked]);
 
-  const id = generateUniqueID();
+  const id = mockId || generateUniqueID();
 
   const handleInputChange = (event: ChangeEvent) => {
     const newChecked = !isChecked;
