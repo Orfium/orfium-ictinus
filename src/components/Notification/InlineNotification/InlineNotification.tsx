@@ -7,9 +7,9 @@ import { TestId } from '../../../utils/types';
 
 export type Props = {
   /** Show notification icon based on the type */
-  withIcon: boolean;
+  withIcon?: boolean;
   /** Use color filling */
-  withFilling: boolean;
+  withFilling?: boolean;
   /** The informative message of the Notification */
   message: string;
   /** The type of the Notification */
