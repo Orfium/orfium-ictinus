@@ -5,19 +5,10 @@ import { transition } from '../../theme/functions';
 import { ToastType } from './Toast';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { isNotificationTypes } from './Toast';
+import { mainTypes } from '../../theme/palette';
 
 const isAcceptedComponentTypes = (type: string): type is AcceptedColorComponentTypes => {
-  return [
-    'primary',
-    'secondary',
-    'branded1',
-    'branded2',
-    'success',
-    'error',
-    'warning',
-    'info',
-    'light',
-  ].includes(type);
+  return mainTypes.includes(type as AcceptedColorComponentTypes);
 };
 
 const widthOptions = {
