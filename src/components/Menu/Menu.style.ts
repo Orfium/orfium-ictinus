@@ -37,21 +37,20 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
   top: ${rem(48)};
   left: ${menuPosition === 'left' ? 0 : 'initial'};
   right: 0;
-  width: ${rem(148)};
+  min-width: ${rem(145)};
+  width: 100%;
   height: auto;
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   text-align: center;
   border-radius: ${rem(4)};
   z-index: 1;
   & > button {
     padding: ${rem(8)} 0;
     height: ${rem(48)};
-    margin-left: 0;
     font-size: ${theme.typography.fontSizes['14']};
+    display: block;
+    width: 100%;
   }
 
   & > button:hover {
