@@ -6,27 +6,27 @@ import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/
 import { AvatarShapes, AvatarSizes } from './Avatar';
 
 const sizeBasedOnProp = (size: AvatarSizes) => {
-  if (size === 'sm') {
-    return rem(40);
+  switch (size) {
+    case 'sm':
+      return rem(40);
+    case 'md':
+      return rem(46);
+    case 'xs':
+      return rem(24);
+    default:
+      return rem(56);
   }
-  if (size === 'md') {
-    return rem(46);
-  }
-  if (size === 'xs') {
-    return rem(24);
-  }
-
-  return rem(56);
 };
-const shapeBasedOnProp = (shape: AvatarShapes) => {
-  if (shape === 'rounded') {
-    return rem(4);
-  }
-  if (shape === 'circular') {
-    return '100%';
-  }
 
-  return rem(8);
+const shapeBasedOnProp = (shape: AvatarShapes) => {
+  switch (shape) {
+    case 'rounded':
+      return rem(4);
+    case 'circular':
+      return '100%';
+    default:
+      return rem(8);
+  }
 };
 
 export const avatarStyle = ({
