@@ -25,7 +25,7 @@ export type Props = {
 };
 
 const InlineNotification: React.FC<Props> = ({
-  withIcon = true,
+  withIcon = false,
   withFilling = false,
   message,
   type,

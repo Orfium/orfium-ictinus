@@ -27,7 +27,7 @@ export type Props = {
 };
 
 const Banner: React.FC<Props> = ({
-  withIcon = true,
+  withIcon = false,
   withFilling = false,
   title,
   message,
