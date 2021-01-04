@@ -6,7 +6,6 @@ import '@testing-library/jest-dom';
 describe('Generic Toast', () => {
   const data = {
     message: 'message',
-    type: 'generic',
   };
 
   test('Generic Toast with simple visual renders correctly', async () => {

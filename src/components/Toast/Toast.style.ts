@@ -2,14 +2,8 @@ import { Theme } from '../../theme';
 import { rem, transparentize } from 'polished';
 import { css, SerializedStyles } from '@emotion/core';
 import { transition } from '../../theme/functions';
-import { ToastType } from './Toast';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { isNotificationTypes } from './Toast';
-import { mainTypes } from '../../theme/palette';
-
-const isAcceptedComponentTypes = (type: string): type is AcceptedColorComponentTypes => {
-  return mainTypes.includes(type as AcceptedColorComponentTypes);
-};
 
 const widthOptions = {
   notification: `width: ${rem(336)};`,
@@ -21,7 +15,9 @@ const maxHeightOptions = {
   generic: `max-height: none;`,
 };
 
-export const toastContainer = (type: string) => (theme: Theme): SerializedStyles => css`
+export const toastContainer = (type: AcceptedColorComponentTypes) => (
+  theme: Theme
+): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -31,15 +27,15 @@ export const toastContainer = (type: string) => (theme: Theme): SerializedStyles
   box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
 `;
 
-export const topContainer = (type: ToastType) => (theme: Theme): SerializedStyles => css`
+export const topContainer = (type: AcceptedColorComponentTypes) => (
+  theme: Theme
+): SerializedStyles => css`
   color: ${theme.palette.white};
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   height: ${rem(58)};
-  background: ${isAcceptedComponentTypes(type)
-    ? theme.utils.getColor(type, 400, 'normal')
-    : theme.utils.getColor('darkGray', 700)};
+  background: ${theme.utils.getColor(type, 400, 'normal')};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
@@ -64,7 +60,7 @@ export const chevronIconContainer = (expanded: boolean) => (): SerializedStyles 
   ${transition(0.2)}
 `;
 
-export const expandedContainer = (type: string, isExpanded: boolean) => (
+export const expandedContainer = (type: AcceptedColorComponentTypes, isExpanded: boolean) => (
   theme: Theme
 ): SerializedStyles => css`
   ${transition(0.1)};

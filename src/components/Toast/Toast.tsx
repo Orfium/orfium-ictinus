@@ -19,13 +19,11 @@ import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
 import { generateTestDataId } from '../../utils/helpers';
 
-export type ToastType = AcceptedColorComponentTypes | string;
-
 export type Props = {
   /** The informative message of the Toast */
   message: string;
   /** The type of the Toast, will determine the color and the icon */
-  type: ToastType;
+  type?: AcceptedColorComponentTypes;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
@@ -42,7 +40,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
 
 const Toast: React.FC<Props> = ({
   message,
-  type,
+  type = 'branded1',
   closeCTA,
   expanded = false,
   children,
