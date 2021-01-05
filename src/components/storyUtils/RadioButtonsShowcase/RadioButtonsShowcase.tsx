@@ -2,7 +2,7 @@ import Radio from 'components/Radio';
 import React, { ReactEventHandler, useState } from 'react';
 
 function RadioButtonsShowcase() {
-  const [selectedValue, setSelectedValue] = useState('b');
+  const [selectedValue, setSelectedValue] = useState('c');
 
   const handleChange: ReactEventHandler = event => {
     setSelectedValue((event.target as HTMLInputElement).value);
@@ -11,9 +11,17 @@ function RadioButtonsShowcase() {
   return (
     <div>
       <Radio checked={selectedValue === 'a'} value={'a'} onChange={handleChange} />
-      <Radio checked={selectedValue === 'b'} value={'b'} onChange={handleChange} />
-      <Radio checked={selectedValue === 'e'} value={'e'} onChange={handleChange} disabled />
-      <Radio checked={true} value={'f'} onChange={handleChange} disabled />
+      <Radio checked={selectedValue === 'b'} value={'b'} onChange={handleChange} filled={false} />
+      <Radio checked={selectedValue === 'c'} value={'c'} onChange={handleChange} />
+      <Radio checked={selectedValue === 'd'} value={'d'} onChange={handleChange} disabled />
+      <Radio
+        checked={selectedValue === 'e'}
+        value={'e'}
+        onChange={handleChange}
+        disabled
+        filled={false}
+      />
+      <Radio checked={true} value={'g'} onChange={handleChange} disabled />
     </div>
   );
 }

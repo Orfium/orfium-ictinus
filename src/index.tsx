@@ -1,13 +1,15 @@
 import * as themeFunctions from './theme/functions';
-import * as palette from './theme/palette';
-import * as spacing from './theme/spacing';
-import * as typography from './theme/typography';
-
 // Types
+import * as palette from './theme/palette';
 import { Palette } from './theme/palette';
+import * as spacing from './theme/spacing';
 import { Spacing } from './theme/spacing';
+import * as typography from './theme/typography';
 import { Typography } from './theme/typography';
+import * as elevation from './theme/elevation';
+import { Elevation } from './theme/elevation';
 
+export { default as Card } from './components/Card';
 export { default as TopNavBar } from './components/TopAppBar';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
@@ -17,6 +19,10 @@ export { default as ExpandCollapse } from './components/ExpandCollapse';
 export { default as Icon } from './components/Icon';
 export { default as IconButton } from './components/IconButton';
 export { default as Menu } from './components/Menu';
+export { default as Avatar } from './components/Avatar';
+export { default as InlineNotification } from './components/Notification/InlineNotification';
+export { default as Banner } from './components/Notification/Banner';
+export { default as NotificationsContainer } from './components/Notification/NotificationsContainer';
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';
@@ -28,4 +34,14 @@ export { default as useTheme } from './hooks/useTheme';
 
 export { Theme, default as themeConfig } from './theme';
 export { AcceptedColorComponentTypes } from './utils/themeFunctions';
-export { themeFunctions, palette, spacing, typography, Spacing, Palette, Typography };
+export {
+  themeFunctions,
+  palette,
+  spacing,
+  typography,
+  elevation,
+  Spacing,
+  Palette,
+  Typography,
+  Elevation,
+};

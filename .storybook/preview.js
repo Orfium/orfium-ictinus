@@ -1,11 +1,8 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
-import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
-import { css, Global } from '@emotion/core';
-import { normalize } from 'polished';
 
 const viewPorts = {
   laptopLg: {
@@ -56,7 +53,7 @@ const ThemeSwitcher = () => {
 export const decorators = [
   Story => {
     return (
-      <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
+      <ThemeProvider>
         <ThemeSwitcher />
         <Story />
       </ThemeProvider>

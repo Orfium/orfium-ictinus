@@ -1,14 +1,20 @@
-import { Meta, Preview } from '@storybook/addon-docs/blocks';
+import { Meta } from '@storybook/addon-docs/blocks';
+import PaletteShowcase from '../src/components/storyUtils/PaletteShowcase';
+import ThemeWrapper from '../src/components/storyUtils/ThemeWrapper';
 
 <Meta title="Guide/Colors" />
 
-# COLORS
+# COLORS<br/><br/>
 
 ### PALETTE
 
+The palette is a collection of colors that has being designed with colors that work harmoniously with each other
+
+### SHADES
+
 All the colors in palette are created with the same principle.
 
-Each color includes seven shades, the base color (color400) and six shades deriving from color400,
+Each color includes seven shades, the base color (shade: 400) and six shades deriving from color 400,
 three darker and three lighter.
 
 All new shades are calculated with color percentages (25%, 50%, 75%) on white background for the lighter shades and black background for the darker ones (75%, 50%, 25%).
@@ -28,3 +34,34 @@ This way we get the following colors for magenta
   700: "#34071d"
 }
 ```
+
+### COLOR PALETTE
+
+The color palette have some text color for each shade either black or white. This text color was picked based on the best accessibility for the end user.
+
+<ThemeWrapper>
+  <PaletteShowcase />
+</ThemeWrapper>
+
+### COLOR STATES
+
+Each color state must follow some rules for lighten or darken the basic color. Rules are as follows
+
+- filled component with color
+
+  - for shades: 500 - 700 = we are lighten the basic color
+  - for shades: 100 - 400 = we are darken the basic color
+
+  based on the above we lighten or darken by these
+
+  - hover : 10%
+  - pressed: 20%
+
+- non filled component
+
+  - we are always using lighten
+
+  based on the above we lighten or darken by these
+
+  - hover: 60%
+  - pressed: 50%

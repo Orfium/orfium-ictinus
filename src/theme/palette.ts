@@ -18,6 +18,7 @@ export const flatColors = [
   'blue',
   'darkBlue',
   'purple',
+  'mint',
 ] as const;
 /**
  * Here are listed all the color shades
@@ -64,3 +65,76 @@ export type Palette = {
 } & Record<typeof mainTypes[number], generatedColorShades>;
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
+
+/**
+ * this function picks either white or black color based on the background that is passed
+ * swatches are calculated based on accessibility by the design team and splited to those two colors
+ **/
+export const pickTextColorFromSwatches = (
+  color: typeof flatColors[number],
+  shade: typeof colorShades[number]
+) => {
+  const colorsForWhiteText: Partial<Record<
+    typeof colorShades[number],
+    typeof flatColors[number][]
+  >> = {
+    700: [
+      'lightGray',
+      'darkGray',
+      'coolGray',
+      'warmGray',
+      'magenta',
+      'red',
+      'orange',
+      'yellow',
+      'olive',
+      'green',
+      'teal',
+      'lightBlue',
+      'blue',
+      'darkBlue',
+      'purple',
+      'mint',
+    ],
+    600: [
+      'lightGray',
+      'darkGray',
+      'coolGray',
+      'warmGray',
+      'magenta',
+      'red',
+      'orange',
+      'yellow',
+      'olive',
+      'green',
+      'teal',
+      'lightBlue',
+      'blue',
+      'darkBlue',
+      'purple',
+      'mint',
+    ],
+    500: [
+      'lightGray',
+      'darkGray',
+      'coolGray',
+      'warmGray',
+      'magenta',
+      'red',
+      'orange',
+      'yellow',
+      'olive',
+      'green',
+      'lightBlue',
+      'blue',
+      'darkBlue',
+      'purple',
+    ],
+    400: ['darkGray', 'magenta', 'red', 'olive', 'darkBlue', 'purple'],
+    300: ['darkGray', 'red', 'olive', 'magenta', 'purple', 'darkBlue'],
+  };
+  const pickedShade = colorsForWhiteText[shade];
+  const pickedColor = pickedShade && pickedShade?.find(item => item === color);
+
+  return pickedColor ? '#fff' : '#000';
+};

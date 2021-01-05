@@ -2,6 +2,7 @@ import { colorShades, flatColors, mainTypes, Palette } from './palette';
 import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
 import typography, { Typography } from './typography';
 import spacing, { Spacing } from './spacing';
+import elevation, { Elevation } from './elevation';
 import { enhancePaletteWithShades } from './utils';
 
 type TextColorTypes = 'primary' | 'secondary' | 'light';
@@ -10,6 +11,7 @@ export type ThemeConfig = {
   palette: PaletteConfig;
   typography: Typography;
   spacing: Spacing;
+  elevation: Elevation;
   isDark: boolean;
 };
 
@@ -24,6 +26,7 @@ export type Theme = {
   palette: Palette;
   typography: Typography;
   spacing: Spacing;
+  elevation: Elevation;
   isDark: boolean;
   utils: {
     getColor: GetColor;
@@ -35,7 +38,8 @@ export const getColor = (palette: Palette): GetColor => (
   variant: typeof colorShades[number],
   scope: 'flat' | 'text' | 'normal' = 'flat'
 ) => {
-  const endColor = scope === 'normal' ? palette[color][variant] : palette[scope][color][variant];
+  const endColor =
+    scope === 'normal' ? palette[color][variant] : palette?.[scope]?.[color]?.[variant];
 
   if (!endColor) {
     throw new Error('No color found with that name');
@@ -54,6 +58,7 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
     palette,
     typography,
     spacing,
+    elevation,
     isDark: false,
     utils: {
       getColor: getColor(palette),

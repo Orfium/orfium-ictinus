@@ -17,16 +17,20 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   }
 };
 
-export const iconButtonStyle = ({ type, filled, size, icon }: RequiredProperties<Props>) => (
-  theme: Theme
-) => {
+export const iconButtonStyle = ({
+  type,
+  filled,
+  size,
+  iconRight,
+  iconLeft,
+}: RequiredProperties<Props>) => (theme: Theme) => {
   const calculatedPaddingSpace = size === 'sm' ? theme.spacing.md : theme.spacing.xl;
 
   return {
     fontSize: theme.typography.fontSizes['16'],
     color: colorPickerBasedOnType(type)(theme),
     backgroundColor: filled ? backgroundPickerBasedOnType(type)(theme) : 'transparent',
-    paddingLeft: icon ? 0 : calculatedPaddingSpace,
+    paddingLeft: iconLeft || iconRight ? 0 : calculatedPaddingSpace,
     paddingRight: calculatedPaddingSpace,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
@@ -34,15 +38,17 @@ export const iconButtonStyle = ({ type, filled, size, icon }: RequiredProperties
   };
 };
 
-export const buttonSpanStyle = ({ icon, size }: RequiredProperties<Props>) => (theme: Theme) => ({
-  display: icon ? 'flex' : 'block',
+export const buttonSpanStyle = ({ iconLeft, iconRight, size }: RequiredProperties<Props>) => (
+  theme: Theme
+) => ({
+  display: iconLeft || iconRight ? 'flex' : 'block',
   // In orfium-ictinus/node_modules/@emotion/serialize/node_modules/csstype/index.d.ts
   // The FlexDirectionProperty, unlike other properties, does not include a simple 'string'
   // definition. So we cast this as something it will accept.
-  flexDirection: icon ? ('row' as const) : ('column' as const),
-  alignItems: icon ? 'center' : 'flex-start',
+  flexDirection: iconLeft || iconRight ? ('row' as const) : ('column' as const),
+  alignItems: iconLeft || iconRight ? 'center' : 'flex-start',
   '> :first-child': {
-    marginLeft: icon ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
+    marginLeft: iconLeft || iconRight ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
     marginRight: theme.spacing.sm,
   },
 });

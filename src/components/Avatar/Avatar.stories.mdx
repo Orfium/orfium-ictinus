@@ -1,0 +1,98 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import Avatar from './Avatar';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/Avatar" component={Avatar} />
+
+# Avatar
+
+A universal Avatar component cam be found around ictinus on menus or can be a standalone component as well. It renders either images, letter or icon from our library
+
+# Usage
+
+```js
+import { Avatar } from '@orfium/ictinus';
+
+<Avatar src={'https://material-ui.com/static/images/avatar/1.jpg'}>PV</Avatar>;
+```
+
+# Props
+
+<Props of={Avatar} />
+
+# Avatar shapes
+
+Avatar shapes
+
+<Preview>
+  <Story name="Avatar shapes">
+    <div>
+      <Stack>
+        <div>circular</div>
+        <Avatar size={'xs'} color={'magenta-400'} iconName={'user'} />
+        <Avatar size={'sm'} color={'magenta-400'} iconName={'user'} />
+        <Avatar size={'md'} color={'lightBlue-100'} iconName={'user'} />
+        <Avatar size={'lg'} iconName={'user'} />
+      </Stack>
+      <Stack>
+        <div>regular</div>
+        <Avatar shape={'regular'} size={'xs'} color={'magenta-400'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'sm'} color={'magenta-400'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'md'} color={'lightBlue-100'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'lg'} iconName={'user'} />
+      </Stack>
+      <Stack>
+        <div>rounded</div>
+        <Avatar shape={'regular'} size={'xs'} color={'magenta-400'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'sm'} color={'magenta-400'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'md'} color={'lightBlue-100'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'lg'} iconName={'user'} />
+      </Stack>
+    </div>
+  </Story>
+</Preview>
+
+# Avatar with icon
+
+Avatar with icon
+
+<Preview>
+  <Story name="Avatar with icon">
+    <Stack>
+      <Avatar size={'xs'} color={'magenta-400'} iconName={'user'} />
+      <Avatar size={'sm'} color={'magenta-400'} iconName={'user'} />
+      <Avatar size={'md'} color={'lightBlue-100'} iconName={'user'} />
+      <Avatar size={'lg'} iconName={'user'} />
+    </Stack>
+  </Story>
+</Preview>
+
+# Avatar with letter
+
+Avatar with letter
+
+<Preview>
+  <Story name="Avatar with letter">
+    <Stack>
+      <Avatar size={'xs'} color={'magenta-400'}>CZ</Avatar>
+      <Avatar size={'sm'} color={'magenta-400'}>CZ</Avatar>
+      <Avatar size={'md'} color={'lightBlue-100'}>GR</Avatar>
+      <Avatar size={'lg'}>G</Avatar>
+    </Stack>
+  </Story>
+</Preview>
+
+# Avatar with src
+
+Avatar with src
+
+<Preview>
+  <Story name="Avatar with src">
+    <Stack>
+      <Avatar size={'xs'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
+      <Avatar size={'sm'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
+      <Avatar size={'md'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>GR</Avatar>
+      <Avatar size={'lg'} src={'https://material-ui.com/static/images/avatar/1.jpg'}>G</Avatar>
+    </Stack>
+  </Story>
+</Preview>

@@ -16,7 +16,9 @@ export const notificationsContainer = (withFilling: boolean, type: NotificationT
   height: ${rem(56)};
   border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
   border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
-  background: ${withFilling ? transparentize(0.9, typeToThemePalette(theme, type)) : 'none'};
+  background: ${withFilling
+    ? transparentize(0.9, typeToThemePalette(theme, type))
+    : theme.palette.white};
   border-radius: ${theme.spacing.xsm};
   // TODO: box-shadow's last parameter to change when elevated is introduced
   box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
@@ -36,6 +38,11 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
 
 export const iconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
+`;
+
+export const headContainer = () => (theme: Theme): SerializedStyles => css`
+  padding-right: ${theme.spacing.xsm};
+  font-weight: ${theme.typography.weights.bold};
 `;
 
 export const primaryActionContainer = () => (theme: Theme): SerializedStyles => css`

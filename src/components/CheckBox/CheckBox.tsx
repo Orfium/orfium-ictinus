@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useEffect } from 'react';
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
 import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
 import { TestId } from '../../utils/types';
@@ -17,8 +17,15 @@ export type Props = {
   disabled?: boolean;
   /** Boolean defining if the checkbox is in intermediate state when checked ( - instead of ✓ ). Defaults to false */
   intermediate?: boolean;
+  /** Whether the radio input is filled or outlined
+   *
+   * @default true
+   * */
+  filled?: boolean;
   /** The data test id if needed */
-  dataTestId?: TestId;
+  dataTestIdSuffix?: TestId;
+  /** Disables auto generated id for snapshots*/
+  id?: string;
 };
 
 const CheckBox: React.FC<Props> = ({
@@ -27,17 +34,19 @@ const CheckBox: React.FC<Props> = ({
   onClick,
   disabled = false,
   intermediate = false,
-  dataTestId,
+  dataTestIdSuffix,
+  filled = true,
+  id = generateUniqueID(),
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
-  const id = generateUniqueID();
+
+  useEffect(() => {
+    setIsChecked(checked);
+  }, [checked]);
 
   const handleInputChange = (event: ChangeEvent) => {
     const newChecked = !isChecked;
-
-    if (checked === undefined) {
-      setIsChecked(newChecked);
-    }
+    setIsChecked(newChecked);
 
     if (!disabled && onClick) {
       onClick(newChecked, event);
@@ -48,13 +57,13 @@ const CheckBox: React.FC<Props> = ({
     <span css={wrapperStyle({ disabled })}>
       <span css={checkboxWrapperStyle()}>
         <input
-          data-testid={generateTestDataId('checkbox', dataTestId)}
-          css={checkboxStyle({ intermediate, checked })}
+          data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
+          css={checkboxStyle({ intermediate, checked, filled })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}
           disabled={disabled}
-          checked={checked}
+          checked={isChecked}
         />
         <label htmlFor={`styled-checkbox-${id}`} />
       </span>
