@@ -68,7 +68,7 @@ You can apply your own branded colours for each product at the definition of the
 
 ### Emotion Project - Merge theme configs from different providers
 
-If you are already using emotion and you have defined a different provider you still have to define Ictinus ThemeProvider as well. You must put the theme config example at the top of the providers and yours afterwards. 
+If you are already using emotion and you have defined a different provider you still have to define Ictinus ThemeProvider as well. You must put the theme config example at the top of the providers and yours afterwards.
 
 Then you must use the below function to create a new theme config for the second provider
 

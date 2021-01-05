@@ -1,0 +1,78 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import PresentComponent from '../storyUtils/PresentComponent';
+import Toast from './Toast';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/Toast" component={Toast} />
+
+# Toast
+
+# Usage
+
+```js
+import { Toast } from '@orfium/ictinus';
+
+<Toast message="message" type="primary" expanded closeCTA={closeCTA}>
+  <div>Content</div>
+</Toast>;
+```
+
+# Props
+
+<Props of={Toast} />
+
+# Generic Toast
+
+<Preview>
+  <Story name="Generic Toast" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={768}>
+      <Stack>
+        <Toast
+          message="Branded2 colored Toast"
+          type="branded2"
+          expanded
+          closeCTA={() => console.log('close action clicked')}
+        ></Toast>
+        <Toast
+          message="Primary colored Toast"
+          type="primary"
+          expanded
+          closeCTA={() => console.log('close action clicked')}
+        ></Toast>
+        <Toast
+          message="Default colored Toast"
+          expanded
+          closeCTA={() => console.log('close action clicked')}
+        >
+          <div>
+            <h1>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est
+              porttitor
+            </h1>
+            <ul>
+              <li>
+                <h1>Lorem ipsum dolor sit amet</h1>
+              </li>
+              <li>
+                <h1>consectetur adipiscing elit</h1>
+              </li>
+              <li>
+                <h1>Sed viverra neque</h1>
+              </li>
+              <li>
+                <h1>neque nec</h1>
+              </li>
+              <li>
+                <h1>est porttitor</h1>
+              </li>
+              <li>
+                <h1>dolor sit amet</h1>
+              </li>
+            </ul>
+          </div>
+        </Toast>
+      </Stack>
+    </PresentComponent>
+  </Story>
+</Preview>

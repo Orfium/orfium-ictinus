@@ -45,7 +45,7 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
     }
   >
     <div
-      className="css-tlhr7b-NotificationsContainer"
+      className="css-x3xtxm-NotificationsContainer"
     >
       <div
         className="css-rur5uo-CompactNotification"
@@ -92,7 +92,7 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
               className="css-1gnbc76-Icon"
             >
               <span
-                className="css-1avnyjk-Icon"
+                className="css-z7hcm5-Icon"
               />
             </span>
           </span>
@@ -143,7 +143,7 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
               className="css-1gnbc76-Icon"
             >
               <span
-                className="css-1avnyjk-Icon"
+                className="css-z7hcm5-Icon"
               />
             </span>
           </span>
@@ -194,7 +194,7 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
               className="css-1gnbc76-Icon"
             >
               <span
-                className="css-1avnyjk-Icon"
+                className="css-z7hcm5-Icon"
               />
             </span>
           </span>
@@ -363,7 +363,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 className="css-1gnbc76-Icon"
               >
                 <span
-                  className="css-1avnyjk-Icon"
+                  className="css-z7hcm5-Icon"
                 />
               </span>
             </span>
@@ -495,7 +495,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 className="css-1gnbc76-Icon"
               >
                 <span
-                  className="css-1avnyjk-Icon"
+                  className="css-z7hcm5-Icon"
                 />
               </span>
             </span>
@@ -512,6 +512,333 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
         </p>
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1rem",
+        "width": 768,
+      }
+    }
+  >
+    <div
+      className="css-gqyrx6-Snackbar"
+    >
+      <div
+        className="css-zeh2a1-Snackbar"
+      >
+        <div
+          className="css-ik60ew-Snackbar"
+        >
+          <div
+            className="css-1xa25n4-Snackbar"
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-c58ujo-Icon"
+              />
+            </span>
+          </div>
+          <div
+            className="css-1xobime-Snackbar"
+          >
+            This is the info
+          </div>
+        </div>
+        <span
+          className="css-jtflos-Snackbar"
+          data-testid="snackbar-close"
+          onClick={[Function]}
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-z7hcm5-Icon"
+            />
+          </span>
+        </span>
+      </div>
+      <div
+        className="css-1bbxilo-Snackbar"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
+      </div>
+      <div
+        className="css-gucdqp-Snackbar"
+      >
+        <div
+          className="css-1rvw1sh-Snackbar"
+          data-testid="snackbar-secondary"
+        >
+          <button
+            className="css-yqjplb-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span
+              className="css-1xr6sam-Button"
+            >
+              <span
+                className="css-l730ys-Button"
+              >
+                Secondary CTA
+              </span>
+            </span>
+          </button>
+        </div>
+        <div
+          className="css-1rvw1sh-Snackbar"
+          data-testid="snackbar-primary"
+        >
+          <button
+            className="css-3r514x-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span
+              className="css-1xr6sam-Button"
+            >
+              <span
+                className="css-l730ys-Button"
+              >
+                Primary CTA
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <p
+      style={
+        Object {
+          "paddingTop": "8px",
+        }
+      }
+    >
+      
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Notification Toast Notification 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "padding": "1rem",
+        "width": 768,
+      }
+    }
+  >
+    <div
+      className="css-3we5al-Toast"
+    >
+      <div
+        className="css-1f9jx92-Toast"
+      >
+        <div
+          className="css-oecirt-Toast"
+        >
+          <div
+            className="css-1pas082-Toast"
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-lhv1r1-Icon"
+              />
+            </span>
+          </div>
+          <div>
+            Informative Message
+          </div>
+        </div>
+        <div
+          className="css-gx89q3-Toast"
+        >
+          <span
+            className="css-b2ukb2-Toast"
+            data-testid="toast-expand"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-lhv1r1-Icon"
+              />
+            </span>
+          </span>
+          <span
+            className="css-1ejuyfz-Toast"
+            data-testid="toast-close"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1gnbc76-Icon"
+            >
+              <span
+                className="css-lhv1r1-Icon"
+              />
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        className="css-1f5h93i-Toast"
+        data-testid="expanded-container"
+      >
+        <div
+          className="css-q268yq-NotificationVisual"
+        >
+          <div
+            className="css-yc4ml2-NotificationVisual"
+          >
+            Message heading
+          </div>
+          <div
+            className="css-c03zyy-NotificationVisual"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor
+          </div>
+          <div
+            className="css-8gkyu8-NotificationVisual"
+          >
+            <div
+              className="css-16owih8-NotificationVisual"
+              data-testid="visual-secondary"
+            >
+              <button
+                className="css-yqjplb-Button"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1xr6sam-Button"
+                >
+                  <span
+                    className="css-l730ys-Button"
+                  >
+                    Secondary CTA
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div
+              className="css-16owih8-NotificationVisual"
+              data-testid="visual-primary"
+            >
+              <button
+                className="css-3r514x-Button"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1xr6sam-Button"
+                >
+                  <span
+                    className="css-l730ys-Button"
+                  >
+                    Primary CTA
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p
+      style={
+        Object {
+          "paddingTop": "8px",
+        }
+      }
+    >
+      
+    </p>
   </div>
 </div>
 `;

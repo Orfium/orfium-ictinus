@@ -1,14 +1,13 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { iconContainer, closeActionContainer } from '../../Notification.style';
 import {
   actionsContainer,
   infoContainer,
   notificationsContainer,
-  iconContainer,
   headContainer,
   primaryActionContainer,
-  closeActionContainer,
 } from './CompactNotification.style';
 import Icon from '../../../Icon';
 import { NotificationTypes } from '../../Notification';
@@ -17,13 +16,13 @@ import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 import useTheme from '../../../../hooks/useTheme';
 
-export type CompactNotificationVariants = 'inline' | 'banner';
+export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 
 export type Props = {
   /** Show notification icon based on the type */
-  withIcon: boolean;
+  withIcon?: boolean;
   /** Use color filling */
-  withFilling: boolean;
+  withFilling?: boolean;
   /** The informative message of the Notification */
   message: string;
   /** The variant of the Notification */
@@ -40,14 +39,22 @@ export type Props = {
   title?: string;
   /** The data test id if needed */
   dataTestId?: TestId;
+
+  /** The secondary call-to-action label of the Notification */
+  secondaryCTALabel?: string | undefined;
+  /** The secondary call-to-action of the Notification */
+  secondaryCTA?: (() => void) | undefined;
+  /** The description of the Notification (only for toast) */
+  description?: string | undefined;
+  /** The closing call-to-action of the Toast */
 };
 
-const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
+export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
   type === 'warning' ? 'alert' : type;
 
 const CompactNotification: React.FC<Props> = ({
-  withIcon,
-  withFilling,
+  withIcon = false,
+  withFilling = false,
   message,
   variant,
   type,
@@ -86,7 +93,7 @@ const CompactNotification: React.FC<Props> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon name="close" color={utils.getColor('lightGray', 500)} />
+            <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
           </span>
         )}
       </div>

@@ -2,6 +2,7 @@ import { Theme } from '../../theme';
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
 import { darken, lighten, transparentize } from 'polished';
 import { mainTypes } from '../../theme/palette';
+import isEmpty from 'lodash/isEmpty';
 
 /**
  * This function defines what background-color to show based on type or color passed
@@ -19,7 +20,7 @@ export const defineBackgroundColor = (
     return 'transparent';
   }
 
-  if (color) {
+  if (color && !isEmpty(color)) {
     return theme.utils.getColor(color.color, color.shade);
   }
 
