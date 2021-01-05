@@ -3,18 +3,30 @@ import useTheme from 'hooks/useTheme';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import { flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
-import { ColorShapeFromComponent } from '../utils/themeFunctions';
+import {
+  calculateActualColorFromComponentProp,
+  ColorShapeFromComponent,
+} from '../utils/themeFunctions';
 
 const defaultContextData = {
   typesShadesColor: {},
+  calculateColorBetweenColorAndType: (color: string, type: typeof mainTypes[number]) => {},
 };
 
-const TypeColorToColorMatchContext = React.createContext<{ typesShadesColor: TypesShadeAndColors }>(
+type ContextProps = {
+  typesShadesColor: TypesShadeAndColors;
+  calculateColorBetweenColorAndType: (
+    color: string,
+    type: typeof mainTypes[number]
+  ) => ColorShapeFromComponent;
+};
+
+const TypeColorToColorMatchContext = React.createContext<ContextProps>(
   // @ts-ignore
   defaultContextData
 );
 const useTypeColorToColorMatch = () => {
-  return React.useContext<{ typesShadesColor: TypesShadeAndColors }>(TypeColorToColorMatchContext);
+  return React.useContext<ContextProps>(TypeColorToColorMatchContext);
 };
 
 export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFromComponent>;
@@ -61,10 +73,20 @@ const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
     return calculateTypesShadeAndColors(types, theme.palette.flat);
   }, [types, theme]);
 
+  const calculateColorBetweenColorAndType = React.useCallback(
+    (color, type) => {
+      const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
+
+      return calculatedColor ? calculatedColor : typesShadesColor[type];
+    },
+    [types, theme, typesShadesColor]
+  );
+
   return (
     <TypeColorToColorMatchContext.Provider
       value={{
         typesShadesColor,
+        calculateColorBetweenColorAndType,
       }}
     >
       {children}

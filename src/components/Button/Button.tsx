@@ -3,9 +3,9 @@ import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes, calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
-import { buttonSpanStyle, buttonStyle, iconStyle } from './Button.style';
+import { buttonSpanStyle, buttonStyle, childrenWrapperStyle, iconStyle } from './Button.style';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 
 export type Props = {
@@ -44,8 +44,8 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     onBlur,
   } = props;
 
-  const calculatedColor = color ? calculateActualColorFromComponentProp(color) : undefined;
-  const { typesShadesColor } = useTypeColorToColorMatch();
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType(color, type);
 
   return (
     <button
@@ -60,7 +60,6 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         disabled,
         iconLeft,
         iconRight,
-        typesShadesColor,
         childrenCount: React.Children.count(children),
       })}
       onClick={onClick}
@@ -68,40 +67,23 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
       disabled={disabled}
     >
       <span css={buttonSpanStyle()}>
-        {iconLeft && (
-          <span
-            css={iconStyle({
-              type,
-              filled,
-              size,
-              color,
-              iconLeft,
-              iconRight,
-              disabled,
-              hasChildren: Boolean(React.Children.count(children)),
-            })}
-          >
-            {iconLeft}
-          </span>
-        )}
-        {children}
+        {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
+        <span
+          css={childrenWrapperStyle({
+            type,
+            filled,
+            size,
+            color,
+            iconLeft,
+            iconRight,
+            disabled,
+            hasChildren: Boolean(React.Children.count(children)),
+          })}
+        >
+          {children}
+        </span>
 
-        {iconRight && (
-          <span
-            css={iconStyle({
-              type,
-              filled,
-              size,
-              color,
-              iconLeft,
-              iconRight,
-              disabled,
-              hasChildren: Boolean(React.Children.count(children)),
-            })}
-          >
-            {iconRight}
-          </span>
-        )}
+        {iconRight && <span css={iconStyle()}>{iconRight}</span>}
       </span>
     </button>
   );

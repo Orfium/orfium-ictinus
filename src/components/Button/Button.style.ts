@@ -4,7 +4,6 @@ import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './Button';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { TypesShadeAndColors } from '../../hooks/useTypeColorToColorMatch';
 import { defineBackgroundColor, stateBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it
@@ -28,41 +27,20 @@ export const buttonStyle = ({
   iconExists,
   disabled,
   childrenCount,
-  typesShadesColor,
 }: RequiredProperties<
   Props & {
-    typesShadesColor: TypesShadeAndColors;
-    calculatedColor: ColorShapeFromComponent | undefined;
+    calculatedColor: ColorShapeFromComponent;
     iconExists: boolean;
     childrenCount: number;
   }
 >) => (theme: Theme) => {
-  const calculatedColorBasedOnColorOrType = calculatedColor
-    ? calculatedColor
-    : typesShadesColor[type];
-
   return {
     fontSize: theme.typography.fontSizes['16'],
     color: filled
-      ? pickTextColorFromSwatches(
-          calculatedColorBasedOnColorOrType.color,
-          calculatedColorBasedOnColorOrType.shade
-        )
-      : defineBackgroundColor(
-          theme,
-          calculatedColorBasedOnColorOrType,
-          type,
-          iconExists,
-          childrenCount > 0
-        ),
+      ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+      : defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0),
     backgroundColor: filled
-      ? defineBackgroundColor(
-          theme,
-          calculatedColorBasedOnColorOrType,
-          type,
-          iconExists,
-          childrenCount > 0
-        )
+      ? defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0)
       : 'transparent',
     padding:
       size === 'sm' || size === 'md'
@@ -75,7 +53,7 @@ export const buttonStyle = ({
       ? 'none'
       : `solid 1px ${defineBackgroundColor(
           theme,
-          calculatedColorBasedOnColorOrType,
+          calculatedColor,
           type,
           iconExists,
           childrenCount > 0
@@ -84,12 +62,12 @@ export const buttonStyle = ({
     transition: 'background-color 150ms linear',
     ':hover': {
       backgroundColor: !disabled
-        ? stateBackgroundColor(theme, 'hover', calculatedColorBasedOnColorOrType, filled)
+        ? stateBackgroundColor(theme, 'hover', calculatedColor, filled)
         : undefined,
     },
     ':active': {
       backgroundColor: !disabled
-        ? stateBackgroundColor(theme, 'active', calculatedColorBasedOnColorOrType, filled)
+        ? stateBackgroundColor(theme, 'active', calculatedColor, filled)
         : undefined,
     },
   };
@@ -102,14 +80,20 @@ export const buttonSpanStyle = () => () => {
   };
 };
 
-export const iconStyle = ({
+export const iconStyle = () => () => ({
+  display: 'inline-flex',
+});
+
+export const childrenWrapperStyle = ({
   iconLeft,
   iconRight,
   hasChildren,
 }: RequiredProperties<Props & { hasChildren: boolean }>) => (theme: Theme) => {
+  const rightIconExists = hasChildren && iconRight;
+  const leftIconExists = hasChildren && iconLeft;
+
   return {
-    marginLeft: hasChildren && iconRight ? theme.spacing.sm : 0,
-    marginRight: hasChildren && iconLeft ? theme.spacing.sm : 0,
-    display: 'inline-flex',
+    marginLeft: leftIconExists ? theme.spacing.sm : 0,
+    marginRight: rightIconExists ? theme.spacing.sm : 0,
   };
 };

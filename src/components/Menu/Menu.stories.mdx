@@ -1,7 +1,7 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import Menu from '../Menu';
 import MenuShowcase from '../storyUtils/MenuShowcase';
+import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Menu" component={Menu} />
 
@@ -14,9 +14,7 @@ A universal Menu component that is a clickable element that can hold many forms.
 ```js
 import { Menu } from '@orfium/ictinus';
 
-<Menu onClick={() => {}})}>
-  Click Me
-</Menu>
+<Menu onClick={() => {}}>Click Me</Menu>;
 ```
 
 # Props
@@ -39,12 +37,78 @@ Menu with option icon (dots) and different button colour
 
 <Preview>
   <Story name="Menu with option icon and different colour">
-    <Menu
-      items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
-      buttonText={'More'}
-      buttonType={'warning'}
-      menuIconName={'dotsVertical'}
-      showOptionIcon
-    />
+    <Stack>
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'More'}
+        buttonType={'warning'}
+        color={'darkGray-600'}
+        rightIconName={'dotsVertical'}
+        avatar={{ src: '', letter: '' }}
+      />
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'More'}
+        buttonType={'warning'}
+        color={'darkGray-100'}
+        rightIconName={'dotsVertical'}
+        avatar={{ src: '', letter: '' }}
+      />
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'More'}
+        buttonType={'warning'}
+        filled={false}
+        color={'darkGray-600'}
+        rightIconName={'dotsVertical'}
+        avatar={{ src: '', letter: '' }}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Menu with avatar
+
+Menu with avatar and different button colour
+
+<Preview>
+  <Story name="Menu with avatar and different button colour">
+    <Stack>
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'Tom Cruise'}
+        buttonType={'warning'}
+        color={'darkGray-600'}
+        rightIconName={'arrowDown'}
+        avatar={{ src: '', letter: 'TC' }}
+      />
+      <Menu
+        items={[
+          'My Profile',
+          'Settings',
+          'Billing',
+          'Notifications',
+          'Logout',
+          'My Profile 1',
+          'Settings 1',
+          'Billing 1',
+          'Notifications 1',
+          'Logout 1',
+        ]}
+        buttonText={'Tom Cruise'}
+        buttonType={'warning'}
+        color={'darkGray-600'}
+        rightIconName={'arrowDown'}
+        avatar={{ src: 'https://material-ui.com/static/images/avatar/1.jpg', letter: 'PV' }}
+      />
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'Tom Cruise'}
+        buttonType={'warning'}
+        color={'darkGray-600'}
+        rightIconName={'arrowDown'}
+        avatar={{ src: '', letter: '' }}
+      />
+    </Stack>
   </Story>
 </Preview>
