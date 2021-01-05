@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import TopAppBar from '../TopAppBar';
 import TextField from '../TextField';
 import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
@@ -37,17 +37,24 @@ const TopAppBarShowcase: FC<Props> = ({
   userMenu = DEFAULT_USER_MENU,
   onMenuIconClick = DEFAULT_ON_CLICK,
 }) => {
+  const [state, setState] = useState('');
   const logoIcon = withLogo && (
     <img src={'https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg'} alt={'logo'} />
   );
 
   return (
-    <TopAppBar
-      logoIcon={logoIcon || undefined}
-      onMenuIconClick={onMenuIconClick}
-      userMenu={userMenu}
-      additionalTools={withAdditionalTools ? additionalTools : []}
-    />
+    <>
+      <TopAppBar
+        logoIcon={logoIcon || undefined}
+        onMenuIconClick={onMenuIconClick}
+        userMenu={userMenu}
+        additionalTools={withAdditionalTools ? additionalTools : []}
+        onSearchHandler={event => {
+          setState(event?.target?.value);
+        }}
+      />
+      <div style={{ marginTop: 50 }}>Search value: {state}</div>
+    </>
   );
 };
 

@@ -18,9 +18,11 @@ const TopAppBar: FC<TopAppBarProps> = ({
   onMenuIconClick,
   additionalTools,
   userMenu,
+  onSearchHandler,
 }) => {
   const { type, variant } = searchBgColor;
   const { items, userAvatar, userName, onSelect } = userMenu;
+  const searchProps = { onChange: onSearchHandler };
 
   return (
     <div
@@ -38,6 +40,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
             styleType={'filled'}
             fillShade={variant}
             leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
+            {...searchProps}
           />
         </div>
       </div>
