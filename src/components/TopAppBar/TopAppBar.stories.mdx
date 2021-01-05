@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import TopAppBar from './TopAppBar';
-import Stack from '../storyUtils/Stack'; import TextField from '../TextField';
+import Stack from '../storyUtils/Stack'; import TextField from '../TextField'; import TopAppBarShowcase
+  from '../storyUtils/TopAppBarShowcase'; import { boolean } from '@storybook/addon-knobs';
 
 <Meta title="Design System/TopAppBar" component={TopAppBar} />
 
@@ -27,15 +28,7 @@ Regular TopAppBar
 <Preview>
   <Story name="Top App Bar">
     <div style={{padding: 10}}>
-      <TopAppBar onMenuIconClick={() => {alert('Toggles a menu!')}}
-                 userMenu={{
-                    userName:'Tom Cruise',
-                    onSelect: (selectedItem) => {alert(selectedItem)},
-                    items: ['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout'],
-                    userAvatar: { src: 'https://material-ui.com/static/images/avatar/1.jpg', letter: 'PV' }
-                  }}
-                 additionalTools={<><TextField /><TextField /><TextField /><TextField /></>}
-      />
+      <TopAppBarShowcase withAdditionalTools={boolean('withAdditionalTools', false)} withLogo={boolean('withLogo', false)} />
     </div>
   </Story>
 </Preview>

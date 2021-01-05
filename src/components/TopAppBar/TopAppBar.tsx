@@ -28,17 +28,19 @@ const TopAppBar: FC<TopAppBarProps> = ({
       aria-label="Top Application Banner"
       css={Styles.topAppBarWrapper({ bgColor })}
     >
-      <div css={Styles.topAppBarSection}>
+      <div css={Styles.mainSection}>
         <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />
         <LogoWrapper logoIcon={logoIcon} />
-        <TextField
-          label={searchLabel}
-          fill={type}
-          styleType={'filled'}
-          fillShade={variant}
-          size={'sm'}
-          leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
-        />
+        <div css={Styles.searchWrapper}>
+          <TextField
+            label={searchLabel}
+            fill={type}
+            styleType={'filled'}
+            fillShade={variant}
+            size={'sm'}
+            leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
+          />
+        </div>
       </div>
       <div css={Styles.additionalToolsSection}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>

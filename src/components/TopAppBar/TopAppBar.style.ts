@@ -29,9 +29,19 @@ const additionalToolsSection = (theme: Theme): SerializedStyles => css`
   ${topAppBarSection};
   margin: 0 ${theme.spacing.md};
 `;
-
+const mainSection = css`
+  ${topAppBarSection};
+  flex-grow: 1;
+  justify-content: flex-start;
+`;
+const searchWrapper = css`
+  flex-grow: 1;
+  max-width: 520px;
+`;
 export default {
   topAppBarWrapper,
   topAppBarSection,
   additionalToolsSection,
+  mainSection,
+  searchWrapper,
 };
