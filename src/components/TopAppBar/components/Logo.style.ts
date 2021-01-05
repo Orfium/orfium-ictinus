@@ -2,18 +2,14 @@ import { Theme } from '../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { flexCenter } from '../../../theme/functions';
 
-interface WrapperProps {
-  hasLogoIcon: boolean;
-}
-
-const wrapper = ({ hasLogoIcon }: WrapperProps) => (theme: Theme): SerializedStyles => css`
+const wrapper = (theme: Theme): SerializedStyles => css`
   ${flexCenter};
-  background-color: ${hasLogoIcon ? 'transparent' : theme.palette.flat.lightGray[700]};
+  background-color: transparent;
   margin: ${theme.spacing.md} ${theme.spacing.md} ${theme.spacing.md} 0px;
   border-radius: ${theme.spacing.xsm};
   width: 200px;
   max-width: 400px;
-  height: 52px;
+  height: 46px;
 `;
 
 export const placeholderWrapper = css`

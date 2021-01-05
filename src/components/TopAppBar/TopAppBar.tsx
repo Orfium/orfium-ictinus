@@ -37,7 +37,6 @@ const TopAppBar: FC<TopAppBarProps> = ({
             fill={type}
             styleType={'filled'}
             fillShade={variant}
-            size={'sm'}
             leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
           />
         </div>
