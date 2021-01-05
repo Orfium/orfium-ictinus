@@ -1,0 +1,20 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import BarChart from './BarChart';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/BarChart" component={BarChart} />
+
+# Select
+
+A universal BarChart.
+
+# Simple Select
+
+Simple BarChart component with clearable data and searchable input
+
+<Preview>
+  <Story name="Dynamic BarChart Props" parameters={{ decorators: [withKnobs] }}>
+    <BarChart/>
+  </Story>
+</Preview>
