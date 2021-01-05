@@ -7,9 +7,6 @@ import { Props } from '../Button/Button';
 export const wrapperStyle = () => () => css`
   position: relative;
   display: inline-block;
-  ':active': {
-    outline: 0;
-  }
 `;
 
 export const buttonSpanStyle = ({
