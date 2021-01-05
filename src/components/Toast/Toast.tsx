@@ -28,8 +28,6 @@ export type Props = {
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
   expanded?: boolean;
-  /** Children of the Toast */
-  children: React.ReactNode | React.ReactNode[] | undefined;
   /** The data test id if needed */
   dataTestId?: TestId;
 };

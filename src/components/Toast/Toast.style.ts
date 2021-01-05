@@ -1,7 +1,7 @@
 import { Theme } from '../../theme';
 import { rem, transparentize } from 'polished';
 import { css, SerializedStyles } from '@emotion/core';
-import { transition } from '../../theme/functions';
+import { transition, flexCenter } from '../../theme/functions';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { isNotificationTypes } from './Toast';
 
@@ -39,8 +39,7 @@ export const topContainer = (type: AcceptedColorComponentTypes) => (
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
-  display: flex;
-  align-items: center;
+  ${flexCenter};
   padding: 0 ${theme.spacing.md};
 `;
 
