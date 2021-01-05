@@ -76,16 +76,12 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
     default:
       return `
         box-shadow: inset 0 0 0 1px ${
-          error
-            ? theme.utils.getColor('error', 400, 'normal')
-            : theme.utils.getColor('lightGray', 100)
+          error ? theme.utils.getColor('error', 400, 'normal') : 'transparent'
         };
         
         &:focus-within {
           box-shadow: inset 0 0 0 1px ${
-            error
-              ? theme.utils.getColor('error', 400, 'normal')
-              : theme.utils.getColor('lightGray', 100)
+            error ? theme.utils.getColor('error', 400, 'normal') : 'transparent'
           },
             0px 2px 6px 0px rgba(67, 67, 67, 0.15);
         }

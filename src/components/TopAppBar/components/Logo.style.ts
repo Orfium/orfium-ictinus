@@ -1,6 +1,5 @@
 import { Theme } from '../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
-import styled from '@emotion/styled';
 
 interface WrapperProps {
   hasLogoIcon: boolean;
@@ -12,17 +11,19 @@ const wrapper = ({ hasLogoIcon }: WrapperProps) => (theme: Theme): SerializedSty
   border-radius: ${theme.spacing.xsm};
   width: 200px;
   max-width: 400px;
-  height: 46px;
+  height: 52px;
 `;
 
-export const PlaceholderWrapper = styled.div`
+export const placeholderWrapper = css`
   margin: auto;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 `;
 
 export default {
   wrapper,
+  placeholderWrapper,
 };

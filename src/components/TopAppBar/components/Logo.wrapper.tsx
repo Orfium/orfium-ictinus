@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import Styles, { PlaceholderWrapper } from './Logo.style';
+import Styles from './Logo.style';
 
 const PlaceHolder = () => (
-  <PlaceholderWrapper>
+  <div css={Styles.placeholderWrapper}>
     <strong>LOGO</strong>PLACEHOLDER
-  </PlaceholderWrapper>
+  </div>
 );
 
 interface Props {
