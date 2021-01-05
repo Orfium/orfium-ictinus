@@ -1,5 +1,8 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
+import Toast from '../Toast';
+import NotificationVisual from '../Notification/NotificationVisual';
+import Snackbar from '../Notification/Snackbar';
 import InlineNotification from '../Notification/InlineNotification';
 import Banner from '../Notification/Banner';
 import NotificationsContainer from '../Notification/NotificationsContainer';
@@ -10,7 +13,7 @@ import Stack from '../storyUtils/Stack';
 
 # Notification
 
-# Inline Notification
+## Inline Notification
 
 ### Props
 
@@ -77,7 +80,7 @@ import { InlineNotification } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Banner Notification
+## Banner Notification
 
 ### Props
 
@@ -144,6 +147,101 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
           closeCTA={() => console.log('close action clicked')}
         />
       </NotificationsContainer>
+    </PresentComponent>
+  </Story>
+</Preview>
+
+## Toast Notification
+
+### Toast Props
+
+<Props of={Toast} />
+
+### NotificationVisual Props
+
+<Props of={NotificationVisual} />
+
+### Usage
+
+```js
+import { Toast, NotificationVisual } from '@orfium/ictinus';
+
+<Toast message="message" type="info" expanded closeCTA={closeCTA}>
+  <NotificationVisual
+    title="title"
+    primaryCTALabel="Primary CTA Label"
+    primaryCTA={primaryCTA}
+    secondaryCTALabel="Secondary CTA Label"
+    secondaryCTA={secondaryCTA}
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+  />
+</Toast>;
+```
+
+<Preview>
+  <Story name="Toast Notification" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={768}>
+      <Toast
+        message={text('message', 'Informative Message')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+        expanded
+        closeCTA={() => console.log('close action clicked')}
+      >
+        <NotificationVisual
+          title={text('title', 'Message heading')}
+          primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+          primaryCTA={() => console.log('primary action clicked')}
+          secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+          secondaryCTA={() => console.log('secondary action clicked')}
+          description={text(
+            'description',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+          )}
+        />
+      </Toast>
+    </PresentComponent>
+  </Story>
+</Preview>
+
+## Snackbar Notification
+
+### Props
+
+<Props of={Snackbar} />
+
+### Usage
+
+```js
+import { Snackbar } from '@orfium/ictinus';
+
+<Snackbar
+  message="message"
+  type="info"
+  primaryCTALabel="Primary CTA Label"
+  primaryCTA={primaryCTA}
+  secondaryCTALabel="Secondary CTA Label"
+  secondaryCTA={secondaryCTA}
+  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+  closeCTA={closeCTA}
+/>;
+```
+
+<Preview>
+  <Story name="Snackbar Notification" parameters={{ decorators: [withKnobs] }}>
+    <PresentComponent name="" width={768}>
+      <Snackbar
+        message={text('message', 'This is the info')}
+        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+        primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+        primaryCTA={() => console.log('primary action clicked')}
+        secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+        secondaryCTA={() => console.log('secondary action clicked')}
+        description={text(
+          'description',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+        )}
+        closeCTA={() => console.log('close action clicked')}
+      />
     </PresentComponent>
   </Story>
 </Preview>
