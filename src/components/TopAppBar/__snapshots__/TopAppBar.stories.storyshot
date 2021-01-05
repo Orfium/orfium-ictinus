@@ -41,31 +41,128 @@ exports[`Storyshots Design System/TopAppBar Top App Bar 1`] = `
   >
     <div
       aria-label="Top Application Banner"
-      className="css-11t6fzg-TopAppBar"
+      className="css-7prc3u-TopAppBar"
       role="banner"
     >
       <div
-        className="css-1o0n0ei-SidebarMenuIcon"
-        onClick={[Function]}
-      >
-        <span
-          className="css-1gnbc76-Icon"
-        >
-          <span
-            className="css-n3de71-Icon"
-          />
-        </span>
-      </div>
-      <div
-        className="css-1l6mfmq-LogoWrapper"
+        className="css-1ywoi9i-TopAppBar"
       >
         <div
-          className="css-1dpbqa5"
+          className="css-1dhefh1-SidebarMenuIcon"
+          onClick={[Function]}
         >
-          <strong>
-            LOGO
-          </strong>
-          PLACEHOLDER
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-n3de71-Icon"
+            />
+          </span>
+        </div>
+        <div
+          className="css-lwis5p-LogoWrapper"
+        >
+          <div
+            className="css-1plr80g-PlaceHolder"
+          >
+            <strong>
+              LOGO
+            </strong>
+            PLACEHOLDER
+          </div>
+        </div>
+        <div
+          className="css-jhsp2n-TopAppBar"
+        >
+          <div
+            className="css-12qr1pz-TextField"
+          >
+            <div
+              className="css-ogmpjz-TextField"
+            >
+              <div
+                className="css-11hzh72-TextField"
+              >
+                <div
+                  className="css-s8kmdl-IconWrapper"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                  >
+                    <span
+                      className="css-14m0jd5-Icon"
+                    />
+                  </span>
+                </div>
+                <input
+                  className="css-1pxwum3-TextField"
+                  placeholder="Search"
+                  required={false}
+                />
+                <label
+                  className="css-1qcp0f-Label"
+                >
+                  Search
+                   
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1m3dfn0-TopAppBar"
+      />
+      <div
+        className="css-16h5l3v-TopAppBar"
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="css-ff4rer-Menu"
+          >
+            <button
+              className="css-8yaow6-Button"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <span
+                className="css-1xr6sam-Button"
+              >
+                <span
+                  className="css-1kner5m-Button"
+                >
+                  <div
+                    className="css-v4tpzl-Avatar"
+                  >
+                    <img
+                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
+                </span>
+                <span
+                  className="css-1qy2jjj-Button"
+                >
+                  <span>
+                    Tom Cruise
+                  </span>
+                </span>
+                <span
+                  className="css-1kner5m-Button"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                  >
+                    <span
+                      className="css-14m0jd5-Icon"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
