@@ -18,7 +18,7 @@ const positionOptions = {
 export const notificationsContainer = (currentPosition: string) => (
   theme: Theme
 ): SerializedStyles => css`
-  position: absolute;
+  position: fixed;
   ${getPositionStyle(positionOptions[currentPosition])};
   min-width: ${rem(489)};
   display: flex;

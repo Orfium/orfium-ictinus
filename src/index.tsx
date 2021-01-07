@@ -23,6 +23,8 @@ export { default as Avatar } from './components/Avatar';
 export { default as InlineNotification } from './components/Notification/InlineNotification';
 export { default as Banner } from './components/Notification/Banner';
 export { default as NotificationsContainer } from './components/Notification/NotificationsContainer';
+export { default as NotificationVisual } from './components/Notification/NotificationVisual';
+export { default as Snackbar } from './components/Notification/Snackbar';
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';
@@ -30,6 +32,7 @@ export { default as Select } from './components/Select';
 export { default as Table } from './components/Table';
 export { default as TextField } from './components/TextField';
 export { default as ThemeProvider } from './components/ThemeProvider';
+export { default as Toast } from './components/Toast';
 export { default as useTheme } from './hooks/useTheme';
 
 export { Theme, default as themeConfig } from './theme';
