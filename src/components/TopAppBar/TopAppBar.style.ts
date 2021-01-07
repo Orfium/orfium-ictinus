@@ -17,7 +17,7 @@ const topAppBarWrapper = ({ bgColor }: StyleProps) => (theme: Theme): Serialized
   background-color: ${theme.utils.getColor(bgColor.type, bgColor.variant)};
   color: ${pickTextColorFromSwatches(bgColor.type, bgColor.variant)};
   height: ${DEFAULT_NAVBAR_HEIGHT}px;
-  padding: ${theme.spacing.sm} ${theme.spacing.md};
+  padding: 0 ${theme.spacing.md};
 `;
 
 const topAppBarSection = css`

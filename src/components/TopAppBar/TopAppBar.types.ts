@@ -8,7 +8,7 @@ export interface BgColorType {
 export interface TopAppBarProps {
   bgColor?: BgColorType;
   searchBgColor?: BgColorType;
-  searchLabel?: string;
+  searchPlaceholder?: string;
   logoIcon?: JSX.Element;
   onMenuIconClick: () => void;
   additionalTools?: JSX.Element | JSX.Element[];

@@ -13,7 +13,7 @@ import Menu from '../Menu';
 const TopAppBar: FC<TopAppBarProps> = ({
   bgColor = DEFAULT_BG_COLOR,
   searchBgColor = DEFAULT_SEARCH_COLOR,
-  searchLabel = 'Search',
+  searchPlaceholder = 'Search',
   logoIcon,
   onMenuIconClick,
   additionalTools,
@@ -35,7 +35,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
         <LogoWrapper logoIcon={logoIcon} />
         <div css={Styles.searchWrapper}>
           <TextField
-            label={searchLabel}
+            placeholder={searchPlaceholder}
             fill={type}
             styleType={'filled'}
             fillShade={variant}
