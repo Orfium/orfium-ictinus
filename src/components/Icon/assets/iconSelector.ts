@@ -132,6 +132,9 @@ import ViewIcon from './view.svg';
 import WorksIcon from './works.svg';
 import WriterIcon from './writer.svg';
 import YoutubeIcon from './youtube.svg';
+import RestartIcon from './restart.svg';
+import ResumeIcon from './resume.svg';
+import PauseIcon from './pause.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -258,6 +261,9 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   youtube: YoutubeIcon,
   refresh: RefreshIcon,
   star: StarIcon,
+  pause: PauseIcon,
+  restart: RestartIcon,
+  resume: ResumeIcon,
 };
 
 export default iconSelector;
