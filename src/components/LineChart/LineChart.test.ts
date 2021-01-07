@@ -1,5 +1,6 @@
 import { getKeyNames, colorPicker } from './utils';
-import { initData, color } from './story.utils';
+import { color } from './story.utils';
+import { initData } from './mockedData';
 import theme from 'theme';
 
 describe('LineChart test funcionallity', () => {
