@@ -6,12 +6,8 @@ export const DEFAULT_SIZE: Size = 'sm';
 type SizeConfig = (theme: Theme, label: string, shouldMoveLeft?: boolean) => Record<Size, string>;
 
 export const getTextFieldSize: SizeConfig = (theme, label, shouldMoveLeft) => {
-  const paddingMD = label
-    ? `${theme.spacing.lg} ${theme.spacing.md}`
-    : `${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.lg}`;
-  const paddingSM = label
-    ? `${theme.spacing.md} ${theme.spacing.sm}`
-    : `${theme.spacing.md} ${theme.spacing.sm} ${theme.spacing.md}`;
+  const paddingMD = label ? `18px ${theme.spacing.md}` : `18px ${theme.spacing.md} 18px`;
+  const paddingSM = label ? `13px ${theme.spacing.sm}` : `13px ${theme.spacing.sm} 13px`;
 
   return {
     md: `
@@ -28,10 +24,10 @@ export const getTextFieldSize: SizeConfig = (theme, label, shouldMoveLeft) => {
 };
 
 export const labelSize = {
-  md: `top: 1.7rem;`,
-  sm: `top: 1.1rem;`,
+  md: `top: 1.4rem;`,
+  sm: `top: 1.0rem;`,
 };
 
-export const getSpacingBySize = (size: Size, theme: Theme) => {
+export const getSpacingBySize: (size: Size, theme: Theme) => string = (size, theme) => {
   return theme.spacing[size];
 };

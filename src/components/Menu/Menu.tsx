@@ -23,7 +23,7 @@ export type Props = {
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
   /** Returns the items selected on the menu */
-  selectedItem: string | null;
+  selectedItem?: string | null;
   /** A callback that is being triggered when an items has been clicked */
   onSelect: (option: string) => void;
   /** The text of the button to show - defaults to "More" */

@@ -10,6 +10,7 @@ import * as elevation from './theme/elevation';
 import { Elevation } from './theme/elevation';
 
 export { default as Card } from './components/Card';
+export { default as TopNavBar } from './components/TopAppBar';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
 export { default as CheckBox } from './components/CheckBox';

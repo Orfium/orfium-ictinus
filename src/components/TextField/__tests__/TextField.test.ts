@@ -6,12 +6,12 @@ describe('TextField', () => {
   describe('Utils', () => {
     it('should matches the correct style configuration based on size', () => {
       const mockStylesMD = `
-    padding: 1.5rem 1rem;
+    padding: 18px 1rem;
     label {
       left: 2.4rem;
     };`;
       const mockStylesSM = `
-     padding: 1rem 0.5rem;
+     padding: 13px 0.5rem;
      label {
       left: 1.9rem;
     };`;

@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/TopAppBar Top App Bar 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": 10,
+      }
+    }
+  >
+    <div
+      aria-label="Top Application Banner"
+      className="css-7prc3u-TopAppBar"
+      role="banner"
+    >
+      <div
+        className="css-1ywoi9i-TopAppBar"
+      >
+        <div
+          className="css-1dhefh1-SidebarMenuIcon"
+          onClick={[Function]}
+        >
+          <span
+            className="css-1gnbc76-Icon"
+          >
+            <span
+              className="css-n3de71-Icon"
+            />
+          </span>
+        </div>
+        <div
+          className="css-1e5m70m-LogoWrapper"
+        >
+          <div
+            className="css-1plr80g-PlaceHolder"
+          >
+            <strong>
+              LOGO
+            </strong>
+            PLACEHOLDER
+          </div>
+        </div>
+        <div
+          className="css-jhsp2n-TopAppBar"
+        >
+          <div
+            className="css-12qr1pz-TextField"
+          >
+            <div
+              className="css-ogmpjz-TextField"
+            >
+              <div
+                className="css-uph77z-TextField"
+              >
+                <div
+                  className="css-s8kmdl-IconWrapper"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                  >
+                    <span
+                      className="css-14m0jd5-Icon"
+                    />
+                  </span>
+                </div>
+                <input
+                  className="css-1pxwum3-TextField"
+                  onChange={[Function]}
+                  placeholder="Search"
+                  required={false}
+                />
+                <label
+                  className="css-1bddsc8-Label"
+                >
+                  Search
+                   
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1m3dfn0-TopAppBar"
+      />
+      <div
+        className="css-16h5l3v-TopAppBar"
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="css-6mpaj4-Menu"
+          >
+            <button
+              className="css-8yaow6-Button"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <span
+                className="css-1xr6sam-Button"
+              >
+                <span
+                  className="css-1kner5m-Button"
+                >
+                  <div
+                    className="css-v4tpzl-Avatar"
+                  >
+                    <img
+                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
+                </span>
+                <span
+                  className="css-1qy2jjj-Button"
+                >
+                  <span>
+                    Tom Cruise
+                  </span>
+                </span>
+                <span
+                  className="css-1kner5m-Button"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                  >
+                    <span
+                      className="css-14m0jd5-Icon"
+                    />
+                  </span>
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "marginTop": 50,
+        }
+      }
+    >
+      Search value: 
+      
+    </div>
+  </div>
+</div>
+`;

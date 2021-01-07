@@ -1,0 +1,36 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import TopAppBar from './TopAppBar';
+import Stack from '../storyUtils/Stack'; import TextField from '../TextField'; import TopAppBarShowcase
+  from '../storyUtils/TopAppBarShowcase'; import { boolean } from '@storybook/addon-knobs';
+
+<Meta title="Design System/TopAppBar" component={TopAppBar} />
+
+# TopAppBar
+
+A universal TopAppBar component.
+
+# Usage
+
+```js
+import { TopAppBar } from '@orfium/ictinus';
+
+<TopAppBar />;
+```
+
+# Props
+
+<Props of={TopAppBar} />
+
+# TopAppBar with Logo Placeholder
+
+Regular TopAppBar
+
+<Preview>
+  <Story name="Top App Bar">
+    <div style={{padding: 10}}>
+      <TopAppBarShowcase withAdditionalTools={boolean('withAdditionalTools', false)} withLogo={boolean('withLogo', false)} />
+    </div>
+  </Story>
+</Preview>
+
+
