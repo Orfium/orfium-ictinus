@@ -21,7 +21,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
   onSearchHandler,
 }) => {
   const { type, variant } = searchBgColor;
-  const { items, userAvatar, userName, onSelect } = userMenu;
+  const { items, userAvatar, userName, onSelect, color } = userMenu;
   const searchProps = onSearchHandler ? { onChange: onSearchHandler } : {};
 
   return (
@@ -52,7 +52,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
           items={items}
           buttonText={userName}
           buttonType={'warning'}
-          color={'darkGray-600'}
+          color={color}
           rightIconName={'arrowDown'}
           avatar={userAvatar}
           onSelect={onSelect}
