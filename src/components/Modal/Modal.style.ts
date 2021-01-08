@@ -1,6 +1,6 @@
 import { Theme } from '../../theme';
 import { css, SerializedStyles } from '@emotion/core';
-import { rem, transparentize } from 'polished';
+import { rem } from 'polished';
 
 export const backgroundContainer = () => (theme: Theme): SerializedStyles => css`
   position: fixed;
@@ -9,7 +9,6 @@ export const backgroundContainer = () => (theme: Theme): SerializedStyles => css
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: ${transparentize(0.6, theme.utils.getColor('lightGray', 100, 'flat'))};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +17,6 @@ export const backgroundContainer = () => (theme: Theme): SerializedStyles => css
 export const cardSizing = () => (): SerializedStyles => css`
   max-width: ${rem(500)};
   max-height: ${rem(684)};
-  overflow: hidden;
 `;
 
 export const modalContainer = () => (theme: Theme): SerializedStyles => css`
