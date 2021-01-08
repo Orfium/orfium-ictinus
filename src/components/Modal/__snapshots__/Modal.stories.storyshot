@@ -78,108 +78,100 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
               </span>
             </span>
           </button>
-          <div
-            className="css-6ssuwr-Modal"
-            data-testid="modal-container"
+        </div>
+        <p
+          style={
+            Object {
+              "paddingTop": "8px",
+            }
+          }
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Modal Modal Custom Content 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "padding": "1rem",
+            "width": 768,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+              "width": "100%",
+            }
+          }
+        >
+          <button
+            className="css-199vak6-Button"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
           >
-            <div
-              className="css-j7z0j7-Modal"
+            <span
+              className="css-1xr6sam-Button"
             >
-              <div
-                className="css-14zzb0f-Card"
+              <span
+                className="css-l730ys-Button"
               >
-                <div
-                  className="css-o2cvwz-Modal"
-                >
-                  <div
-                    className="css-7h37s0-Modal"
-                  >
-                    <button
-                      className="css-1t9gku-Button"
-                      data-testid="button-button"
-                      disabled={false}
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="css-1xr6sam-Button"
-                      >
-                        <span
-                          className="css-1kner5m-Button"
-                        >
-                          <span
-                            className="css-1gnbc76-Icon"
-                          >
-                            <span
-                              className="css-d00jsz-Icon"
-                            />
-                          </span>
-                        </span>
-                        <span
-                          className="css-l730ys-Button"
-                        />
-                      </span>
-                    </button>
-                  </div>
-                  <div
-                    className="css-pw3kua-ModalContent"
-                    data-testid="ModalContent"
-                  >
-                    <p
-                      className="css-tagmum-ModalContent"
-                    >
-                      Label
-                    </p>
-                    <h5
-                      className="css-1ho3ir2-ModalContent"
-                    >
-                      Heading
-                    </h5>
-                    <p
-                      className="css-4gvvrk-ModalContent"
-                    >
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod
-                    </p>
-                    <div
-                      className="css-s9cr3s-ModalContent"
-                    >
-                      <button
-                        className="css-1wvqnig-Button"
-                        data-testid="button"
-                        disabled={false}
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="css-1xr6sam-Button"
-                        >
-                          <span
-                            className="css-l730ys-Button"
-                          >
-                            secondaryCTALabel
-                          </span>
-                        </span>
-                      </button>
-                      <button
-                        className="css-199vak6-Button"
-                        data-testid="button"
-                        disabled={false}
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="css-1xr6sam-Button"
-                        >
-                          <span
-                            className="css-l730ys-Button"
-                          >
-                            primaryCTALabel
-                          </span>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                Open Modal
+              </span>
+            </span>
+          </button>
         </div>
         <p
           style={
