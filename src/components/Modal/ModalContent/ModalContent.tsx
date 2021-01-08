@@ -42,18 +42,32 @@ const ModalContent: React.FC<Props> = ({
   dataTestId,
 }) => {
   return (
-    <div css={modalContentContainer()} data-testid={generateTestDataId('ModalContent', dataTestId)}>
+    <div
+      css={modalContentContainer()}
+      data-testid={generateTestDataId('modal-content', dataTestId)}
+    >
       {Boolean(label) && <p css={labelContainer()}>{label}</p>}
       <h5 css={headingContainer()}>{heading}</h5>
       <p css={messageContainer()}>{message}</p>
       <div css={actionsContainer()}>
         {Boolean(secondaryCTA && secondaryCTALabel) && (
-          <Button type={'primary'} filled={false} onClick={secondaryCTA} size={'md'}>
+          <Button
+            type={'primary'}
+            filled={false}
+            onClick={secondaryCTA}
+            size={'md'}
+            dataTestId={'modal-content-secondaryCTA'}
+          >
             {secondaryCTALabel}
           </Button>
         )}
         {Boolean(primaryCTA && primaryCTALabel) && (
-          <Button type={'primary'} onClick={primaryCTA} size={'md'}>
+          <Button
+            type={'primary'}
+            onClick={primaryCTA}
+            size={'md'}
+            dataTestId={'modal-content-primaryCTA'}
+          >
             {primaryCTALabel}
           </Button>
         )}

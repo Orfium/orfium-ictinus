@@ -30,7 +30,13 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children })
           <Card elevated={'02'}>
             <div css={modalContainer()}>
               <div css={closeContainer()}>
-                <IconButton name={'close'} filled={false} size={'sm'} onClick={onClose} />
+                <IconButton
+                  name={'close'}
+                  filled={false}
+                  size={'sm'}
+                  onClick={onClose}
+                  dataTestId={'modal-close'}
+                />
               </div>
               {children}
             </div>
