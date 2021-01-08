@@ -122,4 +122,7 @@ export type AcceptedIconNames =
   | 'writer'
   | 'youtube'
   | 'refresh'
-  | 'star';
+  | 'star'
+  | 'pause'
+  | 'resume'
+  | 'restart';
