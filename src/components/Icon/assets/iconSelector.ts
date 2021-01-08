@@ -135,6 +135,8 @@ import YoutubeIcon from './youtube.svg';
 import RestartIcon from './restart.svg';
 import ResumeIcon from './resume.svg';
 import PauseIcon from './pause.svg';
+import Entity from './entity.svg';
+import PlayCount from './play-count.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -264,6 +266,8 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   pause: PauseIcon,
   restart: RestartIcon,
   resume: ResumeIcon,
+  entity: Entity,
+  playCount: PlayCount,
 };
 
 export default iconSelector;

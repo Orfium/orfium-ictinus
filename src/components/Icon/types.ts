@@ -125,4 +125,6 @@ export type AcceptedIconNames =
   | 'star'
   | 'pause'
   | 'resume'
-  | 'restart';
+  | 'restart'
+  | 'entity'
+  | 'playCount';
