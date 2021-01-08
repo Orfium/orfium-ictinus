@@ -1,7 +1,6 @@
 import { Theme } from '../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { rem, transparentize } from 'polished';
-import { transition } from '../../theme/functions';
 
 export const backgroundContainer = () => (theme: Theme): SerializedStyles => css`
   position: fixed;
