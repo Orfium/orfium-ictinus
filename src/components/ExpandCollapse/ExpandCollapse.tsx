@@ -8,10 +8,10 @@ import { contentStyles } from './ExpandCollapse.style';
 
 export type Props = {
   /**
-   * A function accepting a click handler. Returns the elements containing the text and the
+   * A function accepting a click handler and a boolean representing the current expansion state. Returns the elements containing the text and the
    * expand/collapse button
    * */
-  textAndControl: (x: React.ReactEventHandler) => React.ReactElement;
+  textAndControl: (x: React.ReactEventHandler, y: boolean) => React.ReactElement;
   /**
    * The type of the component that wraps the action and content. Must be able to hold a
    * `data-testid` prop
@@ -139,7 +139,7 @@ function ExpandCollapse(props: Props) {
 
   return (
     <Component data-testid={generateTestDataId('expand-collapse', dataTestId)}>
-      <div>{textAndControl(handleStateChange)}</div>
+      <div>{textAndControl(handleStateChange, expanded)}</div>
       <div css={contentStyles(expanded, transitionDuration)} ref={contentRef}>
         {renderFunction(expanded)}
       </div>

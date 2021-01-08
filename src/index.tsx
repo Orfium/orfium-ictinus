@@ -15,6 +15,7 @@ export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
 export { default as CheckBox } from './components/CheckBox';
 export { default as DatePicker } from './components/DatePicker';
+export { default as Drawer } from './components/Drawer';
 export { default as ExpandCollapse } from './components/ExpandCollapse';
 export { default as Icon } from './components/Icon';
 export { default as IconButton } from './components/IconButton';
