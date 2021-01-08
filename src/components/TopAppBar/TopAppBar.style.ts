@@ -29,9 +29,9 @@ const additionalToolsSection = (theme: Theme): SerializedStyles => css`
   ${topAppBarSection};
   margin: 0 ${theme.spacing.md};
 `;
-const mainSection = css`
+const mainSection = (hasSearchBar: boolean) => css`
   ${topAppBarSection};
-  flex-grow: 1;
+  flex-grow: ${hasSearchBar ? 1 : 0};
   justify-content: flex-start;
 `;
 const searchWrapper = css`

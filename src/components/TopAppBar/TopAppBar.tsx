@@ -22,7 +22,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
 }) => {
   const { type, variant } = searchBgColor;
   const { items, userAvatar, userName, onSelect } = userMenu;
-  const searchProps = { onChange: onSearchHandler };
+  const searchProps = onSearchHandler ? { onChange: onSearchHandler } : {};
 
   return (
     <div
@@ -30,10 +30,10 @@ const TopAppBar: FC<TopAppBarProps> = ({
       aria-label="Top Application Banner"
       css={Styles.topAppBarWrapper({ bgColor })}
     >
-      <div css={Styles.mainSection}>
+      <div css={Styles.mainSection(Boolean(onSearchHandler))}>
         <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />
         <LogoWrapper logoIcon={logoIcon} />
-        {searchPlaceholder && (
+        {onSearchHandler && (
           <div css={Styles.searchWrapper}>
             <TextField
               placeholder={searchPlaceholder}
