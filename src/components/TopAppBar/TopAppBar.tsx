@@ -33,16 +33,18 @@ const TopAppBar: FC<TopAppBarProps> = ({
       <div css={Styles.mainSection}>
         <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />
         <LogoWrapper logoIcon={logoIcon} />
-        <div css={Styles.searchWrapper}>
-          <TextField
-            placeholder={searchPlaceholder}
-            fill={type}
-            styleType={'filled'}
-            fillShade={variant}
-            leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
-            {...searchProps}
-          />
-        </div>
+        {searchPlaceholder && (
+          <div css={Styles.searchWrapper}>
+            <TextField
+              placeholder={searchPlaceholder}
+              fill={type}
+              styleType={'filled'}
+              fillShade={variant}
+              leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
+              {...searchProps}
+            />
+          </div>
+        )}
       </div>
       <div css={Styles.additionalToolsSection}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>
