@@ -1,5 +1,6 @@
 import { Theme } from '../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
+import { rem } from 'polished';
 
 export const modalContentContainer = () => (theme: Theme): SerializedStyles => css`
   width: 100%;
@@ -27,6 +28,8 @@ export const headingContainer = () => (theme: Theme): SerializedStyles => css`
 
 export const messageContainer = () => (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['16']};
+  max-height: ${rem(430)};
+  overflow-y: hidden;
   margin: 0;
 `;
 

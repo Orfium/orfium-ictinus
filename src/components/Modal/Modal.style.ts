@@ -18,6 +18,7 @@ export const backgroundContainer = () => (theme: Theme): SerializedStyles => css
 export const cardSizing = () => (): SerializedStyles => css`
   max-width: ${rem(500)};
   max-height: ${rem(684)};
+  overflow: hidden;
 `;
 
 export const modalContainer = () => (theme: Theme): SerializedStyles => css`

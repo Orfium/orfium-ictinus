@@ -48,12 +48,12 @@ const ModalContent: React.FC<Props> = ({
       <p css={messageContainer()}>{message}</p>
       <div css={actionsContainer()}>
         {Boolean(secondaryCTA && secondaryCTALabel) && (
-          <Button type={'primary'} filled={false} onClick={secondaryCTA}>
+          <Button type={'primary'} filled={false} onClick={secondaryCTA} size={'md'}>
             {secondaryCTALabel}
           </Button>
         )}
         {Boolean(primaryCTA && primaryCTALabel) && (
-          <Button type={'primary'} onClick={primaryCTA}>
+          <Button type={'primary'} onClick={primaryCTA} size={'md'}>
             {primaryCTALabel}
           </Button>
         )}
