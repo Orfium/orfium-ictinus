@@ -57,7 +57,7 @@ const TopAppBarShowcase: FC<Props> = ({
         additionalTools={withAdditionalTools ? additionalTools : []}
         onSearchHandler={provideSearchHandler ? onSearchHandler : undefined}
       />
-      <div style={{ marginTop: 50 }}>Search value: {state}</div>
+      {provideSearchHandler && <div style={{ marginTop: 50 }}>Search value: {state}</div>}
     </>
   );
 };
