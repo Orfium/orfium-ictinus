@@ -6,6 +6,7 @@ import { backgroundContainer, cardSizing, closeContainer, modalContainer } from 
 import { generateTestDataId } from '../../utils/helpers';
 import Card from '../Card';
 import IconButton from '../IconButton';
+import ClickAwayListener from '../utils/ClickAwayListener';
 
 export type Props = {
   /**  If true, the modal is open. Defaults to false. */
@@ -24,16 +25,18 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children })
       css={backgroundContainer()}
       data-testid={generateTestDataId('modal-container', dataTestId)}
     >
-      <div css={cardSizing()}>
-        <Card elevated={'02'}>
-          <div css={modalContainer()}>
-            <div css={closeContainer()}>
-              <IconButton name={'close'} filled={false} size={'sm'} onClick={onClose} />
+      <ClickAwayListener onClick={onClose}>
+        <div css={cardSizing()}>
+          <Card elevated={'02'}>
+            <div css={modalContainer()}>
+              <div css={closeContainer()}>
+                <IconButton name={'close'} filled={false} size={'sm'} onClick={onClose} />
+              </div>
+              {children}
             </div>
-            {children}
-          </div>
-        </Card>
-      </div>
+          </Card>
+        </div>
+      </ClickAwayListener>
     </div>
   );
 };

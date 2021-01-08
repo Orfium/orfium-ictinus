@@ -16,8 +16,8 @@ export const backgroundContainer = () => (theme: Theme): SerializedStyles => css
 `;
 
 export const cardSizing = () => (): SerializedStyles => css`
-  min-width: ${rem(500)};
-  max-width: 50%;
+  max-width: ${rem(500)};
+  max-height: ${rem(684)};
 `;
 
 export const modalContainer = () => (theme: Theme): SerializedStyles => css`
