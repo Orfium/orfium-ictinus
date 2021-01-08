@@ -10,8 +10,6 @@ import ModalContent from "./ModalContent";
 
 # Modal
 
-## Modal
-
 ### Props
 
 <Props of={Modal} />
@@ -21,11 +19,55 @@ import ModalContent from "./ModalContent";
 ```js
 import { Modal } from '@orfium/ictinus';
 
-<Modal open={true} />
+<Modal open={true} onClose={closeCallback}>
+    {'some content here'}
+</Modal>
 ```
+
 
 <Preview>
   <Story name="Modal" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <PresentComponent name="" width={768}>
+        <ModalShowcase>
+            <div style={{padding: "16px"}}>
+            This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.
+            </div>
+        </ModalShowcase>
+      </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
+
+
+
+
+# Modal Content
+
+### Props
+
+<Props of={ModalContent} />
+
+### Usage
+
+```js
+import { Modal, ModalContent } from '@orfium/ictinus';
+
+<Modal open={true} onClose={closeFunc}>
+    <ModalContent
+        label={'Label'}
+        heading={'Heading'}
+        message={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod'}
+        primaryCTALabel={'Do Action'}
+        primaryCTA={actionCallback}
+        secondaryCTALabel={'Cancel'}
+        secondaryCTA={cancelCallback}
+    />
+</Modal>
+```
+
+<Preview>
+  <Story name="Modal Content" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <PresentComponent name="" width={768}>
         <ModalShowcase>
@@ -43,19 +85,3 @@ import { Modal } from '@orfium/ictinus';
     </Stack>
   </Story>
 </Preview>
-
-
-<Preview>
-  <Story name="Modal Custom Content" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
-      <PresentComponent name="" width={768}>
-        <ModalShowcase>
-            <div style={{padding: "16px"}}>
-            This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.
-            </div>
-        </ModalShowcase>
-      </PresentComponent>
-    </Stack>
-  </Story>
-</Preview>
-
