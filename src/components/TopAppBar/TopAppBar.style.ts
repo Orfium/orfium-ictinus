@@ -17,7 +17,7 @@ const topAppBarWrapper = ({ bgColor }: StyleProps) => (theme: Theme): Serialized
   background-color: ${theme.utils.getColor(bgColor.type, bgColor.variant)};
   color: ${pickTextColorFromSwatches(bgColor.type, bgColor.variant)};
   height: ${DEFAULT_NAVBAR_HEIGHT}px;
-  padding: 0 ${theme.spacing.md};
+  padding: 0 ${theme.spacing.xl};
 `;
 
 const topAppBarSection = css`
@@ -29,9 +29,9 @@ const additionalToolsSection = (theme: Theme): SerializedStyles => css`
   ${topAppBarSection};
   margin: 0 ${theme.spacing.md};
 `;
-const mainSection = css`
+const mainSection = (hasSearchBar: boolean) => css`
   ${topAppBarSection};
-  flex-grow: 1;
+  flex-grow: ${hasSearchBar ? 1 : 0};
   justify-content: flex-start;
 `;
 const searchWrapper = css`

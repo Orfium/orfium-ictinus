@@ -3,7 +3,7 @@ import { css, SerializedStyles } from '@emotion/core';
 
 const iconWrapper = (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  margin: ${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.lg} ${theme.spacing.xsm};
+  margin: ${theme.spacing.lg} 0px ${theme.spacing.lg} ${theme.spacing.xsm};
 `;
 
 export default {

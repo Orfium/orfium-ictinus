@@ -22,7 +22,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
 }) => {
   const { type, variant } = searchBgColor;
   const { items, userAvatar, userName, onSelect } = userMenu;
-  const searchProps = { onChange: onSearchHandler };
+  const searchProps = onSearchHandler ? { onChange: onSearchHandler } : {};
 
   return (
     <div
@@ -30,19 +30,21 @@ const TopAppBar: FC<TopAppBarProps> = ({
       aria-label="Top Application Banner"
       css={Styles.topAppBarWrapper({ bgColor })}
     >
-      <div css={Styles.mainSection}>
+      <div css={Styles.mainSection(Boolean(onSearchHandler))}>
         <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />
         <LogoWrapper logoIcon={logoIcon} />
-        <div css={Styles.searchWrapper}>
-          <TextField
-            placeholder={searchPlaceholder}
-            fill={type}
-            styleType={'filled'}
-            fillShade={variant}
-            leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
-            {...searchProps}
-          />
-        </div>
+        {onSearchHandler && (
+          <div css={Styles.searchWrapper}>
+            <TextField
+              placeholder={searchPlaceholder}
+              fill={type}
+              styleType={'filled'}
+              fillShade={variant}
+              leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
+              {...searchProps}
+            />
+          </div>
+        )}
       </div>
       <div css={Styles.additionalToolsSection}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>

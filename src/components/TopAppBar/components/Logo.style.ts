@@ -5,11 +5,9 @@ import { flexCenter } from '../../../theme/functions';
 const wrapper = (theme: Theme): SerializedStyles => css`
   ${flexCenter};
   background-color: transparent;
-  margin: ${theme.spacing.md} ${theme.spacing.md} ${theme.spacing.md} 0px;
+  margin: ${theme.spacing.md} 72px ${theme.spacing.md} ${theme.spacing.md};
   border-radius: ${theme.spacing.xsm};
-  width: 200px;
   max-width: 400px;
-  height: 46px;
 `;
 
 export const placeholderWrapper = css`

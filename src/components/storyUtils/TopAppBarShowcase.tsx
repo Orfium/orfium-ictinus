@@ -6,6 +6,7 @@ import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 interface Props extends TopAppBarProps {
   withLogo: boolean;
   withAdditionalTools: boolean;
+  provideSearchHandler: boolean;
 }
 
 const DEFAULT_USER_MENU = {
@@ -33,6 +34,7 @@ const DEFAULT_ON_CLICK = () => {
 const TopAppBarShowcase: FC<Props> = ({
   withLogo = false,
   withAdditionalTools = false,
+  provideSearchHandler = false,
   additionalTools = DEFAULT_ADDITIONAL_TOOLS,
   userMenu = DEFAULT_USER_MENU,
   onMenuIconClick = DEFAULT_ON_CLICK,
@@ -42,6 +44,10 @@ const TopAppBarShowcase: FC<Props> = ({
     <img src={'https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg'} alt={'logo'} />
   );
 
+  const onSearchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setState(event?.target?.value);
+  };
+
   return (
     <>
       <TopAppBar
@@ -49,11 +55,9 @@ const TopAppBarShowcase: FC<Props> = ({
         onMenuIconClick={onMenuIconClick}
         userMenu={userMenu}
         additionalTools={withAdditionalTools ? additionalTools : []}
-        onSearchHandler={event => {
-          setState(event?.target?.value);
-        }}
+        onSearchHandler={provideSearchHandler ? onSearchHandler : undefined}
       />
-      <div style={{ marginTop: 50 }}>Search value: {state}</div>
+      {provideSearchHandler && <div style={{ marginTop: 50 }}>Search value: {state}</div>}
     </>
   );
 };
