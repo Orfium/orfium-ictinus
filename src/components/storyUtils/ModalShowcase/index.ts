@@ -1,1 +1,1 @@
-export { default } from './DrawerShowcase';
+export { default } from './ModalShowcase';
