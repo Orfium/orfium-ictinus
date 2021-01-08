@@ -2,7 +2,7 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { TestId } from '../../utils/types';
-import { backgroundContainer, closeContainer, modalContainer } from './Modal.style';
+import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
 import { generateTestDataId } from '../../utils/helpers';
 import Card from '../Card';
 import IconButton from '../IconButton';
@@ -24,14 +24,16 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children })
       css={backgroundContainer()}
       data-testid={generateTestDataId('modal-container', dataTestId)}
     >
-      <Card elevated={'02'}>
-        <div css={modalContainer()}>
-          <div css={closeContainer()}>
-            <IconButton name={'close'} filled={false} size={'sm'} onClick={onClose} />
+      <div css={cardSizing()}>
+        <Card elevated={'02'}>
+          <div css={modalContainer()}>
+            <div css={closeContainer()}>
+              <IconButton name={'close'} filled={false} size={'sm'} onClick={onClose} />
+            </div>
+            {children}
           </div>
-          {children}
-        </div>
-      </Card>
+        </Card>
+      </div>
     </div>
   );
 };

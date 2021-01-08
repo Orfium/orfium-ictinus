@@ -15,10 +15,12 @@ export const backgroundContainer = () => (theme: Theme): SerializedStyles => css
   align-items: center;
 `;
 
-export const modalContainer = () => (theme: Theme): SerializedStyles => css`
+export const cardSizing = () => (): SerializedStyles => css`
   min-width: ${rem(500)};
-  max-width: 80%;
-  height: 100%;
+  max-width: 50%;
+`;
+
+export const modalContainer = () => (theme: Theme): SerializedStyles => css`
   padding: ${theme.spacing.xl};
   background: ${theme.palette.white};
   display: flex;

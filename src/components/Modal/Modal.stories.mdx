@@ -4,6 +4,7 @@ import PresentComponent from '../storyUtils/PresentComponent';
 import ModalShowcase from '../storyUtils/ModalShowcase';
 import Stack from '../storyUtils/Stack';
 import Modal from "./Modal";
+import ModalContent from "./ModalContent";
 
 <Meta title="Design System/Modal" component={Modal} />
 
@@ -27,7 +28,32 @@ import { Modal } from '@orfium/ictinus';
   <Story name="Modal" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <PresentComponent name="" width={768}>
-        <ModalShowcase />
+        <ModalShowcase>
+            <ModalContent
+                label={text('label', 'Label')}
+                heading={text('heading', 'Heading')}
+                message={text('message', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod')}
+                primaryCTALabel={text('primaryCTALabel', 'primaryCTALabel')}
+                secondaryCTALabel={text('secondaryCTALabel', 'secondaryCTALabel')}
+                primaryCTA={() => console.log("primaryCTA")}
+                secondaryCTA={() => console.log("secondaryCTA")}
+            />
+        </ModalShowcase>
+      </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
+
+
+<Preview>
+  <Story name="Modal Custom Content" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <PresentComponent name="" width={768}>
+        <ModalShowcase>
+            <div style={{padding: "16px"}}>
+            This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.
+            </div>
+        </ModalShowcase>
       </PresentComponent>
     </Stack>
   </Story>
