@@ -4,7 +4,7 @@ import Modal from './Modal';
 import ModalContent from './ModalContent';
 import '@testing-library/jest-dom';
 
-xdescribe('Modal', () => {
+describe('Modal', () => {
   const data = {
     label: 'label',
     heading: 'heading',
@@ -52,11 +52,11 @@ xdescribe('Modal', () => {
 
     const { findByTestId } = render(
       <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
-        <ModalContent heading={data.heading} message={data.message} dataTestId={'content'} />
+        {data.message}
       </Modal>
     );
 
-    const closeButton = await findByTestId('button-modal-close');
+    const closeButton = await findByTestId('button-button-modal-close');
     fireEvent.click(closeButton);
 
     expect(closeCTA).toHaveBeenCalledTimes(1);
@@ -84,11 +84,11 @@ xdescribe('Modal', () => {
     const primaryButton = await findByTestId('button-modal-content-primaryCTA');
     fireEvent.click(primaryButton);
 
-    expect(primaryButton).toHaveBeenCalledTimes(1);
+    expect(primaryCTA).toHaveBeenCalledTimes(1);
 
     const secondaryButton = await findByTestId('button-modal-content-secondaryCTA');
     fireEvent.click(secondaryButton);
 
-    expect(secondaryButton).toHaveBeenCalledTimes(1);
+    expect(secondaryCTA).toHaveBeenCalledTimes(1);
   });
 });
