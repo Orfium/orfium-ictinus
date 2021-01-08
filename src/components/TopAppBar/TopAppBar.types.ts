@@ -18,6 +18,7 @@ export interface TopAppBarProps {
     userName: string;
     userAvatar: { src: string; letter: string };
     onSelect: (selectedItem: string) => void;
+    color: string;
   };
 }
 
