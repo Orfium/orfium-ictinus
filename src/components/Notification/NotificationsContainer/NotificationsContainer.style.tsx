@@ -9,10 +9,10 @@ const getPositionStyle = (styleLiteral: string) => {
 };
 
 const positionOptions = {
-  'top-right': `top:0; right: 0;`,
-  'top-left': `top:0; left: 0;`,
-  'bottom-left': `bottom:0; left: 0;`,
-  'bottom-right': `bottom:0; right: 0;`,
+  'top-right': `top:0; right: 0; align-items: flex-end;`,
+  'top-left': `top:0; left: 0; align-items: flex-start;`,
+  'bottom-left': `bottom:0; left: 0; align-items: flex-start;`,
+  'bottom-right': `bottom:0; right: 0; align-items: flex-end;`,
 };
 
 export const notificationsContainer = (currentPosition: string) => (
@@ -20,7 +20,7 @@ export const notificationsContainer = (currentPosition: string) => (
 ): SerializedStyles => css`
   position: fixed;
   ${getPositionStyle(positionOptions[currentPosition])};
-  min-width: ${rem(489)};
+  min-width: ${rem(490)};
   display: flex;
   flex-direction: column;
   margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};

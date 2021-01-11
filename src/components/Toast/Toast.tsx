@@ -29,6 +29,8 @@ export type Props = {
   /** Initialize toast as expanded */
   expanded?: boolean;
   /** The data test id if needed */
+  fullWidth?: boolean;
+  /** The data test id if needed */
   dataTestId?: TestId;
 };
 
@@ -43,11 +45,12 @@ const Toast: React.FC<Props> = ({
   expanded = false,
   children,
   dataTestId,
+  fullWidth = false,
 }) => {
   const [isExpanded, setExpanded] = useState(expanded);
 
   return (
-    <div css={toastContainer(type)}>
+    <div css={toastContainer(type, fullWidth)}>
       <div css={topContainer(type)}>
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (

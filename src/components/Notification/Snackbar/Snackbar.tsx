@@ -34,6 +34,8 @@ export type Props = {
   description: string | undefined;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
+  /** The type of the Notification */
+  fullWidth?: boolean;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
@@ -47,12 +49,13 @@ const Snackbar: React.FC<Props> = ({
   secondaryCTA,
   description,
   closeCTA,
+  fullWidth = false,
   dataTestId,
 }) => {
   const { utils } = useTheme();
 
   return (
-    <div css={cardContainer(type)}>
+    <div css={cardContainer(type, fullWidth)}>
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>

@@ -8,6 +8,7 @@ import { isNotificationTypes } from './Toast';
 const widthOptions = {
   notification: `width: ${rem(336)};`,
   generic: `min-width: ${rem(336)};`,
+  'full-width': `width: 100%`,
 };
 
 const maxHeightOptions = {
@@ -15,13 +16,17 @@ const maxHeightOptions = {
   generic: `max-height: none;`,
 };
 
-export const toastContainer = (type: AcceptedColorComponentTypes) => (
+export const toastContainer = (type: AcceptedColorComponentTypes, fullWidth: boolean) => (
   theme: Theme
 ): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  ${isNotificationTypes(type) ? widthOptions['notification'] : widthOptions['generic']}
+  ${fullWidth
+    ? widthOptions['full-width']
+    : isNotificationTypes(type)
+    ? widthOptions['notification']
+    : widthOptions['generic']};
   border-radius: ${theme.spacing.xsm};
   // TODO: box-shadow's last parameter to change when elevated is introduced
   box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};

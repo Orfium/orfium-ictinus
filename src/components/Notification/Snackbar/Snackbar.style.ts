@@ -4,12 +4,14 @@ import { NotificationTypes } from '../Notification';
 import { css, SerializedStyles } from '@emotion/core';
 import { typeToThemePalette } from '../subcomponents/CompactNotification/CompactNotification.style';
 
-export const cardContainer = (type: NotificationTypes) => (theme: Theme): SerializedStyles => css`
+export const cardContainer = (type: NotificationTypes, fullWidth: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding: ${theme.spacing.md};
-  width: ${rem(336)};
+  width: ${fullWidth ? 'inherit' : rem(336)};
   min-height: ${rem(164)};
   max-height: ${rem(294)};
   border-left: ${typeToThemePalette(theme, type)} 4px solid;
