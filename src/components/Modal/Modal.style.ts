@@ -2,7 +2,7 @@ import { Theme } from '../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { rem, transparentize } from 'polished';
 
-export const backgroundContainer = () => (theme: Theme): SerializedStyles => css`
+export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   position: fixed;
   z-index: 3000; // Because TextField has a z-index of 2000 in its style.
   width: 100vw;
@@ -15,12 +15,12 @@ export const backgroundContainer = () => (theme: Theme): SerializedStyles => css
   align-items: center;
 `;
 
-export const cardSizing = () => (): SerializedStyles => css`
+export const cardSizing = css`
   max-width: ${rem(500)};
   max-height: ${rem(684)};
 `;
 
-export const modalContainer = () => (theme: Theme): SerializedStyles => css`
+export const modalContainer = (theme: Theme): SerializedStyles => css`
   padding: ${theme.spacing.xl};
   background: ${theme.palette.white};
 
@@ -29,7 +29,7 @@ export const modalContainer = () => (theme: Theme): SerializedStyles => css`
   flex-wrap: wrap;
 `;
 
-export const closeContainer = () => (theme: Theme): SerializedStyles => css`
+export const closeContainer = css`
   width: 100%;
   display: flex;
   justify-content: flex-end;

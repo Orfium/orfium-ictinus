@@ -21,15 +21,12 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children })
   if (!open) return null;
 
   return (
-    <div
-      css={backgroundContainer()}
-      data-testid={generateTestDataId('modal-container', dataTestId)}
-    >
+    <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
       <ClickAwayListener onClick={onClose}>
-        <div css={cardSizing()}>
+        <div css={cardSizing}>
           <Card elevated={'02'}>
-            <div css={modalContainer()}>
-              <div css={closeContainer()}>
+            <div css={modalContainer}>
+              <div css={closeContainer}>
                 <IconButton
                   name={'close'}
                   filled={false}
