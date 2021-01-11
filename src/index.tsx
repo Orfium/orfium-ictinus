@@ -23,6 +23,7 @@ export { default as Menu } from './components/Menu';
 export { default as Avatar } from './components/Avatar';
 export { default as InlineNotification } from './components/Notification/InlineNotification';
 export { default as Banner } from './components/Notification/Banner';
+export { default as LineChart } from './components/LineChart';
 export { default as NotificationsContainer } from './components/Notification/NotificationsContainer';
 export { default as NotificationVisual } from './components/Notification/NotificationVisual';
 export { default as Snackbar } from './components/Notification/Snackbar';
