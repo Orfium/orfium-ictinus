@@ -44,13 +44,13 @@ const ModalContent: React.FC<Props> = ({
   return (
     <div
       role={'dialog'}
-      css={modalContentContainer()}
+      css={modalContentContainer}
       data-testid={generateTestDataId('modal-content', dataTestId)}
     >
-      {Boolean(label) && <p css={labelContainer()}>{label}</p>}
-      <h5 css={headingContainer()}>{heading}</h5>
-      <p css={messageContainer()}>{message}</p>
-      <div css={actionsContainer()}>
+      {Boolean(label) && <p css={labelContainer}>{label}</p>}
+      <h5 css={headingContainer}>{heading}</h5>
+      <p css={messageContainer}>{message}</p>
+      <div css={actionsContainer}>
         {Boolean(secondaryCTA && secondaryCTALabel) && (
           <Button
             type={'primary'}
