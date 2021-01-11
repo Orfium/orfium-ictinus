@@ -43,6 +43,7 @@ const ModalContent: React.FC<Props> = ({
 }) => {
   return (
     <div
+      role={'dialog'}
       css={modalContentContainer()}
       data-testid={generateTestDataId('modal-content', dataTestId)}
     >
