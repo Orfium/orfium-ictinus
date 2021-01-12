@@ -53,16 +53,20 @@ import { Modal } from '@orfium/ictinus';
 ```js
 import { Modal, ModalContent } from '@orfium/ictinus';
 
-<Modal open={true} onClose={closeFunc}>
-    <ModalContent
-        label={'Label'}
-        heading={'Heading'}
-        message={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod'}
-        primaryCTALabel={'Do Action'}
-        primaryCTA={actionCallback}
-        secondaryCTALabel={'Cancel'}
-        secondaryCTA={cancelCallback}
-    />
+<Modal
+    open={true}
+    onClose={closeFunc}
+    fixedContent={true}
+    contentProps={
+        label: 'Label',
+        heading: 'Heading',
+        message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod',
+        primaryCTALabel: 'Do Action',
+        primaryCTA: actionCallback,
+        secondaryCTALabel: 'Cancel',
+        secondaryCTA: cancelCallback,
+    }>
 </Modal>
 ```
 

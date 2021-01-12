@@ -7,17 +7,36 @@ import { generateTestDataId } from '../../utils/helpers';
 import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';
+import ModalContent, { Props as ModalContentProps } from './ModalContent/ModalContent';
 
 export type Props = {
   /**  If true, the modal is open. Defaults to false. */
   open: boolean;
   /** Callback fired when the component requests to be closed. */
   onClose: () => void;
+  /** If true, modal will use default ModalContent and contentProps should be ModalContentProps. Defaults to false */
+  fixedContent?: boolean;
+  /** If fixedContent is true, contentProps should be ModalContentProps. Other wise it can be undefined  */
+  contentProps?: ModalContentProps;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
 
-const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children }) => {
+const Modal: React.FC<Props> = ({
+  open = false,
+  onClose,
+  dataTestId,
+  children,
+  fixedContent = false,
+  contentProps,
+}) => {
+  if (fixedContent && !contentProps) {
+    throw Error(
+      `When fixedContent is true contentProps should be ModalContentProps but you passed ${JSON.stringify(
+        contentProps
+      )}.`
+    );
+  }
   if (!open) return null;
 
   return (
@@ -35,7 +54,7 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children })
                   dataTestId={'modal-close'}
                 />
               </div>
-              {children}
+              {fixedContent && contentProps ? <ModalContent {...contentProps} /> : children}
             </div>
           </Card>
         </div>
