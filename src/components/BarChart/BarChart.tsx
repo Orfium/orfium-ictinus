@@ -8,48 +8,141 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  LabelList,
 } from 'recharts';
-const data = [
-  { name: 'Orfium', value: 600000 },
-  { name: 'UMG', value: 230000 },
-  { name: 'Unknown Owners', value: 138000 },
-  { name: 'SME', value: 60908 },
-  { name: 'AdRev (3d party)', value: 40800 },
-  { name: 'Rock Mobile Corp.', value: 30800 },
-  { name: 'UMPG Publishing', value: 7300 },
-  { name: 'Karya Anak Haki', value: 4300 },
-  { name: 'Adshare (3d party)', value: 3300 },
-  { name: 'Other', value: 14300 },
-];
+import { LabelProps } from 'recharts';
+import max from 'lodash/max';
 
-// const CustomYAxisTick = (props: { y: number; payload: { value: React.ReactNode; }; }) => {
+interface CustomLabelProps extends LabelProps {
+  customLabels: string[];
+  // index: number;
+}
+
+type Option = {
+  color?: string;
+};
+
+type Data = {
+  name: string;
+  subcategory?: string;
+  value?: number;
+  barLabel?: string;
+  options?: Option;
+};
+
+type Props = {
+  data: Data[];
+};
+
+const CustomYAxisTick = (props: { y: number; payload: { value: React.ReactNode } }) => {
+  // console.log(props);
+
+  return (
+    <text
+      // width={props.width}
+      // height={props.height}
+      x={0}
+      y={props.y}
+      textAnchor="start"
+      // fill="#666"
+    >
+      <tspan dy="0.335em">{props.payload.value}</tspan>
+    </text>
+  );
+};
+
+// const CustomizedLabel: React.FC<CustomLabelProps> = ({
+//   customLabels,
+//   x,
+//   y,
+//   width,
+//   height,
+//   index,
+// }) => {
 //   // console.log(props);
 
 //   return (
-//     <g transform={`translate(${0},${props.y})`}>
-//       <text x={0} y={0} textAnchor="start" fill="#666">
-//         {props.payload.value}
-//       </text>
-//     </g>
+//     <text
+//       // width={props.width}
+//       // height={props.height}
+//       x={x + width + 16}
+//       y={y + height / 2}
+//       // textAnchor="start"
+//       // fill="#666"
+//     >
+//       <tspan dy="0.335em" fontWeight="bold">
+//         {customLabels[index]}
+//       </tspan>
+//     </text>
 //   );
 // };
 
-const SimpleBarChart = () => {
+const CustomizedLabel: React.FC<LabelProps> = ({ value, x, y, width, height }) => {
+  // console.log(props);
+
+  return (
+    <text x={x + width + 16} y={y + height / 2}>
+      <tspan dy="0.335em" fontWeight="bold">
+        {value}
+      </tspan>
+    </text>
+  );
+};
+
+const SimpleBarChart: React.FC<Props> = ({ data }) => {
+  const barColors = data.map(obj => {
+    if (obj?.options?.color) {
+      return obj?.options?.color;
+    }
+
+    return 'gray';
+  });
+
+  const barLabels = data.map(obj => {
+    if (obj?.barLabel) {
+      return obj?.barLabel;
+    }
+
+    return '';
+  });
+
+  const maxLabelLength = max(
+    data.map(obj => {
+      console.log(obj.name, obj.name.length);
+
+      return obj.name.length;
+    })
+  );
+
+  console.log('max', maxLabelLength);
+
+  const yAxisWidth = maxLabelLength * 6.8;
+
+  console.log('width', yAxisWidth);
+
   return (
     <ResponsiveContainer>
       <BarChart
         data={data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
         layout="vertical"
         barCategoryGap="20%"
       >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis type="number" />
-        <YAxis type="category" dataKey="name" /*tick={<CustomYAxisTick />}*/ />
-        <Tooltip />
-        <Bar dataKey="value" label={{ position: 'right' }}>
+        <CartesianGrid offset={{ left: 0 }} horizontal={false} />
+        <XAxis type="number" axisLine={false} tickLine={false} />
+        <YAxis
+          type="category"
+          dataKey="name"
+          tick={<CustomYAxisTick />}
+          width={yAxisWidth > 220 ? 220 : yAxisWidth}
+          axisLine={false}
+          tickLine={false}
+        />
+        <Tooltip cursor={false} />
+        <Bar dataKey="value" /*label={<CustomizedLabel customLabels={barLabels} />}*/>
+          <LabelList dataKey="barLabel" position="right" content={<CustomizedLabel />} />
           {data.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={index === 0 ? 'orange' : 'gray'} />
+            <Cell key={`cell-${index}`} fill={barColors[index]} />
           ))}{' '}
         </Bar>
       </BarChart>
