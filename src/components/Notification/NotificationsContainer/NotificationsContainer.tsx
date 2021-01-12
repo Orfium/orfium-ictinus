@@ -5,7 +5,7 @@ import { notificationsContainer } from './NotificationsContainer.style';
 
 type Positions = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right';
 
-type NotificationChildren = JSX.Element[];
+// type NotificationChildren = JSX.Element[];
 
 export type VarietyType = {
   banner: boolean;
@@ -16,7 +16,7 @@ type Props = {
   /** Notifications Container position */
   position: Positions;
   /** Notifications Container children */
-  children: NotificationChildren;
+  // children: NotificationChildren;
 };
 
 // const childrenTypeCheck = (children: NotificationChildren) => {
