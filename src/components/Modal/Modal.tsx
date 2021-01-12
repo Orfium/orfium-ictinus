@@ -14,29 +14,13 @@ export type Props = {
   open: boolean;
   /** Callback fired when the component requests to be closed. */
   onClose: () => void;
-  /** If true, modal will use default ModalContent and contentProps should be ModalContentProps. Defaults to false */
-  fixedContent?: boolean;
-  /** If fixedContent is true, contentProps should be ModalContentProps. Other wise it can be undefined  */
+  /** If contentProps are defined then ModalContent will be used instead of children. Otherwise, you can use the Modal as a wrapper  */
   contentProps?: ModalContentProps;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
 
-const Modal: React.FC<Props> = ({
-  open = false,
-  onClose,
-  dataTestId,
-  children,
-  fixedContent = false,
-  contentProps,
-}) => {
-  if (fixedContent && !contentProps) {
-    throw Error(
-      `When fixedContent is true contentProps should be ModalContentProps but you passed ${JSON.stringify(
-        contentProps
-      )}.`
-    );
-  }
+const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, contentProps }) => {
   if (!open) return null;
 
   return (
@@ -54,7 +38,7 @@ const Modal: React.FC<Props> = ({
                   dataTestId={'modal-close'}
                 />
               </div>
-              {fixedContent && contentProps ? <ModalContent {...contentProps} /> : children}
+              {contentProps ? <ModalContent {...contentProps} /> : children}
             </div>
           </Card>
         </div>
