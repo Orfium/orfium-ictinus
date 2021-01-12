@@ -2,9 +2,6 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { notificationsContainer } from './NotificationsContainer.style';
-import Banner from '../Banner';
-import Toast from '../../Toast';
-import Snackbar from '../Snackbar';
 
 type Positions = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right';
 
@@ -22,30 +19,31 @@ type Props = {
   children: NotificationChildren;
 };
 
-const childrenTypeCheck = (children: NotificationChildren) => {
-  const variety = { banner: false, other: false };
-  React.Children.map(children, child => {
-    if (child && child.type === Banner) {
-      variety.banner = true;
-    } else {
-      variety.other = true;
-    }
-  });
+// const childrenTypeCheck = (children: NotificationChildren) => {
+//   const variety = { banner: false, other: false };
+//   React.Children.map(children, child => {
+//     if (child && child.type === Banner) {
+//       variety.banner = true;
+//     } else {
+//       variety.other = true;
+//     }
+//   });
 
-  return variety;
-};
+//   return variety;
+// };
 
 const NotificationsContainer: React.FC<Props> = ({ children, position }) => {
-  const variety = childrenTypeCheck(children);
+  // const variety = childrenTypeCheck(children);
 
   return (
     <div css={notificationsContainer(position)}>
-      {children &&
+      {/* {children &&
         React.Children.map(children, child => {
           if (variety.banner && variety.other && (child.type === Toast || child.type === Snackbar))
             return React.cloneElement(child, { fullWidth: true });
           else return child;
-        })}
+        })} */}
+      {children}
     </div>
   );
 };

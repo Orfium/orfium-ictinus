@@ -269,6 +269,19 @@ import { Snackbar } from '@orfium/ictinus';
           'top-left'
         )}
       >
+        <Snackbar
+          message={text('message', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+          primaryCTA={() => console.log('primary action clicked')}
+          secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+          secondaryCTA={() => console.log('secondary action clicked')}
+          description={text(
+            'description',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+          )}
+          closeCTA={() => console.log('close action clicked')}
+        />
         <Banner
           withIcon={boolean('icon', true)}
           withFilling={boolean('withFilling', false)}
@@ -292,6 +305,24 @@ import { Snackbar } from '@orfium/ictinus';
           )}
           closeCTA={() => console.log('close action clicked')}
         />
+        <Toast
+          message={text('message', 'Informative Message')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          expanded
+          closeCTA={() => console.log('close action clicked')}
+        >
+          <NotificationVisual
+            title={text('title', 'Message heading')}
+            primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+            primaryCTA={() => console.log('primary action clicked')}
+            secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+            secondaryCTA={() => console.log('secondary action clicked')}
+            description={text(
+              'description',
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+            )}
+          />
+        </Toast>
         <Banner
           withIcon={boolean('icon', true)}
           withFilling={boolean('withFilling', false)}
@@ -300,6 +331,60 @@ import { Snackbar } from '@orfium/ictinus';
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
           primaryCTA={() => console.log('action clicked')}
+          closeCTA={() => console.log('close action clicked')}
+        />
+        <Toast
+          message={text('message', 'Informative Message')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          expanded
+          closeCTA={() => console.log('close action clicked')}
+        >
+          <NotificationVisual
+            title={text('title', 'Message heading')}
+            primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+            primaryCTA={() => console.log('primary action clicked')}
+            secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+            secondaryCTA={() => console.log('secondary action clicked')}
+            description={text(
+              'description',
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+            )}
+          />
+        </Toast>
+      </NotificationsContainer>
+    </PresentComponent>
+  </Story>
+</Preview>
+
+## Playground 2
+
+<Preview>
+  <Story
+    name="Playground 2"
+    parameters={{
+      decorators: [withKnobs],
+      docs: { iframeHeight: 500 },
+    }}
+  >
+    <PresentComponent name="" width={768}>
+      <NotificationsContainer
+        position={select(
+          'position',
+          ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
+          'top-left'
+        )}
+      >
+        <Snackbar
+          message={text('message', 'This is the info')}
+          type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+          primaryCTA={() => console.log('primary action clicked')}
+          secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+          secondaryCTA={() => console.log('secondary action clicked')}
+          description={text(
+            'description',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+          )}
           closeCTA={() => console.log('close action clicked')}
         />
         <Toast

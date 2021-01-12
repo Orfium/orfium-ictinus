@@ -49,13 +49,13 @@ const Snackbar: React.FC<Props> = ({
   secondaryCTA,
   description,
   closeCTA,
-  fullWidth = false,
+  // fullWidth = false,
   dataTestId,
 }) => {
   const { utils } = useTheme();
 
   return (
-    <div css={cardContainer(type, fullWidth)}>
+    <div css={cardContainer(type)} notification-type="snackbar">
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>

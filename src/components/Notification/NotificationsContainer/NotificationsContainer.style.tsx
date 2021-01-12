@@ -21,10 +21,27 @@ export const notificationsContainer = (currentPosition: string) => (
   position: fixed;
   ${getPositionStyle(positionOptions[currentPosition])};
   min-width: ${rem(490)};
+  max-width: 66%;
   display: flex;
   flex-direction: column;
   margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};
   > div {
     margin: ${theme.spacing.sm} 0;
+  }
+
+  div[notification-type='toast'] {
+    width: 200px;
+  }
+
+  div[notification-type='snackbar'] {
+    width: 200px;
+  }
+
+  div[notification-type='banner'] ~ div[notification-type='toast'] {
+    width: 100%;
+  }
+
+  div[notification-type='banner'] ~ div[notification-type='snackbar'] {
+    width: 100%;
   }
 `;

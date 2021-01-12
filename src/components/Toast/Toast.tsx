@@ -45,12 +45,15 @@ const Toast: React.FC<Props> = ({
   expanded = false,
   children,
   dataTestId,
-  fullWidth = false,
+  // fullWidth = false,
 }) => {
   const [isExpanded, setExpanded] = useState(expanded);
 
   return (
-    <div css={toastContainer(type, fullWidth)}>
+    <div
+      css={toastContainer()}
+      {...(isNotificationTypes(type) && { 'notification-type': 'toast' })}
+    >
       <div css={topContainer(type)}>
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (
