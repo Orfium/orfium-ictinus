@@ -38,6 +38,7 @@ const Pagination = ({
       css={{
         flex: 1,
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'space-between',
         '> *': { padding: theme.spacing.sm },
       }}
@@ -48,7 +49,7 @@ const Pagination = ({
           onClick={navigateToFirstPage}
           iconSize={24}
           disabled={!hasPrevPage}
-          type={'dark'}
+          type={'primary'}
         />
       )}
       <IconButton
@@ -56,7 +57,7 @@ const Pagination = ({
         iconSize={24}
         onClick={navigateToPrevPage}
         disabled={!hasPrevPage}
-        type={'dark'}
+        type={'primary'}
       />
 
       <div>
@@ -68,7 +69,7 @@ const Pagination = ({
         iconSize={24}
         onClick={navigateToNextPage}
         disabled={!hasNextPage}
-        type={'dark'}
+        type={'primary'}
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
@@ -76,7 +77,7 @@ const Pagination = ({
           iconSize={24}
           onClick={navigateToLastPage}
           disabled={!hasNextPage}
-          type={'dark'}
+          type={'primary'}
         />
       )}
     </div>
