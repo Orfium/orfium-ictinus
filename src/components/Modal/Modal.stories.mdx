@@ -1,0 +1,89 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { withKnobs, text } from '@storybook/addon-knobs';
+import PresentComponent from '../storyUtils/PresentComponent';
+import ModalShowcase from '../storyUtils/ModalShowcase';
+import Stack from '../storyUtils/Stack';
+import Modal from "./Modal";
+import ModalContent from "./ModalContent";
+
+<Meta title="Design System/Modal" component={Modal} />
+
+# Modal
+
+### Props
+
+<Props of={Modal} />
+
+### Usage
+
+```js
+import { Modal } from '@orfium/ictinus';
+
+<Modal open={true} onClose={closeCallback}>
+    {'some content here'}
+</Modal>
+```
+
+
+<Preview>
+  <Story name="Modal" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <PresentComponent name="" width={768}>
+        <ModalShowcase>
+            <div style={{padding: "16px"}}>
+            {text('message', 'This is just a text inside the modal. This text serves really no purpose but for some reason here you are, continuing reading it. You are just like Alice in Wonderland, trying to see where this will lead you.')}
+            </div>
+        </ModalShowcase>
+      </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
+
+
+
+
+# Modal Content
+
+### Props
+
+<Props of={ModalContent} />
+
+### Usage
+
+```js
+import { Modal, ModalContent } from '@orfium/ictinus';
+
+<Modal
+    open={true}
+    onClose={closeFunc}
+    contentProps={{
+        label: 'Label',
+        heading: 'Heading',
+        message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod',
+        primaryCTALabel: 'Do Action',
+        primaryCTA: actionCallback,
+        secondaryCTALabel: 'Cancel',
+        secondaryCTA: cancelCallback,
+    }}>
+</Modal>
+```
+
+<Preview>
+  <Story name="Modal Content" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <PresentComponent name="" width={768}>
+        <ModalShowcase contentProps={{
+            label: text('label', 'Label'),
+            heading: text('heading', 'Heading'),
+            message:
+            text('message','Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod'),
+            primaryCTALabel: text('primaryCTALabel' ,'Do Action'),
+            primaryCTA: () => console.log('primaryCTA'),
+            secondaryCTALabel: text('secondaryCTALabel' ,'Secondary Action'),
+            secondaryCTA: () => console.log('secondaryCTA'),
+       }} />
+      </PresentComponent>
+    </Stack>
+  </Story>
+</Preview>
