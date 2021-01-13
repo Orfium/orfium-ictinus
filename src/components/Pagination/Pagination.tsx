@@ -14,6 +14,10 @@ type Props = {
   onChange?: (page: number) => void;
   /** Hide the enhanced button functionality, this way the jump to first and last page will be hidden **/
   hideEnhancedPaginationButtons?: boolean;
+  /** Manually disable next page buttons **/
+  nextPageDisabled?: boolean;
+  /** Manually disable previous page buttons **/
+  prevPageDisabled?: boolean;
 };
 
 const Pagination = ({
@@ -21,6 +25,8 @@ const Pagination = ({
   count,
   onChange = () => {},
   hideEnhancedPaginationButtons = false,
+  nextPageDisabled,
+  prevPageDisabled,
 }: Props) => {
   const theme = useTheme();
   const {
@@ -47,7 +53,7 @@ const Pagination = ({
           name={'arrowToLeft'}
           onClick={navigateToFirstPage}
           iconSize={24}
-          disabled={!hasPrevPage}
+          disabled={prevPageDisabled || !hasPrevPage}
           type={'dark'}
         />
       )}
@@ -55,7 +61,7 @@ const Pagination = ({
         name={'arrowLeft'}
         iconSize={24}
         onClick={navigateToPrevPage}
-        disabled={!hasPrevPage}
+        disabled={prevPageDisabled || !hasPrevPage}
         type={'dark'}
       />
 
@@ -67,7 +73,7 @@ const Pagination = ({
         name={'arrowRight'}
         iconSize={24}
         onClick={navigateToNextPage}
-        disabled={!hasNextPage}
+        disabled={nextPageDisabled || !hasNextPage}
         type={'dark'}
       />
       {!hideEnhancedPaginationButtons && (
@@ -75,7 +81,7 @@ const Pagination = ({
           name={'arrowToRight'}
           iconSize={24}
           onClick={navigateToLastPage}
-          disabled={!hasNextPage}
+          disabled={nextPageDisabled || !hasNextPage}
           type={'dark'}
         />
       )}
