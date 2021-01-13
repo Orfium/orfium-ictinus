@@ -1,4 +1,5 @@
-import React from 'react';
+// // @ts-nocheck
+import React, { useMemo } from 'react';
 import {
   ResponsiveContainer,
   BarChart,
@@ -9,17 +10,27 @@ import {
   CartesianGrid,
   Tooltip,
   LabelList,
+  LabelProps,
 } from 'recharts';
-import { LabelProps } from 'recharts';
 import max from 'lodash/max';
+import CustomTooltip from './components/CustomTooltip';
+import useTheme from '../../hooks/useTheme';
 
 interface CustomLabelProps extends LabelProps {
   customLabels: string[];
   // index: number;
 }
 
+type hoverInfo = {
+  name: string;
+  value?: string | number;
+  percentage?: string;
+  [prop: string]: number | string | undefined;
+};
+
 type Option = {
   color?: string;
+  hoverInfo?: hoverInfo[];
 };
 
 type Data = {
@@ -51,32 +62,6 @@ const CustomYAxisTick = (props: { y: number; payload: { value: React.ReactNode }
   );
 };
 
-// const CustomizedLabel: React.FC<CustomLabelProps> = ({
-//   customLabels,
-//   x,
-//   y,
-//   width,
-//   height,
-//   index,
-// }) => {
-//   // console.log(props);
-
-//   return (
-//     <text
-//       // width={props.width}
-//       // height={props.height}
-//       x={x + width + 16}
-//       y={y + height / 2}
-//       // textAnchor="start"
-//       // fill="#666"
-//     >
-//       <tspan dy="0.335em" fontWeight="bold">
-//         {customLabels[index]}
-//       </tspan>
-//     </text>
-//   );
-// };
-
 const CustomizedLabel: React.FC<LabelProps> = ({ value, x, y, width, height }) => {
   // console.log(props);
 
@@ -90,35 +75,25 @@ const CustomizedLabel: React.FC<LabelProps> = ({ value, x, y, width, height }) =
 };
 
 const SimpleBarChart: React.FC<Props> = ({ data }) => {
-  const barColors = data.map(obj => {
-    if (obj?.options?.color) {
-      return obj?.options?.color;
-    }
+  const theme = useTheme();
 
-    return 'gray';
-  });
+  const barColors = useMemo(() => {
+    return data.map(obj => {
+      if (obj?.options?.color) {
+        return obj?.options?.color;
+      }
 
-  const barLabels = data.map(obj => {
-    if (obj?.barLabel) {
-      return obj?.barLabel;
-    }
+      return theme.palette.flat.darkBlue[100];
+    });
+  }, [data]);
 
-    return '';
-  });
+  const maxLabelLength = useMemo(() => max(data.map(obj => obj.name.length)), [data]);
 
-  const maxLabelLength = max(
-    data.map(obj => {
-      console.log(obj.name, obj.name.length);
+  // console.log('max', maxLabelLength);
 
-      return obj.name.length;
-    })
-  );
+  const yAxisWidth = maxLabelLength ? maxLabelLength * 7.8 : 60;
 
-  console.log('max', maxLabelLength);
-
-  const yAxisWidth = maxLabelLength * 6.8;
-
-  console.log('width', yAxisWidth);
+  // console.log('width', yAxisWidth);
 
   return (
     <ResponsiveContainer>
@@ -138,7 +113,11 @@ const SimpleBarChart: React.FC<Props> = ({ data }) => {
           axisLine={false}
           tickLine={false}
         />
-        <Tooltip cursor={false} />
+        <Tooltip
+          cursor={false}
+          payload={[{ name: '05-01', value: 12, unit: 'kg' }]}
+          content={<CustomTooltip />}
+        />
         <Bar dataKey="value" /*label={<CustomizedLabel customLabels={barLabels} />}*/>
           <LabelList dataKey="barLabel" position="right" content={<CustomizedLabel />} />
           {data.map((entry, index) => (
