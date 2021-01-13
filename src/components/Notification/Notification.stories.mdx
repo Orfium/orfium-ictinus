@@ -97,7 +97,7 @@ import { InlineNotification } from '@orfium/ictinus';
 ```js
 import { NotificationsContainer, Banner } from '@orfium/ictinus';
 
-<NotificationsContainer position='top-right'>
+<NotificationsContainer position='bottom-right'>
   <Banner
     withIcon
     withFilling
@@ -174,39 +174,51 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
 ```js
 import { Toast, NotificationVisual } from '@orfium/ictinus';
 
-<Toast message="message" type="info" expanded closeCTA={closeCTA}>
-  <NotificationVisual
-    title="title"
-    primaryCTALabel="Primary CTA Label"
-    primaryCTA={primaryCTA}
-    secondaryCTALabel="Secondary CTA Label"
-    secondaryCTA={secondaryCTA}
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
-  />
-</Toast>;
+<NotificationsContainer position="bottom-right">
+  <Toast message="message" type="info" expanded closeCTA={closeCTA}>
+    <NotificationVisual
+      title="title"
+      primaryCTALabel="Primary CTA Label"
+      primaryCTA={primaryCTA}
+      secondaryCTALabel="Secondary CTA Label"
+      secondaryCTA={secondaryCTA}
+      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+    />
+  </Toast>
+</NotificationsContainer>;
 ```
 
 <Preview>
   <Story name="Toast Notification" parameters={{ decorators: [withKnobs] }}>
     <PresentComponent name="" width={768}>
-      <Toast
-        message={text('message', 'Informative Message')}
-        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
-        expanded
-        closeCTA={() => console.log('close action clicked')}
-      >
-        <NotificationVisual
-          title={text('title', 'Message heading')}
-          primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
-          primaryCTA={() => console.log('primary action clicked')}
-          secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
-          secondaryCTA={() => console.log('secondary action clicked')}
-          description={text(
-            'description',
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+      <NotificationShowcase>
+        <NotificationsContainer
+          position={select(
+            'position',
+            ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
+            'bottom-right'
           )}
-        />
-      </Toast>
+        >
+          <Toast
+            message={text('message', 'Informative Message')}
+            type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+            expanded
+            closeCTA={() => console.log('close action clicked')}
+          >
+            <NotificationVisual
+              title={text('title', 'Message heading')}
+              primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
+              primaryCTA={() => console.log('primary action clicked')}
+              secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
+              secondaryCTA={() => console.log('secondary action clicked')}
+              description={text(
+                'description',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+              )}
+            />
+          </Toast>
+        </NotificationsContainer>
+      </NotificationShowcase>
     </PresentComponent>
   </Story>
 </Preview>
@@ -222,55 +234,29 @@ import { Toast, NotificationVisual } from '@orfium/ictinus';
 ```js
 import { Snackbar } from '@orfium/ictinus';
 
-<Snackbar
-  message="message"
-  type="info"
-  primaryCTALabel="Primary CTA Label"
-  primaryCTA={primaryCTA}
-  secondaryCTALabel="Secondary CTA Label"
-  secondaryCTA={secondaryCTA}
-  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
-  closeCTA={closeCTA}
-/>;
+<NotificationsContainer position="bottom-right">
+  <Snackbar
+    message="message"
+    type="info"
+    primaryCTALabel="Primary CTA Label"
+    primaryCTA={primaryCTA}
+    secondaryCTALabel="Secondary CTA Label"
+    secondaryCTA={secondaryCTA}
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor"
+    closeCTA={closeCTA}
+  />
+</NotificationsContainer>;
 ```
 
 <Preview>
   <Story name="Snackbar Notification" parameters={{ decorators: [withKnobs] }}>
-    <PresentComponent name="" width={768}>
-      <Snackbar
-        message={text('message', 'This is the info')}
-        type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
-        primaryCTALabel={text('primaryCTALabel', 'Primary CTA')}
-        primaryCTA={() => console.log('primary action clicked')}
-        secondaryCTALabel={text('secondaryCTALabel', 'Secondary CTA')}
-        secondaryCTA={() => console.log('secondary action clicked')}
-        description={text(
-          'description',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
-        )}
-        closeCTA={() => console.log('close action clicked')}
-      />
-    </PresentComponent>
-  </Story>
-</Preview>
-
-## Playground
-
-<Preview>
-  <Story
-    name="Playground"
-    parameters={{
-      decorators: [withKnobs],
-      docs: { iframeHeight: 500 },
-    }}
-  >
     <PresentComponent name="" width={768}>
       <NotificationShowcase>
         <NotificationsContainer
           position={select(
             'position',
             ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
-            'top-right'
+            'bottom-right'
           )}
         >
           <Snackbar
@@ -286,6 +272,31 @@ import { Snackbar } from '@orfium/ictinus';
             )}
             closeCTA={() => console.log('close action clicked')}
           />
+        </NotificationsContainer>
+      </NotificationShowcase>
+    </PresentComponent>
+  </Story>
+</Preview>
+
+## Playground 1
+
+<Preview>
+  <Story
+    name="Playground 1"
+    parameters={{
+      decorators: [withKnobs],
+      docs: { iframeHeight: 500 },
+    }}
+  >
+    <PresentComponent name="" width={768}>
+      <NotificationShowcase>
+        <NotificationsContainer
+          position={select(
+            'position',
+            ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
+            'bottom-right'
+          )}
+        >
           <Banner
             withIcon={boolean('icon', true)}
             withFilling={boolean('withFilling', false)}
@@ -377,7 +388,7 @@ import { Snackbar } from '@orfium/ictinus';
           position={select(
             'position',
             ['top-right', 'top-left', 'bottom-left', 'bottom-right'],
-            'top-right'
+            'bottom-right'
           )}
         >
           <Snackbar

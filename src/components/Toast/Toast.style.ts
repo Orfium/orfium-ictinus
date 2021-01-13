@@ -5,12 +5,6 @@ import { transition, flexCenter } from '../../theme/functions';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { isNotificationTypes } from './Toast';
 
-// const widthOptions = {
-//   notification: `width: ${rem(336)};`,
-//   generic: `min-width: ${rem(336)};`,
-//   'full-width': `width: 100%`,
-// };
-
 const maxHeightOptions = {
   notification: `max-height: ${rem(294)};`,
   generic: `max-height: none;`,
@@ -20,7 +14,6 @@ export const toastContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* width: 100%; */
   border-radius: ${theme.spacing.xsm};
   // TODO: box-shadow's last parameter to change when elevated is introduced
   box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};

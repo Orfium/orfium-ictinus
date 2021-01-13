@@ -9,7 +9,6 @@ export const cardContainer = (type: NotificationTypes) => (theme: Theme): Serial
   flex-direction: column;
   overflow: hidden;
   padding: ${theme.spacing.md};
-  /* width: 100%; */
   box-sizing: border-box;
   min-height: ${rem(164)};
   max-height: ${rem(294)};
@@ -37,4 +36,5 @@ export const descriptionContainer = () => (theme: Theme): SerializedStyles => cs
   font-size: ${theme.typography.fontSizes['14']};
   max-height: ${rem(194)};
   overflow: auto;
+  max-width: fit-content;
 `;

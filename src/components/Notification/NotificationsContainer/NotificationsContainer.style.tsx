@@ -20,21 +20,24 @@ export const notificationsContainer = (currentPosition: string) => (
 ): SerializedStyles => css`
   position: fixed;
   ${getPositionStyle(positionOptions[currentPosition])};
-  min-width: ${rem(490)};
+  min-width: ${rem(200)};
   max-width: 66%;
   display: flex;
   flex-direction: column;
+  z-index: 2500;
   margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};
   > div {
     margin: ${theme.spacing.sm} 0;
   }
 
   div[notification-type='toast'] {
-    width: 200px;
+    min-width: ${rem(336)};
+    width: 100%;
   }
 
   div[notification-type='snackbar'] {
-    width: 200px;
+    min-width: ${rem(336)};
+    width: 100%;
   }
 
   div[notification-type='banner'] ~ div[notification-type='toast'] {
