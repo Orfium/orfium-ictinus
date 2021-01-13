@@ -5,11 +5,6 @@ import { notificationsContainer } from './NotificationsContainer.style';
 
 type Positions = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right';
 
-export type VarietyType = {
-  banner: boolean;
-  other: boolean;
-};
-
 type Props = {
   /** Notifications Container position */
   position: Positions;
