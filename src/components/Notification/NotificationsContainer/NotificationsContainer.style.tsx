@@ -21,7 +21,6 @@ export const notificationsContainer = (currentPosition: string) => (
   position: fixed;
   ${getPositionStyle(positionOptions[currentPosition])};
   max-width: 66%;
-  /* min-width: ${rem(490)}; */
   display: flex;
   flex-direction: column;
   z-index: 2500;
