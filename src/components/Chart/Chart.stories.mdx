@@ -1,10 +1,12 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import LineChart from './LineChart';
-import { color } from './story.utils';
-import { initData } from './mockedData';
+import PreviewBarChart from './BarChart/PreviewBarChart';
+import BarChart from './BarChart';
+import { color } from './LineChart/story.utils';
+import { initData } from './LineChart/mockedData';
 
-<Meta title="Design System/LineChart" component={LineChart} />
+<Meta title="Design System/Chart"/>
 
 # LineChart
 
@@ -22,9 +24,8 @@ import { LineChart } from '@orfium/ictinus';
 
 <Props of={LineChart} />
 
-# Dynamic LineChart Props - Knobs
 <Preview>
-  <Story name="Dynamic LineChart  Props" parameters={{ decorators: [withKnobs] }}>
+  <Story name="LineChart" parameters={{ decorators: [withKnobs] }}>
     <LineChart
       data={initData}
       labelX={text('labelX', 'Dates')}
@@ -32,5 +33,28 @@ import { LineChart } from '@orfium/ictinus';
       showLegend={boolean('show legend', true)}
       color={color}
     />
+  </Story>
+</Preview>
+
+
+# BarChart
+
+A universal BarChart component.
+
+# Usage
+
+```js
+import { BarChart } from '@orfium/ictinus';
+
+<BarChart data={[]}/>
+```
+
+# Props
+
+<Props of={BarChart} />
+
+<Preview>
+  <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
+    <PreviewBarChart/>
   </Story>
 </Preview>
