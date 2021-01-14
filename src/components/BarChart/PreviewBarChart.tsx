@@ -4,7 +4,7 @@ import BarChart from './BarChart';
 const data = [
   {
     name: 'Orfium',
-    value: 670400,
+    value: 760000,
     barLabel: '56.6%',
     options: {
       color: '#f5781b',
@@ -24,7 +24,7 @@ const data = [
   { name: 'UMPG Publishing', value: 7300, barLabel: '1.9%', options: { color: '#c8cade' } },
   { name: 'Karya Anak Haki', value: 4300, barLabel: '0.7%', options: { color: '#c8cade' } },
   { name: 'Adshare (3d party)', value: 3300, barLabel: '0.6%', options: { color: '#c8cade' } },
-  { name: 'Other', value: 18300, barLabel: '3.1%', options: { color: '#e7e7e7' } },
+  { name: 'Other', value: 18300, barLabel: '3.1%', options: { color: '#e7e7e7', coloringOption: 'all' } },
 ];
 
 const PreviewBarChart = () => {

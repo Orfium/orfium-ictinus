@@ -17,11 +17,10 @@ import CustomTooltip from './components/CustomTooltip';
 import useTheme from '../../hooks/useTheme';
 
 interface CustomLabelProps extends LabelProps {
-  customLabels: string[];
-  // index: number;
+  colors: Record<string, string>;
 }
 
-type hoverInfo = {
+export type HoverInfo = {
   name: string;
   value?: string | number;
   percentage?: string;
@@ -30,7 +29,8 @@ type hoverInfo = {
 
 type Option = {
   color?: string;
-  hoverInfo?: hoverInfo[];
+  coloringOption?: 'all' | 'bar';
+  hoverInfo?: HoverInfo[];
 };
 
 type Data = {
@@ -45,8 +45,12 @@ type Props = {
   data: Data[];
 };
 
-const CustomYAxisTick = (props: { y: number; payload: { value: React.ReactNode } }) => {
-  // console.log(props);
+const CustomYAxisTick = (props: {
+  colors: Record<string, string>;
+  y: number;
+  payload: { value: React.ReactNode };
+}) => {
+  console.log(props);
 
   return (
     <text
@@ -55,19 +59,26 @@ const CustomYAxisTick = (props: { y: number; payload: { value: React.ReactNode }
       x={0}
       y={props.y}
       textAnchor="start"
-      // fill="#666"
+      fill="#666"
     >
       <tspan dy="0.335em">{props.payload.value}</tspan>
     </text>
   );
 };
 
-const CustomizedLabel: React.FC<LabelProps> = ({ value, x, y, width, height }) => {
+const CustomizedLabel: React.FC<CustomLabelProps> = ({ colors, value, x, y, width, height }) => {
+  const theme = useTheme();
   // console.log(props);
+  // console.log('in function', colors);
+  // console.log(colors[value], value);
 
   return (
     <text x={x + width + 16} y={y + height / 2}>
-      <tspan dy="0.335em" fontWeight="bold">
+      <tspan
+        dy="0.335em"
+        fontWeight="bold"
+        fill={value && colors[value] ? colors[value] : theme.palette.black}
+      >
         {value}
       </tspan>
     </text>
@@ -95,6 +106,30 @@ const SimpleBarChart: React.FC<Props> = ({ data }) => {
 
   // console.log('width', yAxisWidth);
 
+  const labelColoringOptions = useMemo(() => {
+    return data.reduce((acc, cur) => {
+      const definedColoringOPt = cur.options?.coloringOption;
+      if (definedColoringOPt === 'all' && cur.barLabel) {
+        acc[cur.barLabel] = cur.options?.color;
+      }
+
+      return acc;
+    }, {});
+  }, [data]);
+
+  const tickColoringOptions = useMemo(() => {
+    return data.reduce((acc, cur) => {
+      const definedColoringOPt = cur.options?.coloringOption;
+      if (definedColoringOPt === 'all') {
+        acc[cur.name] = cur.options?.color;
+      }
+
+      return acc;
+    }, {});
+  }, [data]);
+
+  console.log(labelColoringOptions, tickColoringOptions);
+
   return (
     <ResponsiveContainer>
       <BarChart
@@ -108,7 +143,7 @@ const SimpleBarChart: React.FC<Props> = ({ data }) => {
         <YAxis
           type="category"
           dataKey="name"
-          tick={<CustomYAxisTick />}
+          tick={CustomYAxisTick}
           width={yAxisWidth > 220 ? 220 : yAxisWidth}
           axisLine={false}
           tickLine={false}
@@ -118,8 +153,12 @@ const SimpleBarChart: React.FC<Props> = ({ data }) => {
           payload={[{ name: '05-01', value: 12, unit: 'kg' }]}
           content={<CustomTooltip />}
         />
-        <Bar dataKey="value" /*label={<CustomizedLabel customLabels={barLabels} />}*/>
-          <LabelList dataKey="barLabel" position="right" content={<CustomizedLabel />} />
+        <Bar dataKey="value">
+          <LabelList
+            dataKey="barLabel"
+            position="right"
+            content={<CustomizedLabel colors={labelColoringOptions} />}
+          />
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={barColors[index]} />
           ))}{' '}
