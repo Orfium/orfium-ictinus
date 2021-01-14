@@ -20,8 +20,8 @@ export const notificationsContainer = (currentPosition: string) => (
 ): SerializedStyles => css`
   position: fixed;
   ${getPositionStyle(positionOptions[currentPosition])};
-  min-width: ${rem(200)};
   max-width: 66%;
+  /* min-width: ${rem(490)}; */
   display: flex;
   flex-direction: column;
   z-index: 2500;
@@ -38,6 +38,10 @@ export const notificationsContainer = (currentPosition: string) => (
   div[notification-type='snackbar'] {
     min-width: ${rem(336)};
     width: 100%;
+  }
+
+  div[notification-type='banner'] {
+    min-width: ${rem(490)};
   }
 
   div[notification-type='banner'] ~ div[notification-type='toast'] {
