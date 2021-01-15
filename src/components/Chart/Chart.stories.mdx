@@ -51,10 +51,16 @@ import { BarChart } from '@orfium/ictinus';
 
 # Props
 
-<Props of={BarChart} />
+<Props of={BarChart}/>
 
 <Preview>
   <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
     <PreviewBarChart/>
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="CustomBarChart" parameters={{ decorators: [withKnobs] }}>
+    <BarChart data={[{ name: 'UMG', value: 230000, barLabel: '15.7%', options: { color: '#c8cade' } },]}/>
   </Story>
 </Preview>

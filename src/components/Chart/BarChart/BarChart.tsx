@@ -40,12 +40,13 @@ type Data = {
   options?: Option;
 };
 
-type Props = {
+export type Props = {
+  /** This property defines the data to be shown in the Line Chart */
   data: Data[];
 };
 
 type YAxisProp = {
-  colors: Record<string, string>; 
+  colors: Record<string, string>;
   y: number;
   payload: { value: React.ReactNode };
 };
@@ -53,12 +54,13 @@ type YAxisProp = {
 const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
   const theme = useTheme();
 
-  const fill = typeof payload.value === "string" && colors[payload.value] ? colors[payload.value] : theme.palette.black;
+  const fill =
+    typeof payload.value === 'string' && colors[payload.value]
+      ? colors[payload.value]
+      : theme.palette.black;
 
   return (
     <text
-      // width={props.width}
-      // height={props.height}
       x={0}
       y={y}
       textAnchor="start"
@@ -69,7 +71,7 @@ const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
   );
 };
 
-const SimpleBarChart: React.FC<Props> = ({ data }) => {
+const CustomBarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
   const barColors = useMemo(() => {
@@ -121,15 +123,12 @@ const SimpleBarChart: React.FC<Props> = ({ data }) => {
         <YAxis
           type="category"
           dataKey="name"
-          tick={(props) => <CustomYAxisTick {...props} colors={ tickColoringOptions }/>}
+          tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
           width={yAxisWidth > maxYAxisWidth ? maxYAxisWidth : yAxisWidth}
           axisLine={false}
           tickLine={false}
         />
-        <Tooltip
-          cursor={false}
-          content={<CustomTooltip />}
-        />
+        <Tooltip cursor={false} content={<CustomTooltip />} />
         <Bar dataKey="value">
           <LabelList
             dataKey="barLabel"
@@ -145,4 +144,4 @@ const SimpleBarChart: React.FC<Props> = ({ data }) => {
   );
 };
 
-export default SimpleBarChart;
+export default CustomBarChart;
