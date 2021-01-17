@@ -2,7 +2,7 @@
 import React, { useMemo } from 'react';
 import {
   ResponsiveContainer,
-  BarChart,
+  BarChart as RechartsBarChart,
   Bar,
   Cell,
   XAxis,
@@ -15,6 +15,7 @@ import max from 'lodash/max';
 import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
+import { getValues } from './utils';
 
 const maxYAxisWidth = 220;
 const multiplyFactor = 7.8;
@@ -32,7 +33,7 @@ type Option = {
   hoverInfo?: HoverInfo[];
 };
 
-type Data = {
+export type Data = {
   name: string;
   subcategory?: string;
   value?: number;
@@ -60,18 +61,13 @@ const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
       : theme.palette.black;
 
   return (
-    <text
-      x={0}
-      y={y}
-      textAnchor="start"
-      fill={fill}
-    >
+    <text x={0} y={y} textAnchor="start" fill={fill}>
       <tspan dy="0.335em">{payload.value}</tspan>
     </text>
   );
 };
 
-const CustomBarChart: React.FC<Props> = ({ data }) => {
+const BarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
   const barColors = useMemo(() => {
@@ -87,6 +83,10 @@ const CustomBarChart: React.FC<Props> = ({ data }) => {
   const maxLabelLength = useMemo(() => max(data.map(obj => obj.name.length)), [data]);
 
   const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : 60;
+
+  const maxValue = useMemo(() => max(data.map(obj => obj.value)), [data]);
+
+  const { maxDomainValue, tickCount } = getValues(maxValue);
 
   const labelColoringOptions = useMemo(() => {
     return data.reduce((acc, cur) => {
@@ -111,37 +111,77 @@ const CustomBarChart: React.FC<Props> = ({ data }) => {
   }, [data]);
 
   return (
-    <ResponsiveContainer>
-      <BarChart
-        data={data}
-        margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
-        layout="vertical"
-        barCategoryGap="20%"
-      >
-        <CartesianGrid offset={{ left: 0 }} horizontal={false} />
-        <XAxis type="number" axisLine={false} tickLine={false} />
-        <YAxis
-          type="category"
-          dataKey="name"
-          tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-          width={yAxisWidth > maxYAxisWidth ? maxYAxisWidth : yAxisWidth}
-          axisLine={false}
-          tickLine={false}
+    <Wrapper
+      data={data}
+      margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
+      layout="vertical"
+      barCategoryGap="20%"
+    >
+      <CartesianGrid offset={{ left: 0 }} horizontal={false} />
+      <XAxis
+        type="number"
+        axisLine={false}
+        tickLine={false}
+        tickCount={tickCount}
+        domain={[0, maxDomainValue]}
+      />
+      <YAxis
+        type="category"
+        dataKey="name"
+        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
+        width={yAxisWidth > maxYAxisWidth ? maxYAxisWidth : yAxisWidth}
+        axisLine={false}
+        tickLine={false}
+      />
+      <Tooltip cursor={false} content={<CustomTooltip />} />
+      <Bar dataKey="value">
+        <LabelList
+          dataKey="barLabel"
+          position="right"
+          content={<CustomLabel colors={labelColoringOptions} />}
         />
-        <Tooltip cursor={false} content={<CustomTooltip />} />
-        <Bar dataKey="value">
-          <LabelList
-            dataKey="barLabel"
-            position="right"
-            content={<CustomLabel colors={labelColoringOptions} />}
-          />
-          {data.map((entry, index) => (
-            <Cell key={`cell-${entry.name}-${entry.value}`} fill={barColors[index]} />
-          ))}{' '}
-        </Bar>
-      </BarChart>
-    </ResponsiveContainer>
+        {data.map((entry, index) => (
+          <Cell key={`cell-${entry.name}-${entry.value}`} fill={barColors[index]} />
+        ))}{' '}
+      </Bar>
+    </Wrapper>
   );
 };
 
-export default CustomBarChart;
+const Wrapper: React.FC<{
+  data: Data[];
+  margin: { top: number; right: number; left: number; bottom: number };
+  layout: string;
+  barCategoryGap: string;
+}> = ({ data, children }) => {
+  if (process.env.NODE_ENV !== 'test') {
+    return (
+      <ResponsiveContainer>
+        <RechartsBarChart
+          data={data}
+          margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
+          layout="vertical"
+          barCategoryGap="20%"
+        >
+          {children}
+        </RechartsBarChart>
+      </ResponsiveContainer>
+    );
+  }
+
+  // for testing purposes only !!!
+  return (
+    <RechartsBarChart
+      width={1000}
+      height={500}
+      data={data}
+      margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
+      layout="vertical"
+      barCategoryGap="20%"
+    >
+      {children}
+    </RechartsBarChart>
+  );
+};
+
+export default BarChart;

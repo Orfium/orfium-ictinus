@@ -3,10 +3,10 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import { tooltipLiStyle, tooltipStyle, tooltipUlStyle } from './CustomTooltip.style';
 import { TooltipProps } from 'recharts';
-import { HoverInfo } from 'components/BarChart/BarChart';
+import { HoverInfo } from '../../BarChart';
 
 const CustomTooltip: React.FC<TooltipProps> = ({ payload }) => {
-  const options = payload && payload[0]?.payload?.options?.hoverInfo as HoverInfo[];
+  const options = payload && (payload[0]?.payload?.options?.hoverInfo as HoverInfo[]);
 
   return options ? (
     <div className="custom-tooltip" css={tooltipStyle()}>
