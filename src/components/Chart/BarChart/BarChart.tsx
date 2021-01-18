@@ -15,7 +15,7 @@ import max from 'lodash/max';
 import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
-import { getValues } from './utils';
+import { getValues, customTickFormatter } from './utils';
 
 const maxYAxisWidth = 220;
 const multiplyFactor = 7.8;
@@ -124,6 +124,9 @@ const BarChart: React.FC<Props> = ({ data }) => {
         tickLine={false}
         tickCount={tickCount}
         domain={[0, maxDomainValue]}
+        tickFormatter={tick => {
+          return customTickFormatter(tick, maxDomainValue);
+        }}
       />
       <YAxis
         type="category"
