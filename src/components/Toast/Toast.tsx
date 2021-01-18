@@ -47,7 +47,10 @@ const Toast: React.FC<Props> = ({
   const [isExpanded, setExpanded] = useState(expanded);
 
   return (
-    <div css={toastContainer(type)}>
+    <div
+      css={toastContainer()}
+      {...(isNotificationTypes(type) && { 'notification-type': 'toast' })}
+    >
       <div css={topContainer(type)}>
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (
