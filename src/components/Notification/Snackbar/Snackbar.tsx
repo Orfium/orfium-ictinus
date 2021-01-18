@@ -52,7 +52,7 @@ const Snackbar: React.FC<Props> = ({
   const { utils } = useTheme();
 
   return (
-    <div css={cardContainer(type)}>
+    <div css={cardContainer(type)} notification-type="snackbar">
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>

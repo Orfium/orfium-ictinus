@@ -44,6 +44,7 @@ const Pagination = ({
       css={{
         flex: 1,
         display: 'flex',
+        alignItems: 'center',
         justifyContent: 'space-between',
         '> *': { padding: theme.spacing.sm },
       }}
