@@ -4,7 +4,6 @@ import { jsx } from '@emotion/core';
 import usePagination from '../../hooks/usePagination';
 import useTheme from '../../hooks/useTheme';
 import IconButton from '../IconButton';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 
 type Props = {
   /** The current page you are on if you need to control it, defaults to 1 **/
@@ -19,8 +18,6 @@ type Props = {
   nextPageDisabled?: boolean;
   /** Manually disable previous page buttons **/
   prevPageDisabled?: boolean;
-  /** Changes the color of the pagination arrows **/
-  arrowColor?: AcceptedColorComponentTypes | string;
 };
 
 const Pagination = ({
@@ -30,7 +27,6 @@ const Pagination = ({
   hideEnhancedPaginationButtons = false,
   nextPageDisabled,
   prevPageDisabled,
-  arrowColor = 'darkGray',
 }: Props) => {
   const theme = useTheme();
   const {
@@ -55,7 +51,7 @@ const Pagination = ({
     >
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          iconColor={arrowColor}
+          iconColor={'darkGray'}
           name={'arrowToLeft'}
           onClick={navigateToFirstPage}
           iconSize={24}
@@ -63,7 +59,7 @@ const Pagination = ({
         />
       )}
       <IconButton
-        iconColor={arrowColor}
+        iconColor={'darkGray'}
         name={'arrowLeft'}
         iconSize={24}
         onClick={navigateToPrevPage}
@@ -75,7 +71,7 @@ const Pagination = ({
       </div>
 
       <IconButton
-        iconColor={arrowColor}
+        iconColor={'darkGray'}
         name={'arrowRight'}
         iconSize={24}
         onClick={navigateToNextPage}
@@ -83,7 +79,7 @@ const Pagination = ({
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          iconColor={arrowColor}
+          iconColor={'darkGray'}
           name={'arrowToRight'}
           iconSize={24}
           onClick={navigateToLastPage}
