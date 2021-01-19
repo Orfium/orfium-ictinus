@@ -26,7 +26,11 @@ Simple pagination with all buttons
 
 <Preview>
   <Story name="Pagination" parameters={{ decorators: [withKnobs] }}>
-    <Pagination count={3} page={1} nextPageDisabled={boolean('nextPageDisabled', false)} prevPageDisabled={boolean('prevPageDisabled', false)}/>
+    <Pagination count={3}
+                page={1}
+                nextPageDisabled={boolean('nextPageDisabled', false)}
+                prevPageDisabled={boolean('prevPageDisabled', false)}
+    />
   </Story>
 </Preview>
 
@@ -36,6 +40,11 @@ Simple pagination without jumping on first or last page
 
 <Preview>
   <Story name="Pagination without all buttons" parameters={{ decorators: [withKnobs] }}>
-    <Pagination count={3} page={1} hideEnhancedPaginationButtons nextPageDisabled={boolean('nextPageDisabled', false)} prevPageDisabled={boolean('prevPageDisabled', false)}/>
+    <Pagination count={3}
+                page={1}
+                hideEnhancedPaginationButtons
+                nextPageDisabled={boolean('nextPageDisabled', false)}
+                prevPageDisabled={boolean('prevPageDisabled', false)}
+    />
   </Story>
 </Preview>
