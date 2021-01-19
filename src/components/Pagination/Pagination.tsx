@@ -4,6 +4,7 @@ import { jsx } from '@emotion/core';
 import usePagination from '../../hooks/usePagination';
 import useTheme from '../../hooks/useTheme';
 import IconButton from '../IconButton';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 
 type Props = {
   /** The current page you are on if you need to control it, defaults to 1 **/
@@ -18,6 +19,8 @@ type Props = {
   nextPageDisabled?: boolean;
   /** Manually disable previous page buttons **/
   prevPageDisabled?: boolean;
+  /** Changes the color of the pagination arrows **/
+  arrowColor?: AcceptedColorComponentTypes | string;
 };
 
 const Pagination = ({
@@ -27,6 +30,7 @@ const Pagination = ({
   hideEnhancedPaginationButtons = false,
   nextPageDisabled,
   prevPageDisabled,
+  arrowColor = 'darkGray',
 }: Props) => {
   const theme = useTheme();
   const {
@@ -51,19 +55,19 @@ const Pagination = ({
     >
       {!hideEnhancedPaginationButtons && (
         <IconButton
+          iconColor={arrowColor}
           name={'arrowToLeft'}
           onClick={navigateToFirstPage}
           iconSize={24}
           disabled={prevPageDisabled || !hasPrevPage}
-          type={'primary'}
         />
       )}
       <IconButton
+        iconColor={arrowColor}
         name={'arrowLeft'}
         iconSize={24}
         onClick={navigateToPrevPage}
         disabled={prevPageDisabled || !hasPrevPage}
-        type={'primary'}
       />
 
       <div>
@@ -71,19 +75,19 @@ const Pagination = ({
       </div>
 
       <IconButton
+        iconColor={arrowColor}
         name={'arrowRight'}
         iconSize={24}
         onClick={navigateToNextPage}
         disabled={nextPageDisabled || !hasNextPage}
-        type={'primary'}
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
+          iconColor={arrowColor}
           name={'arrowToRight'}
           iconSize={24}
           onClick={navigateToLastPage}
           disabled={nextPageDisabled || !hasNextPage}
-          type={'primary'}
         />
       )}
     </div>
