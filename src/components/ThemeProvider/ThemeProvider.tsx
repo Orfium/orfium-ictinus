@@ -24,7 +24,6 @@ export const globalStyles = (theme: Theme) => css`
 
   body,
   html {
-    background-color: #f2f2f2;
     font-family: 'Roboto', Tahoma, sans-serif;
     font-size: 16px;
     font-weight: normal;
