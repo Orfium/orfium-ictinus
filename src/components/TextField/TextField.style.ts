@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { darken, rem, transparentize } from 'polished';
+import { darken, lighten, rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
 import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
@@ -47,13 +47,15 @@ export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) 
     flex: 1 1 100%;
     user-select: none;
     position: relative;
-    background-color: ${disabled ? transparentize(0.7, backgroundColor) : backgroundColor};
+    background-color: ${backgroundColor};
+    opacity: ${disabled && 0.5};
     border: 2px solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType)}
 
     ${!disabled &&
       `&:hover {
-      background-color: ${styleType === 'filled' && darken(0.1, backgroundColor)};
+      background-color: ${styleType === 'filled' &&
+        (dark ? lighten(0.1, backgroundColor) : darken(0.1, backgroundColor))};
       border-color: ${styleType === 'outlined' && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }`}
