@@ -134,13 +134,11 @@ Regular TextField with Label and Error Handling Options
   <Story name="TextField with label and error handling options" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextFieldShowcase
-        errorMsg={text('custom error message', '')}
+        errorMsg={text('custom error message', 'Error in Text Field')}
         label={'Label'}
         lean={boolean('lean version', false)}
-        status={select('status', ['success', 'error'], 'error')}
+        status={select('status', ['success', 'error', 'normal'], 'normal')}
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
-        withErrorMsg={boolean('with error message', false)}
-        withIndicator={boolean('with indicator', false)}
       />
     </Stack>
   </Story>
@@ -151,7 +149,7 @@ Regular TextField with Label and Error Handling Options
 Regular Text Field with KNOBS
 
 <Preview>
-  <Story name="Text Field with KNOBS">
+  <Story name="Text Field with KNOBS" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextFieldShowcase
         label={text('Label', 'Label')}
@@ -159,6 +157,8 @@ Regular Text Field with KNOBS
         lean={boolean('Lean version', false)}
         iconName={select('Icon',['none', ...Object.keys(iconSelector)],'search')}
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
+        errorMsg={text('custom error message', 'Error in Text Field')}
+        status={select('status', ['success', 'error', 'normal'], 'normal')}
       />
     </Stack>
   </Story>

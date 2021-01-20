@@ -67,7 +67,7 @@ export const decorators = [
     );
   },
   Story => (
-    <div style={{ margin: 5, backgroundColor: 'lightseagreen' }}>
+    <div style={{ margin: 5 }}>
       <Story />
     </div>
   ),

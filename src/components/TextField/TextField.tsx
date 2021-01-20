@@ -4,7 +4,6 @@ import * as React from 'react';
 import {
   errorMsgStyle,
   iconWrapperStyle,
-  indicatorStyle,
   inputStyle,
   textFieldStyle,
   wrapperStyle,
@@ -42,10 +41,6 @@ export type Props = {
   styleType?: formFieldStyles;
   /** If the text field status is success */
   success?: boolean;
-  /** If the text field has an error message */
-  withErrorMsg?: boolean;
-  /** If the text field has an indicator */
-  withIndicator?: boolean;
   /** Sets the size of the textField */
   size?: 'md' | 'sm';
 };
@@ -60,19 +55,19 @@ const TextField: React.FC<Props> = ({
   lean = false,
   error = false,
   disabled,
-  errorMsg = (
-    <React.Fragment>
-      <Icon color="error" name="alert" size={12} />
-      Error in Text Field
-    </React.Fragment>
-  ),
+  errorMsg,
   styleType = 'filled',
   success = false,
-  withErrorMsg = false,
-  withIndicator = false,
   size = DEFAULT_SIZE,
   ...rest
 }) => {
+  const errorMessageToShow = errorMsg && (
+    <React.Fragment>
+      <Icon color="error" name="issues" size={12} />
+      {errorMsg}
+    </React.Fragment>
+  );
+
   const IconWrapper: FC = ({ children }) => (
     <div css={iconWrapperStyle({ rightIcon })}>{children}</div>
   );
@@ -109,13 +104,8 @@ const TextField: React.FC<Props> = ({
             )}
           </div>
         </div>
-        {withIndicator && (success || error) && (
-          <div css={indicatorStyle}>
-            <Icon color={error ? 'error' : 'teal'} name={error ? 'alert' : 'success'} size={20} />
-          </div>
-        )}
       </div>
-      {withErrorMsg && error && <div css={errorMsgStyle()}>{errorMsg}</div>}
+      {errorMsg && error && <div css={errorMsgStyle()}>{errorMessageToShow}</div>}
     </React.Fragment>
   );
 };

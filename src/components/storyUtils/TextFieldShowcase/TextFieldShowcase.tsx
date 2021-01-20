@@ -14,7 +14,6 @@ type Props = {
   status?: string;
   styleType?: 'filled' | 'outlined' | 'elevated';
   withErrorMsg?: boolean;
-  withIndicator?: boolean;
   iconName?: AcceptedIconNames | 'none';
   withIcon?: boolean;
   size: 'md' | 'sm';
@@ -27,8 +26,6 @@ const TextFieldShowcase: React.FC<Props> = ({
   lean = false,
   status = '',
   styleType = 'filled',
-  withErrorMsg = true,
-  withIndicator = true,
   iconName = 'search',
   size,
 }) => {
@@ -39,15 +36,10 @@ const TextFieldShowcase: React.FC<Props> = ({
     lean,
     styleType,
     success: status === 'success',
-    withErrorMsg,
-    withIndicator,
+    errorMsg: status === 'error' && errorMsg ? errorMsg : undefined,
     size,
     ...(iconName !== 'none' ? { leftIcon: <Icon name={iconName} color={'darkGray'} /> } : {}),
   };
-
-  if (errorMsg) {
-    TextFieldProps.errorMsg = errorMsg;
-  }
 
   return (
     <div>

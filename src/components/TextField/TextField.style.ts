@@ -16,7 +16,7 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
       return `
         box-shadow: 0 0 0 1px
           ${theme.utils.getColor('lightGray', 400)};
-        &:focus-within {
+        &:focus-within, &:hover {
           box-shadow: 0 0 0 1px transparent;
         }
       `;
@@ -49,11 +49,14 @@ export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
   ${wrapperStyleSwitch(theme, lean, error, styleType)}
 
   &:hover {
-    background-color: ${darken(0.1, theme.palette.white)};
+    background-color: ${styleType === 'filled' && darken(0.1, theme.palette.white)};
+    border-color: ${styleType === 'outlined' && theme.utils.getColor('lightGray', 400)};
+    box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
   }
 
   &:focus-within {
     border-color: ${!error && theme.utils.getColor('lightGray', 500)};
+    box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
   }
 
   ${disabled &&
@@ -145,15 +148,8 @@ export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
   color: ${theme.utils.getColor('error', 400, 'normal')};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
-  padding: ${rem(8)} 0 0 ${rem(8)};
+  padding: ${rem(8)} 0 0;
   svg {
     padding: 0 ${rem(2)};
   }
-`;
-
-export const indicatorStyle = (): SerializedStyles => css`
-  display: inline-flex;
-  padding-left: ${rem(16)};
-  position: absolute;
-  left: 100%;
 `;
