@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { darken, rem } from 'polished';
+import { darken, rem, transparentize } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
 import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
@@ -44,15 +44,16 @@ export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
   flex: 1 1 100%;
   user-select: none;
   position: relative;
-  background-color: ${theme.palette.white};
+  background-color: ${disabled ? transparentize(0.7, theme.palette.white) : theme.palette.white};
   border: 2px solid transparent;
   ${wrapperStyleSwitch(theme, lean, error, styleType)}
 
-  &:hover {
-    background-color: ${styleType === 'filled' && darken(0.1, theme.palette.white)};
-    border-color: ${styleType === 'outlined' && theme.utils.getColor('lightGray', 400)};
-    box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
-  }
+  ${!disabled &&
+    `&:hover {
+      background-color: ${styleType === 'filled' && darken(0.1, theme.palette.white)};
+      border-color: ${styleType === 'outlined' && theme.utils.getColor('lightGray', 400)};
+      box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
+    }`}
 
   &:focus-within {
     border-color: ${!error && theme.utils.getColor('lightGray', 500)};
@@ -70,6 +71,10 @@ export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
         left: 0;
         top: 0;
         z-index: 1;
+      }
+      * {
+        color: ${theme.utils.getColor('lightGray', 600)} !important;
+        fill: ${theme.utils.getColor('lightGray', 600)} !important;
       }
   `}
 `;

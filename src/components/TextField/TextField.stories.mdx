@@ -155,6 +155,7 @@ Regular Text Field with KNOBS
         label={text('Label', 'Label')}
         size={select('Size', ['md','sm'], 'md')}
         lean={boolean('Lean version', false)}
+        disabled={boolean('Disabled', false)}
         iconName={select('Icon',['none', ...Object.keys(iconSelector)],'search')}
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
         errorMsg={text('custom error message', 'Error in Text Field')}

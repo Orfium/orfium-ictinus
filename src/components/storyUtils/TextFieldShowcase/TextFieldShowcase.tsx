@@ -38,7 +38,7 @@ const TextFieldShowcase: React.FC<Props> = ({
     success: status === 'success',
     errorMsg: status === 'error' && errorMsg ? errorMsg : undefined,
     size,
-    ...(iconName !== 'none' ? { leftIcon: <Icon name={iconName} color={'darkGray'} /> } : {}),
+    ...(iconName !== 'none' ? { leftIcon: <Icon name={iconName} color={'#000'} /> } : {}),
   };
 
   return (
