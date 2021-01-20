@@ -72,7 +72,7 @@ const TextField: React.FC<Props> = ({
   );
 
   const IconWrapper: FC = ({ children }) => (
-    <div css={iconWrapperStyle({ rightIcon })}>{children}</div>
+    <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{children}</div>
   );
 
   return (
@@ -102,9 +102,7 @@ const TextField: React.FC<Props> = ({
                 />
               )}
             </div>
-            {rightIcon && (
-              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{rightIcon}</div>
-            )}
+            {rightIcon && <IconWrapper>{rightIcon}</IconWrapper>}
           </div>
         </div>
       </div>

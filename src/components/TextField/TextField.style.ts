@@ -4,7 +4,6 @@ import { Props } from './TextField';
 import { Theme } from '../../theme';
 import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
 
-// @todo replace all hex colors with palette colors
 const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, styleType?: string) => {
   if (lean) {
     return `
@@ -26,9 +25,7 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
       `;
     case 'filled':
     default:
-      return `
-        border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : 'transparent'}; 
-      `;
+      return ``;
   }
 };
 /**
@@ -51,12 +48,13 @@ export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) 
     opacity: ${disabled && 0.5};
     border: 2px solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType)}
+    border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
 
     ${!disabled &&
       `&:hover {
       background-color: ${styleType === 'filled' &&
         (dark ? lighten(0.1, backgroundColor) : darken(0.1, backgroundColor))};
-      border-color: ${styleType === 'outlined' && theme.utils.getColor('lightGray', 400)};
+      border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }`}
 
@@ -103,10 +101,12 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
   `;
 };
 
-export const iconWrapperStyle = ({ rightIcon }: Props) => (theme: Theme): SerializedStyles => css`
+export const iconWrapperStyle = ({ rightIcon, leftIcon }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
   line-height: 0.8;
-  margin-right: ${!rightIcon ? theme.spacing.xsm : 0};
-  margin-left: ${rightIcon ? theme.spacing.md : 'inherit'};
+  margin-left: ${leftIcon ? theme.spacing.xsm : 'inherit'};
+  margin-right: ${rightIcon ? theme.spacing.xsm : 0};
 `;
 
 export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
