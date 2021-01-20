@@ -35,33 +35,36 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
+export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) => (
   theme: Theme
-): SerializedStyles => css`
-  transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
-  border-radius: ${theme.spacing.xsm};
-  cursor: ${disabled ? 'not-allowed' : 'auto'};
-  flex: 1 1 100%;
-  user-select: none;
-  position: relative;
-  background-color: ${disabled ? transparentize(0.7, theme.palette.white) : theme.palette.white};
-  border: 2px solid transparent;
-  ${wrapperStyleSwitch(theme, lean, error, styleType)}
+): SerializedStyles => {
+  const backgroundColor = dark ? theme.utils.getColor('darkGray', 600) : theme.palette.white;
 
-  ${!disabled &&
-    `&:hover {
-      background-color: ${styleType === 'filled' && darken(0.1, theme.palette.white)};
+  return css`
+    transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
+    border-radius: ${theme.spacing.xsm};
+    cursor: ${disabled ? 'not-allowed' : 'auto'};
+    flex: 1 1 100%;
+    user-select: none;
+    position: relative;
+    background-color: ${disabled ? transparentize(0.7, backgroundColor) : backgroundColor};
+    border: 2px solid transparent;
+    ${wrapperStyleSwitch(theme, lean, error, styleType)}
+
+    ${!disabled &&
+      `&:hover {
+      background-color: ${styleType === 'filled' && darken(0.1, backgroundColor)};
       border-color: ${styleType === 'outlined' && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }`}
 
   &:focus-within {
-    border-color: ${!error && theme.utils.getColor('lightGray', 500)};
-    box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
-  }
+      border-color: ${!error && theme.utils.getColor('lightGray', 500)};
+      box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
+    }
 
-  ${disabled &&
-    `
+    ${disabled &&
+      `
       &:before {
         content: '';
         background-color: rgba(255, 255, 255, 0.15);
@@ -77,7 +80,8 @@ export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
         fill: ${theme.utils.getColor('lightGray', 600)} !important;
       }
   `}
-`;
+  `;
+};
 
 export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Props) => (
   theme: Theme
@@ -103,12 +107,12 @@ export const iconWrapperStyle = ({ rightIcon }: Props) => (theme: Theme): Serial
   margin-left: ${rightIcon ? theme.spacing.md : 'inherit'};
 `;
 
-export const inputStyle = ({ label, placeholder, size }: Props) => (
+export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${theme.palette.black};
+  color: ${dark ? theme.palette.white : theme.palette.black};
   display: block;
   position: relative;
   top: ${label && '7px'};

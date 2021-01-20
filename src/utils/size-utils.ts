@@ -10,12 +10,8 @@ export const getTextFieldSize: SizeConfig = (theme, label) => {
   const paddingSM = label ? `11px ${theme.spacing.sm}` : `11px ${theme.spacing.sm} 11px`;
 
   return {
-    md: `
-    padding: ${paddingMD};
-    `,
-    sm: `
-     padding: ${paddingSM};
-   `,
+    md: `padding: ${paddingMD};`,
+    sm: `padding: ${paddingSM};`,
   };
 };
 

@@ -29,6 +29,8 @@ export type Props = {
   required?: boolean;
   /** If the text field is disabled */
   disabled?: boolean;
+  /** dark mode of the text field */
+  dark?: boolean;
   /** If the text field has errors */
   error?: boolean;
   /** Error message */
@@ -59,6 +61,7 @@ const TextField: React.FC<Props> = ({
   styleType = 'filled',
   success = false,
   size = DEFAULT_SIZE,
+  dark = false,
   ...rest
 }) => {
   const errorMessageToShow = errorMsg && (
@@ -75,12 +78,12 @@ const TextField: React.FC<Props> = ({
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ disabled, error, lean, styleType })}>
+        <div css={wrapperStyle({ dark, disabled, error, lean, styleType })}>
           <div css={textFieldStyle({ size, label, leftIcon })}>
             {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
             <div>
               <input
-                css={inputStyle({ label, placeholder, size })}
+                css={inputStyle({ label, placeholder, size, dark })}
                 placeholder={
                   !label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label
                 }
