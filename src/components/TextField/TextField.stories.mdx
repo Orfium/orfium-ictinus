@@ -154,13 +154,10 @@ Regular Text Field with KNOBS
   <Story name="Text Field with KNOBS">
     <Stack>
       <TextFieldShowcase
-        label={text('Label', 'label')}
-        fill={select('Fill', flatColors, 'lightGray')}
-        fillShade={select('FillShade', colorShades, 100)}
-        size={select('Size', ['md','sm'], 'sm')}
+        label={text('Label', 'Label')}
+        size={select('Size', ['md','sm'], 'md')}
         lean={boolean('Lean version', false)}
-        withIcon={boolean('WithIcon', true)}
-        iconName={select('Icon',Object.keys(iconSelector),'search')}
+        iconName={select('Icon',['none', ...Object.keys(iconSelector)],'search')}
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
       />
     </Stack>

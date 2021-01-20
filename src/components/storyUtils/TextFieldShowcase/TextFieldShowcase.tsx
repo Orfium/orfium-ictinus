@@ -3,8 +3,6 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import TextField from 'components/TextField';
 import { Props as TextFieldProps } from 'components/TextField/TextField';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../../theme/palette';
-import { DEFAULT_COLOR_CONFIG } from '../../TextField/TextField.style';
 import Icon from '../../Icon';
 import { AcceptedIconNames } from '../../Icon/types';
 
@@ -17,12 +15,9 @@ type Props = {
   styleType?: 'filled' | 'outlined' | 'elevated';
   withErrorMsg?: boolean;
   withIndicator?: boolean;
-  /** Sets the background color of the textField*/
-  fill?: typeof flatColors[number];
-  /** Sets the background color's shade of the textField*/
-  fillShade?: typeof colorShades[number];
-  iconName?: AcceptedIconNames;
+  iconName?: AcceptedIconNames | 'none';
   withIcon?: boolean;
+  size: 'md' | 'sm';
 };
 
 const TextFieldShowcase: React.FC<Props> = ({
@@ -34,10 +29,8 @@ const TextFieldShowcase: React.FC<Props> = ({
   styleType = 'filled',
   withErrorMsg = true,
   withIndicator = true,
-  fill = DEFAULT_COLOR_CONFIG.fill,
-  fillShade = DEFAULT_COLOR_CONFIG.fillShade,
   iconName = 'search',
-  withIcon = false,
+  size,
 }) => {
   const TextFieldProps: TextFieldProps = {
     disabled,
@@ -48,11 +41,8 @@ const TextFieldShowcase: React.FC<Props> = ({
     success: status === 'success',
     withErrorMsg,
     withIndicator,
-    fillShade,
-    fill,
-    ...(withIcon
-      ? { leftIcon: <Icon name={iconName} color={pickTextColorFromSwatches(fill, fillShade)} /> }
-      : {}),
+    size,
+    ...(iconName !== 'none' ? { leftIcon: <Icon name={iconName} color={'darkGray'} /> } : {}),
   };
 
   if (errorMsg) {

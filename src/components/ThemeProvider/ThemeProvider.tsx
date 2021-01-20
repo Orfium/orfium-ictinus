@@ -20,17 +20,16 @@ const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light')
 
 export const globalStyles = (theme: Theme) => css`
   ${normalize()};
-  @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
 
   body,
   html {
-    font-family: 'Lato', Tahoma;
+    font-family: 'Roboto', Tahoma, sans-serif;
     font-size: 16px;
     font-weight: normal;
   }
 
   #root {
-    display: 'flex';
   }
 
   // default outline for all focused elements defined by the design team

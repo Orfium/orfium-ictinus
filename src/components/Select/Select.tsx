@@ -101,6 +101,7 @@ const Select: React.FC<Props> = ({
         padding: `${rem(2)} ${rem(4)}`,
       },
       label: {
+        left: rem(10),
         transform: state.isFocused || state.hasValue ? 'translate(1%, -65%) scale(0.8)' : 'initial',
       },
     }),

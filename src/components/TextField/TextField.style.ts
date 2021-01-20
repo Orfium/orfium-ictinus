@@ -1,90 +1,33 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { rem } from 'polished';
+import { darken, rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
 import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
-
-type ColorConfig = {
-  fill: typeof flatColors[number];
-  fillShade: typeof colorShades[number];
-};
-
-type GeneratedTextFieldColors = {
-  backgroundColor: (theme: Theme, lean?: boolean, error?: boolean) => string;
-  color: () => string;
-};
-
-export type TextFieldColors = { textFieldColors?: GeneratedTextFieldColors };
-
-export const DEFAULT_COLOR_CONFIG: ColorConfig = {
-  fill: 'lightGray',
-  fillShade: 100,
-};
-
-export const generateTextFieldColors: (colorConfig?: ColorConfig) => GeneratedTextFieldColors = (
-  colorConfig = DEFAULT_COLOR_CONFIG
-) => {
-  const { fill, fillShade } = colorConfig;
-
-  return {
-    color: () => pickTextColorFromSwatches(fill, fillShade),
-    backgroundColor: (theme, lean, error) =>
-      lean
-        ? 'transparent'
-        : error
-        ? theme.palette.error[fillShade]
-        : theme.utils.getColor(fill, fillShade),
-  };
-};
 
 // @todo replace all hex colors with palette colors
 const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, styleType?: string) => {
   if (lean) {
     return `
-      box-shadow: inset 0 0 0 1px transparent;
     `;
   }
 
   switch (styleType) {
     case 'outlined':
       return `
-        box-shadow: inset 0 0 0 1px
-          ${error ? theme.utils.getColor('error', 400, 'normal') : '#dfdfdf'};
-        
-         &:focus-within {
-          box-shadow: inset 0 0 0 1px
-              ${error ? theme.utils.getColor('error', 400, 'normal') : '#dfdfdf'},
-            0px 2px 6px 0px #ebeeee;
+        box-shadow: 0 0 0 1px
+          ${theme.utils.getColor('lightGray', 400)};
+        &:focus-within {
+          box-shadow: 0 0 0 1px transparent;
         }
       `;
     case 'elevated':
       return `
-        box-shadow: ${
-          error ? `inset 0 0 0 1px ${theme.utils.getColor('error', 400, 'normal')},` : ''
-        }
-          0px 2px 6px 0px #ebeeee;
-        
-        &:focus-within {
-          box-shadow: ${
-            error ? `inset 0 0 0 1px ${theme.utils.getColor('error', 400, 'normal')},` : ''
-          }
-            0px 6px 16px 0px #ebeeee;
-        }
+        box-shadow: ${theme.elevation['01']};
       `;
     case 'filled':
     default:
       return `
-        box-shadow: inset 0 0 0 1px ${
-          error ? theme.utils.getColor('error', 400, 'normal') : 'transparent'
-        };
-        
-        &:focus-within {
-          box-shadow: inset 0 0 0 1px ${
-            error ? theme.utils.getColor('error', 400, 'normal') : 'transparent'
-          },
-            0px 2px 6px 0px rgba(67, 67, 67, 0.15);
-        }
+        border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : 'transparent'}; 
       `;
   }
 };
@@ -92,21 +35,26 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({
-  textFieldColors,
-  disabled,
-  error,
-  lean,
-  styleType,
-}: Props & TextFieldColors) => (theme: Theme): SerializedStyles => css`
-  transition: background-color 0.25s, box-shadow 0.25s;
+export const wrapperStyle = ({ disabled, error, lean, styleType }: Props) => (
+  theme: Theme
+): SerializedStyles => css`
+  transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
   border-radius: ${theme.spacing.xsm};
   cursor: ${disabled ? 'not-allowed' : 'auto'};
   flex: 1 1 100%;
   user-select: none;
   position: relative;
-  background-color: ${textFieldColors?.backgroundColor(theme, lean, error)};
+  background-color: ${theme.palette.white};
+  border: 2px solid transparent;
   ${wrapperStyleSwitch(theme, lean, error, styleType)}
+
+  &:hover {
+    background-color: ${darken(0.1, theme.palette.white)};
+  }
+
+  &:focus-within {
+    border-color: ${!error && theme.utils.getColor('lightGray', 500)};
+  }
 
   ${disabled &&
     `
@@ -127,34 +75,42 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
   theme: Theme
 ): SerializedStyles => {
   return css`
+    position: relative;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     vertical-align: top;
     width: fill-available;
     ${getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
+
+    > div {
+      position: relative;
+    }
   `;
 };
 
-export const iconWrapperStyle = ({ textFieldColors, rightIcon }: Props & TextFieldColors) => (
-  theme: Theme
-): SerializedStyles => css`
-  color: ${textFieldColors?.color()};
+export const iconWrapperStyle = ({ rightIcon }: Props) => (theme: Theme): SerializedStyles => css`
   line-height: 0.8;
   margin-right: ${!rightIcon ? theme.spacing.xsm : 0};
   margin-left: ${rightIcon ? theme.spacing.md : 'inherit'};
 `;
 
-export const inputStyle = ({ textFieldColors, label, placeholder }: Props & TextFieldColors) => (
+export const inputStyle = ({ label, placeholder, size }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${textFieldColors?.color()};
+  color: ${theme.palette.black};
   display: block;
   position: relative;
+  top: ${label && '7px'};
   width: 100%;
   z-index: 2000;
+  font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+
+  & + label {
+    font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+  }
 
   &:focus {
     outline: none;
@@ -173,7 +129,8 @@ export const inputStyle = ({ textFieldColors, label, placeholder }: Props & Text
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(1%, -95%) scale(0.8);
+      transform: translate(1%, -35%) scale(0.8);
+      font-weight: ${theme.typography.weights.black};
     }
   }
 

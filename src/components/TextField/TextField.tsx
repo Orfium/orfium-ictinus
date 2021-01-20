@@ -2,9 +2,7 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import {
-  DEFAULT_COLOR_CONFIG,
   errorMsgStyle,
-  generateTextFieldColors,
   iconWrapperStyle,
   indicatorStyle,
   inputStyle,
@@ -13,7 +11,7 @@ import {
 } from './TextField.style';
 import Label from '../Label';
 import Icon from '../Icon';
-import { colorShades, flatColors, formFieldStyles } from 'theme/palette';
+import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from '../../utils/size-utils';
 import { FC } from 'react';
 
@@ -50,10 +48,6 @@ export type Props = {
   withIndicator?: boolean;
   /** Sets the size of the textField */
   size?: 'md' | 'sm';
-  /** Sets the background color of the textField*/
-  fill?: typeof flatColors[number];
-  /** Sets the background color's shade of the textField*/
-  fillShade?: typeof colorShades[number];
 };
 
 const TextField: React.FC<Props> = ({
@@ -77,43 +71,41 @@ const TextField: React.FC<Props> = ({
   withErrorMsg = false,
   withIndicator = false,
   size = DEFAULT_SIZE,
-  fill = DEFAULT_COLOR_CONFIG.fill,
-  fillShade = DEFAULT_COLOR_CONFIG.fillShade,
   ...rest
 }) => {
-  const textFieldColors = generateTextFieldColors({ fill, fillShade });
   const IconWrapper: FC = ({ children }) => (
-    <div css={iconWrapperStyle({ textFieldColors, rightIcon })}>{children}</div>
+    <div css={iconWrapperStyle({ rightIcon })}>{children}</div>
   );
 
   return (
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ textFieldColors, disabled, error, lean, styleType })}>
+        <div css={wrapperStyle({ disabled, error, lean, styleType })}>
           <div css={textFieldStyle({ size, label, leftIcon })}>
             {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
-            <input
-              css={inputStyle({ textFieldColors, label, placeholder })}
-              placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
-              required={required}
-              id={id}
-              disabled={disabled}
-              {...rest}
-            />
-            {label && (
-              <Label
-                size={size}
-                error={error}
-                htmlFor={id}
-                label={label}
+            <div>
+              <input
+                css={inputStyle({ label, placeholder, size })}
+                placeholder={
+                  !label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label
+                }
                 required={required}
-                animateToTop={Boolean(rest.value)}
+                id={id}
+                disabled={disabled}
+                {...rest}
               />
-            )}
+              {label && (
+                <Label
+                  size={size}
+                  htmlFor={id}
+                  label={label}
+                  required={required}
+                  animateToTop={Boolean(rest.value)}
+                />
+              )}
+            </div>
             {rightIcon && (
-              <div css={iconWrapperStyle({ textFieldColors, label, rightIcon, leftIcon })}>
-                {rightIcon}
-              </div>
+              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{rightIcon}</div>
             )}
           </div>
         </div>
