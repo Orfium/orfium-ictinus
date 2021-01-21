@@ -170,73 +170,97 @@ Regular TextField locked with label. Locked state defined a locked text field bu
 <Preview>
   <Story name="TextField locked with label">
     <Stack>
-      <TextField
-        locked
-        label={'Label'}
-        size={'md'}
-        styleType={'filled'}
-      />
-      <TextField
-        locked
-        label={'Label'}
-        size={'md'}
-        styleType={'outlined'}
-      />
-      <TextField
-        locked
-        label={'Label'}
-        size={'md'}
-        styleType={'elevated'}
-      />
-    </Stack>
-    <Stack>
-      <TextField
-        locked
-        label={'Label'}
-        size={'sm'}
-        styleType={'filled'}
-      />
-      <TextField
-        locked
-        label={'Label'}
-        size={'sm'}
-        styleType={'outlined'}
-      />
-      <TextField
-        locked
-        label={'Label'}
-        size={'sm'}
-        styleType={'elevated'}
-      />
+      <Stack>
+        <TextField
+          locked
+          label={'Label'}
+          size={'md'}
+          styleType={'filled'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'md'}
+          styleType={'outlined'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'md'}
+          styleType={'elevated'}
+        />
+      </Stack>
+      <Stack>
+        <TextField
+          locked
+          label={'Label'}
+          size={'sm'}
+          styleType={'filled'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'sm'}
+          styleType={'outlined'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'sm'}
+          styleType={'elevated'}
+        />
+      </Stack>
     </Stack>
   </Story>
 </Preview>
 
-# TextField with Label and Error Handling Options
+# TextField with Label and Statuses
 
-Regular TextField with Label and Error Handling Options
+Regular TextField with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
 
 <Preview>
-  <Story name="TextField with label and error handling options" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <TextFieldShowcase
-        errorMsg={text('custom error message', 'Error in Text Field')}
-        label={'Label'}
-        status={'error'}
-        styleType={'filled'}
-      />
-      <TextFieldShowcase
-        errorMsg={text('custom error message', 'Error in Text Field')}
-        label={'Label'}
-        status={'error'}
-        styleType={'outlined'}
-      />
-      <TextFieldShowcase
-        errorMsg={text('custom error message', 'Error in Text Field')}
-        label={'Label'}
-        status={'error'}
-        styleType={'elevated'}
-      />
+      <Stack>
+        <TextFieldShowcase
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'error'}
+          styleType={'filled'}
+        />
+        <TextFieldShowcase
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'error'}
+          styleType={'outlined'}
+        />
+        <TextFieldShowcase
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'error'}
+          styleType={'elevated'}
+        />
+      </Stack>
+      <Stack>
+        <TextFieldShowcase
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'hint'}
+          styleType={'filled'}
+        />
+        <TextFieldShowcase
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'hint'}
+          styleType={'outlined'}
+        />
+        <TextFieldShowcase
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'hint'}
+          styleType={'elevated'}
+        />
+      </Stack>
     </Stack>
   </Story>
 </Preview>
@@ -255,7 +279,7 @@ Regular Text Field with KNOBS
         disabled={boolean('Disabled', false)}
         iconName={select('Icon',['none', ...Object.keys(iconSelector)],'search')}
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
-        errorMsg={text('custom error message', 'Error in Text Field')}
+        hintMsg={text('custom error message', 'Error in Text Field')}
         status={select('status', ['success', 'error', 'normal'], 'normal')}
       />
     </Stack>

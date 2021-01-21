@@ -34,20 +34,18 @@ export type Props = {
   locked?: boolean;
   /** dark mode of the text field */
   dark?: boolean;
-  /** If the text field has errors */
-  error?: boolean;
   /** Error message */
-  errorMsg?: React.ReactNode | string;
+  hintMsg?: React.ReactNode | string;
   /** value of the input */
   value?: string | number;
   /** if the input will be without default style for use inside the library */
   lean?: boolean;
   /** Style of input field */
   styleType?: formFieldStyles;
-  /** If the text field status is success */
-  success?: boolean;
   /** Sets the size of the textField */
   size?: 'md' | 'sm';
+  /** The status of the button regarding the status which is in - default normal */
+  status?: 'success' | 'normal' | 'hint' | 'error';
 };
 
 const TextField = React.forwardRef<HTMLInputElement, Props>(
@@ -60,11 +58,10 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
       placeholder = '',
       required = false,
       lean = false,
-      error = false,
       disabled,
-      errorMsg,
+      hintMsg,
       styleType = 'filled',
-      success = false,
+      status = 'normal',
       locked = false,
       size = DEFAULT_SIZE,
       dark = false,
@@ -73,10 +70,14 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
     ref
   ) => {
     const theme = useTheme();
-    const errorMessageToShow = errorMsg && (
+    const hintMessageToShow = hintMsg && (
       <React.Fragment>
-        <Icon color="error" name="issues" size={12} />
-        {errorMsg}
+        <Icon
+          color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 500)}
+          name={status === 'error' ? 'issues' : 'info'}
+          size={12}
+        />
+        {hintMsg}
       </React.Fragment>
     );
 
@@ -87,7 +88,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
     return (
       <React.Fragment>
         <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-          <div css={wrapperStyle({ dark, locked, disabled, error, lean, styleType })}>
+          <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType })}>
             <div css={textFieldStyle({ size, label, leftIcon })}>
               {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
               <div>
@@ -125,7 +126,9 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
             </div>
           </div>
         </div>
-        {errorMsg && error && <div css={errorMsgStyle()}>{errorMessageToShow}</div>}
+        {hintMsg && status !== 'normal' && (
+          <div css={errorMsgStyle({ status })}>{hintMessageToShow}</div>
+        )}
       </React.Fragment>
     );
   }

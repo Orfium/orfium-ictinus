@@ -40,9 +40,10 @@ const wrapperStyleSwitch = (
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, locked, error, lean, styleType, dark }: Props) => (
+export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }: Props) => (
   theme: Theme
 ): SerializedStyles => {
+  const error = status === 'error';
   const backgroundColor = dark ? theme.utils.getColor('darkGray', 600) : theme.palette.white;
 
   return css`
@@ -163,10 +164,12 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 `;
 
-export const errorMsgStyle = () => (theme: Theme): SerializedStyles => css`
+export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;
-  color: ${theme.utils.getColor('error', 400, 'normal')};
+  color: ${status === 'error'
+    ? theme.utils.getColor('error', 400, 'normal')
+    : theme.utils.getColor('lightGray', 500)};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0;

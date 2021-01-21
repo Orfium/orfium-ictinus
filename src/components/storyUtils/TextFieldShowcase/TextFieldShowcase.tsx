@@ -8,10 +8,10 @@ import { AcceptedIconNames } from '../../Icon/types';
 
 type Props = {
   disabled?: boolean;
-  errorMsg?: React.ReactNode | string;
+  hintMsg?: React.ReactNode | string;
   label?: string;
   lean?: boolean;
-  status?: string;
+  status?: 'normal' | 'success' | 'error' | 'hint';
   styleType?: 'filled' | 'outlined' | 'elevated';
   withErrorMsg?: boolean;
   iconName?: AcceptedIconNames | 'none';
@@ -21,22 +21,21 @@ type Props = {
 
 const TextFieldShowcase: React.FC<Props> = ({
   disabled,
-  errorMsg,
+  hintMsg,
   label,
   lean = false,
-  status = '',
+  status = 'normal',
   styleType = 'filled',
   iconName = 'search',
   size,
 }) => {
   const TextFieldProps: TextFieldProps = {
     disabled,
-    error: status === 'error',
+    status,
     label,
     lean,
     styleType,
-    success: status === 'success',
-    errorMsg: status === 'error' && errorMsg ? errorMsg : undefined,
+    hintMsg,
     size,
     ...(iconName !== 'none' ? { leftIcon: <Icon name={iconName} color={'#000'} /> } : {}),
   };
