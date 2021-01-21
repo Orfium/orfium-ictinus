@@ -14,7 +14,6 @@ export const labelStyle = ({
   transform-origin: 0 0;
   width: 100%;
   position: absolute;
-  //left: 0.7rem;
   user-select: none;
   transform: ${!animateToTop ? 'translate(1%, 0)' : 'translate(1%, -95%) scale(0.8);'};
   font-size: ${theme.typography.fontSizes['16']};
