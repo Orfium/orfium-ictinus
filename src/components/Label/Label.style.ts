@@ -20,7 +20,7 @@ export const labelStyle = ({
   font-weight: ${theme.typography.weights.regular};
   color: ${error
     ? theme.utils.getColor('error', 400, 'normal')
-    : theme.utils.getColor('lightGray', 500)};
+    : theme.utils.getColor('lightGray', 600)};
   align-items: center;
   display: flex;
   top: 0;

@@ -81,8 +81,8 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
       </React.Fragment>
     );
 
-    const IconWrapper: FC = ({ children }) => (
-      <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{children}</div>
+    const IconWrapper: FC<{ iconPosition: 'left' | 'right' }> = ({ children, iconPosition }) => (
+      <div css={iconWrapperStyle({ iconPosition })}>{children}</div>
     );
 
     return (
@@ -90,7 +90,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
         <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
           <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType })}>
             <div css={textFieldStyle({ size, label, leftIcon })}>
-              {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
+              {leftIcon && <IconWrapper iconPosition={'left'}>{leftIcon}</IconWrapper>}
               <div>
                 <input
                   css={inputStyle({ label, placeholder, size, dark })}
@@ -113,9 +113,11 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
                   />
                 )}
               </div>
-              {rightIcon && !locked && <IconWrapper>{rightIcon}</IconWrapper>}
+              {rightIcon && !locked && (
+                <IconWrapper iconPosition={'right'}>{rightIcon}</IconWrapper>
+              )}
               {locked && (
-                <IconWrapper>
+                <IconWrapper iconPosition={'right'}>
                   <Icon
                     name="lock"
                     size={size === 'md' ? 20 : 16}

@@ -29,7 +29,7 @@ const wrapperStyleSwitch = (
       `;
     case 'elevated':
       return `
-        box-shadow: ${theme.elevation['01']};
+        box-shadow: ${disabled ? 'initial' : theme.elevation['01']};
       `;
     case 'filled':
     default:
@@ -63,14 +63,16 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
       !locked &&
       `&:hover {
       background-color: ${styleType === 'filled' &&
-        (dark ? lighten(0.1, backgroundColor) : darken(0.1, backgroundColor))};
+        (dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor))};
       border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
-    }`}
+    }
+    `}
 
   &:focus-within {
       border-color: ${!error && theme.utils.getColor('lightGray', 500)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
+      background-color: ${theme.palette.white};
     }
 
     ${disabled ||
@@ -112,12 +114,12 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
   `;
 };
 
-export const iconWrapperStyle = ({ rightIcon, leftIcon }: Props) => (
+export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
   theme: Theme
 ): SerializedStyles => css`
   line-height: 0.8;
-  margin-left: ${leftIcon ? theme.spacing.xsm : 'inherit'};
-  margin-right: ${rightIcon ? theme.spacing.xsm : 0};
+  margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
+  margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
 `;
 
 export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
@@ -142,7 +144,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightGray', 500) : 'transparent'};
+    color: ${!label && placeholder ? theme.utils.getColor('lightGray', 600) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {
