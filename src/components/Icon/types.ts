@@ -145,4 +145,5 @@ export type AcceptedIconNames =
   | 'resume'
   | 'restart'
   | 'entity'
-  | 'playCount';
+  | 'playCount'
+  | 'processedLogs';
