@@ -70,7 +70,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     `}
 
   &:focus-within {
-      border-color: ${!error && theme.utils.getColor('lightGray', 500)};
+      border-color: ${!error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
       background-color: ${theme.palette.white};
     }

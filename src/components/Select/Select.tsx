@@ -1,183 +1,81 @@
-import { rem, transparentize } from 'polished';
 import * as React from 'react';
-import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
+import ReactSelect, { CommonProps, StylesConfig, ValueType } from 'react-select';
 import useTheme from '../../hooks/useTheme';
 import { generateUniqueID } from '../../utils/helpers';
-import Label from '../Label';
+import TextField from '../TextField';
+import Icon from '../Icon';
+import { Props as TextFieldProps } from '../TextField/TextField';
 
 export type SelectOption = { value: string | number; label: string; isDisabled?: boolean };
 
 export type Props = {
-  /** The label that is going to be displayed */
-  label: string;
-  /** Options for the select dropdown */
-  options: SelectOption[];
   /** The function that is used to return the selected options */
-  onChange?: (value: ValueType<SelectOption>) => void;
+  onChange?: (value: ValueType<SelectOption, false>) => void;
   /** the default value of the select if needed */
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
   value?: SelectOption;
-  /** If the select is going to be disabled or not */
-  disabled?: boolean;
-  /** if the select is loading data */
-  isLoading?: boolean;
-  /** if the select value is searchable */
-  isSearchable?: boolean;
-  /** if the select value can be clearable */
-  isClearable?: boolean;
   /** if the select has tags */
   multi?: boolean;
-  /** if the select is required */
-  required?: boolean;
-  /** If the text field has errors */
-  error?: boolean;
-};
+  /** Options for the select dropdown */
+  options: SelectOption[];
+} & TextFieldProps;
 
-const Control: React.FC<ControlProps<SelectOption>> = ({ children, ...props }) => {
-  return (
-    <components.Control {...props}>
-      <React.Fragment>
-        {props.selectProps.label && (
-          <Label
-            htmlFor={props.selectProps.inputId}
-            label={props.selectProps.label}
-            required={props.selectProps.required}
-            animateToTop={props.hasValue}
-          />
-        )}
-        {children}
-      </React.Fragment>
-    </components.Control>
-  );
-};
+const Select = React.forwardRef<HTMLInputElement, Props>(
+  (
+    {
+      onChange = () => {},
+      defaultValue = undefined,
+      value,
+      multi = false,
+      options,
+      ...restInputProps
+    },
+    ref
+  ) => {
+    const theme = useTheme();
 
-const Select: React.FC<Props> = ({
-  defaultValue = undefined,
-  disabled = false,
-  isLoading = false,
-  isSearchable = false,
-  isClearable = false,
-  multi = false,
-  required = false,
-  options,
-  error,
-  label,
-  value,
-  onChange = () => {},
-}) => {
-  const theme = useTheme();
-
-  const customStyles: Styles = {
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected
-        ? theme.utils.getColor('lightGray', 200)
-        : theme.palette.white,
-      color: state.isDisabled
-        ? theme.utils.getColor('lightGray', 700)
-        : theme.utils.getColor('primary', 400, 'text'),
-      padding: rem(16),
-      '&:hover': {
-        backgroundColor: theme.utils.getColor('lightGray', 100),
-      },
-    }),
-    control: (base, state) => ({
-      ...base,
-      opacity: disabled ? 0.5 : 1,
-      minHeight: rem(56),
-      width: 200,
-      paddingLeft: rem(3),
-      backgroundColor: error
-        ? transparentize(0.85, theme.utils.getColor('error', 400, 'normal'))
-        : theme.utils.getColor('lightGray', 100),
-      border: error ? `1px solid ${theme.utils.getColor('error', 400, 'normal')}` : '0',
-      '&:hover': {},
-      '&:hover svg': {
-        backgroundColor: 'rgba(176, 176, 176, 0.23)',
-      },
-      '> div:first-of-type': {
-        margin: `${rem(18)} ${rem(4)} ${rem(2)}`,
-        padding: `${rem(2)} ${rem(4)}`,
-      },
-      label: {
-        left: rem(10),
-        transform: state.isFocused || state.hasValue ? 'translate(1%, -65%) scale(0.8)' : 'initial',
-      },
-    }),
-    indicatorsContainer: base => ({
-      ...base,
-      marginRight: rem(16),
-    }),
-    indicatorSeparator: () => ({
-      display: 'none',
-    }),
-    dropdownIndicator: () => ({
-      color: theme.utils.getColor('primary', 400, 'text'),
-      borderRadius: '100%',
-      width: rem(20),
-      height: rem(20),
-      position: 'relative',
-      svg: {
-        transition: 'background 0.2s ease-in-out',
-        borderRadius: '100%',
+    const customStyles: StylesConfig<SelectOption, false> = {
+      valueContainer: () => ({
         padding: 0,
-      },
-    }),
-    singleValue: base => ({
-      ...base,
-      color: theme.utils.getColor('primary', 400, 'text'),
-      fontSize: theme.typography.fontSizes[16],
-    }),
-    multiValue: base => ({
-      ...base,
-      fontSize: theme.typography.fontSizes[14],
-      backgroundColor: 'transparent',
-      'div:first-of-type': {
-        paddingLeft: 0,
-      },
-      'div:last-of-type': {
-        backgroundColor: theme.utils.getColor('lightGray', 700),
-        width: theme.spacing.md,
-        height: theme.spacing.md,
-        borderRadius: theme.spacing.md,
-        top: rem(3),
-        position: 'relative',
-        '&:hover': {
-          backgroundColor: theme.utils.getColor('lightGray', 500),
-        },
-        svg: {
-          fill: theme.palette.white,
-          backgroundColor: 'transparent',
-        },
-      },
-    }),
-  };
+      }),
+      control: () => ({}),
+    };
 
-  return (
-    <div css={{ position: 'relative' }}>
-      <ReactSelect
-        inputId={`select-${generateUniqueID()}`}
-        styles={customStyles}
-        defaultValue={defaultValue}
-        isDisabled={disabled}
-        isLoading={isLoading}
-        isClearable={isClearable}
-        isSearchable={isSearchable}
-        isMulti={multi}
-        value={value}
-        options={options}
-        placeholder={false}
-        onChange={onChange}
-        components={{
-          Control,
-        }}
-        label={label}
-        required={required}
-        inputProps={{ required }}
-      />
-    </div>
-  );
-};
+    return (
+      <div css={{ position: 'relative' }}>
+        <ReactSelect
+          inputId={`select-${generateUniqueID()}`}
+          styles={customStyles}
+          defaultValue={defaultValue}
+          isMulti={multi}
+          value={value}
+          options={options}
+          placeholder={false}
+          // onChange={onChange} // TODO fix this
+          components={{
+            DropdownIndicator: null,
+            IndicatorSeparator: null,
+            // eslint-disable-next-line react/display-name
+            Input: (props: CommonProps<SelectOption, false>) => {
+              return (
+                <TextField
+                  {...props}
+                  rightIcon={
+                    <Icon name={'arrowDown'} color={theme.utils.getColor('lightGray', 600)} />
+                  }
+                  {...restInputProps}
+                  ref={ref}
+                  value={props?.selectProps?.value?.label}
+                />
+              );
+            },
+          }}
+        />
+      </div>
+    );
+  }
+);
+Select.displayName = 'Select';
 
 export default Select;
