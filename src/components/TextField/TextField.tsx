@@ -47,68 +47,74 @@ export type Props = {
   size?: 'md' | 'sm';
 };
 
-const TextField: React.FC<Props> = ({
-  id = undefined,
-  rightIcon = null,
-  leftIcon = null,
-  label,
-  placeholder = '',
-  required = false,
-  lean = false,
-  error = false,
-  disabled,
-  errorMsg,
-  styleType = 'filled',
-  success = false,
-  size = DEFAULT_SIZE,
-  dark = false,
-  ...rest
-}) => {
-  const errorMessageToShow = errorMsg && (
-    <React.Fragment>
-      <Icon color="error" name="issues" size={12} />
-      {errorMsg}
-    </React.Fragment>
-  );
+const TextField = React.forwardRef<HTMLInputElement, Props>(
+  (
+    {
+      id = undefined,
+      rightIcon = null,
+      leftIcon = null,
+      label,
+      placeholder = '',
+      required = false,
+      lean = false,
+      error = false,
+      disabled,
+      errorMsg,
+      styleType = 'filled',
+      success = false,
+      size = DEFAULT_SIZE,
+      dark = false,
+      ...rest
+    },
+    ref
+  ) => {
+    const errorMessageToShow = errorMsg && (
+      <React.Fragment>
+        <Icon color="error" name="issues" size={12} />
+        {errorMsg}
+      </React.Fragment>
+    );
 
-  const IconWrapper: FC = ({ children }) => (
-    <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{children}</div>
-  );
+    const IconWrapper: FC = ({ children }) => (
+      <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{children}</div>
+    );
 
-  return (
-    <React.Fragment>
-      <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ dark, disabled, error, lean, styleType })}>
-          <div css={textFieldStyle({ size, label, leftIcon })}>
-            {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
-            <div>
-              <input
-                css={inputStyle({ label, placeholder, size, dark })}
-                placeholder={
-                  !label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label
-                }
-                required={required}
-                id={id}
-                disabled={disabled}
-                {...rest}
-              />
-              {label && (
-                <Label
-                  size={size}
-                  htmlFor={id}
-                  label={label}
+    return (
+      <React.Fragment>
+        <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
+          <div css={wrapperStyle({ dark, disabled, error, lean, styleType })}>
+            <div css={textFieldStyle({ size, label, leftIcon })}>
+              {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
+              <div>
+                <input
+                  css={inputStyle({ label, placeholder, size, dark })}
+                  placeholder={
+                    !label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label
+                  }
                   required={required}
-                  animateToTop={Boolean(rest.value)}
+                  id={id}
+                  disabled={disabled}
+                  {...rest}
+                  ref={ref}
                 />
-              )}
+                {label && (
+                  <Label
+                    size={size}
+                    htmlFor={id}
+                    label={label}
+                    required={required}
+                    animateToTop={Boolean(rest.value)}
+                  />
+                )}
+              </div>
+              {rightIcon && <IconWrapper>{rightIcon}</IconWrapper>}
             </div>
-            {rightIcon && <IconWrapper>{rightIcon}</IconWrapper>}
           </div>
         </div>
-      </div>
-      {errorMsg && error && <div css={errorMsgStyle()}>{errorMessageToShow}</div>}
-    </React.Fragment>
-  );
-};
+        {errorMsg && error && <div css={errorMsgStyle()}>{errorMessageToShow}</div>}
+      </React.Fragment>
+    );
+  }
+);
 
 export default TextField;
