@@ -67,7 +67,10 @@ const CompactNotification: React.FC<Props> = ({
   const { utils } = useTheme();
 
   return (
-    <div css={notificationsContainer(withFilling, type)}>
+    <div
+      css={notificationsContainer(withFilling, type)}
+      {...(variant == 'banner' && { 'notification-type': 'banner' })}
+    >
       <div css={infoContainer()}>
         {withIcon && (
           <div css={iconContainer()}>

@@ -9,6 +9,7 @@ export const typeToThemePalette = (theme: Theme, type: NotificationTypes): strin
 export const notificationsContainer = (withFilling: boolean, type: NotificationTypes) => (
   theme: Theme
 ): SerializedStyles => css`
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   overflow: hidden;

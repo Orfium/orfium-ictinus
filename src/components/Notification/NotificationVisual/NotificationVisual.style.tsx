@@ -10,4 +10,5 @@ export const descriptionContainer = () => (theme: Theme): SerializedStyles => cs
   margin-top: ${theme.spacing.sm};
   max-height: ${rem(180)};
   overflow: auto;
+  max-width: fit-content;
 `;
