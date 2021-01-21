@@ -13,6 +13,7 @@ import Icon from '../Icon';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from '../../utils/size-utils';
 import { FC } from 'react';
+import useTheme from '../../hooks/useTheme';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -29,6 +30,8 @@ export type Props = {
   required?: boolean;
   /** If the text field is disabled */
   disabled?: boolean;
+  /** If the text field is locked. Locked state is unique to this and the system */
+  locked?: boolean;
   /** dark mode of the text field */
   dark?: boolean;
   /** If the text field has errors */
@@ -62,12 +65,14 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
       errorMsg,
       styleType = 'filled',
       success = false,
+      locked = false,
       size = DEFAULT_SIZE,
       dark = false,
       ...rest
     },
     ref
   ) => {
+    const theme = useTheme();
     const errorMessageToShow = errorMsg && (
       <React.Fragment>
         <Icon color="error" name="issues" size={12} />
@@ -82,7 +87,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
     return (
       <React.Fragment>
         <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-          <div css={wrapperStyle({ dark, disabled, error, lean, styleType })}>
+          <div css={wrapperStyle({ dark, locked, disabled, error, lean, styleType })}>
             <div css={textFieldStyle({ size, label, leftIcon })}>
               {leftIcon && <IconWrapper>{leftIcon}</IconWrapper>}
               <div>
@@ -93,7 +98,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
                   }
                   required={required}
                   id={id}
-                  disabled={disabled}
+                  disabled={disabled || locked}
                   {...rest}
                   ref={ref}
                 />
@@ -107,7 +112,16 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
                   />
                 )}
               </div>
-              {rightIcon && <IconWrapper>{rightIcon}</IconWrapper>}
+              {rightIcon && !locked && <IconWrapper>{rightIcon}</IconWrapper>}
+              {locked && (
+                <IconWrapper>
+                  <Icon
+                    name="lock"
+                    size={size === 'md' ? 20 : 16}
+                    color={theme.utils.getColor('lightGray', 500)}
+                  />
+                </IconWrapper>
+              )}
             </div>
           </div>
         </div>

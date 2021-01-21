@@ -4,7 +4,13 @@ import { Props } from './TextField';
 import { Theme } from '../../theme';
 import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
 
-const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, styleType?: string) => {
+const wrapperStyleSwitch = (
+  theme: Theme,
+  lean?: boolean,
+  error?: boolean,
+  styleType?: string,
+  disabled?: boolean
+) => {
   if (lean) {
     return `
     `;
@@ -16,7 +22,9 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
         box-shadow: 0 0 0 1px
           ${theme.utils.getColor('lightGray', 400)};
         &:focus-within, &:hover {
-          box-shadow: 0 0 0 1px transparent;
+          box-shadow: 0 0 0 1px ${
+            !disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)
+          };
         }
       `;
     case 'elevated':
@@ -32,7 +40,7 @@ const wrapperStyleSwitch = (theme: Theme, lean?: boolean, error?: boolean, style
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) => (
+export const wrapperStyle = ({ disabled, locked, error, lean, styleType, dark }: Props) => (
   theme: Theme
 ): SerializedStyles => {
   const backgroundColor = dark ? theme.utils.getColor('darkGray', 600) : theme.palette.white;
@@ -40,17 +48,18 @@ export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) 
   return css`
     transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
     border-radius: ${theme.spacing.xsm};
-    cursor: ${disabled ? 'not-allowed' : 'auto'};
+    cursor: ${disabled || locked ? 'not-allowed' : 'auto'};
     flex: 1 1 100%;
     user-select: none;
     position: relative;
     background-color: ${backgroundColor};
     opacity: ${disabled && 0.5};
     border: 2px solid transparent;
-    ${wrapperStyleSwitch(theme, lean, error, styleType)}
+    ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
     border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
 
     ${!disabled &&
+      !locked &&
       `&:hover {
       background-color: ${styleType === 'filled' &&
         (dark ? lighten(0.1, backgroundColor) : darken(0.1, backgroundColor))};
@@ -63,8 +72,9 @@ export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) 
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }
 
-    ${disabled &&
-      `
+    ${disabled ||
+      (locked &&
+        `
       &:before {
         content: '';
         background-color: rgba(255, 255, 255, 0.15);
@@ -79,7 +89,7 @@ export const wrapperStyle = ({ disabled, error, lean, styleType, dark }: Props) 
         color: ${theme.utils.getColor('lightGray', 600)} !important;
         fill: ${theme.utils.getColor('lightGray', 600)} !important;
       }
-  `}
+  `)}
   `;
 };
 
