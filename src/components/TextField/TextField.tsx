@@ -1,18 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import {
-  errorMsgStyle,
-  iconWrapperStyle,
-  inputStyle,
-  textFieldStyle,
-  wrapperStyle,
-} from './TextField.style';
+import { FC } from 'react';
+import { errorMsgStyle, iconWrapperStyle, inputStyle, textFieldStyle, wrapperStyle } from './TextField.style';
 import Label from '../Label';
 import Icon from '../Icon';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from '../../utils/size-utils';
-import { FC } from 'react';
 import useTheme from '../../hooks/useTheme';
 
 export type Props = {
@@ -73,7 +67,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
     const hintMessageToShow = hintMsg && (
       <React.Fragment>
         <Icon
-          color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 500)}
+          color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 600)}
           name={status === 'error' ? 'issues' : 'info'}
           size={12}
         />
