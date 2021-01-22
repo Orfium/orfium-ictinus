@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { FC } from 'react';
 import {
   errorMsgStyle,
   iconWrapperStyle,
@@ -12,7 +13,6 @@ import Label from '../Label';
 import Icon from '../Icon';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from '../../utils/size-utils';
-import { FC } from 'react';
 import useTheme from '../../hooks/useTheme';
 
 export type Props = {
@@ -46,6 +46,16 @@ export type Props = {
   size?: 'md' | 'sm';
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
+  /** Callback fired when the `input` is blurred. */
+  onBlur?: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  /** Callback fired when the `input` is changed. */
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  /** Callback fired when the `input` is focused. */
+  onFocus?: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  /** Callback fired when the `input` has a key down event. */
+  onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  /** Callback fired when the `input` value typed is changed */
+  onInput?: React.EventHandler<any>;
 };
 
 const TextField = React.forwardRef<HTMLInputElement, Props>(
@@ -73,7 +83,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
     const hintMessageToShow = hintMsg && (
       <React.Fragment>
         <Icon
-          color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 500)}
+          color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 600)}
           name={status === 'error' ? 'issues' : 'info'}
           size={12}
         />

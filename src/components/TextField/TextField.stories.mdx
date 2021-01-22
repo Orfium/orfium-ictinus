@@ -1,11 +1,9 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
-import TextFieldShowcase from '../storyUtils/TextFieldShowcase'; import { colorShades, flatColors,
-  pickTextColorFromSwatches,
-} from '../../theme/palette'; import Icon
-  from '../Icon'; import iconSelector from '../Icon/assets/iconSelector';
+import Icon from '../Icon';
+import iconSelector from '../Icon/assets/iconSelector';
 
 <Meta title="Design System/TextField" component={TextField} />
 
@@ -222,19 +220,19 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
   <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Stack>
-        <TextFieldShowcase
+        <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'error'}
           styleType={'filled'}
         />
-        <TextFieldShowcase
+        <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'error'}
           styleType={'outlined'}
         />
-        <TextFieldShowcase
+        <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'error'}
@@ -242,19 +240,19 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
         />
       </Stack>
       <Stack>
-        <TextFieldShowcase
+        <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
           styleType={'filled'}
         />
-        <TextFieldShowcase
+        <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
           styleType={'outlined'}
         />
-        <TextFieldShowcase
+        <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
@@ -272,7 +270,7 @@ Regular Text Field with KNOBS
 <Preview>
   <Story name="Text Field with KNOBS" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <TextFieldShowcase
+      <TextField
         label={text('Label', 'Label')}
         size={select('Size', ['md','sm'], 'md')}
         lean={boolean('Lean version', false)}
