@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import * as React from 'react';
+import omit from 'lodash/omit';
 import { DayPickerInputProps } from 'react-day-picker';
 import useTheme from '../../../hooks/useTheme';
 import { flex } from '../../../theme/functions';
@@ -47,13 +48,13 @@ const DatePickInput: React.FC<Props> = ({
       <TextField
         label={`${inputLabel} (Start)`}
         lean={true}
-        {...props}
+        {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
         value={getDateFormatted(selectedDay.from)}
       />
       <TextField
         rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
         label={`${inputLabel} (End)`}
-        {...props}
+        {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
         lean={true}
         value={getDateFormatted(selectedDay.to)}
       />
@@ -61,7 +62,7 @@ const DatePickInput: React.FC<Props> = ({
   ) : (
     <TextField
       label={inputLabel}
-      {...props}
+      {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
       styleType={styleType}
       value={getDateFormatted(selectedDay.from)}
       rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}

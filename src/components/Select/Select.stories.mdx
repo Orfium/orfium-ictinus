@@ -63,7 +63,7 @@ Simple select component with clearable data and searchable input
 
 # Select Sizes
 
-Select available sizes - sizes are based on the text field
+Select available sizes - sizes are based on the select
 
 <Preview>
   <Story name="Select Sizes">
@@ -183,16 +183,16 @@ Select disabled with label
   </Story>
 </Preview>
 
-# TextField with Label and Statuses
+# Select with Label and Statuses
 
-Regular TextField with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
+Select with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
 
 <Preview>
-  <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Select with label and statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Stack>
         <Select
-          hintMsg={text('custom error message', 'Error in Text Field')}
+          hintMsg={text('custom error message', 'Error in Select')}
           label={'Label'}
           status={'error'}
           styleType={'filled'}
@@ -200,7 +200,7 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
           defaultValue={defaultValue}
         />
         <Select
-          hintMsg={text('custom error message', 'Error in Text Field')}
+          hintMsg={text('custom error message', 'Error in Select')}
           label={'Label'}
           status={'error'}
           styleType={'outlined'}
@@ -208,7 +208,7 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
           defaultValue={defaultValue}
         />
         <Select
-          hintMsg={text('custom error message', 'Error in Text Field')}
+          hintMsg={text('custom error message', 'Error in Select')}
           label={'Label'}
           status={'error'}
           styleType={'elevated'}
@@ -218,63 +218,27 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
       </Stack>
       <Stack>
         <Select
-          hintMsg={text('custom error message', 'Error in Text Field')}
+          hintMsg={text('custom error message', 'Error in Select')}
           label={'Label'}
           status={'hint'}
           options={options}
           styleType={'filled'}
         />
         <Select
-          hintMsg={text('custom error message', 'Error in Text Field')}
+          hintMsg={text('custom error message', 'Error in Select')}
           label={'Label'}
           status={'hint'}
           options={options}
           styleType={'outlined'}
         />
         <Select
-          hintMsg={text('custom error message', 'Error in Text Field')}
+          hintMsg={text('custom error message', 'Error in Select')}
           label={'Label'}
           status={'hint'}
           options={options}
           styleType={'elevated'}
         />
       </Stack>
-    </Stack>
-  </Story>
-</Preview>
-
-# Multi Tag Select
-
-Multi Tag Select
-
-<Preview>
-  <Story name="Multi Tag Select">
-    <Stack>
-      <Select
-        isClearable
-        multi
-        label={'Flavour'}
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
-      />
-      <Select
-        isClearable
-        multi
-        label={'Flavour'}
-        error
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
-      />
     </Stack>
   </Story>
 </Preview>
