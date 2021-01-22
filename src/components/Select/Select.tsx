@@ -1,18 +1,24 @@
+/** @jsx jsx */
 import * as React from 'react';
-import ReactSelect, { ValueType } from 'react-select';
 import useTheme from '../../hooks/useTheme';
-import { generateUniqueID } from '../../utils/helpers';
 import TextField from '../TextField';
 import Icon from '../Icon';
 import { Props as TextFieldProps } from '../TextField/TextField';
-import customStyles from './Select.style';
-import pick from 'lodash/pick';
+import { jsx } from '@emotion/core';
+import ClickAwayListener from '../utils/ClickAwayListener';
+import { useEffect, useMemo } from 'react';
+import { menuStyle, optionStyle } from './Select.style';
 
-export type SelectOption = { value: string | number; label: string; isDisabled?: boolean };
+export type SelectOption = {
+  value: string | number;
+  label: string;
+  isDisabled?: boolean;
+  tooltipInfo?: string;
+};
 
 export type Props = {
   /** The function that is used to return the selected options */
-  onChange?: (value: ValueType<SelectOption, boolean>) => void;
+  onChange?: (value: SelectOption) => void;
   /** the default value of the select if needed */
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
@@ -23,12 +29,14 @@ export type Props = {
   options: SelectOption[];
 } & TextFieldProps;
 
+const emptyValue = { label: '', value: '' };
+
 const Select = React.forwardRef<HTMLInputElement, Props>(
   (
     {
       onChange = () => {},
       defaultValue = undefined,
-      value,
+      value = emptyValue,
       multi = false,
       options,
       status = 'normal',
@@ -37,50 +45,79 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     ref
   ) => {
     const theme = useTheme();
-    const inputRef = React.useRef<any>(ref);
+    const [open, setOpen] = React.useState(false);
+    const [inputValue, setInputValue] = React.useState(defaultValue || value);
+    const [searchValue, setSearchValue] = React.useState('');
+
+    useEffect(() => {
+      onChange(inputValue);
+    }, [inputValue, onChange]);
+
+    const filteredOptions = useMemo(() => {
+      return options.filter(
+        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
+      );
+    }, [searchValue, options]);
+
+    const rightIconRender = useMemo(
+      () => (
+        <Icon
+          size={20}
+          name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
+          color={theme.utils.getColor('lightGray', 500)}
+        />
+      ),
+      [open, theme.utils]
+    );
 
     return (
-      <div css={{ position: 'relative' }}>
-        <ReactSelect
-          ref={inputRef}
-          inputId={`select-${generateUniqueID()}`}
-          styles={customStyles(theme, { status, ...restInputProps })}
-          defaultValue={defaultValue}
-          isMulti={multi}
-          value={value}
-          options={options}
-          placeholder={false}
-          onChange={onChange}
-          components={{
-            DropdownIndicator: null,
-            IndicatorSeparator: null,
-            // eslint-disable-next-line react/display-name
-            Input: props => {
-              console.log(props);
-
-              return (
-                <TextField
-                  {...pick(props, ['onBlur', 'onChange', 'onFocus'])}
-                  rightIcon={
-                    <Icon
-                      size={20}
-                      name={props?.selectProps.menuIsOpen ? 'chevronLargeUp' : 'chevronLargeDown'}
-                      color={theme.utils.getColor('lightGray', 400)}
-                    />
-                  }
-                  status={status}
-                  {...restInputProps}
-                  value={props?.selectProps.value?.label}
-                  ref={inputRef}
-                />
-              );
-            },
+      <ClickAwayListener
+        onClick={() => {
+          setOpen(false);
+          setSearchValue('');
+        }}
+      >
+        <TextField
+          onFocus={() => setOpen(true)}
+          rightIcon={rightIconRender}
+          onKeyDown={e => {
+            // if backspace
+            if (e.keyCode === 8) {
+              setInputValue(emptyValue);
+            }
           }}
+          onInput={e => {
+            setSearchValue(e.target.value);
+          }}
+          {...restInputProps}
+          status={status}
+          value={searchValue || inputValue.label}
+          ref={ref}
         />
-      </div>
+        {open && (
+          <div css={menuStyle({ status })}>
+            {filteredOptions.length > 0 ? (
+              filteredOptions.map(option => (
+                <div
+                  key={option.value}
+                  css={optionStyle({ selected: inputValue.value === option.value })}
+                  onClick={() => {
+                    setInputValue(option);
+                    setOpen(false);
+                    setSearchValue('');
+                  }}
+                >
+                  {option.label}
+                </div>
+              ))
+            ) : (
+              <div css={optionStyle({ selected: false })}>No options</div>
+            )}
+          </div>
+        )}
+      </ClickAwayListener>
     );
   }
 );
-Select.displayName = 'Select';
 
 export default Select;

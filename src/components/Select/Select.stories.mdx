@@ -22,9 +22,7 @@ A universal Select component that is a clickable element that can hold many form
 ```js
 import { Select } from '@orfium/ictinus';
 
-<Select onClick={() => {}})}>
-  Click Me
-</Select>
+<Select options={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'strawberry', label: 'Strawberry' }]} />
 ```
 
 # Props
@@ -223,18 +221,21 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
+          options={options}
           styleType={'filled'}
         />
         <Select
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
+          options={options}
           styleType={'outlined'}
         />
         <Select
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
+          options={options}
           styleType={'elevated'}
         />
       </Stack>
