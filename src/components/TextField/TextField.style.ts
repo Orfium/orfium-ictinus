@@ -62,8 +62,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     ${!disabled &&
       !locked &&
       `&:hover {
-      background-color: ${styleType === 'filled' &&
-        (dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor))};
+      background-color: ${dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)};
       border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }

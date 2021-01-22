@@ -3,23 +3,30 @@ import { darken } from 'polished';
 import { Theme } from '../../theme';
 import { Props } from '../TextField/TextField';
 
-export const optionStyle = ({ selected }: { selected: boolean }) => (
+export const optionStyle = ({
+  selected,
+  size,
+  noResultsExist,
+}: { selected: boolean; noResultsExist?: boolean } & Props) => (
   theme: Theme
 ): SerializedStyles => css`
   padding: ${theme.spacing.md};
-  font-size: ${theme.typography.fontSizes['14']};
+  font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
   background-color: ${selected ? darken(0.07, theme.palette.white) : theme.palette.white};
-  //cursor: default;
+  cursor: default;
+  color: ${noResultsExist ? theme.utils.getColor('lightGray', 600) : 'initial'};
+  text-align: ${noResultsExist ? 'center' : 'initial'};
 
   &:hover {
     background-color: ${darken(0.03, theme.palette.white)};
   }
 `;
+
 export const menuStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
   background-color: ${theme.palette.white};
   border-radius: 4px;
   box-shadow: ${theme.elevation['02']};
-  margin-top: ${status !== 'normal' ? -15 : 7}px;
+  margin-top: ${status !== 'normal' ? -16 : 8}px;
   z-index: 500;
   position: relative;
 `;

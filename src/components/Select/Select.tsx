@@ -100,7 +100,10 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
               filteredOptions.map(option => (
                 <div
                   key={option.value}
-                  css={optionStyle({ selected: inputValue.value === option.value })}
+                  css={optionStyle({
+                    selected: inputValue.value === option.value,
+                    ...restInputProps,
+                  })}
                   onClick={() => {
                     setInputValue(option);
                     setOpen(false);
@@ -111,7 +114,9 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
                 </div>
               ))
             ) : (
-              <div css={optionStyle({ selected: false })}>No options</div>
+              <div css={optionStyle({ selected: false, noResultsExist: true, ...restInputProps })}>
+                No options
+              </div>
             )}
           </div>
         )}
