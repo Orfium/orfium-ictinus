@@ -37,9 +37,8 @@ const TopAppBar: FC<TopAppBarProps> = ({
           <div css={Styles.searchWrapper}>
             <TextField
               placeholder={searchPlaceholder}
-              fill={type}
+              dark
               styleType={'filled'}
-              fillShade={variant}
               leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
               {...searchProps}
             />

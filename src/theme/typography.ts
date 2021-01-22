@@ -50,7 +50,7 @@ const weights = {
   bold: 700,
   light: 300,
   regular: 400,
-  black: 900,
+  black: 700,
 };
 
 const typography: Typography = {
