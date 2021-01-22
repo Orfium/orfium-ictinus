@@ -2,7 +2,7 @@ import { css, SerializedStyles } from '@emotion/core';
 import { darken, lighten, rem } from 'polished';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
-import { getTextFieldSize, DEFAULT_SIZE } from '../../utils/size-utils';
+import { DEFAULT_SIZE, getTextFieldSize } from '../../utils/size-utils';
 
 const wrapperStyleSwitch = (
   theme: Theme,
@@ -132,7 +132,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   position: relative;
   top: ${label && '7px'};
   width: 100%;
-  z-index: 2000;
+  z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
 
   & + label {
@@ -171,7 +171,7 @@ export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedSt
   align-items: center;
   color: ${status === 'error'
     ? theme.utils.getColor('error', 400, 'normal')
-    : theme.utils.getColor('lightGray', 500)};
+    : theme.utils.getColor('lightGray', 600)};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0;
