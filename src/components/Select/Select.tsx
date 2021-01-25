@@ -9,6 +9,9 @@ import ClickAwayListener from '../utils/ClickAwayListener';
 import { useEffect, useMemo } from 'react';
 import { menuStyle, optionStyle } from './Select.style';
 
+// Mocks onChange to avoid readonly warning for TextField Component
+const ON_CHANGE_MOCK = () => {};
+
 export type SelectOption = {
   value: string | number;
   label: string;
@@ -18,11 +21,11 @@ export type SelectOption = {
 
 export type Props = {
   /** The function that is used to return the selected options */
-  onChange?: (value: SelectOption) => void;
+  handleSelectedOption?: (selectedOption: SelectOption) => void;
   /** the default value of the select if needed */
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
-  value?: SelectOption;
+  selectedOption?: SelectOption;
   /** if the select has tags */
   multi?: boolean;
   /** Options for the select dropdown */
@@ -34,9 +37,9 @@ const emptyValue = { label: '', value: '' };
 const Select = React.forwardRef<HTMLInputElement, Props>(
   (
     {
-      onChange = () => {},
+      handleSelectedOption = () => {},
       defaultValue = undefined,
-      value = emptyValue,
+      selectedOption = emptyValue,
       multi = false,
       options,
       status = 'normal',
@@ -46,12 +49,12 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    const [inputValue, setInputValue] = React.useState(defaultValue || value);
+    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
     useEffect(() => {
-      onChange(inputValue);
-    }, [inputValue, onChange]);
+      handleSelectedOption(inputValue);
+    }, [inputValue, handleSelectedOption]);
 
     const filteredOptions = useMemo(() => {
       return options.filter(
@@ -89,6 +92,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           onInput={e => {
             setSearchValue(e.target.value);
           }}
+          onChange={ON_CHANGE_MOCK}
           {...restInputProps}
           status={status}
           value={searchValue || inputValue.label}
