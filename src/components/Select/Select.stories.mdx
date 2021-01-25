@@ -10,6 +10,9 @@ const options = [
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
 ];
 const defaultValue = options[0];
+const handleSelectedOption = selectedOption => {
+  console.log('On option change', selectedOption);
+}
 
 <Meta title="Design System/Select" component={Select} />
 
@@ -40,21 +43,21 @@ Simple select component with clearable data and searchable input
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         styleType={'filled'}
       />
       <Select
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}
       />
       <Select
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         styleType={'elevated'}
       />
     </Stack>
@@ -72,7 +75,7 @@ Select available sizes - sizes are based on the select
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         size={'md'}
         styleType={'outlined'}
       />
@@ -80,7 +83,7 @@ Select available sizes - sizes are based on the select
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}
       />
     </Stack>
@@ -98,7 +101,7 @@ Select with icon options right and left of the text
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         size={'md'}
         styleType={'outlined'}
         leftIcon={
@@ -114,7 +117,7 @@ Select with icon options right and left of the text
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}
         rightIcon={
           <img
@@ -129,7 +132,7 @@ Select with icon options right and left of the text
         label={'Flavour'}
         options={options}
         defaultValue={defaultValue}
-        onChange={val => console.log('onChange', val)}
+        handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}
         rightIcon={
           <img
@@ -161,20 +164,17 @@ Select disabled with label
     <Stack>
       <Select
         disabled
-        isClearable
         label={'Flavour'}
         options={options}
       />
       <Select
         disabled
-        isClearable
         label={'Flavour'}
         options={options}
         styleType={'outlined'}
       />
       <Select
         disabled
-        isClearable
         label={'Flavour'}
         options={options}
         styleType={'elevated'}
