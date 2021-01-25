@@ -28,5 +28,6 @@ export const menuStyle = ({ status }: Props) => (theme: Theme): SerializedStyles
   box-shadow: ${theme.elevation['02']};
   margin-top: ${status !== 'normal' ? -16 : 8}px;
   z-index: 500;
-  position: relative;
+  position: absolute;
+  min-width: 220px;
 `;

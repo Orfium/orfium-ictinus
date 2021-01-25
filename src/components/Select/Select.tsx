@@ -1,13 +1,14 @@
 /** @jsx jsx */
 import * as React from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import { jsx } from '@emotion/core';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { useEffect, useMemo } from 'react';
 import { menuStyle, optionStyle } from './Select.style';
+import useCombinedRefs from '../../hooks/useCombinedRefs';
 
 export type SelectOption = {
   value: string | number;
@@ -44,6 +45,8 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     },
     ref
   ) => {
+    const innerRef = useRef<HTMLInputElement>(null);
+    const inputRef = useCombinedRefs<HTMLInputElement>(ref, innerRef);
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(defaultValue || value);
@@ -52,6 +55,10 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     useEffect(() => {
       onChange(inputValue);
     }, [inputValue, onChange]);
+
+    useEffect(() => {
+      setInputValue(defaultValue || value);
+    }, [defaultValue, value]);
 
     const filteredOptions = useMemo(() => {
       return options.filter(
@@ -65,9 +72,12 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           size={20}
           name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
           color={theme.utils.getColor('lightGray', 500)}
+          onClick={() => {
+            inputRef?.current?.focus();
+          }}
         />
       ),
-      [open, theme.utils]
+      [open, theme.utils, inputRef.current]
     );
 
     return (
@@ -92,7 +102,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           {...restInputProps}
           status={status}
           value={searchValue || inputValue.label}
-          ref={ref}
+          ref={inputRef}
         />
         {open && (
           <div css={menuStyle({ status })}>
