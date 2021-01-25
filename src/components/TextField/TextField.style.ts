@@ -107,8 +107,9 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
     width: fill-available;
     ${getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
 
-    > div {
+    > div:first-of-type {
       position: relative;
+      width: 100%;
     }
   `;
 };

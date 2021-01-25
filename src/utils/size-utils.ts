@@ -7,7 +7,7 @@ type SizeConfig = (theme: Theme, label: string, shouldMoveLeft?: boolean) => Rec
 
 export const getTextFieldSize: SizeConfig = (theme, label) => {
   const paddingMD = label ? `16px ${theme.spacing.md}` : `16px ${theme.spacing.md} 16px`;
-  const paddingSM = label ? `11px ${theme.spacing.md}` : `11px ${theme.spacing.md} 11px`;
+  const paddingSM = label ? `12px ${theme.spacing.md}` : `12px ${theme.spacing.md} 11px`;
 
   return {
     md: `padding: ${paddingMD};`,
