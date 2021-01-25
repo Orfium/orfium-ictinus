@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import * as React from 'react';
-import { useEffect, useMemo, useRef } from 'react';
+import { useEffect, useMemo } from 'react';
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
@@ -8,7 +8,6 @@ import { Props as TextFieldProps } from '../TextField/TextField';
 import { jsx } from '@emotion/core';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { menuStyle, optionStyle } from './Select.style';
-import useCombinedRefs from '../../hooks/useCombinedRefs';
 
 // Mocks onChange to avoid readonly warning for TextField Component
 const ON_CHANGE_MOCK = () => {};
@@ -48,8 +47,6 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     },
     ref
   ) => {
-    const innerRef = useRef<HTMLInputElement>(null);
-    const inputRef = useCombinedRefs<HTMLInputElement>(ref, innerRef);
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
@@ -76,11 +73,11 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
           color={theme.utils.getColor('lightGray', 500)}
           onClick={() => {
-            inputRef?.current?.focus();
+            setOpen(!open);
           }}
         />
       ),
-      [open, theme.utils, inputRef.current]
+      [open, theme.utils, setOpen]
     );
 
     return (
@@ -106,7 +103,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           {...restInputProps}
           status={status}
           value={searchValue || inputValue.label}
-          ref={inputRef}
+          ref={ref}
         />
         {open && (
           <div css={menuStyle({ status })}>
