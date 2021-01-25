@@ -25,7 +25,7 @@ export type Props = {
   /** the default value of the select if needed */
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
-  value?: SelectOption;
+  selectedOption?: SelectOption;
   /** if the select has tags */
   multi?: boolean;
   /** Options for the select dropdown */
@@ -39,7 +39,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     {
       handleSelectedOption = () => {},
       defaultValue = undefined,
-      value = emptyValue,
+      selectedOption = emptyValue,
       multi = false,
       options,
       status = 'normal',
@@ -49,7 +49,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    const [inputValue, setInputValue] = React.useState(defaultValue || value);
+    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
     useEffect(() => {
