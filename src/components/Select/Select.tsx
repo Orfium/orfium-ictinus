@@ -106,7 +106,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           ref={ref}
         />
         {open && (
-          <div css={menuStyle({ status })}>
+          <div css={menuStyle({ status, size: restInputProps.size })}>
             {filteredOptions.length > 0 ? (
               filteredOptions.map(option => (
                 <div

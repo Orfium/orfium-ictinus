@@ -22,7 +22,7 @@ export const optionStyle = ({
   }
 `;
 
-export const menuStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
+export const menuStyle = ({ status, size }: Props) => (theme: Theme): SerializedStyles => css`
   background-color: ${theme.palette.white};
   border-radius: 4px;
   box-shadow: ${theme.elevation['02']};
@@ -30,4 +30,10 @@ export const menuStyle = ({ status }: Props) => (theme: Theme): SerializedStyles
   z-index: 500;
   position: absolute;
   min-width: 220px;
+  max-height: ${size === 'md' ? 277 : 265}px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 440px; // TODO we need a technique to identify menu position left or right
 `;
