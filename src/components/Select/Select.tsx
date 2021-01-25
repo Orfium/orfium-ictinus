@@ -57,8 +57,8 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     }, [inputValue, handleSelectedOption]);
 
     useEffect(() => {
-      setInputValue(defaultValue || value);
-    }, [defaultValue, value]);
+      setInputValue(defaultValue || selectedOption);
+    }, [defaultValue, selectedOption]);
 
     const filteredOptions = useMemo(() => {
       return options.filter(
