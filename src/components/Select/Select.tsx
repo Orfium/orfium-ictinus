@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import * as React from 'react';
+import { useEffect, useMemo } from 'react';
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import { jsx } from '@emotion/core';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { useEffect, useMemo } from 'react';
 import { menuStyle, optionStyle } from './Select.style';
 
 // Mocks onChange to avoid readonly warning for TextField Component
@@ -56,6 +56,10 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
       handleSelectedOption(inputValue);
     }, [inputValue, handleSelectedOption]);
 
+    useEffect(() => {
+      setInputValue(defaultValue || selectedOption);
+    }, [defaultValue, selectedOption]);
+
     const filteredOptions = useMemo(() => {
       return options.filter(
         option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
@@ -68,9 +72,12 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           size={20}
           name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
           color={theme.utils.getColor('lightGray', 500)}
+          onClick={() => {
+            setOpen(!open);
+          }}
         />
       ),
-      [open, theme.utils]
+      [open, theme.utils, setOpen]
     );
 
     return (
@@ -99,7 +106,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           ref={ref}
         />
         {open && (
-          <div css={menuStyle({ status })}>
+          <div css={menuStyle({ status, size: restInputProps.size })}>
             {filteredOptions.length > 0 ? (
               filteredOptions.map(option => (
                 <div

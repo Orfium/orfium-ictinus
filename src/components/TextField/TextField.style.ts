@@ -105,6 +105,7 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
     align-items: center;
     vertical-align: top;
     width: fill-available;
+    height: ${size === 'md' ? 52 : 42}px; // minus the borders
     ${getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
 
     > div {
@@ -133,6 +134,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+  text-overflow: ellipsis;
 
   & + label {
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
