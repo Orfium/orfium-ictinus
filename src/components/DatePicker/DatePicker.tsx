@@ -17,7 +17,7 @@ export type Props = {
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
-  onChange?: (date: DateRange) => DateRange;
+  onChange?: (date: DateRange) => void;
   /** Option to disable some dates */
   disableDates?: Modifier[];
   /** Value to define if needed an initial state or to handle it externally */
@@ -101,13 +101,17 @@ const DatePicker: React.FC<Props> = ({
     }
   }, [value]);
 
+  useEffect(() => {
+    if (onChange) {
+      onChange(selectedDay);
+    }
+  }, [selectedDay, onChange]);
+
   const handleCalendarValueChange = useCallback(
     (range, hideDatePicker = false) => {
       setSelectedDay(range);
       setSelectedOption('custom');
-      if (onChange) {
-        onChange(range);
-      }
+
       if (hideDatePicker) {
         dayPickerInputRef.current?.hideDayPicker();
       }
