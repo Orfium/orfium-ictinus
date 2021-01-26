@@ -141,6 +141,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 
   &:focus {
+    color: ${theme.palette.black};
     outline: none;
   }
 
