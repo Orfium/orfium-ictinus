@@ -101,7 +101,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>(
           <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType })}>
             <div css={textFieldStyle({ size, label, leftIcon })}>
               {leftIcon && <IconWrapper iconPosition={'left'}>{leftIcon}</IconWrapper>}
-              <div>
+              <div css={{ width: '100% ' }}>
                 <input
                   css={inputStyle({ label, placeholder, size, dark })}
                   placeholder={

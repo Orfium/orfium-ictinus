@@ -16,17 +16,24 @@ export const optionStyle = ({
   cursor: default;
   color: ${noResultsExist ? theme.utils.getColor('lightGray', 600) : 'initial'};
   text-align: ${noResultsExist ? 'center' : 'initial'};
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
 
   &:hover {
     background-color: ${darken(0.03, theme.palette.white)};
   }
 `;
 
-export const menuStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
+export const menuStyle = ({ status, size }: Props) => (theme: Theme): SerializedStyles => css`
   background-color: ${theme.palette.white};
   border-radius: 4px;
   box-shadow: ${theme.elevation['02']};
   margin-top: ${status !== 'normal' ? -16 : 8}px;
   z-index: 500;
-  position: relative;
+  position: absolute;
+  min-width: 220px;
+  max-height: ${size === 'md' ? 277 : 265}px;
+  overflow-y: auto;
+  max-width: 440px; // TODO we need a technique to identify menu position left or right
 `;
