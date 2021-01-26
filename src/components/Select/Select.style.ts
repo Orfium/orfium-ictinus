@@ -16,6 +16,9 @@ export const optionStyle = ({
   cursor: default;
   color: ${noResultsExist ? theme.utils.getColor('lightGray', 600) : 'initial'};
   text-align: ${noResultsExist ? 'center' : 'initial'};
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
 
   &:hover {
     background-color: ${darken(0.03, theme.palette.white)};
@@ -31,9 +34,6 @@ export const menuStyle = ({ status, size }: Props) => (theme: Theme): Serialized
   position: absolute;
   min-width: 220px;
   max-height: ${size === 'md' ? 277 : 265}px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: hidden;
   overflow-y: auto;
   max-width: 440px; // TODO we need a technique to identify menu position left or right
 `;
