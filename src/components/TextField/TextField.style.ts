@@ -108,9 +108,8 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
     height: ${size === 'md' ? 52 : 42}px; // minus the borders
     ${getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
 
-    > div:first-of-type {
+    > div {
       position: relative;
-      width: 100%;
     }
   `;
 };
