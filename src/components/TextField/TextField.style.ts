@@ -135,6 +135,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+  text-overflow: ellipsis;
 
   & + label {
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
