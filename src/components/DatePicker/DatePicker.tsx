@@ -199,16 +199,17 @@ const DatePicker: React.FC<Props> = ({
           />
         )}
         dayPickerProps={dayPickerProps}
-        component={(props: DayPickerInputProps) => (
+        component={React.forwardRef<HTMLInputElement, any>((props: DayPickerInputProps, ref) => (
           <DatePickInput
             {...props}
+            ref={ref}
             styleType={styleType}
             inputLabel={inputLabel}
             selectedDay={selectedDay}
             isRangePicker={isRangePicker}
             dateFormatOverride={dateFormatOverride}
           />
-        )}
+        ))}
         hideOnDayClick={false}
         keepFocus={false}
       />
