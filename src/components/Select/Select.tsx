@@ -23,6 +23,7 @@ export type Props = {
   /** The function that is used to return the selected options */
   handleSelectedOption?: (selectedOption: SelectOption) => void;
   /** the default value of the select if needed */
+  /** TODO: defaultValue is duplication of selectedOption*/
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
   selectedOption?: SelectOption;
@@ -51,10 +52,6 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     const [open, setOpen] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
-
-    useEffect(() => {
-      handleSelectedOption(inputValue);
-    }, [inputValue, handleSelectedOption]);
 
     useEffect(() => {
       setInputValue(defaultValue || selectedOption);
@@ -119,6 +116,7 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
                     setInputValue(option);
                     setOpen(false);
                     setSearchValue('');
+                    handleSelectedOption(option);
                   }}
                 >
                   {option.label}
