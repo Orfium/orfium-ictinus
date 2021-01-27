@@ -1,18 +1,9 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './TextField';
+import { Props } from './TextArea';
 import { Theme } from '../../theme';
+import { Props as TextInputWrapperProps } from '../utils/TextInputWrapper/TextInputWrapper';
 
-export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
-  theme: Theme
-): SerializedStyles => css`
-  line-height: 0.8;
-  height: 16px;
-  display: flex;
-  margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
-  margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
-`;
-
-export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
+export const inputStyle = ({ label, placeholder, size, dark }: Props & TextInputWrapperProps) => (
   theme: Theme
 ): SerializedStyles => css`
   background: transparent;
