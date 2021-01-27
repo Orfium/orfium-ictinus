@@ -14,6 +14,8 @@ export type Props = {
   required?: boolean;
   /** If the text field is disabled */
   disabled?: boolean;
+  /** If the text area can be resized */
+  resizeEnabled?: boolean;
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Error message */
@@ -33,14 +35,21 @@ export type Props = {
 };
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
-  const { id = undefined, placeholder = '', required = false, disabled, ...rest } = props;
+  const {
+    id = undefined,
+    placeholder = '',
+    required = false,
+    disabled,
+    resizeEnabled = true,
+    ...rest
+  } = props;
 
   return (
     <React.Fragment>
       <TextInputWrapper {...props}>
         <div css={{ width: '100% ' }}>
           <textarea
-            css={inputStyle({ placeholder })}
+            css={inputStyle({ placeholder, resizeEnabled })}
             placeholder={placeholder}
             required={required}
             id={id}
