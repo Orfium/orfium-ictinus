@@ -39,6 +39,7 @@ const TopAppBarShowcase: FC<Props> = ({
   additionalTools = DEFAULT_ADDITIONAL_TOOLS,
   userMenu = DEFAULT_USER_MENU,
   onMenuIconClick = DEFAULT_ON_CLICK,
+  dark = false,
 }) => {
   const [state, setState] = useState('');
   const logoIcon = withLogo && (
@@ -52,6 +53,7 @@ const TopAppBarShowcase: FC<Props> = ({
   return (
     <>
       <TopAppBar
+        dark={dark}
         logoIcon={logoIcon || undefined}
         onMenuIconClick={onMenuIconClick}
         userMenu={userMenu}
