@@ -55,15 +55,7 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'f
     disabled,
     filled,
   }: Pick<Props, 'checked' | 'disabled' | 'filled'>) {
-    if (disabled && checked) {
-      return `inset 0px 0px 0px ${rem('2px')} ${
-        theme.palette.flat.lightGray[300]
-      }, inset 0px 0px 0px ${rem('4px')} ${
-        theme.palette.flat.lightGray[300]
-      }, inset 0px 0px 0px ${rem('12px')} currentColor`;
-    }
-
-    if (disabled) {
+    if (disabled && !checked) {
       const radiusSpread = filled ? '12px' : '2px';
 
       return `inset 0px 0px 0px ${rem(radiusSpread)} ${theme.palette.flat.lightGray[200]}`;
@@ -93,7 +85,7 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'f
   `;
 };
 
-export const wrapperStyles = (disabled: boolean): SerializedStyles => css`
+export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedStyles => css`
   position: relative;
 
   border-radius: 50%;
@@ -101,8 +93,9 @@ export const wrapperStyles = (disabled: boolean): SerializedStyles => css`
   width: ${rem('48px')};
   height: ${rem('48px')};
 
-  color: inherit;
+  color: ${theme.utils.getColor('branded1', 400, 'normal')};
   border: 0;
+  opacity: ${disabled ? 0.5 : 1};
   cursor: pointer;
   margin: 0;
   display: inline-flex;
