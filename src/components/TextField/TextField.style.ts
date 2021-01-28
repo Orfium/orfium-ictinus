@@ -141,6 +141,8 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 
   &:focus {
+    //TODO: Revisit color in dark mode implementation
+    color: ${theme.palette.black};
     outline: none;
   }
 
