@@ -1,7 +1,8 @@
 import dayjs from 'dayjs';
-import * as React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import omit from 'lodash/omit';
 import { DayPickerInputProps } from 'react-day-picker';
+
 import useTheme from '../../../hooks/useTheme';
 import { flex } from '../../../theme/functions';
 import Icon from '../../Icon';
@@ -10,7 +11,6 @@ import { wrapperStyle } from '../../TextField/TextField.style';
 import { DateFormatType, DateRange } from '../DatePicker';
 import { formFieldStyles } from '../../../theme/palette';
 import { getLocaleFormat } from '../../../utils/helpers';
-import { InputHTMLAttributes } from 'react';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};

@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import * as React from 'react';
-import { InputHTMLAttributes, useEffect, useMemo } from 'react';
+import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
@@ -87,13 +86,13 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputHTMLAttributes<HT
         <TextField
           onFocus={() => setOpen(true)}
           rightIcon={rightIconRender}
-          onKeyDown={(e: any) => {
+          onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
             // if backspace
             if (e.keyCode === 8) {
               setInputValue(emptyValue);
             }
           }}
-          onInput={(e: any) => {
+          onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
             setSearchValue(e.target.value);
           }}
           onChange={ON_CHANGE_MOCK}
