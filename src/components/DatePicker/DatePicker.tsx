@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { InputHTMLAttributes, useCallback, useEffect, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
@@ -199,17 +199,19 @@ const DatePicker: React.FC<Props> = ({
           />
         )}
         dayPickerProps={dayPickerProps}
-        component={React.forwardRef<HTMLInputElement, any>((props: DayPickerInputProps, ref) => (
-          <DatePickInput
-            {...props}
-            ref={ref}
-            styleType={styleType}
-            inputLabel={inputLabel}
-            selectedDay={selectedDay}
-            isRangePicker={isRangePicker}
-            dateFormatOverride={dateFormatOverride}
-          />
-        ))}
+        component={React.forwardRef<HTMLInputElement, any>(
+          (props: DayPickerInputProps & InputHTMLAttributes<HTMLInputElement>, ref) => (
+            <DatePickInput
+              {...props}
+              ref={ref}
+              styleType={styleType}
+              inputLabel={inputLabel}
+              selectedDay={selectedDay}
+              isRangePicker={isRangePicker}
+              dateFormatOverride={dateFormatOverride}
+            />
+          )
+        )}
         hideOnDayClick={false}
         keepFocus={false}
       />
