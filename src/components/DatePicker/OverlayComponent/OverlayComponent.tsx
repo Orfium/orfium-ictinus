@@ -53,7 +53,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
               ))}
             </div>
           )}
-          <div css={{ display: 'flex', flexDirection: 'column' }}>
+          <div css={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
             <div
               css={css`
                 position: absolute;
@@ -64,7 +64,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
             >
               <div
                 onClick={() => {
-                  setDate(curDate => curDate.month(curDate.month() + 1));
+                  setDate(curDate => curDate.month(curDate.month() - 1));
                 }}
                 css={css`
                   cursor: pointer;
@@ -79,7 +79,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
               </div>
               <div
                 onClick={() => {
-                  setDate(curDate => curDate.month(curDate.month() - 1));
+                  setDate(curDate => curDate.month(curDate.month() + 1));
                 }}
                 css={css`
                   cursor: pointer;
