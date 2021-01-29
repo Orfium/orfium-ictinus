@@ -69,7 +69,7 @@ const TextInputWrapper: FC<Props> = ({
     <React.Fragment>
       <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
         <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType })}>
-          <div css={textFieldStyle({ size, label, leftIcon })}>{children}</div>
+          <div css={textFieldStyle({ size, label, leftIcon, lean })}>{children}</div>
         </div>
       </div>
       {hintMsg && status !== 'normal' && (

@@ -1,22 +1,23 @@
-import dayjs from 'dayjs';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import dayjs, { Dayjs } from 'dayjs';
 import * as React from 'react';
 import omit from 'lodash/omit';
 import { DayPickerInputProps } from 'react-day-picker';
-import useTheme from '../../../hooks/useTheme';
-import { flex } from '../../../theme/functions';
 import Icon from '../../Icon';
 import TextField from '../../TextField';
-import { wrapperStyle } from '../../utils/TextInputWrapper/TextInputWrapper.style';
-import { DateFormatType, DateRange } from '../DatePicker';
+import { DateFormatType } from '../DatePicker';
 import { formFieldStyles } from '../../../theme/palette';
 import { getLocaleFormat } from '../../../utils/helpers';
+import TextInputWrapper from '../../utils/TextInputWrapper/TextInputWrapper';
+import { css } from '@emotion/core';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
 
 type Props = {
   isRangePicker: boolean;
-  selectedDay: DateRange;
+  selectedDay: Dayjs;
   inputLabel: string;
   /** Style of input field */
   styleType: formFieldStyles;
@@ -28,7 +29,6 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
     { isRangePicker, styleType, selectedDay, inputLabel, dateFormatOverride = undefined, ...props },
     ref
   ) => {
-    const theme = useTheme();
     const formatDate = (date: Date | undefined) => {
       return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
     };
@@ -37,30 +37,39 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
 
     return isRangePicker ? (
       <div
-        ref={ref}
-        css={[
-          wrapperStyle({ styleType })(theme),
-          flex,
-          {
-            width: 275,
-          },
-        ]}
+        css={css`
+          input {
+            width: 78px;
+          }
+        `}
       >
-        <TextField
-          onChange={ON_CHANGE_MOCK}
-          label={`${inputLabel} (Start)`}
-          lean={true}
-          {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
-          value={getDateFormatted(selectedDay.from)}
-        />
-        <TextField
-          onChange={ON_CHANGE_MOCK}
-          rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-          label={`${inputLabel} (End)`}
-          {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
-          lean={true}
-          value={getDateFormatted(selectedDay.to)}
-        />
+        <TextInputWrapper styleType={styleType}>
+          <TextField
+            {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
+            onChange={ON_CHANGE_MOCK}
+            lean
+            placeholder={`${inputLabel} (Start)`}
+            value={getDateFormatted(selectedDay.from)}
+          />
+          <span
+            css={css`
+              margin-left: -5px;
+              color: ${selectedDay.from && selectedDay.to ? '#000000' : '#676767'};
+              position: relative;
+              z-index: 1;
+            `}
+          >
+            -
+          </span>
+          <TextField
+            {...omit(props, ['onBlur', 'onChange', 'onFocus'])}
+            onChange={ON_CHANGE_MOCK}
+            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+            placeholder={`${inputLabel} (End)`}
+            lean
+            value={getDateFormatted(selectedDay.to)}
+          />
+        </TextInputWrapper>
       </div>
     ) : (
       <TextField
