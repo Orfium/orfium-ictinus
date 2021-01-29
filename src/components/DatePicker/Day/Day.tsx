@@ -12,9 +12,10 @@ export type Props = {
   year: number;
   onSelect?: (date: Dayjs) => void;
   isSelected: boolean;
+  isBetween?: boolean;
 };
 
-const Day: React.FC<Props> = ({ day, month, year, onSelect, isSelected }) => {
+const Day: React.FC<Props> = ({ day, month, year, onSelect, isSelected, isBetween }) => {
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType('', 'branded1');
@@ -67,20 +68,26 @@ const Day: React.FC<Props> = ({ day, month, year, onSelect, isSelected }) => {
           : theme.utils.getColor('darkGray', 700)};
         width: 39px;
         font-weight: ${isToday && 'bold'};
+        background: ${(isSelected || isBetween) && '#f7f7f7'};
       `}
       aria-label={date ? date.format('dd MMM DD YYYY') : undefined}
       onClick={onDayClick}
     >
       <div
         css={css`
+          //selected 7%
+          //white 7%
+          //hover 3%
+
           border: 1px solid ${isToday ? '#cfcfcf' : 'transparent'};
-          border-radius: ${isToday && '100%'};
+          border-radius: ${(isToday || isSelected) && '100%'};
           height: 39px;
           display: flex;
           align-items: center;
           justify-content: center;
-          background: ${isSelected &&
-            theme.utils.getColor(calculatedColor.color, calculatedColor.shade)};
+          background: ${isSelected
+            ? theme.utils.getColor(calculatedColor.color, calculatedColor.shade)
+            : isBetween && '#f7f7f7'};
 
           &:hover {
             background: ${!isSelected && '#f7f7f7'};

@@ -7,6 +7,9 @@ import chunk from 'lodash/chunk';
 import inRange from 'lodash/inRange';
 import useTheme from '../../../hooks/useTheme';
 import { useCallback } from 'react';
+import { Range } from '../OverlayComponent/OverlayComponent';
+const isBetween = require('dayjs/plugin/isBetween');
+dayjs.extend(isBetween);
 
 function getNumWeeksForMonth(year: number, month: number) {
   const date = new Date(year, month - 1, 1);
@@ -24,7 +27,7 @@ export type Props = {
   year: number;
   month: number;
   onDaySelect?: (date: Dayjs) => void;
-  selectedDays: Dayjs[];
+  selectedDays: Range;
 };
 
 const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
@@ -60,7 +63,23 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
         .year(year)
         .date(day);
 
-      return selectedDays.map(d => d.format('D,M,YYYY')).includes(date.format('D,M,YYYY'));
+      return [selectedDays.from?.format('D,M,YYYY'), selectedDays.to?.format('D,M,YYYY')].includes(
+        date.format('D,M,YYYY')
+      );
+    },
+    [month, selectedDays, year]
+  );
+
+  const calculateIsBetween = useCallback(
+    (day: number) => {
+      if (!day) return false;
+
+      const date = dayjs()
+        .month(month)
+        .year(year)
+        .date(day);
+
+      return dayjs(date).isBetween(selectedDays.from, selectedDays.to || selectedDays.from);
     },
     [month, selectedDays, year]
   );
@@ -107,6 +126,7 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
                   day={day}
                   onSelect={onDaySelect}
                   isSelected={calculateSelected(day)}
+                  isBetween={calculateIsBetween(day)}
                   key={`${week}-${year}-${month}-${dayIndex}-day`}
                 />
               ))}

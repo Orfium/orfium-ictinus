@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
-import omit from 'lodash/omit';
 import * as React from 'react';
 import { DayPickerInputProps } from 'react-day-picker';
 import useTheme from '../../../hooks/useTheme';
@@ -10,14 +9,20 @@ import { optionStyle } from '../DatePicker.style';
 import Month from '../Month/Month';
 import dayjs, { Dayjs } from 'dayjs';
 import Icon from '../../Icon';
+import { useEffect, useState } from 'react';
 
 type Props = {
   selectedOption: string;
   setSelectedOption: (x: string) => void;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
-  selectedDays: Dayjs[];
+  selectedDays: Range;
   onDaySelect: (date: Dayjs) => void;
+};
+
+export type Range = {
+  from?: Dayjs;
+  to?: Dayjs;
 };
 const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
   classNames,
@@ -29,7 +34,13 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
   selectedDays,
 }) => {
   const theme = useTheme();
-  const [date, setDate] = React.useState(dayjs());
+  const [date, setDate] = useState(dayjs());
+
+  useEffect(() => {
+    if (selectedDays.from && selectedDays.to) {
+      setDate(selectedDays.from);
+    }
+  }, [selectedDays]);
 
   return (
     <div
@@ -59,7 +70,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
                 position: absolute;
                 display: flex;
                 right: 10px;
-                top: 20px;
+                top: 12px;
               `}
             >
               <div
@@ -94,7 +105,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
               </div>
             </div>
             <div css={{ display: 'flex', flexDirection: 'row' }}>
-              <div css={{ margin: 10, display: 'flex', flexDirection: 'column' }}>
+              <div css={{ margin: '0 10px', display: 'flex', flexDirection: 'column' }}>
                 <div
                   css={css`
                     margin: 15px 0 20px;
@@ -103,7 +114,10 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
                     font-weight: bold;
                   `}
                 >
-                  {date.format('MMMM')} {date.format('YYYY')}
+                  {date.format('MMMM')}{' '}
+                  <select>
+                    <option>{date.format('YYYY')}</option>
+                  </select>
                 </div>
                 <Month
                   year={date.year()}
@@ -113,7 +127,7 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
                 />
               </div>
               {isRangePicker && (
-                <div css={{ margin: 10, display: 'flex', flexDirection: 'column' }}>
+                <div css={{ margin: '0 10px', display: 'flex', flexDirection: 'column' }}>
                   <div
                     css={css`
                       margin: 15px 0 20px;
@@ -123,7 +137,9 @@ const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
                     `}
                   >
                     {date.month(date.month() + 1).format('MMMM')}{' '}
-                    {date.month(date.month() + 1).format('YYYY')}
+                    <select>
+                      <option>{date.month(date.month() + 1).format('YYYY')}</option>
+                    </select>
                   </div>
                   <Month
                     year={Number(date.month(date.month() + 1).format('YYYY'))}
