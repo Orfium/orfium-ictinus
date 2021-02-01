@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
-import { FC } from 'react';
+import React, { FC, InputHTMLAttributes } from 'react';
+
 import {
   errorMsgStyle,
   iconWrapperStyle,
@@ -58,7 +58,7 @@ export type Props = {
   onInput?: React.EventHandler<any>;
 };
 
-const TextField = React.forwardRef<HTMLInputElement, Props>(
+const TextField = React.forwardRef<HTMLInputElement, Props & InputHTMLAttributes<HTMLInputElement>>(
   (
     {
       id = undefined,
