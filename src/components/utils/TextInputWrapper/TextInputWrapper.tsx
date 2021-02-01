@@ -55,14 +55,14 @@ const TextInputWrapper: FC<Props> = ({
 }) => {
   const theme = useTheme();
   const hintMessageToShow = hintMsg && (
-    <React.Fragment>
+    <div css={errorMsgStyle({ status })}>
       <Icon
         color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 600)}
         name={status === 'error' ? 'issues' : 'info'}
         size={12}
       />
       {hintMsg}
-    </React.Fragment>
+    </div>
   );
 
   return (
@@ -72,9 +72,7 @@ const TextInputWrapper: FC<Props> = ({
           <div css={textFieldStyle({ size, label, leftIcon })}>{children}</div>
         </div>
       </div>
-      {hintMsg && status !== 'normal' && (
-        <div css={errorMsgStyle({ status })}>{hintMessageToShow}</div>
-      )}
+      {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>
   );
 };
