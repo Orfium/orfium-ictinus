@@ -58,7 +58,9 @@ export type Props = {
   onInput?: React.EventHandler<any>;
 };
 
-const TextField = React.forwardRef<HTMLInputElement, Props & InputHTMLAttributes<HTMLInputElement>>(
+type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>;
+
+const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     {
       id = undefined,
