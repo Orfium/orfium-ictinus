@@ -127,6 +127,8 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
                   onSelect={onDaySelect}
                   isSelected={calculateSelected(day)}
                   isBetween={calculateIsBetween(day)}
+                  isLast={selectedDays.to?.date() === day}
+                  isFirst={selectedDays.from?.date() === day}
                   key={`${week}-${year}-${month}-${dayIndex}-day`}
                 />
               ))}

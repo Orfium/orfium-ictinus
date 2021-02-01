@@ -13,9 +13,20 @@ export type Props = {
   onSelect?: (date: Dayjs) => void;
   isSelected: boolean;
   isBetween?: boolean;
+  isLast?: boolean;
+  isFirst?: boolean;
 };
 
-const Day: React.FC<Props> = ({ day, month, year, onSelect, isSelected, isBetween }) => {
+const Day: React.FC<Props> = ({
+  day,
+  month,
+  year,
+  onSelect,
+  isSelected,
+  isBetween,
+  isLast,
+  isFirst,
+}) => {
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType('', 'branded1');
@@ -69,6 +80,10 @@ const Day: React.FC<Props> = ({ day, month, year, onSelect, isSelected, isBetwee
         width: 39px;
         font-weight: ${isToday && 'bold'};
         background: ${(isSelected || isBetween) && '#f7f7f7'};
+        border-bottom-right-radius: ${isLast && '100%'};
+        border-top-right-radius: ${isLast && '100%'};
+        border-bottom-left-radius: ${isFirst && '100%'};
+        border-top-left-radius: ${isFirst && '100%'};
       `}
       aria-label={date ? date.format('dd MMM DD YYYY') : undefined}
       onClick={onDayClick}
