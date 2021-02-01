@@ -1,20 +1,15 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './TextField';
+import { Props } from './TextArea';
 import { Theme } from '../../theme';
+import { Props as TextInputWrapperProps } from '../utils/TextInputWrapper/TextInputWrapper';
 
-export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
-  theme: Theme
-): SerializedStyles => css`
-  line-height: 0.8;
-  height: 16px;
-  display: flex;
-  margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
-  margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
-`;
-
-export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const inputStyle = ({
+  label,
+  placeholder,
+  size,
+  dark,
+  resizeEnabled,
+}: Props & TextInputWrapperProps) => (theme: Theme): SerializedStyles => css`
   background: transparent;
   border: none;
   color: ${dark ? theme.palette.white : theme.palette.black};
@@ -25,14 +20,13 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
   text-overflow: ellipsis;
+  resize: ${!resizeEnabled ? 'none' : 'both'};
 
   & + label {
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
   }
 
   &:focus {
-    //TODO: Revisit color in dark mode implementation
-    color: ${theme.palette.black};
     outline: none;
   }
 

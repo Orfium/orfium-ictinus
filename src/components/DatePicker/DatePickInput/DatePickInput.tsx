@@ -7,7 +7,7 @@ import useTheme from '../../../hooks/useTheme';
 import { flex } from '../../../theme/functions';
 import Icon from '../../Icon';
 import TextField from '../../TextField';
-import { wrapperStyle } from '../../TextField/TextField.style';
+import { wrapperStyle } from '../../utils/TextInputWrapper/TextInputWrapper.style';
 import { DateFormatType, DateRange } from '../DatePicker';
 import { formFieldStyles } from '../../../theme/palette';
 import { getLocaleFormat } from '../../../utils/helpers';
