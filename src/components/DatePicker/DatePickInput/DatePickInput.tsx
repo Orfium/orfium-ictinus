@@ -24,10 +24,9 @@ type Props = {
   dateFormatOverride?: DateFormatType;
 } & DayPickerInputProps;
 
-const DatePickInput = React.forwardRef<
-  HTMLInputElement,
-  Props & InputHTMLAttributes<HTMLInputElement>
->(
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     { isRangePicker, styleType, selectedDay, inputLabel, dateFormatOverride = undefined, ...props },
     ref
