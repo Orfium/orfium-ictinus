@@ -25,7 +25,7 @@ export type Props = {
   onInput?: React.EventHandler<any>;
 } & TextInputWrapperProps;
 
-type InputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>;
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
 const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props, ref) => {
   const {
