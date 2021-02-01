@@ -34,7 +34,9 @@ export type Props = {
 
 const emptyValue = { label: '', value: '' };
 
-const Select = React.forwardRef<HTMLInputElement, Props & InputHTMLAttributes<HTMLInputElement>>(
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     {
       handleSelectedOption = () => {},

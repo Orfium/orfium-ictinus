@@ -76,6 +76,8 @@ const extraOptions: ExtraOption[] = [
   },
 ];
 
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
 const DatePicker: React.FC<Props> = ({
   disableFutureDates = false,
   isRangePicker = false,
@@ -200,7 +202,7 @@ const DatePicker: React.FC<Props> = ({
         )}
         dayPickerProps={dayPickerProps}
         component={React.forwardRef<HTMLInputElement, any>(
-          (props: DayPickerInputProps & InputHTMLAttributes<HTMLInputElement>, ref) => (
+          (props: DayPickerInputProps & InputProps, ref) => (
             <DatePickInput
               {...props}
               ref={ref}
