@@ -74,9 +74,8 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
       background-color: ${theme.palette.white};
     }
 
-    ${disabled ||
-      (locked &&
-        `
+    ${(disabled || locked) &&
+      `
       &:before {
         content: '';
         background-color: rgba(255, 255, 255, 0.15);
@@ -87,11 +86,11 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
         top: 0;
         z-index: 1;
       }
-      * {
-        color: ${theme.utils.getColor('lightGray', 600)} !important;
-        fill: ${theme.utils.getColor('lightGray', 600)} !important;
+      > input, > textarea {
+        color: ${theme.utils.getColor('lightGray', 600)};
+        fill: ${theme.utils.getColor('lightGray', 600)};
       }
-  `)}
+  `}
   `;
 };
 
