@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
@@ -53,7 +53,7 @@ const extraOptions: ExtraOption[] = [
   {
     value: 'custom',
     label: 'Custom',
-    dates: dayjs(),
+    dates: [dayjs()],
   },
 ];
 
@@ -92,18 +92,38 @@ const DatePicker: React.FC<Props> = ({
     setSelectedOption(option);
   };
 
-  const setRangePick = (day: Dayjs) => {
-    if (range.from && range.to) {
-      return setRange({ from: day, to: undefined });
-    }
+  const setRangePick = useCallback(
+    (day: Dayjs) => {
+      const startOfDay = day.startOf('day');
+      const endOfDay = day.endOf('day');
+      // in case is a day picker
+      if (!isRangePicker) {
+        console.log({
+          day,
+          range,
+          valid: range.from && range.to && day.isBetween(range.from, range.to),
+        });
+        if (range.from && range.to && day.isBetween(range.from, range.to)) {
+          return setRange({ from: undefined, to: undefined });
+        }
 
-    if (!range.from) {
-      return setRange(range => ({ ...range, from: day }));
-    }
-    if (!range.to) {
-      return setRange(range => ({ ...range, to: day }));
-    }
-  };
+        return setRange({ from: startOfDay, to: endOfDay });
+      }
+
+      // in case is range picker
+      if (range.from && range.to) {
+        return setRange({ from: startOfDay, to: undefined });
+      }
+
+      if (!range.from) {
+        return setRange(range => ({ ...range, from: startOfDay }));
+      }
+      if (!range.to) {
+        return setRange(range => ({ ...range, to: endOfDay }));
+      }
+    },
+    [isRangePicker, range]
+  );
 
   return (
     <div css={datePickerStyles({ isRangePicker })}>
