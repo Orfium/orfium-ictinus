@@ -2,14 +2,16 @@ import React from 'react';
 import { LabelProps } from 'recharts';
 import useTheme from 'hooks/useTheme';
 
+const xValueBase = 16;
+const divisor = 2;
 interface CustomLabelProps extends LabelProps {
   colors: Record<string, string>;
 }
 
 const CustomLabel: React.FC<CustomLabelProps> = ({ colors, value, x, y, width, height }) => {
   const theme = useTheme();
-  const xValue = x && width ? x + width + 16 : 16;
-  const yValue = y && height ? y + height / 2 : 0;
+  const xValue = x && width ? x + width + xValueBase : xValueBase;
+  const yValue = y && height ? y + height / divisor : 0;
   const fill = value && colors[value] ? colors[value] : theme.palette.black;
 
   return (

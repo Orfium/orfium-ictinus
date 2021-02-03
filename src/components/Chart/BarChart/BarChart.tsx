@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import {
   ResponsiveContainer,
   BarChart as RechartsBarChart,
@@ -18,6 +18,7 @@ import { getValues, customTickFormatter } from './utils';
 
 const maxYAxisWidth = 220;
 const multiplyFactor = 7.8;
+const yAxisWidthDefault = 60;
 
 export type HoverInfo = {
   name: string;
@@ -79,35 +80,33 @@ const BarChart: React.FC<Props> = ({ data }) => {
     });
   }, [data, theme.palette.flat.darkBlue]);
 
-  const maxLabelLength = useMemo(() => max(data.map(obj => obj.name.length)), [data]);
+  const findMaxInData = useCallback(operator => max(data.map(operator)), [data]);
 
-  const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : 60;
+  const setColoringOptions = useCallback(
+    operator => {
+      return data.reduce((acc, cur) => {
+        const definedColoringOPt = cur.options?.coloringOption;
+        if (definedColoringOPt === 'all' && operator(cur)) {
+          acc[operator(cur)] = cur.options?.color;
+        }
 
-  const maxValue = useMemo(() => max(data.map(obj => obj.value)), [data]);
+        return acc;
+      }, {});
+    },
+    [data]
+  );
+
+  const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);
+
+  const maxValue = findMaxInData((obj: Data) => obj.value);
+
+  const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : yAxisWidthDefault;
 
   const { maxDomainValue, tickCount } = getValues(maxValue);
 
-  const labelColoringOptions = useMemo(() => {
-    return data.reduce((acc, cur) => {
-      const definedColoringOPt = cur.options?.coloringOption;
-      if (definedColoringOPt === 'all' && cur.barLabel) {
-        acc[cur.barLabel] = cur.options?.color;
-      }
+  const labelColoringOptions = setColoringOptions((obj: Data) => obj.barLabel);
 
-      return acc;
-    }, {});
-  }, [data]);
-
-  const tickColoringOptions = useMemo(() => {
-    return data.reduce((acc, cur) => {
-      const definedColoringOPt = cur.options?.coloringOption;
-      if (definedColoringOPt === 'all') {
-        acc[cur.name] = cur.options?.color;
-      }
-
-      return acc;
-    }, {});
-  }, [data]);
+  const tickColoringOptions = setColoringOptions((obj: Data) => obj.name);
 
   return (
     <Wrapper
