@@ -10,6 +10,9 @@ export const menuItems: MenuItem[] = [
       {
         name: 'SubMenu1',
         url: '/submenu1',
+        state: {
+          test: 'hello from state',
+        },
         visible: true,
         iconName: 'catalogOverview',
         options: [],

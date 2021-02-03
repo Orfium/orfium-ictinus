@@ -1,182 +1,138 @@
-import { rem, transparentize } from 'polished';
-import * as React from 'react';
-import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
+/** @jsx jsx */
+import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import useTheme from '../../hooks/useTheme';
-import { generateUniqueID } from '../../utils/helpers';
-import Label from '../Label';
+import TextField from '../TextField';
+import Icon from '../Icon';
+import { Props as TextFieldProps } from '../TextField/TextField';
+import { jsx } from '@emotion/core';
+import ClickAwayListener from '../utils/ClickAwayListener';
+import { menuStyle, optionStyle } from './Select.style';
 
-export type SelectOption = { value: string | number; label: string; isDisabled?: boolean };
+// Mocks onChange to avoid readonly warning for TextField Component
+const ON_CHANGE_MOCK = () => {};
+
+export type SelectOption = {
+  value: string | number;
+  label: string;
+  isDisabled?: boolean;
+  tooltipInfo?: string;
+};
 
 export type Props = {
-  /** The label that is going to be displayed */
-  label: string;
-  /** Options for the select dropdown */
-  options: SelectOption[];
   /** The function that is used to return the selected options */
-  onChange?: (value: ValueType<SelectOption>) => void;
+  handleSelectedOption?: (selectedOption: SelectOption) => void;
   /** the default value of the select if needed */
+  /** TODO: defaultValue is duplication of selectedOption*/
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
-  value?: SelectOption;
-  /** If the select is going to be disabled or not */
-  disabled?: boolean;
-  /** if the select is loading data */
-  isLoading?: boolean;
-  /** if the select value is searchable */
-  isSearchable?: boolean;
-  /** if the select value can be clearable */
-  isClearable?: boolean;
+  selectedOption?: SelectOption;
   /** if the select has tags */
   multi?: boolean;
-  /** if the select is required */
-  required?: boolean;
-  /** If the text field has errors */
-  error?: boolean;
-};
+  /** Options for the select dropdown */
+  options: SelectOption[];
+} & TextFieldProps;
 
-const Control: React.FC<ControlProps<SelectOption>> = ({ children, ...props }) => {
-  return (
-    <components.Control {...props}>
-      <React.Fragment>
-        {props.selectProps.label && (
-          <Label
-            htmlFor={props.selectProps.inputId}
-            label={props.selectProps.label}
-            required={props.selectProps.required}
-            animateToTop={props.hasValue}
-          />
-        )}
-        {children}
-      </React.Fragment>
-    </components.Control>
-  );
-};
+const emptyValue = { label: '', value: '' };
 
-const Select: React.FC<Props> = ({
-  defaultValue = undefined,
-  disabled = false,
-  isLoading = false,
-  isSearchable = false,
-  isClearable = false,
-  multi = false,
-  required = false,
-  options,
-  error,
-  label,
-  value,
-  onChange = () => {},
-}) => {
-  const theme = useTheme();
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
-  const customStyles: Styles = {
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected
-        ? theme.utils.getColor('lightGray', 200)
-        : theme.palette.white,
-      color: state.isDisabled
-        ? theme.utils.getColor('lightGray', 700)
-        : theme.utils.getColor('primary', 400, 'text'),
-      padding: rem(16),
-      '&:hover': {
-        backgroundColor: theme.utils.getColor('lightGray', 100),
-      },
-    }),
-    control: (base, state) => ({
-      ...base,
-      opacity: disabled ? 0.5 : 1,
-      minHeight: rem(56),
-      width: 200,
-      paddingLeft: rem(3),
-      backgroundColor: error
-        ? transparentize(0.85, theme.utils.getColor('error', 400, 'normal'))
-        : theme.utils.getColor('lightGray', 100),
-      border: error ? `1px solid ${theme.utils.getColor('error', 400, 'normal')}` : '0',
-      '&:hover': {},
-      '&:hover svg': {
-        backgroundColor: 'rgba(176, 176, 176, 0.23)',
-      },
-      '> div:first-of-type': {
-        margin: `${rem(18)} ${rem(4)} ${rem(2)}`,
-        padding: `${rem(2)} ${rem(4)}`,
-      },
-      label: {
-        transform: state.isFocused || state.hasValue ? 'translate(1%, -65%) scale(0.8)' : 'initial',
-      },
-    }),
-    indicatorsContainer: base => ({
-      ...base,
-      marginRight: rem(16),
-    }),
-    indicatorSeparator: () => ({
-      display: 'none',
-    }),
-    dropdownIndicator: () => ({
-      color: theme.utils.getColor('primary', 400, 'text'),
-      borderRadius: '100%',
-      width: rem(20),
-      height: rem(20),
-      position: 'relative',
-      svg: {
-        transition: 'background 0.2s ease-in-out',
-        borderRadius: '100%',
-        padding: 0,
-      },
-    }),
-    singleValue: base => ({
-      ...base,
-      color: theme.utils.getColor('primary', 400, 'text'),
-      fontSize: theme.typography.fontSizes[16],
-    }),
-    multiValue: base => ({
-      ...base,
-      fontSize: theme.typography.fontSizes[14],
-      backgroundColor: 'transparent',
-      'div:first-of-type': {
-        paddingLeft: 0,
-      },
-      'div:last-of-type': {
-        backgroundColor: theme.utils.getColor('lightGray', 700),
-        width: theme.spacing.md,
-        height: theme.spacing.md,
-        borderRadius: theme.spacing.md,
-        top: rem(3),
-        position: 'relative',
-        '&:hover': {
-          backgroundColor: theme.utils.getColor('lightGray', 500),
-        },
-        svg: {
-          fill: theme.palette.white,
-          backgroundColor: 'transparent',
-        },
-      },
-    }),
-  };
+const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
+  (
+    {
+      handleSelectedOption = () => {},
+      defaultValue = undefined,
+      selectedOption = emptyValue,
+      multi = false,
+      options,
+      status = 'normal',
+      ...restInputProps
+    },
+    ref
+  ) => {
+    const theme = useTheme();
+    const [open, setOpen] = React.useState(false);
+    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
+    const [searchValue, setSearchValue] = React.useState('');
 
-  return (
-    <div css={{ position: 'relative' }}>
-      <ReactSelect
-        inputId={`select-${generateUniqueID()}`}
-        styles={customStyles}
-        defaultValue={defaultValue}
-        isDisabled={disabled}
-        isLoading={isLoading}
-        isClearable={isClearable}
-        isSearchable={isSearchable}
-        isMulti={multi}
-        value={value}
-        options={options}
-        placeholder={false}
-        onChange={onChange}
-        components={{
-          Control,
+    useEffect(() => {
+      setInputValue(defaultValue || selectedOption);
+    }, [defaultValue, selectedOption]);
+
+    const filteredOptions = useMemo(() => {
+      return options.filter(
+        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
+      );
+    }, [searchValue, options]);
+
+    const rightIconRender = useMemo(
+      () => (
+        <Icon
+          size={20}
+          name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
+          color={theme.utils.getColor('lightGray', 500)}
+          onClick={() => {
+            setOpen(!open);
+          }}
+        />
+      ),
+      [open, theme.utils, setOpen]
+    );
+
+    return (
+      <ClickAwayListener
+        onClick={() => {
+          setOpen(false);
+          setSearchValue('');
         }}
-        label={label}
-        required={required}
-        inputProps={{ required }}
-      />
-    </div>
-  );
-};
+      >
+        <TextField
+          onFocus={() => setOpen(true)}
+          rightIcon={rightIconRender}
+          onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+            // if backspace
+            if (e.keyCode === 8) {
+              setInputValue(emptyValue);
+            }
+          }}
+          onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
+            setSearchValue(e.target.value);
+          }}
+          onChange={ON_CHANGE_MOCK}
+          {...restInputProps}
+          status={status}
+          value={searchValue || inputValue.label}
+          ref={ref}
+        />
+        {open && (
+          <div css={menuStyle({ status, size: restInputProps.size })}>
+            {filteredOptions.length > 0 ? (
+              filteredOptions.map(option => (
+                <div
+                  key={option.value}
+                  css={optionStyle({
+                    selected: inputValue.value === option.value,
+                    ...restInputProps,
+                  })}
+                  onClick={() => {
+                    setInputValue(option);
+                    setOpen(false);
+                    setSearchValue('');
+                    handleSelectedOption(option);
+                  }}
+                >
+                  {option.label}
+                </div>
+              ))
+            ) : (
+              <div css={optionStyle({ selected: false, noResultsExist: true, ...restInputProps })}>
+                No options
+              </div>
+            )}
+          </div>
+        )}
+      </ClickAwayListener>
+    );
+  }
+);
 
 export default Select;

@@ -47,6 +47,7 @@ Implementation of the regular DatePicker.
   <Story name="DatePicker" parameters={{ decorators: [withKnobs] }}>
     <DatePicker
       isRangePicker
+      onChange={(date) => { alert(`from: ${date.from ? date.from.toDateString() : '-'}, to: ${date.to ?date.to.toDateString() : '-'}`); }}
       styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
       disableDates={select('disableDates', options, options[0])}
       dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[0])}

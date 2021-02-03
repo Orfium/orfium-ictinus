@@ -5,16 +5,8 @@ import { Theme } from '../../../theme';
 describe('TextField', () => {
   describe('Utils', () => {
     it('should matches the correct style configuration based on size', () => {
-      const mockStylesMD = `
-    padding: 18px 1rem;
-    label {
-      left: 2.4rem;
-    };`;
-      const mockStylesSM = `
-     padding: 13px 0.5rem;
-     label {
-      left: 1.9rem;
-    };`;
+      const mockStylesMD = `padding: 16px 1rem;`;
+      const mockStylesSM = `padding: 12px 1rem;`;
       const textFieldStyle = getTextFieldSize({ spacing } as Theme, 'someLabel', true);
 
       expect(textFieldStyle['md']).toBe(mockStylesMD);

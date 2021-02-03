@@ -2,25 +2,23 @@
 import { jsx } from '@emotion/core';
 import { FC } from 'react';
 import Styles from './TopAppBar.style';
-import { DEFAULT_BG_COLOR, DEFAULT_SEARCH_COLOR, TopAppBarProps } from './TopAppBar.types';
+import { DEFAULT_BG_COLOR, TopAppBarProps } from './TopAppBar.types';
 import { SidebarMenuIcon } from './components';
 import LogoWrapper from './components/Logo.wrapper';
 import TextField from '../TextField';
 import Icon from '../Icon';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import Menu from '../Menu';
 
 const TopAppBar: FC<TopAppBarProps> = ({
   bgColor = DEFAULT_BG_COLOR,
-  searchBgColor = DEFAULT_SEARCH_COLOR,
   searchPlaceholder = 'Search',
   logoIcon,
   onMenuIconClick,
   additionalTools,
   userMenu,
   onSearchHandler,
+  dark = false,
 }) => {
-  const { type, variant } = searchBgColor;
   const { items, userAvatar, userName, onSelect, color } = userMenu;
   const searchProps = onSearchHandler ? { onChange: onSearchHandler } : {};
 
@@ -37,10 +35,9 @@ const TopAppBar: FC<TopAppBarProps> = ({
           <div css={Styles.searchWrapper}>
             <TextField
               placeholder={searchPlaceholder}
-              fill={type}
+              dark={dark}
               styleType={'filled'}
-              fillShade={variant}
-              leftIcon={<Icon name={'search'} color={pickTextColorFromSwatches(type, variant)} />}
+              leftIcon={<Icon name={'search'} />}
               {...searchProps}
             />
           </div>

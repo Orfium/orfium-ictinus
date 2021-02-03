@@ -1,0 +1,162 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import TextArea from './TextArea';
+import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/TextArea" component={TextArea} />
+
+# TextArea
+
+A universal TextArea component that the input component for any forms.
+
+# Usage
+
+```js
+import { TextArea } from '@orfium/ictinus';
+
+<TextArea placeholder={'label'} />;
+```
+
+# Props
+
+<Props of={TextArea} />
+
+# Text Area Types
+
+Regular TextArea and the 3 available types - filled, outlined, elevated
+
+<Preview>
+  <Story name="Text Area Types">
+    <Stack>
+      <TextArea
+        styleType={'filled'}
+        placeholder={'placeholder here'}
+      />
+      <TextArea
+        styleType={'outlined'}
+        placeholder={'placeholder here'}
+      />
+      <TextArea
+        styleType={'elevated'}
+        placeholder={'placeholder here'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Area Sizing
+
+Regular TextArea and how to change size with cols and rows
+
+<Preview>
+  <Story name="Text Area Sizes">
+    <Stack>
+      <TextArea
+        placeholder={'Label'}
+        styleType={'outlined'}
+        cols={10}
+        rows={10}
+      />
+      <TextArea
+        placeholder={'Label'}
+        styleType={'outlined'}
+        cols={35}
+        rows={20}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# TextArea disabled with label
+Regular TextArea disabled with label
+
+<Preview>
+  <Story name="TextArea disabled with label">
+    <Stack>
+      <TextArea
+        disabled
+        placeholder={'Label'}
+        styleType={'filled'}
+      />
+      <TextArea
+        disabled
+        placeholder={'Label'}
+        styleType={'outlined'}
+      />
+      <TextArea
+        disabled
+        placeholder={'Label'}
+        styleType={'elevated'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# TextArea with Label and Statuses
+
+Regular TextArea with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
+
+<Preview>
+  <Story name="TextArea with label and statuses" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Stack>
+        <TextArea
+          hintMsg={text('custom error message', 'Error in Text Area')}
+          placeholder={'Label'}
+          status={'error'}
+          styleType={'filled'}
+        />
+        <TextArea
+          hintMsg={text('custom error message', 'Error in Text Area')}
+          placeholder={'Label'}
+          status={'error'}
+          styleType={'outlined'}
+        />
+        <TextArea
+          hintMsg={text('custom error message', 'Error in Text Area')}
+          placeholder={'Label'}
+          status={'error'}
+          styleType={'elevated'}
+        />
+      </Stack>
+      <Stack>
+        <TextArea
+          hintMsg={text('custom error message', 'Error in Text Area')}
+          placeholder={'Label'}
+          status={'hint'}
+          styleType={'filled'}
+        />
+        <TextArea
+          hintMsg={text('custom error message', 'Error in Text Area')}
+          placeholder={'Label'}
+          status={'hint'}
+          styleType={'outlined'}
+        />
+        <TextArea
+          hintMsg={text('custom error message', 'Error in Text Area')}
+          placeholder={'Label'}
+          status={'hint'}
+          styleType={'elevated'}
+        />
+      </Stack>
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Area with KNOBS
+
+Regular Text Area with KNOBS
+
+<Preview>
+  <Story name="Text Area with KNOBS" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <TextArea
+        placeholder={text('Label', 'Label')}
+        disabled={boolean('Disabled', false)}
+        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
+        hintMsg={text('custom hint message', 'Hint in Text Area')}
+        status={select('status', ['hint', 'error', 'normal'], 'normal')}
+      />
+    </Stack>
+  </Story>
+</Preview>

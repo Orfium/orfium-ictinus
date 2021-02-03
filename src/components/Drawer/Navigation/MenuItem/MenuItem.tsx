@@ -26,7 +26,7 @@ type Props = {
 } & MenuItemProps;
 
 const MenuItem: React.FC<Props> = memo(
-  ({ isCurrent, expanded, name, url, iconName, options, toggleMenuItem }) => {
+  ({ isCurrent, expanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
     const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
 
     const calculatedIconColor = useMemo(() => {
@@ -72,7 +72,10 @@ const MenuItem: React.FC<Props> = memo(
                       subMenuItem.visible && (
                         <NavLink
                           exact
-                          to={subMenuItem.url}
+                          to={{
+                            pathname: subMenuItem.url,
+                            state: subMenuItem.state,
+                          }}
                           data-testid={subMenuItem.url}
                           activeClassName="active"
                           key={subMenuItem.url}
@@ -92,7 +95,10 @@ const MenuItem: React.FC<Props> = memo(
         ) : (
           <NavLink
             exact
-            to={url}
+            to={{
+              pathname: url,
+              state: linkState,
+            }}
             data-testid={url}
             activeClassName="active"
             key={url}
