@@ -1,6 +1,5 @@
 import React from 'react';
-import BarChart from './BarChart';
-import { Data } from './BarChart';
+import BarChart, { Data } from '../../Chart/BarChart';
 
 const data: Data[] = [
   {
@@ -33,7 +32,7 @@ const data: Data[] = [
   },
 ];
 
-const PreviewBarChart = () => {
+const BarChartShowCase = () => {
   return (
     <div style={{ width: 1000, height: 400 }}>
       <BarChart data={data} />
@@ -41,4 +40,4 @@ const PreviewBarChart = () => {
   );
 };
 
-export default PreviewBarChart;
+export default BarChartShowCase;
