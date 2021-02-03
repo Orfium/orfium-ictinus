@@ -24,7 +24,6 @@ const DEFAULT_ADDITIONAL_TOOLS = (
     <TextField />
     <TextField />
     <TextField />
-    <TextField />
   </>
 );
 
