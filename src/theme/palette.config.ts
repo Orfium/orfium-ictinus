@@ -17,6 +17,8 @@ export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
   darkBlue: '#232d7d',
   purple: '#71458f',
   mint: '#2AFFC3',
+  neutralWhite: '#fbfbfb',
+  neutralBlack: '#030303',
 };
 
 export const lightPaletteConfig: PaletteConfig = {
