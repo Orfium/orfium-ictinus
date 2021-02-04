@@ -56,6 +56,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
           rightIconName={'arrowDown'}
           avatar={userAvatar}
           onSelect={onSelect}
+          dataTestId={'userMenu'}
         />
       </div>
     </div>

@@ -62,6 +62,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     leftIconName,
     iconSize = 16,
     avatar,
+    dataTestId,
   } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -91,6 +92,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
               <Icon name={leftIconName} color={iconColor} size={iconSize} />
             ) : null
           }
+          dataTestId={dataTestId}
         >
           <span>{buttonText}</span>
         </Button>
