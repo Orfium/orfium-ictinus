@@ -25,8 +25,12 @@ import { Pagination } from '@orfium/ictinus';
 Simple pagination with all buttons
 
 <Preview>
-  <Story name="Pagination">
-    <Pagination count={3} page={1} />
+  <Story name="Pagination" parameters={{ decorators: [withKnobs] }}>
+    <Pagination count={3}
+                page={1}
+                nextPageDisabled={boolean('nextPageDisabled', false)}
+                prevPageDisabled={boolean('prevPageDisabled', false)}
+    />
   </Story>
 </Preview>
 
@@ -35,7 +39,12 @@ Simple pagination with all buttons
 Simple pagination without jumping on first or last page
 
 <Preview>
-  <Story name="Pagination without all buttons">
-    <Pagination count={3} page={1} hideEnhancedPaginationButtons />
+  <Story name="Pagination without all buttons" parameters={{ decorators: [withKnobs] }}>
+    <Pagination count={3}
+                page={1}
+                hideEnhancedPaginationButtons
+                nextPageDisabled={boolean('nextPageDisabled', false)}
+                prevPageDisabled={boolean('prevPageDisabled', false)}
+    />
   </Story>
 </Preview>

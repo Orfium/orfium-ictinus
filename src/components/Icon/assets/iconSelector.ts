@@ -153,6 +153,7 @@ import ResumeIcon from './resume.svg';
 import PauseIcon from './pause.svg';
 import Entity from './entity.svg';
 import PlayCount from './play-count.svg';
+import ProcessedLogs from './processed-logs.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -300,6 +301,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   resume: ResumeIcon,
   entity: Entity,
   playCount: PlayCount,
+  processedLogs: ProcessedLogs,
 };
 
 export default iconSelector;

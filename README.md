@@ -17,6 +17,13 @@ $ npm install @orfium/ictinus
 $ yarn add @orfium/ictinus
 ```
 
+if you want the next version you can always use the next tag. 
+Remember: this is a release candidate, we encourage you to lock version on installation to avoid any changes 
+
+```text
+$ yarn add @orfium/ictinus@next
+```
+
 ## 🔨 Usage
 
 1. Start by wrapping your App with ictinus `ThemeProvider` component like below

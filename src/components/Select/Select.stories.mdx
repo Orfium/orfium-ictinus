@@ -2,6 +2,17 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Select from './Select';
 import Stack from '../storyUtils/Stack';
+const options = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'citrus', label: 'Citrus' },
+  { value: 'vanilla', label: 'Vanilla', isDisabled: true },
+];
+const defaultValue = options[0];
+const handleSelectedOption = selectedOption => {
+  console.log('On option change', selectedOption);
+}
 
 <Meta title="Design System/Select" component={Select} />
 
@@ -14,9 +25,7 @@ A universal Select component that is a clickable element that can hold many form
 ```js
 import { Select } from '@orfium/ictinus';
 
-<Select onClick={() => {}})}>
-  Click Me
-</Select>
+<Select options={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'strawberry', label: 'Strawberry' }]} />
 ```
 
 # Props
@@ -31,67 +40,116 @@ Simple select component with clearable data and searchable input
   <Story name="Simple Select">
     <Stack>
       <Select
-        isClearable
         label={'Flavour'}
-        isSearchable
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
-        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
       />
       <Select
-        isClearable
         label={'Flavour'}
-        isSearchable
-        error
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
-        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+      />
+      <Select
+        label={'Flavour'}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'elevated'}
       />
     </Stack>
   </Story>
 </Preview>
 
-# Multi Tag Select
+# Select Sizes
 
-Multi Tag Select
+Select available sizes - sizes are based on the select
 
 <Preview>
-  <Story name="Multi Tag Select">
+  <Story name="Select Sizes">
     <Stack>
       <Select
-        isClearable
-        multi
         label={'Flavour'}
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        size={'md'}
+        styleType={'outlined'}
       />
       <Select
-        isClearable
-        multi
         label={'Flavour'}
-        error
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Select Icons
+
+Select with icon options right and left of the text
+
+<Preview>
+  <Story name="Select with icon and size">
+    <Stack>
+      <Select
+        label={'Flavour'}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        size={'md'}
+        styleType={'outlined'}
+        leftIcon={
+          <img
+            style={{ background: 'red' }}
+            src="https://brandmark.io/logo-rank/random/pepsi.png"
+            width="16"
+            height="16"
+          />
+        }
+      />
+      <Select
+        label={'Flavour'}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+        rightIcon={
+          <img
+            style={{ background: 'red' }}
+            src="https://brandmark.io/logo-rank/random/pepsi.png"
+            width="16"
+            height="16"
+          />
+        }
+      />
+      <Select
+        label={'Flavour'}
+        options={options}
+        defaultValue={defaultValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+        rightIcon={
+          <img
+            style={{ background: 'red' }}
+            src="https://brandmark.io/logo-rank/random/pepsi.png"
+            width="16"
+            height="16"
+          />
+        }
+        leftIcon={
+          <img
+            style={{ background: 'red' }}
+            src="https://brandmark.io/logo-rank/random/pepsi.png"
+            width="16"
+            height="16"
+          />
+        }
       />
     </Stack>
   </Story>
@@ -99,24 +157,88 @@ Multi Tag Select
 
 # Disabled Select
 
-Disabled Select
+Select disabled with label
 
 <Preview>
   <Story name="Disabled Select">
     <Stack>
       <Select
         disabled
-        isClearable
         label={'Flavour'}
-        options={[
-          { value: 'chocolate', label: 'Chocolate' },
-          { value: 'strawberry', label: 'Strawberry' },
-          { value: 'banana', label: 'Banana' },
-          { value: 'citrus', label: 'Citrus' },
-          { value: 'vanilla', label: 'Vanilla', isDisabled: true },
-        ]}
-        defaultValue={{ value: 'chocolate', label: 'Chocolate' }}
+        options={options}
       />
+      <Select
+        disabled
+        label={'Flavour'}
+        options={options}
+        styleType={'outlined'}
+      />
+      <Select
+        disabled
+        label={'Flavour'}
+        options={options}
+        styleType={'elevated'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Select with Label and Statuses
+
+Select with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
+
+<Preview>
+  <Story name="Select with label and statuses" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Stack>
+        <Select
+          hintMsg={text('custom error message', 'Error in Select')}
+          label={'Label'}
+          status={'error'}
+          styleType={'filled'}
+          options={options}
+          defaultValue={defaultValue}
+        />
+        <Select
+          hintMsg={text('custom error message', 'Error in Select')}
+          label={'Label'}
+          status={'error'}
+          styleType={'outlined'}
+          options={options}
+          defaultValue={defaultValue}
+        />
+        <Select
+          hintMsg={text('custom error message', 'Error in Select')}
+          label={'Label'}
+          status={'error'}
+          styleType={'elevated'}
+          options={options}
+          defaultValue={defaultValue}
+        />
+      </Stack>
+      <Stack>
+        <Select
+          hintMsg={text('custom error message', 'Error in Select')}
+          label={'Label'}
+          status={'hint'}
+          options={options}
+          styleType={'filled'}
+        />
+        <Select
+          hintMsg={text('custom error message', 'Error in Select')}
+          label={'Label'}
+          status={'hint'}
+          options={options}
+          styleType={'outlined'}
+        />
+        <Select
+          hintMsg={text('custom error message', 'Error in Select')}
+          label={'Label'}
+          status={'hint'}
+          options={options}
+          styleType={'elevated'}
+        />
+      </Stack>
     </Stack>
   </Story>
 </Preview>

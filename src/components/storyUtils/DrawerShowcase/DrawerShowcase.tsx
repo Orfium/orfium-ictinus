@@ -1,12 +1,18 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState } from 'react';
-import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-dom';
+import React, { useState, Fragment } from 'react';
+import { BrowserRouter as Router, NavLink, Route, Switch, useLocation } from 'react-router-dom';
 import Drawer from '../../Drawer';
 import Button from '../../Button';
 import { menuItems } from './MenuItems';
 import useTheme from '../../../hooks/useTheme';
 import { flex } from '../../../theme/functions';
+
+const DisplayLocation = () => {
+  const location = useLocation<{ test: string }>();
+
+  return <div>Link State: {location?.state?.test}</div>;
+};
 
 const DrawerShowcase: React.FC = () => {
   const theme = useTheme();
@@ -58,8 +64,22 @@ const DrawerShowcase: React.FC = () => {
           <br />
           <br /> Current Route:
           <Switch>
-            <Route path="/menu1">{() => <div>/menu1</div>}</Route>
-            <Route path="/submenu1">{() => <div>/submenu1</div>}</Route>
+            <Route path="/menu1">
+              {() => (
+                <Fragment>
+                  <div>/menu1</div>
+                  <DisplayLocation />
+                </Fragment>
+              )}
+            </Route>
+            <Route path="/submenu1">
+              {() => (
+                <Fragment>
+                  <div>/submenu1</div>
+                  <DisplayLocation />
+                </Fragment>
+              )}
+            </Route>
             <Route path="/submenu2">{() => <div>/submenu2</div>}</Route>
             <Route path="/submenu3">{() => <div>/submenu3</div>}</Route>
             <Route path="/submenu4">{() => <div>/submenu4</div>}</Route>

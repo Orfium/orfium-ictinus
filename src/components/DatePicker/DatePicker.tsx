@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { InputHTMLAttributes, useCallback, useEffect, useRef, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
@@ -17,7 +17,7 @@ export type Props = {
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
-  onChange?: (date: DateRange) => DateRange;
+  onChange?: (date: DateRange) => void;
   /** Option to disable some dates */
   disableDates?: Modifier[];
   /** Value to define if needed an initial state or to handle it externally */
@@ -76,6 +76,8 @@ const extraOptions: ExtraOption[] = [
   },
 ];
 
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
 const DatePicker: React.FC<Props> = ({
   disableFutureDates = false,
   isRangePicker = false,
@@ -101,13 +103,17 @@ const DatePicker: React.FC<Props> = ({
     }
   }, [value]);
 
+  useEffect(() => {
+    if (onChange) {
+      onChange(selectedDay);
+    }
+  }, [selectedDay, onChange]);
+
   const handleCalendarValueChange = useCallback(
     (range, hideDatePicker = false) => {
       setSelectedDay(range);
       setSelectedOption('custom');
-      if (onChange) {
-        onChange(range);
-      }
+
       if (hideDatePicker) {
         dayPickerInputRef.current?.hideDayPicker();
       }
@@ -195,15 +201,18 @@ const DatePicker: React.FC<Props> = ({
           />
         )}
         dayPickerProps={dayPickerProps}
-        component={(props: DayPickerInputProps) => (
-          <DatePickInput
-            {...props}
-            styleType={styleType}
-            inputLabel={inputLabel}
-            selectedDay={selectedDay}
-            isRangePicker={isRangePicker}
-            dateFormatOverride={dateFormatOverride}
-          />
+        component={React.forwardRef<HTMLInputElement, any>(
+          (props: DayPickerInputProps & InputProps, ref) => (
+            <DatePickInput
+              {...props}
+              ref={ref}
+              styleType={styleType}
+              inputLabel={inputLabel}
+              selectedDay={selectedDay}
+              isRangePicker={isRangePicker}
+              dateFormatOverride={dateFormatOverride}
+            />
+          )
         )}
         hideOnDayClick={false}
         keepFocus={false}

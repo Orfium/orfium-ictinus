@@ -1,6 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from '../../theme';
-import { labelSize } from '../../utils/size-utils';
 
 export const labelStyle = ({
   size,
@@ -15,13 +14,16 @@ export const labelStyle = ({
   transform-origin: 0 0;
   width: 100%;
   position: absolute;
-  left: 0.7rem;
   user-select: none;
   transform: ${!animateToTop ? 'translate(1%, 0)' : 'translate(1%, -95%) scale(0.8);'};
-  font-size: ${theme.typography.fontSizes['14']};
-  font-weight: ${theme.typography.weights.black};
+  font-size: ${theme.typography.fontSizes['16']};
+  font-weight: ${theme.typography.weights.regular};
   color: ${error
     ? theme.utils.getColor('error', 400, 'normal')
-    : theme.utils.getColor('lightGray', 500)};
-  ${labelSize[size]}
+    : theme.utils.getColor('lightGray', 600)};
+  align-items: center;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
 `;

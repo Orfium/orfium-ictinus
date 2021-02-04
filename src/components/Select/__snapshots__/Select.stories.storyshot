@@ -43,73 +43,168 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "position": "relative",
-          }
-        }
+        role="button"
       >
         <div
-          className=" css-14jk2my-container"
-          onKeyDown={[Function]}
+          className="css-dz29m7-TextInputWrapper"
         >
           <div
-            className=" css-xbxebu-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            className="css-yyyd2u-TextInputWrapper"
           >
-            <label
-              className="css-99nvbd-Label"
-              htmlFor="select-"
-            >
-              Flavour
-               
-            </label>
             <div
-              className=" css-g1d714-ValueContainer"
+              className="css-1il6azq-TextInputWrapper"
             >
               <div
-                className=" css-1p4n7lv-singleValue"
+                className="css-1u4znjd"
               >
-                Chocolate
-              </div>
-              <input
-                aria-autocomplete="list"
-                className="css-62g3xt-dummyInput"
-                disabled={true}
-                id="select-"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                tabIndex="0"
-                value=""
-              />
-            </div>
-            <div
-              className=" css-1k83poq-IndicatorsContainer"
-            >
-              <span
-                className=" css-1xjgjl1-IndicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                className=" css-1cumceu-DropdownIndicator"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
-              >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
+                <input
+                  className="css-1h245c6"
+                  disabled={true}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  value=""
+                />
+                <label
+                  className="css-1yedgls-Label"
                 >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-z7hcm5-Icon"
                   />
-                </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-dz29m7-TextInputWrapper"
+        >
+          <div
+            className="css-i5u9u6-TextInputWrapper"
+          >
+            <div
+              className="css-1il6azq-TextInputWrapper"
+            >
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  disabled={true}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value=""
+                />
+                <label
+                  className="css-1yedgls-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-z7hcm5-Icon"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-dz29m7-TextInputWrapper"
+        >
+          <div
+            className="css-106rjmy-TextInputWrapper"
+          >
+            <div
+              className="css-1il6azq-TextInputWrapper"
+            >
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  disabled={true}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="elevated"
+                  value=""
+                />
+                <label
+                  className="css-1yedgls-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-z7hcm5-Icon"
+                  />
+                </span>
               </div>
             </div>
           </div>
@@ -120,7 +215,7 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Select Multi Tag Select 1`] = `
+exports[`Storyshots Design System/Select Select Sizes 1`] = `
 <div
   style={
     Object {
@@ -163,71 +258,51 @@ exports[`Storyshots Design System/Select Multi Tag Select 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "position": "relative",
-          }
-        }
+        role="button"
       >
         <div
-          className=" css-2b097c-container"
-          onKeyDown={[Function]}
+          className="css-dz29m7-TextInputWrapper"
         >
           <div
-            className=" css-1tctisv-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            className="css-xp95x8-TextInputWrapper"
           >
-            <label
-              className="css-1bddsc8-Label"
-              htmlFor="select-"
-            >
-              Flavour
-               
-            </label>
             <div
-              className=" css-g1d714-ValueContainer"
+              className="css-19bjb4x-TextInputWrapper"
             >
               <div
-                className=" css-1wa3eu0-placeholder"
-              />
-              <input
-                aria-autocomplete="list"
-                className="css-62g3xt-dummyInput"
-                disabled={false}
-                id="select-"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                tabIndex="0"
-                value=""
-              />
-            </div>
-            <div
-              className=" css-1k83poq-IndicatorsContainer"
-            >
-              <span
-                className=" css-1xjgjl1-IndicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                className=" css-1cumceu-DropdownIndicator"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
+                className="css-1u4znjd"
               >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
+                <input
+                  className="css-bzlo54"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
                 >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-z7hcm5-Icon"
                   />
-                </svg>
+                </span>
               </div>
             </div>
           </div>
@@ -242,72 +317,801 @@ exports[`Storyshots Design System/Select Multi Tag Select 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "position": "relative",
-          }
-        }
+        role="button"
       >
         <div
-          className=" css-2b097c-container"
-          onKeyDown={[Function]}
+          className="css-dz29m7-TextInputWrapper"
         >
           <div
-            className=" css-1tlmgod-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            className="css-xp95x8-TextInputWrapper"
           >
-            <label
-              className="css-1bddsc8-Label"
-              htmlFor="select-"
-            >
-              Flavour
-               
-            </label>
             <div
-              className=" css-g1d714-ValueContainer"
+              className="css-1il6azq-TextInputWrapper"
             >
               <div
-                className=" css-1wa3eu0-placeholder"
-              />
-              <input
-                aria-autocomplete="list"
-                className="css-62g3xt-dummyInput"
-                disabled={false}
-                id="select-"
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                readOnly={true}
-                tabIndex="0"
-                value=""
-              />
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-z7hcm5-Icon"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Select with icon and size 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-dz29m7-TextInputWrapper"
+        >
+          <div
+            className="css-xp95x8-TextInputWrapper"
+          >
+            <div
+              className="css-19bjb4x-TextInputWrapper"
+            >
+              <div
+                className="css-g5h1c4-IconWrapper"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-bzlo54"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-z7hcm5-Icon"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-dz29m7-TextInputWrapper"
+        >
+          <div
+            className="css-xp95x8-TextInputWrapper"
+          >
+            <div
+              className="css-1il6azq-TextInputWrapper"
+            >
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-dz29m7-TextInputWrapper"
+        >
+          <div
+            className="css-xp95x8-TextInputWrapper"
+          >
+            <div
+              className="css-1il6azq-TextInputWrapper"
+            >
+              <div
+                className="css-g5h1c4-IconWrapper"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="css-ptimel-Stack"
+      >
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="css-dz29m7-TextInputWrapper"
+            >
+              <div
+                className="css-lsujln-TextInputWrapper"
+              >
+                <div
+                  className="css-1il6azq-TextInputWrapper"
+                >
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-1h245c6"
+                      disabled={false}
+                      hintMsg="Error in Select"
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Label"
+                      required={false}
+                      status="error"
+                      styleType="filled"
+                      value="Chocolate"
+                    />
+                    <label
+                      className="css-10njz0b-Label"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="css-mt0mcx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
-              className=" css-1k83poq-IndicatorsContainer"
+              className="css-y2q41j-TextInputWrapper"
             >
               <span
-                className=" css-1xjgjl1-IndicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                className=" css-1cumceu-DropdownIndicator"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
               >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
+                <span
+                  className="css-hnerwf-Icon"
+                />
+              </span>
+              Error in Select
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="css-dz29m7-TextInputWrapper"
+            >
+              <div
+                className="css-1xeanin-TextInputWrapper"
+              >
+                <div
+                  className="css-1il6azq-TextInputWrapper"
                 >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-1h245c6"
+                      disabled={false}
+                      hintMsg="Error in Select"
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Label"
+                      required={false}
+                      status="error"
+                      styleType="outlined"
+                      value="Chocolate"
+                    />
+                    <label
+                      className="css-10njz0b-Label"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="css-mt0mcx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div
+              className="css-y2q41j-TextInputWrapper"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-hnerwf-Icon"
+                />
+              </span>
+              Error in Select
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="css-dz29m7-TextInputWrapper"
+            >
+              <div
+                className="css-u1rsfx-TextInputWrapper"
+              >
+                <div
+                  className="css-1il6azq-TextInputWrapper"
+                >
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-1h245c6"
+                      disabled={false}
+                      hintMsg="Error in Select"
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Label"
+                      required={false}
+                      status="error"
+                      styleType="elevated"
+                      value="Chocolate"
+                    />
+                    <label
+                      className="css-10njz0b-Label"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="css-mt0mcx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="css-y2q41j-TextInputWrapper"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-hnerwf-Icon"
+                />
+              </span>
+              Error in Select
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="css-ptimel-Stack"
+      >
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="css-dz29m7-TextInputWrapper"
+            >
+              <div
+                className="css-hzcvm6-TextInputWrapper"
+              >
+                <div
+                  className="css-1il6azq-TextInputWrapper"
+                >
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-1h245c6"
+                      disabled={false}
+                      hintMsg="Error in Select"
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Label"
+                      required={false}
+                      status="hint"
+                      styleType="filled"
+                      value=""
+                    />
+                    <label
+                      className="css-1yedgls-Label"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="css-mt0mcx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="css-lxhvoy-TextInputWrapper"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-18ctimf-Icon"
+                />
+              </span>
+              Error in Select
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="css-dz29m7-TextInputWrapper"
+            >
+              <div
+                className="css-xp95x8-TextInputWrapper"
+              >
+                <div
+                  className="css-1il6azq-TextInputWrapper"
+                >
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-1h245c6"
+                      disabled={false}
+                      hintMsg="Error in Select"
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Label"
+                      required={false}
+                      status="hint"
+                      styleType="outlined"
+                      value=""
+                    />
+                    <label
+                      className="css-1yedgls-Label"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="css-mt0mcx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="css-lxhvoy-TextInputWrapper"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-18ctimf-Icon"
+                />
+              </span>
+              Error in Select
+            </div>
+          </div>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="css-dz29m7-TextInputWrapper"
+            >
+              <div
+                className="css-15ow8ps-TextInputWrapper"
+              >
+                <div
+                  className="css-1il6azq-TextInputWrapper"
+                >
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-1h245c6"
+                      disabled={false}
+                      hintMsg="Error in Select"
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Label"
+                      required={false}
+                      status="hint"
+                      styleType="elevated"
+                      value=""
+                    />
+                    <label
+                      className="css-1yedgls-Label"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="css-mt0mcx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="css-lxhvoy-TextInputWrapper"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-18ctimf-Icon"
+                />
+              </span>
+              Error in Select
             </div>
           </div>
         </div>
@@ -360,137 +1164,51 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "position": "relative",
-          }
-        }
+        role="button"
       >
         <div
-          className=" css-2b097c-container"
-          onKeyDown={[Function]}
+          className="css-dz29m7-TextInputWrapper"
         >
           <div
-            className=" css-1tvhbl3-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            className="css-hzcvm6-TextInputWrapper"
           >
-            <label
-              className="css-99nvbd-Label"
-              htmlFor="select-"
-            >
-              Flavour
-               
-            </label>
             <div
-              className=" css-g1d714-ValueContainer"
+              className="css-1il6azq-TextInputWrapper"
             >
               <div
-                className=" css-1p4n7lv-singleValue"
+                className="css-1u4znjd"
               >
-                Chocolate
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="filled"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
+                >
+                  Flavour
+                   
+                </label>
               </div>
               <div
-                className="css-b8ldur-Input"
+                className="css-mt0mcx-IconWrapper"
               >
-                <div
-                  className=""
-                  style={
-                    Object {
-                      "display": "inline-block",
-                    }
-                  }
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    disabled={false}
-                    id="select-"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    spellCheck="false"
-                    style={
-                      Object {
-                        "background": 0,
-                        "border": 0,
-                        "boxSizing": "content-box",
-                        "color": "inherit",
-                        "fontSize": "inherit",
-                        "label": "input",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "1px",
-                      }
-                    }
-                    tabIndex="0"
-                    type="text"
-                    value=""
+                  <span
+                    className="css-z7hcm5-Icon"
                   />
-                  <div
-                    style={
-                      Object {
-                        "height": 0,
-                        "left": 0,
-                        "overflow": "scroll",
-                        "position": "absolute",
-                        "top": 0,
-                        "visibility": "hidden",
-                        "whiteSpace": "pre",
-                      }
-                    }
-                  >
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className=" css-1k83poq-IndicatorsContainer"
-            >
-              <div
-                aria-hidden="true"
-                className=" css-tlfecz-indicatorContainer"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
-              >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
-                >
-                  <path
-                    d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                  />
-                </svg>
-              </div>
-              <span
-                className=" css-1xjgjl1-IndicatorSeparator"
-              />
-              <div
-                aria-hidden="true"
-                className=" css-1cumceu-DropdownIndicator"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
-              >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
-                >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
-                  />
-                </svg>
+                </span>
               </div>
             </div>
           </div>
@@ -505,137 +1223,110 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "position": "relative",
-          }
-        }
+        role="button"
       >
         <div
-          className=" css-2b097c-container"
-          onKeyDown={[Function]}
+          className="css-dz29m7-TextInputWrapper"
         >
           <div
-            className=" css-10gf0vu-Control"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
+            className="css-xp95x8-TextInputWrapper"
           >
-            <label
-              className="css-99nvbd-Label"
-              htmlFor="select-"
-            >
-              Flavour
-               
-            </label>
             <div
-              className=" css-g1d714-ValueContainer"
+              className="css-1il6azq-TextInputWrapper"
             >
               <div
-                className=" css-1p4n7lv-singleValue"
+                className="css-1u4znjd"
               >
-                Chocolate
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="outlined"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
+                >
+                  Flavour
+                   
+                </label>
               </div>
               <div
-                className="css-b8ldur-Input"
+                className="css-mt0mcx-IconWrapper"
               >
-                <div
-                  className=""
-                  style={
-                    Object {
-                      "display": "inline-block",
-                    }
-                  }
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
                 >
-                  <input
-                    aria-autocomplete="list"
-                    autoCapitalize="none"
-                    autoComplete="off"
-                    autoCorrect="off"
-                    disabled={false}
-                    id="select-"
-                    onBlur={[Function]}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    spellCheck="false"
-                    style={
-                      Object {
-                        "background": 0,
-                        "border": 0,
-                        "boxSizing": "content-box",
-                        "color": "inherit",
-                        "fontSize": "inherit",
-                        "label": "input",
-                        "opacity": 1,
-                        "outline": 0,
-                        "padding": 0,
-                        "width": "1px",
-                      }
-                    }
-                    tabIndex="0"
-                    type="text"
-                    value=""
+                  <span
+                    className="css-z7hcm5-Icon"
                   />
-                  <div
-                    style={
-                      Object {
-                        "height": 0,
-                        "left": 0,
-                        "overflow": "scroll",
-                        "position": "absolute",
-                        "top": 0,
-                        "visibility": "hidden",
-                        "whiteSpace": "pre",
-                      }
-                    }
-                  >
-                    
-                  </div>
-                </div>
+                </span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-dz29m7-TextInputWrapper"
+        >
+          <div
+            className="css-15ow8ps-TextInputWrapper"
+          >
             <div
-              className=" css-1k83poq-IndicatorsContainer"
+              className="css-1il6azq-TextInputWrapper"
             >
               <div
-                aria-hidden="true"
-                className=" css-tlfecz-indicatorContainer"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
+                className="css-1u4znjd"
               >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  styleType="elevated"
+                  value="Chocolate"
+                />
+                <label
+                  className="css-10njz0b-Label"
                 >
-                  <path
-                    d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
-                  />
-                </svg>
+                  Flavour
+                   
+                </label>
               </div>
-              <span
-                className=" css-1xjgjl1-IndicatorSeparator"
-              />
               <div
-                aria-hidden="true"
-                className=" css-1cumceu-DropdownIndicator"
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
+                className="css-mt0mcx-IconWrapper"
               >
-                <svg
-                  aria-hidden="true"
-                  className="css-6q0nyr-Svg"
-                  focusable="false"
-                  height={20}
-                  viewBox="0 0 20 20"
-                  width={20}
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
                 >
-                  <path
-                    d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+                  <span
+                    className="css-z7hcm5-Icon"
                   />
-                </svg>
+                </span>
               </div>
             </div>
           </div>

@@ -13,13 +13,15 @@ export type Props = {
   color?: AcceptedColorComponentTypes | string;
   /** Property indicating the size of the icon. Defaults to 16 */
   size?: number;
+  /** Callback fired when the `span` is clicked. */
+  onClick?: React.MouseEventHandler<HTMLSpanElement>;
 };
 
-const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16 }) => {
+const Icon: React.FC<Props> = ({ name, color = 'primary', size = 16, onClick = () => {} }) => {
   const Icon = iconSelector[name];
 
   return (
-    <span css={iconContainerStyle()}>
+    <span css={iconContainerStyle()} onClick={onClick}>
       <Icon css={iconStyle({ color, size })} />
     </span>
   );
