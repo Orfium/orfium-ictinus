@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
 import {
-  ResponsiveContainer,
   BarChart as RechartsBarChart,
   Bar,
   Cell,
@@ -15,6 +14,7 @@ import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
 import { getValues, customTickFormatter } from './utils';
+import Wrapper from '../Wrapper';
 
 const maxYAxisWidth = 220;
 const multiplyFactor = 7.8;
@@ -67,6 +67,8 @@ const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
   );
 };
 
+const WrappedChart = Wrapper(RechartsBarChart);
+
 const BarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
@@ -109,7 +111,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
   const tickColoringOptions = setColoringOptions((obj: Data) => obj.name);
 
   return (
-    <Wrapper
+    <WrappedChart
       data={data}
       margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
       layout="vertical"
@@ -145,43 +147,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
           <Cell key={`cell-${entry.name}-${entry.value}`} fill={barColors[index]} />
         ))}{' '}
       </Bar>
-    </Wrapper>
-  );
-};
-
-const Wrapper: React.FC<{
-  data: Data[];
-  margin: { top: number; right: number; left: number; bottom: number };
-  layout: string;
-  barCategoryGap: string;
-}> = ({ data, children }) => {
-  if (process.env.NODE_ENV !== 'test') {
-    return (
-      <ResponsiveContainer>
-        <RechartsBarChart
-          data={data}
-          margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
-          layout="vertical"
-          barCategoryGap="20%"
-        >
-          {children}
-        </RechartsBarChart>
-      </ResponsiveContainer>
-    );
-  }
-
-  // for testing purposes only !!!
-  return (
-    <RechartsBarChart
-      width={1000}
-      height={500}
-      data={data}
-      margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
-      layout="vertical"
-      barCategoryGap="20%"
-    >
-      {children}
-    </RechartsBarChart>
+    </WrappedChart>
   );
 };
 
