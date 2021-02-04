@@ -9,7 +9,7 @@ interface Props {
 
 const SidebarMenuIcon = ({ onMenuIconClick }: Props) => {
   return (
-    <div css={Styles.iconWrapper} onClick={onMenuIconClick}>
+    <div css={Styles.iconWrapper} onClick={onMenuIconClick} data-testid={'menu-handler'}>
       <Icon color={'primary'} name={'menu'} size={24} />
     </div>
   );

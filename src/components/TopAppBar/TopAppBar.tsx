@@ -43,7 +43,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
           </div>
         )}
       </div>
-      <div css={Styles.additionalToolsSection}>{additionalTools}</div>
+      <div css={Styles.additionalToolsSection(Boolean(additionalTools))}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>
         <Menu
           items={items}
@@ -53,6 +53,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
           rightIconName={'arrowDown'}
           avatar={userAvatar}
           onSelect={onSelect}
+          dataTestId={'userMenu'}
         />
       </div>
     </div>
