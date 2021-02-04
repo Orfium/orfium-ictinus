@@ -74,7 +74,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle()}>
+      <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}
@@ -92,7 +92,6 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
               <Icon name={leftIconName} color={iconColor} size={iconSize} />
             ) : null
           }
-          dataTestId={dataTestId}
         >
           <span>{buttonText}</span>
         </Button>
