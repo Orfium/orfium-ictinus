@@ -28,7 +28,7 @@ const data: Data[] = [
     name: 'Other',
     value: 18300,
     barLabel: '3.1%',
-    options: { color: '#e7e7e7', coloringOption: 'all' },
+    options: { color: '#9b9b9b', coloringOption: 'all' },
   },
 ];
 

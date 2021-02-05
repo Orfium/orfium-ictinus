@@ -10,15 +10,16 @@ import {
   LabelList,
 } from 'recharts';
 import max from 'lodash/max';
+import { lighten } from 'polished';
 import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
 import { getValues, customTickFormatter } from './utils';
 import Wrapper from '../Wrapper';
 
-const maxYAxisWidth = 220;
-const multiplyFactor = 7.8;
+const multiplyFactor = 6.8;
 const yAxisWidthDefault = 60;
+const lightenFactor = 0.2;
 
 export type HoverInfo = {
   name: string;
@@ -75,6 +76,10 @@ const BarChart: React.FC<Props> = ({ data }) => {
   const barColors = useMemo(() => {
     return data.map(obj => {
       if (obj?.options?.color) {
+        if (obj?.options?.coloringOption === 'all') {
+          return lighten(lightenFactor, obj?.options?.color);
+        }
+
         return obj?.options?.color;
       }
 
@@ -86,10 +91,14 @@ const BarChart: React.FC<Props> = ({ data }) => {
 
   const setColoringOptions = useCallback(
     operator => {
-      return data.reduce((acc, cur) => {
+      return data.reduce((acc, cur, index) => {
         const definedColoringOPt = cur.options?.coloringOption;
-        if (definedColoringOPt === 'all' && operator(cur)) {
-          acc[operator(cur)] = cur.options?.color;
+        if (definedColoringOPt === 'all') {
+          if (operator && operator(cur)) {
+            acc[operator(cur)] = cur.options?.color;
+          } else {
+            acc[index] = cur.options?.color;
+          }
         }
 
         return acc;
@@ -106,7 +115,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
 
   const { maxDomainValue, tickCount } = getValues(maxValue);
 
-  const labelColoringOptions = setColoringOptions((obj: Data) => obj.barLabel);
+  const labelColoringOptions = setColoringOptions(() => false);
 
   const tickColoringOptions = setColoringOptions((obj: Data) => obj.name);
 
@@ -132,11 +141,14 @@ const BarChart: React.FC<Props> = ({ data }) => {
         type="category"
         dataKey="name"
         tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-        width={yAxisWidth > maxYAxisWidth ? maxYAxisWidth : yAxisWidth}
+        width={yAxisWidth}
         axisLine={false}
         tickLine={false}
       />
-      <Tooltip cursor={false} content={<CustomTooltip />} />
+      <Tooltip
+        cursor={{ fill: theme.utils.getColor('lightGray', 100) }}
+        content={<CustomTooltip />}
+      />
       <Bar dataKey="value">
         <LabelList
           dataKey="barLabel"
