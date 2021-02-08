@@ -1,9 +1,9 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker from './DatePicker';
 import dayjs from 'dayjs';
 const options = {
-  'Disable days of week (only Monday)': { daysOfWeek: [0, 2, 3, 4, 5, 6] },
+  'Disable days of week (only Monday)': { daysOfWeek: [1, 2, 3, 4, 5, 6] },
   'Disable dates after this day': { after: new Date() },
   'Disable dates before this day': { before: new Date() },
   'Disable dates before and after a date (-/+ 7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },

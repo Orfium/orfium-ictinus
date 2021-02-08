@@ -1,15 +1,19 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { DayPickerInputProps } from 'react-day-picker';
-import useTheme from '../../../hooks/useTheme';
+import { useCallback, useEffect, useState } from 'react';
 import Button from '../../Button';
-import { ExtraOption } from '../DatePicker';
-import { optionStyle } from '../DatePicker.style';
-import Month from '../Month/Month';
+import { DisabledDates, ExtraOption } from '../DatePicker';
 import dayjs, { Dayjs } from 'dayjs';
-import Icon from '../../Icon';
-import { useEffect, useState } from 'react';
+import MonthWrapper from './components/MonthWrapper/MonthWrapper';
+import {
+  buttonsMonthsWrapperStyle,
+  buttonsWrapperStyle,
+  monthsWrapperStyle,
+  optionStyle,
+  optionsWrapperStyle,
+  overlayWrapperStyle,
+} from './OverlayComponent.style';
 
 type Props = {
   selectedOption: string;
@@ -18,163 +22,96 @@ type Props = {
   extraOptions: ExtraOption[];
   selectedDays: Range;
   onDaySelect: (date: Dayjs) => void;
+  disabledDates?: DisabledDates;
 };
 
 export type Range = {
   from?: Dayjs;
   to?: Dayjs;
 };
-const OverlayComponent: React.FC<Props & DayPickerInputProps> = ({
-  classNames,
+const OverlayComponent: React.FC<Props> = ({
   selectedOption,
   setSelectedOption,
   isRangePicker,
   extraOptions = [],
   onDaySelect,
   selectedDays,
+  disabledDates,
 }) => {
-  const theme = useTheme();
   const [date, setDate] = useState(dayjs());
+  const [date2, setDate2] = useState(dayjs());
 
   useEffect(() => {
     if (selectedDays.from && selectedDays.to) {
       setDate(selectedDays.from);
+      setDate2(selectedDays.from);
     }
   }, [selectedDays]);
 
-  return (
-    <div
-      className={classNames?.overlayWrapper}
-      css={{ marginTop: 3 }}
-      // These were omitted due to type miss-match. Also these events on the overlayWrapper don't
-      // do anything and with future keyboard support will still do nothing
-    >
-      <div className={classNames?.overlay}>
-        <div css={{ display: 'flex' }}>
-          {isRangePicker && (
-            <div css={{ borderRight: '1px solid #dfdfdf' }}>
-              {extraOptions.map(option => (
-                <div
-                  key={option.value}
-                  css={optionStyle({ selected: selectedOption === option.value })}
-                  onClick={() => setSelectedOption(option.value)}
-                >
-                  {option.label}
-                </div>
-              ))}
-            </div>
-          )}
-          <div css={{ display: 'flex', flexDirection: 'column', position: 'relative' }}>
-            <div
-              css={css`
-                position: absolute;
-                display: flex;
-                right: 10px;
-                top: 12px;
-              `}
-            >
-              <div
-                onClick={() => {
-                  setDate(curDate => curDate.month(curDate.month() - 1));
-                }}
-                css={css`
-                  cursor: pointer;
-                  margin: 0 5px;
-                `}
-              >
-                <Icon
-                  name={'fatArrowLeft'}
-                  color={theme.utils.getColor('lightGray', 700)}
-                  size={25}
-                />
-              </div>
-              <div
-                onClick={() => {
-                  setDate(curDate => curDate.month(curDate.month() + 1));
-                }}
-                css={css`
-                  cursor: pointer;
-                  margin: 0 5px;
-                `}
-              >
-                <Icon
-                  name={'fatArrowRight'}
-                  color={theme.utils.getColor('lightGray', 700)}
-                  size={25}
-                />
-              </div>
-            </div>
-            <div css={{ display: 'flex', flexDirection: 'row' }}>
-              <div css={{ margin: '0 10px', display: 'flex', flexDirection: 'column' }}>
-                <div
-                  css={css`
-                    margin: 15px 0 20px;
-                    align-content: center;
-                    font-size: 18px;
-                    font-weight: bold;
-                  `}
-                >
-                  {date.format('MMMM')}{' '}
-                  <select>
-                    <option>{date.format('YYYY')}</option>
-                  </select>
-                </div>
-                <Month
-                  year={date.year()}
-                  month={date.month()}
-                  onDaySelect={onDaySelect}
-                  selectedDays={selectedDays}
-                />
-              </div>
-              {isRangePicker && (
-                <div css={{ margin: '0 10px', display: 'flex', flexDirection: 'column' }}>
-                  <div
-                    css={css`
-                      margin: 15px 0 20px;
-                      align-content: center;
-                      font-size: 18px;
-                      font-weight: bold;
-                    `}
-                  >
-                    {date.month(date.month() + 1).format('MMMM')}{' '}
-                    <select>
-                      <option>{date.month(date.month() + 1).format('YYYY')}</option>
-                    </select>
-                  </div>
-                  <Month
-                    year={Number(date.month(date.month() + 1).format('YYYY'))}
-                    month={date.month() + 1}
-                    onDaySelect={onDaySelect}
-                    selectedDays={selectedDays}
-                  />
-                </div>
-              )}
-            </div>
+  const handleArrow = useCallback(
+    (direction: 'forward' | 'back' = 'back') => {
+      setDate(curDate => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
+      setDate2(curDate => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
+    },
+    [date, date2]
+  );
 
+  return (
+    <div css={overlayWrapperStyle()}>
+      {isRangePicker && (
+        <div css={optionsWrapperStyle()}>
+          {extraOptions.map(option => (
             <div
-              css={{
-                display: 'flex',
-                justifyContent: 'flex-end',
-                marginBottom: theme.spacing.md,
-                marginRight: theme.spacing.lg,
-                alignItems: 'space-between',
-                '> button': {
-                  margin: theme.spacing.sm,
-                },
-              }}
+              key={option.value}
+              css={optionStyle({ selected: selectedOption === option.value })}
+              onClick={() => setSelectedOption(option.value)}
             >
-              <Button filled={false} size={'sm'} onClick={() => {}} type={'branded1'}>
-                Cancel
-              </Button>
-              <Button size={'sm'} onClick={() => {}} type={'branded1'}>
-                Apply
-              </Button>
+              {option.label}
             </div>
-          </div>
+          ))}
+        </div>
+      )}
+      <div css={buttonsMonthsWrapperStyle()}>
+        <div css={monthsWrapperStyle()}>
+          <MonthWrapper
+            date={date}
+            onDaySelect={onDaySelect}
+            selectedDays={selectedDays}
+            setDate={setDate}
+            handleArrow={handleArrow}
+            showedArrows={isRangePicker ? 'left' : 'both'}
+            disabledDates={disabledDates}
+          />
+
+          {isRangePicker && (
+            <MonthWrapper
+              date={date2.month(date2.month() + 1)}
+              onDaySelect={onDaySelect}
+              selectedDays={selectedDays}
+              setDate={setDate2}
+              handleArrow={handleArrow}
+              showedArrows={isRangePicker ? 'right' : 'both'}
+              disabledDates={disabledDates}
+            />
+          )}
+        </div>
+
+        <div css={buttonsWrapperStyle()}>
+          <Button filled={false} size={'sm'} onClick={() => {}} type={'branded1'}>
+            Cancel
+          </Button>
+          <Button
+            size={'sm'}
+            onClick={() => {}}
+            type={'branded1'}
+            disabled={Boolean(!selectedDays.from || !selectedDays.to)}
+          >
+            Apply
+          </Button>
         </div>
       </div>
     </div>
   );
 };
 
-export default OverlayComponent;
+export default React.memo(OverlayComponent);

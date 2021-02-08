@@ -1,14 +1,16 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { useCallback } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
 import Day from '../Day/Day';
 import chunk from 'lodash/chunk';
 import inRange from 'lodash/inRange';
-import useTheme from '../../../hooks/useTheme';
-import { useCallback } from 'react';
 import { Range } from '../OverlayComponent/OverlayComponent';
-const isBetween = require('dayjs/plugin/isBetween');
+import isBetween from 'dayjs/plugin/isBetween';
+import { DisabledDates } from '../DatePicker';
+import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
+
 dayjs.extend(isBetween);
 
 function getNumWeeksForMonth(year: number, month: number) {
@@ -28,10 +30,10 @@ export type Props = {
   month: number;
   onDaySelect?: (date: Dayjs) => void;
   selectedDays: Range;
+  disabledDates?: DisabledDates;
 };
 
-const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
-  const theme = useTheme();
+const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
     const monthDate = dayjs()
       .month(month)
@@ -55,7 +57,7 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
   }, [year, month]);
 
   const calculateSelected = useCallback(
-    (day: number) => {
+    (day: number, month: number, year: number) => {
       if (!day) return false;
 
       const date = dayjs()
@@ -67,11 +69,11 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
         date.format('D,M,YYYY')
       );
     },
-    [month, selectedDays, year]
+    [selectedDays.from, selectedDays.to]
   );
 
-  const calculateIsBetween = useCallback(
-    (day: number) => {
+  const calculateDisabled = useCallback(
+    (day: number, month: number, year: number, disabledDates?: DisabledDates) => {
       if (!day) return false;
 
       const date = dayjs()
@@ -79,65 +81,97 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays }) => {
         .year(year)
         .date(day);
 
-      return dayjs(date).isBetween(selectedDays.from, selectedDays.to || selectedDays.from);
+      if (disabledDates?.after && disabledDates?.before) {
+        return !date.isBetween(dayjs(disabledDates?.after), dayjs(disabledDates?.before));
+      }
+      if (disabledDates?.after) {
+        return date.isAfter(dayjs(disabledDates?.after));
+      }
+      if (disabledDates?.before) {
+        return date.isBefore(dayjs(disabledDates?.before));
+      }
+      if (disabledDates?.daysOfWeek) {
+        return disabledDates?.daysOfWeek.includes(day);
+      }
+
+      return false;
     },
-    [month, selectedDays, year]
+    []
+  );
+
+  const calculateIsBetween = useCallback(
+    (day: number, month: number, year: number) => {
+      if (!day) return false;
+
+      const date = dayjs()
+        .month(month)
+        .year(year)
+        .date(day);
+
+      return (
+        selectedDays.from &&
+        selectedDays.to &&
+        dayjs(date).isBetween(selectedDays.from, selectedDays.to)
+      );
+    },
+    [selectedDays.from, selectedDays.to]
   );
 
   return (
     <React.Fragment>
-      <div>
-        <div
-          css={css`
-            display: flex;
-            justify-content: space-around;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
-            border-color: ${theme.utils.getColor('lightGray', 500)};
-          `}
-        >
-          {DAYS.map(day => (
-            <div
-              key={day}
-              css={css`
-                color: ${theme.utils.getColor('lightGray', 500)};
-                padding: ${theme.spacing.md} 0;
-                width: 39px;
-                text-align: center;
-              `}
-            >
-              {day.substr(0, 2)}
-            </div>
-          ))}
-        </div>
+      <div css={weekDaysWrapperStyle()}>
+        {DAYS.map(day => (
+          <div key={day} css={weekDayStyle()}>
+            {day.substr(0, 2)}
+          </div>
+        ))}
       </div>
-      <div css={{ display: 'table', borderCollapse: 'separate', borderSpacing: '0 2px' }}>
-        <div
-          css={css`
-            display: table-row-group;
-          `}
-        >
-          {weeksWithDays.map(week => (
-            <tr key={`${year}-${month}-${week}-week`}>
-              {week.map((day, dayIndex) => (
-                <Day
-                  year={year}
-                  month={month}
-                  day={day}
-                  onSelect={onDaySelect}
-                  isSelected={calculateSelected(day)}
-                  isBetween={calculateIsBetween(day)}
-                  isLast={selectedDays.to?.date() === day}
-                  isFirst={selectedDays.from?.date() === day}
-                  key={`${week}-${year}-${month}-${dayIndex}-day`}
-                />
-              ))}
-            </tr>
-          ))}
-        </div>
-      </div>
+      <table css={datesWrapperStyle()}>
+        {weeksWithDays.map((week, weekIndex) => (
+          <tr
+            // eslint-disable-next-line react/no-array-index-key
+            key={`${year}-${month}-${weekIndex}-week`}
+          >
+            {week.map((day, dayIndex) => (
+              <Day
+                // eslint-disable-next-line react/no-array-index-key
+                key={`${year}-${month}-${weekIndex}-${dayIndex}-day`}
+                year={year}
+                month={month}
+                day={day}
+                onSelect={onDaySelect}
+                disabled={Boolean(calculateDisabled(day, month, year, disabledDates))}
+                isSelected={Boolean(calculateSelected(day, month, year))}
+                isBetween={Boolean(calculateIsBetween(day, month, year))}
+                isLast={Boolean(
+                  typeof day !== 'undefined' &&
+                    selectedDays.to &&
+                    selectedDays.to?.isSame(
+                      dayjs()
+                        .month(month)
+                        .year(year)
+                        .date(day),
+                      'day'
+                    )
+                )}
+                isFirst={Boolean(
+                  typeof day !== 'undefined' &&
+                    selectedDays.from &&
+                    selectedDays.from?.isSame(
+                      dayjs()
+                        .month(month)
+                        .year(year)
+                        .date(day),
+                      'day'
+                    )
+                )}
+              />
+            ))}
+          </tr>
+        ))}
+      </table>
     </React.Fragment>
   );
 };
 
-export default Month;
+export default React.memo(Month);

@@ -3,15 +3,6 @@ import { Theme } from '../../theme';
 import FatArrowLeft from '../Icon/assets/fat-arrow-left.svg';
 import FatArrowRight from '../Icon/assets/fat-arrow-right.svg';
 
-export const optionStyle = ({ selected }: { selected?: boolean }) => (
-  theme: Theme
-): SerializedStyles => css`
-  white-space: nowrap;
-  padding: ${theme.spacing.md};
-  font-weight: ${selected ? 'bold' : 'initial'};
-  cursor: pointer;
-`;
-
 export const datePickerStyles = ({ isRangePicker }: { isRangePicker?: boolean }) => (
   theme: Theme
 ): SerializedStyles => css`

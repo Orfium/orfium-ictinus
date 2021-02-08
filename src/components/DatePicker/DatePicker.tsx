@@ -1,13 +1,17 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useRef, useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
-import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
 import dayjs, { Dayjs } from 'dayjs';
 import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { Modifier } from 'react-day-picker/types/Modifiers';
-import { formFieldStyles } from '../../theme/palette';
+import { formFieldStyles } from 'theme/palette';
+
+export type DisabledDates = {
+  daysOfWeek?: number[];
+  after?: Date;
+  before?: Date;
+};
 
 export type Props = {
   /** This boolean shows if the date picker will have the future dates available to select. Default: false */
@@ -17,7 +21,7 @@ export type Props = {
   /** A callback to return user selection */
   onChange?: (date: Dayjs) => void;
   /** Option to disable some dates */
-  disableDates?: Modifier[];
+  disableDates?: DisabledDates;
   /** Value to define if needed an initial state or to handle it externally */
   value?: Dayjs;
   /** The label that the input will use to show it. Default: Date */
@@ -61,7 +65,7 @@ const DatePicker: React.FC<Props> = ({
   disableFutureDates = false,
   isRangePicker = false,
   onChange,
-  disableDates = [],
+  disableDates,
   value = {
     from: undefined,
     to: undefined,
@@ -70,7 +74,6 @@ const DatePicker: React.FC<Props> = ({
   styleType = 'filled',
   dateFormatOverride = undefined,
 }) => {
-  const dayPickerInputRef = useRef<DayPickerInput>(null);
   const [selectedOption, setSelectedOption] = useState<string>('');
   const [range, setRange] = useState<Range>({
     from: undefined,
@@ -79,7 +82,6 @@ const DatePicker: React.FC<Props> = ({
 
   const handleSelectedOptions = (option: string) => {
     const foundOption = extraOptions.find(optionItem => optionItem.value === option);
-    dayPickerInputRef.current?.hideDayPicker();
 
     if (foundOption) {
       setRange(
@@ -98,31 +100,29 @@ const DatePicker: React.FC<Props> = ({
       const endOfDay = day.endOf('day');
       // in case is a day picker
       if (!isRangePicker) {
-        console.log({
-          day,
-          range,
-          valid: range.from && range.to && day.isBetween(range.from, range.to),
-        });
-        if (range.from && range.to && day.isBetween(range.from, range.to)) {
-          return setRange({ from: undefined, to: undefined });
-        }
+        return setRange(range => {
+          if (range.from && range.to && day.isBetween(range.from, range.to)) {
+            return { from: undefined, to: undefined };
+          }
 
-        return setRange({ from: startOfDay, to: endOfDay });
+          return { from: startOfDay, to: endOfDay };
+        });
       }
 
       // in case is range picker
-      if (range.from && range.to) {
-        return setRange({ from: startOfDay, to: undefined });
-      }
+      return setRange(range => {
+        if (range.from && range.to) {
+          return { from: startOfDay, to: undefined };
+        }
 
-      if (!range.from) {
-        return setRange(range => ({ ...range, from: startOfDay }));
-      }
-      if (!range.to) {
-        return setRange(range => ({ ...range, to: endOfDay }));
-      }
+        if (!range.from) {
+          return { ...range, from: startOfDay };
+        }
+
+        return { ...range, to: endOfDay };
+      });
     },
-    [isRangePicker, range]
+    [isRangePicker]
   );
 
   return (
@@ -136,6 +136,7 @@ const DatePicker: React.FC<Props> = ({
         isRangePicker={isRangePicker}
         onDaySelect={setRangePick}
         selectedDays={range}
+        disabledDates={disableDates}
       />
     </div>
   );
