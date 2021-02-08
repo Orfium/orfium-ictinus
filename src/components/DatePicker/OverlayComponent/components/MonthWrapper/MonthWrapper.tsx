@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import React, { useState } from 'react';
 import { Dayjs } from 'dayjs';
 import { SelectOption } from 'components/Select/Select';
@@ -11,6 +11,13 @@ import SelectMenu from 'components/Select/components/SelectMenu';
 import Month from '../../../Month/Month';
 import { Range } from '../../OverlayComponent';
 import { DisabledDates } from '../../../DatePicker';
+import {
+  monthHeaderNavigationIconWrapperStyle,
+  monthHeaderTitleStyle,
+  monthHeaderTitleWrapperStyle,
+  monthHeaderWrapperStyle,
+  monthWrapperStyle,
+} from './MonthWrapper.style';
 
 const MonthWrapper = ({
   setDate,
@@ -53,28 +60,12 @@ const MonthWrapper = ({
         setOpen(false);
       }}
     >
-      <div css={{ margin: '0 10px', display: 'flex', flexDirection: 'column' }}>
-        <div
-          css={css`
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            position: relative;
-          `}
-        >
+      <div css={monthWrapperStyle()}>
+        <div css={monthHeaderWrapperStyle()}>
           {(showedArrows === 'left' || showedArrows === 'both') && (
             <div
               onClick={() => handleArrow('back')}
-              css={css`
-                cursor: pointer;
-                margin: auto 5px;
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                height: fit-content;
-                z-index: 10;
-              `}
+              css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}
             >
               <Icon
                 name={'fatArrowLeft'}
@@ -83,29 +74,8 @@ const MonthWrapper = ({
               />
             </div>
           )}
-          <div
-            css={css`
-              margin: 5px 0 6px;
-              padding: 0;
-              align-content: center;
-              text-align: center;
-              flex: 1;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              position: relative;
-            `}
-          >
-            <div
-              css={css`
-                margin: 0 ${theme.spacing.sm};
-                padding: ${theme.spacing.sm};
-                display: flex;
-                justify-content: center;
-                cursor: pointer;
-              `}
-              onClick={() => setOpen(true)}
-            >
+          <div css={monthHeaderTitleWrapperStyle()}>
+            <div css={monthHeaderTitleStyle()} onClick={() => setOpen(true)}>
               <Button
                 color={'neutralWhite-100'}
                 iconRight={
@@ -133,16 +103,7 @@ const MonthWrapper = ({
           {(showedArrows === 'right' || showedArrows === 'both') && (
             <div
               onClick={() => handleArrow('forward')}
-              css={css`
-                cursor: pointer;
-                margin: auto 5px;
-                position: absolute;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                height: fit-content;
-                z-index: 10;
-              `}
+              css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}
             >
               <Icon
                 name={'fatArrowRight'}

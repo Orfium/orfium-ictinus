@@ -117,6 +117,43 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
     [selectedDays.from, selectedDays.to]
   );
 
+  const calculateSelectedDayPosition = useCallback(
+    (day: number, position: 'last' | 'first' = 'first') => {
+      if (day && selectedDays.from && selectedDays.to) {
+        const startDate = selectedDays.from.isAfter(selectedDays.to)
+          ? selectedDays.to
+          : selectedDays.from;
+        const endDate = selectedDays.from.isAfter(selectedDays.to)
+          ? selectedDays.from
+          : selectedDays.to;
+        const pickedDate = position === 'last' ? endDate : startDate;
+
+        return (
+          pickedDate &&
+          pickedDate.isSame(
+            dayjs()
+              .month(month)
+              .year(year)
+              .date(day),
+            'day'
+          )
+        );
+      }
+
+      return (
+        day &&
+        selectedDays.from?.isSame(
+          dayjs()
+            .month(month)
+            .year(year)
+            .date(day),
+          'day'
+        )
+      );
+    },
+    [month, selectedDays.from, selectedDays.to, year]
+  );
+
   return (
     <React.Fragment>
       <div css={weekDaysWrapperStyle()}>
@@ -143,28 +180,8 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
                 disabled={Boolean(calculateDisabled(day, month, year, disabledDates))}
                 isSelected={Boolean(calculateSelected(day, month, year))}
                 isBetween={Boolean(calculateIsBetween(day, month, year))}
-                isLast={Boolean(
-                  typeof day !== 'undefined' &&
-                    selectedDays.to &&
-                    selectedDays.to?.isSame(
-                      dayjs()
-                        .month(month)
-                        .year(year)
-                        .date(day),
-                      'day'
-                    )
-                )}
-                isFirst={Boolean(
-                  typeof day !== 'undefined' &&
-                    selectedDays.from &&
-                    selectedDays.from?.isSame(
-                      dayjs()
-                        .month(month)
-                        .year(year)
-                        .date(day),
-                      'day'
-                    )
-                )}
+                isLast={Boolean(calculateSelectedDayPosition(day, 'last'))}
+                isFirst={Boolean(calculateSelectedDayPosition(day, 'first'))}
               />
             ))}
           </tr>

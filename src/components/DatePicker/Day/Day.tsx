@@ -52,6 +52,7 @@ const Day: React.FC<Props> = ({
     },
     [onSelect, date]
   );
+  console.log('hi');
 
   if (!day) {
     return <div css={emptyDayStyle()} />;
