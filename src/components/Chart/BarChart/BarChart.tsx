@@ -1,7 +1,5 @@
-// // @ts-nocheck
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import {
-  ResponsiveContainer,
   BarChart as RechartsBarChart,
   Bar,
   Cell,
@@ -12,13 +10,16 @@ import {
   LabelList,
 } from 'recharts';
 import max from 'lodash/max';
+import { lighten } from 'polished';
 import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
 import { getValues, customTickFormatter } from './utils';
+import Wrapper from '../Wrapper';
 
-const maxYAxisWidth = 220;
-const multiplyFactor = 7.8;
+const multiplyFactor = 6.8;
+const yAxisWidthDefault = 60;
+const lightenFactor = 0.2;
 
 export type HoverInfo = {
   name: string;
@@ -67,12 +68,18 @@ const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
   );
 };
 
+const WrappedChart = Wrapper(RechartsBarChart);
+
 const BarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
   const barColors = useMemo(() => {
     return data.map(obj => {
       if (obj?.options?.color) {
+        if (obj?.options?.coloringOption === 'all') {
+          return lighten(lightenFactor, obj?.options?.color);
+        }
+
         return obj?.options?.color;
       }
 
@@ -80,38 +87,40 @@ const BarChart: React.FC<Props> = ({ data }) => {
     });
   }, [data, theme.palette.flat.darkBlue]);
 
-  const maxLabelLength = useMemo(() => max(data.map(obj => obj.name.length)), [data]);
+  const findMaxInData = useCallback(operator => max(data.map(operator)), [data]);
 
-  const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : 60;
+  const setColoringOptions = useCallback(
+    operator => {
+      return data.reduce((acc, cur, index) => {
+        const definedColoringOPt = cur.options?.coloringOption;
+        if (definedColoringOPt === 'all') {
+          if (operator && operator(cur)) {
+            acc[operator(cur)] = cur.options?.color;
+          } else {
+            acc[index] = cur.options?.color;
+          }
+        }
 
-  const maxValue = useMemo(() => max(data.map(obj => obj.value)), [data]);
+        return acc;
+      }, {});
+    },
+    [data]
+  );
+
+  const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);
+
+  const maxValue = findMaxInData((obj: Data) => obj.value);
+
+  const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : yAxisWidthDefault;
 
   const { maxDomainValue, tickCount } = getValues(maxValue);
 
-  const labelColoringOptions = useMemo(() => {
-    return data.reduce((acc, cur) => {
-      const definedColoringOPt = cur.options?.coloringOption;
-      if (definedColoringOPt === 'all' && cur.barLabel) {
-        acc[cur.barLabel] = cur.options?.color;
-      }
+  const labelColoringOptions = setColoringOptions(() => false);
 
-      return acc;
-    }, {});
-  }, [data]);
-
-  const tickColoringOptions = useMemo(() => {
-    return data.reduce((acc, cur) => {
-      const definedColoringOPt = cur.options?.coloringOption;
-      if (definedColoringOPt === 'all') {
-        acc[cur.name] = cur.options?.color;
-      }
-
-      return acc;
-    }, {});
-  }, [data]);
+  const tickColoringOptions = setColoringOptions((obj: Data) => obj.name);
 
   return (
-    <Wrapper
+    <WrappedChart
       data={data}
       margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
       layout="vertical"
@@ -132,11 +141,14 @@ const BarChart: React.FC<Props> = ({ data }) => {
         type="category"
         dataKey="name"
         tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-        width={yAxisWidth > maxYAxisWidth ? maxYAxisWidth : yAxisWidth}
+        width={yAxisWidth}
         axisLine={false}
         tickLine={false}
       />
-      <Tooltip cursor={false} content={<CustomTooltip />} />
+      <Tooltip
+        cursor={{ fill: theme.utils.getColor('lightGray', 100) }}
+        content={<CustomTooltip />}
+      />
       <Bar dataKey="value">
         <LabelList
           dataKey="barLabel"
@@ -147,43 +159,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
           <Cell key={`cell-${entry.name}-${entry.value}`} fill={barColors[index]} />
         ))}{' '}
       </Bar>
-    </Wrapper>
-  );
-};
-
-const Wrapper: React.FC<{
-  data: Data[];
-  margin: { top: number; right: number; left: number; bottom: number };
-  layout: string;
-  barCategoryGap: string;
-}> = ({ data, children }) => {
-  if (process.env.NODE_ENV !== 'test') {
-    return (
-      <ResponsiveContainer>
-        <RechartsBarChart
-          data={data}
-          margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
-          layout="vertical"
-          barCategoryGap="20%"
-        >
-          {children}
-        </RechartsBarChart>
-      </ResponsiveContainer>
-    );
-  }
-
-  // for testing purposes only !!!
-  return (
-    <RechartsBarChart
-      width={1000}
-      height={500}
-      data={data}
-      margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
-      layout="vertical"
-      barCategoryGap="20%"
-    >
-      {children}
-    </RechartsBarChart>
+    </WrappedChart>
   );
 };
 

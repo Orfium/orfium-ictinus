@@ -13,13 +13,13 @@ const CustomTooltip: React.FC<TooltipProps> = ({ payload }) => {
       <ul css={tooltipUlStyle()}>
         {options.map(({ name, value, percentage }) => (
           <li key={`${name}${value}`} css={tooltipLiStyle()}>
-            <div>{name}</div>{' '}
+            <div>{name}</div>
             <div>
               <span>
                 <b>{value}</b>
               </span>
               {percentage && <span>({percentage})</span>}
-            </div>{' '}
+            </div>
           </li>
         ))}
       </ul>

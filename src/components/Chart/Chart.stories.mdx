@@ -1,7 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import LineChart from './LineChart';
-import PreviewBarChart from './BarChart/PreviewBarChart';
+import BarChartShowCase from '../storyUtils/BarChartShowCase';
 import BarChart from './BarChart';
 import DonutChart from './DonutChart';
 import PreviewDonutChart from './DonutChart/PreviewDonutChart';
@@ -57,7 +57,7 @@ import { BarChart } from '@orfium/ictinus';
 
 <Preview>
   <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
-    <PreviewBarChart/>
+    <BarChartShowCase/>
   </Story>
 </Preview>
 

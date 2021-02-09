@@ -23,9 +23,9 @@ export const customTickFormatter = (tick: number, maxDomainValue: number): strin
   if (tick === 0) {
     return `${tick}`;
   } else if (maxDomainValue > 1000000 || tick === 1000000) {
-    return `${tick / 1000000}M`;
+    return `${(tick / 1000000).toFixed(1)}M`;
   } else if (maxDomainValue > 1000 || tick === 1000) {
-    return `${tick / 1000}T`;
+    return `${tick / 1000}K`;
   }
 
   return `${tick}`;

@@ -1,1 +1,1 @@
-export { default } from './BarChart';
+export { default, Data } from './BarChart';
