@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
+import { PieChart, Pie, Cell, Label } from 'recharts';
 import CustomLabel from './components/CustomLabel';
+import Wrapper from '../Wrapper';
 
 type Data = {
   name: string;
@@ -17,6 +18,8 @@ export type Props = {
   chartUnits?: string;
 };
 
+const WrappedChart = Wrapper(PieChart);
+
 const DonutChart: React.FC<Props> = ({ data, chartValue, chartUnits }) => {
   const Colors = useMemo(() => {
     return data.map(obj => {
@@ -29,7 +32,7 @@ const DonutChart: React.FC<Props> = ({ data, chartValue, chartUnits }) => {
   }, [data]);
 
   return (
-    <Wrapper>
+    <WrappedChart>
       <Pie
         data={data}
         innerRadius="85%"
@@ -48,24 +51,7 @@ const DonutChart: React.FC<Props> = ({ data, chartValue, chartUnits }) => {
           content={<CustomLabel chartValue={chartValue} chartUnits={chartUnits} />}
         />
       </Pie>
-    </Wrapper>
-  );
-};
-
-const Wrapper: React.FC = ({ children }) => {
-  if (process.env.NODE_ENV !== 'test') {
-    return (
-      <ResponsiveContainer>
-        <PieChart>{children}</PieChart>
-      </ResponsiveContainer>
-    );
-  }
-
-  // for testing purposes only !!!
-  return (
-    <PieChart width={400} height={400}>
-      {children}
-    </PieChart>
+    </WrappedChart>
   );
 };
 
