@@ -1,6 +1,661 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Chart Dynamic LineChart  Props 1`] = `
+exports[`Storyshots Design System/Chart BarChart 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "height": 400,
+        "width": 1000,
+      }
+    }
+  >
+    <div
+      className="recharts-wrapper"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseMove={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "cursor": "default",
+          "height": 500,
+          "position": "relative",
+          "width": 1000,
+        }
+      }
+    >
+      <svg
+        className="recharts-surface"
+        height={500}
+        version="1.1"
+        viewBox="0 0 1000 500"
+        width={1000}
+      >
+        <defs>
+          <clipPath
+            id="recharts9-clip"
+          >
+            <rect
+              height={460}
+              width={797.6}
+              x={142.39999999999998}
+              y={5}
+            />
+          </clipPath>
+        </defs>
+        <g
+          className="recharts-cartesian-grid"
+        >
+          <g
+            className="recharts-cartesian-grid-vertical"
+          >
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={142.39999999999998}
+              x2={142.39999999999998}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={231.02222222222218}
+              x2={231.02222222222218}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={319.64444444444445}
+              x2={319.64444444444445}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={408.26666666666665}
+              x2={408.26666666666665}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={496.88888888888886}
+              x2={496.88888888888886}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={585.5111111111112}
+              x2={585.5111111111112}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={674.1333333333333}
+              x2={674.1333333333333}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={762.7555555555555}
+              x2={762.7555555555555}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={851.3777777777777}
+              x2={851.3777777777777}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+            <line
+              fill="none"
+              height={460}
+              stroke="#ccc"
+              width={797.6}
+              x={142.39999999999998}
+              x1={940}
+              x2={940}
+              y={5}
+              y1={5}
+              y2={465}
+            />
+          </g>
+        </g>
+        <g
+          className="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"
+        >
+          <g
+            className="recharts-cartesian-axis-ticks"
+          >
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={142.39999999999998}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={142.39999999999998}
+                >
+                  0
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={231.02222222222218}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={231.02222222222218}
+                >
+                  100K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={319.64444444444445}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={319.64444444444445}
+                >
+                  200K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={408.26666666666665}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={408.26666666666665}
+                >
+                  300K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={496.88888888888886}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={496.88888888888886}
+                >
+                  400K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={585.5111111111112}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={585.5111111111112}
+                >
+                  500K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={674.1333333333333}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={674.1333333333333}
+                >
+                  600K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={762.7555555555555}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={762.7555555555555}
+                >
+                  700K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={851.3777777777777}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={851.3777777777777}
+                >
+                  800K
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                className="recharts-text recharts-cartesian-axis-tick-value"
+                fill="#666"
+                height={30}
+                stroke="none"
+                textAnchor="middle"
+                width={797.6}
+                x={940}
+                y={473}
+              >
+                <tspan
+                  dy="0.71em"
+                  x={940}
+                >
+                  900K
+                </tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+        <g
+          className="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"
+        >
+          <g
+            className="recharts-cartesian-axis-ticks"
+          >
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={28}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  Orfium
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={74}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  UMG
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={120}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  Unknown Owners
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={166}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  SME
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={212}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  AdRev (3d party)
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={258}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  Rock Mobile Corp.
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={304}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  UMPG Publishing
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={350}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  Karya Anak Haki
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="black"
+                textAnchor="start"
+                x={0}
+                y={396}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  Adshare (3d party)
+                </tspan>
+              </text>
+            </g>
+            <g
+              className="recharts-layer recharts-cartesian-axis-tick"
+            >
+              <text
+                fill="#9b9b9b"
+                textAnchor="start"
+                x={0}
+                y={442}
+              >
+                <tspan
+                  dy="0.335em"
+                >
+                  Other
+                </tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+        <g
+          className="recharts-layer recharts-bar"
+        >
+          <g
+            className="recharts-layer recharts-bar-rectangles"
+            clipPath={null}
+          >
+            <g
+              className="recharts-layer"
+            >
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+              <g
+                className="recharts-layer recharts-bar-rectangle"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
+      <div
+        className="recharts-tooltip-wrapper"
+        style={
+          Object {
+            "MozTransform": "translate(undefinedpx, undefinedpx)",
+            "OTransform": "translate(undefinedpx, undefinedpx)",
+            "WebkitTransform": "translate(undefinedpx, undefinedpx)",
+            "msTransform": "translate(undefinedpx, undefinedpx)",
+            "pointerEvents": "none",
+            "position": "absolute",
+            "top": 0,
+            "transform": "translate(undefinedpx, undefinedpx)",
+            "visibility": "hidden",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Chart LineChart 1`] = `
 <div
   style={
     Object {
