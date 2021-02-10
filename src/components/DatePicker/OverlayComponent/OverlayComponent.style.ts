@@ -19,10 +19,13 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
   cursor: pointer;
 `;
 
-export const buttonsMonthsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
+export const buttonsMonthsWrapperStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
+  theme: Theme
+): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-bottom: ${isRangePicker && theme.spacing.md};
 `;
 export const monthsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   display: flex;

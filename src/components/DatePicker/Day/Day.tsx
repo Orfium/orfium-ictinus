@@ -52,27 +52,15 @@ const Day: React.FC<Props> = ({
     },
     [onSelect, date]
   );
-  console.log('hi');
 
   if (!day) {
-    return <div css={emptyDayStyle()} />;
+    return <td css={emptyDayStyle()} />;
   }
 
   return (
-    <div
-      css={dayWrapperStyle({
-        isSelected,
-        isBetween,
-        calculatedColor,
-        isLast,
-        isFirst,
-        isToday,
-        disabled,
-      })}
-      onClick={disabled ? () => {} : onDayClick}
-    >
+    <td style={{ padding: 0 }} onClick={disabled ? () => {} : onDayClick}>
       <div
-        css={dayStyle({
+        css={dayWrapperStyle({
           isSelected,
           isBetween,
           calculatedColor,
@@ -82,9 +70,21 @@ const Day: React.FC<Props> = ({
           disabled,
         })}
       >
-        {day}
+        <div
+          css={dayStyle({
+            isSelected,
+            isBetween,
+            calculatedColor,
+            isLast,
+            isFirst,
+            isToday,
+            disabled,
+          })}
+        >
+          {day}
+        </div>
       </div>
-    </div>
+    </td>
   );
 };
 

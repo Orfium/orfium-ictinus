@@ -29,8 +29,10 @@ export const monthHeaderNavigationIconWrapperStyle = ({
   z-index: 10;
 `;
 
-export const monthHeaderTitleWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  margin: 5px 0 6px;
+export const monthHeaderTitleWrapperStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
+  theme: Theme
+): SerializedStyles => css`
+  margin: ${isRangePicker && `${theme.spacing.md} 0`};
   padding: 0;
   align-content: center;
   text-align: center;
@@ -41,10 +43,12 @@ export const monthHeaderTitleWrapperStyle = () => (theme: Theme): SerializedStyl
   position: relative;
 `;
 
-export const monthHeaderTitleStyle = () => (theme: Theme): SerializedStyles => css`
+export const monthHeaderTitleStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
+  theme: Theme
+): SerializedStyles => css`
   margin: 0 ${theme.spacing.sm};
   padding: ${theme.spacing.sm};
   display: flex;
   justify-content: center;
-  cursor: pointer;
+  cursor: ${!isRangePicker && 'pointer'};
 `;

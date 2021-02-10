@@ -1,11 +1,12 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
-import 'react-day-picker/lib/style.css';
 import dayjs, { Dayjs } from 'dayjs';
 import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { formFieldStyles } from 'theme/palette';
+import { Props as TextFieldProps } from '../TextField/TextField';
+import ClickAwayListener from '../utils/ClickAwayListener';
+import DatePickInput from './DatePickInput';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -14,22 +15,23 @@ export type DisabledDates = {
 };
 
 export type Props = {
-  /** This boolean shows if the date picker will have the future dates available to select. Default: false */
-  disableFutureDates?: boolean;
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
-  onChange?: (date: Dayjs) => void;
+  onChange?: (range: Range) => void;
   /** Option to disable some dates */
   disableDates?: DisabledDates;
   /** Value to define if needed an initial state or to handle it externally */
-  value?: Dayjs;
-  /** The label that the input will use to show it. Default: Date */
-  inputLabel?: string;
-  /** Style of input field */
-  styleType?: formFieldStyles;
+  value?: {
+    from?: Date;
+    to?: Date;
+  };
+  /** Props of the TextField input */
+  inputProps?: TextFieldProps;
   /** The format of the date displayed in the input field */
   dateFormatOverride?: DateFormatType;
+  /** if the datepicker can be clear with backspace */
+  isClearable?: boolean;
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -62,7 +64,6 @@ const extraOptions: ExtraOption[] = [
 ];
 
 const DatePicker: React.FC<Props> = ({
-  disableFutureDates = false,
   isRangePicker = false,
   onChange,
   disableDates,
@@ -70,17 +71,19 @@ const DatePicker: React.FC<Props> = ({
     from: undefined,
     to: undefined,
   },
-  inputLabel = 'Date',
-  styleType = 'filled',
+  inputProps,
   dateFormatOverride = undefined,
+  isClearable = false,
 }) => {
+  const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-  const [range, setRange] = useState<Range>({
-    from: undefined,
-    to: undefined,
+  const [range, setRange] = useState<Range>({ from: dayjs(value.from), to: dayjs(value.to) });
+  const [selectedRange, setSelectedRange] = useState<Range>({
+    from: dayjs(value.from),
+    to: dayjs(value.to),
   });
 
-  const handleSelectedOptions = (option: string) => {
+  const handleSelectedOptions = useCallback((option: string) => {
     const foundOption = extraOptions.find(optionItem => optionItem.value === option);
 
     if (foundOption) {
@@ -92,7 +95,31 @@ const DatePicker: React.FC<Props> = ({
     }
 
     setSelectedOption(option);
-  };
+  }, []);
+
+  const applyRangeAndClose = useCallback(
+    (range: Range) => {
+      const startDate = range.to && range.from?.isAfter(range.to) ? range.to : range.from;
+      const endDate = range.to && range.from?.isAfter(range.to) ? range.from : range.to;
+      const newRange = { from: startDate, to: endDate };
+
+      if (newRange.to) {
+        setOpen(false);
+      }
+
+      setSelectedRange(newRange);
+      if (onChange) {
+        onChange(newRange);
+      }
+    },
+    [onChange]
+  );
+
+  useEffect(() => {
+    if (isRangePicker) {
+      applyRangeAndClose(range);
+    }
+  }, [applyRangeAndClose, isRangePicker, range]);
 
   const setRangePick = useCallback(
     (day: Dayjs) => {
@@ -125,20 +152,71 @@ const DatePicker: React.FC<Props> = ({
     [isRangePicker]
   );
 
+  const onCancel = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleFocus = useCallback(() => {
+    setOpen(true);
+  }, []);
+
+  const handleClear = useCallback(
+    e => {
+      if (!isClearable) {
+        return false;
+      }
+
+      if (e.keyCode === 27) {
+        // if escape
+        return setOpen(false);
+      }
+
+      if (e.keyCode === 8) {
+        //backspace
+        return setSelectedRange(range => {
+          if (range.from && range.to) {
+            // setRange(range => ({ ...range, from: undefined }));
+
+            return { ...range, to: undefined };
+          }
+
+          return { to: undefined, from: undefined };
+        });
+      }
+    },
+    [isClearable]
+  );
+
+  const onApply = useCallback(() => {
+    applyRangeAndClose(range);
+  }, [applyRangeAndClose, range]);
+
   return (
-    <div css={datePickerStyles({ isRangePicker })}>
-      <div>selected from {range.from?.format()}</div>
-      <div>selected to {range.to?.format()}</div>
-      <OverlayComponent
-        selectedOption={selectedOption}
-        setSelectedOption={handleSelectedOptions}
-        extraOptions={extraOptions}
+    <ClickAwayListener onClick={onCancel}>
+      <DatePickInput
         isRangePicker={isRangePicker}
-        onDaySelect={setRangePick}
-        selectedDays={range}
-        disabledDates={disableDates}
+        selectedDay={selectedRange}
+        inputProps={inputProps}
+        dateFormatOverride={dateFormatOverride}
+        handleFocus={handleFocus}
+        handleClear={handleClear}
       />
-    </div>
+      {open && (
+        <div css={datePickerStyles()}>
+          <OverlayComponent
+            selectedOption={selectedOption}
+            setSelectedOption={handleSelectedOptions}
+            extraOptions={extraOptions}
+            isRangePicker={isRangePicker}
+            onDaySelect={setRangePick}
+            selectedDays={range}
+            disabledDates={disableDates}
+            onCancel={onCancel}
+            onApply={onApply}
+          />
+        </div>
+      )}
+    </ClickAwayListener>
   );
 };
 

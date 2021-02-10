@@ -91,7 +91,7 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
         return date.isBefore(dayjs(disabledDates?.before));
       }
       if (disabledDates?.daysOfWeek) {
-        return disabledDates?.daysOfWeek.includes(day);
+        return disabledDates?.daysOfWeek.includes(date.day());
       }
 
       return false;
@@ -164,28 +164,30 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
         ))}
       </div>
       <table css={datesWrapperStyle()}>
-        {weeksWithDays.map((week, weekIndex) => (
-          <tr
-            // eslint-disable-next-line react/no-array-index-key
-            key={`${year}-${month}-${weekIndex}-week`}
-          >
-            {week.map((day, dayIndex) => (
-              <Day
-                // eslint-disable-next-line react/no-array-index-key
-                key={`${year}-${month}-${weekIndex}-${dayIndex}-day`}
-                year={year}
-                month={month}
-                day={day}
-                onSelect={onDaySelect}
-                disabled={Boolean(calculateDisabled(day, month, year, disabledDates))}
-                isSelected={Boolean(calculateSelected(day, month, year))}
-                isBetween={Boolean(calculateIsBetween(day, month, year))}
-                isLast={Boolean(calculateSelectedDayPosition(day, 'last'))}
-                isFirst={Boolean(calculateSelectedDayPosition(day, 'first'))}
-              />
-            ))}
-          </tr>
-        ))}
+        <tbody>
+          {weeksWithDays.map((week, weekIndex) => (
+            <tr
+              // eslint-disable-next-line react/no-array-index-key
+              key={`${year}-${month}-${weekIndex}-week`}
+            >
+              {week.map((day, dayIndex) => (
+                <Day
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`${year}-${month}-${weekIndex}-${dayIndex}-day`}
+                  year={year}
+                  month={month}
+                  day={day}
+                  onSelect={onDaySelect}
+                  disabled={Boolean(calculateDisabled(day, month, year, disabledDates))}
+                  isSelected={Boolean(calculateSelected(day, month, year))}
+                  isBetween={Boolean(calculateIsBetween(day, month, year))}
+                  isLast={Boolean(calculateSelectedDayPosition(day, 'last'))}
+                  isFirst={Boolean(calculateSelectedDayPosition(day, 'first'))}
+                />
+              ))}
+            </tr>
+          ))}
+        </tbody>
       </table>
     </React.Fragment>
   );

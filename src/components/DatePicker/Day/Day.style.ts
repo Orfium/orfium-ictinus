@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from 'theme';
 import { pickTextColorFromSwatches } from '../../../theme/palette';
-import { transparentize } from 'polished';
+import { darken, transparentize } from 'polished';
 import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
 type Props = {
@@ -26,7 +26,6 @@ export const dayWrapperStyle = ({
 }: Props & { isToday: boolean; calculatedColor: ColorShapeFromComponent }) => (
   theme: Theme
 ): SerializedStyles => css`
-  display: table-cell;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -34,12 +33,13 @@ export const dayWrapperStyle = ({
   color: ${isSelected
     ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
     : theme.utils.getColor('darkGray', 700)};
-  width: 39px;
+  width: 40px;
+  padding: 0 4px;
   font-weight: ${isToday && 'bold'};
   opacity: ${disabled ? 0.5 : 1};
   background: ${(isSelected || isBetween) &&
     typeof isBetween !== 'undefined' &&
-    transparentize(0.7, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))};
+    transparentize(0.9, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))};
   border-bottom-right-radius: ${isLast && isSelected && '100%'};
   border-top-right-radius: ${isLast && isSelected && '100%'};
   border-bottom-left-radius: ${isFirst && isSelected && '100%'};
@@ -47,7 +47,6 @@ export const dayWrapperStyle = ({
 `;
 
 export const emptyDayStyle = () => () => css`
-  display: table-cell;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -65,11 +64,11 @@ export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Pro
   justify-content: center;
   background: ${isSelected
     ? theme.utils.getColor(calculatedColor.color, calculatedColor.shade)
-    : isToday && theme.palette.white};
+    : 'transparent'};
 
   ${!disabled &&
     `&:hover {
             border-radius: 100%;
-            background: ${!isSelected && theme.utils.getColor('lightGray', 200)};
+            background: ${!isSelected && darken(0.03, theme.palette.white)};
           }`}
 `;

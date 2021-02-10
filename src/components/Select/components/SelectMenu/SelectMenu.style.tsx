@@ -9,20 +9,20 @@ export const optionStyle = ({
   noResultsExist,
 }: { selected: boolean; noResultsExist?: boolean } & Props) => (theme: Theme): SerializedStyles => {
   return css`
-  padding: ${theme.spacing.md};
-  font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
-  // background-color: ${selected ? darken(0.07, theme.palette.white) : theme.palette.white};
-  cursor: default;
-  color: ${noResultsExist ? theme.utils.getColor('lightGray', 600) : 'initial'};
-  text-align: ${noResultsExist ? 'center' : 'initial'};
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: hidden;
+    padding: ${theme.spacing.md};
+    font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+    background-color: ${selected ? darken(0.07, theme.palette.white) : theme.palette.white};
+    cursor: default;
+    color: ${noResultsExist ? theme.utils.getColor('lightGray', 600) : 'initial'};
+    text-align: ${noResultsExist ? 'center' : 'initial'};
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
 
-  &:hover {
-    background-color: ${darken(0.03, theme.palette.white)};
-  }
-`;
+    &:hover {
+      background-color: ${darken(0.03, theme.palette.white)};
+    }
+  `;
 };
 
 export const menuStyle = ({ status, size }: Props) => (theme: Theme): SerializedStyles => css`

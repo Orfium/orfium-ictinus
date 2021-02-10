@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import React, { useState } from 'react';
 import { Dayjs } from 'dayjs';
+import range from 'lodash/range';
 import { SelectOption } from 'components/Select/Select';
 import useTheme from 'hooks/useTheme';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
@@ -19,6 +20,17 @@ import {
   monthWrapperStyle,
 } from './MonthWrapper.style';
 
+type Props = {
+  showedArrows: 'left' | 'right' | 'both';
+  isRangePicker: boolean;
+  date: Dayjs;
+  selectedDays: Range;
+  onDaySelect: (date: Dayjs) => void;
+  handleArrow: (p: 'forward' | 'back') => void;
+  setDate: React.Dispatch<React.SetStateAction<Dayjs>>;
+  disabledDates?: DisabledDates;
+};
+
 const MonthWrapper = ({
   setDate,
   onDaySelect,
@@ -27,28 +39,20 @@ const MonthWrapper = ({
   handleArrow,
   showedArrows = 'both',
   disabledDates,
-}: {
-  showedArrows: 'left' | 'right' | 'both';
-  date: Dayjs;
-  selectedDays: Range;
-  onDaySelect: (date: Dayjs) => void;
-  handleArrow: (p: 'forward' | 'back') => void;
-  setDate: React.Dispatch<React.SetStateAction<Dayjs>>;
-  disabledDates?: DisabledDates;
-}) => {
+  isRangePicker,
+}: Props) => {
   const [open, setOpen] = useState(false);
 
   function generateArrayOfYears(): SelectOption[] {
     const span = 10;
     const max = new Date().getFullYear() + span;
     const min = new Date().getFullYear() - span;
-    const years = [];
+    const years = range(min, max);
 
-    for (let i = max; i >= min; i--) {
-      years.push(i);
-    }
-
-    return years.map(year => ({ value: year.toString(), label: year.toString() }));
+    return years.map(year => ({
+      value: year.toString(),
+      label: `${date.format('MMMM')} ${year.toString()}`,
+    }));
   }
 
   const theme = useTheme();
@@ -68,26 +72,33 @@ const MonthWrapper = ({
               css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}
             >
               <Icon
-                name={'fatArrowLeft'}
+                name={'chevronSmallLeft'}
                 color={theme.utils.getColor('lightGray', 500)}
                 size={25}
               />
             </div>
           )}
-          <div css={monthHeaderTitleWrapperStyle()}>
-            <div css={monthHeaderTitleStyle()} onClick={() => setOpen(true)}>
-              <Button
-                color={'neutralWhite-100'}
-                iconRight={
-                  <Icon
-                    name={'triangleDown'}
-                    size={10}
-                    color={theme.utils.getColor('lightGray', 500)}
-                  />
-                }
-              >
-                {date.format('MMMM')} {date.format('YYYY')}
-              </Button>
+          <div css={monthHeaderTitleWrapperStyle({ isRangePicker })}>
+            <div css={monthHeaderTitleStyle({ isRangePicker })}>
+              {!isRangePicker ? (
+                <Button
+                  onClick={() => setOpen(true)}
+                  color={'neutralWhite-100'}
+                  iconRight={
+                    <Icon
+                      name={'triangleDown'}
+                      size={10}
+                      color={theme.utils.getColor('lightGray', 500)}
+                    />
+                  }
+                >
+                  {date.format('MMMM')} {date.format('YYYY')}
+                </Button>
+              ) : (
+                <div>
+                  {date.format('MMMM')} {date.format('YYYY')}
+                </div>
+              )}
             </div>
             {open && (
               <SelectMenu
@@ -106,7 +117,7 @@ const MonthWrapper = ({
               css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}
             >
               <Icon
-                name={'fatArrowRight'}
+                name={'chevronSmallRight'}
                 color={theme.utils.getColor('lightGray', 500)}
                 size={25}
               />

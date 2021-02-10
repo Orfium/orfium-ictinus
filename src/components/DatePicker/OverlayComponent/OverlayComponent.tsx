@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import Button from '../../Button';
 import { DisabledDates, ExtraOption } from '../DatePicker';
 import dayjs, { Dayjs } from 'dayjs';
@@ -17,6 +17,8 @@ import {
 
 type Props = {
   selectedOption: string;
+  onCancel?: () => void;
+  onApply?: () => void;
   setSelectedOption: (x: string) => void;
   isRangePicker: boolean;
   extraOptions: ExtraOption[];
@@ -37,16 +39,11 @@ const OverlayComponent: React.FC<Props> = ({
   onDaySelect,
   selectedDays,
   disabledDates,
+  onCancel = () => {},
+  onApply = () => {},
 }) => {
   const [date, setDate] = useState(dayjs());
   const [date2, setDate2] = useState(dayjs());
-
-  useEffect(() => {
-    if (selectedDays.from && selectedDays.to) {
-      setDate(selectedDays.from);
-      setDate2(selectedDays.from);
-    }
-  }, [selectedDays]);
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
@@ -71,7 +68,7 @@ const OverlayComponent: React.FC<Props> = ({
           ))}
         </div>
       )}
-      <div css={buttonsMonthsWrapperStyle()}>
+      <div css={buttonsMonthsWrapperStyle({ isRangePicker })}>
         <div css={monthsWrapperStyle()}>
           <MonthWrapper
             date={date}
@@ -81,6 +78,7 @@ const OverlayComponent: React.FC<Props> = ({
             handleArrow={handleArrow}
             showedArrows={isRangePicker ? 'left' : 'both'}
             disabledDates={disabledDates}
+            isRangePicker={isRangePicker}
           />
 
           {isRangePicker && (
@@ -92,23 +90,26 @@ const OverlayComponent: React.FC<Props> = ({
               handleArrow={handleArrow}
               showedArrows={isRangePicker ? 'right' : 'both'}
               disabledDates={disabledDates}
+              isRangePicker={isRangePicker}
             />
           )}
         </div>
 
-        <div css={buttonsWrapperStyle()}>
-          <Button filled={false} size={'sm'} onClick={() => {}} type={'branded1'}>
-            Cancel
-          </Button>
-          <Button
-            size={'sm'}
-            onClick={() => {}}
-            type={'branded1'}
-            disabled={Boolean(!selectedDays.from || !selectedDays.to)}
-          >
-            Apply
-          </Button>
-        </div>
+        {!isRangePicker && (
+          <div css={buttonsWrapperStyle()}>
+            <Button filled={false} size={'sm'} onClick={onCancel} type={'branded1'}>
+              Cancel
+            </Button>
+            <Button
+              size={'sm'}
+              onClick={onApply}
+              type={'branded1'}
+              disabled={Boolean(!selectedDays.from || !selectedDays.to)}
+            >
+              Apply
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
