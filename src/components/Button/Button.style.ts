@@ -13,9 +13,20 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
     case 'lg':
       return rem(56);
     case 'sm':
-      return rem(40);
+      return rem(32);
     default:
       return rem(46);
+  }
+};
+
+/** Calculates the button specific font size based on the size passed to it
+ * These sizes are specific to this button thus these are placed here and not in the config **/
+const fontSizeBasedOnSize = (theme: Theme, size: 'lg' | 'md' | 'sm') => {
+  switch (size) {
+    case 'sm':
+      return theme.typography.fontSizes['14'];
+    default:
+      return theme.typography.fontSizes['16'];
   }
 };
 
@@ -35,7 +46,7 @@ export const buttonStyle = ({
   }
 >) => (theme: Theme) => {
   return {
-    fontSize: theme.typography.fontSizes['16'],
+    fontSize: fontSizeBasedOnSize(theme, size),
     color: filled
       ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
       : defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0),

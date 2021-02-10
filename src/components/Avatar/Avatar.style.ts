@@ -8,7 +8,7 @@ import { AvatarShapes, AvatarSizes } from './Avatar';
 const sizeBasedOnProp = (size: AvatarSizes) => {
   switch (size) {
     case 'sm':
-      return rem(40);
+      return rem(32);
     case 'md':
       return rem(46);
     case 'xs':
@@ -26,6 +26,17 @@ const shapeBasedOnProp = (shape: AvatarShapes) => {
       return '100%';
     default:
       return rem(8);
+  }
+};
+
+const fontSizeBasedOnProp = (theme: Theme, size: 'lg' | 'md' | 'sm' | 'xs') => {
+  switch (size) {
+    case 'sm':
+      return theme.typography.fontSizes['14'];
+    case 'xs':
+      return theme.typography.fontSizes['13'];
+    default:
+      return theme.typography.fontSizes['18'];
   }
 };
 
@@ -47,7 +58,7 @@ export const avatarStyle = ({
   background: ${theme.utils.getColor(fill, fillShade)};
   overflow: hidden;
   position: relative;
-  font-size: ${theme.typography.fontSizes[size === 'xs' ? '13' : '18']};
+  font-size: ${fontSizeBasedOnProp(theme, size)};
   align-items: center;
   flex-shrink: 0;
   line-height: 1;
