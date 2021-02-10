@@ -19,14 +19,16 @@ export const getValues = (max: number | undefined): Values => {
   };
 };
 
-export const customTickFormatter = (tick: number, maxDomainValue: number): string => {
-  if (tick === 0) {
-    return `${tick}`;
-  } else if (maxDomainValue > 1000000 || tick === 1000000) {
-    return `${(tick / 1000000).toFixed(1)}M`;
-  } else if (maxDomainValue > 1000 || tick === 1000) {
-    return `${tick / 1000}K`;
+export const customTickFormatter = (tickValue: number, maxDomainValue: number): string => {
+  if (tickValue === 0) {
+    return `${tickValue}`;
+  } else if (maxDomainValue > 1000000 || tickValue === 1000000) {
+    /* when tickValue === maxDomainValue === 1000000  return 1M instead of 10000K*/
+    return `${tickValue / 1000000}M`;
+  } else if (maxDomainValue >= 1000 || tickValue === 1000) {
+    /* when tickValue === maxDomainValue === 1000  return 1K instead of 10000*/
+    return `${tickValue / 1000}K`;
   }
 
-  return `${tick}`;
+  return `${tickValue}`;
 };
