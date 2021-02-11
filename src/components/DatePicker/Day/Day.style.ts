@@ -37,13 +37,37 @@ export const dayWrapperStyle = ({
   padding: 0 4px;
   font-weight: ${isToday && 'bold'};
   opacity: ${disabled ? 0.5 : 1};
-  background: ${(isSelected || isBetween) &&
-    typeof isBetween !== 'undefined' &&
-    transparentize(0.9, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))};
+  background: ${isLast || isFirst
+    ? 'transparent'
+    : (isSelected || isBetween) &&
+      typeof isBetween !== 'undefined' &&
+      transparentize(0.9, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))};
   border-bottom-right-radius: ${isLast && isSelected && '100%'};
   border-top-right-radius: ${isLast && isSelected && '100%'};
   border-bottom-left-radius: ${isFirst && isSelected && '100%'};
   border-top-left-radius: ${isFirst && isSelected && '100%'};
+
+  ${(isSelected || isLast || isFirst) &&
+    `&:after {
+    content: ' ';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+     background: ${
+       isLast && isFirst
+         ? 'transparent'
+         : (isSelected || isBetween) &&
+           typeof isBetween !== 'undefined' &&
+           transparentize(0.9, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))
+     };
+  left: ${isLast ? '0' : 'initial'};
+  right: ${isFirst ? '0' : 'initial'};
+  border-bottom-right-radius: ${isLast && isSelected && '100%'};
+  border-top-right-radius: ${isLast && isSelected && '100%'};
+  border-bottom-left-radius: ${isFirst && isSelected && '100%'};
+  border-top-left-radius: ${isFirst && isSelected && '100%'};
+  }`}
 `;
 
 export const emptyDayStyle = () => () => css`

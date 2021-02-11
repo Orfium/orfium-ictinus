@@ -44,31 +44,31 @@ Implementation of both of our types DatePicker(range) and DayPicker
 
 <Preview>
   <Story name="Calendar" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
-    <OverlayComponent
-      isRangePicker
-      extraOptions={extraOptions}
-      selectedDays={{
-        from: dayjs().add(1, 'day'),
-        to: dayjs().add(44, 'day'),
-      }}
-      onDaySelect={() => {}}
-    />
-    <OverlayComponent
-      isRangePicker
-      selectedDays={{
-        from: dayjs().add(1, 'day'),
-        to: dayjs().add(44, 'day'),
-      }}
-      onDaySelect={() => {}}
-    />
-    <OverlayComponent
-      selectedDays={{
-        from: dayjs().add(1, 'day'),
-        to: dayjs().add(1, 'day'),
-      }}
-      onDaySelect={() => {}}
-    />
+    <Stack vertical>
+      <OverlayComponent
+        isRangePicker
+        extraOptions={extraOptions}
+        selectedDays={{
+          from: dayjs().add(1, 'day'),
+          to: dayjs().add(44, 'day'),
+        }}
+        onDaySelect={() => {}}
+      />
+      <OverlayComponent
+        isRangePicker
+        selectedDays={{
+          from: dayjs().add(1, 'day'),
+          to: dayjs().add(44, 'day'),
+        }}
+        onDaySelect={() => {}}
+      />
+      <OverlayComponent
+        selectedDays={{
+          from: dayjs().add(1, 'day'),
+          to: dayjs().add(1, 'day'),
+        }}
+        onDaySelect={() => {}}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -79,7 +79,7 @@ Implementation of the regular Range DatePicker on different sizes
 
 <Preview>
   <Story name="DatePicker Range" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
+    <Stack vertical>
       <DatePicker
         inputProps={{ size: 'md', styleType: 'outlined' }}
         isRangePicker
@@ -161,13 +161,14 @@ Some disable dates functionality
   </Story>
 </Preview>
 
-# DayPicker with predefined values
+# DatePicker with predefined values
 
 This datepicker has a predefined initial value that can be used both for initial definition and to handle values externally
 
 <Preview>
   <Story name="DayPicker with predefined values">
     <DatePicker
+      isRangePicker
       value={{
         to: dayjs()
           .add(11, 'day')
@@ -184,6 +185,6 @@ This datepicker has a predefined initial value that can be used both for initial
 # Dynamic disableDates with all options available and custom label - Knobs
 <Preview>
   <Story name="Dynamic disableDates with all options available - Knobs" parameters={{ decorators: [withKnobs] }}>
-    <DatePicker  disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
+    <DatePicker disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
   </Story>
 </Preview>
