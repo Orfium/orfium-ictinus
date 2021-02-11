@@ -44,6 +44,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
       <div css={rangeInputsWrapper()}>
         {isRangePicker ? (
           <TextField
+            ref={ref}
             {...inputProps}
             onFocus={handleFocus}
             onKeyDown={handleClear}
@@ -57,6 +58,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
           />
         ) : (
           <TextField
+            ref={ref}
             {...inputProps}
             onFocus={handleFocus}
             onKeyDown={handleClear}

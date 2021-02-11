@@ -1,6 +1,6 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
-import DatePicker from './DatePicker';
+import DatePicker, { extraOptions } from './DatePicker';
 import dayjs from 'dayjs';
 import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
 const options = {
@@ -44,13 +44,10 @@ Implementation of both of our types DatePicker(range) and DayPicker
 
 <Preview>
   <Story name="Calendar" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
     <OverlayComponent
       isRangePicker
-      selectedOption={{
-        from: dayjs().add(1, 'day'),
-        to: dayjs().add(11, 'day'),
-      }}
-      setSelectedOption={() => {}}
+      extraOptions={extraOptions}
       selectedDays={{
         from: dayjs().add(1, 'day'),
         to: dayjs().add(44, 'day'),
@@ -58,17 +55,21 @@ Implementation of both of our types DatePicker(range) and DayPicker
       onDaySelect={() => {}}
     />
     <OverlayComponent
-      selectedOption={{
+      isRangePicker
+      selectedDays={{
         from: dayjs().add(1, 'day'),
-        to: dayjs().add(1, 'day'),
+        to: dayjs().add(44, 'day'),
       }}
-      setSelectedOption={() => {}}
+      onDaySelect={() => {}}
+    />
+    <OverlayComponent
       selectedDays={{
         from: dayjs().add(1, 'day'),
         to: dayjs().add(1, 'day'),
       }}
       onDaySelect={() => {}}
     />
+    </Stack>
   </Story>
 </Preview>
 

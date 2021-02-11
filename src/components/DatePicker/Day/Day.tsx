@@ -10,7 +10,7 @@ export type Props = {
   month: number;
   year: number;
   onSelect?: (date: Dayjs) => void;
-  isSelected: boolean;
+  isSelected?: boolean;
   isBetween?: boolean;
   isLast?: boolean;
   isFirst?: boolean;
@@ -22,11 +22,11 @@ const Day: React.FC<Props> = ({
   month,
   year,
   onSelect,
-  isSelected,
-  isBetween,
-  isLast,
-  isFirst,
-  disabled,
+  isSelected = false,
+  isBetween = false,
+  isLast = false,
+  isFirst = false,
+  disabled = false,
 }) => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType('', 'branded1');
@@ -88,4 +88,4 @@ const Day: React.FC<Props> = ({
   );
 };
 
-export default React.memo(Day);
+export default React.memo<Props>(Day);

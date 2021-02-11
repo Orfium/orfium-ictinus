@@ -6,7 +6,7 @@ import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
 type Props = {
   day?: number;
-  isSelected: boolean;
+  isSelected?: boolean;
   isBetween?: boolean;
   isLast?: boolean;
   isFirst?: boolean;

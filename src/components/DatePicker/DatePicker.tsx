@@ -44,7 +44,7 @@ export type DateFormatType =
   | 'MMM D, YYYY'
   | 'ddd, MMM D, YYYY';
 
-const extraOptions: ExtraOption[] = [
+export const extraOptions: ExtraOption[] = [
   {
     value: 'last-7-days',
     label: 'Last 7 days',
@@ -55,7 +55,6 @@ const extraOptions: ExtraOption[] = [
     label: 'Last 30 days',
     dates: [dayjs().subtract(30, 'day'), dayjs()],
   },
-
   {
     value: 'custom',
     label: 'Custom',

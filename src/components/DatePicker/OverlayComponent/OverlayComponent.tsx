@@ -16,12 +16,12 @@ import {
 } from './OverlayComponent.style';
 
 type Props = {
-  selectedOption: string;
+  selectedOption?: string;
   onCancel?: () => void;
   onApply?: () => void;
-  setSelectedOption: (x: string) => void;
-  isRangePicker: boolean;
-  extraOptions: ExtraOption[];
+  setSelectedOption?: (x: string) => void;
+  isRangePicker?: boolean;
+  extraOptions?: ExtraOption[];
   selectedDays: Range;
   onDaySelect: (date: Dayjs) => void;
   disabledDates?: DisabledDates;
@@ -33,8 +33,8 @@ export type Range = {
 };
 const OverlayComponent: React.FC<Props> = ({
   selectedOption,
-  setSelectedOption,
-  isRangePicker,
+  setSelectedOption = () => {},
+  isRangePicker = false,
   extraOptions = [],
   onDaySelect,
   selectedDays,
@@ -55,7 +55,7 @@ const OverlayComponent: React.FC<Props> = ({
 
   return (
     <div css={overlayWrapperStyle()}>
-      {isRangePicker && (
+      {extraOptions.length > 0 && isRangePicker && (
         <div css={optionsWrapperStyle()}>
           {extraOptions.map(option => (
             <div

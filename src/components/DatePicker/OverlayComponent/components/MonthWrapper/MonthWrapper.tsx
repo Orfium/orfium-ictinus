@@ -21,25 +21,25 @@ import {
 } from './MonthWrapper.style';
 
 type Props = {
-  showedArrows: 'left' | 'right' | 'both';
-  isRangePicker: boolean;
+  showedArrows?: 'left' | 'right' | 'both';
+  isRangePicker?: boolean;
   date: Dayjs;
   selectedDays: Range;
-  onDaySelect: (date: Dayjs) => void;
-  handleArrow: (p: 'forward' | 'back') => void;
+  onDaySelect?: (date: Dayjs) => void;
+  handleArrow?: (p: 'forward' | 'back') => void;
   setDate: React.Dispatch<React.SetStateAction<Dayjs>>;
   disabledDates?: DisabledDates;
 };
 
 const MonthWrapper = ({
   setDate,
-  onDaySelect,
+  onDaySelect = () => {},
   selectedDays,
   date,
-  handleArrow,
+  handleArrow = () => {},
   showedArrows = 'both',
   disabledDates,
-  isRangePicker,
+  isRangePicker = false,
 }: Props) => {
   const [open, setOpen] = useState(false);
 

@@ -10,6 +10,12 @@ import { Range } from '../OverlayComponent/OverlayComponent';
 import isBetween from 'dayjs/plugin/isBetween';
 import { DisabledDates } from '../DatePicker';
 import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
+import {
+  calculatedDayIsBetween,
+  calculateDisabledDays,
+  calculateSelectedDay,
+  calculateSelectedDayPosition,
+} from './Month.utils';
 
 dayjs.extend(isBetween);
 
@@ -56,103 +62,10 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
     return chunk(days, daysPerWeekCount);
   }, [year, month]);
 
-  const calculateSelected = useCallback(
-    (day: number, month: number, year: number) => {
-      if (!day) return false;
-
-      const date = dayjs()
-        .month(month)
-        .year(year)
-        .date(day);
-
-      return [selectedDays.from?.format('D,M,YYYY'), selectedDays.to?.format('D,M,YYYY')].includes(
-        date.format('D,M,YYYY')
-      );
-    },
-    [selectedDays.from, selectedDays.to]
-  );
-
-  const calculateDisabled = useCallback(
-    (day: number, month: number, year: number, disabledDates?: DisabledDates) => {
-      if (!day) return false;
-
-      const date = dayjs()
-        .month(month)
-        .year(year)
-        .date(day);
-
-      if (disabledDates?.after && disabledDates?.before) {
-        return !date.isBetween(dayjs(disabledDates?.after), dayjs(disabledDates?.before));
-      }
-      if (disabledDates?.after) {
-        return date.isAfter(dayjs(disabledDates?.after));
-      }
-      if (disabledDates?.before) {
-        return date.isBefore(dayjs(disabledDates?.before));
-      }
-      if (disabledDates?.daysOfWeek) {
-        return disabledDates?.daysOfWeek.includes(date.day());
-      }
-
-      return false;
-    },
-    []
-  );
-
-  const calculateIsBetween = useCallback(
-    (day: number, month: number, year: number) => {
-      if (!day) return false;
-
-      const date = dayjs()
-        .month(month)
-        .year(year)
-        .date(day);
-
-      return (
-        selectedDays.from &&
-        selectedDays.to &&
-        dayjs(date).isBetween(selectedDays.from, selectedDays.to)
-      );
-    },
-    [selectedDays.from, selectedDays.to]
-  );
-
-  const calculateSelectedDayPosition = useCallback(
-    (day: number, position: 'last' | 'first' = 'first') => {
-      if (day && selectedDays.from && selectedDays.to) {
-        const startDate = selectedDays.from.isAfter(selectedDays.to)
-          ? selectedDays.to
-          : selectedDays.from;
-        const endDate = selectedDays.from.isAfter(selectedDays.to)
-          ? selectedDays.from
-          : selectedDays.to;
-        const pickedDate = position === 'last' ? endDate : startDate;
-
-        return (
-          pickedDate &&
-          pickedDate.isSame(
-            dayjs()
-              .month(month)
-              .year(year)
-              .date(day),
-            'day'
-          )
-        );
-      }
-
-      return (
-        day &&
-        selectedDays.from?.isSame(
-          dayjs()
-            .month(month)
-            .year(year)
-            .date(day),
-          'day'
-        )
-      );
-    },
-    [month, selectedDays.from, selectedDays.to, year]
-  );
+  const calculateSelected = useCallback(calculateSelectedDay, []);
+  const disabledDatesCalculated = useCallback(calculateDisabledDays, []);
+  const calculateIsBetween = useCallback(calculatedDayIsBetween, []);
+  const calculateSelectedDayFirstOrLast = useCallback(calculateSelectedDayPosition, []);
 
   return (
     <React.Fragment>
@@ -178,11 +91,33 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
                   month={month}
                   day={day}
                   onSelect={onDaySelect}
-                  disabled={Boolean(calculateDisabled(day, month, year, disabledDates))}
-                  isSelected={Boolean(calculateSelected(day, month, year))}
-                  isBetween={Boolean(calculateIsBetween(day, month, year))}
-                  isLast={Boolean(calculateSelectedDayPosition(day, 'last'))}
-                  isFirst={Boolean(calculateSelectedDayPosition(day, 'first'))}
+                  disabled={Boolean(disabledDatesCalculated(day, month, year, disabledDates))}
+                  isSelected={Boolean(
+                    calculateSelected(day, month, year, selectedDays.from, selectedDays.to)
+                  )}
+                  isBetween={Boolean(
+                    calculateIsBetween(day, month, year, selectedDays.from, selectedDays.to)
+                  )}
+                  isLast={Boolean(
+                    calculateSelectedDayFirstOrLast(
+                      day,
+                      'last',
+                      month,
+                      year,
+                      selectedDays.from,
+                      selectedDays.to
+                    )
+                  )}
+                  isFirst={Boolean(
+                    calculateSelectedDayFirstOrLast(
+                      day,
+                      'first',
+                      month,
+                      year,
+                      selectedDays.from,
+                      selectedDays.to
+                    )
+                  )}
                 />
               ))}
             </tr>
