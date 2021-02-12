@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
-import { FC } from 'react';
+import React, { FC, InputHTMLAttributes } from 'react';
 import { iconWrapperStyle, inputStyle } from './TextField.style';
 import Label from '../Label';
 import Icon from '../Icon';
@@ -26,7 +25,9 @@ export type Props = {
   onInput?: React.EventHandler<any>;
 } & TextInputWrapperProps;
 
-const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props, ref) => {
   const {
     id = undefined,
     rightIcon = null,

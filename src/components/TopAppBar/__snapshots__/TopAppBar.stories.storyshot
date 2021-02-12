@@ -49,6 +49,7 @@ exports[`Storyshots Design System/TopAppBar Top App Bar 1`] = `
       >
         <div
           className="css-7hsty4-SidebarMenuIcon"
+          data-testid="menu-handler"
           onClick={[Function]}
         >
           <span
@@ -74,7 +75,7 @@ exports[`Storyshots Design System/TopAppBar Top App Bar 1`] = `
         </div>
       </div>
       <div
-        className="css-1m3dfn0-TopAppBar"
+        className="css-1nqbwui-TopAppBar"
       />
       <div
         className="css-16h5l3v-TopAppBar"
@@ -84,6 +85,7 @@ exports[`Storyshots Design System/TopAppBar Top App Bar 1`] = `
         >
           <div
             className="css-6mpaj4-Menu"
+            data-testid="userMenu"
           >
             <button
               className="css-8yaow6-Button"

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import dayjs, { Dayjs } from 'dayjs';
-import * as React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
@@ -22,7 +22,9 @@ type Props = {
   dateFormatOverride?: DateFormatType;
 };
 
-const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     {
       handleFocus,

@@ -25,10 +25,14 @@ const topAppBarSection = css`
   flex-wrap: nowrap;
 `;
 
-const additionalToolsSection = (theme: Theme): SerializedStyles => css`
+const additionalToolsSection = (hasAdditionalTools: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
   ${topAppBarSection};
   margin: 0 ${theme.spacing.md};
+  flex-grow: ${hasAdditionalTools ? 1 : 0};
 `;
+
 const mainSection = (hasSearchBar: boolean) => css`
   ${topAppBarSection};
   flex-grow: ${hasSearchBar ? 1 : 0};

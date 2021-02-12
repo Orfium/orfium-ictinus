@@ -62,6 +62,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     leftIconName,
     iconSize = 16,
     avatar,
+    dataTestId,
   } = props;
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
@@ -73,7 +74,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle()}>
+      <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
           onClick={() => setOpen(!open)}
           type={buttonType}

@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import * as React from 'react';
-import { useEffect, useMemo } from 'react';
+import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
@@ -23,6 +22,7 @@ export type Props = {
   /** The function that is used to return the selected options */
   handleSelectedOption?: (selectedOption: SelectOption) => void;
   /** the default value of the select if needed */
+  /** TODO: defaultValue is duplication of selectedOption*/
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
   selectedOption?: SelectOption;
@@ -34,7 +34,9 @@ export type Props = {
 
 const emptyValue = { label: '', value: '' };
 
-const Select = React.forwardRef<HTMLInputElement, Props>(
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     {
       handleSelectedOption = () => {},
@@ -51,10 +53,6 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
     const [open, setOpen] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
-
-    useEffect(() => {
-      handleSelectedOption(inputValue);
-    }, [inputValue, handleSelectedOption]);
 
     useEffect(() => {
       setInputValue(defaultValue || selectedOption);
@@ -101,13 +99,13 @@ const Select = React.forwardRef<HTMLInputElement, Props>(
           <TextField
             onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
-            onKeyDown={e => {
+            onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
               // if backspace
               if (e.keyCode === 8) {
                 setInputValue(emptyValue);
               }
             }}
-            onInput={e => {
+            onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
               setSearchValue(e.target.value);
             }}
             onChange={ON_CHANGE_MOCK}
