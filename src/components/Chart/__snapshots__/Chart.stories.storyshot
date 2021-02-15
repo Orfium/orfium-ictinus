@@ -742,32 +742,40 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
               onMouseLeave={[Function]}
             />
           </g>
-          <text
-            className="recharts-text recharts-label"
-            dominantBaseline="central"
-            textAnchor="middle"
-            x={500}
-            y={250}
-          >
-            <tspan
-              alignmentBaseline="middle"
-              dy="-5"
-              fill="black"
-              fontSize="1rem"
-              x="50%"
+          <g>
+            <text
+              className="recharts-text recharts-label"
+              dominantBaseline="central"
+              textAnchor="middle"
+              x={500}
+              y={250}
             >
-              value1
-            </tspan>
-            <tspan
-              alignmentBaseline="middle"
-              dy="15"
-              fill="#9b9b9b"
-              fontSize="0.75rem"
-              x="50%"
+              <tspan
+                alignmentBaseline="middle"
+                dy="-5"
+                fill="black"
+                fontSize="1rem"
+                x="50%"
+              >
+                value
+              </tspan>
+            </text>
+            <foreignObject
+              height={100}
+              width="100%"
+              y="50%"
             >
-              value2
-            </tspan>
-          </text>
+              <div
+                className="css-vxyorp-CustomLabel"
+              >
+                <div
+                  className="css-bdu41a-CustomLabel"
+                >
+                  units
+                </div>
+              </div>
+            </foreignObject>
+          </g>
         </g>
       </svg>
     </div>

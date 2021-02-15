@@ -3,9 +3,9 @@ import { ResponsiveContainer, AreaChartProps, BarChartProps } from 'recharts';
 
 type ChartProps = AreaChartProps & BarChartProps;
 
-interface Props extends ChartProps {
+type Props = ChartProps & {
   aspect?: number;
-}
+};
 
 function Wrapper(Component: any) {
   const WrappedChart = ({ children, ...rest }: Props) => {

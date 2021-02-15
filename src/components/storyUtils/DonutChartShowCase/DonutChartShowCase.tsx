@@ -1,5 +1,5 @@
 import React from 'react';
-import DonutChart from './DonutChart';
+import DonutChart from '../../Chart/DonutChart';
 
 const totalClaims = 1102545485;
 const orfiumViewsPercentage = 0.129;
@@ -15,12 +15,12 @@ type Props = {
   chartUnits?: string;
 };
 
-const PreviewDonutChart: React.FC<Props> = ({ chartValue, chartUnits }) => {
+const DonutChartShowCase: React.FC<Props> = ({ chartValue, chartUnits }) => {
   return (
     <div style={{ width: 200, height: 200 }}>
-      <DonutChart data={data} chartValue={chartValue} chartUnits={chartUnits} />
+      <DonutChart data={data} value={chartValue} units={chartUnits} />
     </div>
   );
 };
 
-export default PreviewDonutChart;
+export default DonutChartShowCase;

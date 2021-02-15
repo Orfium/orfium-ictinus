@@ -4,7 +4,7 @@ import LineChart from './LineChart';
 import BarChartShowCase from '../storyUtils/BarChartShowCase';
 import BarChart from './BarChart';
 import DonutChart from './DonutChart';
-import PreviewDonutChart from './DonutChart/PreviewDonutChart';
+import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
 import { color } from './LineChart/story.utils';
 import { initData } from './LineChart/mockedData';
 
@@ -80,9 +80,9 @@ import { DonutChart } from '@orfium/ictinus';
 
 <Preview>
   <Story name="DonutChart" parameters={{ decorators: [withKnobs] }}>
-    <PreviewDonutChart 
-      chartValue={text('chartValue', 'value1')}
-      chartUnits={text('chartUnits', 'value2')}/>
+    <DonutChartShowCase 
+      chartValue={text('chartValue', 'value')}
+      chartUnits={text('chartUnits', 'units')}/>
   </Story>
 </Preview>
 

@@ -5,7 +5,7 @@ import Wrapper from '../Wrapper';
 
 type Data = {
   name: string;
-  value?: number;
+  value: number;
   color?: string;
 };
 
@@ -13,22 +13,16 @@ export type Props = {
   /** This property defines the data to be shown in the Donut Chart */
   data: Data[];
   /** This property defines the value to be shown in the Donut Chart label */
-  chartValue?: string | number;
+  value?: string | number;
   /** This property defines the units to be shown in the Donut Chart label*/
-  chartUnits?: string;
+  units?: string;
 };
 
 const WrappedChart = Wrapper(PieChart);
 
-const DonutChart: React.FC<Props> = ({ data, chartValue, chartUnits }) => {
+const DonutChart: React.FC<Props> = ({ data, value, units }) => {
   const Colors = useMemo(() => {
-    return data.map(obj => {
-      if (obj?.color) {
-        return obj?.color;
-      }
-
-      return '';
-    });
+    return data.map(obj => obj?.color || '');
   }, [data]);
 
   return (
@@ -46,10 +40,7 @@ const DonutChart: React.FC<Props> = ({ data, chartValue, chartUnits }) => {
         {data.map((entry, index) => (
           <Cell key={`cell--${entry.name}-${entry.value}`} fill={Colors[index]} />
         ))}
-        <Label
-          position="center"
-          content={<CustomLabel chartValue={chartValue} chartUnits={chartUnits} />}
-        />
+        <Label position="center" content={<CustomLabel value={value} units={units} />} />
       </Pie>
     </WrappedChart>
   );
