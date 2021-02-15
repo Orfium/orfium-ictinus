@@ -23,6 +23,7 @@ export { default as InlineNotification } from './components/Notification/InlineN
 export { default as Banner } from './components/Notification/Banner';
 export { default as LineChart } from './components/Chart/LineChart';
 export { default as BarChart } from './components/Chart/BarChart';
+export { default as DonutChart } from './components/Chart/DonutChart';
 export { default as NotificationsContainer } from './components/Notification/NotificationsContainer';
 export { default as NotificationVisual } from './components/Notification/NotificationVisual';
 export { default as Snackbar } from './components/Notification/Snackbar';

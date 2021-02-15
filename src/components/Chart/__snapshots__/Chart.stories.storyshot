@@ -655,6 +655,134 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
 </div>
 `;
 
+exports[`Storyshots Design System/Chart DonutChart 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    }
+  >
+    <div
+      className="recharts-wrapper"
+      style={
+        Object {
+          "cursor": "default",
+          "height": 500,
+          "position": "relative",
+          "width": 1000,
+        }
+      }
+    >
+      <svg
+        className="recharts-surface"
+        height={500}
+        version="1.1"
+        viewBox="0 0 1000 500"
+        width={1000}
+      >
+        <defs>
+          <clipPath
+            id="recharts11-clip"
+          >
+            <rect
+              height={490}
+              width={990}
+              x={5}
+              y={5}
+            />
+          </clipPath>
+        </defs>
+        <g
+          className="recharts-layer recharts-pie"
+        >
+          <g
+            className="recharts-layer"
+          >
+            <g
+              className="recharts-layer recharts-pie-sector"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            />
+            <g
+              className="recharts-layer recharts-pie-sector"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            />
+          </g>
+          <g>
+            <text
+              className="recharts-text recharts-label"
+              dominantBaseline="central"
+              textAnchor="middle"
+              x={500}
+              y={250}
+            >
+              <tspan
+                alignmentBaseline="middle"
+                dy="-5"
+                fill="black"
+                fontSize="1rem"
+                x="50%"
+              >
+                value
+              </tspan>
+            </text>
+            <foreignObject
+              height={100}
+              width="100%"
+              y="50%"
+            >
+              <div
+                className="css-vxyorp-CustomLabel"
+              >
+                <div
+                  className="css-bdu41a-CustomLabel"
+                >
+                  units
+                </div>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Chart LineChart 1`] = `
 <div
   style={

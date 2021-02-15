@@ -3,6 +3,8 @@ import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs"
 import LineChart from './LineChart';
 import BarChartShowCase from '../storyUtils/BarChartShowCase';
 import BarChart from './BarChart';
+import DonutChart from './DonutChart';
+import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
 import { color } from './LineChart/story.utils';
 import { initData } from './LineChart/mockedData';
 
@@ -56,6 +58,31 @@ import { BarChart } from '@orfium/ictinus';
 <Preview>
   <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
     <BarChartShowCase/>
+  </Story>
+</Preview>
+
+
+# DonutChart
+
+A universal DonutChart component.
+
+# Usage
+
+```js
+import { DonutChart } from '@orfium/ictinus';
+
+<DonutChart data={[]}/>
+```
+
+# Props
+
+<Props of={DonutChart}/>
+
+<Preview>
+  <Story name="DonutChart" parameters={{ decorators: [withKnobs] }}>
+    <DonutChartShowCase 
+      chartValue={text('chartValue', 'value')}
+      chartUnits={text('chartUnits', 'units')}/>
   </Story>
 </Preview>
 
