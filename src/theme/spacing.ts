@@ -1,6 +1,6 @@
 import { rem } from 'polished';
 
-const spaces = {
+export const spaces = {
   xsm: '4',
   sm: '8',
   md: '16',

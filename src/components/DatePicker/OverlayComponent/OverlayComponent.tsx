@@ -69,7 +69,7 @@ const OverlayComponent: React.FC<Props> = ({
         </div>
       )}
       <div css={buttonsMonthsWrapperStyle({ isRangePicker })}>
-        <div css={monthsWrapperStyle()}>
+        <div css={monthsWrapperStyle({ isRangePicker })}>
           <MonthWrapper
             date={date}
             onDaySelect={onDaySelect}

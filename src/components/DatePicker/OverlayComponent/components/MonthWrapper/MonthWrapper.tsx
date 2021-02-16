@@ -59,7 +59,7 @@ const MonthWrapper = ({
   const years = generateArrayOfYears();
 
   return (
-    <>
+    <React.Fragment>
       <div css={monthWrapperStyle()}>
         <div css={monthHeaderWrapperStyle()}>
           {(showedArrows === 'left' || showedArrows === 'both') && (
@@ -84,7 +84,7 @@ const MonthWrapper = ({
               <div css={monthHeaderTitleStyle({ isRangePicker })}>
                 {!isRangePicker ? (
                   <Button
-                    onClick={() => setOpen(true)}
+                    onClick={() => setOpen(!open)}
                     color={'neutralWhite-100'}
                     iconRight={
                       <Icon
@@ -135,7 +135,7 @@ const MonthWrapper = ({
           disabledDates={disabledDates}
         />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

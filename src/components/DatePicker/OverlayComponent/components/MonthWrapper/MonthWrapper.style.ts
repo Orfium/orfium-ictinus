@@ -3,7 +3,6 @@ import { Theme } from 'theme';
 
 export const monthWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   display: flex;
-  margin: 0 10px;
   flex-direction: column;
 `;
 
