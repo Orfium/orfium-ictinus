@@ -6,7 +6,7 @@ import { css, SerializedStyles } from '@emotion/core';
 export const typeToThemePalette = (theme: Theme, type: NotificationTypes): string =>
   theme.utils.getColor(type, 400, 'normal');
 
-export const notificationsContainer = (withFilling: boolean, type: NotificationTypes) => (
+export const notificationsContainer = (type: NotificationTypes) => (
   theme: Theme
 ): SerializedStyles => css`
   box-sizing: border-box;
@@ -15,14 +15,10 @@ export const notificationsContainer = (withFilling: boolean, type: NotificationT
   overflow: hidden;
   width: 100%;
   height: ${rem(56)};
-  border-left: ${!withFilling ? typeToThemePalette(theme, type) : 'none'} 4px solid;
-  border: ${withFilling ? typeToThemePalette(theme, type) : 'none'} 1px solid;
-  background: ${withFilling
-    ? transparentize(0.9, typeToThemePalette(theme, type))
-    : theme.palette.white};
+  border-left: ${typeToThemePalette(theme, type)} 4px solid;
+  background: ${transparentize(0.95, typeToThemePalette(theme, type))};
   border-radius: ${theme.spacing.xsm};
-  // TODO: box-shadow's last parameter to change when elevated is introduced
-  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
+  box-shadow: ${theme.elevation['02']};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
