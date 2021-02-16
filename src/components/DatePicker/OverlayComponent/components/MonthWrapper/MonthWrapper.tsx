@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Dayjs } from 'dayjs';
 import range from 'lodash/range';
 import { SelectOption } from 'components/Select/Select';
@@ -31,6 +31,18 @@ type Props = {
   disabledDates?: DisabledDates;
 };
 
+function generateArrayOfYears(date: Dayjs): SelectOption[] {
+  const span = 10;
+  const max = new Date().getFullYear() + span;
+  const min = new Date().getFullYear() - span;
+  const years = range(min, max);
+
+  return years.map(year => ({
+    value: year.toString(),
+    label: `${date.format('MMMM')} ${year.toString()}`,
+  }));
+}
+
 const MonthWrapper = ({
   setDate,
   onDaySelect = () => {},
@@ -43,20 +55,8 @@ const MonthWrapper = ({
 }: Props) => {
   const [open, setOpen] = useState(false);
 
-  function generateArrayOfYears(): SelectOption[] {
-    const span = 10;
-    const max = new Date().getFullYear() + span;
-    const min = new Date().getFullYear() - span;
-    const years = range(min, max);
-
-    return years.map(year => ({
-      value: year.toString(),
-      label: `${date.format('MMMM')} ${year.toString()}`,
-    }));
-  }
-
   const theme = useTheme();
-  const years = generateArrayOfYears();
+  const years = useMemo(() => generateArrayOfYears(date), [date]);
 
   return (
     <React.Fragment>
