@@ -40,6 +40,8 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
     size = DEFAULT_SIZE,
     dark = false,
     lean,
+    hintMsg: __hintMsg,
+    styleType: __styleType,
     ...rest
   } = props;
   const theme = useTheme();
