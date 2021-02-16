@@ -7,6 +7,7 @@ import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import DatePickInput from './DatePickInput';
+import PositionInScreen from '../utils/PositionInScreen';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -192,15 +193,19 @@ const DatePicker: React.FC<Props> = ({
 
   return (
     <ClickAwayListener onClick={onCancel}>
-      <DatePickInput
-        isRangePicker={isRangePicker}
-        selectedDay={selectedRange}
-        inputProps={inputProps}
-        dateFormatOverride={dateFormatOverride}
-        handleFocus={handleFocus}
-        handleClear={handleClear}
-      />
-      {open && (
+      <PositionInScreen
+        visible={open}
+        parent={() => (
+          <DatePickInput
+            isRangePicker={isRangePicker}
+            selectedDay={selectedRange}
+            inputProps={inputProps}
+            dateFormatOverride={dateFormatOverride}
+            handleFocus={handleFocus}
+            handleClear={handleClear}
+          />
+        )}
+      >
         <div css={datePickerStyles()}>
           <OverlayComponent
             selectedOption={selectedOption}
@@ -214,7 +219,7 @@ const DatePicker: React.FC<Props> = ({
             onApply={onApply}
           />
         </div>
-      )}
+      </PositionInScreen>
     </ClickAwayListener>
   );
 };
