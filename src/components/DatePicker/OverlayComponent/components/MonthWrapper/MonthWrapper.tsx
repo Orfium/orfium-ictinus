@@ -59,11 +59,7 @@ const MonthWrapper = ({
   const years = generateArrayOfYears();
 
   return (
-    <ClickAwayListener
-      onClick={() => {
-        setOpen(false);
-      }}
-    >
+    <>
       <div css={monthWrapperStyle()}>
         <div css={monthHeaderWrapperStyle()}>
           {(showedArrows === 'left' || showedArrows === 'both') && (
@@ -78,51 +74,58 @@ const MonthWrapper = ({
               />
             </div>
           )}
-          <div css={monthHeaderTitleWrapperStyle({ isRangePicker })}>
-            <div css={monthHeaderTitleStyle({ isRangePicker })}>
-              {!isRangePicker ? (
-                <Button
-                  onClick={() => setOpen(true)}
-                  color={'neutralWhite-100'}
-                  iconRight={
-                    <Icon
-                      name={'triangleDown'}
-                      size={10}
-                      color={theme.utils.getColor('lightGray', 500)}
-                    />
-                  }
-                >
-                  {date.format('MMMM')} {date.format('YYYY')}
-                </Button>
-              ) : (
-                <div>
-                  {date.format('MMMM')} {date.format('YYYY')}
-                </div>
+
+          <ClickAwayListener
+            onClick={() => {
+              setOpen(false);
+            }}
+          >
+            <div css={monthHeaderTitleWrapperStyle({ isRangePicker })}>
+              <div css={monthHeaderTitleStyle({ isRangePicker })}>
+                {!isRangePicker ? (
+                  <Button
+                    onClick={() => setOpen(true)}
+                    color={'neutralWhite-100'}
+                    iconRight={
+                      <Icon
+                        name={'triangleDown'}
+                        size={10}
+                        color={theme.utils.getColor('lightGray', 500)}
+                      />
+                    }
+                  >
+                    {date.format('MMMM')} {date.format('YYYY')}
+                  </Button>
+                ) : (
+                  <div>
+                    {date.format('MMMM')} {date.format('YYYY')}
+                  </div>
+                )}
+              </div>
+              {open && (
+                <SelectMenu
+                  filteredOptions={years}
+                  handleOptionClick={e => {
+                    setDate(date.year(Number(e.value)));
+                    setOpen(false);
+                  }}
+                  selectedOption={date.format('YYYY')}
+                />
               )}
             </div>
-            {open && (
-              <SelectMenu
-                filteredOptions={years}
-                handleOptionClick={e => {
-                  setDate(date.year(Number(e.value)));
-                  setOpen(false);
-                }}
-                selectedOption={date.format('YYYY')}
-              />
+            {(showedArrows === 'right' || showedArrows === 'both') && (
+              <div
+                onClick={() => handleArrow('forward')}
+                css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}
+              >
+                <Icon
+                  name={'chevronSmallRight'}
+                  color={theme.utils.getColor('lightGray', 500)}
+                  size={25}
+                />
+              </div>
             )}
-          </div>
-          {(showedArrows === 'right' || showedArrows === 'both') && (
-            <div
-              onClick={() => handleArrow('forward')}
-              css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}
-            >
-              <Icon
-                name={'chevronSmallRight'}
-                color={theme.utils.getColor('lightGray', 500)}
-                size={25}
-              />
-            </div>
-          )}
+          </ClickAwayListener>
         </div>
         <Month
           year={date.year()}
@@ -132,7 +135,7 @@ const MonthWrapper = ({
           disabledDates={disabledDates}
         />
       </div>
-    </ClickAwayListener>
+    </>
   );
 };
 
