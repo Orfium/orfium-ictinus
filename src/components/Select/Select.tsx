@@ -4,9 +4,9 @@ import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
 import { Props as TextFieldProps } from '../TextField/TextField';
-import { jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { menuStyle, optionStyle } from './Select.style';
+import SelectMenu from './components/SelectMenu/SelectMenu';
 
 // Mocks onChange to avoid readonly warning for TextField Component
 const ON_CHANGE_MOCK = () => {};
@@ -58,6 +58,12 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       setInputValue(defaultValue || selectedOption);
     }, [defaultValue, selectedOption]);
 
+    const handleOptionClick = (option: SelectOption) => {
+      setInputValue(option);
+      setOpen(false);
+      setSearchValue('');
+    };
+
     const filteredOptions = useMemo(() => {
       return options.filter(
         option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
@@ -85,51 +91,39 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           setSearchValue('');
         }}
       >
-        <TextField
-          onFocus={() => setOpen(true)}
-          rightIcon={rightIconRender}
-          onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
-            // if backspace
-            if (e.keyCode === 8) {
-              setInputValue(emptyValue);
-            }
-          }}
-          onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-            setSearchValue(e.target.value);
-          }}
-          onChange={ON_CHANGE_MOCK}
-          {...restInputProps}
-          status={status}
-          value={searchValue || inputValue.label}
-          ref={ref}
-        />
-        {open && (
-          <div css={menuStyle({ status, size: restInputProps.size })}>
-            {filteredOptions.length > 0 ? (
-              filteredOptions.map(option => (
-                <div
-                  key={option.value}
-                  css={optionStyle({
-                    selected: inputValue.value === option.value,
-                    ...restInputProps,
-                  })}
-                  onClick={() => {
-                    setInputValue(option);
-                    setOpen(false);
-                    setSearchValue('');
-                    handleSelectedOption(option);
-                  }}
-                >
-                  {option.label}
-                </div>
-              ))
-            ) : (
-              <div css={optionStyle({ selected: false, noResultsExist: true, ...restInputProps })}>
-                No options
-              </div>
-            )}
-          </div>
-        )}
+        <div
+          css={css`
+            position: relative;
+          `}
+        >
+          <TextField
+            onFocus={() => setOpen(true)}
+            rightIcon={rightIconRender}
+            onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
+              // if backspace
+              if (e.keyCode === 8) {
+                setInputValue(emptyValue);
+              }
+            }}
+            onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setSearchValue(e.target.value);
+            }}
+            onChange={ON_CHANGE_MOCK}
+            {...restInputProps}
+            status={status}
+            value={searchValue || inputValue.label}
+            ref={ref}
+          />
+          {open && (
+            <SelectMenu
+              filteredOptions={filteredOptions}
+              handleOptionClick={handleOptionClick}
+              selectedOption={inputValue.value}
+              size={restInputProps.size}
+              status={status}
+            />
+          )}
+        </div>
       </ClickAwayListener>
     );
   }

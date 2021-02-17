@@ -53,13 +53,14 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     flex: 1 1 100%;
     user-select: none;
     position: relative;
-    background-color: ${backgroundColor};
+    background-color: ${lean ? 'transparent' : backgroundColor};
     opacity: ${disabled && 0.5};
     border: 2px solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
     border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
 
-    ${!disabled &&
+    ${!lean &&
+      !disabled &&
       !locked &&
       `&:hover {
       background-color: ${dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)};
@@ -69,7 +70,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     `}
 
   &:focus-within {
-      border-color: ${!error && theme.utils.getColor('lightGray', 400)};
+      border-color: ${!lean && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
       background-color: ${theme.palette.white};
     }
@@ -94,7 +95,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
   `;
 };
 
-export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Props) => (
+export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon, lean }: Props) => (
   theme: Theme
 ): SerializedStyles => {
   return css`
@@ -103,8 +104,8 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon }: Pr
     flex-direction: row;
     align-items: center;
     vertical-align: top;
-    width: fill-available;
-    ${getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
+    width: calc(100% - ${rem(32)});
+    ${!lean && getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
 
     > div {
       position: relative;

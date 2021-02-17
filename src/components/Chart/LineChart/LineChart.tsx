@@ -1,18 +1,10 @@
 import React, { useMemo } from 'react';
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from 'recharts';
-import useTheme from '../../hooks/useTheme';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import useTheme from '../../../hooks/useTheme';
 import GradientLine from './components/GradientLine';
 import CustomTooltip from './components/CustomTooltip';
 import { Data, getKeyNames, colorPicker } from './utils';
+import Wrapper from '../Wrapper';
 
 export type Props = {
   /** This property defines the data to be shown in the Line Chart */
@@ -26,6 +18,8 @@ export type Props = {
   /** Function passed as property, so that the user can select colors for each line. If no function is passed or no color is picked for one or more lines, color will be selected randomly  */
   color?: (dataLabel: string) => string;
 };
+
+const WrappedChart = Wrapper(AreaChart);
 
 const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, color }) => {
   const theme = useTheme();
@@ -41,7 +35,7 @@ const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, 
   const colors = Object.entries(colorsPicked);
 
   return uniqueKeyNames.length <= Object.keys(theme.palette.flat).length ? (
-    <Wrapper data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }}>
+    <WrappedChart data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }} aspect={1.5}>
       <defs>
         {colors.map(([dataLabel, color]) => (
           <GradientLine key={`color${dataLabel}`} dataLabel={dataLabel} color={color} />
@@ -89,36 +83,9 @@ const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, 
           dot={{ r: 3, fill: color }}
         />
       ))}
-    </Wrapper>
+    </WrappedChart>
   ) : (
     <p>You must define less than {Object.keys(theme.palette.flat).length} different data</p>
-  );
-};
-
-const Wrapper: React.FC<{
-  data: Data[];
-  margin: { top: number; right: number; left: number; bottom: number };
-}> = ({ data, children }) => {
-  if (process.env.NODE_ENV !== 'test') {
-    return (
-      <ResponsiveContainer aspect={1.5}>
-        <AreaChart data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }}>
-          {children}
-        </AreaChart>
-      </ResponsiveContainer>
-    );
-  }
-
-  // for testing purposes only !!!
-  return (
-    <AreaChart
-      width={1000}
-      height={500}
-      data={data}
-      margin={{ top: 10, right: 20, left: 20, bottom: 50 }}
-    >
-      {children}
-    </AreaChart>
   );
 };
 
