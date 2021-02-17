@@ -1,5 +1,5 @@
 import { Theme } from '../../../../theme';
-import { rem, transparentize } from 'polished';
+import { rem, tint } from 'polished';
 import { NotificationTypes } from '../../Notification';
 import { css, SerializedStyles } from '@emotion/core';
 
@@ -16,7 +16,7 @@ export const notificationsContainer = (type: NotificationTypes) => (
   width: 100%;
   height: ${rem(56)};
   border-left: ${typeToThemePalette(theme, type)} 4px solid;
-  background: ${transparentize(0.95, typeToThemePalette(theme, type))};
+  background: ${tint(0.95, typeToThemePalette(theme, type))};
   border-radius: ${theme.spacing.xsm};
   box-shadow: ${theme.elevation['02']};
 `;
