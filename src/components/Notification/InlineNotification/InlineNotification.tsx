@@ -8,8 +8,6 @@ import { TestId } from '../../../utils/types';
 export type Props = {
   /** Show notification icon based on the type */
   withIcon?: boolean;
-  /** Use color filling */
-  withFilling?: boolean;
   /** The informative message of the Notification */
   message: string;
   /** The type of the Notification */
@@ -26,7 +24,6 @@ export type Props = {
 
 const InlineNotification: React.FC<Props> = ({
   withIcon = false,
-  withFilling = false,
   message,
   type,
   primaryCTALabel,
@@ -37,7 +34,6 @@ const InlineNotification: React.FC<Props> = ({
   return (
     <CompactNotification
       withIcon={withIcon}
-      withFilling={withFilling}
       message={message}
       variant="inline"
       type={type}

@@ -27,7 +27,6 @@ import { InlineNotification } from '@orfium/ictinus';
 
 <InlineNotification
   withIcon
-  withFilling
   message="Message"
   type="info"
   primaryCTALabel='Action'
@@ -47,7 +46,6 @@ import { InlineNotification } from '@orfium/ictinus';
       <PresentComponent name="" width={768}>
         <InlineNotification
           withIcon={boolean('withIcon', true)}
-          withFilling={boolean('withFilling', false)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         />
@@ -55,7 +53,6 @@ import { InlineNotification } from '@orfium/ictinus';
       <PresentComponent name="" width={768}>
         <InlineNotification
           withIcon={boolean('withIcon', true)}
-          withFilling={boolean('withFilling', false)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
@@ -66,7 +63,6 @@ import { InlineNotification } from '@orfium/ictinus';
       <PresentComponent name="" width={768}>
         <InlineNotification
           withIcon={boolean('withIcon', true)}
-          withFilling={boolean('withFilling', false)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
@@ -76,7 +72,6 @@ import { InlineNotification } from '@orfium/ictinus';
       <PresentComponent name="" width={768}>
         <InlineNotification
           withIcon={boolean('withIcon', true)}
-          withFilling={boolean('withFilling', false)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           closeCTA={() => console.log('close action clicked')}
@@ -100,9 +95,8 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
 <NotificationsContainer position='bottom-right'>
   <Banner
     withIcon
-    withFilling
     title="Title"
-    message="Message"
+    message="Informative Message"
     type="info"
     primaryCTALabel='Action'
     primaryCTA={() => void}
@@ -125,7 +119,6 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
         >
           <Banner
             withIcon={boolean('icon', true)}
-            withFilling={boolean('withFilling', false)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -135,7 +128,6 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
           />
           <Banner
             withIcon={boolean('icon', true)}
-            withFilling={boolean('withFilling', false)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -145,7 +137,6 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
           />
           <Banner
             withIcon={boolean('icon', true)}
-            withFilling={boolean('withFilling', false)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -299,7 +290,6 @@ import { Snackbar } from '@orfium/ictinus';
         >
           <Banner
             withIcon={boolean('icon', true)}
-            withFilling={boolean('withFilling', false)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -340,7 +330,6 @@ import { Snackbar } from '@orfium/ictinus';
           </Toast>
           <Banner
             withIcon={boolean('icon', true)}
-            withFilling={boolean('withFilling', false)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
