@@ -1,0 +1,88 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
+import LineChart from './LineChart';
+import BarChartShowCase from '../storyUtils/BarChartShowCase';
+import BarChart from './BarChart';
+import DonutChart from './DonutChart';
+import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
+import { color } from './LineChart/story.utils';
+import { initData } from './LineChart/mockedData';
+
+<Meta title="Design System/Chart"/>
+
+# LineChart
+
+A universal LineChart component for showing both single line and multiple line chart.
+
+# Usage
+
+```js
+import { LineChart } from '@orfium/ictinus';
+
+<LineChart data={[]}/>
+```
+
+# Props
+
+<Props of={LineChart} />
+
+<Preview>
+  <Story name="LineChart" parameters={{ decorators: [withKnobs] }}>
+    <LineChart
+      data={initData}
+      labelX={text('labelX', 'Dates')}
+      labelY={text('labelY', 'Values')}
+      showLegend={boolean('show legend', true)}
+      color={color}
+    />
+  </Story>
+</Preview>
+
+
+# BarChart
+
+A universal BarChart component.
+
+# Usage
+
+```js
+import { BarChart } from '@orfium/ictinus';
+
+<BarChart data={[]}/>
+```
+
+# Props
+
+<Props of={BarChart}/>
+
+<Preview>
+  <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
+    <BarChartShowCase/>
+  </Story>
+</Preview>
+
+
+# DonutChart
+
+A universal DonutChart component.
+
+# Usage
+
+```js
+import { DonutChart } from '@orfium/ictinus';
+
+<DonutChart data={[]}/>
+```
+
+# Props
+
+<Props of={DonutChart}/>
+
+<Preview>
+  <Story name="DonutChart" parameters={{ decorators: [withKnobs] }}>
+    <DonutChartShowCase 
+      chartValue={text('chartValue', 'value')}
+      chartUnits={text('chartUnits', 'units')}/>
+  </Story>
+</Preview>
+
