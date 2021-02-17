@@ -1,79 +1,76 @@
-import dayjs from 'dayjs';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
-import omit from 'lodash/omit';
-import { DayPickerInputProps } from 'react-day-picker';
-
-import useTheme from '../../../hooks/useTheme';
-import { flex } from '../../../theme/functions';
 import Icon from '../../Icon';
-import TextField from '../../TextField';
-import { wrapperStyle } from '../../utils/TextInputWrapper/TextInputWrapper.style';
-import { DateFormatType, DateRange } from '../DatePicker';
-import { formFieldStyles } from '../../../theme/palette';
+import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
+import { DateFormatType } from '../DatePicker';
 import { getLocaleFormat } from '../../../utils/helpers';
+import { Range } from '../OverlayComponent/OverlayComponent';
+import { rangeInputsWrapper } from './DatePickInput.style';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
 
 type Props = {
+  handleFocus: () => void;
+  handleClear: (event: React.KeyboardEvent) => void;
   isRangePicker: boolean;
-  selectedDay: DateRange;
-  inputLabel: string;
-  /** Style of input field */
-  styleType: formFieldStyles;
+  selectedDay: Range;
+  /** Props for styling the input */
+  inputProps?: TextFieldProps;
   dateFormatOverride?: DateFormatType;
-} & DayPickerInputProps;
+};
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
 const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
-    { isRangePicker, styleType, selectedDay, inputLabel, dateFormatOverride = undefined, ...props },
+    {
+      handleFocus,
+      handleClear,
+      isRangePicker,
+      inputProps,
+      selectedDay,
+      dateFormatOverride = 'MM/DD/YYYY',
+    },
     ref
   ) => {
-    const theme = useTheme();
-    const formatDate = (date: Date | undefined) => {
+    const formatDate = (date: Dayjs | undefined) => {
       return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
     };
 
     const getDateFormatted = React.useCallback(formatDate, []);
 
-    return isRangePicker ? (
-      <div
-        ref={ref}
-        css={[
-          wrapperStyle({ styleType })(theme),
-          flex,
-          {
-            width: 275,
-          },
-        ]}
-      >
-        <TextField
-          onChange={ON_CHANGE_MOCK}
-          label={`${inputLabel} (Start)`}
-          lean={true}
-          {...omit(props, ['onBlur', 'onChange', 'onFocus', 'size'])}
-          value={getDateFormatted(selectedDay.from)}
-        />
-        <TextField
-          onChange={ON_CHANGE_MOCK}
-          rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-          label={`${inputLabel} (End)`}
-          {...omit(props, ['onBlur', 'onChange', 'onFocus', 'size'])}
-          lean={true}
-          value={getDateFormatted(selectedDay.to)}
-        />
+    return (
+      <div css={rangeInputsWrapper()}>
+        {isRangePicker ? (
+          <TextField
+            ref={ref}
+            {...inputProps}
+            onFocus={handleFocus}
+            onKeyDown={handleClear}
+            onChange={ON_CHANGE_MOCK}
+            placeholder={`${dateFormatOverride} - ${dateFormatOverride}`}
+            value={
+              getDateFormatted(selectedDay.from) &&
+              `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+            }
+            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+          />
+        ) : (
+          <TextField
+            ref={ref}
+            {...inputProps}
+            onFocus={handleFocus}
+            onKeyDown={handleClear}
+            onChange={ON_CHANGE_MOCK}
+            placeholder={dateFormatOverride}
+            value={selectedDay.to && getDateFormatted(selectedDay.to)}
+            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+          />
+        )}
       </div>
-    ) : (
-      <TextField
-        onChange={ON_CHANGE_MOCK}
-        label={inputLabel}
-        {...omit(props, ['onBlur', 'onChange', 'onFocus', 'size'])}
-        styleType={styleType}
-        value={getDateFormatted(selectedDay.from)}
-        rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-      />
     );
   }
 );

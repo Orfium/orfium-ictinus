@@ -1,3 +1,5 @@
+export const neutralColors = ['neutralWhite', 'neutralBlack'];
+
 /**
  * Here are listed all the colors available for our project
  * Flat colors are the actual colors of the system
@@ -19,6 +21,7 @@ export const flatColors = [
   'darkBlue',
   'purple',
   'mint',
+  ...neutralColors,
 ] as const;
 /**
  * Here are listed all the color shades

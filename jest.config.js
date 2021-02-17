@@ -12,4 +12,5 @@ module.exports = {
   moduleNameMapper: {
     '\\.svg$': '<rootDir>/__mocks__/fileMock.tsx',
   },
+  setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
 };
