@@ -40,7 +40,7 @@ export const tooltipLiStyle = () => (theme: Theme) => {
     padding: `${theme.spacing.sm} 0px`,
     'div:last-child': {
       marginLeft: theme.spacing.md,
-      'span': { marginLeft: theme.spacing.xsm },
+      span: { marginLeft: theme.spacing.xsm },
     },
   };
 };
