@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { renderHook } from '@testing-library/react-hooks';
 import ThemeProvider from '../components/ThemeProvider';
 
 const renderWithThemeProvider = (children: JSX.Element) => {
@@ -9,4 +10,4 @@ const renderWithThemeProvider = (children: JSX.Element) => {
 };
 
 export * from '@testing-library/react';
-export { renderWithThemeProvider as render };
+export { renderHook, renderWithThemeProvider as render };
