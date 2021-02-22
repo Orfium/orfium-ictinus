@@ -31,6 +31,8 @@ const queries = toPairs(queriesSizes).reduce((acc, size) => {
   return acc;
 }, {} as Record<typeof queriesKeys[number], string>);
 
-export const useBreakpoints = () => {
+const useBreakpoints = () => {
   return useMedia<Record<typeof queriesKeys[number], string>>({ queries });
 };
+
+export default useBreakpoints;

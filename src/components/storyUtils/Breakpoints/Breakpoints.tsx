@@ -1,5 +1,5 @@
 import React from 'react';
-import { queriesKeys, useBreakpoints } from 'hooks/useBreakpoints';
+import useBreakpoints, { queriesKeys } from 'hooks/useBreakpoints';
 
 const MyComponent = () => {
   const breakpoints = useBreakpoints();
