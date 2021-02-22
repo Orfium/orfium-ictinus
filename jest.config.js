@@ -11,6 +11,7 @@ module.exports = {
   moduleDirectories: ['<rootDir>/src', 'node_modules'],
   moduleNameMapper: {
     '\\.svg$': '<rootDir>/__mocks__/fileMock.tsx',
+    '\\.(css|less)$': '<rootDir>/__mocks__/styleMock.js',
   },
   setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
 };

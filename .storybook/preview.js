@@ -3,6 +3,7 @@
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import './main.markdown.css';
 
 const viewPorts = {
   desktop1920: {
