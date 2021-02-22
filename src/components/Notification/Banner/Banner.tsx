@@ -8,8 +8,6 @@ import { TestId } from '../../../utils/types';
 export type Props = {
   /** Show notification icon based on the type */
   withIcon?: boolean;
-  /** Use color filling */
-  withFilling?: boolean;
   /** The title (message heading) of the Notification */
   title: string;
   /** The informative message of the Notification */
@@ -28,7 +26,6 @@ export type Props = {
 
 const Banner: React.FC<Props> = ({
   withIcon = false,
-  withFilling = false,
   title,
   message,
   type,
@@ -40,7 +37,6 @@ const Banner: React.FC<Props> = ({
   return (
     <CompactNotification
       withIcon={withIcon}
-      withFilling={withFilling}
       message={message}
       title={title}
       variant="banner"
