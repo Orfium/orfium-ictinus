@@ -58,7 +58,7 @@ const MenuItem: React.FC<Props> = memo(
             onChange={() => toggleMenuItem(url)}
             textAndControl={handleClick => {
               return (
-                <div css={[menuItemStyle]} data-testid={url} onClick={handleClick}>
+                <div css={menuItemStyle()} data-testid={url} onClick={handleClick}>
                   {MenuItemContent}
                 </div>
               );

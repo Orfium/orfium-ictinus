@@ -14,22 +14,26 @@ export const navigationContainerStyle = (): SerializedStyles => css`
   box-sizing: border-box;
 `;
 
-const itemStyle = css`
+const itemStyle = (theme: Theme): SerializedStyles => css`
   ${flexCenterVertical};
   height: ${rem(44)};
-  color: black;
+  color: ${theme.palette.black};
   cursor: default;
 `;
 
-export const menuItemStyle = css`
-  ${itemStyle};
+export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
+  ${itemStyle(theme)};
   font-size: ${rem(16)};
-  font-weight: 500;
-  padding-left: ${rem(4)};
+  font-weight: ${theme.typography.weights.regular};
+  padding-left: ${theme.spacing.xsm};
+
+  &:hover {
+    background-color: ${theme.utils.getColor('lightGray', 100)};
+  }
 `;
 
-export const menuLinkStyle = (): SerializedStyles => css`
-  ${menuItemStyle};
+export const menuLinkStyle = () => (theme: Theme): SerializedStyles => css`
+  ${menuItemStyle()(theme)};
   text-decoration: none;
 `;
 
@@ -39,16 +43,15 @@ export const menuItemTextStyle = (current: boolean) => (theme: Theme): Serialize
 `;
 
 export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
-  ${itemStyle};
+  ${itemStyle(theme)};
   ${transition(0.2)};
   box-sizing: border-box;
   font-size: ${theme.typography.fontSizes['14']};
-  margin: ${theme.spacing.md} 0 ${theme.spacing.md} ${theme.spacing.md};
-  padding-left: ${rem(12)};
+  margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
+  padding-left: ${theme.spacing.xl};
 
   &.active,
   &:hover {
-    border-radius: ${rem(25)};
     background-color: ${theme.utils.getColor('lightGray', 100)};
 
     path {
