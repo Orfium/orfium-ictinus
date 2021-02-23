@@ -6,7 +6,7 @@ import { Props } from '../Drawer';
 import MenuItem from './MenuItem/MenuItem';
 import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 
-const Navigation: React.FC<Props> = ({ menuItems }) => {
+const Navigation: React.FC<Props> = ({ menuItems, expanded }) => {
   const [openMenuItems, setOpenMenuItems] = useState<string[]>([]); // we identify open menuitems by their url
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 
@@ -28,7 +28,7 @@ const Navigation: React.FC<Props> = ({ menuItems }) => {
   }, []);
 
   return (
-    <div css={navigationContainerStyle()}>
+    <div css={navigationContainerStyle(expanded)}>
       {menuItems.map(
         menuItem =>
           menuItem.visible && (

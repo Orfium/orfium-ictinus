@@ -38,7 +38,9 @@ const MenuItem: React.FC<Props> = memo(
         <div css={menuIconStyle(isCurrent)}>
           <Icon name={iconName} color={isCurrent ? 'white' : 'black'} size={20} />
         </div>
-        <span css={menuItemTextStyle(isCurrent)}>{name}</span>
+        <span id={'menu-item-text'} css={menuItemTextStyle(isCurrent)}>
+          {name}
+        </span>
       </React.Fragment>
     );
 
@@ -72,6 +74,7 @@ const MenuItem: React.FC<Props> = memo(
                           activeClassName="active"
                           key={subMenuItem.url}
                           css={subMenuLinkStyle()}
+                          id={'submenu-item-link'}
                         >
                           <div css={subMenuIconStyle()}>
                             <Icon
@@ -80,7 +83,7 @@ const MenuItem: React.FC<Props> = memo(
                               size={20}
                             />
                           </div>
-                          <span>{subMenuItem.name}</span>
+                          <span id={'submenu-item-text'}>{subMenuItem.name}</span>
                         </NavLink>
                       )
                   )}

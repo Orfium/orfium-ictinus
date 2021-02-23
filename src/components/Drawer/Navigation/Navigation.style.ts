@@ -4,13 +4,25 @@ import { css, SerializedStyles } from '@emotion/core';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 import { backgroundPickerBasedOnType } from 'utils/themeFunctions';
 
-export const navigationContainerStyle = (): SerializedStyles => css`
-  ${transition(0.2)};
+export const navigationContainerStyle = (expanded: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
+  ${transition(10.2)};
   width: 100%;
   background-color: white;
   height: 100%;
   padding: ${rem(24)} 0;
   box-sizing: border-box;
+
+  #menu-item-text,
+  #submenu-item-text {
+    opacity: ${expanded ? 1 : 0};
+    width: ${expanded ? 'auto' : '1px'};
+  }
+
+  #submenu-item-link {
+    padding-left: ${expanded ? 'auto' : rem(40)};
+  }
 `;
 
 const itemStyle = (theme: Theme): SerializedStyles => css`
@@ -24,7 +36,7 @@ export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
   ${itemStyle(theme)};
   font-size: ${rem(16)};
   font-weight: ${theme.typography.weights.regular};
-  padding-left: ${theme.spacing.xsm};
+  padding: 0 ${theme.spacing.md};
 
   &:hover {
     background-color: ${theme.utils.getColor('lightGray', 100)};
@@ -48,7 +60,7 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['14']};
   color: ${theme.utils.getColor('lightGray', 600)};
   margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
-  padding-left: ${theme.spacing.xl};
+  padding-left: ${rem(46)};
 
   &.active,
   &:hover {
