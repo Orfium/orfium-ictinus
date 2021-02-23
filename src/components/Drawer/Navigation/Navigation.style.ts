@@ -1,9 +1,8 @@
-import { rem } from 'polished';
+import { darken, rem } from 'polished';
 import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 import { backgroundPickerBasedOnType } from 'utils/themeFunctions';
-import { pickTextColorFromSwatches } from 'theme/palette';
 
 export const navigationContainerStyle = (): SerializedStyles => css`
   ${transition(0.2)};
@@ -47,30 +46,38 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   ${transition(0.2)};
   box-sizing: border-box;
   font-size: ${theme.typography.fontSizes['14']};
+  color: ${theme.utils.getColor('lightGray', 600)};
   margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
   padding-left: ${theme.spacing.xl};
 
   &.active,
   &:hover {
-    background-color: ${theme.utils.getColor('lightGray', 100)};
-
-    path {
-      fill: ${pickTextColorFromSwatches('lightGray', 100)} !important;
-    }
+    background-color: ${theme.utils.getColor('lightGray', 100)} !important;
   }
   &.active {
     font-weight: ${theme.typography.weights.bold};
+    background-color: ${darken(0.03, theme.utils.getColor('lightGray', 100))};
+    color: ${theme.palette.black};
+
+    path {
+      fill: ${theme.utils.getColor('branded1', 400, 'normal')} !important;
+    }
   }
   text-decoration: none;
 `;
 
-export const arrowContainerStyle = (open: boolean, show: boolean): SerializedStyles => css`
+export const arrowContainerStyle = (open: boolean, show: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
   ${transition(0.2)};
   ${flexCenter};
   width: ${rem(24)};
   height: ${rem(24)};
   opacity: ${show ? '1' : '0'};
   transform: ${open ? 'rotate(90deg)' : 'rotate(0deg);'};
+  path {
+    background-color: ${theme.utils.getColor('lightGray', 600)};
+  }
 `;
 
 export const menuIconStyle = (current: boolean) => (theme: Theme): SerializedStyles => css`
