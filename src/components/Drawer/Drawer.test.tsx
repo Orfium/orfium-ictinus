@@ -4,11 +4,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Drawer from './Drawer';
 import { menuItems } from '../storyUtils/DrawerShowcase/MenuItems';
 import { fireEvent, render } from '../../test';
+import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 
 describe('Drawer', () => {
   let queries: any;
 
   beforeEach(async () => {
+    // @ts-ignore - set what matches will be
+    window.matchMedia = createMockMediaMatcher(true);
+
     queries = render(
       <Router>
         <Drawer expanded={true} menuItems={menuItems} />
