@@ -1,30 +1,47 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import React from 'react';
-import { tooltipLiStyle, tooltipStyle, tooltipUlStyle } from './CustomTooltip.style';
-import { TooltipProps } from 'recharts';
-import { HoverInfo } from '../../BarChart';
+import { padding } from 'polished';
+import React, { useRef } from 'react';
 
-const CustomTooltip: React.FC<TooltipProps> = ({ payload }) => {
-  const options = payload && (payload[0]?.payload?.options?.hoverInfo as HoverInfo[]);
+const CustomTooltip = ({ content, children }) => {
+  const wrapperRef = useRef(null);
+  const tooltipRef = useRef(null);
+  console.log({ content });
 
-  return options ? (
-    <div className="custom-tooltip" css={tooltipStyle()}>
-      <ul css={tooltipUlStyle()}>
-        {options.map(({ name, value, percentage }) => (
-          <li key={`${name}${value}`} css={tooltipLiStyle()}>
-            <div>{name}</div>
-            <div>
-              <span>
-                <b>{value}</b>
-              </span>
-              {percentage && <span>({percentage})</span>}
-            </div>
-          </li>
-        ))}
-      </ul>
+  return (
+    <div
+      ref={wrapperRef}
+      style={{
+        width: 'inherit',
+        height: 'inherit',
+        border: '1px solid #73AD21',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+      }}
+    >
+      {children}
+      <div
+        ref={tooltipRef}
+        style={{
+          display: 'block',
+          position: 'fixed',
+          top: '-33%',
+          left: '110%',
+          color: 'white',
+          backgroundColor: 'black',
+          padding: '8px',
+          zIndex: 10000000,
+          //   width: 'inherit',
+          //   height: 'inherit',
+          //   // border: '3px solid #73AD21',
+          //   whiteSpace: 'nowrap',
+          //   overflow: 'hidden',
+          //   textOverflow: 'ellipsis',
+        }}
+      >
+        {content}
+      </div>
     </div>
-  ) : null;
+  );
 };
 
 export default CustomTooltip;

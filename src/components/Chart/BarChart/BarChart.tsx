@@ -11,6 +11,7 @@ import {
 } from 'recharts';
 import max from 'lodash/max';
 import { lighten } from 'polished';
+import CustomTooltipContent from './components/CustomTooltipContent';
 import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
@@ -53,8 +54,9 @@ type YAxisProp = {
   payload: { value: React.ReactNode };
 };
 
-const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
+const CustomYAxisTick = ({ colors, y, payload, ...rest }: YAxisProp) => {
   const theme = useTheme();
+  // console.log(rest);
 
   const fill =
     typeof payload.value === 'string' && colors[payload.value]
@@ -62,9 +64,25 @@ const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
       : theme.palette.black;
 
   return (
-    <text x={0} y={y} textAnchor="start" fill={fill}>
-      <tspan dy="0.335em">{payload.value}</tspan>
-    </text>
+    <g>
+      {/* <text x={0} y={y} textAnchor="start" fill={fill}>
+        <tspan dy="0.335em">{payload.value}</tspan>
+      </text> */}
+      <foreignObject y={y - 10} width={rest.width} height="20" style={{ overflow: 'visible' }}>
+        {/* <div
+          style={{
+            width: 'inherit',
+            height: 'inherit',
+            // border: '3px solid #73AD21',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+          }}
+        > */}
+        <CustomTooltip content={payload.value}>{payload.value}</CustomTooltip>
+        {/* </div> */}
+      </foreignObject>
+    </g>
   );
 };
 
@@ -141,13 +159,13 @@ const BarChart: React.FC<Props> = ({ data }) => {
         type="category"
         dataKey="name"
         tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-        width={yAxisWidth}
+        width={160}
         axisLine={false}
         tickLine={false}
       />
       <Tooltip
         cursor={{ fill: theme.utils.getColor('lightGray', 100) }}
-        content={<CustomTooltip />}
+        content={<CustomTooltipContent />}
       />
       <Bar dataKey="value">
         <LabelList
