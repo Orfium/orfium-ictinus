@@ -10,7 +10,7 @@ export const navigationContainerStyle = (): SerializedStyles => css`
   width: 100%;
   background-color: white;
   height: 100%;
-  padding: ${rem(14)} ${rem(20)} ${rem(18)} ${rem(20)};
+  padding: ${rem(24)} 0;
   box-sizing: border-box;
 `;
 
