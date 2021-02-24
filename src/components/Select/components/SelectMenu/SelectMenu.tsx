@@ -11,6 +11,7 @@ const SelectMenu = ({
   filteredOptions,
   handleOptionClick,
   selectedOption,
+  isLoading,
 }: {
   /** Sets the size of the menu */
   size?: 'md' | 'sm';
@@ -19,6 +20,7 @@ const SelectMenu = ({
   filteredOptions: SelectOption[];
   handleOptionClick: (option: SelectOption) => void;
   selectedOption: string | number;
+  isLoading?: boolean;
 }) => {
   const myRef = useRef<HTMLDivElement>(null);
 
@@ -28,24 +30,31 @@ const SelectMenu = ({
     executeScroll();
   }, [selectedOption]);
 
+  const renderOptions = () =>
+    filteredOptions.length > 0 ? (
+      filteredOptions.map(option => (
+        <div
+          ref={selectedOption === option.value ? myRef : null}
+          key={option.value}
+          css={optionStyle({
+            selected: selectedOption === option.value,
+            size,
+          })}
+          onClick={() => handleOptionClick(option)}
+        >
+          {option.label}
+        </div>
+      ))
+    ) : (
+      <div css={optionStyle({ selected: false, noResultsExist: true })}>No options</div>
+    );
+
   return (
     <div css={menuStyle({ status, size })}>
-      {filteredOptions.length > 0 ? (
-        filteredOptions.map(option => (
-          <div
-            ref={selectedOption === option.value ? myRef : null}
-            key={option.value}
-            css={optionStyle({
-              selected: selectedOption === option.value,
-              size,
-            })}
-            onClick={() => handleOptionClick(option)}
-          >
-            {option.label}
-          </div>
-        ))
+      {isLoading ? (
+        <div css={optionStyle({ selected: false, noResultsExist: true })}>Loading...</div>
       ) : (
-        <div css={optionStyle({ selected: false, noResultsExist: true })}>No options</div>
+        renderOptions()
       )}
     </div>
   );
