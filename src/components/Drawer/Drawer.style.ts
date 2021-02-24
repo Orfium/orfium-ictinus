@@ -1,10 +1,13 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { transition } from 'theme/functions';
+import { Theme } from '../../theme';
 
-export const drawerContainerStyle = (expanded: boolean): SerializedStyles => css`
+export const drawerContainerStyle = (expanded: boolean, isDesktop: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
   ${transition(0.2)};
-  width: ${expanded ? rem('318px') : rem('0px')};
+  width: ${expanded ? rem('308px') : isDesktop ? rem('112px') : rem('0px')};
   background-color: white;
   overflow: hidden;
   flex-grow: 0;
@@ -12,4 +15,5 @@ export const drawerContainerStyle = (expanded: boolean): SerializedStyles => css
   height: 100%;
   min-height: 100%;
   z-index: 100;
+  box-shadow: ${theme.elevation['01']};
 `;
