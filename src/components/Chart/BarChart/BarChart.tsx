@@ -79,7 +79,7 @@ const CustomYAxisTick = ({ colors, y, payload, ...rest }: YAxisProp) => {
             textOverflow: 'ellipsis',
           }}
         > */}
-        <CustomTooltip content={payload.value}>{payload.value}</CustomTooltip>
+        <CustomTooltip content={payload.value} fill={fill}/>
         {/* </div> */}
       </foreignObject>
     </g>
@@ -155,14 +155,14 @@ const BarChart: React.FC<Props> = ({ data }) => {
           return customTickFormatter(tick, maxDomainValue);
         }}
       />
-      <YAxis
+      {/* <YAxis
         type="category"
         dataKey="name"
         tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
         width={160}
         axisLine={false}
         tickLine={false}
-      />
+      /> */}
       <Tooltip
         cursor={{ fill: theme.utils.getColor('lightGray', 100) }}
         content={<CustomTooltipContent />}
@@ -177,6 +177,14 @@ const BarChart: React.FC<Props> = ({ data }) => {
           <Cell key={`cell-${entry.name}-${entry.value}`} fill={barColors[index]} />
         ))}{' '}
       </Bar>
+      <YAxis
+        type="category"
+        dataKey="name"
+        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
+        width={160}
+        axisLine={false}
+        tickLine={false}
+      />
     </WrappedChart>
   );
 };
