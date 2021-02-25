@@ -1,5 +1,6 @@
 import React from 'react';
-import BarChart, { Data } from '../../Chart/BarChart';
+import BarChart from '../../Chart/BarChart';
+import { Data } from '../../Chart/BarChart/BarChart';
 
 const data: Data[] = [
   {

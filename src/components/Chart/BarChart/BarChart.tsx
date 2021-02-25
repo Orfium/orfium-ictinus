@@ -18,8 +18,8 @@ import CustomLabel from './components/CustomLabel';
 import { getValues, customTickFormatter } from './utils';
 import Wrapper from '../Wrapper';
 
-const multiplyFactor = 6.8;
-const yAxisWidthDefault = 60;
+const multiplyFactor = 9.5;
+const yAxisWidthDefault = 160;
 const lightenFactor = 0.2;
 
 export type HoverInfo = {
@@ -51,12 +51,12 @@ export type Props = {
 type YAxisProp = {
   colors: Record<string, string>;
   y: number;
+  width: number;
   payload: { value: React.ReactNode };
 };
 
-const CustomYAxisTick = ({ colors, y, payload, ...rest }: YAxisProp) => {
+const CustomYAxisTick = ({ colors, y, width, payload }: YAxisProp) => {
   const theme = useTheme();
-  // console.log(rest);
 
   const fill =
     typeof payload.value === 'string' && colors[payload.value]
@@ -65,22 +65,8 @@ const CustomYAxisTick = ({ colors, y, payload, ...rest }: YAxisProp) => {
 
   return (
     <g>
-      {/* <text x={0} y={y} textAnchor="start" fill={fill}>
-        <tspan dy="0.335em">{payload.value}</tspan>
-      </text> */}
-      <foreignObject y={y - 10} width={rest.width} height="20" style={{ overflow: 'visible' }}>
-        {/* <div
-          style={{
-            width: 'inherit',
-            height: 'inherit',
-            // border: '3px solid #73AD21',
-            whiteSpace: 'nowrap',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        > */}
-        <CustomTooltip content={payload.value} fill={fill}/>
-        {/* </div> */}
+      <foreignObject y={y - 10} width={width} height="20" style={{ overflow: 'visible' }}>
+        <CustomTooltip content={payload.value} fill={fill} />
       </foreignObject>
     </g>
   );
@@ -129,7 +115,10 @@ const BarChart: React.FC<Props> = ({ data }) => {
 
   const maxValue = findMaxInData((obj: Data) => obj.value);
 
-  const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : yAxisWidthDefault;
+  const yAxisWidth =
+    maxLabelLength && maxLabelLength * multiplyFactor < yAxisWidthDefault
+      ? maxLabelLength * multiplyFactor
+      : yAxisWidthDefault;
 
   const { maxDomainValue, tickCount } = getValues(maxValue);
 
@@ -155,14 +144,6 @@ const BarChart: React.FC<Props> = ({ data }) => {
           return customTickFormatter(tick, maxDomainValue);
         }}
       />
-      {/* <YAxis
-        type="category"
-        dataKey="name"
-        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-        width={160}
-        axisLine={false}
-        tickLine={false}
-      /> */}
       <Tooltip
         cursor={{ fill: theme.utils.getColor('lightGray', 100) }}
         content={<CustomTooltipContent />}
@@ -181,7 +162,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
         type="category"
         dataKey="name"
         tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-        width={160}
+        width={yAxisWidth}
         axisLine={false}
         tickLine={false}
       />
