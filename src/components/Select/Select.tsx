@@ -10,6 +10,7 @@ import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import { debounce } from 'lodash';
+import Loader from 'components/Loader';
 
 export type SelectOption = {
   value: string | number;
@@ -87,7 +88,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     };
 
     const debouncedOnChange = React.useCallback(
-      debounce((term) => {
+      debounce(term => {
         asyncSearch(term);
       }, 500),
       []
@@ -96,7 +97,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     const handleOnInput = React.useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
         e.persist();
-
         setSearchValue(e.target.value);
 
         if (isAsync) {
@@ -113,7 +113,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       }
 
       return options.filter(
-        (option) => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
+        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
       );
     }, [searchValue, options, isAsync]);
 
@@ -122,11 +122,10 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         <div
           css={css`
             display: flex;
+            gap: 25px;
           `}
         >
-          {isLoading && (
-            <Icon size={20} name={'dotsVertical'} color={theme.utils.getColor('lightGray', 500)} />
-          )}
+          {isLoading && <Loader />}
           <Icon
             size={20}
             name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
