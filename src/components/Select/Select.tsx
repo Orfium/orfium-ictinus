@@ -70,7 +70,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       if (isAsync) {
         setIsLoading(false);
       }
-    }, [options]);
+    }, [isAsync, options]);
 
     const handleOptionClick = (option: SelectOption) => {
       setInputValue(option);
@@ -86,20 +86,26 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       }
     };
 
-    const debouncedOnChange = debounce(term => {
-      asyncSearch(term);
-    }, 500);
+    const debouncedOnChange = React.useCallback(
+      debounce((term) => {
+        asyncSearch(term);
+      }, 500),
+      []
+    );
 
-    const handleOnInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-      e.persist();
+    const handleOnInput = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        e.persist();
 
-      setSearchValue(e.target.value);
+        setSearchValue(e.target.value);
 
-      if (isAsync) {
-        setIsLoading(true);
-        debouncedOnChange(e.target.value);
-      }
-    };
+        if (isAsync) {
+          setIsLoading(true);
+          debouncedOnChange(e.target.value);
+        }
+      },
+      [debouncedOnChange, isAsync]
+    );
 
     const filteredOptions = useMemo(() => {
       if (isAsync) {
@@ -107,7 +113,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       }
 
       return options.filter(
-        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
+        (option) => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
       );
     }, [searchValue, options, isAsync]);
 
