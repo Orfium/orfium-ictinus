@@ -62,6 +62,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       setInputValue(option);
       setOpen(false);
       setSearchValue('');
+      handleSelectedOption(option);
     };
 
     const filteredOptions = useMemo(() => {
