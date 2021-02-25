@@ -36,6 +36,9 @@ export type Props = {
 
 const emptyValue = { label: '', value: '' };
 
+// Mocks onChange to avoid readonly warning for TextField Component
+const ON_CHANGE_MOCK = () => {};
+
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
 const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
@@ -87,8 +90,11 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       asyncSearch(term);
     }, 500);
 
-    const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleOnInput = (e: React.ChangeEvent<HTMLInputElement>) => {
       e.persist();
+
+      setSearchValue(e.target.value);
+
       if (isAsync) {
         setIsLoading(true);
         debouncedOnChange(e.target.value);
@@ -144,10 +150,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
             onKeyDown={handleOnKeyDown}
-            onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setSearchValue(e.target.value);
-            }}
-            onChange={handleOnChange}
+            onInput={handleOnInput}
+            onChange={ON_CHANGE_MOCK}
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}
