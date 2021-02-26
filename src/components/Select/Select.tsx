@@ -37,6 +37,8 @@ export type Props = {
   asyncSearch?: (term: string) => void;
   /** after how many characters to start searching (default = 0) */
   minCharactersToSearch?: number;
+  /** if searched text should be highlighted in available options */
+  highlightSearch?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -58,6 +60,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       asyncSearch = () => {},
       status = 'normal',
       minCharactersToSearch = 0,
+      highlightSearch = false,
       ...restInputProps
     },
     ref
@@ -180,6 +183,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
               size={restInputProps.size}
               status={status}
               isLoading={isLoading}
+              searchTerm={highlightSearch ? searchValue : undefined}
             />
           )}
         </div>

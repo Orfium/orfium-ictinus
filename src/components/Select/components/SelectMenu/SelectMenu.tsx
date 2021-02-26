@@ -1,9 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import { useEffect, useRef } from 'react';
 import { jsx } from '@emotion/core';
+import Highlighter from 'react-highlight-words';
+
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../Select';
-import { useEffect, useRef } from 'react';
 
 const SelectMenu = ({
   size = 'sm',
@@ -12,6 +14,7 @@ const SelectMenu = ({
   handleOptionClick,
   selectedOption,
   isLoading,
+  searchTerm,
 }: {
   /** Sets the size of the menu */
   size?: 'md' | 'sm';
@@ -21,6 +24,7 @@ const SelectMenu = ({
   handleOptionClick: (option: SelectOption) => void;
   selectedOption: string | number;
   isLoading?: boolean;
+  searchTerm?: string;
 }) => {
   const myRef = useRef<HTMLDivElement>(null);
 
@@ -42,7 +46,17 @@ const SelectMenu = ({
           })}
           onClick={() => handleOptionClick(option)}
         >
-          {option.label}
+          {searchTerm ? (
+            <Highlighter
+              highlightClassName="search-text"
+              highlightTag={'strong'}
+              searchWords={[searchTerm]}
+              autoEscape={true}
+              textToHighlight={option.label}
+            />
+          ) : (
+            option.label
+          )}
         </div>
       ))
     ) : (

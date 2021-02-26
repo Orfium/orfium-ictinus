@@ -244,6 +244,24 @@ Select with Label and Statuses. Error and Hint are shown below for all 3 types f
   </Story>
 </Preview>
 
+# Select with Highlighted search term
+
+Simple select component where searched term is highlighted in options
+
+<Preview>
+  <Story name="Select with Highlight">
+    <Stack>
+      <Select
+        highlightSearch
+        label={'Flavour'}
+        options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
 # Select with Async and Loading
 
 Select that support asynchronous fetching, with loading status
