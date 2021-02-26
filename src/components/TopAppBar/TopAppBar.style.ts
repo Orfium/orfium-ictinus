@@ -1,23 +1,18 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from '../../theme';
-import { BgColorType } from './TopAppBar.types';
 import { flexCenter } from '../../theme/functions';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 
 const DEFAULT_NAVBAR_HEIGHT = 62;
 
-interface StyleProps {
-  bgColor: BgColorType;
-}
-
-const topAppBarWrapper = ({ bgColor }: StyleProps) => (theme: Theme): SerializedStyles => css`
+const topAppBarWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => css`
   ${flexCenter};
   position: relative;
   justify-content: space-between;
-  background-color: ${theme.utils.getColor(bgColor.type, bgColor.variant)};
-  color: ${pickTextColorFromSwatches(bgColor.type, bgColor.variant)};
+  background-color: ${dark ? theme.palette.black : theme.palette.white};
+  color: ${dark ? theme.palette.white : theme.palette.black};
   height: ${DEFAULT_NAVBAR_HEIGHT}px;
   padding: 0 ${theme.spacing.xl};
+  box-shadow: ${theme.elevation['02']};
 `;
 
 const topAppBarSection = css`
