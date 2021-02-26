@@ -1,18 +1,31 @@
 import styled from 'styled-components';
 
+export const getDotsLayout = (delay: number, animation: string, left?: number) => `
+    left: ${`${left}px` || ''};
+    width: 6px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: #cfcfcf;
+    color: #cfcfcf;
+    animation: ${animation};
+    animation-delay: ${delay}s;
+`;
+
 export const Container = styled.div`
   align-self: center;
 `;
 
 export const Dots = styled.div`
   position: relative;
-  width: 6px;
-  height: 6px;
-  border-radius: 5px;
-  background-color: #cfcfcf;
-  color: #cfcfcf;
-  animation: dotFlashing 0.7s infinite linear alternate;
-  animation-delay: 0.5s;
+  ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate')}
+
+  &::before {
+    ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', -10)}
+  }
+
+  &::after {
+    ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', 10)}
+  }
 
   &::after,
   &::before {
@@ -20,28 +33,6 @@ export const Dots = styled.div`
     display: inline-block;
     position: absolute;
     top: 0;
-  }
-
-  &::before {
-    left: -10px;
-    width: 6px;
-    height: 6px;
-    border-radius: 5px;
-    background-color: #cfcfcf;
-    color: #cfcfcf;
-    animation: dotFlashing 0.7s infinite alternate;
-    animation-delay: 0s;
-  }
-
-  &::after {
-    left: 10px;
-    width: 6px;
-    height: 6px;
-    border-radius: 5px;
-    background-color: #cfcfcf;
-    color: #cfcfcf;
-    animation: dotFlashing 0.7s infinite alternate;
-    animation-delay: 0.7s;
   }
 
   @keyframes dotFlashing {

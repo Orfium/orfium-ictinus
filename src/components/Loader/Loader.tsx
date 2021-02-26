@@ -2,16 +2,14 @@ import React from 'react';
 import { Container, Dots } from './Loader.style';
 
 type Props = {
-  type?: 'linear' | 'spinner' | 'dots';
+  type?: 'dots';
 };
 
 const Loader: React.FC<Props> = ({ type = 'dots' }) => {
   const renderLoader = () => {
     switch (type) {
       case 'dots':
-        return <Dots />;
-      case 'linear':
-      case 'spinner':
+        return <Dots data-testid="dots-loading" />;
       default:
         return '';
     }
