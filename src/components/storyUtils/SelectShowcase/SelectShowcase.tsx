@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import React, { useState } from 'react';
-import { jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/core';
 
 import Select from '../../Select';
 import { SelectOption } from '../../Select/Select';
@@ -10,7 +10,11 @@ export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, inde
   label: `Test option ${index}`,
 }));
 
-const SelectShowcase: React.FC = () => {
+type Props = {
+  minCharactersToSearch?: number;
+};
+
+const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
   const [options, setOptions] = useState<SelectOption[]>(dummyUnrefinedData);
 
   const mockedApiCall = (term: string) => {
@@ -23,13 +27,19 @@ const SelectShowcase: React.FC = () => {
   };
 
   return (
-    <div style={{ width: '25%', height: '100%' }}>
+    <div
+      css={css`
+        width: 25%;
+        height: 100%;
+      `}
+    >
       <Select
         isAsync
         label={'Flavour'}
         options={options}
         asyncSearch={mockedApiCall}
         styleType={'filled'}
+        minCharactersToSearch={minCharactersToSearch}
       />
     </div>
   );

@@ -31,8 +31,12 @@ export type Props = {
   multi?: boolean;
   /** Options for the select dropdown */
   options: SelectOption[];
+  /** if the component is used asynchronously */
   isAsync?: boolean;
+  /** the function to fetch new options */
   asyncSearch?: (term: string) => void;
+  /** after how many characters to start searching (default = 0) */
+  minCharactersToSearch?: number;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -53,6 +57,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       isAsync = false,
       asyncSearch = () => {},
       status = 'normal',
+      minCharactersToSearch = 0,
       ...restInputProps
     },
     ref
@@ -96,10 +101,15 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
     const handleOnInput = React.useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
-        e.persist();
         setSearchValue(e.target.value);
 
         if (isAsync) {
+          e.persist();
+
+          if (minCharactersToSearch && e.target.value.length < minCharactersToSearch) {
+            return;
+          }
+
           setIsLoading(true);
           debouncedOnChange(e.target.value);
         }

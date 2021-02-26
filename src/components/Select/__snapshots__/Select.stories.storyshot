@@ -33,12 +33,104 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
     </button>
   </div>
   <div
+    className="css-rx2v65-SelectShowcase"
+  >
+    <div
+      role="button"
+    >
+      <div
+        className="css-j752ew"
+      >
+        <div
+          className="css-o66dxn-TextInputWrapper"
+        >
+          <div
+            className="css-hzcvm6-TextInputWrapper"
+          >
+            <div
+              className="css-1kf684z-TextInputWrapper"
+            >
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  required={false}
+                  status="normal"
+                  value=""
+                />
+                <label
+                  className="css-1yedgls-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <div
+                  className="css-1o9yjvp"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-z7hcm5-Icon"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Async Select with min characters 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
     style={
       Object {
-        "height": "100%",
-        "width": "25%",
+        "display": "flex",
+        "justifyContent": "flex-end",
       }
     }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-rx2v65-SelectShowcase"
   >
     <div
       role="button"
