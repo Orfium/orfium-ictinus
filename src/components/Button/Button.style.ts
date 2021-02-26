@@ -13,7 +13,7 @@ const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
     case 'lg':
       return rem(56);
     case 'sm':
-      return rem(32);
+      return rem(36);
     default:
       return rem(46);
   }

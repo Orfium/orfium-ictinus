@@ -1,35 +1,50 @@
-import { rem } from 'polished';
+import { darken, rem } from 'polished';
 import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 import { backgroundPickerBasedOnType } from 'utils/themeFunctions';
-import { pickTextColorFromSwatches } from 'theme/palette';
 
-export const navigationContainerStyle = (): SerializedStyles => css`
-  ${transition(0.2)};
+export const navigationContainerStyle = (expanded: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
+  ${transition(10.2)};
   width: 100%;
   background-color: white;
   height: 100%;
-  padding: ${rem(14)} ${rem(20)} ${rem(18)} ${rem(20)};
+  padding: ${rem(24)} 0;
   box-sizing: border-box;
+
+  #menu-item-text,
+  #submenu-item-text {
+    opacity: ${expanded ? 1 : 0};
+    width: ${expanded ? 'auto' : '1px'};
+  }
+
+  #submenu-item-link {
+    padding-left: ${expanded ? 'auto' : rem(40)};
+  }
 `;
 
-const itemStyle = css`
+const itemStyle = (theme: Theme): SerializedStyles => css`
   ${flexCenterVertical};
   height: ${rem(44)};
-  color: black;
+  color: ${theme.palette.black};
   cursor: default;
 `;
 
-export const menuItemStyle = css`
-  ${itemStyle};
+export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
+  ${itemStyle(theme)};
   font-size: ${rem(16)};
-  font-weight: 500;
-  padding-left: ${rem(4)};
+  font-weight: ${theme.typography.weights.regular};
+  padding: 0 ${theme.spacing.md};
+
+  &:hover {
+    background-color: ${theme.utils.getColor('lightGray', 100)};
+  }
 `;
 
-export const menuLinkStyle = (): SerializedStyles => css`
-  ${menuItemStyle};
+export const menuLinkStyle = () => (theme: Theme): SerializedStyles => css`
+  ${menuItemStyle()(theme)};
   text-decoration: none;
 `;
 
@@ -39,35 +54,42 @@ export const menuItemTextStyle = (current: boolean) => (theme: Theme): Serialize
 `;
 
 export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
-  ${itemStyle};
+  ${itemStyle(theme)};
   ${transition(0.2)};
   box-sizing: border-box;
   font-size: ${theme.typography.fontSizes['14']};
-  margin: ${theme.spacing.md} 0 ${theme.spacing.md} ${theme.spacing.md};
-  padding-left: ${rem(12)};
+  color: ${theme.utils.getColor('lightGray', 600)};
+  margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
+  padding-left: ${rem(46)};
 
   &.active,
   &:hover {
-    border-radius: ${rem(25)};
-    background-color: ${theme.utils.getColor('lightGray', 100)};
-
-    path {
-      fill: ${pickTextColorFromSwatches('lightGray', 100)} !important;
-    }
+    background-color: ${theme.utils.getColor('lightGray', 100)} !important;
   }
   &.active {
     font-weight: ${theme.typography.weights.bold};
+    background-color: ${darken(0.03, theme.utils.getColor('lightGray', 100))};
+    color: ${theme.palette.black};
+
+    path {
+      fill: ${theme.utils.getColor('branded1', 400, 'normal')} !important;
+    }
   }
   text-decoration: none;
 `;
 
-export const arrowContainerStyle = (open: boolean, show: boolean): SerializedStyles => css`
+export const arrowContainerStyle = (open: boolean, show: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
   ${transition(0.2)};
   ${flexCenter};
   width: ${rem(24)};
   height: ${rem(24)};
   opacity: ${show ? '1' : '0'};
   transform: ${open ? 'rotate(90deg)' : 'rotate(0deg);'};
+  path {
+    background-color: ${theme.utils.getColor('lightGray', 600)};
+  }
 `;
 
 export const menuIconStyle = (current: boolean) => (theme: Theme): SerializedStyles => css`

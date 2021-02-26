@@ -8,7 +8,7 @@ import { AvatarShapes, AvatarSizes } from './Avatar';
 const sizeBasedOnProp = (size: AvatarSizes) => {
   switch (size) {
     case 'sm':
-      return rem(32);
+      return rem(36);
     case 'md':
       return rem(46);
     case 'xs':

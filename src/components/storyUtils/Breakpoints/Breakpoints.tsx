@@ -1,7 +1,7 @@
 import React from 'react';
 import useBreakpoints, { queriesKeys } from 'hooks/useBreakpoints';
 
-const MyComponent = () => {
+const Breakpoints = () => {
   const breakpoints = useBreakpoints();
 
   return (
@@ -24,4 +24,4 @@ const MyComponent = () => {
   );
 };
 
-export default MyComponent;
+export default Breakpoints;
