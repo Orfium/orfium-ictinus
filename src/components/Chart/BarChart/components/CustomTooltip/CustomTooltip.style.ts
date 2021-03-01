@@ -1,46 +1,35 @@
-import { rem } from 'polished';
 import { Theme } from 'theme';
+import { css, SerializedStyles } from '@emotion/core';
 
-export const tooltipStyle = () => (theme: Theme) => {
-  return {
-    fontSize: theme.typography.fontSizes['14'],
-    padding: `${theme.spacing.sm} ${theme.spacing.md}`,
-    margin: theme.spacing.sm,
-    color: theme.palette.white,
-    background: theme.utils.getColor('darkGray', 600),
-    opacity: '90%',
-    borderRadius: theme.spacing.xsm,
-    minWidth: rem(200),
-    whiteSpace: 'nowrap' as const,
-  };
-};
+export const tickStyle = (fill: string) => (theme: Theme): SerializedStyles => css`
+  width: inherit;
+  height: inherit;
+  color: ${fill};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
-export const tooltipHrStyle = () => (theme: Theme) => {
-  return {
-    margin: `${theme.spacing.md} 0px`,
-    height: '1px',
-    borderWidth: 0,
-    backgroundColor: theme.palette.white,
-    opacity: '10%',
-  };
-};
+export const tooltipStyle = () => (theme: Theme): SerializedStyles => css`
+  display: block;
+  position: fixed;
+  top: -33%;
+  left: 106%;
+  color: ${theme.palette.white};
+  background-color: ${theme.utils.getColor('darkGray', 600)};
+  opacity: 90%;
+  border-radius: ${theme.spacing.xsm};
+  padding: ${theme.spacing.sm};
+`;
 
-export const tooltipUlStyle = () => () => {
-  return { padding: '0px', margin: '0px' };
-};
-
-export const tooltipLiStyle = () => (theme: Theme) => {
-  return {
-    listStyleType: 'none',
-    color: theme.palette.white,
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between',
-    height: theme.spacing.md,
-    padding: `${theme.spacing.sm} 0px`,
-    'div:last-child': {
-      marginLeft: theme.spacing.md,
-      'span': { marginLeft: theme.spacing.xsm },
-    },
-  };
-};
+export const tooltipArrowStyle = () => (theme: Theme): SerializedStyles => css`
+  content: '';
+  position: absolute;
+  border-style: solid;
+  margin-top: -5px;
+  border-width: 5px;
+  border-color: transparent ${theme.utils.getColor('darkGray', 600)} transparent transparent;
+  top: 50%;
+  left: 100%;
+  opacity: 90%;
+`;
