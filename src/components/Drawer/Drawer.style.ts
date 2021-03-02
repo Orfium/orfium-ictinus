@@ -15,5 +15,6 @@ export const drawerContainerStyle = (expanded: boolean, isDesktop: boolean) => (
   height: 100%;
   min-height: 100%;
   z-index: 100;
-  box-shadow: ${theme.elevation['01']};
+  position: absolute;
+  border-right: ${rem(1)} solid ${theme.utils.getColor('lightGray', 200)};
 `;
