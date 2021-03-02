@@ -262,6 +262,25 @@ Simple select component where searched term is highlighted in options
   </Story>
 </Preview>
 
+# Not Searchable Select
+
+Select that support asynchronous fetching, with loading status
+
+<Preview>
+  <Story name="Not Searchable Select">
+    <Stack>
+      <Select
+        highlightSearch
+        isSearchable={false}
+        label={'Flavour'}
+        options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
 # Select with Async and Loading
 
 Select that support asynchronous fetching, with loading status

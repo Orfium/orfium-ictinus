@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { Props } from './TextField';
 import { Theme } from '../../theme';
+import { InputHTMLAttributes } from 'react';
 
 export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
   theme: Theme
@@ -12,7 +13,13 @@ export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'rig
   margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
 `;
 
-export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
+export const inputStyle = ({
+  label,
+  placeholder,
+  size,
+  dark,
+  readOnly,
+}: Props & Pick<InputHTMLAttributes<HTMLInputElement>, 'readOnly'>) => (
   theme: Theme
 ): SerializedStyles => css`
   background: transparent;
@@ -28,6 +35,10 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 
   & + label {
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+  }
+
+  &:hover {
+    cursor: ${readOnly ? 'default' : 'auto'};
   }
 
   &:focus {

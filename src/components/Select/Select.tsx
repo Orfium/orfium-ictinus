@@ -39,6 +39,8 @@ export type Props = {
   minCharactersToSearch?: number;
   /** if searched text should be highlighted in available options */
   highlightSearch?: boolean;
+  /** if the options are searchable */
+  isSearchable?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -61,6 +63,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       status = 'normal',
       minCharactersToSearch = 0,
       highlightSearch = false,
+      isSearchable = true,
       ...restInputProps
     },
     ref
@@ -84,7 +87,9 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     const handleOptionClick = (option: SelectOption) => {
       setInputValue(option);
       setOpen(false);
-      setSearchValue('');
+      if (isSearchable) {
+        setSearchValue('');
+      }
       handleSelectedOption(option);
     };
 
@@ -104,7 +109,9 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
     const handleOnInput = React.useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchValue(e.target.value);
+        if (isSearchable) {
+          setSearchValue(e.target.value);
+        }
 
         if (isAsync) {
           e.persist();
@@ -117,7 +124,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           debouncedOnChange(e.target.value.trim());
         }
       },
-      [debouncedOnChange, isAsync]
+      [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
     );
 
     const filteredOptions = useMemo(() => {
@@ -170,6 +177,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onKeyDown={handleOnKeyDown}
             onInput={handleOnInput}
             onChange={ON_CHANGE_MOCK}
+            readOnly={!isSearchable}
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}

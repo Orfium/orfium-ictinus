@@ -43,6 +43,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
     lean,
     hintMsg: __hintMsg,
     styleType: __styleType,
+    readOnly,
     ...rest
   } = props;
   const theme = useTheme();
@@ -57,7 +58,8 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
         {leftIcon && <IconWrapper iconPosition={'left'}>{leftIcon}</IconWrapper>}
         <div css={{ width: '100% ' }}>
           <input
-            css={inputStyle({ label, placeholder, size, dark, lean })}
+            readOnly={readOnly}
+            css={inputStyle({ label, placeholder, size, dark, lean, readOnly })}
             placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
             required={required}
             id={id}
