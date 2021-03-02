@@ -18,12 +18,13 @@ export type Props = {
 
 const Drawer: React.FC<Props> = props => {
   const breakpoints = useBreakpoints();
+  const isSmallDesktop = breakpoints.des1200 && !breakpoints.des1440;
 
   return (
     <div
       css={drawerContainerStyle(props.expanded, breakpoints.des1200)}
-      onMouseEnter={() => !breakpoints.des1366 && props.setExpanded(true)}
-      onMouseLeave={() => !breakpoints.des1366 && props.setExpanded(false)}
+      onMouseEnter={() => isSmallDesktop && props.setExpanded(true)}
+      onMouseLeave={() => isSmallDesktop && props.setExpanded(false)}
     >
       <Navigation {...props} />
     </div>
