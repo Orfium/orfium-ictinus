@@ -14,7 +14,7 @@ const Navigation: React.FC<NavigationProps> = ({ menuItems, expanded }) => {
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 
   const toggleMenuItem = useCallback((newUrl: string): void => {
-    setOpenMenuItems(() => [newUrl]);
+    setOpenMenuItems(openMenuItems => (openMenuItems.indexOf(newUrl) !== -1 ? [] : [newUrl]));
   }, []);
 
   return (
