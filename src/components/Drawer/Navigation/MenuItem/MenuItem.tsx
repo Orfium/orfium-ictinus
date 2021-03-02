@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { MenuItem as MenuItemProps } from 'components/Drawer/types';

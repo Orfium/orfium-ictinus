@@ -10,9 +10,10 @@ import {
 } from './Month.utils';
 
 describe('Month', () => {
-  const day = dayjs().date();
-  const year = dayjs().year();
-  const month = dayjs().month();
+  const mockDate = dayjs('12-03-1989');
+  const day = mockDate.date();
+  const year = mockDate.year();
+  const month = mockDate.month();
 
   it('should render correctly', () => {
     const { container } = render(
@@ -20,8 +21,8 @@ describe('Month', () => {
         year={year}
         month={month}
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
         }}
       />
     );
@@ -30,22 +31,14 @@ describe('Month', () => {
 
   it('should check calculateDisabledDays', () => {
     const disabledAfter = calculateDisabledDays(day, month, year, {
-      after: dayjs()
-        .subtract(3, 'day')
-        .toDate(),
+      after: mockDate.subtract(3, 'day').toDate(),
     });
     const disabledBefore = calculateDisabledDays(day, month, year, {
-      before: dayjs()
-        .add(3, 'day')
-        .toDate(),
+      before: mockDate.add(3, 'day').toDate(),
     });
     const disabledBeforeAndAfter = calculateDisabledDays(day, month, year, {
-      before: dayjs()
-        .subtract(1, 'day')
-        .toDate(),
-      after: dayjs()
-        .add(1, 'day')
-        .toDate(),
+      before: mockDate.subtract(1, 'day').toDate(),
+      after: mockDate.add(1, 'day').toDate(),
     });
 
     expect(disabledAfter).toBeTruthy();
@@ -54,8 +47,8 @@ describe('Month', () => {
   });
 
   it('should check calculatedDayIsBetween', () => {
-    const wrongDate = dayjs().subtract(3, 'day');
-    const correctDate = dayjs();
+    const wrongDate = mockDate.subtract(3, 'day');
+    const correctDate = mockDate;
     const faultyDay = calculatedDayIsBetween(
       day,
       month,
@@ -76,8 +69,8 @@ describe('Month', () => {
   });
 
   it('should check calculateSelectedDayPosition', () => {
-    const dateFrom = dayjs();
-    const dateTo = dayjs().add(3, 'day');
+    const dateFrom = mockDate;
+    const dateTo = mockDate.add(3, 'day');
     const isFirst = calculateSelectedDayPosition(day, 'first', month, year, dateFrom, dateTo);
     const isLast = calculateSelectedDayPosition(day, 'first', month, year, dateTo, dateFrom);
 
@@ -86,9 +79,9 @@ describe('Month', () => {
   });
 
   it('should check calculateSelectedDay', () => {
-    const dateFrom = dayjs();
-    const wrongDateFrom = dayjs().add(1, 'day');
-    const dateTo = dayjs().add(3, 'day');
+    const dateFrom = mockDate;
+    const wrongDateFrom = mockDate.add(1, 'day');
+    const dateTo = mockDate.add(3, 'day');
     const isSelected = calculateSelectedDay(day, month, year, dateFrom, dateTo);
     const isSelectedWrongly = calculateSelectedDay(day, month, year, wrongDateFrom, dateTo);
 

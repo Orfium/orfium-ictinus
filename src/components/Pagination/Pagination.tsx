@@ -1,4 +1,5 @@
 // @ts-nocheck
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import usePagination from '../../hooks/usePagination';

@@ -18,9 +18,6 @@ export interface TopAppBarProps {
     userName: string;
     userAvatar: { src: string; letter: string };
     onSelect: (selectedItem: string) => void;
-    color: string;
   };
   dark?: boolean;
 }
-
-export const DEFAULT_BG_COLOR = { type: 'darkGray', variant: 700 } as const;
