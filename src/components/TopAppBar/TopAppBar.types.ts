@@ -1,5 +1,6 @@
 import { colorShades, flatColors } from '../../theme/palette';
 import React from 'react';
+import { UserMenuProps } from './components/UserMenu/UserMenu';
 export interface BgColorType {
   type: typeof flatColors[number];
   variant: typeof colorShades[number];
@@ -13,11 +14,6 @@ export interface TopAppBarProps {
   onMenuIconClick: () => void;
   additionalTools?: JSX.Element | JSX.Element[];
   onSearchHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  userMenu: {
-    items: string[];
-    userName: string;
-    userAvatar: { src: string; letter: string };
-    onSelect: (selectedItem: string) => void;
-  };
+  userMenu: UserMenuProps;
   dark?: boolean;
 }

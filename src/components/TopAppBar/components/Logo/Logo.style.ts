@@ -1,6 +1,6 @@
-import { Theme } from '../../../theme';
+import { Theme } from '../../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
-import { flexCenter } from '../../../theme/functions';
+import { flexCenter } from '../../../../theme/functions';
 
 const wrapper = (theme: Theme): SerializedStyles => css`
   ${flexCenter};
