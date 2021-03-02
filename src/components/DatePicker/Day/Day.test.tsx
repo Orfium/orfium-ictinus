@@ -4,9 +4,11 @@ import Day from './Day';
 import dayjs from 'dayjs';
 
 describe('Day', () => {
-  const day = dayjs().day();
-  const month = dayjs().month();
-  const year = dayjs().year();
+  const mockDate = dayjs('12-03-1989');
+  const day = mockDate.date();
+  const year = mockDate.year();
+  const month = mockDate.month();
+
   it('should render correctly', () => {
     const { container } = render(
       <table>
