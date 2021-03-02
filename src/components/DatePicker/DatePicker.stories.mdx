@@ -3,12 +3,13 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker, { extraOptions } from './DatePicker';
 import dayjs from 'dayjs';
 import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
+const mockDate = dayjs('12-03-1989');
 const options = {
   'Disable days of week (only Monday)': { daysOfWeek: [0, 2, 3, 4, 5, 6] },
-  'Disable dates after this day': { after: new Date() },
-  'Disable dates before this day': { before: new Date() },
-  'Disable dates before and after a date (-/+ 7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
-  'Enable dates from/to a date (7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
+  'Disable dates after this day': { after: mockDate },
+  'Disable dates before this day': { before: mockDate },
+  'Disable dates before and after a date (-/+ 7 days)': { before: mockDate.subtract(7, 'day').toDate(), after: mockDate.add(7, 'day').toDate() },
+  'Enable dates from/to a date (7 days)': { before: mockDate.subtract(7, 'day').toDate(), after: mockDate.add(7, 'day').toDate() },
 }
 const dateFormatOptions = {
   'Enables system\'s locale format' : undefined,
@@ -19,6 +20,7 @@ const dateFormatOptions = {
   'MMM D, YYYY': 'MMM D, YYYY',
   'ddd, MMM D, YYYY': 'ddd, MMM D, YYYY'
 }
+
 
 <Meta title="Design System/DatePicker" component={DatePicker} />
 
@@ -49,23 +51,23 @@ Implementation of both of our types DatePicker(range) and DayPicker
         isRangePicker
         extraOptions={extraOptions}
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
         }}
         onDaySelect={() => {}}
       />
       <OverlayComponent
         isRangePicker
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
         }}
         onDaySelect={() => {}}
       />
       <OverlayComponent
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(1, 'day'),
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(1, 'day'),
         }}
         onDaySelect={() => {}}
       />
@@ -170,10 +172,10 @@ This datepicker has a predefined initial value that can be used both for initial
     <DatePicker
       isRangePicker
       value={{
-        to: dayjs()
+        to: mockDate
           .add(11, 'day')
           .toDate(),
-        from: dayjs()
+        from: mockDate
           .add(1, 'day')
           .toDate(),
       }}
