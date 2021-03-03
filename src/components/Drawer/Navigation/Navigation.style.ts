@@ -17,7 +17,7 @@ export const navigationContainerStyle = (expanded: boolean) => (
   #menu-item-text,
   #submenu-item-text {
     opacity: ${expanded ? 1 : 0};
-    width: ${expanded ? rem(220) : '1px'};
+    width: ${expanded ? rem(204) : rem(16)};
   }
 
   #submenu-item-link {
