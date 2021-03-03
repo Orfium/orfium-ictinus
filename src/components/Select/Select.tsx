@@ -11,6 +11,7 @@ import ClickAwayListener from '../utils/ClickAwayListener';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import { debounce } from 'lodash';
 import Loader from 'components/Loader';
+import { generateTestDataId } from '../../utils/helpers';
 
 export type SelectOption = {
   value: string | number;
@@ -41,6 +42,8 @@ export type Props = {
   highlightSearch?: boolean;
   /** if the options are searchable */
   isSearchable?: boolean;
+  /** data-testid suffix */
+  dataTestId?: string;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -64,6 +67,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       minCharactersToSearch = 0,
       highlightSearch = false,
       isSearchable = true,
+      dataTestId,
       ...restInputProps
     },
     ref
@@ -94,8 +98,9 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     };
 
     const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-      // if backspace
-      if (e.keyCode === 8) {
+      const isBackspaceKey = e.keyCode === 8;
+
+      if (isBackspaceKey) {
         setInputValue(emptyValue);
       }
     };
@@ -178,6 +183,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onInput={handleOnInput}
             onChange={ON_CHANGE_MOCK}
             readOnly={!isSearchable}
+            data-testid={generateTestDataId('select-input', dataTestId)}
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}
