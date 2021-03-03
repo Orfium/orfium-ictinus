@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Loader Dots Loader 1`] = `
+.c0 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.c1 {
+  position: relative;
+  left: undefinedpx;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #cfcfcf;
+  color: #cfcfcf;
+  -webkit-animation: dotFlashing 0.7s infinite linear alternate;
+  animation: dotFlashing 0.7s infinite linear alternate;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.c1::before {
+  left: -10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #cfcfcf;
+  color: #cfcfcf;
+  -webkit-animation: dotFlashing 0.7s infinite alternate;
+  animation: dotFlashing 0.7s infinite alternate;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.c1::after {
+  left: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #cfcfcf;
+  color: #cfcfcf;
+  -webkit-animation: dotFlashing 0.7s infinite alternate;
+  animation: dotFlashing 0.7s infinite alternate;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+.c1::after,
+.c1::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="c0"
+  >
+    <div
+      className="c1"
+      data-testid="dots-loading"
+    />
+  </div>
+</div>
+`;
