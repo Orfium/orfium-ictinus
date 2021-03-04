@@ -1,30 +1,32 @@
-import styled from 'styled-components';
+import { css, SerializedStyles } from '@emotion/core';
 
-export const getDotsLayout = (delay: number, animation: string, left?: number) => `
-    left: ${`${left}px` || ''};
-    width: 6px;
-    height: 6px;
-    border-radius: 5px;
-    background-color: #cfcfcf;
-    color: #cfcfcf;
-    animation: ${animation};
-    animation-delay: ${delay}s;
+import { Theme } from 'theme';
+
+export const getDotsLayout = (delay: number, animation: string, theme: Theme, left?: number) => css`
+  left: ${left && `${left}px`};
+  width: 6px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: ${theme.utils.getColor('lightGray', 300)};
+  color: ${theme.utils.getColor('lightGray', 300)};
+  animation: ${animation};
+  animation-delay: ${delay}s;
 `;
 
-export const Container = styled.div`
+export const loaderContainer = () => (): SerializedStyles => css`
   align-self: center;
 `;
 
-export const Dots = styled.div`
+export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
   position: relative;
-  ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate')}
+  ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme)}
 
   &::before {
-    ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', -10)}
+    ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', theme, -10)}
   }
 
   &::after {
-    ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', 10)}
+    ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', theme, 10)}
   }
 
   &::after,
@@ -37,13 +39,13 @@ export const Dots = styled.div`
 
   @keyframes dotFlashing {
     0% {
-      background-color: #e7e7e7;
+      background-color: ${theme.utils.getColor('lightGray', 200)};
     }
     50% {
-      background-color: #dbdbdb;
+      background-color: ${theme.utils.getColor('lightGray', 300)};
     }
     100% {
-      background-color: #cfcfcf;
+      background-color: ${theme.utils.getColor('lightGray', 400)};
     }
   }
 `;
