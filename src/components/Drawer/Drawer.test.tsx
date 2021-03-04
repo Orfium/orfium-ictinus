@@ -15,7 +15,7 @@ describe('Drawer', () => {
 
     queries = render(
       <Router>
-        <Drawer expanded={true} menuItems={menuItems} />
+        <Drawer expanded={true} menuItems={menuItems} setExpanded={() => {}} />
       </Router>
     );
   });
