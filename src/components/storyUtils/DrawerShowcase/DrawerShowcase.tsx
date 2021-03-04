@@ -25,7 +25,7 @@ const DrawerShowcase: React.FC = () => {
         {expanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>
-        <Drawer expanded={expanded} menuItems={menuItems} />
+        <Drawer expanded={expanded} menuItems={menuItems} setExpanded={setExpanded} />
         <div
           css={[
             flex,

@@ -7,25 +7,14 @@ import { Props } from '../Drawer';
 import MenuItem from './MenuItem/MenuItem';
 import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 
-const Navigation: React.FC<Props> = ({ menuItems, expanded }) => {
+type NavigationProps = Props;
+
+const Navigation: React.FC<NavigationProps> = ({ menuItems, expanded }) => {
   const [openMenuItems, setOpenMenuItems] = useState<string[]>([]); // we identify open menuitems by their url
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 
   const toggleMenuItem = useCallback((newUrl: string): void => {
-    setOpenMenuItems(currentOpenMenuItems => {
-      // check if the newly selected Menuitem is currently open
-      const menuItemIndex = currentOpenMenuItems.findIndex(menuItemUrl => menuItemUrl === newUrl);
-      if (menuItemIndex === -1) {
-        // The newly selected item is not currently open, add to selection
-        return [...currentOpenMenuItems, newUrl];
-      } else {
-        // The newly selected item is already open
-        const newOpenMenuItems = [...currentOpenMenuItems];
-        newOpenMenuItems.splice(menuItemIndex, 1);
-
-        return newOpenMenuItems;
-      }
-    });
+    setOpenMenuItems(openMenuItems => (openMenuItems.indexOf(newUrl) !== -1 ? [] : [newUrl]));
   }, []);
 
   return (
