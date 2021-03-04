@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Select from './Select';
 import Stack from '../storyUtils/Stack';
+import SelectShowcase from '../storyUtils/SelectShowcase';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -242,3 +243,63 @@ Select with Label and Statuses. Error and Hint are shown below for all 3 types f
     </Stack>
   </Story>
 </Preview>
+
+# Select with Highlighted search term
+
+Simple select component where searched term is highlighted in options
+
+<Preview>
+  <Story name="Select with Highlight">
+    <Stack>
+      <Select
+        highlightSearch
+        label={'Flavour'}
+        options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Not Searchable Select
+
+Select that support asynchronous fetching, with loading status
+
+<Preview>
+  <Story name="Not Searchable Select">
+    <Stack>
+      <Select
+        highlightSearch
+        isSearchable={false}
+        label={'Flavour'}
+        options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Select with Async and Loading
+
+Select that support asynchronous fetching, with loading status
+
+<Preview>
+  <Story name="Async Select">
+    <SelectShowcase />
+  </Story>
+</Preview>
+
+# Select with Async, Loading and Minimum Characters to Search for
+
+Select that support asynchronous fetching, with loading status
+
+<Preview>
+  <Story name="Async Select with min characters">
+    <SelectShowcase
+      minCharactersToSearch={3}
+    />
+  </Story>
+</Preview>
+

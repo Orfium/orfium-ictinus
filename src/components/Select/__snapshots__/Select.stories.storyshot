@@ -1,5 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/Select Async Select 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-rx2v65-SelectShowcase"
+  >
+    <div
+      role="button"
+    >
+      <div
+        className="css-j752ew"
+      >
+        <div
+          className="css-o66dxn-TextInputWrapper"
+        >
+          <div
+            className="css-hzcvm6-TextInputWrapper"
+          >
+            <div
+              className="css-1kf684z-TextInputWrapper"
+            >
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  data-testid="select-input"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  readOnly={false}
+                  required={false}
+                  status="normal"
+                  value=""
+                />
+                <label
+                  className="css-1yedgls-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <div
+                  className="css-1o9yjvp"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-z7hcm5-Icon"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Async Select with min characters 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-rx2v65-SelectShowcase"
+  >
+    <div
+      role="button"
+    >
+      <div
+        className="css-j752ew"
+      >
+        <div
+          className="css-o66dxn-TextInputWrapper"
+        >
+          <div
+            className="css-hzcvm6-TextInputWrapper"
+          >
+            <div
+              className="css-1kf684z-TextInputWrapper"
+            >
+              <div
+                className="css-1u4znjd"
+              >
+                <input
+                  className="css-1h245c6"
+                  data-testid="select-input"
+                  disabled={false}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  readOnly={false}
+                  required={false}
+                  status="normal"
+                  value=""
+                />
+                <label
+                  className="css-1yedgls-Label"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="css-mt0mcx-IconWrapper"
+              >
+                <div
+                  className="css-1o9yjvp"
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-z7hcm5-Icon"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Select Disabled Select 1`] = `
 <div
   style={
@@ -62,12 +260,14 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value=""
@@ -82,14 +282,18 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -124,12 +328,14 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value=""
@@ -144,14 +350,18 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -186,12 +396,14 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value=""
@@ -206,14 +418,125 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-j752ew"
+        >
+          <div
+            className="css-o66dxn-TextInputWrapper"
+          >
+            <div
+              className="css-hzcvm6-TextInputWrapper"
+            >
+              <div
+                className="css-1kf684z-TextInputWrapper"
+              >
+                <div
+                  className="css-1u4znjd"
+                >
+                  <input
+                    className="css-1h245c6"
+                    data-testid="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={true}
+                    required={false}
+                    status="normal"
+                    value=""
+                  />
+                  <label
+                    className="css-1yedgls-Label"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="css-mt0mcx-IconWrapper"
+                >
+                  <div
+                    className="css-1o9yjvp"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -287,12 +610,14 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                 >
                   <input
                     className="css-bzlo54"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -307,14 +632,18 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -349,12 +678,14 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -369,14 +700,125 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Select with Highlight 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="css-j752ew"
+        >
+          <div
+            className="css-o66dxn-TextInputWrapper"
+          >
+            <div
+              className="css-hzcvm6-TextInputWrapper"
+            >
+              <div
+                className="css-1kf684z-TextInputWrapper"
+              >
+                <div
+                  className="css-1u4znjd"
+                >
+                  <input
+                    className="css-1h245c6"
+                    data-testid="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    status="normal"
+                    value=""
+                  />
+                  <label
+                    className="css-1yedgls-Label"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="css-mt0mcx-IconWrapper"
+                >
+                  <div
+                    className="css-1o9yjvp"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -464,12 +906,14 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                 >
                   <input
                     className="css-bzlo54"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -484,14 +928,18 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -526,12 +974,14 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -604,12 +1054,14 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -717,12 +1169,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     >
                       <input
                         className="css-1h245c6"
+                        data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
+                        readOnly={false}
                         required={false}
                         status="error"
                         value="Chocolate"
@@ -737,14 +1191,18 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     <div
                       className="css-mt0mcx-IconWrapper"
                     >
-                      <span
-                        className="css-1gnbc76-Icon"
-                        onClick={[Function]}
+                      <div
+                        className="css-1o9yjvp"
                       >
                         <span
-                          className="css-z7hcm5-Icon"
-                        />
-                      </span>
+                          className="css-1gnbc76-Icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="css-z7hcm5-Icon"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -792,12 +1250,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     >
                       <input
                         className="css-1h245c6"
+                        data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
+                        readOnly={false}
                         required={false}
                         status="error"
                         value="Chocolate"
@@ -812,14 +1272,18 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     <div
                       className="css-mt0mcx-IconWrapper"
                     >
-                      <span
-                        className="css-1gnbc76-Icon"
-                        onClick={[Function]}
+                      <div
+                        className="css-1o9yjvp"
                       >
                         <span
-                          className="css-z7hcm5-Icon"
-                        />
-                      </span>
+                          className="css-1gnbc76-Icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="css-z7hcm5-Icon"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -867,12 +1331,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     >
                       <input
                         className="css-1h245c6"
+                        data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
+                        readOnly={false}
                         required={false}
                         status="error"
                         value="Chocolate"
@@ -887,14 +1353,18 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     <div
                       className="css-mt0mcx-IconWrapper"
                     >
-                      <span
-                        className="css-1gnbc76-Icon"
-                        onClick={[Function]}
+                      <div
+                        className="css-1o9yjvp"
                       >
                         <span
-                          className="css-z7hcm5-Icon"
-                        />
-                      </span>
+                          className="css-1gnbc76-Icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="css-z7hcm5-Icon"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -954,12 +1424,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     >
                       <input
                         className="css-1h245c6"
+                        data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
+                        readOnly={false}
                         required={false}
                         status="hint"
                         value=""
@@ -974,14 +1446,18 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     <div
                       className="css-mt0mcx-IconWrapper"
                     >
-                      <span
-                        className="css-1gnbc76-Icon"
-                        onClick={[Function]}
+                      <div
+                        className="css-1o9yjvp"
                       >
                         <span
-                          className="css-z7hcm5-Icon"
-                        />
-                      </span>
+                          className="css-1gnbc76-Icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="css-z7hcm5-Icon"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1029,12 +1505,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     >
                       <input
                         className="css-1h245c6"
+                        data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
+                        readOnly={false}
                         required={false}
                         status="hint"
                         value=""
@@ -1049,14 +1527,18 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     <div
                       className="css-mt0mcx-IconWrapper"
                     >
-                      <span
-                        className="css-1gnbc76-Icon"
-                        onClick={[Function]}
+                      <div
+                        className="css-1o9yjvp"
                       >
                         <span
-                          className="css-z7hcm5-Icon"
-                        />
-                      </span>
+                          className="css-1gnbc76-Icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="css-z7hcm5-Icon"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1104,12 +1586,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     >
                       <input
                         className="css-1h245c6"
+                        data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
                         onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
+                        readOnly={false}
                         required={false}
                         status="hint"
                         value=""
@@ -1124,14 +1608,18 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     <div
                       className="css-mt0mcx-IconWrapper"
                     >
-                      <span
-                        className="css-1gnbc76-Icon"
-                        onClick={[Function]}
+                      <div
+                        className="css-1o9yjvp"
                       >
                         <span
-                          className="css-z7hcm5-Icon"
-                        />
-                      </span>
+                          className="css-1gnbc76-Icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="css-z7hcm5-Icon"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1220,12 +1708,14 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -1240,14 +1730,18 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1282,12 +1776,14 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -1302,14 +1798,18 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1344,12 +1844,14 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                 >
                   <input
                     className="css-1h245c6"
+                    data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
                     onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
+                    readOnly={false}
                     required={false}
                     status="normal"
                     value="Chocolate"
@@ -1364,14 +1866,18 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                 <div
                   className="css-mt0mcx-IconWrapper"
                 >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
+                  <div
+                    className="css-1o9yjvp"
                   >
                     <span
-                      className="css-z7hcm5-Icon"
-                    />
-                  </span>
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-z7hcm5-Icon"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
