@@ -31,7 +31,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
             <TextField
               placeholder={searchPlaceholder}
               dark={dark}
-              styleType={dark ? 'filled' : 'outlined'}
+              styleType={'filled'}
               leftIcon={<Icon name={'search'} />}
               {...searchProps}
             />
