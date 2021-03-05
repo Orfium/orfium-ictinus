@@ -2,6 +2,7 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Props } from './Radio';
 import { Theme } from '../../theme';
+import { colorShades, flatColors } from '../../theme/palette';
 
 const hoverColor = 'rgba(0, 0, 0, 0.05)';
 
@@ -47,45 +48,48 @@ export const customRadioWrapperStyles = (
   ${focused && !disabled && focusedRadio};
 `;
 
+const determineBoxShadow = ({
+  checked,
+  disabled,
+  filled,
+}: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (theme: Theme) => {
+  if (disabled && !checked) {
+    return `inset 0px 0px 0px ${rem(filled ? '12px' : '2px')} ${theme.utils.getColor(
+      'lightGray',
+      200
+    )}`;
+  }
+  if (checked) {
+    return `inset 0px 0px 0px ${rem('2px')} currentColor, inset 0px 0px 0px ${rem(
+      '4px'
+    )} ${theme.utils.getColor('neutralWhite', 100)}, inset 0px 0px 0px ${rem('12px')} currentColor`;
+  }
+  if (filled) {
+    return `inset 0px 0px 0px ${rem('12px')} ${theme.utils.getColor('lightGray', 300)}`;
+  }
+
+  return `inset 0px 0px 0px ${rem('2px')} currentColor`;
+};
+
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (
   theme: Theme
 ): SerializedStyles => {
-  function determineBoxShadow({
-    checked,
-    disabled,
-    filled,
-  }: Pick<Props, 'checked' | 'disabled' | 'filled'>) {
-    if (disabled && !checked) {
-      const radiusSpread = filled ? '12px' : '2px';
-
-      return `inset 0px 0px 0px ${rem(radiusSpread)} ${theme.palette.flat.lightGray[200]}`;
-    }
-
-    if (checked) {
-      return `inset 0px 0px 0px ${rem('2px')} currentColor, inset 0px 0px 0px ${rem('4px')} ${
-        theme.palette.white
-      }, inset 0px 0px 0px ${rem('12px')} currentColor`;
-    }
-
-    if (filled) {
-      return `inset 0px 0px 0px ${rem('12px')} ${theme.palette.flat.lightGray[300]}`;
-    } else {
-      return `inset 0px 0px 0px ${rem('2px')} currentColor`;
-    }
-  }
-
   return css`
     transition: all 0.2s ease;
     border-radius: 50%;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    box-shadow: ${determineBoxShadow(props)};
+    box-shadow: ${determineBoxShadow(props)(theme)};
     position: absolute;
   `;
 };
 
-export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedStyles => css`
+export const wrapperStyles = (
+  disabled: boolean,
+  fill: typeof flatColors[number],
+  fillShade: typeof colorShades[number]
+) => (theme: Theme): SerializedStyles => css`
   position: relative;
 
   border-radius: 50%;
@@ -93,7 +97,7 @@ export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedSt
   width: ${rem('48px')};
   height: ${rem('48px')};
 
-  color: ${theme.utils.getColor('branded1', 400, 'normal')};
+  color: ${theme.utils.getColor(fill, fillShade)};
   border: 0;
   opacity: ${disabled ? 0.5 : 1};
   cursor: pointer;

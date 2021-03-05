@@ -43,7 +43,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
       }
     >
       <span
-        className="css-bjtxnr-Radio"
+        className="css-z2oh1j-Radio"
         data-testid="radio-input"
       >
         <input
@@ -79,7 +79,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
       }
     >
       <span
-        className="css-bjtxnr-Radio"
+        className="css-z2oh1j-Radio"
         data-testid="radio-input"
       >
         <input
@@ -144,7 +144,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
     </button>
   </div>
   <span
-    className="css-bjtxnr-Radio"
+    className="css-z2oh1j-Radio"
     data-testid="radio-input"
   >
     <input
@@ -164,7 +164,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
       className="css-1cnuipo-Radio"
     >
       <span
-        className="css-1bf21so-Radio"
+        className="css-1ta32qg-Radio"
       />
       <span
         className="css-7s815w-Radio"
@@ -217,7 +217,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        className="css-1bt0gk1-Radio"
         data-testid="radio-input"
       >
         <input
@@ -253,7 +253,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        className="css-1bt0gk1-Radio"
         data-testid="radio-input"
       >
         <input
@@ -328,7 +328,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        className="css-1bt0gk1-Radio"
         data-testid="radio-input"
       >
         <input
@@ -364,7 +364,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        className="css-1bt0gk1-Radio"
         data-testid="radio-input"
       >
         <input
@@ -393,6 +393,69 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
       </span>
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Radio Radio Playground 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <span
+    className="css-lv293n-Radio"
+    data-testid="radio-input"
+  >
+    <input
+      checked={true}
+      className="css-dswabq-Radio"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      required={false}
+      type="radio"
+      value="on"
+    />
+    <span
+      className="css-1cnuipo-Radio"
+    >
+      <span
+        className="css-1ta32qg-Radio"
+      />
+      <span
+        className="css-7s815w-Radio"
+      />
+    </span>
+  </span>
 </div>
 `;
 
@@ -430,7 +493,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   </div>
   <div>
     <span
-      className="css-gmxcc7-Radio"
+      className="css-1bt0gk1-Radio"
       data-testid="radio-input"
     >
       <input
@@ -458,7 +521,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
       </span>
     </span>
     <span
-      className="css-gmxcc7-Radio"
+      className="css-1bt0gk1-Radio"
       data-testid="radio-input"
     >
       <input
@@ -486,7 +549,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
       </span>
     </span>
     <span
-      className="css-gmxcc7-Radio"
+      className="css-1bt0gk1-Radio"
       data-testid="radio-input"
     >
       <input
@@ -506,7 +569,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         className="css-1cnuipo-Radio"
       >
         <span
-          className="css-1bf21so-Radio"
+          className="css-1ta32qg-Radio"
         />
         <span
           className="css-7s815w-Radio"
@@ -514,7 +577,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
       </span>
     </span>
     <span
-      className="css-bjtxnr-Radio"
+      className="css-z2oh1j-Radio"
       data-testid="radio-input"
     >
       <input
@@ -542,7 +605,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
       </span>
     </span>
     <span
-      className="css-bjtxnr-Radio"
+      className="css-z2oh1j-Radio"
       data-testid="radio-input"
     >
       <input
@@ -570,7 +633,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
       </span>
     </span>
     <span
-      className="css-bjtxnr-Radio"
+      className="css-z2oh1j-Radio"
       data-testid="radio-input"
     >
       <input
@@ -590,7 +653,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         className="css-1cnuipo-Radio"
       >
         <span
-          className="css-1bf21so-Radio"
+          className="css-1ta32qg-Radio"
         />
         <span
           className="css-7s815w-Radio"
@@ -634,7 +697,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
     </button>
   </div>
   <span
-    className="css-gmxcc7-Radio"
+    className="css-1bt0gk1-Radio"
     data-testid="radio-input"
   >
     <input
@@ -654,7 +717,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
       className="css-1cnuipo-Radio"
     >
       <span
-        className="css-1bf21so-Radio"
+        className="css-1ta32qg-Radio"
       />
       <span
         className="css-7s815w-Radio"

@@ -1,6 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import Radio, { RadioWithoutForwardRef } from './Radio';
 import RadioButtonsShowcase from '../storyUtils/RadioButtonsShowcase';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
 import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Radio" component={Radio} />
@@ -76,5 +77,14 @@ import { Radio } from '@orfium/ictinus';
 <Preview>
   <Story name="Radio showcase">
     <RadioButtonsShowcase />
+  </Story>
+</Preview>
+
+
+# Radio Playground
+
+<Preview>
+  <Story name="Radio Playground"  parameters={{ decorators: [withKnobs] }}>
+    <Radio checked={boolean("checked", true)} disabled={boolean("disabled", false)} color={select('color', [ 'red-400', 'blue-400', 'lightBlue-400', 'mint-400', 'teal-400', 'green-400', 'magenta-400'], 'magenta-400')} />
   </Story>
 </Preview>

@@ -13,6 +13,7 @@ import {
   wrapperStyles,
 } from './Radio.style';
 import useTheme from '../../hooks/useTheme';
+import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 
 export type Props = {
   /** The value of the radio input. If no value is passed the default value, according to spec, is "on"
@@ -25,6 +26,8 @@ export type Props = {
   checked?: boolean;
   /** The onChange event handler for the radio input */
   onChange?: React.ReactEventHandler;
+  /** the color of the radio based on our colors eg. red-400. Default lightGray-500 */
+  color?: string;
   /** The name of the radio input, in case you want to manually form a radio group */
   name?: string;
   /** Whether the radio input is disabled
@@ -53,6 +56,7 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
     onChange,
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
     value = 'on',
+    color = 'lightGray-500',
     name,
     disabled = false,
     id,
@@ -74,6 +78,8 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
   }
 
   function handleChange(e: React.SyntheticEvent) {
+    if (disabled) return;
+
     if (externallyControlledChecked === undefined) {
       setInternallyControlledChecked((e.target as HTMLInputElement).checked);
     }
@@ -94,9 +100,13 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
     externallyControlledChecked ??
     (radioGroup ? (radioGroup && radioGroup.value) === value : internallyControlledChecked);
   const nameValue = name ?? (radioGroup && radioGroup.name);
+  const calculatedColor = calculateActualColorFromComponentProp(color);
 
   return (
-    <span css={wrapperStyles(disabled)} data-testid={generateTestDataId('radio-input', dataTestId)}>
+    <span
+      css={wrapperStyles(disabled, calculatedColor.color, calculatedColor.shade)}
+      data-testid={generateTestDataId('radio-input', dataTestId)}
+    >
       <input
         css={inputStyles}
         onFocus={handleFocus}
