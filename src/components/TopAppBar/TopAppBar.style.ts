@@ -11,7 +11,7 @@ const topAppBarWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => 
   background-color: ${dark ? theme.palette.black : theme.palette.white};
   color: ${dark ? theme.palette.white : theme.palette.black};
   height: ${DEFAULT_NAVBAR_HEIGHT}px;
-  padding: 0 ${theme.spacing.xl};
+  padding: 0 ${theme.spacing.md};
   box-shadow: ${theme.elevation['02']};
 `;
 
