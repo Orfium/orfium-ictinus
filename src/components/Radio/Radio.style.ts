@@ -66,7 +66,7 @@ const determineBoxShadow = ({
     return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGray', 300)}`;
   }
 
-  return `${boxShadowSpread('2px')} currentColor`;
+  return `${boxShadowSpread('2px')} ${theme.utils.getColor('lightGray', 500)}`;
 };
 
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (
