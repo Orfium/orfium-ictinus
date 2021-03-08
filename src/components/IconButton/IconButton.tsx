@@ -6,9 +6,10 @@ import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
-import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { iconButtonStyle } from './IconButton.style';
+import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -43,21 +44,34 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
   dataTestId = '',
   onClick,
   onBlur,
-  disabled,
+  disabled = false,
   iconColor,
 }) => {
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType(color, type);
+
   return (
-    <Button
-      dataTestId={generateTestDataId('button', dataTestId)}
+    <button
+      data-testid={generateTestDataId('button', dataTestId)}
+      css={iconButtonStyle({
+        type,
+        filled,
+        size,
+        color,
+        calculatedColor,
+        iconExists: true,
+        disabled,
+        iconLeft: null,
+        iconRight: null,
+        childrenCount: 1,
+      })}
       onClick={onClick}
       onBlur={onBlur}
-      size={size}
       color={color}
-      type={type}
-      filled={filled}
       disabled={disabled}
-      iconLeft={<Icon name={name} color={iconColor || color || type} size={iconSize} />}
-    />
+    >
+      <Icon name={name} color={iconColor || color || type} size={iconSize} />
+    </button>
   );
 };
 
