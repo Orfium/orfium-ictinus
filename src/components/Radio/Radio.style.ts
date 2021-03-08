@@ -2,7 +2,6 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Props } from './Radio';
 import { Theme } from '../../theme';
-import { colorShades, flatColors } from '../../theme/palette';
 
 const hoverColor = 'rgba(0, 0, 0, 0.05)';
 
@@ -85,11 +84,7 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'f
   `;
 };
 
-export const wrapperStyles = (
-  disabled: boolean,
-  fill: typeof flatColors[number],
-  fillShade: typeof colorShades[number]
-) => (theme: Theme): SerializedStyles => css`
+export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedStyles => css`
   position: relative;
 
   border-radius: 50%;
@@ -97,7 +92,7 @@ export const wrapperStyles = (
   width: ${rem('48px')};
   height: ${rem('48px')};
 
-  color: ${theme.utils.getColor(fill, fillShade)};
+  color: ${theme.utils.getColor('branded1', 400, 'normal')};
   border: 0;
   opacity: ${disabled ? 0.5 : 1};
   cursor: pointer;

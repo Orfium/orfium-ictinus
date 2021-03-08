@@ -9,11 +9,6 @@ describe('Radio', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render correctly with color', () => {
-    const { container } = render(<Radio color={'teal-400'} />);
-    expect(container).toMatchSnapshot();
-  });
-
   it('should change to checked on click', () => {
     const mockOnClick = jest.fn();
     const { getByTestId } = render(<Radio onChange={mockOnClick} dataTestId={'test-check'} />);
