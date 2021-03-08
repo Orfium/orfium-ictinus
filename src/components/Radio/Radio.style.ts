@@ -47,27 +47,26 @@ export const customRadioWrapperStyles = (
   ${focused && !disabled && focusedRadio};
 `;
 
+const boxShadowSpread = (spread: string | number) => `inset 0px 0px 0px ${rem(spread)}`;
+
 const determineBoxShadow = ({
   checked,
   disabled,
   filled,
 }: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (theme: Theme) => {
   if (disabled && !checked) {
-    return `inset 0px 0px 0px ${rem(filled ? '12px' : '2px')} ${theme.utils.getColor(
-      'lightGray',
-      200
-    )}`;
+    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGray', 200)}`;
   }
   if (checked) {
-    return `inset 0px 0px 0px ${rem('2px')} currentColor, inset 0px 0px 0px ${rem(
+    return `${boxShadowSpread('2px')} currentColor, ${boxShadowSpread(
       '4px'
-    )} ${theme.utils.getColor('neutralWhite', 100)}, inset 0px 0px 0px ${rem('12px')} currentColor`;
+    )} ${theme.utils.getColor('neutralWhite', 100)}, ${boxShadowSpread('12px')} currentColor`;
   }
   if (filled) {
-    return `inset 0px 0px 0px ${rem('12px')} ${theme.utils.getColor('lightGray', 300)}`;
+    return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGray', 300)}`;
   }
 
-  return `inset 0px 0px 0px ${rem('2px')} currentColor`;
+  return `${boxShadowSpread('2px')} currentColor`;
 };
 
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (
