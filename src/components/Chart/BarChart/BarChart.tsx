@@ -129,7 +129,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
   return (
     <WrappedChart
       data={data}
-      margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
+      margin={{ top: 5, right: 60, left: 20, bottom: 15 }}
       layout="vertical"
       barCategoryGap="20%"
     >
@@ -138,6 +138,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
         type="number"
         axisLine={false}
         tickLine={false}
+        tickMargin={24}
         tickCount={tickCount}
         domain={[0, maxDomainValue]}
         tickFormatter={tick => {
