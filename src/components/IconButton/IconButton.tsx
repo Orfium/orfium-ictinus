@@ -52,7 +52,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
 
   return (
     <button
-      data-testid={generateTestDataId('button', dataTestId)}
+      data-testid={generateTestDataId('icon-button', dataTestId)}
       css={iconButtonStyle({
         type,
         filled,
