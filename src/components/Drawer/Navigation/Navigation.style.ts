@@ -17,7 +17,7 @@ export const navigationContainerStyle = (expanded: boolean) => (
   #menu-item-text,
   #submenu-item-text {
     opacity: ${expanded ? 1 : 0};
-    width: ${expanded ? 'auto' : '1px'};
+    width: ${expanded ? rem(204) : rem(16)};
   }
 
   #submenu-item-link {
@@ -60,7 +60,7 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['14']};
   color: ${theme.utils.getColor('lightGray', 600)};
   margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
-  padding-left: ${rem(46)};
+  padding-left: ${rem(72)};
 
   &.active,
   &:hover {

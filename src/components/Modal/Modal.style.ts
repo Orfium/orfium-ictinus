@@ -21,7 +21,7 @@ export const cardSizing = css`
 `;
 
 export const modalContainer = (theme: Theme): SerializedStyles => css`
-  padding: ${theme.spacing.xl};
+  padding: ${theme.spacing.md};
   background: ${theme.palette.white};
 
   display: flex;
@@ -29,8 +29,13 @@ export const modalContainer = (theme: Theme): SerializedStyles => css`
   flex-wrap: wrap;
 `;
 
-export const closeContainer = css`
+export const closeContainer = (theme: Theme) => css`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+
+  //TODO: REMOVE THIS AFTER BUTTONS REFACTOR
+  svg {
+    color: ${theme.utils.getColor('lightGray', 500)};
+  }
 `;

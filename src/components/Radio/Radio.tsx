@@ -74,6 +74,8 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
   }
 
   function handleChange(e: React.SyntheticEvent) {
+    if (disabled) return;
+
     if (externallyControlledChecked === undefined) {
       setInternallyControlledChecked((e.target as HTMLInputElement).checked);
     }

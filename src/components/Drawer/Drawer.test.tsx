@@ -8,6 +8,7 @@ import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 
 describe('Drawer', () => {
   let queries: any;
+  let expanded = true;
 
   beforeEach(async () => {
     // @ts-ignore - set what matches will be
@@ -15,7 +16,13 @@ describe('Drawer', () => {
 
     queries = render(
       <Router>
-        <Drawer expanded={true} menuItems={menuItems} />
+        <Drawer
+          expanded={expanded}
+          menuItems={menuItems}
+          setExpanded={() => {
+            expanded = false;
+          }}
+        />
       </Router>
     );
   });
