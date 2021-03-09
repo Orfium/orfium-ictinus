@@ -39,6 +39,7 @@ export { default as ThemeProvider } from './components/ThemeProvider';
 export { default as Toast } from './components/Toast';
 export { default as Modal } from './components/Modal';
 export { default as useTheme } from './hooks/useTheme';
+export { default as useBreakpoints } from './hooks/useBreakpoints';
 
 export { Theme, default as themeConfig } from './theme';
 export { AcceptedColorComponentTypes } from './utils/themeFunctions';

@@ -1,15 +1,17 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import { css, jsx } from '@emotion/core';
+
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';
 import Icon from '../Icon';
 import { Props as TextFieldProps } from '../TextField/TextField';
-import { css, jsx } from '@emotion/core';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import SelectMenu from './components/SelectMenu/SelectMenu';
-
-// Mocks onChange to avoid readonly warning for TextField Component
-const ON_CHANGE_MOCK = () => {};
+import { debounce } from 'lodash';
+import Loader from 'components/Loader';
+import { generateTestDataId } from '../../utils/helpers';
 
 export type SelectOption = {
   value: string | number;
@@ -30,9 +32,24 @@ export type Props = {
   multi?: boolean;
   /** Options for the select dropdown */
   options: SelectOption[];
+  /** if the component is used asynchronously */
+  isAsync?: boolean;
+  /** the function to fetch new options */
+  asyncSearch?: (term: string) => void;
+  /** after how many characters to start searching (default = 0) */
+  minCharactersToSearch?: number;
+  /** if searched text should be highlighted in available options */
+  highlightSearch?: boolean;
+  /** if the options are searchable */
+  isSearchable?: boolean;
+  /** data-testid suffix */
+  dataTestId?: string;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
+
+// Mocks onChange to avoid readonly warning for TextField Component
+const ON_CHANGE_MOCK = () => {};
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
@@ -44,13 +61,20 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       selectedOption = emptyValue,
       multi = false,
       options,
+      isAsync = false,
+      asyncSearch = () => {},
       status = 'normal',
+      minCharactersToSearch = 0,
+      highlightSearch = false,
+      isSearchable = true,
+      dataTestId,
       ...restInputProps
     },
     ref
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [isLoading, setIsLoading] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
@@ -58,31 +82,86 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       setInputValue(defaultValue || selectedOption);
     }, [defaultValue, selectedOption]);
 
+    useEffect(() => {
+      if (isAsync) {
+        setIsLoading(false);
+      }
+    }, [isAsync, options]);
+
     const handleOptionClick = (option: SelectOption) => {
       setInputValue(option);
       setOpen(false);
-      setSearchValue('');
+      if (isSearchable) {
+        setSearchValue('');
+      }
       handleSelectedOption(option);
     };
 
+    const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+      const isBackspaceKey = e.keyCode === 8;
+
+      if (isBackspaceKey) {
+        setInputValue(emptyValue);
+      }
+    };
+
+    const debouncedOnChange = React.useCallback(
+      debounce(term => {
+        asyncSearch(term);
+      }, 400),
+      []
+    );
+
+    const handleOnInput = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (isSearchable) {
+          setSearchValue(e.target.value);
+        }
+
+        if (isAsync) {
+          e.persist();
+
+          if (minCharactersToSearch && e.target.value.length < minCharactersToSearch) {
+            return;
+          }
+
+          setIsLoading(true);
+          debouncedOnChange(e.target.value.trim());
+        }
+      },
+      [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
+    );
+
     const filteredOptions = useMemo(() => {
+      if (isAsync) {
+        return options;
+      }
+
       return options.filter(
         option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
       );
-    }, [searchValue, options]);
+    }, [searchValue, options, isAsync]);
 
     const rightIconRender = useMemo(
       () => (
-        <Icon
-          size={20}
-          name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
-          color={theme.utils.getColor('lightGray', 500)}
-          onClick={() => {
-            setOpen(!open);
-          }}
-        />
+        <div
+          css={css`
+            display: flex;
+            gap: 25px;
+          `}
+        >
+          {isLoading && <Loader />}
+          <Icon
+            size={20}
+            name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
+            color={theme.utils.getColor('lightGray', 500)}
+            onClick={() => {
+              setOpen(!open);
+            }}
+          />
+        </div>
       ),
-      [open, theme.utils, setOpen]
+      [open, theme.utils, setOpen, isLoading]
     );
 
     return (
@@ -100,16 +179,11 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           <TextField
             onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
-            onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => {
-              // if backspace
-              if (e.keyCode === 8) {
-                setInputValue(emptyValue);
-              }
-            }}
-            onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setSearchValue(e.target.value);
-            }}
+            onKeyDown={handleOnKeyDown}
+            onInput={handleOnInput}
             onChange={ON_CHANGE_MOCK}
+            readOnly={!isSearchable}
+            data-testid={generateTestDataId('select-input', dataTestId)}
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}
@@ -122,6 +196,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
               selectedOption={inputValue.value}
               size={restInputProps.size}
               status={status}
+              isLoading={isLoading}
+              searchTerm={highlightSearch ? searchValue : undefined}
             />
           )}
         </div>

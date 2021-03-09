@@ -4,12 +4,14 @@ import OverlayComponent from './OverlayComponent';
 import dayjs from 'dayjs';
 
 describe('OverlayComponent', () => {
+  const mockDate = dayjs('12-03-1989');
+
   it('should render correctly', () => {
     const { container } = render(
       <OverlayComponent
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
         }}
         onDaySelect={() => {}}
       />
@@ -21,8 +23,8 @@ describe('OverlayComponent', () => {
       <OverlayComponent
         isRangePicker
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
         }}
         onDaySelect={() => {}}
       />
@@ -33,7 +35,7 @@ describe('OverlayComponent', () => {
   it('should run callbacks correctly on buttons Cancel, Apply', async () => {
     const onApply = jest.fn();
     const onCancel = jest.fn();
-    const date = dayjs().add(1, 'day');
+    const date = mockDate.add(1, 'day');
 
     const { findByText } = render(
       <OverlayComponent
@@ -58,7 +60,7 @@ describe('OverlayComponent', () => {
 
   it('should run onDaySelect correctly', async () => {
     const onDaySelect = jest.fn();
-    const date = dayjs().add(1, 'day');
+    const date = mockDate.add(1, 'day');
 
     const { findByText } = render(
       <OverlayComponent
@@ -78,22 +80,22 @@ describe('OverlayComponent', () => {
   it('should display and handle extra options', async () => {
     const onDaySelect = jest.fn();
     const onSelectedOption = jest.fn();
-    const date = dayjs().add(1, 'day');
+    const date = mockDate.add(1, 'day');
     const extraOptions = [
       {
         value: 'last-7-days',
         label: 'Last 7 days',
-        dates: [dayjs().subtract(7, 'day'), dayjs()],
+        dates: [mockDate.subtract(7, 'day'), dayjs()],
       },
       {
         value: 'last-30-days',
         label: 'Last 30 days',
-        dates: [dayjs().subtract(30, 'day'), dayjs()],
+        dates: [mockDate.subtract(30, 'day'), dayjs()],
       },
       {
         value: 'custom',
         label: 'Custom',
-        dates: [dayjs()],
+        dates: [mockDate],
       },
     ];
 
