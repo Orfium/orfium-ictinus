@@ -12,6 +12,7 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import { debounce } from 'lodash';
 import Loader from 'components/Loader';
 import { generateTestDataId } from '../../utils/helpers';
+import { rem } from 'polished';
 
 export type SelectOption = {
   value: string | number;
