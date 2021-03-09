@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import Icon from '../../Icon';
+import Icon from '../../../Icon';
 import Styles from './SidebarMenuIcon.style';
 
 interface Props {

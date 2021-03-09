@@ -98,6 +98,7 @@ export const pickTextColorFromSwatches = (
       'darkBlue',
       'purple',
       'mint',
+      'neutralBlack',
     ],
     600: [
       'lightGray',

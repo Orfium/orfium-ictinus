@@ -91,6 +91,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     const handleOptionClick = (option: SelectOption) => {
       setInputValue(option);
       setOpen(false);
+
       if (isSearchable) {
         setSearchValue('');
       }
