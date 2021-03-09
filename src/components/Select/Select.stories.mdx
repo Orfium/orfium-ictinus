@@ -48,7 +48,7 @@ Simple select component with clearable data and searchable input
       />
       <Select
         label={'Flavour'}
-        options={options}
+        options={[...options, { value: 'strawberry', label: 'Strawberry  strawberry strawberry strawberry strawberry strawberry' }]}
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}

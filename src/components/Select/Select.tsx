@@ -8,6 +8,7 @@ import { Props as TextFieldProps } from '../TextField/TextField';
 import { css, jsx } from '@emotion/core';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import SelectMenu from './components/SelectMenu/SelectMenu';
+import { rem } from 'polished';
 
 // Mocks onChange to avoid readonly warning for TextField Component
 const ON_CHANGE_MOCK = () => {};
@@ -96,6 +97,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         <div
           css={css`
             position: relative;
+            min-width: ${rem(150)};
           `}
         >
           <TextField
