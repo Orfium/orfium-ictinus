@@ -176,6 +176,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           css={css`
             position: relative;
             min-width: ${rem(150)};
+            max-width: ${rem(620)};
           `}
         >
           <TextField
