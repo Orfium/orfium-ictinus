@@ -132,6 +132,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
       margin={{ top: 5, right: 60, left: 20, bottom: 15 }}
       layout="vertical"
       barCategoryGap="20%"
+      maxBarSize={32}
     >
       <CartesianGrid offset={{ left: 0 }} horizontal={false} />
       <XAxis
