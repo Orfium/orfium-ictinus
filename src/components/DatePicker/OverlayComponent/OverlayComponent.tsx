@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useCallback, useState } from 'react';
 import Button from '../../Button';
 import { DisabledDates, ExtraOption } from '../DatePicker';
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import MonthWrapper from './components/MonthWrapper/MonthWrapper';
 import {
   buttonsMonthsWrapperStyle,
@@ -15,6 +15,7 @@ import {
   optionsWrapperStyle,
   overlayWrapperStyle,
 } from './OverlayComponent.style';
+import { currentDay } from '../utils';
 
 type Props = {
   selectedOption?: string;
@@ -43,8 +44,8 @@ const OverlayComponent: React.FC<Props> = ({
   onCancel = () => {},
   onApply = () => {},
 }) => {
-  const [date, setDate] = useState(dayjs());
-  const [date2, setDate2] = useState(dayjs());
+  const [date, setDate] = useState(currentDay);
+  const [date2, setDate2] = useState(currentDay);
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
