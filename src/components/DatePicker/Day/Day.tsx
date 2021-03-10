@@ -2,9 +2,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
+import { currentDay } from '../utils';
 
 export type Props = {
   day?: number;
@@ -34,14 +35,14 @@ const Day: React.FC<Props> = ({
   const date = React.useMemo(
     () =>
       day &&
-      dayjs()
+      currentDay
         .month(month)
         .date(day)
         .year(year),
     [year, day, month]
   );
   const isToday = React.useMemo(() => {
-    return dayjs().month() === month && dayjs().year() === year && dayjs().date() === day;
+    return currentDay.month() === month && currentDay.year() === year && currentDay.date() === day;
   }, [year, month, day]);
 
   const onDayClick = React.useCallback(

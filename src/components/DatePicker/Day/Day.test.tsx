@@ -1,10 +1,10 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
 import Day from './Day';
-import dayjs from 'dayjs';
+import { currentDay } from '../utils';
 
 describe('Day', () => {
-  const mockDate = dayjs('12-03-1989');
+  const mockDate = currentDay;
   const day = mockDate.date();
   const year = mockDate.year();
   const month = mockDate.month();
