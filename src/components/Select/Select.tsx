@@ -12,6 +12,7 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import { debounce } from 'lodash';
 import Loader from 'components/Loader';
 import { generateTestDataId } from '../../utils/helpers';
+import { rem } from 'polished';
 
 export type SelectOption = {
   value: string | number;
@@ -175,6 +176,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         <div
           css={css`
             position: relative;
+            min-width: ${rem(150)};
+            max-width: ${rem(620)};
           `}
         >
           <TextField
