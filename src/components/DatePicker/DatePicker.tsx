@@ -9,6 +9,7 @@ import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import DatePickInput from './DatePickInput';
 import PositionInScreen from '../utils/PositionInScreen';
+import { currentDay, datepickerPropValue } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -50,17 +51,17 @@ export const extraOptions: ExtraOption[] = [
   {
     value: 'last-7-days',
     label: 'Last 7 days',
-    dates: [dayjs().subtract(7, 'day'), dayjs()],
+    dates: [currentDay.subtract(7, 'day'), currentDay],
   },
   {
     value: 'last-30-days',
     label: 'Last 30 days',
-    dates: [dayjs().subtract(30, 'day'), dayjs()],
+    dates: [currentDay.subtract(30, 'day'), currentDay],
   },
   {
     value: 'custom',
     label: 'Custom',
-    dates: [dayjs()],
+    dates: [currentDay],
   },
 ];
 
@@ -69,8 +70,8 @@ const DatePicker: React.FC<Props> = ({
   onChange,
   disableDates,
   value = {
-    from: undefined,
-    to: undefined,
+    from: datepickerPropValue,
+    to: datepickerPropValue,
   },
   inputProps,
   dateFormatOverride = undefined,
