@@ -1,5 +1,6 @@
 import { DisabledDates } from '../DatePicker';
 import dayjs, { Dayjs } from 'dayjs';
+import { currentDay } from '../utils';
 
 export const calculateDisabledDays = (
   day: number | undefined,
@@ -9,7 +10,7 @@ export const calculateDisabledDays = (
 ) => {
   if (!day) return false;
 
-  const date = dayjs()
+  const date = currentDay
     .month(month)
     .year(year)
     .date(day);
@@ -39,7 +40,7 @@ export const calculatedDayIsBetween = (
 ) => {
   if (!day) return false;
 
-  const date = dayjs()
+  const date = currentDay
     .month(month)
     .year(year)
     .date(day);
@@ -63,7 +64,7 @@ export const calculateSelectedDayPosition = (
     return (
       pickedDate &&
       pickedDate.isSame(
-        dayjs()
+        currentDay
           .month(month)
           .year(year)
           .date(day),
@@ -75,7 +76,7 @@ export const calculateSelectedDayPosition = (
   return (
     day &&
     from?.isSame(
-      dayjs()
+      currentDay
         .month(month)
         .year(year)
         .date(day),
@@ -93,7 +94,7 @@ export const calculateSelectedDay = (
 ) => {
   if (!day) return false;
 
-  const date = dayjs()
+  const date = currentDay
     .month(month)
     .year(year)
     .date(day);
