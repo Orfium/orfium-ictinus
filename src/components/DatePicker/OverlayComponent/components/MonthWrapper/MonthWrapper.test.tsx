@@ -1,17 +1,17 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
 import MonthWrapper from './MonthWrapper';
-import dayjs from 'dayjs';
+import { currentDay } from '../../../utils';
 
 describe('MonthWrapper', () => {
   it('should render correctly', () => {
     const { container } = render(
       <MonthWrapper
-        date={dayjs()}
+        date={currentDay}
         setDate={() => {}}
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: currentDay.add(1, 'day'),
+          to: currentDay.add(44, 'day'),
         }}
         onDaySelect={() => {}}
       />
@@ -20,7 +20,7 @@ describe('MonthWrapper', () => {
   });
 
   it('should run callbacks correctly onDaySelect, setDate', async () => {
-    const date = dayjs();
+    const date = currentDay;
     const setDate = jest.fn();
     const onDaySelect = jest.fn();
     const nextYearDate = date.year(date.year() + 1);
@@ -30,8 +30,8 @@ describe('MonthWrapper', () => {
         date={date}
         setDate={setDate}
         selectedDays={{
-          from: dayjs().add(1, 'day'),
-          to: dayjs().add(44, 'day'),
+          from: currentDay.add(1, 'day'),
+          to: currentDay.add(44, 'day'),
         }}
         onDaySelect={onDaySelect}
       />
