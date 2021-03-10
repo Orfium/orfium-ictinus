@@ -3,15 +3,13 @@
 import { jsx } from '@emotion/core';
 import { FC } from 'react';
 import Styles from './TopAppBar.style';
-import { DEFAULT_BG_COLOR, TopAppBarProps } from './TopAppBar.types';
-import { SidebarMenuIcon } from './components';
-import LogoWrapper from './components/Logo.wrapper';
+import { TopAppBarProps } from './TopAppBar.types';
+import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';
 import TextField from '../TextField';
 import Icon from '../Icon';
-import Menu from '../Menu';
+import { useBreakpoints } from '../../index';
 
 const TopAppBar: FC<TopAppBarProps> = ({
-  bgColor = DEFAULT_BG_COLOR,
   searchPlaceholder = 'Search',
   logoIcon,
   onMenuIconClick,
@@ -20,18 +18,14 @@ const TopAppBar: FC<TopAppBarProps> = ({
   onSearchHandler,
   dark = false,
 }) => {
-  const { items, userAvatar, userName, onSelect, color } = userMenu;
+  const breakpoints = useBreakpoints();
   const searchProps = onSearchHandler ? { onChange: onSearchHandler } : {};
 
   return (
-    <div
-      role="banner"
-      aria-label="Top Application Banner"
-      css={Styles.topAppBarWrapper({ bgColor })}
-    >
+    <div role="banner" aria-label="Top Application Banner" css={Styles.topAppBarWrapper(dark)}>
       <div css={Styles.mainSection(Boolean(onSearchHandler))}>
-        <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />
-        <LogoWrapper logoIcon={logoIcon} />
+        {!breakpoints.des1200 && <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />}
+        <LogoPlaceholder logoIcon={logoIcon} />
         {onSearchHandler && (
           <div css={Styles.searchWrapper}>
             <TextField
@@ -46,16 +40,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
       </div>
       <div css={Styles.additionalToolsSection(Boolean(additionalTools))}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>
-        <Menu
-          items={items}
-          buttonText={userName}
-          buttonType={'warning'}
-          color={color}
-          rightIconName={'arrowDown'}
-          avatar={userAvatar}
-          onSelect={onSelect}
-          dataTestId={'userMenu'}
-        />
+        <UserMenu dark={dark} {...userMenu} />
       </div>
     </div>
   );

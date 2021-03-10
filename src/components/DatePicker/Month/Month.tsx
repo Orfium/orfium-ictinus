@@ -17,6 +17,7 @@ import {
   calculateSelectedDay,
   calculateSelectedDayPosition,
 } from './Month.utils';
+import { currentDay } from '../utils';
 
 dayjs.extend(isBetween);
 
@@ -42,7 +43,7 @@ export type Props = {
 
 const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
-    const monthDate = dayjs()
+    const monthDate = currentDay
       .month(month)
       .year(year)
       .date(1);
