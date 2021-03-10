@@ -84,14 +84,7 @@ const MenuItem: React.FC<Props> = memo(
                               size={20}
                             />
                           </div>
-                          <span
-                            css={{
-                              whiteSpace: 'nowrap',
-                            }}
-                            className={'submenu-item-text'}
-                          >
-                            {subMenuItem.name}
-                          </span>
+                          <span className={'submenu-item-text'}>{subMenuItem.name}</span>
                         </NavLink>
                       )
                   )}
