@@ -11,14 +11,15 @@ import {
 } from 'recharts';
 import max from 'lodash/max';
 import { lighten } from 'polished';
+import CustomTooltipContent from './components/CustomTooltipContent';
 import CustomTooltip from './components/CustomTooltip';
 import useTheme from 'hooks/useTheme';
 import CustomLabel from './components/CustomLabel';
 import { getValues, customTickFormatter } from './utils';
 import Wrapper from '../Wrapper';
 
-const multiplyFactor = 6.8;
-const yAxisWidthDefault = 60;
+const multiplyFactor = 9.5;
+const yAxisWidthDefault = 160;
 const lightenFactor = 0.2;
 
 export type HoverInfo = {
@@ -50,10 +51,11 @@ export type Props = {
 type YAxisProp = {
   colors: Record<string, string>;
   y: number;
+  width: number;
   payload: { value: React.ReactNode };
 };
 
-const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
+const CustomYAxisTick = ({ colors, y, width, payload }: YAxisProp) => {
   const theme = useTheme();
 
   const fill =
@@ -62,9 +64,11 @@ const CustomYAxisTick = ({ colors, y, payload }: YAxisProp) => {
       : theme.palette.black;
 
   return (
-    <text x={0} y={y} textAnchor="start" fill={fill}>
-      <tspan dy="0.335em">{payload.value}</tspan>
-    </text>
+    <g>
+      <foreignObject y={y - 10} width={width} height="20" style={{ overflow: 'visible' }}>
+        <CustomTooltip content={payload.value} fill={fill} />
+      </foreignObject>
+    </g>
   );
 };
 
@@ -111,7 +115,10 @@ const BarChart: React.FC<Props> = ({ data }) => {
 
   const maxValue = findMaxInData((obj: Data) => obj.value);
 
-  const yAxisWidth = maxLabelLength ? maxLabelLength * multiplyFactor : yAxisWidthDefault;
+  const yAxisWidth =
+    maxLabelLength && maxLabelLength * multiplyFactor < yAxisWidthDefault
+      ? maxLabelLength * multiplyFactor
+      : yAxisWidthDefault;
 
   const { maxDomainValue, tickCount } = getValues(maxValue);
 
@@ -122,32 +129,26 @@ const BarChart: React.FC<Props> = ({ data }) => {
   return (
     <WrappedChart
       data={data}
-      margin={{ top: 5, right: 60, left: 20, bottom: 5 }}
+      margin={{ top: 5, right: 60, left: 20, bottom: 15 }}
       layout="vertical"
       barCategoryGap="20%"
+      maxBarSize={32}
     >
       <CartesianGrid offset={{ left: 0 }} horizontal={false} />
       <XAxis
         type="number"
         axisLine={false}
         tickLine={false}
+        tickMargin={24}
         tickCount={tickCount}
         domain={[0, maxDomainValue]}
         tickFormatter={tick => {
           return customTickFormatter(tick, maxDomainValue);
         }}
       />
-      <YAxis
-        type="category"
-        dataKey="name"
-        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
-        width={yAxisWidth}
-        axisLine={false}
-        tickLine={false}
-      />
       <Tooltip
         cursor={{ fill: theme.utils.getColor('lightGray', 100) }}
-        content={<CustomTooltip />}
+        content={<CustomTooltipContent />}
       />
       <Bar dataKey="value">
         <LabelList
@@ -159,6 +160,14 @@ const BarChart: React.FC<Props> = ({ data }) => {
           <Cell key={`cell-${entry.name}-${entry.value}`} fill={barColors[index]} />
         ))}{' '}
       </Bar>
+      <YAxis
+        type="category"
+        dataKey="name"
+        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
+        width={yAxisWidth}
+        axisLine={false}
+        tickLine={false}
+      />
     </WrappedChart>
   );
 };
