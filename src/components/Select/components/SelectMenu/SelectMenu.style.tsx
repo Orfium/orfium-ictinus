@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { darken } from 'polished';
+import { darken, rem } from 'polished';
 import { Theme } from 'theme';
 import { Props } from '../../../TextField/TextField';
 
@@ -32,8 +32,9 @@ export const menuStyle = ({ status, size }: Props) => (theme: Theme): Serialized
   top: ${status !== 'normal' ? '70%' : '110%'};
   z-index: 500;
   position: absolute;
-  min-width: 220px;
   max-height: ${size === 'md' ? 277 : 265}px;
   overflow-y: auto;
-  max-width: 440px; // TODO we need a technique to identify menu position left or right
+  // TODO we need a technique to identify menu position left or right
+  min-width: 100%;
+  max-width: ${rem(620)};
 `;

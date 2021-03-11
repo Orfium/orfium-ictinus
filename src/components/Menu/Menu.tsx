@@ -21,6 +21,8 @@ export type Props = {
   color?: string;
   /** Items that are being declared as menu options */
   items?: string[];
+  /** This property define the size of the button. Defaults to 'md' */
+  size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
   /** Returns the items selected on the menu */
@@ -55,6 +57,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     items,
     onSelect,
     color = '',
+    size = 'md',
     buttonText = 'More',
     menuPosition = 'left',
     buttonType = 'primary',
@@ -77,6 +80,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     <ClickAwayListener onClick={() => setOpen(false)}>
       <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
+          size={size}
           onClick={() => setOpen(!open)}
           type={buttonType}
           color={color}

@@ -1,10 +1,10 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
 import OverlayComponent from './OverlayComponent';
-import dayjs from 'dayjs';
+import { currentDay } from '../utils';
 
 describe('OverlayComponent', () => {
-  const mockDate = dayjs('12-03-1989');
+  const mockDate = currentDay;
 
   it('should render correctly', () => {
     const { container } = render(
@@ -85,12 +85,12 @@ describe('OverlayComponent', () => {
       {
         value: 'last-7-days',
         label: 'Last 7 days',
-        dates: [mockDate.subtract(7, 'day'), dayjs()],
+        dates: [mockDate.subtract(7, 'day'), currentDay],
       },
       {
         value: 'last-30-days',
         label: 'Last 30 days',
-        dates: [mockDate.subtract(30, 'day'), dayjs()],
+        dates: [mockDate.subtract(30, 'day'), currentDay],
       },
       {
         value: 'custom',

@@ -1,9 +1,10 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker, { extraOptions } from './DatePicker';
+import { currentDay } from './utils';
 import dayjs from 'dayjs';
 import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
-const mockDate = dayjs('12-03-1989');
+const mockDate = currentDay;
 const options = {
   'Disable days of week (only Monday)': { daysOfWeek: [0, 2, 3, 4, 5, 6] },
   'Disable dates after this day': { after: mockDate },

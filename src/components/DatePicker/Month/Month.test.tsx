@@ -1,16 +1,16 @@
 import React from 'react';
 import { render } from 'test';
 import Month from './Month';
-import dayjs from 'dayjs';
 import {
   calculatedDayIsBetween,
   calculateDisabledDays,
   calculateSelectedDay,
   calculateSelectedDayPosition,
 } from './Month.utils';
+import { currentDay } from '../utils';
 
 describe('Month', () => {
-  const mockDate = dayjs('12-03-1989');
+  const mockDate = currentDay;
   const day = mockDate.date();
   const year = mockDate.year();
   const month = mockDate.month();
