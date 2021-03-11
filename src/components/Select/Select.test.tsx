@@ -58,11 +58,12 @@ describe('Generic Select', () => {
 
     let selectInput: HTMLInputElement;
 
-    const renderSelect = (minCharacters = 0) => {
+    const renderSelect = (minCharacters = 0, isLoading = false) => {
       return render(
         <div>
           <Select
             isAsync
+            isLoading={isLoading}
             label={'Country'}
             options={dropdownList}
             styleType={'filled'}
@@ -78,8 +79,8 @@ describe('Generic Select', () => {
       jest.clearAllMocks();
     });
 
-    it('should display loading dots and text when typing', async () => {
-      renderSelect();
+    it('should display loading dots when isLoading is true', async () => {
+      renderSelect(0, true);
 
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
 
