@@ -10,6 +10,9 @@ import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import { iconButtonStyle } from './IconButton.style';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { pickTextColorFromSwatches } from '../../theme/palette';
+import { defineBackgroundColor } from '../Button/utils';
+import { useTheme } from '../../index';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -26,8 +29,6 @@ export type Props = {
   name: AcceptedIconNames;
   /** Define if the button is in disabled state */
   disabled?: boolean;
-  /** Defines the icon's color **/
-  iconColor?: AcceptedColorComponentTypes | string;
 };
 
 export type TestProps = {
@@ -45,10 +46,13 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
   onClick,
   onBlur,
   disabled = false,
-  iconColor,
 }) => {
+  const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
+  const iconColor = filled
+    ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+    : defineBackgroundColor(theme, calculatedColor, type, true, true);
 
   return (
     <button
@@ -70,7 +74,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
       color={color}
       disabled={disabled}
     >
-      <Icon name={name} color={iconColor || color || type} size={iconSize} />
+      <Icon name={name} color={iconColor} size={iconSize} />
     </button>
   );
 };
