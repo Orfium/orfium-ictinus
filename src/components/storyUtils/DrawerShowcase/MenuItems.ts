@@ -2,7 +2,7 @@ import { MenuItem } from '../../Drawer/types';
 
 export const menuItems: MenuItem[] = [
   {
-    name: 'Menu1',
+    name: 'Long Menu Item Name',
     url: '/menu1',
     iconName: 'ticTacToeArrow',
     visible: true,
