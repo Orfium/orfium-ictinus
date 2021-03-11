@@ -26,4 +26,5 @@ export const labelStyle = ({
   top: 0;
   bottom: 0;
   margin: auto;
+  white-space: nowrap;
 `;

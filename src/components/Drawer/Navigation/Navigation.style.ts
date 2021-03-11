@@ -14,10 +14,11 @@ export const navigationContainerStyle = (expanded: boolean) => (
   padding: ${rem(24)} 0;
   box-sizing: border-box;
 
-  #menu-item-text,
-  #submenu-item-text {
+  .menu-item-text,
+  .submenu-item-text {
     opacity: ${expanded ? 1 : 0};
     width: ${expanded ? rem(204) : rem(16)};
+    white-space: nowrap;
   }
 
   #submenu-item-link {
