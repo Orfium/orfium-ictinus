@@ -37,6 +37,7 @@ export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
   font-size: ${rem(16)};
   font-weight: ${theme.typography.weights.regular};
   padding: 0 ${theme.spacing.md};
+  white-space: nowrap;
 
   &:hover {
     background-color: ${theme.utils.getColor('lightGray', 100)};
