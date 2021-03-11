@@ -17,11 +17,15 @@ type Props = {
 
 const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
   const [options, setOptions] = useState<SelectOption[]>(dummyUnrefinedData);
+  const [isLoading, setIsLoading] = React.useState(false);
 
   const mockedApiCall = (term: string) => {
-    new Promise<SelectOption[]>(resolve =>
-      setTimeout(() => resolve(dummyUnrefinedData), 1500)
-    ).then(values => {
+    new Promise<SelectOption[]>(resolve => {
+      setTimeout(() => {
+        resolve(dummyUnrefinedData);
+        setIsLoading(false);
+      }, 1500);
+    }).then(values => {
       const filteredValues = values.filter(option => option.label.includes(term));
       setOptions(filteredValues);
     });
@@ -39,6 +43,8 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
         label={'Flavour'}
         options={options}
         asyncSearch={mockedApiCall}
+        isLoading={isLoading}
+        onKeyPress={() => setIsLoading(true)}
         styleType={'filled'}
         minCharactersToSearch={minCharactersToSearch}
       />

@@ -45,6 +45,8 @@ export type Props = {
   isSearchable?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
+  /** if component is loading */
+  isLoading?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -63,6 +65,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       multi = false,
       options,
       isAsync = false,
+      isLoading = false,
       asyncSearch = () => {},
       status = 'normal',
       minCharactersToSearch = 0,
@@ -75,19 +78,12 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    const [isLoading, setIsLoading] = React.useState(false);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
     useEffect(() => {
       setInputValue(defaultValue || selectedOption);
     }, [defaultValue, selectedOption]);
-
-    useEffect(() => {
-      if (isAsync) {
-        setIsLoading(false);
-      }
-    }, [isAsync, options]);
 
     const handleOptionClick = (option: SelectOption) => {
       setInputValue(option);
@@ -127,7 +123,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             return;
           }
 
-          setIsLoading(true);
           debouncedOnChange(e.target.value.trim());
         }
       },
