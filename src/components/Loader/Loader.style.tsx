@@ -19,15 +19,7 @@ export const loaderContainer = () => (): SerializedStyles => css`
 
 export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
   position: relative;
-  ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme)}
-
-  &::before {
-    ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', theme, -10)}
-  }
-
-  &::after {
-    ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', theme, 10)}
-  }
+  ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme)};
 
   &::after,
   &::before {
@@ -35,6 +27,14 @@ export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
     display: inline-block;
     position: absolute;
     top: 0;
+  }
+
+  &::before {
+    ${getDotsLayout(0, 'dotFlashing 0.7s infinite alternate', theme, -10)};
+  }
+
+  &::after {
+    ${getDotsLayout(0.7, 'dotFlashing 0.7s infinite alternate', theme, 10)};
   }
 
   @keyframes dotFlashing {
