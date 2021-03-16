@@ -26,7 +26,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ viewBox, value, units }) => {
       >
         <tspan
           x="50%"
-          dy="-5"
+          dy="-7"
           alignmentBaseline="middle"
           fontSize={theme.typography.fontSizes['16']}
           fill={theme.palette.black}
@@ -34,7 +34,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ viewBox, value, units }) => {
           {value}
         </tspan>
       </text>
-      <foreignObject y="50%" width="100%" height={cy && cy / 2.5}>
+      <foreignObject y="52%" width="100%" height={cy && cy / 2.5}>
         <div css={flexContainer()}>
           <div css={labelUnitStyle()}>{units}</div>
         </div>
