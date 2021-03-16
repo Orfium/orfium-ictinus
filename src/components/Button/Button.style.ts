@@ -8,7 +8,7 @@ import { defineBackgroundColor, stateBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
-const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
+export const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
   switch (size) {
     case 'lg':
       return rem(56);

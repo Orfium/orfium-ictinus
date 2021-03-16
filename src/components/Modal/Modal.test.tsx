@@ -56,7 +56,7 @@ describe('Modal', () => {
       </Modal>
     );
 
-    const closeButton = await findByTestId('button-button-modal-close');
+    const closeButton = await findByTestId('icon-button-modal-close');
     fireEvent.click(closeButton);
 
     expect(closeCTA).toHaveBeenCalledTimes(1);

@@ -6,9 +6,13 @@ import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
-import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { iconButtonStyle } from './IconButton.style';
+import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { pickTextColorFromSwatches } from '../../theme/palette';
+import { defineBackgroundColor } from '../Button/utils';
+import { useTheme } from '../../index';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -25,8 +29,6 @@ export type Props = {
   name: AcceptedIconNames;
   /** Define if the button is in disabled state */
   disabled?: boolean;
-  /** Defines the icon's color **/
-  iconColor?: AcceptedColorComponentTypes | string;
 };
 
 export type TestProps = {
@@ -43,21 +45,37 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
   dataTestId = '',
   onClick,
   onBlur,
-  disabled,
-  iconColor,
+  disabled = false,
 }) => {
+  const theme = useTheme();
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType(color, type);
+  const iconColor = filled
+    ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+    : defineBackgroundColor(theme, calculatedColor, type, true, true);
+
   return (
-    <Button
-      dataTestId={generateTestDataId('button', dataTestId)}
+    <button
+      data-testid={generateTestDataId('icon-button', dataTestId)}
+      css={iconButtonStyle({
+        type,
+        filled,
+        size,
+        color,
+        calculatedColor,
+        iconExists: true,
+        disabled,
+        iconLeft: null,
+        iconRight: null,
+        childrenCount: 1,
+      })}
       onClick={onClick}
       onBlur={onBlur}
-      size={size}
       color={color}
-      type={type}
-      filled={filled}
       disabled={disabled}
-      iconLeft={<Icon name={name} color={iconColor || color || type} size={iconSize} />}
-    />
+    >
+      <Icon name={name} color={iconColor} size={iconSize} />
+    </button>
   );
 };
 
