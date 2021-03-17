@@ -56,6 +56,8 @@ const Pagination = ({
           name={'arrowToLeft'}
           onClick={navigateToFirstPage}
           iconSize={24}
+          transparent
+          filled={false}
           disabled={prevPageDisabled || !hasPrevPage}
         />
       )}
@@ -63,6 +65,8 @@ const Pagination = ({
         iconColor={'darkGray'}
         name={'arrowLeft'}
         iconSize={24}
+        transparent
+        filled={false}
         onClick={navigateToPrevPage}
         disabled={prevPageDisabled || !hasPrevPage}
       />
@@ -75,6 +79,8 @@ const Pagination = ({
         iconColor={'darkGray'}
         name={'arrowRight'}
         iconSize={24}
+        transparent
+        filled={false}
         onClick={navigateToNextPage}
         disabled={nextPageDisabled || !hasNextPage}
       />
@@ -83,6 +89,8 @@ const Pagination = ({
           iconColor={'darkGray'}
           name={'arrowToRight'}
           iconSize={24}
+          transparent
+          filled={false}
           onClick={navigateToLastPage}
           disabled={nextPageDisabled || !hasNextPage}
         />
