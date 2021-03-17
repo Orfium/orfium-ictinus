@@ -40,12 +40,7 @@ export const lineEllipsis = css`
   text-overflow: ellipsis;
 `;
 
-export const flex = css`
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-`;
+export const flex = css``;
 
 /* centers flex content */
 export const flexCenter = css`
