@@ -18,6 +18,8 @@ export type Props = {
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
+  /** Property indicating if the component is transparent with a color based on the type */
+  transparent?: boolean;
   /** An optional icon to put on the right of the button */
   iconRight?: React.Component | JSX.Element | null;
   /** An optional icon to put on the left of the button */
@@ -36,6 +38,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     type = 'primary',
     color = '',
     filled = true,
+    transparent = false,
     iconLeft = null,
     iconRight = null,
     disabled = false,
@@ -56,6 +59,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         filled,
         size,
         color,
+        transparent,
         calculatedColor,
         iconExists: Boolean(iconLeft || iconRight),
         disabled,
@@ -75,6 +79,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
             filled,
             size,
             color,
+            transparent,
             iconLeft,
             iconRight,
             disabled,

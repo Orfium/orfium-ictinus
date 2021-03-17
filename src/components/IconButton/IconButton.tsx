@@ -25,6 +25,8 @@ export type Props = {
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
+  /** Property indicating if the component is transparent with a color based on the type */
+  transparent?: boolean;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
   /** Define if the button is in disabled state */
@@ -46,6 +48,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
   onClick,
   onBlur,
   disabled = false,
+  transparent = false,
 }) => {
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
@@ -62,6 +65,7 @@ const IconButton: React.FC<Props & TestProps & EventProps> = ({
         filled,
         size,
         color,
+        transparent,
         calculatedColor,
         iconExists: true,
         disabled,

@@ -366,6 +366,29 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
         </span>
       </button>
     </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="css-fqcnmv-Button"
+        data-testid="button"
+        disabled={false}
+      >
+        <span
+          className="css-1xr6sam-Button"
+        >
+          <span
+            className="css-l730ys-Button"
+          >
+            Hello world
+          </span>
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -783,6 +806,56 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
   </div>
   <button
     className="css-gajiax-Button"
+    data-testid="button"
+    disabled={false}
+  >
+    <span
+      className="css-1xr6sam-Button"
+    >
+      <span
+        className="css-l730ys-Button"
+      >
+        Hello world
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Transparent Button 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <button
+    className="css-12d5shl-Button"
     data-testid="button"
     disabled={false}
   >
