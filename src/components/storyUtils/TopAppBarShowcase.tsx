@@ -9,7 +9,7 @@ interface Props extends TopAppBarProps {
   provideSearchHandler?: boolean;
 }
 
-const DEFAULT_USER_MENU = {
+export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',
   onSelect: (selectedItem: string) => {
     alert(selectedItem);
