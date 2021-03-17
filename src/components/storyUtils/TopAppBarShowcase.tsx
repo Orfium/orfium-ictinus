@@ -4,9 +4,9 @@ import TextField from '../TextField';
 import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 
 interface Props extends TopAppBarProps {
-  withLogo: boolean;
-  withAdditionalTools: boolean;
-  provideSearchHandler: boolean;
+  withLogo?: boolean;
+  withAdditionalTools?: boolean;
+  provideSearchHandler?: boolean;
 }
 
 const DEFAULT_USER_MENU = {
