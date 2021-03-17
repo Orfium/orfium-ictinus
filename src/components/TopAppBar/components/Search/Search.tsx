@@ -10,17 +10,19 @@ import { useTheme } from '../../../../index';
 export type SearchProps = {
   searchPlaceholder: string;
   onSearchHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  isSearchDisabled?: boolean;
 };
 
 const Search: FC<SearchProps & { dark?: boolean }> = ({
   searchPlaceholder = 'Search',
   onSearchHandler,
+  isSearchDisabled = false,
   dark = false,
 }) => {
   const theme = useTheme();
 
   return (
-    <div css={searchWrapper(dark)}>
+    <div css={searchWrapper(dark, isSearchDisabled)}>
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon name={'search'} color={dark ? theme.palette.white : theme.palette.black} size={16} />{' '}
       </div>

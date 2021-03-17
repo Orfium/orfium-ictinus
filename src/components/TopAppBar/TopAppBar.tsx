@@ -16,6 +16,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
   additionalTools,
   userMenu,
   onSearchHandler,
+  isSearchDisabled = false,
   dark = false,
 }) => {
   const breakpoints = useBreakpoints();
@@ -29,6 +30,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
           <Search
             onSearchHandler={onSearchHandler}
             searchPlaceholder={searchPlaceholder}
+            isSearchDisabled={isSearchDisabled}
             dark={dark}
           />
         )}
