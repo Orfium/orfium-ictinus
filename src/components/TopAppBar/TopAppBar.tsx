@@ -5,9 +5,9 @@ import { FC } from 'react';
 import Styles from './TopAppBar.style';
 import { TopAppBarProps } from './TopAppBar.types';
 import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';
-import TextField from '../TextField';
-import Icon from '../Icon';
+
 import { useBreakpoints } from '../../index';
+import Search from './components/Search';
 
 const TopAppBar: FC<TopAppBarProps> = ({
   searchPlaceholder = 'Search',
@@ -19,7 +19,6 @@ const TopAppBar: FC<TopAppBarProps> = ({
   dark = false,
 }) => {
   const breakpoints = useBreakpoints();
-  const searchProps = onSearchHandler ? { onChange: onSearchHandler } : {};
 
   return (
     <div role="banner" aria-label="Top Application Banner" css={Styles.topAppBarWrapper(dark)}>
@@ -27,15 +26,11 @@ const TopAppBar: FC<TopAppBarProps> = ({
         {!breakpoints.des1200 && <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />}
         <LogoPlaceholder logoIcon={logoIcon} />
         {onSearchHandler && (
-          <div css={Styles.searchWrapper}>
-            <TextField
-              placeholder={searchPlaceholder}
-              dark={dark}
-              styleType={'filled'}
-              leftIcon={<Icon name={'search'} />}
-              {...searchProps}
-            />
-          </div>
+          <Search
+            onSearchHandler={onSearchHandler}
+            searchPlaceholder={searchPlaceholder}
+            dark={dark}
+          />
         )}
       </div>
       <div css={Styles.additionalToolsSection(Boolean(additionalTools))}>{additionalTools}</div>
