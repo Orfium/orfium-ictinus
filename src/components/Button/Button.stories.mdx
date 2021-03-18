@@ -61,6 +61,7 @@ Button types based on the system approved literals for `success, error, info, wa
         <Button size={'sm'} type='error'>Hello world</Button>
         <Button size={'sm'} type='info'>Hello world</Button>
         <Button size={'sm'} type='warning'>Hello world</Button>
+        <Button size={'sm'} transparent>Hello world</Button>
     </Stack>
   </Story>
 </Preview>
@@ -99,7 +100,14 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 # Non Filled Button
 <Preview>
   <Story name="Non Filled Button">
-    <Button filled={false} size={'lg'}>Hello world</Button>;
+    <Button filled={false} size={'lg'}>Hello world</Button>
+  </Story>
+</Preview>
+
+# Transparent Button
+<Preview>
+  <Story name="Transparent Button">
+    <Button type='success' size={'lg'} transparent>Hello world</Button>
   </Story>
 </Preview>
 
