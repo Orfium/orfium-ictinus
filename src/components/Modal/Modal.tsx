@@ -34,6 +34,7 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, c
                 <IconButton
                   name={'close'}
                   filled={false}
+                  transparent
                   size={'sm'}
                   onClick={onClose}
                   dataTestId={'modal-close'}

@@ -7,6 +7,7 @@ import { Theme } from '../../theme';
 export const iconButtonStyle = ({
   type,
   filled,
+  transparent,
   calculatedColor,
   size,
   iconExists,
@@ -28,6 +29,7 @@ export const iconButtonStyle = ({
     color,
     calculatedColor,
     iconExists,
+    transparent,
     disabled,
     iconLeft,
     iconRight,
