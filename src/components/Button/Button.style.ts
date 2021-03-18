@@ -37,6 +37,7 @@ export const buttonStyle = ({
   size,
   iconExists,
   disabled,
+  transparent,
   childrenCount,
 }: RequiredProperties<
   Props & {
@@ -47,12 +48,14 @@ export const buttonStyle = ({
 >) => (theme: Theme) => {
   return {
     fontSize: fontSizeBasedOnSize(theme, size),
-    color: filled
-      ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-      : defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0),
-    backgroundColor: filled
-      ? defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0)
-      : 'transparent',
+    color:
+      filled && !transparent
+        ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+        : defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0),
+    backgroundColor:
+      filled && !transparent
+        ? defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0)
+        : 'transparent',
     padding:
       size === 'sm' || size === 'md'
         ? `${theme.spacing.sm} ${theme.spacing.md}`
@@ -60,25 +63,26 @@ export const buttonStyle = ({
     height: heightBasedOnSize(size),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
-    border: filled
-      ? 'none'
-      : `solid 1px ${defineBackgroundColor(
-          theme,
-          calculatedColor,
-          type,
-          iconExists,
-          childrenCount > 0
-        )}`,
+    border:
+      filled || transparent
+        ? 'none'
+        : `solid 1px ${defineBackgroundColor(
+            theme,
+            calculatedColor,
+            type,
+            iconExists,
+            childrenCount > 0
+          )}`,
     cursor: 'pointer',
     transition: 'background-color 150ms linear',
     ':hover': {
       backgroundColor: !disabled
-        ? stateBackgroundColor(theme, 'hover', calculatedColor, filled)
+        ? stateBackgroundColor(theme, 'hover', calculatedColor, filled && !transparent)
         : undefined,
     },
     ':active': {
       backgroundColor: !disabled
-        ? stateBackgroundColor(theme, 'active', calculatedColor, filled)
+        ? stateBackgroundColor(theme, 'active', calculatedColor, filled && !transparent)
         : undefined,
     },
   };

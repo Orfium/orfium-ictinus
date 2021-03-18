@@ -1,9 +1,9 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, select, text } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select } from '@storybook/addon-knobs';
 import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
 import iconSelector from '../Icon/assets/iconSelector';
-import { mainTypes, flatColors, colorShades } from "../../theme/palette";
+import { colorShades, flatColors, mainTypes } from '../../theme/palette';
 
 <Meta title="Design System/IconButton" component={IconButton} />
 
@@ -53,16 +53,26 @@ IconButton with different acceptable sizes
 
 # IconButton Playground
 
-
 <Preview>
   <Story name="IconButton Playground">
     <Stack>
       <IconButton
-        type={select("type", mainTypes, "primary")}
-        size={select("size", ['sm', 'md','lg'], 'md')}
-        filled={boolean("filled", false)}
-        name={select("name", Object.keys(iconSelector).sort((a, b) => a.localeCompare(b)).map((iconName) => iconName), "check")}
-        color={select("color", flatColors.map((color) => colorShades.map((shade) => `${color}-${shade}`)).flat(), "")}
+        type={select('type', mainTypes, 'primary')}
+        size={select('size', ['sm', 'md', 'lg'], 'md')}
+        filled={boolean('filled', false)}
+        transparent={boolean('transparent', false)}
+        name={select(
+          'name',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map(iconName => iconName),
+          'check'
+        )}
+        color={select(
+          'color',
+          flatColors.map(color => colorShades.map(shade => `${color}-${shade}`)).flat(),
+          ''
+        )}
       />
     </Stack>
   </Story>
