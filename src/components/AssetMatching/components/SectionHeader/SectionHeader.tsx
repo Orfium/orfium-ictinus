@@ -8,16 +8,17 @@ import { MatchingAction } from '../../types';
 interface Props {
   onCheck?(val: boolean, e: ChangeEvent): void;
   score?: string | number;
-  matchingActions: MatchingAction[];
+  matchingActions?: MatchingAction[];
 }
 
-const SectionHeader: FC<Props> = ({ matchingActions, onCheck, score }) => {
+const SectionHeader: FC<Props> = ({ matchingActions = [], onCheck, score }) => {
   const { checked, handleCheck } = useCheck(onCheck);
+  const hasActions = matchingActions.length > 0;
 
   return (
     <header css={Styles.header(checked)}>
-      <CheckBoxContainer handleCheck={handleCheck} score={score} />
-      <Toolbox matchingActions={matchingActions} />
+      <CheckBoxContainer isEnabled={hasActions} handleCheck={handleCheck} score={score} />
+      {hasActions && <Toolbox matchingActions={matchingActions} />}
     </header>
   );
 };

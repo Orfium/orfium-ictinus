@@ -1,11 +1,19 @@
 import { flex } from '../../theme/functions';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
+import { Theme } from '../../theme';
 
-const section = css`
+const section = (theme: Theme): SerializedStyles => css`
   > div {
     ${flex};
     width: 100%;
+    border-radius: ${theme.spacing.sm};
   }
 `;
 
-export default { section };
+export const inner = css`
+  ${flex};
+  flex-direction: column;
+  width: 100%;
+`;
+
+export default { section, inner };

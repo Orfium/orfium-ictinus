@@ -41,7 +41,11 @@ const AssetMatching = () => {
   return (
     <section css={Styles.section}>
       <Card elevated={'01'}>
-        <SectionHeader score={95} matchingActions={actionsMock} />
+        <div css={Styles.inner}>
+          <SectionHeader score={95} matchingActions={actionsMock} />
+          {/*TODO: replace div with categories*/}
+          <div style={{ height: 300, width: '100%' }} />
+        </div>
       </Card>
     </section>
   );

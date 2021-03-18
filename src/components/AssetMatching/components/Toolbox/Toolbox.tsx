@@ -5,13 +5,14 @@ import PrimaryActions from './PrimaryActions';
 import SecondaryActions from './SecondaryActions';
 
 interface Props {
-  matchingActions: MatchingAction[];
+  matchingActions?: MatchingAction[];
 }
 
 const Toolbox: FC<Props> = ({ matchingActions = [] }) => {
   return (
     <Flex>
       <PrimaryActions matchingActions={matchingActions} />
+      {/*TODO:if secondary actions === 1 display only the icon btn of this action without text*/}
       <SecondaryActions matchingActions={matchingActions} />
     </Flex>
   );
