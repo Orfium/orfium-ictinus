@@ -1,6 +1,11 @@
-import styled from '@emotion/styled';
 import { flex } from '../../theme/functions';
+import { css } from '@emotion/core';
 
-export const MainSection = styled.section`
-  ${flex}
+const section = css`
+  > div {
+    ${flex};
+    width: 100%;
+  }
 `;
+
+export default { section };
