@@ -7,9 +7,7 @@ import { themeFunctions } from '../../../../index';
 const getBackground = (dark: boolean, theme: Theme) =>
   dark ? theme.utils.getColor('darkGray', 600) : theme.utils.getColor('lightGray', 100);
 
-export const searchWrapper = (dark: boolean, disabled: boolean) => (
-  theme: Theme
-): SerializedStyles => {
+export const searchWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => {
   const background = getBackground(dark, theme);
 
   return css`
@@ -19,9 +17,13 @@ export const searchWrapper = (dark: boolean, disabled: boolean) => (
     ${themeFunctions.flexCenterVertical}
     height: ${rem(36)};
     background-color: ${background};
-    pointer-events: ${disabled ? 'none' : 'all'};
     padding-left: ${theme.spacing.md};
-    opacity: ${disabled ? 0.5 : 1};
+
+    &[aria-disabled="true"] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    
     &:hover {
       background: ${dark ? lighten(0.03, background) : darken(0.03, background)};
     }

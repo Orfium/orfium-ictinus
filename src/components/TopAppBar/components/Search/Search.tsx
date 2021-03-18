@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { FC } from 'react';
 import { customInputStyle, searchWrapper } from './Search.style';
 import { iconWrapperStyle } from '../../../TextField/TextField.style';
@@ -22,7 +19,7 @@ const Search: FC<SearchProps & { dark?: boolean }> = ({
   const theme = useTheme();
 
   return (
-    <div css={searchWrapper(dark, isSearchDisabled)}>
+    <div aria-disabled={isSearchDisabled} css={searchWrapper(dark)}>
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon name={'search'} color={dark ? theme.palette.white : theme.palette.black} size={16} />{' '}
       </div>
