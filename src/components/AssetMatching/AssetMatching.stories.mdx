@@ -1,7 +1,8 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { withKnobs } from "@storybook/addon-knobs";
 
-import AssetMatching from './Assetmatching';
+import AssetMatching from './Assetmatching'; import AssetMatchingShowcase
+  from '../storyUtils/AssetMatchingShowcase/AssetMatchingShowcase';
 
 <Meta title="Design System/Asset Matching"/>
 
@@ -23,6 +24,6 @@ import { AssetMatching } from '@orfium/ictinus';
 
 <Preview>
   <Story name="AssetMatching" parameters={{ decorators: [withKnobs] }}>
-    <AssetMatching />
+    <AssetMatchingShowcase />
   </Story>
 </Preview>

@@ -26,10 +26,9 @@ const list = (theme: Theme): SerializedStyles => css`
   }
 `;
 
-const buttonWrapper = (theme: Theme): SerializedStyles => css`
+const buttonWrapper = css`
   > button {
     border: none;
-    color: ${theme.palette.black};
   }
 `;
 

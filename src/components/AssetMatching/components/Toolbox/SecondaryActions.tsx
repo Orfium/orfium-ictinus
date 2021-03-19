@@ -1,4 +1,4 @@
-import React, { FC, useMemo, useState } from 'react';
+import React, { FC, useState } from 'react';
 import { IconButton } from '../../../../index';
 import { MatchingAction } from '../../types';
 
@@ -15,10 +15,15 @@ const SecondaryActions: FC<Props> = ({ matchingActions }) => {
   const [open, setOpen] = useState(false);
   const secondaryActions = matchingActions.slice(2, matchingActions.length);
   const hasUniqueAction = secondaryActions.length === 1;
+  const hasNoAction = secondaryActions.length === 0;
 
   const { actionItems } = useMatchingActions(secondaryActions, actionButton => (
     <li key={generateUniqueID()}>{actionButton}</li>
   ));
+
+  if (hasNoAction) {
+    return null;
+  }
 
   if (hasUniqueAction) {
     const uniqueAction = secondaryActions[0];

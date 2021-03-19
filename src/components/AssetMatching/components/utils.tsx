@@ -6,6 +6,7 @@ import { MatchingAction } from '../types';
 export const createActionButton = (action: MatchingAction) => (
   <Button
     type={'primary'}
+    color={'neutralBlack-700'}
     iconLeft={<Icon color={'inherit'} name={action.icon} />}
     filled={false}
     onClick={action?.onClick}
