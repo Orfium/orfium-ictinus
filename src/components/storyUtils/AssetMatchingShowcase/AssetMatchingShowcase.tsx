@@ -2,40 +2,16 @@ import React, { useState } from 'react';
 import { MatchingAction } from '../../AssetMatching';
 import { uniqueId } from 'lodash';
 import AssetMatching from '../../AssetMatching/Assetmatching';
+import Mocks from './mocks';
 
-const actionsMock: MatchingAction[] = [
-  {
-    text: 'Confirm',
-    icon: 'check',
-    onClick: () => {
-      alert('confirmed');
-    },
-  },
-  {
-    text: 'Reject',
-    icon: 'close',
-    onClick: () => {
-      alert('rejected');
-    },
-  },
-  {
-    text: 'Hide',
-    icon: 'sight',
-    onClick: () => {
-      alert('hidden');
-    },
-  },
-  {
-    text: 'Review Later',
-    icon: 'clock',
-    onClick: () => {
-      alert('reviewed');
-    },
-  },
-];
+const AssetMatchingShowcase = ({ showCustomContent }: { showCustomContent: boolean }) => {
+  const [matchingActions, setMatchingActions] = useState<MatchingAction[]>(Mocks.actionsMock);
 
-const AssetMatchingShowcase = () => {
-  const [matchingActions, setMatchingActions] = useState<MatchingAction[]>(actionsMock);
+  const customShowcase = {
+    ...(showCustomContent
+      ? { rightCustomAsset: Mocks.customElement }
+      : { rightAssetProps: Mocks.rightSideData }),
+  };
 
   const clickHandler = () => {
     const randomText = uniqueId('action_');
@@ -56,7 +32,17 @@ const AssetMatchingShowcase = () => {
         add action
       </button>
       <button onClick={() => setMatchingActions([])}>clear actions</button>
-      <AssetMatching matchingActions={matchingActions} />
+      <button
+        css={{ marginBottom: 10, marginLeft: 10 }}
+        onClick={() => setMatchingActions(Mocks.actionsMock)}
+      >
+        reset actions
+      </button>
+      <AssetMatching
+        leftAssetProps={Mocks.leftSideData}
+        {...customShowcase}
+        matchingActions={matchingActions}
+      />
     </div>
   );
 };
