@@ -19,20 +19,11 @@ const actionsMock: MatchingAction[] = [
       alert('rejected');
     },
   },
-
   {
     text: 'Hide',
     icon: 'sight',
     onClick: () => {
       alert('hidden');
-    },
-  },
-
-  {
-    text: 'Review Later',
-    icon: 'clock',
-    onClick: () => {
-      alert('reviewed');
     },
   },
 ];

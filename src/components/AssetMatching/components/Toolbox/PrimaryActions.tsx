@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import Styles from './Toolbox.style';
 import { MatchingAction } from '../../types';
-import { createActionButton } from '../utils';
+import { useMatchingActions } from '../utils';
 import { generateUniqueID } from '../../../../utils/helpers';
 import { Flex } from './Toolbox.style';
 
@@ -12,15 +12,13 @@ interface Props {
 const PrimaryActions: FC<Props> = ({ matchingActions }) => {
   const primaryActions = matchingActions.slice(0, 2);
 
-  return (
-    <Flex>
-      {primaryActions.map(createActionButton('primary')).map(actionButton => (
-        <div key={generateUniqueID()} css={Styles.buttonWrapper}>
-          {actionButton}
-        </div>
-      ))}
-    </Flex>
-  );
+  const { actionItems } = useMatchingActions(primaryActions, actionButton => (
+    <div key={generateUniqueID()} css={Styles.buttonWrapper}>
+      {actionButton}
+    </div>
+  ));
+
+  return <Flex>{actionItems}</Flex>;
 };
 
 export default PrimaryActions;

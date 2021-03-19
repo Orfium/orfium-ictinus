@@ -1,11 +1,11 @@
 import Button from '../../Button';
 import Icon from '../../Icon';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { MatchingAction } from '../types';
 
-export const createActionButton = (type: 'primary' | 'secondary') => (action: MatchingAction) => (
+export const createActionButton = (action: MatchingAction) => (
   <Button
-    type={type}
+    type={'primary'}
     iconLeft={<Icon color={'inherit'} name={action.icon} />}
     filled={false}
     onClick={action?.onClick}
@@ -13,3 +13,15 @@ export const createActionButton = (type: 'primary' | 'secondary') => (action: Ma
     {action.text}
   </Button>
 );
+
+export const useMatchingActions = (
+  actions: MatchingAction[],
+  enhanceWithWrapperElement: (element: Element) => JSX.Element
+) => {
+  const actionItems = useMemo(
+    () => actions.map(createActionButton).map(enhanceWithWrapperElement),
+    [actions, enhanceWithWrapperElement]
+  );
+
+  return { actionItems };
+};
