@@ -16,4 +16,11 @@ export const inner = css`
   width: 100%;
 `;
 
-export default { section, inner };
+export const assets = (theme: Theme): SerializedStyles => css`
+  ${flex};
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  padding: ${theme.spacing.md};
+`;
+
+export default { section, inner, assets };

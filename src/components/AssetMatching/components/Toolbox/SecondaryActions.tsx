@@ -18,7 +18,7 @@ const SecondaryActions: FC<Props> = ({ matchingActions }) => {
   const hasNoAction = secondaryActions.length === 0;
 
   const { actionItems } = useMatchingActions(secondaryActions, actionButton => (
-    <li key={generateUniqueID()}>{actionButton}</li>
+    <li key={generateUniqueID('secondary_action')}>{actionButton}</li>
   ));
 
   if (hasNoAction) {

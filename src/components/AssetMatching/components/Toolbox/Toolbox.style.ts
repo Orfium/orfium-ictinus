@@ -1,7 +1,6 @@
 import { Theme } from '../../../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { flex } from '../../../../theme/functions';
-import styled from '@emotion/styled';
 import { cardElevation } from '../../../Card/Card.style';
 
 const list = (theme: Theme): SerializedStyles => css`
@@ -35,10 +34,6 @@ const buttonWrapper = css`
 const secondaryActionsWrapper = css`
   ${flex};
   position: relative;
-`;
-
-export const Flex = styled.div`
-  ${flex};
 `;
 
 export default {

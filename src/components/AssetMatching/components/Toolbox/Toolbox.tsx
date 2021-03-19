@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { Flex } from './Toolbox.style';
 import { MatchingAction } from '../../types';
 import PrimaryActions from './PrimaryActions';
 import SecondaryActions from './SecondaryActions';
+import { flex } from '../../../../theme/functions';
 
 interface Props {
   matchingActions?: MatchingAction[];
@@ -10,11 +10,11 @@ interface Props {
 
 const Toolbox: FC<Props> = ({ matchingActions = [] }) => {
   return (
-    <Flex>
+    <div css={flex}>
       <PrimaryActions matchingActions={matchingActions} />
       {/*TODO:if secondary actions === 1 display only the icon btn of this action without text*/}
       <SecondaryActions matchingActions={matchingActions} />
-    </Flex>
+    </div>
   );
 };
 
