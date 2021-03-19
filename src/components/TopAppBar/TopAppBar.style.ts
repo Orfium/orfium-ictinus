@@ -33,14 +33,10 @@ const mainSection = (hasSearchBar: boolean) => css`
   flex-grow: ${hasSearchBar ? 1 : 0};
   justify-content: flex-start;
 `;
-const searchWrapper = css`
-  flex-grow: 1;
-  max-width: 520px;
-`;
+
 export default {
   topAppBarWrapper,
   topAppBarSection,
   additionalToolsSection,
   mainSection,
-  searchWrapper,
 };

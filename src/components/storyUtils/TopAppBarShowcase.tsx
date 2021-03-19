@@ -4,12 +4,12 @@ import TextField from '../TextField';
 import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 
 interface Props extends TopAppBarProps {
-  withLogo: boolean;
-  withAdditionalTools: boolean;
-  provideSearchHandler: boolean;
+  withLogo?: boolean;
+  withAdditionalTools?: boolean;
+  provideSearchHandler?: boolean;
 }
 
-const DEFAULT_USER_MENU = {
+export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',
   onSelect: (selectedItem: string) => {
     alert(selectedItem);
@@ -38,6 +38,7 @@ const TopAppBarShowcase: FC<Props> = ({
   additionalTools = DEFAULT_ADDITIONAL_TOOLS,
   userMenu = DEFAULT_USER_MENU,
   onMenuIconClick = DEFAULT_ON_CLICK,
+  isSearchDisabled = false,
   dark = false,
 }) => {
   const [state, setState] = useState('');
@@ -58,6 +59,7 @@ const TopAppBarShowcase: FC<Props> = ({
         userMenu={userMenu}
         additionalTools={withAdditionalTools ? additionalTools : []}
         onSearchHandler={provideSearchHandler ? onSearchHandler : undefined}
+        isSearchDisabled={isSearchDisabled}
       />
       {provideSearchHandler && <div style={{ marginTop: 50 }}>Search value: {state}</div>}
     </>
