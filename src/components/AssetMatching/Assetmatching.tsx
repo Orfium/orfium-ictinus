@@ -4,7 +4,8 @@ import Card from '../Card';
 import SectionHeader from './components/SectionHeader/SectionHeader';
 import { MatchingAction } from './types';
 import { Asset } from './components/Asset';
-import { AssetProps } from './components/Asset/Asset';
+import { AssetProps } from './components/Asset';
+import { SelectedItemProvider } from './components/SelectedItemContext';
 
 interface Props {
   matchingActions: MatchingAction[];
@@ -12,6 +13,7 @@ interface Props {
   rightCustomAsset?: JSX.Element;
   leftAssetProps?: AssetProps;
   rightAssetProps?: AssetProps;
+  identicalCategoryItems?: string[];
 }
 
 const AssetMatching: FC<Props> = ({
@@ -20,22 +22,31 @@ const AssetMatching: FC<Props> = ({
   rightAssetProps,
   leftAssetProps,
   matchingActions,
+  identicalCategoryItems,
 }) => {
-  const defaultLeft = leftAssetProps && <Asset {...leftAssetProps} />;
-  const defaultRight = rightAssetProps && <Asset {...rightAssetProps} highlightBg />;
+  const defaultLeft = leftAssetProps && (
+    <Asset {...leftAssetProps} identicalCategoryItems={identicalCategoryItems} />
+  );
+  const defaultRight = rightAssetProps && (
+    <Asset {...rightAssetProps} highlightBg identicalCategoryItems={identicalCategoryItems} />
+  );
 
   return (
-    <section css={Styles.section}>
-      <Card elevated={'01'}>
-        <div css={Styles.inner}>
-          <SectionHeader score={95} matchingActions={matchingActions} />
-          <div css={Styles.assets}>
-            {leftCustomAsset ? leftCustomAsset : defaultLeft}
-            {rightCustomAsset ? rightCustomAsset : defaultRight}
+    <SelectedItemProvider>
+      <section css={Styles.section}>
+        {/*TODO: add outlined/filled/elevated feature for component*/}
+        <Card elevated={'01'}>
+          <div css={Styles.inner}>
+            <SectionHeader score={95} matchingActions={matchingActions} />
+            {/*TODO: add property for identical asset category items*/}
+            <div css={Styles.assets}>
+              {leftCustomAsset ? leftCustomAsset : defaultLeft}
+              {rightCustomAsset ? rightCustomAsset : defaultRight}
+            </div>
           </div>
-        </div>
-      </Card>
-    </section>
+        </Card>
+      </section>
+    </SelectedItemProvider>
   );
 };
 

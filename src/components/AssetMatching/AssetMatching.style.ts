@@ -8,6 +8,9 @@ const section = (theme: Theme): SerializedStyles => css`
     width: 100%;
     border-radius: ${theme.spacing.sm};
   }
+  .selected {
+    background: red;
+  }
 `;
 
 export const inner = css`

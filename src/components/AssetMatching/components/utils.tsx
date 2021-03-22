@@ -1,8 +1,24 @@
 import Button from '../../Button';
 import Icon from '../../Icon';
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { MatchingAction } from '../types';
+import { useSelectedItem } from './SelectedItemContext';
 
+export const useCategoryItemActions = (item: string | null) => {
+  const [selected, setSelected] = useSelectedItem();
+  const itemId = `${item?.replace(' ', '_').toLocaleLowerCase()}`;
+
+  const onHover = useCallback(() => setSelected(itemId), [itemId, setSelected]);
+
+  const onLeave = useCallback(() => setSelected(null), [setSelected]);
+
+  return {
+    onHover,
+    onLeave,
+    selected,
+    itemId,
+  };
+};
 export const createActionButton = (action: MatchingAction) => (
   <Button
     type={'primary'}
@@ -17,7 +33,7 @@ export const createActionButton = (action: MatchingAction) => (
 
 export const useMatchingActions = (
   actions: MatchingAction[],
-  enhanceWithWrapperElement: (element: Element) => JSX.Element
+  enhanceWithWrapperElement: (actionButton: JSX.Element) => JSX.Element
 ) => {
   const actionItems = useMemo(
     () => actions.map(createActionButton).map(enhanceWithWrapperElement),

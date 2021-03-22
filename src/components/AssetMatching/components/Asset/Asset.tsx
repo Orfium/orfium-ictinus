@@ -19,16 +19,23 @@ export interface AssetProps {
     title: JSX.Element | string;
     details: string | number;
   };
+  identicalCategoryItems?: string[];
 }
 
-const Asset: FC<AssetProps> = ({ highlightBg, categories, assetHeading, assetLinkedInfo }) => {
+const Asset: FC<AssetProps> = ({
+  identicalCategoryItems,
+  highlightBg = false,
+  categories,
+  assetHeading,
+  assetLinkedInfo,
+}) => {
   return (
-    <article css={Styles.article(highlightBg)}>
+    <article css={Styles.article(highlightBg)} className={highlightBg ? 'opposite' : ''}>
       <div css={Styles.headingContainer}>
         <AssetHeading {...assetHeading} />
         <AssetLinkedInfo {...assetLinkedInfo} />
       </div>
-      <Categories categories={categories} />
+      <Categories categories={categories} identicalCategoryItems={identicalCategoryItems} />
     </article>
   );
 };
