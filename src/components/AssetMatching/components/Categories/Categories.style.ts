@@ -14,14 +14,14 @@ const title = (theme: Theme): SerializedStyles => css`
   color: ${theme.utils.getColor('primary', 400, 'normal')};
 `;
 
-const item = (highlightBg: boolean) => (theme: Theme): SerializedStyles => css`
+const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css`
   font-size: ${rem(12)};
   font-weight: 500;
   color: ${theme.palette.black};
   margin: ${theme.spacing.md};
   padding: ${theme.spacing.xsm};
   cursor: default;
-  background: ${highlightBg ? theme.utils.getColor('lightGray', 200) : 'transparent'};
+  background: ${isItemMatched ? theme.utils.getColor('lightGray', 200) : 'transparent'};
   white-space: nowrap;
 `;
 

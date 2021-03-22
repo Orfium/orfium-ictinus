@@ -39,7 +39,7 @@ const AssetMatchingShowcase = ({ showCustomContent }: { showCustomContent: boole
         reset actions
       </button>
       <AssetMatching
-        identicalCategoryItems={['Kevin Briggs']}
+        matchedCategoryItems={['Kevin Briggs']}
         leftAssetProps={Mocks.leftSideData}
         {...customShowcase}
         matchingActions={matchingActions}

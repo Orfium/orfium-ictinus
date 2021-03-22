@@ -13,7 +13,7 @@ interface Props {
   rightCustomAsset?: JSX.Element;
   leftAssetProps?: AssetProps;
   rightAssetProps?: AssetProps;
-  identicalCategoryItems?: string[];
+  matchedCategoryItems?: string[];
 }
 
 const AssetMatching: FC<Props> = ({
@@ -22,13 +22,13 @@ const AssetMatching: FC<Props> = ({
   rightAssetProps,
   leftAssetProps,
   matchingActions,
-  identicalCategoryItems,
+  matchedCategoryItems,
 }) => {
   const defaultLeft = leftAssetProps && (
-    <Asset {...leftAssetProps} identicalCategoryItems={identicalCategoryItems} />
+    <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
   );
   const defaultRight = rightAssetProps && (
-    <Asset {...rightAssetProps} highlightBg identicalCategoryItems={identicalCategoryItems} />
+    <Asset {...rightAssetProps} highlightBg matchedCategoryItems={matchedCategoryItems} />
   );
 
   return (

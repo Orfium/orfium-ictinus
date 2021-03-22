@@ -7,10 +7,10 @@ export type CategoryType = { title: string; categoryItems: string[] };
 
 interface Props {
   category: CategoryType;
-  identicalCategoryItems?: string[];
+  matchedCategoryItems?: string[];
 }
 
-const Category: FC<Props> = ({ identicalCategoryItems, category }) => {
+const Category: FC<Props> = ({ matchedCategoryItems, category }) => {
   return (
     <div css={Styles.category}>
       <h4 css={Styles.title}>{category.title}</h4>
@@ -20,7 +20,7 @@ const Category: FC<Props> = ({ identicalCategoryItems, category }) => {
             <CategoryItem
               key={uniqueId('category_item')}
               item={item}
-              identicalCategoryItems={identicalCategoryItems}
+              matchedCategoryItems={matchedCategoryItems}
             />
           );
         })}

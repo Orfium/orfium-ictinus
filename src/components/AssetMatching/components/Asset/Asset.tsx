@@ -19,11 +19,11 @@ export interface AssetProps {
     title: JSX.Element | string;
     details: string | number;
   };
-  identicalCategoryItems?: string[];
+  matchedCategoryItems?: string[];
 }
 
 const Asset: FC<AssetProps> = ({
-  identicalCategoryItems,
+  matchedCategoryItems,
   highlightBg = false,
   categories,
   assetHeading,
@@ -35,7 +35,7 @@ const Asset: FC<AssetProps> = ({
         <AssetHeading {...assetHeading} />
         <AssetLinkedInfo {...assetLinkedInfo} />
       </div>
-      <Categories categories={categories} identicalCategoryItems={identicalCategoryItems} />
+      <Categories categories={categories} matchedCategoryItems={matchedCategoryItems} />
     </article>
   );
 };

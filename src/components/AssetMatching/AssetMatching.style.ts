@@ -9,7 +9,7 @@ const section = (theme: Theme): SerializedStyles => css`
     border-radius: ${theme.spacing.sm};
   }
   .selected {
-    background: red;
+    background: ${theme.utils.getColor('primary', 100, 'normal')};
   }
 `;
 

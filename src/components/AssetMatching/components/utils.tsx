@@ -3,22 +3,35 @@ import Icon from '../../Icon';
 import React, { useMemo, useCallback } from 'react';
 import { MatchingAction } from '../types';
 import { useSelectedItem } from './SelectedItemContext';
+import debounce from 'lodash/debounce';
 
-export const useCategoryItemActions = (item: string | null) => {
+export const useCategoryItemActions = (item: string, matchedCategoryItems?: string[]) => {
+  const isItemMatched = useMemo(() => matchedCategoryItems?.includes(item) || false, [
+    matchedCategoryItems,
+  ]);
   const [selected, setSelected] = useSelectedItem();
   const itemId = `${item?.replace(' ', '_').toLocaleLowerCase()}`;
 
-  const onHover = useCallback(() => setSelected(itemId), [itemId, setSelected]);
-
-  const onLeave = useCallback(() => setSelected(null), [setSelected]);
+  const updateSelected = useCallback(
+    (value: string | null) =>
+      debounce(() => {
+        if (isItemMatched) {
+          console.log('updating state');
+          setSelected(value);
+        }
+      }, 150),
+    [isItemMatched, setSelected]
+  );
 
   return {
-    onHover,
-    onLeave,
-    selected,
+    onHover: updateSelected(itemId),
+    onLeave: updateSelected(null),
     itemId,
+    isSelected: selected === itemId,
+    isItemMatched,
   };
 };
+
 export const createActionButton = (action: MatchingAction) => (
   <Button
     type={'primary'}

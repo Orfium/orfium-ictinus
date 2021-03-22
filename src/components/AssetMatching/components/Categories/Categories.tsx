@@ -5,17 +5,17 @@ import { generateUniqueID } from '../../../../utils/helpers';
 
 interface Props {
   categories: CategoryType[];
-  identicalCategoryItems?: string[];
+  matchedCategoryItems?: string[];
 }
 
-const Categories: FC<Props> = ({ identicalCategoryItems, categories }) => {
+const Categories: FC<Props> = ({ matchedCategoryItems, categories }) => {
   return (
     <div css={Styles.categories}>
       {categories.map(category => (
         <Category
           key={generateUniqueID('category')}
           category={category}
-          identicalCategoryItems={identicalCategoryItems}
+          matchedCategoryItems={matchedCategoryItems}
         />
       ))}
     </div>

@@ -2,14 +2,14 @@ import React, { FC, useMemo } from 'react';
 import Styles from './Categories.style';
 import { useCategoryItemActions } from '../utils';
 
-const CategoryItem: FC<{ item: string; identicalCategoryItems?: string[] }> = ({
+const CategoryItem: FC<{ item: string; matchedCategoryItems?: string[] }> = ({
   item,
-  identicalCategoryItems,
+  matchedCategoryItems,
 }) => {
-  const { selected, onHover, onLeave, itemId } = useCategoryItemActions(item);
-  const itemExistInOtherCategory = useMemo(() => identicalCategoryItems?.includes(item) || false, [
-    identicalCategoryItems,
-  ]);
+  const { isSelected, onHover, onLeave, itemId, isItemMatched } = useCategoryItemActions(
+    item,
+    matchedCategoryItems
+  );
 
   return useMemo(
     () => (
@@ -17,13 +17,13 @@ const CategoryItem: FC<{ item: string; identicalCategoryItems?: string[] }> = ({
         data-itemid={itemId}
         onMouseOver={onHover}
         onMouseLeave={onLeave}
-        className={selected === itemId ? 'selected' : ''}
-        css={Styles.item(itemExistInOtherCategory)}
+        className={isSelected && isItemMatched ? 'selected' : ''}
+        css={Styles.item(isItemMatched)}
       >
         {item}
       </p>
     ),
-    [selected, onLeave, onHover, itemExistInOtherCategory, itemId, item]
+    [isSelected, onLeave, onHover, isItemMatched, itemId, item]
   );
 };
 
