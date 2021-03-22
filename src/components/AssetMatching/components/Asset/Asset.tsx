@@ -30,7 +30,7 @@ const Asset: FC<AssetProps> = ({
   assetLinkedInfo,
 }) => {
   return (
-    <article css={Styles.article(highlightBg)} className={highlightBg ? 'opposite' : ''}>
+    <article css={Styles.article(highlightBg)}>
       <div css={Styles.headingContainer}>
         <AssetHeading {...assetHeading} />
         <AssetLinkedInfo {...assetLinkedInfo} />

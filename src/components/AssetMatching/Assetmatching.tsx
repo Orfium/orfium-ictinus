@@ -8,12 +8,19 @@ import { SelectedItemProvider } from './components/SelectedItemContext';
 import { formFieldStyles } from '../../theme/palette';
 
 interface Props {
+  /** The actions that can be performed for the asset matching section */
   matchingActions: MatchingAction[];
+  /** The custom left side of the matching section */
   leftCustomAsset?: JSX.Element;
+  /** The custom right side of the matching section */
   rightCustomAsset?: JSX.Element;
+  /** The props needed for constructing the default left side of the matching section */
   leftAssetProps?: AssetProps;
+  /** The props needed for constructing the default right side of the matching section */
   rightAssetProps?: AssetProps;
+  /** The matched items per category for each asset */
   matchedCategoryItems?: string[];
+  /** The style type of the matching section */
   styleType?: formFieldStyles;
 }
 
