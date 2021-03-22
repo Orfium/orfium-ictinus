@@ -36,7 +36,6 @@ const AssetMatching: FC<Props> = ({
   return (
     <SelectedItemProvider>
       <section css={Styles.section(styleType)}>
-        {/*TODO: add outlined/filled/elevated feature for component*/}
         <div css={Styles.inner}>
           <SectionHeader styleType={styleType} score={95} matchingActions={matchingActions} />
           <div css={Styles.assets}>
