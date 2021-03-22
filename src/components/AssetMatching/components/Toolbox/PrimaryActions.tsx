@@ -13,7 +13,11 @@ const PrimaryActions: FC<Props> = ({ matchingActions }) => {
   const primaryActions = matchingActions.slice(0, 2);
 
   const { actionItems } = useMatchingActions(primaryActions, actionButton => (
-    <div key={generateUniqueID('primary_action')} css={Styles.buttonWrapper}>
+    <div
+      data-testid={'primary_action'}
+      key={generateUniqueID('primary_action')}
+      css={Styles.buttonWrapper}
+    >
       {actionButton}
     </div>
   ));

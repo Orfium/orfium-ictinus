@@ -12,7 +12,6 @@ const Toolbox: FC<Props> = ({ matchingActions = [] }) => {
   return (
     <div css={flex}>
       <PrimaryActions matchingActions={matchingActions} />
-      {/*TODO:if secondary actions === 1 display only the icon btn of this action without text*/}
       <SecondaryActions matchingActions={matchingActions} />
     </div>
   );

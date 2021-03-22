@@ -18,7 +18,9 @@ const SecondaryActions: FC<Props> = ({ matchingActions }) => {
   const hasNoAction = secondaryActions.length === 0;
 
   const { actionItems } = useMatchingActions(secondaryActions, actionButton => (
-    <li key={generateUniqueID('secondary_action')}>{actionButton}</li>
+    <li data-testid={'secondary_action'} key={generateUniqueID('secondary_action')}>
+      {actionButton}
+    </li>
   ));
 
   if (hasNoAction) {
@@ -31,6 +33,7 @@ const SecondaryActions: FC<Props> = ({ matchingActions }) => {
     return (
       <div css={Styles.buttonWrapper}>
         <IconButton
+          dataTestId={'unique_secondary_action'}
           color={'neutralBlack-700'}
           name={uniqueAction.icon}
           filled={false}
@@ -45,6 +48,7 @@ const SecondaryActions: FC<Props> = ({ matchingActions }) => {
       <div css={Styles.secondaryActionsWrapper}>
         <div css={Styles.buttonWrapper}>
           <IconButton
+            dataTestId={'menu_btn'}
             color={'neutralBlack-700'}
             name={'dotsVertical'}
             filled={false}

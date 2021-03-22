@@ -1,4 +1,7 @@
-import React, { ChangeEvent, FC } from 'react';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import { ChangeEvent, FC } from 'react';
 import Styles from './CheckBoxContainer.style';
 import CheckBox from '../../../CheckBox';
 
