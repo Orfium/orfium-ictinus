@@ -100,6 +100,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
       if (isBackspaceKey) {
         setInputValue(emptyValue);
+        debouncedOnChange('');
       }
     };
 
