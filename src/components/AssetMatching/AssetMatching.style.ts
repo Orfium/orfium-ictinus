@@ -4,13 +4,7 @@ import { Theme } from '../../theme';
 import { formFieldStyles } from '../../theme/palette';
 
 const wrapperStyleSwitch = (theme: Theme) => ({
-  outlined: `
-        box-shadow: 0 0 0 1px
-          ${theme.utils.getColor('lightGray', 400)};
-        &:focus-within {
-          box-shadow: 0 0 0 1px 'transparent';
-         };
-      `,
+  outlined: `border: 1px solid ${theme.utils.getColor('lightGray', 200)}`,
   elevated: `box-shadow: ${theme.elevation['01']};`,
   filled: ``,
 });
