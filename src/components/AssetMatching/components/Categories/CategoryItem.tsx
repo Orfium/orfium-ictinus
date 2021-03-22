@@ -15,6 +15,7 @@ const CategoryItem: FC<{ item: string; matchedCategoryItems?: string[] }> = ({
     () => (
       <p
         data-itemid={itemId}
+        data-testid={itemId}
         onMouseOver={onHover}
         onMouseLeave={onLeave}
         className={isSelected && isItemMatched ? 'selected' : ''}

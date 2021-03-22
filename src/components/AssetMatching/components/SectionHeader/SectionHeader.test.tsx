@@ -66,4 +66,36 @@ describe('Asset Matching - Header', () => {
     expect(primaryActions.length).toBe(2);
     expect(uniqueSecondaryAction).toBeInTheDocument();
   });
+
+  it('should render toolbox with 2 matching actions', async () => {
+    const { getAllByTestId, queryByTestId } = render(
+      <SectionHeader
+        styleType={'outlined'}
+        score={100}
+        matchingActions={[
+          {
+            text: 'Confirm',
+            icon: 'check',
+            onClick: () => {
+              alert('confirmed');
+            },
+          },
+          {
+            text: 'Reject',
+            icon: 'close',
+            onClick: () => {
+              alert('rejected');
+            },
+          },
+        ]}
+      />
+    );
+
+    const primaryActions = getAllByTestId('primary_action');
+
+    expect(primaryActions.length).toBe(2);
+    const uniqueSecondaryAction = await queryByTestId('icon-button-unique_secondary_action');
+
+    expect(uniqueSecondaryAction).not.toBeInTheDocument();
+  });
 });

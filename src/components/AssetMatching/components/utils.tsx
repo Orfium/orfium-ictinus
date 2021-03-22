@@ -10,13 +10,14 @@ export const useCategoryItemActions = (item: string, matchedCategoryItems?: stri
     matchedCategoryItems,
   ]);
   const [selected, setSelected] = useSelectedItem();
-  const itemId = `${item?.replace(' ', '_').toLocaleLowerCase()}`;
+  const searchRegExp = /\s/g;
+  const replaceWith = '-';
+  const itemId = `${item?.replace(searchRegExp, replaceWith).toLocaleLowerCase()}`;
 
   const updateSelected = useCallback(
     (value: string | null) =>
       debounce(() => {
         if (isItemMatched) {
-          console.log('updating state');
           setSelected(value);
         }
       }, 150),
