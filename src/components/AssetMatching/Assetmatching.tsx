@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 import Styles from './AssetMatching.style';
-import Card from '../Card';
 import SectionHeader from './components/SectionHeader/SectionHeader';
 import { MatchingAction } from './types';
 import { Asset } from './components/Asset';
 import { AssetProps } from './components/Asset';
 import { SelectedItemProvider } from './components/SelectedItemContext';
+import { formFieldStyles } from '../../theme/palette';
 
 interface Props {
   matchingActions: MatchingAction[];
@@ -14,6 +14,7 @@ interface Props {
   leftAssetProps?: AssetProps;
   rightAssetProps?: AssetProps;
   matchedCategoryItems?: string[];
+  styleType?: formFieldStyles;
 }
 
 const AssetMatching: FC<Props> = ({
@@ -23,6 +24,7 @@ const AssetMatching: FC<Props> = ({
   leftAssetProps,
   matchingActions,
   matchedCategoryItems,
+  styleType = 'outlined',
 }) => {
   const defaultLeft = leftAssetProps && (
     <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
@@ -33,18 +35,15 @@ const AssetMatching: FC<Props> = ({
 
   return (
     <SelectedItemProvider>
-      <section css={Styles.section}>
+      <section css={Styles.section(styleType)}>
         {/*TODO: add outlined/filled/elevated feature for component*/}
-        <Card elevated={'01'}>
-          <div css={Styles.inner}>
-            <SectionHeader score={95} matchingActions={matchingActions} />
-            {/*TODO: add property for identical asset category items*/}
-            <div css={Styles.assets}>
-              {leftCustomAsset ? leftCustomAsset : defaultLeft}
-              {rightCustomAsset ? rightCustomAsset : defaultRight}
-            </div>
+        <div css={Styles.inner}>
+          <SectionHeader styleType={styleType} score={95} matchingActions={matchingActions} />
+          <div css={Styles.assets}>
+            {leftCustomAsset ? leftCustomAsset : defaultLeft}
+            {rightCustomAsset ? rightCustomAsset : defaultRight}
           </div>
-        </Card>
+        </div>
       </section>
     </SelectedItemProvider>
   );

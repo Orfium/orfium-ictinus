@@ -3,8 +3,15 @@ import { MatchingAction } from '../../AssetMatching';
 import { uniqueId } from 'lodash';
 import AssetMatching from '../../AssetMatching/Assetmatching';
 import Mocks from './mocks';
+import { formFieldStyles } from '../../../theme/palette';
 
-const AssetMatchingShowcase = ({ showCustomContent }: { showCustomContent: boolean }) => {
+const AssetMatchingShowcase = ({
+  showCustomContent,
+  styleType,
+}: {
+  showCustomContent: boolean;
+  styleType: formFieldStyles;
+}) => {
   const [matchingActions, setMatchingActions] = useState<MatchingAction[]>(Mocks.actionsMock);
 
   const customShowcase = {
@@ -39,6 +46,7 @@ const AssetMatchingShowcase = ({ showCustomContent }: { showCustomContent: boole
         reset actions
       </button>
       <AssetMatching
+        styleType={styleType}
         matchedCategoryItems={['Kevin Briggs']}
         leftAssetProps={Mocks.leftSideData}
         {...customShowcase}

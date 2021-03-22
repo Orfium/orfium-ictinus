@@ -1,5 +1,5 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean } from "@storybook/addon-knobs";
+import { withKnobs, boolean, select } from '@storybook/addon-knobs';
 
 import AssetMatching from './Assetmatching'; import AssetMatchingShowcase
   from '../storyUtils/AssetMatchingShowcase/AssetMatchingShowcase';
@@ -24,6 +24,6 @@ import { AssetMatching } from '@orfium/ictinus';
 
 <Preview>
   <Story name="AssetMatching" parameters={{ decorators: [withKnobs] }}>
-    <AssetMatchingShowcase showCustomContent={boolean('showCustomContent', false)} />
+    <AssetMatchingShowcase styleType={select('styleType',['filled', 'outlined', 'elevated'], 'outlined')} showCustomContent={boolean('showCustomContent', false)} />
   </Story>
 </Preview>

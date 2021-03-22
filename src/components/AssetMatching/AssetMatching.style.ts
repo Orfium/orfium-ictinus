@@ -1,12 +1,26 @@
 import { flex } from '../../theme/functions';
 import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from '../../theme';
+import { formFieldStyles } from '../../theme/palette';
 
-const section = (theme: Theme): SerializedStyles => css`
+const wrapperStyleSwitch = (theme: Theme) => ({
+  outlined: `
+        box-shadow: 0 0 0 1px
+          ${theme.utils.getColor('lightGray', 400)};
+        &:focus-within {
+          box-shadow: 0 0 0 1px 'transparent';
+         };
+      `,
+  elevated: `box-shadow: ${theme.elevation['01']};`,
+  filled: ``,
+});
+
+const section = (styleType: formFieldStyles) => (theme: Theme): SerializedStyles => css`
   > div {
     ${flex};
     width: 100%;
     border-radius: ${theme.spacing.sm};
+    ${wrapperStyleSwitch(theme)[styleType]}
   }
   .selected {
     background: ${theme.utils.getColor('primary', 100, 'normal')};
