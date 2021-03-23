@@ -37,20 +37,20 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
   top: ${rem(48)};
   left: ${menuPosition === 'left' ? 0 : 'initial'};
   right: 0;
-  min-width: ${rem(145)};
+  min-width: ${rem(150)};
   width: 100%;
   height: auto;
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
-  text-align: center;
   border-radius: ${rem(4)};
   z-index: 1;
   & > button {
-    padding: ${rem(8)} 0;
+    padding: ${rem(8)} ${rem(16)};
     height: ${rem(48)};
     font-size: ${theme.typography.fontSizes['14']};
     display: block;
     width: 100%;
+    text-align: left;
   }
 
   & > button:hover {
