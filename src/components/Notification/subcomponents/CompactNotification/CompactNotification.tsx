@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
@@ -21,8 +22,6 @@ export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 export type Props = {
   /** Show notification icon based on the type */
   withIcon?: boolean;
-  /** Use color filling */
-  withFilling?: boolean;
   /** The informative message of the Notification */
   message: string;
   /** The variant of the Notification */
@@ -54,7 +53,6 @@ export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
 
 const CompactNotification: React.FC<Props> = ({
   withIcon = false,
-  withFilling = false,
   message,
   variant,
   type,
@@ -68,7 +66,7 @@ const CompactNotification: React.FC<Props> = ({
 
   return (
     <div
-      css={notificationsContainer(withFilling, type)}
+      css={notificationsContainer(type)}
       {...(variant == 'banner' && { 'notification-type': 'banner' })}
     >
       <div css={infoContainer()}>

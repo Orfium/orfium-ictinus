@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
@@ -28,9 +29,8 @@ const BreadcrumbAdvancedItem: React.FC<Props> = props => {
       selectedItem={selectedItem}
       onSelect={option => setSelectedItem(option)}
       buttonText={label}
-      showOptionIcon
-      menuIconName="arrowDown"
-      menuIconSize={12}
+      rightIconName="arrowDown"
+      iconSize={12}
     />
   );
 };

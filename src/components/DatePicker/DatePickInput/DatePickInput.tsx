@@ -1,72 +1,81 @@
-import dayjs from 'dayjs';
-import * as React from 'react';
-import { DayPickerInputProps } from 'react-day-picker';
-import useTheme from '../../../hooks/useTheme';
-import { flex } from '../../../theme/functions';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
+import dayjs, { Dayjs } from 'dayjs';
+import React, { InputHTMLAttributes } from 'react';
 import Icon from '../../Icon';
-import TextField from '../../TextField';
-import { wrapperStyle } from '../../TextField/TextField.style';
-import { DateFormatType, DateRange } from '../DatePicker';
-import { formFieldStyles } from '../../../theme/palette';
+import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
+import { DateFormatType } from '../DatePicker';
 import { getLocaleFormat } from '../../../utils/helpers';
+import { Range } from '../OverlayComponent/OverlayComponent';
+import { rangeInputsWrapper } from './DatePickInput.style';
+
+// TODO: Need to fix this (TextField onChange prop)
+const ON_CHANGE_MOCK = () => {};
 
 type Props = {
+  handleFocus: () => void;
+  handleClear: (event: React.KeyboardEvent) => void;
   isRangePicker: boolean;
-  selectedDay: DateRange;
-  inputLabel: string;
-  /** Style of input field */
-  styleType: formFieldStyles;
+  selectedDay: Range;
+  /** Props for styling the input */
+  inputProps?: TextFieldProps;
   dateFormatOverride?: DateFormatType;
-} & DayPickerInputProps;
-
-const DatePickInput: React.FC<Props> = ({
-  isRangePicker,
-  styleType,
-  selectedDay,
-  inputLabel,
-  dateFormatOverride = undefined,
-  ...props
-}) => {
-  const theme = useTheme();
-  const formatDate = (date: Date | undefined) => {
-    return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
-  };
-
-  const getDateFormatted = React.useCallback(formatDate, []);
-
-  return isRangePicker ? (
-    <div
-      css={[
-        wrapperStyle({ styleType })(theme),
-        flex,
-        {
-          width: 275,
-        },
-      ]}
-    >
-      <TextField
-        label={`${inputLabel} (Start)`}
-        lean={true}
-        {...props}
-        value={getDateFormatted(selectedDay.from)}
-      />
-      <TextField
-        rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-        label={`${inputLabel} (End)`}
-        {...props}
-        lean={true}
-        value={getDateFormatted(selectedDay.to)}
-      />
-    </div>
-  ) : (
-    <TextField
-      label={inputLabel}
-      {...props}
-      styleType={styleType}
-      value={getDateFormatted(selectedDay.from)}
-      rightIcon={<Icon name={'calendarEmpty'} color={'secondary'} />}
-    />
-  );
 };
+
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
+  (
+    {
+      handleFocus,
+      handleClear,
+      isRangePicker,
+      inputProps,
+      selectedDay,
+      dateFormatOverride = 'MM/DD/YYYY',
+    },
+    ref
+  ) => {
+    const formatDate = (date: Dayjs | undefined) => {
+      return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
+    };
+
+    const getDateFormatted = React.useCallback(formatDate, []);
+
+    return (
+      <div css={rangeInputsWrapper()}>
+        {isRangePicker ? (
+          <TextField
+            ref={ref}
+            {...inputProps}
+            onFocus={handleFocus}
+            onKeyDown={handleClear}
+            onChange={ON_CHANGE_MOCK}
+            placeholder={`${dateFormatOverride} - ${dateFormatOverride}`}
+            value={
+              getDateFormatted(selectedDay.from) &&
+              `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+            }
+            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+          />
+        ) : (
+          <TextField
+            ref={ref}
+            {...inputProps}
+            onFocus={handleFocus}
+            onKeyDown={handleClear}
+            onChange={ON_CHANGE_MOCK}
+            placeholder={dateFormatOverride}
+            value={selectedDay.to && getDateFormatted(selectedDay.to)}
+            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+          />
+        )}
+      </div>
+    );
+  }
+);
+
+DatePickInput.displayName = 'DatePickInput';
 
 export default DatePickInput;

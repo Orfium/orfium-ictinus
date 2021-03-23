@@ -1,7 +1,9 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { labelStyle } from './Label.style';
+import { DEFAULT_SIZE } from '../../utils/size-utils';
 
 export type Props = {
   /** If the label has error */
@@ -13,6 +15,7 @@ export type Props = {
   /** If the label must be moved to the top */
   animateToTop?: boolean;
   htmlFor?: string;
+  size?: string;
 };
 
 const Label: React.FC<Props> = ({
@@ -21,9 +24,10 @@ const Label: React.FC<Props> = ({
   label,
   required = false,
   animateToTop = false,
+  size = DEFAULT_SIZE,
 }) => {
   return (
-    <label htmlFor={htmlFor} css={labelStyle({ animateToTop, error })}>
+    <label htmlFor={htmlFor} css={labelStyle({ size, animateToTop, error })}>
       {label} {required && '*'}
     </label>
   );

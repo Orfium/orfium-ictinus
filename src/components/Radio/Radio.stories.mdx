@@ -1,7 +1,8 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import Radio, { RadioWithoutForwardRef } from './Radio';
 import RadioButtonsShowcase from '../storyUtils/RadioButtonsShowcase';
+import { boolean, select, withKnobs } from '@storybook/addon-knobs';
+import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Radio" component={Radio} />
 
@@ -15,7 +16,7 @@ If the `checked` prop is not defined it means the `Radio` is not controlled.
 ```jsx
 import { Radio } from '@orfium/ictinus';
 
-<Radio checked={value === 'a'} value={'a'} onChange={() => {}}/>;
+<Radio checked={value === 'a'} value={'a'} onChange={() => {}} />;
 ```
 
 # Props
@@ -23,58 +24,67 @@ import { Radio } from '@orfium/ictinus';
 <Props of={RadioWithoutForwardRef} />
 
 # Not selected Radio (`checked === undefined`)
+
 <Preview>
   <Story name="Not selected Radio  (`checked === undefined`)">
-    <div style={{ color: '#82e616' }}>
-      <Radio/>
-      <Radio filled={false}/>
-    </div>
+    <Stack>
+      <Radio />
+      <Radio filled={false} />
+    </Stack>
   </Story>
 </Preview>
 
 # Not selected Radio (`checked === false`)
+
 <Preview>
   <Story name="Not selected Radio (`checked === false`)">
-    <div style={{ color: '#82e616' }}>
-      <Radio checked={false}/>
-      <Radio filled={false} checked={false}/>
-    </div>
+    <Stack>
+      <Radio checked={false} />
+      <Radio filled={false} checked={false} />
+    </Stack>
   </Story>
 </Preview>
 
 # Selected Radio
+
 <Preview>
   <Story name="Selected Radio">
-    <div style={{ color: '#82e616' }}>
-      <Radio checked={true}/>
-    </div>
+    <Radio checked={true} />
   </Story>
 </Preview>
 
 # Disabled not selected Radio
+
 <Preview>
   <Story name="Disabled not selected Radio">
-    <div style={{ color: '#82e616' }}>
-      <Radio checked={false} disabled={true}/>
-      <Radio filled={false} checked={false} disabled={true}/>
-    </div>
+    <Stack>
+      <Radio checked={false} disabled={true} />
+      <Radio filled={false} checked={false} disabled={true} />
+    </Stack>
   </Story>
 </Preview>
 
 # Disabled selected Radio
+
 <Preview>
   <Story name="Disabled selected Radio">
-    <div style={{ color: '#82e616' }}>
-      <Radio checked={true} disabled={true}/>
-    </div>
+    <Radio checked={true} disabled={true} />
   </Story>
 </Preview>
 
 # Radio group
+
 <Preview>
   <Story name="Radio showcase">
-    <div style={{ color: '#82e616' }}>
-      <RadioButtonsShowcase />
-    </div>
+    <RadioButtonsShowcase />
+  </Story>
+</Preview>
+
+
+# Radio Playground
+
+<Preview>
+  <Story name="Radio Playground"  parameters={{ decorators: [withKnobs] }}>
+    <Radio checked={boolean("checked", true)} disabled={boolean("disabled", false)}  filled={boolean("filled", false)} />
   </Story>
 </Preview>

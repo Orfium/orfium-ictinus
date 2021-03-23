@@ -46,11 +46,11 @@ import { ExpandCollapse } from '@orfium/ictinus';
   <Story name="ExpandCollapse">
     <div>
      <ExpandCollapse
-           textAndControl={handleClick => {
+           textAndControl={(handleClick, expanded) => {
              return (
                <Fragment>
                  <span>Text</span>
-                 <button onClick={handleClick}>expand/collapse</button>
+                 <button onClick={handleClick}> {expanded ? 'collapse' : 'expand'}</button>
                </Fragment>
              );
            }}

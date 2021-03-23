@@ -33,68 +33,80 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
     </button>
   </div>
   <div
-    style={
-      Object {
-        "color": "#82e616",
-      }
-    }
+    className="css-ptimel-Stack"
   >
-    <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
-      <input
-        checked={false}
-        className="css-dswabq-Radio"
-        disabled={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
-      />
       <span
-        className="css-1cnuipo-Radio"
+        className="css-bjtxnr-Radio"
+        data-testid="radio-input"
       >
-        <span
-          className="css-ju6fpu-Radio"
+        <input
+          checked={false}
+          className="css-dswabq-Radio"
+          disabled={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="on"
         />
         <span
-          className="css-7s815w-Radio"
-        />
+          className="css-1cnuipo-Radio"
+        >
+          <span
+            className="css-ju6fpu-Radio"
+          />
+          <span
+            className="css-7s815w-Radio"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
-      <input
-        checked={false}
-        className="css-dswabq-Radio"
-        disabled={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
-      />
       <span
-        className="css-1cnuipo-Radio"
+        className="css-bjtxnr-Radio"
+        data-testid="radio-input"
       >
-        <span
-          className="css-nbhqh9-Radio"
+        <input
+          checked={false}
+          className="css-dswabq-Radio"
+          disabled={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="on"
         />
         <span
-          className="css-7s815w-Radio"
-        />
+          className="css-1cnuipo-Radio"
+        >
+          <span
+            className="css-nbhqh9-Radio"
+          />
+          <span
+            className="css-7s815w-Radio"
+          />
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -131,42 +143,34 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
        on
     </button>
   </div>
-  <div
-    style={
-      Object {
-        "color": "#82e616",
-      }
-    }
+  <span
+    className="css-bjtxnr-Radio"
+    data-testid="radio-input"
   >
+    <input
+      checked={true}
+      className="css-dswabq-Radio"
+      disabled={true}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      required={false}
+      type="radio"
+      value="on"
+    />
     <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+      className="css-1cnuipo-Radio"
     >
-      <input
-        checked={true}
-        className="css-dswabq-Radio"
-        disabled={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
+      <span
+        className="css-1ta32qg-Radio"
       />
       <span
-        className="css-1cnuipo-Radio"
-      >
-        <span
-          className="css-zdwkz9-Radio"
-        />
-        <span
-          className="css-7s815w-Radio"
-        />
-      </span>
+        className="css-7s815w-Radio"
+      />
     </span>
-  </div>
+  </span>
 </div>
 `;
 
@@ -203,68 +207,80 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
     </button>
   </div>
   <div
-    style={
-      Object {
-        "color": "#82e616",
-      }
-    }
+    className="css-ptimel-Stack"
   >
-    <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
-      <input
-        checked={false}
-        className="css-dswabq-Radio"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
-      />
       <span
-        className="css-1cnuipo-Radio"
+        className="css-gmxcc7-Radio"
+        data-testid="radio-input"
       >
-        <span
-          className="css-smkmv8-Radio"
+        <input
+          checked={false}
+          className="css-dswabq-Radio"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="on"
         />
         <span
-          className="css-7s815w-Radio"
-        />
+          className="css-1cnuipo-Radio"
+        >
+          <span
+            className="css-smkmv8-Radio"
+          />
+          <span
+            className="css-7s815w-Radio"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
-      <input
-        checked={false}
-        className="css-dswabq-Radio"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
-      />
       <span
-        className="css-1cnuipo-Radio"
+        className="css-gmxcc7-Radio"
+        data-testid="radio-input"
       >
-        <span
-          className="css-1ps86un-Radio"
+        <input
+          checked={false}
+          className="css-dswabq-Radio"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="on"
         />
         <span
-          className="css-7s815w-Radio"
-        />
+          className="css-1cnuipo-Radio"
+        >
+          <span
+            className="css-1yl76f4-Radio"
+          />
+          <span
+            className="css-7s815w-Radio"
+          />
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </div>
 `;
@@ -302,69 +318,144 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
     </button>
   </div>
   <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <span
+        className="css-gmxcc7-Radio"
+        data-testid="radio-input"
+      >
+        <input
+          checked={false}
+          className="css-dswabq-Radio"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="on"
+        />
+        <span
+          className="css-1cnuipo-Radio"
+        >
+          <span
+            className="css-smkmv8-Radio"
+          />
+          <span
+            className="css-7s815w-Radio"
+          />
+        </span>
+      </span>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <span
+        className="css-gmxcc7-Radio"
+        data-testid="radio-input"
+      >
+        <input
+          checked={false}
+          className="css-dswabq-Radio"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="on"
+        />
+        <span
+          className="css-1cnuipo-Radio"
+        >
+          <span
+            className="css-1yl76f4-Radio"
+          />
+          <span
+            className="css-7s815w-Radio"
+          />
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Radio Radio Playground 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
     style={
       Object {
-        "color": "#82e616",
+        "display": "flex",
+        "justifyContent": "flex-end",
       }
     }
   >
-    <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
     >
-      <input
-        checked={false}
-        className="css-dswabq-Radio"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
-      />
-      <span
-        className="css-1cnuipo-Radio"
-      >
-        <span
-          className="css-smkmv8-Radio"
-        />
-        <span
-          className="css-7s815w-Radio"
-        />
-      </span>
-    </span>
-    <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="css-dswabq-Radio"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
-      />
-      <span
-        className="css-1cnuipo-Radio"
-      >
-        <span
-          className="css-1ps86un-Radio"
-        />
-        <span
-          className="css-7s815w-Radio"
-        />
-      </span>
-    </span>
+      turn 
+      dark
+       on
+    </button>
   </div>
+  <span
+    className="css-gmxcc7-Radio"
+    data-testid="radio-input"
+  >
+    <input
+      checked={true}
+      className="css-dswabq-Radio"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      required={false}
+      type="radio"
+      value="on"
+    />
+    <span
+      className="css-1cnuipo-Radio"
+    >
+      <span
+        className="css-1ta32qg-Radio"
+      />
+      <span
+        className="css-7s815w-Radio"
+      />
+    </span>
+  </span>
 </div>
 `;
 
@@ -400,183 +491,175 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
        on
     </button>
   </div>
-  <div
-    style={
-      Object {
-        "color": "#82e616",
-      }
-    }
-  >
-    <div>
+  <div>
+    <span
+      className="css-gmxcc7-Radio"
+      data-testid="radio-input"
+    >
+      <input
+        checked={false}
+        className="css-dswabq-Radio"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="a"
+      />
       <span
-        className="css-u42v7v-Radio"
-        data-testid="radio-input"
+        className="css-1cnuipo-Radio"
       >
-        <input
-          checked={false}
-          className="css-dswabq-Radio"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="a"
+        <span
+          className="css-smkmv8-Radio"
         />
         <span
-          className="css-1cnuipo-Radio"
-        >
-          <span
-            className="css-smkmv8-Radio"
-          />
-          <span
-            className="css-7s815w-Radio"
-          />
-        </span>
+          className="css-7s815w-Radio"
+        />
       </span>
+    </span>
+    <span
+      className="css-gmxcc7-Radio"
+      data-testid="radio-input"
+    >
+      <input
+        checked={false}
+        className="css-dswabq-Radio"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="b"
+      />
       <span
-        className="css-u42v7v-Radio"
-        data-testid="radio-input"
+        className="css-1cnuipo-Radio"
       >
-        <input
-          checked={false}
-          className="css-dswabq-Radio"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="b"
+        <span
+          className="css-1yl76f4-Radio"
         />
         <span
-          className="css-1cnuipo-Radio"
-        >
-          <span
-            className="css-1ps86un-Radio"
-          />
-          <span
-            className="css-7s815w-Radio"
-          />
-        </span>
+          className="css-7s815w-Radio"
+        />
       </span>
+    </span>
+    <span
+      className="css-gmxcc7-Radio"
+      data-testid="radio-input"
+    >
+      <input
+        checked={true}
+        className="css-dswabq-Radio"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="c"
+      />
       <span
-        className="css-u42v7v-Radio"
-        data-testid="radio-input"
+        className="css-1cnuipo-Radio"
       >
-        <input
-          checked={true}
-          className="css-dswabq-Radio"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="c"
+        <span
+          className="css-1ta32qg-Radio"
         />
         <span
-          className="css-1cnuipo-Radio"
-        >
-          <span
-            className="css-1bf21so-Radio"
-          />
-          <span
-            className="css-7s815w-Radio"
-          />
-        </span>
+          className="css-7s815w-Radio"
+        />
       </span>
+    </span>
+    <span
+      className="css-bjtxnr-Radio"
+      data-testid="radio-input"
+    >
+      <input
+        checked={false}
+        className="css-dswabq-Radio"
+        disabled={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="d"
+      />
       <span
-        className="css-u42v7v-Radio"
-        data-testid="radio-input"
+        className="css-1cnuipo-Radio"
       >
-        <input
-          checked={false}
-          className="css-dswabq-Radio"
-          disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="d"
+        <span
+          className="css-ju6fpu-Radio"
         />
         <span
-          className="css-1cnuipo-Radio"
-        >
-          <span
-            className="css-ju6fpu-Radio"
-          />
-          <span
-            className="css-7s815w-Radio"
-          />
-        </span>
+          className="css-7s815w-Radio"
+        />
       </span>
+    </span>
+    <span
+      className="css-bjtxnr-Radio"
+      data-testid="radio-input"
+    >
+      <input
+        checked={false}
+        className="css-dswabq-Radio"
+        disabled={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="e"
+      />
       <span
-        className="css-u42v7v-Radio"
-        data-testid="radio-input"
+        className="css-1cnuipo-Radio"
       >
-        <input
-          checked={false}
-          className="css-dswabq-Radio"
-          disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="e"
+        <span
+          className="css-nbhqh9-Radio"
         />
         <span
-          className="css-1cnuipo-Radio"
-        >
-          <span
-            className="css-nbhqh9-Radio"
-          />
-          <span
-            className="css-7s815w-Radio"
-          />
-        </span>
+          className="css-7s815w-Radio"
+        />
       </span>
+    </span>
+    <span
+      className="css-bjtxnr-Radio"
+      data-testid="radio-input"
+    >
+      <input
+        checked={true}
+        className="css-dswabq-Radio"
+        disabled={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="g"
+      />
       <span
-        className="css-u42v7v-Radio"
-        data-testid="radio-input"
+        className="css-1cnuipo-Radio"
       >
-        <input
-          checked={true}
-          className="css-dswabq-Radio"
-          disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="g"
+        <span
+          className="css-1ta32qg-Radio"
         />
         <span
-          className="css-1cnuipo-Radio"
-        >
-          <span
-            className="css-zdwkz9-Radio"
-          />
-          <span
-            className="css-7s815w-Radio"
-          />
-        </span>
+          className="css-7s815w-Radio"
+        />
       </span>
-    </div>
+    </span>
   </div>
 </div>
 `;
@@ -613,41 +696,33 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
        on
     </button>
   </div>
-  <div
-    style={
-      Object {
-        "color": "#82e616",
-      }
-    }
+  <span
+    className="css-gmxcc7-Radio"
+    data-testid="radio-input"
   >
+    <input
+      checked={true}
+      className="css-dswabq-Radio"
+      disabled={false}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={[Function]}
+      required={false}
+      type="radio"
+      value="on"
+    />
     <span
-      className="css-u42v7v-Radio"
-      data-testid="radio-input"
+      className="css-1cnuipo-Radio"
     >
-      <input
-        checked={true}
-        className="css-dswabq-Radio"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="on"
+      <span
+        className="css-1ta32qg-Radio"
       />
       <span
-        className="css-1cnuipo-Radio"
-      >
-        <span
-          className="css-1bf21so-Radio"
-        />
-        <span
-          className="css-7s815w-Radio"
-        />
-      </span>
+        className="css-7s815w-Radio"
+      />
     </span>
-  </div>
+  </span>
 </div>
 `;

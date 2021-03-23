@@ -1,182 +1,209 @@
-import { rem, transparentize } from 'polished';
-import * as React from 'react';
-import ReactSelect, { components, ControlProps, Styles, ValueType } from 'react-select';
-import useTheme from '../../hooks/useTheme';
-import { generateUniqueID } from '../../utils/helpers';
-import Label from '../Label';
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import { css, jsx } from '@emotion/core';
 
-export type SelectOption = { value: string | number; label: string; isDisabled?: boolean };
+import useTheme from '../../hooks/useTheme';
+import TextField from '../TextField';
+import Icon from '../Icon';
+import { Props as TextFieldProps } from '../TextField/TextField';
+import ClickAwayListener from '../utils/ClickAwayListener';
+import SelectMenu from './components/SelectMenu/SelectMenu';
+import { debounce } from 'lodash';
+import Loader from 'components/Loader';
+import { generateTestDataId } from '../../utils/helpers';
+import { rem } from 'polished';
+
+export type SelectOption = {
+  value: string | number;
+  label: string;
+  isDisabled?: boolean;
+  tooltipInfo?: string;
+};
 
 export type Props = {
-  /** The label that is going to be displayed */
-  label: string;
-  /** Options for the select dropdown */
-  options: SelectOption[];
   /** The function that is used to return the selected options */
-  onChange?: (value: ValueType<SelectOption>) => void;
+  handleSelectedOption?: (selectedOption: SelectOption) => void;
   /** the default value of the select if needed */
+  /** TODO: defaultValue is duplication of selectedOption*/
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
-  value?: SelectOption;
-  /** If the select is going to be disabled or not */
-  disabled?: boolean;
-  /** if the select is loading data */
-  isLoading?: boolean;
-  /** if the select value is searchable */
-  isSearchable?: boolean;
-  /** if the select value can be clearable */
-  isClearable?: boolean;
+  selectedOption?: SelectOption;
   /** if the select has tags */
   multi?: boolean;
-  /** if the select is required */
-  required?: boolean;
-  /** If the text field has errors */
-  error?: boolean;
-};
+  /** Options for the select dropdown */
+  options: SelectOption[];
+  /** if the component is used asynchronously */
+  isAsync?: boolean;
+  /** the function to fetch new options */
+  asyncSearch?: (term: string) => void;
+  /** after how many characters to start searching (default = 0) */
+  minCharactersToSearch?: number;
+  /** if searched text should be highlighted in available options */
+  highlightSearch?: boolean;
+  /** if the options are searchable */
+  isSearchable?: boolean;
+  /** data-testid suffix */
+  dataTestId?: string;
+  /** if component is loading */
+  isLoading?: boolean;
+} & TextFieldProps;
 
-const Control: React.FC<ControlProps<SelectOption>> = ({ children, ...props }) => {
-  return (
-    <components.Control {...props}>
-      <React.Fragment>
-        {props.selectProps.label && (
-          <Label
-            htmlFor={props.selectProps.inputId}
-            label={props.selectProps.label}
-            required={props.selectProps.required}
-            animateToTop={props.hasValue}
+const emptyValue = { label: '', value: '' };
+
+// Mocks onChange to avoid readonly warning for TextField Component
+const ON_CHANGE_MOCK = () => {};
+
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
+  (
+    {
+      handleSelectedOption = () => {},
+      defaultValue = undefined,
+      selectedOption = emptyValue,
+      multi = false,
+      options,
+      isAsync = false,
+      isLoading = false,
+      asyncSearch = () => {},
+      status = 'normal',
+      minCharactersToSearch = 0,
+      highlightSearch = false,
+      isSearchable = true,
+      dataTestId,
+      ...restInputProps
+    },
+    ref
+  ) => {
+    const theme = useTheme();
+    const [open, setOpen] = React.useState(false);
+    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
+    const [searchValue, setSearchValue] = React.useState('');
+
+    useEffect(() => {
+      setInputValue(defaultValue || selectedOption);
+    }, [defaultValue, selectedOption]);
+
+    const handleOptionClick = (option: SelectOption) => {
+      setInputValue(option);
+      setOpen(false);
+
+      if (isSearchable) {
+        setSearchValue('');
+      }
+      handleSelectedOption(option);
+    };
+
+    const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+      const isBackspaceKey = e.keyCode === 8;
+
+      if (isBackspaceKey) {
+        setInputValue(emptyValue);
+        debouncedOnChange('');
+      }
+    };
+
+    const debouncedOnChange = React.useCallback(
+      debounce(term => {
+        asyncSearch(term);
+      }, 400),
+      []
+    );
+
+    const handleOnInput = React.useCallback(
+      (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (isSearchable) {
+          setSearchValue(e.target.value);
+        }
+
+        if (isAsync) {
+          e.persist();
+
+          if (minCharactersToSearch && e.target.value.length < minCharactersToSearch) {
+            return;
+          }
+
+          debouncedOnChange(e.target.value.trim());
+        }
+      },
+      [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
+    );
+
+    const filteredOptions = useMemo(() => {
+      if (isAsync) {
+        return options;
+      }
+
+      return options.filter(
+        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
+      );
+    }, [searchValue, options, isAsync]);
+
+    const rightIconRender = useMemo(
+      () => (
+        <div
+          css={css`
+            display: flex;
+            gap: 25px;
+          `}
+        >
+          {isLoading && <Loader />}
+          <Icon
+            size={20}
+            name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
+            color={theme.utils.getColor('lightGray', 500)}
+            onClick={() => {
+              setOpen(!open);
+            }}
           />
-        )}
-        {children}
-      </React.Fragment>
-    </components.Control>
-  );
-};
+        </div>
+      ),
+      [open, theme.utils, setOpen, isLoading]
+    );
 
-const Select: React.FC<Props> = ({
-  defaultValue = undefined,
-  disabled = false,
-  isLoading = false,
-  isSearchable = false,
-  isClearable = false,
-  multi = false,
-  required = false,
-  options,
-  error,
-  label,
-  value,
-  onChange = () => {},
-}) => {
-  const theme = useTheme();
-
-  const customStyles: Styles = {
-    option: (provided, state) => ({
-      ...provided,
-      backgroundColor: state.isSelected
-        ? theme.utils.getColor('lightGray', 200)
-        : theme.palette.white,
-      color: state.isDisabled
-        ? theme.utils.getColor('lightGray', 700)
-        : theme.utils.getColor('primary', 400, 'text'),
-      padding: rem(16),
-      '&:hover': {
-        backgroundColor: theme.utils.getColor('lightGray', 100),
-      },
-    }),
-    control: (base, state) => ({
-      ...base,
-      opacity: disabled ? 0.5 : 1,
-      minHeight: rem(56),
-      width: 200,
-      paddingLeft: rem(3),
-      backgroundColor: error
-        ? transparentize(0.85, theme.utils.getColor('error', 400, 'normal'))
-        : theme.utils.getColor('lightGray', 100),
-      border: error ? `1px solid ${theme.utils.getColor('error', 400, 'normal')}` : '0',
-      '&:hover': {},
-      '&:hover svg': {
-        backgroundColor: 'rgba(176, 176, 176, 0.23)',
-      },
-      '> div:first-of-type': {
-        margin: `${rem(18)} ${rem(4)} ${rem(2)}`,
-        padding: `${rem(2)} ${rem(4)}`,
-      },
-      label: {
-        transform: state.isFocused || state.hasValue ? 'translate(1%, -65%) scale(0.8)' : 'initial',
-      },
-    }),
-    indicatorsContainer: base => ({
-      ...base,
-      marginRight: rem(16),
-    }),
-    indicatorSeparator: () => ({
-      display: 'none',
-    }),
-    dropdownIndicator: () => ({
-      color: theme.utils.getColor('primary', 400, 'text'),
-      borderRadius: '100%',
-      width: rem(20),
-      height: rem(20),
-      position: 'relative',
-      svg: {
-        transition: 'background 0.2s ease-in-out',
-        borderRadius: '100%',
-        padding: 0,
-      },
-    }),
-    singleValue: base => ({
-      ...base,
-      color: theme.utils.getColor('primary', 400, 'text'),
-      fontSize: theme.typography.fontSizes[16],
-    }),
-    multiValue: base => ({
-      ...base,
-      fontSize: theme.typography.fontSizes[14],
-      backgroundColor: 'transparent',
-      'div:first-of-type': {
-        paddingLeft: 0,
-      },
-      'div:last-of-type': {
-        backgroundColor: theme.utils.getColor('lightGray', 700),
-        width: theme.spacing.md,
-        height: theme.spacing.md,
-        borderRadius: theme.spacing.md,
-        top: rem(3),
-        position: 'relative',
-        '&:hover': {
-          backgroundColor: theme.utils.getColor('lightGray', 500),
-        },
-        svg: {
-          fill: theme.palette.white,
-          backgroundColor: 'transparent',
-        },
-      },
-    }),
-  };
-
-  return (
-    <div css={{ position: 'relative' }}>
-      <ReactSelect
-        inputId={`select-${generateUniqueID()}`}
-        styles={customStyles}
-        defaultValue={defaultValue}
-        isDisabled={disabled}
-        isLoading={isLoading}
-        isClearable={isClearable}
-        isSearchable={isSearchable}
-        isMulti={multi}
-        value={value}
-        options={options}
-        placeholder={false}
-        onChange={onChange}
-        components={{
-          Control,
+    return (
+      <ClickAwayListener
+        onClick={() => {
+          setOpen(false);
+          setSearchValue('');
         }}
-        label={label}
-        required={required}
-        inputProps={{ required }}
-      />
-    </div>
-  );
-};
+      >
+        <div
+          css={css`
+            position: relative;
+            min-width: ${rem(150)};
+            max-width: ${rem(620)};
+          `}
+        >
+          <TextField
+            onFocus={() => setOpen(true)}
+            rightIcon={rightIconRender}
+            onKeyDown={handleOnKeyDown}
+            onInput={handleOnInput}
+            onChange={ON_CHANGE_MOCK}
+            readOnly={!isSearchable}
+            data-testid={generateTestDataId('select-input', dataTestId)}
+            {...restInputProps}
+            status={status}
+            value={searchValue || inputValue.label}
+            ref={ref}
+          />
+          {open && (
+            <SelectMenu
+              filteredOptions={filteredOptions}
+              handleOptionClick={handleOptionClick}
+              selectedOption={inputValue.value}
+              size={restInputProps.size}
+              status={status}
+              isLoading={isLoading}
+              searchTerm={highlightSearch ? searchValue : undefined}
+            />
+          )}
+        </div>
+      </ClickAwayListener>
+    );
+  }
+);
 
 export default Select;

@@ -1,112 +1,95 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
-import {
-  errorMsgStyle,
-  iconWrapperStyle,
-  indicatorStyle,
-  inputStyle,
-  textFieldStyle,
-  wrapperStyle,
-} from './TextField.style';
+import React, { FC, InputHTMLAttributes } from 'react';
+import { iconWrapperStyle, inputStyle } from './TextField.style';
 import Label from '../Label';
 import Icon from '../Icon';
-import { formFieldStyles } from 'theme/palette';
+import { DEFAULT_SIZE } from 'utils/size-utils';
+import useTheme from 'hooks/useTheme';
+import TextInputWrapper, {
+  Props as TextInputWrapperProps,
+} from 'components/utils/TextInputWrapper/TextInputWrapper';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
   id?: string;
-  /** The label of the text field that will be used as a placeholder and a label */
-  label?: string;
-  /** The placeholder of the input that will be used. This is shown if no label exists */
-  placeholder?: string;
-  /** An optional icon to show to the left */
-  leftIcon?: string | JSX.Element | null;
-  /** An optional icon to show to the right */
-  rightIcon?: string | JSX.Element | null;
-  /** If the text field value is required */
-  required?: boolean;
-  /** If the text field is disabled */
-  disabled?: boolean;
-  /** If the text field has errors */
-  error?: boolean;
-  /** Error message */
-  errorMsg?: React.ReactNode | string;
-  /** value of the input */
-  value?: string | number;
-  /** type of the input */
-  type?: string;
-  /** if the input will be without default style for use inside the library */
-  lean?: boolean;
-  /** Style of input field */
-  styleType?: formFieldStyles;
-  /** If the text field status is success */
-  success?: boolean;
-  /** If the text field has an error message */
-  withErrorMsg?: boolean;
-  /** If the text field has an indicator */
-  withIndicator?: boolean;
-};
+  /** Callback fired when the `input` is blurred. */
+  onBlur?: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  /** Callback fired when the `input` is changed. */
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  /** Callback fired when the `input` is focused. */
+  onFocus?: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  /** Callback fired when the `input` has a key down event. */
+  onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  /** Callback fired when the `input` value typed is changed */
+  onInput?: React.EventHandler<any>;
+} & TextInputWrapperProps;
 
-const TextField: React.FC<Props> = ({
-  id = undefined,
-  rightIcon = null,
-  leftIcon = null,
-  label,
-  placeholder = '',
-  required = false,
-  lean = false,
-  error = false,
-  disabled,
-  errorMsg = (
-    <React.Fragment>
-      <Icon color="error" name="alert" size={12} />
-      Error in Text Field
-    </React.Fragment>
-  ),
-  styleType = 'filled',
-  success = false,
-  withErrorMsg = false,
-  withIndicator = false,
-  ...rest
-}) => {
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props, ref) => {
+  const {
+    id = undefined,
+    rightIcon = null,
+    leftIcon = null,
+    label,
+    placeholder = '',
+    required = false,
+    disabled,
+    locked = false,
+    size = DEFAULT_SIZE,
+    dark = false,
+    lean,
+    hintMsg: __hintMsg,
+    styleType: __styleType,
+    readOnly,
+    ...rest
+  } = props;
+  const theme = useTheme();
+
+  const IconWrapper: FC<{ iconPosition: 'left' | 'right' }> = ({ children, iconPosition }) => (
+    <div css={iconWrapperStyle({ iconPosition })}>{children}</div>
+  );
+
   return (
     <React.Fragment>
-      <div css={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <div css={wrapperStyle({ disabled, error, lean, styleType })}>
-          <div css={textFieldStyle({ label, leftIcon })}>
-            {leftIcon && <div css={iconWrapperStyle({ label, rightIcon })}>{leftIcon}</div>}
-            <input
-              css={inputStyle({ label, placeholder })}
-              placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
+      <TextInputWrapper {...props}>
+        {leftIcon && <IconWrapper iconPosition={'left'}>{leftIcon}</IconWrapper>}
+        <div css={{ width: '100% ' }}>
+          <input
+            readOnly={readOnly}
+            css={inputStyle({ label, placeholder, size, dark, lean })}
+            placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
+            required={required}
+            id={id}
+            disabled={disabled || locked}
+            {...rest}
+            ref={ref}
+          />
+          {label && (
+            <Label
+              size={size}
+              htmlFor={id}
+              label={label}
               required={required}
-              id={id}
-              disabled={disabled}
-              {...rest}
+              animateToTop={Boolean(rest.value)}
             />
-            {label && (
-              <Label
-                error={error}
-                htmlFor={id}
-                label={label}
-                required={required}
-                animateToTop={Boolean(rest.value)}
-              />
-            )}
-            {rightIcon && (
-              <div css={iconWrapperStyle({ label, rightIcon, leftIcon })}>{rightIcon}</div>
-            )}
-          </div>
+          )}
         </div>
-        {withIndicator && (success || error) && (
-          <div css={indicatorStyle}>
-            <Icon color={error ? 'error' : 'teal'} name={error ? 'alert' : 'success'} size={20} />
-          </div>
+        {rightIcon && !locked && <IconWrapper iconPosition={'right'}>{rightIcon}</IconWrapper>}
+        {locked && (
+          <IconWrapper iconPosition={'right'}>
+            <Icon
+              name="lock"
+              size={size === 'md' ? 20 : 16}
+              color={theme.utils.getColor('lightGray', 500)}
+            />
+          </IconWrapper>
         )}
-      </div>
-      {withErrorMsg && error && <div css={errorMsgStyle()}>{errorMsg}</div>}
+      </TextInputWrapper>
     </React.Fragment>
   );
-};
+});
 
 export default TextField;

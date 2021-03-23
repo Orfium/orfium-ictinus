@@ -1,8 +1,9 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
-import TextFieldShowcase from '../storyUtils/TextFieldShowcase';
+import Icon from '../Icon';
+import iconSelector from '../Icon/assets/iconSelector';
 
 <Meta title="Design System/TextField" component={TextField} />
 
@@ -22,74 +23,118 @@ import { TextField } from '@orfium/ictinus';
 
 <Props of={TextField} />
 
-# Text Field with Label
+# Text Field Types
 
-Regular TextField with label
+Regular TextField and the 3 available types - filled, outlined, elevated
+
+<Preview>
+  <Story name="Text Field Types">
+    <Stack>
+      <TextField
+        label={'Label'}
+        size={'md'}
+        styleType={'filled'}
+      />
+      <TextField
+        label={'Label'}
+        size={'md'}
+        styleType={'outlined'}
+      />
+      <TextField
+        label={'Label'}
+        size={'md'}
+        styleType={'elevated'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Field Sizes
+
+Regular TextField and available sizes
+
+<Preview>
+  <Story name="Text Field Sizes">
+    <Stack>
+      <TextField
+        label={'Label'}
+        size={'md'}
+        styleType={'outlined'}
+      />
+      <TextField
+        label={'Label'}
+        size={'sm'}
+        styleType={'outlined'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Field with and without Label
+
+Regular TextField with label options. Label that will float, placeholder and no placeholder
 
 <Preview>
   <Story name="Text Field with Label">
     <Stack>
       <TextField
         label={'Label'}
-        lean={boolean('lean version', false)}
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+        size={'md'}
+        styleType={'outlined'}
+      />
+      <TextField
+        placeholder={'Label'}
+        size={'md'}
+        styleType={'outlined'}
+      />
+      <TextField
+        size={'md'}
+        styleType={'outlined'}
       />
     </Stack>
   </Story>
 </Preview>
 
-# Text Field without Label
 
-Regular TextField without label
+# Text Field Icons
 
-<Preview>
-  <Story name="Text Field without Label">
-    <Stack>
-      <TextField
-        lean={boolean('lean version', false)}
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
-      />
-    </Stack>
-  </Story>
-</Preview>
-
-# Text Field with Placeholder
-
-Regular TextField with placeholder
+TextField with icon options right and left of the text
 
 <Preview>
-  <Story name="Text Field with Placeholder">
+  <Story name="Text Field with Placeholder, icon and size">
     <Stack>
       <TextField
-        lean={boolean('lean version', false)}
-        placeholder="placeholder"
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
-      />
-    </Stack>
-  </Story>
-</Preview>
-
-# Text Field with Placeholder and icon
-
-Regular TextField with placeholder and icon
-
-<Preview>
-  <Story name="Text Field with Placeholder and icon">
-    <Stack>
-      <TextField
-        lean={boolean('lean version', false)}
+        size={select('size', ['md','sm'], 'md')}
+        label={'Label'}
         leftIcon={
-          <img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
+          <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
         }
-        placeholder="placeholder"
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+      />
+      <TextField
+        size={select('size', ['md','sm'], 'md')}
+        label={'Label'}
+        rightIcon={
+          <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
+        }
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+      />
+      <TextField
+        size={select('size', ['md','sm'], 'md')}
+        label={'Label'}
+        leftIcon={
+          <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
+        }
+        rightIcon={
+          <img style={{background: 'red'}} src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />
+        }
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
       />
     </Stack>
   </Story>
 </Preview>
 
 # TextField disabled with label
-
 Regular TextField disabled with label
 
 <Preview>
@@ -98,28 +143,143 @@ Regular TextField disabled with label
       <TextField
         disabled
         label={'Label'}
-        lean={boolean('lean version', false)}
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
+        size={'md'}
+        styleType={'filled'}
+      />
+      <TextField
+        disabled
+        label={'Label'}
+        size={'md'}
+        styleType={'outlined'}
+      />
+      <TextField
+        disabled
+        label={'Label'}
+        size={'md'}
+        styleType={'elevated'}
       />
     </Stack>
   </Story>
 </Preview>
 
-# TextField with Label and Error Handling Options
-
-Regular TextField with Label and Error Handling Options
+# TextField locked with label
+Regular TextField locked with label. Locked state defined a locked text field but not disabled (style-wise)
 
 <Preview>
-  <Story name="TextField with label and error handling options" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextField locked with label">
     <Stack>
-      <TextFieldShowcase
-        errorMsg={text('custom error message', '')}
-        label={'Label'}
-        lean={boolean('lean version', false)}
-        status={select('status', ['success', 'error'], 'error')}
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'filled')}
-        withErrorMsg={boolean('with error message', false)}
-        withIndicator={boolean('with indicator', false)}
+      <Stack>
+        <TextField
+          locked
+          label={'Label'}
+          size={'md'}
+          styleType={'filled'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'md'}
+          styleType={'outlined'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'md'}
+          styleType={'elevated'}
+        />
+      </Stack>
+      <Stack>
+        <TextField
+          locked
+          label={'Label'}
+          size={'sm'}
+          styleType={'filled'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'sm'}
+          styleType={'outlined'}
+        />
+        <TextField
+          locked
+          label={'Label'}
+          size={'sm'}
+          styleType={'elevated'}
+        />
+      </Stack>
+    </Stack>
+  </Story>
+</Preview>
+
+# TextField with Label and Statuses
+
+Regular TextField with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
+
+<Preview>
+  <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Stack>
+        <TextField
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'error'}
+          styleType={'filled'}
+        />
+        <TextField
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'error'}
+          styleType={'outlined'}
+        />
+        <TextField
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'error'}
+          styleType={'elevated'}
+        />
+      </Stack>
+      <Stack>
+        <TextField
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'hint'}
+          styleType={'filled'}
+        />
+        <TextField
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'hint'}
+          styleType={'outlined'}
+        />
+        <TextField
+          hintMsg={text('custom error message', 'Error in Text Field')}
+          label={'Label'}
+          status={'hint'}
+          styleType={'elevated'}
+        />
+      </Stack>
+    </Stack>
+  </Story>
+</Preview>
+
+# Text Field with KNOBS
+
+Regular Text Field with KNOBS
+
+<Preview>
+  <Story name="Text Field with KNOBS" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <TextField
+        label={text('Label', 'Label')}
+        size={select('Size', ['md','sm'], 'md')}
+        lean={boolean('Lean version', false)}
+        locked={boolean('Locked', false)}
+        disabled={boolean('Disabled', false)}
+        iconName={select('Icon',['none', ...Object.keys(iconSelector)],'search')}
+        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
+        hintMsg={text('custom error message', 'Error in Text Field')}
+        status={select('status', ['hint', 'error', 'normal'], 'normal')}
       />
     </Stack>
   </Story>

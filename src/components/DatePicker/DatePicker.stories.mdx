@@ -1,15 +1,17 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, select, text, boolean } from '@storybook/addon-knobs';
-import DatePicker from './DatePicker';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import DatePicker, { extraOptions } from './DatePicker';
+import { currentDay } from './utils';
 import dayjs from 'dayjs';
+import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
+const mockDate = currentDay;
 const options = {
   'Disable days of week (only Monday)': { daysOfWeek: [0, 2, 3, 4, 5, 6] },
-  'Disable dates after this day': { after: new Date() },
-  'Disable dates before this day': { before: new Date() },
-  'Disable dates before and after a date (-/+ 7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
-  'Enable dates from/to a date (7 days)': { before: dayjs().subtract(7, 'day').toDate(), after: dayjs().add(7, 'day').toDate() },
+  'Disable dates after this day': { after: mockDate },
+  'Disable dates before this day': { before: mockDate },
+  'Disable dates before and after a date (-/+ 7 days)': { before: mockDate.subtract(7, 'day').toDate(), after: mockDate.add(7, 'day').toDate() },
+  'Enable dates from/to a date (7 days)': { before: mockDate.subtract(7, 'day').toDate(), after: mockDate.add(7, 'day').toDate() },
 }
-const styleTypeOptions = ['filled', 'outlined', 'elevated']
 const dateFormatOptions = {
   'Enables system\'s locale format' : undefined,
   'MM/DD/YYYY':'MM/DD/YYYY',
@@ -19,6 +21,7 @@ const dateFormatOptions = {
   'MMM D, YYYY': 'MMM D, YYYY',
   'ddd, MMM D, YYYY': 'ddd, MMM D, YYYY'
 }
+
 
 <Meta title="Design System/DatePicker" component={DatePicker} />
 
@@ -38,32 +41,114 @@ import { DatePicker } from '@orfium/ictinus';
 
 <Props of={DatePicker} />
 
-# DatePicker
+# Calendar
 
-Implementation of the regular DatePicker.
-
+Implementation of both of our types DatePicker(range) and DayPicker
 
 <Preview>
-  <Story name="DatePicker" parameters={{ decorators: [withKnobs] }}>
-    <DatePicker
-      isRangePicker
-      styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
-      disableDates={select('disableDates', options, options[0])}
-      dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[0])}
-    />
+  <Story name="Calendar" parameters={{ decorators: [withKnobs] }}>
+    <Stack vertical>
+      <OverlayComponent
+        isRangePicker
+        extraOptions={extraOptions}
+        selectedDays={{
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
+        }}
+        onDaySelect={() => {}}
+      />
+      <OverlayComponent
+        isRangePicker
+        selectedDays={{
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(44, 'day'),
+        }}
+        onDaySelect={() => {}}
+      />
+      <OverlayComponent
+        selectedDays={{
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(1, 'day'),
+        }}
+        onDaySelect={() => {}}
+      />
+    </Stack>
   </Story>
 </Preview>
 
-# DayPicker
+# DatePicker
 
-Implementation of the simple DayPicker
+Implementation of the regular Range DatePicker on different sizes
 
 <Preview>
-  <Story name="DayPicker" parameters={{ decorators: [withKnobs] }}>
-    <DatePicker
-      styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])}
-      disableDates={select('disableDates', options, options[0])}
-    />
+  <Story name="DatePicker Range" parameters={{ decorators: [withKnobs] }}>
+    <Stack vertical>
+      <DatePicker
+        inputProps={{ size: 'md', styleType: 'outlined' }}
+        isRangePicker
+        disableDates={select('disableDates', options, options[0])}
+        dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+      />
+      <DatePicker
+        inputProps={{ size: 'sm', styleType: 'outlined' }}
+        isRangePicker
+        disableDates={select('disableDates', options, options[0])}
+        dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# DayPicker Sizes
+
+Implementation of the simple DayPicker on different sizes
+
+<Preview>
+  <Story name="DayPicker Sizes" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <DatePicker
+        inputProps={{ size: 'md', styleType: 'outlined' }}
+        disableDates={select('disableDates', options, options[0])}
+      />
+      <DatePicker
+        inputProps={{ size: 'sm', styleType: 'outlined' }}
+        disableDates={select('disableDates', options, options[0])}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# DayPicker Input props
+
+Component can take all the properties of the TextField and styles
+
+<Preview>
+  <Story name="DayPicker Input props" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Stack>
+        <DatePicker
+          disableDates={select('disableDates', options, options[0])}
+        />
+        <DatePicker
+          inputProps={{ styleType: 'outlined' }}
+          disableDates={select('disableDates', options, options[0])}
+        />
+        <DatePicker
+          inputProps={{ styleType: 'elevated' }}
+          disableDates={select('disableDates', options, options[0])}
+        />
+      </Stack>
+      <Stack>
+        <DatePicker
+          inputProps={{ hintMsg: 'Wrong Date', status: 'error' }}
+          disableDates={select('disableDates', options, options[0])}
+        />
+        <DatePicker
+          inputProps={{ hintMsg: 'Dates are important', status: 'hint' }}
+          disableDates={select('disableDates', options, options[0])}
+        />
+      </Stack>
+    </Stack>
   </Story>
 </Preview>
 
@@ -74,32 +159,28 @@ Some disable dates functionality
 <Preview>
   <Story name="DayPicker with disabled dates">
     <DatePicker
-      disableDates={[
-        dayjs()
-          .add(1, 'day')
-          .toDate(),
-        { daysOfWeek: [0, 6] },
-      ]}
+      disableDates={{ daysOfWeek: [0, 6] }}
     />
   </Story>
 </Preview>
 
-# DayPicker with predefined values
+# DatePicker with predefined values
 
 This datepicker has a predefined initial value that can be used both for initial definition and to handle values externally
 
 <Preview>
   <Story name="DayPicker with predefined values">
     <DatePicker
+      isRangePicker
       value={{
-        to: dayjs()
+        to: mockDate
           .add(11, 'day')
           .toDate(),
-        from: dayjs()
+        from: mockDate
           .add(1, 'day')
           .toDate(),
       }}
-      disableDates={[{ daysOfWeek: [0, 2, 3, 4, 5, 6] }]}
+      disableDates={{ daysOfWeek: [1, 2, 3, 4, 5, 6] }}
     />
   </Story>
 </Preview>
@@ -107,6 +188,6 @@ This datepicker has a predefined initial value that can be used both for initial
 # Dynamic disableDates with all options available and custom label - Knobs
 <Preview>
   <Story name="Dynamic disableDates with all options available - Knobs" parameters={{ decorators: [withKnobs] }}>
-    <DatePicker styleType={select('styleType', styleTypeOptions, styleTypeOptions[0])} disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
+    <DatePicker disableDates={select('disableDates', options, options[0])} inputLabel={text('inputLabel', 'Custom Date')} isRangePicker={boolean('isRangePicker', false)} />
   </Story>
 </Preview>

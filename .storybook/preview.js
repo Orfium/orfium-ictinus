@@ -1,36 +1,73 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
-import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
-import { css, Global } from '@emotion/core';
-import { normalize } from 'polished';
 
 const viewPorts = {
-  laptopLg: {
-    name: 'Laptop Large',
+  desktop1920: {
+    name: 'Desktop 1920',
+    styles: {
+      width: '1920px',
+      height: '1080px',
+    },
+    type: 'desktop',
+  },
+  desktop1440: {
+    name: 'Desktop 1440',
     styles: {
       width: '1440px',
-      height: '1073px',
+      height: '1080px',
     },
     type: 'desktop',
   },
-  laptopSm: {
-    name: 'Laptop Small',
+  desktop1366: {
+    name: 'Desktop 1366',
+    styles: {
+      width: '1366px',
+      height: '768px',
+    },
+    type: 'desktop',
+  },
+  desktop1200: {
+    name: 'Desktop 1200',
     styles: {
       width: '1200px',
-      height: '859px',
+      height: '800px',
     },
     type: 'desktop',
   },
-  tablet: {
-    name: 'Tablet',
+  tablet1024: {
+    name: 'Tablet 1024',
     styles: {
-      width: '750px',
-      height: '859px',
+      width: '1024px',
+      height: '1024px',
     },
     type: 'tablet',
+  },
+  tablet970: {
+    name: 'Tablet 970',
+    styles: {
+      width: '970px',
+      height: '1024px',
+    },
+    type: 'tablet',
+  },
+  mob480: {
+    name: 'Mobile 480',
+    styles: {
+      width: '480px',
+      height: '320px',
+    },
+    type: 'mobile',
+  },
+  mob320: {
+    name: 'Mobile 320',
+    styles: {
+      width: '320px',
+      height: '480px',
+    },
+    type: 'mobile',
   },
 };
 
@@ -56,7 +93,7 @@ const ThemeSwitcher = () => {
 export const decorators = [
   Story => {
     return (
-      <ThemeProvider theme={{ palette: { branded1: '#000' } }}>
+      <ThemeProvider>
         <ThemeSwitcher />
         <Story />
       </ThemeProvider>

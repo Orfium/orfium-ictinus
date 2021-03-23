@@ -1,1 +1,1 @@
-export {default} from './GradientLine'
+export { default } from './GradientLine';

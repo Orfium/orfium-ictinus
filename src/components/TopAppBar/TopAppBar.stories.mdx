@@ -1,0 +1,83 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import TopAppBar from './TopAppBar';
+import Stack from '../storyUtils/Stack';
+import TextField from '../TextField';
+import TopAppBarShowcase from '../storyUtils/TopAppBarShowcase';
+import { boolean } from '@storybook/addon-knobs';
+import UserMenu from './components/UserMenu/UserMenu';
+
+<Meta title="Design System/TopAppBar" component={TopAppBar} />
+
+# TopAppBar
+
+A universal TopAppBar component.
+
+# Usage
+
+```js
+import { TopAppBar } from '@orfium/ictinus';
+
+<TopAppBar
+     dark={dark}
+     logoIcon={logoIcon}
+     onMenuIconClick={onMenuIconClick}
+     userMenu={userMenu}
+     additionalTools={<AdditionalToolsComponent />}
+     onSearchHandler={onSearchHandler}
+/>
+```
+
+# Props
+
+<Props of={TopAppBar} />
+
+## UserMenu Props
+
+<Props of={UserMenu} />
+
+
+# TopAppBar with Logo Placeholder
+
+<Preview>
+  <Story name="with Logo Placeholder">
+    <div style={{padding: 10}}>
+      <TopAppBarShowcase />
+    </div>
+  </Story>
+</Preview>
+
+
+# TopAppBar with additionalTools
+
+<Preview>
+  <Story name="with Additional Tools">
+    <div style={{padding: 10}}>
+      <TopAppBarShowcase withAdditionalTools={true} />
+    </div>
+  </Story>
+</Preview>
+
+# TopAppBar Dark Theme
+
+<Preview>
+  <Story name="with Dark theme enabled">
+    <div style={{padding: 10}}>
+      <TopAppBarShowcase dark={true} />
+    </div>
+  </Story>
+</Preview>
+
+
+
+# TopAppBar Playground
+
+TopAppBar Playground
+
+<Preview>
+  <Story name="playground">
+    <div style={{padding: 10}}>
+      <TopAppBarShowcase dark={boolean('dark', false)} isSearchDisabled={boolean('disabled search', false)} provideSearchHandler={boolean('providerSearchHandler', false)} withAdditionalTools={boolean('withAdditionalTools', false)} withLogo={boolean('withLogo', false)} />
+    </div>
+  </Story>
+</Preview>
+
