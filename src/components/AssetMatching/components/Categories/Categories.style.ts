@@ -19,7 +19,7 @@ const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css
   font-size: ${rem(12)};
   font-weight: 500;
   color: ${theme.palette.black};
-  margin: ${theme.spacing.md};
+  margin: ${theme.spacing.xsm};
   padding: ${theme.spacing.xsm};
   cursor: default;
   background: ${isItemMatched ? theme.utils.getColor('lightGray', 200) : 'transparent'};
