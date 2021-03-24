@@ -61,6 +61,9 @@ import ExpensesIcon from './expenses.svg';
 import ExternalLinkIcon from './external-link.svg';
 import RefreshIcon from './refresh.svg';
 import StarIcon from './star.svg';
+import Proposed from './proposed.svg';
+import Unpaired from './unpaired.svg';
+import ClockOutlined from './clock-outlined.svg';
 
 /**
  * In the current design system the collection of "FatArrowIcon"
@@ -302,6 +305,9 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   entity: Entity,
   playCount: PlayCount,
   processedLogs: ProcessedLogs,
+  proposed: Proposed,
+  unpaired: Unpaired,
+  clockOutlined: ClockOutlined,
 };
 
 export default iconSelector;
