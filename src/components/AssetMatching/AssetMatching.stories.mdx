@@ -69,7 +69,36 @@ import { AssetMatching } from '@orfium/ictinus';
             iconName: 'composition',
           },
         }}
-        matchingActions={matchingActions}
+        matchingActions={[
+            {
+              text: 'Confirm',
+              icon: 'check',
+              onClick: () => {
+                alert('confirmed');
+              },
+            },
+            {
+              text: 'Reject',
+              icon: 'close',
+              onClick: () => {
+                alert('rejected');
+              },
+            },
+            {
+              text: 'Hide',
+              icon: 'sight',
+              onClick: () => {
+                alert('hidden');
+              },
+            },
+            {
+              text: 'Review Later',
+              icon: 'clock',
+              onClick: () => {
+                alert('reviewed');
+              },
+            },
+          ]}
       />
 ```
 

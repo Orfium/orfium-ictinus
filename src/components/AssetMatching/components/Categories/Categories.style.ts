@@ -24,6 +24,7 @@ const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css
   cursor: default;
   background: ${isItemMatched ? theme.utils.getColor('lightGray', 200) : 'transparent'};
   white-space: nowrap;
+  transition: all 0.2s ease-in-out;
 `;
 
 const itemsContainer = css`
