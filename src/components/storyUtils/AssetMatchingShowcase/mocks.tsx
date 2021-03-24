@@ -39,21 +39,9 @@ const actionsMock: MatchingAction[] = [
 const rightSideData: AssetProps = {
   categories: [
     {
-      title: 'Artist',
-      categoryItems: [
-        'Davis Westervelt',
-        'Kevin Briggs',
-        'Jordyn Torff',
-        'Kevin Briggs',
-        'Davis Westervelt',
-        'Kevin Briggs',
-        'Jordyn Torff',
-        'Kevin Briggs',
-        'Davis Westervelt',
-        'Kevin Briggs',
-        'Jordyn Torff',
-        'Kevin Briggs',
-      ],
+      title: 'Writers',
+      categoryItems: ['George Michael', 'Mick Jagger', 'Keith Richards'],
+      col_order: 1,
     },
   ],
   assetLinkedInfo: {
@@ -67,28 +55,21 @@ const rightSideData: AssetProps = {
   assetHeading: {
     top: 'Owned Composition',
     bottom: 'ISWC: KS39729323',
-    main: 'We are the world',
+    main: 'Waiting for That Day',
     iconName: 'composition',
   },
 };
 const leftSideData: AssetProps = {
   categories: [
     {
-      title: 'Artist',
-      categoryItems: [
-        'Davis Westervelt',
-        'Kevin Briggs',
-        'Jordyn Torff',
-        'Kevin Briggs',
-        'Davis Westervelt',
-        'Kevin Briggs',
-        'Jordyn Torff',
-        'Kevin Briggs',
-        'Davis Westervelt',
-        'Kevin Briggs',
-        'Jordyn Torff',
-        'Kevin Briggs',
-      ],
+      title: 'Artists',
+      categoryItems: ['George Michael'],
+      col_order: 1,
+    },
+    {
+      title: 'Writers',
+      categoryItems: ['George Michael'],
+      col_order: 0,
     },
   ],
   assetLinkedInfo: {
@@ -100,10 +81,10 @@ const leftSideData: AssetProps = {
     details: 234,
   },
   assetHeading: {
-    top: 'Owned Composition',
+    top: 'Owned Recording',
     bottom: 'ISWC: KS39729323',
-    main: 'We are the world',
-    iconName: 'composition',
+    main: 'Too Funky',
+    iconName: 'recordLabel',
   },
 };
 

@@ -15,12 +15,69 @@ A component used for matching records and compositions.
 ```js
 import { AssetMatching } from '@orfium/ictinus';
 
-<AssetMatching />
+    <AssetMatching
+        styleType={styleType}
+        matchedCategoryItems={['George Michael']}
+        leftAssetProps={{
+          categories: [
+            {
+              title: 'Artists',
+              categoryItems: ['George Michael',],
+              col_order: 1,
+            },
+            {
+              title: 'Writers',
+              categoryItems: ['George Michael'],
+              col_order: 0,
+            },
+          ],
+          assetLinkedInfo: {
+            title: (
+              <Fragment>
+                Linked Sound <br /> Recordings
+              </Fragment>
+            ),
+            details: 234,
+          },
+          assetHeading: {
+            top: 'Owned Recording',
+            bottom: 'ISWC: KS39729323',
+            main: 'Too Funky',
+            iconName: 'recordLabel',
+          },
+        }}
+        rightAssetProps={{
+          categories: [
+            {
+              title: 'Writers',
+              categoryItems: ['George Michael', 'Mick Jagger', 'Keith Richards'],
+              col_order: 1,
+            },
+          ],
+          assetLinkedInfo: {
+            title: (
+              <Fragment>
+                Linked Sound <br /> Recordings
+              </Fragment>
+            ),
+            details: 234,
+          },
+          assetHeading: {
+            top: 'Owned Composition',
+            bottom: 'ISWC: KS39729323',
+            main: 'Waiting for That Day',
+            iconName: 'composition',
+          },
+        }}
+        matchingActions={matchingActions}
+      />
 ```
 
 # Props
 
 <Props of={AssetMatching}/>
+
+# Showcase
 
 <Preview>
   <Story name="AssetMatching" parameters={{ decorators: [withKnobs] }}>

@@ -13,7 +13,7 @@ interface Props {
 const AssetHeading: FC<Props> = ({ top = '', main, bottom = '', iconName }) => {
   return (
     <div css={Styles.headingWrapper}>
-      <p css={Styles.subHeading}>{top && top}</p>
+      <p css={Styles.subHeadingTop}>{top && top}</p>
       <div css={flex}>
         <Icon size={24} name={iconName} color={'primary'} />
         <h3 css={Styles.mainHeading}>{main}</h3>

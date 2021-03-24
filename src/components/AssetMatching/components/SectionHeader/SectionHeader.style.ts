@@ -6,7 +6,7 @@ import { formFieldStyles } from '../../../../theme/palette';
 const header = (checked: boolean, styleType: formFieldStyles) => (
   theme: Theme
 ): SerializedStyles => css`
-  padding: ${theme.spacing.lg};
+  padding: ${theme.spacing.sm};
   border-top-left-radius: ${theme.spacing.sm};
   border-top-right-radius: ${theme.spacing.sm};
   background: ${checked ? theme.utils.getColor('lightGray', 200) : theme.palette.white};

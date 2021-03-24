@@ -4,11 +4,15 @@ import { Theme } from '../../../../theme';
 import { flex } from '../../../../theme/functions';
 
 const subHeading = (theme: Theme): SerializedStyles => css`
-  font-style: italic;
   font-size: ${rem(11)};
   font-weight: 500;
   color: ${theme.utils.getColor('lightGray', 600)};
   margin: 0;
+`;
+
+const subHeadingTop = (theme: Theme): SerializedStyles => css`
+  ${subHeading(theme)};
+  font-style: italic;
 `;
 
 const mainHeading = (theme: Theme): SerializedStyles => css`
@@ -73,4 +77,5 @@ export default {
   linkedRecordings,
   linkedText,
   linkedCount,
+  subHeadingTop,
 };

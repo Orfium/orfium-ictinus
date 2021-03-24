@@ -47,7 +47,7 @@ const AssetMatchingShowcase = ({
       </button>
       <AssetMatching
         styleType={styleType}
-        matchedCategoryItems={['Kevin Briggs']}
+        matchedCategoryItems={['George Michael']}
         leftAssetProps={Mocks.leftSideData}
         {...customShowcase}
         matchingActions={matchingActions}

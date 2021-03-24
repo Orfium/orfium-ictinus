@@ -5,6 +5,7 @@ import { Theme } from '../../../../theme';
 
 const categories = css`
   ${flex};
+  flex-direction: column;
   align-items: baseline;
 `;
 
@@ -30,8 +31,10 @@ const itemsContainer = css`
   flex-wrap: wrap;
 `;
 
-const category = css`
+const category = (order?: number) => css`
   ${flex};
+  order: ${order};
+  align-items: baseline;
   justify-content: space-between;
 `;
 

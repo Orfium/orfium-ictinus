@@ -6,7 +6,7 @@ const score = (isEnabled: boolean) => (theme: Theme): SerializedStyles => css`
   font-size: 26px;
   font-weight: 700;
   margin: 0 ${theme.spacing.sm} 0 ${theme.spacing.md};
-  color: ${isEnabled ? theme.palette.black : theme.utils.getColor('lightGray', 400)};
+  color: ${isEnabled ? theme.palette.black : theme.utils.getColor('lightGray', 600)};
 `;
 
 const checkBoxWrapper = css`
