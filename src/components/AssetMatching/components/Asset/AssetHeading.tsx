@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import Styles from './Asset.style';
-import Icon from '../../../Icon';
-import { AcceptedIconNames } from '../../../Icon/types';
-import { flex } from '../../../../theme/functions';
+import Icon from 'components/Icon';
+import { AcceptedIconNames } from 'components/Icon/types';
+import { flex } from 'theme/functions';
 
 interface Props {
   top?: string;

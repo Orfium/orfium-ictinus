@@ -5,7 +5,7 @@ import { MatchingAction } from './types';
 import { Asset } from './components/Asset';
 import { AssetProps } from './components/Asset';
 import { SelectedItemProvider } from './components/SelectedItemContext';
-import { formFieldStyles } from '../../theme/palette';
+import { formFieldStyles } from 'theme/palette';
 
 interface Props {
   /** The actions that can be performed for the asset matching section */
@@ -37,7 +37,7 @@ const AssetMatching: FC<Props> = ({
     <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
   );
   const defaultRight = rightAssetProps && (
-    <Asset {...rightAssetProps} highlightBg matchedCategoryItems={matchedCategoryItems} />
+    <Asset {...rightAssetProps} isHighlighted matchedCategoryItems={matchedCategoryItems} />
   );
 
   return (

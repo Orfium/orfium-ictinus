@@ -1,7 +1,7 @@
-import { flex } from '../../theme/functions';
+import { flex } from 'theme/functions';
 import { css, SerializedStyles } from '@emotion/core';
-import { Theme } from '../../theme';
-import { formFieldStyles } from '../../theme/palette';
+import { Theme } from 'theme';
+import { formFieldStyles } from 'theme/palette';
 
 const wrapperStyleSwitch = (theme: Theme) => ({
   outlined: `border: 1px solid ${theme.utils.getColor('lightGray', 200)}`,

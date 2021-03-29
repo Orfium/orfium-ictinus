@@ -1,7 +1,7 @@
-import { flex } from '../../../../theme/functions';
+import { flex, transition } from 'theme/functions';
 import { css, SerializedStyles } from '@emotion/core';
-import { Theme } from '../../../../theme';
-import { formFieldStyles } from '../../../../theme/palette';
+import { Theme } from 'theme';
+import { formFieldStyles } from 'theme/palette';
 
 const header = (checked: boolean, styleType: formFieldStyles) => (
   theme: Theme
@@ -15,6 +15,7 @@ const header = (checked: boolean, styleType: formFieldStyles) => (
     ? 'box-shadow: 0px 7px 8px -5px rgb(0 0 0 / 15%);'
     : 'box-shadow:  0px 2px 4px rgba(0 0 0 / 15%);'}
   justify-content: space-between;
+  ${transition(0.2)};
 `;
 
 export default {

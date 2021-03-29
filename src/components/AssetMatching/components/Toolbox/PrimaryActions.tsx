@@ -2,16 +2,14 @@ import React, { FC } from 'react';
 import Styles from './Toolbox.style';
 import { MatchingAction } from '../../types';
 import { useMatchingActions } from '../utils';
-import { generateUniqueID } from '../../../../utils/helpers';
-import { flex } from '../../../../theme/functions';
+import { generateUniqueID } from 'utils/helpers';
+import { flex } from 'theme/functions';
 
 interface Props {
-  matchingActions: MatchingAction[];
+  primaryActions: MatchingAction[];
 }
 
-const PrimaryActions: FC<Props> = ({ matchingActions }) => {
-  const primaryActions = matchingActions.slice(0, 2);
-
+const PrimaryActions: FC<Props> = ({ primaryActions }) => {
   const { actionItems } = useMatchingActions(primaryActions, actionButton => (
     <div
       data-testid={'primary_action'}

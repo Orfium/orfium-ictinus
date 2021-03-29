@@ -1,18 +1,20 @@
-import Button from '../../Button';
-import Icon from '../../Icon';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 import React, { useMemo, useCallback } from 'react';
 import { MatchingAction } from '../types';
 import { useSelectedItem } from './SelectedItemContext';
 import debounce from 'lodash/debounce';
+
+const SEARCH_REG_EXPRESSION = /\s/g;
+const REPLACE_WITH = '-';
 
 export const useCategoryItemActions = (item: string, matchedCategoryItems?: string[]) => {
   const isItemMatched = useMemo(() => matchedCategoryItems?.includes(item) || false, [
     matchedCategoryItems,
   ]);
   const [selected, setSelected] = useSelectedItem();
-  const searchRegExp = /\s/g;
-  const replaceWith = '-';
-  const itemId = `${item?.replace(searchRegExp, replaceWith).toLocaleLowerCase()}`;
+
+  const itemId = `${item?.replace(SEARCH_REG_EXPRESSION, REPLACE_WITH).toLocaleLowerCase()}`;
 
   const updateSelected = useCallback(
     (value: string | null) =>

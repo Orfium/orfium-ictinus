@@ -1,31 +1,24 @@
 import React, { FC, useState } from 'react';
-import { IconButton } from '../../../../index';
+import IconButton from 'components/IconButton';
 import { MatchingAction } from '../../types';
-
 import Styles from './Toolbox.style';
 import { useMatchingActions } from '../utils';
-import { generateUniqueID } from '../../../../utils/helpers';
-import ClickAwayListener from '../../../utils/ClickAwayListener';
+import { generateUniqueID } from 'utils/helpers';
+import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 interface Props {
-  matchingActions: MatchingAction[];
+  secondaryActions: MatchingAction[];
 }
 
-const SecondaryActions: FC<Props> = ({ matchingActions }) => {
+const SecondaryActions: FC<Props> = ({ secondaryActions }) => {
   const [open, setOpen] = useState(false);
-  const secondaryActions = matchingActions.slice(2, matchingActions.length);
   const hasUniqueAction = secondaryActions.length === 1;
-  const hasNoAction = secondaryActions.length === 0;
 
   const { actionItems } = useMatchingActions(secondaryActions, actionButton => (
     <li data-testid={'secondary_action'} key={generateUniqueID('secondary_action')}>
       {actionButton}
     </li>
   ));
-
-  if (hasNoAction) {
-    return null;
-  }
 
   if (hasUniqueAction) {
     const uniqueAction = secondaryActions[0];

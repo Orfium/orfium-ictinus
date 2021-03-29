@@ -1,7 +1,6 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { flex } from '../../../../theme/functions';
-import { rem } from 'polished';
-import { Theme } from '../../../../theme';
+import { flex, transition } from 'theme/functions';
+import { Theme } from 'theme';
 
 const categories = css`
   ${flex};
@@ -10,13 +9,13 @@ const categories = css`
 `;
 
 const title = (theme: Theme): SerializedStyles => css`
-  font-size: ${rem(11)};
+  font-size: ${theme.typography.fontSizes[11]};
   margin-right: ${theme.spacing.xl};
   color: ${theme.utils.getColor('primary', 400, 'normal')};
 `;
 
 const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css`
-  font-size: ${rem(12)};
+  font-size: ${theme.typography.fontSizes[12]};
   font-weight: 500;
   color: ${theme.palette.black};
   margin: ${theme.spacing.xsm};
@@ -24,7 +23,7 @@ const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css
   cursor: default;
   background: ${isItemMatched ? theme.utils.getColor('lightGray', 200) : 'transparent'};
   white-space: nowrap;
-  transition: all 0.2s ease-in-out;
+  ${transition(0.2)};
 `;
 
 const itemsContainer = css`

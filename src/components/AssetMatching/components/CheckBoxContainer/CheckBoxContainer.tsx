@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/core';
 import { ChangeEvent, FC } from 'react';
 import Styles from './CheckBoxContainer.style';
-import CheckBox from '../../../CheckBox';
+import CheckBox from 'components/CheckBox';
 
 interface Props {
   handleCheck?(val: boolean, e: ChangeEvent): void;

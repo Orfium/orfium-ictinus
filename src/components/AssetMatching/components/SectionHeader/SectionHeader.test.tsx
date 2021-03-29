@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/core';
 import { render, fireEvent } from '../../../../test';
 import SectionHeader from './SectionHeader';
-import mocks from '../../../storyUtils/AssetMatchingShowcase/mocks';
+import mocks from 'components/storyUtils/AssetMatchingShowcase/mocks';
 import '@testing-library/jest-dom';
 
 describe('Asset Matching - Header', () => {

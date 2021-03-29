@@ -1,21 +1,22 @@
-import { Theme } from '../../../../theme';
+import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/core';
-import { flex } from '../../../../theme/functions';
-import { cardElevation } from '../../../Card/Card.style';
+import { flex } from 'theme/functions';
+import { cardElevation } from 'components/Card/Card.style';
+import { rem } from 'polished';
 
 const list = (theme: Theme): SerializedStyles => css`
   flex-direction: column;
-  z-index: 10;
+  z-index: 9;
   position: absolute;
   background: white;
-  top: 55px;
+  top: ${rem(55)};
   right: 0;
   margin: 0;
   padding: 0;
   ${cardElevation(theme, '02')};
   > li {
     margin: 0;
-    width: 220px;
+    width: ${rem(220)};
     list-style: none;
     > button {
       width: 100%;

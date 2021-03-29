@@ -4,10 +4,10 @@ import { jsx } from '@emotion/core';
 import { ChangeEvent, FC } from 'react';
 import Styles from './SectionHeader.style';
 import { Toolbox } from '../Toolbox';
-import { useCheck } from '../../../../hooks/useCheck';
+import { useCheck } from 'hooks/useCheck';
 import { CheckBoxContainer } from '../CheckBoxContainer';
 import { MatchingAction } from '../../types';
-import { formFieldStyles } from '../../../../theme/palette';
+import { formFieldStyles } from 'theme/palette';
 
 interface Props {
   onCheck?(val: boolean, e: ChangeEvent): void;

@@ -3,12 +3,12 @@ import AssetHeading from './AssetHeading';
 import Styles from './Asset.style';
 import { Categories } from '../Categories';
 import { CategoryType } from '../Categories/Category';
-import { AcceptedIconNames } from '../../../Icon/types';
+import { AcceptedIconNames } from 'components/Icon/types';
 import AssetLinkedInfo from './AssetLinkedInfo';
 
 export interface AssetProps {
   categories: CategoryType[];
-  highlightBg?: boolean;
+  isHighlighted?: boolean;
   assetHeading: {
     top?: string;
     main: string;
@@ -24,13 +24,13 @@ export interface AssetProps {
 
 const Asset: FC<AssetProps> = ({
   matchedCategoryItems,
-  highlightBg = false,
+  isHighlighted = false,
   categories,
   assetHeading,
   assetLinkedInfo,
 }) => {
   return (
-    <article css={Styles.article(highlightBg)}>
+    <article css={Styles.article(isHighlighted)}>
       <div css={Styles.headingContainer}>
         <AssetHeading {...assetHeading} />
         <AssetLinkedInfo {...assetLinkedInfo} />
