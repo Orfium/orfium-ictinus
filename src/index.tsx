@@ -13,9 +13,11 @@ export { default as Avatar } from './components/Avatar';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
 export { default as Card } from './components/Card';
+
 export { default as LineChart } from './components/Chart/LineChart';
 export { default as BarChart } from './components/Chart/BarChart';
 export { default as DonutChart } from './components/Chart/DonutChart';
+
 export { default as CheckBox } from './components/CheckBox';
 export { default as Chip } from './components/Chip';
 export { default as DatePicker } from './components/DatePicker';
@@ -27,11 +29,13 @@ export { default as Label } from './components/Label';
 export { default as Loader } from './components/Loader';
 export { default as Menu } from './components/Menu';
 export { default as Modal } from './components/Modal';
+
 export { default as InlineNotification } from './components/Notification/InlineNotification';
 export { default as NotificationsContainer } from './components/Notification/NotificationsContainer';
 export { default as NotificationVisual } from './components/Notification/NotificationVisual';
 export { default as Banner } from './components/Notification/Banner';
 export { default as Snackbar } from './components/Notification/Snackbar';
+
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';

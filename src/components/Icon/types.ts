@@ -146,4 +146,7 @@ export type AcceptedIconNames =
   | 'restart'
   | 'entity'
   | 'playCount'
-  | 'processedLogs';
+  | 'processedLogs'
+  | 'proposed'
+  | 'unpaired'
+  | 'clockOutlined';
