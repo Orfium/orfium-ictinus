@@ -8,7 +8,19 @@ import AssetMatching from './Assetmatching'; import AssetMatchingShowcase
 
 # AssetMatching
 
-A component used for matching records and compositions.
+The component accepts or rejects asset matches based on probability score and metadata.
+
+The component is used either by rendering the default left and right content by providing the necessary props for each side or by rendering custom components with custom data flow and matching policies.
+
+### Default matching policy:
+All matched metadata are marked with LightGray 300 and onHover color changes to 30%(variant 100) of primary color.
+
+### AssetMatching Header - Card actions
+
+The header of the AssetMatching component can include external actions for manipulating the matched metadata. The actions' display logic is that:
+2 actions: two small button
+3 actions: two small buttons and one small icon button
+more than 3 actions: we display two actions as small buttons and we group all others in a small menu button
 
 # Usage
 
