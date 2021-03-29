@@ -8,6 +8,8 @@ import { SelectedItemProvider } from './components/SelectedItemContext';
 import { formFieldStyles } from 'theme/palette';
 
 interface Props {
+  /** The score of the matched metadata */
+  score?: number | string;
   /** The actions that can be performed for the asset matching section */
   matchingActions: MatchingAction[];
   /** The custom left side of the matching section */
@@ -25,6 +27,7 @@ interface Props {
 }
 
 const AssetMatching: FC<Props> = ({
+  score,
   rightCustomAsset,
   leftCustomAsset,
   rightAssetProps,
@@ -44,7 +47,7 @@ const AssetMatching: FC<Props> = ({
     <SelectedItemProvider>
       <section css={Styles.section(styleType)}>
         <div css={Styles.inner}>
-          <SectionHeader styleType={styleType} score={95} matchingActions={matchingActions} />
+          <SectionHeader styleType={styleType} score={score} matchingActions={matchingActions} />
           <div css={Styles.assets}>
             {leftCustomAsset ? leftCustomAsset : defaultLeft}
             {rightCustomAsset ? rightCustomAsset : defaultRight}

@@ -46,6 +46,7 @@ const AssetMatchingShowcase = ({
         reset actions
       </button>
       <AssetMatching
+        score={95}
         styleType={styleType}
         matchedCategoryItems={['George Michael']}
         leftAssetProps={Mocks.leftSideData}
