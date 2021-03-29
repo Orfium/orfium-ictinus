@@ -2,9 +2,18 @@ import { css, SerializedStyles } from '@emotion/core';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
 
-const subHeading = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes[11]};
+export const boldFont = (size: number, theme: Theme): SerializedStyles => css`
+  font-size: ${theme.typography.fontSizes[size]};
+  font-weight: ${theme.typography.weights.bold};
+`;
+
+export const normalFont = (size: number, theme: Theme): SerializedStyles => css`
+  font-size: ${theme.typography.fontSizes[size]};
   font-weight: 500;
+`;
+
+const subHeading = (theme: Theme): SerializedStyles => css`
+  ${normalFont(11, theme)};
   color: ${theme.utils.getColor('lightGray', 600)};
   margin: 0;
 `;
@@ -16,8 +25,7 @@ const subHeadingTop = (theme: Theme): SerializedStyles => css`
 
 const mainHeading = (theme: Theme): SerializedStyles => css`
   color: ${theme.utils.getColor('primary', 400, 'normal')};
-  font-size: ${theme.typography.fontSizes[16]};
-  font-weight: bold;
+  ${boldFont(16, theme)};
   margin: ${theme.spacing.sm} 0;
 `;
 
@@ -51,15 +59,13 @@ const linkedRecordings = css`
 `;
 
 const linkedText = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes[16]};
-  font-weight: 700;
+  ${boldFont(16, theme)};
   color: ${theme.utils.getColor('lightGray', 600)};
   margin: 0;
 `;
 
 const linkedCount = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes[16]};
-  font-weight: 700;
+  ${boldFont(16, theme)};
   padding: ${theme.spacing.xsm};
   color: ${theme.utils.getColor('primary', 400, 'normal')};
   background: ${theme.utils.getColor('primary', 100, 'normal')};

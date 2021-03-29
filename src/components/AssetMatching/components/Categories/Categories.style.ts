@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { flex, transition } from 'theme/functions';
 import { Theme } from 'theme';
+import { normalFont } from '../Asset/Asset.style';
 
 const categories = css`
   ${flex};
@@ -15,8 +16,7 @@ const title = (theme: Theme): SerializedStyles => css`
 `;
 
 const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes[12]};
-  font-weight: 500;
+  ${normalFont(12, theme)};
   color: ${theme.palette.black};
   margin: ${theme.spacing.xsm};
   padding: ${theme.spacing.xsm};

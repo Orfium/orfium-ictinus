@@ -50,6 +50,7 @@ const weights = {
   bold: 700,
   light: 300,
   regular: 400,
+  //TODO: Introduce new property for weight 500 (e.g. usage of 500 in Asset.style.ts based on provided designs)
   black: 700,
 };
 
