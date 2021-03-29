@@ -9,13 +9,14 @@ interface Props {
   handleCheck?(val: boolean, e: ChangeEvent): void;
   score?: string | number;
   isEnabled: boolean;
+  isChecked: boolean;
 }
-const CheckBoxContainer: FC<Props> = ({ isEnabled, handleCheck, score }) => {
+const CheckBoxContainer: FC<Props> = ({ isChecked, isEnabled, handleCheck, score }) => {
   const scoreText = `${score}%`;
 
   return (
     <div css={Styles.checkBoxWrapper}>
-      <CheckBox disabled={!isEnabled} filled={false} onClick={handleCheck} />
+      <CheckBox disabled={!isEnabled} filled={isChecked} onClick={handleCheck} />
       {score && (
         <div css={Styles.scoreWrapper}>
           <span css={Styles.score(isEnabled)}>{isEnabled ? scoreText : 'N/A'}</span>

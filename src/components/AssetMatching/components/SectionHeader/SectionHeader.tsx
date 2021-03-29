@@ -22,7 +22,12 @@ const SectionHeader: FC<Props> = ({ styleType, matchingActions = [], onCheck, sc
 
   return (
     <header css={Styles.header(checked, styleType)}>
-      <CheckBoxContainer isEnabled={hasActions} handleCheck={handleCheck} score={score} />
+      <CheckBoxContainer
+        isChecked={checked}
+        isEnabled={hasActions}
+        handleCheck={handleCheck}
+        score={score}
+      />
       {hasActions && <Toolbox matchingActions={matchingActions} />}
     </header>
   );
