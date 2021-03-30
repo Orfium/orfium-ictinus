@@ -8,6 +8,7 @@ const util = require('util');
 module.exports = {
   stories: [
     '../guides/INTRODUCTION.stories.@(md|mdx)',
+    '../guides/GETTING_STARTED.stories.@(md|mdx)',
     '../guides/*.stories.@(md|mdx)',
     '../src/**/*.stories.@(ts|tsx|mdx)',
   ],
