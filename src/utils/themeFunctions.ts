@@ -8,7 +8,7 @@ export const getColorFromType = (
   theme: Theme,
   variant: typeof colorShades[number] = 100
 ) => {
-  const normalVariant = variant ? variant : 400;
+  const normalVariant = variant && variant !== 100 ? variant : 400;
 
   if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
     const colorTypeValue = type as AcceptedColorComponentTypes;
