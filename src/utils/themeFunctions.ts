@@ -8,7 +8,7 @@ export const getColorFromType = (
   theme: Theme,
   variant: typeof colorShades[number] = 100
 ) => {
-  const normalVariant = variant && variant !== 100 ? variant : 400;
+  const secondaryVariant = variant && variant !== 100 ? variant : 400;
 
   if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
     const colorTypeValue = type as AcceptedColorComponentTypes;
@@ -16,12 +16,12 @@ export const getColorFromType = (
       return theme.utils.getColor(colorTypeValue, variant, 'normal');
     }
 
-    return theme.utils.getColor(colorTypeValue, normalVariant, 'normal');
+    return theme.utils.getColor(colorTypeValue, secondaryVariant, 'normal');
   }
   if (Object.values(flatColors).includes(type as typeof flatColors[number])) {
     const colorValue = type as typeof flatColors[number];
 
-    return theme.utils.getColor(colorValue, normalVariant);
+    return theme.utils.getColor(colorValue, secondaryVariant);
   }
 
   return type;
