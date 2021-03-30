@@ -3,19 +3,25 @@ import { colorShades, flatColors, mainTypes } from '../theme/palette';
 
 export type AcceptedColorComponentTypes = typeof mainTypes[number];
 
-export const getColorFromType = (type: AcceptedColorComponentTypes | string, theme: Theme) => {
+export const getColorFromType = (
+  type: AcceptedColorComponentTypes | string,
+  theme: Theme,
+  variant: typeof colorShades[number] = 100
+) => {
+  const normalVariant = variant ? variant : 400;
+
   if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
     const colorTypeValue = type as AcceptedColorComponentTypes;
     if (colorTypeValue === 'primary') {
-      return theme.utils.getColor(colorTypeValue, 100, 'normal');
+      return theme.utils.getColor(colorTypeValue, variant, 'normal');
     }
 
-    return theme.utils.getColor(colorTypeValue, 400, 'normal');
+    return theme.utils.getColor(colorTypeValue, normalVariant, 'normal');
   }
   if (Object.values(flatColors).includes(type as typeof flatColors[number])) {
     const colorValue = type as typeof flatColors[number];
 
-    return theme.utils.getColor(colorValue, 400);
+    return theme.utils.getColor(colorValue, normalVariant);
   }
 
   return type;
@@ -35,9 +41,10 @@ export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (th
   }
 };
 
-export const fillPickerBasedOnType = (type: AcceptedColorComponentTypes | string) => (
-  theme: Theme
-) => getColorFromType(type, theme);
+export const fillPickerBasedOnType = (
+  type: AcceptedColorComponentTypes | string,
+  variant: typeof colorShades[number] = 100
+) => (theme: Theme) => getColorFromType(type, theme, variant);
 
 /**
  * The type of the calculateActualColorFromComponentProp that will be used for the components
