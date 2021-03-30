@@ -15,7 +15,7 @@ export interface AssetProps {
     bottom?: string;
     iconName: AcceptedIconNames;
   };
-  assetLinkedInfo: {
+  assetLinkedInfo?: {
     title: JSX.Element | string;
     details: string | number;
   };
@@ -33,7 +33,7 @@ const Asset: FC<AssetProps> = ({
     <article css={Styles.article(isHighlighted)}>
       <div css={Styles.headingContainer}>
         <AssetHeading {...assetHeading} />
-        <AssetLinkedInfo {...assetLinkedInfo} />
+        {assetLinkedInfo && <AssetLinkedInfo {...assetLinkedInfo} />}
       </div>
       <Categories categories={categories} matchedCategoryItems={matchedCategoryItems} />
     </article>
