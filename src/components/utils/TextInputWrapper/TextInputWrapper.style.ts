@@ -20,7 +20,7 @@ const wrapperStyleSwitch = (
     case 'outlined':
       return `
         box-shadow: 0 0 0 1px
-          ${theme.utils.getColor('lightGray', 400)};
+          ${error ? 'transparent' : theme.utils.getColor('lightGray', 400)};
         &:focus-within, &:hover {
           box-shadow: 0 0 0 1px ${
             !disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)
@@ -60,23 +60,38 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
 
     ${!lean &&
-      !disabled &&
-      !locked &&
-      `&:hover {
-      background-color: ${dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)};
+    !disabled &&
+    !locked &&
+    `&:hover {
+      background-color: ${
+        dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
+      } !important;
       border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
+
+      input:-webkit-autofill {
+        -webkit-text-fill-color: #000000;
+        -webkit-box-shadow: 0 0 0px 1000px ${
+          dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
+        } inset;
+      }
     }
     `}
 
-  &:focus-within {
+    input:-webkit-autofill {
+      -webkit-text-fill-color: #000000;
+      -webkit-box-shadow: 0 0 0px 1000px ${backgroundColor} inset;
+      -webkit-transition: box-shadow 0.25s linear !important;
+    }
+
+    &:focus-within {
       border-color: ${!lean && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
       background-color: ${theme.palette.white};
     }
 
     ${(disabled || locked) &&
-      `
+    `
       &:before {
         content: '';
         background-color: rgba(255, 255, 255, 0.15);
@@ -160,7 +175,6 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 
 export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
   display: flex;
-  align-items: center;
   color: ${status === 'error'
     ? theme.utils.getColor('error', 400, 'normal')
     : theme.utils.getColor('lightGray', 600)};
@@ -168,6 +182,11 @@ export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedSt
   line-height: 1;
   padding: ${rem(8)} 0 0;
   svg {
+    padding: 0 ${rem(2)};
+  }
+
+  span {
+    align-items: stretch;
     padding: 0 ${rem(2)};
   }
 `;

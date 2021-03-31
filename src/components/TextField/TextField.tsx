@@ -44,6 +44,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
     hintMsg: __hintMsg,
     styleType: __styleType,
     readOnly,
+    status,
     ...rest
   } = props;
   const theme = useTheme();
@@ -74,6 +75,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
               label={label}
               required={required}
               animateToTop={Boolean(rest.value)}
+              error={status === 'error'}
             />
           )}
         </div>
