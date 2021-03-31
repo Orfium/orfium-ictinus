@@ -7,7 +7,7 @@ import Menu from '../../../Menu';
 export type UserMenuProps = {
   items: string[];
   userName: string;
-  userAvatar: { src: string; letter: string };
+  userAvatar: { src: string; letter: string; color?: string };
   onSelect: (selectedItem: string) => void;
 };
 
