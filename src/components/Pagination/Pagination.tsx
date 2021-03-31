@@ -1,4 +1,3 @@
-// @ts-nocheck
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
@@ -52,7 +51,7 @@ const Pagination = ({
     >
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          iconColor={'darkGray'}
+          color={'neutralBlack-700'}
           name={'arrowToLeft'}
           onClick={navigateToFirstPage}
           iconSize={24}
@@ -62,7 +61,7 @@ const Pagination = ({
         />
       )}
       <IconButton
-        iconColor={'darkGray'}
+        color={'neutralBlack-700'}
         name={'arrowLeft'}
         iconSize={24}
         transparent
@@ -76,7 +75,7 @@ const Pagination = ({
       </div>
 
       <IconButton
-        iconColor={'darkGray'}
+        color={'neutralBlack-700'}
         name={'arrowRight'}
         iconSize={24}
         transparent
@@ -86,7 +85,7 @@ const Pagination = ({
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          iconColor={'darkGray'}
+          color={'neutralBlack-700'}
           name={'arrowToRight'}
           iconSize={24}
           transparent

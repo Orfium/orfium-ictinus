@@ -16,6 +16,7 @@ import {
   menuLinkStyle,
 } from '../Navigation.style';
 import useTheme from '../../../../hooks/useTheme';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 
 type Props = {
   /** Defines the current menu item whose submenu item is currently selected */
@@ -29,6 +30,9 @@ const MenuItem: React.FC<Props> = memo(
   ({ isCurrent, expanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
     const theme = useTheme();
 
+    const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+    const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
+
     const hasSubMenus = useMemo(() => options.length > 0, [options.length]);
 
     const MenuItemContent = (
@@ -37,7 +41,11 @@ const MenuItem: React.FC<Props> = memo(
           <Icon name="triangleRight" color={'black'} size={10} />
         </div>
         <div css={menuIconStyle(isCurrent)}>
-          <Icon name={iconName} color={isCurrent ? 'white' : 'black'} size={20} />
+          <Icon
+            name={iconName}
+            color={isCurrent ? `${color}-${shade}` : 'neutralBlack-700'}
+            size={20}
+          />
         </div>
         <span className={'menu-item-text'} css={menuItemTextStyle(isCurrent)}>
           {name}
