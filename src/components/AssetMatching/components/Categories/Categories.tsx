@@ -11,13 +11,20 @@ interface Props {
 const Categories: FC<Props> = ({ matchedCategoryItems, categories }) => {
   return (
     <div css={Styles.categories}>
-      {categories.map(category => (
-        <Category
-          key={generateUniqueID('category')}
-          category={category}
-          matchedCategoryItems={matchedCategoryItems}
-        />
-      ))}
+      {categories.map((category, index) => {
+        const shouldDisplayCategory = !matchedCategoryItems || matchedCategoryItems?.length > 0;
+        const keyPrefix = `category_${category.title}_${category.col_order}_${index}`;
+
+        return (
+          shouldDisplayCategory && (
+            <Category
+              key={generateUniqueID(keyPrefix)}
+              category={category}
+              matchedCategoryItems={matchedCategoryItems}
+            />
+          )
+        );
+      })}
     </div>
   );
 };

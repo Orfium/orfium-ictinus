@@ -8,7 +8,7 @@ import { flex } from '../../../theme/functions';
 const actionsMock: MatchingAction[] = [
   {
     text: 'Confirm',
-    icon: 'check',
+    icon: 'checkmark',
     onClick: () => {
       alert('confirmed');
     },
