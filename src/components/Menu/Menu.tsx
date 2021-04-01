@@ -45,6 +45,7 @@ export type Props = {
   avatar?: {
     src: string;
     letter: string;
+    color?: string;
   };
 };
 
@@ -90,7 +91,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           }
           iconLeft={
             !isEmpty(avatar) ? (
-              <Avatar size={'xs'} src={avatar?.src} iconName={'user'}>
+              <Avatar size={'xs'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
                 {avatar?.letter}
               </Avatar>
             ) : leftIconName ? (
