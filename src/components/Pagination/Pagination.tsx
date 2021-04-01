@@ -51,8 +51,8 @@ const Pagination = ({
     >
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          color={'neutralBlack-700'}
-          name={'arrowToLeft'}
+          color="neutralBlack-700"
+          name="arrowToLeft"
           onClick={navigateToFirstPage}
           iconSize={24}
           transparent
@@ -61,8 +61,8 @@ const Pagination = ({
         />
       )}
       <IconButton
-        color={'neutralBlack-700'}
-        name={'arrowLeft'}
+        color="neutralBlack-700"
+        name="arrowLeft"
         iconSize={24}
         transparent
         filled={false}
@@ -75,8 +75,8 @@ const Pagination = ({
       </div>
 
       <IconButton
-        color={'neutralBlack-700'}
-        name={'arrowRight'}
+        color="neutralBlack-700"
+        name="arrowRight"
         iconSize={24}
         transparent
         filled={false}
@@ -85,8 +85,8 @@ const Pagination = ({
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          color={'neutralBlack-700'}
-          name={'arrowToRight'}
+          color="neutralBlack-700"
+          name="arrowToRight"
           iconSize={24}
           transparent
           filled={false}
