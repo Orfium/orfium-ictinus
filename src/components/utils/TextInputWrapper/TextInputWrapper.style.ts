@@ -68,21 +68,8 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
       } !important;
       border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGray', 400)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
-
-      input:-webkit-autofill {
-        -webkit-text-fill-color: #000000;
-        -webkit-box-shadow: 0 0 0px 1000px ${
-          dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
-        } inset;
-      }
     }
     `}
-
-    input:-webkit-autofill {
-      -webkit-text-fill-color: #000000;
-      -webkit-box-shadow: 0 0 0px 1000px ${backgroundColor} inset;
-      -webkit-transition: box-shadow 0.25s linear !important;
-    }
 
     &:focus-within {
       border-color: ${!lean && !error && theme.utils.getColor('lightGray', 400)};
