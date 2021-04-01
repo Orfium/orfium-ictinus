@@ -12,7 +12,7 @@ const Categories: FC<Props> = ({ matchedCategoryItems, categories }) => {
   return (
     <div css={Styles.categories}>
       {categories.map((category, index) => {
-        const shouldDisplayCategory = !matchedCategoryItems || matchedCategoryItems?.length > 0;
+        const shouldDisplayCategory = category.categoryItems?.length > 0;
         const keyPrefix = `category_${category.title}_${category.col_order}_${index}`;
 
         return (
