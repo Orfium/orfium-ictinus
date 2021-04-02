@@ -1,0 +1,46 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="System/Utils" />
+
+# System Utilities
+
+System has some utils in place like quering, transformations etc. These utils are listed below.
+
+---
+
+### getColor
+
+This util is provided from core `theme` or you can use it as a standalone function.
+In case of standalone you must provide the [Palette](/?path=/story/system-theme--page#theme-palette).
+
+It gets 3 params:
+
+1. color
+2. shade
+3. scope - text, [flat](/?path=/story/guide-colors--page) or normal - default: flat
+   <br />
+   <br />
+
+#### Usages <br/><br/>
+
+##### 1) Standalone function
+
+```
+import { getColor } from 'theme';
+...
+getColor(palette)('lightBlue', 400)
+```
+
+##### 2) Hook
+
+```
+const theme = useTheme();
+...
+theme.utils.getColor('darkGray', 400);
+...
+theme.utils.getColor('branded1', 400, 'normal');
+...
+theme.utils.getColor('primary', 400, 'text');
+```
+
+---
