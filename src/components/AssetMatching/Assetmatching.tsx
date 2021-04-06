@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC } from 'react';
+import React, { FC } from 'react';
 import Styles from './AssetMatching.style';
 import SectionHeader from './components/SectionHeader/SectionHeader';
 import { MatchingAction } from './types';
@@ -6,6 +6,7 @@ import { Asset } from './components/Asset';
 import { AssetProps } from './components/Asset';
 import { SelectedItemProvider } from './components/SelectedItemContext';
 import { formFieldStyles } from 'theme/palette';
+import { OnCheckHandler } from '../../hooks/useCheck';
 
 interface Props {
   /** The score of the matched metadata */
@@ -25,7 +26,7 @@ interface Props {
   /** The style type of the matching section */
   styleType?: formFieldStyles;
   /** The provided handler for the selected status of the asset matching */
-  onCheck?(val: boolean, e: ChangeEvent): void;
+  onCheck?: OnCheckHandler;
 }
 
 const AssetMatching: FC<Props> = ({
