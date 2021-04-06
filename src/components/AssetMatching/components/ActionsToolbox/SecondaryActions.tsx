@@ -1,24 +1,29 @@
 import React, { FC, useState } from 'react';
 import IconButton from 'components/IconButton';
 import { MatchingAction } from '../../types';
-import Styles from './Toolbox.style';
+import Styles from './ActionsToolbox.style';
 import { useMatchingActions } from '../utils';
 import { generateUniqueID } from 'utils/helpers';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 interface Props {
   secondaryActions: MatchingAction[];
+  isButtonFilled?: boolean;
 }
 
-const SecondaryActions: FC<Props> = ({ secondaryActions }) => {
+const SecondaryActions: FC<Props> = ({ secondaryActions, isButtonFilled = false }) => {
   const [open, setOpen] = useState(false);
   const hasUniqueAction = secondaryActions.length === 1;
 
-  const { actionItems } = useMatchingActions(secondaryActions, actionButton => (
-    <li data-testid={'secondary_action'} key={generateUniqueID('secondary_action')}>
-      {actionButton}
-    </li>
-  ));
+  const { actionItems } = useMatchingActions(
+    secondaryActions,
+    (actionButton, index) => (
+      <li data-testid={'secondary_action'} key={`${generateUniqueID('secondary_action')}_${index}`}>
+        {actionButton}
+      </li>
+    ),
+    isButtonFilled
+  );
 
   if (hasUniqueAction) {
     const uniqueAction = secondaryActions[0];

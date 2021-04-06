@@ -1,8 +1,11 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, select } from '@storybook/addon-knobs';
-
-import AssetMatching from './Assetmatching'; import AssetMatchingShowcase
-  from '../storyUtils/AssetMatchingShowcase/AssetMatchingShowcase';
+import AssetMatching from './index';
+import AssetMatchingShowcase from '../storyUtils/AssetMatchingShowcase/AssetMatchingShowcase';
+import { ActionsToolbox } from '../AssetMatching';
+import ActionsToolBoxShowcase from '../storyUtils/AssetMatchingShowcase/ActionsToolBoxShowcase';
+import SectionHeaderShowcase from '../storyUtils/AssetMatchingShowcase/SectionHeaderShowcase';
+import { SectionHeader } from '../AssetMatching';
 
 <Meta title="Design System/Asset Matching"/>
 
@@ -15,7 +18,7 @@ The component is used either by rendering the default left and right content by 
 ### Default matching policy:
 All matched metadata are marked with LightGray 300 and onHover color changes to 30%(variant 100) of primary color.
 
-### AssetMatching Header - Card actions
+### AssetMatching SectionHeader - Card actions
 
 The header of the AssetMatching component can include external actions for manipulating the matched metadata. The actions' display logic is that:
 2 actions: two small button
@@ -122,6 +125,114 @@ import { AssetMatching } from '@orfium/ictinus';
 
 <Preview>
   <Story name="AssetMatching" parameters={{ decorators: [withKnobs] }}>
-    <AssetMatchingShowcase styleType={select('styleType',['filled', 'outlined', 'elevated'], 'outlined')} showCustomContent={boolean('showCustomContent', false)} />
+    <AssetMatchingShowcase actionButtonFill={boolean('ToolboxActionButtonFill',true)} styleType={select('styleType',['filled', 'outlined', 'elevated'], 'outlined')} showCustomContent={boolean('showCustomContent', false)} />
+  </Story>
+</Preview>
+
+#Usage
+
+
+```js
+import { ActionsToolbox } from '@orfium/ictinus/dist/AssetMatching';
+
+    <ActionsToolbox
+        matchingActions={[
+            {
+              text: 'Confirm',
+              icon: 'check',
+              onClick: () => {
+                alert('confirmed');
+              },
+            },
+            {
+              text: 'Reject',
+              icon: 'close',
+              onClick: () => {
+                alert('rejected');
+              },
+            },
+            {
+              text: 'Hide',
+              icon: 'sight',
+              onClick: () => {
+                alert('hidden');
+              },
+            },
+            {
+              text: 'Review Later',
+              icon: 'clock',
+              onClick: () => {
+                alert('reviewed');
+              },
+            },
+          ]}
+        isButtonFilled={true}
+      />
+```
+
+# Props
+
+<Props of={ActionsToolbox}/>
+
+# Showcase
+
+<Preview>
+  <Story name="ActionsToolbox" parameters={{ decorators: [withKnobs] }}>
+    <ActionsToolBoxShowcase isButtonFilled={boolean('isButtonFilled',true)} />
+  </Story>
+</Preview>
+
+
+#Usage
+
+
+```js
+import { SectionHeader } from '@orfium/ictinus/dist/AssetMatching';
+
+    <SectionHeader
+        matchingActions={[
+            {
+              text: 'Confirm',
+              icon: 'check',
+              onClick: () => {
+                alert('confirmed');
+              },
+            },
+            {
+              text: 'Reject',
+              icon: 'close',
+              onClick: () => {
+                alert('rejected');
+              },
+            },
+            {
+              text: 'Hide',
+              icon: 'sight',
+              onClick: () => {
+                alert('hidden');
+              },
+            },
+            {
+              text: 'Review Later',
+              icon: 'clock',
+              onClick: () => {
+                alert('reviewed');
+              },
+            },
+          ]}
+        customCheckboxContent={<span>2 items selected</span>}
+        isButtonFilled={true}
+      />
+```
+
+# Props
+
+<Props of={SectionHeader}/>
+
+# Showcase
+
+<Preview>
+  <Story name="SectionHeader" parameters={{ decorators: [withKnobs] }}>
+    <SectionHeaderShowcase isButtonFilled={boolean('isButtonFilled',true)} />
   </Story>
 </Preview>
