@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { ChangeEvent, FC } from 'react';
 import Styles from './AssetMatching.style';
 import SectionHeader from './components/SectionHeader/SectionHeader';
 import { MatchingAction } from './types';
@@ -24,6 +24,8 @@ interface Props {
   matchedCategoryItems?: string[];
   /** The style type of the matching section */
   styleType?: formFieldStyles;
+  /** The provided handler for the selected status of the asset matching */
+  onCheck?(val: boolean, e: ChangeEvent): void;
 }
 
 const AssetMatching: FC<Props> = ({
@@ -35,6 +37,7 @@ const AssetMatching: FC<Props> = ({
   matchingActions,
   matchedCategoryItems,
   styleType = 'outlined',
+  onCheck,
 }) => {
   const defaultLeft = leftAssetProps && (
     <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
@@ -47,7 +50,12 @@ const AssetMatching: FC<Props> = ({
     <SelectedItemProvider>
       <section css={Styles.section(styleType)}>
         <div css={Styles.inner}>
-          <SectionHeader styleType={styleType} score={score} matchingActions={matchingActions} />
+          <SectionHeader
+            onCheck={onCheck}
+            styleType={styleType}
+            score={score}
+            matchingActions={matchingActions}
+          />
           <div css={Styles.assets}>
             {leftCustomAsset ? leftCustomAsset : defaultLeft}
             {rightCustomAsset ? rightCustomAsset : defaultRight}
