@@ -1,18 +1,14 @@
-import { ChangeEvent, Dispatch, SetStateAction, useCallback, useState } from 'react';
+import { ChangeEvent, useCallback, useState } from 'react';
 
-export type OnCheckHandler = (
-  val: boolean,
-  setChecked: Dispatch<SetStateAction<boolean>>,
-  e: ChangeEvent
-) => void;
+export type OnCheckHandler = (val: boolean, e: ChangeEvent) => void;
 
-export const useCheck = (onCheck?: OnCheckHandler) => {
-  const [checked, setChecked] = useState(false);
+export const useCheck = (isChecked = false, onCheck?: OnCheckHandler) => {
+  const [checked, setChecked] = useState(isChecked);
 
   const handleCheck = useCallback(
     (checked, e) => {
       if (onCheck) {
-        onCheck(checked, setChecked, e);
+        onCheck(checked, e);
       }
 
       setChecked(checked);

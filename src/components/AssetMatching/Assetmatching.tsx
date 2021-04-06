@@ -27,6 +27,8 @@ interface Props {
   styleType?: formFieldStyles;
   /** The provided handler for the selected status of the asset matching */
   onCheck?: OnCheckHandler;
+  /** The check status of the asset matching checkbox */
+  isChecked?: boolean;
 }
 
 const AssetMatching: FC<Props> = ({
@@ -39,6 +41,7 @@ const AssetMatching: FC<Props> = ({
   matchedCategoryItems,
   styleType = 'outlined',
   onCheck,
+  isChecked = false,
 }) => {
   const defaultLeft = leftAssetProps && (
     <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
@@ -52,6 +55,7 @@ const AssetMatching: FC<Props> = ({
       <section css={Styles.section(styleType)}>
         <div css={Styles.inner}>
           <SectionHeader
+            isChecked={isChecked}
             onCheck={onCheck}
             styleType={styleType}
             score={score}

@@ -16,6 +16,7 @@ interface Props {
   styleType: formFieldStyles;
   isButtonFilled?: boolean;
   customCheckboxContent?: JSX.Element;
+  isChecked?: boolean;
 }
 
 const SectionHeader: FC<Props> = ({
@@ -25,8 +26,9 @@ const SectionHeader: FC<Props> = ({
   score,
   isButtonFilled = false,
   customCheckboxContent,
+  isChecked = false,
 }) => {
-  const { checked, handleCheck } = useCheck(onCheck);
+  const { checked, handleCheck } = useCheck(isChecked, onCheck);
   const hasActions = matchingActions.length > 0;
 
   return (
