@@ -8,17 +8,22 @@ import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 interface Props {
   secondaryActions: MatchingAction[];
+  actionButtonFill?: boolean;
 }
 
-const SecondaryActions: FC<Props> = ({ secondaryActions }) => {
+const SecondaryActions: FC<Props> = ({ secondaryActions, actionButtonFill = false }) => {
   const [open, setOpen] = useState(false);
   const hasUniqueAction = secondaryActions.length === 1;
 
-  const { actionItems } = useMatchingActions(secondaryActions, actionButton => (
-    <li data-testid={'secondary_action'} key={generateUniqueID('secondary_action')}>
-      {actionButton}
-    </li>
-  ));
+  const { actionItems } = useMatchingActions(
+    secondaryActions,
+    (actionButton, index) => (
+      <li data-testid={'secondary_action'} key={`${generateUniqueID('secondary_action')}_${index}`}>
+        {actionButton}
+      </li>
+    ),
+    actionButtonFill
+  );
 
   if (hasUniqueAction) {
     const uniqueAction = secondaryActions[0];

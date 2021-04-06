@@ -35,12 +35,12 @@ export const useCategoryItemActions = (item: string, matchedCategoryItems?: stri
   };
 };
 
-export const createActionButton = (action: MatchingAction) => (
+export const createActionButton = (filled = false) => (action: MatchingAction) => (
   <Button
     type={'primary'}
     color={'neutralBlack-700'}
     iconLeft={<Icon color={'inherit'} name={action.icon} />}
-    filled={false}
+    filled={filled}
     onClick={action?.onClick}
   >
     {action.text}
@@ -49,11 +49,12 @@ export const createActionButton = (action: MatchingAction) => (
 
 export const useMatchingActions = (
   actions: MatchingAction[],
-  enhanceWithWrapperElement: (actionButton: JSX.Element) => JSX.Element
+  enhanceWithWrapperElement: (actionButton: JSX.Element, index: number) => JSX.Element,
+  actionButtonFill = false
 ) => {
   const actionItems = useMemo(
-    () => actions.map(createActionButton).map(enhanceWithWrapperElement),
-    [actions, enhanceWithWrapperElement]
+    () => actions.map(createActionButton(actionButtonFill)).map(enhanceWithWrapperElement),
+    [actions, enhanceWithWrapperElement, actionButtonFill]
   );
 
   return { actionItems };
