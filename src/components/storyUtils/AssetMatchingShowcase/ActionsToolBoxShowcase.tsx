@@ -3,7 +3,7 @@ import ActionsToolbox from '../../AssetMatching/components/ActionsToolbox/Action
 import { rem } from 'polished';
 import mocks from './mocks';
 
-const ActionsToolBoxShowcase = ({ actionButtonFill }: { actionButtonFill: boolean }) => {
+const ActionsToolBoxShowcase = ({ isButtonFilled }: { isButtonFilled: boolean }) => {
   const marginValue = rem(10);
 
   return (
@@ -16,7 +16,7 @@ const ActionsToolBoxShowcase = ({ actionButtonFill }: { actionButtonFill: boolea
       }}
     >
       <h2>⬇️Toolbox for actions can be used separately for handling bulk actions⬇️</h2>
-      <ActionsToolbox actionButtonFill={actionButtonFill} matchingActions={mocks.actionsMock} />
+      <ActionsToolbox isButtonFilled={isButtonFilled} matchingActions={mocks.actionsMock} />
     </div>
   );
 };

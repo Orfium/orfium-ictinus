@@ -166,7 +166,7 @@ import { ActionsToolbox } from '@orfium/ictinus/dist/AssetMatching';
               },
             },
           ]}
-        actionButtonFill={true}
+        isButtonFilled={true}
       />
 ```
 
@@ -178,7 +178,7 @@ import { ActionsToolbox } from '@orfium/ictinus/dist/AssetMatching';
 
 <Preview>
   <Story name="ActionsToolbox" parameters={{ decorators: [withKnobs] }}>
-    <ActionsToolBoxShowcase actionButtonFill={boolean('ToolboxActionButtonFill',true)} />
+    <ActionsToolBoxShowcase isButtonFilled={boolean('isButtonFilled',true)} />
   </Story>
 </Preview>
 
@@ -221,7 +221,7 @@ import { SectionHeader } from '@orfium/ictinus/dist/AssetMatching';
             },
           ]}
         customCheckboxContent={<span>2 items selected</span>}
-        actionButtonFill={true}
+        isButtonFilled={true}
       />
 ```
 
@@ -233,6 +233,6 @@ import { SectionHeader } from '@orfium/ictinus/dist/AssetMatching';
 
 <Preview>
   <Story name="SectionHeader" parameters={{ decorators: [withKnobs] }}>
-    <SectionHeaderShowcase actionButtonFill={boolean('ToolboxActionButtonFill',true)} />
+    <SectionHeaderShowcase isButtonFilled={boolean('isButtonFilled',true)} />
   </Story>
 </Preview>

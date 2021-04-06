@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Styles from './Toolbox.style';
+import Styles from './ActionsToolbox.style';
 import { MatchingAction } from '../../types';
 import { useMatchingActions } from '../utils';
 import { generateUniqueID } from 'utils/helpers';
@@ -7,10 +7,10 @@ import { flex } from 'theme/functions';
 
 interface Props {
   primaryActions: MatchingAction[];
-  actionButtonFill?: boolean;
+  isButtonFilled?: boolean;
 }
 
-const PrimaryActions: FC<Props> = ({ primaryActions, actionButtonFill = false }) => {
+const PrimaryActions: FC<Props> = ({ primaryActions, isButtonFilled = false }) => {
   const { actionItems } = useMatchingActions(
     primaryActions,
     (actionButton, index) => (
@@ -22,7 +22,7 @@ const PrimaryActions: FC<Props> = ({ primaryActions, actionButtonFill = false })
         {actionButton}
       </div>
     ),
-    actionButtonFill
+    isButtonFilled
   );
 
   return <div css={flex}>{actionItems}</div>;

@@ -3,7 +3,7 @@ import { rem } from 'polished';
 import SectionHeader from '../../AssetMatching/components/SectionHeader/SectionHeader';
 import mocks from './mocks';
 
-const SectionHeaderShowcase = ({ actionButtonFill }: { actionButtonFill: boolean }) => {
+const SectionHeaderShowcase = ({ isButtonFilled }: { isButtonFilled: boolean }) => {
   const marginValue = rem(10);
 
   return (
@@ -21,7 +21,7 @@ const SectionHeaderShowcase = ({ actionButtonFill }: { actionButtonFill: boolean
       <SectionHeader
         styleType={'outlined'}
         customCheckboxContent={<span css={{ color: 'black' }}>2 items selected</span>}
-        actionButtonFill={actionButtonFill}
+        isButtonFilled={isButtonFilled}
         matchingActions={mocks.actionsMock}
       />
     </div>
