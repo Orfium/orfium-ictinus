@@ -32,7 +32,12 @@ const CheckBoxContainer: FC<Props> = ({
 
   return (
     <div css={Styles.checkBoxWrapper}>
-      <CheckBox disabled={!isEnabled} filled={isChecked} onClick={handleCheck} />
+      <CheckBox
+        disabled={!isEnabled}
+        filled={isChecked}
+        checked={isChecked}
+        onClick={handleCheck}
+      />
       <div css={Styles.scoreWrapper}>{customContent || defaultContent}</div>
     </div>
   );

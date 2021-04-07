@@ -14,6 +14,7 @@ const AssetMatchingShowcase = ({
   styleType: formFieldStyles;
 }) => {
   const [matchingActions, setMatchingActions] = useState<MatchingAction[]>(Mocks.actionsMock);
+  const [checked, setChecked] = useState(false);
 
   const customShowcase = {
     ...(showCustomContent
@@ -34,6 +35,9 @@ const AssetMatchingShowcase = ({
     setMatchingActions(prevState => [...prevState, newAction]);
   };
 
+  const checkHandler = () => {
+    setChecked(!checked);
+  };
   const marginValue = rem(10);
 
   return (
@@ -48,7 +52,11 @@ const AssetMatchingShowcase = ({
       >
         reset actions
       </button>
+      <button css={{ marginBottom: marginValue, marginLeft: marginValue }} onClick={checkHandler}>
+        check from outside
+      </button>
       <AssetMatching
+        isChecked={checked}
         score={95}
         styleType={styleType}
         matchedCategoryItems={['George Michael']}
