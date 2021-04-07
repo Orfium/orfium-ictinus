@@ -6,7 +6,7 @@ export const useCheck = (isChecked = false, onCheck?: OnCheckHandler) => {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    setChecked(isChecked);
+    setChecked(prevState => !prevState);
   }, [isChecked]);
 
   const handleCheck = useCallback(
