@@ -7,6 +7,7 @@ import { AssetProps } from './components/Asset';
 import { SelectedItemProvider } from './components/SelectedItemContext';
 import { formFieldStyles } from 'theme/palette';
 import { OnCheckHandler } from '../../hooks/useCheck';
+import { generateUniqueID } from '../../utils/helpers';
 
 interface Props {
   /** The score of the matched metadata */
@@ -55,6 +56,7 @@ const AssetMatching: FC<Props> = ({
       <section css={Styles.section(styleType)}>
         <div css={Styles.inner}>
           <SectionHeader
+            key={generateUniqueID(`checkbox_${isChecked}`)}
             isChecked={isChecked}
             onCheck={onCheck}
             styleType={styleType}
