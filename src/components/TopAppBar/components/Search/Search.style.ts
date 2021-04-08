@@ -18,6 +18,7 @@ export const searchWrapper = (dark: boolean) => (theme: Theme): SerializedStyles
     height: ${rem(36)};
     background-color: ${background};
     padding-left: ${theme.spacing.md};
+    border-radius: ${theme.spacing.xsm};
 
     &[aria-disabled="true"] {
       opacity: 0.5;
