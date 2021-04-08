@@ -35,10 +35,12 @@ export const useCategoryItemActions = (item: string, matchedCategoryItems?: stri
   };
 };
 
-export const createActionButton = (isButtonFilled = false) => (action: MatchingAction) => (
+export const createActionButton = (isButtonFilled = false, color: string) => (
+  action: MatchingAction
+) => (
   <Button
     type={'primary'}
-    color={'neutralBlack-700'}
+    color={color}
     iconLeft={<Icon color={'inherit'} name={action.icon} />}
     filled={isButtonFilled}
     onClick={action?.onClick}
@@ -50,10 +52,11 @@ export const createActionButton = (isButtonFilled = false) => (action: MatchingA
 export const useMatchingActions = (
   actions: MatchingAction[],
   enhanceWithWrapperElement: (actionButton: JSX.Element, index: number) => JSX.Element,
-  isButtonFilled = false
+  isButtonFilled = false,
+  color = 'neutralWhite-700'
 ) => {
   const actionItems = useMemo(
-    () => actions.map(createActionButton(isButtonFilled)).map(enhanceWithWrapperElement),
+    () => actions.map(createActionButton(isButtonFilled, color)).map(enhanceWithWrapperElement),
     [actions, enhanceWithWrapperElement, isButtonFilled]
   );
 

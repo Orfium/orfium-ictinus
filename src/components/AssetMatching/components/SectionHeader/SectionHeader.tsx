@@ -14,9 +14,14 @@ interface Props {
   score?: string | number;
   matchingActions?: MatchingAction[];
   styleType: formFieldStyles;
-  isButtonFilled?: boolean;
-  customCheckboxContent?: JSX.Element;
+  buttonStyles?: {
+    secondaryButtonColor?: string;
+    primaryButtonColor?: string;
+    isButtonFilled?: boolean;
+  };
+  customCheckboxContent?: JSX.Element | null;
   isChecked?: boolean;
+  intermediateStatus?: boolean;
 }
 
 const SectionHeader: FC<Props> = ({
@@ -24,9 +29,10 @@ const SectionHeader: FC<Props> = ({
   matchingActions = [],
   onCheck,
   score,
-  isButtonFilled = false,
+  buttonStyles,
   customCheckboxContent,
   isChecked = false,
+  intermediateStatus = false,
 }) => {
   const { checked, handleCheck } = useCheck(isChecked, onCheck);
   const hasActions = matchingActions.length > 0;
@@ -34,14 +40,15 @@ const SectionHeader: FC<Props> = ({
   return (
     <header css={Styles.header(checked, styleType)}>
       <CheckBoxContainer
-        customContent={customCheckboxContent}
+        intermediateStatus={intermediateStatus}
+        customCheckboxContent={customCheckboxContent}
         isChecked={checked}
-        isEnabled={hasActions}
+        isEnabled={Boolean(score || customCheckboxContent)}
         handleCheck={handleCheck}
         score={score}
       />
       {hasActions && (
-        <ActionsToolbox matchingActions={matchingActions} isButtonFilled={isButtonFilled} />
+        <ActionsToolbox matchingActions={matchingActions} buttonStyles={buttonStyles} />
       )}
     </header>
   );
