@@ -34,6 +34,7 @@ const BulkActionsShowcase = () => {
     >
       <h2>⬇️Bulk actions Showcase⬇️</h2>
       <BulkActionsSection
+        isBulkSection
         isChecked={checked}
         intermediateStatus={selectedItems.length > 0 && selectedItems.length < 3}
         styleType={'outlined'}

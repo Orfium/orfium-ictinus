@@ -22,6 +22,7 @@ interface Props {
   customCheckboxContent?: JSX.Element | null;
   isChecked?: boolean;
   intermediateStatus?: boolean;
+  isBulkSection?: boolean;
 }
 
 const SectionHeader: FC<Props> = ({
@@ -32,13 +33,14 @@ const SectionHeader: FC<Props> = ({
   buttonStyles,
   customCheckboxContent,
   isChecked = false,
+  isBulkSection = false,
   intermediateStatus = false,
 }) => {
   const { checked, handleCheck } = useCheck(isChecked, onCheck);
   const hasActions = matchingActions.length > 0;
 
   return (
-    <header css={Styles.header(checked, styleType)}>
+    <header css={Styles.header(checked, styleType, isBulkSection)}>
       <CheckBoxContainer
         intermediateStatus={intermediateStatus}
         customCheckboxContent={customCheckboxContent}
