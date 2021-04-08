@@ -6,6 +6,7 @@ import { ActionsToolbox } from '../AssetMatching';
 import ActionsToolBoxShowcase from '../storyUtils/AssetMatchingShowcase/ActionsToolBoxShowcase';
 import SectionHeaderShowcase from '../storyUtils/AssetMatchingShowcase/SectionHeaderShowcase';
 import { SectionHeader } from '../AssetMatching';
+import BulkActionsShowcase from '../storyUtils/AssetMatchingShowcase/BulkActionsShowcase';
 
 <Meta title="Design System/Asset Matching"/>
 
@@ -25,7 +26,7 @@ The header of the AssetMatching component can include external actions for manip
 3 actions: two small buttons and one small icon button
 more than 3 actions: we display two actions as small buttons and we group all others in a small menu button
 
-# Usage
+# Usage of AssetMatching component
 
 ```js
 import { AssetMatching } from '@orfium/ictinus';
@@ -117,11 +118,11 @@ import { AssetMatching } from '@orfium/ictinus';
       />
 ```
 
-# Props
+# Props of AssetMatching component
 
 <Props of={AssetMatching}/>
 
-# Showcase
+# Showcase of AssetMatching component
 
 <Preview>
   <Story name="AssetMatching" parameters={{ decorators: [withKnobs] }}>
@@ -129,7 +130,7 @@ import { AssetMatching } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-#Usage
+#Usage of AssetMatching Toolbox
 
 
 ```js
@@ -170,11 +171,11 @@ import { ActionsToolbox } from '@orfium/ictinus/dist/AssetMatching';
       />
 ```
 
-# Props
+# Props of Toolbox component
 
 <Props of={ActionsToolbox}/>
 
-# Showcase
+# Showcase of Toolbox component
 
 <Preview>
   <Story name="ActionsToolbox" parameters={{ decorators: [withKnobs] }}>
@@ -183,13 +184,12 @@ import { ActionsToolbox } from '@orfium/ictinus/dist/AssetMatching';
 </Preview>
 
 
-#Usage
-
+# Usage of SectionHeader component as BulkActions section
 
 ```js
-import { SectionHeader } from '@orfium/ictinus/dist/AssetMatching';
+import { SectionHeader as SectionBulkActions } from '@orfium/ictinus/dist/AssetMatching';
 
-    <SectionHeader
+    <SectionBulkActions
         matchingActions={[
             {
               text: 'Confirm',
@@ -220,19 +220,44 @@ import { SectionHeader } from '@orfium/ictinus/dist/AssetMatching';
               },
             },
           ]}
-        customCheckboxContent={<span>2 items selected</span>}
-        isButtonFilled={true}
+        isChecked={checked}
+        isIntermediateStatus={selectedItems.length > 0 && selectedItems.length < 3}
+        styleType={'outlined'}
+        customCheckboxContent={
+          <span css={{ color: 'black' }}>
+            {selectedItems.length !== 0 ? `${selectedItems.length} items selected` : ''}
+          </span>
+        }
+        buttonStyles={{
+          primaryButtonColor: 'blue-400',
+          secondaryButtonColor: 'blue-100',
+          isButtonFilled: true,
+        }}
+        onCheck={checked => {
+          setChecked(checked);
+          setSelectedItems(checked ? ['1', '2', '3'] : []);
+        }}
       />
 ```
 
-# Props
+# Props of SectionBulkActions
 
 <Props of={SectionHeader}/>
 
-# Showcase
+# Showcase SectionBulkActions 1
 
 <Preview>
   <Story name="SectionHeader" parameters={{ decorators: [withKnobs] }}>
     <SectionHeaderShowcase isButtonFilled={boolean('isButtonFilled',true)} />
   </Story>
 </Preview>
+
+
+# Showcase SectionBulkActions 2
+
+<Preview>
+  <Story name="BulkActionsShowcase" >
+    <BulkActionsShowcase />
+  </Story>
+</Preview>
+

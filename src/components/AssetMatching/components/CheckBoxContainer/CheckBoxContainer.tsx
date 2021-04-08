@@ -10,19 +10,21 @@ interface Props {
   score?: string | number;
   isEnabled: boolean;
   isChecked: boolean;
-  customContent?: JSX.Element;
+  customCheckboxContent?: JSX.Element | null;
+  isIntermediateStatus?: boolean;
 }
 const CheckBoxContainer: FC<Props> = ({
   isChecked,
   isEnabled,
   handleCheck,
   score,
-  customContent,
+  customCheckboxContent,
+  isIntermediateStatus = false,
 }) => {
   const scoreText = `${score}%`;
-  const defaultContent = Boolean(score) && (
+  const defaultContent = isEnabled && (
     <Fragment>
-      <span css={Styles.score(isEnabled)}>{isEnabled ? scoreText : 'N/A'}</span>
+      <span css={Styles.score(isEnabled)}>{score ? scoreText : 'N/A'}</span>
       <span css={Styles.text(isEnabled)}>
         Probability
         <br /> Score
@@ -33,12 +35,13 @@ const CheckBoxContainer: FC<Props> = ({
   return (
     <div css={Styles.checkBoxWrapper}>
       <CheckBox
+        intermediate={isIntermediateStatus}
         disabled={!isEnabled}
         filled={isChecked}
         checked={isChecked}
         onClick={handleCheck}
       />
-      <div css={Styles.scoreWrapper}>{customContent || defaultContent}</div>
+      <div css={Styles.scoreWrapper}>{customCheckboxContent || defaultContent}</div>
     </div>
   );
 };

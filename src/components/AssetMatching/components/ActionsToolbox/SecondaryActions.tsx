@@ -9,9 +9,14 @@ import ClickAwayListener from 'components/utils/ClickAwayListener';
 interface Props {
   secondaryActions: MatchingAction[];
   isButtonFilled?: boolean;
+  secondaryButtonColor?: string;
 }
 
-const SecondaryActions: FC<Props> = ({ secondaryActions, isButtonFilled = false }) => {
+const SecondaryActions: FC<Props> = ({
+  secondaryActions,
+  isButtonFilled = false,
+  secondaryButtonColor,
+}) => {
   const [open, setOpen] = useState(false);
   const hasUniqueAction = secondaryActions.length === 1;
 
@@ -22,7 +27,8 @@ const SecondaryActions: FC<Props> = ({ secondaryActions, isButtonFilled = false 
         {actionButton}
       </li>
     ),
-    isButtonFilled
+    isButtonFilled,
+    secondaryButtonColor
   );
 
   if (hasUniqueAction) {

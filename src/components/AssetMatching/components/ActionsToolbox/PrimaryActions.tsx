@@ -8,9 +8,14 @@ import { flex } from 'theme/functions';
 interface Props {
   primaryActions: MatchingAction[];
   isButtonFilled?: boolean;
+  primaryButtonColor?: string;
 }
 
-const PrimaryActions: FC<Props> = ({ primaryActions, isButtonFilled = false }) => {
+const PrimaryActions: FC<Props> = ({
+  primaryActions,
+  isButtonFilled = false,
+  primaryButtonColor,
+}) => {
   const { actionItems } = useMatchingActions(
     primaryActions,
     (actionButton, index) => (
@@ -22,7 +27,8 @@ const PrimaryActions: FC<Props> = ({ primaryActions, isButtonFilled = false }) =
         {actionButton}
       </div>
     ),
-    isButtonFilled
+    isButtonFilled,
+    primaryButtonColor
   );
 
   return <div css={flex}>{actionItems}</div>;
