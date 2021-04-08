@@ -11,7 +11,7 @@ interface Props {
   isEnabled: boolean;
   isChecked: boolean;
   customCheckboxContent?: JSX.Element | null;
-  intermediateStatus?: boolean;
+  isIntermediateStatus?: boolean;
 }
 const CheckBoxContainer: FC<Props> = ({
   isChecked,
@@ -19,7 +19,7 @@ const CheckBoxContainer: FC<Props> = ({
   handleCheck,
   score,
   customCheckboxContent,
-  intermediateStatus = false,
+  isIntermediateStatus = false,
 }) => {
   const scoreText = `${score}%`;
   const defaultContent = isEnabled && (
@@ -35,7 +35,7 @@ const CheckBoxContainer: FC<Props> = ({
   return (
     <div css={Styles.checkBoxWrapper}>
       <CheckBox
-        intermediate={intermediateStatus}
+        intermediate={isIntermediateStatus}
         disabled={!isEnabled}
         filled={isChecked}
         checked={isChecked}

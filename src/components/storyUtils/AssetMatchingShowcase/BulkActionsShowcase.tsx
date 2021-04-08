@@ -36,7 +36,7 @@ const BulkActionsShowcase = () => {
       <BulkActionsSection
         isBulkSection
         isChecked={checked}
-        intermediateStatus={selectedItems.length > 0 && selectedItems.length < 3}
+        isIntermediateStatus={selectedItems.length > 0 && selectedItems.length < 3}
         styleType={'outlined'}
         customCheckboxContent={
           <span css={{ color: 'black' }}>

@@ -21,7 +21,7 @@ interface Props {
   };
   customCheckboxContent?: JSX.Element | null;
   isChecked?: boolean;
-  intermediateStatus?: boolean;
+  isIntermediateStatus?: boolean;
   isBulkSection?: boolean;
 }
 
@@ -34,7 +34,7 @@ const SectionHeader: FC<Props> = ({
   customCheckboxContent,
   isChecked = false,
   isBulkSection = false,
-  intermediateStatus = false,
+  isIntermediateStatus = false,
 }) => {
   const { checked, handleCheck } = useCheck(isChecked, onCheck);
   const hasActions = matchingActions.length > 0;
@@ -42,7 +42,7 @@ const SectionHeader: FC<Props> = ({
   return (
     <header css={Styles.header(checked, styleType, isBulkSection)}>
       <CheckBoxContainer
-        intermediateStatus={intermediateStatus}
+        isIntermediateStatus={isIntermediateStatus}
         customCheckboxContent={customCheckboxContent}
         isChecked={checked}
         isEnabled={Boolean(score || customCheckboxContent)}
