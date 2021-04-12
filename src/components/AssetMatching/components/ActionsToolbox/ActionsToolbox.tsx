@@ -11,9 +11,14 @@ interface Props {
     primaryButtonColor?: string;
     isButtonFilled?: boolean;
   };
+  customActionsContent?: JSX.Element | null;
 }
 
-const ActionsToolbox: FC<Props> = ({ matchingActions = [], buttonStyles }) => {
+const ActionsToolbox: FC<Props> = ({
+  customActionsContent,
+  matchingActions = [],
+  buttonStyles,
+}) => {
   const primaryActions = matchingActions.slice(0, 2);
   const secondaryActions = matchingActions.slice(2, matchingActions.length);
 
@@ -25,6 +30,7 @@ const ActionsToolbox: FC<Props> = ({ matchingActions = [], buttonStyles }) => {
       {hasActions(secondaryActions) && (
         <SecondaryActions {...(buttonStyles || {})} secondaryActions={secondaryActions} />
       )}
+      {customActionsContent && customActionsContent}
     </div>
   );
 };
