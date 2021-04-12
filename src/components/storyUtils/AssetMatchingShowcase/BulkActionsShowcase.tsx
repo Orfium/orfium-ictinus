@@ -3,6 +3,7 @@ import AssetMatching from '../../AssetMatching/Assetmatching';
 import Mocks from './mocks';
 import { rem } from 'polished';
 import BulkActionsSection from '../../AssetMatching/components/SectionHeader/SectionHeader';
+import Select from '../../Select';
 
 const BulkActionsShowcase = () => {
   const [checked, setChecked] = useState(false);
@@ -38,9 +39,14 @@ const BulkActionsShowcase = () => {
         isChecked={checked}
         isIntermediateStatus={selectedItems.length > 0 && selectedItems.length < 3}
         styleType={'outlined'}
+        customActionsContent={
+          selectedItems.length === 0 ? <button>Custom Action Element</button> : null
+        }
         customCheckboxContent={
           <span css={{ color: 'black' }}>
-            {selectedItems.length !== 0 ? `${selectedItems.length} items selected` : ''}
+            {selectedItems.length !== 0
+              ? `${selectedItems.length} items selected`
+              : 'no items selected'}
           </span>
         }
         buttonStyles={{
@@ -48,7 +54,7 @@ const BulkActionsShowcase = () => {
           secondaryButtonColor: 'lightBlue-100',
           isButtonFilled: true,
         }}
-        matchingActions={Mocks.actionsMock}
+        matchingActions={selectedItems.length > 0 ? Mocks.actionsMock : []}
         onCheck={checked => {
           setChecked(checked);
           setSelectedItems(checked ? ['1', '2', '3'] : []);
@@ -66,7 +72,7 @@ const BulkActionsShowcase = () => {
             matchedCategoryItems={['George Michael']}
             leftAssetProps={Mocks.leftSideData}
             rightAssetProps={Mocks.rightSideData}
-            matchingActions={Mocks.actionsMock}
+            matchingActions={isSelected('1') ? [] : Mocks.actionsMock}
           />
         </div>
         <div style={{ marginTop: marginValue, marginBottom: marginValue }}>
@@ -80,7 +86,7 @@ const BulkActionsShowcase = () => {
             matchedCategoryItems={['George Michael']}
             leftAssetProps={Mocks.leftSideData}
             rightAssetProps={Mocks.rightSideData}
-            matchingActions={Mocks.actionsMock}
+            matchingActions={isSelected('2') ? [] : Mocks.actionsMock}
           />
         </div>
         <AssetMatching
@@ -93,7 +99,7 @@ const BulkActionsShowcase = () => {
           matchedCategoryItems={['George Michael']}
           leftAssetProps={Mocks.leftSideData}
           rightAssetProps={Mocks.rightSideData}
-          matchingActions={Mocks.actionsMock}
+          matchingActions={isSelected('3') ? [] : Mocks.actionsMock}
         />
       </div>
     </div>
