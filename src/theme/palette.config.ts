@@ -8,6 +8,7 @@ export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
   magenta: '#d21e75',
   red: '#d40000',
   orange: '#f5781b',
+  darkOrange: '#bf360c',
   yellow: '#ffc700',
   olive: '#545c15',
   green: '#6bbc15',
