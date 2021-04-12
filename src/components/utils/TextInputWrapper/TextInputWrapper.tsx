@@ -7,6 +7,7 @@ import Icon from 'components/Icon';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 import { formFieldStyles } from 'theme/palette';
 import useTheme from 'hooks/useTheme';
+import { AcceptedIconNames } from 'components/Icon/types';
 
 export type Props = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -14,9 +15,9 @@ export type Props = {
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
   /** An optional icon to show to the left */
-  leftIcon?: string | JSX.Element | null;
+  leftIcon?: AcceptedIconNames | JSX.Element | null;
   /** An optional icon to show to the right */
-  rightIcon?: string | JSX.Element | null;
+  rightIcon?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
   required?: boolean;
   /** If the text field is disabled */
