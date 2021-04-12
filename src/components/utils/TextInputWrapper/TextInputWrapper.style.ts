@@ -60,9 +60,9 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
 
     ${!lean &&
-    !disabled &&
-    !locked &&
-    `&:hover {
+      !disabled &&
+      !locked &&
+      `&:hover {
       background-color: ${
         dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
       } !important;
@@ -78,7 +78,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     }
 
     ${(disabled || locked) &&
-    `
+      `
       &:before {
         content: '';
         background-color: rgba(255, 255, 255, 0.15);
@@ -151,7 +151,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:not(:placeholder-shown) {
     & + label {
       transform: translate(1%, -35%) scale(0.8);
-      font-weight: ${theme.typography.weights.black};
+      font-weight: ${theme.typography.weights.bold};
     }
   }
 
