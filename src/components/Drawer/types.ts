@@ -1,5 +1,5 @@
 import { AcceptedIconNames } from 'components/Icon/types';
-import * as H from 'history';
+import { Location, LocationState } from 'history';
 import { match } from 'react-router';
 
 export type MenuItem = {
@@ -8,9 +8,9 @@ export type MenuItem = {
   state?: Record<string, any> | null;
   visible: boolean;
   iconName: AcceptedIconNames;
-  isActive?<Params extends { [K in keyof Params]?: string }>(
+  isActive?<Params extends { [K in keyof Params]?: string }, S = LocationState>(
     match: match<Params> | null,
-    location: H.Location
+    location: Location<S>
   ): boolean;
   options: MenuItem[];
 };
