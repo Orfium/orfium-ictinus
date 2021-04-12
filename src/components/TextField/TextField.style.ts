@@ -50,7 +50,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:not(:placeholder-shown) {
     & + label {
       transform: translate(1%, -35%) scale(0.8);
-      font-weight: ${theme.typography.weights.black};
+      font-weight: ${theme.typography.weights.bold};
     }
   }
 

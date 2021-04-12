@@ -21,9 +21,10 @@ export type Typography = {
     32: string;
   };
   weights: {
-    bold: number;
     light: number;
     regular: number;
+    medium: number;
+    bold: number;
     black: number;
   };
   fontFamily: string;
@@ -47,11 +48,11 @@ const fontSizes = {
 };
 
 const weights = {
-  bold: 700,
   light: 300,
   regular: 400,
-  //TODO: Introduce new property for weight 500 (e.g. usage of 500 in Asset.style.ts based on provided designs)
-  black: 700,
+  medium: 500,
+  bold: 700,
+  black: 900,
 };
 
 const typography: Typography = {
