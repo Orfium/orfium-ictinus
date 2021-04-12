@@ -20,7 +20,7 @@ const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light')
 
 export const globalStyles = (theme: Theme) => css`
   ${normalize()};
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900');
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
 
   body,
   html {
