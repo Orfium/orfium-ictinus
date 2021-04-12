@@ -23,6 +23,7 @@ interface Props {
   isChecked?: boolean;
   isIntermediateStatus?: boolean;
   isBulkSection?: boolean;
+  customActionsContent?: JSX.Element | null;
 }
 
 const SectionHeader: FC<Props> = ({
@@ -35,9 +36,9 @@ const SectionHeader: FC<Props> = ({
   isChecked = false,
   isBulkSection = false,
   isIntermediateStatus = false,
+  customActionsContent,
 }) => {
   const { checked, handleCheck } = useCheck(isChecked, onCheck);
-  const hasActions = matchingActions.length > 0;
 
   return (
     <header css={Styles.header(checked, styleType, isBulkSection)}>
@@ -49,9 +50,12 @@ const SectionHeader: FC<Props> = ({
         handleCheck={handleCheck}
         score={score}
       />
-      {hasActions && (
-        <ActionsToolbox matchingActions={matchingActions} buttonStyles={buttonStyles} />
-      )}
+
+      <ActionsToolbox
+        customActionsContent={customActionsContent}
+        matchingActions={matchingActions}
+        buttonStyles={buttonStyles}
+      />
     </header>
   );
 };

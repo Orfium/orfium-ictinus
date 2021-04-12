@@ -29,6 +29,8 @@ interface Props {
   onCheck?: OnCheckHandler;
   /** The check status of the asset matching checkbox */
   isChecked?: boolean;
+  /** The custom element to pass custom elements to actions toolbox */
+  customActionsContent?: JSX.Element | null;
 }
 
 const AssetMatching: FC<Props> = ({
@@ -42,6 +44,7 @@ const AssetMatching: FC<Props> = ({
   styleType = 'outlined',
   onCheck,
   isChecked = false,
+  customActionsContent,
 }) => {
   const defaultLeft = leftAssetProps && (
     <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
@@ -55,6 +58,7 @@ const AssetMatching: FC<Props> = ({
       <section css={Styles.section(styleType)}>
         <div css={Styles.inner}>
           <SectionHeader
+            customActionsContent={customActionsContent}
             isChecked={isChecked}
             onCheck={onCheck}
             styleType={styleType}

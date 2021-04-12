@@ -19,9 +19,12 @@ const SectionHeaderShowcase = ({ isButtonFilled }: { isButtonFilled: boolean }) 
     >
       <h2>⬇️Header section can be used separately for handling bulk actions⬇️</h2>
       <SectionHeader
+        isBulkSection
         styleType={'outlined'}
         customCheckboxContent={<span css={{ color: 'black' }}>2 items selected</span>}
-        isButtonFilled={isButtonFilled}
+        buttonStyles={{
+          isButtonFilled,
+        }}
         matchingActions={mocks.actionsMock}
       />
     </div>
