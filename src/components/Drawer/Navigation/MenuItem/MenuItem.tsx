@@ -81,6 +81,7 @@ const MenuItem: React.FC<Props> = memo(
                           }}
                           data-testid={subMenuItem.url}
                           activeClassName="active"
+                          isActive={subMenuItem?.isActive}
                           key={subMenuItem.url}
                           css={subMenuLinkStyle()}
                           id={'submenu-item-link'}
