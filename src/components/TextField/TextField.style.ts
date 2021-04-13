@@ -8,6 +8,7 @@ export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'rig
   line-height: 0.8;
   height: 16px;
   display: flex;
+  align-items: center;
   margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
   margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
 `;
