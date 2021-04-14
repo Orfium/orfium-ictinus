@@ -4,6 +4,8 @@ import { UserMenuProps } from './components/UserMenu/UserMenu';
 export interface TopAppBarProps {
   /** The placeholder of the search component */
   searchPlaceholder?: string;
+  /** The defaultValue of the search component */
+  searchDefaultValue?: string;
   /** Flag indicating that the search is disabled */
   isSearchDisabled?: boolean;
   /** Callback to be triggered on onChange event of search component */
