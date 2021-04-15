@@ -11,11 +11,13 @@ import Search from './components/Search';
 
 const TopAppBar: FC<TopAppBarProps> = ({
   searchPlaceholder = 'Search',
+  searchDefaultValue = '',
   logoIcon,
   onMenuIconClick,
   additionalTools,
   userMenu,
   onSearchHandler,
+  onKeyPressHandler,
   isSearchDisabled = false,
   dark = false,
 }) => {
@@ -29,7 +31,9 @@ const TopAppBar: FC<TopAppBarProps> = ({
         {onSearchHandler && (
           <Search
             onSearchHandler={onSearchHandler}
+            onKeyPressHandler={onKeyPressHandler}
             searchPlaceholder={searchPlaceholder}
+            searchDefaultValue={searchDefaultValue}
             isSearchDisabled={isSearchDisabled}
             dark={dark}
           />
