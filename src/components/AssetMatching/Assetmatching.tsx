@@ -31,6 +31,8 @@ interface Props {
   isChecked?: boolean;
   /** The custom element to pass custom elements to actions toolbox */
   customActionsContent?: JSX.Element | null;
+  /** The prop needed for explicitly enabling or disabling checkbox */
+  isCheckboxEnabled?: boolean;
 }
 
 const AssetMatching: FC<Props> = ({
@@ -45,6 +47,7 @@ const AssetMatching: FC<Props> = ({
   onCheck,
   isChecked = false,
   customActionsContent,
+  isCheckboxEnabled = true,
 }) => {
   const defaultLeft = leftAssetProps && (
     <Asset {...leftAssetProps} matchedCategoryItems={matchedCategoryItems} />
@@ -58,6 +61,7 @@ const AssetMatching: FC<Props> = ({
       <section css={Styles.section(styleType)}>
         <div css={Styles.inner}>
           <SectionHeader
+            isCheckboxEnabled={isCheckboxEnabled}
             customActionsContent={customActionsContent}
             isChecked={isChecked}
             onCheck={onCheck}

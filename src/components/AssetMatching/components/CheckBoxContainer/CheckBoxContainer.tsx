@@ -22,7 +22,7 @@ const CheckBoxContainer: FC<Props> = ({
   isIntermediateStatus = false,
 }) => {
   const scoreText = `${score}%`;
-  const defaultContent = isEnabled && (
+  const defaultContent = !customCheckboxContent && (
     <Fragment>
       <span css={Styles.score(isEnabled)}>{score ? scoreText : 'N/A'}</span>
       <span css={Styles.text(isEnabled)}>

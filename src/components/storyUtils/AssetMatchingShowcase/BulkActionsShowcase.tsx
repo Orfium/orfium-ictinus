@@ -3,7 +3,6 @@ import AssetMatching from '../../AssetMatching/Assetmatching';
 import Mocks from './mocks';
 import { rem } from 'polished';
 import BulkActionsSection from '../../AssetMatching/components/SectionHeader/SectionHeader';
-import Select from '../../Select';
 
 const BulkActionsShowcase = () => {
   const [checked, setChecked] = useState(false);
