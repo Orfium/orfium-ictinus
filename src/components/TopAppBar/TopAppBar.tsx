@@ -17,6 +17,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
   additionalTools,
   userMenu,
   onSearchHandler,
+  onKeyPressHandler,
   isSearchDisabled = false,
   dark = false,
 }) => {
@@ -30,6 +31,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
         {onSearchHandler && (
           <Search
             onSearchHandler={onSearchHandler}
+            onKeyPressHandler={onKeyPressHandler}
             searchPlaceholder={searchPlaceholder}
             searchDefaultValue={searchDefaultValue}
             isSearchDisabled={isSearchDisabled}

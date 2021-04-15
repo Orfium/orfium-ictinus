@@ -10,6 +10,8 @@ export interface TopAppBarProps {
   isSearchDisabled?: boolean;
   /** Callback to be triggered on onChange event of search component */
   onSearchHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  /** Callback to be triggered on onKeyPress event of search component */
+  onKeyPressHandler?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   /** Custom product logo */
   logoIcon?: JSX.Element;
   /** Handler for opening end closing the Drawer. Burger menu only visible from breakpoint [tab-1024] */
