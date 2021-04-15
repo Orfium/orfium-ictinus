@@ -8,6 +8,7 @@ export type SearchProps = {
   searchPlaceholder: string;
   searchDefaultValue: string;
   onSearchHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onKeyPressHandler?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   isSearchDisabled?: boolean;
 };
 
@@ -15,6 +16,7 @@ const Search: FC<SearchProps & { dark?: boolean }> = ({
   searchPlaceholder = 'Search',
   searchDefaultValue = '',
   onSearchHandler,
+  onKeyPressHandler,
   isSearchDisabled = false,
   dark = false,
 }) => {
@@ -33,6 +35,7 @@ const Search: FC<SearchProps & { dark?: boolean }> = ({
         id={'top-nav-search'}
         disabled={false}
         onChange={onSearchHandler}
+        onKeyPress={onKeyPressHandler}
       />
     </div>
   );
