@@ -2,9 +2,16 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import Icon from 'components/Icon';
 import { ChangeEvent, useEffect } from 'react';
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
-import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
+import {
+  checkboxStyle,
+  checkboxWrapperStyle,
+  labelStyle,
+  wrapperStyle,
+  markerStyle,
+} from './CheckBox.style';
 import { TestId } from '../../utils/types';
 
 export type Props = {
@@ -59,14 +66,19 @@ const CheckBox: React.FC<Props> = ({
       <span css={checkboxWrapperStyle()}>
         <input
           data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
-          css={checkboxStyle({ intermediate, checked, filled })}
+          css={checkboxStyle({ intermediate, checked: isChecked, filled })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}
           disabled={disabled}
           checked={isChecked}
         />
-        <label htmlFor={`styled-checkbox-${id}`} />
+        <label
+          htmlFor={`styled-checkbox-${id}`}
+          css={markerStyle({ intermediate, checked: isChecked, filled })}
+        >
+          <Icon name={intermediate ? 'minus' : 'checkmark'} size={24} />
+        </label>
       </span>
       {label && <span css={labelStyle()}>{label}</span>}
     </span>
