@@ -33,6 +33,7 @@ const Search: FC<SearchProps & { dark?: boolean }> = ({
         placeholder={searchPlaceholder}
         defaultValue={searchDefaultValue}
         id={'top-nav-search'}
+        data-testid={'top-nav-search'}
         disabled={false}
         onChange={onSearchHandler}
         onKeyPress={onKeyPressHandler}
