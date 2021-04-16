@@ -11,8 +11,10 @@ import {
   labelStyle,
   wrapperStyle,
   markerStyle,
+  getSymbolColor,
 } from './CheckBox.style';
 import { TestId } from '../../utils/types';
+import useTheme from 'hooks/useTheme';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -48,6 +50,8 @@ const CheckBox: React.FC<Props> = ({
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
 
+  const theme = useTheme();
+
   useEffect(() => {
     setIsChecked(checked);
   }, [checked]);
@@ -73,11 +77,12 @@ const CheckBox: React.FC<Props> = ({
           disabled={disabled}
           checked={isChecked}
         />
-        <label
-          htmlFor={`styled-checkbox-${id}`}
-          css={markerStyle({ intermediate, checked: isChecked, filled })}
-        >
-          <Icon name={intermediate ? 'minus' : 'checkmark'} size={24} />
+        <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ checked: isChecked })}>
+          <Icon
+            name={intermediate ? 'minus' : 'checkmark'}
+            size={24}
+            color={getSymbolColor({ intermediate, checked: isChecked, filled, theme })}
+          />
         </label>
       </span>
       {label && <span css={labelStyle()}>{label}</span>}

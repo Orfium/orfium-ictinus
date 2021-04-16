@@ -45,7 +45,11 @@ const getBackgroundColor = ({ intermediate, checked, filled, theme }: Props & { 
       )};`;
 };
 
-const getSymbolColor = ({ intermediate, filled, theme }: Props & { theme: Theme }) => {
+export const getSymbolColor = ({
+  intermediate,
+  filled,
+  theme,
+}: Props & { theme: Theme }): string => {
   if (!filled) {
     return theme.utils.getColor('darkGray', 700);
   } else {
@@ -90,11 +94,7 @@ export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
   `;
 };
 
-export const markerStyle = ({ intermediate, checked, filled }: Props) => (
-  theme: Theme
-): SerializedStyles => {
-  const symbolColor = getSymbolColor({ intermediate, checked, filled, theme });
-
+export const markerStyle = ({ checked }: Props): SerializedStyles => {
   return css`
     span {
       padding: 0;
@@ -104,10 +104,6 @@ export const markerStyle = ({ intermediate, checked, filled }: Props) => (
       position: absolute;
       top: 0;
       display: ${checked ? 'block' : 'none'};
-    }
-
-    path {
-      fill: ${symbolColor} !important;
     }
   `;
 };
