@@ -17,6 +17,7 @@ import {
 } from '../Navigation.style';
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
+import { pickTextColorFromSwatches } from 'theme/palette';
 
 type Props = {
   /** Defines the current menu item whose submenu item is currently selected */
@@ -43,8 +44,9 @@ const MenuItem: React.FC<Props> = memo(
         <div css={menuIconStyle(isCurrent)}>
           <Icon
             name={iconName}
-            color={isCurrent ? `${color}-${shade}` : 'neutralBlack-700'}
+            color={isCurrent ? `${pickTextColorFromSwatches(color, shade)}` : 'neutralBlack'}
             size={20}
+            variant={isCurrent ? shade : 700}
           />
         </div>
         <span className={'menu-item-text'} css={menuItemTextStyle(isCurrent)}>
@@ -81,6 +83,7 @@ const MenuItem: React.FC<Props> = memo(
                           }}
                           data-testid={subMenuItem.url}
                           activeClassName="active"
+                          isActive={subMenuItem?.isActive}
                           key={subMenuItem.url}
                           css={subMenuLinkStyle()}
                           id={'submenu-item-link'}

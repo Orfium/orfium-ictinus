@@ -8,6 +8,7 @@ export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'rig
   line-height: 0.8;
   height: 16px;
   display: flex;
+  align-items: center;
   margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
   margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
 `;
@@ -50,7 +51,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:not(:placeholder-shown) {
     & + label {
       transform: translate(1%, -35%) scale(0.8);
-      font-weight: ${theme.typography.weights.black};
+      font-weight: ${theme.typography.weights.bold};
     }
   }
 
