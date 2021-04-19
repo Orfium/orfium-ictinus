@@ -25,6 +25,12 @@ const TypeColorToColorMatchContext = React.createContext<ContextProps>(
   // @ts-ignore
   defaultContextData
 );
+
+/**
+ * A hook that on provides two methods `typesShadesColor` and `calculateColorBetweenColorAndType`
+ * typesShadesColor: calculates on init and returns all types like `primary` in shade and color objects
+ * calculateColorBetweenColorAndType: get color and type. If color exists gets it from `calculateActualColorFromComponentProp` if not and only type then it fetches it from the `typesShadesColor`
+ */
 const useTypeColorToColorMatch = () => {
   return React.useContext<ContextProps>(TypeColorToColorMatchContext);
 };
