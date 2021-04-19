@@ -9,6 +9,8 @@ export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
   green: '#6bbc15',
   red: '#d40000',
   orange: '#f5781b',
+  // @TODO only for old VH - soon will be removed
+  darkOrange: '#bf360c',
   darkBlue: '#232d7d',
   magenta: '#d21e75',
   yellow: '#ffc700',

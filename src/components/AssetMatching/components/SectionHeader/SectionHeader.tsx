@@ -1,34 +1,63 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { ChangeEvent, FC } from 'react';
+import { FC } from 'react';
 import Styles from './SectionHeader.style';
-import { Toolbox } from '../Toolbox';
-import { useCheck } from 'hooks/useCheck';
+import { ActionsToolbox } from '../ActionsToolbox';
+import { OnCheckHandler, useCheck } from 'hooks/useCheck';
 import { CheckBoxContainer } from '../CheckBoxContainer';
 import { MatchingAction } from '../../types';
 import { formFieldStyles } from 'theme/palette';
 
 interface Props {
-  onCheck?(val: boolean, e: ChangeEvent): void;
+  onCheck?: OnCheckHandler;
   score?: string | number;
   matchingActions?: MatchingAction[];
   styleType: formFieldStyles;
+  buttonStyles?: {
+    secondaryButtonColor?: string;
+    primaryButtonColor?: string;
+    isButtonFilled?: boolean;
+  };
+  customCheckboxContent?: JSX.Element | null;
+  isChecked?: boolean;
+  isIntermediateStatus?: boolean;
+  isBulkSection?: boolean;
+  customActionsContent?: JSX.Element | null;
+  isCheckboxEnabled?: boolean;
 }
 
-const SectionHeader: FC<Props> = ({ styleType, matchingActions = [], onCheck, score }) => {
-  const { checked, handleCheck } = useCheck(onCheck);
-  const hasActions = matchingActions.length > 0;
+const SectionHeader: FC<Props> = ({
+  styleType,
+  matchingActions = [],
+  onCheck,
+  score,
+  buttonStyles,
+  customCheckboxContent,
+  isChecked = false,
+  isBulkSection = false,
+  isIntermediateStatus = false,
+  customActionsContent,
+  isCheckboxEnabled = true,
+}) => {
+  const { checked, handleCheck } = useCheck(isChecked, onCheck);
 
   return (
-    <header css={Styles.header(checked, styleType)}>
+    <header css={Styles.header(checked, styleType, isBulkSection)}>
       <CheckBoxContainer
+        isIntermediateStatus={isIntermediateStatus}
+        customCheckboxContent={customCheckboxContent}
         isChecked={checked}
-        isEnabled={hasActions}
+        isEnabled={isCheckboxEnabled}
         handleCheck={handleCheck}
         score={score}
       />
-      {hasActions && <Toolbox matchingActions={matchingActions} />}
+
+      <ActionsToolbox
+        customActionsContent={customActionsContent}
+        matchingActions={matchingActions}
+        buttonStyles={buttonStyles}
+      />
     </header>
   );
 };

@@ -2,10 +2,19 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import Icon from 'components/Icon';
 import { ChangeEvent, useEffect } from 'react';
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
-import { checkboxStyle, checkboxWrapperStyle, labelStyle, wrapperStyle } from './CheckBox.style';
+import {
+  checkboxStyle,
+  checkboxWrapperStyle,
+  labelStyle,
+  wrapperStyle,
+  markerStyle,
+  getSymbolColor,
+} from './CheckBox.style';
 import { TestId } from '../../utils/types';
+import useTheme from 'hooks/useTheme';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -41,6 +50,8 @@ const CheckBox: React.FC<Props> = ({
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
 
+  const theme = useTheme();
+
   useEffect(() => {
     setIsChecked(checked);
   }, [checked]);
@@ -59,14 +70,20 @@ const CheckBox: React.FC<Props> = ({
       <span css={checkboxWrapperStyle()}>
         <input
           data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
-          css={checkboxStyle({ intermediate, checked, filled })}
+          css={checkboxStyle({ intermediate, checked: isChecked, filled })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}
           disabled={disabled}
           checked={isChecked}
         />
-        <label htmlFor={`styled-checkbox-${id}`} />
+        <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ checked: isChecked })}>
+          <Icon
+            name={intermediate ? 'minus' : 'checkmark'}
+            size={24}
+            color={getSymbolColor({ intermediate, checked: isChecked, filled, theme })}
+          />
+        </label>
       </span>
       {label && <span css={labelStyle()}>{label}</span>}
     </span>

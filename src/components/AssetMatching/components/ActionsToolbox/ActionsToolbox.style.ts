@@ -26,7 +26,8 @@ const list = (theme: Theme): SerializedStyles => css`
   }
 `;
 
-const buttonWrapper = css`
+const buttonWrapper = (theme: Theme): SerializedStyles => css`
+  margin-right: ${theme.spacing.sm};
   > button {
     border: none;
   }

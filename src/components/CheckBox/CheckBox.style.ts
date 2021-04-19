@@ -45,7 +45,11 @@ const getBackgroundColor = ({ intermediate, checked, filled, theme }: Props & { 
       )};`;
 };
 
-const getSymbolColor = ({ intermediate, filled, theme }: Props & { theme: Theme }) => {
+export const getSymbolColor = ({
+  intermediate,
+  filled,
+  theme,
+}: Props & { theme: Theme }): string => {
   if (!filled) {
     return theme.utils.getColor('darkGray', 700);
   } else {
@@ -56,8 +60,6 @@ const getSymbolColor = ({ intermediate, filled, theme }: Props & { theme: Theme 
 export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
   theme: Theme
 ): SerializedStyles => {
-  const symbolColor = getSymbolColor({ intermediate, checked, filled, theme });
-
   return css`
     border: 0;
     border-radius: ${rem(2)};
@@ -89,18 +91,19 @@ export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
     &:disabled + label {
       cursor: not-allowed;
     }
+  `;
+};
 
-    // Checkmark.
-    &:checked + label:after {
-      content: '';
+export const markerStyle = ({ checked }: Props): SerializedStyles => {
+  return css`
+    span {
+      padding: 0;
+    }
+
+    svg {
       position: absolute;
-      left: ${rem(5.5)};
-      ${intermediate
-        ? `width: ${rem(13)}; top: ${rem(10.5)}; height: ${rem(3)};`
-        : `width: ${rem(2)}; top: ${rem(12)}; height: ${rem(2)};;
-      box-shadow: -2px 0 0 ${symbolColor}, 2px 0 0 ${symbolColor}, 4px 0 0 ${symbolColor}, 4px -2px 0 ${symbolColor}, 4px -4px 0 ${symbolColor}, 4px -6px 0 ${symbolColor}, 4px -8px 0 ${symbolColor}, 4px -10px 0 ${symbolColor};
-      transform: rotate(45deg);`};
-      background-color: ${symbolColor};
+      top: 0;
+      display: ${checked ? 'block' : 'none'};
     }
   `;
 };

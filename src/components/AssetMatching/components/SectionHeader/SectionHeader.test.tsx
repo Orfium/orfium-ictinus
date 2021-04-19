@@ -6,7 +6,7 @@ import SectionHeader from './SectionHeader';
 import mocks from 'components/storyUtils/AssetMatchingShowcase/mocks';
 import '@testing-library/jest-dom';
 
-describe('Asset Matching - Header', () => {
+describe('Asset Matching - SectionHeader', () => {
   let matchingActions: any;
   beforeEach(() => {
     matchingActions = mocks.actionsMock;

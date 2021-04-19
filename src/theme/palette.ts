@@ -13,6 +13,8 @@ export const flatColors = [
   'magenta',
   'red',
   'orange',
+  // @TODO only for old VH - soon will be removed
+  'darkOrange',
   'yellow',
   'green',
   'teal',
@@ -93,6 +95,7 @@ export const pickTextColorFromSwatches = (
       'magenta',
       'red',
       'orange',
+      'darkOrange',
       'yellow',
       'green',
       'teal',
@@ -115,6 +118,7 @@ export const pickTextColorFromSwatches = (
       'magenta',
       'red',
       'orange',
+      'darkOrange',
       'yellow',
       'green',
       'teal',
@@ -133,6 +137,7 @@ export const pickTextColorFromSwatches = (
       'magenta',
       'red',
       'orange',
+      'darkOrange',
       'yellow',
       'green',
       'lightBlue',
@@ -145,7 +150,7 @@ export const pickTextColorFromSwatches = (
       'vividBlue',
       'vividPurple',
     ],
-    400: ['darkGray', 'magenta', 'red', 'darkBlue', 'purple', 'vividBlue', 'vividPurple'],
+    400: ['darkGray', 'magenta', 'red', 'darkOrange', 'darkBlue', 'purple', 'vividBlue', 'vividPurple'],
     300: ['darkGray', 'darkBlue'],
   };
   const pickedShade = colorsForWhiteText[shade];

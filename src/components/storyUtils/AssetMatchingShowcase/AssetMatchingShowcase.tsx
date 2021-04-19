@@ -4,6 +4,8 @@ import { uniqueId } from 'lodash';
 import AssetMatching from '../../AssetMatching/Assetmatching';
 import Mocks from './mocks';
 import { formFieldStyles } from '../../../theme/palette';
+import { rem } from 'polished';
+import Select from '../../Select';
 
 const AssetMatchingShowcase = ({
   showCustomContent,
@@ -13,6 +15,7 @@ const AssetMatchingShowcase = ({
   styleType: formFieldStyles;
 }) => {
   const [matchingActions, setMatchingActions] = useState<MatchingAction[]>(Mocks.actionsMock);
+  const [checked, setChecked] = useState(false);
 
   const customShowcase = {
     ...(showCustomContent
@@ -33,19 +36,28 @@ const AssetMatchingShowcase = ({
     setMatchingActions(prevState => [...prevState, newAction]);
   };
 
+  const checkHandler = () => {
+    setChecked(!checked);
+  };
+  const marginValue = rem(10);
+
   return (
     <div>
-      <button css={{ marginBottom: 10, marginRight: 10 }} onClick={clickHandler}>
+      <button css={{ marginBottom: marginValue, marginRight: marginValue }} onClick={clickHandler}>
         add action
       </button>
       <button onClick={() => setMatchingActions([])}>clear actions</button>
       <button
-        css={{ marginBottom: 10, marginLeft: 10 }}
+        css={{ marginBottom: marginValue, marginLeft: marginValue }}
         onClick={() => setMatchingActions(Mocks.actionsMock)}
       >
         reset actions
       </button>
+      <button css={{ marginBottom: marginValue, marginLeft: marginValue }} onClick={checkHandler}>
+        check from outside
+      </button>
       <AssetMatching
+        isChecked={checked}
         score={95}
         styleType={styleType}
         matchedCategoryItems={['George Michael']}

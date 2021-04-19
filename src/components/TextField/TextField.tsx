@@ -10,6 +10,7 @@ import useTheme from 'hooks/useTheme';
 import TextInputWrapper, {
   Props as TextInputWrapperProps,
 } from 'components/utils/TextInputWrapper/TextInputWrapper';
+import { AcceptedIconNames } from 'components/Icon/types';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -53,10 +54,23 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
     <div css={iconWrapperStyle({ iconPosition })}>{children}</div>
   );
 
+  const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
+    icon ? (
+      typeof icon === 'string' ? (
+        <Icon
+          name={icon as AcceptedIconNames}
+          size={24}
+          color={theme.utils.getColor('lightGray', 500)}
+        />
+      ) : (
+        icon
+      )
+    ) : null;
+
   return (
     <React.Fragment>
       <TextInputWrapper {...props}>
-        {leftIcon && <IconWrapper iconPosition={'left'}>{leftIcon}</IconWrapper>}
+        {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
         <div css={{ width: '100% ' }}>
           <input
             readOnly={readOnly}
@@ -79,7 +93,9 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
             />
           )}
         </div>
-        {rightIcon && !locked && <IconWrapper iconPosition={'right'}>{rightIcon}</IconWrapper>}
+        {rightIcon && !locked && (
+          <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
+        )}
         {locked && (
           <IconWrapper iconPosition={'right'}>
             <Icon

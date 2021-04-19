@@ -241,8 +241,33 @@ Regular Text Field with KNOBS
         lean={boolean('Lean version', false)}
         locked={boolean('Locked', false)}
         disabled={boolean('Disabled', false)}
-        iconName={select('Icon', ['none', ...Object.keys(iconSelector)], 'search')}
-        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
+        leftIcon={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
+        rightIcon={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
+        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
+        hintMsg={text('custom error message', 'Error in Text Field')}
+        status={select('status', ['hint', 'error', 'normal'], 'normal')}
+      />
+      <TextField
+        label={text('Label', 'Label')}
+        size={select('Size', ['md', 'sm'], 'md')}
+        lean={boolean('Lean version', false)}
+        locked={boolean('Locked', false)}
+        disabled={boolean('Disabled', false)}
+        leftIcon={
+          <Icon
+            name={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
+            size={24}
+            color={'#f5781b'}
+          />
+        }
+        rightIcon={
+          <Icon
+            name={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
+            size={24}
+            color={'#f5781b'}
+          />
+        }
+        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
         hintMsg={text('custom error message', 'Error in Text Field')}
         status={select('status', ['hint', 'error', 'normal'], 'normal')}
       />
