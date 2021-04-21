@@ -13,7 +13,7 @@ export const queriesKeys = [
   'mob320',
 ] as const;
 
-const queriesSizes: Record<typeof queriesKeys[number], string> = {
+export const queriesSizes: Record<typeof queriesKeys[number], string> = {
   des1920: '1920',
   des1440: '1440',
   des1366: '1366',
