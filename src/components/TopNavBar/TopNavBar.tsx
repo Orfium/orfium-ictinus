@@ -2,14 +2,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FC } from 'react';
-import Styles from './TopAppBar.style';
-import { TopAppBarProps } from './TopAppBar.types';
+import Styles from './TopNavBar.style';
+import { TopNavBarProps } from './TopNavBar.types';
 import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';
 
 import { useBreakpoints } from '../../index';
 import Search from './components/Search';
 
-const TopAppBar: FC<TopAppBarProps> = ({
+const TopNavBar: FC<TopNavBarProps> = ({
   searchPlaceholder = 'Search',
   searchDefaultValue = '',
   logoIcon,
@@ -24,7 +24,7 @@ const TopAppBar: FC<TopAppBarProps> = ({
   const breakpoints = useBreakpoints();
 
   return (
-    <div role="banner" aria-label="Top Application Banner" css={Styles.topAppBarWrapper(dark)}>
+    <div role="banner" aria-label="Top Application Banner" css={Styles.topNavBarWrapper(dark)}>
       <div css={Styles.mainSection(Boolean(onSearchHandler))}>
         {!breakpoints.des1200 && <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />}
         <LogoPlaceholder logoIcon={logoIcon} />
@@ -40,11 +40,11 @@ const TopAppBar: FC<TopAppBarProps> = ({
         )}
       </div>
       <div css={Styles.additionalToolsSection(Boolean(additionalTools))}>{additionalTools}</div>
-      <div css={Styles.topAppBarSection}>
+      <div css={Styles.topNavBarSection}>
         <UserMenu dark={dark} {...userMenu} />
       </div>
     </div>
   );
 };
 
-export default TopAppBar;
+export default TopNavBar;

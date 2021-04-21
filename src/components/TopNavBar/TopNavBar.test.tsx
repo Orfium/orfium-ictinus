@@ -1,10 +1,10 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
-import { DEFAULT_USER_MENU } from '../storyUtils/TopAppBarShowcase';
-import TopAppBar from './TopAppBar';
+import { DEFAULT_USER_MENU } from '../storyUtils/TopNavBarShowcase';
+import TopNavBar from './TopNavBar';
 import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 
-describe('TopAppBar', () => {
+describe('TopNavBar', () => {
   let onMenuIconClickMock: jest.Mock;
   let onSearchHandler: jest.Mock;
   let onKeyPressHandler: jest.Mock;
@@ -19,14 +19,14 @@ describe('TopAppBar', () => {
 
   it('should render correctly', () => {
     const { container } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
+      <TopNavBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
     );
     expect(container).toMatchSnapshot();
   });
 
   it('should render correctly on dark', () => {
     const { container } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} dark />
+      <TopNavBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} dark />
     );
     expect(container).toMatchSnapshot();
   });
@@ -36,7 +36,7 @@ describe('TopAppBar', () => {
     window.matchMedia = createMockMediaMatcher(false);
 
     const { findByTestId } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
+      <TopNavBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} />
     );
 
     const menuHandler = await findByTestId('menu-handler');
@@ -49,7 +49,7 @@ describe('TopAppBar', () => {
     window.matchMedia = createMockMediaMatcher(false);
 
     const { findByTestId } = render(
-      <TopAppBar
+      <TopNavBar
         onMenuIconClick={onMenuIconClickMock}
         onSearchHandler={onSearchHandler}
         onKeyPressHandler={onKeyPressHandler}

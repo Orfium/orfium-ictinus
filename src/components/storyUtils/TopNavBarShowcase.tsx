@@ -1,9 +1,9 @@
 import React, { FC, useState } from 'react';
-import TopAppBar from '../TopAppBar';
+import TopNavBar from '../TopNavBar';
 import TextField from '../TextField';
-import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
+import { TopNavBarProps } from '../TopNavBar/TopNavBar.types';
 
-interface Props extends TopAppBarProps {
+interface Props extends TopNavBarProps {
   withLogo?: boolean;
   withAdditionalTools?: boolean;
   provideSearchHandler?: boolean;
@@ -31,7 +31,7 @@ const DEFAULT_ON_CLICK = () => {
   alert('Toggles a menu!');
 };
 
-const TopAppBarShowcase: FC<Props> = ({
+const TopNavBarShowcase: FC<Props> = ({
   withLogo = false,
   withAdditionalTools = false,
   provideSearchHandler = false,
@@ -52,7 +52,7 @@ const TopAppBarShowcase: FC<Props> = ({
 
   return (
     <>
-      <TopAppBar
+      <TopNavBar
         dark={dark}
         logoIcon={logoIcon || undefined}
         onMenuIconClick={onMenuIconClick}
@@ -66,4 +66,4 @@ const TopAppBarShowcase: FC<Props> = ({
   );
 };
 
-export default TopAppBarShowcase;
+export default TopNavBarShowcase;

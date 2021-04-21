@@ -1,23 +1,23 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import TopAppBar from './TopAppBar';
+import TopNavBar from './TopNavBar';
 import Stack from '../storyUtils/Stack';
 import TextField from '../TextField';
-import TopAppBarShowcase from '../storyUtils/TopAppBarShowcase';
+import TopNavBarShowcase from '../storyUtils/TopNavBarShowcase';
 import { boolean } from '@storybook/addon-knobs';
 import UserMenu from './components/UserMenu/UserMenu';
 
-<Meta title="Design System/TopAppBar" component={TopAppBar} />
+<Meta title="Design System/TopNavBar" component={TopNavBar} />
 
-# TopAppBar
+# TopNavBar
 
-A universal TopAppBar component.
+A universal TopNavBar component.
 
 # Usage
 
 ```js
-import { TopAppBar } from '@orfium/ictinus';
+import { TopNavBar } from '@orfium/ictinus';
 
-<TopAppBar
+<TopNavBar
      dark={dark}
      logoIcon={logoIcon}
      onMenuIconClick={onMenuIconClick}
@@ -29,54 +29,54 @@ import { TopAppBar } from '@orfium/ictinus';
 
 # Props
 
-<Props of={TopAppBar} />
+<Props of={TopNavBar} />
 
 ## UserMenu Props
 
 <Props of={UserMenu} />
 
 
-# TopAppBar with Logo Placeholder
+# TopNavBar with Logo Placeholder
 
 <Preview>
   <Story name="with Logo Placeholder">
     <div style={{padding: 10}}>
-      <TopAppBarShowcase />
+      <TopNavBarShowcase />
     </div>
   </Story>
 </Preview>
 
 
-# TopAppBar with additionalTools
+# TopNavBar with additionalTools
 
 <Preview>
   <Story name="with Additional Tools">
     <div style={{padding: 10}}>
-      <TopAppBarShowcase withAdditionalTools={true} />
+      <TopNavBarShowcase withAdditionalTools={true} />
     </div>
   </Story>
 </Preview>
 
-# TopAppBar Dark Theme
+# TopNavBar Dark Theme
 
 <Preview>
   <Story name="with Dark theme enabled">
     <div style={{padding: 10}}>
-      <TopAppBarShowcase dark={true} />
+      <TopNavBarShowcase dark={true} />
     </div>
   </Story>
 </Preview>
 
 
 
-# TopAppBar Playground
+# TopNavBar Playground
 
-TopAppBar Playground
+TopNavBar Playground
 
 <Preview>
   <Story name="playground">
     <div style={{padding: 10}}>
-      <TopAppBarShowcase dark={boolean('dark', false)} isSearchDisabled={boolean('disabled search', false)} provideSearchHandler={boolean('providerSearchHandler', false)} withAdditionalTools={boolean('withAdditionalTools', false)} withLogo={boolean('withLogo', false)} />
+      <TopNavBarShowcase dark={boolean('dark', false)} isSearchDisabled={boolean('disabled search', false)} provideSearchHandler={boolean('providerSearchHandler', false)} withAdditionalTools={boolean('withAdditionalTools', false)} withLogo={boolean('withLogo', false)} />
     </div>
   </Story>
 </Preview>

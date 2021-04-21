@@ -1,7 +1,7 @@
 import React from 'react';
 import { UserMenuProps } from './components/UserMenu/UserMenu';
 
-export interface TopAppBarProps {
+export interface TopNavBarProps {
   /** The placeholder of the search component */
   searchPlaceholder?: string;
   /** The defaultValue of the search component */

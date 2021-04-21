@@ -46,7 +46,7 @@ export { default as TextField } from './components/TextField';
 export { default as TextArea } from './components/TextArea';
 export { default as ThemeProvider } from './components/ThemeProvider';
 export { default as Toast } from './components/Toast';
-export { default as TopNavBar } from './components/TopAppBar';
+export { default as TopNavBar } from './components/TopNavBar';
 
 export { default as useTheme } from './hooks/useTheme';
 export { default as useBreakpoints } from './hooks/useBreakpoints';
