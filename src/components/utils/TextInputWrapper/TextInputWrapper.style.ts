@@ -106,7 +106,7 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon, lean
     flex-direction: row;
     align-items: center;
     vertical-align: top;
-    width: calc(100% - ${rem(32)});
+    width: fill-available;
     ${!lean && getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
 
     > div {

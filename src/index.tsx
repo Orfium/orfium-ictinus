@@ -8,6 +8,7 @@ import * as typography from './theme/typography';
 import { Typography } from './theme/typography';
 import * as elevation from './theme/elevation';
 import { Elevation } from './theme/elevation';
+import { queriesSizes } from './hooks/useBreakpoints';
 
 export { default as Avatar } from './components/Avatar';
 export { default as Breadcrumb } from './components/Breadcrumb';
@@ -62,4 +63,5 @@ export {
   Palette,
   Typography,
   Elevation,
+  queriesSizes,
 };
