@@ -42,7 +42,7 @@ const RenderRowWithCells = React.memo(
     return (
       <TableRow
         selected={isRowSelected}
-        onClick={() => toggleChecked()}
+        onClick={toggleChecked}
         css={
           bordered && { borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}` }
         }
