@@ -25,7 +25,7 @@ const TableRow: React.FC<Props> = ({ nested, selected, children, onClick, ...res
           paddingBottom: theme.spacing.xsm,
           cursor: onClick && 'pointer',
           '&:hover': {
-            backgroundColor: onClick && theme.utils.getColor('lightGray', 100),
+            backgroundColor: onClick && theme.utils.getColor('lightGray', 200),
           },
 
           '> td': {
