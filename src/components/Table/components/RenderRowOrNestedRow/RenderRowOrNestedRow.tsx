@@ -42,7 +42,7 @@ const RenderRowWithCells = React.memo(
     return (
       <TableRow
         selected={isRowSelected}
-        onClick={isExpandedExists && toggleChecked}
+        onClick={isExpandedExists ? toggleChecked : undefined}
         css={
           bordered && { borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}` }
         }
