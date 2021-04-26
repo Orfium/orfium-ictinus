@@ -7,13 +7,13 @@ export const LoaderLine = () => (theme: Theme): SerializedStyles => css`
   opacity: 0.4;
   background: ${theme.utils.getColor('lightCoolGray', 400)};
   width: 150%;
-  height: ${rem(5)};
+  height: ${rem(8)};
 `;
 
 export const LoaderSubLine = (color: string) => css`
   position: absolute;
   background: ${color};
-  height: ${rem(5)};
+  height: ${rem(8)};
 `;
 
 export const LoaderDecLine = () => (theme: Theme): SerializedStyles => css`
@@ -51,6 +51,6 @@ export const LoaderIncLine = () => (theme: Theme): SerializedStyles => css`
 export const LoaderContainer = () => (): SerializedStyles => css`
   position: relative;
   width: 100%;
-  height: ${rem(5)};
+  height: ${rem(8)};
   overflow-x: hidden;
 `;
