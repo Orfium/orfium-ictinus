@@ -149,4 +149,5 @@ export type AcceptedIconNames =
   | 'processedLogs'
   | 'proposed'
   | 'unpaired'
-  | 'clockOutlined';
+  | 'clockOutlined'
+  | 'userCheck';
