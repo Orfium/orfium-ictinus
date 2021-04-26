@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import CheckBox from './CheckBox';
 import Stack from '../storyUtils/Stack';
+import { colorShades, flatColors, mainTypes } from '../../theme/palette';
 
 <Meta title="Design System/CheckBox" component={CheckBox} />
 
@@ -55,14 +56,19 @@ Regular CheckBox with label
 </Preview>
 
 <Preview>
-  <Story name="CheckBox with Props" parameters={{ decorators: [withKnobs] }}>
+  <Story name="CheckBox Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <CheckBox 
         checked={boolean('checked', false)} 
         intermediate={boolean('intermediate', false)} 
         filled={boolean('filled', true)} 
         label={text('custom label', '')} 
-        disabled={boolean('disabled', false)} 
+        color={select(
+          'color',
+          [...mainTypes, ...flatColors.map(color => colorShades.map(shade => `${color}-${shade}`)).flat()],
+          ''
+        )}
+        disabled={boolean('disabled', false)}
       />
     </Stack>
   </Story>

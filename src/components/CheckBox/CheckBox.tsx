@@ -15,6 +15,7 @@ import {
 } from './CheckBox.style';
 import { TestId } from '../../utils/types';
 import useTheme from 'hooks/useTheme';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -27,6 +28,8 @@ export type Props = {
   disabled?: boolean;
   /** Boolean defining if the checkbox is in intermediate state when checked ( - instead of ✓ ). Defaults to false */
   intermediate?: boolean;
+  /** Optional color for the checkbox component.  */
+  color?: AcceptedColorComponentTypes | string;
   /** Whether the radio input is filled or outlined
    *
    * @default true
@@ -46,6 +49,7 @@ const CheckBox: React.FC<Props> = ({
   intermediate = false,
   dataTestIdSuffix,
   filled = true,
+  color,
   id = generateUniqueID(),
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
@@ -70,7 +74,7 @@ const CheckBox: React.FC<Props> = ({
       <span css={checkboxWrapperStyle()}>
         <input
           data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
-          css={checkboxStyle({ intermediate, checked: isChecked, filled })}
+          css={checkboxStyle({ intermediate, checked: isChecked, filled, color })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
           onChange={handleInputChange}
@@ -81,7 +85,7 @@ const CheckBox: React.FC<Props> = ({
           <Icon
             name={intermediate ? 'minus' : 'checkmark'}
             size={24}
-            color={getSymbolColor({ intermediate, checked: isChecked, filled, theme })}
+            color={getSymbolColor({ intermediate, checked: isChecked, filled, theme, color })}
           />
         </label>
       </span>

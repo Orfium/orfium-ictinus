@@ -2,6 +2,11 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { Props } from './CheckBox';
+import {
+  AcceptedColorComponentTypes,
+  calculateActualColorFromComponentProp,
+  getColorFromType,
+} from '../../utils/themeFunctions';
 
 export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
   opacity: ${disabled ? 0.3 : 1};
@@ -31,33 +36,54 @@ export const checkboxWrapperStyle = () => (): SerializedStyles => css`
   }
 `;
 
-const getBackgroundColor = ({ intermediate, checked, filled, theme }: Props & { theme: Theme }) => {
+const pickColorFromTypeOrSwatch = (theme: Theme, color?: AcceptedColorComponentTypes | string) => {
+  if (color) {
+    let temp;
+    if (color.split('-').length === 2) {
+      console.log(color, color.split);
+      temp = calculateActualColorFromComponentProp(color);
+      return getColorFromType(temp.color, theme, temp.shade);
+    } else {
+      return getColorFromType(color, theme);
+    }
+  }
+  return;
+};
+const getBackgroundColor = ({
+  intermediate,
+  checked,
+  filled,
+  color,
+  theme,
+}: Props & { theme: Theme }) => {
+  const calculated = pickColorFromTypeOrSwatch(theme, color);
   // if checked and no intermediate
   if (checked && !intermediate && filled) {
-    return `background: ${theme.utils.getColor('lightGray', 700)}`;
+    return `background: ${calculated || theme.utils.getColor('lightGray', 700)}`;
   }
 
   return filled
-    ? `background: ${theme.utils.getColor('lightGray', 400)}`
-    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
-        'darkGray',
-        700
-      )};`;
+    ? `background: ${calculated || theme.utils.getColor('lightGray', 400)}`
+    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${calculated ||
+        theme.utils.getColor('darkGray', 700)};`;
 };
 
 export const getSymbolColor = ({
   intermediate,
   filled,
+  color,
   theme,
 }: Props & { theme: Theme }): string => {
+  const calculated = pickColorFromTypeOrSwatch(theme, color);
+
   if (!filled) {
-    return theme.utils.getColor('darkGray', 700);
+    return calculated || theme.utils.getColor('darkGray', 700);
   } else {
-    return intermediate ? theme.utils.getColor('lightGray', 700) : 'white';
+    return intermediate ? calculated || theme.utils.getColor('lightGray', 700) : 'white';
   }
 };
 
-export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
+export const checkboxStyle = ({ intermediate, checked, filled, color }: Props) => (
   theme: Theme
 ): SerializedStyles => {
   return css`
@@ -83,7 +109,7 @@ export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
       vertical-align: text-top;
       width: ${rem(24)};
       height: ${rem(24)};
-      ${getBackgroundColor({ intermediate, checked, filled, theme })};
+      ${getBackgroundColor({ intermediate, checked, filled, color, theme })};
       border-radius: ${rem(2)};
     }
 
