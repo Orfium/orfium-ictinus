@@ -3,6 +3,9 @@ import { colorShades, flatColors, mainTypes } from '../theme/palette';
 
 export type AcceptedColorComponentTypes = typeof mainTypes[number];
 
+/**
+ ** This util provide an easy way to return the hex color from a type based on our main types 'primary', 'light', 'secondary' etc
+ */
 export const getColorFromType = (
   type: AcceptedColorComponentTypes | string,
   theme: Theme,
@@ -55,7 +58,8 @@ export type ColorShapeFromComponent = {
   shade: typeof colorShades[number];
 };
 /**
- * A utility to translate a color like red-400 to an object
+ * A utility to translate a color like red-400 to an object. This calculates on the color passed picked by our palette.
+ * So in case you run a red color for example `#d40000` this will return
  * returns an object or undefined
  * */
 export const calculateActualColorFromComponentProp = (color: string): ColorShapeFromComponent => {
