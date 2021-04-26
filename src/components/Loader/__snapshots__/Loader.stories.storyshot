@@ -36,9 +36,62 @@ exports[`Storyshots Design System/Loader Dots Loader 1`] = `
     className="css-gestgw-Loader"
   >
     <div
-      className="css-odx5xo"
+      className="css-o6i08o-DotsLoader"
       data-testid="dots-loading"
     />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Loader Indeterminate Loader 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-gestgw-Loader"
+  >
+    <div
+      className="css-is1c44-IndeterminateLoader"
+      data-testid="dots-loading"
+    >
+      <div
+        className="css-1tkh2dx-IndeterminateLoader"
+      />
+      <div
+        className="css-gn9uls-IndeterminateLoader"
+      />
+      <div
+        className="css-1myssco-IndeterminateLoader"
+      />
+    </div>
   </div>
 </div>
 `;
