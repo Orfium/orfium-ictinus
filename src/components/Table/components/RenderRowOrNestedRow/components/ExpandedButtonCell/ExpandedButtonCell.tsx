@@ -28,7 +28,10 @@ const ExpandedButtonCell: React.FC<Props> = ({ isExpandedExists, checked, toggle
             transition: '0.2s all ease-in-out',
             cursor: 'pointer',
           }}
-          onClick={() => toggleChecked()}
+          onClick={e => {
+            e.stopPropagation();
+            toggleChecked();
+          }}
         >
           <div
             css={{
