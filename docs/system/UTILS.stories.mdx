@@ -1,0 +1,92 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="System/Utils" />
+
+# System Utilities
+
+System has some utils in place like quering, transformations etc. These utils are listed below.
+
+---
+
+### getColor
+
+This util is provided from core `theme` or you can use it as a standalone function.
+In case of standalone you must provide the [Palette](/?path=/story/system-theme--page#theme-palette).
+
+It gets 3 params:
+
+1. color
+2. shade
+3. scope - text, [flat](/?path=/story/guide-colors--page) or normal - default: flat
+   <br />
+   <br />
+
+#### Usages <br/><br/>
+
+##### 1) Standalone function
+
+```
+import { getColor } from 'theme';
+...
+getColor(palette)('lightBlue', 400)
+```
+
+##### 2) Hook
+
+```
+const theme = useTheme();
+...
+theme.utils.getColor('darkGray', 400);
+...
+theme.utils.getColor('branded1', 400, 'normal');
+...
+theme.utils.getColor('primary', 400, 'text');
+```
+
+---
+
+### getColorFromType
+
+This util provide an easy way to return the hex color from a type based on our main types 'primary', 'light', 'secondary' etc
+
+#### Usage <br/><br/>
+
+```
+const color = getColorFromType('primary', theme)
+```
+
+---
+
+### calculateActualColorFromComponentProp
+
+A utility to translate a color like red-400 to an object. This calculates on the color passed picked by our palette.
+So in case you run a red color for example `red-400` this will return
+
+```
+color: '#d40000'
+shade: 400
+```
+
+#### Usage <br/><br/>
+
+```
+const calculatedColor = calculateActualColorFromComponentProp('#d40000');
+```
+
+---
+
+### useTypeColorToColorMatch
+
+A hook that on provides two methods `typesShadesColor` and `calculateColorBetweenColorAndType`
+
+- typesShadesColor: calculates on init and returns all types like `primary` in shade and color objects
+- calculateColorBetweenColorAndType: get color and type. If color exists gets it from `calculateActualColorFromComponentProp` if not and only type then it fetches it from the `typesShadesColor`
+
+#### Usage <br/><br/>
+
+```
+const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+const calculatedColor = calculateColorBetweenColorAndType(color, type);
+
+console.log(calculatedColor.color, calculatedColor.shade);
+```
