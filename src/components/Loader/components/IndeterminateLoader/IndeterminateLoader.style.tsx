@@ -53,4 +53,5 @@ export const LoaderContainer = () => (): SerializedStyles => css`
   width: 100%;
   height: ${rem(8)};
   overflow-x: hidden;
+  border-radius: ${rem(8)};
 `;
