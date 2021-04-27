@@ -132,7 +132,7 @@ Table with expandable rows and nested header
       data={new Array(50).fill(null).map((item, index) => ({
         id: index + 1,
         cells: [
-          { content: 'title', widthPercentage: 40 },
+          { content: <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>'title'</a> },
           { content: 'firstname' },
           { content: 'lastname' },
           { content: 4.221 },

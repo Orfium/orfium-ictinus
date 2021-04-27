@@ -64,6 +64,7 @@ import StarIcon from './star.svg';
 import Proposed from './proposed.svg';
 import Unpaired from './unpaired.svg';
 import ClockOutlined from './clock-outlined.svg';
+import UserCheck from './userCheck.svg';
 
 /**
  * In the current design system the collection of "FatArrowIcon"
@@ -308,6 +309,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   proposed: Proposed,
   unpaired: Unpaired,
   clockOutlined: ClockOutlined,
+  userCheck: UserCheck,
 };
 
 export default iconSelector;
