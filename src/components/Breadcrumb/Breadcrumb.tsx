@@ -13,7 +13,7 @@ import { BreadcrumbItemData } from './types';
 
 export type Props = {
   /** Defines the data for constructing the related breadcrumb items */
-  data: BreadcrumbItemData[];
+  data?: BreadcrumbItemData[];
 };
 
 const MAX_LIMIT_BREADCRUMB_LENGTH = 4;
