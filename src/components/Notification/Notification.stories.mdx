@@ -201,6 +201,7 @@ import { Toast, NotificationVisual } from '@orfium/ictinus';
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             expanded
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
           >
             <NotificationVisual
