@@ -46,6 +46,7 @@ import { InlineNotification } from '@orfium/ictinus';
       <PresentComponent name="" width={768}>
         <InlineNotification
           withIcon={boolean('withIcon', true)}
+          styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
         />
@@ -55,6 +56,7 @@ import { InlineNotification } from '@orfium/ictinus';
           withIcon={boolean('withIcon', true)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
           primaryCTA={() => console.log('action clicked')}
           closeCTA={() => console.log('close action clicked')}
@@ -64,6 +66,7 @@ import { InlineNotification } from '@orfium/ictinus';
         <InlineNotification
           withIcon={boolean('withIcon', true)}
           message={text('message', 'Informative Message')}
+          styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           primaryCTALabel={text('primaryCTALabel', 'Action')}
           primaryCTA={() => console.log('action clicked')}
@@ -74,6 +77,7 @@ import { InlineNotification } from '@orfium/ictinus';
           withIcon={boolean('withIcon', true)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+          styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           closeCTA={() => console.log('close action clicked')}
         />
       </PresentComponent>
@@ -125,6 +129,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
             primaryCTALabel={text('primaryCTALabel', 'Action')}
             primaryCTA={() => console.log('action clicked')}
             closeCTA={() => console.log('close action clicked')}
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           />
           <Banner
             withIcon={boolean('icon', true)}
@@ -133,6 +138,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             primaryCTALabel={text('primaryCTALabel', 'Action')}
             primaryCTA={() => console.log('action clicked')}
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
           />
           <Banner
@@ -142,6 +148,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             primaryCTALabel={text('primaryCTALabel', 'Action')}
             primaryCTA={() => console.log('action clicked')}
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
           />
         </NotificationsContainer>

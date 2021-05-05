@@ -2,7 +2,7 @@ import { Theme } from '../../../theme';
 import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../Notification';
 import { css, SerializedStyles } from '@emotion/core';
-import { typeToThemePalette } from '../subcomponents/CompactNotification/CompactNotification.style';
+import { typeToThemePalette } from '../Notification.style';
 
 export const cardContainer = (type: NotificationTypes) => (theme: Theme): SerializedStyles => css`
   display: flex;
