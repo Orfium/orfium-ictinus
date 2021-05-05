@@ -21,7 +21,7 @@ export const notificationsContainerPerType = (
         border-left: ${typeToThemePalette(theme, type)} 4px solid;
         background: ${tint(0.95, typeToThemePalette(theme, type))};
         box-shadow: ${theme.elevation['02']};
-      `;
+`;
 
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;

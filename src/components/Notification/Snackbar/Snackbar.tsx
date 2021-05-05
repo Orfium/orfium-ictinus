@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/core';
 import Icon from 'components/Icon';
 import * as React from 'react';
-import { NotificationTypes } from '../Notification';
+import { NotificationStyleType, NotificationTypes } from '../Notification';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import {
   actionContainer,
@@ -23,6 +23,8 @@ export type Props = {
   message: string;
   /** The type of the Notification */
   type: NotificationTypes;
+  /** The style type of the Notification. Defaults to elevated */
+  styleType?: NotificationStyleType;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel: string | undefined;
   /** The primary call-to-action of the Notification */
@@ -42,6 +44,7 @@ export type Props = {
 const Snackbar: React.FC<Props> = ({
   message,
   type,
+  styleType = 'elevated',
   primaryCTALabel = 'OK',
   primaryCTA,
   secondaryCTALabel = 'Cancel',
@@ -53,7 +56,7 @@ const Snackbar: React.FC<Props> = ({
   const { utils } = useTheme();
 
   return (
-    <div css={cardContainer(type)} notification-type="snackbar">
+    <div css={cardContainer(type, styleType)} notification-type="snackbar">
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>

@@ -1,10 +1,26 @@
 import { Theme } from '../../../theme';
-import { rem, transparentize } from 'polished';
-import { NotificationTypes } from '../Notification';
+import { rem } from 'polished';
+import { NotificationStyleType, NotificationTypes } from '../Notification';
 import { css, SerializedStyles } from '@emotion/core';
 import { typeToThemePalette } from '../Notification.style';
 
-export const cardContainer = (type: NotificationTypes) => (theme: Theme): SerializedStyles => css`
+const snackbarContainerPerType = (
+  type: NotificationTypes,
+  styleType: NotificationStyleType,
+  theme: Theme
+) =>
+  styleType === 'outlined'
+    ? `
+        border: ${rem(2)} solid ${typeToThemePalette(theme, type)};
+      `
+    : ` 
+    border-left: ${typeToThemePalette(theme, type)} ${rem(4)} solid;
+    box-shadow: ${theme.elevation['02']};
+`;
+
+export const cardContainer = (type: NotificationTypes, styleType: NotificationStyleType) => (
+  theme: Theme
+): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -12,11 +28,9 @@ export const cardContainer = (type: NotificationTypes) => (theme: Theme): Serial
   box-sizing: border-box;
   min-height: ${rem(164)};
   max-height: ${rem(294)};
-  border-left: ${typeToThemePalette(theme, type)} 4px solid;
+  border-radius: ${rem(8)};
   background: ${theme.palette.white};
-  border-radius: ${theme.spacing.xsm};
-  // TODO: box-shadow's last parameter to change when elevated is introduced
-  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
+  ${snackbarContainerPerType(type, styleType, theme)};
 `;
 
 export const topContainer = () => (theme: Theme): SerializedStyles => css`
