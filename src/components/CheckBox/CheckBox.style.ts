@@ -31,29 +31,25 @@ export const checkboxWrapperStyle = () => (): SerializedStyles => css`
   }
 `;
 
-const getBackgroundColor = ({ intermediate, checked, filled, theme }: Props & { theme: Theme }) => {
-  // if checked and no intermediate
-  if (checked && !intermediate && filled) {
-    return `background: ${theme.utils.getColor('lightGray', 700)}`;
-  }
-
+const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }) => {
   return filled
-    ? `background: ${theme.utils.getColor('lightGray', 400)}`
-    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
-        'darkGray',
-        700
-      )};`;
+    ? `background: ${
+        checked
+          ? theme.utils.getColor('branded1', 400, 'normal')
+          : theme.utils.getColor('lightGray', 400)
+      }`
+    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${
+        checked
+          ? theme.utils.getColor('branded1', 400, 'normal')
+          : theme.utils.getColor('lightGray', 400)
+      };`;
 };
 
-export const getSymbolColor = ({
-  intermediate,
-  filled,
-  theme,
-}: Props & { theme: Theme }): string => {
+export const getSymbolColor = ({ filled, theme }: Props & { theme: Theme }): string => {
   if (!filled) {
-    return theme.utils.getColor('darkGray', 700);
+    return theme.utils.getColor('branded1', 400, 'normal');
   } else {
-    return intermediate ? theme.utils.getColor('lightGray', 700) : 'white';
+    return 'white';
   }
 };
 

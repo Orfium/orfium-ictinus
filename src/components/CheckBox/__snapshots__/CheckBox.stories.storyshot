@@ -32,266 +32,530 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
        on
     </button>
   </div>
-  <div
-    className="css-ptimel-Stack"
-  >
+  <div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="css-ptimel-Stack"
     >
-      <span
-        className="css-58ep04-CheckBox"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={false}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-8t9up8-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={false}
+              className="css-eju6g1-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1b2vmav-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Not checked single
+          </span>
         </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
         <span
-          className="css-howegt-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          Not checked single
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={true}
+              className="css-10slfui-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Checked Single
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-2w5jy3-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={true}
+              className="css-10slfui-CheckBox"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Disabled single
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-58ep04-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={true}
+              className="css-10slfui-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Checked intermediate
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-58ep04-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={false}
+              className="css-eju6g1-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Not checked intermediate
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-2w5jy3-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={true}
+              className="css-10slfui-CheckBox"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Disabled checked intermediate
+          </span>
+        </span>
+      </div>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="css-ptimel-Stack"
     >
-      <span
-        className="css-58ep04-CheckBox"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={true}
-            className="css-wzijo6-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-cvoy0w-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={false}
+              className="css-tq8k5b-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1b2vmav-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Not checked single
+          </span>
         </span>
-        <span
-          className="css-howegt-CheckBox"
-        >
-          Checked Single
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-2w5jy3-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={true}
-            className="css-wzijo6-CheckBox"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-cvoy0w-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={true}
+              className="css-ntt761-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1b2vmav-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Checked Single
+          </span>
         </span>
-        <span
-          className="css-howegt-CheckBox"
-        >
-          Disabled single
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-58ep04-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-2w5jy3-CheckBox"
         >
-          <input
-            checked={true}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-cvoy0w-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={true}
+              className="css-ntt761-CheckBox"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1vo5vm5-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Disabled single
+          </span>
         </span>
-        <span
-          className="css-howegt-CheckBox"
-        >
-          Checked intermediate
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-58ep04-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={false}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-8t9up8-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={true}
+              className="css-ntt761-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1vo5vm5-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Checked intermediate
+          </span>
         </span>
-        <span
-          className="css-howegt-CheckBox"
-        >
-          Not checked intermediate
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-2w5jy3-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={true}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-cvoy0w-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={false}
+              className="css-tq8k5b-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1vo5vm5-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Not checked intermediate
+          </span>
         </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
         <span
-          className="css-howegt-CheckBox"
+          className="css-2w5jy3-CheckBox"
         >
-          Disabled checked intermediate
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={true}
+              className="css-ntt761-CheckBox"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+          <span
+            className="css-howegt-CheckBox"
+          >
+            Disabled checked intermediate
+          </span>
         </span>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -407,198 +671,394 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
        on
     </button>
   </div>
-  <div
-    className="css-ptimel-Stack"
-  >
+  <div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="css-ptimel-Stack"
     >
-      <span
-        className="css-58ep04-CheckBox"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={true}
-            className="css-wzijo6-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-cvoy0w-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={true}
+              className="css-10slfui-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1b2vmav-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-58ep04-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={false}
+              className="css-eju6g1-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-58ep04-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={true}
+              className="css-10slfui-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-58ep04-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={false}
+              className="css-eju6g1-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-2w5jy3-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={false}
+              className="css-eju6g1-CheckBox"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1b2vmav-Icon"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="css-ptimel-Stack"
     >
-      <span
-        className="css-58ep04-CheckBox"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={false}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-8t9up8-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={true}
+              className="css-ntt761-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1b2vmav-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-58ep04-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={true}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-cvoy0w-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={false}
+              className="css-tq8k5b-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1vo5vm5-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-58ep04-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={false}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-8t9up8-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={true}
+              className="css-ntt761-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-cvoy0w-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1vo5vm5-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="css-2w5jy3-CheckBox"
       >
         <span
-          className="css-16p0htb-CheckBox"
+          className="css-58ep04-CheckBox"
         >
-          <input
-            checked={false}
-            className="css-eju6g1-CheckBox"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="css-8t9up8-CheckBox"
-            htmlFor="styled-checkbox-"
+          <span
+            className="css-16p0htb-CheckBox"
           >
-            <span
-              className="css-1gnbc76-Icon"
-              onClick={[Function]}
+            <input
+              checked={false}
+              className="css-tq8k5b-CheckBox"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1vo5vm5-Icon"
-              />
-            </span>
-          </label>
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="css-2w5jy3-CheckBox"
+        >
+          <span
+            className="css-16p0htb-CheckBox"
+          >
+            <input
+              checked={false}
+              className="css-tq8k5b-CheckBox"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="css-8t9up8-CheckBox"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-1shwk9n-Icon"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
