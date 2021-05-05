@@ -16,7 +16,7 @@ export type Props = {
   /** The type of the Notification */
   type: NotificationTypes;
   /** The style type of the Notification. Defaults to elevated */
-  styleType: NotificationStyleType;
+  styleType?: NotificationStyleType;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
