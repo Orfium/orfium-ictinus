@@ -19,6 +19,8 @@ const ModalShowcase: React.FC<Props> = ({ children, contentProps }) => {
       <Modal open={open} onClose={() => setOpen(false)} contentProps={contentProps}>
         {contentProps ? null : children}
       </Modal>
+      {/** empty div with height to test the body's overflow functionality when toggling the modal */}
+      <div style={{ height: '1800px' }} />
     </div>
   );
 };

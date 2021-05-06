@@ -59,6 +59,7 @@ const ModalContent: React.FC<Props> = ({
             onClick={secondaryCTA}
             size={'md'}
             dataTestId={'modal-content-secondaryCTA'}
+            transparent
           >
             {secondaryCTALabel}
           </Button>

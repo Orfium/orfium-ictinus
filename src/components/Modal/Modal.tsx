@@ -1,7 +1,8 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
+import React, { useEffect } from 'react';
+
 import { TestId } from '../../utils/types';
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
 import { generateTestDataId } from '../../utils/helpers';
@@ -22,24 +23,34 @@ export type Props = {
 };
 
 const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, contentProps }) => {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
+
   if (!open) return null;
 
   return (
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
       <ClickAwayListener onClick={onClose}>
         <div css={cardSizing}>
-          <Card elevated={'02'}>
+          <Card elevated={'02'} radius={'xsm'}>
+            <div css={closeContainer}>
+              <IconButton
+                name={'close'}
+                filled={false}
+                transparent
+                size={'sm'}
+                onClick={onClose}
+                dataTestId={'modal-close'}
+              />
+            </div>
             <div css={modalContainer}>
-              <div css={closeContainer}>
-                <IconButton
-                  name={'close'}
-                  filled={false}
-                  transparent
-                  size={'sm'}
-                  onClick={onClose}
-                  dataTestId={'modal-close'}
-                />
-              </div>
               {contentProps ? <ModalContent {...contentProps} /> : children}
             </div>
           </Card>

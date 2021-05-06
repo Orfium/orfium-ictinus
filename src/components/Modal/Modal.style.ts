@@ -21,18 +21,18 @@ export const cardSizing = css`
 `;
 
 export const modalContainer = (theme: Theme): SerializedStyles => css`
-  padding: ${theme.spacing.md};
-  background: ${theme.palette.white};
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: ${theme.spacing.lg} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl};
 `;
 
 export const closeContainer = (theme: Theme) => css`
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  padding: ${theme.spacing.sm} ${theme.spacing.sm} 0 0;
+  box-sizing: border-box;
 
   //TODO: REMOVE THIS AFTER BUTTONS REFACTOR
   svg {
