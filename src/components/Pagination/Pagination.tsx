@@ -54,7 +54,8 @@ const Pagination = ({
           color="neutralBlack-700"
           name="arrowToLeft"
           onClick={navigateToFirstPage}
-          iconSize={24}
+          iconSize={20}
+          size="sm"
           transparent
           filled={false}
           disabled={prevPageDisabled || !hasPrevPage}
@@ -63,7 +64,8 @@ const Pagination = ({
       <IconButton
         color="neutralBlack-700"
         name="arrowLeft"
-        iconSize={24}
+        iconSize={20}
+        size="sm"
         transparent
         filled={false}
         onClick={navigateToPrevPage}
@@ -71,13 +73,14 @@ const Pagination = ({
       />
 
       <div>
-        page {currentPage} of {count}
+        Page {currentPage} of {count}
       </div>
 
       <IconButton
         color="neutralBlack-700"
         name="arrowRight"
-        iconSize={24}
+        iconSize={20}
+        size="sm"
         transparent
         filled={false}
         onClick={navigateToNextPage}
@@ -87,7 +90,8 @@ const Pagination = ({
         <IconButton
           color="neutralBlack-700"
           name="arrowToRight"
-          iconSize={24}
+          iconSize={20}
+          size="sm"
           transparent
           filled={false}
           onClick={navigateToLastPage}
