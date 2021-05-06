@@ -1,7 +1,27 @@
 import { Theme } from '../../theme';
 import { css, SerializedStyles } from '@emotion/core';
+import { NotificationStyleType, NotificationTypes } from './Notification';
+import { rem, tint } from 'polished';
+
+export const typeToThemePalette = (theme: Theme, type: NotificationTypes): string =>
+  theme.utils.getColor(type, 400, 'normal');
 
 // Generic SerializedStyles for all Notification Types
+
+export const notificationsContainerPerType = (
+  type: NotificationTypes,
+  styleType: NotificationStyleType,
+  theme: Theme
+): string =>
+  styleType === 'outlined'
+    ? `
+        border: ${rem(2)} solid ${typeToThemePalette(theme, type)};
+      `
+    : `
+        border-left: ${typeToThemePalette(theme, type)} 4px solid;
+        background: ${tint(0.95, typeToThemePalette(theme, type))};
+        box-shadow: ${theme.elevation['02']};
+`;
 
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
