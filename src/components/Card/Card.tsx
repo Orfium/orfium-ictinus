@@ -6,8 +6,11 @@ import React from 'react';
 import { cardStyle } from './Card.style';
 
 export type Props = {
+  /** Elevation of Card */
   elevated?: keyof Elevation;
+  /** Transparency of Card: if false the Card's background is white, otherwise it's transparent */
   transparent?: boolean;
+  /** Border radius of Card: if not provided it defaults to 0 */
   radius?: keyof Spacing;
 };
 

@@ -1,24 +1,21 @@
 import { Theme } from '../../../../theme';
-import { rem, tint } from 'polished';
-import { NotificationTypes } from '../../Notification';
+import { rem } from 'polished';
+import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { css, SerializedStyles } from '@emotion/core';
+import { notificationsContainerPerType } from '../../Notification.style';
 
-export const typeToThemePalette = (theme: Theme, type: NotificationTypes): string =>
-  theme.utils.getColor(type, 400, 'normal');
-
-export const notificationsContainer = (type: NotificationTypes) => (
-  theme: Theme
-): SerializedStyles => css`
+export const notificationsContainer = (
+  type: NotificationTypes,
+  styleType: NotificationStyleType
+) => (theme: Theme): SerializedStyles => css`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
   height: ${rem(56)};
-  border-left: ${typeToThemePalette(theme, type)} 4px solid;
-  background: ${tint(0.95, typeToThemePalette(theme, type))};
   border-radius: ${theme.spacing.xsm};
-  box-shadow: ${theme.elevation['02']};
+  ${notificationsContainerPerType(type, styleType, theme)};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`
