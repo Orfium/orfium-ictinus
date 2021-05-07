@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { last, pick } from 'lodash';
 import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';

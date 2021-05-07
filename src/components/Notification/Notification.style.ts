@@ -1,5 +1,5 @@
 import { Theme } from '../../theme';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 
 // Generic SerializedStyles for all Notification Types
 

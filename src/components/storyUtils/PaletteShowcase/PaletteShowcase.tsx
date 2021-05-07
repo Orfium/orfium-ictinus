@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/react';
 import useTheme from '../../../hooks/useTheme';
 import { colorShades, flatColors, neutralColors } from '../../../theme/palette';
 import mapValues from 'lodash/mapValues';

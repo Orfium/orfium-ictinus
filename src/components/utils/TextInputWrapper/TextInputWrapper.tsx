@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { FC } from 'react';
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputWrapper.style';
 import Icon from 'components/Icon';

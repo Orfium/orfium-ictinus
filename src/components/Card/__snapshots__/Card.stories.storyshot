@@ -33,7 +33,13 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -43,13 +49,21 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
       }
     >
       <div
-        className="css-1o29upc-CardShowcase"
+        css={
+          Object {
+            "width": "749px",
+          }
+        }
       >
         <div
-          className="css-1ctmbk5-Card"
+          css={[Function]}
         >
           <div
-            className="css-1phqqj5-CardContent"
+            css={
+              Object {
+                "padding": "20px",
+              }
+            }
           >
             <div>
               Card with 01 elevation

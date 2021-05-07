@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Elevation } from 'index';
 import React from 'react';
 import { cardStyle } from './Card.style';

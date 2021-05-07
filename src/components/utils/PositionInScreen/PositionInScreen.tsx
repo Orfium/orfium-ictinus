@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useEffect, useRef, useState } from 'react';
 import { container, itemContainer } from './PositionInScreen.style';
 

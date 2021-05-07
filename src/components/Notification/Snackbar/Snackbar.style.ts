@@ -1,7 +1,7 @@
 import { Theme } from '../../../theme';
 import { rem, transparentize } from 'polished';
 import { NotificationTypes } from '../Notification';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { typeToThemePalette } from '../subcomponents/CompactNotification/CompactNotification.style';
 
 export const cardContainer = (type: NotificationTypes) => (theme: Theme): SerializedStyles => css`

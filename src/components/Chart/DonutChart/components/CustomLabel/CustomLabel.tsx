@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
 import { LabelProps, PolarViewBox } from 'recharts';
 import useTheme from 'hooks/useTheme';

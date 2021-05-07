@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useCallback, useState } from 'react';
 import { navigationContainerStyle } from './Navigation.style';
 import { Props } from '../Drawer';

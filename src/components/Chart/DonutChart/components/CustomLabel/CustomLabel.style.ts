@@ -1,5 +1,5 @@
 import { Theme } from 'theme';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 
 export const flexContainer = () => (): SerializedStyles => css`
   display: flex;

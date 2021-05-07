@@ -33,7 +33,13 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -43,12 +49,35 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
       }
     >
       <span
-        className="css-bjtxnr-Radio"
+        css={[Function]}
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="css-dswabq-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "i91fru",
+              "next": undefined,
+              "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+              "toString": [Function],
+            }
+          }
           disabled={true}
           onBlur={[Function]}
           onChange={[Function]}
@@ -60,13 +89,59 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
           value="on"
         />
         <span
-          className="css-1cnuipo-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1nrms42",
+              "next": undefined,
+              "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         >
           <span
-            className="css-ju6fpu-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "139u0tn",
+                "next": undefined,
+                "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.75rem #e7e7e7;
+    position: absolute;
+  ",
+                "toString": [Function],
+              }
+            }
           />
           <span
-            className="css-7s815w-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "1iv8hzm",
+                "next": undefined,
+                "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+                "toString": [Function],
+              }
+            }
           />
         </span>
       </span>
@@ -79,12 +154,35 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
       }
     >
       <span
-        className="css-bjtxnr-Radio"
+        css={[Function]}
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="css-dswabq-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "i91fru",
+              "next": undefined,
+              "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+              "toString": [Function],
+            }
+          }
           disabled={true}
           onBlur={[Function]}
           onChange={[Function]}
@@ -96,13 +194,59 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
           value="on"
         />
         <span
-          className="css-1cnuipo-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1nrms42",
+              "next": undefined,
+              "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         >
           <span
-            className="css-nbhqh9-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "5yzrgt",
+                "next": undefined,
+                "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem #e7e7e7;
+    position: absolute;
+  ",
+                "toString": [Function],
+              }
+            }
           />
           <span
-            className="css-7s815w-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "1iv8hzm",
+                "next": undefined,
+                "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+                "toString": [Function],
+              }
+            }
           />
         </span>
       </span>
@@ -144,12 +288,35 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
     </button>
   </div>
   <span
-    className="css-bjtxnr-Radio"
+    css={[Function]}
     data-testid="radio-input"
   >
     <input
       checked={true}
-      className="css-dswabq-Radio"
+      css={
+        Object {
+          "map": undefined,
+          "name": "i91fru",
+          "next": undefined,
+          "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+          "toString": [Function],
+        }
+      }
       disabled={true}
       onBlur={[Function]}
       onChange={[Function]}
@@ -161,13 +328,59 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
       value="on"
     />
     <span
-      className="css-1cnuipo-Radio"
+      css={
+        Object {
+          "map": undefined,
+          "name": "1nrms42",
+          "next": undefined,
+          "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+          "toString": [Function],
+        }
+      }
     >
       <span
-        className="css-1ta32qg-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "p5fxb6",
+            "next": undefined,
+            "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
+    position: absolute;
+  ",
+            "toString": [Function],
+          }
+        }
       />
       <span
-        className="css-7s815w-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1iv8hzm",
+            "next": undefined,
+            "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       />
     </span>
   </span>
@@ -207,7 +420,13 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -217,12 +436,35 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        css={[Function]}
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="css-dswabq-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "i91fru",
+              "next": undefined,
+              "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+              "toString": [Function],
+            }
+          }
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -234,13 +476,59 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
           value="on"
         />
         <span
-          className="css-1cnuipo-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1nrms42",
+              "next": undefined,
+              "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         >
           <span
-            className="css-smkmv8-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "s78ecu",
+                "next": undefined,
+                "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
+    position: absolute;
+  ",
+                "toString": [Function],
+              }
+            }
           />
           <span
-            className="css-7s815w-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "1iv8hzm",
+                "next": undefined,
+                "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+                "toString": [Function],
+              }
+            }
           />
         </span>
       </span>
@@ -253,12 +541,35 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        css={[Function]}
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="css-dswabq-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "i91fru",
+              "next": undefined,
+              "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+              "toString": [Function],
+            }
+          }
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -270,13 +581,59 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
           value="on"
         />
         <span
-          className="css-1cnuipo-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1nrms42",
+              "next": undefined,
+              "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         >
           <span
-            className="css-1yl76f4-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "ir375v",
+                "next": undefined,
+                "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem #9b9b9b;
+    position: absolute;
+  ",
+                "toString": [Function],
+              }
+            }
           />
           <span
-            className="css-7s815w-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "1iv8hzm",
+                "next": undefined,
+                "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+                "toString": [Function],
+              }
+            }
           />
         </span>
       </span>
@@ -318,7 +675,13 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -328,12 +691,35 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        css={[Function]}
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="css-dswabq-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "i91fru",
+              "next": undefined,
+              "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+              "toString": [Function],
+            }
+          }
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -345,13 +731,59 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
           value="on"
         />
         <span
-          className="css-1cnuipo-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1nrms42",
+              "next": undefined,
+              "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         >
           <span
-            className="css-smkmv8-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "s78ecu",
+                "next": undefined,
+                "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
+    position: absolute;
+  ",
+                "toString": [Function],
+              }
+            }
           />
           <span
-            className="css-7s815w-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "1iv8hzm",
+                "next": undefined,
+                "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+                "toString": [Function],
+              }
+            }
           />
         </span>
       </span>
@@ -364,12 +796,35 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
       }
     >
       <span
-        className="css-gmxcc7-Radio"
+        css={[Function]}
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="css-dswabq-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "i91fru",
+              "next": undefined,
+              "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+              "toString": [Function],
+            }
+          }
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -381,13 +836,59 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
           value="on"
         />
         <span
-          className="css-1cnuipo-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1nrms42",
+              "next": undefined,
+              "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         >
           <span
-            className="css-1yl76f4-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "ir375v",
+                "next": undefined,
+                "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem #9b9b9b;
+    position: absolute;
+  ",
+                "toString": [Function],
+              }
+            }
           />
           <span
-            className="css-7s815w-Radio"
+            css={
+              Object {
+                "map": undefined,
+                "name": "1iv8hzm",
+                "next": undefined,
+                "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+                "toString": [Function],
+              }
+            }
           />
         </span>
       </span>
@@ -429,12 +930,35 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
     </button>
   </div>
   <span
-    className="css-gmxcc7-Radio"
+    css={[Function]}
     data-testid="radio-input"
   >
     <input
       checked={true}
-      className="css-dswabq-Radio"
+      css={
+        Object {
+          "map": undefined,
+          "name": "i91fru",
+          "next": undefined,
+          "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+          "toString": [Function],
+        }
+      }
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}
@@ -446,13 +970,59 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
       value="on"
     />
     <span
-      className="css-1cnuipo-Radio"
+      css={
+        Object {
+          "map": undefined,
+          "name": "1nrms42",
+          "next": undefined,
+          "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+          "toString": [Function],
+        }
+      }
     >
       <span
-        className="css-1ta32qg-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "p5fxb6",
+            "next": undefined,
+            "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
+    position: absolute;
+  ",
+            "toString": [Function],
+          }
+        }
       />
       <span
-        className="css-7s815w-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1iv8hzm",
+            "next": undefined,
+            "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       />
     </span>
   </span>
@@ -493,12 +1063,35 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   </div>
   <div>
     <span
-      className="css-gmxcc7-Radio"
+      css={[Function]}
       data-testid="radio-input"
     >
       <input
         checked={false}
-        className="css-dswabq-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "i91fru",
+            "next": undefined,
+            "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+            "toString": [Function],
+          }
+        }
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -510,23 +1103,92 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         value="a"
       />
       <span
-        className="css-1cnuipo-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1nrms42",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       >
         <span
-          className="css-smkmv8-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "s78ecu",
+              "next": undefined,
+              "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
+    position: absolute;
+  ",
+              "toString": [Function],
+            }
+          }
         />
         <span
-          className="css-7s815w-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1iv8hzm",
+              "next": undefined,
+              "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         />
       </span>
     </span>
     <span
-      className="css-gmxcc7-Radio"
+      css={[Function]}
       data-testid="radio-input"
     >
       <input
         checked={false}
-        className="css-dswabq-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "i91fru",
+            "next": undefined,
+            "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+            "toString": [Function],
+          }
+        }
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -538,23 +1200,92 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         value="b"
       />
       <span
-        className="css-1cnuipo-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1nrms42",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       >
         <span
-          className="css-1yl76f4-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "ir375v",
+              "next": undefined,
+              "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem #9b9b9b;
+    position: absolute;
+  ",
+              "toString": [Function],
+            }
+          }
         />
         <span
-          className="css-7s815w-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1iv8hzm",
+              "next": undefined,
+              "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         />
       </span>
     </span>
     <span
-      className="css-gmxcc7-Radio"
+      css={[Function]}
       data-testid="radio-input"
     >
       <input
         checked={true}
-        className="css-dswabq-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "i91fru",
+            "next": undefined,
+            "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+            "toString": [Function],
+          }
+        }
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -566,23 +1297,92 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         value="c"
       />
       <span
-        className="css-1cnuipo-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1nrms42",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       >
         <span
-          className="css-1ta32qg-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "p5fxb6",
+              "next": undefined,
+              "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
+    position: absolute;
+  ",
+              "toString": [Function],
+            }
+          }
         />
         <span
-          className="css-7s815w-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1iv8hzm",
+              "next": undefined,
+              "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         />
       </span>
     </span>
     <span
-      className="css-bjtxnr-Radio"
+      css={[Function]}
       data-testid="radio-input"
     >
       <input
         checked={false}
-        className="css-dswabq-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "i91fru",
+            "next": undefined,
+            "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+            "toString": [Function],
+          }
+        }
         disabled={true}
         onBlur={[Function]}
         onChange={[Function]}
@@ -594,23 +1394,92 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         value="d"
       />
       <span
-        className="css-1cnuipo-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1nrms42",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       >
         <span
-          className="css-ju6fpu-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "139u0tn",
+              "next": undefined,
+              "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.75rem #e7e7e7;
+    position: absolute;
+  ",
+              "toString": [Function],
+            }
+          }
         />
         <span
-          className="css-7s815w-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1iv8hzm",
+              "next": undefined,
+              "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         />
       </span>
     </span>
     <span
-      className="css-bjtxnr-Radio"
+      css={[Function]}
       data-testid="radio-input"
     >
       <input
         checked={false}
-        className="css-dswabq-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "i91fru",
+            "next": undefined,
+            "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+            "toString": [Function],
+          }
+        }
         disabled={true}
         onBlur={[Function]}
         onChange={[Function]}
@@ -622,23 +1491,92 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         value="e"
       />
       <span
-        className="css-1cnuipo-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1nrms42",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       >
         <span
-          className="css-nbhqh9-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "5yzrgt",
+              "next": undefined,
+              "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem #e7e7e7;
+    position: absolute;
+  ",
+              "toString": [Function],
+            }
+          }
         />
         <span
-          className="css-7s815w-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1iv8hzm",
+              "next": undefined,
+              "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         />
       </span>
     </span>
     <span
-      className="css-bjtxnr-Radio"
+      css={[Function]}
       data-testid="radio-input"
     >
       <input
         checked={true}
-        className="css-dswabq-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "i91fru",
+            "next": undefined,
+            "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+            "toString": [Function],
+          }
+        }
         disabled={true}
         onBlur={[Function]}
         onChange={[Function]}
@@ -650,13 +1588,59 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
         value="g"
       />
       <span
-        className="css-1cnuipo-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1nrms42",
+            "next": undefined,
+            "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       >
         <span
-          className="css-1ta32qg-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "p5fxb6",
+              "next": undefined,
+              "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
+    position: absolute;
+  ",
+              "toString": [Function],
+            }
+          }
         />
         <span
-          className="css-7s815w-Radio"
+          css={
+            Object {
+              "map": undefined,
+              "name": "1iv8hzm",
+              "next": undefined,
+              "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+              "toString": [Function],
+            }
+          }
         />
       </span>
     </span>
@@ -697,12 +1681,35 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
     </button>
   </div>
   <span
-    className="css-gmxcc7-Radio"
+    css={[Function]}
     data-testid="radio-input"
   >
     <input
       checked={true}
-      className="css-dswabq-Radio"
+      css={
+        Object {
+          "map": undefined,
+          "name": "i91fru",
+          "next": undefined,
+          "styles": "
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+
+  &:disabled {
+    cursor: default;
+  }
+",
+          "toString": [Function],
+        }
+      }
       disabled={false}
       onBlur={[Function]}
       onChange={[Function]}
@@ -714,13 +1721,59 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
       value="on"
     />
     <span
-      className="css-1cnuipo-Radio"
+      css={
+        Object {
+          "map": undefined,
+          "name": "1nrms42",
+          "next": undefined,
+          "styles": "
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: box-shadow 0.3s ease;
+  ;
+",
+          "toString": [Function],
+        }
+      }
     >
       <span
-        className="css-1ta32qg-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "p5fxb6",
+            "next": undefined,
+            "styles": "
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
+    position: absolute;
+  ",
+            "toString": [Function],
+          }
+        }
       />
       <span
-        className="css-7s815w-Radio"
+        css={
+          Object {
+            "map": undefined,
+            "name": "1iv8hzm",
+            "next": undefined,
+            "styles": "
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.2s ease;
+  ;
+",
+            "toString": [Function],
+          }
+        }
       />
     </span>
   </span>

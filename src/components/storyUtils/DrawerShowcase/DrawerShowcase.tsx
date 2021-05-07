@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useState, Fragment } from 'react';
 import { BrowserRouter as Router, NavLink, Route, Switch, useLocation } from 'react-router-dom';
 import Drawer from '../../Drawer';

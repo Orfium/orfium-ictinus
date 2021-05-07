@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
 import { flexCenterVertical } from 'theme/functions';
 import { colorShades, pickTextColorFromSwatches } from 'theme/palette';

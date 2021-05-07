@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { ReactComponentLike } from 'prop-types';
 import * as React from 'react';
 import { generateTestDataId } from '../../utils/helpers';

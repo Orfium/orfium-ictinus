@@ -1,6 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import { render, fireEvent } from '../../../../test';
 import SectionHeader from './SectionHeader';
 import mocks from 'components/storyUtils/AssetMatchingShowcase/mocks';

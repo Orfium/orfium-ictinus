@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Styles from './TopAppBar.style';
 import { TopAppBarProps } from './TopAppBar.types';
 import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';

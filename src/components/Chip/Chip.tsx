@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
 import { iconWrapperStyle, wrapperStyle } from './Chip.style';
 import { colorShades, flatColors } from 'theme/palette';

@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useMemo, useState } from 'react';
 import { Dayjs } from 'dayjs';
 import range from 'lodash/range';

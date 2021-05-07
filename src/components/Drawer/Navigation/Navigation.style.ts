@@ -1,6 +1,6 @@
 import { darken, rem } from 'polished';
 import { Theme } from 'theme';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 import { backgroundPickerBasedOnType } from 'utils/themeFunctions';
 

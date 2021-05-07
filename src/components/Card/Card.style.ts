@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Props } from './Card';
 import { Theme } from '../../theme';
 import { Elevation } from 'index';

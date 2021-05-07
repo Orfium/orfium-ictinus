@@ -33,7 +33,13 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -43,14 +49,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={false}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -58,21 +64,46 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
             type="checkbox"
           />
           <label
-            className="css-8t9up8-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "26epj0",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1b2vmav-Icon"
+                css={[Function]}
               />
             </span>
           </label>
         </span>
         <span
-          className="css-howegt-CheckBox"
+          css={[Function]}
         >
           Not checked single
         </span>
@@ -86,14 +117,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={true}
-            className="css-wzijo6-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -101,21 +132,46 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
             type="checkbox"
           />
           <label
-            className="css-cvoy0w-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "frs6cl",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1b2vmav-Icon"
+                css={[Function]}
               />
             </span>
           </label>
         </span>
         <span
-          className="css-howegt-CheckBox"
+          css={[Function]}
         >
           Checked Single
         </span>
@@ -129,14 +185,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
       }
     >
       <span
-        className="css-2w5jy3-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={true}
-            className="css-wzijo6-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={true}
             id="styled-checkbox-"
@@ -144,21 +200,46 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
             type="checkbox"
           />
           <label
-            className="css-cvoy0w-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "frs6cl",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1b2vmav-Icon"
+                css={[Function]}
               />
             </span>
           </label>
         </span>
         <span
-          className="css-howegt-CheckBox"
+          css={[Function]}
         >
           Disabled single
         </span>
@@ -172,14 +253,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={true}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -187,21 +268,46 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
             type="checkbox"
           />
           <label
-            className="css-cvoy0w-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "frs6cl",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1vo5vm5-Icon"
+                css={[Function]}
               />
             </span>
           </label>
         </span>
         <span
-          className="css-howegt-CheckBox"
+          css={[Function]}
         >
           Checked intermediate
         </span>
@@ -215,14 +321,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={false}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -230,21 +336,46 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
             type="checkbox"
           />
           <label
-            className="css-8t9up8-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "26epj0",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1vo5vm5-Icon"
+                css={[Function]}
               />
             </span>
           </label>
         </span>
         <span
-          className="css-howegt-CheckBox"
+          css={[Function]}
         >
           Not checked intermediate
         </span>
@@ -258,14 +389,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
       }
     >
       <span
-        className="css-2w5jy3-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={true}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={true}
             id="styled-checkbox-"
@@ -273,21 +404,46 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
             type="checkbox"
           />
           <label
-            className="css-cvoy0w-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "frs6cl",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1vo5vm5-Icon"
+                css={[Function]}
               />
             </span>
           </label>
         </span>
         <span
-          className="css-howegt-CheckBox"
+          css={[Function]}
         >
           Disabled checked intermediate
         </span>
@@ -330,7 +486,13 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -340,14 +502,14 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={false}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -355,15 +517,40 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
             type="checkbox"
           />
           <label
-            className="css-8t9up8-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "26epj0",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1b2vmav-Icon"
+                css={[Function]}
               />
             </span>
           </label>
@@ -408,7 +595,13 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -418,14 +611,14 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={true}
-            className="css-wzijo6-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -433,15 +626,40 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
             type="checkbox"
           />
           <label
-            className="css-cvoy0w-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "frs6cl",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1b2vmav-Icon"
+                css={[Function]}
               />
             </span>
           </label>
@@ -456,14 +674,14 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={false}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -471,15 +689,40 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
             type="checkbox"
           />
           <label
-            className="css-8t9up8-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "26epj0",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1b2vmav-Icon"
+                css={[Function]}
               />
             </span>
           </label>
@@ -494,14 +737,14 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={true}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -509,15 +752,40 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
             type="checkbox"
           />
           <label
-            className="css-cvoy0w-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "frs6cl",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: block;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1vo5vm5-Icon"
+                css={[Function]}
               />
             </span>
           </label>
@@ -532,14 +800,14 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
       }
     >
       <span
-        className="css-58ep04-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={false}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={false}
             id="styled-checkbox-"
@@ -547,15 +815,40 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
             type="checkbox"
           />
           <label
-            className="css-8t9up8-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "26epj0",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1vo5vm5-Icon"
+                css={[Function]}
               />
             </span>
           </label>
@@ -570,14 +863,14 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
       }
     >
       <span
-        className="css-2w5jy3-CheckBox"
+        css={[Function]}
       >
         <span
-          className="css-16p0htb-CheckBox"
+          css={[Function]}
         >
           <input
             checked={false}
-            className="css-eju6g1-CheckBox"
+            css={[Function]}
             data-testid="checkbox"
             disabled={true}
             id="styled-checkbox-"
@@ -585,15 +878,40 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
             type="checkbox"
           />
           <label
-            className="css-8t9up8-CheckBox"
+            css={
+              Object {
+                "map": undefined,
+                "name": "26epj0",
+                "next": undefined,
+                "styles": "
+    span {
+      padding: 0;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      display: none;
+    }
+  ",
+                "toString": [Function],
+              }
+            }
             htmlFor="styled-checkbox-"
           >
             <span
-              className="css-1gnbc76-Icon"
+              css={
+                Object {
+                  "alignItems": "center",
+                  "display": "flex",
+                  "justifyContent": "center",
+                  "padding": "0.125rem",
+                }
+              }
               onClick={[Function]}
             >
               <span
-                className="css-1vo5vm5-Icon"
+                css={[Function]}
               />
             </span>
           </label>

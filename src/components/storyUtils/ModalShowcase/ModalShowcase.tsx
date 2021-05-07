@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useState } from 'react';
 import Modal from '../../Modal/Modal';
 import Button from '../../Button';

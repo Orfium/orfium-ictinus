@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Styles from './SectionHeader.style';
 import { ActionsToolbox } from '../ActionsToolbox';
 import { OnCheckHandler, useCheck } from 'hooks/useCheck';

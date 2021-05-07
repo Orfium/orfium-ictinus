@@ -1,7 +1,7 @@
 import { MatchingAction } from '../../AssetMatching';
 import { AssetProps } from '../../AssetMatching/components/Asset';
 import React, { Fragment } from 'react';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from '../../../theme';
 import { flex } from '../../../theme/functions';
 

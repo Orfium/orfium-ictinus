@@ -1,5 +1,5 @@
 import { Theme } from 'theme';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { flex } from 'theme/functions';
 import { boldFont, normalFont } from '../Asset/Asset.style';
 

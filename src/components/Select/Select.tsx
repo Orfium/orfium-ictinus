@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import useTheme from '../../hooks/useTheme';
 import TextField from '../TextField';

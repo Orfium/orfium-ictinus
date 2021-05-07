@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { FC } from 'react';
+import React, { FC } from 'react';
 import Menu from '../../../Menu';
 import Styles from './UserMenu.style';
 

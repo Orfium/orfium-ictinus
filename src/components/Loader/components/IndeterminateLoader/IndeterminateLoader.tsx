@@ -1,5 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
 import {
   LoaderContainer,
@@ -8,7 +6,6 @@ import {
   LoaderIncLine,
 } from './IndeterminateLoader.style';
 import { generateTestDataId } from 'utils/helpers';
-import { jsx } from '@emotion/core';
 
 type Props = {
   dataTestId?: string;

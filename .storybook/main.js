@@ -33,6 +33,11 @@ module.exports = {
     const fileLoaderRule = rules.find(rule => rule.test.test('.svg'));
     fileLoaderRule.exclude = /\.svg$/;
 
+    config.module.rules[0].use[0].options.presets = [
+      ...config.module.rules[0].use[0].options.presets,
+      require.resolve('@emotion/babel-preset-css-prop'),
+    ];
+
     rules.push({
       test: /\.svg$/,
       issuer: /\.tsx?$/,

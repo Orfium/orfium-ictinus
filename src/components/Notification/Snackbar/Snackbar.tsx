@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import Icon from 'components/Icon';
 import * as React from 'react';
 import { NotificationTypes } from '../Notification';

@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import rem from 'polished/lib/helpers/rem';

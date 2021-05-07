@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { inputStyle } from './TextArea.style';
 import TextInputWrapper from '../utils/TextInputWrapper/TextInputWrapper';

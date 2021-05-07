@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useCallback, useEffect, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
 import dayjs, { Dayjs } from 'dayjs';

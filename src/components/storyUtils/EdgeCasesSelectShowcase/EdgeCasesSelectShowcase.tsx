@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
 import Select from 'components/Select';
 
 const options = [

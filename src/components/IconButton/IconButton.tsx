@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';

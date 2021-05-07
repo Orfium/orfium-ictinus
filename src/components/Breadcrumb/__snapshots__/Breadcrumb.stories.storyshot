@@ -33,7 +33,13 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -44,28 +50,35 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
     >
       <ol
         aria-label="Breadcrumb"
-        className="css-fih44h-Breadcrumb"
+        css={[Function]}
       >
         <li>
           <div
-            className="css-1po3gjx-BreadcrumbItem"
+            css={[Function]}
           >
             <a
-              className="css-kllbug"
+              css={[Function]}
               href="/first-level"
               onClick={[Function]}
             >
               First Level
             </a>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -80,30 +93,56 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
           }
         >
           <div
-            className="css-1w7gjlo-BreadcrumbCollapsed"
+            css={
+              Object {
+                "map": undefined,
+                "name": "166u9ib",
+                "next": undefined,
+                "styles": "
+  display: flex;
+  cursor: pointer;
+  position: relative;
+",
+                "toString": [Function],
+              }
+            }
           >
             <span
-              className="css-hjigrk-BreadcrumbCollapsed"
+              css={[Function]}
               onClick={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-il5cqq-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -111,24 +150,31 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
         </li>
         <li>
           <div
-            className="css-1po3gjx-BreadcrumbItem"
+            css={[Function]}
           >
             <a
-              className="css-kllbug"
+              css={[Function]}
               href="/forth-level"
               onClick={[Function]}
             >
               Forth Level
             </a>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -136,39 +182,46 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
         </li>
         <li>
           <div
-            className="css-e8ptyq-BreadcrumbItem"
+            css={[Function]}
           >
             <div
               role="button"
             >
               <div
-                className="css-6mpaj4-Menu"
+                css={[Function]}
               >
                 <button
-                  className="css-199vak6-Button"
+                  css={[Function]}
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1xr6sam-Button"
+                    css={[Function]}
                   >
                     <span
-                      className="css-uao30q-Button"
+                      css={[Function]}
                     >
                       <span>
                         Fifth Level
                       </span>
                     </span>
                     <span
-                      className="css-1kner5m-Button"
+                      css={[Function]}
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        css={
+                          Object {
+                            "alignItems": "center",
+                            "display": "flex",
+                            "justifyContent": "center",
+                            "padding": "0.125rem",
+                          }
+                        }
                         onClick={[Function]}
                       >
                         <span
-                          className="css-1r432t2-Icon"
+                          css={[Function]}
                         />
                       </span>
                     </span>
@@ -217,7 +270,13 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -235,28 +294,35 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
         </button>
         <ol
           aria-label="Breadcrumb"
-          className="css-fih44h-Breadcrumb"
+          css={[Function]}
         >
           <li>
             <div
-              className="css-1po3gjx-BreadcrumbItem"
+              css={[Function]}
             >
               <a
-                className="css-kllbug"
+                css={[Function]}
                 href="/first-level"
                 onClick={[Function]}
               >
                 First Level
               </a>
               <span
-                className="css-x63yja-Separator"
+                css={[Function]}
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  css={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "padding": "0.125rem",
+                    }
+                  }
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1bxgyna-Icon"
+                    css={[Function]}
                   />
                 </span>
               </span>
@@ -271,30 +337,56 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
             }
           >
             <div
-              className="css-1w7gjlo-BreadcrumbCollapsed"
+              css={
+                Object {
+                  "map": undefined,
+                  "name": "166u9ib",
+                  "next": undefined,
+                  "styles": "
+  display: flex;
+  cursor: pointer;
+  position: relative;
+",
+                  "toString": [Function],
+                }
+              }
             >
               <span
-                className="css-hjigrk-BreadcrumbCollapsed"
+                css={[Function]}
                 onClick={[Function]}
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  css={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "padding": "0.125rem",
+                    }
+                  }
                   onClick={[Function]}
                 >
                   <span
-                    className="css-il5cqq-Icon"
+                    css={[Function]}
                   />
                 </span>
               </span>
               <span
-                className="css-x63yja-Separator"
+                css={[Function]}
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  css={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "padding": "0.125rem",
+                    }
+                  }
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1bxgyna-Icon"
+                    css={[Function]}
                   />
                 </span>
               </span>
@@ -302,24 +394,31 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
           </li>
           <li>
             <div
-              className="css-1po3gjx-BreadcrumbItem"
+              css={[Function]}
             >
               <a
-                className="css-kllbug"
+                css={[Function]}
                 href="/forth-level"
                 onClick={[Function]}
               >
                 Forth Level
               </a>
               <span
-                className="css-x63yja-Separator"
+                css={[Function]}
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  css={
+                    Object {
+                      "alignItems": "center",
+                      "display": "flex",
+                      "justifyContent": "center",
+                      "padding": "0.125rem",
+                    }
+                  }
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1bxgyna-Icon"
+                    css={[Function]}
                   />
                 </span>
               </span>
@@ -327,39 +426,46 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
           </li>
           <li>
             <div
-              className="css-e8ptyq-BreadcrumbItem"
+              css={[Function]}
             >
               <div
                 role="button"
               >
                 <div
-                  className="css-6mpaj4-Menu"
+                  css={[Function]}
                 >
                   <button
-                    className="css-199vak6-Button"
+                    css={[Function]}
                     data-testid="button"
                     disabled={false}
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1xr6sam-Button"
+                      css={[Function]}
                     >
                       <span
-                        className="css-uao30q-Button"
+                        css={[Function]}
                       >
                         <span>
                           Fifth Level
                         </span>
                       </span>
                       <span
-                        className="css-1kner5m-Button"
+                        css={[Function]}
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          css={
+                            Object {
+                              "alignItems": "center",
+                              "display": "flex",
+                              "justifyContent": "center",
+                              "padding": "0.125rem",
+                            }
+                          }
                           onClick={[Function]}
                         >
                           <span
-                            className="css-1r432t2-Icon"
+                            css={[Function]}
                           />
                         </span>
                       </span>
@@ -409,7 +515,13 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -420,24 +532,31 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
     >
       <ol
         aria-label="Breadcrumb"
-        className="css-fih44h-Breadcrumb"
+        css={[Function]}
       >
         <li>
           <div
-            className="css-1po3gjx-BreadcrumbItem"
+            css={[Function]}
           >
             <div>
               First Level
             </div>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -445,20 +564,27 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
         </li>
         <li>
           <div
-            className="css-1po3gjx-BreadcrumbItem"
+            css={[Function]}
           >
             <div>
               Second Level
             </div>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -466,7 +592,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
         </li>
         <li>
           <div
-            className="css-e8ptyq-BreadcrumbItem"
+            css={[Function]}
           >
             <div>
               Third Level
@@ -512,7 +638,13 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    css={
+      Object {
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      }
+    }
   >
     <div
       style={
@@ -523,28 +655,35 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
     >
       <ol
         aria-label="Breadcrumb"
-        className="css-fih44h-Breadcrumb"
+        css={[Function]}
       >
         <li>
           <div
-            className="css-1po3gjx-BreadcrumbItem"
+            css={[Function]}
           >
             <a
-              className="css-kllbug"
+              css={[Function]}
               href="/first-level"
               onClick={[Function]}
             >
               First Level
             </a>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -559,30 +698,56 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
           }
         >
           <div
-            className="css-1w7gjlo-BreadcrumbCollapsed"
+            css={
+              Object {
+                "map": undefined,
+                "name": "166u9ib",
+                "next": undefined,
+                "styles": "
+  display: flex;
+  cursor: pointer;
+  position: relative;
+",
+                "toString": [Function],
+              }
+            }
           >
             <span
-              className="css-hjigrk-BreadcrumbCollapsed"
+              css={[Function]}
               onClick={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-il5cqq-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -590,24 +755,31 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
         </li>
         <li>
           <div
-            className="css-1po3gjx-BreadcrumbItem"
+            css={[Function]}
           >
             <a
-              className="css-kllbug"
+              css={[Function]}
               href="/forth-level"
               onClick={[Function]}
             >
               Forth Level
             </a>
             <span
-              className="css-x63yja-Separator"
+              css={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                css={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "justifyContent": "center",
+                    "padding": "0.125rem",
+                  }
+                }
                 onClick={[Function]}
               >
                 <span
-                  className="css-1bxgyna-Icon"
+                  css={[Function]}
                 />
               </span>
             </span>
@@ -615,10 +787,10 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
         </li>
         <li>
           <div
-            className="css-e8ptyq-BreadcrumbItem"
+            css={[Function]}
           >
             <a
-              className="css-kllbug"
+              css={[Function]}
               href="/fifth-level"
               onClick={[Function]}
             >

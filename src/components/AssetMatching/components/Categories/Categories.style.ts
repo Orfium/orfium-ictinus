@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { flex, transition } from 'theme/functions';
 import { Theme } from 'theme';
 import { normalFont } from '../Asset/Asset.style';

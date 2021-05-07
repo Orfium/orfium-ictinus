@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from '../../../../theme';
 
 const buttonTextStyle = (theme: Theme): SerializedStyles => css`

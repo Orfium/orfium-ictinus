@@ -1,7 +1,7 @@
 import { Theme } from '../../../../theme';
 import { rem, tint } from 'polished';
 import { NotificationTypes } from '../../Notification';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 
 export const typeToThemePalette = (theme: Theme, type: NotificationTypes): string =>
   theme.utils.getColor(type, 400, 'normal');

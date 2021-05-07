@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { useEffect, useRef } from 'react';
-import { jsx } from '@emotion/core';
+import React, { useEffect, useRef } from 'react';
 import Highlighter from 'react-highlight-words';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';

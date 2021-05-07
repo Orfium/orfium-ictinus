@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
 import { avatarStyle } from './Avatar.style';
 import { pickTextColorFromSwatches } from '../../theme/palette';

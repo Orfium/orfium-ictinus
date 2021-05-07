@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { darken, rem } from 'polished';
 import { Theme } from 'theme';
 import { Props } from '../../../TextField/TextField';

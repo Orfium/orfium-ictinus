@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { FC, InputHTMLAttributes } from 'react';
 import { iconWrapperStyle, inputStyle } from './TextField.style';
 import Label from '../Label';

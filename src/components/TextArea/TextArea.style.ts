@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Props } from './TextArea';
 import { Theme } from '../../theme';
 import { Props as TextInputWrapperProps } from '../utils/TextInputWrapper/TextInputWrapper';

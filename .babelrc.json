@@ -1,9 +1,11 @@
 {
   "presets": [
     "@babel/preset-env",
-    "@babel/preset-react",
     "@babel/preset-typescript",
-    "@emotion/babel-preset-css-prop"
+    [
+      "@babel/preset-react",
+      { "runtime": "automatic", "importSource": "@emotion/react" }
+    ]
   ],
   "plugins": [
     [
@@ -12,7 +14,8 @@
         "extensions": [".ts", ".tsx", ".js", ".jsx"],
         "root": ["./src"]
       }
-    ]
+    ],
+    "@emotion"
   ],
   "ignore": ["./src/storybook.test.ts", "**/*.stories.tsx", "**/*.stories.storyshot"]
 }
