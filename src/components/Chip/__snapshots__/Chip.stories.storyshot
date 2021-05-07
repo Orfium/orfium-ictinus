@@ -1,6 +1,85 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Chip Chip Sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.25rem;
+  border-radius: 1.03125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 <div
   style={
     Object {
@@ -17,14 +96,7 @@ exports[`Storyshots Design System/Chip Chip Sizes 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,13 +105,7 @@ exports[`Storyshots Design System/Chip Chip Sizes 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -49,7 +115,7 @@ exports[`Storyshots Design System/Chip Chip Sizes 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-2"
         data-testid="chip"
       >
         <div>
@@ -65,7 +131,7 @@ exports[`Storyshots Design System/Chip Chip Sizes 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-3"
         data-testid="chip"
       >
         <div>
@@ -78,6 +144,85 @@ exports[`Storyshots Design System/Chip Chip Sizes 1`] = `
 `;
 
 exports[`Storyshots Design System/Chip Chip Styles 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #737373;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 <div
   style={
     Object {
@@ -94,14 +239,7 @@ exports[`Storyshots Design System/Chip Chip Styles 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -110,13 +248,7 @@ exports[`Storyshots Design System/Chip Chip Styles 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -126,7 +258,7 @@ exports[`Storyshots Design System/Chip Chip Styles 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-2"
         data-testid="chip"
       >
         <div>
@@ -142,7 +274,7 @@ exports[`Storyshots Design System/Chip Chip Styles 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-3"
         data-testid="chip"
       >
         <div>
@@ -155,6 +287,170 @@ exports[`Storyshots Design System/Chip Chip Styles 1`] = `
 `;
 
 exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  margin-bottom: 20px;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: inherit;
+  padding-right: 0.5rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  cursor: auto;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.emotion-4>* {
+  max-height: 100%;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: inherit;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: inherit;
+  padding-right: inherit;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.emotion-10>* {
+  max-height: 100%;
+}
+
 <div
   style={
     Object {
@@ -171,14 +467,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -187,13 +476,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -204,48 +487,14 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
     >
       <div>
         <div
-          css={
-            Object {
-              "marginBottom": "20px",
-            }
-          }
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-3"
             data-testid="chip"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "e947bd",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  height: 1rem;
-  width: 1rem;
-  & > * {
-    max-height: 100%;
-  }
-
-  cursor: auto;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-4"
             >
               <img
                 src="https://brandmark.io/logo-rank/random/pepsi.png"
@@ -259,14 +508,10 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
           </div>
         </div>
         <div
-          css={
-            Object {
-              "marginBottom": "20px",
-            }
-          }
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-6"
             data-testid="chip"
           >
             <div>
@@ -275,37 +520,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
               </div>
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "e947bd",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  height: 1rem;
-  width: 1rem;
-  & > * {
-    max-height: 100%;
-  }
-
-  cursor: auto;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-4"
             >
               <img
                 src="https://brandmark.io/logo-rank/random/pepsi.png"
@@ -314,48 +529,14 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
           </div>
         </div>
         <div
-          css={
-            Object {
-              "marginBottom": "20px",
-            }
-          }
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-9"
             data-testid="chip"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "dyb6w8",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  height: 1rem;
-  width: 1rem;
-  & > * {
-    max-height: 100%;
-  }
-
-  cursor: pointer;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-10"
               onClick={[Function]}
             >
               <img
@@ -368,37 +549,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
               </div>
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "dyb6w8",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  height: 1rem;
-  width: 1rem;
-  & > * {
-    max-height: 100%;
-  }
-
-  cursor: pointer;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-10"
               onClick={[Function]}
             >
               <img
@@ -414,6 +565,56 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
 `;
 
 exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 0.78125rem;
+  font-size: 0.8125rem;
+  box-sizing: border-box;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #f3f3f3;
+  color: #000;
+  border: 1px solid #f3f3f3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 <div
   style={
     Object {
@@ -430,14 +631,7 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -446,13 +640,7 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -462,7 +650,7 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-2"
         data-testid="chip"
       >
         <div>

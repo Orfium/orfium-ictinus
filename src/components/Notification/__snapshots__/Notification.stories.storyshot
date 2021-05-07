@@ -1,6 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Notification Banner Notification 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #181f55;
+}
+
+.emotion-1:active {
+  background-color: #0d102d;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -17,14 +62,7 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -53,16 +91,16 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
       }
     >
       <button
-        css={[Function]}
+        className="emotion-1"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          css={[Function]}
+          className="emotion-2"
         >
           <span
-            css={[Function]}
+            className="emotion-3"
           >
             Show Notifications
           </span>
@@ -83,6 +121,119 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 `;
 
 exports[`Storyshots Design System/Notification Inline Notification 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  height: 3.5rem;
+  border-left: #6bbc15 4px solid;
+  background: #f7fbf3;
+  border-radius: 0.25rem;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.emotion-4 {
+  padding-right: 0.5rem;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #6bbc15;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-6 path {
+  fill: #6bbc15;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.emotion-14 {
+  cursor: pointer;
+  color: #18aed2;
+}
+
+.emotion-15 {
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+.emotion-17 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-17 path {
+  fill: #9b9b9b;
+}
+
 <div
   style={
     Object {
@@ -99,14 +250,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -115,13 +259,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -143,27 +281,20 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
         }
       >
         <div
-          css={[Function]}
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-4"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-6"
                 />
               </span>
             </div>
@@ -172,7 +303,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-7"
           />
         </div>
         <p
@@ -206,27 +337,20 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
         }
       >
         <div
-          css={[Function]}
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-4"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-6"
                 />
               </span>
             </div>
@@ -235,33 +359,26 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-7"
           >
             <span
-              css={[Function]}
+              className="emotion-14"
               data-testid="notification-primary"
               onClick={[Function]}
             >
               Action
             </span>
             <span
-              css={[Function]}
+              className="emotion-15"
               data-testid="notification-close"
               onClick={[Function]}
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-17"
                 />
               </span>
             </span>
@@ -298,27 +415,20 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
         }
       >
         <div
-          css={[Function]}
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-4"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-6"
                 />
               </span>
             </div>
@@ -327,10 +437,10 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-7"
           >
             <span
-              css={[Function]}
+              className="emotion-14"
               data-testid="notification-primary"
               onClick={[Function]}
             >
@@ -369,27 +479,20 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
         }
       >
         <div
-          css={[Function]}
+          className="emotion-2"
         >
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-4"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-6"
                 />
               </span>
             </div>
@@ -398,26 +501,19 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-7"
           >
             <span
-              css={[Function]}
+              className="emotion-15"
               data-testid="notification-close"
               onClick={[Function]}
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-17"
                 />
               </span>
             </span>
@@ -439,6 +535,51 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 `;
 
 exports[`Storyshots Design System/Notification Playground 1 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #181f55;
+}
+
+.emotion-1:active {
+  background-color: #0d102d;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -455,14 +596,7 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -491,16 +625,16 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
       }
     >
       <button
-        css={[Function]}
+        className="emotion-1"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          css={[Function]}
+          className="emotion-2"
         >
           <span
-            css={[Function]}
+            className="emotion-3"
           >
             Show Notifications
           </span>
@@ -521,6 +655,51 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 `;
 
 exports[`Storyshots Design System/Notification Playground 2 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #181f55;
+}
+
+.emotion-1:active {
+  background-color: #0d102d;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -537,14 +716,7 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -573,16 +745,16 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
       }
     >
       <button
-        css={[Function]}
+        className="emotion-1"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          css={[Function]}
+          className="emotion-2"
         >
           <span
-            css={[Function]}
+            className="emotion-3"
           >
             Show Notifications
           </span>
@@ -603,6 +775,51 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 `;
 
 exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #181f55;
+}
+
+.emotion-1:active {
+  background-color: #0d102d;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -619,14 +836,7 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -655,16 +865,16 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
       }
     >
       <button
-        css={[Function]}
+        className="emotion-1"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          css={[Function]}
+          className="emotion-2"
         >
           <span
-            css={[Function]}
+            className="emotion-3"
           >
             Show Notifications
           </span>
@@ -685,6 +895,51 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 `;
 
 exports[`Storyshots Design System/Notification Toast Notification 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #181f55;
+}
+
+.emotion-1:active {
+  background-color: #0d102d;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -701,14 +956,7 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -737,16 +985,16 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
       }
     >
       <button
-        css={[Function]}
+        className="emotion-1"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          css={[Function]}
+          className="emotion-2"
         >
           <span
-            css={[Function]}
+            className="emotion-3"
           >
             Show Notifications
           </span>

@@ -1,6 +1,158 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-3:focus-within,
+.emotion-3:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-3:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-3:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  resize: both;
+}
+
+.emotion-6+label {
+  font-size: 0.875rem;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #676767;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::placeholder {
+  color: #676767;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(1%, -35%) scale(0.8);
+  -moz-transform: translate(1%, -35%) scale(0.8);
+  -ms-transform: translate(1%, -35%) scale(0.8);
+  transform: translate(1%, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
 <div
   style={
     Object {
@@ -17,14 +169,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,13 +178,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -49,31 +188,20 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-3"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
+                className="emotion-6"
                 cols={10}
-                css={[Function]}
                 placeholder="Label"
                 required={false}
                 rows={10}
@@ -92,31 +220,20 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-3"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
+                className="emotion-6"
                 cols={35}
-                css={[Function]}
                 placeholder="Label"
                 required={false}
                 rows={20}
@@ -132,6 +249,216 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
 `;
 
 exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-3:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-3:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  resize: both;
+}
+
+.emotion-6+label {
+  font-size: 0.875rem;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #676767;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::placeholder {
+  color: #676767;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(1%, -35%) scale(0.8);
+  -moz-transform: translate(1%, -35%) scale(0.8);
+  -ms-transform: translate(1%, -35%) scale(0.8);
+  transform: translate(1%, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-8:focus-within,
+.emotion-8:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-8:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-8:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-13 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-13:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-13:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
 <div
   style={
     Object {
@@ -148,14 +475,7 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -164,13 +484,7 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -180,30 +494,19 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-3"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 placeholder="placeholder here"
                 required={false}
                 styleType="filled"
@@ -221,30 +524,19 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-8"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 placeholder="placeholder here"
                 required={false}
                 styleType="outlined"
@@ -262,30 +554,19 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-13"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 placeholder="placeholder here"
                 required={false}
                 styleType="elevated"
@@ -300,6 +581,152 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
 `;
 
 exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-3:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-3:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  resize: both;
+}
+
+.emotion-6+label {
+  font-size: 0.875rem;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #676767;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::placeholder {
+  color: #676767;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(1%, -35%) scale(0.8);
+  -moz-transform: translate(1%, -35%) scale(0.8);
+  -ms-transform: translate(1%, -35%) scale(0.8);
+  transform: translate(1%, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
 <div
   style={
     Object {
@@ -316,14 +743,7 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -332,13 +752,7 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -348,30 +762,19 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-3"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 disabled={false}
                 hintMsg="Hint in Text Area"
                 placeholder="Label"
@@ -389,6 +792,252 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
 `;
 
 exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid transparent;
+}
+
+.emotion-3:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-3:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-3>input,
+.emotion-3>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  resize: both;
+}
+
+.emotion-6+label {
+  font-size: 0.875rem;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::-moz-placeholder {
+  color: #676767;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: #676767;
+}
+
+.emotion-6::placeholder {
+  color: #676767;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(1%, -35%) scale(0.8);
+  -moz-transform: translate(1%, -35%) scale(0.8);
+  -ms-transform: translate(1%, -35%) scale(0.8);
+  transform: translate(1%, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-8:focus-within,
+.emotion-8:hover {
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-8:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-8:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-8>input,
+.emotion-8>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
+.emotion-13 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  box-shadow: initial;
+}
+
+.emotion-13:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.emotion-13:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-13>input,
+.emotion-13>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
 <div
   style={
     Object {
@@ -405,14 +1054,7 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -421,13 +1063,7 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -437,30 +1073,19 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-3"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 disabled={true}
                 placeholder="Label"
                 required={false}
@@ -479,30 +1104,19 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-8"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 disabled={true}
                 placeholder="Label"
                 required={false}
@@ -521,30 +1135,19 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
       }
     >
       <div
-        css={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "position": "relative",
-            "width": "fill-available",
-          }
-        }
+        className="emotion-2"
       >
         <div
-          css={[Function]}
+          className="emotion-13"
         >
           <div
-            css={[Function]}
+            className="emotion-4"
           >
             <div
-              css={
-                Object {
-                  "width": "100% ",
-                }
-              }
+              className="emotion-5"
             >
               <textarea
-                css={[Function]}
+                className="emotion-6"
                 disabled={true}
                 placeholder="Label"
                 required={false}
@@ -560,6 +1163,390 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
 `;
 
 exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  border-color: #d40000;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+  resize: both;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: #676767;
+}
+
+.emotion-7::-moz-placeholder {
+  color: #676767;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: #676767;
+}
+
+.emotion-7::placeholder {
+  color: #676767;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(1%, -35%) scale(0.8);
+  -moz-transform: translate(1%, -35%) scale(0.8);
+  -ms-transform: translate(1%, -35%) scale(0.8);
+  transform: translate(1%, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d40000;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-8 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-8 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #d40000;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-10 path {
+  fill: #d40000;
+}
+
+.emotion-12 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px transparent;
+  border-color: #d40000;
+}
+
+.emotion-12:focus-within,
+.emotion-12:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-12:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-12:focus-within {
+  background-color: white;
+}
+
+.emotion-20 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-color: #d40000;
+}
+
+.emotion-20:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-20:focus-within {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.emotion-29 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-29:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-29:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-33 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #676767;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-33 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-33 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-35 {
+  fill: #676767;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-35 path {
+  fill: #676767;
+}
+
+.emotion-37 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-37:focus-within,
+.emotion-37:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-37:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-37:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-45 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-45:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-45:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
 <div
   style={
     Object {
@@ -576,14 +1563,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -592,13 +1572,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -608,13 +1582,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
       }
     >
       <div
-        css={
-          Object {
-            "display": "flex",
-            "flexDirection": "row",
-            "flexWrap": "wrap",
-          }
-        }
+        className="emotion-1"
       >
         <div
           style={
@@ -624,30 +1592,19 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            css={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "position": "relative",
-                "width": "fill-available",
-              }
-            }
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-4"
             >
               <div
-                css={[Function]}
+                className="emotion-5"
               >
                 <div
-                  css={
-                    Object {
-                      "width": "100% ",
-                    }
-                  }
+                  className="emotion-6"
                 >
                   <textarea
-                    css={[Function]}
+                    className="emotion-7"
                     hintMsg="Error in Text Area"
                     placeholder="Label"
                     required={false}
@@ -659,21 +1616,14 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-8"
           >
             <span
-              css={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "padding": "0.125rem",
-                }
-              }
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={[Function]}
+                className="emotion-10"
               />
             </span>
             Error in Text Area
@@ -687,30 +1637,19 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            css={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "position": "relative",
-                "width": "fill-available",
-              }
-            }
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-12"
             >
               <div
-                css={[Function]}
+                className="emotion-5"
               >
                 <div
-                  css={
-                    Object {
-                      "width": "100% ",
-                    }
-                  }
+                  className="emotion-6"
                 >
                   <textarea
-                    css={[Function]}
+                    className="emotion-7"
                     hintMsg="Error in Text Area"
                     placeholder="Label"
                     required={false}
@@ -722,21 +1661,14 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-8"
           >
             <span
-              css={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "padding": "0.125rem",
-                }
-              }
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={[Function]}
+                className="emotion-10"
               />
             </span>
             Error in Text Area
@@ -750,30 +1682,19 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            css={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "position": "relative",
-                "width": "fill-available",
-              }
-            }
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-20"
             >
               <div
-                css={[Function]}
+                className="emotion-5"
               >
                 <div
-                  css={
-                    Object {
-                      "width": "100% ",
-                    }
-                  }
+                  className="emotion-6"
                 >
                   <textarea
-                    css={[Function]}
+                    className="emotion-7"
                     hintMsg="Error in Text Area"
                     placeholder="Label"
                     required={false}
@@ -785,21 +1706,14 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-8"
           >
             <span
-              css={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "padding": "0.125rem",
-                }
-              }
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={[Function]}
+                className="emotion-10"
               />
             </span>
             Error in Text Area
@@ -815,13 +1729,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
       }
     >
       <div
-        css={
-          Object {
-            "display": "flex",
-            "flexDirection": "row",
-            "flexWrap": "wrap",
-          }
-        }
+        className="emotion-1"
       >
         <div
           style={
@@ -831,30 +1739,19 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            css={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "position": "relative",
-                "width": "fill-available",
-              }
-            }
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-29"
             >
               <div
-                css={[Function]}
+                className="emotion-5"
               >
                 <div
-                  css={
-                    Object {
-                      "width": "100% ",
-                    }
-                  }
+                  className="emotion-6"
                 >
                   <textarea
-                    css={[Function]}
+                    className="emotion-7"
                     hintMsg="Error in Text Area"
                     placeholder="Label"
                     required={false}
@@ -866,21 +1763,14 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-33"
           >
             <span
-              css={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "padding": "0.125rem",
-                }
-              }
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={[Function]}
+                className="emotion-35"
               />
             </span>
             Error in Text Area
@@ -894,30 +1784,19 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            css={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "position": "relative",
-                "width": "fill-available",
-              }
-            }
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-37"
             >
               <div
-                css={[Function]}
+                className="emotion-5"
               >
                 <div
-                  css={
-                    Object {
-                      "width": "100% ",
-                    }
-                  }
+                  className="emotion-6"
                 >
                   <textarea
-                    css={[Function]}
+                    className="emotion-7"
                     hintMsg="Error in Text Area"
                     placeholder="Label"
                     required={false}
@@ -929,21 +1808,14 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-33"
           >
             <span
-              css={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "padding": "0.125rem",
-                }
-              }
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={[Function]}
+                className="emotion-35"
               />
             </span>
             Error in Text Area
@@ -957,30 +1829,19 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            css={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "position": "relative",
-                "width": "fill-available",
-              }
-            }
+            className="emotion-3"
           >
             <div
-              css={[Function]}
+              className="emotion-45"
             >
               <div
-                css={[Function]}
+                className="emotion-5"
               >
                 <div
-                  css={
-                    Object {
-                      "width": "100% ",
-                    }
-                  }
+                  className="emotion-6"
                 >
                   <textarea
-                    css={[Function]}
+                    className="emotion-7"
                     hintMsg="Error in Text Area"
                     placeholder="Label"
                     required={false}
@@ -992,21 +1853,14 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             </div>
           </div>
           <div
-            css={[Function]}
+            className="emotion-33"
           >
             <span
-              css={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "justifyContent": "center",
-                  "padding": "0.125rem",
-                }
-              }
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={[Function]}
+                className="emotion-35"
               />
             </span>
             Error in Text Area

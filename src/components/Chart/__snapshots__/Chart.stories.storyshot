@@ -1,6 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Chart BarChart 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  width: inherit;
+  height: inherit;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-10 {
+  width: inherit;
+  height: inherit;
+  color: #9b9b9b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 <div
   style={
     Object {
@@ -17,14 +42,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -486,7 +504,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={17.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -510,7 +528,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={62.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -534,7 +552,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={107.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -558,7 +576,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={152.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -582,7 +600,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={197.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -606,7 +624,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={242.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -630,7 +648,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={287.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -654,7 +672,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={332.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -678,7 +696,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={377.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-1"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -702,7 +720,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                   y={422.5}
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-10"
                     onMouseEnter={[Function]}
                     onMouseLeave={[Function]}
                   >
@@ -736,6 +754,32 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
 `;
 
 exports[`Storyshots Design System/Chart DonutChart 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-2 {
+  width: 80%;
+  font-size: 0.75rem;
+  color: #9b9b9b;
+  text-align: center;
+}
+
 <div
   style={
     Object {
@@ -752,14 +796,7 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -846,10 +883,10 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
               y="52%"
             >
               <div
-                css={[Function]}
+                className="emotion-1"
               >
                 <div
-                  css={[Function]}
+                  className="emotion-2"
                 >
                   units
                 </div>
@@ -864,6 +901,29 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
 `;
 
 exports[`Storyshots Design System/Chart LineChart 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  color: white;
+  background: #242424;
+  opacity: 90%;
+  border-radius: 0.25rem;
+  min-width: 12.5rem;
+  white-space: nowrap;
+}
+
+.emotion-2 {
+  padding: 0px;
+  margin: 0px;
+}
+
 <div
   style={
     Object {
@@ -880,14 +940,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -1646,8 +1699,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
       }
     >
       <div
-        className="custom-tooltip"
-        css={[Function]}
+        className="custom-tooltip emotion-1"
       >
         <p
           className="label"
@@ -1661,7 +1713,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
            
         </p>
         <ul
-          css={[Function]}
+          className="emotion-2"
         />
       </div>
     </div>

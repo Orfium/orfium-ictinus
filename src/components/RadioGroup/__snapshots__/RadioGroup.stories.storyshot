@@ -1,6 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  color: #f5781b;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  outline: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:disabled {
+  cursor: default;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.emotion-4 {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
+  position: absolute;
+}
+
+.emotion-5 {
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.emotion-9 {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 0.125rem currentColor,inset 0px 0px 0px 0.25rem #fefefe,inset 0px 0px 0px 0.75rem currentColor;
+  position: absolute;
+}
+
 <div
   style={
     Object {
@@ -17,14 +116,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -40,35 +132,12 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
     }
   >
     <span
-      css={[Function]}
+      className="emotion-1"
       data-testid="radio-input"
     >
       <input
         checked={false}
-        css={
-          Object {
-            "map": undefined,
-            "name": "i91fru",
-            "next": undefined,
-            "styles": "
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         disabled={false}
         name="group"
         onBlur={[Function]}
@@ -81,92 +150,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
         value="a"
       />
       <span
-        css={
-          Object {
-            "map": undefined,
-            "name": "1nrms42",
-            "next": undefined,
-            "styles": "
-  position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  ;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "s78ecu",
-              "next": undefined,
-              "styles": "
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
-    position: absolute;
-  ",
-              "toString": [Function],
-            }
-          }
+          className="emotion-4"
         />
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "1iv8hzm",
-              "next": undefined,
-              "styles": "
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: all 0.2s ease;
-  ;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-5"
         />
       </span>
     </span>
     <span
-      css={[Function]}
+      className="emotion-1"
       data-testid="radio-input"
     >
       <input
         checked={true}
-        css={
-          Object {
-            "map": undefined,
-            "name": "i91fru",
-            "next": undefined,
-            "styles": "
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         disabled={false}
         name="group"
         onBlur={[Function]}
@@ -179,92 +179,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
         value="b"
       />
       <span
-        css={
-          Object {
-            "map": undefined,
-            "name": "1nrms42",
-            "next": undefined,
-            "styles": "
-  position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  ;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "p5fxb6",
-              "next": undefined,
-              "styles": "
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
-    position: absolute;
-  ",
-              "toString": [Function],
-            }
-          }
+          className="emotion-9"
         />
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "1iv8hzm",
-              "next": undefined,
-              "styles": "
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: all 0.2s ease;
-  ;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-5"
         />
       </span>
     </span>
     <span
-      css={[Function]}
+      className="emotion-1"
       data-testid="radio-input"
     >
       <input
         checked={false}
-        css={
-          Object {
-            "map": undefined,
-            "name": "i91fru",
-            "next": undefined,
-            "styles": "
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         disabled={false}
         name="group"
         onBlur={[Function]}
@@ -277,59 +208,13 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
         value="c"
       />
       <span
-        css={
-          Object {
-            "map": undefined,
-            "name": "1nrms42",
-            "next": undefined,
-            "styles": "
-  position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  ;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "s78ecu",
-              "next": undefined,
-              "styles": "
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
-    position: absolute;
-  ",
-              "toString": [Function],
-            }
-          }
+          className="emotion-4"
         />
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "1iv8hzm",
-              "next": undefined,
-              "styles": "
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: all 0.2s ease;
-  ;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-5"
         />
       </span>
     </span>
@@ -338,6 +223,105 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
 `;
 
 exports[`Storyshots Design System/RadioGroup Radio with options with onChange handler 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  color: #f5781b;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  margin: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  outline: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.emotion-2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  cursor: inherit;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-2:disabled {
+  cursor: default;
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+}
+
+.emotion-4 {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
+  position: absolute;
+}
+
+.emotion-5 {
+  position: absolute;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.emotion-9 {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 0.125rem currentColor,inset 0px 0px 0px 0.25rem #fefefe,inset 0px 0px 0px 0.75rem currentColor;
+  position: absolute;
+}
+
 <div
   style={
     Object {
@@ -354,14 +338,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -377,35 +354,12 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
     }
   >
     <span
-      css={[Function]}
+      className="emotion-1"
       data-testid="radio-input"
     >
       <input
         checked={false}
-        css={
-          Object {
-            "map": undefined,
-            "name": "i91fru",
-            "next": undefined,
-            "styles": "
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         disabled={false}
         name="group"
         onBlur={[Function]}
@@ -418,92 +372,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
         value="a"
       />
       <span
-        css={
-          Object {
-            "map": undefined,
-            "name": "1nrms42",
-            "next": undefined,
-            "styles": "
-  position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  ;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "s78ecu",
-              "next": undefined,
-              "styles": "
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
-    position: absolute;
-  ",
-              "toString": [Function],
-            }
-          }
+          className="emotion-4"
         />
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "1iv8hzm",
-              "next": undefined,
-              "styles": "
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: all 0.2s ease;
-  ;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-5"
         />
       </span>
     </span>
     <span
-      css={[Function]}
+      className="emotion-1"
       data-testid="radio-input"
     >
       <input
         checked={true}
-        css={
-          Object {
-            "map": undefined,
-            "name": "i91fru",
-            "next": undefined,
-            "styles": "
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         disabled={false}
         name="group"
         onBlur={[Function]}
@@ -516,92 +401,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
         value="b"
       />
       <span
-        css={
-          Object {
-            "map": undefined,
-            "name": "1nrms42",
-            "next": undefined,
-            "styles": "
-  position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  ;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "p5fxb6",
-              "next": undefined,
-              "styles": "
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 0.125rem currentColor, inset 0px 0px 0px 0.25rem #fefefe, inset 0px 0px 0px 0.75rem currentColor;
-    position: absolute;
-  ",
-              "toString": [Function],
-            }
-          }
+          className="emotion-9"
         />
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "1iv8hzm",
-              "next": undefined,
-              "styles": "
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: all 0.2s ease;
-  ;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-5"
         />
       </span>
     </span>
     <span
-      css={[Function]}
+      className="emotion-1"
       data-testid="radio-input"
     >
       <input
         checked={false}
-        css={
-          Object {
-            "map": undefined,
-            "name": "i91fru",
-            "next": undefined,
-            "styles": "
-  top: 0;
-  left: 0;
-  width: 100%;
-  cursor: inherit;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  z-index: 1;
-  position: absolute;
-  opacity: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-2"
         disabled={false}
         name="group"
         onBlur={[Function]}
@@ -614,59 +430,13 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
         value="c"
       />
       <span
-        css={
-          Object {
-            "map": undefined,
-            "name": "1nrms42",
-            "next": undefined,
-            "styles": "
-  position: relative;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: box-shadow 0.3s ease;
-  ;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "s78ecu",
-              "next": undefined,
-              "styles": "
-    transition: all 0.2s ease;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    box-shadow: inset 0px 0px 0px 0.75rem #dbdbdb;
-    position: absolute;
-  ",
-              "toString": [Function],
-            }
-          }
+          className="emotion-4"
         />
         <span
-          css={
-            Object {
-              "map": undefined,
-              "name": "1iv8hzm",
-              "next": undefined,
-              "styles": "
-  position: absolute;
-  border-radius: 50%;
-  width: 1.5rem;
-  height: 1.5rem;
-  transition: all 0.2s ease;
-  ;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-5"
         />
       </span>
     </span>

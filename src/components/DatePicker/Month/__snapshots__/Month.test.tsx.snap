@@ -1,38 +1,398 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Month should render correctly 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.emotion-1 {
+  color: #9b9b9b;
+  padding: 1rem 0;
+  width: 39px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.emotion-8 {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.emotion-9 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #121212;
+  width: 40px;
+  padding: 0 4px;
+  opacity: 1;
+}
+
+.emotion-10 {
+  border: 1px solid transparent;
+  height: 39px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-10:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
+.emotion-11 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #121212;
+  width: 40px;
+  padding: 0 4px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.emotion-12 {
+  border: 1px solid #cfcfcf;
+  border-radius: 100%;
+  height: 39px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-12:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
+.emotion-13 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  width: 40px;
+  padding: 0 4px;
+  opacity: 1;
+  background: transparent;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-13:after {
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.1);
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-14 {
+  border: 1px solid transparent;
+  border-radius: 100%;
+  height: 39px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #000;
+}
+
+.emotion-14:hover {
+  border-radius: 100%;
+  background: false;
+}
+
+.emotion-15 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #121212;
+  width: 40px;
+  padding: 0 4px;
+  opacity: 1;
+  background: rgba(0,0,0,0.1);
+}
+
+.emotion-67 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #e7e7e7;
+}
+
+.emotion-1 {
+  color: #9b9b9b;
+  padding: 1rem 0;
+  width: 39px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.emotion-8 {
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.emotion-9 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #121212;
+  width: 40px;
+  padding: 0 4px;
+  opacity: 1;
+}
+
+.emotion-10 {
+  border: 1px solid transparent;
+  height: 39px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-10:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
+.emotion-11 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #121212;
+  width: 40px;
+  padding: 0 4px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.emotion-12 {
+  border: 1px solid #cfcfcf;
+  border-radius: 100%;
+  height: 39px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.emotion-12:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
+.emotion-13 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  width: 40px;
+  padding: 0 4px;
+  opacity: 1;
+  background: transparent;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-13:after {
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.1);
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
+.emotion-14 {
+  border: 1px solid transparent;
+  border-radius: 100%;
+  height: 39px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: #000;
+}
+
+.emotion-14:hover {
+  border-radius: 100%;
+  background: false;
+}
+
+.emotion-15 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  color: #121212;
+  width: 40px;
+  padding: 0 4px;
+  opacity: 1;
+  background: rgba(0,0,0,0.1);
+}
+
+.emotion-67 {
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
 <div>
-  <div>
-    <div>
+  <div
+    class="emotion-0"
+  >
+    <div
+      class="emotion-1"
+    >
       Mo
     </div>
-    <div>
+    <div
+      class="emotion-1"
+    >
       Tu
     </div>
-    <div>
+    <div
+      class="emotion-1"
+    >
       We
     </div>
-    <div>
+    <div
+      class="emotion-1"
+    >
       Th
     </div>
-    <div>
+    <div
+      class="emotion-1"
+    >
       Fr
     </div>
-    <div>
+    <div
+      class="emotion-1"
+    >
       Sa
     </div>
-    <div>
+    <div
+      class="emotion-1"
+    >
       Su
     </div>
   </div>
-  <table>
+  <table
+    class="emotion-8"
+  >
     <tbody>
       <tr>
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-9"
+          >
+            <div
+              class="emotion-10"
+            >
               2
             </div>
           </div>
@@ -40,8 +400,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-11"
+          >
+            <div
+              class="emotion-12"
+            >
               3
             </div>
           </div>
@@ -49,8 +413,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-13"
+          >
+            <div
+              class="emotion-14"
+            >
               4
             </div>
           </div>
@@ -58,8 +426,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               5
             </div>
           </div>
@@ -67,8 +439,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               6
             </div>
           </div>
@@ -76,8 +452,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               7
             </div>
           </div>
@@ -85,8 +465,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               8
             </div>
           </div>
@@ -96,8 +480,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               9
             </div>
           </div>
@@ -105,8 +493,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               10
             </div>
           </div>
@@ -114,8 +506,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               11
             </div>
           </div>
@@ -123,8 +519,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               12
             </div>
           </div>
@@ -132,8 +532,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               13
             </div>
           </div>
@@ -141,8 +545,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               14
             </div>
           </div>
@@ -150,8 +558,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               15
             </div>
           </div>
@@ -161,8 +573,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               16
             </div>
           </div>
@@ -170,8 +586,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               17
             </div>
           </div>
@@ -179,8 +599,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               18
             </div>
           </div>
@@ -188,8 +612,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               19
             </div>
           </div>
@@ -197,8 +625,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               20
             </div>
           </div>
@@ -206,8 +638,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               21
             </div>
           </div>
@@ -215,8 +651,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               22
             </div>
           </div>
@@ -226,8 +666,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               23
             </div>
           </div>
@@ -235,8 +679,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               24
             </div>
           </div>
@@ -244,8 +692,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               25
             </div>
           </div>
@@ -253,8 +705,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               26
             </div>
           </div>
@@ -262,8 +718,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               27
             </div>
           </div>
@@ -271,8 +731,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               28
             </div>
           </div>
@@ -280,8 +744,12 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               29
             </div>
           </div>
@@ -291,18 +759,34 @@ exports[`Month should render correctly 1`] = `
         <td
           style="padding: 0px;"
         >
-          <div>
-            <div>
+          <div
+            class="emotion-15"
+          >
+            <div
+              class="emotion-10"
+            >
               30
             </div>
           </div>
         </td>
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
-        <td />
+        <td
+          class="emotion-67"
+        />
+        <td
+          class="emotion-67"
+        />
+        <td
+          class="emotion-67"
+        />
+        <td
+          class="emotion-67"
+        />
+        <td
+          class="emotion-67"
+        />
+        <td
+          class="emotion-67"
+        />
       </tr>
     </tbody>
   </table>

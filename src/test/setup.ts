@@ -1,3 +1,8 @@
+import '@testing-library/jest-dom';
+import { createSerializer } from '@emotion/jest';
+
+expect.addSnapshotSerializer(createSerializer());
+
 // because scrollIntoView doesn't exist in jest
 window.HTMLElement.prototype.scrollIntoView = function() {};
 

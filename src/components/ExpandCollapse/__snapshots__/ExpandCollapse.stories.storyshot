@@ -1,6 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
+  transition: opacity 0ms ease,transform 0ms ease;
+  opacity: 0;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
 <div
   style={
     Object {
@@ -17,14 +34,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -48,7 +58,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
         </button>
       </div>
       <div
-        className="css-1agut24-ExpandCollapse"
+        className="emotion-1"
       >
         <div>
           <div>
@@ -77,7 +87,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
         </button>
       </div>
       <div
-        className="css-1agut24-ExpandCollapse"
+        className="emotion-1"
       >
         <div>
           <div>
@@ -103,7 +113,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
               </button>
             </div>
             <div
-              className="css-1agut24-ExpandCollapse"
+              className="emotion-1"
             >
               <div>
                 <div>
@@ -135,7 +145,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
         </button>
       </div>
       <div
-        className="css-1agut24-ExpandCollapse"
+        className="emotion-1"
       >
         <div>
           <div>

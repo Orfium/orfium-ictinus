@@ -1,6 +1,236 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options per data item 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.emotion-2>li {
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #cfcfcf;
+}
+
+.emotion-3 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-3 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-3 button>span {
+  margin-left: 0;
+}
+
+.emotion-3>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
+.emotion-4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+.emotion-4:hover {
+  color: #494949;
+}
+
+.emotion-5 {
+  margin: auto 0.5rem;
+  color: #cfcfcf;
+  cursor: default;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: lightGray400;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-7 path {
+  fill: lightGray400;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  margin-top: 0.0625rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-radius: 3rem;
+  background-color: #e7e7e7;
+}
+
+.emotion-11 {
+  fill: lightGray700;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.emotion-11 path {
+  fill: lightGray700;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #494949;
+}
+
+.emotion-20 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-20 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-20 button>span {
+  margin-left: 0;
+}
+
+.emotion-20>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
+.emotion-21 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-22 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-22:hover {
+  background-color: #181f55;
+}
+
+.emotion-22:active {
+  background-color: #0d102d;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-24 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-27 {
+  fill: #fff;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-27 path {
+  fill: #fff;
+}
+
 <div
   style={
     Object {
@@ -17,14 +247,7 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,13 +256,7 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -50,35 +267,28 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
     >
       <ol
         aria-label="Breadcrumb"
-        css={[Function]}
+        className="emotion-2"
       >
         <li>
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <a
-              css={[Function]}
+              className="emotion-4"
               href="/first-level"
               onClick={[Function]}
             >
               First Level
             </a>
             <span
-              css={[Function]}
+              className="emotion-5"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-7"
                 />
               </span>
             </span>
@@ -93,56 +303,30 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
           }
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "166u9ib",
-                "next": undefined,
-                "styles": "
-  display: flex;
-  cursor: pointer;
-  position: relative;
-",
-                "toString": [Function],
-              }
-            }
+            className="emotion-8"
           >
             <span
-              css={[Function]}
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-11"
                 />
               </span>
             </span>
             <span
-              css={[Function]}
+              className="emotion-5"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-7"
                 />
               </span>
             </span>
@@ -150,31 +334,24 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
         </li>
         <li>
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <a
-              css={[Function]}
+              className="emotion-4"
               href="/forth-level"
               onClick={[Function]}
             >
               Forth Level
             </a>
             <span
-              css={[Function]}
+              className="emotion-5"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-7"
                 />
               </span>
             </span>
@@ -182,46 +359,39 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
         </li>
         <li>
           <div
-            css={[Function]}
+            className="emotion-20"
           >
             <div
               role="button"
             >
               <div
-                css={[Function]}
+                className="emotion-21"
               >
                 <button
-                  css={[Function]}
+                  className="emotion-22"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                 >
                   <span
-                    css={[Function]}
+                    className="emotion-23"
                   >
                     <span
-                      css={[Function]}
+                      className="emotion-24"
                     >
                       <span>
                         Fifth Level
                       </span>
                     </span>
                     <span
-                      css={[Function]}
+                      className="emotion-25"
                     >
                       <span
-                        css={
-                          Object {
-                            "alignItems": "center",
-                            "display": "flex",
-                            "justifyContent": "center",
-                            "padding": "0.125rem",
-                          }
-                        }
+                        className="emotion-6"
                         onClick={[Function]}
                       >
                         <span
-                          css={[Function]}
+                          className="emotion-27"
                         />
                       </span>
                     </span>
@@ -238,6 +408,236 @@ exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options p
 `;
 
 exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.emotion-2>li {
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #cfcfcf;
+}
+
+.emotion-3 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-3 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-3 button>span {
+  margin-left: 0;
+}
+
+.emotion-3>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
+.emotion-4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+.emotion-4:hover {
+  color: #494949;
+}
+
+.emotion-5 {
+  margin: auto 0.5rem;
+  color: #cfcfcf;
+  cursor: default;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: lightGray400;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-7 path {
+  fill: lightGray400;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  margin-top: 0.0625rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-radius: 3rem;
+  background-color: #e7e7e7;
+}
+
+.emotion-11 {
+  fill: lightGray700;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.emotion-11 path {
+  fill: lightGray700;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #494949;
+}
+
+.emotion-20 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-20 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-20 button>span {
+  margin-left: 0;
+}
+
+.emotion-20>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
+.emotion-21 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-22 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-22:hover {
+  background-color: #181f55;
+}
+
+.emotion-22:active {
+  background-color: #0d102d;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-24 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-25 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-27 {
+  fill: #fff;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-27 path {
+  fill: #fff;
+}
+
 <div
   style={
     Object {
@@ -254,14 +654,7 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -270,13 +663,7 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -294,35 +681,28 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
         </button>
         <ol
           aria-label="Breadcrumb"
-          css={[Function]}
+          className="emotion-2"
         >
           <li>
             <div
-              css={[Function]}
+              className="emotion-3"
             >
               <a
-                css={[Function]}
+                className="emotion-4"
                 href="/first-level"
                 onClick={[Function]}
               >
                 First Level
               </a>
               <span
-                css={[Function]}
+                className="emotion-5"
               >
                 <span
-                  css={
-                    Object {
-                      "alignItems": "center",
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "padding": "0.125rem",
-                    }
-                  }
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    css={[Function]}
+                    className="emotion-7"
                   />
                 </span>
               </span>
@@ -337,56 +717,30 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
             }
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "166u9ib",
-                  "next": undefined,
-                  "styles": "
-  display: flex;
-  cursor: pointer;
-  position: relative;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-8"
             >
               <span
-                css={[Function]}
+                className="emotion-9"
                 onClick={[Function]}
               >
                 <span
-                  css={
-                    Object {
-                      "alignItems": "center",
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "padding": "0.125rem",
-                    }
-                  }
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    css={[Function]}
+                    className="emotion-11"
                   />
                 </span>
               </span>
               <span
-                css={[Function]}
+                className="emotion-5"
               >
                 <span
-                  css={
-                    Object {
-                      "alignItems": "center",
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "padding": "0.125rem",
-                    }
-                  }
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    css={[Function]}
+                    className="emotion-7"
                   />
                 </span>
               </span>
@@ -394,31 +748,24 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
           </li>
           <li>
             <div
-              css={[Function]}
+              className="emotion-3"
             >
               <a
-                css={[Function]}
+                className="emotion-4"
                 href="/forth-level"
                 onClick={[Function]}
               >
                 Forth Level
               </a>
               <span
-                css={[Function]}
+                className="emotion-5"
               >
                 <span
-                  css={
-                    Object {
-                      "alignItems": "center",
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "padding": "0.125rem",
-                    }
-                  }
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    css={[Function]}
+                    className="emotion-7"
                   />
                 </span>
               </span>
@@ -426,46 +773,39 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
           </li>
           <li>
             <div
-              css={[Function]}
+              className="emotion-20"
             >
               <div
                 role="button"
               >
                 <div
-                  css={[Function]}
+                  className="emotion-21"
                 >
                   <button
-                    css={[Function]}
+                    className="emotion-22"
                     data-testid="button"
                     disabled={false}
                     onClick={[Function]}
                   >
                     <span
-                      css={[Function]}
+                      className="emotion-23"
                     >
                       <span
-                        css={[Function]}
+                        className="emotion-24"
                       >
                         <span>
                           Fifth Level
                         </span>
                       </span>
                       <span
-                        css={[Function]}
+                        className="emotion-25"
                       >
                         <span
-                          css={
-                            Object {
-                              "alignItems": "center",
-                              "display": "flex",
-                              "justifyContent": "center",
-                              "padding": "0.125rem",
-                            }
-                          }
+                          className="emotion-6"
                           onClick={[Function]}
                         >
                           <span
-                            css={[Function]}
+                            className="emotion-27"
                           />
                         </span>
                       </span>
@@ -483,6 +823,135 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
 `;
 
 exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.emotion-2>li {
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #cfcfcf;
+}
+
+.emotion-3 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-3 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-3 button>span {
+  margin-left: 0;
+}
+
+.emotion-3>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
+.emotion-4 {
+  margin: auto 0.5rem;
+  color: #cfcfcf;
+  cursor: default;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: lightGray400;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: lightGray400;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #494949;
+}
+
+.emotion-11 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-11 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-11 button>span {
+  margin-left: 0;
+}
+
+.emotion-11>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
 <div
   style={
     Object {
@@ -499,14 +968,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -515,13 +977,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -532,31 +988,24 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
     >
       <ol
         aria-label="Breadcrumb"
-        css={[Function]}
+        className="emotion-2"
       >
         <li>
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <div>
               First Level
             </div>
             <span
-              css={[Function]}
+              className="emotion-4"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-6"
                 />
               </span>
             </span>
@@ -564,27 +1013,20 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
         </li>
         <li>
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <div>
               Second Level
             </div>
             <span
-              css={[Function]}
+              className="emotion-4"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-5"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-6"
                 />
               </span>
             </span>
@@ -592,7 +1034,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
         </li>
         <li>
           <div
-            css={[Function]}
+            className="emotion-11"
           >
             <div>
               Third Level
@@ -606,6 +1048,176 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
 `;
 
 exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.emotion-2>li {
+  padding: 1rem 0;
+  margin: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #cfcfcf;
+}
+
+.emotion-3 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-3 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-3 button>span {
+  margin-left: 0;
+}
+
+.emotion-3>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
+.emotion-4 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+.emotion-4:hover {
+  color: #494949;
+}
+
+.emotion-5 {
+  margin: auto 0.5rem;
+  color: #cfcfcf;
+  cursor: default;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: lightGray400;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-7 path {
+  fill: lightGray400;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  margin-top: 0.0625rem;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-radius: 3rem;
+  background-color: #e7e7e7;
+}
+
+.emotion-11 {
+  fill: lightGray700;
+  width: 1.375rem;
+  height: 1.375rem;
+}
+
+.emotion-11 path {
+  fill: lightGray700;
+}
+
+.emotion-20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: default;
+  color: #494949;
+}
+
+.emotion-20 button {
+  height: auto;
+  background-color: white;
+  padding: 0.5rem;
+}
+
+.emotion-20 button:focus {
+  outline: none;
+  background-color: #e7e7e7;
+}
+
+.emotion-20 button>span {
+  margin-left: 0;
+}
+
+.emotion-20>div>div>div {
+  top: 3rem;
+  box-shadow: #363636 0px 0px 1rem;
+}
+
 <div
   style={
     Object {
@@ -622,14 +1234,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -638,13 +1243,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
     </button>
   </div>
   <div
-    css={
-      Object {
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -655,35 +1254,28 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
     >
       <ol
         aria-label="Breadcrumb"
-        css={[Function]}
+        className="emotion-2"
       >
         <li>
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <a
-              css={[Function]}
+              className="emotion-4"
               href="/first-level"
               onClick={[Function]}
             >
               First Level
             </a>
             <span
-              css={[Function]}
+              className="emotion-5"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-7"
                 />
               </span>
             </span>
@@ -698,56 +1290,30 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
           }
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "166u9ib",
-                "next": undefined,
-                "styles": "
-  display: flex;
-  cursor: pointer;
-  position: relative;
-",
-                "toString": [Function],
-              }
-            }
+            className="emotion-8"
           >
             <span
-              css={[Function]}
+              className="emotion-9"
               onClick={[Function]}
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-11"
                 />
               </span>
             </span>
             <span
-              css={[Function]}
+              className="emotion-5"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-7"
                 />
               </span>
             </span>
@@ -755,31 +1321,24 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
         </li>
         <li>
           <div
-            css={[Function]}
+            className="emotion-3"
           >
             <a
-              css={[Function]}
+              className="emotion-4"
               href="/forth-level"
               onClick={[Function]}
             >
               Forth Level
             </a>
             <span
-              css={[Function]}
+              className="emotion-5"
             >
               <span
-                css={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "justifyContent": "center",
-                    "padding": "0.125rem",
-                  }
-                }
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  css={[Function]}
+                  className="emotion-7"
                 />
               </span>
             </span>
@@ -787,10 +1346,10 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
         </li>
         <li>
           <div
-            css={[Function]}
+            className="emotion-20"
           >
             <a
-              css={[Function]}
+              className="emotion-4"
               href="/fifth-level"
               onClick={[Function]}
             >

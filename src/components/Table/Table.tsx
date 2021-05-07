@@ -82,6 +82,7 @@ function Table<T>({
     setSelectedIds(undefined);
   }, [data]);
 
+  // @ts-ignore
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1

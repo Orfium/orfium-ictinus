@@ -1,9 +1,8 @@
 import registerRequireContextHook from 'babel-plugin-require-context-hook/register';
 import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
-import 'jest-styled-components';
 import renderer from 'react-test-renderer';
-import { styleSheetSerializer } from 'jest-styled-components';
 import { addSerializer } from 'jest-specific-snapshot';
+import { createSerializer } from '@emotion/jest';
 import { crawlTreeChildrenProps } from './utils/storyshots';
 import { ReactElement } from 'react';
 
@@ -15,7 +14,7 @@ import { ReactElement } from 'react';
  * Currently, there are two dynamic attributes, id for inputs and htmlFor for labels.
  * */
 
-addSerializer(styleSheetSerializer);
+addSerializer(createSerializer());
 registerRequireContextHook();
 
 function createNodeMock(element: ReactElement) {
