@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/core';
 import * as React from 'react';
 import CompactNotification from '../subcomponents/CompactNotification';
-import { NotificationTypes } from '../Notification';
+import { NotificationStyleType, NotificationTypes } from '../Notification';
 import { TestId } from '../../../utils/types';
 
 export type Props = {
@@ -15,6 +15,8 @@ export type Props = {
   message: string;
   /** The type of the Notification */
   type: NotificationTypes;
+  /** The style type of the Notification. Defaults to elevated */
+  styleType?: NotificationStyleType;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
@@ -30,6 +32,7 @@ const Banner: React.FC<Props> = ({
   title,
   message,
   type,
+  styleType = 'elevated',
   primaryCTALabel,
   primaryCTA = undefined,
   closeCTA = undefined,
@@ -42,6 +45,7 @@ const Banner: React.FC<Props> = ({
       title={title}
       variant="banner"
       type={type}
+      styleType={styleType}
       primaryCTALabel={primaryCTALabel}
       primaryCTA={primaryCTA}
       closeCTA={closeCTA}
