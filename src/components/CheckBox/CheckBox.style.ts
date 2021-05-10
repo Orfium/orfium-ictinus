@@ -45,14 +45,6 @@ const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }
       };`;
 };
 
-export const getSymbolColor = ({ filled, theme }: Props & { theme: Theme }): string => {
-  if (!filled) {
-    return theme.utils.getColor('branded1', 400, 'normal');
-  } else {
-    return 'white';
-  }
-};
-
 export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
   theme: Theme
 ): SerializedStyles => {
