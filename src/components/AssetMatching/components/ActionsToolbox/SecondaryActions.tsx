@@ -18,7 +18,6 @@ const SecondaryActions: FC<Props> = ({
   secondaryButtonColor,
 }) => {
   const [open, setOpen] = useState(false);
-  const hasUniqueAction = secondaryActions.length === 1;
 
   const { actionItems } = useMatchingActions(
     secondaryActions,
@@ -30,22 +29,6 @@ const SecondaryActions: FC<Props> = ({
     isButtonFilled,
     secondaryButtonColor
   );
-
-  if (hasUniqueAction) {
-    const uniqueAction = secondaryActions[0];
-
-    return (
-      <div css={Styles.buttonWrapper}>
-        <IconButton
-          dataTestId={'unique_secondary_action'}
-          color={'neutralBlack-700'}
-          name={uniqueAction.icon}
-          filled={false}
-          onClick={uniqueAction?.onClick}
-        />
-      </div>
-    );
-  }
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>

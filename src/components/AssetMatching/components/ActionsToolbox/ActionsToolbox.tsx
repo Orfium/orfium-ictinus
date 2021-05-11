@@ -19,8 +19,9 @@ const ActionsToolbox: FC<Props> = ({
   matchingActions = [],
   buttonStyles,
 }) => {
-  const primaryActions = matchingActions.slice(0, 2);
-  const secondaryActions = matchingActions.slice(2, matchingActions.length);
+  const primaryActions = matchingActions.length > 3 ? matchingActions.slice(0, 2) : matchingActions;
+  const secondaryActions =
+    matchingActions.length > 3 ? matchingActions.slice(2, matchingActions.length) : [];
 
   return (
     <div css={flex}>
