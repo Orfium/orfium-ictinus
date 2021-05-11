@@ -29,7 +29,7 @@ describe('Asset Matching - SectionHeader', () => {
     expect(secondaryActions.length).toBe(2);
   });
 
-  it('should render toolbox with 3 matching actions', async () => {
+  it('should render toolbox with 3 matching actions and the menu button is not rendered', async () => {
     const { getAllByTestId, queryByTestId } = render(
       <SectionHeader
         styleType={'outlined'}
@@ -67,7 +67,7 @@ describe('Asset Matching - SectionHeader', () => {
     expect(menuBtn).not.toBeInTheDocument();
   });
 
-  it('should render toolbox with 2 matching actions', async () => {
+  it('should render toolbox with 2 matching actions and the menu button is not rendered', async () => {
     const { getAllByTestId, queryByTestId } = render(
       <SectionHeader
         styleType={'outlined'}
