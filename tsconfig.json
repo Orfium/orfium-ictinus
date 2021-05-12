@@ -7,7 +7,7 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "allowJs": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "strict": true,
@@ -24,6 +24,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "types": ["@emotion/react/types/css-prop", "node", "jest", "@testing-library/jest-dom"],
+    "jsxImportSource": "@emotion/react"
   },
   "exclude": [
     "node_modules",
