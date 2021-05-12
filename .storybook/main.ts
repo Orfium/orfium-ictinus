@@ -1,3 +1,5 @@
+import 'babel/polyfill';
+
 module.exports = {
   stories: [
     '../docs/guides/INTRODUCTION.stories.@(md|mdx)',

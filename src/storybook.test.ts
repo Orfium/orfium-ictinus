@@ -1,4 +1,3 @@
-import registerRequireContextHook from 'babel-plugin-require-context-hook/register';
 import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
 import renderer from 'react-test-renderer';
 import { addSerializer } from 'jest-specific-snapshot';
@@ -15,7 +14,6 @@ import { ReactElement } from 'react';
  * */
 
 addSerializer(createSerializer());
-registerRequireContextHook();
 
 function createNodeMock(element: ReactElement) {
   const isExpandCollapseComponent = element.props.className?.includes('ExpandCollapse');

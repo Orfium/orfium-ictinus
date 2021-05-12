@@ -954,6 +954,14 @@
     "@babel/helper-create-regexp-features-plugin" "^7.12.13"
     "@babel/helper-plugin-utils" "^7.12.13"
 
+"@babel/polyfill@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.12.1.tgz#1f2d6371d1261bbd961f3c5d5909150e12d0bd96"
+  integrity sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.4"
+
 "@babel/preset-env@^7.12.1", "@babel/preset-env@^7.12.11", "@babel/preset-env@^7.14.1":
   version "7.14.1"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.14.1.tgz#b55914e2e68885ea03f69600b2d3537e54574a93"
@@ -5012,7 +5020,7 @@ core-js-pure@^3.0.0, core-js-pure@^3.8.2:
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.12.0.tgz#c59d45954a6569232f0704d085916a5e8c3b272f"
   integrity sha512-j2y084taJU4VMUpwuC93l19tsPbTAtOpg6/do3UOwX4eUJbsFdhEaGRQfTYthn5rDubsB88YITtei0Kw46vEQQ==
 
-core-js@^2.6.10:
+core-js@^2.6.10, core-js@^2.6.5:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==

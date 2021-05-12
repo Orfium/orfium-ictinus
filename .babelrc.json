@@ -4,7 +4,13 @@
       "@babel/preset-react",
       { "runtime": "automatic", "importSource": "@emotion/react" }
     ],
-    "@babel/preset-env",
+    [
+      "@babel/preset-env",
+      {
+        "loose": true,
+        "shippedProposals": true
+      }
+    ],
     "@babel/preset-typescript",
     "@emotion/babel-preset-css-prop"
   ],
@@ -16,7 +22,13 @@
         "root": ["./src"]
       }
     ],
-    "@emotion"
+    "@emotion",
+    [
+      "@babel/plugin-proposal-private-property-in-object",
+      {
+        "loose": "true"
+      }
+    ]
   ],
   "ignore": ["./src/storybook.test.ts", "**/*.stories.tsx", "**/*.stories.storyshot"],
   "env": {
