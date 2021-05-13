@@ -18,6 +18,9 @@ type Props = {
   align?: 'left' | 'right';
   rowType: TableType;
   cellCounter: number;
+  dataTestIdPrefix?: string;
+  rowIndex?: number;
+  index?: number;
 };
 
 const ContentCell: React.FC<Props> = ({
@@ -31,6 +34,9 @@ const ContentCell: React.FC<Props> = ({
   cellType,
   align,
   cellCounter,
+  dataTestIdPrefix,
+  rowIndex,
+  index,
 }) => {
   const theme = useTheme();
 
@@ -41,6 +47,9 @@ const ContentCell: React.FC<Props> = ({
       type={cellType}
       padded={padded}
       width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
+      dataTestIdPrefix={dataTestIdPrefix}
+      rowIndex={rowIndex}
+      index={index}
     >
       {rowType === 'nested-header' && (
         <div
