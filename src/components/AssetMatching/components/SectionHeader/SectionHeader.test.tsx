@@ -27,8 +27,8 @@ describe('Asset Matching - SectionHeader', () => {
     expect(secondaryActions.length).toBe(2);
   });
 
-  it('should render toolbox with 3 matching actions', () => {
-    const { getAllByTestId, getByTestId } = render(
+  it('should render toolbox with 3 matching actions and the menu button is not rendered', async () => {
+    const { getAllByTestId, queryByTestId } = render(
       <SectionHeader
         styleType={'outlined'}
         score={100}
@@ -59,13 +59,13 @@ describe('Asset Matching - SectionHeader', () => {
     );
 
     const primaryActions = getAllByTestId('primary_action');
-    const uniqueSecondaryAction = getByTestId('icon-button-unique_secondary_action');
+    expect(primaryActions.length).toBe(3);
 
-    expect(primaryActions.length).toBe(2);
-    expect(uniqueSecondaryAction).toBeInTheDocument();
+    const menuBtn = await queryByTestId('icon-button-menu_btn');
+    expect(menuBtn).not.toBeInTheDocument();
   });
 
-  it('should render toolbox with 2 matching actions', async () => {
+  it('should render toolbox with 2 matching actions and the menu button is not rendered', async () => {
     const { getAllByTestId, queryByTestId } = render(
       <SectionHeader
         styleType={'outlined'}
@@ -92,8 +92,8 @@ describe('Asset Matching - SectionHeader', () => {
     const primaryActions = getAllByTestId('primary_action');
 
     expect(primaryActions.length).toBe(2);
-    const uniqueSecondaryAction = await queryByTestId('icon-button-unique_secondary_action');
+    const menuBtn = await queryByTestId('icon-button-menu_btn');
 
-    expect(uniqueSecondaryAction).not.toBeInTheDocument();
+    expect(menuBtn).not.toBeInTheDocument();
   });
 });

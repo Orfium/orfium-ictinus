@@ -1,6 +1,6 @@
 import * as React from 'react';
 import CompactNotification from '../subcomponents/CompactNotification';
-import { NotificationTypes } from '../Notification';
+import { NotificationStyleType, NotificationTypes } from '../Notification';
 import { TestId } from '../../../utils/types';
 
 export type Props = {
@@ -10,6 +10,8 @@ export type Props = {
   message: string;
   /** The type of the Notification */
   type: NotificationTypes;
+  /** The style type of the Notification. Defaults to elevated */
+  styleType?: NotificationStyleType;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
@@ -24,6 +26,7 @@ const InlineNotification: React.FC<Props> = ({
   withIcon = false,
   message,
   type,
+  styleType = 'elevated',
   primaryCTALabel,
   primaryCTA = undefined,
   closeCTA = undefined,
@@ -35,6 +38,7 @@ const InlineNotification: React.FC<Props> = ({
       message={message}
       variant="inline"
       type={type}
+      styleType={styleType}
       primaryCTALabel={primaryCTALabel}
       primaryCTA={primaryCTA}
       closeCTA={closeCTA}

@@ -1,22 +1,35 @@
 import { Theme } from '../../theme';
-import { rem, transparentize } from 'polished';
+import { rem } from 'polished';
 import { css, SerializedStyles } from '@emotion/react';
 import { transition, flexCenter } from '../../theme/functions';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { isNotificationTypes } from './Toast';
+import { NotificationStyleType } from '../Notification/Notification';
 
 const maxHeightOptions = {
   notification: `max-height: ${rem(294)};`,
   generic: `max-height: none;`,
 };
 
-export const toastContainer = () => (theme: Theme): SerializedStyles => css`
+const toastContainerPerType = (
+  type: AcceptedColorComponentTypes,
+  styleType: NotificationStyleType,
+  theme: Theme
+) =>
+  styleType === 'outlined'
+    ? `border: ${rem(2)} solid ${theme.utils.getColor(type, 400, 'normal')}`
+    : `box-shadow: ${theme.elevation['02']}
+`;
+
+export const toastContainer = (
+  type: AcceptedColorComponentTypes,
+  styleType: NotificationStyleType
+) => (theme: Theme): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border-radius: ${theme.spacing.xsm};
-  // TODO: box-shadow's last parameter to change when elevated is introduced
-  box-shadow: ${rem(0)} ${rem(2)} ${rem(4)} ${rem(0)} ${transparentize(0.85, theme.palette.black)};
+  border-radius: ${rem(8)};
+  ${toastContainerPerType(type, styleType, theme)};
 `;
 
 export const topContainer = (type: AcceptedColorComponentTypes) => (

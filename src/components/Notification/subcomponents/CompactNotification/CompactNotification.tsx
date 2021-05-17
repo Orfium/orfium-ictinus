@@ -8,7 +8,7 @@ import {
   primaryActionContainer,
 } from './CompactNotification.style';
 import Icon from '../../../Icon';
-import { NotificationTypes } from '../../Notification';
+import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { AcceptedIconNames } from 'components/Icon/types';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
@@ -25,6 +25,8 @@ export type Props = {
   variant: CompactNotificationVariants;
   /** The type of the Notification */
   type: NotificationTypes;
+  /** The style type of the Notification. Defaults to elevated */
+  styleType: NotificationStyleType;
   /** The primary call-to-action label of the Notification */
   primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
@@ -53,6 +55,7 @@ const CompactNotification: React.FC<Props> = ({
   message,
   variant,
   type,
+  styleType = 'elevated',
   primaryCTALabel,
   primaryCTA,
   closeCTA,
@@ -63,7 +66,7 @@ const CompactNotification: React.FC<Props> = ({
 
   return (
     <div
-      css={notificationsContainer(type)}
+      css={notificationsContainer(type, styleType)}
       {...(variant == 'banner' && { 'notification-type': 'banner' })}
     >
       <div css={infoContainer()}>

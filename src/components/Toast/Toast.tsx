@@ -12,7 +12,7 @@ import {
 } from './Toast.style';
 import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 import Icon from '../Icon';
-import { NotificationTypes } from '../Notification/Notification';
+import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
 import { generateTestDataId } from '../../utils/helpers';
@@ -22,6 +22,8 @@ export type Props = {
   message: string;
   /** The type of the Toast, will determine the color and the icon */
   type?: AcceptedColorComponentTypes;
+  /** The style type of the Notification. Defaults to elevated */
+  styleType?: NotificationStyleType;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
@@ -37,6 +39,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
 const Toast: React.FC<Props> = ({
   message,
   type = 'branded1',
+  styleType = 'elevated',
   closeCTA,
   expanded = false,
   children,
@@ -46,7 +49,7 @@ const Toast: React.FC<Props> = ({
 
   return (
     <div
-      css={toastContainer()}
+      css={toastContainer(type, styleType)}
       {...(isNotificationTypes(type) && { 'notification-type': 'toast' })}
     >
       <div css={topContainer(type)}>
