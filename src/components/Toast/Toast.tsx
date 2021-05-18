@@ -38,7 +38,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
 
 const Toast: React.FC<Props> = ({
   message,
-  type = 'branded1',
+  type = 'primary',
   styleType = 'elevated',
   closeCTA,
   expanded = false,

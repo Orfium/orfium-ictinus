@@ -83,7 +83,7 @@ const Snackbar: React.FC<Props> = ({
           css={actionContainer()}
           data-testid={generateTestDataId('snackbar-primary', dataTestId)}
         >
-          <Button type="branded1" size="sm" onClick={primaryCTA}>
+          <Button type="primary" size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>

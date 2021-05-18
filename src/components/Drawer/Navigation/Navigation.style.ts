@@ -73,7 +73,7 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
     color: ${theme.palette.black};
 
     path {
-      fill: ${theme.utils.getColor('branded1', 400, 'normal')} !important;
+      fill: ${theme.utils.getColor('primary', 400, 'normal')} !important;
     }
   }
   text-decoration: none;
@@ -100,7 +100,7 @@ export const menuIconStyle = (current: boolean) => (theme: Theme): SerializedSty
   width: ${rem(32)};
   height: ${rem(32)};
   border-radius: 50%;
-  ${current ? `background-color: ${backgroundPickerBasedOnType('branded1')(theme)}; ` : ''}
+  ${current ? `background-color: ${backgroundPickerBasedOnType('primary')(theme)}; ` : ''}
 `;
 
 export const subMenuIconStyle = () => (theme: Theme): SerializedStyles => css`

@@ -28,7 +28,7 @@ const Day: React.FC<Props> = ({
   disabled = false,
 }) => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType('', 'branded1');
+  const calculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const date = React.useMemo(
     () =>
       day &&

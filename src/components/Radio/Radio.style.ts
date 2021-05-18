@@ -91,7 +91,7 @@ export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedSt
   width: ${rem('48px')};
   height: ${rem('48px')};
 
-  color: ${theme.utils.getColor('branded1', 400, 'normal')};
+  color: ${theme.utils.getColor('primary', 400, 'normal')};
   border: 0;
   opacity: ${disabled ? 0.5 : 1};
   cursor: pointer;

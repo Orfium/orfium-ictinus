@@ -29,7 +29,7 @@ const MenuItem: React.FC<Props> = memo(
     const theme = useTheme();
 
     const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-    const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
+    const { color, shade } = calculateColorBetweenColorAndType('', 'primary');
 
     const hasSubMenus = useMemo(() => options.length > 0, [options.length]);
 

@@ -66,8 +66,8 @@ You can apply your own branded colours for each product at the definition of the
 <ThemeProvider
     theme={{
         palette: {
-            branded1: theme.colors.orange,
-            branded2: theme.colors.ciel,
+            primary: theme.colors.orange,
+            secondary: theme.colors.ciel,
         },
     }}
 >
@@ -94,8 +94,8 @@ The final outcome will look like this.
 <IctinusThemeProvider
   theme={{
     palette: {
-      branded1: theme.colors.orange,
-      branded2: theme.colors.ciel,
+      primary: theme.colors.orange,
+      secondary: theme.colors.ciel,
     },
   }}
 >

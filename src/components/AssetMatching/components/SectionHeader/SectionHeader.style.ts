@@ -38,7 +38,7 @@ function getHeaderBg(isChecked: boolean, isBulkSection: boolean, theme: Theme) {
   }
 
   if (isChecked) {
-    return theme.utils.getColor('branded1', 100, 'normal');
+    return theme.utils.getColor('primary', 100, 'normal');
   }
 
   return theme.palette.white;

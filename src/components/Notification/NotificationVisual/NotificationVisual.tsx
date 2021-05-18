@@ -45,7 +45,7 @@ const NotificationVisual: React.FC<Props> = ({
           </Button>
         </div>
         <div css={actionContainer()} data-testid={generateTestDataId('visual-primary', dataTestId)}>
-          <Button type="branded1" size="sm" onClick={primaryCTA}>
+          <Button type="primary" size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>

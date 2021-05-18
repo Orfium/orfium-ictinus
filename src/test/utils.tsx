@@ -13,9 +13,7 @@ export const selectDropdownOption = async (
 };
 
 const renderWithThemeProvider = (children: JSX.Element) => {
-  return render(
-    <ThemeProvider theme={{ palette: { branded1: '#000' } }}>{children}</ThemeProvider>
-  );
+  return render(<ThemeProvider theme={{ palette: { primary: '#000' } }}>{children}</ThemeProvider>);
 };
 
 export * from '@testing-library/react';
