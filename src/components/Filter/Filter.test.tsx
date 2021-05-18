@@ -20,6 +20,7 @@ describe('Generic Filter', () => {
         <Filter
           label={label}
           items={items}
+          color={'lightCoolGray-400'}
           styleType={'filled'}
           onSelect={onSelect}
           defaultValue={items[0]}
