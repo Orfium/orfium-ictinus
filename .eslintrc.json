@@ -8,7 +8,7 @@
     "plugin:react-hooks/recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["react", "@emotion", "@typescript-eslint"],
+  "plugins": ["react", "@emotion", "@typescript-eslint", "import"],
   "env": {
     "node": true,
     "browser": true,
@@ -61,7 +61,23 @@
     "no-unused-vars": "off",
     "no-debugger": "warn",
     "no-console": "warn",
-
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
     /* Typescript rules */
     "@typescript-eslint/no-unused-expressions": "warn",
     "@typescript-eslint/no-unused-vars": [
