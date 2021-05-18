@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import Highlighter from 'react-highlight-words';
 
-import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../Select';
+import { menuStyle, optionStyle } from './SelectMenu.style';
 
 const SelectMenu = ({
   size = 'sm',

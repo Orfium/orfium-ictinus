@@ -1,8 +1,8 @@
-import React from 'react';
 import { Dayjs } from 'dayjs';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
+import React from 'react';
 import { currentDay } from '../utils';
+import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
 
 export type Props = {
   day?: number;

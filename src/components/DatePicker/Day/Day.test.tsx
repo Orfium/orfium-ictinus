@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
-import Day from './Day';
 import { currentDay } from '../utils';
+import Day from './Day';
 
 describe('Day', () => {
   const mockDate = currentDay;

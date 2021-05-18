@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
-import { Props } from './Radio';
 import { Theme } from '../../theme';
+import { Props } from './Radio';
 
 const hoverColor = 'rgba(0, 0, 0, 0.05)';
 

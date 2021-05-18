@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'test';
+import { currentDay } from '../utils';
 import Month from './Month';
 import {
   calculatedDayIsBetween,
@@ -7,7 +8,6 @@ import {
   calculateSelectedDay,
   calculateSelectedDayPosition,
 } from './Month.utils';
-import { currentDay } from '../utils';
 
 describe('Month', () => {
   const mockDate = currentDay;

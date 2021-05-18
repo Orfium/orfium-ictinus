@@ -1,6 +1,6 @@
-import { flex, transition } from 'theme/functions';
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { flex, transition } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
 
 const header = (checked: boolean, styleType: formFieldStyles, isBulkSection: boolean) => (

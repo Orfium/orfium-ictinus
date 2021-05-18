@@ -1,5 +1,5 @@
-import React from 'react';
 import Select from 'components/Select';
+import React from 'react';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },

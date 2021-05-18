@@ -1,11 +1,11 @@
 import React from 'react';
+import { generateTestDataId } from 'utils/helpers';
 import {
   LoaderContainer,
   LoaderLine,
   LoaderDecLine,
   LoaderIncLine,
 } from './IndeterminateLoader.style';
-import { generateTestDataId } from 'utils/helpers';
 
 type Props = {
   dataTestId?: string;

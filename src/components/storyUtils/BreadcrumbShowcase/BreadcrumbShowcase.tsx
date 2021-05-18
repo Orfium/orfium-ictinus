@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
 import Breadcrumb from 'components/Breadcrumb';
-import { BreadcrumbItemData } from '../../Breadcrumb/types';
-import { Router, Switch, Route } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import { uniqueId } from 'lodash';
+import React, { useState, useEffect } from 'react';
+import { Router, Switch, Route } from 'react-router-dom';
+import { BreadcrumbItemData } from '../../Breadcrumb/types';
 interface Props {
   initData: BreadcrumbItemData[];
 }

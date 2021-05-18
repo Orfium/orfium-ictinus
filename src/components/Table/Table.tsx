@@ -6,8 +6,8 @@ import useTheme from '../../hooks/useTheme';
 import CheckBox from '../CheckBox';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
-import { tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
+import { tableStyle } from './Table.style';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {

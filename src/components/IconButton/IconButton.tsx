@@ -1,15 +1,15 @@
 import * as React from 'react';
+import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { useTheme } from '../../index';
+import { pickTextColorFromSwatches } from '../../theme/palette';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
+import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import { iconButtonStyle } from './IconButton.style';
-import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
-import { pickTextColorFromSwatches } from '../../theme/palette';
-import { defineBackgroundColor } from '../Button/utils';
-import { useTheme } from '../../index';
 
 export type Props = {
   /** Type indicating the type of the button */

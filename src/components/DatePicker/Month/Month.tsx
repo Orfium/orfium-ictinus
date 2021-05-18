@@ -1,12 +1,13 @@
-import * as React from 'react';
-import { useCallback } from 'react';
 import dayjs, { Dayjs } from 'dayjs';
-import Day from '../Day/Day';
+import isBetween from 'dayjs/plugin/isBetween';
 import chunk from 'lodash/chunk';
 import inRange from 'lodash/inRange';
-import { Range } from '../OverlayComponent/OverlayComponent';
-import isBetween from 'dayjs/plugin/isBetween';
+import { useCallback } from 'react';
+import * as React from 'react';
 import { DisabledDates } from '../DatePicker';
+import Day from '../Day/Day';
+import { Range } from '../OverlayComponent/OverlayComponent';
+import { currentDay } from '../utils';
 import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
 import {
   calculatedDayIsBetween,
@@ -14,7 +15,6 @@ import {
   calculateSelectedDay,
   calculateSelectedDayPosition,
 } from './Month.utils';
-import { currentDay } from '../utils';
 
 dayjs.extend(isBetween);
 

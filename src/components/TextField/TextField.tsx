@@ -1,13 +1,13 @@
-import React, { FC, InputHTMLAttributes } from 'react';
-import { iconWrapperStyle, inputStyle } from './TextField.style';
-import Label from '../Label';
-import Icon from '../Icon';
-import { DEFAULT_SIZE } from 'utils/size-utils';
-import useTheme from 'hooks/useTheme';
+import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputWrapper, {
   Props as TextInputWrapperProps,
 } from 'components/utils/TextInputWrapper/TextInputWrapper';
-import { AcceptedIconNames } from 'components/Icon/types';
+import useTheme from 'hooks/useTheme';
+import React, { FC, InputHTMLAttributes } from 'react';
+import { DEFAULT_SIZE } from 'utils/size-utils';
+import Icon from '../Icon';
+import Label from '../Label';
+import { iconWrapperStyle, inputStyle } from './TextField.style';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */

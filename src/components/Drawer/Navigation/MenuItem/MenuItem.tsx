@@ -1,8 +1,11 @@
 import { MenuItem as MenuItemProps } from 'components/Drawer/types';
 import ExpandCollapse from 'components/ExpandCollapse';
 import Icon from 'components/Icon';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
+import { pickTextColorFromSwatches } from 'theme/palette';
+import useTheme from '../../../../hooks/useTheme';
 import {
   menuItemStyle,
   arrowContainerStyle,
@@ -12,9 +15,6 @@ import {
   subMenuIconStyle,
   menuLinkStyle,
 } from '../Navigation.style';
-import useTheme from '../../../../hooks/useTheme';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import { pickTextColorFromSwatches } from 'theme/palette';
 
 type Props = {
   /** Defines the current menu item whose submenu item is currently selected */

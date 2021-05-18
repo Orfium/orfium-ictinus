@@ -1,7 +1,7 @@
 import { rem } from 'polished';
 import { Theme } from '../../theme';
-import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';
 import { colorShades } from '../../theme/palette';
+import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';
 
 type iconStyleProps = {
   /** Property indicating the color of the icon. Defaults to primary */

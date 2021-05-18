@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { labelStyle } from './Label.style';
 import { DEFAULT_SIZE } from '../../utils/size-utils';
+import { labelStyle } from './Label.style';
 
 export type Props = {
   /** If the label has error */

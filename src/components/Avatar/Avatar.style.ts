@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from '../../theme';
 import { rem } from 'polished';
+import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
 import { AvatarShapes, AvatarSizes } from './Avatar';

@@ -1,9 +1,9 @@
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import debounce from 'lodash/debounce';
 import React, { useMemo, useCallback } from 'react';
 import { MatchingAction } from '../types';
 import { useSelectedItem } from './SelectedItemContext';
-import debounce from 'lodash/debounce';
 
 const SEARCH_REG_EXPRESSION = /\s/g;
 const REPLACE_WITH = '-';

@@ -1,3 +1,6 @@
+import useTheme from 'hooks/useTheme';
+import max from 'lodash/max';
+import { lighten } from 'polished';
 import React, { useCallback, useMemo } from 'react';
 import {
   BarChart as RechartsBarChart,
@@ -9,14 +12,11 @@ import {
   Tooltip,
   LabelList,
 } from 'recharts';
-import max from 'lodash/max';
-import { lighten } from 'polished';
-import CustomTooltipContent from './components/CustomTooltipContent';
-import CustomTooltip from './components/CustomTooltip';
-import useTheme from 'hooks/useTheme';
-import CustomLabel from './components/CustomLabel';
-import { getValues, customTickFormatter } from './utils';
 import Wrapper from '../Wrapper';
+import CustomLabel from './components/CustomLabel';
+import CustomTooltip from './components/CustomTooltip';
+import CustomTooltipContent from './components/CustomTooltipContent';
+import { getValues, customTickFormatter } from './utils';
 
 const multiplyFactor = 9.5;
 const yAxisWidthDefault = 160;

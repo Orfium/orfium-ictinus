@@ -1,9 +1,9 @@
 import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
+import { getLocaleFormat } from '../../../utils/helpers';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
-import { getLocaleFormat } from '../../../utils/helpers';
 import { Range } from '../OverlayComponent/OverlayComponent';
 import { rangeInputsWrapper } from './DatePickInput.style';
 

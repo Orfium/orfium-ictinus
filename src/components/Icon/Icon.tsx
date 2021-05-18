@@ -1,9 +1,9 @@
 import * as React from 'react';
+import { colorShades } from '../../theme/palette';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyle, iconStyle } from './Icon.style';
 import { AcceptedIconNames } from './types';
-import { colorShades } from '../../theme/palette';
 
 export type Props = {
   /** This property defines witch icon to use */

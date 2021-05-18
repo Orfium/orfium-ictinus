@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { loaderContainer } from './Loader.style';
 import DotsLoader from './components/DotsLoader';
 import IndeterminateLoader from './components/IndeterminateLoader';
+import { loaderContainer } from './Loader.style';
 
 type Props = {
   type?: 'dots' | 'indeterminate';

@@ -1,5 +1,5 @@
-import React from 'react';
 import Menu from 'components/Menu';
+import React from 'react';
 
 const MenuShowcase = () => {
   const [selectedItem, setSelectedItem] = React.useState('');

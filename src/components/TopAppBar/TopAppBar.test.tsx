@@ -1,8 +1,8 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
+import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 import { DEFAULT_USER_MENU } from '../storyUtils/TopAppBarShowcase';
 import TopAppBar from './TopAppBar';
-import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
 
 describe('TopAppBar', () => {
   let onMenuIconClickMock: jest.Mock;

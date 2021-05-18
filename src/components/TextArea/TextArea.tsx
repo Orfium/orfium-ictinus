@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { inputStyle } from './TextArea.style';
-import TextInputWrapper from '../utils/TextInputWrapper/TextInputWrapper';
 import { formFieldStyles } from '../../theme/palette';
+import TextInputWrapper from '../utils/TextInputWrapper/TextInputWrapper';
+import { inputStyle } from './TextArea.style';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */

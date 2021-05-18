@@ -1,8 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from '../../../../theme';
-import { inputStyle } from '../../../TextField/TextField.style';
 import { darken, lighten, rem } from 'polished';
 import { themeFunctions } from '../../../../index';
+import { Theme } from '../../../../theme';
+import { inputStyle } from '../../../TextField/TextField.style';
 
 const getBackground = (dark: boolean, theme: Theme) =>
   dark ? theme.utils.getColor('darkGray', 600) : theme.utils.getColor('lightGray', 100);
