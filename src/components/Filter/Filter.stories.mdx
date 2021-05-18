@@ -40,10 +40,10 @@ A filter with different with style types and a selection handler to return selec
 <Preview>
   <Story name="Filter with style types">
     <Stack>
-       <FilterShowcase styleType="filled" />
-       <FilterShowcase styleType="outlined" />
-       <FilterShowcase styleType="elevated" />
-       <FilterShowcase styleType="transparent" />
+       <FilterShowcase styleType="filled" color="lightCoolGray-400" />
+       <FilterShowcase styleType="outlined" color="lightCoolGray-400" />
+       <FilterShowcase styleType="elevated" color="lightCoolGray-400" />
+       <FilterShowcase styleType="transparent" color="lightCoolGray-400" />
     </Stack>
   </Story>
 </Preview>
@@ -66,13 +66,14 @@ A filter with colors and a selection handler to return selection on change and t
 
 # Dynamic Props - Knobs
 <Preview>
-  <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Dynamic Filter Props" parameters={{ decorators: [withKnobs] }}>
     <Filter
         items={[{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }]}
         label={text('text', 'you can change me')}
         defaultValue={select('defaultValue', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }], { value: 'apple', label: 'Apple' })}
         selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }], { value: 'apple', label: 'Apple' })}
         styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
+        color={select('color', ['lightCoolGray-400', 'magenta-100', 'darkGray-700', 'red-500'], 'lightCoolGray-400')}
         onSelect={option => {}}
     >
     {text('text', 'change me!')}

@@ -28,7 +28,7 @@ const Filter: React.FC<Props & TestProps> = props => {
     styleType,
     dataTestId,
     label = '',
-    color = '',
+    color,
     buttonType = 'primary',
     disabled = false,
   } = props;

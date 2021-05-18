@@ -1,5 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    role="button"
+  >
+    <div
+      className="css-prp4qr-Filter"
+    >
+      <button
+        className="css-190url3-Filter"
+        data-testid="filter"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="css-ohjhgn-Filter"
+        >
+          <span
+            className="css-12o2hfl-Filter"
+          >
+            <span
+              className="css-1afohzx-Filter"
+            >
+              you can change me
+              :
+              <span>
+                Apple
+              </span>
+            </span>
+          </span>
+          <span
+            className="css-1gnbc76-Icon"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1rnhl34-Icon"
+            />
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 <div
   style={
