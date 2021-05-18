@@ -36,12 +36,15 @@ const TableCell: React.FC<Props> = React.memo(
 
     const tableCellTestId = children
       ? component === 'th' && typeof children === 'string'
-        ? (dataTestIdPrefix ? dataTestIdPrefix + '_table_header_' : 'table_header_') +
-          children.split(' ').join('_').toLowerCase()
-        : (dataTestIdPrefix ? dataTestIdPrefix + '_row_' : 'table_row_') +
-          rowIndex +
-          '_cell_' +
-          index
+        ? (dataTestIdPrefix ? dataTestIdPrefix + '_' : '') +
+          'table_header_' +
+          children
+            .split(' ')
+            .join('_')
+            .toLowerCase()
+        : (dataTestIdPrefix ? dataTestIdPrefix + '_' : '') +
+          (rowIndex != undefined ? 'table_row_' + rowIndex : '') +
+          (index != undefined ? '_cell_' + index : '')
       : undefined;
 
     return (
