@@ -9,12 +9,13 @@ import Button from '../Button';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { MenuPositionAllowed, optionsStyle, wrapperStyle } from './Menu.style';
+import { wrapperStyle } from './Menu.style';
 import { pickTextColorFromSwatches } from 'theme/palette';
 import isEmpty from 'lodash/isEmpty';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import Avatar from '../Avatar';
 import { defineBackgroundColor } from '../Button/utils';
+import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
 
 export type Props = {
   /** the color of the button based on our colors eg. red-400 */

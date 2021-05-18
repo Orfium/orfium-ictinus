@@ -5,7 +5,7 @@ import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 import Separator from '../../Breadcrumb/Separator/Separator';
 import Icon from '../../Icon';
-import { optionsStyle } from '../../Menu/Menu.style';
+import { optionsStyle } from '../../utils/DropdownOptions';
 import ClickAwayListener from '../../utils/ClickAwayListener';
 import {
   breadcrumbCollapsedStyles,
