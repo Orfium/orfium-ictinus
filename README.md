@@ -67,7 +67,7 @@ You can apply your own branded colours for each product at the definition of the
     theme={{
         palette: {
             primary: theme.colors.orange,
-            branded2: theme.colors.ciel,
+            secondary: theme.colors.ciel,
         },
     }}
 >
@@ -95,7 +95,7 @@ The final outcome will look like this.
   theme={{
     palette: {
       primary: theme.colors.orange,
-      branded2: theme.colors.ciel,
+      secondary: theme.colors.ciel,
     },
   }}
 >
