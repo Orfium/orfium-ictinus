@@ -31,7 +31,6 @@ export const lightPaletteConfig: PaletteConfig = {
   primary: flatPaletteConfig.darkBlue,
   secondary: flatPaletteConfig.yellow,
 
-  branded1: flatPaletteConfig.orange,
   branded2: flatPaletteConfig.yellow,
 
   //rest
@@ -60,7 +59,6 @@ export const darkPaletteConfig: PaletteConfig = {
   primary: flatPaletteConfig.darkGray,
   secondary: flatPaletteConfig.lightGray,
 
-  branded1: flatPaletteConfig.orange,
   branded2: flatPaletteConfig.yellow,
 
   //rest
@@ -97,7 +95,6 @@ export type PaletteConfig = {
   primary?: string;
   secondary?: string;
 
-  branded1?: string;
   branded2?: string;
 
   success?: string;

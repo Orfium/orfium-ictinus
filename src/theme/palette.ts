@@ -44,7 +44,6 @@ export const colorShades = [100, 200, 300, 400, 500, 600, 700] as const;
 export const mainTypes = [
   'primary',
   'secondary',
-  'branded1',
   'branded2',
   'success',
   'error',
@@ -150,7 +149,16 @@ export const pickTextColorFromSwatches = (
       'vividBlue',
       'vividPurple',
     ],
-    400: ['darkGray', 'magenta', 'red', 'darkOrange', 'darkBlue', 'purple', 'vividBlue', 'vividPurple'],
+    400: [
+      'darkGray',
+      'magenta',
+      'red',
+      'darkOrange',
+      'darkBlue',
+      'purple',
+      'vividBlue',
+      'vividPurple',
+    ],
     300: ['darkGray', 'darkBlue'],
   };
   const pickedShade = colorsForWhiteText[shade];
