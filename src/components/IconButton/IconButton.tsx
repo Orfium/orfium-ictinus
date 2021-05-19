@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { useTheme } from '../../index';
 import { pickTextColorFromSwatches } from '../../theme/palette';

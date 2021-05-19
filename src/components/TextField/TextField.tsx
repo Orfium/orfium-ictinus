@@ -5,6 +5,7 @@ import TextInputWrapper, {
 import useTheme from 'hooks/useTheme';
 import React, { FC, InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
+
 import Icon from '../Icon';
 import Label from '../Label';
 import { iconWrapperStyle, inputStyle } from './TextField.style';

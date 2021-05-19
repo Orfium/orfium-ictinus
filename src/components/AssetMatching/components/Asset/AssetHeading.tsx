@@ -2,6 +2,7 @@ import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 import React, { FC } from 'react';
 import { flex } from 'theme/functions';
+
 import Styles from './Asset.style';
 
 interface Props {

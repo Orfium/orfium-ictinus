@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from 'test';
+
 import { SelectedItemProvider } from '../SelectedItemContext';
 import { Categories } from './index';
 import '@testing-library/jest-dom';

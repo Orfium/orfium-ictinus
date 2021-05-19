@@ -1,4 +1,5 @@
 import React from 'react';
+
 import useTheme from '../../../../../../hooks/useTheme';
 import { isComponentFunctionType } from '../../../../../../utils/helpers';
 import { ContentComponent, TableType } from '../../../../Table';

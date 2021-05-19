@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+
 import useTheme from '../../../hooks/useTheme';
 import Wrapper from '../Wrapper';
 import CustomTooltip from './components/CustomTooltip';

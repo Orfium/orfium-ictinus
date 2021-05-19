@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { render, fireEvent } from '../../test';
 import Toast from '../Toast';
 import Banner from './Banner';

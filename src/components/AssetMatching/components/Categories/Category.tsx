@@ -1,5 +1,6 @@
 import uniqueId from 'lodash/uniqueId';
 import React, { FC } from 'react';
+
 import Styles from './Categories.style';
 import CategoryItem from './CategoryItem';
 

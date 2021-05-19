@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Chip from './Chip';
 import '@testing-library/jest-dom';
 import { render, fireEvent } from '../../test';

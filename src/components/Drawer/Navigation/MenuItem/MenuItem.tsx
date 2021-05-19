@@ -5,6 +5,7 @@ import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { pickTextColorFromSwatches } from 'theme/palette';
+
 import useTheme from '../../../../hooks/useTheme';
 import {
   menuItemStyle,

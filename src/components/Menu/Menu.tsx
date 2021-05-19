@@ -5,6 +5,7 @@ import * as React from 'react';
 import { pickTextColorFromSwatches } from 'theme/palette';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+
 import Avatar from '../Avatar';
 import Button from '../Button';
 import { defineBackgroundColor } from '../Button/utils';

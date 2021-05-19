@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { formFieldStyles } from '../../theme/palette';
 import TextInputWrapper from '../utils/TextInputWrapper/TextInputWrapper';
 import { inputStyle } from './TextArea.style';

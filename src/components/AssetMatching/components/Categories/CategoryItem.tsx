@@ -1,4 +1,5 @@
 import React, { FC, useMemo } from 'react';
+
 import { useCategoryItemActions } from '../utils';
 import Styles from './Categories.style';
 

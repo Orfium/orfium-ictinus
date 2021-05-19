@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { DEFAULT_SIZE } from '../../utils/size-utils';
 import { labelStyle } from './Label.style';
 

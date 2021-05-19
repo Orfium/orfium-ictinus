@@ -1,4 +1,5 @@
 import theme from 'theme';
+
 import { initData } from './mockedData';
 import { color } from './story.utils';
 import { getKeyNames, colorPicker } from './utils';

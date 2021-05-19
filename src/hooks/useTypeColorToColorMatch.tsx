@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import * as React from 'react';
+
 import { flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
 import {
   calculateActualColorFromComponentProp,

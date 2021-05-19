@@ -1,5 +1,6 @@
 import { AcceptedIconNames } from 'components/Icon/types';
 import React, { FC } from 'react';
+
 import { Categories } from '../Categories';
 import { CategoryType } from '../Categories/Category';
 import Styles from './Asset.style';

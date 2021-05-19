@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem, tint } from 'polished';
+
 import { Theme } from '../../theme';
 import { NotificationStyleType, NotificationTypes } from './Notification';
 

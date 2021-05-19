@@ -5,6 +5,7 @@ import { keys, merge, pick } from 'lodash';
 import { normalize } from 'polished';
 import React from 'react';
 import theme, { Theme, ThemeConfig } from 'theme';
+
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';

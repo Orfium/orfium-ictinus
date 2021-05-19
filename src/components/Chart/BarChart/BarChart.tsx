@@ -12,6 +12,7 @@ import {
   Tooltip,
   LabelList,
 } from 'recharts';
+
 import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';
 import CustomTooltip from './components/CustomTooltip';

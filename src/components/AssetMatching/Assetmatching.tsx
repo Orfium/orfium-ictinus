@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
+
 import { OnCheckHandler } from '../../hooks/useCheck';
 import Styles from './AssetMatching.style';
 import { Asset } from './components/Asset';

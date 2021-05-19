@@ -1,5 +1,4 @@
 import { AcceptedIconNames } from '../types';
-
 import AccountIcon from './account.svg';
 import ActionsIcon from './actions.svg';
 import AddIcon from './add.svg';

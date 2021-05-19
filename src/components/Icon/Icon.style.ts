@@ -1,4 +1,5 @@
 import { rem } from 'polished';
+
 import { Theme } from '../../theme';
 import { colorShades } from '../../theme/palette';
 import { AcceptedColorComponentTypes, fillPickerBasedOnType } from '../../utils/themeFunctions';

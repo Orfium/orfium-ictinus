@@ -4,6 +4,7 @@ import useTheme from 'hooks/useTheme';
 import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
+
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputWrapper.style';
 
 export type Props = {

@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { PieChart, Pie, Cell, Label } from 'recharts';
+
 import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';
 

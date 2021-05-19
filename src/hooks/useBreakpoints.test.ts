@@ -1,4 +1,5 @@
 import { renderHook } from 'test';
+
 import useBreakpoints, { queriesKeys } from './useBreakpoints';
 
 export const createMockMediaMatcher = (matchesOrMapOfMatches: boolean) => (

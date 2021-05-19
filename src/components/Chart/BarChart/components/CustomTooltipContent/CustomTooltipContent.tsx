@@ -1,5 +1,6 @@
 import React from 'react';
 import { TooltipProps } from 'recharts';
+
 import { HoverInfo } from '../../BarChart';
 import { tooltipLiStyle, tooltipStyle, tooltipUlStyle } from './CustomTooltipContent.style';
 

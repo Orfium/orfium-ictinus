@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../../theme/palette';
 
 export const paletteWrapper = css`

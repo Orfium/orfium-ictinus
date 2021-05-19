@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { pickTextColorFromSwatches } from '../../theme/palette';
 import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Icon from '../Icon';

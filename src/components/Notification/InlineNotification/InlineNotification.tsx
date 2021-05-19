@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { TestId } from '../../../utils/types';
 import { NotificationStyleType, NotificationTypes } from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';

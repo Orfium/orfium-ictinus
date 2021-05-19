@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
+
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';

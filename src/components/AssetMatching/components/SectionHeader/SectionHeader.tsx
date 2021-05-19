@@ -1,6 +1,7 @@
 import { OnCheckHandler, useCheck } from 'hooks/useCheck';
 import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
+
 import { MatchingAction } from '../../types';
 import { ActionsToolbox } from '../ActionsToolbox';
 import { CheckBoxContainer } from '../CheckBoxContainer';

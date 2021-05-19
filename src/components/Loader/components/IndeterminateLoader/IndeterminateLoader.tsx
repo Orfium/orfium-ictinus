@@ -1,5 +1,6 @@
 import React from 'react';
 import { generateTestDataId } from 'utils/helpers';
+
 import {
   LoaderContainer,
   LoaderLine,

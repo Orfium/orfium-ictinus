@@ -2,6 +2,7 @@ import Icon from 'components/Icon';
 import useTheme from 'hooks/useTheme';
 import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
+
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
 import { TestId } from '../../utils/types';
 import {

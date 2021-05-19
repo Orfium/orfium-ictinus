@@ -1,5 +1,6 @@
 import isEmpty from 'lodash/isEmpty';
 import { darken, lighten, transparentize } from 'polished';
+
 import { Theme } from '../../theme';
 import { mainTypes } from '../../theme/palette';
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';

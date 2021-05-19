@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+
 import { container, itemContainer } from './PositionInScreen.style';
 
 type Props = {

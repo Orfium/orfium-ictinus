@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
+
 import { normalFont } from '../Asset/Asset.style';
 
 const categories = css`

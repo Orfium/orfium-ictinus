@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';

@@ -1,5 +1,6 @@
 import Icon from 'components/Icon';
 import * as React from 'react';
+
 import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';

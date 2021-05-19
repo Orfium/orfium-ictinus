@@ -1,4 +1,5 @@
 import { rem } from 'polished';
+
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
 import { RequiredProperties } from '../../utils/common';

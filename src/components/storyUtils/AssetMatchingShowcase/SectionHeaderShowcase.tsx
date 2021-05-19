@@ -1,5 +1,6 @@
 import { rem } from 'polished';
 import React from 'react';
+
 import SectionHeader from '../../AssetMatching/components/SectionHeader/SectionHeader';
 import mocks from './mocks';
 

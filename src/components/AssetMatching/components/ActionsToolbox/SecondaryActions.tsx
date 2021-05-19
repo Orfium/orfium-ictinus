@@ -2,6 +2,7 @@ import IconButton from 'components/IconButton';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import React, { FC, useState } from 'react';
 import { generateUniqueID } from 'utils/helpers';
+
 import { MatchingAction } from '../../types';
 import { useMatchingActions } from '../utils';
 import Styles from './ActionsToolbox.style';

@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 import React from 'react';
+
 import { render, fireEvent } from '../../test';
 import Toast from './Toast';
 import '@testing-library/jest-dom';

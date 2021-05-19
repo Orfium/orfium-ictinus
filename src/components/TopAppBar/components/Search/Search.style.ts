@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
+
 import { themeFunctions } from '../../../../index';
 import { Theme } from '../../../../theme';
 import { inputStyle } from '../../../TextField/TextField.style';

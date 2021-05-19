@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { flex } from 'theme/functions';
 import { generateUniqueID } from 'utils/helpers';
+
 import { MatchingAction } from '../../types';
 import { useMatchingActions } from '../utils';
 import Styles from './ActionsToolbox.style';
