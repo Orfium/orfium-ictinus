@@ -12,6 +12,9 @@ type Props = {
   colSpan?: number;
   type?: 'financial' | 'normal';
   padded?: boolean;
+  dataTestIdPrefix?: string;
+  rowIndex?: number;
+  index?: number | string;
 };
 
 const TableCell: React.FC<Props> = React.memo(
@@ -24,9 +27,25 @@ const TableCell: React.FC<Props> = React.memo(
     children,
     type = 'normal',
     padded = false,
+    dataTestIdPrefix,
+    rowIndex,
+    index,
   }) => {
     const theme = useTheme();
     const Component = component;
+
+    const tableCellTestId = children
+      ? component === 'th' && typeof children === 'string'
+        ? (dataTestIdPrefix ? dataTestIdPrefix + '_' : '') +
+          'table_header_' +
+          children
+            .split(' ')
+            .join('_')
+            .toLowerCase()
+        : (dataTestIdPrefix ? dataTestIdPrefix + '_' : '') +
+          (rowIndex != undefined ? 'table_row_' + rowIndex : '') +
+          (index != undefined ? '_cell_' + index : '')
+      : undefined;
 
     return (
       <Component
@@ -57,6 +76,7 @@ const TableCell: React.FC<Props> = React.memo(
             borderLeft: `1px solid ${theme.utils.getColor('lightGray', 400)}`,
           },
         ]}
+        data-testid={tableCellTestId}
       >
         {children}
       </Component>
