@@ -21,6 +21,9 @@ const dateFormatOptions = {
   'MMM D, YYYY': 'MMM D, YYYY',
   'ddd, MMM D, YYYY': 'ddd, MMM D, YYYY'
 }
+const disableDates = {
+    days: [mockDate.toDate(), mockDate.subtract(1, 'day').toDate() , mockDate.subtract(2, 'day').toDate(), mockDate.subtract(5, 'day').toDate()]
+}
 
 
 <Meta title="Design System/DatePicker" component={DatePicker} />
@@ -158,9 +161,11 @@ Some disable dates functionality
 
 <Preview>
   <Story name="DayPicker with disabled dates">
+  <Stack>
     <DatePicker
-      disableDates={{ daysOfWeek: [0, 6] }}
+      disableDates={disableDates}
     />
+    </Stack>
   </Story>
 </Preview>
 
