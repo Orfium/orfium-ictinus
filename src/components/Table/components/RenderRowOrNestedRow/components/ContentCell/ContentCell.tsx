@@ -1,8 +1,9 @@
 import React from 'react';
+
 import useTheme from '../../../../../../hooks/useTheme';
-import TableCell from '../../../TableCell';
 import { isComponentFunctionType } from '../../../../../../utils/helpers';
 import { ContentComponent, TableType } from '../../../../Table';
+import TableCell from '../../../TableCell';
 
 type Props = {
   columnsHasNumberArr: boolean[];

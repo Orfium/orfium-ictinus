@@ -1,10 +1,11 @@
-import { Theme } from '../../theme';
-import { rem } from 'polished';
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'polished';
+
+import { Theme } from '../../theme';
 import { transition, flexCenter } from '../../theme/functions';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { isNotificationTypes } from './Toast';
 import { NotificationStyleType } from '../Notification/Notification';
+import { isNotificationTypes } from './Toast';
 
 const maxHeightOptions = {
   notification: `max-height: ${rem(294)};`,

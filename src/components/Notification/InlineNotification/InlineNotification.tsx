@@ -1,7 +1,8 @@
 import * as React from 'react';
-import CompactNotification from '../subcomponents/CompactNotification';
-import { NotificationStyleType, NotificationTypes } from '../Notification';
+
 import { TestId } from '../../../utils/types';
+import { NotificationStyleType, NotificationTypes } from '../Notification';
+import CompactNotification from '../subcomponents/CompactNotification';
 
 export type Props = {
   /** Show notification icon based on the type */

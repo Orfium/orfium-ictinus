@@ -1,8 +1,9 @@
-import React from 'react';
-import useTheme from '../../../../../../hooks/useTheme';
-import TableCell from '../../../TableCell';
 import rem from 'polished/lib/helpers/rem';
+import React from 'react';
+
+import useTheme from '../../../../../../hooks/useTheme';
 import Icon from '../../../../../Icon';
+import TableCell from '../../../TableCell';
 
 type Props = { isExpandedExists: boolean; checked: boolean; toggleChecked: () => void };
 

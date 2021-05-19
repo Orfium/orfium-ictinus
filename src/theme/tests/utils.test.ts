@@ -1,8 +1,8 @@
+import { getColor } from '../index';
+import { pickTextColorFromSwatches } from '../palette';
+import { flatPaletteConfig, lightPaletteConfig } from '../palette.config';
 import { colorShadesCreator, enhancePaletteWithShades } from '../utils';
 import { magentaShades } from './const';
-import { getColor } from '../index';
-import { flatPaletteConfig, lightPaletteConfig } from '../palette.config';
-import { pickTextColorFromSwatches } from '../palette';
 
 describe('GetColor functionalities', () => {
   test('magenta base color to be shaded correctly', () => {

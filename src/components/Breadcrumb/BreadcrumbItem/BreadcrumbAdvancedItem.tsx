@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import Menu from '../../Menu/index';
 
 type Props = {

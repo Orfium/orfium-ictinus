@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Chip from '../../Chip';
 import { Props } from '../../Chip/Chip';
 

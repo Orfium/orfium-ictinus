@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+
 import { flex } from '../../../theme/functions';
 
 export const overlayWrapperStyle = () => (theme: Theme): SerializedStyles => css`

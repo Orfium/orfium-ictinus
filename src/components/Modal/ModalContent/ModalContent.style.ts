@@ -1,6 +1,7 @@
-import { Theme } from '../../../theme';
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
+import { Theme } from '../../../theme';
 
 export const modalContentContainer = (theme: Theme): SerializedStyles => css`
   width: 100%;

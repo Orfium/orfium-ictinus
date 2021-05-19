@@ -1,4 +1,6 @@
 import * as React from 'react';
+
+import useTheme from '../../hooks/useTheme';
 import { generateTestDataId } from '../../utils/helpers';
 import { TestId } from '../../utils/types';
 import useRadioGroup from '../RadioGroup/useRadioGroup';
@@ -9,7 +11,6 @@ import {
   inputStyles,
   wrapperStyles,
 } from './Radio.style';
-import useTheme from '../../hooks/useTheme';
 
 export type Props = {
   /** The value of the radio input. If no value is passed the default value, according to spec, is "on"

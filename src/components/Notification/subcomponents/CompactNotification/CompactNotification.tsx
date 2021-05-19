@@ -1,4 +1,11 @@
+import { AcceptedIconNames } from 'components/Icon/types';
 import * as React from 'react';
+
+import useTheme from '../../../../hooks/useTheme';
+import { generateTestDataId } from '../../../../utils/helpers';
+import { TestId } from '../../../../utils/types';
+import Icon from '../../../Icon';
+import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, closeActionContainer } from '../../Notification.style';
 import {
   actionsContainer,
@@ -7,12 +14,6 @@ import {
   headContainer,
   primaryActionContainer,
 } from './CompactNotification.style';
-import Icon from '../../../Icon';
-import { NotificationStyleType, NotificationTypes } from '../../Notification';
-import { AcceptedIconNames } from 'components/Icon/types';
-import { generateTestDataId } from '../../../../utils/helpers';
-import { TestId } from '../../../../utils/types';
-import useTheme from '../../../../hooks/useTheme';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 

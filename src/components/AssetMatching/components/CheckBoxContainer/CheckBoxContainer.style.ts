@@ -1,6 +1,7 @@
-import { Theme } from 'theme';
 import { css, SerializedStyles } from '@emotion/react';
+import { Theme } from 'theme';
 import { flex } from 'theme/functions';
+
 import { boldFont, normalFont } from '../Asset/Asset.style';
 
 const score = (isEnabled: boolean) => (theme: Theme): SerializedStyles => css`

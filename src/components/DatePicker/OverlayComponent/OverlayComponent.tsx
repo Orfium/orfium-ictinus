@@ -1,8 +1,10 @@
+import { Dayjs } from 'dayjs';
 import * as React from 'react';
 import { useCallback, useState } from 'react';
+
 import Button from '../../Button';
 import { DisabledDates, ExtraOption } from '../DatePicker';
-import { Dayjs } from 'dayjs';
+import { currentDay } from '../utils';
 import MonthWrapper from './components/MonthWrapper/MonthWrapper';
 import {
   buttonsMonthsWrapperStyle,
@@ -12,7 +14,6 @@ import {
   optionsWrapperStyle,
   overlayWrapperStyle,
 } from './OverlayComponent.style';
-import { currentDay } from '../utils';
 
 type Props = {
   selectedOption?: string;

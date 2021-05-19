@@ -1,8 +1,9 @@
-import { Theme } from '../../theme';
-import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
-import { darken, lighten, transparentize } from 'polished';
-import { mainTypes } from '../../theme/palette';
 import isEmpty from 'lodash/isEmpty';
+import { darken, lighten, transparentize } from 'polished';
+
+import { Theme } from '../../theme';
+import { mainTypes } from '../../theme/palette';
+import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
 
 /**
  * This function defines what background-color to show based on type or color passed

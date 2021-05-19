@@ -1,6 +1,7 @@
 import React from 'react';
-import { dotsContainer } from './DotsLoader.style';
 import { generateTestDataId } from 'utils/helpers';
+
+import { dotsContainer } from './DotsLoader.style';
 
 type Props = {
   dataTestId?: string;

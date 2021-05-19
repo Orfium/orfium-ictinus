@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
-import Styles from './SectionHeader.style';
-import { ActionsToolbox } from '../ActionsToolbox';
 import { OnCheckHandler, useCheck } from 'hooks/useCheck';
-import { CheckBoxContainer } from '../CheckBoxContainer';
-import { MatchingAction } from '../../types';
+import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
+
+import { MatchingAction } from '../../types';
+import { ActionsToolbox } from '../ActionsToolbox';
+import { CheckBoxContainer } from '../CheckBoxContainer';
+import Styles from './SectionHeader.style';
 
 interface Props {
   onCheck?: OnCheckHandler;

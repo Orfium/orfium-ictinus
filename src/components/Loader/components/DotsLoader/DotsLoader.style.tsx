@@ -1,5 +1,4 @@
 import { css, SerializedStyles } from '@emotion/react';
-
 import { Theme } from 'theme';
 
 export const getDotsLayout = (delay: number, animation: string, theme: Theme, left?: number) => css`

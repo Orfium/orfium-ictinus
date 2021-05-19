@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
-import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputWrapper.style';
 import Icon from 'components/Icon';
-import { DEFAULT_SIZE } from 'utils/size-utils';
-import { formFieldStyles } from 'theme/palette';
-import useTheme from 'hooks/useTheme';
 import { AcceptedIconNames } from 'components/Icon/types';
+import useTheme from 'hooks/useTheme';
+import React, { FC } from 'react';
+import { formFieldStyles } from 'theme/palette';
+import { DEFAULT_SIZE } from 'utils/size-utils';
+
+import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputWrapper.style';
 
 export type Props = {
   /** The label of the text field that will be used as a placeholder and a label */

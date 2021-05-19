@@ -1,9 +1,10 @@
 import { css } from '@emotion/react';
+import mapValues from 'lodash/mapValues';
+import toPairs from 'lodash/toPairs';
+import values from 'lodash/values';
+
 import useTheme from '../../../hooks/useTheme';
 import { colorShades, flatColors, neutralColors } from '../../../theme/palette';
-import mapValues from 'lodash/mapValues';
-import values from 'lodash/values';
-import toPairs from 'lodash/toPairs';
 import {
   colorBox,
   colorBoxWrapper,

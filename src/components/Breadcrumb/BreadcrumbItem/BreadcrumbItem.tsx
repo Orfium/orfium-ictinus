@@ -1,7 +1,8 @@
-import React from 'react';
 import Separator from 'components/Breadcrumb/Separator/Separator';
-import { breadcrumbItemStyles } from './BreadcrumbItem.style';
+import React from 'react';
+
 import BreadcrumbAdvancedItem from './BreadcrumbAdvancedItem';
+import { breadcrumbItemStyles } from './BreadcrumbItem.style';
 
 type Props = {
   /** Defines the child element that will be rendered inside the list element */

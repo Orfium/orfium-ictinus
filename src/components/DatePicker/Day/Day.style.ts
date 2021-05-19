@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { Theme } from 'theme';
-import { pickTextColorFromSwatches } from '../../../theme/palette';
 import { darken, transparentize } from 'polished';
+import { Theme } from 'theme';
+
+import { pickTextColorFromSwatches } from '../../../theme/palette';
 import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
 type Props = {

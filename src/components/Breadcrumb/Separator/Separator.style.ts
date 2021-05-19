@@ -1,5 +1,5 @@
-import { Theme } from 'theme';
 import { css } from '@emotion/react';
+import { Theme } from 'theme';
 
 export const separatorStyles = () => (theme: Theme) => css`
   margin: auto ${theme.spacing.sm};

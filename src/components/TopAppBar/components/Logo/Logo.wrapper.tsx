@@ -1,5 +1,6 @@
-import Styles from './Logo.style';
 import React, { FC } from 'react';
+
+import Styles from './Logo.style';
 
 const PlaceHolder = () => (
   <div css={Styles.placeholderWrapper}>

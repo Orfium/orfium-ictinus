@@ -1,10 +1,11 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Drawer from './Drawer';
-import { menuItems } from '../storyUtils/DrawerShowcase/MenuItems';
-import { fireEvent, render } from '../../test';
+
 import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';
+import { fireEvent, render } from '../../test';
+import { menuItems } from '../storyUtils/DrawerShowcase/MenuItems';
+import Drawer from './Drawer';
 
 describe('Drawer', () => {
   let queries: any;

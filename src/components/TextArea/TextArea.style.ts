@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { Props } from './TextArea';
+
 import { Theme } from '../../theme';
 import { Props as TextInputWrapperProps } from '../utils/TextInputWrapper/TextInputWrapper';
+import { Props } from './TextArea';
 
 export const inputStyle = ({
   label,

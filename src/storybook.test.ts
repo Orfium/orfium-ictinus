@@ -1,9 +1,10 @@
-import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
-import renderer from 'react-test-renderer';
-import { addSerializer } from 'jest-specific-snapshot';
 import { createSerializer } from '@emotion/jest';
-import { crawlTreeChildrenProps } from './utils/storyshots';
+import initStoryshots, { Stories2SnapsConverter } from '@storybook/addon-storyshots';
+import { addSerializer } from 'jest-specific-snapshot';
 import { ReactElement } from 'react';
+import renderer from 'react-test-renderer';
+
+import { crawlTreeChildrenProps } from './utils/storyshots';
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.

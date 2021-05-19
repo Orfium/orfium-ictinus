@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { css } from '@emotion/react';
+import React, { useState } from 'react';
 
 import Select from '../../Select';
 import { SelectOption } from '../../Select/Select';

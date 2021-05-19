@@ -1,6 +1,7 @@
-import React, { ChangeEvent, FC, Fragment } from 'react';
-import Styles from './CheckBoxContainer.style';
 import CheckBox from 'components/CheckBox';
+import React, { ChangeEvent, FC, Fragment } from 'react';
+
+import Styles from './CheckBoxContainer.style';
 
 interface Props {
   handleCheck?(val: boolean, e: ChangeEvent): void;

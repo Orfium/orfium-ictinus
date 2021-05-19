@@ -1,5 +1,6 @@
 import { ReactComponentLike } from 'prop-types';
 import * as React from 'react';
+
 import { generateTestDataId } from '../../utils/helpers';
 import { TestProps } from '../../utils/types';
 import { contentStyles } from './ExpandCollapse.style';

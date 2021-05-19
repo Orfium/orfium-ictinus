@@ -1,9 +1,10 @@
+import { AcceptedIconNames } from 'components/Icon/types';
 import React, { FC } from 'react';
-import AssetHeading from './AssetHeading';
-import Styles from './Asset.style';
+
 import { Categories } from '../Categories';
 import { CategoryType } from '../Categories/Category';
-import { AcceptedIconNames } from 'components/Icon/types';
+import Styles from './Asset.style';
+import AssetHeading from './AssetHeading';
 import AssetLinkedInfo from './AssetLinkedInfo';
 
 export interface AssetProps {

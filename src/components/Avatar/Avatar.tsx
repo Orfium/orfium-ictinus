@@ -1,9 +1,10 @@
 import React from 'react';
-import { avatarStyle } from './Avatar.style';
+
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { AcceptedIconNames } from '../Icon/types';
-import Icon from '../Icon';
 import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
+import Icon from '../Icon';
+import { AcceptedIconNames } from '../Icon/types';
+import { avatarStyle } from './Avatar.style';
 
 export type Props = {
   /** the src of the image to show **/
