@@ -28,7 +28,7 @@ export const calculateDisabledDays = (
     return disabledDates?.daysOfWeek.includes(date.day());
   }
   if (disabledDates?.days) {
-    return Boolean(disabledDates?.days.find((cur) =>dayjs(cur).isSame(dayjs(date), 'day')));
+    return Boolean(disabledDates?.days.find(cur => dayjs(cur).isSame(dayjs(date), 'day')));
   }
 
   return false;
