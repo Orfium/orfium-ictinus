@@ -8,7 +8,7 @@ import AssetExternalLink, { ExternalLinkProps } from './AssetExternalLink';
 export interface AssetHeadingProps {
   top?: string;
   main: string;
-  externalLink: ExternalLinkProps;
+  externalLink?: ExternalLinkProps;
   bottom?: string;
   iconName: AcceptedIconNames;
 }
