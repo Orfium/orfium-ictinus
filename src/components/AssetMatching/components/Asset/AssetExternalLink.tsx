@@ -9,6 +9,8 @@ export interface ExternalLinkProps {
   tooltipContent: string;
 }
 
+// @TODO: Introduce a generic tooltip component based on the ACs of the story: https://orfium.atlassian.net/browse/DS-153
+
 const AssetExternalLink: FC<ExternalLinkProps> = ({ tooltipContent, url }) => {
   return (
     <Tippy
