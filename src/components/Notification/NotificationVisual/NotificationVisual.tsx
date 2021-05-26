@@ -43,12 +43,12 @@ const NotificationVisual: React.FC<Props> = ({
           css={actionContainer()}
           data-testid={generateTestDataId('visual-secondary', dataTestId)}
         >
-          <Button filled={false} size="sm" onClick={secondaryCTA}>
+          <Button transparent size="sm" onClick={secondaryCTA}>
             {secondaryCTALabel}
           </Button>
         </div>
         <div css={actionContainer()} data-testid={generateTestDataId('visual-primary', dataTestId)}>
-          <Button type="branded1" size="sm" onClick={primaryCTA}>
+          <Button filled={true} size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>
