@@ -74,7 +74,7 @@ const linkedCount = (theme: Theme): SerializedStyles => css`
   margin-left: ${theme.spacing.lg};
 `;
 
-export const externalLink = (theme: Theme): SerializedStyles => css`
+const externalLink = (theme: Theme): SerializedStyles => css`
   display: none;
   margin: auto ${theme.spacing.sm};
   text-decoration: none;
@@ -92,7 +92,7 @@ export const externalLink = (theme: Theme): SerializedStyles => css`
   }
 `;
 
-export const title = css`
+const title = css`
   ${flex};
 
   :hover {
@@ -104,7 +104,7 @@ export const title = css`
   }
 `;
 
-export const tooltip = (theme: Theme): SerializedStyles => css`
+const tooltip = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['12']};
   background-color: ${theme.utils.getColor('darkGray', 500)};
 `;

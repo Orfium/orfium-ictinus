@@ -13,16 +13,10 @@ export interface AssetHeadingProps {
   iconName: AcceptedIconNames;
 }
 
-const AssetHeading: FC<AssetHeadingProps> = ({
-  top = '',
-  main,
-  bottom = '',
-  iconName,
-  externalLink,
-}) => {
+const AssetHeading: FC<AssetHeadingProps> = ({ top, main, bottom, iconName, externalLink }) => {
   return (
     <div css={Styles.headingWrapper}>
-      <p css={Styles.subHeadingTop}>{top && top}</p>
+      {top && <p css={Styles.subHeadingTop}>{top}</p>}
       <div css={flex}>
         <Icon size={24} name={iconName} variant={400} color={'primary'} />
         <div css={externalLink ? Styles.title : flex}>
@@ -30,7 +24,7 @@ const AssetHeading: FC<AssetHeadingProps> = ({
           {externalLink && <AssetExternalLink {...externalLink} />}
         </div>
       </div>
-      <p css={Styles.subHeading}>{bottom && bottom}</p>
+      {bottom && <p css={Styles.subHeading}>{bottom}</p>}
     </div>
   );
 };
