@@ -92,12 +92,13 @@ const externalLink = (theme: Theme): SerializedStyles => css`
   }
 `;
 
-const title = css`
+const title = (theme: Theme): SerializedStyles => css`
   ${flex};
 
   :hover {
     ${transition(0.2, 'text-decoration')};
     text-decoration: underline;
+    color: ${theme.utils.getColor('primary', 400, 'normal')};
     > a {
       display: block;
     }
