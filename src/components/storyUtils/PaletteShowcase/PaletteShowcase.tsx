@@ -23,7 +23,7 @@ const PaletteShowcase = () => {
   return (
     <div css={paletteWrapper}>
       {palette
-        .filter(([colorName]) => !neutralColors.includes(colorName))
+        .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
         .map(([colorName, colors]) => (
           <div key={colorName} css={paletteColorWrapper}>
             <div css={colorNameBox(colors[3], colorName)}>
