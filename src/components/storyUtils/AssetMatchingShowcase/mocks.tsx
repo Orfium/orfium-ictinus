@@ -56,6 +56,7 @@ const rightSideData: AssetProps = {
     top: 'Owned Composition',
     bottom: 'ISWC: KS39729323',
     main: 'Waiting for That Day',
+    externalLink: { url: 'https://www.orfium.com', tooltipContent: 'Open asset in MRC' },
     iconName: 'composition',
   },
 };

@@ -61,6 +61,7 @@ export type AcceptedIconNames =
   | 'error'
   | 'expenses'
   | 'externalLink'
+  | 'externalLinkV2'
   | 'fatArrowDown'
   | 'fatArrowLeft'
   | 'fatArrowRight'
