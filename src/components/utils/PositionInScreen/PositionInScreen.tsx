@@ -31,6 +31,9 @@ const usePositionInScreen = (
 
     if (itemYOutOfScreenHeight) {
       itemY -= height;
+      if (itemY < 0) {
+        itemY = 0;
+      }
     } else {
       itemY += parrentOffsetHeight;
     }

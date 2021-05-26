@@ -40,10 +40,14 @@ describe('Month', () => {
       before: mockDate.subtract(1, 'day').toDate(),
       after: mockDate.add(1, 'day').toDate(),
     });
+    const disabledArray = calculateDisabledDays(day, month, year, {
+      days: [mockDate.subtract(1, 'day').toDate()],
+    });
 
     expect(disabledAfter).toBeTruthy();
     expect(disabledBefore).toBeTruthy();
     expect(disabledBeforeAndAfter).toBeFalsy();
+    expect(disabledArray).toBeFalsy();
   });
 
   it('should check calculatedDayIsBetween', () => {

@@ -5,12 +5,16 @@ import { currentDay } from './utils';
 import dayjs from 'dayjs';
 import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
 const mockDate = currentDay;
+const disableDates = {
+    days: [mockDate.toDate(), mockDate.subtract(1, 'day').toDate() , mockDate.subtract(2, 'day').toDate(), mockDate.subtract(4, 'day').toDate()]
+}
 const options = {
   'Disable days of week (only Monday)': { daysOfWeek: [0, 2, 3, 4, 5, 6] },
   'Disable dates after this day': { after: mockDate },
   'Disable dates before this day': { before: mockDate },
   'Disable dates before and after a date (-/+ 7 days)': { before: mockDate.subtract(7, 'day').toDate(), after: mockDate.add(7, 'day').toDate() },
   'Enable dates from/to a date (7 days)': { before: mockDate.subtract(7, 'day').toDate(), after: mockDate.add(7, 'day').toDate() },
+  'Array of disabled dates(Today, last 2 days, and the 4th day to today)': disableDates
 }
 const dateFormatOptions = {
   'Enables system\'s locale format' : undefined,
@@ -158,9 +162,11 @@ Some disable dates functionality
 
 <Preview>
   <Story name="DayPicker with disabled dates">
+  <Stack>
     <DatePicker
-      disableDates={{ daysOfWeek: [0, 6] }}
+      disableDates={disableDates}
     />
+    </Stack>
   </Story>
 </Preview>
 

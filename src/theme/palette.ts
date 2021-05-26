@@ -1,4 +1,4 @@
-export const neutralColors = ['neutralWhite', 'neutralBlack'];
+export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
 /**
  * Here are listed all the colors available for our project
@@ -150,7 +150,16 @@ export const pickTextColorFromSwatches = (
       'vividBlue',
       'vividPurple',
     ],
-    400: ['darkGray', 'magenta', 'red', 'darkOrange', 'darkBlue', 'purple', 'vividBlue', 'vividPurple'],
+    400: [
+      'darkGray',
+      'magenta',
+      'red',
+      'darkOrange',
+      'darkBlue',
+      'purple',
+      'vividBlue',
+      'vividPurple',
+    ],
     300: ['darkGray', 'darkBlue'],
   };
   const pickedShade = colorsForWhiteText[shade];
