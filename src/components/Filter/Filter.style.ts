@@ -50,7 +50,7 @@ export const buttonStyle = ({
       activeCalculatedColor,
       calculatedColor,
     }),
-    boxShadow: styleType === 'elevated' && !hasSelectedValue ? theme.elevation['01'] : 'none',
+    boxShadow: styleType === 'elevated' ? theme.elevation['01'] : 'none',
 
     border: getBorder({
       styleType,
@@ -66,7 +66,7 @@ export const buttonStyle = ({
       border: hasSelectedValue
         ? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`
         :  styleType === 'outlined'? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}` : 'none',
-      boxShadow: styleType === 'elevated' && !hasSelectedValue ? theme.elevation['02'] : 'none',
+      boxShadow: styleType === 'elevated' ? theme.elevation['02'] : 'none',
     },
     ':active': {
       backgroundColor: !disabled && !open
@@ -77,7 +77,7 @@ export const buttonStyle = ({
         ? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`
         :  styleType === 'outlined'? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}` : 'none',
 
-      boxShadow: styleType === 'elevated' && !hasSelectedValue ? theme.elevation['02'] : 'none',
+      boxShadow: styleType === 'elevated' ? theme.elevation['02'] : 'none',
     },
   };
 };

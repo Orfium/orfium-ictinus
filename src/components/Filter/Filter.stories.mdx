@@ -67,16 +67,13 @@ A filter with colors and a selection handler to return selection on change and t
 # Dynamic Props - Knobs
 <Preview>
   <Story name="Dynamic Filter Props" parameters={{ decorators: [withKnobs] }}>
-    <Filter
+    <FilterShowcase
         items={[{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }]}
         label={text('text', 'you can change me')}
-        defaultValue={select('defaultValue', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }], { value: 'apple', label: 'Apple' })}
-        selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }], { value: 'apple', label: 'Apple' })}
+        selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }])}
+        defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
         styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
         color={select('color', ['lightCoolGray-400', 'magenta-100', 'darkGray-700', 'red-500'], 'lightCoolGray-400')}
-        onSelect={option => {}}
-    >
-    {text('text', 'change me!')}
-    </Filter>
+    />
   </Story>
 </Preview>

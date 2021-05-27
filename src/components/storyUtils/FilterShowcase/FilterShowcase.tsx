@@ -11,19 +11,30 @@ export const dummyUnrefinedData = Array.from({ length: 15 }, (value, index) => (
 interface Props {
   styleType: StyleType;
   color: string;
+  items?: Array<FilterOption>;
+  label?: string;
+  defaultValue?: FilterOption;
+  selectedItem?: FilterOption;
 }
-const FilterShowcase = ({ styleType, color }: Props) => {
-  const [selectedItem, setSelectedItem] = React.useState<FilterOption>(dummyUnrefinedData[0]);
+const FilterShowcase = ({
+  styleType,
+  color,
+  items = dummyUnrefinedData,
+  label = 'Label',
+  defaultValue = { value: 18, label: 'Default value' },
+  selectedItem,
+}: Props) => {
+  const [stateItem, setStateItem] = React.useState<FilterOption | undefined>(selectedItem);
 
   return (
     <div>
       <Filter
         styleType={styleType}
-        defaultValue={dummyUnrefinedData[0]}
-        items={dummyUnrefinedData}
-        selectedItem={selectedItem}
-        onSelect={option => setSelectedItem(option)}
-        label={'Label'}
+        defaultValue={defaultValue}
+        items={items}
+        selectedItem={stateItem}
+        onSelect={option => setStateItem(option)}
+        label={label}
         color={color}
       />
     </div>

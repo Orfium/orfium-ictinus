@@ -10,7 +10,7 @@ export type MenuOptions = {
 };
 
 export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) => css`
-  max-height: 400px;
+  max-height: 253px;
   overflow-y: auto;
   position: absolute;
   top: ${rem(48)};

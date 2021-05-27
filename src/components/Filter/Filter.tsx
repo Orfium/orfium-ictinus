@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
+import { isUndefined } from 'lodash';
 
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
@@ -18,13 +19,14 @@ import {
   labelSpanStyle,
   wrapperStyle,
 } from './Filter.style';
+import { darken } from 'polished';
 
 const Filter: React.FC<Props & TestProps> = props => {
   const {
     items,
     onSelect,
-    defaultValue,
     selectedItem,
+    defaultValue,
     styleType,
     dataTestId,
     label = '',
@@ -35,7 +37,7 @@ const Filter: React.FC<Props & TestProps> = props => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const hasSelectedValue = defaultValue.value !== selectedItem.value;
+  const hasSelectedValue = Boolean(selectedItem?.value);
   const activeCalculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
   const iconColor = getTextColor({
@@ -67,7 +69,7 @@ const Filter: React.FC<Props & TestProps> = props => {
           <span css={buttonSpanStyle()}>
             <span css={childrenWrapperStyle()}>
               <span css={labelSpanStyle(open, hasSelectedValue)}>{label}:
-                <span>{selectedItem.label}</span>
+                <span>{selectedItem?.label ?? defaultValue.label}</span>
               </span>
             </span>
 
@@ -76,12 +78,31 @@ const Filter: React.FC<Props & TestProps> = props => {
         </button>
         {open && (
           <div css={optionsStyle({})(theme)} data-testid="filter-menu">
+            <button
+              css={{
+                backgroundColor: isUndefined(selectedItem?.value) || selectedItem?.value === defaultValue.value
+                  ? darken(0.05, theme.palette.white)
+                  : theme.palette.white,
+                border: 0,
+                fontWeight: theme.typography.weights.medium,
+              }}
+              key={`${defaultValue.value}`}
+              onClick={() => {
+                setOpen(false);
+                onSelect(defaultValue);
+              }}
+            >
+              {defaultValue.label}
+            </button>
             {items &&
-              items.map((option, index) => (
+              items
+                .filter(option => option.value !== defaultValue.value) //filter options just in case the default value is included
+                .map((option, index) => (
                 <button
                   css={{
-                    backgroundColor: theme.palette.white,
+                    backgroundColor: option.value === selectedItem?.value ? darken(0.05, theme.palette.white) : theme.palette.white,
                     border: 0,
+                    fontWeight: theme.typography.weights.regular,
                   }}
                   key={`${option.value}-${index}`}
                   onClick={() => {
