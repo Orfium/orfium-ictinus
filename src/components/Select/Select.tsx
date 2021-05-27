@@ -176,8 +176,10 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             min-width: ${rem(150)};
             max-width: ${rem(620)};
             & > div:nth-of-type(1) > div {
-              ${open && `border: 2px solid ${theme.utils.getColor('lightGray', 400)};`}
-              ${open && styleType == 'outlined' && `box-shadow: none;`}
+              ${open &&
+                status != 'error' &&
+                `border: 2px solid ${theme.utils.getColor('lightGray', 400)};`}
+              ${open && status != 'error' && styleType == 'outlined' && `box-shadow: none;`}
             }
           `}
         >
