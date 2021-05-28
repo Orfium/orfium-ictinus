@@ -11,10 +11,10 @@ import {
   labelStyle,
   wrapperStyle,
   markerStyle,
-  getSymbolColor,
 } from './CheckBox.style';
 import { TestId } from '../../utils/types';
-import useTheme from 'hooks/useTheme';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
+import { pickTextColorFromSwatches } from 'theme/palette';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -50,7 +50,8 @@ const CheckBox: React.FC<Props> = ({
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
 
-  const theme = useTheme();
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
 
   useEffect(() => {
     setIsChecked(checked);
@@ -81,7 +82,7 @@ const CheckBox: React.FC<Props> = ({
           <Icon
             name={intermediate ? 'minus' : 'checkmark'}
             size={24}
-            color={getSymbolColor({ intermediate, checked: isChecked, filled, theme })}
+            color={filled ? `${pickTextColorFromSwatches(color, shade)}` : 'branded1'}
           />
         </label>
       </span>
