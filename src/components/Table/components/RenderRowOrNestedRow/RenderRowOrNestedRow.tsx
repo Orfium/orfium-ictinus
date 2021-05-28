@@ -1,8 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import rem from 'polished/lib/helpers/rem';
 import * as React from 'react';
+
 import useTheme from '../../../../hooks/useTheme';
 import useToggle from '../../../../hooks/useToggle';
 import CheckBox from '../../../CheckBox';

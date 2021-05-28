@@ -1,10 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import * as React from 'react';
 import Icon from 'components/Icon';
+import useTheme from 'hooks/useTheme';
+import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
+
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
+import { TestId } from '../../utils/types';
 import {
   checkboxStyle,
   checkboxWrapperStyle,
@@ -13,8 +13,6 @@ import {
   markerStyle,
   getSymbolColor,
 } from './CheckBox.style';
-import { TestId } from '../../utils/types';
-import useTheme from 'hooks/useTheme';
 
 export type Props = {
   /** The label of the checkbox. */

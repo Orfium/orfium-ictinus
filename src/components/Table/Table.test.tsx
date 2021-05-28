@@ -1,5 +1,6 @@
 import React from 'react';
 import { fireEvent, render, within } from 'test';
+
 import Table from './Table';
 
 describe('Table', () => {

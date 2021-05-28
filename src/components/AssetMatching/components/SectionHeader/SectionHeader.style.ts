@@ -1,6 +1,6 @@
-import { flex, transition } from 'theme/functions';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { flex, transition } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
 
 const header = (checked: boolean, styleType: formFieldStyles, isBulkSection: boolean) => (
@@ -38,7 +38,7 @@ function getHeaderBg(isChecked: boolean, isBulkSection: boolean, theme: Theme) {
   }
 
   if (isChecked) {
-    return theme.utils.getColor('branded1', 100, 'normal');
+    return theme.utils.getColor('primary', 100, 'normal');
   }
 
   return theme.palette.white;

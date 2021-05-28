@@ -1,6 +1,7 @@
-import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './TextField';
+import { css, SerializedStyles } from '@emotion/react';
+
 import { Theme } from '../../theme';
+import { Props } from './TextField';
 
 export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
   theme: Theme

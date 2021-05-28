@@ -1,6 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Modal Modal 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #181f55;
+}
+
+.emotion-2:active {
+  background-color: #0d102d;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -17,14 +76,7 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,7 +85,7 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -63,16 +115,16 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
           }
         >
           <button
-            className="css-199vak6-Button"
+            className="emotion-2"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-3"
             >
               <span
-                className="css-l730ys-Button"
+                className="emotion-4"
               >
                 Open Modal
               </span>
@@ -102,6 +154,65 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 `;
 
 exports[`Storyshots Design System/Modal Modal Content 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #181f55;
+}
+
+.emotion-2:active {
+  background-color: #0d102d;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -118,14 +229,7 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -134,7 +238,7 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -164,16 +268,16 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
           }
         >
           <button
-            className="css-199vak6-Button"
+            className="emotion-2"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-3"
             >
               <span
-                className="css-l730ys-Button"
+                className="emotion-4"
               >
                 Open Modal
               </span>

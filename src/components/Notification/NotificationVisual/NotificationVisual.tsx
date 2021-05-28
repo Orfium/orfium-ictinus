@@ -1,12 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
+import { generateTestDataId } from '../../../utils/helpers';
+import { TestId } from '../../../utils/types';
 import Button from '../../Button';
 import { actionContainer, actionsContainer, boldMessageContainer } from '../Notification.style';
 import { visualContainer, descriptionContainer } from './NotificationVisual.style';
-import { TestId } from '../../../utils/types';
-import { generateTestDataId } from '../../../utils/helpers';
 
 export type Props = {
   /** The message heading of the Notification */
@@ -48,7 +46,7 @@ const NotificationVisual: React.FC<Props> = ({
           </Button>
         </div>
         <div css={actionContainer()} data-testid={generateTestDataId('visual-primary', dataTestId)}>
-          <Button type="branded1" size="sm" onClick={primaryCTA}>
+          <Button type="primary" size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>

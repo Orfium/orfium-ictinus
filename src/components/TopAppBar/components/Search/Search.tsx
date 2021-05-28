@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import { customInputStyle, searchWrapper } from './Search.style';
-import { iconWrapperStyle } from '../../../TextField/TextField.style';
-import Icon from '../../../Icon';
+
 import { useTheme } from '../../../../index';
+import Icon from '../../../Icon';
+import { iconWrapperStyle } from '../../../TextField/TextField.style';
+import { customInputStyle, searchWrapper } from './Search.style';
 
 export type SearchProps = {
   searchPlaceholder: string;

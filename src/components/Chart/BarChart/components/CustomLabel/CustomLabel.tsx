@@ -1,6 +1,6 @@
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 import { LabelProps } from 'recharts';
-import useTheme from 'hooks/useTheme';
 
 const xValueBase = 16;
 const divisor = 2;

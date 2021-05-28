@@ -1,13 +1,11 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
+import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
 import { buttonSpanStyle, buttonStyle, childrenWrapperStyle, iconStyle } from './Button.style';
-import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 
 export type Props = {
   /** Type indicating the type of the button */

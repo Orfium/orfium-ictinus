@@ -1,13 +1,11 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useState, Fragment } from 'react';
 import { BrowserRouter as Router, NavLink, Route, Switch, useLocation } from 'react-router-dom';
-import Drawer from '../../Drawer';
-import Button from '../../Button';
-import { menuItems } from './MenuItems';
+
 import useTheme from '../../../hooks/useTheme';
 import { flex } from '../../../theme/functions';
+import Button from '../../Button';
+import Drawer from '../../Drawer';
+import { menuItems } from './MenuItems';
 
 const DisplayLocation = () => {
   const location = useLocation<{ test: string }>();
@@ -21,7 +19,7 @@ const DrawerShowcase: React.FC = () => {
 
   return (
     <Router>
-      <Button type="branded1" size="sm" onClick={() => setExpanded(prev => !prev)}>
+      <Button type="primary" size="sm" onClick={() => setExpanded(prev => !prev)}>
         {expanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>

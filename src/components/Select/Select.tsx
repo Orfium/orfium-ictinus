@@ -1,18 +1,16 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+import { css } from '@emotion/react';
+import Loader from 'components/Loader';
+import { debounce } from 'lodash';
+import { rem } from 'polished';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
-import { css, jsx } from '@emotion/core';
 
 import useTheme from '../../hooks/useTheme';
-import TextField from '../TextField';
+import { generateTestDataId } from '../../utils/helpers';
 import Icon from '../Icon';
+import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import SelectMenu from './components/SelectMenu/SelectMenu';
-import { debounce } from 'lodash';
-import Loader from 'components/Loader';
-import { generateTestDataId } from '../../utils/helpers';
-import { rem } from 'polished';
 
 export type SelectOption = {
   value: string | number;

@@ -1,12 +1,13 @@
 import React from 'react';
+
 import { render, fireEvent } from '../../test';
-import { NotificationTypes } from './Notification';
 import Toast from '../Toast';
+import Banner from './Banner';
+import InlineNotification from './InlineNotification';
+import { NotificationTypes } from './Notification';
+import NotificationsContainer from './NotificationsContainer';
 import NotificationVisual from './NotificationVisual';
 import Snackbar from './Snackbar';
-import InlineNotification from './InlineNotification';
-import Banner from './Banner';
-import NotificationsContainer from './NotificationsContainer';
 import '@testing-library/jest-dom';
 
 describe('Inline Notification', () => {

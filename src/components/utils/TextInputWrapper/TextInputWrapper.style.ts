@@ -1,8 +1,9 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
-import { Props } from './TextInputWrapper';
 import { Theme } from 'theme';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
+
+import { Props } from './TextInputWrapper';
 
 const wrapperStyleSwitch = (
   theme: Theme,

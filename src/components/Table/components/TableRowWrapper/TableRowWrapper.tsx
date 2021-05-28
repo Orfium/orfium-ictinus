@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
+
+import { Row, Selection, TableType } from '../../Table';
 import { TableRowContext } from '../../TableRowContext';
 import RenderRowOrNestedRow from '../RenderRowOrNestedRow/RenderRowOrNestedRow';
-import { Row, Selection, TableType } from '../../Table';
 
 type TableRowWrapperProps<T> = {
   row: Row<T>;

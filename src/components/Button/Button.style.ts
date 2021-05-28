@@ -1,9 +1,10 @@
 import { rem } from 'polished';
+
 import { Theme } from '../../theme';
+import { pickTextColorFromSwatches } from '../../theme/palette';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './Button';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it

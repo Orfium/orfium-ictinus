@@ -1,8 +1,8 @@
-import { buttonStyle, heightBasedOnSize } from '../Button/Button.style';
-import { RequiredProperties } from '../../utils/common';
-import { Props } from '../Button/Button';
-import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Theme } from '../../theme';
+import { RequiredProperties } from '../../utils/common';
+import { ColorShapeFromComponent } from '../../utils/themeFunctions';
+import { Props } from '../Button/Button';
+import { buttonStyle, heightBasedOnSize } from '../Button/Button.style';
 
 export const iconButtonStyle = ({
   type,
