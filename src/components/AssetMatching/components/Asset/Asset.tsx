@@ -1,20 +1,14 @@
 import React, { FC } from 'react';
-import AssetHeading from './AssetHeading';
+import AssetHeading, { AssetHeadingProps } from './AssetHeading';
 import Styles from './Asset.style';
 import { Categories } from '../Categories';
 import { CategoryType } from '../Categories/Category';
-import { AcceptedIconNames } from 'components/Icon/types';
 import AssetLinkedInfo from './AssetLinkedInfo';
 
 export interface AssetProps {
   categories: CategoryType[];
   isHighlighted?: boolean;
-  assetHeading: {
-    top?: string;
-    main: string;
-    bottom?: string;
-    iconName: AcceptedIconNames;
-  };
+  assetHeading: AssetHeadingProps;
   assetLinkedInfo?: {
     title: JSX.Element | string;
     details: string | number;

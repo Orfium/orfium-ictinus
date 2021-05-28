@@ -3381,7 +3381,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
             className="css-1u1yjpt-OverlayComponent"
           >
             <button
-              className="css-t09fsc-Button"
+              className="css-17xxpj4-Button"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
@@ -4142,48 +4142,60 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
     </button>
   </div>
   <div
-    role="button"
+    className="css-ptimel-Stack"
   >
     <div
-      className="css-qxwdtl-PositionInScreen"
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
       <div
-        className="css-d6j72o"
+        role="button"
       >
         <div
-          className="css-o66dxn-TextInputWrapper"
+          className="css-qxwdtl-PositionInScreen"
         >
           <div
-            className="css-hpo279-TextInputWrapper"
+            className="css-d6j72o"
           >
             <div
-              className="css-1il6azq-TextInputWrapper"
+              className="css-o66dxn-TextInputWrapper"
             >
               <div
-                className="css-1u4znjd"
+                className="css-hpo279-TextInputWrapper"
               >
-                <input
-                  className="css-g6bat3"
-                  disabled={false}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="MM/DD/YYYY "
-                  required={false}
-                  value="11/03/2020"
-                />
-              </div>
-              <div
-                className="css-bhexrx-IconWrapper"
-              >
-                <span
-                  className="css-1gnbc76-Icon"
-                  onClick={[Function]}
+                <div
+                  className="css-1il6azq-TextInputWrapper"
                 >
-                  <span
-                    className="css-137pzfe-Icon"
-                  />
-                </span>
+                  <div
+                    className="css-1u4znjd"
+                  >
+                    <input
+                      className="css-g6bat3"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="MM/DD/YYYY "
+                      required={false}
+                      value="11/03/2020"
+                    />
+                  </div>
+                  <div
+                    className="css-bhexrx-IconWrapper"
+                  >
+                    <span
+                      className="css-1gnbc76-Icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="css-137pzfe-Icon"
+                      />
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

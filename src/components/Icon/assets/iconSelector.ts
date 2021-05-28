@@ -59,6 +59,7 @@ import EntitiesIcon from './entities.svg';
 import ErrorIcon from './error.svg';
 import ExpensesIcon from './expenses.svg';
 import ExternalLinkIcon from './external-link.svg';
+import ExternalLinkIconV2 from './external-link-v2.svg';
 import RefreshIcon from './refresh.svg';
 import StarIcon from './star.svg';
 import Proposed from './proposed.svg';
@@ -221,6 +222,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   error: ErrorIcon, // "closeTag" copy (larger)
   expenses: ExpensesIcon,
   externalLink: ExternalLinkIcon,
+  externalLinkV2: ExternalLinkIconV2,
   fatArrowDown: FatArrowDownIcon,
   fatArrowLeft: FatArrowLeftIcon,
   fatArrowRight: FatArrowRightIcon,
