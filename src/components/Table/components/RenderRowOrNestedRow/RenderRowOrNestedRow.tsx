@@ -131,6 +131,11 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
                 flex: 1,
                 flexDirection: 'row',
                 display: 'flex',
+                borderTop:
+                  //Adds border to the first row only.
+                  rowIndex === 1
+                    ? `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}`
+                    : 'none',
                 borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}`,
               }}
             >
