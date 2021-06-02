@@ -175,7 +175,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       >
         <div
           onClick={() => (isSearchable ? combinedRefs?.current?.focus() : setOpen(true))}
-          css={selectWrapper({ open, status, styleType })}
+          css={selectWrapper({ open, status, styleType, isSearchable })}
         >
           <TextField
             styleType={styleType}
