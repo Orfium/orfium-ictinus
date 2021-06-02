@@ -41,6 +41,7 @@ export type AcceptedIconNames =
   | 'closeTag'
   | 'cmsProcess'
   | 'composition'
+  | 'compositionV2'
   | 'concert'
   | 'confirmedMatches'
   | 'conflicts'
@@ -104,6 +105,7 @@ export type AcceptedIconNames =
   | 'publicPerformance'
   | 'publisher'
   | 'recordLabel'
+  | 'recordLabelV2'
   | 'referenceFile'
   | 'relations'
   | 'restore'
@@ -150,5 +152,6 @@ export type AcceptedIconNames =
   | 'processedLogs'
   | 'proposed'
   | 'unpaired'
+  | 'unpairedV2'
   | 'clockOutlined'
   | 'userCheck';

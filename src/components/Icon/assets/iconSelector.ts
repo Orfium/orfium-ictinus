@@ -39,6 +39,7 @@ import CloseTagIcon from './close-tag.svg';
 import CloseIcon from './close.svg';
 import CmsProcessIcon from './cms-process.svg';
 import CompositionIcon from './composition.svg';
+import CompositionIconV2 from './composition-v2.svg';
 import ConcertIcon from './concert.svg';
 import ConfirmedMatchesIcon from './confirmed-matches.svg';
 import ConflictsIcon from './conflicts.svg';
@@ -64,6 +65,7 @@ import RefreshIcon from './refresh.svg';
 import StarIcon from './star.svg';
 import Proposed from './proposed.svg';
 import Unpaired from './unpaired.svg';
+import UnpairedV2 from './unpaired-v2.svg';
 import ClockOutlined from './clock-outlined.svg';
 import UserCheck from './userCheck.svg';
 
@@ -117,6 +119,7 @@ import ProcessIcon from './process.svg';
 import PublicPerformanceIcon from './publicPerformance.svg';
 import PublisherIcon from './publisher.svg';
 import RecordLabelIcon from './record-label.svg';
+import RecordLabelIconV2 from './record-label-v2.svg';
 import ReferenceFileIcon from './reference-file.svg';
 import RelationsIcon from './relations.svg';
 import RestoreIcon from './restore.svg';
@@ -203,6 +206,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   closeTag: CloseTagIcon,
   cmsProcess: CmsProcessIcon,
   composition: CompositionIcon,
+  compositionV2: CompositionIconV2,
   concert: ConcertIcon,
   confirmedMatches: ConfirmedMatchesIcon,
   conflicts: ConflictsIcon,
@@ -264,6 +268,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   processManagement: ProcessManagementIcon, // "ticTacToeArrow" copy
   publisher: PublisherIcon,
   recordLabel: RecordLabelIcon,
+  recordLabelV2: RecordLabelIconV2,
   referenceFile: ReferenceFileIcon,
   relations: RelationsIcon,
   restore: RestoreIcon,
@@ -310,6 +315,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   processedLogs: ProcessedLogs,
   proposed: Proposed,
   unpaired: Unpaired,
+  unpairedV2: UnpairedV2,
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
 };
