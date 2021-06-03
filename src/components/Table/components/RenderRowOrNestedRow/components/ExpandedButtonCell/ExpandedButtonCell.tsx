@@ -4,8 +4,7 @@ import { jsx } from '@emotion/core';
 import React from 'react';
 import useTheme from '../../../../../../hooks/useTheme';
 import TableCell from '../../../TableCell';
-import rem from 'polished/lib/helpers/rem';
-import Icon from '../../../../../Icon';
+import { IconButton } from '../../../../../../index';
 
 type Props = {
   isExpandedExists: boolean;
@@ -30,30 +29,26 @@ const ExpandedButtonCell: React.FC<Props> = ({
     <TableCell width={67} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
       <div>
         <div
-          data-testid="expanded-button"
           css={{
-            padding: theme.spacing.sm,
-            overflow: 'hidden',
-            borderRadius: rem(20),
-            backgroundColor: checked
-              ? theme.utils.getColor('darkGray', 400)
-              : theme.utils.getColor('lightGray', 200),
-            margin: `${rem(8)} ${theme.spacing.md}`,
-            transition: '0.2s all ease-in-out',
-            cursor: 'pointer',
-          }}
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleChecked();
+            padding: `${theme.spacing.xsm} ${theme.spacing.sm}`,
           }}
         >
           <div
             css={{
               transition: '0.3s all ease-in-out',
+              transformOrigin: 'center',
+              width: 'fit-content',
               transform: `rotate(${checked ? '180' : '0'}deg)`,
             }}
+            onClick={e => e.stopPropagation()}
           >
-            <Icon name={'arrowDown'} size={15} color={checked ? 'light' : 'dark'} />
+            <IconButton
+              name={'arrowDown'}
+              size={'sm'}
+              onClick={toggleChecked}
+              color={checked ? 'lightGray-400' : 'darkGray-400'}
+              dataTestId={'expanded-button'}
+            />
           </div>
         </div>
       </div>
