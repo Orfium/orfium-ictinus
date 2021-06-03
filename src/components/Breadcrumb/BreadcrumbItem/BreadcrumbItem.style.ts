@@ -12,7 +12,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
 ) => css`
   display: flex;
   cursor: default;
-  color: ${active ? theme.utils.getColor('darkGray', 400) : theme.utils.getColor('lightGray', 400)};
+  color: ${active ? theme.utils.getColor('darkGray', 400) : theme.utils.getColor('lightGray', 600)};
 
   & button {
     height: auto;
