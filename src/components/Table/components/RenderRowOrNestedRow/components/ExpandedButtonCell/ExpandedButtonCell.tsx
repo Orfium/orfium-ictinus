@@ -43,10 +43,11 @@ const ExpandedButtonCell: React.FC<Props> = ({
             onClick={e => e.stopPropagation()}
           >
             <IconButton
+              transparent
               name={'arrowDown'}
               size={'sm'}
               onClick={toggleChecked}
-              color={checked ? 'lightGray-400' : 'darkGray-400'}
+              color={'lightGray-700'}
               dataTestId={'expanded-button'}
             />
           </div>
