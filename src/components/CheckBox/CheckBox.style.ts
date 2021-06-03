@@ -8,13 +8,13 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   justify-content: center;
   align-items: center;
   display: flex;
-  width: ${rem(48)};
-  height: ${rem(48)};
 `;
 
 export const checkboxWrapperStyle = () => (): SerializedStyles => css`
   border-radius: 100%;
   display: flex;
+  width: ${rem(48)};
+  height: ${rem(48)};
   justify-content: center;
   align-items: center;
 
