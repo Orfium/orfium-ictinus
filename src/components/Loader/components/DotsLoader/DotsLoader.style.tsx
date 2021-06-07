@@ -13,8 +13,15 @@ export const getDotsLayout = (delay: number, animation: string, theme: Theme, le
   animation-delay: ${delay}s;
 `;
 
-export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
+export const dotsWrapper = css`
+  width: 26px;
   position: relative;
+  height: 6px;
+`;
+
+export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
+  position: absolute;
+  left: 10px;
   ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme)};
 
   &::after,

@@ -4,6 +4,7 @@ import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
+import Loader from '../Loader';
 
 <Meta title="Design System/TextField" component={TextField} />
 
@@ -115,6 +116,14 @@ TextField with icon options right and left of the text
             width="16"
             height="16"
           />
+        }
+        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+      />
+      <TextField
+        size={select('size', ['md', 'sm'], 'md')}
+        label={'Label'}
+        rightIcon={
+          <Loader type={'dots'} />
         }
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
       />
