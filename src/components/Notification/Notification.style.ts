@@ -17,6 +17,7 @@ export const notificationsContainerPerType = (
   styleType === 'outlined'
     ? `
         border: ${rem(2)} solid ${typeToThemePalette(theme, type)};
+        background: white;
       `
     : `
         border-left: ${typeToThemePalette(theme, type)} 4px solid;

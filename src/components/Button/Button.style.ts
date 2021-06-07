@@ -1,4 +1,4 @@
-import { rem } from 'polished';
+import { rem, transparentize } from 'polished';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
@@ -67,12 +67,9 @@ export const buttonStyle = ({
     border:
       filled || transparent
         ? 'none'
-        : `solid 1px ${defineBackgroundColor(
-            theme,
-            calculatedColor,
-            type,
-            iconExists,
-            childrenCount > 0
+        : `solid 1px ${transparentize(
+            0.5,
+            defineBackgroundColor(theme, calculatedColor, type, iconExists, childrenCount > 0)
           )}`,
     cursor: 'pointer',
     transition: 'background-color 150ms linear',

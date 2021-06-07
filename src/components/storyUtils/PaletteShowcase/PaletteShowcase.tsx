@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import values from 'lodash/values';
+import React from 'react';
 
 import useTheme from '../../../hooks/useTheme';
 import { colorShades, flatColors, neutralColors } from '../../../theme/palette';
@@ -22,7 +23,7 @@ const PaletteShowcase = () => {
   return (
     <div css={paletteWrapper}>
       {palette
-        .filter(([colorName]) => !neutralColors.includes(colorName))
+        .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
         .map(([colorName, colors]) => (
           <div key={colorName} css={paletteColorWrapper}>
             <div css={colorNameBox(colors[3], colorName)}>

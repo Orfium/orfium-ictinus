@@ -1,4 +1,4 @@
-export const neutralColors = ['neutralWhite', 'neutralBlack'];
+export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
 /**
  * Here are listed all the colors available for our project

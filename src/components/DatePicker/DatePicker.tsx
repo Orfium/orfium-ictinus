@@ -11,6 +11,7 @@ import { currentDay, datepickerPropValue } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
+  days?: Date[];
   after?: Date;
   before?: Date;
 };

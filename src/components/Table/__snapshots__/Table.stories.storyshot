@@ -136,13 +136,13 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
 }
 
 .emotion-9 {
-  fill: white;
+  fill: #fff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-9 path {
-  fill: white;
+  fill: #fff;
 }
 
 .emotion-10 {
@@ -252,6 +252,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_0_cell_0"
         >
           <span
             className="emotion-4"
@@ -286,12 +287,14 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </th>
         <td
           className="emotion-10"
+          data-testid="table_row_0_cell_1"
         >
           topLeftText
         </td>
         <td
           className="emotion-11"
           colSpan={3}
+          data-testid="table_row_0_cell_2"
         >
           <div>
             <div>
@@ -315,21 +318,25 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         />
         <th
           className="emotion-15"
+          data-testid="table_header_title"
         >
           Title
         </th>
         <th
           className="emotion-15"
+          data-testid="table_header_name"
         >
           Name
         </th>
         <th
           className="emotion-15"
+          data-testid="table_header_surname"
         >
           Surname
         </th>
         <th
           className="emotion-18"
+          data-testid="table_header_age"
         >
           Age
         </th>
@@ -342,6 +349,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_1_cell_0"
         >
           <span
             className="emotion-4"
@@ -376,6 +384,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_1_cell_1"
         >
           <span
             data-column="Title"
@@ -385,6 +394,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_1_cell_2"
         >
           <span
             data-column="Name"
@@ -394,6 +404,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_1_cell_3"
         >
           <span
             data-column="Surname"
@@ -403,6 +414,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_1_cell_4"
         >
           <span
             data-column="Age"
@@ -417,6 +429,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_2_cell_0"
         >
           <span
             className="emotion-4"
@@ -451,6 +464,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_2_cell_1"
         >
           <span
             data-column="Title"
@@ -460,6 +474,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_2_cell_2"
         >
           <span
             data-column="Name"
@@ -469,6 +484,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_2_cell_3"
         >
           <span
             data-column="Surname"
@@ -478,6 +494,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_2_cell_4"
         >
           <span
             data-column="Age"
@@ -492,6 +509,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_3_cell_0"
         >
           <span
             className="emotion-4"
@@ -526,6 +544,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_3_cell_1"
         >
           <span
             data-column="Title"
@@ -535,6 +554,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_3_cell_2"
         >
           <span
             data-column="Name"
@@ -544,6 +564,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_3_cell_3"
         >
           <span
             data-column="Surname"
@@ -553,6 +574,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_3_cell_4"
         >
           <span
             data-column="Age"
@@ -567,6 +589,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_4_cell_0"
         >
           <span
             className="emotion-4"
@@ -601,6 +624,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_4_cell_1"
         >
           <span
             data-column="Title"
@@ -611,6 +635,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         <td
           className="emotion-27"
           colSpan={2}
+          data-testid="table_row_4_cell_2"
         >
           <span
             data-column="Name"
@@ -620,6 +645,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_4_cell_3"
         >
           <span
             data-column="Surname"
@@ -775,13 +801,13 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
 }
 
 .emotion-9 {
-  fill: white;
+  fill: #fff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-9 path {
-  fill: white;
+  fill: #fff;
 }
 
 .emotion-10 {
@@ -903,6 +929,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_0_cell_0"
         >
           <span
             className="emotion-4"
@@ -937,12 +964,14 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-10"
+          data-testid="table_row_0_cell_1"
         >
           topLeftText
         </td>
         <td
           className="emotion-11"
           colSpan={3}
+          data-testid="table_row_0_cell_2"
         >
           <div>
             <div>
@@ -966,21 +995,25 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         />
         <th
           className="emotion-15"
+          data-testid="table_header_title"
         >
           Title
         </th>
         <th
           className="emotion-15"
+          data-testid="table_header_name"
         >
           Name
         </th>
         <th
           className="emotion-15"
+          data-testid="table_header_surname"
         >
           Surname
         </th>
         <th
           className="emotion-18"
+          data-testid="table_header_age"
         >
           Age
         </th>
@@ -993,6 +1026,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_1_cell_0"
         >
           <span
             className="emotion-4"
@@ -1027,6 +1061,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_1_cell_1"
         >
           <span
             data-column="Title"
@@ -1036,6 +1071,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_1_cell_2"
         >
           <span
             data-column="Name"
@@ -1045,6 +1081,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_1_cell_3"
         >
           <span
             data-column="Surname"
@@ -1054,6 +1091,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_1_cell_4"
         >
           <span
             data-column="Age"
@@ -1068,6 +1106,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_2_cell_0"
         >
           <span
             className="emotion-4"
@@ -1102,6 +1141,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_2_cell_1"
         >
           <span
             data-column="Title"
@@ -1111,6 +1151,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_2_cell_2"
         >
           <span
             data-column="Name"
@@ -1120,6 +1161,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_2_cell_3"
         >
           <span
             data-column="Surname"
@@ -1129,6 +1171,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_2_cell_4"
         >
           <span
             data-column="Age"
@@ -1143,6 +1186,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_3_cell_0"
         >
           <span
             className="emotion-4"
@@ -1177,6 +1221,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_3_cell_1"
         >
           <span
             data-column="Title"
@@ -1186,6 +1231,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_3_cell_2"
         >
           <span
             data-column="Name"
@@ -1195,6 +1241,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_3_cell_3"
         >
           <span
             data-column="Surname"
@@ -1204,6 +1251,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_3_cell_4"
         >
           <span
             data-column="Age"
@@ -1218,6 +1266,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_4_cell_0"
         >
           <span
             className="emotion-4"
@@ -1252,6 +1301,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_4_cell_1"
         >
           <span
             data-column="Title"
@@ -1261,6 +1311,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_4_cell_2"
         >
           <span
             data-column="Name"
@@ -1270,6 +1321,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_4_cell_3"
         >
           <span
             data-column="Surname"
@@ -1279,6 +1331,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_4_cell_4"
         >
           <span
             data-column="Age"
@@ -1293,6 +1346,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_5_cell_0"
         >
           <span
             className="emotion-4"
@@ -1327,6 +1381,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_5_cell_1"
         >
           <span
             data-column="Title"
@@ -1336,6 +1391,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_5_cell_2"
         >
           <span
             data-column="Name"
@@ -1345,6 +1401,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_5_cell_3"
         >
           <span
             data-column="Surname"
@@ -1354,6 +1411,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_5_cell_4"
         >
           <span
             data-column="Age"
@@ -1368,6 +1426,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_6_cell_0"
         >
           <span
             className="emotion-4"
@@ -1402,6 +1461,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_6_cell_1"
         >
           <span
             data-column="Title"
@@ -1411,6 +1471,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_6_cell_2"
         >
           <span
             data-column="Name"
@@ -1420,6 +1481,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_6_cell_3"
         >
           <span
             data-column="Surname"
@@ -1429,6 +1491,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_6_cell_4"
         >
           <span
             data-column="Age"
@@ -1443,6 +1506,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_7_cell_0"
         >
           <span
             className="emotion-4"
@@ -1477,6 +1541,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_7_cell_1"
         >
           <span
             data-column="Title"
@@ -1486,6 +1551,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_7_cell_2"
         >
           <span
             data-column="Name"
@@ -1495,6 +1561,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_7_cell_3"
         >
           <span
             data-column="Surname"
@@ -1504,6 +1571,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_7_cell_4"
         >
           <span
             data-column="Age"
@@ -1518,6 +1586,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_8_cell_0"
         >
           <span
             className="emotion-4"
@@ -1552,6 +1621,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_8_cell_1"
         >
           <span
             data-column="Title"
@@ -1561,6 +1631,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_8_cell_2"
         >
           <span
             data-column="Name"
@@ -1570,6 +1641,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_8_cell_3"
         >
           <span
             data-column="Surname"
@@ -1579,6 +1651,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_8_cell_4"
         >
           <span
             data-column="Age"
@@ -1593,6 +1666,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_9_cell_0"
         >
           <span
             className="emotion-4"
@@ -1627,6 +1701,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </th>
         <td
           className="emotion-27"
+          data-testid="table_row_9_cell_1"
         >
           <span
             data-column="Title"
@@ -1636,6 +1711,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-27"
+          data-testid="table_row_9_cell_2"
         >
           <span
             data-column="Name"
@@ -1645,6 +1721,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-29"
+          data-testid="table_row_9_cell_3"
         >
           <span
             data-column="Surname"
@@ -1654,6 +1731,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         </td>
         <td
           className="emotion-30"
+          data-testid="table_row_9_cell_4"
         >
           <span
             data-column="Age"
@@ -1784,12 +1862,14 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-3"
+          data-testid="ictinus_table_row_0_cell_1"
         >
           topLeftText
         </td>
         <td
           className="emotion-4"
           colSpan={3}
+          data-testid="ictinus_table_row_0_cell_2"
         >
           <div>
             <div>
@@ -1810,21 +1890,25 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <th
           className="emotion-7"
+          data-testid="ictinus_table_header_title"
         >
           Title
         </th>
         <th
           className="emotion-7"
+          data-testid="ictinus_table_header_name"
         >
           Name
         </th>
         <th
           className="emotion-7"
+          data-testid="ictinus_table_header_surname"
         >
           Surname
         </th>
         <th
           className="emotion-10"
+          data-testid="ictinus_table_header_age"
         >
           Age
         </th>
@@ -1837,6 +1921,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_1"
         >
           <span
             data-column="Title"
@@ -1846,6 +1931,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_2"
         >
           <span
             data-column="Name"
@@ -1855,6 +1941,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_3"
         >
           <span
             data-column="Surname"
@@ -1864,6 +1951,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_1_cell_4"
         >
           <span
             data-column="Age"
@@ -1878,6 +1966,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_2_cell_1"
         >
           <span
             data-column="Title"
@@ -1887,6 +1976,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_2_cell_2"
         >
           <span
             data-column="Name"
@@ -1896,6 +1986,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_2_cell_3"
         >
           <span
             data-column="Surname"
@@ -1905,6 +1996,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_2_cell_4"
         >
           <span
             data-column="Age"
@@ -1919,6 +2011,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_3_cell_1"
         >
           <span
             data-column="Title"
@@ -1928,6 +2021,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_3_cell_2"
         >
           <span
             data-column="Name"
@@ -1937,6 +2031,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_3_cell_3"
         >
           <span
             data-column="Surname"
@@ -1946,6 +2041,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_3_cell_4"
         >
           <span
             data-column="Age"
@@ -1960,6 +2056,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_4_cell_1"
         >
           <span
             data-column="Title"
@@ -1969,6 +2066,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_4_cell_2"
         >
           <span
             data-column="Name"
@@ -1978,6 +2076,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_4_cell_3"
         >
           <span
             data-column="Surname"
@@ -1987,6 +2086,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_4_cell_4"
         >
           <span
             data-column="Age"
@@ -2001,6 +2101,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_5_cell_1"
         >
           <span
             data-column="Title"
@@ -2010,6 +2111,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_5_cell_2"
         >
           <span
             data-column="Name"
@@ -2019,6 +2121,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_5_cell_3"
         >
           <span
             data-column="Surname"
@@ -2028,6 +2131,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_5_cell_4"
         >
           <span
             data-column="Age"
@@ -2042,6 +2146,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_6_cell_1"
         >
           <span
             data-column="Title"
@@ -2051,6 +2156,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_6_cell_2"
         >
           <span
             data-column="Name"
@@ -2060,6 +2166,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_6_cell_3"
         >
           <span
             data-column="Surname"
@@ -2069,6 +2176,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_6_cell_4"
         >
           <span
             data-column="Age"
@@ -2083,6 +2191,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_7_cell_1"
         >
           <span
             data-column="Title"
@@ -2092,6 +2201,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_7_cell_2"
         >
           <span
             data-column="Name"
@@ -2101,6 +2211,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_7_cell_3"
         >
           <span
             data-column="Surname"
@@ -2110,6 +2221,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_7_cell_4"
         >
           <span
             data-column="Age"
@@ -2124,6 +2236,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_8_cell_1"
         >
           <span
             data-column="Title"
@@ -2133,6 +2246,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_8_cell_2"
         >
           <span
             data-column="Name"
@@ -2142,6 +2256,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-12"
+          data-testid="ictinus_table_row_8_cell_3"
         >
           <span
             data-column="Surname"
@@ -2151,6 +2266,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-15"
+          data-testid="ictinus_table_row_8_cell_4"
         >
           <span
             data-column="Age"
@@ -2300,13 +2416,13 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 }
 
 .emotion-9 {
-  fill: white;
+  fill: #fff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-9 path {
-  fill: white;
+  fill: #fff;
 }
 
 .emotion-10 {
@@ -2457,6 +2573,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
       >
         <th
           className="emotion-3"
+          data-testid="table_row_0_cell_0"
         >
           <span
             className="emotion-4"
@@ -2491,12 +2608,14 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         </th>
         <td
           className="emotion-10"
+          data-testid="table_row_0_cell_1"
         >
           topLeftText
         </td>
         <td
           className="emotion-11"
           colSpan={3}
+          data-testid="table_row_0_cell_2"
         >
           <div>
             <div>
@@ -2519,6 +2638,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_1"
         >
           <div
             className="emotion-15"
@@ -2533,6 +2653,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_1_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -2567,6 +2688,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_1_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -2586,6 +2708,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_1_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -2600,6 +2723,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_1_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -2614,6 +2738,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_1_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -2628,6 +2753,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_1_cell_5"
                   >
                     <div>
                       <div
@@ -2663,6 +2789,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_2"
         >
           <div
             className="emotion-15"
@@ -2677,6 +2804,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_2_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -2711,6 +2839,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_2_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -2730,6 +2859,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_2_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -2744,6 +2874,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_2_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -2758,6 +2889,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_2_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -2772,6 +2904,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_2_cell_5"
                   >
                     <div>
                       <div
@@ -2807,6 +2940,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_3"
         >
           <div
             className="emotion-15"
@@ -2821,6 +2955,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_3_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -2855,6 +2990,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_3_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -2874,6 +3010,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_3_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -2888,6 +3025,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_3_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -2902,6 +3040,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_3_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -2916,6 +3055,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_3_cell_5"
                   >
                     <div>
                       <div
@@ -2951,6 +3091,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_4"
         >
           <div
             className="emotion-15"
@@ -2965,6 +3106,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_4_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -2999,6 +3141,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_4_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3018,6 +3161,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_4_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3032,6 +3176,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_4_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3046,6 +3191,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_4_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3060,6 +3206,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_4_cell_5"
                   >
                     <div>
                       <div
@@ -3095,6 +3242,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_5"
         >
           <div
             className="emotion-15"
@@ -3109,6 +3257,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_5_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -3143,6 +3292,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_5_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3162,6 +3312,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_5_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3176,6 +3327,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_5_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3190,6 +3342,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_5_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3204,6 +3357,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_5_cell_5"
                   >
                     <div>
                       <div
@@ -3239,6 +3393,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_6"
         >
           <div
             className="emotion-15"
@@ -3253,6 +3408,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_6_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -3287,6 +3443,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_6_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3306,6 +3463,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_6_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3320,6 +3478,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_6_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3334,6 +3493,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_6_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3348,6 +3508,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_6_cell_5"
                   >
                     <div>
                       <div
@@ -3383,6 +3544,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_7"
         >
           <div
             className="emotion-15"
@@ -3397,6 +3559,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_7_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -3431,6 +3594,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_7_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3450,6 +3614,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_7_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3464,6 +3629,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_7_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3478,6 +3644,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_7_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3492,6 +3659,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_7_cell_5"
                   >
                     <div>
                       <div
@@ -3527,6 +3695,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_8"
         >
           <div
             className="emotion-15"
@@ -3541,6 +3710,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_8_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -3575,6 +3745,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_8_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3594,6 +3765,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_8_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3608,6 +3780,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_8_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3622,6 +3795,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_8_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3636,6 +3810,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_8_cell_5"
                   >
                     <div>
                       <div
@@ -3671,6 +3846,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_9"
         >
           <div
             className="emotion-15"
@@ -3685,6 +3861,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_9_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -3719,6 +3896,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_9_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3738,6 +3916,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_9_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3752,6 +3931,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_9_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3766,6 +3946,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_9_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3780,6 +3961,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_9_cell_5"
                   >
                     <div>
                       <div
@@ -3815,6 +3997,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_10"
         >
           <div
             className="emotion-15"
@@ -3829,6 +4012,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_10_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -3863,6 +4047,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_10_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -3882,6 +4067,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_10_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -3896,6 +4082,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_10_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -3910,6 +4097,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_10_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -3924,6 +4112,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_10_cell_5"
                   >
                     <div>
                       <div
@@ -3959,6 +4148,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_11"
         >
           <div
             className="emotion-15"
@@ -3973,6 +4163,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_11_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4007,6 +4198,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_11_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4026,6 +4218,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_11_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4040,6 +4233,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_11_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4054,6 +4248,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_11_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4068,6 +4263,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_11_cell_5"
                   >
                     <div>
                       <div
@@ -4103,6 +4299,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_12"
         >
           <div
             className="emotion-15"
@@ -4117,6 +4314,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_12_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4151,6 +4349,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_12_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4170,6 +4369,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_12_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4184,6 +4384,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_12_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4198,6 +4399,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_12_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4212,6 +4414,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_12_cell_5"
                   >
                     <div>
                       <div
@@ -4247,6 +4450,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_13"
         >
           <div
             className="emotion-15"
@@ -4261,6 +4465,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_13_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4295,6 +4500,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_13_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4314,6 +4520,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_13_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4328,6 +4535,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_13_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4342,6 +4550,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_13_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4356,6 +4565,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_13_cell_5"
                   >
                     <div>
                       <div
@@ -4391,6 +4601,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_14"
         >
           <div
             className="emotion-15"
@@ -4405,6 +4616,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_14_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4439,6 +4651,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_14_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4458,6 +4671,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_14_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4472,6 +4686,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_14_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4486,6 +4701,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_14_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4500,6 +4716,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_14_cell_5"
                   >
                     <div>
                       <div
@@ -4535,6 +4752,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_15"
         >
           <div
             className="emotion-15"
@@ -4549,6 +4767,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_15_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4583,6 +4802,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_15_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4602,6 +4822,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_15_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4616,6 +4837,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_15_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4630,6 +4852,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_15_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4644,6 +4867,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_15_cell_5"
                   >
                     <div>
                       <div
@@ -4679,6 +4903,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_16"
         >
           <div
             className="emotion-15"
@@ -4693,6 +4918,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_16_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4727,6 +4953,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_16_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4746,6 +4973,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_16_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4760,6 +4988,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_16_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4774,6 +5003,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_16_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4788,6 +5018,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_16_cell_5"
                   >
                     <div>
                       <div
@@ -4823,6 +5054,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_17"
         >
           <div
             className="emotion-15"
@@ -4837,6 +5069,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_17_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -4871,6 +5104,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_17_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -4890,6 +5124,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_17_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -4904,6 +5139,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_17_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -4918,6 +5154,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_17_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -4932,6 +5169,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_17_cell_5"
                   >
                     <div>
                       <div
@@ -4967,6 +5205,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_18"
         >
           <div
             className="emotion-15"
@@ -4981,6 +5220,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_18_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5015,6 +5255,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_18_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5034,6 +5275,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_18_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5048,6 +5290,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_18_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5062,6 +5305,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_18_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5076,6 +5320,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_18_cell_5"
                   >
                     <div>
                       <div
@@ -5111,6 +5356,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_19"
         >
           <div
             className="emotion-15"
@@ -5125,6 +5371,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_19_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5159,6 +5406,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_19_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5178,6 +5426,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_19_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5192,6 +5441,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_19_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5206,6 +5456,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_19_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5220,6 +5471,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_19_cell_5"
                   >
                     <div>
                       <div
@@ -5255,6 +5507,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_20"
         >
           <div
             className="emotion-15"
@@ -5269,6 +5522,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_20_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5303,6 +5557,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_20_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5322,6 +5577,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_20_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5336,6 +5592,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_20_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5350,6 +5607,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_20_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5364,6 +5622,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_20_cell_5"
                   >
                     <div>
                       <div
@@ -5399,6 +5658,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_21"
         >
           <div
             className="emotion-15"
@@ -5413,6 +5673,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_21_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5447,6 +5708,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_21_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5466,6 +5728,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_21_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5480,6 +5743,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_21_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5494,6 +5758,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_21_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5508,6 +5773,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_21_cell_5"
                   >
                     <div>
                       <div
@@ -5543,6 +5809,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_22"
         >
           <div
             className="emotion-15"
@@ -5557,6 +5824,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_22_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5591,6 +5859,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_22_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5610,6 +5879,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_22_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5624,6 +5894,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_22_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5638,6 +5909,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_22_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5652,6 +5924,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_22_cell_5"
                   >
                     <div>
                       <div
@@ -5687,6 +5960,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_23"
         >
           <div
             className="emotion-15"
@@ -5701,6 +5975,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_23_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5735,6 +6010,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_23_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5754,6 +6030,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_23_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5768,6 +6045,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_23_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5782,6 +6060,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_23_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5796,6 +6075,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_23_cell_5"
                   >
                     <div>
                       <div
@@ -5831,6 +6111,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_24"
         >
           <div
             className="emotion-15"
@@ -5845,6 +6126,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_24_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -5879,6 +6161,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_24_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -5898,6 +6181,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_24_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -5912,6 +6196,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_24_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -5926,6 +6211,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_24_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -5940,6 +6226,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_24_cell_5"
                   >
                     <div>
                       <div
@@ -5975,6 +6262,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_25"
         >
           <div
             className="emotion-15"
@@ -5989,6 +6277,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_25_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6023,6 +6312,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_25_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6042,6 +6332,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_25_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6056,6 +6347,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_25_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6070,6 +6362,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_25_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6084,6 +6377,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_25_cell_5"
                   >
                     <div>
                       <div
@@ -6119,6 +6413,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_26"
         >
           <div
             className="emotion-15"
@@ -6133,6 +6428,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_26_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6167,6 +6463,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_26_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6186,6 +6483,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_26_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6200,6 +6498,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_26_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6214,6 +6513,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_26_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6228,6 +6528,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_26_cell_5"
                   >
                     <div>
                       <div
@@ -6263,6 +6564,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_27"
         >
           <div
             className="emotion-15"
@@ -6277,6 +6579,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_27_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6311,6 +6614,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_27_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6330,6 +6634,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_27_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6344,6 +6649,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_27_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6358,6 +6664,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_27_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6372,6 +6679,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_27_cell_5"
                   >
                     <div>
                       <div
@@ -6407,6 +6715,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_28"
         >
           <div
             className="emotion-15"
@@ -6421,6 +6730,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_28_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6455,6 +6765,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_28_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6474,6 +6785,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_28_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6488,6 +6800,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_28_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6502,6 +6815,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_28_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6516,6 +6830,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_28_cell_5"
                   >
                     <div>
                       <div
@@ -6551,6 +6866,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_29"
         >
           <div
             className="emotion-15"
@@ -6565,6 +6881,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_29_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6599,6 +6916,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_29_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6618,6 +6936,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_29_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6632,6 +6951,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_29_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6646,6 +6966,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_29_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6660,6 +6981,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_29_cell_5"
                   >
                     <div>
                       <div
@@ -6695,6 +7017,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_30"
         >
           <div
             className="emotion-15"
@@ -6709,6 +7032,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_30_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6743,6 +7067,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_30_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6762,6 +7087,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_30_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6776,6 +7102,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_30_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6790,6 +7117,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_30_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6804,6 +7132,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_30_cell_5"
                   >
                     <div>
                       <div
@@ -6839,6 +7168,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_31"
         >
           <div
             className="emotion-15"
@@ -6853,6 +7183,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_31_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -6887,6 +7218,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_31_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -6906,6 +7238,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_31_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -6920,6 +7253,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_31_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -6934,6 +7268,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_31_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -6948,6 +7283,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_31_cell_5"
                   >
                     <div>
                       <div
@@ -6983,6 +7319,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_32"
         >
           <div
             className="emotion-15"
@@ -6997,6 +7334,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_32_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7031,6 +7369,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_32_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7050,6 +7389,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_32_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7064,6 +7404,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_32_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7078,6 +7419,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_32_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7092,6 +7434,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_32_cell_5"
                   >
                     <div>
                       <div
@@ -7127,6 +7470,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_33"
         >
           <div
             className="emotion-15"
@@ -7141,6 +7485,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_33_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7175,6 +7520,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_33_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7194,6 +7540,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_33_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7208,6 +7555,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_33_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7222,6 +7570,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_33_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7236,6 +7585,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_33_cell_5"
                   >
                     <div>
                       <div
@@ -7271,6 +7621,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_34"
         >
           <div
             className="emotion-15"
@@ -7285,6 +7636,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_34_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7319,6 +7671,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_34_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7338,6 +7691,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_34_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7352,6 +7706,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_34_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7366,6 +7721,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_34_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7380,6 +7736,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_34_cell_5"
                   >
                     <div>
                       <div
@@ -7415,6 +7772,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_35"
         >
           <div
             className="emotion-15"
@@ -7429,6 +7787,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_35_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7463,6 +7822,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_35_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7482,6 +7842,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_35_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7496,6 +7857,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_35_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7510,6 +7872,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_35_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7524,6 +7887,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_35_cell_5"
                   >
                     <div>
                       <div
@@ -7559,6 +7923,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_36"
         >
           <div
             className="emotion-15"
@@ -7573,6 +7938,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_36_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7607,6 +7973,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_36_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7626,6 +7993,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_36_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7640,6 +8008,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_36_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7654,6 +8023,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_36_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7668,6 +8038,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_36_cell_5"
                   >
                     <div>
                       <div
@@ -7703,6 +8074,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_37"
         >
           <div
             className="emotion-15"
@@ -7717,6 +8089,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_37_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7751,6 +8124,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_37_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7770,6 +8144,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_37_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7784,6 +8159,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_37_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7798,6 +8174,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_37_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7812,6 +8189,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_37_cell_5"
                   >
                     <div>
                       <div
@@ -7847,6 +8225,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_38"
         >
           <div
             className="emotion-15"
@@ -7861,6 +8240,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_38_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -7895,6 +8275,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_38_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -7914,6 +8295,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_38_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -7928,6 +8310,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_38_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -7942,6 +8325,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_38_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -7956,6 +8340,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_38_cell_5"
                   >
                     <div>
                       <div
@@ -7991,6 +8376,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_39"
         >
           <div
             className="emotion-15"
@@ -8005,6 +8391,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_39_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8039,6 +8426,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_39_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8058,6 +8446,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_39_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8072,6 +8461,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_39_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8086,6 +8476,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_39_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8100,6 +8491,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_39_cell_5"
                   >
                     <div>
                       <div
@@ -8135,6 +8527,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_40"
         >
           <div
             className="emotion-15"
@@ -8149,6 +8542,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_40_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8183,6 +8577,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_40_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8202,6 +8597,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_40_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8216,6 +8612,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_40_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8230,6 +8627,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_40_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8244,6 +8642,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_40_cell_5"
                   >
                     <div>
                       <div
@@ -8279,6 +8678,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_41"
         >
           <div
             className="emotion-15"
@@ -8293,6 +8693,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_41_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8327,6 +8728,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_41_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8346,6 +8748,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_41_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8360,6 +8763,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_41_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8374,6 +8778,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_41_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8388,6 +8793,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_41_cell_5"
                   >
                     <div>
                       <div
@@ -8423,6 +8829,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_42"
         >
           <div
             className="emotion-15"
@@ -8437,6 +8844,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_42_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8471,6 +8879,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_42_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8490,6 +8899,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_42_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8504,6 +8914,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_42_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8518,6 +8929,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_42_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8532,6 +8944,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_42_cell_5"
                   >
                     <div>
                       <div
@@ -8567,6 +8980,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_43"
         >
           <div
             className="emotion-15"
@@ -8581,6 +8995,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_43_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8615,6 +9030,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_43_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8634,6 +9050,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_43_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8648,6 +9065,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_43_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8662,6 +9080,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_43_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8676,6 +9095,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_43_cell_5"
                   >
                     <div>
                       <div
@@ -8711,6 +9131,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_44"
         >
           <div
             className="emotion-15"
@@ -8725,6 +9146,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_44_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8759,6 +9181,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_44_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8778,6 +9201,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_44_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8792,6 +9216,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_44_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8806,6 +9231,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_44_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8820,6 +9246,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_44_cell_5"
                   >
                     <div>
                       <div
@@ -8855,6 +9282,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_45"
         >
           <div
             className="emotion-15"
@@ -8869,6 +9297,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_45_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -8903,6 +9332,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_45_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -8922,6 +9352,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_45_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -8936,6 +9367,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_45_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -8950,6 +9382,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_45_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -8964,6 +9397,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_45_cell_5"
                   >
                     <div>
                       <div
@@ -8999,6 +9433,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_46"
         >
           <div
             className="emotion-15"
@@ -9013,6 +9448,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_46_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -9047,6 +9483,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_46_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -9066,6 +9503,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_46_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -9080,6 +9518,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_46_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -9094,6 +9533,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_46_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -9108,6 +9548,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_46_cell_5"
                   >
                     <div>
                       <div
@@ -9143,6 +9584,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_47"
         >
           <div
             className="emotion-15"
@@ -9157,6 +9599,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_47_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -9191,6 +9634,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_47_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -9210,6 +9654,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_47_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -9224,6 +9669,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_47_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -9238,6 +9684,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_47_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -9252,6 +9699,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_47_cell_5"
                   >
                     <div>
                       <div
@@ -9287,6 +9735,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_48"
         >
           <div
             className="emotion-15"
@@ -9301,6 +9750,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_48_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -9335,6 +9785,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_48_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -9354,6 +9805,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_48_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -9368,6 +9820,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_48_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -9382,6 +9835,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_48_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -9396,6 +9850,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_48_cell_5"
                   >
                     <div>
                       <div
@@ -9431,6 +9886,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_49"
         >
           <div
             className="emotion-15"
@@ -9445,6 +9901,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_49_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -9479,6 +9936,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_49_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -9498,6 +9956,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_49_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -9512,6 +9971,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_49_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -9526,6 +9986,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_49_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -9540,6 +10001,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_49_cell_5"
                   >
                     <div>
                       <div
@@ -9575,6 +10037,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
         <td
           className="emotion-14"
           colSpan={5}
+          data-testid="table_row_50"
         >
           <div
             className="emotion-15"
@@ -9589,6 +10052,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                 >
                   <th
                     className="emotion-3"
+                    data-testid="table_row_50_cell_0"
                   >
                     <span
                       className="emotion-4"
@@ -9623,6 +10087,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </th>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_50_cell_1"
                   >
                     <div
                       className="emotion-26"
@@ -9642,6 +10107,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_50_cell_2"
                   >
                     <div
                       className="emotion-26"
@@ -9656,6 +10122,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-25"
+                    data-testid="table_row_50_cell_3"
                   >
                     <div
                       className="emotion-26"
@@ -9670,6 +10137,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-31"
+                    data-testid="table_row_50_cell_4"
                   >
                     <div
                       className="emotion-26"
@@ -9684,6 +10152,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                   </td>
                   <td
                     className="emotion-33"
+                    data-testid="table_row_50_cell_5"
                   >
                     <div>
                       <div

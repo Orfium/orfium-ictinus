@@ -17,6 +17,8 @@ type TableRowWrapperProps<T> = {
   fixedHeader: boolean;
   type: TableType;
   expanded: boolean;
+  dataTestIdPrefix?: string;
+  rowIndex?: number;
 };
 
 const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapperProps<T>) => {
@@ -33,6 +35,8 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
     columnCount,
     onSelectionChangeExist,
     expanded,
+    dataTestIdPrefix,
+    rowIndex,
   } = props;
 
   const tChange = React.useCallback(() => {
@@ -56,7 +60,7 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
         bordered: !expanded,
       }}
     >
-      <RenderRowOrNestedRow<T> row={row} />
+      <RenderRowOrNestedRow<T> row={row} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} />
     </TableRowContext.Provider>
   );
 };

@@ -16,9 +16,13 @@ const RenderRowWithCells = React.memo(
   ({
     checked = false,
     toggleChecked = () => {},
+    dataTestIdPrefix,
+    rowIndex,
   }: {
     checked?: boolean;
     toggleChecked?: () => void;
+    dataTestIdPrefix?: string;
+    rowIndex?: number;
   }) => {
     const {
       columnsHasNumberArr,
@@ -46,7 +50,15 @@ const RenderRowWithCells = React.memo(
         }
       >
         {onSelectionChangeExist && (
-          <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
+          <TableCell
+            component={'th'}
+            sticky={fixedHeader}
+            width={50}
+            padded={padded}
+            dataTestIdPrefix={dataTestIdPrefix}
+            rowIndex={rowIndex}
+            index={0}
+          >
             <CheckBox dataTestIdSuffix={'row-check'} checked={isRowSelected} onClick={tChange} />
           </TableCell>
         )}
@@ -63,6 +75,9 @@ const RenderRowWithCells = React.memo(
             cellType={cellType}
             rowType={type}
             align={align}
+            dataTestIdPrefix={dataTestIdPrefix}
+            rowIndex={rowIndex}
+            index={index + 1}
           />
         ))}
 
@@ -70,6 +85,9 @@ const RenderRowWithCells = React.memo(
           isExpandedExists={isExpandedExists}
           checked={checked}
           toggleChecked={toggleChecked}
+          dataTestIdPrefix={dataTestIdPrefix}
+          rowIndex={rowIndex}
+          index={row.cells.length + 1}
         />
       </TableRow>
     );
@@ -77,7 +95,15 @@ const RenderRowWithCells = React.memo(
 );
 RenderRowWithCells.displayName = 'RenderRowWithCells';
 
-const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { row: Row<T> }) => {
+const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
+  row,
+  dataTestIdPrefix,
+  rowIndex,
+}: {
+  row: Row<T>;
+  dataTestIdPrefix?: string;
+  rowIndex?: number;
+}) => {
   const { isRowSelected, columnCount } = React.useContext(TableRowContext);
   const theme = useTheme();
   const { expanded } = row;
@@ -89,10 +115,15 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { r
   return (
     <React.Fragment>
       {!expanded ? (
-        <RenderRowWithCells />
+        <RenderRowWithCells dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} />
       ) : (
         <TableRow nested selected={isRowSelected}>
-          <TableCell colSpan={columnCount} padded={false}>
+          <TableCell
+            colSpan={columnCount}
+            padded={false}
+            dataTestIdPrefix={dataTestIdPrefix}
+            rowIndex={rowIndex}
+          >
             <div
               css={{
                 flex: 1,
@@ -103,11 +134,23 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({ row }: { r
             >
               <table css={tableStyle()()}>
                 <tbody>
-                  <RenderRowWithCells {...{ checked, toggleChecked }} />
+                  <RenderRowWithCells
+                    {...{ checked, toggleChecked }}
+                    dataTestIdPrefix={dataTestIdPrefix}
+                    rowIndex={rowIndex}
+                  />
                   {checked && (
                     <TableRow nested>
                       {/* colSpan is +1 because of the tableCell added for the arrow icon */}
-                      <TableCell colSpan={columnCount + 1}>{ExpandedComponent}</TableCell>
+
+                      <TableCell
+                        colSpan={columnCount + 1}
+                        dataTestIdPrefix={dataTestIdPrefix}
+                        rowIndex={rowIndex}
+                        index={'expanded'}
+                      >
+                        {ExpandedComponent}
+                      </TableCell>
                     </TableRow>
                   )}
                 </tbody>

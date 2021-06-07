@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
-import { flex } from 'theme/functions';
+import { flex, transition } from 'theme/functions';
 
 export const boldFont = (size: number, theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes[size]};
@@ -27,6 +27,7 @@ const mainHeading = (theme: Theme): SerializedStyles => css`
   color: ${theme.utils.getColor('primary', 400, 'normal')};
   ${boldFont(16, theme)};
   margin: ${theme.spacing.sm} 0;
+  cursor: default;
 `;
 
 const article = (isHighlighted: boolean = false) => (theme: Theme): SerializedStyles => css`
@@ -73,7 +74,46 @@ const linkedCount = (theme: Theme): SerializedStyles => css`
   margin-left: ${theme.spacing.lg};
 `;
 
+const externalLink = (theme: Theme): SerializedStyles => css`
+  display: none;
+  margin: auto ${theme.spacing.sm};
+  text-decoration: none;
+  cursor: pointer;
+
+  :hover {
+    > span {
+      > svg {
+        > path {
+          ${transition(0.2, 'fill')};
+          fill: ${theme.palette.black};
+        }
+      }
+    }
+  }
+`;
+
+const title = (theme: Theme): SerializedStyles => css`
+  ${flex};
+
+  :hover {
+    ${transition(0.2, 'text-decoration')};
+    text-decoration: underline;
+    color: ${theme.utils.getColor('primary', 400, 'normal')};
+    > a {
+      display: block;
+    }
+  }
+`;
+
+const tooltip = (theme: Theme): SerializedStyles => css`
+  font-size: ${theme.typography.fontSizes['12']};
+  background-color: ${theme.utils.getColor('darkGray', 500)};
+`;
+
 export default {
+  title,
+  tooltip,
+  externalLink,
   subHeading,
   mainHeading,
   article,

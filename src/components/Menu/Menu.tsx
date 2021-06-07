@@ -12,7 +12,8 @@ import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { MenuPositionAllowed, optionsStyle, wrapperStyle } from './Menu.style';
+import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
+import { wrapperStyle } from './Menu.style';
 
 export type Props = {
   /** the color of the button based on our colors eg. red-400 */

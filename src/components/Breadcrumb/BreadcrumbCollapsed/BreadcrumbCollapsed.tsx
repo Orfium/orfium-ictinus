@@ -3,8 +3,8 @@ import * as React from 'react';
 
 import Separator from '../../Breadcrumb/Separator/Separator';
 import Icon from '../../Icon';
-import { optionsStyle } from '../../Menu/Menu.style';
 import ClickAwayListener from '../../utils/ClickAwayListener';
+import { optionsStyle } from '../../utils/DropdownOptions';
 import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,

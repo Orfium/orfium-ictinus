@@ -38,6 +38,7 @@ import ClockIcon from './clock.svg';
 import CloseTagIcon from './close-tag.svg';
 import CloseIcon from './close.svg';
 import CmsProcessIcon from './cms-process.svg';
+import CompositionIconV2 from './composition-v2.svg';
 import CompositionIcon from './composition.svg';
 import ConcertIcon from './concert.svg';
 import ConfirmedMatchesIcon from './confirmed-matches.svg';
@@ -59,8 +60,8 @@ import EntitiesIcon from './entities.svg';
 import Entity from './entity.svg';
 import ErrorIcon from './error.svg';
 import ExpensesIcon from './expenses.svg';
+import ExternalLinkIconV2 from './external-link-v2.svg';
 import ExternalLinkIcon from './external-link.svg';
-
 /**
  * In the current design system the collection of "FatArrowIcon"
  * has been renamed into "ArrowIcon" collection. For backwards
@@ -114,6 +115,7 @@ import ProcessedLogs from './processed-logs.svg';
 import Proposed from './proposed.svg';
 import PublicPerformanceIcon from './publicPerformance.svg';
 import PublisherIcon from './publisher.svg';
+import RecordLabelIconV2 from './record-label-v2.svg';
 import RecordLabelIcon from './record-label.svg';
 import ReferenceFileIcon from './reference-file.svg';
 import RefreshIcon from './refresh.svg';
@@ -143,6 +145,7 @@ import TriangleUpIcon from './triangle-up.svg';
 import TrophyIcon from './trophy.svg';
 import TVCinemaIcon from './TVCinema.svg';
 import TVRadioIcon from './TVRadio.svg';
+import UnpairedV2 from './unpaired-v2.svg';
 import Unpaired from './unpaired.svg';
 import UpdateIcon from './update.svg';
 import UploadIcon from './upload.svg';
@@ -201,6 +204,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   closeTag: CloseTagIcon,
   cmsProcess: CmsProcessIcon,
   composition: CompositionIcon,
+  compositionV2: CompositionIconV2,
   concert: ConcertIcon,
   confirmedMatches: ConfirmedMatchesIcon,
   conflicts: ConflictsIcon,
@@ -220,6 +224,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   error: ErrorIcon, // "closeTag" copy (larger)
   expenses: ExpensesIcon,
   externalLink: ExternalLinkIcon,
+  externalLinkV2: ExternalLinkIconV2,
   fatArrowDown: FatArrowDownIcon,
   fatArrowLeft: FatArrowLeftIcon,
   fatArrowRight: FatArrowRightIcon,
@@ -261,6 +266,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   processManagement: ProcessManagementIcon, // "ticTacToeArrow" copy
   publisher: PublisherIcon,
   recordLabel: RecordLabelIcon,
+  recordLabelV2: RecordLabelIconV2,
   referenceFile: ReferenceFileIcon,
   relations: RelationsIcon,
   restore: RestoreIcon,
@@ -307,6 +313,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   processedLogs: ProcessedLogs,
   proposed: Proposed,
   unpaired: Unpaired,
+  unpairedV2: UnpairedV2,
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
 };

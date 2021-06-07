@@ -121,4 +121,5 @@ const MenuItem: React.FC<Props> = memo(
   }
 );
 
+MenuItem.displayName = 'MenuItem';
 export default MenuItem;

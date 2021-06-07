@@ -4,22 +4,29 @@ import React, { FC } from 'react';
 import { flex } from 'theme/functions';
 
 import Styles from './Asset.style';
+import AssetExternalLink, { ExternalLinkProps } from './AssetExternalLink';
 
-interface Props {
+
+export interface AssetHeadingProps {
   top?: string;
   main: string;
+  externalLink?: ExternalLinkProps;
   bottom?: string;
   iconName: AcceptedIconNames;
 }
-const AssetHeading: FC<Props> = ({ top = '', main, bottom = '', iconName }) => {
+
+const AssetHeading: FC<AssetHeadingProps> = ({ top, main, bottom, iconName, externalLink }) => {
   return (
     <div css={Styles.headingWrapper}>
-      <p css={Styles.subHeadingTop}>{top && top}</p>
+      {top && <p css={Styles.subHeadingTop}>{top}</p>}
       <div css={flex}>
         <Icon size={24} name={iconName} variant={400} color={'primary'} />
-        <h3 css={Styles.mainHeading}>{main}</h3>
+        <div css={externalLink ? Styles.title : flex}>
+          <h3 css={Styles.mainHeading}>{main}</h3>
+          {externalLink && <AssetExternalLink {...externalLink} />}
+        </div>
       </div>
-      <p css={Styles.subHeading}>{bottom && bottom}</p>
+      {bottom && <p css={Styles.subHeading}>{bottom}</p>}
     </div>
   );
 };

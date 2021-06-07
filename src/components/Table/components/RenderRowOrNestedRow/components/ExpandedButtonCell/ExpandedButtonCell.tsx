@@ -5,13 +5,27 @@ import useTheme from '../../../../../../hooks/useTheme';
 import Icon from '../../../../../Icon';
 import TableCell from '../../../TableCell';
 
-type Props = { isExpandedExists: boolean; checked: boolean; toggleChecked: () => void };
+type Props = {
+  isExpandedExists: boolean;
+  checked: boolean;
+  toggleChecked: () => void;
+  dataTestIdPrefix?: string;
+  rowIndex?: number;
+  index?: number;
+};
 
-const ExpandedButtonCell: React.FC<Props> = ({ isExpandedExists, checked, toggleChecked }) => {
+const ExpandedButtonCell: React.FC<Props> = ({
+  isExpandedExists,
+  checked,
+  toggleChecked,
+  dataTestIdPrefix,
+  rowIndex,
+  index,
+}) => {
   const theme = useTheme();
 
   return isExpandedExists ? (
-    <TableCell width={67}>
+    <TableCell width={67} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
       <div>
         <div
           data-testid="expanded-button"
@@ -26,7 +40,7 @@ const ExpandedButtonCell: React.FC<Props> = ({ isExpandedExists, checked, toggle
             transition: '0.2s all ease-in-out',
             cursor: 'pointer',
           }}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
             toggleChecked();
           }}

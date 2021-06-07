@@ -55,6 +55,8 @@ type Props<T> = {
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
   topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.Component | JSX.Element;
+  /** Data test id prefix for all th/td elements */
+  dataTestIdPrefix?: string;
 };
 
 function Table<T>({
@@ -64,8 +66,9 @@ function Table<T>({
   fixedHeader = false,
   onCheck,
   padded = false,
-  topLeftText = '',
+  topLeftText,
   topRightArea,
+  dataTestIdPrefix,
 }: Props<T>) {
   const theme = useTheme();
   const [selectedIds, setSelectedIds] = React.useState<Selection[] | undefined>(undefined);
@@ -88,7 +91,7 @@ function Table<T>({
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
         ? [...selectedIds, rowId]
-        : selectedIds.filter(item => item !== rowId)
+        : selectedIds.filter((item) => item !== rowId)
     );
   }, []);
 
@@ -110,12 +113,20 @@ function Table<T>({
 
   return (
     <React.Fragment>
-      <table css={tableStyle()}>
-        {(onCheck || topRightArea || type === 'normal') && (
+      {(onCheck || topRightArea || topLeftText) && (
+        <table css={tableStyle()}>
           <thead>
             <TableRow>
               {onCheck && (
-                <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded}>
+                <TableCell
+                  component={'th'}
+                  sticky={fixedHeader}
+                  width={50}
+                  padded={padded}
+                  dataTestIdPrefix={dataTestIdPrefix}
+                  rowIndex={0}
+                  index={0}
+                >
                   <CheckBox
                     checked={Boolean(selectedIds && selectedIds.length > 0)}
                     intermediate={
@@ -131,7 +142,7 @@ function Table<T>({
                   />
                 </TableCell>
               )}
-              <TableCell padded={padded}>
+              <TableCell padded={padded} dataTestIdPrefix={dataTestIdPrefix} rowIndex={0} index={1}>
                 {selectedIds && selectedIds?.length > 0 ? (
                   <span>
                     <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
@@ -145,14 +156,18 @@ function Table<T>({
                   textAlign={'right'}
                   padded={padded}
                   colSpan={columnCount - (onCheck ? 2 : 1)}
+                  dataTestIdPrefix={dataTestIdPrefix}
+                  rowIndex={0}
+                  index={2}
                 >
                   {topRightArea(data, selectedIds)}
                 </TableCell>
               )}
             </TableRow>
           </thead>
-        )}
-      </table>
+        </table>
+      )}
+
       <table css={tableStyle()}>
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
@@ -169,7 +184,13 @@ function Table<T>({
                 ]}
               >
                 {onCheck && (
-                  <TableCell component={'th'} sticky={fixedHeader} width={50} padded={padded} />
+                  <TableCell
+                    component={'th'}
+                    sticky={fixedHeader}
+                    width={50}
+                    padded={padded}
+                    dataTestIdPrefix={dataTestIdPrefix}
+                  />
                 )}
                 {columns.map((item, index) => (
                   <TableCell
@@ -179,6 +200,7 @@ function Table<T>({
                     sticky={fixedHeader}
                     padded={padded}
                     width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
+                    dataTestIdPrefix={dataTestIdPrefix}
                   >
                     {item}
                   </TableCell>
@@ -188,7 +210,7 @@ function Table<T>({
           </thead>
         )}
         <tbody>
-          {data.map(row => (
+          {data.map((row, index) => (
             // @ts-ignore
             <TableRowWrapper<T>
               key={row.id}
@@ -206,6 +228,8 @@ function Table<T>({
                 onSelectionChangeExist: Boolean(onCheck),
                 expanded: !!row.expanded,
               }}
+              dataTestIdPrefix={dataTestIdPrefix}
+              rowIndex={index + 1}
             />
           ))}
         </tbody>

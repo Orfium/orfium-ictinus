@@ -108,4 +108,6 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
   );
 });
 
+TextField.displayName = 'TextField';
+
 export default TextField;

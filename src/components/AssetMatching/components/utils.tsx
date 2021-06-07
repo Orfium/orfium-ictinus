@@ -36,6 +36,7 @@ export const useCategoryItemActions = (item: string, matchedCategoryItems?: stri
   };
 };
 
+// eslint-disable-next-line react/display-name
 export const createActionButton = (isButtonFilled = false, color: string) => (
   action: MatchingAction
 ) => (

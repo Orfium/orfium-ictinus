@@ -69,6 +69,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       minCharactersToSearch = 0,
       highlightSearch = false,
       isSearchable = true,
+      styleType,
       dataTestId,
       ...restInputProps
     },
@@ -172,9 +173,16 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             position: relative;
             min-width: ${rem(150)};
             max-width: ${rem(620)};
+            & > div:nth-of-type(1) > div {
+              ${open &&
+                status !== 'error' &&
+                `border: 2px solid ${theme.utils.getColor('lightGray', 400)};`}
+              ${open && status !== 'error' && styleType === 'outlined' && `box-shadow: none;`}
+            }
           `}
         >
           <TextField
+            styleType={styleType}
             onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
             onKeyDown={handleOnKeyDown}
@@ -203,5 +211,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     );
   }
 );
+
+Select.displayName = 'Select';
 
 export default Select;
