@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { isUndefined } from 'lodash';
 
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
@@ -10,8 +9,8 @@ import Icon from '../Icon';
 import { generateTestDataId } from '../../utils/helpers';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle } from '../utils/DropdownOptions';
-import { Props, TestProps, } from './types';
-import { getTextColor } from './utils';
+import { FilterOption, Props, TestProps } from './types';
+import { getTextColor, defaultOptionStyle, optionStyle } from './utils';
 import {
   buttonStyle,
   childrenWrapperStyle,
@@ -19,7 +18,6 @@ import {
   labelSpanStyle,
   wrapperStyle,
 } from './Filter.style';
-import { darken } from 'polished';
 
 const Filter: React.FC<Props & TestProps> = props => {
   const {
@@ -37,7 +35,7 @@ const Filter: React.FC<Props & TestProps> = props => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const hasSelectedValue = Boolean(selectedItem?.value);
+  const hasSelectedValue = Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
   const activeCalculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
   const iconColor = getTextColor({
@@ -48,6 +46,11 @@ const Filter: React.FC<Props & TestProps> = props => {
     hasSelectedValue,
   });
   const iconName = open ? 'triangleUp' : 'triangleDown';
+
+  const handleSelect = (option: FilterOption) => {
+    setOpen(false);
+    onSelect(option);
+  }
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
@@ -79,18 +82,9 @@ const Filter: React.FC<Props & TestProps> = props => {
         {open && (
           <div css={optionsStyle({})(theme)} data-testid="filter-menu">
             <button
-              css={{
-                backgroundColor: isUndefined(selectedItem?.value) || selectedItem?.value === defaultValue.value
-                  ? darken(0.05, theme.palette.white)
-                  : theme.palette.white,
-                border: 0,
-                fontWeight: theme.typography.weights.medium,
-              }}
-              key={`${defaultValue.value}`}
-              onClick={() => {
-                setOpen(false);
-                onSelect(defaultValue);
-              }}
+              type="button"
+              css={defaultOptionStyle(defaultValue, selectedItem)(theme)}
+              onClick={() => {handleSelect(defaultValue);}}
             >
               {defaultValue.label}
             </button>
@@ -99,16 +93,10 @@ const Filter: React.FC<Props & TestProps> = props => {
                 .filter(option => option.value !== defaultValue.value) //filter options just in case the default value is included
                 .map((option, index) => (
                 <button
-                  css={{
-                    backgroundColor: option.value === selectedItem?.value ? darken(0.05, theme.palette.white) : theme.palette.white,
-                    border: 0,
-                    fontWeight: theme.typography.weights.regular,
-                  }}
+                  type="button"
+                  css={optionStyle(option, selectedItem)(theme)}
                   key={`${option.value}-${index}`}
-                  onClick={() => {
-                    setOpen(false);
-                    onSelect(option);
-                  }}
+                  onClick={() => {handleSelect(option);}}
                 >
                   {option.label}
                 </button>

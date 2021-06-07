@@ -4,11 +4,12 @@ import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
-import { getBackgroundColor, getTextColor, getBorder } from './utils';
+import { getBackgroundColor, getTextColor, getBorder, getHoverBorder } from './utils';
 
 export const wrapperStyle = () => () => css`
   position: relative;
   display: inline-block;
+  height: ${rem(36)};
 `;
 
 export const buttonSpanStyle = () => () => {
@@ -27,6 +28,8 @@ export const buttonStyle = ({
   styleType,
   hasSelectedValue
 }: ButtonStyleProps) => (theme: Theme) => {
+  const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
+
   return {
     fontSize: theme.typography.fontSizes['13'],
     cursor: 'pointer',
@@ -34,6 +37,8 @@ export const buttonStyle = ({
     height: rem(36),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.lg,
+    transition: 'background-color 150ms linear',
+    boxShadow,
     color: getTextColor({
       theme,
       open,
@@ -50,34 +55,25 @@ export const buttonStyle = ({
       activeCalculatedColor,
       calculatedColor,
     }),
-    boxShadow: styleType === 'elevated' ? theme.elevation['01'] : 'none',
-
     border: getBorder({
       styleType,
       theme,
       hasSelectedValue,
       activeCalculatedColor,
     }),
-    transition: 'background-color 150ms linear',
-    ':hover': {
+    ':hover,:active': {
       backgroundColor: !disabled && !open
         ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
         : undefined,
-      border: hasSelectedValue
-        ? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`
-        :  styleType === 'outlined'? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}` : 'none',
-      boxShadow: styleType === 'elevated' ? theme.elevation['02'] : 'none',
-    },
-    ':active': {
-      backgroundColor: !disabled && !open
-        ? stateBackgroundColor(theme, 'active', calculatedColor, true)
-        : undefined,
-
-      border: hasSelectedValue
-        ? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`
-        :  styleType === 'outlined'? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}` : 'none',
-
-      boxShadow: styleType === 'elevated' ? theme.elevation['02'] : 'none',
+      border: getHoverBorder({
+        styleType,
+        theme,
+        open,
+        calculatedColor,
+        activeCalculatedColor,
+        hasSelectedValue,
+      }),
+      boxShadow,
     },
   };
 };

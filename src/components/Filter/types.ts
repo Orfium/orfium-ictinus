@@ -57,3 +57,8 @@ export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
 export type BorderProps = Omit<BaseColorProps, 'open' | 'calculatedColor'> & {
   styleType: StyleType;
 };
+
+
+export type HoverBorderProps = BaseColorProps & {
+  styleType: StyleType;
+};

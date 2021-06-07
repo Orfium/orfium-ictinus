@@ -4,7 +4,7 @@ import { FilterOption, StyleType } from 'components/Filter/types';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const dummyUnrefinedData = Array.from({ length: 15 }, (value, index) => ({
-  value: index,
+  value: index + 1,
   label: `Test option ${index}`,
 }));
 
