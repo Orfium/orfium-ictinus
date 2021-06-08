@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { formFieldStyles } from '../../theme/palette';
-import TextInputWrapper from '../utils/TextInputWrapper/TextInputWrapper';
+import TextInputBase from '../TextInputBase/TextInputBase';
 import { inputStyle } from './TextArea.style';
 
 export type Props = {
@@ -45,7 +45,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
 
   return (
     <React.Fragment>
-      <TextInputWrapper {...props}>
+      <TextInputBase {...props}>
         <div css={{ width: '100% ' }}>
           <textarea
             css={inputStyle({ placeholder, resizeEnabled })}
@@ -57,7 +57,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
             ref={ref}
           />
         </div>
-      </TextInputWrapper>
+      </TextInputBase>
     </React.Fragment>
   );
 });
