@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { fireEvent, render } from 'test';
 
 import { createMockMediaMatcher } from '../../hooks/useBreakpoints.test';

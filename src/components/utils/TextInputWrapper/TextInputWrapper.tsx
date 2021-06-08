@@ -1,7 +1,8 @@
+import React, { FC } from 'react';
+
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 import useTheme from 'hooks/useTheme';
-import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 

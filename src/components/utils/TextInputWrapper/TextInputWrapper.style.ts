@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
+
 import { Theme } from 'theme';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 

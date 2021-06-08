@@ -1,8 +1,9 @@
 import { css } from '@emotion/react';
-import Loader from 'components/Loader';
 import { debounce } from 'lodash';
 import { rem } from 'polished';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+
+import Loader from 'components/Loader';
 
 import useTheme from '../../hooks/useTheme';
 import { generateTestDataId } from '../../utils/helpers';

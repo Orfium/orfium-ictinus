@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+
 import { Theme } from 'theme';
 
 export const tickStyle = (fill: string) => (theme: Theme): SerializedStyles => css`

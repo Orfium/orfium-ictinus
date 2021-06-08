@@ -1,5 +1,6 @@
-import CheckBox from 'components/CheckBox';
 import React, { ChangeEvent, FC, Fragment } from 'react';
+
+import CheckBox from 'components/CheckBox';
 
 import Styles from './CheckBoxContainer.style';
 

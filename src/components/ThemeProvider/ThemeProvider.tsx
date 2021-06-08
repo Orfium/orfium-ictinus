@@ -1,9 +1,9 @@
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
-import { css, Global } from '@emotion/react';
-import { useThemeSwitch } from 'hooks/useThemeSwitch';
+import { ThemeProvider as EmotionThemeProvider , css, Global } from '@emotion/react';
 import { keys, merge, pick } from 'lodash';
 import { normalize } from 'polished';
 import React from 'react';
+
+import { useThemeSwitch } from 'hooks/useThemeSwitch';
 import theme, { Theme, ThemeConfig } from 'theme';
 
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';

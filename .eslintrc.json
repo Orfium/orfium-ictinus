@@ -6,7 +6,9 @@
     "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
   ],
   "plugins": ["react", "@emotion", "@typescript-eslint", "import"],
   "env": {
@@ -102,6 +104,11 @@
     "react": {
       "pragma": "React",
       "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
     }
   },
   "parser": "@typescript-eslint/parser",

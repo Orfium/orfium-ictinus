@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { colorShades, flatColors } from 'theme/palette';
 import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';

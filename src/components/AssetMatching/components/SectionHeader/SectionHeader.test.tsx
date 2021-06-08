@@ -1,5 +1,6 @@
-import mocks from 'components/storyUtils/AssetMatchingShowcase/mocks';
 import React from 'react';
+
+import mocks from 'components/storyUtils/AssetMatchingShowcase/mocks';
 
 import { render, fireEvent } from '../../../../test';
 import SectionHeader from './SectionHeader';

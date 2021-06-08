@@ -1,4 +1,3 @@
-import useTheme from 'hooks/useTheme';
 import max from 'lodash/max';
 import { lighten } from 'polished';
 import React, { useCallback, useMemo } from 'react';
@@ -12,6 +11,8 @@ import {
   Tooltip,
   LabelList,
 } from 'recharts';
+
+import useTheme from 'hooks/useTheme';
 
 import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';

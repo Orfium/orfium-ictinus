@@ -1,7 +1,8 @@
-import useTheme from 'hooks/useTheme';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import isEmpty from 'lodash/isEmpty';
 import * as React from 'react';
+
+import useTheme from 'hooks/useTheme';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { pickTextColorFromSwatches } from 'theme/palette';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
