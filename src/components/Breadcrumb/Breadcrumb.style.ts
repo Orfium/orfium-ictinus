@@ -5,10 +5,10 @@ export const breadcrumbStyles = () => (theme: Theme) => css`
   display: flex;
   flex-wrap: nowrap;
   list-style: none;
-  padding: ${theme.spacing.md} 0;
+  padding: 0;
+  margin: 0;
 
   & > li {
-    padding: ${theme.spacing.md} 0;
     margin: auto;
   }
 `;
