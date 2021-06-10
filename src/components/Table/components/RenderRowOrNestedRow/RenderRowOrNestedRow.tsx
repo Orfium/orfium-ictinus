@@ -61,7 +61,9 @@ const RenderRowWithCells = React.memo(
             rowIndex={rowIndex}
             index={0}
           >
-            <CheckBox dataTestIdSuffix={'row-check'} checked={isRowSelected} onClick={tChange} />
+            <div onClick={e => e.stopPropagation()}>
+              <CheckBox dataTestIdSuffix={'row-check'} checked={isRowSelected} onClick={tChange} />
+            </div>
           </TableCell>
         )}
         {row.cells.map(({ content, colSpan, type: cellType, align }, index) => (
@@ -131,6 +133,11 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
                 flex: 1,
                 flexDirection: 'row',
                 display: 'flex',
+                borderTop:
+                  //Adds border to the first row only.
+                  rowIndex === 1
+                    ? `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}`
+                    : 'none',
                 borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}`,
               }}
             >
