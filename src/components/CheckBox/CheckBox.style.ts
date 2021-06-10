@@ -12,13 +12,14 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
 
 export const checkboxWrapperStyle = () => (): SerializedStyles => css`
   border-radius: 100%;
+  display: flex;
   width: ${rem(48)};
   height: ${rem(48)};
-  display: flex;
   justify-content: center;
   align-items: center;
 
   &:before {
+    display: none;
     border-radius: 100%;
     transition: all 0.2s;
     content: ' ';
@@ -26,8 +27,12 @@ export const checkboxWrapperStyle = () => (): SerializedStyles => css`
     height: ${rem(48)};
     position: absolute;
   }
-  &:hover:before {
-    background: rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    &:before {
+      display: block;
+      background: rgba(0, 0, 0, 0.05);
+    }
   }
 `;
 
