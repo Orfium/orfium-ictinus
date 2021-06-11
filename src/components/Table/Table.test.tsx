@@ -41,7 +41,7 @@ describe('Table', () => {
 
   test('that the onCheck returns the selected rows back when a row is selected', async () => {
     const onCheck = jest.fn();
-    const { getAllByText, container } = render(
+    const { getAllByText } = render(
       <Table
         columns={['Title', 'Name', 'Surname', 'Age']}
         type="nested-header"
@@ -58,14 +58,12 @@ describe('Table', () => {
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith([data[0].id]);
-
-    expect(container).toMatchSnapshot();
   });
 
   test('that the onCheck on top of the table returns the selected rows back when all are selected', async () => {
     const onCheck = jest.fn();
     const topLeftText = 'topLeftText';
-    const { getByText, container } = render(
+    const { getByText } = render(
       <Table
         columns={['Title', 'Name', 'Surname', 'Age']}
         type="nested-header"
@@ -83,7 +81,5 @@ describe('Table', () => {
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith(data.map(({ id }) => id));
-
-    expect(container).toMatchSnapshot();
   });
 });
