@@ -19,12 +19,13 @@ const wrapperStyleSwitch = (
   switch (styleType) {
     case 'outlined':
       return `
-        box-shadow: 0 0 0 1px
+      padding: 2px;
+        border: 1px solid
           ${error ? 'transparent' : theme.utils.getColor('lightGray', 400)};
         &:focus-within, &:hover {
-          box-shadow: 0 0 0 1px ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)
-          };
+              padding: 1px;
+
+          border: 2px solid ${!disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)};
         }
       `;
     case 'elevated':
@@ -47,7 +48,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
   const backgroundColor = dark ? theme.utils.getColor('darkGray', 600) : theme.palette.white;
 
   return css`
-    transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
+    transition: background-color 0.25s, box-shadow 0.25s, border 0.25s, padding 0.25s;
     border-radius: ${theme.spacing.xsm};
     cursor: ${disabled || locked ? 'not-allowed' : 'auto'};
     flex: 1 1 100%;
