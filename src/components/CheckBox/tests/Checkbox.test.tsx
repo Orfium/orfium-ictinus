@@ -7,7 +7,7 @@ describe('Checkbox Component', () => {
   let wrapper;
 
   it('should be able to change its check condition', async () => {
-    wrapper = render(<CheckBox checked={false} dataTestIdSuffix={'single'} />);
+    wrapper = render(<CheckBox dataTestIdSuffix={'single'} />);
 
     const { getByTestId } = wrapper;
 

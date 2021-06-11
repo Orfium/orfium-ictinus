@@ -40,7 +40,7 @@ export type Props = {
 
 const CheckBox: React.FC<Props> = ({
   label,
-  checked = false,
+  checked,
   onClick,
   disabled = false,
   intermediate = false,
@@ -48,14 +48,16 @@ const CheckBox: React.FC<Props> = ({
   filled = true,
   id = generateUniqueID(),
 }) => {
-  const [isChecked, setIsChecked] = React.useState(checked);
+  const [isChecked, setIsChecked] = React.useState(Boolean(checked));
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
 
   useEffect(() => {
-    setIsChecked(checked);
+    if (checked !== undefined) {
+      setIsChecked(checked);
+    }
   }, [checked]);
 
   const handleInputChange = (event: ChangeEvent) => {
