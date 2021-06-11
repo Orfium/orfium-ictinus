@@ -157,13 +157,11 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             size={20}
             name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
             color={theme.utils.getColor('lightGray', 500)}
-            onClick={() => {
-              setOpen(!open);
-            }}
+            onClick={() => isSearchable && open && setOpen(!open)}
           />
         </div>
       ),
-      [open, theme.utils, setOpen, isLoading]
+      [open, theme.utils, setOpen, isSearchable, isLoading]
     );
 
     return (
@@ -174,12 +172,19 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         }}
       >
         <div
-          onClick={() => (isSearchable ? combinedRefs?.current?.focus() : setOpen(true))}
+          onClick={() => {
+            if (!open) {
+              setOpen(true);
+              combinedRefs?.current?.focus();
+            } else if (!isSearchable) {
+              setOpen(false);
+              combinedRefs?.current?.blur();
+            }
+          }}
           css={selectWrapper({ open, status, styleType, isSearchable })}
         >
           <TextField
             styleType={styleType}
-            onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
             onKeyDown={handleOnKeyDown}
             onInput={handleOnInput}
