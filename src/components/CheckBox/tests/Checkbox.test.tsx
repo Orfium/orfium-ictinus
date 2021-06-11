@@ -45,4 +45,25 @@ describe('Checkbox Component', () => {
 
     expect(mockOnClick).toHaveBeenCalledTimes(0);
   });
+
+  it('should work properly as a controlled component', async () => {
+    const isChecked = true;
+    const mockOnClick = jest.fn();
+
+    wrapper = render(
+      <CheckBox checked={isChecked} onClick={mockOnClick} dataTestIdSuffix={'controlled'} />
+    );
+
+    const { getByTestId } = wrapper;
+
+    const checkbox = getByTestId('checkbox-controlled') as HTMLInputElement;
+
+    expect(checkbox.checked).toEqual(isChecked);
+
+    fireEvent.click(checkbox);
+
+    expect(mockOnClick).toHaveBeenCalledTimes(1);
+
+    expect(checkbox.checked).toEqual(isChecked);
+  });
 });
