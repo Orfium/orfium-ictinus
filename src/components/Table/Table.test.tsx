@@ -30,7 +30,7 @@ describe('Table', () => {
 
     const row = getAllByText('Title')[0].closest('tr') as HTMLElement;
     const rowUtils = within(row);
-    const expandedButton = await rowUtils.findByTestId('expanded-button');
+    const expandedButton = await rowUtils.findByTestId('icon-button-expanded-button');
 
     fireEvent.click(expandedButton);
 
