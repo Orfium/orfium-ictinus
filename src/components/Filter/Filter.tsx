@@ -1,38 +1,49 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import {jsx } from '@emotion/core';
 import * as React from 'react';
 
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import Icon from '../Icon';
-import { generateTestDataId } from '../../utils/helpers';
+import { generateTestDataId } from 'utils/helpers';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { optionsStyle } from '../utils/DropdownOptions';
-import { FilterOption, Props, TestProps } from './types';
-import { getTextColor, defaultOptionStyle, optionStyle } from './utils';
+import { FilterOption, Props } from './types';
+import { getTextColor } from './utils';
 import {
   buttonStyle,
   childrenWrapperStyle,
   buttonSpanStyle,
   labelSpanStyle,
   wrapperStyle,
+  menuStyle,
 } from './Filter.style';
+import Options from './components/Options/Options';
+import { useMemo } from 'react';
+import { debounce } from 'lodash';
+import SearchInput from './components/SearchInput/SearchInput';
 
-const Filter: React.FC<Props & TestProps> = props => {
+const Filter: React.FC<Props> = props => {
   const {
     items,
     onSelect,
     selectedItem,
     defaultValue,
     styleType,
-    dataTestId,
     label = '',
     color,
     buttonType = 'primary',
     disabled = false,
+    dataTestId,
+    isSearchable = false,
+    minCharactersToSearch = 0,
+    isAsync = false,
+    onAsyncSearch = () => {},
+    isLoading = false,
   } = props;
   const [open, setOpen] = React.useState(false);
+  const [searchValue, setSearchValue] = React.useState('');
+
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const hasSelectedValue = Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
@@ -52,6 +63,43 @@ const Filter: React.FC<Props & TestProps> = props => {
     onSelect(option);
   }
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { target: { value }} = e;
+
+    setSearchValue(value);
+
+    if (minCharactersToSearch && value.length && value.length < minCharactersToSearch) {
+      return;
+    }
+
+    if (isAsync) {
+      e.persist();
+      debouncedOnChange(value.trim());
+    }
+  }
+
+  const filteredOptions = useMemo(() => {
+    if (isAsync) {
+      return items;
+    }
+
+    return items.filter(
+      item => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }, [searchValue, items, isAsync]);
+
+  const shouldDisplayDefaultOption = searchValue === '' && !!items.length;
+
+  const handleOpen = () => {
+    setSearchValue('');
+    setOpen(!open)
+  }
+
+  const debouncedOnChange = React.useCallback(
+    debounce(onAsyncSearch, 400),
+    []
+  );
+
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
       <div css={wrapperStyle()} data-testid={dataTestId}>
@@ -66,7 +114,7 @@ const Filter: React.FC<Props & TestProps> = props => {
             styleType,
             hasSelectedValue,
           })}
-          onClick={() => setOpen(!open)}
+          onClick={handleOpen}
           disabled={disabled}
         >
           <span css={buttonSpanStyle()}>
@@ -80,27 +128,23 @@ const Filter: React.FC<Props & TestProps> = props => {
           </span>
         </button>
         {open && (
-          <div css={optionsStyle({})(theme)} data-testid="filter-menu">
-            <button
-              type="button"
-              css={defaultOptionStyle(defaultValue, selectedItem)(theme)}
-              onClick={() => {handleSelect(defaultValue);}}
-            >
-              {defaultValue.label}
-            </button>
-            {items &&
-              items
-                .filter(option => option.value !== defaultValue.value) //filter options just in case the default value is included
-                .map((option, index) => (
-                <button
-                  type="button"
-                  css={optionStyle(option, selectedItem)(theme)}
-                  key={`${option.value}-${index}`}
-                  onClick={() => {handleSelect(option);}}
-                >
-                  {option.label}
-                </button>
-              ))}
+          <div css={menuStyle()(theme)} data-testid="filter-menu">
+            {isSearchable && (
+              <SearchInput
+                value={searchValue}
+                onChange={handleChange}
+                dataTestId={dataTestId}
+                isLoading={isLoading}
+              />
+            )}
+            <Options
+              dataTestId={dataTestId}
+              items={filteredOptions}
+              defaultValue={defaultValue}
+              selectedItem={selectedItem}
+              onSelect={handleSelect}
+              shouldDisplayDefaultOption={shouldDisplayDefaultOption}
+            />
           </div>
         )}
       </div>

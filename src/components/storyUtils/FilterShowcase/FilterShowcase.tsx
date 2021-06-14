@@ -15,6 +15,7 @@ interface Props {
   label?: string;
   defaultValue?: FilterOption;
   selectedItem?: FilterOption;
+  isSearchable?: boolean;
 }
 const FilterShowcase = ({
   styleType,
@@ -23,6 +24,7 @@ const FilterShowcase = ({
   label = 'Label',
   defaultValue = { value: 18, label: 'Default value' },
   selectedItem,
+  isSearchable = false
 }: Props) => {
   const [stateItem, setStateItem] = React.useState<FilterOption | undefined>(selectedItem);
 
@@ -36,6 +38,7 @@ const FilterShowcase = ({
         onSelect={option => setStateItem(option)}
         label={label}
         color={color}
+        isSearchable={isSearchable}
       />
     </div>
   );

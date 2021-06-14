@@ -2,7 +2,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import Filter from '../Filter';
-import FilterShowcase from '../storyUtils/FilterShowcase';
+import FilterShowcase, { AsyncFilterShowcase } from '../storyUtils/FilterShowcase';
 import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Filter" component={Filter} />
@@ -62,6 +62,39 @@ A filter with colors and a selection handler to return selection on change and t
 </Preview>
 
 
+# Searchable Filter
+
+A filter that supports searching options
+
+<Preview>
+  <Story name="Searchable Filter">
+    <Stack>
+       <FilterShowcase styleType="filled" isSearchable />
+    </Stack>
+  </Story>
+</Preview>
+
+
+# Filter with Async and Loading
+
+Filter that support asynchronous fetching, with loading status
+
+<Preview>
+  <Story name="Async Filter">
+    <AsyncFilterShowcase />
+  </Story>
+</Preview>
+
+# Filter with Async, Loading and Minimum Characters to Search for
+
+Filter that support asynchronous fetching, with loading status
+
+<Preview>
+  <Story name="Async Filter with min characters">
+    <AsyncFilterShowcase minCharactersToSearch={3} />
+  </Story>
+</Preview>
+
 # Dynamic Props - Knobs
 <Preview>
   <Story name="Dynamic Filter Props" parameters={{ decorators: [withKnobs] }}>
@@ -72,6 +105,7 @@ A filter with colors and a selection handler to return selection on change and t
         defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
         styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
         color={select('color', ['lightCoolGray-400', 'magenta-100', 'darkGray-700', 'red-500'], 'lightCoolGray-400')}
+        isSearchable={boolean('isSearchable', false)}
     />
   </Story>
 </Preview>

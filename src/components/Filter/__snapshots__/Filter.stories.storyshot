@@ -1,5 +1,155 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/Filter Async Filter 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    role="button"
+  >
+    <div
+      className="css-10b4kyy-Filter"
+    >
+      <button
+        className="css-bskkdk-Filter"
+        data-testid="filter"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="css-ohjhgn-Filter"
+        >
+          <span
+            className="css-12o2hfl-Filter"
+          >
+            <span
+              className="css-1afohzx-Filter"
+            >
+              Async Label
+              :
+              <span>
+                Default value
+              </span>
+            </span>
+          </span>
+          <span
+            className="css-1gnbc76-Icon"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1rnhl34-Icon"
+            />
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    role="button"
+  >
+    <div
+      className="css-10b4kyy-Filter"
+    >
+      <button
+        className="css-bskkdk-Filter"
+        data-testid="filter"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="css-ohjhgn-Filter"
+        >
+          <span
+            className="css-12o2hfl-Filter"
+          >
+            <span
+              className="css-1afohzx-Filter"
+            >
+              Async Label
+              :
+              <span>
+                Default value
+              </span>
+            </span>
+          </span>
+          <span
+            className="css-1gnbc76-Icon"
+            onClick={[Function]}
+          >
+            <span
+              className="css-1rnhl34-Icon"
+            />
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 <div
   style={
@@ -543,6 +693,95 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                 >
                   <span
                     className="css-1rnhl34-Icon"
+                  />
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="css-ptimel-Stack"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="css-10b4kyy-Filter"
+          >
+            <button
+              className="css-71l237-Filter"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <span
+                className="css-ohjhgn-Filter"
+              >
+                <span
+                  className="css-12o2hfl-Filter"
+                >
+                  <span
+                    className="css-1afohzx-Filter"
+                  >
+                    Label
+                    :
+                    <span>
+                      Default value
+                    </span>
+                  </span>
+                </span>
+                <span
+                  className="css-1gnbc76-Icon"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-y9hhnm-Icon"
                   />
                 </span>
               </span>

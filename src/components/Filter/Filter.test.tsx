@@ -1,44 +1,43 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
-
+import { render, screen } from 'test';
 import Filter from './Filter';
-import { render, screen } from '../../test';
+import { waitFor } from '../../test';
 
 const items = [
   { label: 'option 1', value: 1 },
   { label: 'option 2', value: 2 },
 ];
-const label = 'Label';
-const defaultValue = {
-  label: 'option 3', value: 3,
+type Props = React.ComponentProps<typeof Filter>;
+
+const renderFilter = (props:  Partial<Props> = {}) => {
+  const defaultProps = {
+    defaultValue: {
+      label: 'option 3', value: 3,
+    },
+    label: 'Label',
+    items,
+    isSearchable: false,
+    selectedItem: { label: 'option 1', value: 1 },
+    onSelect: jest.fn(),
+    color: 'lightCoolGray-400',
+  };
+
+  return render(
+      <Filter styleType={'filled'} {...{...defaultProps, ...props}} />
+  )
 };
 
 describe('Generic Filter', () => {
-  const onSelect = jest.fn();
-
-  beforeEach(() => {
-    render(
-      <div>
-        <Filter
-          label={label}
-          items={items}
-          color={'lightCoolGray-400'}
-          styleType={'filled'}
-          onSelect={onSelect}
-          defaultValue={defaultValue}
-          selectedItem={items[0]}
-        />
-      </div>
-    );
-  });
-
 
   afterEach(() => {
     jest.clearAllMocks();
   });
 
   it('should display a dropdown menu when the button is clicked', () => {
+    renderFilter();
+
     const button = screen.getByTestId('filter');
 
     userEvent.click(button);
@@ -47,11 +46,79 @@ describe('Generic Filter', () => {
   });
 
   it('should trigger onSelect property function when one item of the dropdown is clicked',  () => {
-    const button = screen.getByTestId('filter');
+    const onSelect = jest.fn();
+    renderFilter({ onSelect });
 
+    const button = screen.getByTestId('filter');
     userEvent.click(button);
     userEvent.click(screen.getByText(items[1].label));
 
     expect(onSelect).toHaveBeenCalledWith(items[1]);
   });
+
+  it('should render a text input when isSearchable prop is true',  () => {
+    renderFilter({ isSearchable: true });
+
+    const button = screen.getByTestId('filter');
+    userEvent.click(button);
+
+    expect(screen.getByTestId('filter-input')).toBeInTheDocument();
+  });
+
+  it('default value should not be rendered when a value is typed on the input text', () => {
+    renderFilter({ isSearchable: true });
+
+    const button = screen.getByTestId('filter');
+    userEvent.click(button);
+
+    const selectInput = screen.getByTestId('filter-input');
+
+    expect(screen.getByTestId('default-option')).toBeInTheDocument();
+
+    userEvent.type(selectInput, 'test');
+
+    expect(screen.queryByTestId('default-option')).not.toBeInTheDocument();
+  });
+
+  it('should display loading dots when isLoading is true', async () => {
+    renderFilter({ isSearchable: true, isLoading: true });
+
+    const button = screen.getByTestId('filter');
+    userEvent.click(button);
+
+    const selectInput = screen.getByTestId('filter-input');
+    userEvent.type(selectInput, 'test');
+
+    await waitFor(() => expect(screen.getByTestId('dots-loading')).toBeVisible());
+  });
+
+  it('should call onAsyncSearch when typing', async () => {
+    const onAsyncSearch = jest.fn();
+
+    renderFilter({ isSearchable: true, isAsync: true, onAsyncSearch });
+
+    const button = screen.getByTestId('filter');
+    userEvent.click(button);
+
+    const selectInput = screen.getByTestId('filter-input');
+    await userEvent.type(selectInput, 'tes', { delay: 500 });
+
+    await waitFor(() => expect(onAsyncSearch).toHaveBeenCalledTimes(3));
+  });
+
+  it('should call onAsyncSearch when minCharactersToSearch check is satisfied', async () => {
+    const onAsyncSearch = jest.fn();
+
+    renderFilter({ isSearchable: true, isAsync: true, onAsyncSearch, minCharactersToSearch: 3 });
+
+    const button = screen.getByTestId('filter');
+    userEvent.click(button);
+
+    const selectInput = screen.getByTestId('filter-input');
+
+    await userEvent.type(selectInput, 'tes', { delay: 500 });
+
+    await waitFor(() => expect(onAsyncSearch).toHaveBeenCalledTimes(1));
+  });
+
 });
