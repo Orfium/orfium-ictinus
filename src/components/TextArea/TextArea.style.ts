@@ -1,7 +1,9 @@
 import { css, SerializedStyles } from '@emotion/core';
+
 import { Props } from './TextArea';
 import { Theme } from '../../theme';
 import { Props as TextInputWrapperProps } from '../utils/TextInputWrapper/TextInputWrapper';
+import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
 export const inputStyle = ({
   label,
@@ -43,7 +45,7 @@ export const inputStyle = ({
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(1%, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }
