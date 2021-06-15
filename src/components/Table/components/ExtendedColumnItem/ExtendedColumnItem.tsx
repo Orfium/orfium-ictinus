@@ -1,18 +1,15 @@
 import React from 'react';
 
-import Icon from 'components/Icon';
 import useTheme from 'hooks/useTheme';
-import { ExtendedColumn, SortingOrder } from '../../types';
+import { ExtendedColumn, Sort } from '../../types';
 import { containerStyles } from './ExtendedColumnItem.style';
+import Icon from 'components/Icon';
 
 type Props = {
   item: ExtendedColumn;
   isNumerical: boolean;
-  handleSorting: (name: string, order: SortingOrder) => void;
-  sorting: {
-    name: string;
-    order: SortingOrder;
-  };
+  handleSorting: (column: string) => void;
+  sorting: Sort;
 };
 
 const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isNumerical }) => {
@@ -20,13 +17,13 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
 
   return (
     <div
-      css={containerStyles('8')}
+      css={containerStyles('8', item.isSortable)}
       onClick={() => {
-        if (!item.initialSortOrder) {
+        if (!item.isSortable) {
           return;
         }
 
-        handleSorting(item.content, item.initialSortOrder ?? 'asc');
+        handleSorting(item.content);
       }}
     >
       {item.content}
@@ -34,8 +31,8 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
       <div css={containerStyles('4')}>
         {isNumerical ? (
           <>
-            {item?.initialSortOrder &&
-              item.content === sorting.name &&
+            {item?.isSortable &&
+              item.content === sorting.column &&
               (sorting.order === 'asc' ? (
                 <Icon name="fatArrowUp" color={theme.utils.getColor('lightGray', 600)} />
               ) : (
@@ -52,8 +49,8 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
               <Icon name={'info'} color={theme.utils.getColor('lightGray', 600)} />
             )}
 
-            {item?.initialSortOrder &&
-              item.content === sorting.name &&
+            {item?.isSortable &&
+              item.content === sorting.column &&
               (sorting.order === 'asc' ? (
                 <Icon name="fatArrowUp" color={theme.utils.getColor('lightGray', 600)} />
               ) : (

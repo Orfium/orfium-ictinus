@@ -4,16 +4,16 @@ import { jsx } from '@emotion/core';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import rem from 'polished/lib/helpers/rem';
-import * as React from 'react';
-import useTheme from '../../hooks/useTheme';
-import CheckBox from '../CheckBox';
+import React, { useEffect, useState } from 'react';
+
+import useTheme from 'hooks/useTheme';
+import CheckBox from 'components/CheckBox';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import { tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
-import { useEffect, useState } from 'react';
 import ExtendedColumnItem from './components/ExtendedColumnItem';
-import { ExtendedColumn, SortingOrder } from './types';
+import { ExtendedColumn, Sort, SortingOrder } from './types';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -58,6 +58,7 @@ type Props<T> = {
   onCheck?: (data: Selection[]) => void;
   /** Function that once provided will provide the currently selected sorting configuration */
   onSort?: (column: string, order: SortingOrder) => void;
+  initialSort?: Sort;
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
@@ -74,6 +75,7 @@ function Table<T>({
   onCheck,
   padded = false,
   onSort,
+  initialSort,
   topLeftText,
   topRightArea,
   dataTestIdPrefix,
@@ -81,28 +83,13 @@ function Table<T>({
   const theme = useTheme();
   const [selectedIds, setSelectedIds] = useState<Selection[] | undefined>(undefined);
 
-  const [sorting, setSorting] = useState<{ name: string; order: SortingOrder }>(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const initialSorting = columns.find((item: string | ExtendedColumn) => {
-      if (typeof item !== 'string') {
-        if (item.initialSortOrder) {
-          return true;
-        }
-      }
-    });
-
-    return {
-      name: initialSorting?.content,
-      order: initialSorting?.initialSortOrder ?? 'asc',
-    };
-  });
+  const [sorting, setSorting] = useState<Sort>(initialSort ?? { column: '', order: 'asc' });
 
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
   useEffect(() => {
     if (onSort) {
-      onSort(sorting.name, sorting.order);
+      onSort(sorting.column, sorting.order);
     }
   }, [onSort, sorting]);
 
@@ -142,15 +129,15 @@ function Table<T>({
     [data]
   );
 
-  const handleSorting = (name: string, order: SortingOrder) => {
+  const handleSorting = (column: string) => {
     setSorting(prevState => {
-      return prevState.name !== name
+      return prevState.column !== column
         ? {
-            name: name,
-            order: order ?? 'asc',
+            column: column,
+            order: 'asc',
           }
         : {
-            name: name,
+            column: column,
             order: prevState.order === 'asc' ? 'desc' : 'asc',
           };
     });

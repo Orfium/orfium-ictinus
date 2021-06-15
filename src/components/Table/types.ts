@@ -3,5 +3,10 @@ export type SortingOrder = 'asc' | 'desc';
 export type ExtendedColumn = {
   content: string;
   tooltipContent?: string;
-  initialSortOrder?: SortingOrder;
+  isSortable?: boolean;
+};
+
+export type Sort = {
+  column: string;
+  order: SortingOrder;
 };

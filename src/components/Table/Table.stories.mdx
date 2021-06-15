@@ -122,18 +122,19 @@ Regular Table with sorting and tooltips
     <Table
       columns={[{
         content: 'Title',
-        initialSortOrder: 'asc',
+        isSortable: true,
         tooltipContent: 'Tooltip Content'
       }, 'Name', {
         content: 'Surname',
         tooltipContent: 'Tooltip Content'
       }, {
         content: 'Age',
-        initialSortOrder: 'desc',
+        isSortable: true,
         tooltipContent: 'Tooltip Content'
       }]}
       dataTestIdPrefix="ictinus"
-      onSort={(name, order) => console.log(name, order)}
+      onSort={(column, order) => console.log(column, order)}
+      initialSort={{ column: 'Title', order: 'asc' }}
       padded
       data={[
         {
