@@ -1,6 +1,6 @@
 import { rem } from 'polished';
 
-const defaultFontFamily = 'Lato';
+const defaultFontFamily = 'Roboto';
 
 export type Typography = {
   globalFontSize: number;
