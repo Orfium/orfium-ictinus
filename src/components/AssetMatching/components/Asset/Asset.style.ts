@@ -110,7 +110,13 @@ const tooltip = (theme: Theme): SerializedStyles => css`
   background-color: ${theme.utils.getColor('darkGray', 500)};
 `;
 
+const iconHeadingWrapper = css`
+  ${flex};
+  justify-content: center;
+`;
+
 export default {
+  iconHeadingWrapper,
   title,
   tooltip,
   externalLink,
