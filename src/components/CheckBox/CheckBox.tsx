@@ -19,7 +19,7 @@ import { pickTextColorFromSwatches } from 'theme/palette';
 export type Props = {
   /** The label of the checkbox. */
   label?: string;
-  /** Boolean defining if the checkbox is checked. Defaults to false */
+  /** Boolean defining if the checkbox is checked. */
   checked?: boolean;
   /** Callback function for onClick. Returns the new value and the change event. */
   onClick?(val: boolean, e: ChangeEvent): void;
@@ -40,7 +40,7 @@ export type Props = {
 
 const CheckBox: React.FC<Props> = ({
   label,
-  checked = false,
+  checked,
   onClick,
   disabled = false,
   intermediate = false,
@@ -48,19 +48,23 @@ const CheckBox: React.FC<Props> = ({
   filled = true,
   id = generateUniqueID(),
 }) => {
-  const [isChecked, setIsChecked] = React.useState(checked);
+  const [isChecked, setIsChecked] = React.useState(Boolean(checked));
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
 
   useEffect(() => {
-    setIsChecked(checked);
+    if (checked !== undefined) {
+      setIsChecked(checked);
+    }
   }, [checked]);
 
   const handleInputChange = (event: ChangeEvent) => {
     const newChecked = !isChecked;
-    setIsChecked(newChecked);
+    if (checked === undefined) {
+      setIsChecked(newChecked);
+    }
 
     if (!disabled && onClick) {
       onClick(newChecked, event);
