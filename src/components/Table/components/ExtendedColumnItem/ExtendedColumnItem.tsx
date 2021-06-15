@@ -19,6 +19,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
     item?.isSortable &&
     item.content === sorting.column && (
       <div
+        key={`table_icon_sort_${item.content.toLowerCase()}`}
         css={{
           transition: '0.3s all ease-in-out',
           transformOrigin: 'center',
@@ -28,7 +29,9 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
       >
         <Icon
           name="fatArrowUp"
-          dataTestId={`table_icon_sort_${item.content.toLowerCase()}`}
+          dataTestId={`table_icon_sort_${item.content.toLowerCase()}_${
+            sorting.order === 'desc' ? 'desc' : 'asc'
+          }`}
           color={theme.utils.getColor('lightGray', 600)}
         />
       </div>
@@ -36,11 +39,18 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
 
   const tooltipItem = () =>
     item?.tooltipContent && (
-      <Icon
-        name={'info'}
-        dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
-        color={theme.utils.getColor('lightGray', 600)}
-      />
+      <div
+        css={{
+          width: 'fit-content',
+        }}
+        key={`table_icon_tooltip_${item.content.toLowerCase()}`}
+      >
+        <Icon
+          name={'info'}
+          dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
+          color={theme.utils.getColor('lightGray', 600)}
+        />
+      </div>
     );
 
   const renderSortingAndTooltip = () =>
@@ -60,7 +70,9 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
     >
       {item.content}
 
-      <div css={containerStyles('4')()}>{renderSortingAndTooltip()}</div>
+      <div css={containerStyles('4')()} key={`header_${item.content.toLowerCase()}_items`}>
+        {renderSortingAndTooltip()}
+      </div>
     </div>
   );
 };
