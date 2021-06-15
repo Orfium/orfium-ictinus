@@ -1,5 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import Tooltip from './Tooltip'; import Icon from '../Icon';
+import Tooltip from './Tooltip';
+import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Tooltip" component={Tooltip} />
 
@@ -26,11 +27,31 @@ import { Tooltip } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Generic Tooltip">
-    <Tooltip
-      content="By hover here you can see useful info"
-      placement={'right'}
-    >
-      <Icon name={'info'} />
-    </Tooltip>
+    <Stack>
+      <Tooltip
+        content="By hover here you can see useful info"
+        placement={'Top'}
+      >
+        <button>Top</button>
+      </Tooltip>
+      <Tooltip
+        content="By hover here you can see useful info"
+        placement={'Bottom'}
+      >
+        <button>Bottom</button>
+      </Tooltip>
+      <Tooltip
+        content="By hover here you can see useful info"
+        placement={'right'}
+      >
+        <button>Right</button>
+      </Tooltip>
+      <Tooltip
+        content="By hover here you can see useful info"
+        placement={'left'}
+      >
+        <button>Left</button>
+      </Tooltip>
+    </Stack>
   </Story>
 </Preview>
