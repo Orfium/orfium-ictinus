@@ -7,7 +7,7 @@ describe('Checkbox Component', () => {
   let wrapper;
 
   it('should be able to change its check condition', async () => {
-    wrapper = render(<CheckBox checked={false} dataTestIdSuffix={'single'} />);
+    wrapper = render(<CheckBox dataTestIdSuffix={'single'} />);
 
     const { getByTestId } = wrapper;
 
@@ -44,5 +44,26 @@ describe('Checkbox Component', () => {
     fireEvent.click(checkbox);
 
     expect(mockOnClick).toHaveBeenCalledTimes(0);
+  });
+
+  it('should work properly as a controlled component', async () => {
+    const isChecked = true;
+    const mockOnClick = jest.fn();
+
+    wrapper = render(
+      <CheckBox checked={isChecked} onClick={mockOnClick} dataTestIdSuffix={'controlled'} />
+    );
+
+    const { getByTestId } = wrapper;
+
+    const checkbox = getByTestId('checkbox-controlled') as HTMLInputElement;
+
+    expect(checkbox.checked).toEqual(isChecked);
+
+    fireEvent.click(checkbox);
+
+    expect(mockOnClick).toHaveBeenCalledTimes(1);
+
+    expect(checkbox.checked).toEqual(isChecked);
   });
 });
