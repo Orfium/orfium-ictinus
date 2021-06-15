@@ -10,6 +10,9 @@ const items = [
   { label: 'option 2', value: 2 },
 ];
 const label = 'Label';
+const defaultValue = {
+  label: 'option 3', value: 3,
+};
 
 describe('Generic Filter', () => {
   const onSelect = jest.fn();
@@ -23,7 +26,7 @@ describe('Generic Filter', () => {
           color={'lightCoolGray-400'}
           styleType={'filled'}
           onSelect={onSelect}
-          defaultValue={items[0]}
+          defaultValue={defaultValue}
           selectedItem={items[0]}
         />
       </div>

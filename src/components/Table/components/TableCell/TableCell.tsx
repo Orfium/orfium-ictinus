@@ -60,8 +60,8 @@ const TableCell: React.FC<Props> = React.memo(
             width,
           },
           component === 'th' && {
-            paddingTop: theme.spacing.md,
-            paddingBottom: theme.spacing.md,
+            paddingTop: theme.spacing.sm,
+            paddingBottom: theme.spacing.sm,
             fontWeight: theme.typography.weights.bold,
             fontSize: theme.typography.fontSizes['14'],
           },
