@@ -1,0 +1,36 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Tooltip from './Tooltip'; import Icon from '../Icon';
+
+<Meta title="Design System/Tooltip" component={Tooltip} />
+
+# Tooltip
+
+# Usage
+
+```js
+import { Tooltip } from '@orfium/ictinus';
+
+<Tooltip
+  content="Content you want to show as descrption of tooltip"
+  placement={'right'}
+>
+  ...
+</Tooltip>;
+```
+
+# Props
+
+<Props of={Tooltip} />
+
+# Generic Tooltip
+
+<Preview>
+  <Story name="Generic Tooltip">
+    <Tooltip
+      content="By hover here you can see useful info"
+      placement={'right'}
+    >
+      <Icon name={'info'} />
+    </Tooltip>
+  </Story>
+</Preview>
