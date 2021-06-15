@@ -50,8 +50,6 @@ const TableCell: React.FC<Props> = React.memo(
     return (
       <Component
         colSpan={colSpan}
-        /** this ignore the css property that doesnt recognize array of objects as property **/
-        // @ts-ignore
         css={[
           {
             position: 'relative',

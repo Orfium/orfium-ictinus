@@ -1849,6 +1849,633 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
 </div>
 `;
 
+exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <table
+    className="css-1n7pp7a-Table"
+  >
+    <thead>
+      <tr
+        className="css-1mb2eua-Table"
+        onClick={[Function]}
+      >
+        <th
+          className="css-1ukzli6"
+          data-testid="ictinus_"
+        >
+          <div
+            css={[Function]}
+            onClick={[Function]}
+          >
+            Title
+            <div
+              css={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-137pzfe-Icon"
+                />
+              </span>
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-137pzfe-Icon"
+                />
+              </span>
+            </div>
+          </div>
+        </th>
+        <th
+          className="css-1ukzli6"
+          data-testid="ictinus_table_header_name"
+        >
+          Name
+        </th>
+        <th
+          className="css-1ukzli6"
+          data-testid="ictinus_"
+        >
+          <div
+            css={[Function]}
+            onClick={[Function]}
+          >
+            Surname
+            <div
+              css={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-137pzfe-Icon"
+                />
+              </span>
+            </div>
+          </div>
+        </th>
+        <th
+          className="css-1pbao9u"
+          data-testid="ictinus_"
+        >
+          <div
+            css={[Function]}
+            onClick={[Function]}
+          >
+            Age
+            <div
+              css={[Function]}
+            >
+              <span
+                className="css-1gnbc76-Icon"
+                onClick={[Function]}
+              >
+                <span
+                  className="css-137pzfe-Icon"
+                />
+              </span>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_1_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_1_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_1_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_1_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_2_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_2_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_2_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_2_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_3_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_3_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_3_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_3_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_4_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_4_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_4_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_4_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_5_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_5_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_5_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_5_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_6_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_6_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_6_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_6_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_7_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_7_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_7_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_7_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_8_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "initialSortOrder": "asc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_8_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_8_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_8_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "initialSortOrder": "desc",
+                "tooltipContent": "Tooltip Content",
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 <div
   style={
