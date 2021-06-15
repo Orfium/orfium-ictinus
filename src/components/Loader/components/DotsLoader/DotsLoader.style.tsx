@@ -1,20 +1,28 @@
 import { css, SerializedStyles } from '@emotion/core';
 
 import { Theme } from 'theme';
+import { rem } from 'polished';
 
 export const getDotsLayout = (delay: number, animation: string, theme: Theme, left?: number) => css`
   left: ${left && `${left}px`};
-  width: 6px;
-  height: 6px;
-  border-radius: 5px;
+  width: ${rem(6)};
+  height: ${rem(6)};
+  border-radius: ${rem(5)};
   background-color: ${theme.utils.getColor('lightGray', 300)};
   color: ${theme.utils.getColor('lightGray', 300)};
   animation: ${animation};
   animation-delay: ${delay}s;
 `;
 
-export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
+export const dotsWrapper = css`
+  width: ${rem(26)};
   position: relative;
+  height: ${rem(6)};
+`;
+
+export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
+  position: absolute;
+  left: ${rem(10)};
   ${getDotsLayout(0.5, 'dotFlashing 0.7s infinite linear alternate', theme)};
 
   &::after,
