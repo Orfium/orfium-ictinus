@@ -15,6 +15,37 @@ type Props = {
 const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isNumerical }) => {
   const theme = useTheme();
 
+  const sortingItem = () =>
+    item?.isSortable &&
+    item.content === sorting.column && (
+      <div
+        css={{
+          transition: '0.3s all ease-in-out',
+          transformOrigin: 'center',
+          width: 'fit-content',
+          transform: `rotate(${sorting.order === 'desc' ? '180' : '0'}deg)`,
+        }}
+      >
+        <Icon
+          name="fatArrowUp"
+          dataTestId={`table_icon_sort_${item.content.toLowerCase()}`}
+          color={theme.utils.getColor('lightGray', 600)}
+        />
+      </div>
+    );
+
+  const tooltipItem = () =>
+    item?.tooltipContent && (
+      <Icon
+        name={'info'}
+        dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
+        color={theme.utils.getColor('lightGray', 600)}
+      />
+    );
+
+  const renderSortingAndTooltip = () =>
+    isNumerical ? [sortingItem(), tooltipItem()] : [tooltipItem(), sortingItem()];
+
   return (
     <div
       data-testid={`header_${item.content.toLowerCase()}`}
@@ -29,61 +60,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
     >
       {item.content}
 
-      <div css={containerStyles('4')()}>
-        {isNumerical ? (
-          <>
-            {item?.isSortable &&
-              item.content === sorting.column &&
-              (sorting.order === 'asc' ? (
-                <Icon
-                  name="fatArrowUp"
-                  dataTestId={`table_icon_sort_${item.content.toLowerCase()}_asc`}
-                  color={theme.utils.getColor('lightGray', 600)}
-                />
-              ) : (
-                <Icon
-                  name="fatArrowDown"
-                  dataTestId={`table_icon_sort_${item.content.toLowerCase()}_desc`}
-                  color={theme.utils.getColor('lightGray', 600)}
-                />
-              ))}
-
-            {item?.tooltipContent && (
-              <Icon
-                name={'info'}
-                dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
-                color={theme.utils.getColor('lightGray', 600)}
-              />
-            )}
-          </>
-        ) : (
-          <>
-            {item?.tooltipContent && (
-              <Icon
-                name={'info'}
-                dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
-                color={theme.utils.getColor('lightGray', 600)}
-              />
-            )}
-
-            {item?.isSortable &&
-              item.content === sorting.column &&
-              (sorting.order === 'asc' ? (
-                <Icon
-                  name="fatArrowUp"
-                  dataTestId={`table_icon_sort_${item.content.toLowerCase()}_asc`}
-                  color={theme.utils.getColor('lightGray', 600)}
-                />
-              ) : (
-                <Icon
-                  name="fatArrowDown"
-                  dataTestId={`table_icon_sort_${item.content.toLowerCase()}_desc`}
-                  color={theme.utils.getColor('lightGray', 600)}
-                />
-              ))}
-          </>
-        )}
-      </div>
+      <div css={containerStyles('4')()}>{renderSortingAndTooltip()}</div>
     </div>
   );
 };

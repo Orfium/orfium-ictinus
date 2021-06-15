@@ -76,7 +76,7 @@ function Table<T>({
   onCheck,
   padded = false,
   onSort,
-  initialSort,
+  initialSort = { column: '', order: 'asc' },
   topLeftText,
   topRightArea,
   dataTestIdPrefix,
@@ -84,7 +84,7 @@ function Table<T>({
   const theme = useTheme();
   const [selectedIds, setSelectedIds] = useState<Selection[] | undefined>(undefined);
 
-  const [sorting, setSorting] = useState<Sort>(initialSort ?? { column: '', order: 'asc' });
+  const [sorting, setSorting] = useState<Sort>(initialSort);
 
   const columnCount = onCheck ? columns.length + 1 : columns.length;
 
