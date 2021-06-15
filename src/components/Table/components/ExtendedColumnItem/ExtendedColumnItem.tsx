@@ -18,7 +18,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
   return (
     <div
       data-testid={`header_${item.content.toLowerCase()}`}
-      css={containerStyles('8', item.isSortable)}
+      css={containerStyles('8', item.isSortable)()}
       onClick={() => {
         if (!item.isSortable) {
           return;
@@ -29,7 +29,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
     >
       {item.content}
 
-      <div css={containerStyles('4')}>
+      <div css={containerStyles('4')()}>
         {isNumerical ? (
           <>
             {item?.isSortable &&

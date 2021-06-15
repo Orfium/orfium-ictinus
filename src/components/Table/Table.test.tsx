@@ -1,10 +1,9 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-
-import { fireEvent, render, within } from 'test';
-import Table from './Table';
-import { screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+
+import { fireEvent, render, within, waitFor, screen } from 'test';
+import Table from './Table';
 
 describe('Table', () => {
   const data = new Array(50).fill(null).map((item, index) => ({
