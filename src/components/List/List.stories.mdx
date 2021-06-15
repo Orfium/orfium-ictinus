@@ -1,12 +1,14 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { select, number, boolean } from '@storybook/addon-knobs';
 
+import ListShowcase from '../storyUtils/ListShowcase';
 import List from './List';
 
 <Meta title="Design System/List" component={List} />
 
 # List
 
-A universal Loader component with different types.
+A universal List component with different types.
 
 # Usage
 
@@ -20,12 +22,18 @@ import { List } from '@orfium/ictinus';
 
 <Props of={List} />
 
-# Simple List
+# List
 
 List component.
 
 <Preview>
   <Story name="List">
-    <List />
+    <ListShowcase
+      itemsCount={number('itemsCount', 300)}
+      rowSize={select('rowSize', ['small', 'normal'], 'normal')}
+      width={number('width', 300)}
+      height={number('height', 300)}
+      isVirtualized={boolean('isVirtualized', false)}
+    />
   </Story>
 </Preview>
