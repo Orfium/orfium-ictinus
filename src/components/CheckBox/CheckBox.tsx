@@ -19,7 +19,7 @@ import { pickTextColorFromSwatches } from 'theme/palette';
 export type Props = {
   /** The label of the checkbox. */
   label?: string;
-  /** Boolean defining if the checkbox is checked. Defaults to false */
+  /** Boolean defining if the checkbox is checked. */
   checked?: boolean;
   /** Callback function for onClick. Returns the new value and the change event. */
   onClick?(val: boolean, e: ChangeEvent): void;
