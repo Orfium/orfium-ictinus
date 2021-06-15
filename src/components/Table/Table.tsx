@@ -47,7 +47,7 @@ type Props<T> = {
   /** The data for the table that needs to display. */
   data: Row<T>[];
   /** An array of titles or objects to define columns. */
-  columns: string[] | ExtendedColumn[];
+  columns: (string | ExtendedColumn)[];
   /** Boolean defining if the header is fixed or not. */
   fixedHeader?: boolean;
   /** Type of the table which determine the headers display. */
@@ -58,6 +58,7 @@ type Props<T> = {
   onCheck?: (data: Selection[]) => void;
   /** Function that once provided will provide the currently selected sorting configuration */
   onSort?: (column: string, order: SortingOrder) => void;
+  /** Initial sorting column and order. Should be provided along with onSort */
   initialSort?: Sort;
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string | JSX.Element;

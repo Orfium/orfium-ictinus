@@ -17,6 +17,8 @@ export type Props = {
   size?: number;
   /** Callback fired when the `span` is clicked. */
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
+  /** String prop that adds a data-testid attribute */
+  dataTestId?: string;
   /** Property indicating the color's variant of the icon. */
   variant?: typeof colorShades[number];
 };
@@ -26,12 +28,13 @@ const Icon: React.FC<Props> = ({
   name,
   color = 'primary',
   size = 16,
+  dataTestId,
   onClick = () => {},
 }) => {
   const Icon = iconSelector[name];
 
   return (
-    <span css={iconContainerStyle()} onClick={onClick}>
+    <span css={iconContainerStyle()} onClick={onClick} data-testid={dataTestId}>
       <Icon css={iconStyle({ color, size, variant })} />
     </span>
   );
