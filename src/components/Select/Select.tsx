@@ -12,7 +12,8 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import { debounce } from 'lodash';
 import Loader from 'components/Loader';
 import { generateTestDataId } from '../../utils/helpers';
-import { rem } from 'polished';
+import useCombinedRefs from '../../hooks/useCombinedRefs';
+import { selectWrapper } from './Select.style';
 
 export type SelectOption = {
   value: string | number;
@@ -79,6 +80,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const inputRef = React.useRef<HTMLInputElement>(null);
+    const combinedRefs = useCombinedRefs(inputRef, ref);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
@@ -154,13 +157,11 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             size={20}
             name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
             color={theme.utils.getColor('lightGray', 500)}
-            onClick={() => {
-              setOpen(!open);
-            }}
+            onClick={() => isSearchable && open && setOpen(!open)}
           />
         </div>
       ),
-      [open, theme.utils, setOpen, isLoading]
+      [open, theme.utils, setOpen, isSearchable, isLoading]
     );
 
     return (
@@ -171,21 +172,19 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         }}
       >
         <div
-          css={css`
-            position: relative;
-            min-width: ${rem(150)};
-            max-width: ${rem(620)};
-            & > div:nth-of-type(1) > div {
-              ${open &&
-                status !== 'error' &&
-                `border: 2px solid ${theme.utils.getColor('lightGray', 400)};`}
-              ${open && status !== 'error' && styleType === 'outlined' && `box-shadow: none;`}
+          onClick={() => {
+            if (!open) {
+              setOpen(true);
+              combinedRefs?.current?.focus();
+            } else if (!isSearchable) {
+              setOpen(false);
+              combinedRefs?.current?.blur();
             }
-          `}
+          }}
+          css={selectWrapper({ open, status, styleType, isSearchable })}
         >
           <TextField
             styleType={styleType}
-            onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
             onKeyDown={handleOnKeyDown}
             onInput={handleOnInput}
@@ -195,7 +194,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}
-            ref={ref}
+            ref={combinedRefs}
           />
           {open && (
             <SelectMenu

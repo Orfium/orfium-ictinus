@@ -49,6 +49,7 @@ const CheckBox: React.FC<Props> = ({
   id = generateUniqueID(),
 }) => {
   const [isChecked, setIsChecked] = React.useState(checked);
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
@@ -68,15 +69,25 @@ const CheckBox: React.FC<Props> = ({
 
   return (
     <span css={wrapperStyle({ disabled })}>
-      <span css={checkboxWrapperStyle()}>
+      <span
+        css={checkboxWrapperStyle()}
+        onClick={e => {
+          e.stopPropagation();
+          if (e.currentTarget === e.target) {
+            inputRef?.current?.click();
+          }
+        }}
+      >
         <input
           data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
           css={checkboxStyle({ intermediate, checked: isChecked, filled })}
           id={`styled-checkbox-${id}`}
           type="checkbox"
+          onClick={e => e.stopPropagation()}
           onChange={handleInputChange}
           disabled={disabled}
           checked={isChecked}
+          ref={inputRef}
         />
         <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ checked: isChecked })}>
           <Icon

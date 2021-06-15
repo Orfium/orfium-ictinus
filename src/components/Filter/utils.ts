@@ -1,8 +1,11 @@
-import { lighten } from 'polished';
+import { darken, lighten } from 'polished';
+import { css } from '@emotion/core';
+import { isUndefined } from 'lodash';
 
-import { defineBackgroundColor } from '../Button/utils';
+import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { BackgroundColorProps, BaseColorProps, BorderProps } from './types';
+import { BackgroundColorProps, BaseColorProps, FilterOption, BorderProps, HoverBorderProps } from './types';
+import { Theme } from '../../theme';
 
 export const getBackgroundColor = ({
   open,
@@ -40,6 +43,22 @@ export const getTextColor = ({
   return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
 }
 
+export const defaultOptionStyle = (defaultValue: FilterOption, selectedValue?: FilterOption) => (theme: Theme) => css`
+  background-color: ${isUndefined(selectedValue?.value) || selectedValue?.value === defaultValue.value
+  ? darken(0.05, theme.palette.white)
+  : theme.palette.white};
+    border: 0;
+    font-weight: ${theme.typography.weights.medium};
+`;
+
+export const optionStyle = (option: FilterOption, selectedItem?: FilterOption) => (theme: Theme) => css`
+  background-color: ${option.value === selectedItem?.value 
+          ? darken(0.05, theme.palette.white) 
+          : theme.palette.white};
+  border: 0;
+  font-weight: ${theme.typography.weights.regular};
+`;
+
 export const getBorder = ({
   styleType,
   theme,
@@ -54,3 +73,25 @@ export const getBorder = ({
 
   return 'none';
 }
+
+export const getHoverBorder = ({
+  styleType,
+  theme,
+  open,
+  calculatedColor,
+  activeCalculatedColor,
+  hasSelectedValue
+}: HoverBorderProps) => {
+  if (styleType === 'outlined' || hasSelectedValue) {
+    if (open) {
+      return `solid 1px ${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
+    }
+
+    return `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
+  }
+
+  return 'none';
+}
+
+
+
