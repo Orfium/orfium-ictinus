@@ -2,10 +2,11 @@ import React from 'react';
 
 import NormalList from './NormalList';
 import VirtualizedList from './VirtualizedList';
+import { SelectOption } from '../Select/Select';
 
 export interface ListProps {
   /** Data for the list */
-  data: string[];
+  data: (string | number | SelectOption)[];
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: 'small' | 'normal';
   /** Width of the list */
@@ -14,6 +15,14 @@ export interface ListProps {
   height: number;
   /** Virtualized list option */
   isVirtualized?: boolean;
+  /** Ref of ListItem component */
+  listItemRef?: React.RefObject<HTMLDivElement>;
+  /** Selected Item */
+  selectedItem?: string | number;
+  /** Search Term to be highlighted in list items */
+  searchTerm?: string;
+  /** Option Click handler for SelectOption[] data case */
+  handleOptionClick?: (option: SelectOption) => void;
   /** Data Test Id Prefix */
   dataTestIdPrefix?: string;
 }
@@ -24,6 +33,10 @@ const List: React.FC<ListProps> = ({
   width,
   height,
   isVirtualized = false,
+  listItemRef,
+  selectedItem,
+  searchTerm,
+  handleOptionClick,
   dataTestIdPrefix,
 }) => {
   return isVirtualized ? (
@@ -32,6 +45,10 @@ const List: React.FC<ListProps> = ({
       rowSize={rowSize}
       width={width}
       height={height}
+      listItemRef={listItemRef}
+      selectedItem={selectedItem}
+      searchTerm={searchTerm}
+      handleOptionClick={handleOptionClick}
       dataTestIdPrefix={dataTestIdPrefix}
     />
   ) : (
@@ -40,6 +57,10 @@ const List: React.FC<ListProps> = ({
       rowSize={rowSize}
       width={width}
       height={height}
+      listItemRef={listItemRef}
+      selectedItem={selectedItem}
+      searchTerm={searchTerm}
+      handleOptionClick={handleOptionClick}
       dataTestIdPrefix={dataTestIdPrefix}
     />
   );

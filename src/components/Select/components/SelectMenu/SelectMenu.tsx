@@ -2,10 +2,10 @@
 /** @jsx jsx */
 import { useEffect, useRef } from 'react';
 import { jsx } from '@emotion/core';
-import Highlighter from 'react-highlight-words';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../Select';
+import List from '../../../List';
 
 const SelectMenu = ({
   size = 'sm',
@@ -36,29 +36,16 @@ const SelectMenu = ({
 
   const renderOptions = () =>
     filteredOptions.length > 0 ? (
-      filteredOptions.map(option => (
-        <div
-          ref={selectedOption === option.value ? myRef : null}
-          key={option.value}
-          css={optionStyle({
-            selected: selectedOption === option.value,
-            size,
-          })}
-          onClick={() => handleOptionClick(option)}
-        >
-          {searchTerm ? (
-            <Highlighter
-              highlightClassName="search-text"
-              highlightTag={'strong'}
-              searchWords={[searchTerm]}
-              autoEscape={true}
-              textToHighlight={option.label}
-            />
-          ) : (
-            option.label
-          )}
-        </div>
-      ))
+      <List
+        data={filteredOptions}
+        rowSize={'small'}
+        width={231}
+        height={240}
+        listItemRef={myRef}
+        handleOptionClick={handleOptionClick}
+        searchTerm={searchTerm}
+        selectedItem={selectedOption}
+      />
     ) : (
       <div css={optionStyle({ selected: false, noResultsExist: true })}>No options</div>
     );
