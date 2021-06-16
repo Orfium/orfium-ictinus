@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 import Tooltip from './Tooltip';
-import Stack from '../storyUtils/Stack';
+import TooltipShowcase from '../storyUtils/TooltipShowcase'; import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Tooltip" component={Tooltip} />
 
@@ -11,10 +11,7 @@ import Stack from '../storyUtils/Stack';
 ```js
 import { Tooltip } from '@orfium/ictinus';
 
-<Tooltip
-  content="Content you want to show as descrption of tooltip"
-  placement={'right'}
->
+<Tooltip content="Content you want to show as descrption of tooltip" placement={'right'}>
   ...
 </Tooltip>;
 ```
@@ -25,32 +22,29 @@ import { Tooltip } from '@orfium/ictinus';
 
 # Generic Tooltip
 
+Tooltip use to show info in any direction defined. If there is no space in the screen then it moves to the available space.
+
 <Preview>
   <Story name="Generic Tooltip">
+    <TooltipShowcase />
+  </Story>
+</Preview>
+
+# Tooltip sizes
+
+Tooltip sizes are 3 `normal, medium, small` and you can see them in action below.
+
+<Preview>
+  <Story name="Tooltip sizes">
     <Stack>
-      <Tooltip
-        content="By hover here you can see useful info"
-        placement={'Top'}
-      >
-        <button>Top</button>
+      <Tooltip id={'right1'} size={'normal'} content="By hover here you can see useful info" placement={'right'}>
+        <button>Normal</button>
       </Tooltip>
-      <Tooltip
-        content="By hover here you can see useful info"
-        placement={'Bottom'}
-      >
-        <button>Bottom</button>
+      <Tooltip id={'right2'} size={'medium'} content="By hover here you can see useful info" placement={'right'}>
+        <button>Medium</button>
       </Tooltip>
-      <Tooltip
-        content="By hover here you can see useful info"
-        placement={'right'}
-      >
-        <button>Right</button>
-      </Tooltip>
-      <Tooltip
-        content="By hover here you can see useful info"
-        placement={'left'}
-      >
-        <button>Left</button>
+      <Tooltip id={'right3'} size={'small'} content="By hover here you can see useful info" placement={'right'}>
+        <button>Small</button>
       </Tooltip>
     </Stack>
   </Story>

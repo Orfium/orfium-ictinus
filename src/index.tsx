@@ -4,6 +4,8 @@ import * as palette from './theme/palette';
 import { Palette } from './theme/palette';
 import * as spacing from './theme/spacing';
 import { Spacing } from './theme/spacing';
+import * as overrides from './theme/overrides';
+import { Overrides } from './theme/overrides';
 import * as typography from './theme/typography';
 import { Typography } from './theme/typography';
 import * as elevation from './theme/elevation';
@@ -64,5 +66,7 @@ export {
   Palette,
   Typography,
   Elevation,
+  overrides,
+  Overrides,
   queriesSizes,
 };

@@ -13,6 +13,7 @@ export type ThemeConfig = {
   typography: Typography;
   spacing: Spacing;
   elevation: Elevation;
+  overrides: Overrides;
   isDark: boolean;
 };
 
