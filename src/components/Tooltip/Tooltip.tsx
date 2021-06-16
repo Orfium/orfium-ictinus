@@ -3,7 +3,7 @@ import { tooltipStyle, tooltipChildrenWrapperStyle } from './Tooltip.style';
 import { uuid } from 'uuidv4';
 import ReactTooltip from 'react-tooltip';
 
-export type TooltipSize = 'normal' | 'medium' | 'small';
+export type TooltipSize = 'large' | 'medium' | 'small';
 
 type Props = {
   /** The plain text to show inside the tooltip */
@@ -14,6 +14,7 @@ type Props = {
   /** @default uuid */
   id?: string;
   /** The size of the tooltip to define different style */
+  /** @default medium */
   size?: TooltipSize;
 };
 
