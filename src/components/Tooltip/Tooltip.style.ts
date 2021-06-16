@@ -12,7 +12,7 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
   const backgroundColor = theme.utils.getColor(color, shade);
 
   const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {
-    if (size === 'normal') {
+    if (size === 'large') {
       return theme.typography.fontSizes['16'];
     } else if (size === 'small') {
       return theme.typography.fontSizes['12'];
