@@ -1,5 +1,5 @@
 import React from 'react';
-import 'tippy.js/dist/tippy.css';
+// import 'tippy.js/dist/tippy.css';
 import Tippy from '@tippyjs/react';
 import { Placement } from 'tippy.js';
 import { tooltipStyle, tooltipChildrenWrapperStyle } from './Tooltip.style';

@@ -6,6 +6,11 @@ import { styleSheetSerializer } from 'jest-styled-components';
 import { addSerializer } from 'jest-specific-snapshot';
 import { crawlTreeChildrenProps } from './utils/storyshots';
 import { ReactElement } from 'react';
+import ReactDOM from 'react-dom';
+
+// NOTE: this fix all storyshots for tippyjs
+// @ts-ignore
+ReactDOM.createPortal = jest.fn((element, node) => element);
 
 /** Every time we run the tests, the dynamic attribute values that are generated for each element cause tests to fail.
  * A quick solution is to update snapshots every time we run the tests (jest -u) and then push the updated snapshots to git.
