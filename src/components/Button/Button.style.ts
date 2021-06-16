@@ -48,6 +48,7 @@ export const buttonStyle = ({
 >) => (theme: Theme) => {
   return {
     fontSize: fontSizeBasedOnSize(theme, size),
+    fontWeight: theme.typography.weights.medium,
     color:
       filled && !transparent
         ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)

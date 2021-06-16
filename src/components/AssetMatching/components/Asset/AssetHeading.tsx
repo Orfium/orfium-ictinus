@@ -17,8 +17,8 @@ const AssetHeading: FC<AssetHeadingProps> = ({ top, main, bottom, iconName, exte
   return (
     <div css={Styles.headingWrapper}>
       {top && <p css={Styles.subHeadingTop}>{top}</p>}
-      <div css={flex}>
-        <Icon size={24} name={iconName} variant={400} color={'primary'} />
+      <div css={Styles.iconHeadingWrapper}>
+        <Icon size={16} name={iconName} variant={400} color={'primary'} />
         <div css={externalLink ? Styles.title : flex}>
           <h3 css={Styles.mainHeading}>{main}</h3>
           {externalLink && <AssetExternalLink {...externalLink} />}
