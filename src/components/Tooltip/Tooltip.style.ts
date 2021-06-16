@@ -29,6 +29,10 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
     font-size: ${defineFontSizeBasedOnTooltipSize(size)} !important;
     line-height: 110%;
     border-radius: ${theme.spacing.sm};
+    text-align: justify;
+    &.show {
+      opacity: 1 !important;
+    }
     &.place-right {
       &::after {
         border-right-color: ${backgroundColor} !important;
