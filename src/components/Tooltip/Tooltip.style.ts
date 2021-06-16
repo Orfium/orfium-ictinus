@@ -21,8 +21,6 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
     return theme.typography.fontSizes['14'];
   };
 
-  console.log('size: ', defineFontSizeBasedOnTooltipSize(size));
-
   return css`
     color: ${pickTextColorFromSwatches(color, shade)} !important;
     background-color: ${backgroundColor} !important;
@@ -32,25 +30,21 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
     line-height: 110%;
     border-radius: ${theme.spacing.sm};
     &.place-right {
-      margin-right: ${rem(10)};
       &::after {
         border-right-color: ${backgroundColor} !important;
       }
     }
     &.place-left {
-      margin-left: ${rem(10)};
       &::after {
         border-left-color: ${backgroundColor} !important;
       }
     }
     &.place-top {
-      margin-top: ${rem(10)};
       &::after {
         border-top-color: ${backgroundColor} !important;
       }
     }
     &.place-bottom {
-      margin-bottom: ${rem(10)};
       &::after {
         border-bottom-color: ${backgroundColor} !important;
       }
@@ -59,5 +53,7 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
 };
 
 export const tooltipChildrenWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 `;
