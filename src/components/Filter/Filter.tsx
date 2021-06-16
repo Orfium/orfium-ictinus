@@ -2,6 +2,8 @@
 /** @jsx jsx */
 import {jsx } from '@emotion/core';
 import * as React from 'react';
+import { useMemo } from 'react';
+import { debounce } from 'lodash';
 
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
@@ -19,8 +21,6 @@ import {
   menuStyle,
 } from './Filter.style';
 import Options from './components/Options/Options';
-import { useMemo } from 'react';
-import { debounce } from 'lodash';
 import SearchInput from './components/SearchInput/SearchInput';
 
 const Filter: React.FC<Props> = props => {
@@ -128,7 +128,7 @@ const Filter: React.FC<Props> = props => {
           </span>
         </button>
         {open && (
-          <div css={menuStyle()(theme)} data-testid="filter-menu">
+          <div css={menuStyle()(theme)} data-testid={generateTestDataId('filter-menu', dataTestId)}>
             {isSearchable && (
               <SearchInput
                 value={searchValue}

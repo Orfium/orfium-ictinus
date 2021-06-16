@@ -1,6 +1,8 @@
-import { Theme } from '../../../../theme';
 import { css } from '@emotion/core';
 import { darken, rem } from 'polished';
+
+import { Theme } from 'theme';
+import { flexCenter } from 'theme/functions';
 
 export const optionsStyle = () => (theme: Theme) => css`
   max-height: ${rem(253)};
@@ -28,8 +30,6 @@ export const emptyStyle = () => (theme: Theme) => css`
   height: ${rem(48)};
   padding: 0 ${rem(16)};
   font-size: ${theme.typography.fontSizes['14']};
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flexCenter};
 `;
 
