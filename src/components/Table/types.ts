@@ -1,8 +1,13 @@
+import { TooltipPlacement } from '../Tooltip/Tooltip';
+
 export type SortingOrder = 'asc' | 'desc';
 
 export type ExtendedColumn = {
   content: string;
-  tooltipContent?: string;
+  tooltip?: {
+    content: string;
+    placement?: TooltipPlacement;
+  };
   isSortable?: boolean;
 };
 

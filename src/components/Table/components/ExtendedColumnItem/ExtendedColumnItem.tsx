@@ -4,6 +4,7 @@ import useTheme from 'hooks/useTheme';
 import { ExtendedColumn, Sort } from '../../types';
 import { containerStyles } from './ExtendedColumnItem.style';
 import Icon from 'components/Icon';
+import Tooltip from 'components/Tooltip';
 
 type Props = {
   item: ExtendedColumn;
@@ -38,18 +39,20 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
     );
 
   const tooltipItem = () =>
-    item?.tooltipContent && (
+    item?.tooltip?.content && (
       <div
         css={{
           width: 'fit-content',
         }}
         key={`table_icon_tooltip_${item.content.toLowerCase()}`}
       >
-        <Icon
-          name={'info'}
-          dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
-          color={theme.utils.getColor('lightGray', 600)}
-        />
+        <Tooltip content={item?.tooltip?.content} placement={item?.tooltip.placement}>
+          <Icon
+            name={'info'}
+            dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
+            color={theme.utils.getColor('lightGray', 600)}
+          />
+        </Tooltip>
       </div>
     );
 

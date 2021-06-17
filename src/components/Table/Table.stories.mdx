@@ -120,18 +120,30 @@ Regular Table with sorting and tooltips
 <Preview>
   <Story name="Regular Table with sorting and tooltips">
     <Table
-      columns={[{
-        content: 'Title',
-        isSortable: true,
-        tooltipContent: 'Tooltip Content'
-      }, 'Name', {
-        content: 'Surname',
-        tooltipContent: 'Tooltip Content'
-      }, {
-        content: 'Age',
-        isSortable: true,
-        tooltipContent: 'Tooltip Content'
-      }]}
+      columns={[
+        {
+          content: 'Title',
+          isSortable: true,
+          tooltip: {
+            content: 'Tooltip Content',
+            placement: 'bottom'
+          }
+        },
+        'Name',
+        {
+          content: 'Surname',
+          tooltip: {
+            content: 'Tooltip Content',
+          }
+        },
+        {
+          content: 'Age',
+          isSortable: true,
+          tooltip: {
+            content: 'Tooltip Content',
+            placement: 'right'
+          }
+        }]}
       dataTestIdPrefix="ictinus"
       onSort={(column, order) => console.log(column, order)}
       initialSort={{ column: 'Title', order: 'asc' }}
