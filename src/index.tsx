@@ -4,6 +4,8 @@ import * as palette from './theme/palette';
 import { Palette } from './theme/palette';
 import * as spacing from './theme/spacing';
 import { Spacing } from './theme/spacing';
+import * as overrides from './theme/overrides';
+import { Overrides } from './theme/overrides';
 import * as typography from './theme/typography';
 import { Typography } from './theme/typography';
 import * as elevation from './theme/elevation';
@@ -47,6 +49,7 @@ export { default as TextField } from './components/TextField';
 export { default as TextArea } from './components/TextArea';
 export { default as ThemeProvider } from './components/ThemeProvider';
 export { default as Toast } from './components/Toast';
+export { default as Tooltip } from './components/Tooltip';
 export { default as TopNavBar } from './components/TopAppBar';
 
 export { default as useTheme } from './hooks/useTheme';
@@ -64,5 +67,7 @@ export {
   Palette,
   Typography,
   Elevation,
+  overrides,
+  Overrides,
   queriesSizes,
 };

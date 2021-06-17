@@ -99,7 +99,7 @@ const title = (theme: Theme): SerializedStyles => css`
     ${transition(0.2, 'text-decoration')};
     text-decoration: underline;
     color: ${theme.utils.getColor('primary', 400, 'normal')};
-    > a {
+    a {
       display: block;
     }
   }
