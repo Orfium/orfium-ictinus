@@ -2,8 +2,12 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 
-import { fireEvent, render, within, waitFor, screen } from 'test';
+import { fireEvent, render, within, screen } from 'test';
 import Table from './Table';
+
+const tooltip = {
+  content: 'Tooltip Content',
+};
 
 describe('Table', () => {
   const data = new Array(50).fill(null).map((item, index) => ({
@@ -99,7 +103,7 @@ describe('Table', () => {
           'Name',
           {
             content: 'Surname',
-            tooltipContent: 'Tooltip Content',
+            tooltip,
           },
           'Age',
         ]}
@@ -142,14 +146,13 @@ describe('Table', () => {
     expect(onSort).toHaveBeenLastCalledWith('Title', 'desc');
   });
 
-  test.skip('that the tooltip is showed when hovering over the icon', () => {
-    const tooltipContent = 'Tooltip Test';
+  test('that the tooltip is showed when hovering over the icon', () => {
     render(
       <Table
         columns={[
           {
             content: 'Title',
-            tooltipContent,
+            tooltip,
           },
           'Name',
           'Surname',
@@ -163,7 +166,7 @@ describe('Table', () => {
 
     userEvent.hover(tooltipIcon);
 
-    waitFor(() => expect(screen.getByText(tooltipContent)).toBeInTheDocument());
+    expect(screen.getByText(tooltip.content)).toBeVisible();
   });
 
   test('that the order of the icons is correct when column is numerical', () => {
@@ -175,14 +178,14 @@ describe('Table', () => {
           {
             content: 'Title',
             isSortable: true,
-            tooltipContent: 'Tooltip',
+            tooltip,
           },
           'Name',
           'Surname',
           {
             content: 'Age',
             isSortable: true,
-            tooltipContent: 'Tooltip',
+            tooltip,
           },
         ]}
         initialSort={{ column: 'Title', order: 'asc' }}
