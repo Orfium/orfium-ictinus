@@ -10,9 +10,9 @@ export interface ListProps {
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: 'small' | 'normal';
   /** Width of the list */
-  width: number;
+  width?: number;
   /** Height of the list */
-  height: number;
+  height?: number;
   /** Virtualized list option */
   isVirtualized?: boolean;
   /** Ref of ListItem component */
@@ -43,8 +43,8 @@ const List: React.FC<ListProps> = ({
     <VirtualizedList
       items={data}
       rowSize={rowSize}
-      width={width}
-      height={height}
+      customWidth={width}
+      customHeight={height}
       listItemRef={listItemRef}
       selectedItem={selectedItem}
       searchTerm={searchTerm}

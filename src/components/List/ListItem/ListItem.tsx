@@ -9,12 +9,12 @@ type Props = {
   size: 'normal' | 'small';
   /** Content of the ListItem */
   content: string | number | SelectOption;
+  /** Index, for test-id calculation */
+  index: number;
   /** Selected state */
   selected?: boolean;
   /** Disabled state */
   disabled?: boolean;
-  /** Index, for test-id calculation */
-  index?: number;
   /** Ref of ListItem component */
   listItemRef?: React.RefObject<HTMLDivElement>;
   /** Search Term to be highlighted in list items */
@@ -28,15 +28,14 @@ type Props = {
 const ListItem: React.FC<Props> = ({
   size,
   content,
+  index,
   selected = false,
   disabled = false,
-  index,
   handleOptionClick,
   listItemRef,
   searchTerm,
   dataTestIdPrefix,
 }) => {
-
   const handleListItemSelect = () => {
     if (
       !(typeof content === 'string' || typeof content === 'number') &&
@@ -45,15 +44,14 @@ const ListItem: React.FC<Props> = ({
     ) {
       handleOptionClick(content);
     }
-  }
-
+  };
 
   return (
     <div
       css={listItemStyle({ size, selected, disabled })}
       ref={selected ? listItemRef : null}
       onClick={handleListItemSelect}
-      data-testid={dataTestIdPrefix ?? 'ictinus_list' + ('_option' + (index ?? ''))}
+      data-testid={dataTestIdPrefix ?? 'ictinus_list' + ('_item_' + index)}
     >
       <div css={contentStyle()}>
         {typeof content === 'string' || typeof content === 'number' ? (

@@ -1,18 +1,19 @@
 import React from 'react';
-import { List as VList } from 'react-virtualized';
+import { List as VList, AutoSizer } from 'react-virtualized';
 
 import ListItem from '../ListItem';
 import { SelectOption } from '../../Select/Select';
 import { isSelected } from '../utils';
+import { listStyle } from './VirtualizedList.style';
 
 type Props = {
   items: (string | number | SelectOption)[];
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: 'small' | 'normal';
   /** Width of the list */
-  width: number;
+  customWidth?: number;
   /** Height of the list */
-  height: number;
+  customHeight?: number;
   /** Ref of ListItem component */
   listItemRef?: React.RefObject<HTMLDivElement>;
   /** Selected Item */
@@ -27,11 +28,12 @@ type Props = {
 
 const VirtualizedList: React.FC<Props> = ({
   items,
-  width,
-  height,
+  customWidth,
+  customHeight,
   rowSize,
   listItemRef,
   selectedItem,
+  searchTerm,
   handleOptionClick,
   dataTestIdPrefix,
 }) => {
@@ -43,6 +45,7 @@ const VirtualizedList: React.FC<Props> = ({
         index={index}
         listItemRef={listItemRef}
         selected={isSelected({ item: items[index], selectedItem })}
+        searchTerm={searchTerm}
         dataTestIdPrefix={dataTestIdPrefix}
         handleOptionClick={handleOptionClick}
       />
@@ -50,15 +53,20 @@ const VirtualizedList: React.FC<Props> = ({
   );
 
   return (
-    <div data-testid={dataTestIdPrefix ? `${dataTestIdPrefix}_list` : 'ictinus_list'}>
-      <VList
-        width={width}
-        height={height}
-        rowCount={items.length}
-        rowHeight={rowSize === 'normal' ? 56 : 46}
-        rowRenderer={rowRenderer}
-      />
-    </div>
+    <AutoSizer
+      css={listStyle({ width: customWidth, height: customHeight })}
+      data-testid={dataTestIdPrefix ? `${dataTestIdPrefix}_list` : 'ictinus_list'}
+    >
+      {({ height, width }) => (
+        <VList
+          width={customWidth ?? width}
+          height={customHeight ?? height}
+          rowCount={items.length}
+          rowHeight={rowSize === 'normal' ? 56 : 46}
+          rowRenderer={rowRenderer}
+        />
+      )}
+    </AutoSizer>
   );
 };
 

@@ -11,9 +11,9 @@ type Props = {
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: 'small' | 'normal';
   /** Width of the list */
-  width: number;
+  width?: number;
   /** Height of the list */
-  height: number;
+  height?: number;
   /** Ref of ListItem component */
   listItemRef?: React.RefObject<HTMLDivElement>;
   /** Selected Item */
@@ -41,17 +41,18 @@ const NormalList: React.FC<Props> = ({
     <div data-testid={dataTestIdPrefix ? `${dataTestIdPrefix}_list` : 'ictinus_list'}>
       <ul css={listStyle({ width, height })}>
         {items.map((item, index) => (
-          <ListItem
-            key={generateUniqueID('list_item')}
-            content={item}
-            size={rowSize}
-            index={index}
-            listItemRef={listItemRef}
-            searchTerm={searchTerm}
-            dataTestIdPrefix={dataTestIdPrefix}
-            handleOptionClick={handleOptionClick}
-            selected={isSelected({ item, selectedItem })}
-          />
+          <li key={generateUniqueID('list_item')}>
+            <ListItem
+              content={item}
+              size={rowSize}
+              index={index}
+              listItemRef={listItemRef}
+              searchTerm={searchTerm}
+              dataTestIdPrefix={dataTestIdPrefix}
+              handleOptionClick={handleOptionClick}
+              selected={isSelected({ item, selectedItem })}
+            />
+          </li>
         ))}
       </ul>
     </div>

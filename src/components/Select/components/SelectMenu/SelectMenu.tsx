@@ -14,6 +14,7 @@ const SelectMenu = ({
   handleOptionClick,
   selectedOption,
   isLoading,
+  isVirtualized,
   searchTerm,
 }: {
   /** Sets the size of the menu */
@@ -24,6 +25,7 @@ const SelectMenu = ({
   handleOptionClick: (option: SelectOption) => void;
   selectedOption: string | number;
   isLoading?: boolean;
+  isVirtualized?: boolean;
   searchTerm?: string;
 }) => {
   const myRef = useRef<HTMLDivElement>(null);
@@ -39,8 +41,7 @@ const SelectMenu = ({
       <List
         data={filteredOptions}
         rowSize={'small'}
-        width={231}
-        height={240}
+        isVirtualized={isVirtualized}
         listItemRef={myRef}
         handleOptionClick={handleOptionClick}
         searchTerm={searchTerm}
@@ -51,7 +52,7 @@ const SelectMenu = ({
     );
 
   return (
-    <div css={menuStyle({ status, size })}>
+    <div css={menuStyle({ status, size, itemsCount: filteredOptions.length })}>
       {isLoading ? (
         <div css={optionStyle({ selected: false, noResultsExist: true })}>Loading...</div>
       ) : (
