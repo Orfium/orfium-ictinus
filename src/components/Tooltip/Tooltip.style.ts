@@ -2,11 +2,15 @@ import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { css, SerializedStyles } from '@emotion/core';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { TooltipSize } from './Tooltip';
+import { TooltipPlacement, TooltipSize } from './Tooltip';
 
-export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
-  theme: Theme
-): SerializedStyles => {
+export const tooltipStyle = ({
+  placement,
+  size,
+}: {
+  placement: TooltipPlacement;
+  size: TooltipSize;
+}) => (theme: Theme): SerializedStyles => {
   const color = theme.overrides.tooltip.background.color;
   const shade = theme.overrides.tooltip.background.shade;
   const backgroundColor = theme.utils.getColor(color, shade);
@@ -33,24 +37,9 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
     &.show {
       opacity: 1 !important;
     }
-    &.place-right {
+    &.place-${placement} {
       &::after {
-        border-right-color: ${backgroundColor} !important;
-      }
-    }
-    &.place-left {
-      &::after {
-        border-left-color: ${backgroundColor} !important;
-      }
-    }
-    &.place-top {
-      &::after {
-        border-top-color: ${backgroundColor} !important;
-      }
-    }
-    &.place-bottom {
-      &::after {
-        border-bottom-color: ${backgroundColor} !important;
+        border-${placement}-color: ${backgroundColor} !important;
       }
     }
   `;

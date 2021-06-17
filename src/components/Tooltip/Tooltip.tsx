@@ -5,11 +5,14 @@ import ReactTooltip from 'react-tooltip';
 
 export type TooltipSize = 'large' | 'medium' | 'small';
 
+export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
+
 type Props = {
   /** The plain text to show inside the tooltip */
   content: React.ReactNode;
   /** The placement where the tooltip will show */
-  placement?: 'top' | 'right' | 'bottom' | 'left';
+  /** @default top */
+  placement?: TooltipPlacement;
   /** The unique id in order to link content and tooltip */
   /** @default uuid */
   id?: string;
@@ -18,7 +21,13 @@ type Props = {
   size?: TooltipSize;
 };
 
-const Tooltip: React.FC<Props> = ({ id, size = 'medium', children, content, placement }) => {
+const Tooltip: React.FC<Props> = ({
+  id,
+  size = 'medium',
+  children,
+  content,
+  placement = 'top',
+}) => {
   const tooltipID = id || uuid();
 
   return (
@@ -27,7 +36,7 @@ const Tooltip: React.FC<Props> = ({ id, size = 'medium', children, content, plac
         {children}
       </div>
       <ReactTooltip
-        css={tooltipStyle({ size })}
+        css={tooltipStyle({ placement, size })}
         id={tooltipID}
         place={placement}
         effect="solid"
