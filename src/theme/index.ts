@@ -3,6 +3,7 @@ import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.
 import typography, { Typography } from './typography';
 import spacing, { Spacing } from './spacing';
 import elevation, { Elevation } from './elevation';
+import overrides, { Overrides } from './overrides';
 import { enhancePaletteWithShades } from './utils';
 
 type TextColorTypes = 'primary' | 'secondary' | 'light';
@@ -12,6 +13,7 @@ export type ThemeConfig = {
   typography: Typography;
   spacing: Spacing;
   elevation: Elevation;
+  overrides: Overrides;
   isDark: boolean;
 };
 
@@ -28,6 +30,7 @@ export type Theme = {
   spacing: Spacing;
   elevation: Elevation;
   isDark: boolean;
+  overrides: Overrides;
   utils: {
     getColor: GetColor;
   };
@@ -60,6 +63,7 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
     spacing,
     elevation,
     isDark: false,
+    overrides,
     utils: {
       getColor: getColor(palette),
     },
