@@ -2,10 +2,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import useTheme from '../../../../../../hooks/useTheme';
 import TableCell from '../../../TableCell';
 import { isComponentFunctionType } from '../../../../../../utils/helpers';
 import { ContentComponent, TableType } from '../../../../Table';
+import { nestedHeaderStyle } from './ContentCell.style';
 
 type Props = {
   columnsHasNumberArr: boolean[];
@@ -37,38 +37,29 @@ const ContentCell: React.FC<Props> = ({
   dataTestIdPrefix,
   rowIndex,
   index,
-}) => {
-  const theme = useTheme();
-
-  return (
-    <TableCell
-      textAlign={align ? align : columnsHasNumberArr[cellCounter] ? 'right' : 'left'}
-      colSpan={colSpan}
-      type={cellType}
-      padded={padded}
-      width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
-      dataTestIdPrefix={dataTestIdPrefix}
-      rowIndex={rowIndex}
-      index={index}
-    >
-      {rowType === 'nested-header' && (
-        <div
-          css={{
-            color: theme.utils.getColor('lightGray', 700),
-            fontSize: theme.typography.fontSizes['14'],
-          }}
-        >
-          {/* nested header render */}
-          {columns[cellCounter]}
-        </div>
-      )}
-      {isComponentFunctionType(content) ? (
-        content({ content, colSpan })
-      ) : (
-        <span data-column={columns[cellCounter]}>{content}</span>
-      )}
-    </TableCell>
-  );
-};
+}) => (
+  <TableCell
+    textAlign={align ? align : columnsHasNumberArr[cellCounter] ? 'right' : 'left'}
+    colSpan={colSpan}
+    type={cellType}
+    padded={padded}
+    width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
+    dataTestIdPrefix={dataTestIdPrefix}
+    rowIndex={rowIndex}
+    index={index}
+  >
+    {rowType === 'nested-header' && (
+      <div css={nestedHeaderStyle()}>
+        {/* nested header render */}
+        {columns[cellCounter]}
+      </div>
+    )}
+    {isComponentFunctionType(content) ? (
+      content({ content, colSpan })
+    ) : (
+      <span data-column={columns[cellCounter]}>{content}</span>
+    )}
+  </TableCell>
+);
 
 export default React.memo(ContentCell);
