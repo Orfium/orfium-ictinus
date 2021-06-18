@@ -70,6 +70,7 @@ export type AcceptedIconNames =
   | 'financialChart'
   | 'generatedReports'
   | 'genericFile'
+  | 'genericOrdering'
   | 'globalItem'
   | 'heartFill'
   | 'heartStroke'
