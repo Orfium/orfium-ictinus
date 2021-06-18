@@ -46,7 +46,11 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, handleSorting, sorting, isN
         }}
         key={`table_icon_tooltip_${item.content.toLowerCase()}`}
       >
-        <Tooltip content={item?.tooltip?.content} placement={item?.tooltip.placement}>
+        <Tooltip
+          content={item?.tooltip?.content}
+          id={item?.content.replace(' ', '-')}
+          placement={item?.tooltip.placement}
+        >
           <Icon
             name={'info'}
             dataTestId={`table_icon_tooltip_${item.content.toLowerCase()}`}
