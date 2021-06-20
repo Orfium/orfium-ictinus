@@ -110,27 +110,47 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         />
         <th
           className="css-1ukzli6"
-          data-testid="table_header_title"
+          data-testid="undefined_title_"
+          onClick={[Function]}
         >
-          Title
+          <div
+            css={[Function]}
+          >
+            Title
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="table_header_name"
+          data-testid="undefined_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="table_header_surname"
+          data-testid="undefined_surname_"
+          onClick={[Function]}
         >
-          Surname
+          <div
+            css={[Function]}
+          >
+            Surname
+          </div>
         </th>
         <th
           className="css-1pbao9u"
-          data-testid="table_header_age"
+          data-testid="undefined_age_"
+          onClick={[Function]}
         >
-          Age
+          <div
+            css={[Function]}
+          >
+            Age
+          </div>
         </th>
       </tr>
     </thead>
@@ -585,27 +605,47 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         />
         <th
           className="css-vcuvk2"
-          data-testid="table_header_title"
+          data-testid="undefined_title_"
+          onClick={[Function]}
         >
-          Title
+          <div
+            css={[Function]}
+          >
+            Title
+          </div>
         </th>
         <th
           className="css-vcuvk2"
-          data-testid="table_header_name"
+          data-testid="undefined_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-vcuvk2"
-          data-testid="table_header_surname"
+          data-testid="undefined_surname_"
+          onClick={[Function]}
         >
-          Surname
+          <div
+            css={[Function]}
+          >
+            Surname
+          </div>
         </th>
         <th
           className="css-1vpizby"
-          data-testid="table_header_age"
+          data-testid="undefined_age_"
+          onClick={[Function]}
         >
-          Age
+          <div
+            css={[Function]}
+          >
+            Age
+          </div>
         </th>
       </tr>
     </thead>
@@ -1459,27 +1499,47 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_title"
+          data-testid="ictinus_title_"
+          onClick={[Function]}
         >
-          Title
+          <div
+            css={[Function]}
+          >
+            Title
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_name"
+          data-testid="ictinus_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_surname"
+          data-testid="ictinus_surname_"
+          onClick={[Function]}
         >
-          Surname
+          <div
+            css={[Function]}
+          >
+            Surname
+          </div>
         </th>
         <th
           className="css-1pbao9u"
-          data-testid="ictinus_table_header_age"
+          data-testid="ictinus_age_"
+          onClick={[Function]}
         >
-          Age
+          <div
+            css={[Function]}
+          >
+            Age
+          </div>
         </th>
       </tr>
     </thead>
@@ -1890,67 +1950,21 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
         onClick={[Function]}
       >
         <th
-          className="css-1ukzli6"
-          data-testid="ictinus_"
+          className="css-a3fsdn"
+          data-testid="ictinus_title_"
+          onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "1uq74d0",
-                "next": undefined,
-                "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  display: inline-flex;
-  gap: 8px;
-
-  cursor: pointer;
-",
-                "toString": [Function],
-              }
-            }
+            css={[Function]}
             data-testid="header_title"
-            onClick={[Function]}
           >
-            Title
+            <span
+              css={[Function]}
+            >
+              Title
+            </span>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "xs967f",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  display: inline-flex;
-  gap: 4px;
-
-  cursor: ;
-",
-                  "toString": [Function],
-                }
-              }
+              css={[Function]}
             >
               <div
                 css={
@@ -2067,7 +2081,7 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
               <div
                 css={
                   Object {
-                    "transform": "rotate(0deg)",
+                    "transform": "rotate(180deg)",
                     "transformOrigin": "center",
                     "transition": "0.3s all ease-in-out",
                     "width": "fit-content",
@@ -2080,7 +2094,7 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   onClick={[Function]}
                 >
                   <span
-                    className="css-137pzfe-Icon"
+                    className="css-1gnrqdj-Icon"
                   />
                 </span>
               </div>
@@ -2089,72 +2103,31 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_name"
+          data-testid="ictinus_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_"
+          data-testid="ictinus_surname_"
+          onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "1lp87m5",
-                "next": undefined,
-                "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  display: inline-flex;
-  gap: 8px;
-
-  cursor: ;
-",
-                "toString": [Function],
-              }
-            }
+            css={[Function]}
             data-testid="header_surname"
-            onClick={[Function]}
           >
-            Surname
+            <span
+              css={[Function]}
+            >
+              Surname
+            </span>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "xs967f",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  display: inline-flex;
-  gap: 4px;
-
-  cursor: ;
-",
-                  "toString": [Function],
-                }
-              }
+              css={[Function]}
             >
               <div
                 css={
@@ -2272,68 +2245,39 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
           </div>
         </th>
         <th
-          className="css-1pbao9u"
-          data-testid="ictinus_"
+          className="css-1j6d1jx"
+          data-testid="ictinus_age_"
+          onClick={[Function]}
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "1uq74d0",
-                "next": undefined,
-                "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  display: inline-flex;
-  gap: 8px;
-
-  cursor: pointer;
-",
-                "toString": [Function],
-              }
-            }
+            css={[Function]}
             data-testid="header_age"
-            onClick={[Function]}
           >
-            Age
-            <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "xs967f",
-                  "next": undefined,
-                  "styles": "
-  
-  
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-;;
-  display: inline-flex;
-  gap: 4px;
-
-  cursor: ;
-",
-                  "toString": [Function],
-                }
-              }
+            <span
+              css={[Function]}
             >
+              Age
+            </span>
+            <div
+              css={[Function]}
+            >
+              <div
+                css={
+                  Object {
+                    "width": "fit-content",
+                  }
+                }
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  data-testid="table_icon_sort_age"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-1gnrqdj-Icon"
+                  />
+                </span>
+              </div>
               <div
                 css={
                   Object {

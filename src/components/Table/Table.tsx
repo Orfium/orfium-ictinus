@@ -76,7 +76,7 @@ function Table<T>({
   onCheck,
   padded = false,
   onSort,
-  initialSort = { column: '', order: 'asc' },
+  initialSort = { column: '', order: 'desc' },
   topLeftText,
   topRightArea,
   dataTestIdPrefix,
@@ -239,15 +239,26 @@ function Table<T>({
                       sticky={fixedHeader}
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
-                      dataTestIdPrefix={dataTestIdPrefix}
+                      isSortable={typeof item !== 'string' && item.isSortable}
+                      handleClick={() => {
+                        if (typeof item !== 'string' && item.isSortable) {
+                          handleSorting(item.content);
+                        }
+                      }}
+                      dataTestIdPrefix={
+                        dataTestIdPrefix +
+                        '_' +
+                        (typeof item !== 'string'
+                          ? item?.content.toLowerCase()
+                          : item.toLowerCase())
+                      }
                     >
                       {typeof item === 'string' ? (
-                        item
+                        <ExtendedColumnItem item={item} />
                       ) : (
                         <ExtendedColumnItem
                           sorting={sorting}
                           isNumerical={columnsHasNumberArr && columnsHasNumberArr[index]}
-                          handleSorting={handleSorting}
                           item={item}
                         />
                       )}
