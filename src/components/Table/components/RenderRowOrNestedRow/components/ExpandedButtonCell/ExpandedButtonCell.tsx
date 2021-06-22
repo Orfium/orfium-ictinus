@@ -44,7 +44,7 @@ const ExpandedButtonCell: React.FC<Props> = ({
           >
             <IconButton
               transparent
-              name={'arrowDown'}
+              name={'chevronSmallDown'}
               size={'sm'}
               onClick={toggleChecked}
               color={'lightGray-700'}

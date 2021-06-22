@@ -1,0 +1,51 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Tooltip from './Tooltip';
+import TooltipShowcase from '../storyUtils/TooltipShowcase'; import Stack from '../storyUtils/Stack';
+
+<Meta title="Design System/Tooltip" component={Tooltip} />
+
+# Tooltip
+
+# Usage
+
+```js
+import { Tooltip } from '@orfium/ictinus';
+
+<Tooltip content="Content you want to show as descrption of tooltip" placement={'right'}>
+  ...
+</Tooltip>;
+```
+
+# Props
+
+<Props of={Tooltip} />
+
+# Generic Tooltip
+
+Tooltip use to show info in any direction defined. If there is no space in the screen then it moves to the available space.
+
+<Preview>
+  <Story name="Generic Tooltip">
+    <TooltipShowcase />
+  </Story>
+</Preview>
+
+# Tooltip sizes
+
+Tooltip sizes are 3 `large, medium, small` and you can see them in action below.
+
+<Preview>
+  <Story name="Tooltip sizes">
+    <Stack>
+      <Tooltip id={'right1'} size={'large'} content="By hover here you can see useful info" placement={'right'}>
+        <button>Large</button>
+      </Tooltip>
+      <Tooltip id={'right2'} size={'medium'} content="By hover here you can see useful info" placement={'right'}>
+        <button>Medium</button>
+      </Tooltip>
+      <Tooltip id={'right3'} size={'small'} content="By hover here you can see useful info" placement={'right'}>
+        <button>Small</button>
+      </Tooltip>
+    </Stack>
+  </Story>
+</Preview>
