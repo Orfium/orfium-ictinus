@@ -110,27 +110,47 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
         />
         <th
           className="css-1ukzli6"
-          data-testid="table_header_title"
+          data-testid="undefined_title_"
+          onClick={[Function]}
         >
-          Title
+          <div
+            css={[Function]}
+          >
+            Title
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="table_header_name"
+          data-testid="undefined_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="table_header_surname"
+          data-testid="undefined_surname_"
+          onClick={[Function]}
         >
-          Surname
+          <div
+            css={[Function]}
+          >
+            Surname
+          </div>
         </th>
         <th
           className="css-1pbao9u"
-          data-testid="table_header_age"
+          data-testid="undefined_age_"
+          onClick={[Function]}
         >
-          Age
+          <div
+            css={[Function]}
+          >
+            Age
+          </div>
         </th>
       </tr>
     </thead>
@@ -585,27 +605,47 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         />
         <th
           className="css-vcuvk2"
-          data-testid="table_header_title"
+          data-testid="undefined_title_"
+          onClick={[Function]}
         >
-          Title
+          <div
+            css={[Function]}
+          >
+            Title
+          </div>
         </th>
         <th
           className="css-vcuvk2"
-          data-testid="table_header_name"
+          data-testid="undefined_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-vcuvk2"
-          data-testid="table_header_surname"
+          data-testid="undefined_surname_"
+          onClick={[Function]}
         >
-          Surname
+          <div
+            css={[Function]}
+          >
+            Surname
+          </div>
         </th>
         <th
           className="css-1vpizby"
-          data-testid="table_header_age"
+          data-testid="undefined_age_"
+          onClick={[Function]}
         >
-          Age
+          <div
+            css={[Function]}
+          >
+            Age
+          </div>
         </th>
       </tr>
     </thead>
@@ -1459,27 +1499,47 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
       >
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_title"
+          data-testid="ictinus_title_"
+          onClick={[Function]}
         >
-          Title
+          <div
+            css={[Function]}
+          >
+            Title
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_name"
+          data-testid="ictinus_name_"
+          onClick={[Function]}
         >
-          Name
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
         </th>
         <th
           className="css-1ukzli6"
-          data-testid="ictinus_table_header_surname"
+          data-testid="ictinus_surname_"
+          onClick={[Function]}
         >
-          Surname
+          <div
+            css={[Function]}
+          >
+            Surname
+          </div>
         </th>
         <th
           className="css-1pbao9u"
-          data-testid="ictinus_table_header_age"
+          data-testid="ictinus_age_"
+          onClick={[Function]}
         >
-          Age
+          <div
+            css={[Function]}
+          >
+            Age
+          </div>
         </th>
       </tr>
     </thead>
@@ -1839,6 +1899,1058 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         >
           <span
             data-column="Age"
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <table
+    className="css-1n7pp7a-Table"
+  >
+    <thead>
+      <tr
+        className="css-1mb2eua-Table"
+        onClick={[Function]}
+      >
+        <th
+          className="css-1rjnu80"
+          data-testid="ictinus_title_"
+          onClick={[Function]}
+        >
+          <div
+            css={[Function]}
+            data-testid="header_title"
+          >
+            <span
+              css={[Function]}
+            >
+              Title
+            </span>
+            <div
+              css={[Function]}
+            >
+              <div
+                css={
+                  Object {
+                    "width": "fit-content",
+                  }
+                }
+              >
+                <div
+                  css={[Function]}
+                  data-for="Title"
+                  data-tip={true}
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                    data-testid="table_icon_tooltip_title"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-137pzfe-Icon"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-bottom type-dark"
+                  data-id="tooltip"
+                  id="Title"
+                >
+                  <style
+                    aria-hidden="true"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "
+  	.t00000000-0000-0000-0000-000000000000 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t00000000-0000-0000-0000-000000000000.place-top {
+        margin-top: -10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-bottom {
+        margin-top: 10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-left {
+        margin-left: -10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-right {
+        margin-left: 10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+                      }
+                    }
+                  />
+                  Tooltip Content
+                </div>
+              </div>
+              <div
+                css={
+                  Object {
+                    "transform": "rotate(180deg)",
+                    "transformOrigin": "center",
+                    "transition": "0.3s all ease-in-out",
+                    "width": "fit-content",
+                  }
+                }
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  data-testid="table_icon_sort_title_asc"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-1gnrqdj-Icon"
+                  />
+                </span>
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          className="css-1ukzli6"
+          data-testid="ictinus_name_"
+          onClick={[Function]}
+        >
+          <div
+            css={[Function]}
+          >
+            Name
+          </div>
+        </th>
+        <th
+          className="css-1ukzli6"
+          data-testid="ictinus_surname_"
+          onClick={[Function]}
+        >
+          <div
+            css={[Function]}
+            data-testid="header_surname"
+          >
+            <span
+              css={[Function]}
+            >
+              Surname
+            </span>
+            <div
+              css={[Function]}
+            >
+              <div
+                css={
+                  Object {
+                    "width": "fit-content",
+                  }
+                }
+              >
+                <div
+                  css={[Function]}
+                  data-for="Surname"
+                  data-tip={true}
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                    data-testid="table_icon_tooltip_surname"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-137pzfe-Icon"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-top type-dark"
+                  data-id="tooltip"
+                  id="Surname"
+                >
+                  <style
+                    aria-hidden="true"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "
+  	.t00000000-0000-0000-0000-000000000000 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t00000000-0000-0000-0000-000000000000.place-top {
+        margin-top: -10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-bottom {
+        margin-top: 10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-left {
+        margin-left: -10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-right {
+        margin-left: 10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+                      }
+                    }
+                  />
+                  Tooltip Content
+                </div>
+              </div>
+            </div>
+          </div>
+        </th>
+        <th
+          className="css-wkif5c"
+          data-testid="ictinus_age_"
+          onClick={[Function]}
+        >
+          <div
+            css={[Function]}
+            data-testid="header_age"
+          >
+            <span
+              css={[Function]}
+            >
+              Age
+            </span>
+            <div
+              css={[Function]}
+            >
+              <div
+                css={
+                  Object {
+                    "width": "fit-content",
+                  }
+                }
+              >
+                <span
+                  className="css-1gnbc76-Icon"
+                  data-testid="table_icon_sort_age"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="css-1gnrqdj-Icon"
+                  />
+                </span>
+              </div>
+              <div
+                css={
+                  Object {
+                    "width": "fit-content",
+                  }
+                }
+              >
+                <div
+                  css={[Function]}
+                  data-for="Age"
+                  data-tip={true}
+                >
+                  <span
+                    className="css-1gnbc76-Icon"
+                    data-testid="table_icon_tooltip_age"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="css-137pzfe-Icon"
+                    />
+                  </span>
+                </div>
+                <div
+                  className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-right type-dark"
+                  data-id="tooltip"
+                  id="Age"
+                >
+                  <style
+                    aria-hidden="true"
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "
+  	.t00000000-0000-0000-0000-000000000000 {
+	    color: #fff;
+	    background: #222;
+	    border: 1px solid transparent;
+  	}
+
+  	.t00000000-0000-0000-0000-000000000000.place-top {
+        margin-top: -10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-top::before {
+        border-top: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-top::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        bottom: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-top-color: #222;
+        border-top-style: solid;
+        border-top-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-bottom {
+        margin-top: 10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
+        border-bottom: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        top: -6px;
+        left: 50%;
+        margin-left: -8px;
+        border-bottom-color: #222;
+        border-bottom-style: solid;
+        border-bottom-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-left {
+        margin-left: -10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-left::before {
+        border-left: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-left::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        right: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-left-color: #222;
+        border-left-style: solid;
+        border-left-width: 6px;
+    }
+
+    .t00000000-0000-0000-0000-000000000000.place-right {
+        margin-left: 10px;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-right::before {
+        border-right: 8px solid transparent;
+    }
+    .t00000000-0000-0000-0000-000000000000.place-right::after {
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        left: -6px;
+        top: 50%;
+        margin-top: -4px;
+        border-right-color: #222;
+        border-right-style: solid;
+        border-right-width: 6px;
+    }
+  ",
+                      }
+                    }
+                  />
+                  Tooltip Content
+                </div>
+              </div>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_1_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_1_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_1_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_1_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_2_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_2_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_2_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_2_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_3_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_3_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_3_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_3_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_4_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_4_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_4_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_4_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_5_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_5_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_5_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_5_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_6_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_6_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_6_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_6_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_7_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_7_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_7_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_7_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
+          >
+            4.221
+          </span>
+        </td>
+      </tr>
+      <tr
+        className="css-1o1ej9v-TableRow"
+        onClick={[Function]}
+      >
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_8_cell_1"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Title",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "bottom",
+                },
+              }
+            }
+          >
+            title
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_8_cell_2"
+        >
+          <span
+            data-column="Name"
+          >
+            firstname
+          </span>
+        </td>
+        <td
+          className="css-1myytz"
+          data-testid="ictinus_table_row_8_cell_3"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Surname",
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                },
+              }
+            }
+          >
+            lastname
+          </span>
+        </td>
+        <td
+          className="css-2hnjbj"
+          data-testid="ictinus_table_row_8_cell_4"
+        >
+          <span
+            data-column={
+              Object {
+                "content": "Age",
+                "isSortable": true,
+                "tooltip": Object {
+                  "content": "Tooltip Content",
+                  "placement": "right",
+                },
+              }
+            }
           >
             4.221
           </span>
