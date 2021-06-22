@@ -83,6 +83,7 @@ import FileIcon from './file.svg';
 import FinancialChartIcon from './financial-chart.svg';
 import GeneretedReportsIcon from './generatedReports.svg';
 import GenericFileIcon from './generic-file.svg';
+import GenericOrderingIcon from './generic-ordering.svg';
 import GlobalItemIcon from './global-item.svg';
 import HeartFillIcon from './heart-fill.svg';
 import HeartStrokeIcon from './heart-stroke.svg';
@@ -235,6 +236,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   financialChart: FinancialChartIcon,
   generatedReports: GeneretedReportsIcon,
   genericFile: GenericFileIcon,
+  genericOrdering: GenericOrderingIcon,
   globalItem: GlobalItemIcon,
   heartFill: HeartFillIcon,
   heartStroke: HeartStrokeIcon,
