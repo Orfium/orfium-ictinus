@@ -14,6 +14,7 @@ import { tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
 import ExtendedColumnItem from './components/ExtendedColumnItem';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
+import { isItemString } from './utils';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -134,11 +135,11 @@ function Table<T>({
     setSorting(prevState => {
       return prevState.column !== column
         ? {
-            column: column,
+            column,
             order: 'asc',
           }
         : {
-            column: column,
+            column,
             order: prevState.order === 'asc' ? 'desc' : 'asc',
           };
     });
@@ -235,25 +236,21 @@ function Table<T>({
                         columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
                       }
                       component={'th'}
-                      key={`${typeof item === 'string' ? item : item.content}`}
+                      key={`${isItemString(item) ? item : item.content}`}
                       sticky={fixedHeader}
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
-                      isSortable={typeof item !== 'string' && item.isSortable}
-                      handleClick={() => {
-                        if (typeof item !== 'string' && item.isSortable) {
+                      isSortable={!isItemString(item) && item.isSortable}
+                      onClick={() => {
+                        if (!isItemString(item) && item.isSortable) {
                           handleSorting(item.content);
                         }
                       }}
-                      dataTestIdPrefix={
-                        dataTestIdPrefix +
-                        '_' +
-                        (typeof item !== 'string'
-                          ? item?.content.toLowerCase()
-                          : item.toLowerCase())
-                      }
+                      dataTestIdPrefix={`${dataTestIdPrefix}_${
+                        !isItemString(item) ? item?.content.toLowerCase() : item.toLowerCase()
+                      }`}
                     >
-                      {typeof item === 'string' ? (
+                      {isItemString(item) ? (
                         <ExtendedColumnItem item={item} />
                       ) : (
                         <ExtendedColumnItem

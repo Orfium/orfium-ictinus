@@ -1,11 +1,12 @@
 import { css, SerializedStyles } from '@emotion/core';
+import { rem } from 'polished';
 
 import { Theme } from 'theme';
 
 export const parentStyles = () => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
   position: relative;
-  height: 64px;
+  height: ${rem(64)};
 
   &:hover {
     & * {

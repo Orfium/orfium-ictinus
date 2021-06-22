@@ -18,7 +18,7 @@ type Props = {
   rowIndex?: number;
   index?: number | string;
   isSortable?: boolean;
-  handleClick?: () => void;
+  onClick?: () => void;
 };
 
 const TableCell: React.FC<Props> = React.memo(
@@ -34,7 +34,7 @@ const TableCell: React.FC<Props> = React.memo(
     padded = false,
     dataTestIdPrefix,
     rowIndex,
-    handleClick,
+    onClick,
     index,
   }) => {
     const theme = useTheme();
@@ -81,7 +81,7 @@ const TableCell: React.FC<Props> = React.memo(
             borderLeft: `1px solid ${theme.utils.getColor('lightGray', 400)}`,
           },
         ]}
-        onClick={handleClick}
+        onClick={onClick}
         data-testid={tableCellTestId}
       >
         {children}
