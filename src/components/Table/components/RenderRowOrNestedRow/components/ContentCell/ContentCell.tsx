@@ -37,29 +37,33 @@ const ContentCell: React.FC<Props> = ({
   dataTestIdPrefix,
   rowIndex,
   index,
-}) => (
-  <TableCell
-    textAlign={align ? align : columnsHasNumberArr[cellCounter] ? 'right' : 'left'}
-    colSpan={colSpan}
-    type={cellType}
-    padded={padded}
-    width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
-    dataTestIdPrefix={dataTestIdPrefix}
-    rowIndex={rowIndex}
-    index={index}
-  >
-    {rowType === 'nested-header' && (
-      <div css={nestedHeaderStyle()}>
-        {/* nested header render */}
-        {columns[cellCounter]}
-      </div>
-    )}
-    {isComponentFunctionType(content) ? (
-      content({ content, colSpan })
-    ) : (
-      <span data-column={columns[cellCounter]}>{content}</span>
-    )}
-  </TableCell>
-);
+}) => {
+  const isNumeral = columnsHasNumberArr[cellCounter];
+
+  return (
+    <TableCell
+      textAlign={align ? align : isNumeral ? 'right' : 'left'}
+      colSpan={colSpan}
+      type={cellType}
+      padded={padded}
+      width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
+      dataTestIdPrefix={dataTestIdPrefix}
+      rowIndex={rowIndex}
+      index={index}
+    >
+      {rowType === 'nested-header' && (
+        <div css={nestedHeaderStyle()}>
+          {/* nested header render */}
+          {columns[cellCounter]}
+        </div>
+      )}
+      {isComponentFunctionType(content) ? (
+        content({ content, colSpan })
+      ) : (
+        <span data-column={columns[cellCounter]}>{content}</span>
+      )}
+    </TableCell>
+  );
+};
 
 export default React.memo(ContentCell);

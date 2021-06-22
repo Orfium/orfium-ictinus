@@ -45,7 +45,7 @@ const RenderRowWithCells = React.memo(
       <TableRow
         selected={isRowSelected}
         onClick={isExpandedExists ? toggleChecked : undefined}
-        css={borderedRowStyle(bordered)}
+        css={borderedRowStyle({ bordered })}
       >
         {onSelectionChangeExist && (
           <TableCell
@@ -123,7 +123,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
             dataTestIdPrefix={dataTestIdPrefix}
             rowIndex={rowIndex}
           >
-            <div css={expandableRowStyle(rowIndex === 1)}>
+            <div css={expandableRowStyle({ isFirstRow: rowIndex === 1 })}>
               <table css={tableStyle()()}>
                 <tbody>
                   <RenderRowWithCells
