@@ -3,7 +3,7 @@ export type RequiredProperties<T> = { [K in keyof T]-?: T[K] };
 
 /** A generic type for native events */
 export type EventProps = {
-  onClick?: (setLoading?: (isLoading: boolean) => void) => void;
+  onClick?: () => void;
   onBlur?: () => void;
 };
 
