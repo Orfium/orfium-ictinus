@@ -9,9 +9,8 @@ import { TestProps } from '../../utils/types';
 import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
-import { iconButtonStyle } from './IconButton.style';
 
-export type Props = ButtonBaseProps & {
+export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRight'> & {
   /** Property indicating the size of the icon. Defaults to 16 */
   iconSize?: number;
   /** This property defines witch icon to use */
@@ -19,7 +18,7 @@ export type Props = ButtonBaseProps & {
 };
 
 const IconButton: React.FC<Props & TestProps & EventProps> = props => {
-  const { iconSize, color = '', type = 'primary', filled = true, name, size } = props;
+  const { iconSize, color = '', type = 'primary', filled = true, name } = props;
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
