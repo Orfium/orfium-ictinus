@@ -18,6 +18,7 @@ type Props = {
   rowIndex?: number;
   index?: number | string;
   isSortable?: boolean;
+  isActive?: boolean;
   onClick?: () => void;
 };
 
@@ -30,6 +31,7 @@ const TableCell: React.FC<Props> = React.memo(
     colSpan,
     children,
     isSortable = false,
+    isActive = false,
     type = 'normal',
     padded = false,
     dataTestIdPrefix,
@@ -69,7 +71,7 @@ const TableCell: React.FC<Props> = React.memo(
             fontWeight: theme.typography.weights.bold,
             fontSize: theme.typography.fontSizes['14'],
           },
-          component === 'th' && isSortable && { ...parentStyles()(theme) },
+          component === 'th' && isSortable && { ...parentStyles(isActive)(theme) },
           sticky && {
             top: 0,
             left: 0,

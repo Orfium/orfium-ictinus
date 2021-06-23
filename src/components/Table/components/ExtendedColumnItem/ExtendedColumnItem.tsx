@@ -40,7 +40,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
           dataTestId={`table_icon_sort_${itemContentLowerCase}_${
             sorting.order === 'desc' ? 'desc' : 'asc'
           }`}
-          color={theme.utils.getColor('lightGray', 600)}
+          color="neutralBlack-700"
         />
       </div>
     ) : (
