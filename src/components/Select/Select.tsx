@@ -14,6 +14,7 @@ import Loader from 'components/Loader';
 import { generateTestDataId } from '../../utils/helpers';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import { selectWrapper } from './Select.style';
+import { ChangeEvent } from '../../utils/common';
 
 export type SelectOption = {
   value: string | number;
@@ -116,7 +117,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     );
 
     const handleOnInput = React.useCallback(
-      (e: React.ChangeEvent<HTMLInputElement>) => {
+      (e: ChangeEvent) => {
         if (isSearchable) {
           setSearchValue(e.target.value);
         }
