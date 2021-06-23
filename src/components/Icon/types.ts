@@ -51,6 +51,7 @@ export type AcceptedIconNames =
   | 'delivery'
   | 'details'
   | 'digitalUse'
+  | 'distribution'
   | 'dotsVertical'
   | 'download'
   | 'duplicate'
