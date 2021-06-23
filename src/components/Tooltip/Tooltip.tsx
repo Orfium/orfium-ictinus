@@ -1,6 +1,6 @@
 import React from 'react';
 import { tooltipStyle, tooltipChildrenWrapperStyle } from './Tooltip.style';
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 import ReactTooltip from 'react-tooltip';
 
 export type TooltipSize = 'large' | 'medium' | 'small';
@@ -28,7 +28,7 @@ const Tooltip: React.FC<Props> = ({
   content,
   placement = 'top',
 }) => {
-  const tooltipID = id || uuid();
+  const tooltipID = id || v4();
 
   return (
     <>
