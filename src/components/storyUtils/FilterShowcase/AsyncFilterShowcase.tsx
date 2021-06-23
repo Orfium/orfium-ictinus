@@ -44,7 +44,6 @@ export const AsyncFilterShowcase: React.FC<Props> = ({ minCharactersToSearch = 0
   return (
     <Filter
       isSearchable
-      isAsync
       isLoading={isLoading}
       minCharactersToSearch={minCharactersToSearch}
       items={items}

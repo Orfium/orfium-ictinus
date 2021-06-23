@@ -1,4 +1,5 @@
 import { css } from '@emotion/core';
+import { rem } from 'polished';
 
 import { Theme } from 'theme';
 
@@ -25,5 +26,5 @@ export const textFieldWrapper = () => (theme: Theme) => css`
 
 export const iconWrapper = () => () => css`
   display: flex;
-  gap: 25px;
+  gap: ${rem(25)}
 `;

@@ -94,7 +94,7 @@ describe('Generic Filter', () => {
   it('should call onAsyncSearch when typing', async () => {
     const onAsyncSearch = jest.fn();
 
-    renderFilter({ isSearchable: true, isAsync: true, onAsyncSearch });
+    renderFilter({ isSearchable: true, onAsyncSearch });
 
     const button = screen.getByTestId('filter');
     userEvent.click(button);
@@ -108,7 +108,7 @@ describe('Generic Filter', () => {
   it('should call onAsyncSearch when minCharactersToSearch check is satisfied', async () => {
     const onAsyncSearch = jest.fn();
 
-    renderFilter({ isSearchable: true, isAsync: true, onAsyncSearch, minCharactersToSearch: 3 });
+    renderFilter({ isSearchable: true, onAsyncSearch, minCharactersToSearch: 3 });
 
     const button = screen.getByTestId('filter');
     userEvent.click(button);

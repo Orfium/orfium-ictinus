@@ -37,8 +37,7 @@ const Filter: React.FC<Props> = props => {
     dataTestId,
     isSearchable = false,
     minCharactersToSearch = 0,
-    isAsync = false,
-    onAsyncSearch = () => {},
+    onAsyncSearch,
     isLoading = false,
   } = props;
   const [open, setOpen] = React.useState(false);
@@ -72,21 +71,21 @@ const Filter: React.FC<Props> = props => {
       return;
     }
 
-    if (isAsync) {
+    if (onAsyncSearch) {
       e.persist();
       debouncedOnChange(value.trim());
     }
   }
 
   const filteredOptions = useMemo(() => {
-    if (isAsync) {
+    if (onAsyncSearch) {
       return items;
     }
 
     return items.filter(
       item => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
     );
-  }, [searchValue, items, isAsync]);
+  }, [searchValue, items, onAsyncSearch]);
 
   const shouldDisplayDefaultOption = searchValue === '' && !!items.length;
 
@@ -96,7 +95,9 @@ const Filter: React.FC<Props> = props => {
   }
 
   const debouncedOnChange = React.useCallback(
-    debounce(onAsyncSearch, 400),
+    debounce((value: string) => {
+      onAsyncSearch?.(value);
+    }, 400),
     []
   );
 

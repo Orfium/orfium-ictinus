@@ -31,8 +31,6 @@ export type Props = {
   disabled?: boolean;
   /** if the options are searchable */
   isSearchable?: boolean;
-  /** if the component is used asynchronously */
-  isAsync?: boolean;
   /** the function to fetch new options */
   onAsyncSearch?: (term: string) => void;
   /** after how many characters to start searching (default = 0) */

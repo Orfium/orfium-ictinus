@@ -34,7 +34,7 @@ const Options = ({
 
         data-testid={generateTestDataId('default-option', dataTestId)}
         css={defaultOptionStyle(defaultValue, selectedItem)(theme)}
-        onClick={() => {onSelect(defaultValue);}}
+        onClick={() => onSelect(defaultValue)}
       >
         {defaultValue.label}
       </button> }
@@ -45,7 +45,7 @@ const Options = ({
             type="button"
             css={optionStyle(option, selectedItem)(theme)}
             key={`${option.value}-${index}`}
-            onClick={() => {onSelect(option);}}
+            onClick={() => onSelect(option)}
           >
             {option.label}
           </button>
