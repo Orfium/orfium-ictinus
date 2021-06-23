@@ -7,6 +7,7 @@ import { debounce } from 'lodash';
 
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
+import { ChangeEvent } from 'utils/common';
 import Icon from '../Icon';
 import { generateTestDataId } from 'utils/helpers';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -62,17 +63,20 @@ const Filter: React.FC<Props> = props => {
     onSelect(option);
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent) => {
     const { target: { value }} = e;
 
-    setSearchValue(value);
-
-    if (minCharactersToSearch && value.length && value.length < minCharactersToSearch) {
-      return;
+    if (isSearchable) {
+      setSearchValue(value);
     }
 
     if (onAsyncSearch) {
       e.persist();
+
+      if (minCharactersToSearch && value.length && value.length < minCharactersToSearch) {
+        return;
+      }
+
       debouncedOnChange(value.trim());
     }
   }
