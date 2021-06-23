@@ -3,7 +3,7 @@ import { darken, lighten, rem } from 'polished';
 import { Theme } from 'theme';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
-import { Props } from './TextInputWrapper';
+import { Props } from './TextInputBase';
 
 const wrapperStyleSwitch = (
   theme: Theme,

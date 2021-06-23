@@ -1,7 +1,5 @@
 import { AcceptedIconNames } from 'components/Icon/types';
-import TextInputWrapper, {
-  Props as TextInputWrapperProps,
-} from 'components/utils/TextInputWrapper/TextInputWrapper';
+import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
 import useTheme from 'hooks/useTheme';
 import React, { FC, InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
@@ -67,7 +65,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
 
   return (
     <React.Fragment>
-      <TextInputWrapper {...props}>
+      <TextInputBase {...props}>
         {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
         <div css={{ width: '100% ' }}>
           <input
@@ -103,7 +101,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
             />
           </IconWrapper>
         )}
-      </TextInputWrapper>
+      </TextInputBase>
     </React.Fragment>
   );
 });
