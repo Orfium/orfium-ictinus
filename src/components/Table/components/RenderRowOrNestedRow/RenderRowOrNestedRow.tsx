@@ -1,9 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import rem from 'polished/lib/helpers/rem';
 import * as React from 'react';
-import useTheme from '../../../../hooks/useTheme';
 import useToggle from '../../../../hooks/useToggle';
 import CheckBox from '../../../CheckBox';
 import { Row } from '../../Table';
@@ -13,6 +11,7 @@ import TableCell from '../TableCell';
 import TableRow from '../TableRow';
 import ContentCell from './components/ContentCell';
 import ExpandedButtonCell from './components/ExpandedButtonCell';
+import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
 
 const RenderRowWithCells = React.memo(
   ({
@@ -39,7 +38,6 @@ const RenderRowWithCells = React.memo(
       isRowSelected,
       bordered,
     } = React.useContext(TableRowContext);
-    const theme = useTheme();
     const { expanded } = row;
     const isExpandedExists = Boolean(expanded);
 
@@ -47,9 +45,7 @@ const RenderRowWithCells = React.memo(
       <TableRow
         selected={isRowSelected}
         onClick={isExpandedExists ? toggleChecked : undefined}
-        css={
-          bordered && { borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}` }
-        }
+        css={borderedRowStyle({ bordered })}
       >
         {onSelectionChangeExist && (
           <TableCell
@@ -109,7 +105,6 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
   rowIndex?: number;
 }) => {
   const { isRowSelected, columnCount } = React.useContext(TableRowContext);
-  const theme = useTheme();
   const { expanded } = row;
   const [checked, toggleChecked] = useToggle(false);
   const ExpandedComponent = expanded
@@ -128,19 +123,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
             dataTestIdPrefix={dataTestIdPrefix}
             rowIndex={rowIndex}
           >
-            <div
-              css={{
-                flex: 1,
-                flexDirection: 'row',
-                display: 'flex',
-                borderTop:
-                  //Adds border to the first row only.
-                  rowIndex === 1
-                    ? `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}`
-                    : 'none',
-                borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGray', 400)}`,
-              }}
-            >
+            <div css={expandableRowStyle({ isFirstRow: rowIndex === 1 })}>
               <table css={tableStyle()()}>
                 <tbody>
                   <RenderRowWithCells

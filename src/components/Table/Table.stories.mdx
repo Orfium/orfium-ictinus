@@ -113,6 +113,119 @@ Regular Table with simple rows
   </Story>
 </Preview>
 
+# Table With Sorting And Tooltips
+
+Regular Table with sorting and tooltips
+
+<Preview>
+  <Story name="Regular Table with sorting and tooltips">
+    <Table
+      columns={[
+        {
+          content: 'Title',
+          isSortable: true,
+          tooltip: {
+            content: 'Tooltip Content',
+            placement: 'bottom'
+          }
+        },
+        'Name',
+        {
+          content: 'Surname',
+          tooltip: {
+            content: 'Tooltip Content',
+          }
+        },
+        {
+          content: 'Age',
+          isSortable: true,
+          tooltip: {
+            content: 'Tooltip Content',
+            placement: 'right'
+          }
+        }]}
+      dataTestIdPrefix="ictinus"
+      onSort={(column, order) => console.log(column, order)}
+      initialSort={{ column: 'Title', order: 'asc' }}
+      padded
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 2,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 3,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 4,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 5,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 6,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 7,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+        {
+          id: 8,
+          cells: [
+            { content: 'title' },
+            { content: 'firstname' },
+            { content: 'lastname' },
+            { content: 4.221 },
+          ],
+        },
+      ]}
+    />
+  </Story>
+</Preview>
+
 # Expandable Table
 
 Table with expandable rows and nested header
