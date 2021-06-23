@@ -7,8 +7,9 @@ import iconSelector from './assets/iconSelector';
 import { iconContainerStyle, iconStyle } from './Icon.style';
 import { AcceptedIconNames } from './types';
 import { colorShades } from '../../theme/palette';
+import { TestProps } from '../../utils/types';
 
-export type Props = {
+export type OwnProps = {
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
   /** Property indicating the color of the icon. Defaults to primary */
@@ -17,21 +18,25 @@ export type Props = {
   size?: number;
   /** Callback fired when the `span` is clicked. */
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
+
   /** Property indicating the color's variant of the icon. */
   variant?: typeof colorShades[number];
 };
+
+type Props = OwnProps & TestProps;
 
 const Icon: React.FC<Props> = ({
   variant,
   name,
   color = 'primary',
   size = 16,
+  dataTestId,
   onClick = () => {},
 }) => {
   const Icon = iconSelector[name];
 
   return (
-    <span css={iconContainerStyle()} onClick={onClick}>
+    <span css={iconContainerStyle()} onClick={onClick} data-testid={dataTestId}>
       <Icon css={iconStyle({ color, size, variant })} />
     </span>
   );
