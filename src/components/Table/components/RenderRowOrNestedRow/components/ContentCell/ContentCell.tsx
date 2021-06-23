@@ -2,10 +2,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import React from 'react';
-import useTheme from '../../../../../../hooks/useTheme';
 import TableCell from '../../../TableCell';
 import { isComponentFunctionType } from '../../../../../../utils/helpers';
 import { ContentComponent, TableType } from '../../../../Table';
+import { nestedHeaderStyle } from './ContentCell.style';
 
 type Props = {
   columnsHasNumberArr: boolean[];
@@ -38,11 +38,11 @@ const ContentCell: React.FC<Props> = ({
   rowIndex,
   index,
 }) => {
-  const theme = useTheme();
+  const isNumeral = columnsHasNumberArr[cellCounter];
 
   return (
     <TableCell
-      textAlign={align ? align : columnsHasNumberArr[cellCounter] ? 'right' : 'left'}
+      textAlign={align ? align : isNumeral ? 'right' : 'left'}
       colSpan={colSpan}
       type={cellType}
       padded={padded}
@@ -52,12 +52,7 @@ const ContentCell: React.FC<Props> = ({
       index={index}
     >
       {rowType === 'nested-header' && (
-        <div
-          css={{
-            color: theme.utils.getColor('lightGray', 700),
-            fontSize: theme.typography.fontSizes['14'],
-          }}
-        >
+        <div css={nestedHeaderStyle()}>
           {/* nested header render */}
           {columns[cellCounter]}
         </div>

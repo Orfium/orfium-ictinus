@@ -163,6 +163,7 @@ import PauseIcon from './pause.svg';
 import Entity from './entity.svg';
 import PlayCount from './play-count.svg';
 import ProcessedLogs from './processed-logs.svg';
+import Distribution from './distribution.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -320,6 +321,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   unpairedV2: UnpairedV2,
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
+  distribution: Distribution,
 };
 
 export default iconSelector;
