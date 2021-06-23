@@ -1,5 +1,6 @@
-import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 import React, { useCallback, useState } from 'react';
+
+import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 
 import { Props } from '../Drawer';
 import MenuItem from './MenuItem/MenuItem';

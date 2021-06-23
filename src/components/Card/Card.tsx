@@ -1,5 +1,6 @@
-import { Elevation, Spacing } from 'index';
 import React from 'react';
+
+import { Elevation, Spacing } from 'index';
 
 import { cardStyle } from './Card.style';
 

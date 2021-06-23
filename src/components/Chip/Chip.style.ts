@@ -1,8 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
+
 import { flexCenterVertical } from 'theme/functions';
-import { colorShades, pickTextColorFromSwatches } from 'theme/palette';
-import { flatColors } from 'theme/palette';
+import { colorShades, pickTextColorFromSwatches , flatColors } from 'theme/palette';
+
 
 import { Theme } from '../../theme';
 import { Props } from './Chip';

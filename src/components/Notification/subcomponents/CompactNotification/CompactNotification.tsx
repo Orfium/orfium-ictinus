@@ -1,5 +1,6 @@
-import { AcceptedIconNames } from 'components/Icon/types';
 import * as React from 'react';
+
+import { AcceptedIconNames } from 'components/Icon/types';
 
 import useTheme from '../../../../hooks/useTheme';
 import { generateTestDataId } from '../../../../utils/helpers';

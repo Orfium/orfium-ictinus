@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, transparentize } from 'polished';
+
 import { Theme } from 'theme';
 
 import { pickTextColorFromSwatches } from '../../../theme/palette';

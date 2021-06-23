@@ -1,4 +1,5 @@
 import { rem } from 'polished';
+
 import { Theme } from 'theme';
 
 export const tooltipStyle = () => (theme: Theme) => {

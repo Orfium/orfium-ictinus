@@ -1,6 +1,7 @@
+import React from 'react';
+
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import * as React from 'react';
 
 import { generateTestDataId } from '../../utils/helpers';
 import Icon from '../Icon';

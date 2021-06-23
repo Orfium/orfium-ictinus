@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { cardElevation } from 'components/Card/Card.style';
 import { rem } from 'polished';
+
+import { cardElevation } from 'components/Card/Card.style';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
 

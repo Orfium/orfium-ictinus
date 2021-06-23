@@ -1,5 +1,6 @@
-import ButtonBase, { Props as ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 import * as React from 'react';
+
+import ButtonBase, { Props as ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { useTheme } from '../../index';

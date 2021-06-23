@@ -1,7 +1,8 @@
+import React, { FC, InputHTMLAttributes } from 'react';
+
 import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
 import useTheme from 'hooks/useTheme';
-import React, { FC, InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import Icon from '../Icon';

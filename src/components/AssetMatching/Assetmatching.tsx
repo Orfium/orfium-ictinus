@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
+
 import { formFieldStyles } from 'theme/palette';
 
 import { OnCheckHandler } from '../../hooks/useCheck';
 import Styles from './AssetMatching.style';
-import { Asset } from './components/Asset';
-import { AssetProps } from './components/Asset';
+import { Asset , AssetProps } from './components/Asset';
 import SectionHeader from './components/SectionHeader/SectionHeader';
 import { SelectedItemProvider } from './components/SelectedItemContext';
 import { MatchingAction } from './types';

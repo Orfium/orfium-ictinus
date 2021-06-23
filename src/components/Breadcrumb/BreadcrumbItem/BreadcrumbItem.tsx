@@ -1,5 +1,6 @@
-import Separator from 'components/Breadcrumb/Separator/Separator';
 import React from 'react';
+
+import Separator from 'components/Breadcrumb/Separator/Separator';
 
 import BreadcrumbAdvancedItem from './BreadcrumbAdvancedItem';
 import { breadcrumbItemStyles } from './BreadcrumbItem.style';

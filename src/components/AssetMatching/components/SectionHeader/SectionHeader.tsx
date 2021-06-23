@@ -1,5 +1,6 @@
-import { OnCheckHandler, useCheck } from 'hooks/useCheck';
 import React, { FC } from 'react';
+
+import { OnCheckHandler, useCheck } from 'hooks/useCheck';
 import { formFieldStyles } from 'theme/palette';
 
 import { MatchingAction } from '../../types';

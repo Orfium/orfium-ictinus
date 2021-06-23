@@ -1,7 +1,8 @@
-import Icon from 'components/Icon';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
+
+import Icon from 'components/Icon';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { pickTextColorFromSwatches } from 'theme/palette';
 
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
