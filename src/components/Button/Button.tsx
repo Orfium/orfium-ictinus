@@ -6,8 +6,17 @@ import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
-import { buttonSpanStyle, buttonStyle, childrenWrapperStyle, iconStyle } from './Button.style';
+import {
+  buttonSpanStyle,
+  buttonStyle,
+  centralizedLoader,
+  childrenWrapperStyle,
+  iconStyle,
+} from './Button.style';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { useLoading } from 'hooks/useLoading';
+import Loader from '../Loader';
+import { useRef } from 'react';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -47,12 +56,16 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     onClick,
     onBlur,
   } = props;
-
+  const { loading, handleAsyncOperation } = useLoading(onClick);
+  // TODO: Replace dots loader with spinner loader when it is ready.
+  const childrenWrapperRef = useRef<HTMLSpanElement>(null);
+  const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
 
   return (
     <button
+      type={'button'}
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({
         type,
@@ -67,13 +80,14 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         iconRight,
         childrenCount: React.Children.count(children),
       })}
-      onClick={onClick}
+      onClick={handleAsyncOperation}
       onBlur={onBlur}
-      disabled={disabled}
+      disabled={disabled || loading}
     >
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
+          ref={childrenWrapperRef}
           css={childrenWrapperStyle({
             type,
             filled,
@@ -86,7 +100,13 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
             hasChildren: Boolean(React.Children.count(children)),
           })}
         >
-          {children}
+          {loading ? (
+            <div css={centralizedLoader(innerButtonWidth)}>
+              <Loader type={'dots'} />
+            </div>
+          ) : (
+            children
+          )}
         </span>
 
         {iconRight && <span css={iconStyle()}>{iconRight}</span>}
