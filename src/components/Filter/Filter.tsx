@@ -1,11 +1,7 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import * as React from 'react';
+import React from 'react';
 
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-
 
 import { generateTestDataId } from '../../utils/helpers';
 import Icon from '../Icon';
@@ -18,7 +14,7 @@ import {
   labelSpanStyle,
   wrapperStyle,
 } from './Filter.style';
-import { Props, TestProps, } from './types';
+import { Props, TestProps } from './types';
 import { getTextColor } from './utils';
 
 const Filter: React.FC<Props & TestProps> = props => {
@@ -68,8 +64,8 @@ const Filter: React.FC<Props & TestProps> = props => {
         >
           <span css={buttonSpanStyle()}>
             <span css={childrenWrapperStyle()}>
-              <span css={labelSpanStyle(open, hasSelectedValue)}>{label}:
-                <span>{selectedItem.label}</span>
+              <span css={labelSpanStyle(open, hasSelectedValue)}>
+                {label}:<span>{selectedItem.label}</span>
               </span>
             </span>
 
