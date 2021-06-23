@@ -65,7 +65,6 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
 
   return (
     <button
-      type={'button'}
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({
         type,
