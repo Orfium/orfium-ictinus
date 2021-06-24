@@ -241,6 +241,7 @@ function Table<T>({
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
                       isSortable={!isItemString(item) && item.isSortable}
+                      isActive={!isItemString(item) ? item.content === sorting.column : false}
                       onClick={() => {
                         if (!isItemString(item) && item.isSortable) {
                           handleSorting(item.content);
