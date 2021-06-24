@@ -1,8 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 
 import Loader from './Loader';
+import {loaderTypes} from './Loader.utils';
 
-<Meta title="Design System/Loader" component={Loader} />
+<Meta title="Design System/Loaders" component={Loader} />
 
 # Loader
 
@@ -20,22 +21,12 @@ import { Loader } from '@orfium/ictinus';
 
 <Props of={Loader} />
 
-# Dots Loader
+# Available Loaders
 
-Dots loader component.
-
-<Preview>
-  <Story name="Dots Loader">
-    <Loader type="dots" />
-  </Story>
-</Preview>
-
-# Indeterminate Loader
-
-Indeterminate loader component.
+Loader components.
 
 <Preview>
-  <Story name="Indeterminate Loader">
-    <Loader type="indeterminate" />
+  <Story name="Available Loaders">
+    {loaderTypes.map(type => <div style={{margin: 10}}><strong>{type}: </strong><Loader type={type} /></div>)}
   </Story>
 </Preview>
