@@ -71,7 +71,7 @@ const TableCell: React.FC<Props> = React.memo(
             fontWeight: theme.typography.weights.bold,
             fontSize: theme.typography.fontSizes['14'],
           },
-          component === 'th' && isSortable && { ...parentStyles(isActive)(theme) },
+          component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           sticky && {
             top: 0,
             left: 0,

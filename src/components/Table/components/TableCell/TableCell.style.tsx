@@ -5,12 +5,14 @@ import { Theme } from 'theme';
 
 const activeStateStyles = (): SerializedStyles => css`
   & > div > span {
-    color: black !important;
-    font-weight: 700 !important;
+    color: black;
+    font-weight: 700;
   }
 `;
 
-export const parentStyles = (isActive: boolean) => (theme: Theme): SerializedStyles => css`
+export const parentStyles = ({ isActive }: { isActive: boolean }) => (
+  theme: Theme
+): SerializedStyles => css`
   cursor: pointer;
   position: relative;
   height: ${rem(64)};
