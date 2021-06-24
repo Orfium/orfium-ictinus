@@ -3,14 +3,12 @@
 import { jsx } from '@emotion/core';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
-import rem from 'polished/lib/helpers/rem';
 import React, { useEffect, useState } from 'react';
 
-import useTheme from 'hooks/useTheme';
 import CheckBox from 'components/CheckBox';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
-import { tableStyle } from './Table.style';
+import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
 import ExtendedColumnItem from './components/ExtendedColumnItem';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
@@ -82,7 +80,6 @@ function Table<T>({
   topRightArea,
   dataTestIdPrefix,
 }: Props<T>) {
-  const theme = useTheme();
   const [selectedIds, setSelectedIds] = useState<Selection[] | undefined>(undefined);
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
@@ -206,17 +203,7 @@ function Table<T>({
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (
-              <TableRow
-                css={[
-                  {
-                    paddingTop: theme.spacing.md,
-                    paddingBottom: theme.spacing.md,
-                    borderBottomWidth: rem(1),
-                    borderBottomStyle: 'solid',
-                    borderBottomColor: theme.utils.getColor('lightGray', 700),
-                  },
-                ]}
-              >
+              <TableRow css={tableRowHeadersStyle()}>
                 {onCheck && (
                   <TableCell
                     component={'th'}
