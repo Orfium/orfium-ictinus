@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Button from '../../Button';
 
 const serviceMock = (isSuccess = true) =>
@@ -12,10 +12,14 @@ const serviceMock = (isSuccess = true) =>
     }, 3000);
   });
 
-const AsyncButtonShowcase = () => {
+const AsyncButtonShowcase: FC<{ text: string; btnSize?: 'lg' | 'md' | 'sm' | undefined }> = ({
+  text,
+  btnSize,
+}) => {
   return (
     <Button
-      size={'sm'}
+      type={'secondary'}
+      size={btnSize}
       onClick={setLoading => {
         setLoading?.(true);
 
@@ -26,7 +30,7 @@ const AsyncButtonShowcase = () => {
           .finally(() => setLoading?.(false));
       }}
     >
-      Async Action
+      {text}
     </Button>
   );
 };

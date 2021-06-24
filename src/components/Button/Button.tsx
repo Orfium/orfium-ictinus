@@ -2,7 +2,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
@@ -41,7 +40,12 @@ export type TestProps = {
   dataTestId?: TestId;
 };
 
-const Button: React.FC<Props & TestProps & EventProps> = props => {
+export type EventButtonProps = {
+  onClick?: (setLoading?: (isLoading: boolean) => void) => void;
+  onBlur?: () => void;
+};
+
+const Button: React.FC<Props & TestProps & EventButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -101,7 +105,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
         >
           {loading ? (
             <div css={centralizedLoader(innerButtonWidth)}>
-              <Loader type={'dots'} />
+              <Loader type={'spinner'} />
             </div>
           ) : (
             children
