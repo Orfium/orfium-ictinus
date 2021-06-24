@@ -10,6 +10,7 @@ import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { ChangeEvent } from 'utils/common';
 import Icon from '../Icon';
 import { generateTestDataId } from 'utils/helpers';
+import handleSearch from 'components/utils/handleSearch';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { FilterOption, Props } from './types';
 import { getTextColor } from './utils';
@@ -63,22 +64,17 @@ const Filter: React.FC<Props> = props => {
     onSelect(option);
   }
 
-  const handleChange = (e: ChangeEvent) => {
-    const { target: { value }} = e;
+  const handleChange = (event: ChangeEvent) => {
+    const isAsync = typeof onAsyncSearch === 'function';
 
-    if (isSearchable) {
-      setSearchValue(value);
-    }
-
-    if (onAsyncSearch) {
-      e.persist();
-
-      if (minCharactersToSearch && value.length && value.length < minCharactersToSearch) {
-        return;
-      }
-
-      debouncedOnChange(value.trim());
-    }
+    handleSearch({
+      event,
+      isSearchable,
+      isAsync,
+      setSearchValue,
+      onChange: debouncedOnChange,
+      minCharactersToSearch,
+    });
   }
 
   const filteredOptions = useMemo(() => {

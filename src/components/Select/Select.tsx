@@ -15,6 +15,7 @@ import { generateTestDataId } from '../../utils/helpers';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import { selectWrapper } from './Select.style';
 import { ChangeEvent } from '../../utils/common';
+import handleSearch from '../utils/handleSearch';
 
 export type SelectOption = {
   value: string | number;
@@ -117,20 +118,15 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     );
 
     const handleOnInput = React.useCallback(
-      (e: ChangeEvent) => {
-        if (isSearchable) {
-          setSearchValue(e.target.value);
-        }
-
-        if (isAsync) {
-          e.persist();
-
-          if (minCharactersToSearch && e.target.value.length < minCharactersToSearch) {
-            return;
-          }
-
-          debouncedOnChange(e.target.value.trim());
-        }
+      (event: ChangeEvent) => {
+        handleSearch({
+          event,
+          isSearchable,
+          isAsync,
+          setSearchValue,
+          onChange: debouncedOnChange,
+          minCharactersToSearch,
+        });
       },
       [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
     );
