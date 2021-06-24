@@ -29,9 +29,15 @@ export type Props = {
   selectedItem?: FilterOption;
   /** Defines if the button is in disabled state */
   disabled?: boolean;
-};
-
-export type TestProps = {
+  /** if the options are searchable */
+  isSearchable?: boolean;
+  /** the function to fetch new options */
+  onAsyncSearch?: (term: string) => void;
+  /** after how many characters to start searching (default = 0) */
+  minCharactersToSearch?: number;
+  /** if the search request is loading */
+  isLoading?: boolean;
+  /** data-testid suffix */
   dataTestId?: string;
 };
 
