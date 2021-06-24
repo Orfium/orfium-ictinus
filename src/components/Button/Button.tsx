@@ -61,7 +61,6 @@ const Button: React.FC<Props & TestProps & EventButtonProps> = props => {
     onBlur,
   } = props;
   const { loading, handleAsyncOperation } = useLoading(onClick);
-  // TODO: Replace dots loader with spinner loader when it is ready.
   const childrenWrapperRef = useRef<HTMLSpanElement>(null);
   const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
