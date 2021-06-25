@@ -82,6 +82,7 @@ export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Pro
 ) => css`
   border: 1px solid ${isToday ? '#cfcfcf' : 'transparent'};
   border-radius: ${(isToday || isSelected) && '100%'};
+  width: 39px;
   height: 39px;
   display: flex;
   align-items: center;
