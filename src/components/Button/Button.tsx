@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
+import React, { useRef, FC } from 'react';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
@@ -15,7 +15,6 @@ import {
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { useLoading } from 'hooks/useLoading';
 import Loader from '../Loader';
-import { useRef } from 'react';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -45,7 +44,7 @@ export type EventButtonProps = {
   onBlur?: () => void;
 };
 
-const Button: React.FC<Props & TestProps & EventButtonProps> = props => {
+const Button: FC<Props & TestProps & EventButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
