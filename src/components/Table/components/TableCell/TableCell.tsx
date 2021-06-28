@@ -2,7 +2,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import * as React from 'react';
-import useTheme from '../../../../hooks/useTheme';
+
+import useTheme from 'hooks/useTheme';
+import { parentStyles } from './TableCell.style';
 
 type Props = {
   textAlign?: 'left' | 'right';
@@ -15,6 +17,9 @@ type Props = {
   dataTestIdPrefix?: string;
   rowIndex?: number;
   index?: number | string;
+  isSortable?: boolean;
+  isActive?: boolean;
+  onClick?: () => void;
 };
 
 const TableCell: React.FC<Props> = React.memo(
@@ -25,10 +30,13 @@ const TableCell: React.FC<Props> = React.memo(
     sticky = false,
     colSpan,
     children,
+    isSortable = false,
+    isActive = false,
     type = 'normal',
     padded = false,
     dataTestIdPrefix,
     rowIndex,
+    onClick,
     index,
   }) => {
     const theme = useTheme();
@@ -50,8 +58,6 @@ const TableCell: React.FC<Props> = React.memo(
     return (
       <Component
         colSpan={colSpan}
-        /** this ignore the css property that doesnt recognize array of objects as property **/
-        // @ts-ignore
         css={[
           {
             position: 'relative',
@@ -65,6 +71,7 @@ const TableCell: React.FC<Props> = React.memo(
             fontWeight: theme.typography.weights.bold,
             fontSize: theme.typography.fontSizes['14'],
           },
+          component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           sticky && {
             top: 0,
             left: 0,
@@ -76,6 +83,7 @@ const TableCell: React.FC<Props> = React.memo(
             borderLeft: `1px solid ${theme.utils.getColor('lightGray', 400)}`,
           },
         ]}
+        onClick={onClick}
         data-testid={tableCellTestId}
       >
         {children}

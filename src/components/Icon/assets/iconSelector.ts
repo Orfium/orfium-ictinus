@@ -83,6 +83,7 @@ import FileIcon from './file.svg';
 import FinancialChartIcon from './financial-chart.svg';
 import GeneretedReportsIcon from './generatedReports.svg';
 import GenericFileIcon from './generic-file.svg';
+import GenericOrderingIcon from './generic-ordering.svg';
 import GlobalItemIcon from './global-item.svg';
 import HeartFillIcon from './heart-fill.svg';
 import HeartStrokeIcon from './heart-stroke.svg';
@@ -162,6 +163,7 @@ import PauseIcon from './pause.svg';
 import Entity from './entity.svg';
 import PlayCount from './play-count.svg';
 import ProcessedLogs from './processed-logs.svg';
+import Distribution from './distribution.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -235,6 +237,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   financialChart: FinancialChartIcon,
   generatedReports: GeneretedReportsIcon,
   genericFile: GenericFileIcon,
+  genericOrdering: GenericOrderingIcon,
   globalItem: GlobalItemIcon,
   heartFill: HeartFillIcon,
   heartStroke: HeartStrokeIcon,
@@ -318,6 +321,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   unpairedV2: UnpairedV2,
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
+  distribution: Distribution,
 };
 
 export default iconSelector;
