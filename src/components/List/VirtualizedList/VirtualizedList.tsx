@@ -5,11 +5,14 @@ import ListItem from '../ListItem';
 import { SelectOption } from '../../Select/Select';
 import { isSelected } from '../utils';
 import { listStyle } from './VirtualizedList.style';
+import { TestProps } from 'utils/types';
+import { ListRowSize } from '../List';
+import { CSSProperties } from 'styled-components';
 
 type Props = {
   items: (string | number | SelectOption)[];
   /** Size of the list's row (height of ListItem Component)  */
-  rowSize: 'small' | 'normal';
+  rowSize: ListRowSize;
   /** Width of the list */
   customWidth?: number;
   /** Height of the list */
@@ -22,9 +25,7 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: (option: SelectOption) => void;
-  /** Data Test Id Prefix */
-  dataTestIdPrefix?: string;
-};
+} & TestProps;
 
 const VirtualizedList: React.FC<Props> = ({
   items,
@@ -35,9 +36,9 @@ const VirtualizedList: React.FC<Props> = ({
   selectedItem,
   searchTerm,
   handleOptionClick,
-  dataTestIdPrefix,
+  dataTestId,
 }) => {
-  const rowRenderer = ({ index, key, style }: { index: number; key: string; style: any }) => (
+  const rowRenderer = ({ index, key, style }: { index: number; key: string; style: CSSProperties }) => (
     <span style={style} key={key}>
       <ListItem
         size={rowSize}
@@ -46,7 +47,7 @@ const VirtualizedList: React.FC<Props> = ({
         listItemRef={listItemRef}
         selected={isSelected({ item: items[index], selectedItem })}
         searchTerm={searchTerm}
-        dataTestIdPrefix={dataTestIdPrefix}
+        dataTestId={dataTestId}
         handleOptionClick={handleOptionClick}
       />
     </span>
@@ -55,7 +56,7 @@ const VirtualizedList: React.FC<Props> = ({
   return (
     <AutoSizer
       css={listStyle({ width: customWidth, height: customHeight })}
-      data-testid={dataTestIdPrefix ? `${dataTestIdPrefix}_list` : 'ictinus_list'}
+      data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
     >
       {({ height, width }) => (
         <VList

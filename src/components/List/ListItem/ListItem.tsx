@@ -3,6 +3,7 @@ import Highlighter from 'react-highlight-words';
 
 import { listItemStyle, contentStyle } from './ListItem.style';
 import { SelectOption } from '../../Select/Select';
+import { TestProps } from 'utils/types';
 
 type Props = {
   /** Size of the ListItem (translates to height) */
@@ -21,9 +22,7 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: (option: SelectOption) => void;
-  /** Data Test Id Prefix */
-  dataTestIdPrefix?: string;
-};
+} & TestProps;
 
 const ListItem: React.FC<Props> = ({
   size,
@@ -34,7 +33,7 @@ const ListItem: React.FC<Props> = ({
   handleOptionClick,
   listItemRef,
   searchTerm,
-  dataTestIdPrefix,
+  dataTestId,
 }) => {
   const handleListItemSelect = () => {
     if (
@@ -51,7 +50,7 @@ const ListItem: React.FC<Props> = ({
       css={listItemStyle({ size, selected, disabled })}
       ref={selected ? listItemRef : null}
       onClick={handleListItemSelect}
-      data-testid={dataTestIdPrefix ?? 'ictinus_list' + ('_item_' + index)}
+      data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
     >
       <div css={contentStyle()}>
         {typeof content === 'string' || typeof content === 'number' ? (

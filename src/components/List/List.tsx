@@ -3,12 +3,15 @@ import React from 'react';
 import NormalList from './NormalList';
 import VirtualizedList from './VirtualizedList';
 import { SelectOption } from '../Select/Select';
+import { TestProps } from 'utils/types';
 
-export interface ListProps {
+export type ListRowSize = 'small' | 'normal';
+
+export type ListProps = {
   /** Data for the list */
   data: (string | number | SelectOption)[];
   /** Size of the list's row (height of ListItem Component)  */
-  rowSize: 'small' | 'normal';
+  rowSize: ListRowSize;
   /** Width of the list */
   width?: number;
   /** Height of the list */
@@ -23,9 +26,7 @@ export interface ListProps {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: (option: SelectOption) => void;
-  /** Data Test Id Prefix */
-  dataTestIdPrefix?: string;
-}
+} & TestProps;
 
 const List: React.FC<ListProps> = ({
   data,
@@ -37,7 +38,7 @@ const List: React.FC<ListProps> = ({
   selectedItem,
   searchTerm,
   handleOptionClick,
-  dataTestIdPrefix,
+  dataTestId,
 }) => {
   return isVirtualized ? (
     <VirtualizedList
@@ -49,7 +50,7 @@ const List: React.FC<ListProps> = ({
       selectedItem={selectedItem}
       searchTerm={searchTerm}
       handleOptionClick={handleOptionClick}
-      dataTestIdPrefix={dataTestIdPrefix}
+      dataTestId={dataTestId}
     />
   ) : (
     <NormalList
@@ -61,7 +62,7 @@ const List: React.FC<ListProps> = ({
       selectedItem={selectedItem}
       searchTerm={searchTerm}
       handleOptionClick={handleOptionClick}
-      dataTestIdPrefix={dataTestIdPrefix}
+      dataTestId={dataTestId}
     />
   );
 };

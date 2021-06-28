@@ -5,11 +5,13 @@ import { generateUniqueID } from 'utils/helpers';
 import { listStyle } from './NormalList.style';
 import { SelectOption } from '../../Select/Select';
 import { isSelected } from '../utils';
+import { TestProps } from 'utils/types';
+import { ListRowSize } from '../List';
 
 type Props = {
   items: (string | number | SelectOption)[];
   /** Size of the list's row (height of ListItem Component)  */
-  rowSize: 'small' | 'normal';
+  rowSize: ListRowSize;
   /** Width of the list */
   width?: number;
   /** Height of the list */
@@ -22,9 +24,7 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: (option: SelectOption) => void;
-  /** Data Test Id Prefix */
-  dataTestIdPrefix?: string;
-};
+} & TestProps;
 
 const NormalList: React.FC<Props> = ({
   items,
@@ -35,10 +35,10 @@ const NormalList: React.FC<Props> = ({
   selectedItem,
   searchTerm,
   handleOptionClick,
-  dataTestIdPrefix,
+  dataTestId,
 }) => {
   return (
-    <div data-testid={dataTestIdPrefix ? `${dataTestIdPrefix}_list` : 'ictinus_list'}>
+    <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
       <ul css={listStyle({ width, height })}>
         {items.map((item, index) => (
           <li key={generateUniqueID('list_item')}>
@@ -48,7 +48,7 @@ const NormalList: React.FC<Props> = ({
               index={index}
               listItemRef={listItemRef}
               searchTerm={searchTerm}
-              dataTestIdPrefix={dataTestIdPrefix}
+              dataTestId={dataTestId}
               handleOptionClick={handleOptionClick}
               selected={isSelected({ item, selectedItem })}
             />

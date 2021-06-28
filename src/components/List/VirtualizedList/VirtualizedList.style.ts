@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
+import { rem } from 'polished';
 
 export const listStyle = ({
   width,
@@ -7,6 +8,6 @@ export const listStyle = ({
   width?: number;
   height?: number;
 }) => (): SerializedStyles => css`
-  height: ${height ? `${height}px` : '100%'};
-  width: ${width ? `${width}px` : '100%'};
+  height: ${height ? rem(height) : '100%'};
+  width: ${width ? rem(width) : '100%'};
 `;

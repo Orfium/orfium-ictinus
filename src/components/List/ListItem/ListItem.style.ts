@@ -1,21 +1,23 @@
 import { css, SerializedStyles } from '@emotion/core';
+import { rem } from 'polished';
 import { Theme } from 'theme';
+import { ListRowSize } from '../List';
 
 export const listItemStyle = ({
   size,
   selected,
   disabled,
 }: {
-  size: 'small' | 'normal';
+  size: ListRowSize;
   selected: boolean;
   disabled: boolean;
 }) => (theme: Theme): SerializedStyles => css`
-  height: ${size === 'normal' ? '56px' : '46px'};
-  font-size: ${size === 'normal' ? '16px' : '14px'};
+  height: ${size === 'normal' ? rem(56) : rem(46)};
+  font-size: ${theme.typography.fontSizes[size === 'normal' ? '16' : '14']};
   background-color: ${theme.palette.white};
   display: flex;
   align-items: center;
-  padding: 0px 16px;
+  padding: 0px ${theme.spacing.md};
 
   ${!(selected || disabled) &&
     `

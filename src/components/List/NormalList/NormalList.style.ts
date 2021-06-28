@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
+import { rem } from 'polished';
 
 export const listStyle = ({
   width,
@@ -10,7 +11,7 @@ export const listStyle = ({
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  width: ${width ? `${width}px` : '100%'};
-  height: ${height ? `${height}px` : '100%'};
+  width: ${width ? rem(width) : '100%'};
+  height: ${height ? rem(height) : '100%'};
   overflow: auto;
 `;
