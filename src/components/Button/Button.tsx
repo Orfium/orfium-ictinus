@@ -51,7 +51,7 @@ const Button: React.FC<Props & TestProps & EventProps & HTMLButtonProps> = props
     dataTestId = '',
     onClick,
     onBlur,
-    buttonType = 'submit',
+    buttonType = 'button',
   } = props;
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
