@@ -28,11 +28,16 @@ export type Props = {
   disabled?: boolean;
 };
 
+interface HTMLButtonProps {
+  /** Property indicating the button's type */
+  buttonType?: 'submit' | 'reset' | 'button';
+}
+
 export type TestProps = {
   dataTestId?: TestId;
 };
 
-const Button: React.FC<Props & TestProps & EventProps> = props => {
+const Button: React.FC<Props & TestProps & EventProps & HTMLButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -46,6 +51,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     dataTestId = '',
     onClick,
     onBlur,
+    buttonType = 'button',
   } = props;
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
@@ -53,6 +59,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
 
   return (
     <button
+      type={buttonType}
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({
         type,
