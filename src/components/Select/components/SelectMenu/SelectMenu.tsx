@@ -2,10 +2,10 @@
 /** @jsx jsx */
 import { useEffect, useRef } from 'react';
 import { jsx } from '@emotion/core';
-import Highlighter from 'react-highlight-words';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../Select';
+import List from '../../../List';
 
 const SelectMenu = ({
   size = 'sm',
@@ -14,6 +14,7 @@ const SelectMenu = ({
   handleOptionClick,
   selectedOption,
   isLoading,
+  isVirtualized,
   searchTerm,
 }: {
   /** Sets the size of the menu */
@@ -24,6 +25,7 @@ const SelectMenu = ({
   handleOptionClick: (option: SelectOption) => void;
   selectedOption: string | number;
   isLoading?: boolean;
+  isVirtualized?: boolean;
   searchTerm?: string;
 }) => {
   const myRef = useRef<HTMLDivElement>(null);
@@ -36,35 +38,21 @@ const SelectMenu = ({
 
   const renderOptions = () =>
     filteredOptions.length > 0 ? (
-      filteredOptions.map(option => (
-        <div
-          ref={selectedOption === option.value ? myRef : null}
-          key={option.value}
-          css={optionStyle({
-            selected: selectedOption === option.value,
-            size,
-          })}
-          onClick={() => handleOptionClick(option)}
-        >
-          {searchTerm ? (
-            <Highlighter
-              highlightClassName="search-text"
-              highlightTag={'strong'}
-              searchWords={[searchTerm]}
-              autoEscape={true}
-              textToHighlight={option.label}
-            />
-          ) : (
-            option.label
-          )}
-        </div>
-      ))
+      <List
+        data={filteredOptions}
+        rowSize={'small'}
+        isVirtualized={isVirtualized}
+        listItemRef={myRef}
+        handleOptionClick={handleOptionClick}
+        searchTerm={searchTerm}
+        selectedItem={selectedOption}
+      />
     ) : (
       <div css={optionStyle({ selected: false, noResultsExist: true })}>No options</div>
     );
 
   return (
-    <div css={menuStyle({ status, size })}>
+    <div css={menuStyle({ status, size, itemsCount: filteredOptions.length })}>
       {isLoading ? (
         <div css={optionStyle({ selected: false, noResultsExist: true })}>Loading...</div>
       ) : (

@@ -50,6 +50,8 @@ export type Props = {
   dataTestId?: string;
   /** if component is loading */
   isLoading?: boolean;
+  /** if options list is virtualized */
+  isVirtualized?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -74,6 +76,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       minCharactersToSearch = 0,
       highlightSearch = false,
       isSearchable = true,
+      isVirtualized = false,
       styleType,
       dataTestId,
       ...restInputProps
@@ -201,6 +204,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
               size={restInputProps.size}
               status={status}
               isLoading={isLoading}
+              isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
             />
           )}
