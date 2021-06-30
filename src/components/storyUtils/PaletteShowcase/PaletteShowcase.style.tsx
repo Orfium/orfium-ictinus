@@ -44,6 +44,7 @@ export const colorBox = (
   align-items: center;
   display: flex;
   padding: 0 10px;
+  cursor: pointer;
   div:last-child {
     font-size: 14px;
   }

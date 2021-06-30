@@ -6,15 +6,17 @@ import ColorBox from './ColorBox';
 
 const DEFAULT_COLOR = 'white';
 
-const ColorUtility = () => {
-  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors();
+const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
+  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors(
+    defaultColor
+  );
 
   return (
     <div css={container}>
       <h1> Color Utility </h1>
       <div css={inputWrapper}>
         <TextField
-          placeholder={DEFAULT_COLOR}
+          placeholder={defaultColor || DEFAULT_COLOR}
           size={'md'}
           styleType={'outlined'}
           onChange={updateColor}

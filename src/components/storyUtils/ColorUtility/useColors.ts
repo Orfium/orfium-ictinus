@@ -1,11 +1,17 @@
-import { ChangeEvent, useCallback, useState } from 'react';
+import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { darken, lighten } from 'polished';
 import { validateColor } from './utils';
 
 const DEFAULT_COLOR = 'white';
 
-export const useColors = () => {
-  const [color, setColor] = useState(DEFAULT_COLOR);
+export const useColors = (defaultColor?: string) => {
+  const [color, setColor] = useState(defaultColor || DEFAULT_COLOR);
+  useEffect(() => {
+    if (defaultColor !== DEFAULT_COLOR) {
+      setColor(defaultColor || DEFAULT_COLOR);
+    }
+  }, [defaultColor]);
+
   const [lightenValue, setLightenValue] = useState(0.1);
   const [darkenValue, setDarkenValue] = useState(0.1);
 
