@@ -1,48 +1,10 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { TextField } from '../../../index';
-import { getPercentage } from './utils';
 import { colorWrapper, container, contentWrapper, inputWrapper } from './ColorUtility.style';
 import { useColors } from './useColors';
+import ColorBox from './ColorBox';
 
 const DEFAULT_COLOR = 'white';
-
-interface RangeInputProps {
-  onChange: (amount: number) => void;
-  value: number;
-}
-const RangeInput: FC<RangeInputProps> = ({ onChange, value }) => {
-  return (
-    <input
-      onChange={event => {
-        onChange(Number(event.target.value));
-      }}
-      readOnly={false}
-      type="range"
-      id="lighten-range"
-      min="0"
-      max="1"
-      step="0.1"
-      value={value}
-    />
-  );
-};
-
-interface ColorBoxProps {
-  color: string;
-  utilityValue: number;
-  updateValue: React.Dispatch<React.SetStateAction<number>>;
-  colorStatus: 'darken' | 'lighten';
-}
-const ColorBox: FC<ColorBoxProps> = ({ colorStatus, utilityValue, updateValue, color }) => {
-  return (
-    <div css={colorWrapper(color)}>
-      <RangeInput onChange={updateValue} value={utilityValue} />
-      <div css={contentWrapper}>
-        {colorStatus} {getPercentage(utilityValue)} : {color}
-      </div>
-    </div>
-  );
-};
 
 const ColorUtility = () => {
   const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors();
