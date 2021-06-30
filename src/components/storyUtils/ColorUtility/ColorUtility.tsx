@@ -16,7 +16,7 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
       <h1> Color Utility </h1>
       <div css={inputWrapper}>
         <TextField
-          placeholder={defaultColor || DEFAULT_COLOR}
+          placeholder={color.normal || DEFAULT_COLOR}
           size={'md'}
           styleType={'outlined'}
           onChange={updateColor}
