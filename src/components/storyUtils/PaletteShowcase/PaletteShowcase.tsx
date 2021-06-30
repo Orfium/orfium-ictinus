@@ -72,7 +72,8 @@ const PaletteShowcase = () => {
                     css={colorBox(
                       color,
                       colorName,
-                      ((index + 1) * 100) as typeof colorShades[number]
+                      ((index + 1) * 100) as typeof colorShades[number],
+                      paletteColor === color
                     )}
                   >
                     <div>{(index + 1) * 100}</div>
