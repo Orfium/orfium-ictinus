@@ -35,6 +35,11 @@ export type Props = {
   disabled?: boolean;
 };
 
+interface HTMLButtonProps {
+  /** Property indicating the button's type */
+  buttonType?: 'submit' | 'reset' | 'button';
+}
+
 export type TestProps = {
   dataTestId?: TestId;
 };
@@ -44,7 +49,7 @@ export type EventButtonProps = {
   onBlur?: () => void;
 };
 
-const Button: FC<Props & TestProps & EventButtonProps> = props => {
+const Button: FC<Props & TestProps & EventButtonProps & HTMLButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -58,6 +63,7 @@ const Button: FC<Props & TestProps & EventButtonProps> = props => {
     dataTestId = '',
     onClick,
     onBlur,
+    buttonType = 'button',
   } = props;
   const { loading, handleAsyncOperation } = useLoading(onClick);
   const childrenWrapperRef = useRef<HTMLSpanElement>(null);
@@ -67,6 +73,7 @@ const Button: FC<Props & TestProps & EventButtonProps> = props => {
 
   return (
     <button
+      type={buttonType}
       data-testid={generateTestDataId('button', dataTestId)}
       css={buttonStyle({
         type,
