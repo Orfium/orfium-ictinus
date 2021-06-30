@@ -1,4 +1,3 @@
-import Icon from 'components/Icon';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
@@ -13,6 +12,7 @@ import {
   wrapperStyle,
   markerStyle,
 } from './CheckBox.style';
+import Icon from 'components/Icon';
 
 export type Props = {
   /** The label of the checkbox. */

@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import Loader from 'components/Loader';
 import { debounce } from 'lodash';
 import { rem } from 'polished';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
@@ -11,6 +10,7 @@ import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import SelectMenu from './components/SelectMenu/SelectMenu';
+import Loader from 'components/Loader';
 
 export type SelectOption = {
   value: string | number;

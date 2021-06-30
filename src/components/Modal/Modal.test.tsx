@@ -3,7 +3,6 @@ import React from 'react';
 import { render, fireEvent } from '../../test';
 import Modal from './Modal';
 import ModalContent from './ModalContent';
-import '@testing-library/jest-dom';
 
 describe('Modal', () => {
   const data = {

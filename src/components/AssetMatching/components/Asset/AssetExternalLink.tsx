@@ -1,9 +1,9 @@
 import Tippy from '@tippyjs/react';
 import React, { FC } from 'react';
+import 'tippy.js/dist/tippy.css';
 
 import Icon from '../../../Icon';
 import Styles from './Asset.style';
-import 'tippy.js/dist/tippy.css';
 
 export interface ExternalLinkProps {
   url: string;
