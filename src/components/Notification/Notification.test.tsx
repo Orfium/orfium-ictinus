@@ -8,7 +8,6 @@ import { NotificationTypes } from './Notification';
 import NotificationsContainer from './NotificationsContainer';
 import NotificationVisual from './NotificationVisual';
 import Snackbar from './Snackbar';
-import '@testing-library/jest-dom';
 
 describe('Inline Notification', () => {
   const data = {

@@ -1,4 +1,3 @@
-import Icon from 'components/Icon';
 import * as React from 'react';
 
 import useTheme from '../../../hooks/useTheme';
@@ -15,6 +14,7 @@ import {
 } from '../Notification.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
+import Icon from 'components/Icon';
 
 export type Props = {
   /** The informative message of the Toast */

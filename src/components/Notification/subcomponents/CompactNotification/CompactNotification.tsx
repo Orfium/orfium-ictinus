@@ -1,4 +1,3 @@
-import { AcceptedIconNames } from 'components/Icon/types';
 import * as React from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
@@ -14,6 +13,7 @@ import {
   headContainer,
   primaryActionContainer,
 } from './CompactNotification.style';
+import { AcceptedIconNames } from 'components/Icon/types';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 

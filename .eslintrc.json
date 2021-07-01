@@ -8,7 +8,12 @@
     "plugin:react-hooks/recommended",
     "plugin:react/recommended"
   ],
-  "plugins": ["react", "@emotion", "@typescript-eslint", "import"],
+  "plugins": [
+    "react",
+    "@emotion",
+    "@typescript-eslint",
+    "import"
+  ],
   "env": {
     "node": true,
     "browser": true,
@@ -31,10 +36,8 @@
     "react/button-has-type": "warn",
     "react/no-array-index-key": "warn",
     "react/no-render-return-value": 0,
-
     /* JSX rules */
     "react/jsx-key": "error",
-
     /* eslint basic rules */
     "padding-line-between-statements": [
       "error",
@@ -64,13 +67,29 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal"],
+        "groups": [
+          "builtin",
+          "external",
+          [
+            "internal",
+            "parent",
+            "sibling",
+            "index",
+            "object"
+          ]
+        ],
         "pathGroups": [
           {
             "pattern": "react",
-            "group": "external",
-            "position": "before"
+            "group": "external"
+          },
+          {
+            "pattern": "components/**",
+            "group": "internal"
           }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react"
         ],
         "alphabetize": {
           "order": "asc",

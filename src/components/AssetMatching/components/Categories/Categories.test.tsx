@@ -3,7 +3,6 @@ import { render, fireEvent } from 'test';
 
 import { SelectedItemProvider } from '../SelectedItemContext';
 import { Categories } from './index';
-import '@testing-library/jest-dom';
 
 jest.mock('lodash/debounce', () =>
   jest.fn(fn => {

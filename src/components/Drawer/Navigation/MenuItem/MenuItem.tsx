@@ -1,6 +1,3 @@
-import { MenuItem as MenuItemProps } from 'components/Drawer/types';
-import ExpandCollapse from 'components/ExpandCollapse';
-import Icon from 'components/Icon';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
@@ -16,6 +13,9 @@ import {
   subMenuIconStyle,
   menuLinkStyle,
 } from '../Navigation.style';
+import { MenuItem as MenuItemProps } from 'components/Drawer/types';
+import ExpandCollapse from 'components/ExpandCollapse';
+import Icon from 'components/Icon';
 
 type Props = {
   /** Defines the current menu item whose submenu item is currently selected */

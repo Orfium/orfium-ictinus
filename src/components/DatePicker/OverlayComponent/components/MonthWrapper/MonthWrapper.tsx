@@ -1,8 +1,3 @@
-import Button from 'components/Button';
-import Icon from 'components/Icon';
-import SelectMenu from 'components/Select/components/SelectMenu';
-import { SelectOption } from 'components/Select/Select';
-import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { Dayjs } from 'dayjs';
 import useTheme from 'hooks/useTheme';
 import range from 'lodash/range';
@@ -18,6 +13,11 @@ import {
   monthHeaderWrapperStyle,
   monthWrapperStyle,
 } from './MonthWrapper.style';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
+import SelectMenu from 'components/Select/components/SelectMenu';
+import { SelectOption } from 'components/Select/Select';
+import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 type Props = {
   showedArrows?: 'left' | 'right' | 'both';

@@ -1,6 +1,5 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import '@testing-library/jest-dom/extend-expect';
 
 import { render, screen } from '../../test';
 import Filter from './Filter';
