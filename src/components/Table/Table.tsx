@@ -235,7 +235,9 @@ function Table<T>({
                         }
                       }}
                       dataTestIdPrefix={`${dataTestIdPrefix}_${
-                        !isItemString(item) ? item?.content.toLowerCase() : item.toLowerCase()
+                        !isItemString(item)
+                          ? item?.content.toLowerCase().replace(/ /g, '_')
+                          : item.toLowerCase().replace(/ /g, '_')
                       }`}
                     >
                       {isItemString(item) ? (
