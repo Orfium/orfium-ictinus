@@ -20,6 +20,7 @@ export type AcceptedIconNames =
   | 'catalog'
   | 'catalogOverview'
   | 'catalogFiles'
+  | 'chatBubble'
   | 'check'
   | 'checkedList'
   | 'checkmark'
