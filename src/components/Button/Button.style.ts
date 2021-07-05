@@ -36,9 +36,6 @@ export const centralizedLoader: (clientWidth?: number) => SerializedStyles = cli
   width: ${clientWidth ? rem(clientWidth) : 'auto'};
   ${flex};
   justify-content: center;
-  > div > div {
-    margin: -5px auto;
-  }
 `;
 
 export const buttonStyle = ({
