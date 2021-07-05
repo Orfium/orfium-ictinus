@@ -1,7 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 
 import Loader from './Loader';
-import {loaderTypes} from './Loader.utils';
 
 <Meta title="Design System/Loader" component={Loader} />
 
@@ -27,6 +26,6 @@ Available Loader components.
 
 <Preview>
   <Story name="Loader Types">
-    {loaderTypes.map(type => <div style={{margin: 10}}><strong>{type}: </strong><Loader type={type} /></div>)}
+    { ['dots', 'indeterminate', 'spinner'].map(type => <div style={{margin: 10}}><strong>{type}: </strong><Loader type={type} /></div>)}
   </Story>
 </Preview>

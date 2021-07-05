@@ -3,12 +3,12 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 
 const spinnerBorderStyle = (theme: Theme, color?: string) =>
-  `${rem(4)} solid ${color || theme.utils.getColor('primary', 400, 'normal')};`;
+  `${rem(2)} solid ${color || theme.utils.getColor('primary', 400, 'normal')};`;
 
 export const spinnerContainer = () => (theme: Theme): SerializedStyles => css`
   position: relative;
-  width: ${rem(20)};
-  height: ${rem(20)};
+  width: 20px;
+  height: 20px;
   border-top: ${spinnerBorderStyle(theme)};
   border-right: ${spinnerBorderStyle(theme)};
   border-bottom: ${spinnerBorderStyle(theme)};
