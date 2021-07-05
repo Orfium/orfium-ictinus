@@ -1,5 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/Loader Loader Types 1`] = `
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      css={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 4,
+          "color": "#000",
+          "outline": "none",
+        }
+      }
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <strong>
+      dots
+      : 
+    </strong>
+    <div
+      className="css-gestgw-Loader"
+    >
+      <div
+        className="css-1jzvei9-DotsLoader"
+        data-testid="dots-loading"
+      >
+        <div
+          className="css-1erenax-DotsLoader"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <strong>
+      indeterminate
+      : 
+    </strong>
+    <div
+      className="css-gestgw-Loader"
+    >
+      <div
+        className="css-1vqojf9-IndeterminateLoader"
+        data-testid="dots-loading"
+      >
+        <div
+          className="css-1ua2gdi-IndeterminateLoader"
+        />
+        <div
+          className="css-1wzd8ge-IndeterminateLoader"
+        />
+        <div
+          className="css-yg1hm8-IndeterminateLoader"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "margin": 10,
+      }
+    }
+  >
+    <strong>
+      spinner
+      : 
+    </strong>
+    <div
+      className="css-gestgw-Loader"
+    >
+      <div
+        css={[Function]}
+        data-testid="spinner"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Loaders Available Loaders 1`] = `
 <div
   style={
