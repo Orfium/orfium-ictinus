@@ -5,6 +5,8 @@ import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './Button';
 import { pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from './utils';
+import { css, SerializedStyles } from '@emotion/core';
+import { flex } from '../../theme/functions';
 
 /** Calculates the button specific height based on the size passed to it
  * These sizes are specific to this button thus these are placed here and not in the config **/
@@ -29,6 +31,12 @@ const fontSizeBasedOnSize = (theme: Theme, size: 'lg' | 'md' | 'sm') => {
       return theme.typography.fontSizes['16'];
   }
 };
+
+export const centralizedLoader: (clientWidth?: number) => SerializedStyles = clientWidth => css`
+  width: ${clientWidth ? rem(clientWidth) : 'auto'};
+  ${flex};
+  justify-content: center;
+`;
 
 export const buttonStyle = ({
   type,

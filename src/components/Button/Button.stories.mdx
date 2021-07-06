@@ -2,6 +2,7 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
+import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
 
 <Meta title="Design System/Button" component={Button} />
 
@@ -16,6 +17,26 @@ import { Button } from '@orfium/ictinus';
 
 <Button onClick={() => {}}>
   Click Me
+</Button>
+```
+
+### Async handling case
+
+```js
+import { Button } from '@orfium/ictinus';
+
+<Button
+      onClick={setLoading => {
+        setLoading?.(true);
+
+        serviceMock()
+          .then(res => {
+            console.log(res);
+          })
+          .finally(() => setLoading?.(false));
+      }}
+    >
+      Async Action
 </Button>
 ```
 
@@ -115,5 +136,19 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 <Preview>
   <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
     <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'branded1', 'branded2'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')}>{text('text', 'change me!')}</Button>
+  </Story>
+</Preview>
+
+
+# Async Button with loading state
+
+<Preview>
+  <Story name="Async Button">
+    <Stack>
+      <Button size={'sm'} onClick={() => { console.log('clicked!')}}>Sync Action</Button>
+      <AsyncButtonShowcase text={'Async sm'} btnSize={'sm'}/>
+      <AsyncButtonShowcase text={'Async md'} btnSize={'md'}/>
+      <AsyncButtonShowcase text={'Async lg'} btnSize={'lg'}/>
+    </Stack>
   </Story>
 </Preview>

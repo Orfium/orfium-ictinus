@@ -1,13 +1,20 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import * as React from 'react';
-import { EventProps } from '../../utils/common';
+import React, { useRef, FC } from 'react';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestId } from '../../utils/types';
-import { buttonSpanStyle, buttonStyle, childrenWrapperStyle, iconStyle } from './Button.style';
+import {
+  buttonSpanStyle,
+  buttonStyle,
+  centralizedLoader,
+  childrenWrapperStyle,
+  iconStyle,
+} from './Button.style';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { useLoading } from 'hooks/useLoading';
+import Loader from '../Loader';
 
 export type Props = {
   /** Type indicating the type of the button */
@@ -37,7 +44,12 @@ export type TestProps = {
   dataTestId?: TestId;
 };
 
-const Button: React.FC<Props & TestProps & EventProps & HTMLButtonProps> = props => {
+export type EventButtonProps = {
+  onClick?: (setLoading?: (isLoading: boolean) => void) => void;
+  onBlur?: () => void;
+};
+
+const Button: FC<Props & TestProps & EventButtonProps & HTMLButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -53,7 +65,9 @@ const Button: React.FC<Props & TestProps & EventProps & HTMLButtonProps> = props
     onBlur,
     buttonType = 'button',
   } = props;
-
+  const { loading, handleAsyncOperation } = useLoading(onClick);
+  const childrenWrapperRef = useRef<HTMLSpanElement>(null);
+  const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
 
@@ -74,13 +88,14 @@ const Button: React.FC<Props & TestProps & EventProps & HTMLButtonProps> = props
         iconRight,
         childrenCount: React.Children.count(children),
       })}
-      onClick={onClick}
+      onClick={handleAsyncOperation}
       onBlur={onBlur}
-      disabled={disabled}
+      disabled={disabled || loading}
     >
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
+          ref={childrenWrapperRef}
           css={childrenWrapperStyle({
             type,
             filled,
@@ -93,7 +108,13 @@ const Button: React.FC<Props & TestProps & EventProps & HTMLButtonProps> = props
             hasChildren: Boolean(React.Children.count(children)),
           })}
         >
-          {children}
+          {loading ? (
+            <div css={centralizedLoader(innerButtonWidth)}>
+              <Loader type={'spinner'} />
+            </div>
+          ) : (
+            children
+          )}
         </span>
 
         {iconRight && <span css={iconStyle()}>{iconRight}</span>}
