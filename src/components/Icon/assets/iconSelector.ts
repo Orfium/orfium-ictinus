@@ -18,6 +18,7 @@ import CalendarFilledIcon from './calendar-filled.svg';
 import CatalogFilesIcon from './catalog-files.svg';
 import CatalogOverviewIcon from './catalog-overview.svg';
 import CatalogIcon from './catalog.svg';
+import ChatBubble from './chat-bubble.svg';
 import CheckIcon from './check.svg';
 import CheckedListIcon from './checked-list.svg';
 import CheckmarkIcon from './checkmark.svg';
@@ -187,6 +188,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   catalog: CatalogIcon,
   catalogOverview: CatalogOverviewIcon,
   catalogFiles: CatalogFilesIcon,
+  chatBubble: ChatBubble,
   check: CheckIcon,
   checkedList: CheckedListIcon,
   checkmark: CheckmarkIcon, // "check" copy (smaller)
