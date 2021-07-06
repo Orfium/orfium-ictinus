@@ -15,7 +15,10 @@ const DisplayLocation = () => {
   return <div>Link State: {location?.state?.test}</div>;
 };
 
-const DrawerShowcase: React.FC = () => {
+interface Props {
+  renderHeader?: () => React.ReactNode;
+}
+const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
   const theme = useTheme();
   const [expanded, setExpanded] = useState<boolean>(true);
 
@@ -25,7 +28,7 @@ const DrawerShowcase: React.FC = () => {
         {expanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>
-        <Drawer expanded={expanded} menuItems={menuItems} setExpanded={setExpanded} />
+        <Drawer expanded={expanded} menuItems={menuItems} setExpanded={setExpanded} renderHeader={renderHeader} />
         <div
           css={[
             flex,
