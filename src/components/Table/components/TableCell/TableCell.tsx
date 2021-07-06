@@ -42,18 +42,25 @@ const TableCell: React.FC<Props> = React.memo(
     const theme = useTheme();
     const Component = component;
 
-    const tableCellTestId = children
-      ? component === 'th' && typeof children === 'string'
-        ? (dataTestIdPrefix ? dataTestIdPrefix + '_' : '') +
-          'table_header_' +
-          children
-            .split(' ')
-            .join('_')
-            .toLowerCase()
-        : (dataTestIdPrefix ? dataTestIdPrefix + '_' : '') +
-          (rowIndex != undefined ? 'table_row_' + rowIndex : '') +
-          (index != undefined ? '_cell_' + index : '')
-      : undefined;
+    const getTestId = () => {
+      if (!children) {
+        return undefined;
+      }
+
+      if (component === 'th' && typeof children === 'string') {
+        return [dataTestIdPrefix, 'table_header', children?.replace(/ /g, '_').toLowerCase()]
+          .filter(value => value)
+          .join('_');
+      } else {
+        return [
+          dataTestIdPrefix,
+          rowIndex !== undefined ? `table_row_${rowIndex}` : '',
+          index !== undefined ? `cell_${index}` : '',
+        ]
+          .filter(value => value)
+          .join('_');
+      }
+    };
 
     return (
       <Component
@@ -84,7 +91,7 @@ const TableCell: React.FC<Props> = React.memo(
           },
         ]}
         onClick={onClick}
-        data-testid={tableCellTestId}
+        data-testid={getTestId()}
       >
         {children}
       </Component>

@@ -17,8 +17,8 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
   const theme = useTheme();
 
   const itemContentLowerCase = !isItemString(item)
-    ? item.content.toLowerCase()
-    : item.toLowerCase();
+    ? item.content.toLowerCase().replace(/ /g, '_')
+    : item.toLowerCase().replace(/ /g, '_');
 
   const sortingItem = () =>
     //TODO: Remove type check when backwards-compatibility is removed
@@ -71,7 +71,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
       >
         <Tooltip
           content={item?.tooltip?.content}
-          id={item?.content.replace(' ', '-')}
+          id={itemContentLowerCase}
           placement={item?.tooltip.placement}
         >
           <Icon

@@ -16,6 +16,14 @@
           "changelogFile": "CHANGELOG.md"
         }
       ],
-      "@semantic-release/npm"
+      [
+        "@amanda-mitchell/semantic-release-npm-multiple",
+        {
+          "registries": {
+            "github": {},
+            "public": {}
+          }
+        }
+      ]
     ]
   }
