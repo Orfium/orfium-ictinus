@@ -3,7 +3,10 @@ import { TooltipPlacement } from '../Tooltip/Tooltip';
 export type SortingOrder = 'asc' | 'desc';
 
 export type ExtendedColumn = {
-  content: string;
+  content: {
+    label: string;
+    key: string;
+  };
   tooltip?: {
     content: string;
     placement?: TooltipPlacement;

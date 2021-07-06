@@ -122,7 +122,10 @@ Regular Table with sorting and tooltips
     <Table
       columns={[
         {
-          content: 'Title',
+          content: {
+            label: 'Title',
+            key: 'title'
+          },
           isSortable: true,
           tooltip: {
             content: 'Tooltip Content',
@@ -131,13 +134,19 @@ Regular Table with sorting and tooltips
         },
         'Name',
         {
-          content: 'Surname',
+          content: {
+            label: 'Surname',
+            key: 'surname'
+          },
           tooltip: {
             content: 'Tooltip Content',
           }
         },
         {
-          content: 'Age',
+          content: {
+            label: 'Age',
+            key: 'age'
+          },
           isSortable: true,
           tooltip: {
             content: 'Tooltip Content',
@@ -146,7 +155,7 @@ Regular Table with sorting and tooltips
         }]}
       dataTestIdPrefix="ictinus"
       onSort={(column, order) => console.log(column, order)}
-      initialSort={{ column: 'Title', order: 'asc' }}
+      initialSort={{ column: 'title', order: 'asc' }}
       padded
       data={[
         {

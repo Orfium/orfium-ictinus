@@ -223,20 +223,20 @@ function Table<T>({
                         columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
                       }
                       component={'th'}
-                      key={`${isItemString(item) ? item : item.content}`}
+                      key={`${isItemString(item) ? item : item.content.key}`}
                       sticky={fixedHeader}
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
                       isSortable={!isItemString(item) && item.isSortable}
-                      isActive={!isItemString(item) ? item.content === sorting.column : false}
+                      isActive={!isItemString(item) ? item.content.key === sorting.column : false}
                       onClick={() => {
                         if (!isItemString(item) && item.isSortable) {
-                          handleSorting(item.content);
+                          handleSorting(item.content.key);
                         }
                       }}
                       dataTestIdPrefix={`${dataTestIdPrefix}_${
                         !isItemString(item)
-                          ? item?.content.toLowerCase().replace(/ /g, '_')
+                          ? item?.content.key.toLowerCase().replace(/ /g, '_')
                           : item.toLowerCase().replace(/ /g, '_')
                       }`}
                     >
