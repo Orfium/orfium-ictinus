@@ -16,7 +16,7 @@ export type Props = {
   /** The menu items to be displayed in the drawer */
   menuItems: MenuItem[];
   /** Render prop function to display something over the Navigation */
-  renderHeader?: () => React.ReactNode;
+  renderHeader?: React.FC;
 };
 
 const Drawer: React.FC<Props> = props => {
@@ -29,7 +29,7 @@ const Drawer: React.FC<Props> = props => {
       onMouseEnter={() => isSmallDesktop && props.setExpanded(true)}
       onMouseLeave={() => isSmallDesktop && props.setExpanded(false)}
     >
-      {props.renderHeader?.()}
+      {props.renderHeader?.({})}
       <Navigation {...omit(props, 'renderHeader')} />
     </div>
   );

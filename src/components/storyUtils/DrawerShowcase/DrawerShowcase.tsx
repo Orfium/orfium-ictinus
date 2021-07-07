@@ -16,7 +16,7 @@ const DisplayLocation = () => {
 };
 
 interface Props {
-  renderHeader?: () => React.ReactNode;
+  renderHeader?: React.FC;
 }
 const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
   const theme = useTheme();
