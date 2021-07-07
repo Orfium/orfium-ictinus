@@ -99,7 +99,7 @@ describe('Table', () => {
           {
             content: {
               label: 'Title',
-              key: 'title',
+              sortingKey: 'title',
             },
             isSortable: true,
           },
@@ -107,7 +107,7 @@ describe('Table', () => {
           {
             content: {
               label: 'Surname',
-              key: 'surname',
+              sortingKey: 'surname',
             },
             tooltip,
           },
@@ -136,7 +136,7 @@ describe('Table', () => {
           {
             content: {
               label: 'Title',
-              key: 'title',
+              sortingKey: 'title',
             },
             isSortable: true,
           },
@@ -162,7 +162,7 @@ describe('Table', () => {
           {
             content: {
               label: 'Title',
-              key: 'title',
+              sortingKey: 'title',
             },
             tooltip,
           },
@@ -190,7 +190,7 @@ describe('Table', () => {
           {
             content: {
               label: 'Title',
-              key: 'title',
+              sortingKey: 'title',
             },
             isSortable: true,
             tooltip,
@@ -200,7 +200,7 @@ describe('Table', () => {
           {
             content: {
               label: 'Age',
-              key: 'age',
+              sortingKey: 'age',
             },
             isSortable: true,
             tooltip,

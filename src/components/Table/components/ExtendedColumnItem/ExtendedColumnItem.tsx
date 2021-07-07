@@ -17,14 +17,20 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
   const theme = useTheme();
 
   const itemContentLowerCase = !isItemString(item)
-    ? item.content.key.toLowerCase().replace(/ /g, '_')
-    : item.toLowerCase().replace(/ /g, '_');
+    ? item.content.sortingKey
+        .trim()
+        .toLowerCase()
+        .replace(/ /g, '_')
+    : item
+        .trim()
+        .toLowerCase()
+        .replace(/ /g, '_');
 
   const sortingItem = () =>
     //TODO: Remove type check when backwards-compatibility is removed
     !isItemString(item) &&
     item?.isSortable &&
-    (item.content.key === sorting?.column ? (
+    (item.content.sortingKey === sorting?.column ? (
       <div
         key={`table_icon_sort_${itemContentLowerCase}`}
         css={{

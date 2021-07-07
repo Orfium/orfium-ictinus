@@ -5,7 +5,7 @@ export type SortingOrder = 'asc' | 'desc';
 export type ExtendedColumn = {
   content: {
     label: string;
-    key: string;
+    sortingKey: string;
   };
   tooltip?: {
     content: string;
