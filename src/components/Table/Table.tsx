@@ -223,21 +223,27 @@ function Table<T>({
                         columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
                       }
                       component={'th'}
-                      key={`${isItemString(item) ? item : item.content}`}
+                      key={`${isItemString(item) ? item : item.content.sortingKey}`}
                       sticky={fixedHeader}
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
                       isSortable={!isItemString(item) && item.isSortable}
-                      isActive={!isItemString(item) ? item.content === sorting.column : false}
+                      isActive={!isItemString(item) && item.content.sortingKey === sorting.column}
                       onClick={() => {
                         if (!isItemString(item) && item.isSortable) {
-                          handleSorting(item.content);
+                          handleSorting(item.content.sortingKey);
                         }
                       }}
                       dataTestIdPrefix={`${dataTestIdPrefix}_${
                         !isItemString(item)
-                          ? item?.content.toLowerCase().replace(/ /g, '_')
-                          : item.toLowerCase().replace(/ /g, '_')
+                          ? item.content.sortingKey
+                              .trim()
+                              .toLowerCase()
+                              .replace(/ /g, '_')
+                          : item
+                              .trim()
+                              .toLowerCase()
+                              .replace(/ /g, '_')
                       }`}
                     >
                       {isItemString(item) ? (

@@ -97,17 +97,23 @@ describe('Table', () => {
       <Table
         columns={[
           {
-            content: 'Title',
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
             isSortable: true,
           },
           'Name',
           {
-            content: 'Surname',
+            content: {
+              label: 'Surname',
+              sortingKey: 'surname',
+            },
             tooltip,
           },
           'Age',
         ]}
-        initialSort={{ column: 'Title', order: 'asc' }}
+        initialSort={{ column: 'title', order: 'asc' }}
         onSort={onSort}
         data={data}
       />
@@ -128,14 +134,17 @@ describe('Table', () => {
       <Table
         columns={[
           {
-            content: 'Title',
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
             isSortable: true,
           },
           'Name',
           'Surname',
           'Age',
         ]}
-        initialSort={{ column: 'Title', order: 'asc' }}
+        initialSort={{ column: 'title', order: 'asc' }}
         onSort={onSort}
         data={data}
       />
@@ -143,7 +152,7 @@ describe('Table', () => {
 
     userEvent.click(screen.getByTestId('header_title'));
 
-    expect(onSort).toHaveBeenLastCalledWith('Title', 'desc');
+    expect(onSort).toHaveBeenLastCalledWith('title', 'desc');
   });
 
   test('that the tooltip is showed when hovering over the icon', () => {
@@ -151,7 +160,10 @@ describe('Table', () => {
       <Table
         columns={[
           {
-            content: 'Title',
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
             tooltip,
           },
           'Name',
@@ -176,19 +188,25 @@ describe('Table', () => {
       <Table
         columns={[
           {
-            content: 'Title',
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
             isSortable: true,
             tooltip,
           },
           'Name',
           'Surname',
           {
-            content: 'Age',
+            content: {
+              label: 'Age',
+              sortingKey: 'age',
+            },
             isSortable: true,
             tooltip,
           },
         ]}
-        initialSort={{ column: 'Title', order: 'asc' }}
+        initialSort={{ column: 'title', order: 'asc' }}
         onSort={onSort}
         data={data}
       />
