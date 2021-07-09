@@ -1,4 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
 import Highlighter from 'react-highlight-words';
 
 import { listItemStyle, contentStyle } from './ListItem.style';
@@ -16,59 +19,61 @@ type Props = {
   selected?: boolean;
   /** Disabled state */
   disabled?: boolean;
-  /** Ref of ListItem component */
-  listItemRef?: React.RefObject<HTMLDivElement>;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: (option: SelectOption) => void;
 } & TestProps;
 
-const ListItem: React.FC<Props> = ({
-  size,
-  content,
-  index,
-  selected = false,
-  disabled = false,
-  handleOptionClick,
-  listItemRef,
-  searchTerm,
-  dataTestId,
-}) => {
-  const handleListItemSelect = () => {
-    if (
-      !(typeof content === 'string' || typeof content === 'number') &&
-      content &&
-      handleOptionClick
-    ) {
-      handleOptionClick(content);
-    }
-  };
+const ListItem = React.forwardRef<HTMLDivElement, Props>(
+  (
+    {
+      size,
+      content,
+      index,
+      selected = false,
+      disabled = false,
+      handleOptionClick,
+      searchTerm,
+      dataTestId,
+    },
+    ref
+  ) => {
+    const handleListItemSelect = () => {
+      if (
+        !(typeof content === 'string' || typeof content === 'number') &&
+        content &&
+        handleOptionClick
+      ) {
+        handleOptionClick(content);
+      }
+    };
 
-  return (
-    <div
-      css={listItemStyle({ size, selected, disabled })}
-      ref={selected ? listItemRef : null}
-      onClick={handleListItemSelect}
-      data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
-    >
-      <div css={contentStyle()}>
-        {typeof content === 'string' || typeof content === 'number' ? (
-          content
-        ) : searchTerm ? (
-          <Highlighter
-            highlightClassName="search-text"
-            highlightTag={'strong'}
-            searchWords={[searchTerm]}
-            autoEscape={true}
-            textToHighlight={content.label}
-          />
-        ) : (
-          content.label
-        )}
+    return (
+      <div
+        css={listItemStyle({ size, selected, disabled })}
+        ref={selected ? ref : null}
+        onClick={handleListItemSelect}
+        data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
+      >
+        <div css={contentStyle()}>
+          {typeof content === 'string' || typeof content === 'number' ? (
+            content
+          ) : searchTerm ? (
+            <Highlighter
+              highlightClassName="search-text"
+              highlightTag={'strong'}
+              searchWords={[searchTerm]}
+              autoEscape={true}
+              textToHighlight={content.label}
+            />
+          ) : (
+            content.label
+          )}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default ListItem;

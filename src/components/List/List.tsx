@@ -1,4 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
 
 import NormalList from './NormalList';
 import VirtualizedList from './VirtualizedList';
@@ -18,8 +21,6 @@ export type ListProps = {
   height?: number;
   /** Virtualized list option */
   isVirtualized?: boolean;
-  /** Ref of ListItem component */
-  listItemRef?: React.RefObject<HTMLDivElement>;
   /** Selected Item */
   selectedItem?: string | number;
   /** Search Term to be highlighted in list items */
@@ -28,43 +29,47 @@ export type ListProps = {
   handleOptionClick?: (option: SelectOption) => void;
 } & TestProps;
 
-const List: React.FC<ListProps> = ({
-  data,
-  rowSize,
-  width,
-  height,
-  isVirtualized = false,
-  listItemRef,
-  selectedItem,
-  searchTerm,
-  handleOptionClick,
-  dataTestId,
-}) => {
-  return isVirtualized ? (
-    <VirtualizedList
-      items={data}
-      rowSize={rowSize}
-      customWidth={width}
-      customHeight={height}
-      listItemRef={listItemRef}
-      selectedItem={selectedItem}
-      searchTerm={searchTerm}
-      handleOptionClick={handleOptionClick}
-      dataTestId={dataTestId}
-    />
-  ) : (
-    <NormalList
-      items={data}
-      rowSize={rowSize}
-      width={width}
-      height={height}
-      listItemRef={listItemRef}
-      selectedItem={selectedItem}
-      searchTerm={searchTerm}
-      handleOptionClick={handleOptionClick}
-      dataTestId={dataTestId}
-    />
-  );
-};
+const List = React.forwardRef<HTMLDivElement, ListProps>(
+  (
+    {
+      data,
+      rowSize,
+      width,
+      height,
+      isVirtualized = false,
+      selectedItem,
+      searchTerm,
+      handleOptionClick,
+      dataTestId,
+    },
+    ref
+  ) => {
+    return isVirtualized ? (
+      <VirtualizedList
+        items={data}
+        rowSize={rowSize}
+        customWidth={width}
+        customHeight={height}
+        ref={ref}
+        selectedItem={selectedItem}
+        searchTerm={searchTerm}
+        handleOptionClick={handleOptionClick}
+        dataTestId={dataTestId}
+      />
+    ) : (
+      <NormalList
+        items={data}
+        rowSize={rowSize}
+        width={width}
+        height={height}
+        ref={ref}
+        selectedItem={selectedItem}
+        searchTerm={searchTerm}
+        handleOptionClick={handleOptionClick}
+        dataTestId={dataTestId}
+      />
+    );
+  }
+);
 
 export default List;

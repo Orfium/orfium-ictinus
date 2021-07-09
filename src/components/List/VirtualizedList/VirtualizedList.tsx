@@ -1,4 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
 import { List as VList, AutoSizer } from 'react-virtualized';
 
 import ListItem from '../ListItem';
@@ -17,8 +20,6 @@ type Props = {
   customWidth?: number;
   /** Height of the list */
   customHeight?: number;
-  /** Ref of ListItem component */
-  listItemRef?: React.RefObject<HTMLDivElement>;
   /** Selected Item */
   selectedItem?: string | number;
   /** Search Term to be highlighted in list items */
@@ -27,48 +28,60 @@ type Props = {
   handleOptionClick?: (option: SelectOption) => void;
 } & TestProps;
 
-const VirtualizedList: React.FC<Props> = ({
-  items,
-  customWidth,
-  customHeight,
-  rowSize,
-  listItemRef,
-  selectedItem,
-  searchTerm,
-  handleOptionClick,
-  dataTestId,
-}) => {
-  const rowRenderer = ({ index, key, style }: { index: number; key: string; style: CSSProperties }) => (
-    <span style={style} key={key}>
-      <ListItem
-        size={rowSize}
-        content={items[index]}
-        index={index}
-        listItemRef={listItemRef}
-        selected={isSelected({ item: items[index], selectedItem })}
-        searchTerm={searchTerm}
-        dataTestId={dataTestId}
-        handleOptionClick={handleOptionClick}
-      />
-    </span>
-  );
-
-  return (
-    <AutoSizer
-      css={listStyle({ width: customWidth, height: customHeight })}
-      data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
-    >
-      {({ height, width }) => (
-        <VList
-          width={customWidth ?? width}
-          height={customHeight ?? height}
-          rowCount={items.length}
-          rowHeight={rowSize === 'normal' ? 56 : 46}
-          rowRenderer={rowRenderer}
+const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
+  (
+    {
+      items,
+      customWidth,
+      customHeight,
+      rowSize,
+      selectedItem,
+      searchTerm,
+      handleOptionClick,
+      dataTestId,
+    },
+    ref
+  ) => {
+    const rowRenderer = ({
+      index,
+      key,
+      style,
+    }: {
+      index: number;
+      key: string;
+      style: CSSProperties;
+    }) => (
+      <span style={style} key={key}>
+        <ListItem
+          size={rowSize}
+          content={items[index]}
+          index={index}
+          ref={ref}
+          selected={isSelected({ item: items[index], selectedItem })}
+          searchTerm={searchTerm}
+          dataTestId={dataTestId}
+          handleOptionClick={handleOptionClick}
         />
-      )}
-    </AutoSizer>
-  );
-};
+      </span>
+    );
+
+    return (
+      <AutoSizer
+        css={listStyle({ width: customWidth, height: customHeight })}
+        data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
+      >
+        {({ height, width }) => (
+          <VList
+            width={customWidth ?? width}
+            height={customHeight ?? height}
+            rowCount={items.length}
+            rowHeight={rowSize === 'normal' ? 56 : 46}
+            rowRenderer={rowRenderer}
+          />
+        )}
+      </AutoSizer>
+    );
+  }
+);
 
 export default VirtualizedList;

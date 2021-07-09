@@ -1,4 +1,7 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
 import React from 'react';
+import { jsx } from '@emotion/core';
 
 import ListItem from '../ListItem';
 import { generateUniqueID } from 'utils/helpers';
@@ -16,8 +19,6 @@ type Props = {
   width?: number;
   /** Height of the list */
   height?: number;
-  /** Ref of ListItem component */
-  listItemRef?: React.RefObject<HTMLDivElement>;
   /** Selected Item */
   selectedItem?: string | number;
   /** Search Term to be highlighted in list items */
@@ -26,37 +27,32 @@ type Props = {
   handleOptionClick?: (option: SelectOption) => void;
 } & TestProps;
 
-const NormalList: React.FC<Props> = ({
-  items,
-  width,
-  height,
-  rowSize,
-  listItemRef,
-  selectedItem,
-  searchTerm,
-  handleOptionClick,
-  dataTestId,
-}) => {
-  return (
-    <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
-      <ul css={listStyle({ width, height })}>
-        {items.map((item, index) => (
-          <li key={generateUniqueID('list_item')}>
-            <ListItem
-              content={item}
-              size={rowSize}
-              index={index}
-              listItemRef={listItemRef}
-              searchTerm={searchTerm}
-              dataTestId={dataTestId}
-              handleOptionClick={handleOptionClick}
-              selected={isSelected({ item, selectedItem })}
-            />
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+const NormalList = React.forwardRef<HTMLDivElement, Props>(
+  (
+    { items, width, height, rowSize, selectedItem, searchTerm, handleOptionClick, dataTestId },
+    ref
+  ) => {
+    return (
+      <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
+        <ul css={listStyle({ width, height })}>
+          {items.map((item, index) => (
+            <li key={generateUniqueID('list_item')}>
+              <ListItem
+                content={item}
+                size={rowSize}
+                index={index}
+                ref={ref}
+                searchTerm={searchTerm}
+                dataTestId={dataTestId}
+                handleOptionClick={handleOptionClick}
+                selected={isSelected({ item, selectedItem })}
+              />
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+);
 
 export default NormalList;
