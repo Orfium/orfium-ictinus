@@ -3,6 +3,8 @@ import * as elevation from './theme/elevation';
 import { Elevation } from './theme/elevation';
 import * as themeFunctions from './theme/functions';
 // Types
+import * as overrides from './theme/overrides';
+import { Overrides } from './theme/overrides';
 import * as palette from './theme/palette';
 import { Palette } from './theme/palette';
 import * as spacing from './theme/spacing';
@@ -46,10 +48,12 @@ export { default as TextField } from './components/TextField';
 export { default as TextArea } from './components/TextArea';
 export { default as ThemeProvider } from './components/ThemeProvider';
 export { default as Toast } from './components/Toast';
+export { default as Tooltip } from './components/Tooltip';
 export { default as TopNavBar } from './components/TopAppBar';
 
 export { default as useTheme } from './hooks/useTheme';
 export { default as useBreakpoints } from './hooks/useBreakpoints';
+export { default as Filter } from './components/Filter';
 
 export { Theme, default as themeConfig } from './theme';
 export { AcceptedColorComponentTypes } from './utils/themeFunctions';
@@ -63,5 +67,7 @@ export {
   Palette,
   Typography,
   Elevation,
+  overrides,
+  Overrides,
   queriesSizes,
 };

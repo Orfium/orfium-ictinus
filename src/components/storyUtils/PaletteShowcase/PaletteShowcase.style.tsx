@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
 
+import { transition } from '../../../theme/functions';
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../../theme/palette';
 
 export const paletteWrapper = css`
@@ -35,7 +36,8 @@ export const colorBoxWrapper = css`
 export const colorBox = (
   color: string,
   colorName: typeof flatColors[number],
-  shade: typeof colorShades[number]
+  shade: typeof colorShades[number],
+  isSelectedColor: boolean
 ) => css`
   height: 50px;
   width: calc(100% - 20px);
@@ -45,6 +47,13 @@ export const colorBox = (
   align-items: center;
   display: flex;
   padding: 0 10px;
+  cursor: pointer;
+  font-weight: ${isSelectedColor ? 700 : 400};
+  ${transition(0.2)};
+  transform: scale(${isSelectedColor ? 1.1 : 1});
+  :hover {
+    transform: scale(1.1);
+  }
   div:last-child {
     font-size: 14px;
   }

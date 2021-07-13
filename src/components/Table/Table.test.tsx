@@ -1,7 +1,13 @@
+import userEvent from '@testing-library/user-event';
 import React from 'react';
-import { fireEvent, render, within } from 'test';
+import '@testing-library/jest-dom';
+import { fireEvent, render, within, screen } from 'test';
 
 import Table from './Table';
+
+const tooltip = {
+  content: 'Tooltip Content',
+};
 
 describe('Table', () => {
   const data = new Array(50).fill(null).map((item, index) => ({
@@ -31,7 +37,7 @@ describe('Table', () => {
 
     const row = getAllByText('Title')[0].closest('tr') as HTMLElement;
     const rowUtils = within(row);
-    const expandedButton = await rowUtils.findByTestId('expanded-button');
+    const expandedButton = await rowUtils.findByTestId('icon-button-expanded-button');
 
     fireEvent.click(expandedButton);
 
@@ -82,5 +88,144 @@ describe('Table', () => {
 
     expect(onCheck).toHaveBeenCalledTimes(1);
     expect(onCheck).toHaveBeenCalledWith(data.map(({ id }) => id));
+  });
+
+  test('that the header contains sorting and tooltip icons', () => {
+    const onSort = jest.fn();
+
+    render(
+      <Table
+        columns={[
+          {
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
+            isSortable: true,
+          },
+          'Name',
+          {
+            content: {
+              label: 'Surname',
+              sortingKey: 'surname',
+            },
+            tooltip,
+          },
+          'Age',
+        ]}
+        initialSort={{ column: 'title', order: 'asc' }}
+        onSort={onSort}
+        data={data}
+      />
+    );
+
+    const titleHeader = screen.getByTestId('header_title');
+    const surnameHeader = screen.getByTestId('header_surname');
+
+    expect(within(titleHeader).getByTestId('table_icon_sort_title_asc')).toBeInTheDocument();
+
+    expect(within(surnameHeader).getByTestId('table_icon_tooltip_surname')).toBeInTheDocument();
+  });
+
+  test('that onSort is called with correct parameters', () => {
+    const onSort = jest.fn();
+
+    render(
+      <Table
+        columns={[
+          {
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
+            isSortable: true,
+          },
+          'Name',
+          'Surname',
+          'Age',
+        ]}
+        initialSort={{ column: 'title', order: 'asc' }}
+        onSort={onSort}
+        data={data}
+      />
+    );
+
+    userEvent.click(screen.getByTestId('header_title'));
+
+    expect(onSort).toHaveBeenLastCalledWith('title', 'desc');
+  });
+
+  test('that the tooltip is showed when hovering over the icon', () => {
+    render(
+      <Table
+        columns={[
+          {
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
+            tooltip,
+          },
+          'Name',
+          'Surname',
+          'Age',
+        ]}
+        data={data}
+      />
+    );
+
+    const tooltipIcon = screen.getByTestId('table_icon_tooltip_title');
+
+    userEvent.hover(tooltipIcon);
+
+    expect(screen.getByText(tooltip.content)).toBeVisible();
+  });
+
+  test('that the order of the icons is correct when column is numerical', () => {
+    const onSort = jest.fn();
+
+    render(
+      <Table
+        columns={[
+          {
+            content: {
+              label: 'Title',
+              sortingKey: 'title',
+            },
+            isSortable: true,
+            tooltip,
+          },
+          'Name',
+          'Surname',
+          {
+            content: {
+              label: 'Age',
+              sortingKey: 'age',
+            },
+            isSortable: true,
+            tooltip,
+          },
+        ]}
+        initialSort={{ column: 'title', order: 'asc' }}
+        onSort={onSort}
+        data={data}
+      />
+    );
+
+    const titleElements = within(screen.getByTestId('header_title')).queryAllByTestId(
+      new RegExp('table_icon')
+    );
+
+    expect(titleElements[0]).toStrictEqual(screen.getByTestId('table_icon_tooltip_title'));
+    expect(titleElements[1]).toStrictEqual(screen.getByTestId('table_icon_sort_title_asc'));
+
+    const headerAge = screen.getByTestId('header_age');
+
+    userEvent.click(headerAge);
+
+    const ageElements = within(headerAge).queryAllByTestId(new RegExp('table_icon'));
+
+    expect(ageElements[0]).toStrictEqual(screen.getByTestId('table_icon_sort_age_asc'));
+    expect(ageElements[1]).toStrictEqual(screen.getByTestId('table_icon_tooltip_age'));
   });
 });

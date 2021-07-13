@@ -5,6 +5,7 @@ module.exports = {
     '../docs/guides/INTRODUCTION.stories.@(md|mdx)',
     '../docs/guides/GETTING_STARTED.stories.@(md|mdx)',
     '../docs/system/THEME.stories.@(md|mdx)',
+    '../docs/system/COLOR-UTILITY.stories.@(md|mdx)',
     '../docs/guides/*.stories.@(md|mdx)',
     '../docs/system/*.stories.@(md|mdx)',
     '../src/**/*.stories.@(ts|tsx|mdx)',

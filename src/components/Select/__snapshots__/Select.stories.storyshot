@@ -19,6 +19,10 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   max-width: 38.75rem;
 }
 
+.emotion-2 * {
+  cursor: auto;
+}
+
 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -134,10 +138,10 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -155,10 +159,10 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, 0);
-  -moz-transform: translate(1%, 0);
-  -ms-transform: translate(1%, 0);
-  transform: translate(1%, 0);
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -257,6 +261,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
     >
       <div
         className="emotion-2"
+        onClick={[Function]}
       >
         <div
           className="emotion-3"
@@ -275,7 +280,6 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
-                  onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
@@ -335,6 +339,10 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   max-width: 38.75rem;
 }
 
+.emotion-2 * {
+  cursor: auto;
+}
+
 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -450,10 +458,10 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -471,10 +479,10 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, 0);
-  -moz-transform: translate(1%, 0);
-  -ms-transform: translate(1%, 0);
-  transform: translate(1%, 0);
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -573,6 +581,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
     >
       <div
         className="emotion-2"
+        onClick={[Function]}
       >
         <div
           className="emotion-3"
@@ -591,7 +600,6 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
-                  onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
                   onKeyPress={[Function]}
@@ -658,6 +666,10 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
 }
 
 .emotion-3 {
@@ -787,10 +799,10 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -808,10 +820,10 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, 0);
-  -moz-transform: translate(1%, 0);
-  -ms-transform: translate(1%, 0);
-  transform: translate(1%, 0);
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -1005,6 +1017,7 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -1023,7 +1036,6 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                     data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -1072,6 +1084,7 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -1090,7 +1103,6 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                     data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -1139,6 +1151,7 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -1157,7 +1170,6 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                     data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -1224,6 +1236,10 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: pointer;
 }
 
 .emotion-3 {
@@ -1341,10 +1357,10 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -1362,10 +1378,10 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, 0);
-  -moz-transform: translate(1%, 0);
-  -ms-transform: translate(1%, 0);
-  transform: translate(1%, 0);
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -1471,6 +1487,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -1489,7 +1506,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -1556,6 +1572,10 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
 }
 
 .emotion-3 {
@@ -1679,10 +1699,10 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -1700,10 +1720,10 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, -95%) scale(0.8);
-  -moz-transform: translate(1%, -95%) scale(0.8);
-  -ms-transform: translate(1%, -95%) scale(0.8);
-  transform: translate(1%, -95%) scale(0.8);
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -1838,10 +1858,10 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 
 .emotion-18:focus+label,
 .emotion-18:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -1888,6 +1908,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -1906,7 +1927,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -1955,6 +1975,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -1973,7 +1994,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -2040,6 +2060,10 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
 }
 
 .emotion-3 {
@@ -2157,10 +2181,10 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -2178,10 +2202,10 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, 0);
-  -moz-transform: translate(1%, 0);
-  -ms-transform: translate(1%, 0);
-  transform: translate(1%, 0);
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -2287,6 +2311,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -2305,7 +2330,6 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -2358,6 +2382,10 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-1 * {
+  cursor: auto;
 }
 
 .emotion-2 {
@@ -2475,10 +2503,10 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 
 .emotion-6:focus+label,
 .emotion-6:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -2496,10 +2524,10 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, -95%) scale(0.8);
-  -moz-transform: translate(1%, -95%) scale(0.8);
-  -ms-transform: translate(1%, -95%) scale(0.8);
-  transform: translate(1%, -95%) scale(0.8);
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -2602,6 +2630,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
     >
       <div
         className="emotion-1"
+        onClick={[Function]}
       >
         <div
           className="emotion-2"
@@ -2620,7 +2649,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
-                  onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
                   placeholder="Flavour"
@@ -2662,6 +2690,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   >
     <div
       className="emotion-1"
+      onClick={[Function]}
     >
       <div
         className="emotion-2"
@@ -2680,7 +2709,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                 data-testid="select-input"
                 disabled={false}
                 onChange={[Function]}
-                onFocus={[Function]}
                 onInput={[Function]}
                 onKeyDown={[Function]}
                 placeholder="Flavour"
@@ -2728,6 +2756,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
     >
       <div
         className="emotion-1"
+        onClick={[Function]}
       >
         <div
           className="emotion-2"
@@ -2746,7 +2775,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
-                  onFocus={[Function]}
                   onInput={[Function]}
                   onKeyDown={[Function]}
                   placeholder="Flavour"
@@ -2812,6 +2840,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
 }
 
 .emotion-3 {
@@ -2950,10 +2982,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 
 .emotion-8:focus+label,
 .emotion-8:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -2971,10 +3003,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, -95%) scale(0.8);
-  -moz-transform: translate(1%, -95%) scale(0.8);
-  -ms-transform: translate(1%, -95%) scale(0.8);
-  transform: translate(1%, -95%) scale(0.8);
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -3109,10 +3141,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 
 .emotion-19:focus+label,
 .emotion-19:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -3159,6 +3191,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -3191,7 +3224,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -3240,6 +3272,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -3258,7 +3291,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -3305,6 +3337,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -3337,7 +3370,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -3402,6 +3434,10 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-3 * {
+  cursor: auto;
 }
 
 .emotion-4 {
@@ -3519,10 +3555,10 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 
 .emotion-8:focus+label,
 .emotion-8:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -3540,10 +3576,10 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, -95%) scale(0.8);
-  -moz-transform: translate(1%, -95%) scale(0.8);
-  -ms-transform: translate(1%, -95%) scale(0.8);
-  transform: translate(1%, -95%) scale(0.8);
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
   color: #d40000;
@@ -3745,10 +3781,10 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, 0);
-  -moz-transform: translate(1%, 0);
-  -ms-transform: translate(1%, 0);
-  transform: translate(1%, 0);
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -3912,6 +3948,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -3930,7 +3967,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
-                        onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
@@ -3992,6 +4028,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -4010,7 +4047,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
-                        onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
@@ -4072,6 +4108,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -4090,7 +4127,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
-                        onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
@@ -4164,6 +4200,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -4182,7 +4219,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
-                        onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
@@ -4244,6 +4280,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -4262,7 +4299,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
-                        onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
@@ -4324,6 +4360,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -4342,7 +4379,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
-                        onFocus={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
@@ -4424,6 +4460,10 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   position: relative;
   min-width: 9.375rem;
   max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
 }
 
 .emotion-3 {
@@ -4541,10 +4581,10 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 
 .emotion-7:focus+label,
 .emotion-7:not(:placeholder-shown)+label {
-  -webkit-transform: translate(1%, -35%) scale(0.8);
-  -moz-transform: translate(1%, -35%) scale(0.8);
-  -ms-transform: translate(1%, -35%) scale(0.8);
-  transform: translate(1%, -35%) scale(0.8);
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -4562,10 +4602,10 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(1%, -95%) scale(0.8);
-  -moz-transform: translate(1%, -95%) scale(0.8);
-  -ms-transform: translate(1%, -95%) scale(0.8);
-  transform: translate(1%, -95%) scale(0.8);
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
   color: #676767;
@@ -4735,6 +4775,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -4753,7 +4794,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -4802,6 +4842,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -4820,7 +4861,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"
@@ -4869,6 +4909,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
       >
         <div
           className="emotion-2"
+          onClick={[Function]}
         >
           <div
             className="emotion-3"
@@ -4887,7 +4928,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
-                    onFocus={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
                     placeholder="Flavour"

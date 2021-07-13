@@ -5,6 +5,7 @@
   "types": "./dist/index.d.ts",
   "license": "MIT",
   "devDependencies": {
+    "@amanda-mitchell/semantic-release-npm-multiple": "^2.8.0",
     "@babel/cli": "^7.13.16",
     "@babel/core": "^7.14.0",
     "@babel/polyfill": "^7.12.1",
@@ -43,6 +44,7 @@
     "@types/react-test-renderer": "^17.0.1",
     "@types/recharts": "^1.8.16",
     "@types/styled-components": "^5.1.7",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "babel-loader": "^8.0.6",
@@ -94,7 +96,9 @@
     "polished": "^3.4.4",
     "react-highlight-words": "^0.17.0",
     "react-media": "^2.0.0-rc.1",
-    "recharts": "^1.8.5"
+    "react-tooltip": "^4.2.21",
+    "recharts": "^1.8.5",
+    "uuid": "^8.3.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",

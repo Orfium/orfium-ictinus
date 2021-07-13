@@ -4,6 +4,8 @@ import { Theme } from 'theme';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
 import { Props } from './TextInputBase';
+import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+
 
 const wrapperStyleSwitch = (
   theme: Theme,
@@ -151,7 +153,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(1%, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }

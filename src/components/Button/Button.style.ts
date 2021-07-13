@@ -1,5 +1,9 @@
-import { Theme } from '../../theme';
-import { RequiredProperties } from '../../utils/common';
+import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'polished';
+import { Theme } from 'theme';
+import { flex } from 'theme/functions';
+import { RequiredProperties } from 'utils/common';
+
 import { Props } from './Button';
 
 export const buttonSpanStyle = () => () => {
@@ -28,3 +32,9 @@ export const childrenWrapperStyle = ({
     marginRight: rightIconExists ? theme.spacing.sm : 0,
   };
 };
+
+export const centralizedLoader: (clientWidth?: number) => SerializedStyles = clientWidth => css`
+  width: ${clientWidth ? rem(clientWidth) : 'auto'};
+  ${flex};
+  justify-content: center;
+`;

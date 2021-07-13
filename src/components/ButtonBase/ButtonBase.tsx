@@ -7,6 +7,11 @@ import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
 import { buttonBaseStyle } from './ButtonBase.style';
 
+export type EventButtonProps = {
+  onClick?: (setLoading?: (isLoading: boolean) => void) => void;
+  onBlur?: () => void;
+};
+
 export type Props = {
   /** Type indicating the type of the button */
   type?: AcceptedColorComponentTypes;
@@ -16,6 +21,8 @@ export type Props = {
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
+  /** Property indicating if the component is async and loading */
+  loading?: boolean;
   /** Property indicating if the component is transparent with a color based on the type */
   transparent?: boolean;
   /** An optional boolean to show if the button is icon */
@@ -28,7 +35,7 @@ export type Props = {
   disabled?: boolean;
 };
 
-const ButtonBase: React.FC<Props & TestProps & EventProps> = props => {
+const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -39,12 +46,12 @@ const ButtonBase: React.FC<Props & TestProps & EventProps> = props => {
     iconLeft = null,
     iconRight = null,
     disabled = false,
+    loading = false,
     children,
     dataTestId = '',
     onClick,
     onBlur,
   } = props;
-
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
   const testIdName = `${isIconButton ? 'icon-' : ''}button`;
@@ -54,6 +61,7 @@ const ButtonBase: React.FC<Props & TestProps & EventProps> = props => {
       data-testid={generateTestDataId(testIdName, dataTestId)}
       css={buttonBaseStyle({
         type,
+        loading,
         filled,
         size,
         color,
@@ -67,7 +75,7 @@ const ButtonBase: React.FC<Props & TestProps & EventProps> = props => {
       })}
       onClick={onClick}
       onBlur={onBlur}
-      disabled={disabled}
+      disabled={disabled || loading}
     >
       {children}
     </button>

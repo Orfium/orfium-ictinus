@@ -17,6 +17,7 @@ import CalendarFilledIcon from './calendar-filled.svg';
 import CatalogFilesIcon from './catalog-files.svg';
 import CatalogOverviewIcon from './catalog-overview.svg';
 import CatalogIcon from './catalog.svg';
+import ChatBubble from './chat-bubble.svg';
 import CheckIcon from './check.svg';
 import CheckedListIcon from './checked-list.svg';
 import CheckmarkIcon from './checkmark.svg';
@@ -50,6 +51,7 @@ import DeleteIcon from './delete.svg';
 import DeliveryIcon from './delivery.svg';
 import DetailsIcon from './details.svg';
 import DigitalUse from './digitalUse.svg';
+import Distribution from './distribution.svg';
 import DotsVerticalIcon from './dots-vertical.svg';
 import DownloadIcon from './download.svg';
 import DuplicateIcon from './duplicate.svg';
@@ -76,6 +78,7 @@ import FileIcon from './file.svg';
 import FinancialChartIcon from './financial-chart.svg';
 import GeneretedReportsIcon from './generatedReports.svg';
 import GenericFileIcon from './generic-file.svg';
+import GenericOrderingIcon from './generic-ordering.svg';
 import GlobalItemIcon from './global-item.svg';
 import HeartFillIcon from './heart-fill.svg';
 import HeartStrokeIcon from './heart-stroke.svg';
@@ -183,6 +186,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   catalog: CatalogIcon,
   catalogOverview: CatalogOverviewIcon,
   catalogFiles: CatalogFilesIcon,
+  chatBubble: ChatBubble,
   check: CheckIcon,
   checkedList: CheckedListIcon,
   checkmark: CheckmarkIcon, // "check" copy (smaller)
@@ -233,6 +237,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   financialChart: FinancialChartIcon,
   generatedReports: GeneretedReportsIcon,
   genericFile: GenericFileIcon,
+  genericOrdering: GenericOrderingIcon,
   globalItem: GlobalItemIcon,
   heartFill: HeartFillIcon,
   heartStroke: HeartStrokeIcon,
@@ -316,6 +321,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   unpairedV2: UnpairedV2,
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
+  distribution: Distribution,
 };
 
 export default iconSelector;

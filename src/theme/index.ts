@@ -1,4 +1,5 @@
 import elevation, { Elevation } from './elevation';
+import overrides, { Overrides } from './overrides';
 import { colorShades, flatColors, mainTypes, Palette } from './palette';
 import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
 import spacing, { Spacing } from './spacing';
@@ -12,6 +13,7 @@ export type ThemeConfig = {
   typography: Typography;
   spacing: Spacing;
   elevation: Elevation;
+  overrides: Overrides;
   isDark: boolean;
 };
 
@@ -28,6 +30,7 @@ export type Theme = {
   spacing: Spacing;
   elevation: Elevation;
   isDark: boolean;
+  overrides: Overrides;
   utils: {
     getColor: GetColor;
   };
@@ -60,6 +63,7 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
     spacing,
     elevation,
     isDark: false,
+    overrides,
     utils: {
       getColor: getColor(palette),
     },

@@ -1,6 +1,8 @@
+
+import useBreakpoints from 'hooks/useBreakpoints';
+import omit from 'lodash/omit';
 import React from 'react';
 
-import useBreakpoints from '../../hooks/useBreakpoints';
 import { drawerContainerStyle } from './Drawer.style';
 import Navigation from './Navigation/Navigation';
 import { MenuItem } from './types';
@@ -12,6 +14,8 @@ export type Props = {
   setExpanded: (v: boolean) => void;
   /** The menu items to be displayed in the drawer */
   menuItems: MenuItem[];
+  /** Render prop function to display something over the Navigation */
+  renderHeader?: () => React.ReactNode;
 };
 
 const Drawer: React.FC<Props> = props => {
@@ -24,7 +28,8 @@ const Drawer: React.FC<Props> = props => {
       onMouseEnter={() => isSmallDesktop && props.setExpanded(true)}
       onMouseLeave={() => isSmallDesktop && props.setExpanded(false)}
     >
-      <Navigation {...props} />
+      {props.renderHeader?.()}
+      <Navigation {...omit(props, 'renderHeader')} />
     </div>
   );
 };

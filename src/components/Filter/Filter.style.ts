@@ -1,14 +1,15 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { rem } from 'polished';
 
 import { Theme } from '../../theme';
 import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
-import { getBackgroundColor, getTextColor, getBorder } from './utils';
+import { getBackgroundColor, getTextColor, getBorder, getHoverBorder } from './utils';
 
 export const wrapperStyle = () => () => css`
   position: relative;
   display: inline-block;
+  height: ${rem(36)};
 `;
 
 export const buttonSpanStyle = () => () => {
@@ -25,8 +26,10 @@ export const buttonStyle = ({
   disabled,
   open,
   styleType,
-  hasSelectedValue
+  hasSelectedValue,
 }: ButtonStyleProps) => (theme: Theme) => {
+  const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
+
   return {
     fontSize: theme.typography.fontSizes['13'],
     cursor: 'pointer',
@@ -34,6 +37,8 @@ export const buttonStyle = ({
     height: rem(36),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.lg,
+    transition: 'background-color 150ms linear',
+    boxShadow,
     color: getTextColor({
       theme,
       open,
@@ -50,34 +55,26 @@ export const buttonStyle = ({
       activeCalculatedColor,
       calculatedColor,
     }),
-    boxShadow: styleType === 'elevated' && !hasSelectedValue ? theme.elevation['01'] : 'none',
-
     border: getBorder({
       styleType,
       theme,
       hasSelectedValue,
       activeCalculatedColor,
     }),
-    transition: 'background-color 150ms linear',
-    ':hover': {
-      backgroundColor: !disabled && !open
-        ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
-        : undefined,
-      border: hasSelectedValue
-        ? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`
-        :  styleType === 'outlined'? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}` : 'none',
-      boxShadow: styleType === 'elevated' && !hasSelectedValue ? theme.elevation['02'] : 'none',
-    },
-    ':active': {
-      backgroundColor: !disabled && !open
-        ? stateBackgroundColor(theme, 'active', calculatedColor, true)
-        : undefined,
-
-      border: hasSelectedValue
-        ? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`
-        :  styleType === 'outlined'? `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}` : 'none',
-
-      boxShadow: styleType === 'elevated' && !hasSelectedValue ? theme.elevation['02'] : 'none',
+    ':hover,:active': {
+      backgroundColor:
+        !disabled && !open
+          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
+          : undefined,
+      border: getHoverBorder({
+        styleType,
+        theme,
+        open,
+        calculatedColor,
+        activeCalculatedColor,
+        hasSelectedValue,
+      }),
+      boxShadow,
     },
   };
 };
@@ -91,13 +88,26 @@ export const childrenWrapperStyle = () => (theme: Theme) => {
 
 export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
   return {
-    fontWeight: open || hasSelectedValue
-      ? theme.typography.weights.bold
-      : theme.typography.weights.regular,
+    fontWeight:
+      open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
 
-    'span': {
+    span: {
       marginLeft: theme.spacing.xsm,
       fontWeight: theme.typography.weights.bold,
-    }
+    },
   };
 };
+
+export const menuStyle = () => (theme: Theme) => css`
+  position: absolute;
+  top: ${rem(48)};
+  min-width: ${rem(280)};
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: ${theme.palette.white};
+  box-shadow: ${theme.elevation['02']};
+  border-radius: ${rem(4)};
+  z-index: 1;
+  overflow: hidden;
+`;

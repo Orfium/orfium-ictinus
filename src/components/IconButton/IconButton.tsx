@@ -18,13 +18,14 @@ export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRig
 };
 
 const IconButton: React.FC<Props & TestProps & EventProps> = props => {
-  const { iconSize, color = '', type = 'primary', filled = true, name } = props;
+  const { iconSize, color = '', type = 'primary', filled = true, name, transparent } = props;
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
-  const iconColor = filled
-    ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-    : defineBackgroundColor(theme, calculatedColor, type, true, true);
+  const iconColor =
+    filled && !transparent
+      ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+      : defineBackgroundColor(theme, calculatedColor, type, true, true);
 
   return (
     <ButtonBase {...props} isIconButton>

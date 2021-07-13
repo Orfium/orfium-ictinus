@@ -1,9 +1,16 @@
-import * as React from 'react';
+import { useLoading } from 'hooks/useLoading';
+import React, { useRef } from 'react';
+import { EventProps } from 'utils/common';
+import { TestProps } from 'utils/types';
 
-import { EventProps } from '../../utils/common';
-import { TestProps } from '../../utils/types';
 import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
-import { buttonSpanStyle, childrenWrapperStyle, iconStyle } from './Button.style';
+import {
+  buttonSpanStyle,
+  childrenWrapperStyle,
+  iconStyle,
+  centralizedLoader,
+} from './Button.style';
+import Loader from 'components/Loader';
 
 export type Props = ButtonBaseProps;
 
@@ -18,15 +25,21 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     iconRight = null,
     disabled = false,
     children,
+    onClick,
   } = props;
+  const { loading, handleAsyncOperation } = useLoading(onClick);
+  const childrenWrapperRef = useRef<HTMLSpanElement>(null);
+  const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
 
   return (
-    <ButtonBase {...props}>
+    <ButtonBase {...props} loading={loading} onClick={handleAsyncOperation}>
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
+          ref={childrenWrapperRef}
           css={childrenWrapperStyle({
             type,
+            loading,
             filled,
             size,
             color,
@@ -37,7 +50,13 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
             hasChildren: Boolean(React.Children.count(children)),
           })}
         >
-          {children}
+          {loading ? (
+            <div css={centralizedLoader(innerButtonWidth)}>
+              <Loader type={'spinner'} />
+            </div>
+          ) : (
+            children
+          )}
         </span>
 
         {iconRight && <span css={iconStyle()}>{iconRight}</span>}

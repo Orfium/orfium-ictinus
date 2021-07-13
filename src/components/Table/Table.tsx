@@ -1,14 +1,15 @@
 import head from 'lodash/head';
 import pluralize from 'pluralize';
-import rem from 'polished/lib/helpers/rem';
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import useTheme from '../../hooks/useTheme';
 import CheckBox from '../CheckBox';
+import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import TableRowWrapper from './components/TableRowWrapper';
-import { tableStyle } from './Table.style';
+import { tableRowHeadersStyle, tableStyle } from './Table.style';
+import { ExtendedColumn, Sort, SortingOrder } from './types';
+import { isItemString } from './utils';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -41,8 +42,8 @@ export type TableType = 'normal' | 'nested-header';
 type Props<T> = {
   /** The data for the table that needs to display. */
   data: Row<T>[];
-  /** An array of titles to define columns. */
-  columns: string[];
+  /** An array of titles or objects to define columns. */
+  columns: (string | ExtendedColumn)[];
   /** Boolean defining if the header is fixed or not. */
   fixedHeader?: boolean;
   /** Type of the table which determine the headers display. */
@@ -51,6 +52,10 @@ type Props<T> = {
   padded?: boolean;
   /** Function that once provided on each check will return the selection. */
   onCheck?: (data: Selection[]) => void;
+  /** Function that once provided will provide the currently selected sorting configuration */
+  onSort?: (column: string, order: SortingOrder) => void;
+  /** Initial sorting column and order. Should be provided along with onSort */
+  initialSort?: Sort;
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
@@ -66,13 +71,23 @@ function Table<T>({
   fixedHeader = false,
   onCheck,
   padded = false,
+  onSort,
+  initialSort = { column: '', order: 'desc' },
   topLeftText,
   topRightArea,
   dataTestIdPrefix,
 }: Props<T>) {
-  const theme = useTheme();
-  const [selectedIds, setSelectedIds] = React.useState<Selection[] | undefined>(undefined);
+  const [selectedIds, setSelectedIds] = useState<Selection[] | undefined>(undefined);
+
+  const [sorting, setSorting] = useState<Sort>(initialSort);
+
   const columnCount = onCheck ? columns.length + 1 : columns.length;
+
+  useEffect(() => {
+    if (onSort) {
+      onSort(sorting.column, sorting.order);
+    }
+  }, [onSort, sorting]);
 
   /** when the selection of ids change then inform the user if onCheck callback provided **/
   React.useEffect(() => {
@@ -91,7 +106,7 @@ function Table<T>({
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
         ? [...selectedIds, rowId]
-        : selectedIds.filter((item) => item !== rowId)
+        : selectedIds.filter(item => item !== rowId)
     );
   }, []);
 
@@ -110,6 +125,20 @@ function Table<T>({
       }) || [],
     [data]
   );
+
+  const handleSorting = (column: string) => {
+    setSorting(prevState => {
+      return prevState.column !== column
+        ? {
+            column,
+            order: 'asc',
+          }
+        : {
+            column,
+            order: prevState.order === 'asc' ? 'desc' : 'asc',
+          };
+    });
+  };
 
   return (
     <React.Fragment>
@@ -172,17 +201,7 @@ function Table<T>({
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (
-              <TableRow
-                css={[
-                  {
-                    paddingTop: theme.spacing.md,
-                    paddingBottom: theme.spacing.md,
-                    borderBottomWidth: rem(1),
-                    borderBottomStyle: 'solid',
-                    borderBottomColor: theme.utils.getColor('lightGray', 700),
-                  },
-                ]}
-              >
+              <TableRow css={tableRowHeadersStyle()}>
                 {onCheck && (
                   <TableCell
                     component={'th'}
@@ -192,19 +211,51 @@ function Table<T>({
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
                 )}
-                {columns.map((item, index) => (
-                  <TableCell
-                    textAlign={columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'}
-                    component={'th'}
-                    key={`${item}`}
-                    sticky={fixedHeader}
-                    padded={padded}
-                    width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
-                    dataTestIdPrefix={dataTestIdPrefix}
-                  >
-                    {item}
-                  </TableCell>
-                ))}
+                {/* TODO: Remove this when the open TS issue, regarding arrays with multiple types, is fixed */}
+                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                {/* @ts-ignore */}
+                {columns.map((item: string | ExtendedColumn, index: number) => {
+                  return (
+                    <TableCell
+                      textAlign={
+                        columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
+                      }
+                      component={'th'}
+                      key={`${isItemString(item) ? item : item.content.sortingKey}`}
+                      sticky={fixedHeader}
+                      padded={padded}
+                      width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
+                      isSortable={!isItemString(item) && item.isSortable}
+                      isActive={!isItemString(item) && item.content.sortingKey === sorting.column}
+                      onClick={() => {
+                        if (!isItemString(item) && item.isSortable) {
+                          handleSorting(item.content.sortingKey);
+                        }
+                      }}
+                      dataTestIdPrefix={`${dataTestIdPrefix}_${
+                        !isItemString(item)
+                          ? item.content.sortingKey
+                              .trim()
+                              .toLowerCase()
+                              .replace(/ /g, '_')
+                          : item
+                              .trim()
+                              .toLowerCase()
+                              .replace(/ /g, '_')
+                      }`}
+                    >
+                      {isItemString(item) ? (
+                        <ExtendedColumnItem item={item} />
+                      ) : (
+                        <ExtendedColumnItem
+                          sorting={sorting}
+                          isNumerical={columnsHasNumberArr && columnsHasNumberArr[index]}
+                          item={item}
+                        />
+                      )}
+                    </TableCell>
+                  );
+                })}
               </TableRow>
             )}
           </thead>

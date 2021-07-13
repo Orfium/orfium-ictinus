@@ -1,15 +1,18 @@
 import { css } from '@emotion/react';
 import { debounce } from 'lodash';
-import { rem } from 'polished';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import { generateTestDataId } from 'utils/helpers';
 
+import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
-import { generateTestDataId } from '../../utils/helpers';
+import { ChangeEvent } from '../../utils/common';
 import Icon from '../Icon';
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
+import handleSearch from '../utils/handleSearch';
 import SelectMenu from './components/SelectMenu/SelectMenu';
+import { selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 
 export type SelectOption = {
@@ -77,6 +80,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
   ) => {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const inputRef = React.useRef<HTMLInputElement>(null);
+    const combinedRefs = useCombinedRefs(inputRef, ref);
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
@@ -111,20 +116,15 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     );
 
     const handleOnInput = React.useCallback(
-      (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (isSearchable) {
-          setSearchValue(e.target.value);
-        }
-
-        if (isAsync) {
-          e.persist();
-
-          if (minCharactersToSearch && e.target.value.length < minCharactersToSearch) {
-            return;
-          }
-
-          debouncedOnChange(e.target.value.trim());
-        }
+      (event: ChangeEvent) => {
+        handleSearch({
+          event,
+          isSearchable,
+          isAsync,
+          setSearchValue,
+          onChange: debouncedOnChange,
+          minCharactersToSearch,
+        });
       },
       [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
     );
@@ -152,13 +152,11 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             size={20}
             name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
             color={theme.utils.getColor('lightGray', 500)}
-            onClick={() => {
-              setOpen(!open);
-            }}
+            onClick={() => isSearchable && open && setOpen(!open)}
           />
         </div>
       ),
-      [open, theme.utils, setOpen, isLoading]
+      [open, theme.utils, setOpen, isSearchable, isLoading]
     );
 
     return (
@@ -169,21 +167,19 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         }}
       >
         <div
-          css={css`
-            position: relative;
-            min-width: ${rem(150)};
-            max-width: ${rem(620)};
-            & > div:nth-of-type(1) > div {
-              ${open &&
-                status !== 'error' &&
-                `border: 2px solid ${theme.utils.getColor('lightGray', 400)};`}
-              ${open && status !== 'error' && styleType === 'outlined' && `box-shadow: none;`}
+          onClick={() => {
+            if (!open) {
+              setOpen(true);
+              combinedRefs?.current?.focus();
+            } else if (!isSearchable) {
+              setOpen(false);
+              combinedRefs?.current?.blur();
             }
-          `}
+          }}
+          css={selectWrapper({ open, status, styleType, isSearchable })}
         >
           <TextField
             styleType={styleType}
-            onFocus={() => setOpen(true)}
             rightIcon={rightIconRender}
             onKeyDown={handleOnKeyDown}
             onInput={handleOnInput}
@@ -193,7 +189,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}
-            ref={ref}
+            ref={combinedRefs}
           />
           {open && (
             <SelectMenu
