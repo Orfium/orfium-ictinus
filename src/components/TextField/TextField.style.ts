@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { Theme } from 'theme';
 
-import { Theme } from '../../theme';
 import { Props } from './TextField';
+import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
 export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
   theme: Theme
@@ -51,7 +52,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(1%, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }

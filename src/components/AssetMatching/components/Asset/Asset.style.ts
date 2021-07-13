@@ -99,7 +99,7 @@ const title = (theme: Theme): SerializedStyles => css`
     ${transition(0.2, 'text-decoration')};
     text-decoration: underline;
     color: ${theme.utils.getColor('primary', 400, 'normal')};
-    > a {
+    a {
       display: block;
     }
   }
@@ -110,7 +110,13 @@ const tooltip = (theme: Theme): SerializedStyles => css`
   background-color: ${theme.utils.getColor('darkGray', 500)};
 `;
 
+const iconHeadingWrapper = css`
+  ${flex};
+  justify-content: center;
+`;
+
 export default {
+  iconHeadingWrapper,
   title,
   tooltip,
   externalLink,

@@ -40,12 +40,12 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 
 .emotion-3 {
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 3rem;
+  height: 3rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -57,6 +57,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 }
 
 .emotion-3:before {
+  display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -67,6 +68,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 }
 
 .emotion-3:hover:before {
+  display: block;
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -316,6 +318,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -324,6 +327,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -359,6 +363,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -367,6 +372,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -402,6 +408,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -410,6 +417,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={true}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -445,6 +453,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -453,6 +462,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -488,6 +498,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -496,6 +507,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -531,6 +543,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -539,6 +552,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={true}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -578,6 +592,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -586,6 +601,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -621,6 +637,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -629,6 +646,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -664,6 +682,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -672,6 +691,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={true}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -707,6 +727,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -715,6 +736,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -750,6 +772,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -758,6 +781,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -793,6 +817,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -801,6 +826,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
               disabled={true}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -869,12 +895,12 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 
 .emotion-3 {
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 3rem;
+  height: 3rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -886,6 +912,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 }
 
 .emotion-3:before {
+  display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -896,6 +923,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 }
 
 .emotion-3:hover:before {
+  display: block;
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -1005,6 +1033,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
       >
         <span
           className="emotion-3"
+          onClick={[Function]}
         >
           <input
             checked={false}
@@ -1013,6 +1042,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
             disabled={false}
             id="styled-checkbox-"
             onChange={[Function]}
+            onClick={[Function]}
             type="checkbox"
           />
           <label
@@ -1076,12 +1106,12 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
 
 .emotion-3 {
   border-radius: 100%;
-  width: 3rem;
-  height: 3rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 3rem;
+  height: 3rem;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -1093,6 +1123,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
 }
 
 .emotion-3:before {
+  display: none;
   border-radius: 100%;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -1103,6 +1134,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
 }
 
 .emotion-3:hover:before {
+  display: block;
   background: rgba(0, 0, 0, 0.05);
 }
 
@@ -1344,6 +1376,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -1352,6 +1385,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1382,6 +1416,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -1390,6 +1425,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1420,6 +1456,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -1428,6 +1465,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1458,6 +1496,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -1466,6 +1505,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1496,6 +1536,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -1504,6 +1545,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={true}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1538,6 +1580,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -1546,6 +1589,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1576,6 +1620,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -1584,6 +1629,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1614,6 +1660,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={true}
@@ -1622,6 +1669,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1652,6 +1700,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -1660,6 +1709,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={false}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label
@@ -1690,6 +1740,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
         >
           <span
             className="emotion-3"
+            onClick={[Function]}
           >
             <input
               checked={false}
@@ -1698,6 +1749,7 @@ exports[`Storyshots Design System/CheckBox CheckBox without 1`] = `
               disabled={true}
               id="styled-checkbox-"
               onChange={[Function]}
+              onClick={[Function]}
               type="checkbox"
             />
             <label

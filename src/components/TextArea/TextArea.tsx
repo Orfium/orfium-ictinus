@@ -1,3 +1,4 @@
+import omit from 'lodash/omit';
 import * as React from 'react';
 
 import { formFieldStyles } from '../../theme/palette';
@@ -53,7 +54,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
             required={required}
             id={id}
             disabled={disabled}
-            {...rest}
+            {...omit(rest, ['styleType', 'hintMsg'])}
             ref={ref}
           />
         </div>

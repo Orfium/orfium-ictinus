@@ -20,22 +20,12 @@ import { Loader } from '@orfium/ictinus';
 
 <Props of={Loader} />
 
-# Dots Loader
+# Loader Types
 
-Dots loader component.
-
-<Preview>
-  <Story name="Dots Loader">
-    <Loader type="dots" />
-  </Story>
-</Preview>
-
-# Indeterminate Loader
-
-Indeterminate loader component.
+Available Loader components.
 
 <Preview>
-  <Story name="Indeterminate Loader">
-    <Loader type="indeterminate" />
+  <Story name="Loader Types">
+    { ['dots', 'indeterminate', 'spinner'].map(type => <div style={{margin: 10}}><strong>{type}: </strong><Loader type={type} /></div>)}
   </Story>
 </Preview>
