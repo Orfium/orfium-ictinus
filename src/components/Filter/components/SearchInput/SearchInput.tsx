@@ -1,8 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
-import * as React from 'react';
+import React from 'react';
 import { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
