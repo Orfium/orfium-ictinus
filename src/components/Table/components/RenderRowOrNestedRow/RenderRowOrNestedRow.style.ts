@@ -7,6 +7,13 @@ export const borderedRowStyle = ({ bordered }: { bordered: boolean }) => (
 ): SerializedStyles =>
   css({
     borderBottom: bordered ? `${rem(1)} solid ${theme.utils.getColor('lightGray', 200)}` : 'none',
+    'td:first-child': {
+      paddingLeft: theme.spacing.md,
+    },
+
+    'td:last-child': {
+      paddingRight: theme.spacing.md,
+    },
   });
 
 export const expandableRowStyle = ({ isFirstRow }: { isFirstRow: boolean }) => (

@@ -26,7 +26,7 @@ const ExpandedButtonCell: React.FC<Props> = ({
   const theme = useTheme();
 
   return isExpandedExists ? (
-    <TableCell width={67} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
+    <TableCell width={'5%'} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
       <div>
         <div
           css={{
