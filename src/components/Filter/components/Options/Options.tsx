@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
+import React from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
 import { FilterOption } from '../../types';

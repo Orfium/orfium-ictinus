@@ -1,6 +1,3 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import React, { useState } from 'react';
 
 import Filter from 'components/Filter';
