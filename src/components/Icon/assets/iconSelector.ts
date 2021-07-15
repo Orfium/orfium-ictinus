@@ -57,6 +57,7 @@ import DownloadIcon from './download.svg';
 import DuplicateIcon from './duplicate.svg';
 import Duplicate2Icon from './duplicate2.svg';
 import EarningsIcon from './earnings.svg';
+import EarningsIcon2 from './earnings2.svg';
 import EditIcon from './edit.svg';
 import EntitiesIcon from './entities.svg';
 import Entity from './entity.svg';
@@ -94,11 +95,13 @@ import LockIcon from './lock.svg';
 import MailIcon from './mail.svg';
 import ManualIcon from './manual.svg';
 import MenuIcon from './menu.svg';
+import Microphone from './microphone.svg';
 // MinusIcon code has been updated from current design system
 import MinusIcon from './minus.svg';
 import MoreOptionsHorizontalIcon from './more-options-horizontal.svg';
 import MoreOptionsVerticalIcon from './more-options-vertical.svg';
 import MusicNoteIcon from './music-note.svg';
+import MyEarnings from './myEarnings.svg';
 import NotificationsIcon from './notifications.svg';
 import Notifications2Icon from './notifications2.svg';
 import OthersIcon from './others.svg';
@@ -136,7 +139,9 @@ import SortAscendingIcon from './sort-ascending.svg';
 import SortDescendingIcon from './sort-descending.svg';
 import StampIcon from './stamp.svg';
 import StarIcon from './star.svg';
+import Statements from './statements.svg';
 import SuccessIcon from './success.svg';
+import Television from './television.svg';
 import ThunderIcon from './thunder.svg';
 import TicTacToeArrowIcon from './tic-tac-toe-arrow.svg';
 import TimeOutIcon from './time-out.svg';
@@ -223,6 +228,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   duplicate: DuplicateIcon,
   duplicate2: Duplicate2Icon,
   earnings: EarningsIcon,
+  earnings2: EarningsIcon2,
   edit: EditIcon,
   entities: EntitiesIcon,
   error: ErrorIcon, // "closeTag" copy (larger)
@@ -253,10 +259,12 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   mail: MailIcon,
   manual: ManualIcon,
   menu: MenuIcon,
+  microphone: Microphone,
   minus: MinusIcon,
   moreOptionsHorizontal: MoreOptionsHorizontalIcon,
   moreOptionsVertical: MoreOptionsVerticalIcon, // "dotsVertical" copy (larger)
   musicNote: MusicNoteIcon,
+  myEarnings: MyEarnings,
   notifications: NotificationsIcon,
   notifications2: Notifications2Icon,
   others: OthersIcon,
@@ -284,7 +292,9 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   sortAscending: SortAscendingIcon,
   sortDescending: SortDescendingIcon,
   stamp: StampIcon,
+  statements: Statements,
   success: SuccessIcon,
+  television: Television,
   thunder: ThunderIcon,
   ticTacToeArrow: TicTacToeArrowIcon,
   timeOut: TimeOutIcon,

@@ -112,15 +112,15 @@ function Table<T>({
 
   const columnsHasNumberArr = React.useMemo(
     () =>
-      head(data)?.cells.map(({ content }) => {
-        return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
+      head(data)?.cells?.map(({ content }) => {
+        return !Number.isNaN(Number(content));
       }) || [],
     [data]
   );
 
   const columnsWithWidth = React.useMemo(
     () =>
-      head(data)?.cells.map(({ widthPercentage }) => {
+      head(data)?.cells?.map(({ widthPercentage }) => {
         return widthPercentage;
       }) || [],
     [data]
