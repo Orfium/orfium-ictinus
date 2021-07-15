@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import { colorWrapper, contentWrapper } from './ColorUtility.style';
 import RangeInput from './RangeInput';
 import { getPercentage } from './utils';

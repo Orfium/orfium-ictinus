@@ -1,7 +1,8 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
-import { Props } from './Radio';
+
 import { Theme } from '../../theme';
+import { Props } from './Radio';
 
 const hoverColor = 'rgba(0, 0, 0, 0.05)';
 
@@ -91,7 +92,7 @@ export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedSt
   width: ${rem('48px')};
   height: ${rem('48px')};
 
-  color: ${theme.utils.getColor('branded1', 400, 'normal')};
+  color: ${theme.utils.getColor('primary', 400, 'normal')};
   border: 0;
   opacity: ${disabled ? 0.5 : 1};
   cursor: pointer;

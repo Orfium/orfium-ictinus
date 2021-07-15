@@ -1,8 +1,9 @@
-import { Theme } from 'theme';
-import { css, SerializedStyles } from '@emotion/core';
-import { flex } from 'theme/functions';
-import { cardElevation } from 'components/Card/Card.style';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+import { Theme } from 'theme';
+import { flex } from 'theme/functions';
+
+import { cardElevation } from 'components/Card/Card.style';
 
 const list = (theme: Theme): SerializedStyles => css`
   flex-direction: column;

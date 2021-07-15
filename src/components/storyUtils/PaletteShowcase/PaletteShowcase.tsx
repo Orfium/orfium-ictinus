@@ -1,11 +1,15 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core';
-import useTheme from '../../../hooks/useTheme';
-import { colorShades, flatColors, neutralColors } from '../../../theme/palette';
+import { css } from '@emotion/react';
 import mapValues from 'lodash/mapValues';
-import values from 'lodash/values';
 import toPairs from 'lodash/toPairs';
+import values from 'lodash/values';
+import React from 'react';
+import { useState, Fragment, useRef } from 'react';
+
+import useTheme from '../../../hooks/useTheme';
+import { flexCenter } from '../../../theme/functions';
+import { colorShades, flatColors, neutralColors } from '../../../theme/palette';
+import Button from '../../Button';
+import ColorUtility from '../ColorUtility/ColorUtility';
 import {
   colorBox,
   colorBoxWrapper,
@@ -13,10 +17,6 @@ import {
   paletteColorWrapper,
   paletteWrapper,
 } from './PaletteShowcase.style';
-import ColorUtility from '../ColorUtility/ColorUtility';
-import { useState, Fragment, useRef } from 'react';
-import { flexCenter } from '../../../theme/functions';
-import Button from '../../Button';
 
 const PaletteShowcase = () => {
   const theme = useTheme();

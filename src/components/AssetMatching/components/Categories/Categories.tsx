@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+import { generateUniqueID } from 'utils/helpers';
+
 import Styles from './Categories.style';
 import Category, { CategoryType } from './Category';
-import { generateUniqueID } from 'utils/helpers';
 
 interface Props {
   categories: CategoryType[];

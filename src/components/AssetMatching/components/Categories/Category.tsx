@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
-import Styles from './Categories.style';
 import uniqueId from 'lodash/uniqueId';
+import React, { FC } from 'react';
+
+import Styles from './Categories.style';
 import CategoryItem from './CategoryItem';
 
 export type CategoryType = { title: string; categoryItems: string[]; col_order?: number };

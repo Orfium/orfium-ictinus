@@ -1,6 +1,234 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Select Async Select 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  width: 25%;
+  height: 100%;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
 <div
   style={
     Object {
@@ -17,14 +245,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,29 +254,29 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
     </button>
   </div>
   <div
-    className="css-rx2v65-SelectShowcase"
+    className="emotion-1"
   >
     <div
       role="button"
     >
       <div
-        className="css-14gi27"
+        className="emotion-2"
         onClick={[Function]}
       >
         <div
-          className="css-o66dxn-TextInputWrapper"
+          className="emotion-3"
         >
           <div
-            className="css-hpo279-TextInputWrapper"
+            className="emotion-4"
           >
             <div
-              className="css-1il6azq-TextInputWrapper"
+              className="emotion-5"
             >
               <div
-                className="css-1u4znjd"
+                className="emotion-6"
               >
                 <input
-                  className="css-193mfgp"
+                  className="emotion-7"
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
@@ -68,24 +289,24 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                   value=""
                 />
                 <label
-                  className="css-u10266-Label"
+                  className="emotion-8"
                 >
                   Flavour
                    
                 </label>
               </div>
               <div
-                className="css-bhexrx-IconWrapper"
+                className="emotion-9"
               >
                 <div
-                  className="css-1o9yjvp"
+                  className="emotion-10"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-11"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-z7hcm5-Icon"
+                      className="emotion-12"
                     />
                   </span>
                 </div>
@@ -100,6 +321,234 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Async Select with min characters 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  width: 25%;
+  height: 100%;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
 <div
   style={
     Object {
@@ -116,14 +565,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -132,29 +574,29 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
     </button>
   </div>
   <div
-    className="css-rx2v65-SelectShowcase"
+    className="emotion-1"
   >
     <div
       role="button"
     >
       <div
-        className="css-14gi27"
+        className="emotion-2"
         onClick={[Function]}
       >
         <div
-          className="css-o66dxn-TextInputWrapper"
+          className="emotion-3"
         >
           <div
-            className="css-hpo279-TextInputWrapper"
+            className="emotion-4"
           >
             <div
-              className="css-1il6azq-TextInputWrapper"
+              className="emotion-5"
             >
               <div
-                className="css-1u4znjd"
+                className="emotion-6"
               >
                 <input
-                  className="css-193mfgp"
+                  className="emotion-7"
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
@@ -167,24 +609,24 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                   value=""
                 />
                 <label
-                  className="css-u10266-Label"
+                  className="emotion-8"
                 >
                   Flavour
                    
                 </label>
               </div>
               <div
-                className="css-bhexrx-IconWrapper"
+                className="emotion-9"
               >
                 <div
-                  className="css-1o9yjvp"
+                  className="emotion-10"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-11"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-z7hcm5-Icon"
+                      className="emotion-12"
                     />
                   </span>
                 </div>
@@ -199,6 +641,343 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 `;
 
 exports[`Storyshots Design System/Select Disabled Select 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid transparent;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-4:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-4>input,
+.emotion-4>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
+.emotion-15 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-15:focus-within,
+.emotion-15:hover {
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-15:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-15:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-15>input,
+.emotion-15>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
+.emotion-26 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 2px solid transparent;
+  box-shadow: initial;
+}
+
+.emotion-26:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.emotion-26:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-26>input,
+.emotion-26>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
 <div
   style={
     Object {
@@ -215,14 +994,7 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -231,7 +1003,7 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -244,23 +1016,23 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-1p4z2la-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
@@ -272,24 +1044,24 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                     value=""
                   />
                   <label
-                    className="css-u10266-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -311,23 +1083,23 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-1e1zkk7-TextInputWrapper"
+              className="emotion-15"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
@@ -339,24 +1111,24 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                     value=""
                   />
                   <label
-                    className="css-u10266-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -378,23 +1150,23 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-yklu5p-TextInputWrapper"
+              className="emotion-26"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={true}
                     onChange={[Function]}
@@ -406,24 +1178,24 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                     value=""
                   />
                   <label
-                    className="css-u10266-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -439,6 +1211,243 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: pointer;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
 <div
   style={
     Object {
@@ -455,14 +1464,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -471,7 +1473,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -484,23 +1486,23 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
         role="button"
       >
         <div
-          className="css-1vi5roj"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-hpo279-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -512,24 +1514,24 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                     value=""
                   />
                   <label
-                    className="css-u10266-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -545,6 +1547,328 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Select Sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-4:focus-within,
+.emotion-4:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 16px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 1rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
+.emotion-16 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-16>div {
+  position: relative;
+}
+
+.emotion-18 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-18+label {
+  font-size: 0.875rem;
+}
+
+.emotion-18:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-18::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-18::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-18:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-18::placeholder {
+  color: transparent;
+}
+
+.emotion-18:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-18:focus+label,
+.emotion-18:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-18:disabled {
+  cursor: not-allowed;
+}
+
 <div
   style={
     Object {
@@ -561,14 +1885,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -577,7 +1894,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -590,23 +1907,23 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-71prqf-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-19bjb4x-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-13caovv"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -618,24 +1935,24 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -657,23 +1974,23 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-71prqf-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-16"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-18"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -685,24 +2002,24 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -718,6 +2035,243 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Select with Highlight 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
 <div
   style={
     Object {
@@ -734,14 +2288,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -750,7 +2297,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -763,23 +2310,23 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-hpo279-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -791,24 +2338,24 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                     value=""
                   />
                   <label
-                    className="css-u10266-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -824,6 +2371,229 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Select with edge case 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-1 * {
+  cursor: auto;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-3:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-3:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  width: 100%;
+}
+
+.emotion-6 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-6+label {
+  font-size: 0.875rem;
+}
+
+.emotion-6:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-6::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-6:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-7 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-8 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-11 path {
+  fill: #9b9b9b;
+}
+
 <div
   style={
     Object {
@@ -840,14 +2610,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -866,23 +2629,23 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
       role="button"
     >
       <div
-        className="css-14gi27"
+        className="emotion-1"
         onClick={[Function]}
       >
         <div
-          className="css-o66dxn-TextInputWrapper"
+          className="emotion-2"
         >
           <div
-            className="css-hpo279-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-1il6azq-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1u4znjd"
+                className="emotion-5"
               >
                 <input
-                  className="css-193mfgp"
+                  className="emotion-6"
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
@@ -894,24 +2657,24 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                   value="Chocolate"
                 />
                 <label
-                  className="css-f4rmxh-Label"
+                  className="emotion-7"
                 >
                   Flavour
                    
                 </label>
               </div>
               <div
-                className="css-bhexrx-IconWrapper"
+                className="emotion-8"
               >
                 <div
-                  className="css-1o9yjvp"
+                  className="emotion-9"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-z7hcm5-Icon"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
@@ -926,23 +2689,23 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
     role="button"
   >
     <div
-      className="css-14gi27"
+      className="emotion-1"
       onClick={[Function]}
     >
       <div
-        className="css-o66dxn-TextInputWrapper"
+        className="emotion-2"
       >
         <div
-          className="css-hpo279-TextInputWrapper"
+          className="emotion-3"
         >
           <div
-            className="css-1il6azq-TextInputWrapper"
+            className="emotion-4"
           >
             <div
-              className="css-1u4znjd"
+              className="emotion-5"
             >
               <input
-                className="css-193mfgp"
+                className="emotion-6"
                 data-testid="select-input"
                 disabled={false}
                 onChange={[Function]}
@@ -954,24 +2717,24 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                 value="Chocolate"
               />
               <label
-                className="css-f4rmxh-Label"
+                className="emotion-7"
               >
                 Flavour
                  
               </label>
             </div>
             <div
-              className="css-bhexrx-IconWrapper"
+              className="emotion-8"
             >
               <div
-                className="css-1o9yjvp"
+                className="emotion-9"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-10"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-z7hcm5-Icon"
+                    className="emotion-11"
                   />
                 </span>
               </div>
@@ -992,23 +2755,23 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
       role="button"
     >
       <div
-        className="css-14gi27"
+        className="emotion-1"
         onClick={[Function]}
       >
         <div
-          className="css-o66dxn-TextInputWrapper"
+          className="emotion-2"
         >
           <div
-            className="css-hpo279-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-1il6azq-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1u4znjd"
+                className="emotion-5"
               >
                 <input
-                  className="css-193mfgp"
+                  className="emotion-6"
                   data-testid="select-input"
                   disabled={false}
                   onChange={[Function]}
@@ -1020,24 +2783,24 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                   value="Chocolate"
                 />
                 <label
-                  className="css-f4rmxh-Label"
+                  className="emotion-7"
                 >
                   Flavour
                    
                 </label>
               </div>
               <div
-                className="css-bhexrx-IconWrapper"
+                className="emotion-8"
               >
                 <div
-                  className="css-1o9yjvp"
+                  className="emotion-9"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-z7hcm5-Icon"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
@@ -1052,6 +2815,343 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Select with icon and size 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-4:focus-within,
+.emotion-4:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 16px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: inherit;
+  margin-right: 0.5rem;
+}
+
+.emotion-7 {
+  width: 100%;
+}
+
+.emotion-8 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-8+label {
+  font-size: 1rem;
+}
+
+.emotion-8:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus+label,
+.emotion-8:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-10 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #9b9b9b;
+}
+
+.emotion-17 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-17>div {
+  position: relative;
+}
+
+.emotion-19 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-19+label {
+  font-size: 0.875rem;
+}
+
+.emotion-19:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-19::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-19::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-19:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-19::placeholder {
+  color: transparent;
+}
+
+.emotion-19:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-19:focus+label,
+.emotion-19:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-19:disabled {
+  cursor: not-allowed;
+}
+
 <div
   style={
     Object {
@@ -1068,14 +3168,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -1084,7 +3177,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -1097,20 +3190,20 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-71prqf-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-19bjb4x-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1i3wexl-IconWrapper"
+                  className="emotion-6"
                 >
                   <img
                     height="16"
@@ -1124,10 +3217,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                   />
                 </div>
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-7"
                 >
                   <input
-                    className="css-13caovv"
+                    className="emotion-8"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -1139,24 +3232,24 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-9"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-10"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-11"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-12"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-13"
                       />
                     </span>
                   </div>
@@ -1178,23 +3271,23 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-71prqf-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-17"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-7"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-19"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -1206,14 +3299,14 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-9"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-10"
                 >
                   <img
                     height="16"
@@ -1243,20 +3336,20 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-71prqf-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-17"
               >
                 <div
-                  className="css-1i3wexl-IconWrapper"
+                  className="emotion-6"
                 >
                   <img
                     height="16"
@@ -1270,10 +3363,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                   />
                 </div>
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-7"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-19"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -1285,14 +3378,14 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-9"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-10"
                 >
                   <img
                     height="16"
@@ -1316,6 +3409,496 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-3 * {
+  cursor: auto;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-5 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  border-color: #d40000;
+}
+
+.emotion-5:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-5:focus-within {
+  background-color: white;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  width: 100%;
+}
+
+.emotion-8 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-8+label {
+  font-size: 0.875rem;
+}
+
+.emotion-8:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus+label,
+.emotion-8:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #d40000;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-10 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #9b9b9b;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #d40000;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-14 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-14 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-16 {
+  fill: #d40000;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-16 path {
+  fill: #d40000;
+}
+
+.emotion-19 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px transparent;
+  border-color: #d40000;
+}
+
+.emotion-19:focus-within,
+.emotion-19:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-19:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-19:focus-within {
+  background-color: white;
+}
+
+.emotion-33 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  border-color: #d40000;
+}
+
+.emotion-33:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-33:focus-within {
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.emotion-48 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-48:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-48:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-52 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, 0);
+  -moz-transform: translate(3px, 0);
+  -ms-transform: translate(3px, 0);
+  transform: translate(3px, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-57 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #676767;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-57 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-57 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-59 {
+  fill: #676767;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-59 path {
+  fill: #676767;
+}
+
+.emotion-62 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-62:focus-within,
+.emotion-62:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-62:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-62:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-76 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-76:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-76:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
 <div
   style={
     Object {
@@ -1332,14 +3915,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -1348,7 +3924,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -1358,7 +3934,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
       }
     >
       <div
-        className="css-ptimel-Stack"
+        className="emotion-1"
       >
         <div
           style={
@@ -1371,23 +3947,23 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             role="button"
           >
             <div
-              className="css-14gi27"
+              className="emotion-3"
               onClick={[Function]}
             >
               <div
-                className="css-o66dxn-TextInputWrapper"
+                className="emotion-4"
               >
                 <div
-                  className="css-8zmr6c-TextInputWrapper"
+                  className="emotion-5"
                 >
                   <div
-                    className="css-1il6azq-TextInputWrapper"
+                    className="emotion-6"
                   >
                     <div
-                      className="css-1u4znjd"
+                      className="emotion-7"
                     >
                       <input
-                        className="css-193mfgp"
+                        className="emotion-8"
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
@@ -1399,24 +3975,24 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value="Chocolate"
                       />
                       <label
-                        className="css-mavza5-Label"
+                        className="emotion-9"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
-                      className="css-bhexrx-IconWrapper"
+                      className="emotion-10"
                     >
                       <div
-                        className="css-1o9yjvp"
+                        className="emotion-11"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-z7hcm5-Icon"
+                            className="emotion-13"
                           />
                         </span>
                       </div>
@@ -1425,14 +4001,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 </div>
               </div>
               <div
-                className="css-1lgcoxd-TextInputWrapper"
+                className="emotion-14"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-12"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-hnerwf-Icon"
+                    className="emotion-16"
                   />
                 </span>
                 Error in Select
@@ -1451,23 +4027,23 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             role="button"
           >
             <div
-              className="css-14gi27"
+              className="emotion-3"
               onClick={[Function]}
             >
               <div
-                className="css-o66dxn-TextInputWrapper"
+                className="emotion-4"
               >
                 <div
-                  className="css-alwr26-TextInputWrapper"
+                  className="emotion-19"
                 >
                   <div
-                    className="css-1il6azq-TextInputWrapper"
+                    className="emotion-6"
                   >
                     <div
-                      className="css-1u4znjd"
+                      className="emotion-7"
                     >
                       <input
-                        className="css-193mfgp"
+                        className="emotion-8"
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
@@ -1479,24 +4055,24 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value="Chocolate"
                       />
                       <label
-                        className="css-mavza5-Label"
+                        className="emotion-9"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
-                      className="css-bhexrx-IconWrapper"
+                      className="emotion-10"
                     >
                       <div
-                        className="css-1o9yjvp"
+                        className="emotion-11"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-z7hcm5-Icon"
+                            className="emotion-13"
                           />
                         </span>
                       </div>
@@ -1505,14 +4081,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 </div>
               </div>
               <div
-                className="css-1lgcoxd-TextInputWrapper"
+                className="emotion-14"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-12"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-hnerwf-Icon"
+                    className="emotion-16"
                   />
                 </span>
                 Error in Select
@@ -1531,23 +4107,23 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             role="button"
           >
             <div
-              className="css-14gi27"
+              className="emotion-3"
               onClick={[Function]}
             >
               <div
-                className="css-o66dxn-TextInputWrapper"
+                className="emotion-4"
               >
                 <div
-                  className="css-1r0s33d-TextInputWrapper"
+                  className="emotion-33"
                 >
                   <div
-                    className="css-1il6azq-TextInputWrapper"
+                    className="emotion-6"
                   >
                     <div
-                      className="css-1u4znjd"
+                      className="emotion-7"
                     >
                       <input
-                        className="css-193mfgp"
+                        className="emotion-8"
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
@@ -1559,24 +4135,24 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value="Chocolate"
                       />
                       <label
-                        className="css-mavza5-Label"
+                        className="emotion-9"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
-                      className="css-bhexrx-IconWrapper"
+                      className="emotion-10"
                     >
                       <div
-                        className="css-1o9yjvp"
+                        className="emotion-11"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-z7hcm5-Icon"
+                            className="emotion-13"
                           />
                         </span>
                       </div>
@@ -1585,14 +4161,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 </div>
               </div>
               <div
-                className="css-1lgcoxd-TextInputWrapper"
+                className="emotion-14"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-12"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-hnerwf-Icon"
+                    className="emotion-16"
                   />
                 </span>
                 Error in Select
@@ -1610,7 +4186,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
       }
     >
       <div
-        className="css-ptimel-Stack"
+        className="emotion-1"
       >
         <div
           style={
@@ -1623,23 +4199,23 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             role="button"
           >
             <div
-              className="css-14gi27"
+              className="emotion-3"
               onClick={[Function]}
             >
               <div
-                className="css-o66dxn-TextInputWrapper"
+                className="emotion-4"
               >
                 <div
-                  className="css-hpo279-TextInputWrapper"
+                  className="emotion-48"
                 >
                   <div
-                    className="css-1il6azq-TextInputWrapper"
+                    className="emotion-6"
                   >
                     <div
-                      className="css-1u4znjd"
+                      className="emotion-7"
                     >
                       <input
-                        className="css-193mfgp"
+                        className="emotion-8"
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
@@ -1651,24 +4227,24 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value=""
                       />
                       <label
-                        className="css-u10266-Label"
+                        className="emotion-52"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
-                      className="css-bhexrx-IconWrapper"
+                      className="emotion-10"
                     >
                       <div
-                        className="css-1o9yjvp"
+                        className="emotion-11"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-z7hcm5-Icon"
+                            className="emotion-13"
                           />
                         </span>
                       </div>
@@ -1677,14 +4253,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 </div>
               </div>
               <div
-                className="css-9lkybz-TextInputWrapper"
+                className="emotion-57"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-12"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-18ctimf-Icon"
+                    className="emotion-59"
                   />
                 </span>
                 Error in Select
@@ -1703,23 +4279,23 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             role="button"
           >
             <div
-              className="css-14gi27"
+              className="emotion-3"
               onClick={[Function]}
             >
               <div
-                className="css-o66dxn-TextInputWrapper"
+                className="emotion-4"
               >
                 <div
-                  className="css-71prqf-TextInputWrapper"
+                  className="emotion-62"
                 >
                   <div
-                    className="css-1il6azq-TextInputWrapper"
+                    className="emotion-6"
                   >
                     <div
-                      className="css-1u4znjd"
+                      className="emotion-7"
                     >
                       <input
-                        className="css-193mfgp"
+                        className="emotion-8"
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
@@ -1731,24 +4307,24 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value=""
                       />
                       <label
-                        className="css-u10266-Label"
+                        className="emotion-52"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
-                      className="css-bhexrx-IconWrapper"
+                      className="emotion-10"
                     >
                       <div
-                        className="css-1o9yjvp"
+                        className="emotion-11"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-z7hcm5-Icon"
+                            className="emotion-13"
                           />
                         </span>
                       </div>
@@ -1757,14 +4333,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 </div>
               </div>
               <div
-                className="css-9lkybz-TextInputWrapper"
+                className="emotion-57"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-12"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-18ctimf-Icon"
+                    className="emotion-59"
                   />
                 </span>
                 Error in Select
@@ -1783,23 +4359,23 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             role="button"
           >
             <div
-              className="css-14gi27"
+              className="emotion-3"
               onClick={[Function]}
             >
               <div
-                className="css-o66dxn-TextInputWrapper"
+                className="emotion-4"
               >
                 <div
-                  className="css-fpor5m-TextInputWrapper"
+                  className="emotion-76"
                 >
                   <div
-                    className="css-1il6azq-TextInputWrapper"
+                    className="emotion-6"
                   >
                     <div
-                      className="css-1u4znjd"
+                      className="emotion-7"
                     >
                       <input
-                        className="css-193mfgp"
+                        className="emotion-8"
                         data-testid="select-input"
                         disabled={false}
                         onChange={[Function]}
@@ -1811,24 +4387,24 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value=""
                       />
                       <label
-                        className="css-u10266-Label"
+                        className="emotion-52"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
-                      className="css-bhexrx-IconWrapper"
+                      className="emotion-10"
                     >
                       <div
-                        className="css-1o9yjvp"
+                        className="emotion-11"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-z7hcm5-Icon"
+                            className="emotion-13"
                           />
                         </span>
                       </div>
@@ -1837,14 +4413,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 </div>
               </div>
               <div
-                className="css-9lkybz-TextInputWrapper"
+                className="emotion-57"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-12"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-18ctimf-Icon"
+                    className="emotion-59"
                   />
                 </span>
                 Error in Select
@@ -1859,6 +4435,307 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 `;
 
 exports[`Storyshots Design System/Select Simple Select 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  min-width: 9.375rem;
+  max-width: 38.75rem;
+}
+
+.emotion-2 * {
+  cursor: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-4 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-4:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: false;
+}
+
+.emotion-4:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-5 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-5>div {
+  position: relative;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: black;
+  display: block;
+  position: relative;
+  top: 7px;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-7+label {
+  font-size: 0.875rem;
+}
+
+.emotion-7:focus {
+  color: black;
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(3px, -35%) scale(0.8);
+  -moz-transform: translate(3px, -35%) scale(0.8);
+  -ms-transform: translate(3px, -35%) scale(0.8);
+  transform: translate(3px, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(3px, -95%) scale(0.8);
+  -moz-transform: translate(3px, -95%) scale(0.8);
+  -ms-transform: translate(3px, -95%) scale(0.8);
+  transform: translate(3px, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #676767;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #9b9b9b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-12 path {
+  fill: #9b9b9b;
+}
+
+.emotion-15 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-15:focus-within,
+.emotion-15:hover {
+  box-shadow: 0 0 0 1px transparent;
+}
+
+.emotion-15:hover {
+  background-color: #f7f7f7!important;
+  border-color: #cfcfcf;
+  box-shadow: false;
+}
+
+.emotion-15:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-26 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-26:hover {
+  background-color: #f7f7f7!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-26:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
 <div
   style={
     Object {
@@ -1875,14 +4752,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -1891,7 +4761,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -1904,23 +4774,23 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-hpo279-TextInputWrapper"
+              className="emotion-4"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -1932,24 +4802,24 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -1971,23 +4841,23 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-71prqf-TextInputWrapper"
+              className="emotion-15"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -1999,24 +4869,24 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>
@@ -2038,23 +4908,23 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         role="button"
       >
         <div
-          className="css-14gi27"
+          className="emotion-2"
           onClick={[Function]}
         >
           <div
-            className="css-o66dxn-TextInputWrapper"
+            className="emotion-3"
           >
             <div
-              className="css-fpor5m-TextInputWrapper"
+              className="emotion-26"
             >
               <div
-                className="css-1il6azq-TextInputWrapper"
+                className="emotion-5"
               >
                 <div
-                  className="css-1u4znjd"
+                  className="emotion-6"
                 >
                   <input
-                    className="css-193mfgp"
+                    className="emotion-7"
                     data-testid="select-input"
                     disabled={false}
                     onChange={[Function]}
@@ -2066,24 +4936,24 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     value="Chocolate"
                   />
                   <label
-                    className="css-f4rmxh-Label"
+                    className="emotion-8"
                   >
                     Flavour
                      
                   </label>
                 </div>
                 <div
-                  className="css-bhexrx-IconWrapper"
+                  className="emotion-9"
                 >
                   <div
-                    className="css-1o9yjvp"
+                    className="emotion-10"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-z7hcm5-Icon"
+                        className="emotion-12"
                       />
                     </span>
                   </div>

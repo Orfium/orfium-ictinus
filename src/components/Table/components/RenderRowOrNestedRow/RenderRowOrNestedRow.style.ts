@@ -1,6 +1,6 @@
-import { css, SerializedStyles } from '@emotion/core';
-import { Theme } from 'theme';
+import { css, SerializedStyles } from '@emotion/react';
 import rem from 'polished/lib/helpers/rem';
+import { Theme } from 'theme';
 
 export const borderedRowStyle = ({ bordered }: { bordered: boolean }) => (
   theme: Theme

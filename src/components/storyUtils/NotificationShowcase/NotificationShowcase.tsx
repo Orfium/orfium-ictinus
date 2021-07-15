@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useState } from 'react';
+
 import Button from '../../Button';
 
 const NotificationShowcase: React.FC = ({ children }) => {

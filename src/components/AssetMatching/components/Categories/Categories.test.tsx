@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, fireEvent } from 'test';
-import { Categories } from './index';
-import '@testing-library/jest-dom';
+
 import { SelectedItemProvider } from '../SelectedItemContext';
+import { Categories } from './index';
 
 jest.mock('lodash/debounce', () =>
   jest.fn(fn => {

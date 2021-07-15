@@ -1,11 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import React from 'react';
 import { Dayjs } from 'dayjs';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
+import React from 'react';
+
 import { currentDay } from '../utils';
+import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
 
 export type Props = {
   day?: number;
@@ -31,7 +29,7 @@ const Day: React.FC<Props> = ({
   disabled = false,
 }) => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType('', 'branded1');
+  const calculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const date = React.useMemo(
     () =>
       day &&

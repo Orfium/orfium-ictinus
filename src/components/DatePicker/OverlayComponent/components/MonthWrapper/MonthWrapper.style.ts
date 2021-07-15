@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
 export const monthWrapperStyle = () => (theme: Theme): SerializedStyles => css`

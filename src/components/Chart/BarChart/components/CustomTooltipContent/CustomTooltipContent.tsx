@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
-import { tooltipLiStyle, tooltipStyle, tooltipUlStyle } from './CustomTooltipContent.style';
 import { TooltipProps } from 'recharts';
+
 import { HoverInfo } from '../../BarChart';
+import { tooltipLiStyle, tooltipStyle, tooltipUlStyle } from './CustomTooltipContent.style';
 
 const CustomTooltip: React.FC<TooltipProps> = ({ payload }) => {
   const options = payload && (payload[0]?.payload?.options?.hoverInfo as HoverInfo[]);

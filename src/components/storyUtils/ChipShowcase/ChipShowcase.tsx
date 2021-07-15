@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
+
 import Chip from '../../Chip';
 import { Props } from '../../Chip/Chip';
 

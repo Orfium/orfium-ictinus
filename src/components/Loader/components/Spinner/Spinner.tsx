@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { spinnerContainer } from './Spinner.style';
+
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
+import { spinnerContainer } from './Spinner.style';
 
 interface Props {
   dataTestId?: TestId;

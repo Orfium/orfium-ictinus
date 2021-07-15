@@ -91,7 +91,7 @@ const ThemeSwitcher = () => {
 };
 
 export const decorators = [
-  Story => {
+  (Story: any) => {
     return (
       <ThemeProvider>
         <ThemeSwitcher />
@@ -99,14 +99,14 @@ export const decorators = [
       </ThemeProvider>
     );
   },
-  Story => {
+  (Story: any) => {
     return (
       <ThemeSwitchProvider>
         <Story />
       </ThemeSwitchProvider>
     );
   },
-  Story => (
+  (Story: any) => (
     <div style={{ margin: 5 }}>
       <Story />
     </div>

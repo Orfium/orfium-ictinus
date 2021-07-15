@@ -1,14 +1,15 @@
-import React from 'react';
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
-import { keys, merge, pick } from 'lodash';
-import theme, { Theme, ThemeConfig } from 'theme';
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { css, Global } from '@emotion/react';
 import { useThemeSwitch } from 'hooks/useThemeSwitch';
+import { keys, merge, pick } from 'lodash';
+import { normalize } from 'polished';
+import React from 'react';
+import theme, { Theme, ThemeConfig } from 'theme';
+
+import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';
-import { css, Global } from '@emotion/core';
-import { normalize } from 'polished';
 import 'utils/initLocaleFormat';
-import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 
 type Props = {
   /** Theme properties to override or pass theming down to library */
@@ -19,8 +20,8 @@ const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light')
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
 export const globalStyles = (theme: Theme) => css`
-  ${normalize()};
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+  ${normalize()};
 
   body,
   html {

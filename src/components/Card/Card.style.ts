@@ -1,7 +1,8 @@
-import { css, SerializedStyles } from '@emotion/core';
-import { Props } from './Card';
-import { Theme } from '../../theme';
+import { css, SerializedStyles } from '@emotion/react';
 import { Elevation, Spacing } from 'index';
+
+import { Theme } from '../../theme';
+import { Props } from './Card';
 
 export const cardStyle = ({ elevated, transparent, radius }: Props) => (
   theme: Theme

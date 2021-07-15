@@ -1,9 +1,13 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
 import { useState } from 'react';
+
+import { generateTestDataId } from '../../utils/helpers';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { TestId } from '../../utils/types';
+import Icon from '../Icon';
+import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
 import { actionContainer } from '../Notification/Notification.style';
+import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 import {
   toastContainer,
   topContainer,
@@ -13,12 +17,6 @@ import {
   chevronIconContainer,
   expandedContainer,
 } from './Toast.style';
-import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
-import Icon from '../Icon';
-import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestId } from '../../utils/types';
-import { generateTestDataId } from '../../utils/helpers';
 
 export type Props = {
   /** The informative message of the Toast */
@@ -41,7 +39,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
 
 const Toast: React.FC<Props> = ({
   message,
-  type = 'branded1',
+  type = 'primary',
   styleType = 'elevated',
   closeCTA,
   expanded = false,

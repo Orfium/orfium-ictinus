@@ -16,6 +16,8 @@ $ npm install @orfium/ictinus
 ```text
 $ yarn add @orfium/ictinus
 ```
+Please note that react >= 16.0.0 and react-dom >= 16.0.0 are peer dependencies. Also that emotion 11 is being used and that
+will not work in older emotion projects.
 
 if you want the next version you can always use the next tag.
 Remember: this is a release candidate, we encourage you to lock version on installation to avoid any changes
@@ -64,8 +66,8 @@ You can apply your own branded colours for each product at the definition of the
 <ThemeProvider
     theme={{
         palette: {
-            branded1: theme.colors.orange,
-            branded2: theme.colors.ciel,
+            primary: theme.colors.orange,
+            secondary: theme.colors.ciel,
         },
     }}
 >
@@ -92,8 +94,8 @@ The final outcome will look like this.
 <IctinusThemeProvider
   theme={{
     palette: {
-      branded1: theme.colors.orange,
-      branded2: theme.colors.ciel,
+      primary: theme.colors.orange,
+      secondary: theme.colors.ciel,
     },
   }}
 >

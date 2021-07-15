@@ -1,11 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { last, pick } from 'lodash';
 import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+
 import { breadcrumbLinkStyles, breadcrumbStyles } from './Breadcrumb.style';
 import BreadcrumbCollapsed from './BreadcrumbCollapsed/BreadcrumbCollapsed';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';

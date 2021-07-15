@@ -1,7 +1,8 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
-import MonthWrapper from './MonthWrapper';
+
 import { currentDay } from '../../../utils';
+import MonthWrapper from './MonthWrapper';
 
 describe('MonthWrapper', () => {
   it('should render correctly', () => {

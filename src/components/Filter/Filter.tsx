@@ -1,19 +1,16 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import {jsx } from '@emotion/core';
-import * as React from 'react';
-import { useMemo } from 'react';
-import { debounce } from 'lodash';
-
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
+import { debounce } from 'lodash';
+import { useMemo } from 'react';
+import React from 'react';
 import { ChangeEvent } from 'utils/common';
-import Icon from '../Icon';
 import { generateTestDataId } from 'utils/helpers';
-import handleSearch from 'components/utils/handleSearch';
+
+
+import Icon from '../Icon';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { FilterOption, Props } from './types';
-import { getTextColor } from './utils';
+import Options from './components/Options/Options';
+import SearchInput from './components/SearchInput/SearchInput';
 import {
   buttonStyle,
   childrenWrapperStyle,
@@ -22,8 +19,9 @@ import {
   wrapperStyle,
   menuStyle,
 } from './Filter.style';
-import Options from './components/Options/Options';
-import SearchInput from './components/SearchInput/SearchInput';
+import { FilterOption, Props } from './types';
+import { getTextColor } from './utils';
+import handleSearch from 'components/utils/handleSearch';
 
 const Filter: React.FC<Props> = props => {
   const {

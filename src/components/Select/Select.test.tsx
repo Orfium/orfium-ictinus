@@ -1,9 +1,8 @@
-import React from 'react';
-import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 
-import Select from './Select';
 import { render, screen, selectDropdownOption, waitFor } from '../../test';
+import Select from './Select';
 
 const dropdownList = [
   { label: 'Greece', value: 'GR' },

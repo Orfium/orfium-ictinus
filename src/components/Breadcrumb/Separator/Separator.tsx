@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
 import Icon from '../../Icon';
 import { separatorStyles } from './Separator.style';
 

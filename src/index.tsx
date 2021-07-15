@@ -1,16 +1,16 @@
+import { queriesSizes } from './hooks/useBreakpoints';
+import * as elevation from './theme/elevation';
+import { Elevation } from './theme/elevation';
 import * as themeFunctions from './theme/functions';
 // Types
+import * as overrides from './theme/overrides';
+import { Overrides } from './theme/overrides';
 import * as palette from './theme/palette';
 import { Palette } from './theme/palette';
 import * as spacing from './theme/spacing';
 import { Spacing } from './theme/spacing';
-import * as overrides from './theme/overrides';
-import { Overrides } from './theme/overrides';
 import * as typography from './theme/typography';
 import { Typography } from './theme/typography';
-import * as elevation from './theme/elevation';
-import { Elevation } from './theme/elevation';
-import { queriesSizes } from './hooks/useBreakpoints';
 
 export { default as Avatar } from './components/Avatar';
 export { default as Breadcrumb } from './components/Breadcrumb';

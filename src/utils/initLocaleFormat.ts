@@ -1,6 +1,6 @@
-import localizedFormat from 'dayjs/plugin/localizedFormat';
-import localeData from 'dayjs/plugin/localeData';
 import dayjs from 'dayjs';
+import localeData from 'dayjs/plugin/localeData';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import 'dayjs/locale/en-gb';
 import 'dayjs/locale/en';
 

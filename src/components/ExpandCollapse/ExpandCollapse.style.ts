@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 export const contentStyles = (expanded: boolean, transitionDuration: number) => css`
   transition: opacity ${expanded ? transitionDuration + 100 : 0}ms ease,

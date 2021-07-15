@@ -1,16 +1,13 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
 
-import CheckBox from 'components/CheckBox';
+import CheckBox from '../CheckBox';
+import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
-import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
-import ExtendedColumnItem from './components/ExtendedColumnItem';
+import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
@@ -104,6 +101,7 @@ function Table<T>({
     setSelectedIds(undefined);
   }, [data]);
 
+  // @ts-ignore
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1

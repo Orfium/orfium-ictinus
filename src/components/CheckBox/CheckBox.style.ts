@@ -1,5 +1,6 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
 import { Theme } from '../../theme';
 import { Props } from './CheckBox';
 
@@ -40,12 +41,12 @@ const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }
   return filled
     ? `background: ${
         checked
-          ? theme.utils.getColor('branded1', 400, 'normal')
+          ? theme.utils.getColor('primary', 400, 'normal')
           : theme.utils.getColor('lightGray', 400)
       }`
     : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${
         checked
-          ? theme.utils.getColor('branded1', 400, 'normal')
+          ? theme.utils.getColor('primary', 400, 'normal')
           : theme.utils.getColor('lightGray', 400)
       };`;
 };

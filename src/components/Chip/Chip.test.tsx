@@ -1,9 +1,9 @@
 import React from 'react';
-import Chip from './Chip';
-import '@testing-library/jest-dom';
+
 import { render, fireEvent } from '../../test';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import { Theme } from '../../theme';
+import { pickTextColorFromSwatches } from '../../theme/palette';
+import Chip from './Chip';
 
 describe('Chip', () => {
   const images = [

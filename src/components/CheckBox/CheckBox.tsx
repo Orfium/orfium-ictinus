@@ -1,10 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import * as React from 'react';
-import Icon from 'components/Icon';
 import { ChangeEvent, useEffect } from 'react';
+import { pickTextColorFromSwatches } from 'theme/palette';
+
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
+import { TestId } from '../../utils/types';
 import {
   checkboxStyle,
   checkboxWrapperStyle,
@@ -12,9 +12,7 @@ import {
   wrapperStyle,
   markerStyle,
 } from './CheckBox.style';
-import { TestId } from '../../utils/types';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import { pickTextColorFromSwatches } from 'theme/palette';
+import Icon from 'components/Icon';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -52,7 +50,7 @@ const CheckBox: React.FC<Props> = ({
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const { color, shade } = calculateColorBetweenColorAndType('', 'branded1');
+  const { color, shade } = calculateColorBetweenColorAndType('', 'primary');
 
   useEffect(() => {
     if (checked !== undefined) {
@@ -97,7 +95,7 @@ const CheckBox: React.FC<Props> = ({
           <Icon
             name={intermediate ? 'minus' : 'checkmark'}
             size={24}
-            color={filled ? `${pickTextColorFromSwatches(color, shade)}` : 'branded1'}
+            color={filled ? `${pickTextColorFromSwatches(color, shade)}` : 'primary'}
           />
         </label>
       </span>

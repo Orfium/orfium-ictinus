@@ -1,14 +1,12 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import React, { useCallback, useEffect, useState } from 'react';
-import { datePickerStyles } from './DatePicker.style';
 import dayjs, { Dayjs } from 'dayjs';
-import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
+import React, { useCallback, useEffect, useState } from 'react';
+
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import DatePickInput from './DatePickInput';
 import PositionInScreen from '../utils/PositionInScreen';
+import { datePickerStyles } from './DatePicker.style';
+import DatePickInput from './DatePickInput';
+import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
 import { currentDay, datepickerPropValue } from './utils';
 
 export type DisabledDates = {

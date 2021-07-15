@@ -1,4 +1,5 @@
 import { shade, tint } from 'polished';
+
 import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
 

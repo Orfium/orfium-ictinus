@@ -1,8 +1,8 @@
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
-import userEvent from '@testing-library/user-event';
-
 import { fireEvent, render, within, screen } from 'test';
+
 import Table from './Table';
 
 const tooltip = {

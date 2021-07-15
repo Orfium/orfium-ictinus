@@ -1,9 +1,9 @@
-import { colorShades, flatColors, mainTypes, Palette } from './palette';
-import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
-import typography, { Typography } from './typography';
-import spacing, { Spacing } from './spacing';
 import elevation, { Elevation } from './elevation';
 import overrides, { Overrides } from './overrides';
+import { colorShades, flatColors, mainTypes, Palette } from './palette';
+import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
+import spacing, { Spacing } from './spacing';
+import typography, { Typography } from './typography';
 import { enhancePaletteWithShades } from './utils';
 
 type TextColorTypes = 'primary' | 'secondary' | 'light';

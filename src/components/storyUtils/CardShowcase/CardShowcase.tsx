@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
-import Card from '../../Card';
+
 import { Elevation } from '../../../theme/elevation';
 import { Spacing } from '../../../theme/spacing';
+import Card from '../../Card';
 import { showcaseContainerStyle } from './CardShowcase.style';
 
 type Props = {

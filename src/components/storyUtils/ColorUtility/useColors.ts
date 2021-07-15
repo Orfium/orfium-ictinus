@@ -1,5 +1,6 @@
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { darken, lighten } from 'polished';
+import { ChangeEvent, useCallback, useEffect, useState } from 'react';
+
 import { validateColor } from './utils';
 
 const DEFAULT_COLOR = 'white';

@@ -1,8 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React, { FC } from 'react';
+
 import Styles from './Logo.style';
-import { FC } from 'react';
 
 const PlaceHolder = () => (
   <div css={Styles.placeholderWrapper}>

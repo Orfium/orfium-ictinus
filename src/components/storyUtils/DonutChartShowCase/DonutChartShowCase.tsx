@@ -1,4 +1,5 @@
 import React from 'react';
+
 import DonutChart from '../../Chart/DonutChart';
 
 const totalClaims = 1102545485;

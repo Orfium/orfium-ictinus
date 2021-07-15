@@ -1,9 +1,10 @@
 import React, { FC } from 'react';
-import Styles from './ActionsToolbox.style';
+import { flex } from 'theme/functions';
+import { generateUniqueID } from 'utils/helpers';
+
 import { MatchingAction } from '../../types';
 import { useMatchingActions } from '../utils';
-import { generateUniqueID } from 'utils/helpers';
-import { flex } from 'theme/functions';
+import Styles from './ActionsToolbox.style';
 
 interface Props {
   primaryActions: MatchingAction[];

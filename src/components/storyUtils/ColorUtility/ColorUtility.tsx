@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { TextField } from '../../../index';
+import ColorBox from './ColorBox';
 import { colorWrapper, container, contentWrapper, inputWrapper } from './ColorUtility.style';
 import { useColors } from './useColors';
-import ColorBox from './ColorBox';
 
 const DEFAULT_COLOR = 'white';
 

@@ -1,6 +1,6 @@
-import { getColorFromType, calculateActualColorFromComponentProp } from '../themeFunctions';
 import theme from '../../theme';
 import { lightPaletteConfig } from '../../theme/palette.config';
+import { getColorFromType, calculateActualColorFromComponentProp } from '../themeFunctions';
 
 describe('The usability of calculateActualColorFromComponentProp to be correct', () => {
   test('that it fails to get a wrong color', () => {

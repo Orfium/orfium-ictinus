@@ -1,21 +1,19 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import * as React from 'react';
 import useTheme from 'hooks/useTheme';
+import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
+import isEmpty from 'lodash/isEmpty';
+import * as React from 'react';
+import { pickTextColorFromSwatches } from 'theme/palette';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
+
+import Avatar from '../Avatar';
 import Button from '../Button';
+import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { wrapperStyle } from './Menu.style';
-import { pickTextColorFromSwatches } from 'theme/palette';
-import isEmpty from 'lodash/isEmpty';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import Avatar from '../Avatar';
-import { defineBackgroundColor } from '../Button/utils';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
+import { wrapperStyle } from './Menu.style';
 
 export type Props = {
   /** the color of the button based on our colors eg. red-400 */

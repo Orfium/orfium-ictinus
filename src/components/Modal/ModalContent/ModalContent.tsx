@@ -1,8 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
+import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
+import Button from '../../Button';
 import {
   actionsContainer,
   headingContainer,
@@ -10,8 +10,6 @@ import {
   messageContainer,
   modalContentContainer,
 } from './ModalContent.style';
-import { generateTestDataId } from '../../../utils/helpers';
-import Button from '../../Button';
 
 export type Props = {
   /** The label of the modal. */
