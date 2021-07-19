@@ -36,6 +36,8 @@ export type Props = {
   dateFormatOverride?: DateFormatType;
   /** if the datepicker can be clear with backspace */
   isClearable?: boolean;
+  /** if the datepicker's default date is today instead of placeholder text */
+  isDefaultNow?: boolean;
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -77,13 +79,19 @@ const DatePicker: React.FC<Props> = ({
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
+  isDefaultNow = false,
 }) => {
+  const isValueUndefined = Object.values(value).every(v => !v);
+
   const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-  const [range, setRange] = useState<Range>({ from: dayjs(value.from), to: dayjs(value.to) });
+  const [range, setRange] = useState<Range>({
+    from: !isValueUndefined || isDefaultNow ? dayjs(value.from) : undefined,
+    to: !isValueUndefined || isDefaultNow ? dayjs(value.to) : undefined,
+  });
   const [selectedRange, setSelectedRange] = useState<Range>({
-    from: dayjs(value.from),
-    to: dayjs(value.to),
+    from: !isValueUndefined || isDefaultNow ? dayjs(value.from) : undefined,
+    to: !isValueUndefined || isDefaultNow ? dayjs(value.to) : undefined,
   });
 
   const handleSelectedOptions = useCallback((option: string) => {
