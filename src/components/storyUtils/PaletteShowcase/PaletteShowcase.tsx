@@ -85,7 +85,7 @@ const PaletteShowcase = () => {
           ))}
       </div>
       <div ref={colorUtilRef} css={flexCenter}>
-        <ColorUtility defaultColor={paletteColor} />
+        <ColorUtility defaultColor={paletteColor} step={0.05} />
       </div>
     </Fragment>
   );

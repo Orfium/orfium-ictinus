@@ -6,9 +6,10 @@ import ColorBox from './ColorBox';
 
 const DEFAULT_COLOR = 'white';
 
-const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
+const ColorUtility = ({ defaultColor, step = 0.1 }: { defaultColor?: string; step?: number }) => {
   const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors(
-    defaultColor
+    defaultColor,
+    step
   );
 
   return (
@@ -26,12 +27,14 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
         <div css={contentWrapper}>normal : {color.normal}</div>
       </div>
       <ColorBox
+        step={step}
         colorStatus={'lighten'}
         color={color.lighten}
         utilityValue={utilityValues.lighten}
         updateValue={setLightenValue}
       />
       <ColorBox
+        step={step}
         colorStatus={'darken'}
         color={color.darken}
         utilityValue={utilityValues.darken}

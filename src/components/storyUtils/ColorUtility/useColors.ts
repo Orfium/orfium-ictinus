@@ -4,7 +4,7 @@ import { validateColor } from './utils';
 
 const DEFAULT_COLOR = 'white';
 
-export const useColors = (defaultColor?: string) => {
+export const useColors = (defaultColor?: string, step = 0.1) => {
   const [color, setColor] = useState(defaultColor || DEFAULT_COLOR);
   useEffect(() => {
     if (defaultColor !== DEFAULT_COLOR) {
@@ -12,8 +12,9 @@ export const useColors = (defaultColor?: string) => {
     }
   }, [defaultColor]);
 
-  const [lightenValue, setLightenValue] = useState(0.1);
-  const [darkenValue, setDarkenValue] = useState(0.1);
+  console.log(step);
+  const [lightenValue, setLightenValue] = useState(step);
+  const [darkenValue, setDarkenValue] = useState(step);
 
   const darkColor = darken(darkenValue, color);
   const lightColor = lighten(lightenValue, color);
