@@ -79,7 +79,7 @@ const DatePicker: React.FC<Props> = ({
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
-  isDefaultNow = false,
+  isDefaultNow = true,
 }) => {
   const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
