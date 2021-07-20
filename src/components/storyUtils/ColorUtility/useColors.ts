@@ -12,7 +12,6 @@ export const useColors = (defaultColor?: string, step = 0.1) => {
     }
   }, [defaultColor]);
 
-  console.log(step);
   const [lightenValue, setLightenValue] = useState(step);
   const [darkenValue, setDarkenValue] = useState(step);
 
