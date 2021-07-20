@@ -3,13 +3,13 @@
 import { jsx } from '@emotion/core';
 import React, { useCallback, useEffect, useState } from 'react';
 import { datePickerStyles } from './DatePicker.style';
-import dayjs, { Dayjs } from 'dayjs';
+import { Dayjs } from 'dayjs';
 import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import DatePickInput from './DatePickInput';
 import PositionInScreen from '../utils/PositionInScreen';
-import { currentDay, datepickerPropValue } from './utils';
+import { currentDay, datepickerPropValue, initDates } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -36,6 +36,8 @@ export type Props = {
   dateFormatOverride?: DateFormatType;
   /** if the datepicker can be clear with backspace */
   isClearable?: boolean;
+  /** if the datepicker's default date is today instead of placeholder text */
+  isDefaultNow?: boolean;
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -71,20 +73,19 @@ const DatePicker: React.FC<Props> = ({
   onChange,
   disableDates,
   value = {
-    from: datepickerPropValue,
-    to: datepickerPropValue,
+    from: datepickerPropValue?.toDate(),
+    to: datepickerPropValue?.toDate(),
   },
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
+  isDefaultNow = false,
 }) => {
   const [open, setOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-  const [range, setRange] = useState<Range>({ from: dayjs(value.from), to: dayjs(value.to) });
-  const [selectedRange, setSelectedRange] = useState<Range>({
-    from: dayjs(value.from),
-    to: dayjs(value.to),
-  });
+
+  const [range, setRange] = useState<Range>(initDates(value, isDefaultNow));
+  const [selectedRange, setSelectedRange] = useState<Range>(initDates(value, isDefaultNow));
 
   const handleSelectedOptions = useCallback((option: string) => {
     const foundOption = extraOptions.find(optionItem => optionItem.value === option);
