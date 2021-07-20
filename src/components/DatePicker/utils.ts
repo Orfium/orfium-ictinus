@@ -13,10 +13,10 @@ export const initDates = (
   },
   isDefaultNow: boolean
 ): Range => {
-  const isToday = !Object.values(value).every(v => !v) || isDefaultNow;
+  const hasDefaultDate = isDefaultNow || Object.values(value).some(v => v);
 
   return {
-    from: isToday ? dayjs(value.from) : undefined,
-    to: isToday ? dayjs(value.to) : undefined,
+    from: hasDefaultDate ? dayjs(value.from) : undefined,
+    to: hasDefaultDate ? dayjs(value.to) : undefined,
   };
 };
