@@ -2,7 +2,7 @@ import { css, SerializedStyles } from '@emotion/react';
 import { darken, rem } from 'polished';
 import { Theme } from 'theme';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
-import { backgroundPickerBasedOnType } from 'utils/themeFunctions';
+import { fillPickerBasedOnType } from 'utils/themeFunctions';
 
 export const navigationContainerStyle = (expanded: boolean) => (
   theme: Theme
@@ -100,7 +100,7 @@ export const menuIconStyle = (current: boolean) => (theme: Theme): SerializedSty
   width: ${rem(32)};
   height: ${rem(32)};
   border-radius: 50%;
-  ${current ? `background-color: ${backgroundPickerBasedOnType('primary')(theme)}; ` : ''}
+  ${current ? `background-color: ${fillPickerBasedOnType('primary', 400)(theme)}; ` : ''}
 `;
 
 export const subMenuIconStyle = () => (theme: Theme): SerializedStyles => css`
