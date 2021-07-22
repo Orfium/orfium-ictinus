@@ -130,6 +130,7 @@ import RestartIcon from './restart.svg';
 import RestoreIcon from './restore.svg';
 import ResultIcon from './result.svg';
 import ResumeIcon from './resume.svg';
+import RoyaltyShares from './royaltyShares.svg';
 import SearchMusicIcon from './search-music.svg';
 import SearchThunderIcon from './search-thunder.svg';
 import SearchIcon from './search.svg';
@@ -332,6 +333,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
   distribution: Distribution,
+  royaltyShares: RoyaltyShares,
 };
 
 export default iconSelector;
