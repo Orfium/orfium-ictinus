@@ -50,9 +50,9 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onFocus={handleFocus}
             onKeyDown={handleClear}
             onChange={ON_CHANGE_MOCK}
-            placeholder={`${dateFormatOverride} - ${dateFormatOverride}`}
+            placeholder="Date (start) - Date (end)"
             value={
-              getDateFormatted(selectedDay.from) &&
+              selectedDay.from &&
               `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
             }
             rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
@@ -64,7 +64,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onFocus={handleFocus}
             onKeyDown={handleClear}
             onChange={ON_CHANGE_MOCK}
-            placeholder={dateFormatOverride}
+            placeholder="Select date"
             value={selectedDay.to && getDateFormatted(selectedDay.to)}
             rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
           />
