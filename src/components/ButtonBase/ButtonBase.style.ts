@@ -51,6 +51,7 @@ export const buttonBaseStyle = ({
   const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
+    fontWeight: theme.typography.weights.medium,
     color:
       filled && !transparent
         ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
