@@ -1,9 +1,7 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 import { LabelProps, PolarViewBox } from 'recharts';
-import useTheme from 'hooks/useTheme';
+
 import { flexContainer, labelUnitStyle } from './CustomLabel.style';
 
 type CustomLabelProps = LabelProps & {

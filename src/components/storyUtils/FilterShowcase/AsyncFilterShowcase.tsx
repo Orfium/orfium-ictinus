@@ -1,7 +1,4 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React, { useState } from 'react';
-import { jsx } from '@emotion/core';
 
 import Filter from 'components/Filter';
 import { FilterOption } from 'components/Filter/types';
@@ -39,7 +36,7 @@ export const AsyncFilterShowcase: React.FC<Props> = ({ minCharactersToSearch = 0
   const handleSelectItem = (item: FilterOption) => {
     setStateItem(item);
     setOptions(dummyUnrefinedData);
-  }
+  };
 
   return (
     <Filter

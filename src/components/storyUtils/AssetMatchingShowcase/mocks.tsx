@@ -1,9 +1,10 @@
-import { MatchingAction } from '../../AssetMatching';
-import { AssetProps } from '../../AssetMatching/components/Asset';
+import { css, SerializedStyles } from '@emotion/react';
 import React, { Fragment } from 'react';
-import { css, SerializedStyles } from '@emotion/core';
+
 import { Theme } from '../../../theme';
 import { flex } from '../../../theme/functions';
+import { MatchingAction } from '../../AssetMatching';
+import { AssetProps } from '../../AssetMatching/components/Asset';
 
 const actionsMock: MatchingAction[] = [
   {

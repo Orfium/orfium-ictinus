@@ -1,9 +1,9 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 
-import { Props } from './TextArea';
 import { Theme } from '../../theme';
-import { Props as TextInputWrapperProps } from '../utils/TextInputWrapper/TextInputWrapper';
+import { Props } from './TextArea';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+import { Props as TextInputWrapperProps } from 'components/TextInputBase';
 
 export const inputStyle = ({
   label,

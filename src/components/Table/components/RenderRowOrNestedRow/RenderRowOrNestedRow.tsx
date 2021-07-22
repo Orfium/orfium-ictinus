@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
 import useToggle from '../../../../hooks/useToggle';
 import CheckBox from '../../../CheckBox';
 import { Row } from '../../Table';

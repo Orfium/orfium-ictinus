@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
-import TableCell from '../../../TableCell';
+
 import { isComponentFunctionType } from '../../../../../../utils/helpers';
 import { ContentComponent, TableType } from '../../../../Table';
+import TableCell from '../../../TableCell';
 import { nestedHeaderStyle } from './ContentCell.style';
 
 type Props = {

@@ -1,6 +1,6 @@
-import { flex } from 'theme/functions';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { flex } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
 
 const wrapperStyleSwitch = (theme: Theme) => ({

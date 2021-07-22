@@ -1,8 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { Elevation, Spacing } from 'index';
 import React from 'react';
+
 import { cardStyle } from './Card.style';
 
 export type Props = {

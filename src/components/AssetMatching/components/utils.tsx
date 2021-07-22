@@ -1,9 +1,10 @@
-import Button from 'components/Button';
-import Icon from 'components/Icon';
+import debounce from 'lodash/debounce';
 import React, { useMemo, useCallback } from 'react';
+
 import { MatchingAction } from '../types';
 import { useSelectedItem } from './SelectedItemContext';
-import debounce from 'lodash/debounce';
+import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 const SEARCH_REG_EXPRESSION = /\s/g;
 const REPLACE_WITH = '-';
@@ -35,6 +36,7 @@ export const useCategoryItemActions = (item: string, matchedCategoryItems?: stri
   };
 };
 
+// eslint-disable-next-line react/display-name
 export const createActionButton = (isButtonFilled = false, color: string) => (
   action: MatchingAction
 ) => (

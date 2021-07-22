@@ -1,7 +1,7 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
+import { Theme } from 'theme';
 
 import { Props } from './TextField';
-import { Theme } from 'theme';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
 export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (

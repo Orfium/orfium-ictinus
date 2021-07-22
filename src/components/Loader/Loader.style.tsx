@@ -1,4 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 
 export const loaderContainer = () => (): SerializedStyles => css`
   align-self: center;

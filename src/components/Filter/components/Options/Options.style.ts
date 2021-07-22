@@ -1,13 +1,12 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { darken, rem } from 'polished';
-
 import { Theme } from 'theme';
 import { flexCenter } from 'theme/functions';
 
 export const optionsStyle = () => (theme: Theme) => css`
   max-height: ${rem(253)};
   overflow: auto;
-  
+
   button {
     padding: ${rem(8)} ${rem(16)};
     height: ${rem(48)};
@@ -32,4 +31,3 @@ export const emptyStyle = () => (theme: Theme) => css`
   font-size: ${theme.typography.fontSizes['14']};
   ${flexCenter};
 `;
-

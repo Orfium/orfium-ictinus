@@ -1,7 +1,8 @@
-import { Theme } from '../../../theme';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
+import { Theme } from '../../../theme';
 import { NotificationStyleType, NotificationTypes } from '../Notification';
-import { css, SerializedStyles } from '@emotion/core';
 import { typeToThemePalette } from '../Notification.style';
 
 const snackbarContainerPerType = (

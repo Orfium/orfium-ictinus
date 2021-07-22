@@ -1,5 +1,4 @@
-import { css, SerializedStyles } from '@emotion/core';
-
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
 export const showcaseContainerStyle = (theme: Theme): SerializedStyles => css`

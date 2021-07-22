@@ -1,12 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
+import { generateTestDataId } from '../../../utils/helpers';
+import { TestId } from '../../../utils/types';
 import Button from '../../Button';
 import { actionContainer, actionsContainer, boldMessageContainer } from '../Notification.style';
 import { visualContainer, descriptionContainer } from './NotificationVisual.style';
-import { TestId } from '../../../utils/types';
-import { generateTestDataId } from '../../../utils/helpers';
 
 export type Props = {
   /** The message heading of the Notification */

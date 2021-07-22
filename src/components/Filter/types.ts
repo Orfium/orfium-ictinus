@@ -1,6 +1,7 @@
-import { AcceptedColorComponentTypes, ColorShapeFromComponent } from '../../utils/themeFunctions';
 import * as React from 'react';
+
 import { Theme } from '../../theme';
+import { AcceptedColorComponentTypes, ColorShapeFromComponent } from '../../utils/themeFunctions';
 
 export type FilterOption = {
   value: string | number;

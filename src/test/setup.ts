@@ -1,3 +1,8 @@
+import '@testing-library/jest-dom';
+import { createSerializer } from '@emotion/jest';
+
+expect.addSnapshotSerializer(createSerializer());
+
 jest.mock(
   (() => {
     // This will mock the version of uuid belonging to react-tooltip

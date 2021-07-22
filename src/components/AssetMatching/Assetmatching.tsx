@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
+import { formFieldStyles } from 'theme/palette';
+
+import { OnCheckHandler } from '../../hooks/useCheck';
 import Styles from './AssetMatching.style';
-import SectionHeader from './components/SectionHeader/SectionHeader';
-import { MatchingAction } from './types';
 import { Asset } from './components/Asset';
 import { AssetProps } from './components/Asset';
+import SectionHeader from './components/SectionHeader/SectionHeader';
 import { SelectedItemProvider } from './components/SelectedItemContext';
-import { formFieldStyles } from 'theme/palette';
-import { OnCheckHandler } from '../../hooks/useCheck';
+import { MatchingAction } from './types';
 
 interface Props {
   /** The score of the matched metadata */

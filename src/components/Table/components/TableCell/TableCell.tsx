@@ -1,9 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import useTheme from 'hooks/useTheme';
 import * as React from 'react';
 
-import useTheme from 'hooks/useTheme';
 import { parentStyles } from './TableCell.style';
 
 type Props = {
@@ -98,5 +95,7 @@ const TableCell: React.FC<Props> = React.memo(
     );
   }
 );
+
+TableCell.displayName = 'TableCell';
 
 export default TableCell;

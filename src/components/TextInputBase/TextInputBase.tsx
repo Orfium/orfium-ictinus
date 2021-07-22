@@ -1,12 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import React, { FC } from 'react';
-import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputWrapper.style';
-import Icon from 'components/Icon';
-import { DEFAULT_SIZE } from 'utils/size-utils';
-import { formFieldStyles } from 'theme/palette';
 import useTheme from 'hooks/useTheme';
+import React, { FC } from 'react';
+import { formFieldStyles } from 'theme/palette';
+import { DEFAULT_SIZE } from 'utils/size-utils';
+
+import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
 export type Props = {
@@ -42,7 +40,7 @@ export type Props = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputWrapper: FC<Props> = ({
+const TextInputBase: FC<Props> = ({
   leftIcon = null,
   label,
   lean = false,
@@ -86,4 +84,4 @@ const TextInputWrapper: FC<Props> = ({
   );
 };
 
-export default TextInputWrapper;
+export default TextInputBase;

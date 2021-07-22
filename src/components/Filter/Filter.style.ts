@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { rem } from 'polished';
 
 import { Theme } from '../../theme';
@@ -26,7 +26,7 @@ export const buttonStyle = ({
   disabled,
   open,
   styleType,
-  hasSelectedValue
+  hasSelectedValue,
 }: ButtonStyleProps) => (theme: Theme) => {
   const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
 
@@ -62,9 +62,10 @@ export const buttonStyle = ({
       activeCalculatedColor,
     }),
     ':hover,:active': {
-      backgroundColor: !disabled && !open
-        ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
-        : undefined,
+      backgroundColor:
+        !disabled && !open
+          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
+          : undefined,
       border: getHoverBorder({
         styleType,
         theme,
@@ -87,14 +88,13 @@ export const childrenWrapperStyle = () => (theme: Theme) => {
 
 export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
   return {
-    fontWeight: open || hasSelectedValue
-      ? theme.typography.weights.bold
-      : theme.typography.weights.regular,
+    fontWeight:
+      open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
 
-    'span': {
+    span: {
       marginLeft: theme.spacing.xsm,
       fontWeight: theme.typography.weights.bold,
-    }
+    },
   };
 };
 
@@ -111,4 +111,3 @@ export const menuStyle = () => (theme: Theme) => css`
   z-index: 1;
   overflow: hidden;
 `;
-

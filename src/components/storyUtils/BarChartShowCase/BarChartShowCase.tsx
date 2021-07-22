@@ -1,4 +1,5 @@
 import React from 'react';
+
 import BarChart from '../../Chart/BarChart';
 import { Data } from '../../Chart/BarChart/BarChart';
 

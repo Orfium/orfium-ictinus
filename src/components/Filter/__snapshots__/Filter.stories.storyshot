@@ -1,6 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Filter Async Filter 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-2 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #F3F5F9;
+  border: none;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-5 {
+  font-weight: 400;
+}
+
+.emotion-5 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-7 path {
+  fill: #000;
+}
+
 <div
   style={
     Object {
@@ -17,14 +103,7 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -36,22 +115,22 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
     role="button"
   >
     <div
-      className="css-10b4kyy-Filter"
+      className="emotion-1"
     >
       <button
-        className="css-bskkdk-Filter"
+        className="emotion-2"
         data-testid="filter"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          className="css-ohjhgn-Filter"
+          className="emotion-3"
         >
           <span
-            className="css-12o2hfl-Filter"
+            className="emotion-4"
           >
             <span
-              className="css-1afohzx-Filter"
+              className="emotion-5"
             >
               Async Label
               :
@@ -61,11 +140,11 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
             </span>
           </span>
           <span
-            className="css-1gnbc76-Icon"
+            className="emotion-6"
             onClick={[Function]}
           >
             <span
-              className="css-1rnhl34-Icon"
+              className="emotion-7"
             />
           </span>
         </span>
@@ -76,6 +155,92 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
 `;
 
 exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-2 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #F3F5F9;
+  border: none;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-5 {
+  font-weight: 400;
+}
+
+.emotion-5 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-7 path {
+  fill: #000;
+}
+
 <div
   style={
     Object {
@@ -92,14 +257,7 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -111,22 +269,22 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
     role="button"
   >
     <div
-      className="css-10b4kyy-Filter"
+      className="emotion-1"
     >
       <button
-        className="css-bskkdk-Filter"
+        className="emotion-2"
         data-testid="filter"
         disabled={false}
         onClick={[Function]}
       >
         <span
-          className="css-ohjhgn-Filter"
+          className="emotion-3"
         >
           <span
-            className="css-12o2hfl-Filter"
+            className="emotion-4"
           >
             <span
-              className="css-1afohzx-Filter"
+              className="emotion-5"
             >
               Async Label
               :
@@ -136,11 +294,11 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
             </span>
           </span>
           <span
-            className="css-1gnbc76-Icon"
+            className="emotion-6"
             onClick={[Function]}
           >
             <span
-              className="css-1rnhl34-Icon"
+              className="emotion-7"
             />
           </span>
         </span>
@@ -151,6 +309,92 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
 `;
 
 exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-2 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #F3F5F9;
+  border: none;
+}
+
+.emotion-2:hover,
+.emotion-2:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-5 {
+  font-weight: 400;
+}
+
+.emotion-5 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-7 path {
+  fill: #000;
+}
+
 <div
   style={
     Object {
@@ -167,14 +411,7 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -187,22 +424,22 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
       role="button"
     >
       <div
-        className="css-10b4kyy-Filter"
+        className="emotion-1"
       >
         <button
-          className="css-bskkdk-Filter"
+          className="emotion-2"
           data-testid="filter"
           disabled={false}
           onClick={[Function]}
         >
           <span
-            className="css-ohjhgn-Filter"
+            className="emotion-3"
           >
             <span
-              className="css-12o2hfl-Filter"
+              className="emotion-4"
             >
               <span
-                className="css-1afohzx-Filter"
+                className="emotion-5"
               >
                 you can change me
                 :
@@ -212,11 +449,11 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
               </span>
             </span>
             <span
-              className="css-1gnbc76-Icon"
+              className="emotion-6"
               onClick={[Function]}
             >
               <span
-                className="css-1rnhl34-Icon"
+                className="emotion-7"
               />
             </span>
           </span>
@@ -228,6 +465,182 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 `;
 
 exports[`Storyshots Design System/Filter Filter with colors 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-3 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #e1ccff;
+  border: none;
+}
+
+.emotion-3:hover,
+.emotion-3:active {
+  background-color: #c399ff;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-6 {
+  font-weight: 400;
+}
+
+.emotion-6 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-8 path {
+  fill: #000;
+}
+
+.emotion-10 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #fff;
+  background-color: #9f0000;
+  border: solid 1px #cfcfcf;
+}
+
+.emotion-10:hover,
+.emotion-10:active {
+  background-color: #d20000;
+  border: solid 1px #d20000;
+  box-shadow: none;
+}
+
+.emotion-15 {
+  fill: #fff;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-15 path {
+  fill: #fff;
+}
+
+.emotion-17 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  background-color: #767676;
+  border: none;
+}
+
+.emotion-17:hover,
+.emotion-17:active {
+  background-color: #5d5d5d;
+  border: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-24 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: transparent;
+  border: none;
+}
+
+.emotion-24:hover,
+.emotion-24:active {
+  background-color: #ea9cc2;
+  border: none;
+  box-shadow: none;
+}
+
 <div
   style={
     Object {
@@ -244,14 +657,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -260,7 +666,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -274,22 +680,22 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-157s1g7-Filter"
+              className="emotion-3"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -299,11 +705,11 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -324,22 +730,22 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-9lwg9e-Filter"
+              className="emotion-10"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -349,11 +755,11 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-y9hhnm-Icon"
+                    className="emotion-15"
                   />
                 </span>
               </span>
@@ -374,22 +780,22 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-1jbzsq7-Filter"
+              className="emotion-17"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -399,11 +805,11 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-y9hhnm-Icon"
+                    className="emotion-15"
                   />
                 </span>
               </span>
@@ -424,22 +830,22 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-17oowc3-Filter"
+              className="emotion-24"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -449,11 +855,11 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -467,6 +873,172 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 `;
 
 exports[`Storyshots Design System/Filter Filter with style types 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-3 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #F3F5F9;
+  border: none;
+}
+
+.emotion-3:hover,
+.emotion-3:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-6 {
+  font-weight: 400;
+}
+
+.emotion-6 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-8 path {
+  fill: #000;
+}
+
+.emotion-10 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #F3F5F9;
+  border: solid 1px #cfcfcf;
+}
+
+.emotion-10:hover,
+.emotion-10:active {
+  background-color: #d1d9e8;
+  border: solid 1px #d1d9e8;
+  box-shadow: none;
+}
+
+.emotion-17 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  color: #000;
+  background-color: #F3F5F9;
+  border: none;
+}
+
+.emotion-17:hover,
+.emotion-17:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-24 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: transparent;
+  border: none;
+}
+
+.emotion-24:hover,
+.emotion-24:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: none;
+}
+
 <div
   style={
     Object {
@@ -483,14 +1055,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -499,7 +1064,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -513,22 +1078,22 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-bskkdk-Filter"
+              className="emotion-3"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -538,11 +1103,11 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -563,22 +1128,22 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-1d0eh5b-Filter"
+              className="emotion-10"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -588,11 +1153,11 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -613,22 +1178,22 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-1d4r5ll-Filter"
+              className="emotion-17"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -638,11 +1203,11 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -663,22 +1228,22 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-tjpahu-Filter"
+              className="emotion-24"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -688,11 +1253,11 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -706,6 +1271,106 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 `;
 
 exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-3 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  box-shadow: none;
+  color: #000;
+  background-color: #F3F5F9;
+  border: none;
+}
+
+.emotion-3:hover,
+.emotion-3:active {
+  background-color: #d1d9e8;
+  border: none;
+  box-shadow: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-6 {
+  font-weight: 400;
+}
+
+.emotion-6 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-8 path {
+  fill: #000;
+}
+
 <div
   style={
     Object {
@@ -722,14 +1387,7 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -738,7 +1396,7 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -752,22 +1410,22 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
           role="button"
         >
           <div
-            className="css-10b4kyy-Filter"
+            className="emotion-2"
           >
             <button
-              className="css-bskkdk-Filter"
+              className="emotion-3"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-ohjhgn-Filter"
+                className="emotion-4"
               >
                 <span
-                  className="css-12o2hfl-Filter"
+                  className="emotion-5"
                 >
                   <span
-                    className="css-1afohzx-Filter"
+                    className="emotion-6"
                   >
                     Label
                     :
@@ -777,11 +1435,11 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
                   </span>
                 </span>
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1rnhl34-Icon"
+                    className="emotion-8"
                   />
                 </span>
               </span>
