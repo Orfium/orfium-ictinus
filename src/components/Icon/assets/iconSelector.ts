@@ -170,6 +170,7 @@ import Entity from './entity.svg';
 import PlayCount from './play-count.svg';
 import ProcessedLogs from './processed-logs.svg';
 import Distribution from './distribution.svg';
+import RoyaltyShares from './royaltyShares.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -334,6 +335,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
   distribution: Distribution,
+  royaltyShares: RoyaltyShares,
 };
 
 export default iconSelector;

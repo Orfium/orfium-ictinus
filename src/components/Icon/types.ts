@@ -114,6 +114,7 @@ export type AcceptedIconNames =
   | 'relations'
   | 'restore'
   | 'result'
+  | 'royaltyShares'
   | 'search'
   | 'searchMusic'
   | 'searchThunder'
