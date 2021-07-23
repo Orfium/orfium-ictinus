@@ -68,5 +68,6 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
     );
   }
 );
+List.displayName = 'List';
 
 export default List;

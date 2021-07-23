@@ -1,19 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 
-import List from '../../../List';
 import { SelectOption } from '../../Select';
 import { menuStyle, optionStyle } from './SelectMenu.style';
+import List from 'components/List';
 
-const SelectMenu = ({
-  size = 'sm',
-  status = 'normal',
-  filteredOptions,
-  handleOptionClick,
-  selectedOption,
-  isLoading,
-  isVirtualized,
-  searchTerm,
-}: {
+export type Props = {
   /** Sets the size of the menu */
   size?: 'md' | 'sm';
   /** The status of the button regarding the status which is in - default normal */
@@ -24,7 +15,19 @@ const SelectMenu = ({
   isLoading?: boolean;
   isVirtualized?: boolean;
   searchTerm?: string;
-}) => {
+};
+
+const SelectMenu: React.FC<Props> = props => {
+  const {
+    size = 'sm',
+    status = 'normal',
+    filteredOptions,
+    handleOptionClick,
+    selectedOption,
+    isLoading,
+    isVirtualized,
+    searchTerm,
+  } = props;
   const myRef = useRef<HTMLDivElement>(null);
 
   const executeScroll = () => myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
@@ -49,7 +52,7 @@ const SelectMenu = ({
     );
 
   return (
-    <div css={menuStyle({ status, size, itemsCount: filteredOptions.length })}>
+    <div css={menuStyle(props)}>
       {isLoading ? (
         <div css={optionStyle({ selected: false, noResultsExist: true })}>Loading...</div>
       ) : (

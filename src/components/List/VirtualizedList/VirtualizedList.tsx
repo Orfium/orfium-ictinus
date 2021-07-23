@@ -1,13 +1,16 @@
 import React from 'react';
-import { List as VList, AutoSizer } from 'react-virtualized';
+import { FixedSizeList as VList } from 'react-window';
 import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
 
+import {
+  MAX_LARGE_HEIGHT,
+  MAX_SMALL_HEIGHT,
+} from '../../Select/components/SelectMenu/SelectMenu.style';
 import { SelectOption } from '../../Select/Select';
 import { ListRowSize } from '../List';
 import ListItem from '../ListItem';
 import { isSelected } from '../utils';
-import { listStyle } from './VirtualizedList.style';
 
 type Props = {
   items: (string | number | SelectOption)[];
@@ -39,16 +42,8 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     },
     ref
   ) => {
-    const rowRenderer = ({
-      index,
-      key,
-      style,
-    }: {
-      index: number;
-      key: string;
-      style: CSSProperties;
-    }) => (
-      <span style={style} key={key}>
+    const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => (
+      <span style={style}>
         <ListItem
           size={rowSize}
           content={items[index]}
@@ -63,22 +58,19 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     );
 
     return (
-      <AutoSizer
-        css={listStyle({ width: customWidth, height: customHeight })}
+      <VList
         data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
+        height={customHeight || rowSize === 'normal' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT}
+        width={customWidth || '100%'}
+        itemCount={items.length}
+        itemSize={rowSize === 'normal' ? 56 : 46}
+        style={{ overflowX: 'hidden' }}
       >
-        {({ height, width }) => (
-          <VList
-            width={customWidth ?? width}
-            height={customHeight ?? height}
-            rowCount={items.length}
-            rowHeight={rowSize === 'normal' ? 56 : 46}
-            rowRenderer={rowRenderer}
-          />
-        )}
-      </AutoSizer>
+        {rowRenderer}
+      </VList>
     );
   }
 );
+VirtualizedList.displayName = 'VirtualizedList';
 
 export default VirtualizedList;

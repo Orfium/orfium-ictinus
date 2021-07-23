@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Theme } from 'theme';
+
 import { ListRowSize } from '../List';
 
 export const listItemStyle = ({

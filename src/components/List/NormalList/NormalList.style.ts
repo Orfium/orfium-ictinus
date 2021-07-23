@@ -14,4 +14,5 @@ export const listStyle = ({
   width: ${width ? rem(width) : '100%'};
   height: ${height ? rem(height) : '100%'};
   overflow: auto;
+  overflow-x: hidden;
 `;
