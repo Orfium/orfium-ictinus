@@ -1,16 +1,13 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
 import { List as VList, AutoSizer } from 'react-virtualized';
+import { CSSProperties } from 'styled-components';
+import { TestProps } from 'utils/types';
 
-import ListItem from '../ListItem';
 import { SelectOption } from '../../Select/Select';
+import { ListRowSize } from '../List';
+import ListItem from '../ListItem';
 import { isSelected } from '../utils';
 import { listStyle } from './VirtualizedList.style';
-import { TestProps } from 'utils/types';
-import { ListRowSize } from '../List';
-import { CSSProperties } from 'styled-components';
 
 type Props = {
   items: (string | number | SelectOption)[];

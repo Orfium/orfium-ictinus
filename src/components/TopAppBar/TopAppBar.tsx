@@ -1,13 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { FC } from 'react';
-import Styles from './TopAppBar.style';
-import { TopAppBarProps } from './TopAppBar.types';
-import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';
+import React, { FC } from 'react';
 
 import { useBreakpoints } from '../../index';
+import { SidebarMenuIcon, LogoPlaceholder, UserMenu } from './components';
 import Search from './components/Search';
+import Styles from './TopAppBar.style';
+import { TopAppBarProps } from './TopAppBar.types';
 
 const TopAppBar: FC<TopAppBarProps> = ({
   searchPlaceholder = 'Search',

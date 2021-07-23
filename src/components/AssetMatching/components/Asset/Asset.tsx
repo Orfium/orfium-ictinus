@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
-import AssetHeading, { AssetHeadingProps } from './AssetHeading';
-import Styles from './Asset.style';
+
 import { Categories } from '../Categories';
 import { CategoryType } from '../Categories/Category';
+import Styles from './Asset.style';
+import AssetHeading, { AssetHeadingProps } from './AssetHeading';
 import AssetLinkedInfo from './AssetLinkedInfo';
 
 export interface AssetProps {

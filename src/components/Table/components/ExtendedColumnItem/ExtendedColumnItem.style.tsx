@@ -1,7 +1,7 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
-
 import { flexCenterVertical } from 'theme/functions';
+
 import { Theme } from '../../../../theme';
 
 export const containerStyles = (gap: string) => (): SerializedStyles => css`

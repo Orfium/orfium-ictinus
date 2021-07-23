@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import useTheme from 'hooks/useTheme';
 import React from 'react';
-import useTheme from '../../../../../../hooks/useTheme';
+
 import TableCell from '../../../TableCell';
-import { IconButton } from '../../../../../../index';
+import IconButton from 'components/IconButton';
 
 type Props = {
   isExpandedExists: boolean;

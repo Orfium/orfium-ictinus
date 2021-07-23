@@ -1,12 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
+import { TestProps } from 'utils/types';
 
+import { SelectOption } from '../Select/Select';
 import NormalList from './NormalList';
 import VirtualizedList from './VirtualizedList';
-import { SelectOption } from '../Select/Select';
-import { TestProps } from 'utils/types';
 
 export type ListRowSize = 'small' | 'normal';
 

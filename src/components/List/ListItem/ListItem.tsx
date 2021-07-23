@@ -1,12 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
 import Highlighter from 'react-highlight-words';
-
-import { listItemStyle, contentStyle } from './ListItem.style';
-import { SelectOption } from '../../Select/Select';
 import { TestProps } from 'utils/types';
+
+import { SelectOption } from '../../Select/Select';
+import { listItemStyle, contentStyle } from './ListItem.style';
 
 type Props = {
   /** Size of the ListItem (translates to height) */

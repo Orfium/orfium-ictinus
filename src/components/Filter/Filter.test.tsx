@@ -1,7 +1,7 @@
-import React from 'react';
-import '@testing-library/jest-dom/extend-expect';
 import userEvent from '@testing-library/user-event';
+import React from 'react';
 import { render, screen, waitFor } from 'test';
+
 import Filter from './Filter';
 
 const items = [

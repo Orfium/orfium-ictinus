@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+import { css } from '@emotion/react';
 import React, { useState } from 'react';
-import { css, jsx } from '@emotion/core';
 
 import Select from '../../Select';
 import { SelectOption } from '../../Select/Select';

@@ -1,10 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import omit from 'lodash/omit';
 import * as React from 'react';
-import { inputStyle } from './TextArea.style';
-import TextInputWrapper from '../utils/TextInputWrapper/TextInputWrapper';
+
 import { formFieldStyles } from '../../theme/palette';
+import TextInputBase from '../TextInputBase/TextInputBase';
+import { inputStyle } from './TextArea.style';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -47,7 +46,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
 
   return (
     <React.Fragment>
-      <TextInputWrapper {...props}>
+      <TextInputBase {...props}>
         <div css={{ width: '100% ' }}>
           <textarea
             css={inputStyle({ placeholder, resizeEnabled })}
@@ -55,13 +54,15 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
             required={required}
             id={id}
             disabled={disabled}
-            {...rest}
+            {...omit(rest, ['styleType', 'hintMsg'])}
             ref={ref}
           />
         </div>
-      </TextInputWrapper>
+      </TextInputBase>
     </React.Fragment>
   );
 });
+
+TextArea.displayName = 'TextArea';
 
 export default TextArea;

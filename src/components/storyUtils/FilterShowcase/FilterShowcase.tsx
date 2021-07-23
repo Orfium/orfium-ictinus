@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Filter from 'components/Filter';
 import { FilterOption, StyleType } from 'components/Filter/types';
 

@@ -1,15 +1,11 @@
-// const projectConfig = require('../webpack.config.js');
-// const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
-const path = require('path');
-const tsConfig = require('../tsconfig');
-const pathToInlineSvg = path.resolve(__dirname, '../src/components/Icon/assets');
-const util = require('util');
+import '@babel/polyfill';
 
 module.exports = {
   stories: [
     '../docs/guides/INTRODUCTION.stories.@(md|mdx)',
     '../docs/guides/GETTING_STARTED.stories.@(md|mdx)',
     '../docs/system/THEME.stories.@(md|mdx)',
+    '../docs/system/COLOR-UTILITY.stories.@(md|mdx)',
     '../docs/guides/*.stories.@(md|mdx)',
     '../docs/system/*.stories.@(md|mdx)',
     '../src/**/*.stories.@(ts|tsx|mdx)',
@@ -23,15 +19,20 @@ module.exports = {
     '@storybook/addon-storysource/register',
     '@storybook/addon-docs',
   ],
-  webpackFinal: async config => {
+  webpackFinal: async (config: any) => {
     // do mutation to the config
     // Edit config with care. Make sure to preserve the following config options:
     // * entry
     // * output
 
     const rules = config.module.rules;
-    const fileLoaderRule = rules.find(rule => rule.test.test('.svg'));
+    const fileLoaderRule = rules.find((rule: any) => rule.test.test('.svg'));
     fileLoaderRule.exclude = /\.svg$/;
+
+    config.module.rules[0].use[0].options.presets = [
+      ...config.module.rules[0].use[0].options.presets,
+      require.resolve('@emotion/babel-preset-css-prop'),
+    ];
 
     rules.push({
       test: /\.svg$/,

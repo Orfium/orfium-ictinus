@@ -1,16 +1,13 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
 
-import CheckBox from 'components/CheckBox';
+import CheckBox from '../CheckBox';
+import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
-import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
-import ExtendedColumnItem from './components/ExtendedColumnItem';
+import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
@@ -104,6 +101,7 @@ function Table<T>({
     setSelectedIds(undefined);
   }, [data]);
 
+  // @ts-ignore
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
@@ -114,15 +112,15 @@ function Table<T>({
 
   const columnsHasNumberArr = React.useMemo(
     () =>
-      head(data)?.cells.map(({ content }) => {
-        return Boolean(Number.isInteger(Number(content)) || parseFloat(`${content}`));
+      head(data)?.cells?.map(({ content }) => {
+        return !Number.isNaN(Number(content));
       }) || [],
     [data]
   );
 
   const columnsWithWidth = React.useMemo(
     () =>
-      head(data)?.cells.map(({ widthPercentage }) => {
+      head(data)?.cells?.map(({ widthPercentage }) => {
         return widthPercentage;
       }) || [],
     [data]
@@ -223,19 +221,27 @@ function Table<T>({
                         columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
                       }
                       component={'th'}
-                      key={`${isItemString(item) ? item : item.content}`}
+                      key={`${isItemString(item) ? item : item.content.sortingKey}`}
                       sticky={fixedHeader}
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
                       isSortable={!isItemString(item) && item.isSortable}
-                      isActive={!isItemString(item) ? item.content === sorting.column : false}
+                      isActive={!isItemString(item) && item.content.sortingKey === sorting.column}
                       onClick={() => {
                         if (!isItemString(item) && item.isSortable) {
-                          handleSorting(item.content);
+                          handleSorting(item.content.sortingKey);
                         }
                       }}
                       dataTestIdPrefix={`${dataTestIdPrefix}_${
-                        !isItemString(item) ? item?.content.toLowerCase() : item.toLowerCase()
+                        !isItemString(item)
+                          ? item.content.sortingKey
+                              .trim()
+                              .toLowerCase()
+                              .replace(/ /g, '_')
+                          : item
+                              .trim()
+                              .toLowerCase()
+                              .replace(/ /g, '_')
                       }`}
                     >
                       {isItemString(item) ? (

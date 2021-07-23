@@ -1,36 +1,18 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import * as React from 'react';
-import { EventProps } from '../../utils/common';
-import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestId } from '../../utils/types';
-import { buttonSpanStyle, buttonStyle, childrenWrapperStyle, iconStyle } from './Button.style';
-import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { useLoading } from 'hooks/useLoading';
+import React, { useRef } from 'react';
+import { EventProps } from 'utils/common';
+import { TestProps } from 'utils/types';
 
-export type Props = {
-  /** Type indicating the type of the button */
-  type?: AcceptedColorComponentTypes;
-  /** the color of the button based on our colors eg. red-400 */
-  color?: string;
-  /** This property define the size of the button. Defaults to 'md' */
-  size?: 'lg' | 'md' | 'sm';
-  /** Property indicating if the component is filled with a color based on the type */
-  filled?: boolean;
-  /** Property indicating if the component is transparent with a color based on the type */
-  transparent?: boolean;
-  /** An optional icon to put on the right of the button */
-  iconRight?: React.Component | JSX.Element | null;
-  /** An optional icon to put on the left of the button */
-  iconLeft?: React.Component | JSX.Element | null;
-  /** Define if the button is in disabled state */
-  disabled?: boolean;
-};
+import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
+import {
+  buttonSpanStyle,
+  childrenWrapperStyle,
+  iconStyle,
+  centralizedLoader,
+} from './Button.style';
+import Loader from 'components/Loader';
 
-export type TestProps = {
-  dataTestId?: TestId;
-};
+export type Props = ButtonBaseProps;
 
 const Button: React.FC<Props & TestProps & EventProps> = props => {
   const {
@@ -43,39 +25,21 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
     iconRight = null,
     disabled = false,
     children,
-    dataTestId = '',
     onClick,
-    onBlur,
   } = props;
-
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType(color, type);
+  const { loading, handleAsyncOperation } = useLoading(onClick);
+  const childrenWrapperRef = useRef<HTMLSpanElement>(null);
+  const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
 
   return (
-    <button
-      data-testid={generateTestDataId('button', dataTestId)}
-      css={buttonStyle({
-        type,
-        filled,
-        size,
-        color,
-        transparent,
-        calculatedColor,
-        iconExists: Boolean(iconLeft || iconRight),
-        disabled,
-        iconLeft,
-        iconRight,
-        childrenCount: React.Children.count(children),
-      })}
-      onClick={onClick}
-      onBlur={onBlur}
-      disabled={disabled}
-    >
+    <ButtonBase {...props} loading={loading} onClick={handleAsyncOperation}>
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
+          ref={childrenWrapperRef}
           css={childrenWrapperStyle({
             type,
+            loading,
             filled,
             size,
             color,
@@ -86,12 +50,18 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
             hasChildren: Boolean(React.Children.count(children)),
           })}
         >
-          {children}
+          {loading ? (
+            <div css={centralizedLoader(innerButtonWidth)}>
+              <Loader type={'spinner'} />
+            </div>
+          ) : (
+            children
+          )}
         </span>
 
         {iconRight && <span css={iconStyle()}>{iconRight}</span>}
       </span>
-    </button>
+    </ButtonBase>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+
 import Styles from './Asset.style';
 
 interface Props {

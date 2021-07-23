@@ -1,6 +1,7 @@
 import React, { FC, useMemo } from 'react';
-import Styles from './Categories.style';
+
 import { useCategoryItemActions } from '../utils';
+import Styles from './Categories.style';
 
 const CategoryItem: FC<{ item: string; matchedCategoryItems?: string[] }> = ({
   item,

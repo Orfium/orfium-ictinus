@@ -1,15 +1,12 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
-import { jsx } from '@emotion/core';
-
-import ListItem from '../ListItem';
 import { generateUniqueID } from 'utils/helpers';
-import { listStyle } from './NormalList.style';
-import { SelectOption } from '../../Select/Select';
-import { isSelected } from '../utils';
 import { TestProps } from 'utils/types';
+
+import { SelectOption } from '../../Select/Select';
 import { ListRowSize } from '../List';
+import ListItem from '../ListItem';
+import { isSelected } from '../utils';
+import { listStyle } from './NormalList.style';
 
 type Props = {
   items: (string | number | SelectOption)[];
