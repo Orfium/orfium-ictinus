@@ -10,6 +10,7 @@ import TableRow from '../TableRow';
 import ContentCell from './components/ContentCell';
 import ExpandedButtonCell from './components/ExpandedButtonCell';
 import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
+import { isComponentFunctionType } from '../../../../utils/helpers';
 
 const RenderRowWithCells = React.memo(
   ({
@@ -38,12 +39,16 @@ const RenderRowWithCells = React.memo(
     } = React.useContext(TableRowContext);
     const { expanded } = row;
     const isExpandedExists = Boolean(expanded);
+    const [lastItem] = row.cells?.slice(-1);
 
     return (
       <TableRow
         selected={isRowSelected}
         onClick={isExpandedExists ? toggleChecked : undefined}
-        css={borderedRowStyle({ bordered })}
+        css={borderedRowStyle({
+          bordered,
+          isCustomCell: isExpandedExists || isComponentFunctionType(lastItem.content),
+        })}
       >
         {onSelectionChangeExist && (
           <TableCell

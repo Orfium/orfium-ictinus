@@ -4045,7 +4045,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 }
 
 .emotion-17 td:last-child {
-  padding-right: 1rem;
+  padding-right: inherit;
 }
 
 .emotion-25 {
@@ -4077,6 +4077,14 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 }
 
 .emotion-34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   padding: 0.25rem 0.5rem;
 }
 

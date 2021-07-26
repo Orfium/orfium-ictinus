@@ -28,6 +28,8 @@ const ExpandedButtonCell: React.FC<Props> = ({
       <div>
         <div
           css={{
+            display: 'flex',
+            justifyContent: 'center',
             padding: `${theme.spacing.xsm} ${theme.spacing.sm}`,
           }}
         >
