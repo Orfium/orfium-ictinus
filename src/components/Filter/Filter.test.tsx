@@ -72,11 +72,11 @@ describe('Generic Filter', () => {
 
     const selectInput = screen.getByTestId('filter-input');
 
-    expect(screen.getByTestId('default-option')).toBeInTheDocument();
+    expect(screen.getByTestId('ictinus_list_default_option')).toBeInTheDocument();
 
     userEvent.type(selectInput, 'test');
 
-    expect(screen.queryByTestId('default-option')).not.toBeInTheDocument();
+    expect(screen.queryByTestId('ictinus_list_default_option')).not.toBeInTheDocument();
   });
 
   it('should display loading dots when isLoading is true', async () => {

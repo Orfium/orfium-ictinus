@@ -38,6 +38,8 @@ export type Props = {
   minCharactersToSearch?: number;
   /** if the search request is loading */
   isLoading?: boolean;
+  /** Whether the Options List is Virtualized or not */
+  isVirtualized?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
 };
@@ -48,7 +50,7 @@ export type BaseColorProps = {
   calculatedColor: ColorShapeFromComponent;
   activeCalculatedColor: ColorShapeFromComponent;
   hasSelectedValue: boolean;
-}
+};
 
 export type BackgroundColorProps = BaseColorProps & {
   buttonType: AcceptedColorComponentTypes;
@@ -64,7 +66,6 @@ export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
 export type BorderProps = Omit<BaseColorProps, 'open' | 'calculatedColor'> & {
   styleType: StyleType;
 };
-
 
 export type HoverBorderProps = BaseColorProps & {
   styleType: StyleType;

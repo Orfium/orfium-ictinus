@@ -2,15 +2,17 @@ import { css, SerializedStyles } from '@emotion/core';
 import { rem } from 'polished';
 import { Theme } from 'theme';
 
-import { ListRowSize } from '../List';
+import { ListRowSize } from '../types';
 
 export const listItemStyle = ({
   size,
   selected,
+  highlighted,
   disabled,
 }: {
   size: ListRowSize;
   selected: boolean;
+  highlighted: boolean;
   disabled: boolean;
 }) => (theme: Theme): SerializedStyles => css`
   height: ${size === 'normal' ? rem(56) : rem(46)};
@@ -19,6 +21,8 @@ export const listItemStyle = ({
   display: flex;
   align-items: center;
   padding: 0px ${theme.spacing.md};
+
+  ${highlighted && 'font-weight: 500;'}
 
   ${!(selected || disabled) &&
     `

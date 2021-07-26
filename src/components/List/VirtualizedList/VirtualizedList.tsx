@@ -3,17 +3,14 @@ import { FixedSizeList as VList } from 'react-window';
 import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
 
-import {
-  MAX_LARGE_HEIGHT,
-  MAX_SMALL_HEIGHT,
-} from '../../Select/components/SelectMenu/SelectMenu.style';
 import { SelectOption } from '../../Select/Select';
-import { ListRowSize } from '../List';
 import ListItem from '../ListItem';
-import { isSelected } from '../utils';
+import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
+import { isSelected, MAX_LARGE_HEIGHT, MAX_SMALL_HEIGHT } from '../utils';
+import { FilterOption } from 'components/Filter/types';
 
 type Props = {
-  items: (string | number | SelectOption)[];
+  items: ListItemType[];
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: ListRowSize;
   /** Width of the list */
@@ -21,11 +18,13 @@ type Props = {
   /** Height of the list */
   customHeight?: number;
   /** Selected Item */
-  selectedItem?: string | number;
+  selectedItem?: string | number | SelectOption | FilterOption;
+  /** Default option. Renders on top of the list, highlighted */
+  defaultOption?: string | number | SelectOption | FilterOption;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
-  handleOptionClick?: (option: SelectOption) => void;
+  handleOptionClick?: SelectHandlerType;
 } & TestProps;
 
 const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
@@ -36,12 +35,17 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
       customHeight,
       rowSize,
       selectedItem,
+      defaultOption,
       searchTerm,
       handleOptionClick,
       dataTestId,
     },
     ref
   ) => {
+    if (defaultOption) {
+      items.unshift(defaultOption);
+    }
+
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => (
       <span style={style}>
         <ListItem
@@ -51,7 +55,8 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
           ref={ref}
           selected={isSelected({ item: items[index], selectedItem })}
           searchTerm={searchTerm}
-          dataTestId={dataTestId}
+          dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
+          highlighted={Boolean(defaultOption && index === 0)}
           handleOptionClick={handleOptionClick}
         />
       </span>

@@ -1,17 +1,10 @@
-import { css } from '@emotion/react';
-import { isUndefined } from 'lodash';
-import { darken, lighten } from 'polished';
+import { lighten } from 'polished';
 
-import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
-import {
-  BackgroundColorProps,
-  BaseColorProps,
-  FilterOption,
-  BorderProps,
-  HoverBorderProps,
-} from './types';
+import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
+
+export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
 export const getBackgroundColor = ({
   open,
@@ -48,27 +41,6 @@ export const getTextColor = ({
 
   return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
 };
-
-export const defaultOptionStyle = (defaultValue: FilterOption, selectedValue?: FilterOption) => (
-  theme: Theme
-) => css`
-  background-color: ${isUndefined(selectedValue?.value) ||
-  selectedValue?.value === defaultValue.value
-    ? darken(0.05, theme.palette.white)
-    : theme.palette.white};
-  border: 0;
-  font-weight: ${theme.typography.weights.medium};
-`;
-
-export const optionStyle = (option: FilterOption, selectedItem?: FilterOption) => (
-  theme: Theme
-) => css`
-  background-color: ${option.value === selectedItem?.value
-    ? darken(0.05, theme.palette.white)
-    : theme.palette.white};
-  border: 0;
-  font-weight: ${theme.typography.weights.regular};
-`;
 
 export const getBorder = ({
   styleType,

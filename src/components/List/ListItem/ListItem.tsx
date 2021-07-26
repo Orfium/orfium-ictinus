@@ -2,24 +2,26 @@ import React from 'react';
 import Highlighter from 'react-highlight-words';
 import { TestProps } from 'utils/types';
 
-import { SelectOption } from '../../Select/Select';
+import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { listItemStyle, contentStyle } from './ListItem.style';
 
 type Props = {
   /** Size of the ListItem (translates to height) */
-  size: 'normal' | 'small';
+  size: ListRowSize;
   /** Content of the ListItem */
-  content: string | number | SelectOption;
+  content: ListItemType;
   /** Index, for test-id calculation */
   index: number;
   /** Selected state */
   selected?: boolean;
+  /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
+  highlighted?: boolean;
   /** Disabled state */
   disabled?: boolean;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
-  handleOptionClick?: (option: SelectOption) => void;
+  handleOptionClick?: SelectHandlerType;
 } & TestProps;
 
 const ListItem = React.forwardRef<HTMLDivElement, Props>(
@@ -29,6 +31,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       content,
       index,
       selected = false,
+      highlighted = false,
       disabled = false,
       handleOptionClick,
       searchTerm,
@@ -37,18 +40,14 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
     ref
   ) => {
     const handleListItemSelect = () => {
-      if (
-        !(typeof content === 'string' || typeof content === 'number') &&
-        content &&
-        handleOptionClick
-      ) {
-        handleOptionClick(content);
+      if (content && handleOptionClick) {
+        handleOptionClick(content as never);
       }
     };
 
     return (
       <div
-        css={listItemStyle({ size, selected, disabled })}
+        css={listItemStyle({ size, selected, highlighted, disabled })}
         ref={selected ? ref : null}
         onClick={handleListItemSelect}
         data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
@@ -72,5 +71,6 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
     );
   }
 );
+ListItem.displayName = 'ListItem';
 
 export default ListItem;

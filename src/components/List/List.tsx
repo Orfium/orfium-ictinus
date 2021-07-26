@@ -1,15 +1,13 @@
 import React from 'react';
 import { TestProps } from 'utils/types';
 
-import { SelectOption } from '../Select/Select';
 import NormalList from './NormalList';
+import { ListItemType, ListRowSize, SelectHandlerType } from './types';
 import VirtualizedList from './VirtualizedList';
-
-export type ListRowSize = 'small' | 'normal';
 
 export type ListProps = {
   /** Data for the list */
-  data: (string | number | SelectOption)[];
+  data: ListItemType[];
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: ListRowSize;
   /** Width of the list */
@@ -19,11 +17,13 @@ export type ListProps = {
   /** Virtualized list option */
   isVirtualized?: boolean;
   /** Selected Item */
-  selectedItem?: string | number;
+  selectedItem?: ListItemType;
+  /** Default option. Renders on top of the list, highlighted - for Filter component */
+  defaultOption?: ListItemType;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
-  handleOptionClick?: (option: SelectOption) => void;
+  handleOptionClick?: SelectHandlerType;
 } & TestProps;
 
 const List = React.forwardRef<HTMLDivElement, ListProps>(
@@ -35,6 +35,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
       height,
       isVirtualized = false,
       selectedItem,
+      defaultOption,
       searchTerm,
       handleOptionClick,
       dataTestId,
@@ -49,6 +50,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
         customHeight={height}
         ref={ref}
         selectedItem={selectedItem}
+        defaultOption={defaultOption}
         searchTerm={searchTerm}
         handleOptionClick={handleOptionClick}
         dataTestId={dataTestId}
@@ -61,6 +63,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
         height={height}
         ref={ref}
         selectedItem={selectedItem}
+        defaultOption={defaultOption}
         searchTerm={searchTerm}
         handleOptionClick={handleOptionClick}
         dataTestId={dataTestId}
