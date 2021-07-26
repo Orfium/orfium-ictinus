@@ -1,15 +1,11 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import * as React from 'react';
-import { useMemo } from 'react';
-
 import useTheme from 'hooks/useTheme';
+import React from 'react';
+import { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
-import TextField from '../../../TextField';
+
 import Icon from '../../../Icon';
 import Loader from '../../../Loader';
-
+import TextField from '../../../TextField';
 import { textFieldWrapper, iconWrapper } from './SearchInput.style';
 
 interface Props {
@@ -26,11 +22,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: Props) => {
     () => (
       <div css={iconWrapper()}>
         {isLoading && <Loader />}
-        <Icon
-          size={20}
-          name="search"
-          color={theme.utils.getColor('lightGray', 500)}
-        />
+        <Icon size={20} name="search" color={theme.utils.getColor('lightGray', 500)} />
       </div>
     ),
     [open, theme.utils, isLoading]
@@ -43,7 +35,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: Props) => {
         styleType={'filled'}
         onChange={onChange}
         data-testid={generateTestDataId('filter-input', dataTestId)}
-        status='normal'
+        status="normal"
         placeholder="Search"
         value={value}
         rightIcon={rightIcon}

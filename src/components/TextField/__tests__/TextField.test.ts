@@ -1,6 +1,6 @@
-import { getTextFieldSize } from '../../../utils/size-utils';
-import spacing from '../../../theme/spacing';
 import { Theme } from '../../../theme';
+import spacing from '../../../theme/spacing';
+import { getTextFieldSize } from '../../../utils/size-utils';
 
 describe('TextField', () => {
   describe('Utils', () => {

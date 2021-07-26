@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
-import Styles from './Asset.style';
+
 import Icon from '../../../Icon';
+import Styles from './Asset.style';
 import Tooltip from 'components/Tooltip';
 
 export interface ExternalLinkProps {

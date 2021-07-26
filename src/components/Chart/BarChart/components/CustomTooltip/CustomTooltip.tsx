@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useState, useRef, useCallback, useEffect } from 'react';
+
 import { tickStyle, tooltipStyle, tooltipArrowStyle } from './CustomTooltip.style';
 
 type Props = {

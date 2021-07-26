@@ -1,11 +1,11 @@
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import useTheme from 'hooks/useTheme';
 import { ExtendedColumn, Sort } from '../../types';
+import { isItemString } from '../../utils';
 import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
-import { isItemString } from '../../utils';
 
 type Props = {
   item: ExtendedColumn | string;
@@ -17,14 +17,20 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
   const theme = useTheme();
 
   const itemContentLowerCase = !isItemString(item)
-    ? item.content.toLowerCase().replace(/ /g, '_')
-    : item.toLowerCase().replace(/ /g, '_');
+    ? item.content.sortingKey
+        .trim()
+        .toLowerCase()
+        .replace(/ /g, '_')
+    : item
+        .trim()
+        .toLowerCase()
+        .replace(/ /g, '_');
 
   const sortingItem = () =>
     //TODO: Remove type check when backwards-compatibility is removed
     !isItemString(item) &&
     item?.isSortable &&
-    (item.content === sorting?.column ? (
+    (item.content.sortingKey === sorting?.column ? (
       <div
         key={`table_icon_sort_${itemContentLowerCase}`}
         css={{
@@ -91,7 +97,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
     <div css={contentStyles()}>{item}</div>
   ) : (
     <div data-testid={`header_${itemContentLowerCase}`} css={containerStyles('8')}>
-      <span css={contentStyles()}>{item.content}</span>
+      <span css={contentStyles()}>{item.content.label}</span>
 
       <div css={containerStyles('4')}>{renderSortingAndTooltip()}</div>
     </div>

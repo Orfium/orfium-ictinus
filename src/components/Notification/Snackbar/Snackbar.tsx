@@ -1,10 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import Icon from 'components/Icon';
 import * as React from 'react';
+
+import useTheme from '../../../hooks/useTheme';
+import { generateTestDataId } from '../../../utils/helpers';
+import { TestId } from '../../../utils/types';
+import Button from '../../Button';
 import { NotificationStyleType, NotificationTypes } from '../Notification';
-import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import {
   actionContainer,
   iconContainer,
@@ -12,11 +12,9 @@ import {
   actionsContainer,
   boldMessageContainer,
 } from '../Notification.style';
+import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
-import useTheme from '../../../hooks/useTheme';
-import Button from '../../Button';
-import { TestId } from '../../../utils/types';
-import { generateTestDataId } from '../../../utils/helpers';
+import Icon from 'components/Icon';
 
 export type Props = {
   /** The informative message of the Toast */

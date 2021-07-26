@@ -1,7 +1,9 @@
 import React from 'react';
-import { tooltipStyle, tooltipChildrenWrapperStyle } from './Tooltip.style';
-import { v4 } from 'uuid';
 import ReactTooltip from 'react-tooltip';
+import { v4 } from 'uuid';
+
+import { tooltipStyle, tooltipChildrenWrapperStyle } from './Tooltip.style';
+
 
 export type TooltipSize = 'large' | 'medium' | 'small';
 

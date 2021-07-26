@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'test';
-import Radio from './Radio';
+
 import { fireEvent } from '../../test';
+import Radio from './Radio';
 
 describe('Radio', () => {
   let mockOnClick: jest.Mock<any, any>;

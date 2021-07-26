@@ -1,7 +1,8 @@
 import React from 'react';
 import { fireEvent, render } from 'test';
-import OverlayComponent from './OverlayComponent';
+
 import { currentDay } from '../utils';
+import OverlayComponent from './OverlayComponent';
 
 describe('OverlayComponent', () => {
   const mockDate = currentDay;

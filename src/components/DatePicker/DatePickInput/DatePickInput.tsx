@@ -1,12 +1,10 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
+
+import { getLocaleFormat } from '../../../utils/helpers';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
-import { getLocaleFormat } from '../../../utils/helpers';
 import { Range } from '../OverlayComponent/OverlayComponent';
 import { rangeInputsWrapper } from './DatePickInput.style';
 
@@ -52,9 +50,9 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onFocus={handleFocus}
             onKeyDown={handleClear}
             onChange={ON_CHANGE_MOCK}
-            placeholder={`${dateFormatOverride} - ${dateFormatOverride}`}
+            placeholder="Date (start) - Date (end)"
             value={
-              getDateFormatted(selectedDay.from) &&
+              selectedDay.from &&
               `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
             }
             rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
@@ -66,7 +64,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onFocus={handleFocus}
             onKeyDown={handleClear}
             onChange={ON_CHANGE_MOCK}
-            placeholder={dateFormatOverride}
+            placeholder="Select date"
             value={selectedDay.to && getDateFormatted(selectedDay.to)}
             rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
           />

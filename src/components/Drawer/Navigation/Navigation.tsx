@@ -1,11 +1,9 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 import React, { useCallback, useState } from 'react';
-import { navigationContainerStyle } from './Navigation.style';
+
 import { Props } from '../Drawer';
 import MenuItem from './MenuItem/MenuItem';
-import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
+import { navigationContainerStyle } from './Navigation.style';
 
 type NavigationProps = Props;
 

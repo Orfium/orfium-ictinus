@@ -1,14 +1,11 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React, { useEffect } from 'react';
 
-import { TestId } from '../../utils/types';
-import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
 import { generateTestDataId } from '../../utils/helpers';
+import { TestId } from '../../utils/types';
 import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';
+import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
 import ModalContent, { Props as ModalContentProps } from './ModalContent/ModalContent';
 
 export type Props = {

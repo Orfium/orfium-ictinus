@@ -1,7 +1,5 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import * as React from 'react';
+
 import useToggle from '../../../../hooks/useToggle';
 import CheckBox from '../../../CheckBox';
 import { Row } from '../../Table';
@@ -62,7 +60,7 @@ const RenderRowWithCells = React.memo(
             </div>
           </TableCell>
         )}
-        {row.cells.map(({ content, colSpan, type: cellType, align }, index) => (
+        {row.cells?.map(({ content, colSpan, type: cellType, align }, index) => (
           <ContentCell
             key={`${row.id}-${index}`}
             cellCounter={index}
@@ -87,7 +85,7 @@ const RenderRowWithCells = React.memo(
           toggleChecked={toggleChecked}
           dataTestIdPrefix={dataTestIdPrefix}
           rowIndex={rowIndex}
-          index={row.cells.length + 1}
+          index={row.cells?.length + 1}
         />
       </TableRow>
     );

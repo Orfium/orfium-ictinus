@@ -1,6 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css } from '@emotion/react';
+import React from 'react';
+
 import Tooltip from '../../Tooltip';
 
 const TooltipShowcase = () => {
