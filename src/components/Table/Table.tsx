@@ -64,6 +64,21 @@ type Props<T> = {
   dataTestIdPrefix?: string;
 };
 
+const getColumnCount = (
+  columns: (string | ExtendedColumn)[],
+  onCheck: ((data: Selection[]) => void) | undefined,
+  hasExpandableRows: boolean
+) => {
+  if (!onCheck && !hasExpandableRows) {
+    return columns.length;
+  }
+  if (Boolean(onCheck) && hasExpandableRows) {
+    return columns.length + 2;
+  }
+
+  return columns.length + 1;
+};
+
 function Table<T>({
   data,
   columns,
@@ -81,10 +96,9 @@ function Table<T>({
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
 
-  let columnCount = onCheck ? columns.length + 1 : columns.length;
+  const hasExpandableRows = data.some(row => Boolean(row.expanded));
 
-  const hasExpandableRows = data.some(row => !!row.expanded);
-  columnCount = hasExpandableRows ? columnCount + 1 : columnCount;
+  const columnCount = getColumnCount(columns, onCheck, hasExpandableRows);
 
   useEffect(() => {
     if (onSort) {
@@ -288,7 +302,7 @@ function Table<T>({
                 columnsHasNumberArr,
                 columnsWithWidth,
                 onSelectionChangeExist: Boolean(onCheck),
-                expanded: !!row.expanded,
+                expanded: Boolean(row.expanded),
               }}
               dataTestIdPrefix={dataTestIdPrefix}
               rowIndex={index + 1}
