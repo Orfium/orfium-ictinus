@@ -1,4 +1,5 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { select } from '@storybook/addon-knobs';
 import Table from './Table';
 
 <Meta title="Design System/Table" component={Table} />
@@ -243,7 +244,7 @@ Table with expandable rows and nested header
   <Story name="Table with expandable rows">
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
-      type="nested-header"
+      type={select('type', ['normal', 'nested-header'], 'normal')}
       padded
       onCheck={(g) => console.log('on table change: ', g)}
       topLeftText={'topLeftText'}

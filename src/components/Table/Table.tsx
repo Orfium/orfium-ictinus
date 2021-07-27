@@ -81,7 +81,10 @@ function Table<T>({
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
 
-  const columnCount = onCheck ? columns.length + 1 : columns.length;
+  let columnCount = onCheck ? columns.length + 1 : columns.length;
+
+  const hasExpandableRows = data.some(row => !!row.expanded);
+  columnCount = hasExpandableRows ? columnCount + 1 : columnCount;
 
   useEffect(() => {
     if (onSort) {
@@ -256,6 +259,14 @@ function Table<T>({
                     </TableCell>
                   );
                 })}
+                {hasExpandableRows && (
+                  <TableCell
+                    component={'th'}
+                    sticky={fixedHeader}
+                    width={67}
+                    dataTestIdPrefix={dataTestIdPrefix}
+                  />
+                )}
               </TableRow>
             )}
           </thead>
