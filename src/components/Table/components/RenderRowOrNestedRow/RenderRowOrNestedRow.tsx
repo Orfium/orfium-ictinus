@@ -136,10 +136,8 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
                   />
                   {checked && (
                     <TableRow nested>
-                      {/* colSpan is +1 because of the tableCell added for the arrow icon */}
-
                       <TableCell
-                        colSpan={columnCount + 1}
+                        colSpan={columnCount}
                         dataTestIdPrefix={dataTestIdPrefix}
                         rowIndex={rowIndex}
                         index={'expanded'}
