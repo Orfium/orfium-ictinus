@@ -1,6 +1,7 @@
-import { Theme } from '../../theme';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
+import { Theme } from '../../theme';
 import { formFieldStyles } from '../../theme/palette';
 
 export const selectWrapper = ({

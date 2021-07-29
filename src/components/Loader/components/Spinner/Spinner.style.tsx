@@ -1,6 +1,7 @@
-import { Theme } from '../../../../theme';
-import { css, SerializedStyles } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
+import { Theme } from '../../../../theme';
 
 const spinnerBorderStyle = (theme: Theme, color?: string) =>
   `${rem(2)} solid ${color || theme.utils.getColor('primary', 400, 'normal')};`;

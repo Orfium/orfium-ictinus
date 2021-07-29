@@ -12,5 +12,6 @@ module.exports = {
   moduleNameMapper: {
     '\\.svg$': '<rootDir>/__mocks__/fileMock.tsx',
   },
+  snapshotSerializers: ['@emotion/jest/serializer'],
   setupFilesAfterEnv: ['<rootDir>/src/test/setup.ts'],
 };

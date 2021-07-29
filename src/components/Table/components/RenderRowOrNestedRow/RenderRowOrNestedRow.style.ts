@@ -1,12 +1,23 @@
-import { css, SerializedStyles } from '@emotion/core';
-import { Theme } from 'theme';
+import { css, SerializedStyles } from '@emotion/react';
 import rem from 'polished/lib/helpers/rem';
+import { Theme } from 'theme';
 
-export const borderedRowStyle = ({ bordered }: { bordered: boolean }) => (
-  theme: Theme
-): SerializedStyles =>
+export const borderedRowStyle = ({
+  bordered,
+  isCustomCell,
+}: {
+  bordered: boolean;
+  isCustomCell?: boolean;
+}) => (theme: Theme): SerializedStyles =>
   css({
     borderBottom: bordered ? `${rem(1)} solid ${theme.utils.getColor('lightGray', 200)}` : 'none',
+    'td:first-child': {
+      paddingLeft: theme.spacing.md,
+    },
+
+    'td:last-child': {
+      paddingRight: isCustomCell ? 'inherit' : theme.spacing.md,
+    },
   });
 
 export const expandableRowStyle = ({ isFirstRow }: { isFirstRow: boolean }) => (

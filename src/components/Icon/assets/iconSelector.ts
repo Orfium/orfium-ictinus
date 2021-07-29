@@ -1,5 +1,4 @@
 import { AcceptedIconNames } from '../types';
-
 import AccountIcon from './account.svg';
 import ActionsIcon from './actions.svg';
 import AddIcon from './add.svg';
@@ -35,12 +34,13 @@ import ChevronSmallLeftIcon from './chevron-small-left.svg';
 import ChevronSmallRightIcon from './chevron-small-right.svg';
 import ChevronSmallUpIcon from './chevron-small-up.svg';
 import ClaimListIcon from './claimList.svg';
+import ClockOutlined from './clock-outlined.svg';
 import ClockIcon from './clock.svg';
 import CloseTagIcon from './close-tag.svg';
 import CloseIcon from './close.svg';
 import CmsProcessIcon from './cms-process.svg';
-import CompositionIcon from './composition.svg';
 import CompositionIconV2 from './composition-v2.svg';
+import CompositionIcon from './composition.svg';
 import ConcertIcon from './concert.svg';
 import ConfirmedMatchesIcon from './confirmed-matches.svg';
 import ConflictsIcon from './conflicts.svg';
@@ -51,6 +51,7 @@ import DeleteIcon from './delete.svg';
 import DeliveryIcon from './delivery.svg';
 import DetailsIcon from './details.svg';
 import DigitalUse from './digitalUse.svg';
+import Distribution from './distribution.svg';
 import DotsVerticalIcon from './dots-vertical.svg';
 import DownloadIcon from './download.svg';
 import DuplicateIcon from './duplicate.svg';
@@ -59,18 +60,11 @@ import EarningsIcon from './earnings.svg';
 import EarningsIcon2 from './earnings2.svg';
 import EditIcon from './edit.svg';
 import EntitiesIcon from './entities.svg';
+import Entity from './entity.svg';
 import ErrorIcon from './error.svg';
 import ExpensesIcon from './expenses.svg';
-import ExternalLinkIcon from './external-link.svg';
 import ExternalLinkIconV2 from './external-link-v2.svg';
-import RefreshIcon from './refresh.svg';
-import StarIcon from './star.svg';
-import Proposed from './proposed.svg';
-import Unpaired from './unpaired.svg';
-import UnpairedV2 from './unpaired-v2.svg';
-import ClockOutlined from './clock-outlined.svg';
-import UserCheck from './userCheck.svg';
-
+import ExternalLinkIcon from './external-link.svg';
 /**
  * In the current design system the collection of "FatArrowIcon"
  * has been renamed into "ArrowIcon" collection. For backwards
@@ -116,19 +110,27 @@ import PageFirstIcon from './page-first.svg';
 import PageLastIcon from './page-last.svg';
 import ArrowToRightIcon from './pagination-end.svg';
 import ArrowToLeftIcon from './pagination-start.svg';
+import PauseIcon from './pause.svg';
 import PercentageIcon from './percentage.svg';
+import PlayCount from './play-count.svg';
 import PlusIcon from './plus.svg';
 import PoliciesIcon from './policies.svg';
 import ProcessManagementIcon from './process-management.svg';
 import ProcessIcon from './process.svg';
+import ProcessedLogs from './processed-logs.svg';
+import Proposed from './proposed.svg';
 import PublicPerformanceIcon from './publicPerformance.svg';
 import PublisherIcon from './publisher.svg';
-import RecordLabelIcon from './record-label.svg';
 import RecordLabelIconV2 from './record-label-v2.svg';
+import RecordLabelIcon from './record-label.svg';
 import ReferenceFileIcon from './reference-file.svg';
+import RefreshIcon from './refresh.svg';
 import RelationsIcon from './relations.svg';
+import RestartIcon from './restart.svg';
 import RestoreIcon from './restore.svg';
 import ResultIcon from './result.svg';
+import ResumeIcon from './resume.svg';
+import RoyaltyShares from './royaltyShares.svg';
 import SearchMusicIcon from './search-music.svg';
 import SearchThunderIcon from './search-thunder.svg';
 import SearchIcon from './search.svg';
@@ -137,6 +139,7 @@ import SightIcon from './sight.svg';
 import SortAscendingIcon from './sort-ascending.svg';
 import SortDescendingIcon from './sort-descending.svg';
 import StampIcon from './stamp.svg';
+import StarIcon from './star.svg';
 import Statements from './statements.svg';
 import SuccessIcon from './success.svg';
 import Television from './television.svg';
@@ -151,10 +154,13 @@ import TriangleUpIcon from './triangle-up.svg';
 import TrophyIcon from './trophy.svg';
 import TVCinemaIcon from './TVCinema.svg';
 import TVRadioIcon from './TVRadio.svg';
+import UnpairedV2 from './unpaired-v2.svg';
+import Unpaired from './unpaired.svg';
 import UpdateIcon from './update.svg';
 import UploadIcon from './upload.svg';
 import UserAvatarIcon from './user-avatar.svg';
 import UserIcon from './user.svg';
+import UserCheck from './userCheck.svg';
 import UsersIcon from './users.svg';
 import Users2Icon from './users2.svg';
 import VideoCondirmationIcon from './videoConfirmation.svg';
@@ -163,13 +169,6 @@ import WarningIcon from './warning.svg';
 import WorksIcon from './works.svg';
 import WriterIcon from './writer.svg';
 import YoutubeIcon from './youtube.svg';
-import RestartIcon from './restart.svg';
-import ResumeIcon from './resume.svg';
-import PauseIcon from './pause.svg';
-import Entity from './entity.svg';
-import PlayCount from './play-count.svg';
-import ProcessedLogs from './processed-logs.svg';
-import Distribution from './distribution.svg';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,
@@ -334,6 +333,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   clockOutlined: ClockOutlined,
   userCheck: UserCheck,
   distribution: Distribution,
+  royaltyShares: RoyaltyShares,
 };
 
 export default iconSelector;

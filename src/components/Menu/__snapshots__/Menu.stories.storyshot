@@ -1,6 +1,237 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Menu Menu with avatar and different button colour 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #242424;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-3:hover {
+  background-color: #3e3e3e;
+}
+
+.emotion-3:active {
+  background-color: #575757;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background: #676767;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.8125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  line-height: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.emotion-6 img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #fff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #fff;
+}
+
+.emotion-26 {
+  fill: #fff;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.emotion-26 path {
+  fill: #fff;
+}
+
+.emotion-32 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  background-color: #f3f3f3;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-32:hover {
+  background-color: #dadada;
+}
+
+.emotion-32:active {
+  background-color: #c0c0c0;
+}
+
+.emotion-35 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background: #27dcbd;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.8125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  line-height: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #000;
+}
+
+.emotion-35 img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-37 {
+  fill: #000;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.emotion-37 path {
+  fill: #000;
+}
+
+.emotion-41 {
+  fill: #000;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-41 path {
+  fill: #000;
+}
+
 <div
   style={
     Object {
@@ -17,14 +248,7 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,7 +257,7 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -46,44 +270,43 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1w0uhk0-Button"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-v4tpzl-Avatar"
+                  className="emotion-6"
                 >
                   
                   TC
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-7"
               >
                 <span>
                   Tom Cruise
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-9"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-14m0jd5-Icon"
+                    className="emotion-10"
                   />
                 </span>
               </span>
@@ -103,23 +326,22 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1w0uhk0-Button"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-v4tpzl-Avatar"
+                  className="emotion-6"
                 >
                   <img
                     src="https://material-ui.com/static/images/avatar/1.jpg"
@@ -127,21 +349,21 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-7"
               >
                 <span>
                   Tom Cruise
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-9"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-14m0jd5-Icon"
+                    className="emotion-10"
                   />
                 </span>
               </span>
@@ -161,52 +383,51 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1w0uhk0-Button"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-v4tpzl-Avatar"
+                  className="emotion-6"
                 >
                   
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-xcq3z3-Icon"
+                      className="emotion-26"
                     />
                   </span>
                   
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-7"
               >
                 <span>
                   Tom Cruise
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-9"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-14m0jd5-Icon"
+                    className="emotion-10"
                   />
                 </span>
               </span>
@@ -226,52 +447,51 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1v4og6h-Button"
+            className="emotion-32"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-g77rbc-Avatar"
+                  className="emotion-35"
                 >
                   
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-15k2u31-Icon"
+                      className="emotion-37"
                     />
                   </span>
                   
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-7"
               >
                 <span>
                   Tom Cruise
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-9"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1k5aruc-Icon"
+                    className="emotion-41"
                   />
                 </span>
               </span>
@@ -285,6 +505,220 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
 `;
 
 exports[`Storyshots Design System/Menu Menu with option icon and different colour 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #242424;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-3:hover {
+  background-color: #3e3e3e;
+}
+
+.emotion-3:active {
+  background-color: #575757;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  background: #676767;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.8125rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  line-height: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.emotion-6 img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: #fff;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.emotion-8 path {
+  fill: #fff;
+}
+
+.emotion-9 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-12 {
+  fill: #fff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-12 path {
+  fill: #fff;
+}
+
+.emotion-14 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  background-color: #d1d1d1;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-14:hover {
+  background-color: #b8b8b8;
+}
+
+.emotion-14:active {
+  background-color: #9e9e9e;
+}
+
+.emotion-23 {
+  fill: #000;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-23 path {
+  fill: #000;
+}
+
+.emotion-25 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #242424;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: solid 1px rgba(36,36,36,0.5);
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-25:hover {
+  background-color: rgba(36,36,36,0.1);
+}
+
+.emotion-25:active {
+  background-color: rgba(36,36,36,0.2);
+}
+
+.emotion-34 {
+  fill: #242424;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-34 path {
+  fill: #242424;
+}
+
 <div
   style={
     Object {
@@ -301,14 +735,7 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -317,7 +744,7 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -330,52 +757,51 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1w0uhk0-Button"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-v4tpzl-Avatar"
+                  className="emotion-6"
                 >
                   
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-xcq3z3-Icon"
+                      className="emotion-8"
                     />
                   </span>
                   
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-9"
               >
                 <span>
                   More
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-14m0jd5-Icon"
+                    className="emotion-12"
                   />
                 </span>
               </span>
@@ -395,52 +821,51 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1o6wti9-Button"
+            className="emotion-14"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-v4tpzl-Avatar"
+                  className="emotion-6"
                 >
                   
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-xcq3z3-Icon"
+                      className="emotion-8"
                     />
                   </span>
                   
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-9"
               >
                 <span>
                   More
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1k5aruc-Icon"
+                    className="emotion-23"
                   />
                 </span>
               </span>
@@ -460,52 +885,51 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
         role="button"
       >
         <div
-          className="css-6mpaj4-Menu"
+          className="emotion-2"
         >
           <button
-            className="css-1xebuoy-Button"
+            className="emotion-25"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-4"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <div
-                  className="css-v4tpzl-Avatar"
+                  className="emotion-6"
                 >
                   
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-xcq3z3-Icon"
+                      className="emotion-8"
                     />
                   </span>
                   
                 </div>
               </span>
               <span
-                className="css-1qy2jjj-Button"
+                className="emotion-9"
               >
                 <span>
                   More
                 </span>
               </span>
               <span
-                className="css-1kner5m-Button"
+                className="emotion-5"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1ej672q-Icon"
+                    className="emotion-34"
                   />
                 </span>
               </span>
@@ -519,6 +943,57 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
 `;
 
 exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #232d7d;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #181f55;
+}
+
+.emotion-2:active {
+  background-color: #0d102d;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -535,14 +1010,7 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -561,20 +1029,19 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
       role="button"
     >
       <div
-        className="css-6mpaj4-Menu"
+        className="emotion-1"
       >
         <button
-          className="css-1rg7573-Button"
+          className="emotion-2"
           data-testid="button"
           disabled={false}
           onClick={[Function]}
-          type="button"
         >
           <span
-            className="css-1xr6sam-Button"
+            className="emotion-3"
           >
             <span
-              className="css-l730ys-Button"
+              className="emotion-4"
             >
               <span>
                 More

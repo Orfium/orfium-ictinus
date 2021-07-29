@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { UserMenuProps } from './components/UserMenu/UserMenu';
 
 export interface TopAppBarProps {

@@ -1,4 +1,5 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
+
 import { flexCenter } from '../../../theme/functions';
 
 export const container = css`

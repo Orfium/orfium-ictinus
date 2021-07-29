@@ -1,10 +1,8 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import useTheme from 'hooks/useTheme';
 import React from 'react';
-import useTheme from '../../../../../../hooks/useTheme';
+
 import TableCell from '../../../TableCell';
-import { IconButton } from '../../../../../../index';
+import IconButton from 'components/IconButton';
 
 type Props = {
   isExpandedExists: boolean;
@@ -26,10 +24,12 @@ const ExpandedButtonCell: React.FC<Props> = ({
   const theme = useTheme();
 
   return isExpandedExists ? (
-    <TableCell width={67} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
+    <TableCell width={'5%'} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
       <div>
         <div
           css={{
+            display: 'flex',
+            justifyContent: 'center',
             padding: `${theme.spacing.xsm} ${theme.spacing.sm}`,
           }}
         >

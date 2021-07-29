@@ -1,21 +1,19 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
+import { css } from '@emotion/react';
+import { debounce } from 'lodash';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
-import { css, jsx } from '@emotion/core';
+import { generateTestDataId } from 'utils/helpers';
 
+import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
-import TextField from '../TextField';
+import { ChangeEvent } from '../../utils/common';
 import Icon from '../Icon';
+import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import SelectMenu from './components/SelectMenu/SelectMenu';
-import { debounce } from 'lodash';
-import Loader from 'components/Loader';
-import { generateTestDataId } from '../../utils/helpers';
-import useCombinedRefs from '../../hooks/useCombinedRefs';
-import { selectWrapper } from './Select.style';
-import { ChangeEvent } from '../../utils/common';
 import handleSearch from '../utils/handleSearch';
+import SelectMenu from './components/SelectMenu/SelectMenu';
+import { selectWrapper } from './Select.style';
+import Loader from 'components/Loader';
 
 export type SelectOption = {
   value: string | number;
@@ -209,5 +207,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     );
   }
 );
+
+Select.displayName = 'Select';
 
 export default Select;

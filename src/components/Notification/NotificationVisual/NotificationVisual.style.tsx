@@ -1,6 +1,7 @@
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
 import { Theme } from '../../../theme';
-import { css, SerializedStyles } from '@emotion/core';
 
 export const visualContainer = () => (theme: Theme): SerializedStyles => css`
   margin: ${theme.spacing.md};

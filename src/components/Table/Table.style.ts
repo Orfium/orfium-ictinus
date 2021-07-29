@@ -1,6 +1,7 @@
-import { css, SerializedStyles } from '@emotion/core';
-import { Theme } from '../../theme';
+import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+
+import { Theme } from '../../theme';
 
 export const tableStyle = () => (): SerializedStyles =>
   css({ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' });
@@ -12,4 +13,12 @@ export const tableRowHeadersStyle = () => (theme: Theme): SerializedStyles =>
     borderBottomWidth: rem(1),
     borderBottomStyle: 'solid',
     borderBottomColor: theme.utils.getColor('lightGray', 200),
+
+    'th:first-child': {
+      paddingLeft: theme.spacing.md,
+    },
+
+    'th:last-child': {
+      paddingRight: theme.spacing.md,
+    },
   });

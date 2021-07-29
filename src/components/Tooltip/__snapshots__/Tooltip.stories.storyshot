@@ -1,6 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 250px;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 <div
   style={
     Object {
@@ -17,14 +58,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,10 +67,10 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
     </button>
   </div>
   <div
-    className="css-18gcp79-TooltipShowcase"
+    className="emotion-1"
   >
     <div
-      css={[Function]}
+      className="emotion-2"
       data-for="top"
       data-tip={true}
     >
@@ -134,7 +168,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       By hover here you can see useful info
     </div>
     <div
-      css={[Function]}
+      className="emotion-2"
       data-for="bottom"
       data-tip={true}
     >
@@ -232,7 +266,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       By hover here you can see useful info
     </div>
     <div
-      css={[Function]}
+      className="emotion-2"
       data-for="right"
       data-tip={true}
     >
@@ -330,7 +364,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       By hover here you can see useful info
     </div>
     <div
-      css={[Function]}
+      className="emotion-2"
       data-for="left"
       data-tip={true}
     >
@@ -432,6 +466,42 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 `;
 
 exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
 <div
   style={
     Object {
@@ -448,14 +518,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -464,7 +527,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -474,7 +537,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-2"
         data-for="right1"
         data-tip={true}
       >
@@ -580,7 +643,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-2"
         data-for="right2"
         data-tip={true}
       >
@@ -686,7 +749,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
       }
     >
       <div
-        css={[Function]}
+        className="emotion-2"
         data-for="right3"
         data-tip={true}
       >

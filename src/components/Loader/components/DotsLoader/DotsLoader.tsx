@@ -1,9 +1,7 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
 import React from 'react';
-import { dotsContainer, dotsWrapper } from './DotsLoader.style';
 import { generateTestDataId } from 'utils/helpers';
-import { jsx } from '@emotion/core';
+
+import { dotsContainer, dotsWrapper } from './DotsLoader.style';
 
 type Props = {
   dataTestId?: string;

@@ -1,14 +1,12 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import React from 'react';
+import { TooltipProps } from 'recharts';
+
 import {
   tooltipHrStyle,
   tooltipLiStyle,
   tooltipStyle,
   tooltipUlStyle,
 } from './CustomTooltip.style';
-import { TooltipProps } from 'recharts';
 
 const CustomTooltip: React.FC<TooltipProps> = ({ label, payload }) => {
   return (

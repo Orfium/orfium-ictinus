@@ -1,5 +1,5 @@
 // import theme from 'src/theme/globals';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 /* Declare mixins in order to further DRY our code. Any reusable and indepedent =  css code bundle
   should become a mixin. Include them using the "@include" command inside a =  css selector
  */

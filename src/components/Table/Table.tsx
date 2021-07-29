@@ -1,16 +1,13 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
 
-import CheckBox from 'components/CheckBox';
+import CheckBox from '../CheckBox';
+import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
-import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import TableRowWrapper from './components/TableRowWrapper';
-import ExtendedColumnItem from './components/ExtendedColumnItem';
+import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
@@ -67,6 +64,21 @@ type Props<T> = {
   dataTestIdPrefix?: string;
 };
 
+const getColumnCount = (
+  columns: (string | ExtendedColumn)[],
+  onCheck: ((data: Selection[]) => void) | undefined,
+  hasExpandableRows: boolean
+) => {
+  if (!onCheck && !hasExpandableRows) {
+    return columns.length;
+  }
+  if (Boolean(onCheck) && hasExpandableRows) {
+    return columns.length + 2;
+  }
+
+  return columns.length + 1;
+};
+
 function Table<T>({
   data,
   columns,
@@ -84,7 +96,9 @@ function Table<T>({
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
 
-  const columnCount = onCheck ? columns.length + 1 : columns.length;
+  const hasExpandableRows = data.some(row => Boolean(row.expanded));
+
+  const columnCount = getColumnCount(columns, onCheck, hasExpandableRows);
 
   useEffect(() => {
     if (onSort) {
@@ -104,6 +118,7 @@ function Table<T>({
     setSelectedIds(undefined);
   }, [data]);
 
+  // @ts-ignore
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
@@ -258,6 +273,14 @@ function Table<T>({
                     </TableCell>
                   );
                 })}
+                {hasExpandableRows && (
+                  <TableCell
+                    component={'th'}
+                    sticky={fixedHeader}
+                    width={67}
+                    dataTestIdPrefix={dataTestIdPrefix}
+                  />
+                )}
               </TableRow>
             )}
           </thead>
@@ -279,7 +302,7 @@ function Table<T>({
                 columnsHasNumberArr,
                 columnsWithWidth,
                 onSelectionChangeExist: Boolean(onCheck),
-                expanded: !!row.expanded,
+                expanded: Boolean(row.expanded),
               }}
               dataTestIdPrefix={dataTestIdPrefix}
               rowIndex={index + 1}

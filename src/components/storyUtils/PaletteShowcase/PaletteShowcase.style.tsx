@@ -1,6 +1,7 @@
-import { css } from '@emotion/core';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../../theme/palette';
+import { css } from '@emotion/react';
+
 import { transition } from '../../../theme/functions';
+import { colorShades, flatColors, pickTextColorFromSwatches } from '../../../theme/palette';
 
 export const paletteWrapper = css`
   display: grid;

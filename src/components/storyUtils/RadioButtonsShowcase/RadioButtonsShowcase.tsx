@@ -1,5 +1,6 @@
-import Radio from 'components/Radio';
 import React, { ReactEventHandler, useState } from 'react';
+
+import Radio from 'components/Radio';
 
 function RadioButtonsShowcase() {
   const [selectedValue, setSelectedValue] = useState('c');
