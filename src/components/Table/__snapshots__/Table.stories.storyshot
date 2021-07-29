@@ -169,6 +169,14 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
   border-bottom-color: #e7e7e7;
 }
 
+.emotion-13 th:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-13 th:last-child {
+  padding-right: 1rem;
+}
+
 .emotion-15 {
   position: relative;
   text-align: left;
@@ -200,6 +208,14 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #e7e7e7;
+}
+
+.emotion-23 td:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-23 td:last-child {
+  padding-right: 1rem;
 }
 
 .emotion-31 {
@@ -887,6 +903,14 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
   border-bottom-color: #e7e7e7;
 }
 
+.emotion-13 th:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-13 th:last-child {
+  padding-right: 1rem;
+}
+
 .emotion-15 {
   position: relative;
   text-align: left;
@@ -930,6 +954,14 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #e7e7e7;
+}
+
+.emotion-23 td:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-23 td:last-child {
+  padding-right: 1rem;
 }
 
 .emotion-31 {
@@ -1922,6 +1954,14 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
   border-bottom-color: #e7e7e7;
 }
 
+.emotion-6 th:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-6 th:last-child {
+  padding-right: 1rem;
+}
+
 .emotion-7 {
   position: relative;
   text-align: left;
@@ -1953,6 +1993,14 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #e7e7e7;
+}
+
+.emotion-15 td:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-15 td:last-child {
+  padding-right: 1rem;
 }
 
 .emotion-16 {
@@ -2465,6 +2513,14 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
   border-bottom-color: #e7e7e7;
 }
 
+.emotion-2 th:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-2 th:last-child {
+  padding-right: 1rem;
+}
+
 .emotion-3 {
   position: relative;
   text-align: left;
@@ -2660,6 +2716,14 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #e7e7e7;
+}
+
+.emotion-35 td:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-35 td:last-child {
+  padding-right: 1rem;
 }
 
 .emotion-36 {
@@ -3938,6 +4002,14 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   border-bottom-color: #e7e7e7;
 }
 
+.emotion-13 th:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-13 th:last-child {
+  padding-right: 1rem;
+}
+
 .emotion-15 {
   position: relative;
   text-align: left;
@@ -4024,6 +4096,14 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   background-color: #e7e7e7;
 }
 
+.emotion-28 td:first-child {
+  padding-left: 1rem;
+}
+
+.emotion-28 td:last-child {
+  padding-right: inherit;
+}
+
 .emotion-36 {
   position: relative;
   text-align: left;
@@ -4042,10 +4122,18 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   position: relative;
   text-align: left;
   padding: 0.25rem 0;
-  width: 67px;
+  width: 5%;
 }
 
 .emotion-41 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   padding: 0.25rem 0.5rem;
 }
 

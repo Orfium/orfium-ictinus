@@ -13,4 +13,12 @@ export const tableRowHeadersStyle = () => (theme: Theme): SerializedStyles =>
     borderBottomWidth: rem(1),
     borderBottomStyle: 'solid',
     borderBottomColor: theme.utils.getColor('lightGray', 200),
+
+    'th:first-child': {
+      paddingLeft: theme.spacing.md,
+    },
+
+    'th:last-child': {
+      paddingRight: theme.spacing.md,
+    },
   });
