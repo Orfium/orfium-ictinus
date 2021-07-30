@@ -6,7 +6,9 @@ import { Theme } from '../../theme';
 export const tableStyle = () => (): SerializedStyles =>
   css({ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' });
 
-export const tableRowHeadersStyle = () => (theme: Theme): SerializedStyles =>
+export const tableRowHeadersStyle = (hasExpandableRows: boolean) => (
+  theme: Theme
+): SerializedStyles =>
   css({
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
@@ -19,6 +21,6 @@ export const tableRowHeadersStyle = () => (theme: Theme): SerializedStyles =>
     },
 
     'th:last-child': {
-      paddingRight: theme.spacing.md,
+      paddingRight: hasExpandableRows ? 'inherit' : theme.spacing.md,
     },
   });
