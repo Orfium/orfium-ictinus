@@ -16,10 +16,48 @@ export const buttonSpanStyle = () => () => {
   return {
     display: 'flex',
     alignItems: 'center',
+    height: '100%',
   };
 };
 
-export const buttonStyle = ({
+export const buttonWrapperStyle = ({
+  calculatedColor,
+  activeCalculatedColor,
+  disabled,
+  open,
+  styleType,
+  hasSelectedValue,
+  filterType,
+}: ButtonStyleProps) => (theme: Theme) => {
+  const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
+
+  return {
+    background: 'none',
+    border: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    height: rem(36),
+
+    ':hover > *,:active > *': {
+      backgroundColor:
+        !disabled && !open
+          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
+          : undefined,
+      border: getHoverBorder({
+        styleType,
+        filterType,
+        theme,
+        open,
+        calculatedColor,
+        activeCalculatedColor,
+        hasSelectedValue,
+      }),
+      boxShadow,
+    },
+  };
+};
+
+export const buttonBaseStyle = ({
   calculatedColor,
   activeCalculatedColor,
   buttonType,
@@ -27,17 +65,18 @@ export const buttonStyle = ({
   open,
   styleType,
   hasSelectedValue,
+  filterType,
 }: ButtonStyleProps) => (theme: Theme) => {
   const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
 
   return {
+    zIndex: 0,
+    position: 'relative' as const,
     fontSize: theme.typography.fontSizes['13'],
     cursor: 'pointer',
-    padding: `${theme.spacing.sm} ${theme.spacing.md}`,
-    height: rem(36),
+    height: '100%',
     opacity: disabled ? 0.5 : 1,
-    borderRadius: theme.spacing.lg,
-    transition: 'background-color 150ms linear',
+    transition: 'all 150ms linear',
     boxShadow,
     color: getTextColor({
       theme,
@@ -60,22 +99,33 @@ export const buttonStyle = ({
       theme,
       hasSelectedValue,
       activeCalculatedColor,
+      filterType,
     }),
-    ':hover,:active': {
-      backgroundColor:
-        !disabled && !open
-          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
-          : undefined,
-      border: getHoverBorder({
-        styleType,
-        theme,
-        open,
-        calculatedColor,
-        activeCalculatedColor,
-        hasSelectedValue,
-      }),
-      boxShadow,
-    },
+    display: 'flex',
+  };
+};
+export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
+  const { filterType, styleType } = props;
+
+  return {
+    ...buttonBaseStyle(props)(theme),
+    paddingRight: theme.spacing.md,
+    marginLeft: filterType === 'added' && styleType !== 'outlined' ? rem(1) : undefined,
+    borderTopRightRadius: theme.spacing.lg,
+    borderBottomRightRadius: theme.spacing.lg,
+  };
+};
+
+export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
+  const { filterType } = props;
+  const isPreset = filterType === 'preset';
+
+  return {
+    ...buttonBaseStyle(props)(theme),
+    padding: `0 ${!isPreset ? theme.spacing.xsm : theme.spacing.md} 0 ${theme.spacing.md}`,
+    borderRadius: theme.spacing.lg,
+    borderTopRightRadius: !isPreset ? 0 : undefined,
+    borderBottomRightRadius: !isPreset ? 0 : undefined,
   };
 };
 

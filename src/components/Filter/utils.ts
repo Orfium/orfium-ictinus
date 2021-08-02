@@ -75,17 +75,22 @@ export const getBorder = ({
   theme,
   hasSelectedValue,
   activeCalculatedColor,
+  filterType,
 }: BorderProps) => {
-  if (styleType === 'outlined' && !hasSelectedValue) {
+  if (filterType === 'added' && styleType !== 'outlined') {
+    return `solid 1px transparent`;
+  }
+  if (filterType !== 'added' && styleType === 'outlined' && !hasSelectedValue) {
     return `solid 1px ${theme.utils.getColor('lightGray', 400)}`;
-  } else if (hasSelectedValue) {
+  }
+  if (hasSelectedValue) {
     return `solid 1px ${lighten(
       0.5,
       theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade)
     )}`;
   }
 
-  return 'none';
+  return 'solid 1px transparent';
 };
 
 export const getHoverBorder = ({
@@ -95,7 +100,11 @@ export const getHoverBorder = ({
   calculatedColor,
   activeCalculatedColor,
   hasSelectedValue,
+  filterType,
 }: HoverBorderProps) => {
+  if (filterType === 'added' && styleType !== 'outlined') {
+    return `solid 1px transparent`;
+  }
   if (styleType === 'outlined' || hasSelectedValue) {
     if (open) {
       return `solid 1px ${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
@@ -104,5 +113,5 @@ export const getHoverBorder = ({
     return `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
   }
 
-  return 'none';
+  return 'solid 1px transparent';
 };
