@@ -6,7 +6,9 @@ import { Theme } from '../../theme';
 export const tableStyle = () => (): SerializedStyles =>
   css({ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' });
 
-export const tableRowHeadersStyle = () => (theme: Theme): SerializedStyles =>
+export const tableRowHeadersStyle = (hasExpandableRows: boolean, hasOnCheck: boolean) => (
+  theme: Theme
+): SerializedStyles =>
   css({
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
@@ -15,10 +17,10 @@ export const tableRowHeadersStyle = () => (theme: Theme): SerializedStyles =>
     borderBottomColor: theme.utils.getColor('lightGray', 200),
 
     'th:first-child': {
-      paddingLeft: theme.spacing.md,
+      paddingLeft: hasOnCheck ? undefined : theme.spacing.md,
     },
 
     'th:last-child': {
-      paddingRight: theme.spacing.md,
+      paddingRight: hasExpandableRows ? undefined : theme.spacing.md,
     },
   });
