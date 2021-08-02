@@ -218,7 +218,7 @@ function Table<T>({
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (
-              <TableRow css={tableRowHeadersStyle()}>
+              <TableRow css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck))}>
                 {onCheck && (
                   <TableCell
                     component={'th'}
@@ -277,7 +277,7 @@ function Table<T>({
                   <TableCell
                     component={'th'}
                     sticky={fixedHeader}
-                    width={67}
+                    width={'5%'}
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
                 )}
