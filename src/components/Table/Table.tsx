@@ -218,7 +218,7 @@ function Table<T>({
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (
-              <TableRow css={tableRowHeadersStyle(hasExpandableRows)}>
+              <TableRow css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck))}>
                 {onCheck && (
                   <TableCell
                     component={'th'}
