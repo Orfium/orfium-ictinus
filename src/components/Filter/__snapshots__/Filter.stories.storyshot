@@ -32,19 +32,15 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
 .emotion-2:active>* {
   background-color: #d1d9e8;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-3 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #F3F5F9;
   border: solid 1px transparent;
@@ -211,19 +207,15 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
 .emotion-2:active>* {
   background-color: #d1d9e8;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-3 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #F3F5F9;
   border: solid 1px transparent;
@@ -390,19 +382,15 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 .emotion-2:active>* {
   background-color: #d1d9e8;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-3 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #F3F5F9;
   border: solid 1px transparent;
@@ -585,19 +573,15 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 .emotion-3:active>* {
   background-color: #c399ff;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-4 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #e1ccff;
   border: solid 1px transparent;
@@ -679,19 +663,15 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 .emotion-11:active>* {
   background-color: #d20000;
   border: solid 1px #d20000;
-  box-shadow: none;
 }
 
 .emotion-12 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #fff;
   background-color: #9f0000;
   border: solid 1px #cfcfcf;
@@ -713,6 +693,14 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   fill: #fff;
 }
 
+.emotion-18 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+  -webkit-filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
 .emotion-19 {
   background: none;
   border: none;
@@ -731,19 +719,15 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 .emotion-19:active>* {
   background-color: #5d5d5d;
   border: solid 1px transparent;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .emotion-20 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
   color: #fff;
   background-color: #767676;
   border: solid 1px transparent;
@@ -773,19 +757,15 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 .emotion-27:active>* {
   background-color: #ea9cc2;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-28 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: transparent;
   border: solid 1px transparent;
@@ -944,7 +924,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
           role="button"
         >
           <div
-            className="emotion-2"
+            className="emotion-18"
           >
             <button
               className="emotion-19"
@@ -1090,19 +1070,15 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 .emotion-3:active>* {
   background-color: #d1d9e8;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-4 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #F3F5F9;
   border: solid 1px transparent;
@@ -1184,19 +1160,15 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 .emotion-11:active>* {
   background-color: #d1d9e8;
   border: solid 1px #d1d9e8;
-  box-shadow: none;
 }
 
 .emotion-12 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #F3F5F9;
   border: solid 1px #cfcfcf;
@@ -1208,58 +1180,21 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-19 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 2.25rem;
-}
-
-.emotion-19:hover>*,
-.emotion-19:active>* {
-  background-color: #d1d9e8;
-  border: solid 1px transparent;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
-}
-
-.emotion-20 {
-  z-index: 0;
+.emotion-18 {
   position: relative;
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
-  color: #000;
-  background-color: #F3F5F9;
-  border: solid 1px transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
+  display: inline-block;
+  height: 2.25rem;
+  -webkit-filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
 }
 
 .emotion-28 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: transparent;
   border: solid 1px transparent;
@@ -1289,19 +1224,15 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 .emotion-36:active>* {
   background-color: #c399ff;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-37 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #e1ccff;
   border: solid 1px transparent;
@@ -1316,15 +1247,12 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 }
 
 .emotion-43 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #e1ccff;
   border: solid 1px transparent;
@@ -1332,6 +1260,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
   padding-right: 1rem;
   margin-left: 0.0625rem;
   border-top-right-radius: 1.5rem;
@@ -1366,65 +1295,18 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 .emotion-47:active>* {
   background-color: #c399ff;
   border: solid 1px #c399ff;
-  box-shadow: none;
 }
 
-.emotion-54 {
-  z-index: 0;
-  position: relative;
+.emotion-48 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #e1ccff;
-  border: solid 1px transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding-right: 1rem;
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-}
-
-.emotion-58 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 2.25rem;
-}
-
-.emotion-58:hover>*,
-.emotion-58:active>* {
-  background-color: #c399ff;
-  border: solid 1px transparent;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
-}
-
-.emotion-59 {
-  z-index: 0;
-  position: relative;
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
-  color: #000;
-  background-color: #e1ccff;
-  border: solid 1px transparent;
+  border: solid 1px #cfcfcf;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1435,39 +1317,33 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   border-bottom-right-radius: 0;
 }
 
-.emotion-65 {
-  z-index: 0;
-  position: relative;
+.emotion-54 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
   color: #000;
   background-color: #e1ccff;
-  border: solid 1px transparent;
+  border: solid 1px #cfcfcf;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
   padding-right: 1rem;
-  margin-left: 0.0625rem;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
 
 .emotion-70 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: transparent;
   border: solid 1px transparent;
@@ -1482,15 +1358,12 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 }
 
 .emotion-76 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: transparent;
   border: solid 1px transparent;
@@ -1498,6 +1371,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: -1;
   padding-right: 1rem;
   margin-left: 0.0625rem;
   border-top-right-radius: 1.5rem;
@@ -1654,16 +1528,16 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
           role="button"
         >
           <div
-            className="emotion-2"
+            className="emotion-18"
           >
             <button
-              className="emotion-19"
+              className="emotion-3"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-20"
+                className="emotion-4"
               >
                 <span
                   className="emotion-5"
@@ -1844,7 +1718,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
               onClick={[Function]}
             >
               <div
-                className="emotion-37"
+                className="emotion-48"
               >
                 <span
                   className="emotion-5"
@@ -1901,16 +1775,16 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
           role="button"
         >
           <div
-            className="emotion-2"
+            className="emotion-18"
           >
             <button
-              className="emotion-58"
+              className="emotion-36"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-59"
+                className="emotion-37"
               >
                 <span
                   className="emotion-5"
@@ -1939,7 +1813,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                 </span>
               </div>
               <div
-                className="emotion-65"
+                className="emotion-43"
               >
                 <span
                   className="emotion-8"
@@ -2071,19 +1945,15 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
 .emotion-3:active>* {
   background-color: #d1d9e8;
   border: solid 1px transparent;
-  box-shadow: none;
 }
 
 .emotion-4 {
-  z-index: 0;
-  position: relative;
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  box-shadow: none;
   color: #000;
   background-color: #F3F5F9;
   border: solid 1px transparent;

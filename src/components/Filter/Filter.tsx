@@ -116,7 +116,7 @@ const Filter: React.FC<Props> = props => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle()} data-testid={dataTestId}>
+      <div css={wrapperStyle(buttonStyleProps)} data-testid={dataTestId}>
         <button
           data-testid={generateTestDataId('filter', dataTestId)}
           onClick={handleOpen}

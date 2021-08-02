@@ -6,11 +6,16 @@ import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
 import { getBackgroundColor, getTextColor, getBorder, getHoverBorder } from './utils';
 
-export const wrapperStyle = () => () => css`
-  position: relative;
-  display: inline-block;
-  height: ${rem(36)};
-`;
+export const wrapperStyle = ({ styleType }: ButtonStyleProps) => (theme: Theme) => {
+  const boxShadow = theme.elevation['02'];
+
+  return {
+    position: 'relative' as const,
+    display: 'inline-block',
+    height: rem(36),
+    filter: styleType === 'elevated' ? `drop-shadow(${boxShadow})` : undefined,
+  };
+};
 
 export const buttonSpanStyle = () => () => {
   return {
@@ -29,8 +34,6 @@ export const buttonWrapperStyle = ({
   hasSelectedValue,
   filterType,
 }: ButtonStyleProps) => (theme: Theme) => {
-  const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
-
   return {
     background: 'none',
     border: 'none',
@@ -52,7 +55,6 @@ export const buttonWrapperStyle = ({
         activeCalculatedColor,
         hasSelectedValue,
       }),
-      boxShadow,
     },
   };
 };
@@ -67,17 +69,12 @@ export const buttonBaseStyle = ({
   hasSelectedValue,
   filterType,
 }: ButtonStyleProps) => (theme: Theme) => {
-  const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
-
   return {
-    zIndex: 0,
-    position: 'relative' as const,
     fontSize: theme.typography.fontSizes['13'],
     cursor: 'pointer',
     height: '100%',
     opacity: disabled ? 0.5 : 1,
     transition: 'all 150ms linear',
-    boxShadow,
     color: getTextColor({
       theme,
       open,
@@ -109,6 +106,7 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
 
   return {
     ...buttonBaseStyle(props)(theme),
+    zIndex: -1,
     paddingRight: theme.spacing.md,
     marginLeft: filterType === 'added' && styleType !== 'outlined' ? rem(1) : undefined,
     borderTopRightRadius: theme.spacing.lg,

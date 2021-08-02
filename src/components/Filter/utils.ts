@@ -80,7 +80,7 @@ export const getBorder = ({
   if (filterType === 'added' && styleType !== 'outlined') {
     return `solid 1px transparent`;
   }
-  if (filterType !== 'added' && styleType === 'outlined' && !hasSelectedValue) {
+  if (styleType === 'outlined' && !hasSelectedValue) {
     return `solid 1px ${theme.utils.getColor('lightGray', 400)}`;
   }
   if (hasSelectedValue) {
