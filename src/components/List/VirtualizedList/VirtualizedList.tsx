@@ -47,7 +47,7 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     }
 
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => (
-      <span style={style}>
+      <span css={{ ...style }}>
         <ListItem
           size={rowSize}
           content={items[index]}
@@ -69,7 +69,7 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
         width={customWidth || '100%'}
         itemCount={items.length}
         itemSize={rowSize === 'normal' ? 56 : 46}
-        style={{ overflowX: 'hidden' }}
+        css={{ overflowX: 'hidden' }}
       >
         {rowRenderer}
       </VList>

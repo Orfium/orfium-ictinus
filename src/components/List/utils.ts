@@ -1,7 +1,8 @@
 import { ListItemType } from './types';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
-export const MAX_NON_VIRTUALIZED_ITEMS = 6;
+export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;
+export const MAX_NON_VIRTUALIZED_ITEMS_SELECT = 5;
 
 /** Min-max heights for VList */
 export const MAX_LARGE_HEIGHT = 277;

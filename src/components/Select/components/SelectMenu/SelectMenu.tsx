@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { SelectOption } from '../../Select';
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import List from 'components/List';
+import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 
 export type Props = {
   /** Sets the size of the menu */
@@ -41,7 +42,7 @@ const SelectMenu: React.FC<Props> = props => {
       <List
         data={filteredOptions}
         rowSize={'small'}
-        isVirtualized={isVirtualized}
+        isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
         ref={myRef}
         handleOptionClick={handleOptionClick}
         searchTerm={searchTerm}

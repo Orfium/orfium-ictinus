@@ -53,7 +53,8 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
         data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
       >
         <div css={contentStyle()}>
-          {typeof content === 'string' || typeof content === 'number' ? (
+          {/** @TODO latest version typescript 4.4 is solving this as a constant */
+          typeof content === 'string' || typeof content === 'number' ? (
             content
           ) : searchTerm ? (
             <Highlighter

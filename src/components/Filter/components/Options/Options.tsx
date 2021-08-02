@@ -4,7 +4,7 @@ import { FilterOption } from '../../types';
 import { emptyStyle } from './Options.style';
 import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/utils';
 import List from 'components/List';
-import { MAX_NON_VIRTUALIZED_ITEMS } from 'components/List/utils';
+import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
 
 interface Props {
   items: FilterOption[];
@@ -31,8 +31,10 @@ const Options: React.FC<Props> = ({
       defaultOption={shouldDisplayDefaultOption ? defaultValue : undefined}
       selectedItem={selectedItem}
       handleOptionClick={(option: FilterOption) => onSelect(option)}
-      isVirtualized={isVirtualized && items.length > MAX_NON_VIRTUALIZED_ITEMS}
-      height={items.length > MAX_NON_VIRTUALIZED_ITEMS ? FILTER_OPTIONS_MAX_HEIGHT : undefined}
+      isVirtualized={isVirtualized && items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER}
+      height={
+        items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER ? FILTER_OPTIONS_MAX_HEIGHT : undefined
+      }
       dataTestId={dataTestId}
     />
   ) : (
