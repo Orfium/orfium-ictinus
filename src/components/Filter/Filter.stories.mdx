@@ -62,6 +62,23 @@ A filter with colors and a selection handler to return selection on change and t
 </Preview>
 
 
+# Filter with big text
+
+<Preview>
+  <Story name="Filter with big text">
+    <Stack>
+       <FilterShowcase
+            styleType="filled"
+            color="lightCoolGray-400"
+            defaultValue={{
+                 label: 'default item is a very long text that should be overflow ellipsis',
+                 value: '1',
+            }}
+        />
+    </Stack>
+  </Story>
+</Preview>
+
 # Searchable Filter
 
 A filter that supports searching options

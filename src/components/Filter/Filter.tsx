@@ -17,6 +17,7 @@ import {
   labelSpanStyle,
   wrapperStyle,
   menuStyle,
+  valueSpanStyle,
 } from './Filter.style';
 import { FilterOption, Props } from './types';
 import { getTextColor } from './utils';
@@ -113,14 +114,14 @@ const Filter: React.FC<Props> = props => {
             open,
             styleType,
             hasSelectedValue,
-          })}
+          })(theme)}
           onClick={handleOpen}
           disabled={disabled}
         >
           <span css={buttonSpanStyle()}>
-            <span css={childrenWrapperStyle()}>
-              <span css={labelSpanStyle(open, hasSelectedValue)}>
-                {label}:<span>{selectedItem?.label ?? defaultValue.label}</span>
+            <span css={childrenWrapperStyle()(theme)}>
+              <span css={labelSpanStyle(open, hasSelectedValue)}>{label}:
+                <span css={valueSpanStyle()}>{selectedItem?.label ?? defaultValue.label}</span>
               </span>
             </span>
 

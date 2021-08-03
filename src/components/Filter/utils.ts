@@ -17,7 +17,9 @@ export const getBackgroundColor = ({
 }: BackgroundColorProps) => {
   if (open) {
     return defineBackgroundColor(theme, activeCalculatedColor);
-  } else if (hasSelectedValue || styleType === 'transparent') {
+  } else if (hasSelectedValue) {
+    return '#FFFFFF';
+  } else if (styleType === 'transparent') {
     return 'transparent';
   } else if (styleType === 'filled' || styleType === 'outlined') {
     return defineBackgroundColor(theme, calculatedColor, buttonType);
@@ -32,9 +34,9 @@ export const getTextColor = ({
   hasSelectedValue,
   activeCalculatedColor,
   calculatedColor,
-}: BaseColorProps) => {
+}: BaseColorProps): string => {
   if (hasSelectedValue && !open) {
-    return theme.utils.getColor(activeCalculatedColor.color, 500);
+    return theme.utils.getColor(activeCalculatedColor.color, 400);
   } else if (open) {
     return pickTextColorFromSwatches(activeCalculatedColor.color, activeCalculatedColor.shade);
   }
@@ -49,7 +51,7 @@ export const getBorder = ({
   activeCalculatedColor,
 }: BorderProps) => {
   if (styleType === 'outlined' && !hasSelectedValue) {
-    return `solid 1px ${theme.utils.getColor('lightGray', 400)}`;
+    return `solid 1px ${theme.utils.getColor(activeCalculatedColor.color, 200)}`;
   } else if (hasSelectedValue) {
     return `solid 1px ${lighten(
       0.5,

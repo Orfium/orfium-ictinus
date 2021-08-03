@@ -19,11 +19,20 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
   border: none;
@@ -33,7 +42,6 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
 .emotion-2:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 .emotion-3 {
@@ -50,10 +58,16 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
 .emotion-4 {
   margin-left: 0;
   margin-right: 0.5rem;
+  max-width: 16.875rem;
 }
 
 .emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
+  max-width: 13.125rem;
 }
 
 .emotion-5 span {
@@ -62,6 +76,13 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
 }
 
 .emotion-6 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -77,13 +98,13 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: #000;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-7 path {
+.emotion-8 path {
   fill: #000;
 }
 
@@ -134,17 +155,19 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
             >
               Async Label
               :
-              <span>
+              <span
+                className="emotion-6"
+              >
                 Default value
               </span>
             </span>
           </span>
           <span
-            className="emotion-6"
+            className="emotion-7"
             onClick={[Function]}
           >
             <span
-              className="emotion-7"
+              className="emotion-8"
             />
           </span>
         </span>
@@ -173,11 +196,20 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
   border: none;
@@ -187,7 +219,6 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
 .emotion-2:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 .emotion-3 {
@@ -204,10 +235,16 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
 .emotion-4 {
   margin-left: 0;
   margin-right: 0.5rem;
+  max-width: 16.875rem;
 }
 
 .emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
+  max-width: 13.125rem;
 }
 
 .emotion-5 span {
@@ -216,6 +253,13 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
 }
 
 .emotion-6 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -231,13 +275,13 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: #000;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-7 path {
+.emotion-8 path {
   fill: #000;
 }
 
@@ -288,17 +332,19 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
             >
               Async Label
               :
-              <span>
+              <span
+                className="emotion-6"
+              >
                 Default value
               </span>
             </span>
           </span>
           <span
-            className="emotion-6"
+            className="emotion-7"
             onClick={[Function]}
           >
             <span
-              className="emotion-7"
+              className="emotion-8"
             />
           </span>
         </span>
@@ -327,11 +373,20 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
   border: none;
@@ -341,7 +396,6 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 .emotion-2:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 .emotion-3 {
@@ -358,10 +412,16 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 .emotion-4 {
   margin-left: 0;
   margin-right: 0.5rem;
+  max-width: 16.875rem;
 }
 
 .emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
+  max-width: 13.125rem;
 }
 
 .emotion-5 span {
@@ -370,6 +430,13 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 }
 
 .emotion-6 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -385,13 +452,13 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: #000;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-7 path {
+.emotion-8 path {
   fill: #000;
 }
 
@@ -443,17 +510,19 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
               >
                 you can change me
                 :
-                <span>
+                <span
+                  className="emotion-6"
+                >
                   Peach
                 </span>
               </span>
             </span>
             <span
-              className="emotion-6"
+              className="emotion-7"
               onClick={[Function]}
             >
               <span
-                className="emotion-7"
+                className="emotion-8"
               />
             </span>
           </span>
@@ -464,7 +533,7 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Filter Filter with colors 1`] = `
+exports[`Storyshots Design System/Filter Filter with big text 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -497,21 +566,29 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
-  background-color: #e1ccff;
+  background-color: #F3F5F9;
   border: none;
 }
 
 .emotion-3:hover,
 .emotion-3:active {
-  background-color: #c399ff;
+  background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 .emotion-4 {
@@ -528,10 +605,16 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 .emotion-5 {
   margin-left: 0;
   margin-right: 0.5rem;
+  max-width: 16.875rem;
 }
 
 .emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
+  max-width: 13.125rem;
 }
 
 .emotion-6 span {
@@ -540,6 +623,13 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 }
 
 .emotion-7 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -555,90 +645,14 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: #000;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-8 path {
+.emotion-9 path {
   fill: #000;
-}
-
-.emotion-10 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 1.5rem;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-  box-shadow: none;
-  color: #fff;
-  background-color: #9f0000;
-  border: solid 1px #cfcfcf;
-}
-
-.emotion-10:hover,
-.emotion-10:active {
-  background-color: #d20000;
-  border: solid 1px #d20000;
-  box-shadow: none;
-}
-
-.emotion-15 {
-  fill: #fff;
-  width: 0.375rem;
-  height: 0.375rem;
-}
-
-.emotion-15 path {
-  fill: #fff;
-}
-
-.emotion-17 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 1.5rem;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
-  color: #fff;
-  background-color: #767676;
-  border: none;
-}
-
-.emotion-17:hover,
-.emotion-17:active {
-  background-color: #5d5d5d;
-  border: none;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
-}
-
-.emotion-24 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 1.5rem;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-  box-shadow: none;
-  color: #000;
-  background-color: transparent;
-  border: none;
-}
-
-.emotion-24:hover,
-.emotion-24:active {
-  background-color: #ea9cc2;
-  border: none;
-  box-shadow: none;
 }
 
 <div
@@ -699,17 +713,324 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
+                      default item is a very long text that should be overflow ellipsis
+                    </span>
+                  </span>
+                </span>
+                <span
+                  className="emotion-8"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-9"
+                  />
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Filter Filter with colors 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-3 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #000;
+  background-color: #e1ccff;
+  border: none;
+}
+
+.emotion-3:hover,
+.emotion-3:active {
+  background-color: #c399ff;
+  border: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+  max-width: 16.875rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  max-width: 13.125rem;
+}
+
+.emotion-6 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-7 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #000;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-9 path {
+  fill: #000;
+}
+
+.emotion-11 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  background-color: #9f0000;
+  border: solid 1px #9196be;
+}
+
+.emotion-11:hover,
+.emotion-11:active {
+  background-color: #d20000;
+  border: solid 1px #d20000;
+}
+
+.emotion-17 {
+  fill: #fff;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-17 path {
+  fill: #fff;
+}
+
+.emotion-19 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  background-color: #767676;
+  border: none;
+}
+
+.emotion-19:hover,
+.emotion-19:active {
+  background-color: #5d5d5d;
+  border: none;
+}
+
+.emotion-27 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+  opacity: 1;
+  border-radius: 1.5rem;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #000;
+  background-color: transparent;
+  border: none;
+}
+
+.emotion-27:hover,
+.emotion-27:active {
+  background-color: #ea9cc2;
+  border: none;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-4"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    Label
+                    :
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
@@ -733,7 +1054,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-10"
+              className="emotion-11"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -749,17 +1070,19 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-15"
+                    className="emotion-17"
                   />
                 </span>
               </span>
@@ -783,7 +1106,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-17"
+              className="emotion-19"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -799,17 +1122,19 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-15"
+                    className="emotion-17"
                   />
                 </span>
               </span>
@@ -833,7 +1158,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-24"
+              className="emotion-27"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -849,17 +1174,19 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
@@ -905,11 +1232,20 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
   border: none;
@@ -919,7 +1255,6 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 .emotion-3:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 .emotion-4 {
@@ -936,10 +1271,16 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 .emotion-5 {
   margin-left: 0;
   margin-right: 0.5rem;
+  max-width: 16.875rem;
 }
 
 .emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
+  max-width: 13.125rem;
 }
 
 .emotion-6 span {
@@ -948,6 +1289,13 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
 }
 
 .emotion-7 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -963,80 +1311,104 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: #000;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-8 path {
+.emotion-9 path {
   fill: #000;
 }
 
-.emotion-10 {
+.emotion-11 {
   font-size: 0.8125rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
-  border: solid 1px #cfcfcf;
+  border: solid 1px #9196be;
 }
 
-.emotion-10:hover,
-.emotion-10:active {
+.emotion-11:hover,
+.emotion-11:active {
   background-color: #d1d9e8;
   border: solid 1px #d1d9e8;
-  box-shadow: none;
 }
 
-.emotion-17 {
+.emotion-19 {
   font-size: 0.8125rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
   border: none;
 }
 
-.emotion-17:hover,
-.emotion-17:active {
+.emotion-19:hover,
+.emotion-19:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
-.emotion-24 {
+.emotion-27 {
   font-size: 0.8125rem;
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: transparent;
   border: none;
 }
 
-.emotion-24:hover,
-.emotion-24:active {
+.emotion-27:hover,
+.emotion-27:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 <div
@@ -1097,17 +1469,19 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
@@ -1131,7 +1505,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-10"
+              className="emotion-11"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -1147,17 +1521,19 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
@@ -1181,7 +1557,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-17"
+              className="emotion-19"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -1197,17 +1573,19 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
@@ -1231,7 +1609,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-24"
+              className="emotion-27"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -1247,17 +1625,19 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
@@ -1303,11 +1683,20 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   cursor: pointer;
   padding: 0.5rem 1rem;
   height: 2.25rem;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
   opacity: 1;
   border-radius: 1.5rem;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-  box-shadow: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   color: #000;
   background-color: #F3F5F9;
   border: none;
@@ -1317,7 +1706,6 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
 .emotion-3:active {
   background-color: #d1d9e8;
   border: none;
-  box-shadow: none;
 }
 
 .emotion-4 {
@@ -1334,10 +1722,16 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
 .emotion-5 {
   margin-left: 0;
   margin-right: 0.5rem;
+  max-width: 16.875rem;
 }
 
 .emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   font-weight: 400;
+  max-width: 13.125rem;
 }
 
 .emotion-6 span {
@@ -1346,6 +1740,13 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
 }
 
 .emotion-7 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1361,13 +1762,13 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-9 {
   fill: #000;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-8 path {
+.emotion-9 path {
   fill: #000;
 }
 
@@ -1429,17 +1830,19 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
                   >
                     Label
                     :
-                    <span>
+                    <span
+                      className="emotion-7"
+                    >
                       Default value
                     </span>
                   </span>
                 </span>
                 <span
-                  className="emotion-7"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-9"
                   />
                 </span>
               </span>
