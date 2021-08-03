@@ -10,6 +10,7 @@ import TableRowWrapper from './components/TableRowWrapper';
 import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
+import content from '*.svg';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
@@ -135,6 +136,14 @@ function Table<T>({
     [data]
   );
 
+  const columnsHasCustomAlignment = React.useMemo(
+    () =>
+      head(data)?.cells?.map(({ align }) => {
+        return align;
+      }) || [],
+    [data]
+  );
+
   const columnsWithWidth = React.useMemo(
     () =>
       head(data)?.cells?.map(({ widthPercentage }) => {
@@ -235,7 +244,11 @@ function Table<T>({
                   return (
                     <TableCell
                       textAlign={
-                        columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
+                        columnsHasCustomAlignment && columnsHasCustomAlignment[index]
+                          ? columnsHasCustomAlignment[index]
+                          : columnsHasNumberArr && columnsHasNumberArr[index]
+                          ? 'right'
+                          : 'left'
                       }
                       component={'th'}
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}
