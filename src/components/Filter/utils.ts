@@ -3,7 +3,7 @@ import { isUndefined } from 'lodash';
 import { darken, lighten } from 'polished';
 
 import { Theme } from '../../theme';
-import { pickTextColorFromSwatches } from '../../theme/palette';
+import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import {
   BackgroundColorProps,
@@ -75,19 +75,23 @@ export const getBorder = ({
   theme,
   hasSelectedValue,
   activeCalculatedColor,
-  filterType,
+  calculatedColor,
 }: BorderProps) => {
-  if (filterType === 'added' && styleType !== 'outlined') {
-    return `solid 1px transparent`;
-  }
+  const addOrSubtract = (shade: typeof colorShades[number]) => {
+    const calculatedShade = shade < 700 ? 100 : -100;
+
+    return (shade + calculatedShade) as typeof colorShades[number];
+  };
+
   if (styleType === 'outlined' && !hasSelectedValue) {
-    return `solid 1px ${theme.utils.getColor('lightGray', 400)}`;
+    const shadeCalculated = addOrSubtract(calculatedColor.shade);
+
+    return `solid 1px ${theme.utils.getColor(calculatedColor.color, shadeCalculated)}`;
   }
   if (hasSelectedValue) {
-    return `solid 1px ${lighten(
-      0.5,
-      theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade)
-    )}`;
+    const shadeCalculated = addOrSubtract(activeCalculatedColor.shade);
+
+    return `solid 1px ${theme.utils.getColor(activeCalculatedColor.color, shadeCalculated)}`;
   }
 
   return 'solid 1px transparent';
@@ -102,7 +106,7 @@ export const getHoverBorder = ({
   hasSelectedValue,
   filterType,
 }: HoverBorderProps) => {
-  if (filterType === 'added' && styleType !== 'outlined') {
+  if (filterType === 'added' && styleType === 'filled') {
     return `solid 1px transparent`;
   }
   if (styleType === 'outlined' || hasSelectedValue) {

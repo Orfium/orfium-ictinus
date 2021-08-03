@@ -127,7 +127,8 @@ const Filter: React.FC<Props> = props => {
             <span css={buttonSpanStyle()}>
               <span css={childrenWrapperStyle()}>
                 <span css={labelSpanStyle(open, hasSelectedValue)}>
-                  {label}:<span>{selectedItem?.label ?? defaultValue.label}</span>
+                  {label && `${label} :`}
+                  <span>{selectedItem?.label ?? defaultValue.label}</span>
                 </span>
               </span>
 

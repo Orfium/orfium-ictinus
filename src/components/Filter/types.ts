@@ -68,7 +68,7 @@ export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
   filterType: FilterType;
 };
 
-export type BorderProps = Omit<BaseColorProps, 'open' | 'calculatedColor'> & {
+export type BorderProps = Omit<BaseColorProps, 'open'> & {
   styleType: StyleType;
   filterType: FilterType;
 };

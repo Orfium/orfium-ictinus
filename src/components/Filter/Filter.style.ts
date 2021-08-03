@@ -97,18 +97,33 @@ export const buttonBaseStyle = ({
       hasSelectedValue,
       activeCalculatedColor,
       filterType,
+      calculatedColor,
     }),
     display: 'flex',
   };
 };
+
 export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
-  const { filterType, styleType } = props;
+  const { filterType, styleType, hasSelectedValue } = props;
+
+  const marginLeftSpecialCaseCalculation = () => {
+    if (filterType === 'added') {
+      if (hasSelectedValue || styleType === 'outlined') {
+        return rem(-1);
+      }
+
+      return rem(1);
+    }
+
+    return undefined;
+  };
 
   return {
     ...buttonBaseStyle(props)(theme),
     zIndex: -1,
     paddingRight: theme.spacing.md,
-    marginLeft: filterType === 'added' && styleType !== 'outlined' ? rem(1) : undefined,
+    marginLeft: marginLeftSpecialCaseCalculation(),
+    borderLeftWidth: '0 !important', // this is to remove the extra line created by border on the 2nd div
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
   };
