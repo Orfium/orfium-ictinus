@@ -73,6 +73,7 @@ export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
 export type BorderProps = BaseColorProps & {
   styleType: StyleType;
   filterType: FilterType;
+  isDivider?: boolean;
 };
 
 export type HoverBorderProps = BaseColorProps & {

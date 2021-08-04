@@ -52,7 +52,8 @@ export const buttonWrapperStyle = ({
     height: '100%',
     ':hover > span,:active > span': {
       backgroundColor: dividerHoverColor,
-      border: `${borderStyleParams} ${dividerHoverColor}`,
+      borderTop: `${borderStyleParams} ${dividerHoverColor}`,
+      borderBottom: `${borderStyleParams} ${dividerHoverColor}`,
     },
     ':hover > div,:active > div': {
       backgroundColor:
@@ -128,8 +129,8 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
   } = props;
 
   return {
-    width: 1,
     height: '100%',
+    width: rem(1),
     transition: 'all 150ms linear',
     backgroundColor: getBorder({
       styleType,
@@ -139,8 +140,9 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       filterType,
       calculatedColor,
       open,
+      isDivider: true,
     }),
-    border: `${borderStyleParams} ${getBorder({
+    borderTop: `${borderStyleParams} ${getBorder({
       styleType,
       theme,
       hasSelectedValue,
@@ -149,7 +151,15 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       calculatedColor,
       open,
     })}`,
-    borderRight: '0 !important',
+    borderBottom: `${borderStyleParams} ${getBorder({
+      styleType,
+      theme,
+      hasSelectedValue,
+      activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+    })}`,
   };
 };
 export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {

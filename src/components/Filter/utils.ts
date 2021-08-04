@@ -48,6 +48,7 @@ export const getBorder = ({
   hasSelectedValue,
   calculatedColor,
   open,
+  isDivider,
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
     const calculatedShade = shade < 700 ? 100 : -100;
@@ -55,7 +56,7 @@ export const getBorder = ({
     return (shade + calculatedShade) as typeof colorShades[number];
   };
 
-  if (styleType === 'outlined' && open) {
+  if ((styleType === 'outlined' && open) || (isDivider && !hasSelectedValue)) {
     return 'transparent';
   }
   if (styleType === 'outlined' || hasSelectedValue) {
