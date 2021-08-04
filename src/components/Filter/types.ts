@@ -44,6 +44,8 @@ export type Props = {
   minCharactersToSearch?: number;
   /** if the search request is loading */
   isLoading?: boolean;
+  /** Whether the Options List is Virtualized or not */
+  isVirtualized?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
 };

@@ -1,10 +1,10 @@
-import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { generateTestDataId } from 'utils/helpers';
 
 import { FilterOption } from '../../types';
-import { defaultOptionStyle, optionStyle } from '../../utils';
-import { optionsStyle, emptyStyle } from './Options.style';
+import { emptyStyle } from './Options.style';
+import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/utils';
+import List from 'components/List';
+import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
 
 interface Props {
   items: FilterOption[];
@@ -12,47 +12,33 @@ interface Props {
   defaultValue: FilterOption;
   selectedItem?: FilterOption;
   shouldDisplayDefaultOption: boolean;
+  isVirtualized?: boolean;
   dataTestId?: string;
 }
-const Options = ({
+const Options: React.FC<Props> = ({
   items,
   onSelect,
   defaultValue,
   selectedItem,
   shouldDisplayDefaultOption,
+  isVirtualized,
   dataTestId,
-}: Props) => {
-  const theme = useTheme();
-
-  return (
-    <div css={optionsStyle()(theme)}>
-      {shouldDisplayDefaultOption && (
-        <button
-          type="button"
-          data-testid={generateTestDataId('default-option', dataTestId)}
-          css={defaultOptionStyle(defaultValue, selectedItem)(theme)}
-          onClick={() => onSelect(defaultValue)}
-        >
-          {defaultValue.label}
-        </button>
-      )}
-      {items.length ? (
-        items
-          .filter(option => option.value !== defaultValue.value) //filter options just in case the default value is included
-          .map((option, index) => (
-            <button
-              type="button"
-              css={optionStyle(option, selectedItem)(theme)}
-              key={`${option.value}-${index}`}
-              onClick={() => onSelect(option)}
-            >
-              {option.label}
-            </button>
-          ))
-      ) : (
-        <div css={emptyStyle()}>No options</div>
-      )}
-    </div>
+}) => {
+  return items.length ? (
+    <List
+      data={items.filter(option => option.value !== defaultValue.value)}
+      rowSize={'small'}
+      defaultOption={shouldDisplayDefaultOption ? defaultValue : undefined}
+      selectedItem={selectedItem}
+      handleOptionClick={(option: FilterOption) => onSelect(option)}
+      isVirtualized={isVirtualized && items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER}
+      height={
+        items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER ? FILTER_OPTIONS_MAX_HEIGHT : undefined
+      }
+      dataTestId={dataTestId}
+    />
+  ) : (
+    <div css={emptyStyle()}>No options</div>
   );
 };
 

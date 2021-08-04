@@ -2,13 +2,19 @@ import { css, SerializedStyles } from '@emotion/react';
 import { darken, rem } from 'polished';
 import { Theme } from 'theme';
 
-import { Props } from '../../../TextField/TextField';
+import { Props } from './SelectMenu';
+import { Props as TextFieldProps } from 'components/TextField/TextField';
+
+export const MAX_LARGE_HEIGHT = 277;
+export const MAX_SMALL_HEIGHT = 265;
 
 export const optionStyle = ({
   selected,
   size,
   noResultsExist,
-}: { selected: boolean; noResultsExist?: boolean } & Props) => (theme: Theme): SerializedStyles => {
+}: { selected: boolean; noResultsExist?: boolean } & TextFieldProps) => (
+  theme: Theme
+): SerializedStyles => {
   return css`
     padding: ${theme.spacing.md};
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
@@ -26,15 +32,17 @@ export const optionStyle = ({
   `;
 };
 
-export const menuStyle = ({ status, size }: Props) => (theme: Theme): SerializedStyles => css`
+export const menuStyle = ({ status, size, isVirtualized }: Props & TextFieldProps) => (
+  theme: Theme
+): SerializedStyles => css`
   background-color: ${theme.palette.white};
   border-radius: 4px;
   box-shadow: ${theme.elevation['02']};
   top: ${status !== 'normal' ? '70%' : '110%'};
   z-index: 500;
   position: absolute;
-  max-height: ${size === 'md' ? 277 : 265}px;
-  overflow-y: auto;
+  max-height: ${rem(size === 'md' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT)};
+  overflow-y: ${isVirtualized ? 'hidden' : 'auto'};
   // TODO we need a technique to identify menu position left or right
   min-width: 100%;
   max-width: ${rem(620)};

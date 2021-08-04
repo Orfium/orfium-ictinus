@@ -42,6 +42,7 @@ const Filter: React.FC<Props> = props => {
     minCharactersToSearch = 0,
     onAsyncSearch,
     isLoading = false,
+    isVirtualized = false,
     onClear = () => {},
   } = props;
   const [open, setOpen] = React.useState(false);
@@ -186,6 +187,7 @@ const Filter: React.FC<Props> = props => {
             <Options
               dataTestId={dataTestId}
               items={filteredOptions}
+              isVirtualized={isVirtualized}
               defaultValue={defaultValue}
               selectedItem={selectedItem}
               onSelect={handleSelect}

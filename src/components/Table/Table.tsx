@@ -135,6 +135,14 @@ function Table<T>({
     [data]
   );
 
+  const columnsHasCustomAlignment = React.useMemo(
+    () =>
+      head(data)?.cells?.map(({ align }) => {
+        return align;
+      }) || [],
+    [data]
+  );
+
   const columnsWithWidth = React.useMemo(
     () =>
       head(data)?.cells?.map(({ widthPercentage }) => {
@@ -218,7 +226,7 @@ function Table<T>({
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (
-              <TableRow css={tableRowHeadersStyle()}>
+              <TableRow css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck))}>
                 {onCheck && (
                   <TableCell
                     component={'th'}
@@ -235,7 +243,11 @@ function Table<T>({
                   return (
                     <TableCell
                       textAlign={
-                        columnsHasNumberArr && columnsHasNumberArr[index] ? 'right' : 'left'
+                        columnsHasCustomAlignment && columnsHasCustomAlignment[index]
+                          ? columnsHasCustomAlignment[index]
+                          : columnsHasNumberArr && columnsHasNumberArr[index]
+                          ? 'right'
+                          : 'left'
                       }
                       component={'th'}
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}
@@ -277,7 +289,7 @@ function Table<T>({
                   <TableCell
                     component={'th'}
                     sticky={fixedHeader}
-                    width={67}
+                    width={'5%'}
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
                 )}
