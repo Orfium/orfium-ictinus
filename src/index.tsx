@@ -29,6 +29,7 @@ export { default as ExpandCollapse } from './components/ExpandCollapse';
 export { default as Icon } from './components/Icon';
 export { default as IconButton } from './components/IconButton';
 export { default as Label } from './components/Label';
+export { default as List } from './components/List';
 export { default as Loader } from './components/Loader';
 export { default as Menu } from './components/Menu';
 export { default as Modal } from './components/Modal';
