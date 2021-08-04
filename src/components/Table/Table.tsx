@@ -10,7 +10,6 @@ import TableRowWrapper from './components/TableRowWrapper';
 import { tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
-import content from '*.svg';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
