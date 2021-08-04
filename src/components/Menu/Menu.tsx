@@ -14,6 +14,7 @@ import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
 import { wrapperStyle } from './Menu.style';
+import List from 'components/List';
 
 export type Props = {
   /** the color of the button based on our colors eg. red-400 */
@@ -102,22 +103,16 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         </Button>
         {open && (
           <div css={optionsStyle({ menuPosition })(theme)}>
-            {items &&
-              items.map((option, index) => (
-                <button
-                  css={{
-                    backgroundColor: theme.palette.white,
-                    border: 0,
-                  }}
-                  key={`${option}-${index}`}
-                  onClick={() => {
-                    setOpen(false);
-                    onSelect(option);
-                  }}
-                >
-                  {option}
-                </button>
-              ))}
+            {items && (
+              <List
+                data={items}
+                rowSize={'small'}
+                handleOptionClick={(option: string) => {
+                  setOpen(false);
+                  onSelect(option);
+                }}
+              />
+            )}
           </div>
         )}
       </div>

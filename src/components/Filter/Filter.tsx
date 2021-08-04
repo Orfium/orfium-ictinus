@@ -6,7 +6,6 @@ import React from 'react';
 import { ChangeEvent } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 
-
 import Icon from '../Icon';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import Options from './components/Options/Options';
@@ -39,13 +38,15 @@ const Filter: React.FC<Props> = props => {
     minCharactersToSearch = 0,
     onAsyncSearch,
     isLoading = false,
+    isVirtualized = false,
   } = props;
   const [open, setOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
 
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const hasSelectedValue = Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
+  const hasSelectedValue =
+    Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
   const activeCalculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
   const iconColor = getTextColor({
@@ -60,7 +61,7 @@ const Filter: React.FC<Props> = props => {
   const handleSelect = (option: FilterOption) => {
     setOpen(false);
     onSelect(option);
-  }
+  };
 
   const handleChange = (event: ChangeEvent) => {
     const isAsync = typeof onAsyncSearch === 'function';
@@ -73,7 +74,7 @@ const Filter: React.FC<Props> = props => {
       onChange: debouncedOnChange,
       minCharactersToSearch,
     });
-  }
+  };
 
   const filteredOptions = useMemo(() => {
     if (onAsyncSearch) {
@@ -89,8 +90,8 @@ const Filter: React.FC<Props> = props => {
 
   const handleOpen = () => {
     setSearchValue('');
-    setOpen(!open)
-  }
+    setOpen(!open);
+  };
 
   const debouncedOnChange = React.useCallback(
     debounce((value: string) => {
@@ -118,8 +119,8 @@ const Filter: React.FC<Props> = props => {
         >
           <span css={buttonSpanStyle()}>
             <span css={childrenWrapperStyle()}>
-              <span css={labelSpanStyle(open, hasSelectedValue)}>{label}:
-                <span>{selectedItem?.label ?? defaultValue.label}</span>
+              <span css={labelSpanStyle(open, hasSelectedValue)}>
+                {label}:<span>{selectedItem?.label ?? defaultValue.label}</span>
               </span>
             </span>
 
@@ -139,6 +140,7 @@ const Filter: React.FC<Props> = props => {
             <Options
               dataTestId={dataTestId}
               items={filteredOptions}
+              isVirtualized={isVirtualized}
               defaultValue={defaultValue}
               selectedItem={selectedItem}
               onSelect={handleSelect}
