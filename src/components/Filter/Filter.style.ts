@@ -4,16 +4,24 @@ import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
-import { getBackgroundColor, getTextColor, getBorder, getHoverBorder } from './utils';
+import {
+  getBackgroundColor,
+  getTextColor,
+  getBorder,
+  getHoverBorder,
+  borderStyleParams,
+} from './utils';
 
-export const wrapperStyle = ({ styleType }: ButtonStyleProps) => (theme: Theme) => {
+export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) => (
+  theme: Theme
+) => {
   const boxShadow = theme.elevation['02'];
 
   return {
     position: 'relative' as const,
     display: 'inline-block',
     height: rem(36),
-    filter: styleType === 'elevated' ? `drop-shadow(${boxShadow})` : undefined,
+    filter: styleType === 'elevated' && !hasSelectedValue ? `drop-shadow(${boxShadow})` : undefined,
   };
 };
 
@@ -34,19 +42,24 @@ export const buttonWrapperStyle = ({
   hasSelectedValue,
   filterType,
 }: ButtonStyleProps) => (theme: Theme) => {
+  const dividerHoverColor = filterType === 'added' ? 'transparent' : undefined;
+
   return {
     background: 'none',
     border: 'none',
     display: 'flex',
     alignItems: 'center',
-    height: rem(36),
-
-    ':hover > *,:active > *': {
+    height: '100%',
+    ':hover > span,:active > span': {
+      backgroundColor: dividerHoverColor,
+      border: `${borderStyleParams} ${dividerHoverColor}`,
+    },
+    ':hover > div,:active > div': {
       backgroundColor:
         !disabled && !open
           ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
           : undefined,
-      border: getHoverBorder({
+      border: `${borderStyleParams} ${getHoverBorder({
         styleType,
         filterType,
         theme,
@@ -54,7 +67,7 @@ export const buttonWrapperStyle = ({
         calculatedColor,
         activeCalculatedColor,
         hasSelectedValue,
-      }),
+      })}`,
     },
   };
 };
@@ -91,39 +104,59 @@ export const buttonBaseStyle = ({
       activeCalculatedColor,
       calculatedColor,
     }),
-    border: getBorder({
+    border: `${borderStyleParams} ${getBorder({
       styleType,
       theme,
       hasSelectedValue,
       activeCalculatedColor,
       filterType,
       calculatedColor,
-    }),
+      open,
+    })}`,
     display: 'flex',
   };
 };
 
-export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
-  const { filterType, styleType, hasSelectedValue } = props;
-
-  const marginLeftSpecialCaseCalculation = () => {
-    if (filterType === 'added') {
-      if (hasSelectedValue || styleType === 'outlined') {
-        return rem(-1);
-      }
-
-      return rem(1);
-    }
-
-    return undefined;
-  };
+export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
+  const {
+    open,
+    activeCalculatedColor,
+    calculatedColor,
+    styleType,
+    hasSelectedValue,
+    filterType,
+  } = props;
 
   return {
+    width: 1,
+    height: '100%',
+    transition: 'all 150ms linear',
+    backgroundColor: getBorder({
+      styleType,
+      theme,
+      hasSelectedValue,
+      activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+    }),
+    border: `${borderStyleParams} ${getBorder({
+      styleType,
+      theme,
+      hasSelectedValue,
+      activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+    })}`,
+    borderRight: '0 !important',
+  };
+};
+export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
+  return {
     ...buttonBaseStyle(props)(theme),
-    zIndex: -1,
+    borderLeft: '0 !important',
     paddingRight: theme.spacing.md,
-    marginLeft: marginLeftSpecialCaseCalculation(),
-    borderLeftWidth: '0 !important', // this is to remove the extra line created by border on the 2nd div
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
   };
@@ -137,6 +170,7 @@ export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
     ...buttonBaseStyle(props)(theme),
     padding: `0 ${!isPreset ? theme.spacing.xsm : theme.spacing.md} 0 ${theme.spacing.md}`,
     borderRadius: theme.spacing.lg,
+    borderRight: !isPreset ? '0 !important' : undefined,
     borderTopRightRadius: !isPreset ? 0 : undefined,
     borderBottomRightRadius: !isPreset ? 0 : undefined,
   };

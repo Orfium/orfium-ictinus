@@ -13,6 +13,8 @@ import {
   HoverBorderProps,
 } from './types';
 
+export const borderStyleParams = 'solid 1px';
+
 export const getBackgroundColor = ({
   open,
   theme,
@@ -25,7 +27,7 @@ export const getBackgroundColor = ({
   if (open) {
     return defineBackgroundColor(theme, activeCalculatedColor);
   } else if (hasSelectedValue || styleType === 'transparent') {
-    return 'transparent';
+    return theme.utils.getColor('neutralWhite', 100);
   } else if (styleType === 'filled' || styleType === 'outlined') {
     return defineBackgroundColor(theme, calculatedColor, buttonType);
   }
@@ -74,8 +76,8 @@ export const getBorder = ({
   styleType,
   theme,
   hasSelectedValue,
-  activeCalculatedColor,
   calculatedColor,
+  open,
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
     const calculatedShade = shade < 700 ? 100 : -100;
@@ -83,18 +85,16 @@ export const getBorder = ({
     return (shade + calculatedShade) as typeof colorShades[number];
   };
 
-  if (styleType === 'outlined' && !hasSelectedValue) {
+  if (styleType === 'outlined' && open) {
+    return 'transparent';
+  }
+  if (styleType === 'outlined' || hasSelectedValue) {
     const shadeCalculated = addOrSubtract(calculatedColor.shade);
 
-    return `solid 1px ${theme.utils.getColor(calculatedColor.color, shadeCalculated)}`;
-  }
-  if (hasSelectedValue) {
-    const shadeCalculated = addOrSubtract(activeCalculatedColor.shade);
-
-    return `solid 1px ${theme.utils.getColor(activeCalculatedColor.color, shadeCalculated)}`;
+    return `${theme.utils.getColor(calculatedColor.color, shadeCalculated)}`;
   }
 
-  return 'solid 1px transparent';
+  return 'transparent';
 };
 
 export const getHoverBorder = ({
@@ -107,15 +107,15 @@ export const getHoverBorder = ({
   filterType,
 }: HoverBorderProps) => {
   if (filterType === 'added' && styleType === 'filled') {
-    return `solid 1px transparent`;
+    return `transparent`;
   }
   if (styleType === 'outlined' || hasSelectedValue) {
     if (open) {
-      return `solid 1px ${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
+      return `${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
     }
 
-    return `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
+    return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
   }
 
-  return 'solid 1px transparent';
+  return 'transparent';
 };

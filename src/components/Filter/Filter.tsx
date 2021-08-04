@@ -19,6 +19,7 @@ import {
   menuStyle,
   buttonWrapperStyle,
   dividedButtonStyle,
+  divider,
 } from './Filter.style';
 import { FilterOption, Props } from './types';
 import { getTextColor } from './utils';
@@ -41,7 +42,7 @@ const Filter: React.FC<Props> = props => {
     minCharactersToSearch = 0,
     onAsyncSearch,
     isLoading = false,
-    onClear,
+    onClear = () => {},
   } = props;
   const [open, setOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
@@ -114,6 +115,25 @@ const Filter: React.FC<Props> = props => {
     filterType,
   };
 
+  const pickIconColor = () => {
+    if (open) {
+      return theme.utils.getColor(activeCalculatedColor.color, 100);
+    }
+    if (hasSelectedValue && !open) {
+      return theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade);
+    }
+
+    return theme.utils.getColor('lightGray', 600);
+  };
+
+  /**
+   * for 'added' type design team decided that is not needed therefore in order not having to maintain
+   * one more special case we dont render it
+   **/
+  if (filterType === 'added' && styleType === 'transparent') {
+    throw new Error('This filterType and styleType is not supported');
+  }
+
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
       <div css={wrapperStyle(buttonStyleProps)} data-testid={dataTestId}>
@@ -137,17 +157,20 @@ const Filter: React.FC<Props> = props => {
           </div>
 
           {filterType === 'added' && (
-            <div css={dividedButtonStyle(buttonStyleProps)}>
-              <Icon
-                size={20}
-                name={'closeTag'}
-                color={theme.utils.getColor('lightGray', 600)}
-                onClick={e => {
-                  e.stopPropagation();
-                  onClear && onClear();
-                }}
-              />
-            </div>
+            <>
+              <span css={divider(buttonStyleProps)} />
+              <div css={dividedButtonStyle(buttonStyleProps)}>
+                <Icon
+                  size={19}
+                  name={'closeTag'}
+                  color={pickIconColor()}
+                  onClick={e => {
+                    e.stopPropagation();
+                    onClear();
+                  }}
+                />
+              </div>
+            </>
           )}
         </button>
         {open && (
