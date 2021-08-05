@@ -1,10 +1,10 @@
-import { lighten } from 'polished';
-
-import { pickTextColorFromSwatches } from '../../theme/palette';
+import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
+
+export const borderStyleParams = 'solid 1px';
 
 export const getBackgroundColor = ({
   open,
@@ -18,7 +18,7 @@ export const getBackgroundColor = ({
   if (open) {
     return defineBackgroundColor(theme, activeCalculatedColor);
   } else if (hasSelectedValue || styleType === 'transparent') {
-    return 'transparent';
+    return theme.utils.getColor('neutralWhite', 100);
   } else if (styleType === 'filled' || styleType === 'outlined') {
     return defineBackgroundColor(theme, calculatedColor, buttonType);
   }
@@ -46,18 +46,26 @@ export const getBorder = ({
   styleType,
   theme,
   hasSelectedValue,
-  activeCalculatedColor,
+  calculatedColor,
+  open,
+  isDivider,
 }: BorderProps) => {
-  if (styleType === 'outlined' && !hasSelectedValue) {
-    return `solid 1px ${theme.utils.getColor('lightGray', 400)}`;
-  } else if (hasSelectedValue) {
-    return `solid 1px ${lighten(
-      0.5,
-      theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade)
-    )}`;
+  const addOrSubtract = (shade: typeof colorShades[number]) => {
+    const calculatedShade = shade < 700 ? 100 : -100;
+
+    return (shade + calculatedShade) as typeof colorShades[number];
+  };
+
+  if ((styleType === 'outlined' && open) || (isDivider && !hasSelectedValue)) {
+    return 'transparent';
+  }
+  if (styleType === 'outlined' || hasSelectedValue) {
+    const shadeCalculated = addOrSubtract(calculatedColor.shade);
+
+    return `${theme.utils.getColor(calculatedColor.color, shadeCalculated)}`;
   }
 
-  return 'none';
+  return 'transparent';
 };
 
 export const getHoverBorder = ({
@@ -67,14 +75,18 @@ export const getHoverBorder = ({
   calculatedColor,
   activeCalculatedColor,
   hasSelectedValue,
+  filterType,
 }: HoverBorderProps) => {
+  if (filterType === 'added' && styleType === 'filled') {
+    return `transparent`;
+  }
   if (styleType === 'outlined' || hasSelectedValue) {
     if (open) {
-      return `solid 1px ${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
+      return `${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
     }
 
-    return `solid 1px ${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
+    return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
   }
 
-  return 'none';
+  return 'transparent';
 };

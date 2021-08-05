@@ -4,22 +4,76 @@ import { rem } from 'polished';
 import { Theme } from '../../theme';
 import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
-import { getBackgroundColor, getTextColor, getBorder, getHoverBorder } from './utils';
+import {
+  getBackgroundColor,
+  getTextColor,
+  getBorder,
+  getHoverBorder,
+  borderStyleParams,
+} from './utils';
 
-export const wrapperStyle = () => () => css`
-  position: relative;
-  display: inline-block;
-  height: ${rem(36)};
-`;
+export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) => (
+  theme: Theme
+) => {
+  const boxShadow = theme.elevation['02'];
+
+  return {
+    position: 'relative' as const,
+    display: 'inline-block',
+    height: rem(36),
+    filter: styleType === 'elevated' && !hasSelectedValue ? `drop-shadow(${boxShadow})` : undefined,
+  };
+};
 
 export const buttonSpanStyle = () => () => {
   return {
     display: 'flex',
     alignItems: 'center',
+    height: '100%',
   };
 };
 
-export const buttonStyle = ({
+export const buttonWrapperStyle = ({
+  calculatedColor,
+  activeCalculatedColor,
+  disabled,
+  open,
+  styleType,
+  hasSelectedValue,
+  filterType,
+}: ButtonStyleProps) => (theme: Theme) => {
+  const dividerHoverColor = filterType === 'added' ? 'transparent' : undefined;
+
+  return {
+    background: 'none',
+    border: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    height: '100%',
+    ':hover > span,:active > span': {
+      backgroundColor: dividerHoverColor,
+      borderTop: `${borderStyleParams} ${dividerHoverColor}`,
+      borderBottom: `${borderStyleParams} ${dividerHoverColor}`,
+    },
+    ':hover > div,:active > div': {
+      backgroundColor:
+        !disabled && !open
+          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
+          : undefined,
+      border: `${borderStyleParams} ${getHoverBorder({
+        styleType,
+        filterType,
+        theme,
+        open,
+        calculatedColor,
+        activeCalculatedColor,
+        hasSelectedValue,
+      })}`,
+    },
+  };
+};
+
+export const buttonBaseStyle = ({
   calculatedColor,
   activeCalculatedColor,
   buttonType,
@@ -27,18 +81,14 @@ export const buttonStyle = ({
   open,
   styleType,
   hasSelectedValue,
+  filterType,
 }: ButtonStyleProps) => (theme: Theme) => {
-  const boxShadow = styleType === 'elevated' ? theme.elevation['02'] : 'none';
-
   return {
     fontSize: theme.typography.fontSizes['13'],
     cursor: 'pointer',
-    padding: `${theme.spacing.sm} ${theme.spacing.md}`,
-    height: rem(36),
+    height: '100%',
     opacity: disabled ? 0.5 : 1,
-    borderRadius: theme.spacing.lg,
-    transition: 'background-color 150ms linear',
-    boxShadow,
+    transition: 'all 150ms linear',
     color: getTextColor({
       theme,
       open,
@@ -55,27 +105,84 @@ export const buttonStyle = ({
       activeCalculatedColor,
       calculatedColor,
     }),
-    border: getBorder({
+    border: `${borderStyleParams} ${getBorder({
       styleType,
       theme,
       hasSelectedValue,
       activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+    })}`,
+    display: 'flex',
+  };
+};
+
+export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
+  const {
+    open,
+    activeCalculatedColor,
+    calculatedColor,
+    styleType,
+    hasSelectedValue,
+    filterType,
+  } = props;
+
+  return {
+    height: '100%',
+    width: rem(1),
+    transition: 'all 150ms linear',
+    backgroundColor: getBorder({
+      styleType,
+      theme,
+      hasSelectedValue,
+      activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+      isDivider: true,
     }),
-    ':hover,:active': {
-      backgroundColor:
-        !disabled && !open
-          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
-          : undefined,
-      border: getHoverBorder({
-        styleType,
-        theme,
-        open,
-        calculatedColor,
-        activeCalculatedColor,
-        hasSelectedValue,
-      }),
-      boxShadow,
-    },
+    borderTop: `${borderStyleParams} ${getBorder({
+      styleType,
+      theme,
+      hasSelectedValue,
+      activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+    })}`,
+    borderBottom: `${borderStyleParams} ${getBorder({
+      styleType,
+      theme,
+      hasSelectedValue,
+      activeCalculatedColor,
+      filterType,
+      calculatedColor,
+      open,
+    })}`,
+  };
+};
+export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
+  return {
+    ...buttonBaseStyle(props)(theme),
+    borderLeft: '0 !important',
+    paddingRight: theme.spacing.md,
+    borderTopRightRadius: theme.spacing.lg,
+    borderBottomRightRadius: theme.spacing.lg,
+  };
+};
+
+export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
+  const { filterType } = props;
+  const isPreset = filterType === 'preset';
+
+  return {
+    ...buttonBaseStyle(props)(theme),
+    padding: `0 ${!isPreset ? theme.spacing.xsm : theme.spacing.md} 0 ${theme.spacing.md}`,
+    borderRadius: theme.spacing.lg,
+    borderRight: !isPreset ? '0 !important' : undefined,
+    borderTopRightRadius: !isPreset ? 0 : undefined,
+    borderBottomRightRadius: !isPreset ? 0 : undefined,
   };
 };
 
