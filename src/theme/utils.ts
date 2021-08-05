@@ -26,10 +26,14 @@ const createShades = (func: (index: number) => string, numOfShades = 4) =>
     return acc;
   }, []);
 
-export const colorShadesCreator = (base: string, per: number): generatedColorShades =>
+export const colorShadesCreator = (
+  base: string,
+  per: number,
+  numShade?: number
+): generatedColorShades =>
   reduceColorShades([
-    ...createShades((index: number) => shade(per * index, base)).reverse(),
-    ...createShades((index: number) => tint(per * index, base)),
+    ...createShades((index: number) => shade(per * index, base), numShade).reverse(),
+    ...createShades((index: number) => tint(per * index, base), numShade),
   ]);
 
 export const iterateObject = <T>(

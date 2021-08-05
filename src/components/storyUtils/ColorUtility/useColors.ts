@@ -1,4 +1,4 @@
-import { darken, lighten } from 'polished';
+import { shade, tint } from 'polished';
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 
 import { validateColor } from './utils';
@@ -16,8 +16,8 @@ export const useColors = (defaultColor?: string) => {
   const [lightenValue, setLightenValue] = useState(0.1);
   const [darkenValue, setDarkenValue] = useState(0.1);
 
-  const darkColor = darken(darkenValue, color);
-  const lightColor = lighten(lightenValue, color);
+  const darkColor = shade(darkenValue, color);
+  const lightColor = tint(lightenValue, color);
 
   const updateColor = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     const colorInput = event.target.value;
