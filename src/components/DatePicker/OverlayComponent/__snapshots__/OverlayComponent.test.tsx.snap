@@ -22,6 +22,10 @@ exports[`OverlayComponent should render correctly 1`] = `
   position: relative;
 }
 
+.emotion-2>div:first-of-type {
+  margin-right: 0;
+}
+
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -33,10 +37,6 @@ exports[`OverlayComponent should render correctly 1`] = `
   position: relative;
   padding: 0 1.5rem;
   z-index: 10;
-}
-
-.emotion-2>div:first-of-type {
-  margin-right: 0;
 }
 
 .emotion-3 {
@@ -156,12 +156,12 @@ exports[`OverlayComponent should render correctly 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-10:hover {
-  background-color: #e5e5e5;
-}
-
 .emotion-10:active {
   background-color: #cbcbcb;
+}
+
+.emotion-10:hover {
+  background-color: #e5e5e5;
 }
 
 .emotion-11 {
@@ -248,6 +248,11 @@ exports[`OverlayComponent should render correctly 1`] = `
   opacity: 1;
 }
 
+.emotion-29:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
 .emotion-29 {
   border: 1px solid transparent;
   width: 39px;
@@ -265,11 +270,6 @@ exports[`OverlayComponent should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   background: transparent;
-}
-
-.emotion-29:hover {
-  border-radius: 100%;
-  background: #f7f7f7;
 }
 
 .emotion-30 {
@@ -471,6 +471,10 @@ exports[`OverlayComponent should render correctly 1`] = `
   position: relative;
 }
 
+.emotion-2>div:first-of-type {
+  margin-right: 0;
+}
+
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -482,10 +486,6 @@ exports[`OverlayComponent should render correctly 1`] = `
   position: relative;
   padding: 0 1.5rem;
   z-index: 10;
-}
-
-.emotion-2>div:first-of-type {
-  margin-right: 0;
 }
 
 .emotion-3 {
@@ -605,12 +605,12 @@ exports[`OverlayComponent should render correctly 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-10:hover {
-  background-color: #e5e5e5;
-}
-
 .emotion-10:active {
   background-color: #cbcbcb;
+}
+
+.emotion-10:hover {
+  background-color: #e5e5e5;
 }
 
 .emotion-11 {
@@ -697,6 +697,11 @@ exports[`OverlayComponent should render correctly 1`] = `
   opacity: 1;
 }
 
+.emotion-29:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
 .emotion-29 {
   border: 1px solid transparent;
   width: 39px;
@@ -714,11 +719,6 @@ exports[`OverlayComponent should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   background: transparent;
-}
-
-.emotion-29:hover {
-  border-radius: 100%;
-  background: #f7f7f7;
 }
 
 .emotion-30 {
@@ -1489,6 +1489,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   margin-bottom: 1rem;
 }
 
+.emotion-2>div:first-of-type {
+  margin-right: 1.5rem;
+}
+
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1500,10 +1504,6 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   position: relative;
   padding: 0 1.5rem;
   z-index: 10;
-}
-
-.emotion-2>div:first-of-type {
-  margin-right: 1.5rem;
 }
 
 .emotion-3 {
@@ -1646,6 +1646,11 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   opacity: 1;
 }
 
+.emotion-20:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
 .emotion-20 {
   border: 1px solid transparent;
   width: 39px;
@@ -1663,11 +1668,6 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   background: transparent;
-}
-
-.emotion-20:hover {
-  border-radius: 100%;
-  background: #f7f7f7;
 }
 
 .emotion-21 {
@@ -1707,6 +1707,21 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #f7f7f7;
 }
 
+.emotion-23:after {
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.1);
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
 .emotion-23 {
   vertical-align: middle;
   text-align: center;
@@ -1721,19 +1736,9 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-23:after {
-  content: ' ';
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  background: rgba(0,0,0,0.1);
-  left: initial;
-  right: 0;
-  border-bottom-right-radius: false;
-  border-top-right-radius: false;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
+.emotion-24:hover {
+  border-radius: 100%;
+  background: false;
 }
 
 .emotion-24 {
@@ -1754,11 +1759,6 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   background: #000;
-}
-
-.emotion-24:hover {
-  border-radius: 100%;
-  background: false;
 }
 
 .emotion-25 {
@@ -1844,6 +1844,10 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   margin-bottom: 1rem;
 }
 
+.emotion-2>div:first-of-type {
+  margin-right: 1.5rem;
+}
+
 .emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1855,10 +1859,6 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   position: relative;
   padding: 0 1.5rem;
   z-index: 10;
-}
-
-.emotion-2>div:first-of-type {
-  margin-right: 1.5rem;
 }
 
 .emotion-3 {
@@ -2001,6 +2001,11 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   opacity: 1;
 }
 
+.emotion-20:hover {
+  border-radius: 100%;
+  background: #f7f7f7;
+}
+
 .emotion-20 {
   border: 1px solid transparent;
   width: 39px;
@@ -2018,11 +2023,6 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   background: transparent;
-}
-
-.emotion-20:hover {
-  border-radius: 100%;
-  background: #f7f7f7;
 }
 
 .emotion-21 {
@@ -2062,6 +2062,21 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   background: #f7f7f7;
 }
 
+.emotion-23:after {
+  content: ' ';
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.1);
+  left: initial;
+  right: 0;
+  border-bottom-right-radius: false;
+  border-top-right-radius: false;
+  border-bottom-left-radius: 100%;
+  border-top-left-radius: 100%;
+}
+
 .emotion-23 {
   vertical-align: middle;
   text-align: center;
@@ -2076,19 +2091,9 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-23:after {
-  content: ' ';
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  background: rgba(0,0,0,0.1);
-  left: initial;
-  right: 0;
-  border-bottom-right-radius: false;
-  border-top-right-radius: false;
-  border-bottom-left-radius: 100%;
-  border-top-left-radius: 100%;
+.emotion-24:hover {
+  border-radius: 100%;
+  background: false;
 }
 
 .emotion-24 {
@@ -2109,11 +2114,6 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   background: #000;
-}
-
-.emotion-24:hover {
-  border-radius: 100%;
-  background: false;
 }
 
 .emotion-25 {
