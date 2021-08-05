@@ -53,13 +53,11 @@ const Filter: React.FC<Props> = props => {
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
-  /**
-   * it started as active color will be primary but the we want the active state to be the base (for now 400) of the
-   * selected color
-   */
+
+  // The active calculated color is the base of the defined color. So till today the base is defined as '400'.
   const activeCalculatedColor = calculateColorBetweenColorAndType(
     `${calculatedColor.color}-400`,
-    'primary'
+    buttonType
   );
   const iconColor = getTextColor({
     open,
