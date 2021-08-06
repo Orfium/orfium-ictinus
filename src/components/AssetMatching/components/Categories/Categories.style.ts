@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
+import { BASE_SHADE } from 'theme/palette';
 
 import { normalFont } from '../Asset/Asset.style';
 
@@ -13,7 +14,7 @@ const categories = css`
 const title = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes[11]};
   margin-right: ${theme.spacing.xl};
-  color: ${theme.utils.getColor('primary', 400, 'normal')};
+  color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
 `;
 
 const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css`
@@ -22,7 +23,7 @@ const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css
   margin: ${theme.spacing.xsm};
   padding: ${theme.spacing.xsm};
   cursor: default;
-  background: ${isItemMatched ? theme.utils.getColor('lightGray', 200) : 'transparent'};
+  background: ${isItemMatched ? theme.utils.getColor('lightTintedGrey', 250) : 'transparent'};
   white-space: nowrap;
   ${transition(0.2)};
 `;

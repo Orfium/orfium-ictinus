@@ -16,7 +16,7 @@ describe('The usability of calculateActualColorFromComponentProp to be correct',
     const checkFunction = () => calculateActualColorFromComponentProp(testColor);
 
     expect(checkFunction).toThrowError(
-      `You passed a wrong color for the first argument: ${testColor} - try something like red-400`
+      `You passed a wrong color for the first argument: ${testColor} - try something like red-500`
     );
   });
   test('that it fails to get a wrong second argument', () => {
@@ -24,7 +24,7 @@ describe('The usability of calculateActualColorFromComponentProp to be correct',
     const checkFunction = () => calculateActualColorFromComponentProp(testColor);
 
     expect(checkFunction).toThrowError(
-      `You passed a wrong shade for the second argument: ${testColor} - try something like red-400`
+      `You passed a wrong shade for the second argument: ${testColor} - try something like red-500`
     );
   });
   test('get the color correctly', () => {

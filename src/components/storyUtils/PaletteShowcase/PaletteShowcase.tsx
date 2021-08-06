@@ -82,7 +82,7 @@ const PaletteShowcase = () => {
                     font-size: 14px;
                   `}
                 >
-                  Base (400)
+                  Base (500)
                 </div>
               </div>
               <div css={colorBoxWrapper}>
@@ -95,12 +95,12 @@ const PaletteShowcase = () => {
                     css={colorBox(
                       color,
                       colorName,
-                      ((index + 1) * 100) as typeof colorShades[number],
+                      ((index + 1) * 50) as typeof colorShades[number],
                       paletteColor === color
                     )}
                   >
-                    <div>{(index + 1) * 100}</div>
-                    <div>{color}</div>
+                    <div>{(index + 1) * 50}</div>
+                    <div css={{ textTransform: 'capitalize' }}>{color}</div>
                   </div>
                 ))}
               </div>
@@ -131,7 +131,7 @@ const PaletteShowcase = () => {
                 css={colorBox(
                   color,
                   color,
-                  ((index + 1) * 100) as typeof colorShades[number],
+                  ((index + 1) * 50) as typeof colorShades[number],
                   paletteColor === color
                 )}
               >
@@ -154,7 +154,7 @@ const PaletteShowcase = () => {
                   color,
                   // @ts-ignore*
                   color,
-                  ((index + 1) * 100) as typeof colorShades[number],
+                  ((index + 1) * 50) as typeof colorShades[number],
                   paletteColor === color
                 )}
               >

@@ -38,10 +38,10 @@ A filter with different with style types and a selection handler to return selec
 <Preview>
   <Story name="Filter with style types">
     <Stack>
-       <FilterShowcase styleType="filled" color="lightCoolGray-400" />
-       <FilterShowcase styleType="outlined" color="lightCoolGray-400" />
-       <FilterShowcase styleType="elevated" color="lightCoolGray-400" />
-       <FilterShowcase styleType="transparent" color="lightCoolGray-400" />
+       <FilterShowcase styleType="filled" color="lightTintedGrey-50" />
+       <FilterShowcase styleType="outlined" color="lightTintedGrey-50" />
+       <FilterShowcase styleType="elevated" color="lightTintedGrey-50" />
+       <FilterShowcase styleType="transparent" color="lightTintedGrey-50" />
     </Stack>
   </Story>
 </Preview>
@@ -69,7 +69,7 @@ A filter that supports searching options
 <Preview>
   <Story name="Searchable Filter">
     <Stack>
-       <FilterShowcase styleType="filled" isSearchable color="lightCoolGray-400" />
+       <FilterShowcase styleType="filled" isSearchable color="lightTintedGrey-50" />
     </Stack>
   </Story>
 </Preview>
@@ -104,7 +104,7 @@ Filter that support asynchronous fetching, with loading status
         selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }])}
         defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
         styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
-        color={select('color', ['lightCoolGray-400', 'magenta-100', 'darkGray-700', 'red-500'], 'lightCoolGray-400')}
+        color={select('color', ['lightTintedGrey-50', 'magenta-100', 'darkGray-700', 'red-500'], 'lightTintedGrey-50')}
         isSearchable={boolean('isSearchable', false)}
     />
   </Story>

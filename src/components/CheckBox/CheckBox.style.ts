@@ -2,6 +2,7 @@ import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 
 import { Theme } from '../../theme';
+import { BASE_SHADE } from '../../theme/palette';
 import { Props } from './CheckBox';
 
 export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
@@ -41,13 +42,13 @@ const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }
   return filled
     ? `background: ${
         checked
-          ? theme.utils.getColor('primary', 400, 'normal')
-          : theme.utils.getColor('lightGray', 400)
+          ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
+          : theme.utils.getColor('lightTintedGrey', 650)
       }`
     : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${
         checked
-          ? theme.utils.getColor('primary', 400, 'normal')
-          : theme.utils.getColor('lightGray', 400)
+          ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
+          : theme.utils.getColor('lightTintedGrey', 650)
       };`;
 };
 
@@ -106,6 +107,6 @@ export const labelStyle = () => (theme: Theme): SerializedStyles => css`
   padding-left: ${rem(4)};
   font-size: ${theme.typography.fontSizes['15']};
   font-weight: ${theme.typography.weights.regular};
-  color: ${theme.utils.getColor('darkGray', 600)};
+  color: ${theme.utils.getColor('darkGrey', 750)};
   white-space: nowrap;
 `;

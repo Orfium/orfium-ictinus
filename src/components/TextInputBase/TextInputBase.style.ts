@@ -1,11 +1,11 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
 import { Theme } from 'theme';
+import { BASE_SHADE } from 'theme/palette';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
 import { Props } from './TextInputBase';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
-
 
 const wrapperStyleSwitch = (
   theme: Theme,
@@ -23,10 +23,10 @@ const wrapperStyleSwitch = (
     case 'outlined':
       return `
         box-shadow: 0 0 0 1px
-          ${error ? 'transparent' : theme.utils.getColor('lightGray', 400)};
+          ${error ? 'transparent' : theme.utils.getColor('lightTintedGrey', 650)};
         &:focus-within, &:hover {
           box-shadow: 0 0 0 1px ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)
+            !disabled ? 'transparent' : theme.utils.getColor('lightTintedGrey', 650)
           };
         }
       `;
@@ -47,7 +47,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
   theme: Theme
 ): SerializedStyles => {
   const error = status === 'error';
-  const backgroundColor = dark ? theme.utils.getColor('darkGray', 600) : theme.palette.white;
+  const backgroundColor = dark ? theme.utils.getColor('darkGrey', 750) : theme.palette.white;
 
   return css`
     transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
@@ -60,7 +60,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     opacity: ${disabled && 0.5};
     border: 2px solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
-    border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
+    border-color: ${error ? theme.utils.getColor('error', BASE_SHADE, 'normal') : undefined};
 
     ${!lean &&
       !disabled &&
@@ -69,13 +69,15 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
       background-color: ${
         dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
       } !important;
-      border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGray', 400)};
+      border-color: ${styleType === 'outlined' &&
+        !error &&
+        theme.utils.getColor('lightTintedGrey', 650)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }
     `}
 
     &:focus-within {
-      border-color: ${!lean && !error && theme.utils.getColor('lightGray', 400)};
+      border-color: ${!lean && !error && theme.utils.getColor('lightTintedGrey', 650)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
       background-color: ${theme.palette.white};
     }
@@ -93,8 +95,8 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
         z-index: 1;
       }
       > input, > textarea {
-        color: ${theme.utils.getColor('lightGray', 600)};
-        fill: ${theme.utils.getColor('lightGray', 600)};
+        color: ${theme.utils.getColor('lightTintedGrey', 750)};
+        fill: ${theme.utils.getColor('lightTintedGrey', 750)};
       }
   `}
   `;
@@ -141,7 +143,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightGray', 600) : 'transparent'};
+    color: ${!label && placeholder ? theme.utils.getColor('lightTintedGrey', 750) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {
@@ -166,8 +168,8 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
   display: flex;
   color: ${status === 'error'
-    ? theme.utils.getColor('error', 400, 'normal')
-    : theme.utils.getColor('lightGray', 600)};
+    ? theme.utils.getColor('error', BASE_SHADE, 'normal')
+    : theme.utils.getColor('lightTintedGrey', 750)};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0;

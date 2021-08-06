@@ -1,27 +1,20 @@
 import { flatColors } from './palette';
 
 export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
-  lightGray: '#cfcfcf',
-  darkGray: '#494949',
-  warmGray: '#afa6a3',
-  coolGray: '#a3a9ac',
-  lightCoolGray: '#F3F5F9',
-  green: '#6bbc15',
-  red: '#d40000',
-  orange: '#f5781b',
-  // @TODO only for old VH - soon will be removed
-  darkOrange: '#bf360c',
-  darkBlue: '#232d7d',
-  magenta: '#d21e75',
-  yellow: '#ffc700',
-  purple: '#71458f',
-  blue: '#1283d3',
-  lightBlue: '#18aed2',
-  teal: '#27dcbd',
-  mint: '#2AFFC3',
-  vividPurple: '#8833FF',
-  vividBlue: '#4945EE',
-  cyan: '#76C6FF',
+  greyScale: '#808080',
+  darkGrey: '#32324E',
+  lightTintedGrey: '#889BBF',
+  red: '#FF1744',
+  magenta: '#C813D5',
+  purple: '#8833FF',
+  darkBlue: '#4945EE',
+  blue: '#2979FF',
+  lightBlue: '#28BDFF',
+  teal: '#1DE9B6',
+  green: '#36C152',
+  yellow: '#FDD835',
+  orange: '#FF6F00',
+  darkOrange: '#BF360C',
   neutralWhite: '#fbfbfb',
   neutralBlack: '#030303',
 };
@@ -36,16 +29,16 @@ export const lightPaletteConfig: PaletteConfig = {
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGray,
+  light: flatPaletteConfig.greyScale,
 
   flat: {
     ...flatPaletteConfig,
   },
 
   text: {
-    primary: flatPaletteConfig.darkGray,
-    secondary: flatPaletteConfig.coolGray,
-    light: flatPaletteConfig.lightGray,
+    primary: flatPaletteConfig.darkGrey,
+    secondary: flatPaletteConfig.lightTintedGrey,
+    light: flatPaletteConfig.greyScale,
   },
 
   white: 'white',
@@ -54,24 +47,24 @@ export const lightPaletteConfig: PaletteConfig = {
 
 export const darkPaletteConfig: PaletteConfig = {
   // Primary Palette
-  primary: flatPaletteConfig.darkGray,
-  secondary: flatPaletteConfig.lightGray,
+  primary: flatPaletteConfig.darkGrey,
+  secondary: flatPaletteConfig.lightTintedGrey,
 
   //rest
   success: flatPaletteConfig.green,
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGray,
+  light: flatPaletteConfig.lightTintedGrey,
 
   flat: {
     ...flatPaletteConfig,
   },
 
   text: {
-    primary: flatPaletteConfig.darkGray,
-    secondary: flatPaletteConfig.coolGray,
-    light: flatPaletteConfig.lightGray,
+    primary: flatPaletteConfig.darkGrey,
+    secondary: flatPaletteConfig.greyScale,
+    light: flatPaletteConfig.lightTintedGrey,
   },
 
   white: 'white',

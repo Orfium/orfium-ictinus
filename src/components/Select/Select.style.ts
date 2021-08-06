@@ -19,7 +19,9 @@ export const selectWrapper = ({
   min-width: ${rem(150)};
   max-width: ${rem(620)};
   & > div:nth-of-type(1) > div {
-    ${open && status !== 'error' && `border: 2px solid ${theme.utils.getColor('lightGray', 400)};`}
+    ${open &&
+      status !== 'error' &&
+      `border: 2px solid ${theme.utils.getColor('lightTintedGrey', 650)};`}
     ${open && status !== 'error' && styleType === 'outlined' && `box-shadow: none;`}
   }
 

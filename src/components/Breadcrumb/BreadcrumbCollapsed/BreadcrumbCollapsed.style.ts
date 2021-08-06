@@ -16,8 +16,8 @@ export const breadcrumbCollapsedStyles = ({ open }: BreadcrumbIconStyle) => (the
   transform: rotate(90deg);
   border-radius: 3rem;
   background-color: ${open
-    ? theme.utils.getColor('lightGray', 700)
-    : theme.utils.getColor('lightGray', 200)};
+    ? theme.utils.getColor('lightTintedGrey', 850)
+    : theme.utils.getColor('lightTintedGrey', 250)};
 `;
 
 export const breadcrumbCollapsedWrapperStyles = () => css`
@@ -29,7 +29,7 @@ export const breadcrumbCollapsedWrapperStyles = () => css`
 export const collapsedItemStyles = () => (theme: Theme) => css`
   &:hover {
     transition: 0.5s all;
-    background: ${theme.utils.getColor('lightGray', 200)};
+    background: ${theme.utils.getColor('lightTintedGrey', 250)};
   }
   font-size: ${theme.typography.fontSizes['14']};
   // getFontSize

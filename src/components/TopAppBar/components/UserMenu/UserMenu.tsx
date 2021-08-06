@@ -20,7 +20,7 @@ const UserMenu: FC<UserMenuProps & { dark?: boolean }> = ({
   <Menu
     items={items}
     size={'sm'}
-    color={dark ? 'neutralBlack-700' : 'neutralWhite-100'}
+    color={dark ? 'neutralBlack-500' : 'neutralWhite-100'}
     buttonText={<span css={Styles.buttonTextStyle}>{userName}</span>}
     buttonType={'warning'}
     rightIconName={'arrowDown'}

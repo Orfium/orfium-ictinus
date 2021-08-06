@@ -50,7 +50,7 @@ export const AsyncFilterShowcase: React.FC<Props> = ({ minCharactersToSearch = 0
       onSelect={handleSelectItem}
       styleType={'filled'}
       label={'Async Label'}
-      color={'lightCoolGray-400'}
+      color={'lightTintedGrey-650'}
     />
   );
 };

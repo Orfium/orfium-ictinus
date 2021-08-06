@@ -17,8 +17,8 @@ export type Props = {
    *  @default 'md'
    * */
   size?: AvatarSizes;
-  /** the color of the button based on our colors eg. red-400
-   *  @default 'darkGray-400'
+  /** the color of the button based on our colors eg. red-500
+   *  @default 'darkGray-500'
    * */
   color?: string;
   /** the shape of the avatar
@@ -36,7 +36,7 @@ const Avatar: React.FC<Props> = ({
   src = '',
   iconName = 'user',
   size = 'md',
-  color = 'lightGray-600',
+  color = 'lightTintedGrey-600',
   shape = 'circular',
   children,
   className,

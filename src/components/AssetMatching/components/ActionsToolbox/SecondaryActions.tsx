@@ -37,7 +37,7 @@ const SecondaryActions: FC<Props> = ({
         <div css={Styles.buttonWrapper}>
           <IconButton
             dataTestId={'menu_btn'}
-            color={'neutralBlack-700'}
+            color={'neutralBlack-500'}
             name={'dotsVertical'}
             filled={false}
             onClick={() => setOpen(!open)}

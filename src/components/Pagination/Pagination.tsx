@@ -50,7 +50,7 @@ const Pagination = ({
     >
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          color="neutralBlack-700"
+          color="neutralBlack-500"
           name="arrowToLeft"
           onClick={navigateToFirstPage}
           iconSize={20}
@@ -61,7 +61,7 @@ const Pagination = ({
         />
       )}
       <IconButton
-        color="neutralBlack-700"
+        color="neutralBlack-500"
         name="arrowLeft"
         iconSize={20}
         size="sm"
@@ -76,7 +76,7 @@ const Pagination = ({
       </div>
 
       <IconButton
-        color="neutralBlack-700"
+        color="neutralBlack-500"
         name="arrowRight"
         iconSize={20}
         size="sm"
@@ -87,7 +87,7 @@ const Pagination = ({
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          color="neutralBlack-700"
+          color="neutralBlack-500"
           name="arrowToRight"
           iconSize={20}
           size="sm"

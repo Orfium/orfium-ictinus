@@ -38,5 +38,5 @@ export const headContainer = () => (theme: Theme): SerializedStyles => css`
 
 export const primaryActionContainer = () => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  color: ${theme.utils.getColor('lightBlue', 400)};
+  color: ${theme.utils.getColor('lightBlue', 650)};
 `;

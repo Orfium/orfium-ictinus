@@ -33,7 +33,7 @@ export const dayWrapperStyle = ({
   position: relative;
   color: ${isSelected
     ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-    : theme.utils.getColor('darkGray', 700)};
+    : theme.utils.getColor('darkGrey', 850)};
   width: 40px;
   padding: 0 4px;
   font-weight: ${isToday && 'bold'};

@@ -1,6 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
 import Avatar from './Avatar';
 import Stack from '../storyUtils/Stack';
+import { BASE_SHADE } from '../../theme/palette';
 
 <Meta title="Design System/Avatar" component={Avatar} />
 
@@ -29,22 +30,22 @@ Avatar shapes
     <div>
       <Stack>
         <div>circular</div>
-        <Avatar size={'xs'} color={'magenta-400'} iconName={'user'} />
-        <Avatar size={'sm'} color={'magenta-400'} iconName={'user'} />
+        <Avatar size={'xs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
+        <Avatar size={'sm'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
         <Avatar size={'md'} color={'lightBlue-100'} iconName={'user'} />
         <Avatar size={'lg'} iconName={'user'} />
       </Stack>
       <Stack>
         <div>regular</div>
-        <Avatar shape={'regular'} size={'xs'} color={'magenta-400'} iconName={'user'} />
-        <Avatar shape={'regular'} size={'sm'} color={'magenta-400'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'xs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
+        <Avatar shape={'regular'} size={'sm'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
         <Avatar shape={'regular'} size={'md'} color={'lightBlue-100'} iconName={'user'} />
         <Avatar shape={'regular'} size={'lg'} iconName={'user'} />
       </Stack>
       <Stack>
         <div>rounded</div>
-        <Avatar shape={'regular'} size={'xs'} color={'magenta-400'} iconName={'user'} />
-        <Avatar shape={'regular'} size={'sm'} color={'magenta-400'} iconName={'user'} />
+        <Avatar shape={'regular'} size={'xs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
+        <Avatar shape={'regular'} size={'sm'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
         <Avatar shape={'regular'} size={'md'} color={'lightBlue-100'} iconName={'user'} />
         <Avatar shape={'regular'} size={'lg'} iconName={'user'} />
       </Stack>
@@ -59,8 +60,8 @@ Avatar with icon
 <Preview>
   <Story name="Avatar with icon">
     <Stack>
-      <Avatar size={'xs'} color={'magenta-400'} iconName={'user'} />
-      <Avatar size={'sm'} color={'magenta-400'} iconName={'user'} />
+      <Avatar size={'xs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
+      <Avatar size={'sm'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
       <Avatar size={'md'} color={'lightBlue-100'} iconName={'user'} />
       <Avatar size={'lg'} iconName={'user'} />
     </Stack>
@@ -74,8 +75,8 @@ Avatar with letter
 <Preview>
   <Story name="Avatar with letter">
     <Stack>
-      <Avatar size={'xs'} color={'magenta-400'}>CZ</Avatar>
-      <Avatar size={'sm'} color={'magenta-400'}>CZ</Avatar>
+      <Avatar size={'xs'} color={`magenta-${BASE_SHADE}`}>CZ</Avatar>
+      <Avatar size={'sm'} color={`magenta-${BASE_SHADE}`}>CZ</Avatar>
       <Avatar size={'md'} color={'lightBlue-100'}>GR</Avatar>
       <Avatar size={'lg'}>G</Avatar>
     </Stack>

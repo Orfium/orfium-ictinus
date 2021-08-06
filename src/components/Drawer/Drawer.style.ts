@@ -19,5 +19,5 @@ export const drawerContainerStyle = (
   min-height: 100%;
   z-index: 100;
   position: ${isSmallDesktop ? 'absolute' : 'relative'};
-  border-right: ${rem(1)} solid ${theme.utils.getColor('lightGray', 200)};
+  border-right: ${rem(1)} solid ${theme.utils.getColor('lightTintedGrey', 250)};
 `;

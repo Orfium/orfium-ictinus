@@ -7,8 +7,8 @@ export const getDotsLayout = (delay: number, animation: string, theme: Theme, le
   width: ${rem(6)};
   height: ${rem(6)};
   border-radius: ${rem(5)};
-  background-color: ${theme.utils.getColor('lightGray', 300)};
-  color: ${theme.utils.getColor('lightGray', 300)};
+  background-color: ${theme.utils.getColor('lightTintedGrey', 650)};
+  color: ${theme.utils.getColor('lightTintedGrey', 650)};
   animation: ${animation};
   animation-delay: ${delay}s;
 `;
@@ -42,13 +42,13 @@ export const dotsContainer = () => (theme: Theme): SerializedStyles => css`
 
   @keyframes dotFlashing {
     0% {
-      background-color: ${theme.utils.getColor('lightGray', 200)};
+      background-color: ${theme.utils.getColor('lightTintedGrey', 250)};
     }
     50% {
-      background-color: ${theme.utils.getColor('lightGray', 300)};
+      background-color: ${theme.utils.getColor('lightTintedGrey', 650)};
     }
     100% {
-      background-color: ${theme.utils.getColor('lightGray', 400)};
+      background-color: ${theme.utils.getColor('lightTintedGrey', 650)};
     }
   }
 `;

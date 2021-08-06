@@ -3,7 +3,7 @@ import { shade, tint } from 'polished';
 import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
 
-const BASE_PERCENTAGE = 0.25;
+const BASE_PERCENTAGE = 0.1;
 
 const EXCLUDED = ['white', 'black'];
 
@@ -14,12 +14,12 @@ const reduceColorShades = (arr: string[]) =>
     .filter((value, index, arr) => arr.indexOf(value) === index)
     .reverse()
     .reduce((acc, _, index) => {
-      acc[`${index + 1}00`] = _;
+      acc[`${(index + 1) * 50}`] = _;
 
       return acc;
     }, {} as generatedColorShades);
 
-const createShades = (func: (index: number) => string, numOfShades = 4) =>
+const createShades = (func: (index: number) => string, numOfShades = 10) =>
   new Array(numOfShades).fill(null).reduce((acc, __, index) => {
     acc.push(func(index));
 

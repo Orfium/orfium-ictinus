@@ -1,31 +1,26 @@
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
+export const BASE_SHADE = 500;
+
 /**
  * Here are listed all the colors available for our project
  * Flat colors are the actual colors of the system
  **/
 export const flatColors = [
-  'lightGray',
-  'darkGray',
-  'lightCoolGray',
-  'coolGray',
-  'warmGray',
-  'magenta',
+  'greyScale',
+  'darkGrey',
+  'lightTintedGrey',
   'red',
-  'orange',
-  // @TODO only for old VH - soon will be removed
-  'darkOrange',
-  'yellow',
-  'green',
-  'teal',
-  'lightBlue',
-  'blue',
-  'darkBlue',
+  'magenta',
   'purple',
-  'mint',
-  'cyan',
-  'vividBlue',
-  'vividPurple',
+  'darkBlue',
+  'blue',
+  'lightBlue',
+  'teal',
+  'green',
+  'yellow',
+  'orange',
+  'darkOrange',
   ...neutralColors,
 ] as const;
 /**
@@ -33,9 +28,29 @@ export const flatColors = [
  * Each colors of the flat palette is generated with these variations
  * E.g red.100 = color or yellow.500 = color
  * so there is no yellow but variations of yellow
- * default variation: 400
+ * default variation: 500
  **/
-export const colorShades = [100, 200, 300, 400, 500, 600, 700] as const;
+export const colorShades = [
+  50,
+  100,
+  150,
+  200,
+  250,
+  300,
+  350,
+  400,
+  450,
+  500,
+  550,
+  600,
+  650,
+  700,
+  750,
+  800,
+  850,
+  900,
+  950,
+] as const;
 /**
  * mainTypes are not colors per se but a type of color
  * for example error is red but also defines a state that's why is listed here and not in flat colors
@@ -80,85 +95,65 @@ export const pickTextColorFromSwatches = (
   color: typeof flatColors[number],
   shade: typeof colorShades[number]
 ) => {
+  const colors950To750: typeof flatColors[number][] = [
+    'greyScale',
+    'darkGrey',
+    'lightTintedGrey',
+    'red',
+    'magenta',
+    'purple',
+    'darkBlue',
+    'blue',
+    'lightBlue',
+    'teal',
+    'green',
+    'yellow',
+    'orange',
+    'darkOrange',
+    'neutralBlack',
+  ];
   const colorsForWhiteText: Partial<Record<
     typeof colorShades[number],
     typeof flatColors[number][]
   >> = {
+    950: colors950To750,
+    900: colors950To750,
+    850: colors950To750,
+    800: colors950To750,
+    750: colors950To750,
     700: [
-      'lightGray',
-      'lightCoolGray',
-      'darkGray',
-      'coolGray',
-      'warmGray',
-      'magenta',
+      'greyScale',
+      'darkGrey',
+      'lightTintedGrey',
       'red',
+      'magenta',
+      'purple',
+      'darkBlue',
+      'blue',
+      'lightBlue',
+      'green',
       'orange',
       'darkOrange',
-      'yellow',
-      'green',
-      'teal',
-      'lightBlue',
-      'blue',
-      'darkBlue',
-      'purple',
-      'mint',
-      'cyan',
-      'vividBlue',
-      'vividPurple',
-      'neutralBlack',
     ],
-    600: [
-      'lightGray',
-      'lightCoolGray',
-      'darkGray',
-      'coolGray',
-      'warmGray',
-      'magenta',
+    650: [
+      'greyScale',
+      'darkGrey',
+      'lightTintedGrey',
       'red',
+      'magenta',
+      'purple',
+      'darkBlue',
+      'blue',
+      'green',
       'orange',
       'darkOrange',
-      'yellow',
-      'green',
-      'teal',
-      'lightBlue',
-      'blue',
-      'darkBlue',
-      'purple',
-      'mint',
-      'cyan',
-      'vividBlue',
-      'vividPurple',
     ],
-    500: [
-      'darkGray',
-      'coolGray',
-      'magenta',
-      'red',
-      'orange',
-      'darkOrange',
-      'yellow',
-      'green',
-      'lightBlue',
-      'blue',
-      'darkBlue',
-      'purple',
-      'mint',
-      'teal',
-      'cyan',
-      'vividBlue',
-      'vividPurple',
-    ],
-    400: [
-      'darkGray',
-      'magenta',
-      'red',
-      'darkOrange',
-      'darkBlue',
-      'purple',
-      'vividBlue',
-      'vividPurple',
-    ],
-    300: ['darkGray', 'darkBlue'],
+    600: ['greyScale', 'darkGrey', 'red', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
+    550: ['greyScale', 'darkGrey', 'red', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
+    500: ['darkGrey', 'magenta', 'purple', 'darkBlue', 'darkOrange'],
+    450: ['darkGrey', 'purple', 'darkBlue', 'darkOrange'],
+    400: ['darkGrey', 'darkOrange'],
+    350: ['darkGrey', 'darkOrange'],
   };
   const pickedShade = colorsForWhiteText[shade];
   const pickedColor = pickedShade && pickedShade?.find(item => item === color);

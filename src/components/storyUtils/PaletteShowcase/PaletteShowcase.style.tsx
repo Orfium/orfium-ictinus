@@ -23,7 +23,7 @@ export const colorNameBox = (color: string, colorName: typeof flatColors[number]
   padding: 10px;
   display: flex;
   flex-direction: column;
-  color: ${pickTextColorFromSwatches(colorName, 400)}; // base shade
+  color: ${pickTextColorFromSwatches(colorName, 650)}; // base shade
 `;
 
 export const colorBoxWrapper = css`
@@ -56,5 +56,6 @@ export const colorBox = (
   }
   div:last-child {
     font-size: 14px;
+    text-transform: uppercase;
   }
 `;

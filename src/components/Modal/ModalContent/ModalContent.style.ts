@@ -10,7 +10,7 @@ export const modalContentContainer = (theme: Theme): SerializedStyles => css`
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
-  color: ${theme.utils.getColor('lightGray', 700, 'flat')};
+  color: ${theme.utils.getColor('lightTintedGrey', 700, 'flat')};
   font-weight: ${theme.typography.weights.regular};
 `;
 
@@ -28,7 +28,7 @@ export const headingContainer = (theme: Theme): SerializedStyles => css`
 
 export const messageContainer = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['16']};
-  color: ${theme.utils.getColor('lightGray', 600)};
+  color: ${theme.utils.getColor('lightTintedGrey', 750)};
   max-height: ${rem(430)};
   overflow-y: hidden;
   margin: 0;

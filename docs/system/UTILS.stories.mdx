@@ -28,7 +28,7 @@ It gets 3 params:
 ```
 import { getColor } from 'theme';
 ...
-getColor(palette)('lightBlue', 400)
+getColor(palette)('lightBlue', 650)
 ```
 
 ##### 2) Hook
@@ -36,11 +36,11 @@ getColor(palette)('lightBlue', 400)
 ```
 const theme = useTheme();
 ...
-theme.utils.getColor('darkGray', 400);
+theme.utils.getColor('darkGrey', 650);
 ...
-theme.utils.getColor('primary', 400, 'normal');
+theme.utils.getColor('primary', BASE_SHADE, 'normal');
 ...
-theme.utils.getColor('primary', 400, 'text');
+theme.utils.getColor('primary', BASE_SHADE, 'text');
 ```
 
 ---

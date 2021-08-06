@@ -50,7 +50,7 @@ const BulkActionsShowcase = () => {
           </span>
         }
         buttonStyles={{
-          primaryButtonColor: 'lightBlue-400',
+          primaryButtonColor: 'lightBlue-500',
           secondaryButtonColor: 'lightBlue-100',
           isButtonFilled: true,
         }}

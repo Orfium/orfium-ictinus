@@ -34,7 +34,7 @@ export const getTextColor = ({
   calculatedColor,
 }: BaseColorProps) => {
   if (hasSelectedValue && !open) {
-    return theme.utils.getColor(activeCalculatedColor.color, 500);
+    return theme.utils.getColor(activeCalculatedColor.color, 650);
   } else if (open) {
     return pickTextColorFromSwatches(activeCalculatedColor.color, activeCalculatedColor.shade);
   }
@@ -49,7 +49,7 @@ export const getBorder = ({
   activeCalculatedColor,
 }: BorderProps) => {
   if (styleType === 'outlined' && !hasSelectedValue) {
-    return `solid 1px ${theme.utils.getColor('lightGray', 400)}`;
+    return `solid 1px ${theme.utils.getColor('lightTintedGrey', 650)}`;
   } else if (hasSelectedValue) {
     return `solid 1px ${lighten(
       0.5,

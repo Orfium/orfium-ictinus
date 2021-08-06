@@ -97,7 +97,7 @@ const customElement = (
       width: 100%;
       flex-direction: column;
       padding: ${theme.spacing.md};
-      border: 1px solid ${theme.utils.getColor('lightGray', 200)};
+      border: 1px solid ${theme.utils.getColor('lightTintedGrey', 250)};
       border-radius: ${theme.spacing.xsm};
       :first-of-type {
         margin-right: ${theme.spacing.md};

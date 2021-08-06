@@ -14,7 +14,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
   display: flex;
   cursor: default;
   font-weight: ${active ? theme.typography.weights.medium : theme.typography.weights.regular};
-  color: ${active ? theme.palette.black : theme.utils.getColor('lightGray', 600)};
+  color: ${active ? theme.palette.black : theme.utils.getColor('lightTintedGrey', 750)};
 
   & button {
     height: auto;
@@ -22,7 +22,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
     padding: ${theme.spacing.sm};
     &:focus {
       outline: none;
-      background-color: ${theme.utils.getColor('lightGray', 200)};
+      background-color: ${theme.utils.getColor('lightTintedGrey', 250)};
     }
 
     & > span {
@@ -32,6 +32,6 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
 
   & > div > div > div {
     top: 3rem;
-    box-shadow: ${theme.utils.getColor('darkGray', 500)} 0px 0px ${rem(16)};
+    box-shadow: ${theme.utils.getColor('darkGrey', 650)} 0px 0px ${rem(16)};
   }
 `;

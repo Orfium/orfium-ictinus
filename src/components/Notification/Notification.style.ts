@@ -1,11 +1,12 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem, tint } from 'polished';
+import { Theme } from 'theme';
+import { BASE_SHADE } from 'theme/palette';
 
-import { Theme } from '../../theme';
 import { NotificationStyleType, NotificationTypes } from './Notification';
 
 export const typeToThemePalette = (theme: Theme, type: NotificationTypes): string =>
-  theme.utils.getColor(type, 400, 'normal');
+  theme.utils.getColor(type, BASE_SHADE, 'normal');
 
 // Generic SerializedStyles for all Notification Types
 

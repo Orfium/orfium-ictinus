@@ -95,7 +95,7 @@ const CompactNotification: React.FC<Props> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
+            <Icon name="close" color={utils.getColor('lightTintedGrey', 650)} size={20} />
           </span>
         )}
       </div>
