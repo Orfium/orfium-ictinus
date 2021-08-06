@@ -57,8 +57,6 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
       ? enhancePaletteWithShades(lightPaletteConfig)
       : enhancePaletteWithShades(darkPaletteConfig);
 
-  console.log({ palette });
-
   return {
     palette,
     typography,
