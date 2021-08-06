@@ -89,7 +89,7 @@ const MonthWrapper = ({
                       <Icon
                         name={'triangleDown'}
                         size={10}
-                        color={theme.utils.getColor('lightTintedGrey', 650)}
+                        color={theme.utils.getColor('darkGrey', 650)}
                       />
                     }
                   >

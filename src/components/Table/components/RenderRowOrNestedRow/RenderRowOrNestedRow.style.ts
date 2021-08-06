@@ -13,7 +13,7 @@ export const borderedRowStyle = ({
     borderBottom: bordered
       ? `${rem(1)} solid ${theme.utils.getColor('lightTintedGrey', 250)}`
       : 'none',
-    'td:first-child': {
+    'td:first-of-type': {
       paddingLeft: theme.spacing.md,
     },
 

@@ -55,7 +55,7 @@ export const useMatchingActions = (
   actions: MatchingAction[],
   enhanceWithWrapperElement: (actionButton: JSX.Element, index: number) => JSX.Element,
   isButtonFilled = false,
-  color = 'neutralWhite-700'
+  color = 'neutralWhite-500'
 ) => {
   const actionItems = useMemo(
     () => actions.map(createActionButton(isButtonFilled, color)).map(enhanceWithWrapperElement),

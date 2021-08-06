@@ -48,11 +48,11 @@ describe('The usability of getColorFromType to be correct', () => {
 
     expect(color).toBe(lightPaletteConfig.secondary);
   });
-  test('getColorFromType to get specific the primary to get the specia case of 100 shade', () => {
+  test('getColorFromType to get specific the primary to get the special case of 100 shade', () => {
     const testColor = 'primary';
     const color = getColorFromType(testColor, theme('light'));
 
-    expect(color).toBe('#c8cade');
+    expect(color).toBe('#ececfd');
   });
   test('getColorFromType to get a color from the palette and return the correct color', () => {
     const testColor = 'lightBlue';

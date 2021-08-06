@@ -6,7 +6,7 @@ import { magentaShades } from './const';
 
 describe('GetColor functionalities', () => {
   test('magenta base color to be shaded correctly', () => {
-    expect(colorShadesCreator(flatPaletteConfig.magenta as string, 0.25)).toStrictEqual(
+    expect(colorShadesCreator(flatPaletteConfig.magenta as string, 0.1)).toStrictEqual(
       magentaShades
     );
   });
@@ -14,9 +14,9 @@ describe('GetColor functionalities', () => {
   test('that the getColor fetch the correct colors from what has being requested', () => {
     const palette = enhancePaletteWithShades(lightPaletteConfig);
     const getColorFun = getColor(palette);
-    expect(getColorFun('lightBlue', 650)).toStrictEqual('#18aed2');
-    expect(getColorFun('magenta', 250)).toStrictEqual(magentaShades['200']);
-    expect(getColorFun('primary', BASE_SHADE, 'text')).toStrictEqual('#494949');
+    expect(getColorFun('teal', 550)).toStrictEqual('#1ad1a3');
+    expect(getColorFun('magenta', 250)).toStrictEqual(magentaShades['250']);
+    expect(getColorFun('primary', BASE_SHADE, 'text')).toStrictEqual('#32324E');
   });
 });
 
@@ -25,10 +25,10 @@ describe('pickTextColorFromSwatches functionalities', () => {
     const black = '#000';
     const white = '#fff';
 
-    expect(pickTextColorFromSwatches('lightBlue', 650)).toBe(black);
+    expect(pickTextColorFromSwatches('darkGrey', 300)).toBe(black);
     expect(pickTextColorFromSwatches('darkBlue', 650)).toBe(white);
     expect(pickTextColorFromSwatches('magenta', 650)).toBe(white);
-    expect(pickTextColorFromSwatches('green', 650)).toBe(black);
+    expect(pickTextColorFromSwatches('green', 600)).toBe(black);
     expect(pickTextColorFromSwatches('green', 850)).toBe(white);
   });
 });

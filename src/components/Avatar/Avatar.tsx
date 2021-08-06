@@ -18,7 +18,7 @@ export type Props = {
    * */
   size?: AvatarSizes;
   /** the color of the button based on our colors eg. red-500
-   *  @default 'darkGray-500'
+   *  @default 'darkGrey-500'
    * */
   color?: string;
   /** the shape of the avatar
