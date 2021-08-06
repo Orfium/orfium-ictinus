@@ -50,6 +50,8 @@ export const buttonWrapperStyle = ({
     display: 'flex',
     alignItems: 'center',
     height: '100%',
+    maxWidth: rem(270),
+    minWidth: rem(150),
     ':hover > span,:active > span': {
       backgroundColor: dividerHoverColor,
       borderTop: `${borderStyleParams} ${dividerHoverColor}`,
@@ -162,6 +164,7 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
     })}`,
   };
 };
+
 export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
   return {
     ...buttonBaseStyle(props)(theme),
@@ -190,6 +193,7 @@ export const childrenWrapperStyle = () => (theme: Theme) => {
   return {
     marginLeft: 0,
     marginRight: theme.spacing.sm,
+    maxWidth: rem(270),
   };
 };
 
@@ -197,13 +201,25 @@ export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (the
   return {
     fontWeight:
       open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
-
+    maxWidth: rem(210),
+    display: 'flex',
+    alignItems: 'center',
+    div: {
+      flex: 'none',
+    },
     span: {
       marginLeft: theme.spacing.xsm,
       fontWeight: theme.typography.weights.bold,
     },
   };
 };
+
+export const valueSpanStyle = () => css`
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+`;
 
 export const menuStyle = () => (theme: Theme) => css`
   position: absolute;
