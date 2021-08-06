@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
 import { flexCenterVertical } from 'theme/functions';
-import { colorShades, pickTextColorFromSwatches } from 'theme/palette';
+import { BASE_SHADE, colorShades, pickTextColorFromSwatches } from 'theme/palette';
 import { flatColors } from 'theme/palette';
 
 import { Theme } from '../../theme';
@@ -36,7 +36,7 @@ const wrapperStyleSwitch = (
   theme: Theme,
   styleType?: 'filled' | 'outlined',
   fill?: typeof flatColors[number],
-  shade: typeof colorShades[number] = 400
+  shade: typeof colorShades[number] = BASE_SHADE
 ) => {
   switch (styleType) {
     case 'outlined': {

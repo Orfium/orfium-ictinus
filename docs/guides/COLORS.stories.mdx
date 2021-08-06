@@ -14,7 +14,7 @@ The palette is a collection of colors that has being designed with colors that w
 
 All the colors in palette are created with the same principle.
 
-Each color includes seven shades, the base color (shade: 400) and six shades deriving from color 400,
+Each color includes seven shades, the base color (shade: 500) and six shades deriving from color 500,
 three darker and three lighter.
 
 All new shades are calculated with color percentages (25%, 50%, 75%) on white background for the lighter shades and black background for the darker ones (75%, 50%, 25%).
@@ -25,13 +25,25 @@ This way we get the following colors for magenta
 
 ```
 {
-  100: "#f3c6dc",
-  200: "#e88eba",
-  300: "#dd5697",
-  400: "#d21e75",
-  500: "#9d1657",
-  600: "#690f3a",
-  700: "#34071d"
+  "50": "#f9e7fa",
+  "100": "#f4cff6",
+  "150": "#eeb8f2",
+  "200": "#e9a0ee",
+  "250": "#e389ea",
+  "300": "#de71e5",
+  "350": "#d859e1",
+  "400": "#d342dd",
+  "450": "#cd2ad9",
+  "500": "#C813D5",
+  "550": "#b411bf",
+  "600": "#a00faa",
+  "650": "#8c0d95",
+  "700": "#780b7f",
+  "750": "#64096a",
+  "800": "#4f0755",
+  "850": "#3b053f",
+  "900": "#27032a",
+  "950": "#130115"
 }
 ```
 
@@ -49,8 +61,8 @@ Each color state must follow some rules for lighten or darken the basic color. R
 
 - filled component with color
 
-  - for shades: 500 - 700 = we are lighten the basic color
-  - for shades: 100 - 400 = we are darken the basic color
+  - for shades: 500 - 950 = we are lighten the basic color
+  - for shades: 50 - 450 = we are darken the basic color
 
   based on the above we lighten or darken by these
 

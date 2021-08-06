@@ -59,7 +59,7 @@ export type ColorShapeFromComponent = {
   shade: typeof colorShades[number];
 };
 /**
- * A utility to translate a color like red-400 to an object. This calculates on the color passed picked by our palette.
+ * A utility to translate a color like red-500 to an object. This calculates on the color passed picked by our palette.
  * So in case you run a red color for example `#d40000` this will return
  * returns an object or undefined
  * */
@@ -75,12 +75,12 @@ export const calculateActualColorFromComponentProp = (color: string): ColorShape
 
   if (!flatColors.includes(calculatedColor as typeof flatColors[number])) {
     throw new Error(
-      `You passed a wrong color for the first argument: ${color} - try something like red-400`
+      `You passed a wrong color for the first argument: ${color} - try something like red-500`
     );
   }
   if (!colorShades.includes(calculatedShade as typeof colorShades[number])) {
     throw new Error(
-      `You passed a wrong shade for the second argument: ${color} - try something like red-400`
+      `You passed a wrong shade for the second argument: ${color} - try something like red-500`
     );
   }
 
