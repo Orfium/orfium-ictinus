@@ -6,6 +6,7 @@ import React from 'react';
 import { ChangeEvent } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 
+import { pickTextColorFromSwatches } from '../../theme/palette';
 import Icon from '../Icon';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import Options from './components/Options/Options';
@@ -34,7 +35,6 @@ const Filter: React.FC<Props> = props => {
     defaultValue,
     styleType,
     label = '',
-    color,
     buttonType = 'primary',
     filterType = 'preset',
     disabled = false,
@@ -53,17 +53,11 @@ const Filter: React.FC<Props> = props => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
-  const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
+  const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
 
-  // The active calculated color is the base of the defined color. So till today the base is defined as '400'.
-  const activeCalculatedColor = calculateColorBetweenColorAndType(
-    `${calculatedColor.color}-400`,
-    buttonType
-  );
   const iconColor = getTextColor({
     open,
     theme,
-    activeCalculatedColor,
     calculatedColor,
     hasSelectedValue,
   });
@@ -113,7 +107,6 @@ const Filter: React.FC<Props> = props => {
 
   const buttonStyleProps = {
     calculatedColor,
-    activeCalculatedColor,
     buttonType,
     disabled,
     open,
@@ -124,10 +117,10 @@ const Filter: React.FC<Props> = props => {
 
   const pickIconColor = () => {
     if (open) {
-      return theme.utils.getColor(activeCalculatedColor.color, 100);
+      return pickTextColorFromSwatches(calculatedColor.color, 400);
     }
     if (hasSelectedValue && !open) {
-      return theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade);
+      return theme.utils.getColor(calculatedColor.color, calculatedColor.shade);
     }
 
     return theme.utils.getColor('lightGray', 600);

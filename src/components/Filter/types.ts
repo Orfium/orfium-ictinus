@@ -13,8 +13,6 @@ export type StyleType = 'filled' | 'outlined' | 'elevated' | 'transparent';
 export type FilterType = 'preset' | 'added';
 
 export type Props = {
-  /** the color of the button when the menu is opened based on our colors eg. red-400 */
-  color: string;
   /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;
   /** Items that are being declared as menu options */
@@ -54,19 +52,16 @@ export type BaseColorProps = {
   open: boolean;
   theme: Theme;
   calculatedColor: ColorShapeFromComponent;
-  activeCalculatedColor: ColorShapeFromComponent;
   hasSelectedValue: boolean;
 };
 
 export type BackgroundColorProps = BaseColorProps & {
-  buttonType: AcceptedColorComponentTypes;
   styleType: StyleType;
 };
 
 export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
   disabled?: boolean;
   styleType: StyleType;
-  buttonType: AcceptedColorComponentTypes;
   filterType: FilterType;
 };
 
@@ -76,7 +71,7 @@ export type BorderProps = BaseColorProps & {
   isDivider?: boolean;
 };
 
-export type HoverBorderProps = BaseColorProps & {
+export type HoverBorderProps = Omit<BaseColorProps, 'open'> & {
   styleType: StyleType;
   filterType: FilterType;
 };
