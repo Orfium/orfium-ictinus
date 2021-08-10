@@ -1981,28 +1981,28 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
   font-size: 0.875rem;
 }
 
-.emotion-15 {
+.emotion-17 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #e7e7e7;
 }
 
-.emotion-15 td:first-child {
+.emotion-17 td:first-child {
   padding-left: 1rem;
 }
 
-.emotion-15 td:last-child {
+.emotion-17 td:last-child {
   padding-right: 1rem;
 }
 
-.emotion-16 {
+.emotion-18 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
   width: initial;
 }
 
-.emotion-19 {
+.emotion-21 {
   position: relative;
   text-align: right;
   padding: 0.25rem 0.5rem;
@@ -2049,7 +2049,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
         </td>
         <td
           className="emotion-4"
-          colSpan={3}
+          colSpan={4}
           data-testid="ictinus_table_row_0_cell_2"
         >
           <div>
@@ -2113,15 +2113,26 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
             Age
           </div>
         </th>
+        <th
+          className="emotion-13"
+          data-testid="ictinus_sauron_age"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-8"
+          >
+            Sauron Age
+          </div>
+        </th>
       </tr>
     </thead>
     <tbody>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_1_cell_1"
         >
           <span
@@ -2131,7 +2142,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_1_cell_2"
         >
           <span
@@ -2141,7 +2152,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_1_cell_3"
         >
           <span
@@ -2151,22 +2162,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_1_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_1_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_2_cell_1"
         >
           <span
@@ -2176,7 +2197,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_2_cell_2"
         >
           <span
@@ -2186,7 +2207,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_2_cell_3"
         >
           <span
@@ -2196,22 +2217,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_2_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_2_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_3_cell_1"
         >
           <span
@@ -2221,7 +2252,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_3_cell_2"
         >
           <span
@@ -2231,7 +2262,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_3_cell_3"
         >
           <span
@@ -2241,22 +2272,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_3_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_3_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_4_cell_1"
         >
           <span
@@ -2266,7 +2307,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_4_cell_2"
         >
           <span
@@ -2276,7 +2317,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_4_cell_3"
         >
           <span
@@ -2286,22 +2327,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_4_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_4_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_5_cell_1"
         >
           <span
@@ -2311,7 +2362,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_5_cell_2"
         >
           <span
@@ -2321,7 +2372,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_5_cell_3"
         >
           <span
@@ -2331,22 +2382,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_5_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_5_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_6_cell_1"
         >
           <span
@@ -2356,7 +2417,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_6_cell_2"
         >
           <span
@@ -2366,7 +2427,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_6_cell_3"
         >
           <span
@@ -2376,22 +2437,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_6_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_6_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_7_cell_1"
         >
           <span
@@ -2401,7 +2472,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_7_cell_2"
         >
           <span
@@ -2411,7 +2482,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_7_cell_3"
         >
           <span
@@ -2421,22 +2492,32 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_7_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_7_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
       <tr
-        className="emotion-15"
+        className="emotion-17"
         onClick={[Function]}
       >
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_8_cell_1"
         >
           <span
@@ -2446,7 +2527,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_8_cell_2"
         >
           <span
@@ -2456,7 +2537,7 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-16"
+          className="emotion-18"
           data-testid="ictinus_table_row_8_cell_3"
         >
           <span
@@ -2466,13 +2547,23 @@ exports[`Storyshots Design System/Table Regular Table with simple rows 1`] = `
           </span>
         </td>
         <td
-          className="emotion-19"
+          className="emotion-21"
           data-testid="ictinus_table_row_8_cell_4"
         >
           <span
             data-column="Age"
           >
-            4.221
+            42
+          </span>
+        </td>
+        <td
+          className="emotion-21"
+          data-testid="ictinus_table_row_8_cell_5"
+        >
+          <span
+            data-column="Sauron Age"
+          >
+            4.2M
           </span>
         </td>
       </tr>
