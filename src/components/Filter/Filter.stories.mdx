@@ -33,15 +33,23 @@ import { Filter } from '@orfium/ictinus';
 
 # Filter with style types
 
-A filter with different with style types and a selection handler to return selection on change and to pass selection callback
+A filter with different style types and a selection handler to return selection on change and to pass selection callback.
+Here you can see our two different filter types as well.
 
 <Preview>
   <Story name="Filter with style types">
+     <h2>Preset</h2>
     <Stack>
        <FilterShowcase styleType="filled" color="lightTintedGrey-50" />
        <FilterShowcase styleType="outlined" color="lightTintedGrey-50" />
        <FilterShowcase styleType="elevated" color="lightTintedGrey-50" />
        <FilterShowcase styleType="transparent" color="lightTintedGrey-50" />
+    </Stack>
+    <h2>Added</h2>
+    <Stack>
+      <FilterShowcase styleType="filled" filterType="added" color="purple-50" />
+      <FilterShowcase styleType="outlined" filterType="added" color="purple-50" />
+      <FilterShowcase styleType="elevated" filterType="added" color="purple-50" />
     </Stack>
   </Story>
 </Preview>
@@ -57,6 +65,23 @@ A filter with colors and a selection handler to return selection on change and t
        <FilterShowcase styleType="outlined" color="red-500" />
        <FilterShowcase styleType="elevated" color="darkGrey-300"/>
        <FilterShowcase styleType="transparent" color="magenta-100" />
+    </Stack>
+  </Story>
+</Preview>
+
+# Filter with big text
+
+<Preview>
+  <Story name="Filter with big text">
+    <Stack>
+       <FilterShowcase
+            styleType="filled"
+            color="lightTintedGrey-500"
+            defaultValue={{
+                 label: 'default item is a very long text that should be overflow ellipsis',
+                 value: '1',
+            }}
+        />
     </Stack>
   </Story>
 </Preview>

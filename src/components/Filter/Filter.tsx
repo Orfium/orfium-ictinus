@@ -17,6 +17,10 @@ import {
   labelSpanStyle,
   wrapperStyle,
   menuStyle,
+  buttonWrapperStyle,
+  dividedButtonStyle,
+  divider,
+  valueSpanStyle,
 } from './Filter.style';
 import { FilterOption, Props } from './types';
 import { getTextColor } from './utils';
@@ -32,6 +36,7 @@ const Filter: React.FC<Props> = props => {
     label = '',
     color,
     buttonType = 'primary',
+    filterType = 'preset',
     disabled = false,
     dataTestId,
     isSearchable = false,
@@ -39,6 +44,7 @@ const Filter: React.FC<Props> = props => {
     onAsyncSearch,
     isLoading = false,
     isVirtualized = false,
+    onClear = () => {},
   } = props;
   const [open, setOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
@@ -47,8 +53,13 @@ const Filter: React.FC<Props> = props => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
-  const activeCalculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
+
+  // The active calculated color is the base of the defined color. So till today the base is defined as '400'.
+  const activeCalculatedColor = calculateColorBetweenColorAndType(
+    `${calculatedColor.color}-400`,
+    buttonType
+  );
   const iconColor = getTextColor({
     open,
     theme,
@@ -100,35 +111,77 @@ const Filter: React.FC<Props> = props => {
     []
   );
 
+  const buttonStyleProps = {
+    calculatedColor,
+    activeCalculatedColor,
+    buttonType,
+    disabled,
+    open,
+    styleType,
+    hasSelectedValue,
+    filterType,
+  };
+
+  const pickIconColor = () => {
+    if (open) {
+      return theme.utils.getColor(activeCalculatedColor.color, 100);
+    }
+    if (hasSelectedValue && !open) {
+      return theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade);
+    }
+
+    return theme.utils.getColor('lightTintedGrey', 750);
+  };
+
+  /**
+   * for 'added' type design team decided that is not needed therefore in order not having to maintain
+   * one more special case we dont render it
+   **/
+  if (filterType === 'added' && styleType === 'transparent') {
+    throw new Error('This filterType and styleType is not supported');
+  }
+
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle()} data-testid={dataTestId}>
+      <div css={wrapperStyle(buttonStyleProps)} data-testid={dataTestId}>
         <button
           data-testid={generateTestDataId('filter', dataTestId)}
-          css={buttonStyle({
-            calculatedColor,
-            activeCalculatedColor,
-            buttonType,
-            disabled,
-            open,
-            styleType,
-            hasSelectedValue,
-          })}
           onClick={handleOpen}
           disabled={disabled}
+          css={buttonWrapperStyle(buttonStyleProps)}
         >
-          <span css={buttonSpanStyle()}>
-            <span css={childrenWrapperStyle()}>
-              <span css={labelSpanStyle(open, hasSelectedValue)}>
-                {label}:<span>{selectedItem?.label ?? defaultValue.label}</span>
+          <div css={buttonStyle(buttonStyleProps)}>
+            <span css={buttonSpanStyle()}>
+              <span css={childrenWrapperStyle()}>
+                <span css={labelSpanStyle(open, hasSelectedValue)}>
+                  <div>{label && `${label} :`}</div>
+                  <span css={valueSpanStyle()}>{selectedItem?.label ?? defaultValue.label}</span>
+                </span>
               </span>
-            </span>
 
-            <Icon name={iconName} color={iconColor} size={6} />
-          </span>
+              <Icon name={iconName} color={iconColor} size={6} />
+            </span>
+          </div>
+
+          {filterType === 'added' && (
+            <>
+              <span css={divider(buttonStyleProps)} />
+              <div css={dividedButtonStyle(buttonStyleProps)}>
+                <Icon
+                  size={19}
+                  name={'closeTag'}
+                  color={pickIconColor()}
+                  onClick={e => {
+                    e.stopPropagation();
+                    onClear();
+                  }}
+                />
+              </div>
+            </>
+          )}
         </button>
         {open && (
-          <div css={menuStyle()(theme)} data-testid={generateTestDataId('filter-menu', dataTestId)}>
+          <div css={menuStyle()} data-testid={generateTestDataId('filter-menu', dataTestId)}>
             {isSearchable && (
               <SearchInput
                 value={searchValue}

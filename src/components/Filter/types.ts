@@ -10,6 +10,8 @@ export type FilterOption = {
 
 export type StyleType = 'filled' | 'outlined' | 'elevated' | 'transparent';
 
+export type FilterType = 'preset' | 'added';
+
 export type Props = {
   /** the color of the button when the menu is opened based on our colors eg. red-500 */
   color: string;
@@ -22,10 +24,14 @@ export type Props = {
   defaultValue: FilterOption;
   /** A callback that is being triggered when an items has been clicked */
   onSelect: (option: FilterOption) => void;
+  /** A callback that is being triggered when type is added and you press the X icon */
+  onClear?: () => void;
   /** The text of the button to show */
   label: React.ReactNode;
   /** Defines the style type of the button */
   styleType: StyleType;
+  /** Defines the filter type */
+  filterType?: FilterType;
   /** The selected item of the menu. This is an item of the the items list */
   selectedItem?: FilterOption;
   /** Defines if the button is in disabled state */
@@ -61,12 +67,16 @@ export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
   disabled?: boolean;
   styleType: StyleType;
   buttonType: AcceptedColorComponentTypes;
+  filterType: FilterType;
 };
 
-export type BorderProps = Omit<BaseColorProps, 'open' | 'calculatedColor'> & {
+export type BorderProps = BaseColorProps & {
   styleType: StyleType;
+  filterType: FilterType;
+  isDivider?: boolean;
 };
 
 export type HoverBorderProps = BaseColorProps & {
   styleType: StyleType;
+  filterType: FilterType;
 };
