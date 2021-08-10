@@ -13,7 +13,7 @@ import {
   borderStyleParams,
 } from './utils';
 
-export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) => (
+export const wrapperStyle = ({ styleType, hasSelectedValue, open }: ButtonStyleProps) => (
   theme: Theme
 ) => {
   const boxShadow = theme.elevation['02'];
@@ -22,7 +22,7 @@ export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) 
     position: 'relative' as const,
     display: 'inline-block',
     height: rem(36),
-    filter: styleType === 'elevated' && !hasSelectedValue ? `drop-shadow(${boxShadow})` : undefined,
+    filter: styleType === 'elevated' && !hasSelectedValue && !open ? `drop-shadow(${boxShadow})` : undefined,
   };
 };
 
