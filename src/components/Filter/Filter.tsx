@@ -107,7 +107,7 @@ const Filter: React.FC<Props> = props => {
   const debouncedOnChange = React.useCallback(
     debounce((value: string) => {
       onAsyncSearch?.(value);
-    }, 650),
+    }, 400),
     []
   );
 

@@ -114,7 +114,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
     const debouncedOnChange = React.useCallback(
       debounce(term => {
         asyncSearch(term);
-      }, 650),
+      }, 400),
       []
     );
 
