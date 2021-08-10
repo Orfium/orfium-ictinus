@@ -47,7 +47,7 @@ const PaletteShowcase = () => {
           .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
           .map(([colorName, colors]) => (
             <div key={colorName} css={paletteColorWrapper}>
-              <div css={colorNameBox(colors[3], colorName)}>
+              <div css={colorNameBox(colors[Math.round(colors.length / 2)], colorName)}>
                 <div
                   css={css`
                     flex: 1;
