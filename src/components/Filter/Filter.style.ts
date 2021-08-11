@@ -162,7 +162,11 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
   return {
     ...buttonBaseStyle(props)(theme),
     borderLeft: '0 !important',
-    paddingRight: theme.spacing.md,
+    paddingRight: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: rem(34),
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
   };
