@@ -93,7 +93,7 @@ const ThemeSwitcher = () => {
 export const decorators = [
   (Story: any) => {
     return (
-      <ThemeProvider>
+      <ThemeProvider theme={{ palette: { primary: '#8833FF', secondary: '#C813D5' } }}>
         <ThemeSwitcher />
         <Story />
       </ThemeProvider>
