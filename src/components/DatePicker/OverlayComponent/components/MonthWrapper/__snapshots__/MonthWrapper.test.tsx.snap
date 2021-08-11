@@ -55,14 +55,14 @@ exports[`MonthWrapper should render correctly 1`] = `
   justify-content: center;
 }
 
+.emotion-4 path {
+  fill: #9b9b9b;
+}
+
 .emotion-4 {
   fill: #9b9b9b;
   width: 1.5625rem;
   height: 1.5625rem;
-}
-
-.emotion-4 path {
-  fill: #9b9b9b;
 }
 
 .emotion-5 {
@@ -103,6 +103,10 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
 }
 
+.emotion-7:hover {
+  background-color: #e5e5e5;
+}
+
 .emotion-7 {
   font-size: 1rem;
   font-weight: 500;
@@ -116,10 +120,6 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-}
-
-.emotion-7:hover {
-  background-color: #e5e5e5;
 }
 
 .emotion-7:active {
@@ -398,14 +398,14 @@ exports[`MonthWrapper should render correctly 1`] = `
   justify-content: center;
 }
 
+.emotion-4 path {
+  fill: #9b9b9b;
+}
+
 .emotion-4 {
   fill: #9b9b9b;
   width: 1.5625rem;
   height: 1.5625rem;
-}
-
-.emotion-4 path {
-  fill: #9b9b9b;
 }
 
 .emotion-5 {
@@ -446,6 +446,10 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
 }
 
+.emotion-7:hover {
+  background-color: #e5e5e5;
+}
+
 .emotion-7 {
   font-size: 1rem;
   font-weight: 500;
@@ -459,10 +463,6 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
-}
-
-.emotion-7:hover {
-  background-color: #e5e5e5;
 }
 
 .emotion-7:active {
@@ -725,7 +725,7 @@ exports[`MonthWrapper should render correctly 1`] = `
                   class="emotion-9"
                 >
                   November
-
+                   
                   2020
                 </span>
                 <span
