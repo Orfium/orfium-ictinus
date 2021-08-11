@@ -28,7 +28,7 @@ const FilterShowcase = ({
   defaultValue = { value: 18, label: 'Default value' },
   selectedItem,
   isSearchable = false,
-                          buttonType = 'primary'
+  buttonType = 'primary'
 }: Props) => {
   const [stateItem, setStateItem] = React.useState<FilterOption | undefined>(selectedItem);
 
