@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { rem } from 'polished';
 
 import { Theme } from '../../theme';
+import { pickTextColorFromSwatches } from '../../theme/palette';
 import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
 import {
@@ -12,7 +13,7 @@ import {
   borderStyleParams,
 } from './utils';
 
-export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) => (
+export const wrapperStyle = ({ styleType, hasSelectedValue, open }: ButtonStyleProps) => (
   theme: Theme
 ) => {
   const boxShadow = theme.elevation['02'];
@@ -21,7 +22,7 @@ export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) 
     position: 'relative' as const,
     display: 'inline-block',
     height: rem(36),
-    filter: styleType === 'elevated' && !hasSelectedValue ? `drop-shadow(${boxShadow})` : undefined,
+    filter: styleType === 'elevated' && !hasSelectedValue && !open ? `drop-shadow(${boxShadow})` : undefined,
   };
 };
 
@@ -35,7 +36,6 @@ export const buttonSpanStyle = () => () => {
 
 export const buttonWrapperStyle = ({
   calculatedColor,
-  activeCalculatedColor,
   disabled,
   open,
   styleType,
@@ -57,7 +57,7 @@ export const buttonWrapperStyle = ({
       borderTop: `${borderStyleParams} ${dividerHoverColor}`,
       borderBottom: `${borderStyleParams} ${dividerHoverColor}`,
     },
-    ':hover > div,:active > div': {
+    ':hover > div, :active > div': {
       backgroundColor:
         !disabled && !open
           ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
@@ -66,19 +66,20 @@ export const buttonWrapperStyle = ({
         styleType,
         filterType,
         theme,
-        open,
         calculatedColor,
-        activeCalculatedColor,
         hasSelectedValue,
       })}`,
+      color: pickTextColorFromSwatches(calculatedColor.color, 400),
     },
+    // hack to change color to arrow and close icons
+    ':hover > div > span > span > svg path, :hover > div > span > svg path': {
+      fill: pickTextColorFromSwatches(calculatedColor.color, 400),
+    }
   };
 };
 
 export const buttonBaseStyle = ({
   calculatedColor,
-  activeCalculatedColor,
-  buttonType,
   disabled,
   open,
   styleType,
@@ -94,7 +95,6 @@ export const buttonBaseStyle = ({
     color: getTextColor({
       theme,
       open,
-      activeCalculatedColor,
       calculatedColor,
       hasSelectedValue,
     }),
@@ -102,16 +102,13 @@ export const buttonBaseStyle = ({
       theme,
       open,
       styleType,
-      buttonType,
       hasSelectedValue,
-      activeCalculatedColor,
       calculatedColor,
     }),
     border: `${borderStyleParams} ${getBorder({
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -123,7 +120,6 @@ export const buttonBaseStyle = ({
 export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
   const {
     open,
-    activeCalculatedColor,
     calculatedColor,
     styleType,
     hasSelectedValue,
@@ -138,7 +134,6 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -148,7 +143,6 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -157,7 +151,6 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -169,7 +162,11 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
   return {
     ...buttonBaseStyle(props)(theme),
     borderLeft: '0 !important',
-    paddingRight: theme.spacing.md,
+    paddingRight: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: rem(34),
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
   };

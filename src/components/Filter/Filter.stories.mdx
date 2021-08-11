@@ -40,16 +40,16 @@ Here you can see our two different filter types as well.
   <Story name="Filter with style types">
      <h2>Preset</h2>
     <Stack>
-       <FilterShowcase styleType="filled" color="lightCoolGray-400" />
-       <FilterShowcase styleType="outlined" color="lightCoolGray-400" />
-       <FilterShowcase styleType="elevated" color="lightCoolGray-400" />
-       <FilterShowcase styleType="transparent" color="lightCoolGray-400" />
+       <FilterShowcase styleType="filled" />
+       <FilterShowcase styleType="outlined" />
+       <FilterShowcase styleType="elevated" />
+       <FilterShowcase styleType="transparent" />
     </Stack>
     <h2>Added</h2>
     <Stack>
-      <FilterShowcase styleType="filled" filterType="added" color="vividPurple-100" />
-      <FilterShowcase styleType="outlined" filterType="added" color="vividPurple-100" />
-      <FilterShowcase styleType="elevated" filterType="added" color="vividPurple-100" />
+      <FilterShowcase styleType="filled" filterType="added" />
+      <FilterShowcase styleType="outlined" filterType="added" />
+      <FilterShowcase styleType="elevated" filterType="added" />
     </Stack>
   </Story>
 </Preview>
@@ -60,11 +60,19 @@ A filter with colors and a selection handler to return selection on change and t
 
 <Preview>
   <Story name="Filter with colors">
+    <h2>Primary</h2>
     <Stack>
-       <FilterShowcase styleType="filled" color="vividPurple-100" />
-       <FilterShowcase styleType="outlined" color="red-500" />
-       <FilterShowcase styleType="elevated" color="darkGray-300"/>
-       <FilterShowcase styleType="transparent" color="magenta-100" />
+       <FilterShowcase styleType="filled" buttonType='primary' />
+       <FilterShowcase styleType="outlined" buttonType='primary' />
+       <FilterShowcase styleType="elevated" buttonType='primary' />
+       <FilterShowcase styleType="transparent" buttonType='primary' />
+    </Stack>
+    <h2>Secondary</h2>
+    <Stack>
+       <FilterShowcase styleType="filled" buttonType='secondary' />
+       <FilterShowcase styleType="outlined" buttonType='secondary' />
+       <FilterShowcase styleType="elevated" buttonType='secondary' />
+       <FilterShowcase styleType="transparent" buttonType='secondary' />
     </Stack>
   </Story>
 </Preview>
@@ -76,7 +84,6 @@ A filter with colors and a selection handler to return selection on change and t
     <Stack>
        <FilterShowcase
             styleType="filled"
-            color="lightCoolGray-400"
             defaultValue={{
                  label: 'default item is a very long text that should be overflow ellipsis',
                  value: '1',
@@ -94,7 +101,7 @@ A filter that supports searching options
 <Preview>
   <Story name="Searchable Filter">
     <Stack>
-       <FilterShowcase styleType="filled" isSearchable color="lightCoolGray-400" />
+       <FilterShowcase styleType="filled" isSearchable />
     </Stack>
   </Story>
 </Preview>
@@ -129,8 +136,8 @@ Filter that support asynchronous fetching, with loading status
         selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }])}
         defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
         styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
-        color={select('color', ['lightCoolGray-400', 'magenta-100', 'darkGray-700', 'red-500'], 'lightCoolGray-400')}
         isSearchable={boolean('isSearchable', false)}
+        buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
     />
   </Story>
 </Preview>
