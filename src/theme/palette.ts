@@ -1,3 +1,7 @@
+import { getColor } from './index';
+import { lightPaletteConfig } from './palette.config';
+import { enhancePaletteWithShades } from './utils';
+
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
 export const BASE_SHADE = 500;
@@ -157,6 +161,7 @@ export const pickTextColorFromSwatches = (
   };
   const pickedShade = colorsForWhiteText[shade];
   const pickedColor = pickedShade && pickedShade?.find(item => item === color);
+  const palette = enhancePaletteWithShades(lightPaletteConfig);
 
-  return pickedColor ? '#fff' : '#000';
+  return pickedColor ? '#fff' : getColor(palette)('darkGrey', 850);
 };
