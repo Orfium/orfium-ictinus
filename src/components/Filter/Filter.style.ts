@@ -223,11 +223,12 @@ export const menuStyle = () => (theme: Theme) => css`
   top: ${rem(48)};
   min-width: ${rem(280)};
   left: 0;
-  width: 100%;
   height: auto;
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
   border-radius: ${rem(4)};
   z-index: 1;
   overflow: hidden;
+  min-width: 100%;
+  max-width: ${rem(620)};
 `;

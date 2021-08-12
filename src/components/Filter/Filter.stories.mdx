@@ -85,7 +85,14 @@ A filter with colors and a selection handler to return selection on change and t
        <FilterShowcase
             styleType="filled"
             defaultValue={{
-                 label: 'default item is a very long text that should be overflow ellipsis',
+                 label: 'default item is a very long text that should not be overflow ellipsis',
+                 value: '1',
+            }}
+        />
+        <FilterShowcase
+            styleType="filled"
+            defaultValue={{
+                 label: 'default item is a very long text that should be overflow ellipsis because the max width of the component is smaller than the width of the text',
                  value: '1',
             }}
         />
