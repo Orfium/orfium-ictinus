@@ -867,7 +867,64 @@ exports[`Storyshots Design System/Filter Filter with big text 1`] = `
                       <span
                         className="emotion-8"
                       >
-                        default item is a very long text that should be overflow ellipsis
+                        default item is a very long text that should not be overflow ellipsis
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-4"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-8"
+                      >
+                        default item is a very long text that should be overflow ellipsis because the max width of the component is smaller than the width of the text
                       </span>
                     </span>
                   </span>
