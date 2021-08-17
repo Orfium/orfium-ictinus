@@ -3,7 +3,6 @@ import { rem } from 'polished';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
 import {
   getBackgroundColor,
@@ -11,6 +10,7 @@ import {
   getBorder,
   getHoverBorder,
   borderStyleParams,
+  getHoverBackgroundColor,
 } from './utils';
 
 export const wrapperStyle = ({ styleType, hasSelectedValue, open }: ButtonStyleProps) => (
@@ -60,7 +60,7 @@ export const buttonWrapperStyle = ({
     ':hover > div, :active > div': {
       backgroundColor:
         !disabled && !open
-          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
+          ? getHoverBackgroundColor(theme, calculatedColor)
           : undefined,
       border: `${borderStyleParams} ${getHoverBorder({
         styleType,
@@ -69,11 +69,11 @@ export const buttonWrapperStyle = ({
         calculatedColor,
         hasSelectedValue,
       })}`,
-      color: pickTextColorFromSwatches(calculatedColor.color, 400),
+      color: pickTextColorFromSwatches(calculatedColor.color, open ? 400 : 100),
     },
     // hack to change color to arrow and close icons
     ':hover > div > span > span > svg path, :hover > div > span > svg path': {
-      fill: pickTextColorFromSwatches(calculatedColor.color, 400),
+      fill: pickTextColorFromSwatches(calculatedColor.color, open ? 400 : 100),
     }
   };
 };

@@ -1,6 +1,11 @@
+import { darken, lighten, transparentize } from 'polished';
+
+import { Theme } from '../../theme';
 import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
+import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
+
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
@@ -70,8 +75,18 @@ export const getHoverBorder = ({
     return `transparent`;
   }
   if (styleType === 'outlined' || hasSelectedValue) {
-    return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
+    return `${getHoverBackgroundColor(theme, calculatedColor)}`;
   }
 
   return 'transparent';
+};
+
+export const getHoverBackgroundColor = (
+  theme: Theme,
+  calculatedColor: ColorShapeFromComponent,
+) => {
+  const value = 0.1;
+  const color = theme.utils.getColor(calculatedColor.color, 100);
+
+  return calculatedColor.shade > 400 ? lighten(value, color) : darken(value, color);
 };
