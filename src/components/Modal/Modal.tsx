@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 
+import useEscape from '../../hooks/useEscape';
 import { generateTestDataId } from '../../utils/helpers';
 import { TestId } from '../../utils/types';
 import Card from '../Card';
@@ -17,9 +18,17 @@ export type Props = {
   contentProps?: ModalContentProps;
   /** The data test id if needed */
   dataTestId?: TestId;
+  /**  If true, the modal will close also with esc button. Defaults to true. */
+  closeOnEsc?: boolean;
 };
 
-const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, contentProps }) => {
+const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, contentProps, closeOnEsc= true }) => {
+  useEscape(() => {
+    if (closeOnEsc) {
+      onClose();
+    }
+  });
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';

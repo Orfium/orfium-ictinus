@@ -1,5 +1,5 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import { withKnobs, text } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean } from '@storybook/addon-knobs';
 import PresentComponent from '../storyUtils/PresentComponent';
 import ModalShowcase from '../storyUtils/ModalShowcase';
 import Stack from '../storyUtils/Stack';
@@ -73,6 +73,7 @@ import { Modal, ModalContent } from '@orfium/ictinus';
     <Stack>
       <PresentComponent name="" width={768}>
         <ModalShowcase
+          closeOnEsc={boolean('close on Esc', false)}
           contentProps={{
             label: text('label', 'Label'),
             heading: text('heading', 'Heading'),
