@@ -91,4 +91,40 @@ describe('Modal', () => {
 
     expect(secondaryCTA).toHaveBeenCalledTimes(1);
   });
+
+  test('Modal closeCTA will get triggered when closeOnEsc prop is true', async () => {
+    const closeCTA = jest.fn();
+
+    render(
+      <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
+        {data.message}
+      </Modal>
+    );
+
+    fireEvent.keyDown(document.body, {
+        key: "Escape",
+        keyCode: 27,
+        which: 27
+      })
+
+    expect(closeCTA).toHaveBeenCalledTimes(1);
+  });
+
+  test('Modal closeCTA will not get triggered when closeOnEsc prop is false', async () => {
+    const closeCTA = jest.fn();
+
+    render(
+      <Modal open={true} onClose={closeCTA} dataTestId={'modal'} closeOnEsc={false}>
+        {data.message}
+      </Modal>
+    );
+
+    fireEvent.keyDown(document.body, {
+      key: "Escape",
+      keyCode: 27,
+      which: 27
+    })
+
+    expect(closeCTA).toHaveBeenCalledTimes(0);
+  });
 });
