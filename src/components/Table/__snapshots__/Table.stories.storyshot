@@ -2688,18 +2688,30 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
 }
 
 .emotion-8 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  color: #000;
+  background-color: #dbdbdb;
+  max-width: 16rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-8.tippy-box[data-placement^='left']>.tippy-arrow:before {
+  border-left-color: #dbdbdb!important;
+}
+
+.emotion-8.tippy-box[data-placement^='right']>.tippy-arrow:before {
+  border-right-color: #dbdbdb!important;
+}
+
+.emotion-8.tippy-box[data-placement^='top']>.tippy-arrow:before {
+  border-top-color: #dbdbdb!important;
+}
+
+.emotion-8.tippy-box[data-placement^='bottom']>.tippy-arrow:before {
+  border-bottom-color: #dbdbdb!important;
 }
 
 .emotion-9 {
@@ -2877,106 +2889,22 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
               >
                 <div
                   className="emotion-8"
-                  data-for="title"
-                  data-tip={true}
+                  data-testid="title"
+                  placement="bottom"
                 >
-                  <span
-                    className="emotion-9"
-                    data-testid="table_icon_tooltip_title"
-                    onClick={[Function]}
-                  >
+                  <div>
                     <span
-                      className="emotion-10"
-                    />
-                  </span>
+                      className="emotion-9"
+                      data-testid="table_icon_tooltip_title"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
                 </div>
-                <div
-                  className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-bottom type-dark"
-                  data-id="tooltip"
-                  id="title"
-                >
-                  <style
-                    aria-hidden="true"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                      }
-                    }
-                  />
+                <div>
                   Tooltip Content
                 </div>
               </div>
@@ -3029,106 +2957,22 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
               >
                 <div
                   className="emotion-8"
-                  data-for="surname"
-                  data-tip={true}
+                  data-testid="surname"
+                  placement="top"
                 >
-                  <span
-                    className="emotion-9"
-                    data-testid="table_icon_tooltip_surname"
-                    onClick={[Function]}
-                  >
+                  <div>
                     <span
-                      className="emotion-10"
-                    />
-                  </span>
+                      className="emotion-9"
+                      data-testid="table_icon_tooltip_surname"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
                 </div>
-                <div
-                  className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-top type-dark"
-                  data-id="tooltip"
-                  id="surname"
-                >
-                  <style
-                    aria-hidden="true"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                      }
-                    }
-                  />
+                <div>
                   Tooltip Content
                 </div>
               </div>
@@ -3170,106 +3014,22 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
               >
                 <div
                   className="emotion-8"
-                  data-for="age"
-                  data-tip={true}
+                  data-testid="age"
+                  placement="right"
                 >
-                  <span
-                    className="emotion-9"
-                    data-testid="table_icon_tooltip_age"
-                    onClick={[Function]}
-                  >
+                  <div>
                     <span
-                      className="emotion-10"
-                    />
-                  </span>
+                      className="emotion-9"
+                      data-testid="table_icon_tooltip_age"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
                 </div>
-                <div
-                  className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-right type-dark"
-                  data-id="tooltip"
-                  id="age"
-                >
-                  <style
-                    aria-hidden="true"
-                    dangerouslySetInnerHTML={
-                      Object {
-                        "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                      }
-                    }
-                  />
+                <div>
                   Tooltip Content
                 </div>
               </div>

@@ -1,9 +1,7 @@
+import Tippy from '@tippyjs/react';
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
-import { v4 } from 'uuid';
 
-import { tooltipStyle, tooltipChildrenWrapperStyle } from './Tooltip.style';
-
+import { tooltipStyle } from './Tooltip.style';
 
 export type TooltipSize = 'large' | 'medium' | 'small';
 
@@ -30,23 +28,10 @@ const Tooltip: React.FC<Props> = ({
   content,
   placement = 'top',
 }) => {
-  const tooltipID = id || v4();
-
   return (
-    <>
-      <div css={tooltipChildrenWrapperStyle()} data-tip data-for={tooltipID}>
-        {children}
-      </div>
-      <ReactTooltip
-        css={tooltipStyle({ placement, size })}
-        id={tooltipID}
-        place={placement}
-        effect="solid"
-        className="tooltip"
-      >
-        {content}
-      </ReactTooltip>
-    </>
+    <Tippy data-testid={id} css={tooltipStyle({ size })} content={content} placement={placement}>
+      <div>{children}</div>
+    </Tippy>
   );
 };
 

@@ -18,6 +18,7 @@ addSerializer(createSerializer());
 
 function createNodeMock(element: ReactElement) {
   const isExpandCollapseComponent = element.props.className?.includes('ExpandCollapse');
+
   if (isExpandCollapseComponent) {
     //Mocking useRef<HTMLDivElement> for ExpandCollapse component.
     const htmlDivElementRefMock = {

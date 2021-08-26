@@ -3,15 +3,12 @@ import { rem } from 'polished';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { TooltipPlacement, TooltipSize } from './Tooltip';
+import { TooltipSize } from './Tooltip';
+import 'tippy.js/dist/tippy.css';
 
-export const tooltipStyle = ({
-  placement,
-  size,
-}: {
-  placement: TooltipPlacement;
-  size: TooltipSize;
-}) => (theme: Theme): SerializedStyles => {
+export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
+  theme: Theme
+): SerializedStyles => {
   const color = theme.overrides.tooltip.background.color;
   const shade = theme.overrides.tooltip.background.shade;
   const backgroundColor = theme.utils.getColor(color, shade);
@@ -27,27 +24,25 @@ export const tooltipStyle = ({
   };
 
   return css`
-    color: ${pickTextColorFromSwatches(color, shade)} !important;
-    background-color: ${backgroundColor} !important;
+    color: ${pickTextColorFromSwatches(color, shade)};
+    background-color: ${backgroundColor};
     max-width: ${rem(256)};
-    padding: ${theme.spacing.sm} !important;
-    font-size: ${defineFontSizeBasedOnTooltipSize(size)} !important;
+    padding: ${theme.spacing.sm};
+    font-size: ${defineFontSizeBasedOnTooltipSize(size)};
     line-height: 110%;
     border-radius: ${theme.spacing.sm};
     text-align: justify;
-    &.show {
-      opacity: 1 !important;
+    &.tippy-box[data-placement^='left'] > .tippy-arrow:before {
+      border-left-color: ${backgroundColor} !important;
     }
-    &.place-${placement} {
-      &::after {
-        border-${placement}-color: ${backgroundColor} !important;
-      }
+    &.tippy-box[data-placement^='right'] > .tippy-arrow:before {
+      border-right-color: ${backgroundColor} !important;
+    }
+    &.tippy-box[data-placement^='top'] > .tippy-arrow:before {
+      border-top-color: ${backgroundColor} !important;
+    }
+    &.tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
+      border-bottom-color: ${backgroundColor} !important;
     }
   `;
 };
-
-export const tooltipChildrenWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-`;

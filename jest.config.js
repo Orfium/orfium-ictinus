@@ -10,6 +10,7 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'mdx'],
   moduleDirectories: ['<rootDir>/src', 'node_modules'],
   moduleNameMapper: {
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.svg$': '<rootDir>/__mocks__/fileMock.tsx',
   },
   snapshotSerializers: ['@emotion/jest/serializer'],
