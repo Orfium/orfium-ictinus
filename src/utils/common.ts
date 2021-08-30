@@ -9,6 +9,12 @@ export type EventProps = {
   onBlur?: () => void;
 };
 
+//@TODO fix props to not overwrite button props from base
+export type ButtonProps = Omit<React.HTMLProps<HTMLButtonElement>, 'size' | 'css'>;
+
+//@TODO fix props to not overwrite div props from base
+export type DivProps = Omit<React.HTMLProps<HTMLDivElement>, 'size' | 'css'>;
+
 export type FlexDirectionProperty = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 
 export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;

@@ -24,25 +24,19 @@ export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
   };
 
   return css`
-    color: ${pickTextColorFromSwatches(color, shade)};
-    background-color: ${backgroundColor};
-    max-width: ${rem(256)};
-    padding: ${theme.spacing.sm};
-    font-size: ${defineFontSizeBasedOnTooltipSize(size)};
-    line-height: 110%;
-    border-radius: ${theme.spacing.sm};
-    text-align: justify;
-    &.tippy-box[data-placement^='left'] > .tippy-arrow:before {
-      border-left-color: ${backgroundColor} !important;
+    background: transparent;
+    .tippy-content {
+      color: ${pickTextColorFromSwatches(color, shade)};
+      background-color: ${backgroundColor};
+      max-width: ${rem(256)};
+      padding: ${theme.spacing.sm};
+      font-size: ${defineFontSizeBasedOnTooltipSize(size)};
+      line-height: 110%;
+      border-radius: ${theme.spacing.sm};
+      text-align: justify;
     }
-    &.tippy-box[data-placement^='right'] > .tippy-arrow:before {
-      border-right-color: ${backgroundColor} !important;
-    }
-    &.tippy-box[data-placement^='top'] > .tippy-arrow:before {
-      border-top-color: ${backgroundColor} !important;
-    }
-    &.tippy-box[data-placement^='bottom'] > .tippy-arrow:before {
-      border-bottom-color: ${backgroundColor} !important;
+    .tippy-arrow {
+      color: ${backgroundColor};
     }
   `;
 };

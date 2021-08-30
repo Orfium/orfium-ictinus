@@ -19,6 +19,7 @@ type Props = {
   /** The size of the tooltip to define different style */
   /** @default medium */
   size?: TooltipSize;
+  children: React.ReactElement;
 };
 
 const Tooltip: React.FC<Props> = ({
@@ -30,7 +31,7 @@ const Tooltip: React.FC<Props> = ({
 }) => {
   return (
     <Tippy data-testid={id} css={tooltipStyle({ size })} content={content} placement={placement}>
-      <div>{children}</div>
+      {children}
     </Tippy>
   );
 };

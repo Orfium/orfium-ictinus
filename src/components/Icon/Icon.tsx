@@ -23,21 +23,17 @@ export type OwnProps = {
 
 type Props = OwnProps & TestProps;
 
-const Icon: React.FC<Props> = ({
-  variant,
-  name,
-  color = 'primary',
-  size = 16,
-  dataTestId,
-  onClick = () => {},
-}) => {
-  const Icon = iconSelector[name];
+const Icon = React.forwardRef<HTMLSpanElement, Props>(
+  ({ variant, name, color = 'primary', size = 16, dataTestId, onClick = () => {} }, ref) => {
+    const Icon = iconSelector[name];
 
-  return (
-    <span css={iconContainerStyle()} onClick={onClick} data-testid={dataTestId}>
-      <Icon css={iconStyle({ color, size, variant })} />
-    </span>
-  );
-};
+    return (
+      <span ref={ref} css={iconContainerStyle()} onClick={onClick} data-testid={dataTestId}>
+        <Icon css={iconStyle({ color, size, variant })} />
+      </span>
+    );
+  }
+);
+Icon.displayName = 'Icon';
 
 export default Icon;

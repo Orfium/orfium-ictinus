@@ -2688,6 +2688,10 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
 }
 
 .emotion-8 {
+  background: transparent;
+}
+
+.emotion-8 .tippy-content {
   color: #000;
   background-color: #dbdbdb;
   max-width: 16rem;
@@ -2698,20 +2702,8 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
   text-align: justify;
 }
 
-.emotion-8.tippy-box[data-placement^='left']>.tippy-arrow:before {
-  border-left-color: #dbdbdb!important;
-}
-
-.emotion-8.tippy-box[data-placement^='right']>.tippy-arrow:before {
-  border-right-color: #dbdbdb!important;
-}
-
-.emotion-8.tippy-box[data-placement^='top']>.tippy-arrow:before {
-  border-top-color: #dbdbdb!important;
-}
-
-.emotion-8.tippy-box[data-placement^='bottom']>.tippy-arrow:before {
-  border-bottom-color: #dbdbdb!important;
+.emotion-8 .tippy-arrow {
+  color: #dbdbdb;
 }
 
 .emotion-9 {
@@ -2892,17 +2884,15 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   data-testid="title"
                   placement="bottom"
                 >
-                  <div>
+                  <span
+                    className="emotion-9"
+                    data-testid="table_icon_tooltip_title"
+                    onClick={[Function]}
+                  >
                     <span
-                      className="emotion-9"
-                      data-testid="table_icon_tooltip_title"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-10"
-                      />
-                    </span>
-                  </div>
+                      className="emotion-10"
+                    />
+                  </span>
                 </div>
                 <div>
                   Tooltip Content
@@ -2960,17 +2950,15 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   data-testid="surname"
                   placement="top"
                 >
-                  <div>
+                  <span
+                    className="emotion-9"
+                    data-testid="table_icon_tooltip_surname"
+                    onClick={[Function]}
+                  >
                     <span
-                      className="emotion-9"
-                      data-testid="table_icon_tooltip_surname"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-10"
-                      />
-                    </span>
-                  </div>
+                      className="emotion-10"
+                    />
+                  </span>
                 </div>
                 <div>
                   Tooltip Content
@@ -3017,17 +3005,15 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                   data-testid="age"
                   placement="right"
                 >
-                  <div>
+                  <span
+                    className="emotion-9"
+                    data-testid="table_icon_tooltip_age"
+                    onClick={[Function]}
+                  >
                     <span
-                      className="emotion-9"
-                      data-testid="table_icon_tooltip_age"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-10"
-                      />
-                    </span>
-                  </div>
+                      className="emotion-10"
+                    />
+                  </span>
                 </div>
                 <div>
                   Tooltip Content

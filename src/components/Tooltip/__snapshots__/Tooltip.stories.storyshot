@@ -28,6 +28,10 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 }
 
 .emotion-2 {
+  background: transparent;
+}
+
+.emotion-2 .tippy-content {
   color: #000;
   background-color: #dbdbdb;
   max-width: 16rem;
@@ -38,20 +42,8 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   text-align: justify;
 }
 
-.emotion-2.tippy-box[data-placement^='left']>.tippy-arrow:before {
-  border-left-color: #dbdbdb!important;
-}
-
-.emotion-2.tippy-box[data-placement^='right']>.tippy-arrow:before {
-  border-right-color: #dbdbdb!important;
-}
-
-.emotion-2.tippy-box[data-placement^='top']>.tippy-arrow:before {
-  border-top-color: #dbdbdb!important;
-}
-
-.emotion-2.tippy-box[data-placement^='bottom']>.tippy-arrow:before {
-  border-bottom-color: #dbdbdb!important;
+.emotion-2 .tippy-arrow {
+  color: #dbdbdb;
 }
 
 <div
@@ -86,11 +78,9 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       data-testid="top"
       placement="top"
     >
-      <div>
-        <button>
-          Top
-        </button>
-      </div>
+      <button>
+        Top
+      </button>
     </div>
     <div>
       By hover here you can see useful info
@@ -100,11 +90,9 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       data-testid="bottom"
       placement="bottom"
     >
-      <div>
-        <button>
-          Bottom
-        </button>
-      </div>
+      <button>
+        Bottom
+      </button>
     </div>
     <div>
       By hover here you can see useful info
@@ -114,11 +102,9 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       data-testid="right"
       placement="right"
     >
-      <div>
-        <button>
-          Right
-        </button>
-      </div>
+      <button>
+        Right
+      </button>
     </div>
     <div>
       By hover here you can see useful info
@@ -128,11 +114,9 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       data-testid="left"
       placement="left"
     >
-      <div>
-        <button>
-          Left
-        </button>
-      </div>
+      <button>
+        Left
+      </button>
     </div>
     <div>
       By hover here you can see useful info
@@ -164,6 +148,10 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
 }
 
 .emotion-2 {
+  background: transparent;
+}
+
+.emotion-2 .tippy-content {
   color: #000;
   background-color: #dbdbdb;
   max-width: 16rem;
@@ -174,23 +162,15 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   text-align: justify;
 }
 
-.emotion-2.tippy-box[data-placement^='left']>.tippy-arrow:before {
-  border-left-color: #dbdbdb!important;
-}
-
-.emotion-2.tippy-box[data-placement^='right']>.tippy-arrow:before {
-  border-right-color: #dbdbdb!important;
-}
-
-.emotion-2.tippy-box[data-placement^='top']>.tippy-arrow:before {
-  border-top-color: #dbdbdb!important;
-}
-
-.emotion-2.tippy-box[data-placement^='bottom']>.tippy-arrow:before {
-  border-bottom-color: #dbdbdb!important;
+.emotion-2 .tippy-arrow {
+  color: #dbdbdb;
 }
 
 .emotion-3 {
+  background: transparent;
+}
+
+.emotion-3 .tippy-content {
   color: #000;
   background-color: #dbdbdb;
   max-width: 16rem;
@@ -201,23 +181,15 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   text-align: justify;
 }
 
-.emotion-3.tippy-box[data-placement^='left']>.tippy-arrow:before {
-  border-left-color: #dbdbdb!important;
-}
-
-.emotion-3.tippy-box[data-placement^='right']>.tippy-arrow:before {
-  border-right-color: #dbdbdb!important;
-}
-
-.emotion-3.tippy-box[data-placement^='top']>.tippy-arrow:before {
-  border-top-color: #dbdbdb!important;
-}
-
-.emotion-3.tippy-box[data-placement^='bottom']>.tippy-arrow:before {
-  border-bottom-color: #dbdbdb!important;
+.emotion-3 .tippy-arrow {
+  color: #dbdbdb;
 }
 
 .emotion-4 {
+  background: transparent;
+}
+
+.emotion-4 .tippy-content {
   color: #000;
   background-color: #dbdbdb;
   max-width: 16rem;
@@ -228,20 +200,8 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   text-align: justify;
 }
 
-.emotion-4.tippy-box[data-placement^='left']>.tippy-arrow:before {
-  border-left-color: #dbdbdb!important;
-}
-
-.emotion-4.tippy-box[data-placement^='right']>.tippy-arrow:before {
-  border-right-color: #dbdbdb!important;
-}
-
-.emotion-4.tippy-box[data-placement^='top']>.tippy-arrow:before {
-  border-top-color: #dbdbdb!important;
-}
-
-.emotion-4.tippy-box[data-placement^='bottom']>.tippy-arrow:before {
-  border-bottom-color: #dbdbdb!important;
+.emotion-4 .tippy-arrow {
+  color: #dbdbdb;
 }
 
 <div
@@ -283,11 +243,9 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
         data-testid="right1"
         placement="right"
       >
-        <div>
-          <button>
-            Large
-          </button>
-        </div>
+        <button>
+          Large
+        </button>
       </div>
       <div>
         By hover here you can see useful info
@@ -305,11 +263,9 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
         data-testid="right2"
         placement="right"
       >
-        <div>
-          <button>
-            Medium
-          </button>
-        </div>
+        <button>
+          Medium
+        </button>
       </div>
       <div>
         By hover here you can see useful info
@@ -327,11 +283,9 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
         data-testid="right3"
         placement="right"
       >
-        <div>
-          <button>
-            Small
-          </button>
-        </div>
+        <button>
+          Small
+        </button>
       </div>
       <div>
         By hover here you can see useful info

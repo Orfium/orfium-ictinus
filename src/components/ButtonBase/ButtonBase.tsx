@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
-import { EventProps } from '../../utils/common';
+import { ButtonProps, EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
@@ -35,7 +35,11 @@ export type Props = {
   disabled?: boolean;
 };
 
-const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = props => {
+//@TODO fix props to not overwrite button props
+const ButtonBase = React.forwardRef<
+  HTMLButtonElement,
+  ButtonProps & Props & TestProps & EventProps & EventButtonProps
+>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
@@ -58,6 +62,7 @@ const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = 
 
   return (
     <button
+      ref={ref}
       data-testid={generateTestDataId(testIdName, dataTestId)}
       css={buttonBaseStyle({
         type,
@@ -80,6 +85,7 @@ const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = 
       {children}
     </button>
   );
-};
+});
+ButtonBase.displayName = 'ButtonBase';
 
 export default ButtonBase;
