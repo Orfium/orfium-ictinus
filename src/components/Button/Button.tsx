@@ -33,7 +33,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps & Props & TestPro
     const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
 
     return (
-      // @ts-ignore this is being ignored because some of the props overwriting html button props
       <ButtonBase {...props} ref={ref} loading={loading} onClick={handleAsyncOperation}>
         <span css={buttonSpanStyle()}>
           {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
