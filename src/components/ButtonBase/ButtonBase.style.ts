@@ -43,7 +43,7 @@ export const buttonBaseStyle = ({
   transparent,
   childrenCount,
 }: RequiredProperties<
-  Props & {
+  Omit<Props, 'buttonType'> & {
     calculatedColor: ColorShapeFromComponent;
     childrenCount: number;
   }

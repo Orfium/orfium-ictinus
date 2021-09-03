@@ -1,14 +1,14 @@
 import React from 'react';
 
+import { ClickEvent } from '../../hooks/useLoading';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
-import { EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
 import { buttonBaseStyle } from './ButtonBase.style';
 
 export type EventButtonProps = {
-  onClick?: (setLoading?: (isLoading: boolean) => void) => void;
+  onClick?: (event: ClickEvent) => void;
   onBlur?: () => void;
 };
 
@@ -33,9 +33,11 @@ export type Props = {
   iconLeft?: React.Component | JSX.Element | null;
   /** Define if the button is in disabled state */
   disabled?: boolean;
+  /** Defines the button type */
+  buttonType?: 'submit' | 'reset' | 'button';
 };
 
-const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = props => {
+const ButtonBase: React.FC<Props & TestProps & EventButtonProps> = props => {
   const {
     size = 'md',
     type = 'primary',
@@ -49,6 +51,7 @@ const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = 
     loading = false,
     children,
     dataTestId = '',
+    buttonType,
     onClick,
     onBlur,
   } = props;
@@ -58,6 +61,7 @@ const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = 
 
   return (
     <button
+      type={buttonType}
       data-testid={generateTestDataId(testIdName, dataTestId)}
       css={buttonBaseStyle({
         type,
@@ -73,7 +77,11 @@ const ButtonBase: React.FC<Props & TestProps & EventProps & EventButtonProps> = 
         iconRight,
         childrenCount: React.Children.count(children),
       })}
-      onClick={onClick}
+      onClick={event => {
+        if (onClick) {
+          onClick(event);
+        }
+      }}
       onBlur={onBlur}
       disabled={disabled || loading}
     >
