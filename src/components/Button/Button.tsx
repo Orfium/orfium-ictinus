@@ -24,7 +24,6 @@ const Button: React.FC<Props & TestProps & onClickProp> = props => {
     iconLeft = null,
     iconRight = null,
     disabled = false,
-    buttonType,
     children,
     onClick,
   } = props;
@@ -33,7 +32,7 @@ const Button: React.FC<Props & TestProps & onClickProp> = props => {
   const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
 
   return (
-    <ButtonBase buttonType={buttonType} {...props} loading={loading} onClick={handleAsyncOperation}>
+    <ButtonBase {...props} loading={loading} onClick={handleAsyncOperation}>
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
