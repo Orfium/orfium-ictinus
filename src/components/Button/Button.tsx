@@ -1,6 +1,5 @@
-import { useLoading } from 'hooks/useLoading';
+import { ClickHandler, useLoading } from 'hooks/useLoading';
 import React, { useRef } from 'react';
-import { EventProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
 import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
@@ -13,8 +12,9 @@ import {
 import Loader from 'components/Loader';
 
 export type Props = ButtonBaseProps;
+type onClickProp = { onClick: ClickHandler };
 
-const Button: React.FC<Props & TestProps & EventProps> = props => {
+const Button: React.FC<Props & TestProps & onClickProp> = props => {
   const {
     size = 'md',
     type = 'primary',
