@@ -22,7 +22,14 @@ export type Props = {
   closeOnEsc?: boolean;
 };
 
-const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, contentProps, closeOnEsc= true }) => {
+const Modal: React.FC<Props> = ({
+  open = false,
+  onClose,
+  dataTestId,
+  children,
+  contentProps,
+  closeOnEsc = true,
+}) => {
   useEscape(() => {
     if (closeOnEsc) {
       onClose();
@@ -52,6 +59,7 @@ const Modal: React.FC<Props> = ({ open = false, onClose, dataTestId, children, c
                 filled={false}
                 transparent
                 size={'sm'}
+                color={'lightGray-600'}
                 onClick={onClose}
                 dataTestId={'modal-close'}
               />
