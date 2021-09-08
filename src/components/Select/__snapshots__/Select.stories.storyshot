@@ -640,7 +640,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 </div>
 `;
 
-exports[`Storyshots Design System/Select Disabled Select 1`] = `
+exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -978,6 +978,141 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
   fill: #676767;
 }
 
+.emotion-38 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+}
+
+.emotion-38:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-38:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-38>input,
+.emotion-38>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
+.emotion-45 {
+  fill: #9b9b9b;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-45 path {
+  fill: #9b9b9b;
+}
+
+.emotion-48 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-48:focus-within,
+.emotion-48:hover {
+  box-shadow: 0 0 0 1px #cfcfcf;
+}
+
+.emotion-48:focus-within {
+  border-color: #cfcfcf;
+  background-color: white;
+}
+
+.emotion-48:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-48>input,
+.emotion-48>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
+.emotion-58 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 2px solid transparent;
+  box-shadow: initial;
+}
+
+.emotion-58:focus-within {
+  border-color: #cfcfcf;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.emotion-58:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-58>input,
+.emotion-58>textarea {
+  color: #676767;
+  fill: #676767;
+}
+
 <div
   style={
     Object {
@@ -1196,6 +1331,196 @@ exports[`Storyshots Design System/Select Disabled Select 1`] = `
                       />
                     </span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-38"
+            >
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    data-testid="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <span
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-45"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-48"
+            >
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    data-testid="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <span
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-45"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-58"
+            >
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    data-testid="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <span
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-45"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
