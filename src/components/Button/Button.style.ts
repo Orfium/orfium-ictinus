@@ -21,7 +21,7 @@ export const childrenWrapperStyle = ({
   iconLeft,
   iconRight,
   hasChildren,
-}: RequiredProperties<Omit<Props, 'isIconButton'> & { hasChildren: boolean }>) => (
+}: RequiredProperties<Omit<Props, 'isIconButton' | 'buttonType'> & { hasChildren: boolean }>) => (
   theme: Theme
 ) => {
   const rightIconExists = hasChildren && iconRight;

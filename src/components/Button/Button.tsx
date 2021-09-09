@@ -1,4 +1,4 @@
-import { useLoading } from 'hooks/useLoading';
+import { ClickHandler, useLoading } from 'hooks/useLoading';
 import React, { useRef } from 'react';
 import { ButtonProps, EventProps } from 'utils/common';
 import { TestProps } from 'utils/types';
@@ -13,8 +13,9 @@ import {
 import Loader from 'components/Loader';
 
 export type Props = ButtonBaseProps;
+type onClickProp = { onClick: ClickHandler };
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps & Props & TestProps & EventProps>(
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps & Props & TestProps & onClickProp>(
   (props, ref) => {
     const {
       size = 'md',
