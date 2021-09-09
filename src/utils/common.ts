@@ -10,7 +10,10 @@ export type EventProps = {
 };
 
 //@TODO fix props to not overwrite button props from base
-export type ButtonProps = Omit<React.HTMLProps<HTMLButtonElement>, 'size' | 'css'>;
+export type ButtonProps = Omit<
+  React.HTMLProps<HTMLButtonElement>,
+  'size' | 'css' | 'onBlur' | 'onClick'
+>;
 
 //@TODO fix props to not overwrite div props from base
 export type DivProps = Omit<React.HTMLProps<HTMLDivElement>, 'size' | 'css'>;

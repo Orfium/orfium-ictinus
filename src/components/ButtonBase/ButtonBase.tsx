@@ -41,7 +41,7 @@ export type Props = {
 //@TODO fix props to not overwrite button props
 const ButtonBase = React.forwardRef<
   HTMLButtonElement,
-  ButtonProps & Props & TestProps & EventProps & EventButtonProps
+  ButtonProps & Props & TestProps & EventButtonProps
 >((props, ref) => {
   const {
     size = 'md',
