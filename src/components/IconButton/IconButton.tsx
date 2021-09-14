@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { useTheme } from '../../index';
@@ -17,21 +17,24 @@ export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRig
   name: AcceptedIconNames;
 };
 
-const IconButton: React.FC<Props & TestProps & EventProps> = props => {
-  const { iconSize, color = '', type = 'primary', filled = true, name, transparent } = props;
-  const theme = useTheme();
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType(color, type);
-  const iconColor =
-    filled && !transparent
-      ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-      : defineBackgroundColor(theme, calculatedColor, type, true, true);
+const IconButton = React.forwardRef<HTMLButtonElement, Props & TestProps & EventProps>(
+  (props, ref) => {
+    const { iconSize, color = '', type = 'primary', filled = true, name, transparent } = props;
+    const theme = useTheme();
+    const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+    const calculatedColor = calculateColorBetweenColorAndType(color, type);
+    const iconColor =
+      filled && !transparent
+        ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+        : defineBackgroundColor(theme, calculatedColor, type, true, true);
 
-  return (
-    <ButtonBase {...props} isIconButton>
-      <Icon name={name} color={iconColor} size={iconSize} />
-    </ButtonBase>
-  );
-};
+    return (
+      <ButtonBase {...props} ref={ref} isIconButton>
+        <Icon name={name} color={iconColor} size={iconSize} />
+      </ButtonBase>
+    );
+  }
+);
+IconButton.displayName = 'IconButton';
 
 export default IconButton;
