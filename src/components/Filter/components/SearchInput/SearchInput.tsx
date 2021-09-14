@@ -22,7 +22,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: Props) => {
     () => (
       <div css={iconWrapper()}>
         {isLoading && <Loader />}
-        <Icon size={20} name="search" color={theme.utils.getColor('lightTintedGrey', 650)} />
+        <Icon size={20} name="search" color={theme.utils.getColor('lightGrey', 650)} />
       </div>
     ),
     [open, theme.utils, isLoading]

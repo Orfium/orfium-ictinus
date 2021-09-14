@@ -130,7 +130,7 @@ const Filter: React.FC<Props> = props => {
       return theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade);
     }
 
-    return theme.utils.getColor('lightTintedGrey', 750);
+    return theme.utils.getColor('lightGrey', 750);
   };
 
   /**

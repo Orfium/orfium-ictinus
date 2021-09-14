@@ -57,10 +57,7 @@ const determineBoxShadow = ({
   filled,
 }: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (theme: Theme) => {
   if (disabled && !checked) {
-    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor(
-      'lightTintedGrey',
-      250
-    )}`;
+    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGrey', 250)}`;
   }
   if (checked) {
     return `${boxShadowSpread('2px')} currentColor, ${boxShadowSpread(
@@ -68,10 +65,10 @@ const determineBoxShadow = ({
     )} ${theme.utils.getColor('neutralWhite', 50)}, ${boxShadowSpread('12px')} currentColor`;
   }
   if (filled) {
-    return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightTintedGrey', 650)}`;
+    return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGrey', 650)}`;
   }
 
-  return `${boxShadowSpread('2px')} ${theme.utils.getColor('lightTintedGrey', 650)}`;
+  return `${boxShadowSpread('2px')} ${theme.utils.getColor('lightGrey', 650)}`;
 };
 
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (

@@ -56,7 +56,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
         <Icon
           name={icon as AcceptedIconNames}
           size={24}
-          color={theme.utils.getColor('lightTintedGrey', 650)}
+          color={theme.utils.getColor('lightGrey', 650)}
         />
       ) : (
         icon
@@ -97,7 +97,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
             <Icon
               name="lock"
               size={size === 'md' ? 20 : 16}
-              color={theme.utils.getColor('lightTintedGrey', 650)}
+              color={theme.utils.getColor('lightGrey', 650)}
             />
           </IconWrapper>
         )}

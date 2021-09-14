@@ -23,10 +23,10 @@ const wrapperStyleSwitch = (
     case 'outlined':
       return `
         box-shadow: 0 0 0 1px
-          ${error ? 'transparent' : theme.utils.getColor('lightTintedGrey', 650)};
+          ${error ? 'transparent' : theme.utils.getColor('lightGrey', 650)};
         &:focus-within, &:hover {
           box-shadow: 0 0 0 1px ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightTintedGrey', 650)
+            !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 650)
           };
         }
       `;
@@ -69,15 +69,13 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
       background-color: ${
         dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
       } !important;
-      border-color: ${styleType === 'outlined' &&
-        !error &&
-        theme.utils.getColor('lightTintedGrey', 650)};
+      border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGrey', 650)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }
     `}
 
     &:focus-within {
-      border-color: ${!lean && !error && theme.utils.getColor('lightTintedGrey', 650)};
+      border-color: ${!lean && !error && theme.utils.getColor('lightGrey', 650)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
       background-color: ${theme.palette.white};
     }
@@ -95,8 +93,8 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
         z-index: 1;
       }
       > input, > textarea {
-        color: ${theme.utils.getColor('lightTintedGrey', 750)};
-        fill: ${theme.utils.getColor('lightTintedGrey', 750)};
+        color: ${theme.utils.getColor('lightGrey', 750)};
+        fill: ${theme.utils.getColor('lightGrey', 750)};
       }
   `}
   `;
@@ -143,7 +141,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightTintedGrey', 750) : 'transparent'};
+    color: ${!label && placeholder ? theme.utils.getColor('lightGrey', 750) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {
@@ -169,7 +167,7 @@ export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedSt
   display: flex;
   color: ${status === 'error'
     ? theme.utils.getColor('error', BASE_SHADE, 'normal')
-    : theme.utils.getColor('lightTintedGrey', 750)};
+    : theme.utils.getColor('lightGrey', 750)};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0;

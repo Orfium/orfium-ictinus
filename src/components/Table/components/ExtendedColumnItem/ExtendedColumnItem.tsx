@@ -60,7 +60,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
           name="genericOrdering"
           size={8}
           dataTestId={`table_icon_sort_${itemContentLowerCase}`}
-          color={theme.utils.getColor('lightTintedGrey', 750)}
+          color={theme.utils.getColor('lightGrey', 750)}
         />
       </div>
     ));
@@ -83,7 +83,7 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
           <Icon
             name={'info'}
             dataTestId={`table_icon_tooltip_${itemContentLowerCase}`}
-            color={theme.utils.getColor('lightTintedGrey', 750)}
+            color={theme.utils.getColor('lightGrey', 750)}
           />
         </Tooltip>
       </div>

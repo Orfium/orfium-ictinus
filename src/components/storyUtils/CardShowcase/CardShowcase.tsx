@@ -24,9 +24,7 @@ const CardShowcase: React.FC<Props> = ({ elevated, transparent, radius }) => {
 
   return (
     <div css={showcaseContainerStyle}>
-      <p>
-        (Card inside a lightTintedGrey container to test the transparency/radius/elevation props)
-      </p>
+      <p>(Card inside a lightGrey container to test the transparency/radius/elevation props)</p>
       <div css={{ width: '749px' }}>
         <Card elevated={elevated} transparent={transparent} radius={radius}>
           <CardContent />

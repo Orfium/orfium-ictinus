@@ -8,7 +8,7 @@ import { boldFont, normalFont } from '../Asset/Asset.style';
 const score = (isEnabled: boolean) => (theme: Theme): SerializedStyles => css`
   ${boldFont(26, theme)};
   margin: 0 ${theme.spacing.sm} 0 ${theme.spacing.md};
-  color: ${isEnabled ? theme.palette.black : theme.utils.getColor('lightTintedGrey', 750)};
+  color: ${isEnabled ? theme.palette.black : theme.utils.getColor('lightGrey', 750)};
 `;
 
 const checkBoxWrapper = css`
@@ -18,7 +18,7 @@ const checkBoxWrapper = css`
 
 const text = (isEnabled: boolean) => (theme: Theme): SerializedStyles => css`
   ${normalFont(11, theme)};
-  color: ${theme.utils.getColor('lightTintedGrey', isEnabled ? 600 : BASE_SHADE)};
+  color: ${theme.utils.getColor('lightGrey', isEnabled ? 600 : BASE_SHADE)};
   margin-right: ${theme.spacing.sm};
 `;
 

@@ -36,7 +36,7 @@ const Avatar: React.FC<Props> = ({
   src = '',
   iconName = 'user',
   size = 'md',
-  color = 'lightTintedGrey-600',
+  color = 'lightGrey-600',
   shape = 'circular',
   children,
   className,

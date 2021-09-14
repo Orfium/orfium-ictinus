@@ -89,7 +89,7 @@ const MenuItem: React.FC<Props> = memo(
                           <div css={subMenuIconStyle()}>
                             <Icon
                               name={subMenuItem.iconName}
-                              color={theme.utils.getColor('lightTintedGrey', 750)}
+                              color={theme.utils.getColor('lightGrey', 750)}
                               size={20}
                             />
                           </div>

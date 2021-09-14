@@ -37,7 +37,7 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
     </ul>
   );
 
-  const iconColor = open ? 'lightTintedGrey100' : 'lightTintedGrey700';
+  const iconColor = open ? 'lightGrey100' : 'lightGrey700';
 
   return (
     <ClickAwayListener

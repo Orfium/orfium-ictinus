@@ -25,7 +25,7 @@ export const labelStyle = ({
   font-weight: ${theme.typography.weights.regular};
   color: ${error
     ? theme.utils.getColor('error', BASE_SHADE, 'normal')
-    : theme.utils.getColor('lightTintedGrey', 750)};
+    : theme.utils.getColor('lightGrey', 750)};
   align-items: center;
   display: flex;
   top: 0;

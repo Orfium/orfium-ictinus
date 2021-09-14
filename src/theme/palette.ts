@@ -13,7 +13,7 @@ export const BASE_SHADE = 500;
 export const flatColors = [
   'greyScale',
   'darkGrey',
-  'lightTintedGrey',
+  'lightGrey',
   'red',
   'magenta',
   'purple',
@@ -102,7 +102,7 @@ export const pickTextColorFromSwatches = (
   const colors950To750: typeof flatColors[number][] = [
     'greyScale',
     'darkGrey',
-    'lightTintedGrey',
+    'lightGrey',
     'red',
     'magenta',
     'purple',
@@ -128,7 +128,7 @@ export const pickTextColorFromSwatches = (
     700: [
       'greyScale',
       'darkGrey',
-      'lightTintedGrey',
+      'lightGrey',
       'red',
       'magenta',
       'purple',
@@ -142,7 +142,7 @@ export const pickTextColorFromSwatches = (
     650: [
       'greyScale',
       'darkGrey',
-      'lightTintedGrey',
+      'lightGrey',
       'red',
       'magenta',
       'purple',

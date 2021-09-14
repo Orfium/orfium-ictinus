@@ -41,7 +41,7 @@ export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
   padding: 0 ${theme.spacing.md};
 
   &:hover {
-    background-color: ${theme.utils.getColor('lightTintedGrey', 50)};
+    background-color: ${theme.utils.getColor('lightGrey', 50)};
   }
 `;
 
@@ -60,17 +60,17 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   ${transition(0.2)};
   box-sizing: border-box;
   font-size: ${theme.typography.fontSizes['14']};
-  color: ${theme.utils.getColor('lightTintedGrey', 750)};
+  color: ${theme.utils.getColor('lightGrey', 750)};
   margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
   padding-left: ${rem(72)};
 
   &.active,
   &:hover {
-    background-color: ${theme.utils.getColor('lightTintedGrey', 50)} !important;
+    background-color: ${theme.utils.getColor('lightGrey', 50)} !important;
   }
   &.active {
     font-weight: ${theme.typography.weights.bold};
-    background-color: ${darken(0.03, theme.utils.getColor('lightTintedGrey', 50))};
+    background-color: ${darken(0.03, theme.utils.getColor('lightGrey', 50))};
     color: ${theme.palette.black};
 
     path {
@@ -90,7 +90,7 @@ export const arrowContainerStyle = (open: boolean, show: boolean) => (
   opacity: ${show ? '1' : '0'};
   transform: ${open ? 'rotate(90deg)' : 'rotate(0deg);'};
   path {
-    background-color: ${theme.utils.getColor('lightTintedGrey', 750)};
+    background-color: ${theme.utils.getColor('lightGrey', 750)};
   }
 `;
 

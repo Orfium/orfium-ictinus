@@ -6,7 +6,7 @@ import { BASE_SHADE } from 'theme/palette';
 export const LoaderLine = () => (theme: Theme): SerializedStyles => css`
   position: absolute;
   opacity: 0.4;
-  background: ${theme.utils.getColor('lightTintedGrey', 650)};
+  background: ${theme.utils.getColor('lightGrey', 100)};
   width: 150%;
   height: ${rem(8)};
 `;

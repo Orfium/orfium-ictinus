@@ -84,7 +84,7 @@ const TableCell: React.FC<Props> = React.memo(
             background: theme.palette.white,
           },
           type === 'financial' && {
-            borderLeft: `1px solid ${theme.utils.getColor('lightTintedGrey', 650)}`,
+            borderLeft: `1px solid ${theme.utils.getColor('lightGrey', 650)}`,
           },
         ]}
         onClick={onClick}

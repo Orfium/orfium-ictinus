@@ -18,12 +18,12 @@ const TableRow: React.FC<Props> = ({ nested, selected, children, onClick, ...res
       }}
       css={[
         {
-          backgroundColor: selected ? theme.utils.getColor('lightTintedGrey', 50) : undefined,
+          backgroundColor: selected ? theme.utils.getColor('lightGrey', 50) : undefined,
           paddingTop: theme.spacing.xsm,
           paddingBottom: theme.spacing.xsm,
           cursor: onClick && 'pointer',
           '&:hover': {
-            backgroundColor: onClick && theme.utils.getColor('lightTintedGrey', 250),
+            backgroundColor: onClick && theme.utils.getColor('lightGrey', 250),
           },
 
           '> td': {

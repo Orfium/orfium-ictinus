@@ -3,7 +3,7 @@ import { flatColors } from './palette';
 export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
   greyScale: '#808080',
   darkGrey: '#32324E',
-  lightTintedGrey: '#889BBF',
+  lightGrey: '#889BBF',
   red: '#FF1744',
   magenta: '#C813D5',
   purple: '#8833FF',
@@ -37,7 +37,7 @@ export const lightPaletteConfig: PaletteConfig = {
 
   text: {
     primary: flatPaletteConfig.darkGrey,
-    secondary: flatPaletteConfig.lightTintedGrey,
+    secondary: flatPaletteConfig.lightGrey,
     light: flatPaletteConfig.greyScale,
   },
 
@@ -48,14 +48,14 @@ export const lightPaletteConfig: PaletteConfig = {
 export const darkPaletteConfig: PaletteConfig = {
   // Primary Palette
   primary: flatPaletteConfig.darkGrey,
-  secondary: flatPaletteConfig.lightTintedGrey,
+  secondary: flatPaletteConfig.lightGrey,
 
   //rest
   success: flatPaletteConfig.green,
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightTintedGrey,
+  light: flatPaletteConfig.lightGrey,
 
   flat: {
     ...flatPaletteConfig,
@@ -64,7 +64,7 @@ export const darkPaletteConfig: PaletteConfig = {
   text: {
     primary: flatPaletteConfig.darkGrey,
     secondary: flatPaletteConfig.greyScale,
-    light: flatPaletteConfig.lightTintedGrey,
+    light: flatPaletteConfig.lightGrey,
   },
 
   white: 'white',

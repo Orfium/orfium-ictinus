@@ -23,7 +23,7 @@ const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css
   margin: ${theme.spacing.xsm};
   padding: ${theme.spacing.xsm};
   cursor: default;
-  background: ${isItemMatched ? theme.utils.getColor('lightTintedGrey', 250) : 'transparent'};
+  background: ${isItemMatched ? theme.utils.getColor('lightGrey', 250) : 'transparent'};
   white-space: nowrap;
   ${transition(0.2)};
 `;

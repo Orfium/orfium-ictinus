@@ -43,12 +43,12 @@ const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }
     ? `background: ${
         checked
           ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
-          : theme.utils.getColor('lightTintedGrey', 650)
+          : theme.utils.getColor('lightGrey', 650)
       }`
     : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${
         checked
           ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
-          : theme.utils.getColor('lightTintedGrey', 650)
+          : theme.utils.getColor('lightGrey', 650)
       };`;
 };
 
@@ -79,7 +79,7 @@ export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
       width: ${rem(24)};
       height: ${rem(24)};
       ${getBackgroundColor({ intermediate, checked, filled, theme })};
-      border-radius: ${rem(2)};
+      border-radius: ${rem(4)};
     }
 
     // Disabled state label.

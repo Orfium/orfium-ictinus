@@ -12,7 +12,7 @@ export type Overrides = {
 const overrides: Overrides = {
   tooltip: {
     background: {
-      color: 'lightTintedGrey',
+      color: 'lightGrey',
       shade: 50,
     },
   },

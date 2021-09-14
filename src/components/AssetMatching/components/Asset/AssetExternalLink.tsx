@@ -13,7 +13,7 @@ const AssetExternalLink: FC<ExternalLinkProps> = ({ tooltipContent, url }) => {
   return (
     <Tooltip content={tooltipContent} placement={'right'} id={'external-link-tooltip'}>
       <a css={Styles.externalLink} href={url} rel="noreferrer" target="_blank">
-        <Icon name={'externalLinkV2'} size={10} color={'lightTintedGrey'} variant={600} />
+        <Icon name={'externalLinkV2'} size={10} color={'lightGrey'} variant={600} />
       </a>
     </Tooltip>
   );

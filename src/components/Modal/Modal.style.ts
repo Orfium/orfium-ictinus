@@ -37,6 +37,6 @@ export const closeContainer = (theme: Theme) => css`
 
   //TODO: REMOVE THIS AFTER BUTTONS REFACTOR
   svg {
-    color: ${theme.utils.getColor('lightTintedGrey', 650)};
+    color: ${theme.utils.getColor('lightGrey', 650)};
   }
 `;

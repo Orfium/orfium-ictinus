@@ -14,7 +14,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
   display: flex;
   cursor: default;
   font-weight: ${active ? theme.typography.weights.medium : theme.typography.weights.regular};
-  color: ${active ? theme.palette.black : theme.utils.getColor('lightTintedGrey', 750)};
+  color: ${active ? theme.palette.black : theme.utils.getColor('lightGrey', 750)};
 
   & button {
     height: auto;
@@ -22,7 +22,7 @@ export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>)
     padding: ${theme.spacing.sm};
     &:focus {
       outline: none;
-      background-color: ${theme.utils.getColor('lightTintedGrey', 250)};
+      background-color: ${theme.utils.getColor('lightGrey', 250)};
     }
 
     & > span {

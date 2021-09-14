@@ -67,7 +67,7 @@ const Snackbar: React.FC<Props> = ({
           onClick={closeCTA}
           data-testid={generateTestDataId('snackbar-close', dataTestId)}
         >
-          <Icon name="close" color={utils.getColor('lightTintedGrey', 650)} size={20} />
+          <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
         </span>
       </div>
       <div css={descriptionContainer()}>{description}</div>

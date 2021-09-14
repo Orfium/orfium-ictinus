@@ -95,7 +95,7 @@ const CheckBox: React.FC<Props> = ({
           <Icon
             name={intermediate ? 'minus' : 'checkmark'}
             size={24}
-            color={filled ? `${pickTextColorFromSwatches(color, shade)}` : 'primary'}
+            color={filled ? `${pickTextColorFromSwatches(color, shade)}` : color}
           />
         </label>
       </span>

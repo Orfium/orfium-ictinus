@@ -13,7 +13,6 @@ export const getColorFromType = (
 ) => {
   const secondaryVariant = variant && variant !== 50 ? variant : BASE_SHADE;
 
-  debugger;
   if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
     const colorTypeValue = type as AcceptedColorComponentTypes;
     if (colorTypeValue === 'primary') {

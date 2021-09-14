@@ -33,7 +33,7 @@ export const inputStyle = ({
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightTintedGrey', 750) : 'transparent'};
+    color: ${!label && placeholder ? theme.utils.getColor('lightGrey', 750) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {

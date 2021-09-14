@@ -36,7 +36,7 @@ const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
           css={[
             flex,
             `padding: 50px;flex-direction: column; align-items: center; background-color: ${theme.utils.getColor(
-              'lightTintedGrey',
+              'lightGrey',
               50
             )}; width: 100%;  `,
           ]}

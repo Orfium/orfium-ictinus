@@ -42,7 +42,7 @@ const wrapperStyleSwitch = (
     case 'outlined': {
       const fillColor = fill
         ? theme.utils.getColor(fill, shade)
-        : theme.utils.getColor('lightTintedGrey', shade);
+        : theme.utils.getColor('lightGrey', shade);
       const borderColor = shade < 500 ? darken('0.5', fillColor) : lighten('0.5', fillColor);
 
       return `
@@ -55,11 +55,11 @@ const wrapperStyleSwitch = (
     default:
       return `
         background-color: ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightTintedGrey', 50)
+          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGrey', 50)
         };
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
         border: 1px solid ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightTintedGrey', 50)
+          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGrey', 50)
         };
       `;
   }
