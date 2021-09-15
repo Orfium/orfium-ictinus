@@ -3,15 +3,12 @@ import { rem } from 'polished';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { TooltipPlacement, TooltipSize } from './Tooltip';
+import { TooltipSize } from './Tooltip';
+import 'tippy.js/dist/tippy.css';
 
-export const tooltipStyle = ({
-  placement,
-  size,
-}: {
-  placement: TooltipPlacement;
-  size: TooltipSize;
-}) => (theme: Theme): SerializedStyles => {
+export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
+  theme: Theme
+): SerializedStyles => {
   const color = theme.overrides.tooltip.background.color;
   const shade = theme.overrides.tooltip.background.shade;
   const backgroundColor = theme.utils.getColor(color, shade);
@@ -27,27 +24,19 @@ export const tooltipStyle = ({
   };
 
   return css`
-    color: ${pickTextColorFromSwatches(color, shade)} !important;
-    background-color: ${backgroundColor} !important;
-    max-width: ${rem(256)};
-    padding: ${theme.spacing.sm} !important;
-    font-size: ${defineFontSizeBasedOnTooltipSize(size)} !important;
-    line-height: 110%;
-    border-radius: ${theme.spacing.sm};
-    text-align: justify;
-    &.show {
-      opacity: 1 !important;
+    background: transparent;
+    .tippy-content {
+      color: ${pickTextColorFromSwatches(color, shade)};
+      background-color: ${backgroundColor};
+      max-width: ${rem(256)};
+      padding: ${theme.spacing.sm};
+      font-size: ${defineFontSizeBasedOnTooltipSize(size)};
+      line-height: 110%;
+      border-radius: ${theme.spacing.sm};
+      text-align: justify;
     }
-    &.place-${placement} {
-      &::after {
-        border-${placement}-color: ${backgroundColor} !important;
-      }
+    .tippy-arrow {
+      color: ${backgroundColor};
     }
   `;
 };
-
-export const tooltipChildrenWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-`;
