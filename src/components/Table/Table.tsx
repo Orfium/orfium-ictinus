@@ -1,3 +1,4 @@
+import useBreakpoints from 'hooks/useBreakpoints';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
@@ -60,6 +61,8 @@ type Props<T> = {
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
   topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.Component | JSX.Element;
+  /** Action cell width for Table with Expandable Rows (in %)*/
+  actionWidth?: number;
   /** Data test id prefix for all th/td elements */
   dataTestIdPrefix?: string;
 };
@@ -90,8 +93,12 @@ function Table<T>({
   initialSort = { column: '', order: 'desc' },
   topLeftText,
   topRightArea,
+  actionWidth,
   dataTestIdPrefix,
 }: Props<T>) {
+  const breakpoints = useBreakpoints();
+  const actionCellWidth = actionWidth ? `${actionWidth}%` : breakpoints.des1920 ? '5%' : '7%';
+
   const [selectedIds, setSelectedIds] = useState<Selection[] | undefined>(undefined);
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
@@ -289,7 +296,7 @@ function Table<T>({
                   <TableCell
                     component={'th'}
                     sticky={fixedHeader}
-                    width={'5%'}
+                    width={actionCellWidth}
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
                 )}
@@ -315,6 +322,7 @@ function Table<T>({
                 columnsWithWidth,
                 onSelectionChangeExist: Boolean(onCheck),
                 expanded: Boolean(row.expanded),
+                actionWidth: actionWidth,
               }}
               dataTestIdPrefix={dataTestIdPrefix}
               rowIndex={index + 1}

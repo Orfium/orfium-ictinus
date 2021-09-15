@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import useToggle from '../../../../hooks/useToggle';
+import { isComponentFunctionType } from '../../../../utils/helpers';
 import CheckBox from '../../../CheckBox';
 import { Row } from '../../Table';
 import { tableStyle } from '../../Table.style';
@@ -10,7 +11,6 @@ import TableRow from '../TableRow';
 import ContentCell from './components/ContentCell';
 import ExpandedButtonCell from './components/ExpandedButtonCell';
 import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.style';
-import { isComponentFunctionType } from '../../../../utils/helpers';
 
 const RenderRowWithCells = React.memo(
   ({
@@ -36,6 +36,7 @@ const RenderRowWithCells = React.memo(
       type,
       isRowSelected,
       bordered,
+      actionWidth,
     } = React.useContext(TableRowContext);
     const { expanded } = row;
     const isExpandedExists = Boolean(expanded);
@@ -88,6 +89,7 @@ const RenderRowWithCells = React.memo(
           isExpandedExists={isExpandedExists}
           checked={checked}
           toggleChecked={toggleChecked}
+          actionWidth={actionWidth}
           dataTestIdPrefix={dataTestIdPrefix}
           rowIndex={rowIndex}
           index={row.cells?.length + 1}

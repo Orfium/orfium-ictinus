@@ -17,6 +17,7 @@ type TableRowWrapperProps<T> = {
   fixedHeader: boolean;
   type: TableType;
   expanded: boolean;
+  actionWidth?: number;
   dataTestIdPrefix?: string;
   rowIndex?: number;
 };
@@ -35,6 +36,7 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
     columnCount,
     onSelectionChangeExist,
     expanded,
+    actionWidth,
     dataTestIdPrefix,
     rowIndex,
   } = props;
@@ -58,6 +60,7 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
         columnCount,
         isRowSelected,
         bordered: !expanded,
+        actionWidth,
       }}
     >
       <RenderRowOrNestedRow<T> row={row} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} />

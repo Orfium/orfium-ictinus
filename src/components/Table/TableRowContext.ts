@@ -15,6 +15,7 @@ export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   tChange: () => void;
   type: TableType;
   bordered: boolean;
+  actionWidth?: number;
 };
 
 export const TableRowContext = React.createContext<

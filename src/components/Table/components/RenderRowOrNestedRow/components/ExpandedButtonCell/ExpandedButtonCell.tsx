@@ -1,3 +1,4 @@
+import useBreakpoints from 'hooks/useBreakpoints';
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
@@ -8,6 +9,7 @@ type Props = {
   isExpandedExists: boolean;
   checked: boolean;
   toggleChecked: () => void;
+  actionWidth?: number;
   dataTestIdPrefix?: string;
   rowIndex?: number;
   index?: number;
@@ -17,14 +19,23 @@ const ExpandedButtonCell: React.FC<Props> = ({
   isExpandedExists,
   checked,
   toggleChecked,
+  actionWidth,
   dataTestIdPrefix,
   rowIndex,
   index,
 }) => {
   const theme = useTheme();
 
+  const breakpoints = useBreakpoints();
+  const actionCellWidth = actionWidth ? `${actionWidth}%` : breakpoints.des1920 ? '5%' : '7%';
+
   return isExpandedExists ? (
-    <TableCell width={'5%'} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} index={index}>
+    <TableCell
+      width={actionCellWidth}
+      dataTestIdPrefix={dataTestIdPrefix}
+      rowIndex={rowIndex}
+      index={index}
+    >
       <div>
         <div
           css={{
