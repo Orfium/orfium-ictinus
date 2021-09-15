@@ -1,7 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
 import { Theme } from 'theme';
-import { BASE_SHADE } from 'theme/palette';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
 import { Props } from './TextInputBase';
@@ -23,10 +22,10 @@ const wrapperStyleSwitch = (
     case 'outlined':
       return `
         box-shadow: 0 0 0 1px
-          ${error ? 'transparent' : theme.utils.getColor('lightGrey', 650)};
+          ${error ? 'transparent' : theme.utils.getColor('lightGrey', 200)};
         &:focus-within, &:hover {
           box-shadow: 0 0 0 1px ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 650)
+            !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 200)
           };
         }
       `;
@@ -60,7 +59,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     opacity: ${disabled && 0.5};
     border: 2px solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
-    border-color: ${error ? theme.utils.getColor('error', BASE_SHADE, 'normal') : undefined};
+    border-color: ${error ? theme.utils.getColor('error', 550, 'normal') : undefined};
 
     ${!lean &&
       !disabled &&
@@ -166,8 +165,8 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
   display: flex;
   color: ${status === 'error'
-    ? theme.utils.getColor('error', BASE_SHADE, 'normal')
-    : theme.utils.getColor('lightGrey', 750)};
+    ? theme.utils.getColor('error', 550, 'normal')
+    : theme.utils.getColor('lightGrey', 650)};
   font-size: ${theme.typography.fontSizes['12']};
   line-height: 1;
   padding: ${rem(8)} 0 0;

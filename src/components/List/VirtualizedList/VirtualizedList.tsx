@@ -46,21 +46,26 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
       items.unshift(defaultOption);
     }
 
-    const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => (
-      <span css={{ ...style }}>
-        <ListItem
-          size={rowSize}
-          content={items[index]}
-          index={index}
-          ref={ref}
-          selected={isSelected({ item: items[index], selectedItem })}
-          searchTerm={searchTerm}
-          dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
-          highlighted={Boolean(defaultOption && index === 0)}
-          handleOptionClick={handleOptionClick}
-        />
-      </span>
-    );
+    const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => {
+      debugger;
+
+      return (
+        <span css={{ ...style }}>
+          <ListItem
+            size={rowSize}
+            content={items[index]}
+            index={index}
+            ref={ref}
+            disabled={(items[index] as SelectOption)?.isDisabled}
+            selected={isSelected({ item: items[index], selectedItem })}
+            searchTerm={searchTerm}
+            dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
+            highlighted={Boolean(defaultOption && index === 0)}
+            handleOptionClick={handleOptionClick}
+          />
+        </span>
+      );
+    };
 
     return (
       <VList
