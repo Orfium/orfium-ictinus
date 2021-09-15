@@ -75,7 +75,7 @@ export const buttonBaseStyle = ({
     padding:
       size === 'sm' || size === 'md'
         ? `${theme.spacing.sm} ${theme.spacing.md}`
-        : `${theme.spacing.md} ${theme.spacing.lg}`,
+        : `${theme.spacing.md} ${theme.spacing.md}`,
     height: heightBasedOnSize(size),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
