@@ -29,7 +29,7 @@ export type Props = {
   className?: string;
 };
 
-export type AvatarSizes = 'xs' | 'sm' | 'md' | 'lg';
+export type AvatarSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
 export type AvatarShapes = 'regular' | 'rounded' | 'circular';
 
 const Avatar: React.FC<Props> = ({

@@ -32,10 +32,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: black;
 }
 
 .emotion-2 {
@@ -254,13 +257,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -469,10 +472,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: black;
 }
 
 .emotion-2 {
@@ -816,13 +822,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1095,10 +1101,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: black;
-  color: white;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: white;
 }
 
 .emotion-2 {
@@ -1271,7 +1280,7 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 .emotion-11 {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #0e0e17;
+  color: #fff;
   background-color: #030303;
   padding: 0.5rem 1rem;
   height: 2.25rem;
@@ -1317,13 +1326,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1359,13 +1368,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 }
 
 .emotion-19 {
-  fill: #0e0e17;
+  fill: #fff;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-19 path {
-  fill: #0e0e17;
+  fill: #fff;
 }
 
 <div
@@ -1532,10 +1541,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: black;
 }
 
 .emotion-2 {
@@ -1754,13 +1766,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;

@@ -26,7 +26,11 @@ const Search: FC<SearchProps & { dark?: boolean }> = ({
   return (
     <div aria-disabled={isSearchDisabled} css={searchWrapper(dark)}>
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
-        <Icon name={'search'} color={dark ? theme.palette.white : theme.palette.black} size={16} />{' '}
+        <Icon
+          name={'search'}
+          color={dark ? theme.palette.white : theme.utils.getColor('lightGrey', 650)}
+          size={20}
+        />{' '}
       </div>
       <input
         readOnly={false}

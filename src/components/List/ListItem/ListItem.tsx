@@ -45,8 +45,6 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       }
     };
 
-    debugger;
-
     return (
       <div
         css={listItemStyle({ size, selected, highlighted, disabled })}

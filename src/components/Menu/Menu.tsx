@@ -91,7 +91,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           }
           iconLeft={
             !isEmpty(avatar) ? (
-              <Avatar size={'xs'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
+              <Avatar size={'xxs'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
                 {avatar?.letter}
               </Avatar>
             ) : leftIconName ? (

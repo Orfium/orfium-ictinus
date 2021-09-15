@@ -25,10 +25,13 @@ exports[`TopAppBar should render correctly 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-0>*:not(:last-of-type) {
+  color: black;
 }
 
 .emotion-1 {
@@ -216,13 +219,13 @@ exports[`TopAppBar should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -307,10 +310,13 @@ exports[`TopAppBar should render correctly 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-0>*:not(:last-of-type) {
+  color: black;
 }
 
 .emotion-1 {
@@ -498,13 +504,13 @@ exports[`TopAppBar should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -674,10 +680,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: black;
-  color: white;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-0>*:not(:last-of-type) {
+  color: white;
 }
 
 .emotion-1 {
@@ -819,7 +828,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 .emotion-7 {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #0e0e17;
+  color: #fff;
   background-color: #030303;
   padding: 0.5rem 1rem;
   height: 2.25rem;
@@ -865,13 +874,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -923,13 +932,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-15 {
-  fill: #0e0e17;
+  fill: #fff;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-15 path {
-  fill: #0e0e17;
+  fill: #fff;
 }
 
 .emotion-0 {
@@ -956,10 +965,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: black;
-  color: white;
   height: 62px;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.emotion-0>*:not(:last-of-type) {
+  color: white;
 }
 
 .emotion-1 {
@@ -1101,7 +1113,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 .emotion-7 {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #0e0e17;
+  color: #fff;
   background-color: #030303;
   padding: 0.5rem 1rem;
   height: 2.25rem;
@@ -1147,13 +1159,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 1.125rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1205,13 +1217,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-15 {
-  fill: #0e0e17;
+  fill: #fff;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-15 path {
-  fill: #0e0e17;
+  fill: #fff;
 }
 
 <div>

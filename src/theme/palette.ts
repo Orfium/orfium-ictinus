@@ -160,7 +160,8 @@ export const pickTextColorFromSwatches = (
     350: ['darkGrey', 'darkOrange'],
   };
   const pickedShade = colorsForWhiteText[shade];
-  const pickedColor = pickedShade && pickedShade?.find(item => item === color);
+  const pickedColor =
+    (pickedShade && pickedShade?.find(item => item === color)) || color === 'neutralBlack';
   const palette = enhancePaletteWithShades(lightPaletteConfig);
 
   return pickedColor ? '#fff' : getColor(palette)('darkGrey', 850);

@@ -6,7 +6,7 @@ import { Theme } from '../../../../theme';
 import { inputStyle } from '../../../TextField/TextField.style';
 
 const getBackground = (dark: boolean, theme: Theme) =>
-  dark ? theme.utils.getColor('darkGrey', 750) : theme.utils.getColor('lightGrey', 50);
+  dark ? theme.utils.getColor('darkGrey', 650) : theme.utils.getColor('lightGrey', 50);
 
 export const searchWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => {
   const background = getBackground(dark, theme);
@@ -58,7 +58,7 @@ export const customInputStyle = (searchPlaceholder: string, dark: boolean) => (t
    
     &::placeholder {
         color: ${
-          dark ? theme.utils.getColor('darkGrey', 50) : theme.utils.getColor('lightGrey', 750)
+          dark ? theme.utils.getColor('darkGrey', 50) : theme.utils.getColor('lightGrey', 850)
         };
        outline: none;
       }

@@ -47,8 +47,6 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     }
 
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => {
-      debugger;
-
       return (
         <span css={{ ...style }}>
           <ListItem

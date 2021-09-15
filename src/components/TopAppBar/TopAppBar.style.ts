@@ -10,10 +10,12 @@ const topAppBarWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => 
   position: relative;
   justify-content: space-between;
   background-color: ${dark ? theme.palette.black : theme.palette.white};
-  color: ${dark ? theme.palette.white : theme.palette.black};
   height: ${DEFAULT_NAVBAR_HEIGHT}px;
   padding: 0 ${theme.spacing.md};
   box-shadow: ${theme.elevation['02']};
+  > *:not(:last-of-type) {
+    color: ${dark ? theme.palette.white : theme.palette.black};
+  }
 `;
 
 const topAppBarSection = css`
