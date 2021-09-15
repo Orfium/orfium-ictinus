@@ -10,6 +10,7 @@ export const buttonSpanStyle = () => () => {
   return {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
   };
 };
 
@@ -21,7 +22,7 @@ export const childrenWrapperStyle = ({
   iconLeft,
   iconRight,
   hasChildren,
-}: RequiredProperties<Omit<Props, 'isIconButton' | 'buttonType'> & { hasChildren: boolean }>) => (
+}: RequiredProperties<Omit<Props, 'block'| 'isIconButton' | 'buttonType'> & { hasChildren: boolean }>) => (
   theme: Theme
 ) => {
   const rightIconExists = hasChildren && iconRight;

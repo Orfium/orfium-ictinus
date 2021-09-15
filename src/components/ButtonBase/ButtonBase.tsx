@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ClickEvent } from '../../hooks/useLoading';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
+import { ButtonProps, EventProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
@@ -19,6 +20,8 @@ export type Props = {
   color?: string;
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';
+  /** This property will make the button fit to its parent width. Defaults to false */
+  block?: boolean;
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
   /** Property indicating if the component is async and loading */
@@ -37,11 +40,16 @@ export type Props = {
   buttonType?: 'submit' | 'reset' | 'button';
 };
 
-const ButtonBase: React.FC<Props & TestProps & EventButtonProps> = props => {
+//@TODO fix props to not overwrite button props
+const ButtonBase = React.forwardRef<
+  HTMLButtonElement,
+  ButtonProps & Props & TestProps & EventButtonProps
+>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
     color = '',
+    block = false,
     filled = true,
     transparent = false,
     isIconButton = false,
@@ -61,6 +69,7 @@ const ButtonBase: React.FC<Props & TestProps & EventButtonProps> = props => {
 
   return (
     <button
+      ref={ref}
       type={buttonType}
       data-testid={generateTestDataId(testIdName, dataTestId)}
       css={buttonBaseStyle({
@@ -68,6 +77,7 @@ const ButtonBase: React.FC<Props & TestProps & EventButtonProps> = props => {
         loading,
         filled,
         size,
+        block,
         color,
         transparent,
         calculatedColor,
@@ -88,6 +98,7 @@ const ButtonBase: React.FC<Props & TestProps & EventButtonProps> = props => {
       {children}
     </button>
   );
-};
+});
+ButtonBase.displayName = 'ButtonBase';
 
 export default ButtonBase;
