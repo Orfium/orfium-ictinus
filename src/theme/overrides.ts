@@ -13,7 +13,7 @@ const overrides: Overrides = {
   tooltip: {
     background: {
       color: 'lightGrey',
-      shade: 50,
+      shade: 150,
     },
   },
 };
