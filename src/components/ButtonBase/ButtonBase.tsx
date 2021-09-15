@@ -20,6 +20,8 @@ export type Props = {
   color?: string;
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';
+  /** This property will make the button fit to its parent width. Defaults to false */
+  block?: boolean;
   /** Property indicating if the component is filled with a color based on the type */
   filled?: boolean;
   /** Property indicating if the component is async and loading */
@@ -47,6 +49,7 @@ const ButtonBase = React.forwardRef<
     size = 'md',
     type = 'primary',
     color = '',
+    block = false,
     filled = true,
     transparent = false,
     isIconButton = false,
@@ -74,6 +77,7 @@ const ButtonBase = React.forwardRef<
         loading,
         filled,
         size,
+        block,
         color,
         transparent,
         calculatedColor,
