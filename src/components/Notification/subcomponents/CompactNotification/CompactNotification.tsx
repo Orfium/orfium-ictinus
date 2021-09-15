@@ -72,9 +72,11 @@ const CompactNotification: React.FC<Props> = ({
     >
       <div css={infoContainer()}>
         {withIcon && (
-          <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} size={20} />
-          </div>
+          <>
+            <div css={iconContainer()}>
+              <Icon name={typeToIconName(type)} color={type} size={20} />
+            </div>
+          </>
         )}
         {variant === 'banner' && <div css={headContainer()}>{title}</div>}
         <div>{message}</div>
@@ -82,7 +84,7 @@ const CompactNotification: React.FC<Props> = ({
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
           <span
-            css={primaryActionContainer()}
+            css={primaryActionContainer({ variant })}
             onClick={primaryCTA}
             data-testid={generateTestDataId('notification-primary', dataTestId)}
           >

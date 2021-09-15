@@ -154,10 +154,15 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
-  height: 3.5rem;
+  height: 2.875rem;
   border-radius: 0.25rem;
-  border-left: #36C152 4px solid;
-  background: #f4fbf6;
+  color: #0e0e17;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #d6f2dc;
+  background: #f4faf5;
+}
+
+.emotion-2[notification-type='banner'] {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -217,7 +222,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 
 .emotion-14 {
   cursor: pointer;
-  color: #1c84b2;
+  color: #24aae5;
 }
 
 .emotion-15 {

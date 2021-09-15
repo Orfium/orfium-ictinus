@@ -25,11 +25,12 @@ export const lightPaletteConfig: PaletteConfig = {
   secondary: flatPaletteConfig.yellow,
 
   //rest
-  success: flatPaletteConfig.green,
+  success: flatPaletteConfig.green, //550 shade
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
   light: flatPaletteConfig.greyScale,
+  link: '#246CE5',
 
   flat: {
     ...flatPaletteConfig,
@@ -89,6 +90,7 @@ export type PaletteConfig = {
   warning?: string;
   info?: string;
   light?: string;
+  link?: string;
 
   text?: TextPaletteConfigType;
 

@@ -1,12 +1,11 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem, tint } from 'polished';
 import { Theme } from 'theme';
-import { BASE_SHADE } from 'theme/palette';
 
 import { NotificationStyleType, NotificationTypes } from './Notification';
 
 export const typeToThemePalette = (theme: Theme, type: NotificationTypes): string =>
-  theme.utils.getColor(type, BASE_SHADE, 'normal');
+  theme.utils.getColor(type, 550, 'normal');
 
 // Generic SerializedStyles for all Notification Types
 
@@ -14,16 +13,21 @@ export const notificationsContainerPerType = (
   type: NotificationTypes,
   styleType: NotificationStyleType,
   theme: Theme
-): string =>
-  styleType === 'outlined'
+): SerializedStyles => css`
+  border: ${rem(1)} solid ${theme.utils.getColor(type, 100, 'normal')};
+
+  &[notification-type='banner'] {
+    box-shadow: ${theme.elevation['02']};
+  }
+
+  ${styleType === 'outlined'
     ? `
         border: ${rem(2)} solid ${typeToThemePalette(theme, type)};
         background: white;
       `
     : `
-        border-left: ${typeToThemePalette(theme, type)} 4px solid;
         background: ${tint(0.95, typeToThemePalette(theme, type))};
-        box-shadow: ${theme.elevation['02']};
+`}
 `;
 
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
