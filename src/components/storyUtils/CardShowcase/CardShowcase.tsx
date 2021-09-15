@@ -13,7 +13,7 @@ type Props = {
 
 const CardShowcase: React.FC<Props> = ({ elevated, transparent, radius }) => {
   const CardContent = () => (
-    <div css={{ padding: '20px' }}>
+    <div css={{ padding: '16px' }}>
       <div>{`Card with ${elevated ? elevated : 'no'} elevation`}</div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at
