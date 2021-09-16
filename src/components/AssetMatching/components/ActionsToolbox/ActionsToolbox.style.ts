@@ -15,23 +15,10 @@ const list = (theme: Theme): SerializedStyles => css`
   margin: 0;
   padding: 0;
   ${cardElevation(theme, '02')};
-  > li {
-    margin: 0;
-    width: ${rem(220)};
-    list-style: none;
-    > button {
-      width: 100%;
-      border: none;
-      color: ${theme.palette.black};
-    }
-  }
 `;
 
 const buttonWrapper = (theme: Theme): SerializedStyles => css`
   margin-right: ${theme.spacing.sm};
-  > button {
-    border: none;
-  }
 `;
 
 const secondaryActionsWrapper = css`

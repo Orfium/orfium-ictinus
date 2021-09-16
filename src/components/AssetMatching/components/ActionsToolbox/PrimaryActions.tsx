@@ -9,12 +9,14 @@ import Styles from './ActionsToolbox.style';
 interface Props {
   primaryActions: MatchingAction[];
   isButtonFilled?: boolean;
+  isButtonTransparent?: boolean;
   primaryButtonColor?: string;
 }
 
 const PrimaryActions: FC<Props> = ({
   primaryActions,
   isButtonFilled = false,
+  isButtonTransparent,
   primaryButtonColor,
 }) => {
   const { actionItems } = useMatchingActions(
@@ -29,7 +31,8 @@ const PrimaryActions: FC<Props> = ({
       </div>
     ),
     isButtonFilled,
-    primaryButtonColor
+    primaryButtonColor,
+    isButtonTransparent
   );
 
   return <div css={flex}>{actionItems}</div>;

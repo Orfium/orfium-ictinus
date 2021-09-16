@@ -43,12 +43,12 @@ const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }
     ? `background: ${
         checked
           ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
-          : theme.utils.getColor('lightGrey', 650)
+          : theme.utils.getColor('lightGrey', 300)
       }`
     : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${
         checked
           ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
-          : theme.utils.getColor('lightGrey', 650)
+          : theme.utils.getColor('lightGrey', 300)
       };`;
 };
 

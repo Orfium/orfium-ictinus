@@ -4,7 +4,7 @@ import { flex } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
 
 const wrapperStyleSwitch = (theme: Theme) => ({
-  outlined: `border: 1px solid ${theme.utils.getColor('lightGrey', 250)}`,
+  outlined: `border: 1px solid ${theme.utils.getColor('lightGrey', 200)}`,
   elevated: `box-shadow: ${theme.elevation['01']};`,
   filled: ``,
 });

@@ -15,7 +15,7 @@ export const normalFont = (size: number, theme: Theme): SerializedStyles => css`
 
 const subHeading = (theme: Theme): SerializedStyles => css`
   ${normalFont(11, theme)};
-  color: ${theme.utils.getColor('lightGrey', 750)};
+  color: ${theme.utils.getColor('lightGrey', 650)};
   margin: 0;
 `;
 
@@ -37,7 +37,7 @@ const article = (isHighlighted: boolean = false) => (theme: Theme): SerializedSt
   flex-direction: column;
   background: ${isHighlighted ? theme.utils.getColor('lightGrey', 50) : 'transparent'};
   padding: ${theme.spacing.md};
-  border: 1px solid ${theme.utils.getColor('lightGrey', 250)};
+  border: 1px solid ${theme.utils.getColor('lightGrey', 150)};
   border-radius: ${theme.spacing.xsm};
   :first-of-type {
     margin-right: ${theme.spacing.md};
@@ -61,8 +61,8 @@ const linkedRecordings = css`
 `;
 
 const linkedText = (theme: Theme): SerializedStyles => css`
-  ${boldFont(16, theme)};
-  color: ${theme.utils.getColor('lightGrey', 750)};
+  ${boldFont(12, theme)};
+  color: ${theme.utils.getColor('lightGrey', 650)};
   margin: 0;
 `;
 

@@ -16,6 +16,7 @@ interface Props {
     secondaryButtonColor?: string;
     primaryButtonColor?: string;
     isButtonFilled?: boolean;
+    isButtonTransparent?: boolean;
   };
   customCheckboxContent?: JSX.Element | null;
   isChecked?: boolean;

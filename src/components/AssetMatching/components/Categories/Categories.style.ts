@@ -19,11 +19,11 @@ const title = (theme: Theme): SerializedStyles => css`
 
 const item = (isItemMatched: boolean) => (theme: Theme): SerializedStyles => css`
   ${normalFont(12, theme)};
-  color: ${theme.palette.black};
+  color: ${theme.utils.getColor('darkGrey', 850)};
   margin: ${theme.spacing.xsm};
   padding: ${theme.spacing.xsm};
   cursor: default;
-  background: ${isItemMatched ? theme.utils.getColor('lightGrey', 250) : 'transparent'};
+  background: ${isItemMatched ? theme.utils.getColor('lightGrey', 150) : 'transparent'};
   white-space: nowrap;
   ${transition(0.2)};
 `;

@@ -53,15 +53,15 @@ export const buttonBaseStyle = ({
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
     color:
-      filled && !transparent
-        ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-        : defineBackgroundColor(
+      !filled && !transparent
+        ? defineBackgroundColor(
             theme,
             calculatedColor,
             type,
             hasSupplementaryIcons,
             childrenCount > 0
-          ),
+          )
+        : pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade),
     backgroundColor:
       filled && !transparent
         ? defineBackgroundColor(

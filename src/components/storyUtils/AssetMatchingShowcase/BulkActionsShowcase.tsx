@@ -30,10 +30,15 @@ const BulkActionsShowcase = () => {
         flexDirection: 'column',
         alignItems: 'space-between',
         width: '100%',
-        textAlign: 'center',
       }}
     >
-      <h2>⬇️Bulk actions Showcase⬇️</h2>
+      <h2
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        ⬇️Bulk actions Showcase⬇️
+      </h2>
       <BulkActionsSection
         isBulkSection
         isChecked={checked}
@@ -53,6 +58,7 @@ const BulkActionsShowcase = () => {
           primaryButtonColor: 'lightBlue-500',
           secondaryButtonColor: 'lightBlue-100',
           isButtonFilled: true,
+          isButtonTransparent: false,
         }}
         matchingActions={selectedItems.length > 0 ? Mocks.actionsMock : []}
         onCheck={checked => {

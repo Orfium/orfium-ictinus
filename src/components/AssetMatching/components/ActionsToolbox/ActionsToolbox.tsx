@@ -11,6 +11,7 @@ interface Props {
     secondaryButtonColor?: string;
     primaryButtonColor?: string;
     isButtonFilled?: boolean;
+    isButtonTransparent?: boolean;
   };
   customActionsContent?: JSX.Element | null;
 }
