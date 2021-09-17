@@ -33,7 +33,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-3 {
-  border-right: 1px solid #dfdfdf;
+  background-color: #F9FAFC;
 }
 
 .emotion-4 {
@@ -41,6 +41,12 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   padding: 1rem;
   font-weight: 400;
   cursor: pointer;
+  background-color: transparent;
+  position: relative;
+}
+
+.emotion-4:hover {
+  background-color: #e9f1ff;
 }
 
 .emotion-7 {
@@ -127,13 +133,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-13 {
-  fill: #5f6c85;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-13 path {
-  fill: #5f6c85;
+  fill: #0e0e17;
 }
 
 .emotion-14 {
@@ -172,6 +178,8 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-16 {
@@ -185,7 +193,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   justify-content: space-around;
   border-top: 1px solid;
   border-bottom: 1px solid;
-  border-color: #c3cddf;
+  border-color: #e7ebf2;
 }
 
 .emotion-17 {
@@ -194,6 +202,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   width: 39px;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-24 {
@@ -249,7 +258,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-28 {
-  border: 1px solid #cfcfcf;
+  border: 1px solid #93a5c5;
   border-radius: 100%;
   width: 39px;
   height: 39px;
@@ -288,12 +297,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-29:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(136,51,255,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -336,7 +346,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   width: 40px;
   padding: 0 4px;
   opacity: 1;
-  background: rgba(136,51,255,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-83 {
@@ -344,6 +354,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-93 {
@@ -374,12 +385,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-138:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(136,51,255,0.1);
+  background: #e9f1ff;
   left: 0;
   right: initial;
   border-bottom-right-radius: 100%;
@@ -452,6 +464,8 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-346 {
@@ -501,13 +515,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-351 {
-  fill: #232336;
+  fill: #0e0e17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
 .emotion-351 path {
-  fill: #232336;
+  fill: #0e0e17;
 }
 
 .emotion-368 {
@@ -527,6 +541,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-368:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;

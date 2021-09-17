@@ -6,7 +6,7 @@ export const weekDaysWrapperStyle = () => (theme: Theme): SerializedStyles => cs
   justify-content: space-around;
   border-top: 1px solid;
   border-bottom: 1px solid;
-  border-color: ${theme.utils.getColor('lightGrey', 250)};
+  border-color: ${theme.utils.getColor('lightGrey', 100)};
 `;
 
 export const weekDayStyle = () => (theme: Theme): SerializedStyles => css`
@@ -15,6 +15,7 @@ export const weekDayStyle = () => (theme: Theme): SerializedStyles => css`
   width: 39px;
   font-size: ${theme.typography.fontSizes['14']};
   text-align: center;
+  font-weight: ${theme.typography.weights.medium};
 `;
 
 export const datesWrapperStyle = () => (theme: Theme): SerializedStyles => css`
