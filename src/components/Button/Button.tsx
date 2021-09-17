@@ -15,7 +15,7 @@ import Loader from 'components/Loader';
 export type Props = ButtonBaseProps;
 type onClickProp = { onClick: ClickHandler };
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps & Props & TestProps & onClickProp>(
+const Button: React.ForwardRefExoticComponent<React.PropsWithoutRef<ButtonProps & Props & TestProps & onClickProp> & React.RefAttributes<HTMLButtonElement>>  = React.forwardRef<HTMLButtonElement, ButtonProps & Props & TestProps & onClickProp>(
   (props, ref) => {
     const {
       size = 'md',
@@ -66,7 +66,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps & Props & TestPro
       </ButtonBase>
     );
   }
-);
+)
 Button.displayName = 'Button';
 
 export default Button;
