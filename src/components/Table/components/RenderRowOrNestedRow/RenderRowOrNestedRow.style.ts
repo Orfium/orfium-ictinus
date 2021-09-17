@@ -10,7 +10,7 @@ export const borderedRowStyle = ({
   isCustomCell?: boolean;
 }) => (theme: Theme): SerializedStyles =>
   css({
-    borderBottom: bordered ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 250)}` : 'none',
+    borderBottom: bordered ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 200)}` : 'none',
     'td:first-of-type': {
       paddingLeft: theme.spacing.md,
     },
@@ -30,5 +30,5 @@ export const expandableRowStyle = ({ isFirstRow }: { isFirstRow: boolean }) => (
     borderTop:
       //Adds border to the first row only.
       isFirstRow ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 250)}` : 'none',
-    borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGrey', 250)}`,
+    borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGrey', 200)}`,
   });
