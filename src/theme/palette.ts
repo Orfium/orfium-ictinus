@@ -28,6 +28,25 @@ export const flatColors = [
   ...neutralColors,
 ] as const;
 /**
+ * Here are listed all the colors available for our project
+ * Pale colors are just colors without shades
+ **/
+export const paleColors = [
+  'greyScale',
+  'darkGrey',
+  'lightGrey',
+  'red',
+  'magenta',
+  'purple',
+  'darkBlue',
+  'blue',
+  'lightBlue',
+  'teal',
+  'green',
+  'yellow',
+  'orange',
+] as const;
+/**
  * Here are listed all the color shades
  * Each colors of the flat palette is generated with these variations
  * E.g red.100 = color or yellow.500 = color
@@ -73,6 +92,8 @@ export const mainTypes = [
 
 export type flatPalette = Record<typeof flatColors[number], generatedColorShades>;
 
+export type palePalette = Record<typeof paleColors[number], string>;
+
 export type generatedColorShades = Record<typeof colorShades[number], string>;
 
 /**
@@ -85,6 +106,7 @@ export type Palette = {
     light: generatedColorShades;
   };
   flat: flatPalette;
+  pale: palePalette;
 
   white: string;
   black: string;

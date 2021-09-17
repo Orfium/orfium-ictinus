@@ -1,6 +1,6 @@
 import elevation, { Elevation } from './elevation';
 import overrides, { Overrides } from './overrides';
-import { colorShades, flatColors, mainTypes, Palette } from './palette';
+import { colorShades, flatColors, mainTypes, paleColors, Palette } from './palette';
 import { darkPaletteConfig, lightPaletteConfig, PaletteConfig } from './palette.config';
 import spacing, { Spacing } from './spacing';
 import typography, { Typography } from './typography';
@@ -17,11 +17,14 @@ export type ThemeConfig = {
   isDark: boolean;
 };
 
+type Names = typeof paleColors[number];
+
 type GetColor = {
   (color: typeof flatColors[number], variant: typeof colorShades[number]): string;
   (color: typeof flatColors[number], variant: typeof colorShades[number], scope: 'flat'): string;
   (color: TextColorTypes, variant: typeof colorShades[number], scope: 'text'): string;
   (color: typeof mainTypes[number], variant: typeof colorShades[number], scope: 'normal'): string;
+  (color: typeof paleColors[number], variant: null, scope: 'pale'): string;
 };
 
 export type Theme = {
@@ -37,12 +40,20 @@ export type Theme = {
 };
 
 export const getColor = (palette: Palette): GetColor => (
-  color: typeof flatColors[number] | TextColorTypes | typeof mainTypes[number],
-  variant: typeof colorShades[number],
-  scope: 'flat' | 'text' | 'normal' = 'flat'
+  color:
+    | typeof flatColors[number]
+    | TextColorTypes
+    | typeof mainTypes[number]
+    | typeof paleColors[number],
+  variant: typeof colorShades[number] | null,
+  scope: 'flat' | 'text' | 'normal' | 'pale' = 'flat'
 ) => {
   const endColor =
-    scope === 'normal' ? palette[color][variant] : palette?.[scope]?.[color]?.[variant];
+    variant === null
+      ? palette?.[scope]?.[color]
+      : scope === 'normal'
+      ? palette[color][variant]
+      : palette?.[scope]?.[color]?.[variant];
 
   if (!endColor) {
     throw new Error('No color found with that name');

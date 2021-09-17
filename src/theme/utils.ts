@@ -5,7 +5,7 @@ import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './p
 
 const BASE_PERCENTAGE = 0.1;
 
-const EXCLUDED = ['white', 'black'];
+const EXCLUDED = ['white', 'black', 'pale'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
@@ -44,7 +44,7 @@ export const iterateObject = <T>(
     acc[value] =
       typeof obj[value] !== 'object'
         ? func(obj[value], value)
-        : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
+        : EXCLUDED.includes(value) ? obj[value] : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
 
     return acc;
   }, {});

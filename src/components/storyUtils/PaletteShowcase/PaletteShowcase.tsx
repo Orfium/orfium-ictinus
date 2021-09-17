@@ -6,7 +6,7 @@ import values from 'lodash/values';
 import React from 'react';
 import { useState, Fragment, useRef } from 'react';
 import { flexCenter } from 'theme/functions';
-import { colorShades, flatColors, neutralColors } from 'theme/palette';
+import { colorShades, flatColors, neutralColors, paleColors } from 'theme/palette';
 
 import ColorUtility from '../ColorUtility/ColorUtility';
 import {
@@ -24,8 +24,11 @@ const PaletteShowcase = () => {
   const [paletteColor, setPaletteColor] = useState<string | undefined>(undefined);
 
   type Palette = [typeof flatColors[number], string[]];
+  type PalePalette = [typeof paleColors[number], string[]];
   // @ts-ignore
   const palette = toPairs(mapValues(theme.palette.flat, values)) as Palette[];
+  // @ts-ignore
+  const palePalette = toPairs(theme.palette.pale) as PalePalette;
 
   const onClick = () => {
     if (window) {
@@ -84,6 +87,36 @@ const PaletteShowcase = () => {
               </div>
             </div>
           ))}
+      </div>
+      <div>
+        <h3>PALE PALETTE</h3>
+        <p>Another palette is the pale where is not having shades.</p>
+        <div css={paletteColorWrapper}>
+          <div css={colorNameBox('white', 'yellow')}>
+            <div
+              css={css`
+                flex: 1;
+              `}
+            >
+              Pale
+            </div>
+            <div
+              css={css`
+                font-size: 14px;
+              `}
+            />
+          </div>
+          <div css={colorBoxWrapper}>
+            {/*
+        // @ts-ignore */}
+            {palePalette.map(([colorName, color]) => (
+              <div key={color} css={colorBox(color, colorName, 100, false, false)}>
+                <div>{colorName}</div>
+                <div css={{ textTransform: 'capitalize' }}>{color}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div ref={colorUtilRef} css={flexCenter}>
         <ColorUtility defaultColor={paletteColor} />
