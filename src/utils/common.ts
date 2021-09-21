@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { ButtonHTMLAttributes } from 'react';
 
 /** URL currently used for figma */
 export const FIGMA_URL =
@@ -14,9 +15,8 @@ export type EventProps = {
 };
 
 //@TODO fix props to not overwrite button props from base
-export type ButtonProps = Omit<
-  React.HTMLProps<HTMLButtonElement>,
-  'size' | 'css' | 'onBlur' | 'onClick'
+export type ButtonProps = Partial<
+  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'size' | 'css' | 'onBlur' | 'onClick' | 'type'>
 >;
 
 //@TODO fix props to not overwrite div props from base
