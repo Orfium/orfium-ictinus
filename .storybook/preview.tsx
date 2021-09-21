@@ -115,7 +115,6 @@ export const decorators = [
 export const parameters = {
   viewport: {
     viewports: viewPorts,
-    defaultViewport: 'laptopLg',
   },
   options: { showPanel: true },
 };
