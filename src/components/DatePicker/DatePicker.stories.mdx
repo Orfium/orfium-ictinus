@@ -2,8 +2,9 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import DatePicker, { extraOptions } from './DatePicker';
 import { currentDay } from './utils';
-import dayjs from 'dayjs';
-import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
+import Stack from '../storyUtils/Stack';
+import OverlayComponent from './OverlayComponent';
+import { FIGMA_URL } from '../../utils/common';
 const mockDate = currentDay;
 const disableDates = {
     days: [mockDate.toDate(), mockDate.subtract(1, 'day').toDate() , mockDate.subtract(2, 'day').toDate(), mockDate.subtract(4, 'day').toDate()]
@@ -27,7 +28,12 @@ const dateFormatOptions = {
 }
 
 
-<Meta title="Design System/DatePicker" component={DatePicker} />
+<Meta title="Design System/DatePicker" component={DatePicker} parameters={{
+  design: {
+    type: 'figma',
+    url: `${FIGMA_URL}?node-id=529%3A8731`,
+  },
+}} />
 
 # DatePicker
 

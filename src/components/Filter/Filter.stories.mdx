@@ -4,8 +4,19 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Filter from '../Filter';
 import FilterShowcase, { AsyncFilterShowcase } from '../storyUtils/FilterShowcase';
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Filter" component={Filter} />
+<Meta title="Design System/Filter" component={Filter} parameters={{
+  design: [{
+    type: 'figma',
+    name: 'Filter',
+    url: `${FIGMA_URL}?node-id=5122%3A75234`,
+  }, {
+    type: 'figma',
+    name: 'Focus State',
+    url: `${FIGMA_URL}?node-id=6796%3A3017`,
+  },]
+}} />
 
 # Filter
 

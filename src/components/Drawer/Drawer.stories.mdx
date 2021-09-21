@@ -1,8 +1,22 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import DrawerShowcase from '../storyUtils/DrawerShowcase';
-import Drawer from './Drawer';
+import Drawer from './Drawer'; import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Drawer" component={Drawer} />
+<Meta title="Design System/Drawer" component={Drawer} parameters={{
+  design: [{
+    type: 'figma',
+    name: 'Functionality',
+    url: `${FIGMA_URL}?node-id=2828%3A9465`,
+  }, {
+    type: 'figma',
+    name: 'Side Menu',
+    url: `${FIGMA_URL}?node-id=870%3A26958`,
+  }, {
+    type: 'figma',
+    name: 'Responsive Layout',
+    url: `${FIGMA_URL}?node-id=3456%3A101617`,
+  }]
+}} />
 
 # Drawer
 

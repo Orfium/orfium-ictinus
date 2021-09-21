@@ -3,8 +3,14 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
 import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Button" component={Button} />
+<Meta title="Design System/Button" component={Button} parameters={{
+  design: {
+    type: 'figma',
+    url: `${FIGMA_URL}?node-id=9660%3A117281`
+  }
+}} />
 
 # Button
 

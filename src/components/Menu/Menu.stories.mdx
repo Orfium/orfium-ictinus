@@ -2,8 +2,18 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import Menu from '../Menu';
 import MenuShowcase from '../storyUtils/MenuShowcase';
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Menu" component={Menu} />
+<Meta
+  title="Design System/Menu"
+  component={Menu}
+  parameters={{
+    design: {
+      type: 'figma',
+      url: `${FIGMA_URL}?node-id=2714%3A1333`,
+    },
+  }}
+/>
 
 # Menu
 

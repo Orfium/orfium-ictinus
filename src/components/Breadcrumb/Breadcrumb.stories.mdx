@@ -3,8 +3,26 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import BreadcrumbShowcase from '../storyUtils/BreadcrumbShowcase/BreadcrumbShowcase.tsx';
 import Stack from '../storyUtils/Stack';
 import Breadcrumb from './Breadcrumb';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Breadcrumb" component={() => true} />
+<Meta
+  title="Design System/Breadcrumb"
+  component={() => true}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Breadcrumb',
+        url: `${FIGMA_URL}?node-id=1620%3A279`,
+      },
+      {
+        type: 'figma',
+        name: 'Focused state',
+        url: `${FIGMA_URL}?node-id=9697%3A110079`,
+      },
+    ],
+  }}
+/>
 
 # Breadcrumb
 

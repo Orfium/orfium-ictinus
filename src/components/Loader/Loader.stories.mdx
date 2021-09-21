@@ -1,8 +1,14 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 
 import Loader from './Loader';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Loader" component={Loader} />
+<Meta title="Design System/Loader" component={Loader} parameters={{
+  design: {
+    type: 'figma',
+    url: `${FIGMA_URL}?node-id=2992%3A63789`,
+  },
+}} />
 
 # Loader
 

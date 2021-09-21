@@ -18,6 +18,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@storybook/addon-storysource/register',
     '@storybook/addon-docs',
+    'storybook-addon-designs',
   ],
   webpackFinal: async (config: any) => {
     // do mutation to the config

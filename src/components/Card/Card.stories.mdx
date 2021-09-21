@@ -3,8 +3,18 @@ import { select, boolean } from '@storybook/addon-knobs';
 import CardShowcase from '../storyUtils/CardShowcase';
 import Card from './Card';
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Card" component={Card} />
+<Meta
+  title="Design System/Card"
+  component={Card}
+  parameters={{
+    design: {
+      type: 'figma',
+      url: `${FIGMA_URL}?node-id=9714%3A110180`,
+    },
+  }}
+/>
 
 # Card
 
