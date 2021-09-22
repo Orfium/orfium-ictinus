@@ -1,6 +1,7 @@
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 
+import useTheme from '../../../hooks/useTheme';
 import Separator from '../../Breadcrumb/Separator/Separator';
 import Icon from '../../Icon';
 import ClickAwayListener from '../../utils/ClickAwayListener';
@@ -21,6 +22,7 @@ type Props = {
 const BreadcrumbCollapsed: React.FC<Props> = props => {
   const [open, setOpen] = React.useState<boolean>(false);
   const { collapsedItems } = props;
+  const theme = useTheme();
   const expandHandler = () => {
     setOpen(prevState => !prevState);
   };
@@ -37,7 +39,8 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
     </ul>
   );
 
-  const iconColor = open ? 'lightGrey100' : 'lightGrey700';
+  const iconColor = 'lightGrey';
+  const iconColorShade = open ? 100 : 700;
 
   return (
     <ClickAwayListener
@@ -48,7 +51,11 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
     >
       <div css={breadcrumbCollapsedWrapperStyles()}>
         <span css={breadcrumbCollapsedStyles({ open })} onClick={expandHandler}>
-          <Icon name="dotsVertical" size={22} color={iconColor} />
+          <Icon
+            name="dotsVertical"
+            size={22}
+            color={theme.utils.getColor(iconColor, iconColorShade)}
+          />
         </span>
         <Separator />
         {open && collapsedItemsList}

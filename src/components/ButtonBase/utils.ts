@@ -17,7 +17,7 @@ export const defineBackgroundColor = (
   iconExists?: boolean,
   childrenExists?: boolean
 ): string => {
-  if (!childrenExists && iconExists) {
+  if ((!childrenExists && iconExists) || type === 'link') {
     return 'transparent';
   }
 

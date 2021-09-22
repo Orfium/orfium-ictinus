@@ -49,19 +49,27 @@ export const buttonBaseStyle = ({
   }
 >) => (theme: Theme) => {
   const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
+  const calculateButtonColor = () => {
+    if (!filled && !transparent) {
+      return defineBackgroundColor(
+        theme,
+        calculatedColor,
+        type,
+        hasSupplementaryIcons,
+        childrenCount > 0
+      );
+    }
+
+    if (type === 'link') {
+      return theme.utils.getColor('blue', 550);
+    }
+
+    return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
+  };
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
-    color:
-      !filled && !transparent
-        ? defineBackgroundColor(
-            theme,
-            calculatedColor,
-            type,
-            hasSupplementaryIcons,
-            childrenCount > 0
-          )
-        : pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade),
+    color: calculateButtonColor(),
     backgroundColor:
       filled && !transparent
         ? defineBackgroundColor(

@@ -3,7 +3,9 @@ import * as React from 'react';
 import useTheme from '../../../../hooks/useTheme';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
+import Button from '../../../Button';
 import Icon from '../../../Icon';
+import IconButton from '../../../IconButton';
 import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, closeActionContainer } from '../../Notification.style';
 import {
@@ -72,24 +74,24 @@ const CompactNotification: React.FC<Props> = ({
     >
       <div css={infoContainer()}>
         {withIcon && (
-          <>
-            <div css={iconContainer()}>
-              <Icon name={typeToIconName(type)} color={type} size={20} />
-            </div>
-          </>
+          <div css={iconContainer()}>
+            <Icon name={typeToIconName(type)} color={type} size={20} />
+          </div>
         )}
         {variant === 'banner' && <div css={headContainer()}>{title}</div>}
         <div>{message}</div>
       </div>
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
-          <span
-            css={primaryActionContainer({ variant })}
+          <Button
+            css={primaryActionContainer()}
+            type={'link'}
+            size={'sm'}
             onClick={primaryCTA}
             data-testid={generateTestDataId('notification-primary', dataTestId)}
           >
             {primaryCTALabel}
-          </span>
+          </Button>
         )}
         {closeCTA && (
           <span

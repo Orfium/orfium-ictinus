@@ -23,7 +23,7 @@ export const colorNameBox = (color: string, colorName: typeof flatColors[number]
   padding: 10px;
   display: flex;
   flex-direction: column;
-  color: ${pickTextColorFromSwatches(colorName, 650)}; // base shade
+  color: ${pickTextColorFromSwatches(colorName, 650)};
 `;
 
 export const colorBoxWrapper = css`

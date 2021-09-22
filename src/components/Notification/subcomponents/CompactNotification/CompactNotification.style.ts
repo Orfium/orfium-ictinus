@@ -32,6 +32,7 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;
   padding-right: ${theme.spacing.md};
+  font-weight: ${theme.typography.weights.medium};
 `;
 
 export const headContainer = () => (theme: Theme): SerializedStyles => css`
@@ -39,9 +40,6 @@ export const headContainer = () => (theme: Theme): SerializedStyles => css`
   font-weight: ${theme.typography.weights.medium};
 `;
 
-export const primaryActionContainer = ({ variant }: { variant: CompactNotificationVariants }) => (
-  theme: Theme
-): SerializedStyles => css`
+export const primaryActionContainer = () => (): SerializedStyles => css`
   cursor: pointer;
-  color: ${theme.utils.getColor('lightBlue', 550)};
 `;

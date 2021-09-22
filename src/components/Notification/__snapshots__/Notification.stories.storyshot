@@ -218,25 +218,60 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding-right: 1rem;
+  font-weight: 500;
 }
 
 .emotion-14 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #246ce5;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
   cursor: pointer;
-  color: #24aae5;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-14:hover {
+  background-color: transparent;
+}
+
+.emotion-14:active {
+  background-color: transparent;
 }
 
 .emotion-15 {
-  cursor: pointer;
-  margin-left: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-16 {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .emotion-17 {
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.emotion-19 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-17 path {
+.emotion-19 path {
   fill: #5f6c85;
 }
 
@@ -367,15 +402,24 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           <div
             className="emotion-7"
           >
-            <span
+            <button
               className="emotion-14"
-              data-testid="notification-primary"
+              data-testid="button"
+              disabled={false}
               onClick={[Function]}
             >
-              Action
-            </span>
+              <span
+                className="emotion-15"
+              >
+                <span
+                  className="emotion-16"
+                >
+                  Action
+                </span>
+              </span>
+            </button>
             <span
-              className="emotion-15"
+              className="emotion-17"
               data-testid="notification-close"
               onClick={[Function]}
             >
@@ -384,7 +428,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-17"
+                  className="emotion-19"
                 />
               </span>
             </span>
@@ -445,13 +489,22 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           <div
             className="emotion-7"
           >
-            <span
+            <button
               className="emotion-14"
-              data-testid="notification-primary"
+              data-testid="button"
+              disabled={false}
               onClick={[Function]}
             >
-              Action
-            </span>
+              <span
+                className="emotion-15"
+              >
+                <span
+                  className="emotion-16"
+                >
+                  Action
+                </span>
+              </span>
+            </button>
           </div>
         </div>
         <p
@@ -510,7 +563,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
             className="emotion-7"
           >
             <span
-              className="emotion-15"
+              className="emotion-17"
               data-testid="notification-close"
               onClick={[Function]}
             >
@@ -519,7 +572,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-17"
+                  className="emotion-19"
                 />
               </span>
             </span>

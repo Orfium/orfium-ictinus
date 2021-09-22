@@ -1,5 +1,4 @@
 import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
-import { getColorFromType } from '../../utils/themeFunctions';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
 
@@ -17,7 +16,6 @@ export const getBackgroundColor = ({
   styleType,
 }: BackgroundColorProps) => {
   if (open) {
-    // return getColorFromType(buttonType, theme, 500);
     return theme.utils.getColor(activeCalculatedColor.color, 500);
   } else if (hasSelectedValue || styleType === 'transparent') {
     return theme.utils.getColor('neutralWhite', 100);

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 
 import { MatchingAction } from '../../types';
 import { useMatchingActions } from '../utils';
@@ -33,6 +33,17 @@ const SecondaryActions: FC<Props> = ({
   // @TODO add icon support on list to implement this
   const newActions = actions.map(({ text, icon }) => text);
 
+  const handleOptionClick = useCallback(
+    (option: string) => {
+      const foundAction = actions.find(({ text }) => text === option);
+      if (typeof foundAction !== 'undefined' && foundAction.onClick) {
+        foundAction.onClick();
+      }
+      setOpen(false);
+    },
+    [actions]
+  );
+
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
       <div css={Styles.secondaryActionsWrapper}>
@@ -53,13 +64,7 @@ const SecondaryActions: FC<Props> = ({
               dataTestId={'secondary_action'}
               data={newActions}
               rowSize={'small'}
-              handleOptionClick={(option: string) => {
-                const foundAction = actions.find(({ text }) => text === option);
-                if (typeof foundAction !== 'undefined' && foundAction.onClick) {
-                  foundAction?.onClick();
-                }
-                setOpen(false);
-              }}
+              handleOptionClick={handleOptionClick}
             />
           </div>
         )}
