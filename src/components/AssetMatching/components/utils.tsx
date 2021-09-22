@@ -67,9 +67,12 @@ export const useMatchingActions = (
 ) => {
   const actionItems = useMemo(
     () =>
-      actions
-        .map(createActionButton(isButtonFilled, color, isButtonTransparent))
-        .map(enhanceWithWrapperElement),
+      actions.map((action, index) =>
+        enhanceWithWrapperElement(
+          createActionButton(isButtonFilled, color, isButtonTransparent)(action),
+          index
+        )
+      ),
     [actions, enhanceWithWrapperElement, isButtonFilled]
   );
 
