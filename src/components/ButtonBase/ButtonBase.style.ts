@@ -50,7 +50,7 @@ export const buttonBaseStyle = ({
 >) => (theme: Theme) => {
   const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
   const calculateButtonColor = () => {
-    if (!filled && !transparent) {
+    if ((!filled && !transparent) || transparent) {
       return defineBackgroundColor(
         theme,
         calculatedColor,
