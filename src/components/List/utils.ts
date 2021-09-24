@@ -21,6 +21,11 @@ export const isSelected = ({
     return false;
   }
   const checkIfItemHasValue = (item: ListItemType) => {
+    /**
+     * Check if list item is not react element because it can be
+     * and also checks if its object with property 'value'
+     * @TODO Typescript 4.4 will solve this in one constant
+     * **/
     if (
       item &&
       !React.isValidElement(item) &&

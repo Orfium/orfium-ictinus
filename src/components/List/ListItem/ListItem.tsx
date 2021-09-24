@@ -45,6 +45,11 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       }
     };
     const renderContent = (content: ListItemType) => {
+      /**
+       * Check if list item is not react element because it can be
+       * and also checks if its object with property 'value'
+       * @TODO Typescript 4.4 will solve this in one constant
+       * **/
       if (
         searchTerm &&
         content &&
@@ -65,6 +70,11 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
         );
       }
 
+      /**
+       * Check if list item is not react element because it can be
+       * and also checks if its object with property 'value'
+       * @TODO Typescript 4.4 will solve this in one constant
+       * **/
       if (
         content &&
         !React.isValidElement(content) &&
