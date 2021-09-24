@@ -23,16 +23,4 @@ export const optionsStyle = ({ menuPosition }: MenuOptions) => (theme: Theme) =>
   box-shadow: ${theme.elevation['02']};
   border-radius: ${rem(4)};
   z-index: 1;
-  & > button {
-    padding: ${rem(8)} ${rem(16)};
-    height: ${rem(48)};
-    font-size: ${theme.typography.fontSizes['14']};
-    display: block;
-    width: 100%;
-    text-align: left;
-  }
-
-  & > button:hover {
-    background-color: ${darken(0.05, theme.palette.white)};
-  }
 `;

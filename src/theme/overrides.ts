@@ -1,21 +1,5 @@
-import { colorShades, flatColors } from './palette';
+export type Overrides = Record<string, any>;
 
-export type Overrides = {
-  tooltip: {
-    background: {
-      color: typeof flatColors[number];
-      shade: typeof colorShades[number];
-    };
-  };
-};
-
-const overrides: Overrides = {
-  tooltip: {
-    background: {
-      color: 'lightGrey',
-      shade: 150,
-    },
-  },
-};
+const overrides: Overrides = {};
 
 export default overrides;

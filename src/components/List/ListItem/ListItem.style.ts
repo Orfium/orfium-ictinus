@@ -21,6 +21,7 @@ export const listItemStyle = ({
   display: flex;
   align-items: center;
   padding: 0px ${theme.spacing.md};
+  font-weight: ${selected && theme.typography.weights.medium};
 
   ${highlighted && 'font-weight: 500;'}
 

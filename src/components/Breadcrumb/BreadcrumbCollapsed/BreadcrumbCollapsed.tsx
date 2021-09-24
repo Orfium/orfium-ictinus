@@ -1,16 +1,15 @@
-import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 
 import useTheme from '../../../hooks/useTheme';
 import Separator from '../../Breadcrumb/Separator/Separator';
 import Icon from '../../Icon';
+import List from '../../List';
 import ClickAwayListener from '../../utils/ClickAwayListener';
 import { optionsStyle } from '../../utils/DropdownOptions';
 import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,
   ClickAwayListenerStyle,
-  collapsedItemStyles,
   inlineBreadcrumbWrapperStyles,
 } from './BreadcrumbCollapsed.style';
 
@@ -27,16 +26,17 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
     setOpen(prevState => !prevState);
   };
 
-  const listItems = collapsedItems.map(item => (
-    <li key={uniqueId('collapsed_')} css={collapsedItemStyles()}>
-      {item}
-    </li>
-  ));
-
   const collapsedItemsList = (
-    <ul style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })}>
-      {listItems}
-    </ul>
+    <div style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })}>
+      <List
+        data={collapsedItems}
+        rowSize={'small'}
+        dataTestId={'collapsed_'}
+        handleOptionClick={() => {
+          setOpen(false);
+        }}
+      />
+    </div>
   );
 
   const iconColor = 'lightGrey';

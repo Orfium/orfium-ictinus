@@ -20,7 +20,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 ): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${dark ? theme.palette.white : theme.palette.black};
+  color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   display: block;
   position: relative;
   top: ${label && '7px'};
@@ -35,7 +35,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 
   &:focus {
     //TODO: Revisit color in dark mode implementation
-    color: ${theme.palette.black};
+    color: ${theme.utils.getColor('darkGrey', 850)};
     outline: none;
   }
 

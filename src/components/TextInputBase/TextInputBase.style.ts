@@ -65,16 +65,14 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
       !disabled &&
       !locked &&
       `&:hover {
-      background-color: ${
-        dark ? lighten(0.1, backgroundColor) : darken(0.03, backgroundColor)
-      } !important;
-      border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGrey', 650)};
+      background-color: ${theme.utils.getColor('lightGrey', 50)} !important;
+      border-color: ${styleType === 'outlined' && !error && theme.utils.getColor('lightGrey', 200)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
     }
     `}
 
     &:focus-within {
-      border-color: ${!lean && !error && theme.utils.getColor('lightGrey', 650)};
+      border-color: ${!lean && !error && theme.utils.getColor('lightGrey', 200)};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
       background-color: ${theme.palette.white};
     }
@@ -122,7 +120,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
 ): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${dark ? theme.palette.white : theme.palette.black};
+  color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   display: block;
   position: relative;
   top: ${label && '7px'};

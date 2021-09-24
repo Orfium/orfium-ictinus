@@ -12,8 +12,8 @@ export const tooltipStyle = ({
   placement: TooltipPlacement;
   size: TooltipSize;
 }) => (theme: Theme): SerializedStyles => {
-  const color = theme.overrides.tooltip.background.color;
-  const shade = theme.overrides.tooltip.background.shade;
+  const color = 'darkGrey';
+  const shade = 850;
   const backgroundColor = theme.utils.getColor(color, shade);
 
   const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {

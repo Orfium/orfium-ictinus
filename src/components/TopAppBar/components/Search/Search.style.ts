@@ -52,7 +52,7 @@ export const customInputStyle = (searchPlaceholder: string, dark: boolean) => (t
 
   
     &:focus {
-      color: ${dark ? theme.palette.white : theme.palette.black};
+      color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
       outline: none;
     }
    

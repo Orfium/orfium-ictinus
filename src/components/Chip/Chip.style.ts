@@ -21,13 +21,13 @@ const styleBasedOnSize = (
       return `
       height: ${rem(20)};
       border-radius: ${rem(16.5)};
-      font-size: ${hasIcon ? theme.typography.fontSizes['12'] : theme.typography.fontSizes['13']};
+      font-size: ${theme.typography.fontSizes['10']};
       `;
     default:
       return `
       height: ${rem(24)};
       border-radius: ${rem(12.5)};
-      font-size: ${theme.typography.fontSizes['13']};
+      font-size: ${theme.typography.fontSizes['12']};
       `;
   }
 };

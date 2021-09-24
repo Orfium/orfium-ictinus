@@ -14,7 +14,7 @@ const topAppBarWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => 
   padding: 0 ${theme.spacing.md};
   box-shadow: ${theme.elevation['02']};
   > *:not(:last-of-type) {
-    color: ${dark ? theme.palette.white : theme.palette.black};
+    color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   }
 `;
 

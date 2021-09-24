@@ -42,7 +42,11 @@ const MenuItem: React.FC<Props> = memo(
         <div css={menuIconStyle(isCurrent)}>
           <Icon
             name={iconName}
-            color={isCurrent ? `${pickTextColorFromSwatches(color, shade)}` : 'neutralBlack'}
+            color={
+              isCurrent
+                ? `${pickTextColorFromSwatches(color, shade)}`
+                : theme.utils.getColor('lightGrey', hasSubMenus ? 850 : 650)
+            }
             size={20}
             variant={isCurrent ? shade : BASE_SHADE}
           />
@@ -89,7 +93,7 @@ const MenuItem: React.FC<Props> = memo(
                           <div css={subMenuIconStyle()}>
                             <Icon
                               name={subMenuItem.iconName}
-                              color={theme.utils.getColor('lightGrey', 750)}
+                              color={theme.utils.getColor('lightGrey', 650)}
                               size={20}
                             />
                           </div>

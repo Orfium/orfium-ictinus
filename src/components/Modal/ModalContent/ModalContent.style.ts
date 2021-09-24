@@ -21,7 +21,7 @@ export const labelContainer = (theme: Theme): SerializedStyles => css`
 
 export const headingContainer = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['28']};
-  color: ${theme.palette.black};
+  color: ${theme.utils.getColor('darkGrey', 850)};
   font-weight: ${theme.typography.weights.medium};
   margin: 0 0 ${theme.spacing.xl} 0;
 `;

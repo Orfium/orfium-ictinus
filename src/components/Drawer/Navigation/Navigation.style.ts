@@ -72,7 +72,7 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   &.active {
     font-weight: ${theme.typography.weights.bold};
     background-color: ${darken(0.03, theme.utils.getColor('lightGrey', 50))};
-    color: ${theme.palette.black};
+    color: ${theme.utils.getColor('darkGrey', 850)};
 
     path {
       fill: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')} !important;

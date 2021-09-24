@@ -7,7 +7,6 @@ import { SelectOption } from '../../Select/Select';
 import ListItem from '../ListItem';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected, MAX_LARGE_HEIGHT, MAX_SMALL_HEIGHT } from '../utils';
-import { FilterOption } from 'components/Filter/types';
 
 type Props = {
   items: ListItemType[];
@@ -18,9 +17,9 @@ type Props = {
   /** Height of the list */
   customHeight?: number;
   /** Selected Item */
-  selectedItem?: string | number | SelectOption | FilterOption;
+  selectedItem?: ListItemType;
   /** Default option. Renders on top of the list, highlighted */
-  defaultOption?: string | number | SelectOption | FilterOption;
+  defaultOption?: ListItemType;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */

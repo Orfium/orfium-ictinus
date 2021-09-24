@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { ListItemType } from './types';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
@@ -15,11 +17,29 @@ export const isSelected = ({
   item: ListItemType;
   selectedItem: ListItemType | undefined;
 }): boolean => {
-  const itemValue = typeof item === 'string' || typeof item === 'number' ? item : item.value;
+  if (item && React.isValidElement(item)) {
+    return false;
+  }
+  const checkIfItemHasValue = (item: ListItemType) => {
+    if (
+      item &&
+      !React.isValidElement(item) &&
+      typeof item === 'object' &&
+      !Array.isArray(item) &&
+      'value' in item &&
+      item?.value
+    ) {
+      return item.value;
+    }
+
+    return item;
+  };
+  const itemValue =
+    typeof item === 'string' || typeof item === 'number' ? item : checkIfItemHasValue(item);
   const selectedItemValue =
     typeof selectedItem === 'string' || typeof selectedItem === 'number'
       ? selectedItem
-      : selectedItem?.value;
+      : checkIfItemHasValue(selectedItem);
 
   return itemValue === selectedItemValue;
 };

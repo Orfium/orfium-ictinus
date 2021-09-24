@@ -5,6 +5,8 @@ import { flex } from '../../../theme/functions';
 
 export const overlayWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   ${flex};
+  border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
+  border-radius: ${theme.spacing.xsm};
 `;
 
 export const optionsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
@@ -16,13 +18,14 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
 ): SerializedStyles => css`
   white-space: nowrap;
   padding: ${theme.spacing.md};
-  font-weight: ${selected ? theme.typography.weights.bold : theme.typography.weights.regular};
+  font-weight: ${selected ? theme.typography.weights.medium : theme.typography.weights.regular};
   cursor: pointer;
   background-color: ${selected ? theme.utils.getColor('blue', 50) : 'transparent'};
   position: relative;
+  font-size: ${theme.typography.fontSizes['13']};
 
   &:hover {
-    background-color: ${theme.utils.getColor('blue', 50)};
+    background-color: ${theme.utils.getColor('lightGrey', 50)};
   }
 
   ${selected &&

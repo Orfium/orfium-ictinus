@@ -97,6 +97,6 @@ export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Pro
   ${!disabled &&
     `&:hover {
             border-radius: 100%;
-            background: ${!isSelected && darken(0.03, theme.palette.white)};
+            background: ${!isSelected && theme.utils.getColor('blue', 100)};
           }`}
 `;

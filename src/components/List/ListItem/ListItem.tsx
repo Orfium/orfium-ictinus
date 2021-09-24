@@ -44,6 +44,40 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
         handleOptionClick(content as never);
       }
     };
+    const renderContent = (content: ListItemType) => {
+      if (
+        searchTerm &&
+        content &&
+        !React.isValidElement(content) &&
+        typeof content === 'object' &&
+        !Array.isArray(content) &&
+        'label' in content &&
+        content?.label
+      ) {
+        return (
+          <Highlighter
+            highlightClassName="search-text"
+            highlightTag={'strong'}
+            searchWords={[searchTerm]}
+            autoEscape={true}
+            textToHighlight={content.label}
+          />
+        );
+      }
+
+      if (
+        content &&
+        !React.isValidElement(content) &&
+        typeof content === 'object' &&
+        !Array.isArray(content) &&
+        'label' in content &&
+        content?.label
+      ) {
+        return content.label;
+      }
+
+      return content;
+    };
 
     return (
       <div
@@ -54,19 +88,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       >
         <div css={contentStyle()}>
           {/** @TODO latest version typescript 4.4 is solving this as a constant */
-          typeof content === 'string' || typeof content === 'number' ? (
-            content
-          ) : searchTerm ? (
-            <Highlighter
-              highlightClassName="search-text"
-              highlightTag={'strong'}
-              searchWords={[searchTerm]}
-              autoEscape={true}
-              textToHighlight={content.label}
-            />
-          ) : (
-            content.label
-          )}
+          renderContent(content)}
         </div>
       </div>
     );

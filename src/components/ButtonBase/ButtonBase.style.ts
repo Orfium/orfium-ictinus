@@ -25,7 +25,7 @@ export const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
 const fontSizeBasedOnSize = (theme: Theme, size: 'lg' | 'md' | 'sm') => {
   switch (size) {
     case 'sm':
-      return theme.typography.fontSizes['14'];
+      return theme.typography.fontSizes['13'];
     default:
       return theme.typography.fontSizes['16'];
   }
