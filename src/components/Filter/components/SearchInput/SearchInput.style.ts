@@ -3,7 +3,7 @@ import { rem } from 'polished';
 import { Theme } from 'theme';
 
 export const textFieldWrapper = () => (theme: Theme) => css`
-  border-bottom: 1px solid ${theme.utils.getColor('lightCoolGray', 200)};
+  border-bottom: 1px solid ${theme.utils.getColor('lightGrey', 250)};
 
   div:first-of-type {
     outline: none;

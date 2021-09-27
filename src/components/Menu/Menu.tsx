@@ -17,7 +17,7 @@ import { wrapperStyle } from './Menu.style';
 import List from 'components/List';
 
 export type Props = {
-  /** the color of the button based on our colors eg. red-400 */
+  /** the color of the button based on our colors eg. red-500 */
   color?: string;
   /** Items that are being declared as menu options */
   items?: string[];
@@ -91,7 +91,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           }
           iconLeft={
             !isEmpty(avatar) ? (
-              <Avatar size={'xs'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
+              <Avatar size={'xxs'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
                 {avatar?.letter}
               </Avatar>
             ) : leftIconName ? (

@@ -10,6 +10,6 @@ export const flexContainer = () => (): SerializedStyles => css`
 export const labelUnitStyle = () => (theme: Theme): SerializedStyles => css`
   width: 80%;
   font-size: ${theme.typography.fontSizes['12']};
-  color: ${theme.utils.getColor('lightGray', 500)};
+  color: ${theme.utils.getColor('lightGrey', 650)};
   text-align: center;
 `;

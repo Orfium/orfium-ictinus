@@ -3,7 +3,7 @@ import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import * as React from 'react';
 
-import { flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
+import { BASE_SHADE, flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
 import {
   calculateActualColorFromComponentProp,
   ColorShapeFromComponent,
@@ -39,9 +39,9 @@ const useTypeColorToColorMatch = () => {
 export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFromComponent>;
 
 /**
- * Apply for each type passed what color it is and shade (shade now is auto applied at 400)
+ * Apply for each type passed what color it is and shade (shade now is auto applied at 500)
  * as this is heavy this runs only once at the initialization of the app under the theme provider
- * return e.g { primary: { shade: 400, color: 'orange'}, info: { shade: 400, color: 'darkBlue'}}
+ * return e.g { primary: { shade: 500, color: 'orange'}, info: { shade: 500, color: 'darkBlue'}}
  */
 const calculateTypesShadeAndColors = (
   types: Record<typeof mainTypes[number], generatedColorShades>,
@@ -50,11 +50,11 @@ const calculateTypesShadeAndColors = (
   // for each mainType
   return mainTypes.reduce((mainTypeAcc, mainType) => {
     // save the base color of the the type
-    const typeColor = types[mainType][400]; // base color of the type
+    const typeColor = types[mainType][BASE_SHADE]; // base color of the type
     const flatPaletteKeys = keys(palette); // the keys of the flat palette so we can iterate
 
     // construct a new key in the main object with name from the main type currently in iteration
-    // and return the color found in the flat colors e.g { shade: 400, color: 'orange'}
+    // and return the color found in the flat colors e.g { shade: 500, color: 'orange'}
     // if nothing found then it will return empty object {}
     mainTypeAcc[mainType] = flatPaletteKeys.reduce((acc, paletteColor) => {
       const colorShadesKeys = keys(palette[paletteColor]); // the shades of the palette color currently in the iteration
@@ -62,7 +62,7 @@ const calculateTypesShadeAndColors = (
         shade => palette[paletteColor][shade] === typeColor
       );
 
-      // return either the found color as e.g { shade: 400, color: 'orange'} or the object as it was
+      // return either the found color as e.g { shade: 500, color: 'orange'} or the object as it was
       return foundShadeWithThatColor
         ? { shade: Number(foundShadeWithThatColor), color: paletteColor }
         : acc;

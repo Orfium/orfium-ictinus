@@ -16,7 +16,7 @@ export const getBackgroundColor = ({
   styleType,
 }: BackgroundColorProps) => {
   if (open) {
-    return defineBackgroundColor(theme, activeCalculatedColor);
+    return theme.utils.getColor(activeCalculatedColor.color, 500);
   } else if (hasSelectedValue || styleType === 'transparent') {
     return theme.utils.getColor('neutralWhite', 100);
   } else if (styleType === 'filled' || styleType === 'outlined') {
@@ -34,7 +34,7 @@ export const getTextColor = ({
   calculatedColor,
 }: BaseColorProps) => {
   if (hasSelectedValue && !open) {
-    return theme.utils.getColor(activeCalculatedColor.color, 500);
+    return theme.utils.getColor(activeCalculatedColor.color, 650);
   } else if (open) {
     return pickTextColorFromSwatches(activeCalculatedColor.color, activeCalculatedColor.shade);
   }
@@ -51,7 +51,7 @@ export const getBorder = ({
   isDivider,
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
-    const calculatedShade = shade < 700 ? 100 : -100;
+    const calculatedShade = shade < 950 ? 100 : -100;
 
     return (shade + calculatedShade) as typeof colorShades[number];
   };

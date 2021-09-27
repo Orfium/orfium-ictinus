@@ -62,15 +62,19 @@ export const buttonWrapperStyle = ({
         !disabled && !open
           ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
           : undefined,
-      border: `${borderStyleParams} ${getHoverBorder({
-        styleType,
-        filterType,
-        theme,
-        open,
-        calculatedColor,
-        activeCalculatedColor,
-        hasSelectedValue,
-      })}`,
+      border: `${borderStyleParams} ${
+        !open
+          ? getHoverBorder({
+              styleType,
+              filterType,
+              theme,
+              open,
+              calculatedColor,
+              activeCalculatedColor,
+              hasSelectedValue,
+            })
+          : 'transparent'
+      }`,
     },
   };
 };
@@ -215,10 +219,10 @@ export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (the
 };
 
 export const valueSpanStyle = () => css`
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
 `;
 
 export const menuStyle = () => (theme: Theme) => css`

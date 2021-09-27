@@ -3,9 +3,9 @@ import { shade, tint } from 'polished';
 import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
 
-const BASE_PERCENTAGE = 0.25;
+const BASE_PERCENTAGE = 0.1;
 
-const EXCLUDED = ['white', 'black'];
+const EXCLUDED = ['white', 'black', 'pale'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
@@ -14,22 +14,26 @@ const reduceColorShades = (arr: string[]) =>
     .filter((value, index, arr) => arr.indexOf(value) === index)
     .reverse()
     .reduce((acc, _, index) => {
-      acc[`${index + 1}00`] = _;
+      acc[`${(index + 1) * 50}`] = _;
 
       return acc;
     }, {} as generatedColorShades);
 
-const createShades = (func: (index: number) => string, numOfShades = 4) =>
+const createShades = (func: (index: number) => string, numOfShades = 10) =>
   new Array(numOfShades).fill(null).reduce((acc, __, index) => {
     acc.push(func(index));
 
     return acc;
   }, []);
 
-export const colorShadesCreator = (base: string, per: number): generatedColorShades =>
+export const colorShadesCreator = (
+  base: string,
+  per: number,
+  numShade?: number
+): generatedColorShades =>
   reduceColorShades([
-    ...createShades((index: number) => shade(per * index, base)).reverse(),
-    ...createShades((index: number) => tint(per * index, base)),
+    ...createShades((index: number) => shade(per * index, base), numShade).reverse(),
+    ...createShades((index: number) => tint(per * index, base), numShade),
   ]);
 
 export const iterateObject = <T>(
@@ -40,7 +44,7 @@ export const iterateObject = <T>(
     acc[value] =
       typeof obj[value] !== 'object'
         ? func(obj[value], value)
-        : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
+        : EXCLUDED.includes(value) ? obj[value] : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
 
     return acc;
   }, {});

@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
+import { Theme } from 'theme';
+import { BASE_SHADE } from 'theme/palette';
 
-import { Theme } from '../../theme';
 import { Props } from './Radio';
 
 const hoverColor = 'rgba(0, 0, 0, 0.05)';
@@ -56,18 +57,18 @@ const determineBoxShadow = ({
   filled,
 }: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (theme: Theme) => {
   if (disabled && !checked) {
-    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGray', 200)}`;
+    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGrey', 250)}`;
   }
   if (checked) {
     return `${boxShadowSpread('2px')} currentColor, ${boxShadowSpread(
       '4px'
-    )} ${theme.utils.getColor('neutralWhite', 100)}, ${boxShadowSpread('12px')} currentColor`;
+    )} ${theme.utils.getColor('neutralWhite', 50)}, ${boxShadowSpread('12px')} currentColor`;
   }
   if (filled) {
-    return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGray', 300)}`;
+    return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGrey', 300)}`;
   }
 
-  return `${boxShadowSpread('2px')} ${theme.utils.getColor('lightGray', 500)}`;
+  return `${boxShadowSpread('2px')} ${theme.utils.getColor('lightGrey', 300)}`;
 };
 
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (
@@ -92,7 +93,7 @@ export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedSt
   width: ${rem('48px')};
   height: ${rem('48px')};
 
-  color: ${theme.utils.getColor('primary', 400, 'normal')};
+  color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
   border: 0;
   opacity: ${disabled ? 0.5 : 1};
   cursor: pointer;

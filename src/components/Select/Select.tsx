@@ -154,7 +154,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           <Icon
             size={20}
             name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
-            color={theme.utils.getColor('lightGray', 500)}
+            color={theme.utils.getColor('lightGrey', 650)}
             onClick={() => isSearchable && open && setOpen(!open)}
           />
         </div>

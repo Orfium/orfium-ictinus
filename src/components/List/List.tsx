@@ -1,6 +1,7 @@
 import React from 'react';
 import { TestProps } from 'utils/types';
 
+import { wrapperStyle } from './List.style';
 import NormalList from './NormalList';
 import { ListItemType, ListRowSize, SelectHandlerType } from './types';
 import VirtualizedList from './VirtualizedList';
@@ -42,32 +43,36 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
     },
     ref
   ) => {
-    return isVirtualized ? (
-      <VirtualizedList
-        items={data}
-        rowSize={rowSize}
-        customWidth={width}
-        customHeight={height}
-        ref={ref}
-        selectedItem={selectedItem}
-        defaultOption={defaultOption}
-        searchTerm={searchTerm}
-        handleOptionClick={handleOptionClick}
-        dataTestId={dataTestId}
-      />
-    ) : (
-      <NormalList
-        items={data}
-        rowSize={rowSize}
-        width={width}
-        height={height}
-        ref={ref}
-        selectedItem={selectedItem}
-        defaultOption={defaultOption}
-        searchTerm={searchTerm}
-        handleOptionClick={handleOptionClick}
-        dataTestId={dataTestId}
-      />
+    return (
+      <div css={wrapperStyle({ width })}>
+        {isVirtualized ? (
+          <VirtualizedList
+            items={data}
+            rowSize={rowSize}
+            customWidth={width}
+            customHeight={height}
+            ref={ref}
+            selectedItem={selectedItem}
+            defaultOption={defaultOption}
+            searchTerm={searchTerm}
+            handleOptionClick={handleOptionClick}
+            dataTestId={dataTestId}
+          />
+        ) : (
+          <NormalList
+            items={data}
+            rowSize={rowSize}
+            width={width}
+            height={height}
+            ref={ref}
+            selectedItem={selectedItem}
+            defaultOption={defaultOption}
+            searchTerm={searchTerm}
+            handleOptionClick={handleOptionClick}
+            dataTestId={dataTestId}
+          />
+        )}
+      </div>
     );
   }
 );

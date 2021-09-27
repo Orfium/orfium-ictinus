@@ -25,7 +25,7 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
 .emotion-2 {
   width: 1000px;
   height: 400px;
-  background: #f3f3f3;
+  background: #f3f5f8;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,13 +49,13 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
 }
 
 .emotion-4 {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
   background: white;
   border-radius: 0;
 }
 
 .emotion-5 {
-  padding: 20px;
+  padding: 16px;
 }
 
 <div
@@ -96,7 +96,7 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
         className="emotion-2"
       >
         <p>
-          (Card inside a lightGray container to test the transparency/radius/elevation props)
+          (Card inside a lightGrey container to test the transparency/radius/elevation props)
         </p>
         <div
           className="emotion-3"

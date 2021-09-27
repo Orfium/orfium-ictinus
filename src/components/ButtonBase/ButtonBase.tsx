@@ -15,7 +15,7 @@ export type EventButtonProps = {
 export type Props = {
   /** Type indicating the type of the button */
   type?: AcceptedColorComponentTypes;
-  /** the color of the button based on our colors eg. red-400 */
+  /** the color of the button based on our colors eg. red-500 */
   color?: string;
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';

@@ -33,7 +33,7 @@ export const dayWrapperStyle = ({
   position: relative;
   color: ${isSelected
     ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-    : theme.utils.getColor('darkGray', 700)};
+    : theme.utils.getColor('darkGrey', 850)};
   width: 40px;
   padding: 0 4px;
   font-weight: ${isToday && 'bold'};
@@ -42,7 +42,7 @@ export const dayWrapperStyle = ({
     ? 'transparent'
     : (isSelected || isBetween) &&
       typeof isBetween !== 'undefined' &&
-      transparentize(0.9, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))};
+      theme.utils.getColor('blue', 50)};
   border-bottom-right-radius: ${isLast && isSelected && '100%'};
   border-top-right-radius: ${isLast && isSelected && '100%'};
   border-bottom-left-radius: ${isFirst && isSelected && '100%'};
@@ -50,6 +50,7 @@ export const dayWrapperStyle = ({
 
   ${(isSelected || isLast || isFirst) &&
     `&:after {
+    z-index: -1;
     content: ' ';
     height: 100%;
     width: 50%;
@@ -60,7 +61,7 @@ export const dayWrapperStyle = ({
          ? 'transparent'
          : (isSelected || isBetween) &&
            typeof isBetween !== 'undefined' &&
-           transparentize(0.9, theme.utils.getColor(calculatedColor.color, calculatedColor.shade))
+           theme.utils.getColor('blue', 50)
      };
   left: ${isLast ? '0' : 'initial'};
   right: ${isFirst ? '0' : 'initial'};
@@ -71,17 +72,18 @@ export const dayWrapperStyle = ({
   }`}
 `;
 
-export const emptyDayStyle = () => () => css`
+export const emptyDayStyle = ({ isBetween }: { isBetween: boolean }) => (theme: Theme) => css`
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: ${isBetween ? theme.utils.getColor('blue', 50) : 'transparent'};
 `;
 
 export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Props) => (
   theme: Theme
 ) => css`
-  border: 1px solid ${isToday ? '#cfcfcf' : 'transparent'};
+  border: 1px solid ${isToday ? theme.utils.getColor('lightGrey', 450) : 'transparent'};
   border-radius: ${(isToday || isSelected) && '100%'};
   width: 39px;
   height: 39px;
@@ -95,6 +97,6 @@ export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Pro
   ${!disabled &&
     `&:hover {
             border-radius: 100%;
-            background: ${!isSelected && darken(0.03, theme.palette.white)};
+            background: ${!isSelected && theme.utils.getColor('blue', 100)};
           }`}
 `;

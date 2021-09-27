@@ -6,6 +6,7 @@ import React from 'react';
 import { ChangeEvent } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 
+import { BASE_SHADE } from '../../theme/palette';
 import Icon from '../Icon';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import Options from './components/Options/Options';
@@ -55,9 +56,9 @@ const Filter: React.FC<Props> = props => {
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
 
-  // The active calculated color is the base of the defined color. So till today the base is defined as '400'.
+  // The active calculated color is the base of the defined color. So till today the base is defined as '500'.
   const activeCalculatedColor = calculateColorBetweenColorAndType(
-    `${calculatedColor.color}-400`,
+    `${calculatedColor.color}-${BASE_SHADE}`,
     buttonType
   );
   const iconColor = getTextColor({
@@ -130,7 +131,7 @@ const Filter: React.FC<Props> = props => {
       return theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade);
     }
 
-    return theme.utils.getColor('lightGray', 600);
+    return theme.utils.getColor('lightGrey', 750);
   };
 
   /**

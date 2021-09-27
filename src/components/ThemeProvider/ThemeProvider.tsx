@@ -34,7 +34,7 @@ export const globalStyles = (theme: Theme) => css`
   }
 
   // default outline for all focused elements defined by the design team
-  // our lightGray base color (400 shade) with opacity at 50%
+  // our lightGrey base color (500 shade) with opacity at 50%
   *:focus {
     outline: 0;
   }

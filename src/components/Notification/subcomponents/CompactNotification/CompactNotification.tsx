@@ -3,7 +3,9 @@ import * as React from 'react';
 import useTheme from '../../../../hooks/useTheme';
 import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
+import Button from '../../../Button';
 import Icon from '../../../Icon';
+import IconButton from '../../../IconButton';
 import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, closeActionContainer } from '../../Notification.style';
 import {
@@ -81,13 +83,15 @@ const CompactNotification: React.FC<Props> = ({
       </div>
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
-          <span
+          <Button
             css={primaryActionContainer()}
+            type={'link'}
+            size={'sm'}
             onClick={primaryCTA}
             data-testid={generateTestDataId('notification-primary', dataTestId)}
           >
             {primaryCTALabel}
-          </span>
+          </Button>
         )}
         {closeCTA && (
           <span
@@ -95,7 +99,7 @@ const CompactNotification: React.FC<Props> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
+            <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
           </span>
         )}
       </div>

@@ -20,7 +20,7 @@ export const optionStyle = ({
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
     background-color: ${selected ? darken(0.07, theme.palette.white) : theme.palette.white};
     cursor: default;
-    color: ${noResultsExist ? theme.utils.getColor('lightGray', 600) : 'initial'};
+    color: ${noResultsExist ? theme.utils.getColor('lightGrey', 750) : 'initial'};
     text-align: ${noResultsExist ? 'center' : 'initial'};
     text-overflow: ellipsis;
     white-space: nowrap;

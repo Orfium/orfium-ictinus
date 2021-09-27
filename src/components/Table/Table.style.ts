@@ -12,11 +12,11 @@ export const tableRowHeadersStyle = (hasExpandableRows: boolean, hasOnCheck: boo
   css({
     paddingTop: theme.spacing.md,
     paddingBottom: theme.spacing.md,
-    borderBottomWidth: rem(1),
+    borderBottomWidth: rem(hasExpandableRows ? 0 : 1),
     borderBottomStyle: 'solid',
-    borderBottomColor: theme.utils.getColor('lightGray', 200),
+    borderBottomColor: theme.utils.getColor('lightGrey', 100),
 
-    'th:first-child': {
+    'th:first-of-type': {
       paddingLeft: hasOnCheck ? undefined : theme.spacing.md,
     },
 

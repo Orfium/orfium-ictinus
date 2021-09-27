@@ -12,7 +12,7 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  background-color: #232d7d;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -24,11 +24,11 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #181f55;
+  background-color: #6a00ff;
 }
 
 .emotion-1:active {
-  background-color: #0d102d;
+  background-color: #50c;
 }
 
 .emotion-2 {
@@ -154,11 +154,16 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
-  height: 3.5rem;
+  height: 2.875rem;
   border-radius: 0.25rem;
-  border-left: #6bbc15 4px solid;
-  background: #f7fbf3;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  color: #0e0e17;
+  font-size: 0.875rem;
+  border: 0.0625rem solid #d6f2dc;
+  background: #f4faf5;
+}
+
+.emotion-2[notification-type='banner'] {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
 }
 
 .emotion-3 {
@@ -194,13 +199,13 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 }
 
 .emotion-6 {
-  fill: #6bbc15;
+  fill: #36C152;
   width: 1.25rem;
   height: 1.25rem;
 }
 
 .emotion-6 path {
-  fill: #6bbc15;
+  fill: #36C152;
 }
 
 .emotion-7 {
@@ -213,26 +218,61 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   -ms-flex-align: center;
   align-items: center;
   padding-right: 1rem;
+  font-weight: 500;
 }
 
 .emotion-14 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #246ce5;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
   cursor: pointer;
-  color: #18aed2;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-14:hover {
+  background-color: transparent;
+}
+
+.emotion-14:active {
+  background-color: transparent;
 }
 
 .emotion-15 {
-  cursor: pointer;
-  margin-left: 1.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-16 {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .emotion-17 {
-  fill: #9b9b9b;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.emotion-19 {
+  fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-17 path {
-  fill: #9b9b9b;
+.emotion-19 path {
+  fill: #5f6c85;
 }
 
 <div
@@ -362,15 +402,24 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           <div
             className="emotion-7"
           >
-            <span
+            <button
               className="emotion-14"
-              data-testid="notification-primary"
+              data-testid="button"
+              disabled={false}
               onClick={[Function]}
             >
-              Action
-            </span>
+              <span
+                className="emotion-15"
+              >
+                <span
+                  className="emotion-16"
+                >
+                  Action
+                </span>
+              </span>
+            </button>
             <span
-              className="emotion-15"
+              className="emotion-17"
               data-testid="notification-close"
               onClick={[Function]}
             >
@@ -379,7 +428,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-17"
+                  className="emotion-19"
                 />
               </span>
             </span>
@@ -440,13 +489,22 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           <div
             className="emotion-7"
           >
-            <span
+            <button
               className="emotion-14"
-              data-testid="notification-primary"
+              data-testid="button"
+              disabled={false}
               onClick={[Function]}
             >
-              Action
-            </span>
+              <span
+                className="emotion-15"
+              >
+                <span
+                  className="emotion-16"
+                >
+                  Action
+                </span>
+              </span>
+            </button>
           </div>
         </div>
         <p
@@ -505,7 +563,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
             className="emotion-7"
           >
             <span
-              className="emotion-15"
+              className="emotion-17"
               data-testid="notification-close"
               onClick={[Function]}
             >
@@ -514,7 +572,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-17"
+                  className="emotion-19"
                 />
               </span>
             </span>
@@ -547,7 +605,7 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  background-color: #232d7d;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -559,11 +617,11 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #181f55;
+  background-color: #6a00ff;
 }
 
 .emotion-1:active {
-  background-color: #0d102d;
+  background-color: #50c;
 }
 
 .emotion-2 {
@@ -668,7 +726,7 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  background-color: #232d7d;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -680,11 +738,11 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #181f55;
+  background-color: #6a00ff;
 }
 
 .emotion-1:active {
-  background-color: #0d102d;
+  background-color: #50c;
 }
 
 .emotion-2 {
@@ -789,7 +847,7 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  background-color: #232d7d;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -801,11 +859,11 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #181f55;
+  background-color: #6a00ff;
 }
 
 .emotion-1:active {
-  background-color: #0d102d;
+  background-color: #50c;
 }
 
 .emotion-2 {
@@ -910,7 +968,7 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: #fff;
-  background-color: #232d7d;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -922,11 +980,11 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
 }
 
 .emotion-1:hover {
-  background-color: #181f55;
+  background-color: #6a00ff;
 }
 
 .emotion-1:active {
-  background-color: #0d102d;
+  background-color: #50c;
 }
 
 .emotion-2 {

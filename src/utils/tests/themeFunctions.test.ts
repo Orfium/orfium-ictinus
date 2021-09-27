@@ -16,7 +16,7 @@ describe('The usability of calculateActualColorFromComponentProp to be correct',
     const checkFunction = () => calculateActualColorFromComponentProp(testColor);
 
     expect(checkFunction).toThrowError(
-      `You passed a wrong color for the first argument: ${testColor} - try something like red-400`
+      `You passed a wrong color for the first argument: ${testColor} - try something like red-500`
     );
   });
   test('that it fails to get a wrong second argument', () => {
@@ -24,7 +24,7 @@ describe('The usability of calculateActualColorFromComponentProp to be correct',
     const checkFunction = () => calculateActualColorFromComponentProp(testColor);
 
     expect(checkFunction).toThrowError(
-      `You passed a wrong shade for the second argument: ${testColor} - try something like red-400`
+      `You passed a wrong shade for the second argument: ${testColor} - try something like red-500`
     );
   });
   test('get the color correctly', () => {
@@ -48,11 +48,11 @@ describe('The usability of getColorFromType to be correct', () => {
 
     expect(color).toBe(lightPaletteConfig.secondary);
   });
-  test('getColorFromType to get specific the primary to get the specia case of 100 shade', () => {
+  test('getColorFromType to get specific the primary to get the special case of 100 shade', () => {
     const testColor = 'primary';
     const color = getColorFromType(testColor, theme('light'));
 
-    expect(color).toBe('#c8cade');
+    expect(color).toBe('#ececfd');
   });
   test('getColorFromType to get a color from the palette and return the correct color', () => {
     const testColor = 'lightBlue';

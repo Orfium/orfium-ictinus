@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
+import { BASE_SHADE } from 'theme/palette';
 
 export const boldFont = (size: number, theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes[size]};
@@ -14,7 +15,7 @@ export const normalFont = (size: number, theme: Theme): SerializedStyles => css`
 
 const subHeading = (theme: Theme): SerializedStyles => css`
   ${normalFont(11, theme)};
-  color: ${theme.utils.getColor('lightGray', 600)};
+  color: ${theme.utils.getColor('lightGrey', 650)};
   margin: 0;
 `;
 
@@ -24,7 +25,7 @@ const subHeadingTop = (theme: Theme): SerializedStyles => css`
 `;
 
 const mainHeading = (theme: Theme): SerializedStyles => css`
-  color: ${theme.utils.getColor('primary', 400, 'normal')};
+  color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
   ${boldFont(16, theme)};
   margin: ${theme.spacing.sm} 0;
   cursor: default;
@@ -34,9 +35,9 @@ const article = (isHighlighted: boolean = false) => (theme: Theme): SerializedSt
   ${flex};
   width: 100%;
   flex-direction: column;
-  background: ${isHighlighted ? theme.utils.getColor('lightGray', 100) : 'transparent'};
+  background: ${isHighlighted ? theme.utils.getColor('lightGrey', 50) : 'transparent'};
   padding: ${theme.spacing.md};
-  border: 1px solid ${theme.utils.getColor('lightGray', 200)};
+  border: 1px solid ${theme.utils.getColor('lightGrey', 150)};
   border-radius: ${theme.spacing.xsm};
   :first-of-type {
     margin-right: ${theme.spacing.md};
@@ -60,15 +61,15 @@ const linkedRecordings = css`
 `;
 
 const linkedText = (theme: Theme): SerializedStyles => css`
-  ${boldFont(16, theme)};
-  color: ${theme.utils.getColor('lightGray', 600)};
+  ${boldFont(12, theme)};
+  color: ${theme.utils.getColor('lightGrey', 650)};
   margin: 0;
 `;
 
 const linkedCount = (theme: Theme): SerializedStyles => css`
   ${boldFont(16, theme)};
   padding: ${theme.spacing.xsm};
-  color: ${theme.utils.getColor('primary', 400, 'normal')};
+  color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
   background: ${theme.utils.getColor('primary', 100, 'normal')};
   border-radius: ${theme.spacing.xsm};
   margin-left: ${theme.spacing.lg};
@@ -98,7 +99,7 @@ const title = (theme: Theme): SerializedStyles => css`
   :hover {
     ${transition(0.2, 'text-decoration')};
     text-decoration: underline;
-    color: ${theme.utils.getColor('primary', 400, 'normal')};
+    color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
     a {
       display: block;
     }
@@ -107,7 +108,7 @@ const title = (theme: Theme): SerializedStyles => css`
 
 const tooltip = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['12']};
-  background-color: ${theme.utils.getColor('darkGray', 500)};
+  background-color: ${theme.utils.getColor('darkGrey', 650)};
 `;
 
 const iconHeadingWrapper = css`

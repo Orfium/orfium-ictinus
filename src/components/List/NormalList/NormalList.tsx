@@ -3,6 +3,7 @@ import React from 'react';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
+import { SelectOption } from '../../Select/Select';
 import ListItem from '../ListItem';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
@@ -54,6 +55,7 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
                 highlighted
                 dataTestId={dataTestId ?? 'ictinus_list' + '_default_option'}
                 handleOptionClick={handleOptionClick}
+                disabled={(defaultOption as SelectOption)?.isDisabled}
                 selected={
                   isUndefined(selectedItem) || isSelected({ item: defaultOption, selectedItem })
                 }
@@ -68,6 +70,7 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
                 index={index}
                 ref={ref}
                 searchTerm={searchTerm}
+                disabled={(item as SelectOption)?.isDisabled}
                 dataTestId={dataTestId}
                 handleOptionClick={handleOptionClick}
                 selected={isSelected({ item, selectedItem })}

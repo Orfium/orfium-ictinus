@@ -1,14 +1,13 @@
 import { css } from '@emotion/react';
+import useTheme from 'hooks/useTheme';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import values from 'lodash/values';
 import React from 'react';
 import { useState, Fragment, useRef } from 'react';
+import { flexCenter } from 'theme/functions';
+import { colorShades, flatColors, neutralColors, paleColors } from 'theme/palette';
 
-import useTheme from '../../../hooks/useTheme';
-import { flexCenter } from '../../../theme/functions';
-import { colorShades, flatColors, neutralColors } from '../../../theme/palette';
-import Button from '../../Button';
 import ColorUtility from '../ColorUtility/ColorUtility';
 import {
   colorBox,
@@ -17,6 +16,7 @@ import {
   paletteColorWrapper,
   paletteWrapper,
 } from './PaletteShowcase.style';
+import Button from 'components/Button';
 
 const PaletteShowcase = () => {
   const theme = useTheme();
@@ -24,7 +24,11 @@ const PaletteShowcase = () => {
   const [paletteColor, setPaletteColor] = useState<string | undefined>(undefined);
 
   type Palette = [typeof flatColors[number], string[]];
+  type PalePalette = [typeof paleColors[number], string[]];
+  // @ts-ignore
   const palette = toPairs(mapValues(theme.palette.flat, values)) as Palette[];
+  // @ts-ignore
+  const palePalette = toPairs(theme.palette.pale) as PalePalette;
 
   const onClick = () => {
     if (window) {
@@ -46,7 +50,7 @@ const PaletteShowcase = () => {
           .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
           .map(([colorName, colors]) => (
             <div key={colorName} css={paletteColorWrapper}>
-              <div css={colorNameBox(colors[3], colorName)}>
+              <div css={colorNameBox(colors[Math.round(colors.length / 2)], colorName)}>
                 <div
                   css={css`
                     flex: 1;
@@ -59,7 +63,7 @@ const PaletteShowcase = () => {
                     font-size: 14px;
                   `}
                 >
-                  Base (400)
+                  Base (500)
                 </div>
               </div>
               <div css={colorBoxWrapper}>
@@ -72,17 +76,47 @@ const PaletteShowcase = () => {
                     css={colorBox(
                       color,
                       colorName,
-                      ((index + 1) * 100) as typeof colorShades[number],
+                      ((index + 1) * 50) as typeof colorShades[number],
                       paletteColor === color
                     )}
                   >
-                    <div>{(index + 1) * 100}</div>
-                    <div>{color}</div>
+                    <div>{(index + 1) * 50}</div>
+                    <div css={{ textTransform: 'capitalize' }}>{color}</div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
+      </div>
+      <div>
+        <h3>PALE PALETTE</h3>
+        <p>Another palette is the pale where is not having shades.</p>
+        <div css={paletteColorWrapper}>
+          <div css={colorNameBox('white', 'yellow')}>
+            <div
+              css={css`
+                flex: 1;
+              `}
+            >
+              Pale
+            </div>
+            <div
+              css={css`
+                font-size: 14px;
+              `}
+            />
+          </div>
+          <div css={colorBoxWrapper}>
+            {/*
+        // @ts-ignore */}
+            {palePalette.map(([colorName, color]) => (
+              <div key={color} css={colorBox(color, colorName, 100, false, false)}>
+                <div>{colorName}</div>
+                <div css={{ textTransform: 'capitalize' }}>{color}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <div ref={colorUtilRef} css={flexCenter}>
         <ColorUtility defaultColor={paletteColor} />

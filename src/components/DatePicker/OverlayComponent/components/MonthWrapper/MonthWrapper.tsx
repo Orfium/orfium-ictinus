@@ -68,7 +68,7 @@ const MonthWrapper = ({
             >
               <Icon
                 name={'chevronSmallLeft'}
-                color={theme.utils.getColor('lightGray', 500)}
+                color={theme.utils.getColor('darkGrey', 850)}
                 size={25}
               />
             </div>
@@ -89,7 +89,7 @@ const MonthWrapper = ({
                       <Icon
                         name={'triangleDown'}
                         size={10}
-                        color={theme.utils.getColor('lightGray', 500)}
+                        color={theme.utils.getColor('darkGrey', 850)}
                       />
                     }
                   >
@@ -119,7 +119,7 @@ const MonthWrapper = ({
               >
                 <Icon
                   name={'chevronSmallRight'}
-                  color={theme.utils.getColor('lightGray', 500)}
+                  color={theme.utils.getColor('darkGrey', 850)}
                   size={25}
                 />
               </div>

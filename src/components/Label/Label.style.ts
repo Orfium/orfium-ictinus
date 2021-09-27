@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-
-import { Theme } from '../../theme';
+import { Theme } from 'theme';
+import { BASE_SHADE } from 'theme/palette';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = '3';
 
@@ -24,8 +24,8 @@ export const labelStyle = ({
   font-size: ${theme.typography.fontSizes['16']};
   font-weight: ${theme.typography.weights.regular};
   color: ${error
-    ? theme.utils.getColor('error', 400, 'normal')
-    : theme.utils.getColor('lightGray', 600)};
+    ? theme.utils.getColor('error', BASE_SHADE, 'normal')
+    : theme.utils.getColor('lightGrey', 750)};
   align-items: center;
   display: flex;
   top: 0;

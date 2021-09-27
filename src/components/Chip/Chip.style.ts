@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { darken, lighten, rem } from 'polished';
 import { flexCenterVertical } from 'theme/functions';
-import { colorShades, pickTextColorFromSwatches } from 'theme/palette';
+import { BASE_SHADE, colorShades, pickTextColorFromSwatches } from 'theme/palette';
 import { flatColors } from 'theme/palette';
 
 import { Theme } from '../../theme';
@@ -21,13 +21,13 @@ const styleBasedOnSize = (
       return `
       height: ${rem(20)};
       border-radius: ${rem(16.5)};
-      font-size: ${hasIcon ? theme.typography.fontSizes['12'] : theme.typography.fontSizes['13']};
+      font-size: ${theme.typography.fontSizes['10']};
       `;
     default:
       return `
       height: ${rem(24)};
       border-radius: ${rem(12.5)};
-      font-size: ${theme.typography.fontSizes['13']};
+      font-size: ${theme.typography.fontSizes['12']};
       `;
   }
 };
@@ -36,13 +36,13 @@ const wrapperStyleSwitch = (
   theme: Theme,
   styleType?: 'filled' | 'outlined',
   fill?: typeof flatColors[number],
-  shade: typeof colorShades[number] = 400
+  shade: typeof colorShades[number] = BASE_SHADE
 ) => {
   switch (styleType) {
     case 'outlined': {
       const fillColor = fill
         ? theme.utils.getColor(fill, shade)
-        : theme.utils.getColor('lightGray', shade);
+        : theme.utils.getColor('lightGrey', shade);
       const borderColor = shade < 500 ? darken('0.5', fillColor) : lighten('0.5', fillColor);
 
       return `
@@ -55,11 +55,11 @@ const wrapperStyleSwitch = (
     default:
       return `
         background-color: ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
+          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGrey', 50)
         };
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
         border: 1px solid ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
+          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGrey', 50)
         };
       `;
   }

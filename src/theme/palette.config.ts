@@ -1,29 +1,38 @@
-import { flatColors } from './palette';
+import { flatColors, paleColors } from './palette';
 
 export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
-  lightGray: '#cfcfcf',
-  darkGray: '#494949',
-  warmGray: '#afa6a3',
-  coolGray: '#a3a9ac',
-  lightCoolGray: '#F3F5F9',
-  green: '#6bbc15',
-  red: '#d40000',
-  orange: '#f5781b',
-  // @TODO only for old VH - soon will be removed
-  darkOrange: '#bf360c',
-  darkBlue: '#232d7d',
-  magenta: '#d21e75',
-  yellow: '#ffc700',
-  purple: '#71458f',
-  blue: '#1283d3',
-  lightBlue: '#18aed2',
-  teal: '#27dcbd',
-  mint: '#2AFFC3',
-  vividPurple: '#8833FF',
-  vividBlue: '#4945EE',
-  cyan: '#76C6FF',
+  greyScale: '#808080',
+  darkGrey: '#32324E',
+  lightGrey: '#889BBF',
+  red: '#FF1744',
+  magenta: '#C813D5',
+  purple: '#8833FF',
+  darkBlue: '#4945EE',
+  blue: '#2979FF',
+  lightBlue: '#28BDFF',
+  teal: '#1DE9B6',
+  green: '#36C152',
+  yellow: '#FDD835',
+  orange: '#FF6F00',
+  darkOrange: '#BF360C',
   neutralWhite: '#fbfbfb',
   neutralBlack: '#030303',
+};
+
+export const palePaletteConfig: Record<typeof paleColors[number], string> = {
+  greyScale: '#F9F9F9',
+  darkGrey: '#F5F5F6',
+  lightGrey: '#F9FAFC',
+  red: '#FFF3F6',
+  magenta: '#FCF3FD',
+  purple: '#F9F5FF',
+  darkBlue: '#F6F6FE',
+  blue: '#F4F8FF',
+  lightBlue: '#F4FCFF',
+  teal: '#F4FEFB',
+  green: '#F5FCF6',
+  yellow: '#FFFDF5',
+  orange: '#FFF8F2',
 };
 
 export const lightPaletteConfig: PaletteConfig = {
@@ -32,20 +41,25 @@ export const lightPaletteConfig: PaletteConfig = {
   secondary: flatPaletteConfig.yellow,
 
   //rest
-  success: flatPaletteConfig.green,
+  success: flatPaletteConfig.green, //550 shade
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGray,
+  light: flatPaletteConfig.greyScale,
+  link: '#246CE5',
 
   flat: {
     ...flatPaletteConfig,
   },
 
+  pale: {
+    ...palePaletteConfig,
+  },
+
   text: {
-    primary: flatPaletteConfig.darkGray,
-    secondary: flatPaletteConfig.coolGray,
-    light: flatPaletteConfig.lightGray,
+    primary: flatPaletteConfig.darkGrey,
+    secondary: flatPaletteConfig.lightGrey,
+    light: flatPaletteConfig.greyScale,
   },
 
   white: 'white',
@@ -54,24 +68,28 @@ export const lightPaletteConfig: PaletteConfig = {
 
 export const darkPaletteConfig: PaletteConfig = {
   // Primary Palette
-  primary: flatPaletteConfig.darkGray,
-  secondary: flatPaletteConfig.lightGray,
+  primary: flatPaletteConfig.darkGrey,
+  secondary: flatPaletteConfig.lightGrey,
 
   //rest
   success: flatPaletteConfig.green,
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGray,
+  light: flatPaletteConfig.lightGrey,
 
   flat: {
     ...flatPaletteConfig,
   },
 
+  pale: {
+    ...palePaletteConfig,
+  },
+
   text: {
-    primary: flatPaletteConfig.darkGray,
-    secondary: flatPaletteConfig.coolGray,
-    light: flatPaletteConfig.lightGray,
+    primary: flatPaletteConfig.darkGrey,
+    secondary: flatPaletteConfig.greyScale,
+    light: flatPaletteConfig.lightGrey,
   },
 
   white: 'white',
@@ -79,6 +97,8 @@ export const darkPaletteConfig: PaletteConfig = {
 };
 
 export type flatPaletteConfigType = Partial<Record<typeof flatColors[number], string>>;
+
+export type palePaletteConfigType = Partial<Record<typeof paleColors[number], string>>;
 
 export type TextPaletteConfigType = {
   primary?: string;
@@ -96,10 +116,13 @@ export type PaletteConfig = {
   warning?: string;
   info?: string;
   light?: string;
+  link?: string;
 
   text?: TextPaletteConfigType;
 
   flat?: flatPaletteConfigType;
+
+  pale?: palePaletteConfigType;
 
   white?: string;
   black?: string;

@@ -3,6 +3,7 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
 import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
+import Icon from '../Icon';
 
 <Meta title="Design System/Button" component={Button} />
 
@@ -51,9 +52,9 @@ Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default i
 <Preview>
   <Story name="Icon Button Sizes">
     <Stack>
-        <Button size={'lg'} iconLeft={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />} dataTestId={'size-lg'}>Hello world</Button>
-        <Button size={'md'} iconLeft={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />} dataTestId={'size-md'}>Hello world</Button>
-        <Button size={'sm'} iconLeft={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />} dataTestId={'size-sm'}>Hello world</Button>
+        <Button size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-lg'}>Hello world</Button>
+        <Button size={'md'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-md'}>Hello world</Button>
+        <Button size={'sm'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-sm'}>Hello world</Button>
     </Stack>
   </Story>
 </Preview>
@@ -72,17 +73,17 @@ Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default i
 </Preview>
 
 # Button Types
-Button types based on the system approved literals for `success, error, info, warning`
+Button types based on the system approved literals for `success, error, info, warning, link`
 
 <Preview>
   <Story name="Button Types">
     <Stack>
-        <Button size={'sm'} disabled type='success'>Disabled</Button>
-        <Button size={'sm'} type='success'>Hello world</Button>
-        <Button size={'sm'} type='error'>Hello world</Button>
-        <Button size={'sm'} type='info'>Hello world</Button>
-        <Button size={'sm'} type='warning'>Hello world</Button>
-        <Button size={'sm'} transparent>Hello world</Button>
+        <Button size={'sm'} disabled type='success'>Success</Button>
+        <Button size={'sm'} type='success'>Success</Button>
+        <Button size={'sm'} type='error'>Error</Button>
+        <Button size={'sm'} type='info'>Info</Button>
+        <Button size={'sm'} type='warning'>Warning</Button>
+        <Button size={'sm'} type='link'>Link</Button>
     </Stack>
   </Story>
 </Preview>
@@ -93,7 +94,7 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 <Preview>
   <Story name="Button Colors">
     <Stack>
-        <Button size={'sm'} disabled color={'red-400'}>Disabled</Button>
+        <Button size={'sm'} disabled color={'red-500'}>Disabled</Button>
         <Button size={'sm'} color={'red-600'}>Red 600</Button>
         <Button size={'sm'} color={'magenta-200'}>Magenta 200</Button>
     </Stack>
@@ -111,9 +112,9 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 <Preview>
   <Story name="Button with icon">
     <Stack>
-      <Button filled={true} size={'lg'} iconLeft={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
-      <Button filled={true} size={'lg'} iconRight={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
-      <Button filled={true} size={'lg'} iconLeft={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />} iconRight={<img src="https://brandmark.io/logo-rank/random/pepsi.png" width="16" height="16" />}>Hello world</Button>
+      <Button filled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
+      <Button filled={true} size={'lg'} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
+      <Button filled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dotsVertical'} color={'primary'} size={18} />}>Hello world</Button>
     </Stack>
   </Story>
 </Preview>
@@ -128,7 +129,7 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 # Transparent Button
 <Preview>
   <Story name="Transparent Button">
-    <Button type='success' size={'lg'} transparent>Hello world</Button>
+    <Button type='primary' size={'lg'} transparent>Hello world</Button>
   </Story>
 </Preview>
 

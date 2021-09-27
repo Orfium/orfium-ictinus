@@ -50,4 +50,6 @@ export const monthHeaderTitleStyle = ({ isRangePicker }: { isRangePicker: boolea
   display: flex;
   justify-content: center;
   cursor: ${!isRangePicker && 'pointer'};
+  font-weight: ${theme.typography.weights.medium};
+  color: ${theme.utils.getColor('darkGrey', 850)};
 `;
