@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'polished';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
@@ -36,7 +37,7 @@ const article = (isHighlighted: boolean = false) => (theme: Theme): SerializedSt
   flex-direction: column;
   background: ${isHighlighted ? theme.utils.getColor('lightGray', 100) : 'transparent'};
   padding: ${theme.spacing.md};
-  border: 1px solid ${theme.utils.getColor('lightGray', 200)};
+  border: ${rem(1)} solid ${theme.utils.getColor('lightGray', 200)};
   border-radius: ${theme.spacing.xsm};
   :first-of-type {
     margin-right: ${theme.spacing.md};
