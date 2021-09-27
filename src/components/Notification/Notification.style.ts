@@ -20,7 +20,7 @@ export const notificationsContainerPerType = (
         background: white;
       `
     : `
-        border-left: ${typeToThemePalette(theme, type)} 4px solid;
+        border-left: ${typeToThemePalette(theme, type)} ${rem(4)} solid;
         background: ${tint(0.95, typeToThemePalette(theme, type))};
         box-shadow: ${theme.elevation['02']};
 `;
