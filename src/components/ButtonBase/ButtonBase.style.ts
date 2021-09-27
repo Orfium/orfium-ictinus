@@ -50,6 +50,10 @@ export const buttonBaseStyle = ({
 >) => (theme: Theme) => {
   const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
   const calculateButtonColor = () => {
+    if (type === 'link') {
+      return theme.utils.getColor('blue', 550);
+    }
+
     if ((!filled && !transparent) || transparent) {
       return defineBackgroundColor(
         theme,
@@ -58,10 +62,6 @@ export const buttonBaseStyle = ({
         hasSupplementaryIcons,
         childrenCount > 0
       );
-    }
-
-    if (type === 'link') {
-      return theme.utils.getColor('blue', 550);
     }
 
     return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
