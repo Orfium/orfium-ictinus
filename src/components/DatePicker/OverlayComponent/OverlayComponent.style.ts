@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'polished';
 import { Theme } from 'theme';
 
 import { flex } from '../../../theme/functions';
@@ -8,7 +9,7 @@ export const overlayWrapperStyle = () => (theme: Theme): SerializedStyles => css
 `;
 
 export const optionsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  border-right: 1px solid #dfdfdf;
+  border-right: ${rem(1)} solid #dfdfdf;
 `;
 
 export const optionStyle = ({ selected }: { selected?: boolean }) => (
