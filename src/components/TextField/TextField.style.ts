@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'polished';
 import { Theme } from 'theme';
 
 import { Props } from './TextField';
@@ -52,7 +53,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
+      transform: translate(${rem(LABEL_TRANSFORM_LEFT_SPACING)}, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }
