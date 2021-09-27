@@ -48,7 +48,7 @@ const wrapperStyleSwitch = (
       return `
         background-color: ${fill ? fillColor : 'transparent'};
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
-        border: 1px solid ${borderColor};
+        border: ${rem(1)} solid ${borderColor};
       `;
     }
     case 'filled':
@@ -58,9 +58,9 @@ const wrapperStyleSwitch = (
           fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
         };
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
-        border: 1px solid ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
-        };
+        border: ${rem(1)} solid ${
+        fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
+      };
       `;
   }
 };
