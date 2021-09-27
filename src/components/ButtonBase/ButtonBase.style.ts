@@ -84,7 +84,7 @@ export const buttonBaseStyle = ({
     border:
       filled || transparent
         ? 'none'
-        : `solid 1px ${transparentize(
+        : `solid ${rem(1)} ${transparentize(
             0.5,
             defineBackgroundColor(
               theme,
