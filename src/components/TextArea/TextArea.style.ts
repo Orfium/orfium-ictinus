@@ -18,7 +18,7 @@ export const inputStyle = ({
   color: ${dark ? theme.palette.white : theme.palette.black};
   display: block;
   position: relative;
-  top: ${label && '7px'};
+  top: ${label && rem('7px')};
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
