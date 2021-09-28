@@ -54,6 +54,7 @@ export { default as TopNavBar } from './components/TopAppBar';
 
 export { default as useTheme } from './hooks/useTheme';
 export { default as useBreakpoints } from './hooks/useBreakpoints';
+export { default as useEscape } from './hooks/useEscape';
 export { default as Filter } from './components/Filter';
 
 export { Theme, default as themeConfig } from './theme';

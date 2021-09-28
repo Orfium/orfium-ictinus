@@ -36,6 +36,7 @@ export const buttonBaseStyle = ({
   filled,
   calculatedColor,
   size,
+  block,
   iconLeft,
   iconRight,
   isIconButton,
@@ -43,7 +44,7 @@ export const buttonBaseStyle = ({
   transparent,
   childrenCount,
 }: RequiredProperties<
-  Props & {
+  Omit<Props, 'buttonType'> & {
     calculatedColor: ColorShapeFromComponent;
     childrenCount: number;
   }
@@ -70,6 +71,8 @@ export const buttonBaseStyle = ({
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
     color: calculateButtonColor(),
+
+    width: block ? '100%' : undefined,
     backgroundColor:
       filled && !transparent
         ? defineBackgroundColor(

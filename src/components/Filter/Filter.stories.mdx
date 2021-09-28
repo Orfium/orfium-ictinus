@@ -40,6 +40,7 @@ Here you can see our two different filter types as well.
   <Story name="Filter with style types">
      <h2>Preset</h2>
     <Stack>
+<<<<<<< HEAD
        <FilterShowcase styleType="filled" color="lightGrey-50" />
        <FilterShowcase styleType="outlined" color="lightGrey-50" />
        <FilterShowcase styleType="elevated" color="lightGrey-50" />
@@ -50,6 +51,18 @@ Here you can see our two different filter types as well.
       <FilterShowcase styleType="filled" filterType="added" color="purple-150" />
       <FilterShowcase styleType="outlined" filterType="added" color="purple-150" />
       <FilterShowcase styleType="elevated" filterType="added" color="purple-150" />
+=======
+       <FilterShowcase styleType="filled" />
+       <FilterShowcase styleType="outlined" />
+       <FilterShowcase styleType="elevated" />
+       <FilterShowcase styleType="transparent" />
+    </Stack>
+    <h2>Added</h2>
+    <Stack>
+      <FilterShowcase styleType="filled" filterType="added" />
+      <FilterShowcase styleType="outlined" filterType="added" />
+      <FilterShowcase styleType="elevated" filterType="added" />
+>>>>>>> master
     </Stack>
   </Story>
 </Preview>
@@ -60,11 +73,26 @@ A filter with colors and a selection handler to return selection on change and t
 
 <Preview>
   <Story name="Filter with colors">
+    <h2>Primary</h2>
     <Stack>
+<<<<<<< HEAD
        <FilterShowcase styleType="filled" color="purple-50" />
        <FilterShowcase styleType="outlined" color="red-500" />
        <FilterShowcase styleType="elevated" color="darkGrey-300"/>
        <FilterShowcase styleType="transparent" color="magenta-100" />
+=======
+       <FilterShowcase styleType="filled" buttonType='primary' />
+       <FilterShowcase styleType="outlined" buttonType='primary' />
+       <FilterShowcase styleType="elevated" buttonType='primary' />
+       <FilterShowcase styleType="transparent" buttonType='primary' />
+    </Stack>
+    <h2>Secondary</h2>
+    <Stack>
+       <FilterShowcase styleType="filled" buttonType='secondary' />
+       <FilterShowcase styleType="outlined" buttonType='secondary' />
+       <FilterShowcase styleType="elevated" buttonType='secondary' />
+       <FilterShowcase styleType="transparent" buttonType='secondary' />
+>>>>>>> master
     </Stack>
   </Story>
 </Preview>
@@ -76,9 +104,19 @@ A filter with colors and a selection handler to return selection on change and t
     <Stack>
        <FilterShowcase
             styleType="filled"
+<<<<<<< HEAD
             color="lightGrey-500"
+=======
+>>>>>>> master
             defaultValue={{
-                 label: 'default item is a very long text that should be overflow ellipsis',
+                 label: 'default item is a very long text that should not be overflow ellipsis',
+                 value: '1',
+            }}
+        />
+        <FilterShowcase
+            styleType="filled"
+            defaultValue={{
+                 label: 'default item is a very long text that should be overflow ellipsis because the max width of the component is smaller than the width of the text',
                  value: '1',
             }}
         />
@@ -94,7 +132,11 @@ A filter that supports searching options
 <Preview>
   <Story name="Searchable Filter">
     <Stack>
+<<<<<<< HEAD
        <FilterShowcase styleType="filled" isSearchable color="lightGrey-50" />
+=======
+       <FilterShowcase styleType="filled" isSearchable />
+>>>>>>> master
     </Stack>
   </Story>
 </Preview>
@@ -129,8 +171,12 @@ Filter that support asynchronous fetching, with loading status
         selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }])}
         defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
         styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
+<<<<<<< HEAD
         color={select('color', ['lightGrey-50', 'magenta-100', 'darkGrey-700', 'red-500'], 'lightGrey-50')}
+=======
+>>>>>>> master
         isSearchable={boolean('isSearchable', false)}
+        buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
     />
   </Story>
 </Preview>

@@ -1,6 +1,149 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Button Async Button 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-2:active {
+  background-color: #50c;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-5 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #C813D5;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-5:hover {
+  background-color: #9c0fa6;
+}
+
+.emotion-5:active {
+  background-color: #700b77;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-9 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #C813D5;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-9:hover {
+  background-color: #9c0fa6;
+}
+
+.emotion-9:active {
+  background-color: #700b77;
+}
+
+.emotion-13 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #C813D5;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-13:hover {
+  background-color: #9c0fa6;
+}
+
+.emotion-13:active {
+  background-color: #700b77;
+}
+
 <div
   style={
     Object {
@@ -17,14 +160,7 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -33,7 +169,7 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -43,17 +179,16 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
       }
     >
       <button
-        className="css-4lk8tm-Button"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Sync Action
           </span>
@@ -68,22 +203,33 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
       }
     >
       <button
-        className="css-dnnnd5-Button"
+        className="emotion-5"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Async sm
           </span>
         </span>
       </button>
+      <div
+        className="emotion-8"
+      >
+        <div>
+          Button inner text from event: 
+          
+        </div>
+        <div>
+          Fake response: 
+          
+        </div>
+      </div>
     </div>
     <div
       style={
@@ -93,22 +239,33 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
       }
     >
       <button
-        className="css-1994lfm-Button"
+        className="emotion-9"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Async md
           </span>
         </span>
       </button>
+      <div
+        className="emotion-8"
+      >
+        <div>
+          Button inner text from event: 
+          
+        </div>
+        <div>
+          Fake response: 
+          
+        </div>
+      </div>
     </div>
     <div
       style={
@@ -118,28 +275,164 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
       }
     >
       <button
-        className="css-1tlu3zc-Button"
+        className="emotion-13"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Async lg
           </span>
         </span>
       </button>
+      <div
+        className="emotion-8"
+      >
+        <div>
+          Button inner text from event: 
+          
+        </div>
+        <div>
+          Fake response: 
+          
+        </div>
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Design System/Button Button Colors 1`] = `
+exports[`Storyshots Design System/Button Block Button 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  width: 100%;
+  background-color: #8833FF;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-2:active {
+  background-color: #50c;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-5 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-7 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8833FF;
+  width: 100%;
+  background-color: transparent;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: solid 1px rgba(136,51,255,0.5);
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-7:hover {
+  background-color: rgba(136,51,255,0.1);
+}
+
+.emotion-7:active {
+  background-color: rgba(136,51,255,0.2);
+}
+
+.emotion-9 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #36C152;
+  width: 100%;
+  background-color: transparent;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-10:hover {
+  background-color: rgba(54,193,82,0.1);
+}
+
+.emotion-10:active {
+  background-color: rgba(54,193,82,0.2);
+}
+
 <div
   style={
     Object {
@@ -156,14 +449,7 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -172,7 +458,7 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -182,17 +468,240 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-19fxgjm-Button"
+        className="emotion-2"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </span>
+          <span
+            className="emotion-5"
+          >
+            Hello world
+          </span>
+          <span
+            className="emotion-4"
+          >
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="emotion-7"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-9"
+          >
+            Hello world
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="emotion-10"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-9"
+          >
+            Hello world
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button Button Colors 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #0e0e17;
+  background-color: #FF1744;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-5 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #cc1236;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-5:hover {
+  background-color: #ec254c;
+}
+
+.emotion-5:active {
+  background-color: #f05472;
+}
+
+.emotion-8 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #0e0e17;
+  background-color: #e9a0ee;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-8:hover {
+  background-color: #df75e6;
+}
+
+.emotion-8:active {
+  background-color: #d549df;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="emotion-2"
         data-testid="button"
         disabled={true}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Disabled
           </span>
@@ -207,17 +716,16 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-nz7rb5-Button"
+        className="emotion-5"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Red 600
           </span>
@@ -232,17 +740,16 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
       }
     >
       <button
-        className="css-1s4qos3-Button"
+        className="emotion-8"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Magenta 200
           </span>
@@ -254,6 +761,116 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Button Sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-2:active {
+  background-color: #50c;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-5:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-5:active {
+  background-color: #50c;
+}
+
+.emotion-8 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-8:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-8:active {
+  background-color: #50c;
+}
+
 <div
   style={
     Object {
@@ -270,14 +887,7 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -286,7 +896,7 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -296,17 +906,16 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
       }
     >
       <button
-        className="css-54uhic-Button"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Hello world
           </span>
@@ -321,17 +930,16 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
       }
     >
       <button
-        className="css-1rg7573-Button"
+        className="emotion-5"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Hello world
           </span>
@@ -346,17 +954,16 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
       }
     >
       <button
-        className="css-4lk8tm-Button"
+        className="emotion-8"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
             Hello world
           </span>
@@ -368,6 +975,177 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Button Types 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #0e0e17;
+  background-color: #36C152;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 0.5;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-5 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #0e0e17;
+  background-color: #36C152;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-5:hover {
+  background-color: #2b9941;
+}
+
+.emotion-5:active {
+  background-color: #207130;
+}
+
+.emotion-8 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #0e0e17;
+  background-color: #FF1744;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-8:hover {
+  background-color: #e3002c;
+}
+
+.emotion-8:active {
+  background-color: #b00022;
+}
+
+.emotion-11 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #4945EE;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-11:hover {
+  background-color: #1b16ea;
+}
+
+.emotion-11:active {
+  background-color: #1511bc;
+}
+
+.emotion-14 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #0e0e17;
+  background-color: #FF6F00;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-14:hover {
+  background-color: #cc5900;
+}
+
+.emotion-14:active {
+  background-color: #994300;
+}
+
+.emotion-17 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #246ce5;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-17:hover {
+  background-color: transparent;
+}
+
+.emotion-17:active {
+  background-color: transparent;
+}
+
 <div
   style={
     Object {
@@ -384,14 +1162,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -400,7 +1171,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -410,19 +1181,18 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="css-1kzvidy-Button"
+        className="emotion-2"
         data-testid="button"
         disabled={true}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
-            Disabled
+            Success
           </span>
         </span>
       </button>
@@ -435,19 +1205,18 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="css-13finl0-Button"
+        className="emotion-5"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
-            Hello world
+            Success
           </span>
         </span>
       </button>
@@ -460,19 +1229,18 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="css-1iovcze-Button"
+        className="emotion-8"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
-            Hello world
+            Error
           </span>
         </span>
       </button>
@@ -485,19 +1253,18 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="css-4lk8tm-Button"
+        className="emotion-11"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
-            Hello world
+            Info
           </span>
         </span>
       </button>
@@ -510,19 +1277,18 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="css-11vz8yb-Button"
+        className="emotion-14"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
-            Hello world
+            Warning
           </span>
         </span>
       </button>
@@ -535,19 +1301,18 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="css-3r6zap-Button"
+        className="emotion-17"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-l730ys-Button"
+            className="emotion-4"
           >
-            Hello world
+            Link
           </span>
         </span>
       </button>
@@ -557,6 +1322,123 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Button with icon 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-2:active {
+  background-color: #50c;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #f3eaff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: #f3eaff;
+}
+
+.emotion-7 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-10 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+}
+
+.emotion-19 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.emotion-22 {
+  fill: #f3eaff;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.emotion-22 path {
+  fill: #f3eaff;
+}
+
 <div
   style={
     Object {
@@ -573,14 +1455,7 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -589,7 +1464,7 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -599,26 +1474,28 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
       }
     >
       <button
-        className="css-54uhic-Button"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
           <span
-            className="css-5zv1of-Button"
+            className="emotion-7"
           >
             Hello world
           </span>
@@ -633,28 +1510,30 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
       }
     >
       <button
-        className="css-54uhic-Button"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-uao30q-Button"
+            className="emotion-10"
           >
             Hello world
           </span>
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
         </span>
       </button>
@@ -667,37 +1546,42 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
       }
     >
       <button
-        className="css-54uhic-Button"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
           <span
-            className="css-1qy2jjj-Button"
+            className="emotion-19"
           >
             Hello world
           </span>
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-22"
+              />
+            </span>
           </span>
         </span>
       </button>
@@ -707,6 +1591,56 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #C813D5;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #9c0fa6;
+}
+
+.emotion-1:active {
+  background-color: #700b77;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -723,14 +1657,7 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -739,17 +1666,16 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
     </button>
   </div>
   <button
-    className="css-1tlu3zc-Button"
+    className="emotion-1"
     data-testid="button"
     disabled={false}
     onClick={[Function]}
-    type="button"
   >
     <span
-      className="css-1xr6sam-Button"
+      className="emotion-2"
     >
       <span
-        className="css-l730ys-Button"
+        className="emotion-3"
       >
         change me!
       </span>
@@ -759,6 +1685,149 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-2:active {
+  background-color: #50c;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #f3eaff;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-6 path {
+  fill: #f3eaff;
+}
+
+.emotion-7 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-8 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-8:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-8:active {
+  background-color: #50c;
+}
+
+.emotion-14 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-14:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-14:active {
+  background-color: #50c;
+}
+
 <div
   style={
     Object {
@@ -775,14 +1844,7 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -791,7 +1853,7 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
     </button>
   </div>
   <div
-    className="css-ptimel-Stack"
+    className="emotion-1"
   >
     <div
       style={
@@ -801,26 +1863,28 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       }
     >
       <button
-        className="css-54uhic-Button"
+        className="emotion-2"
         data-testid="button-size-lg"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
           <span
-            className="css-5zv1of-Button"
+            className="emotion-7"
           >
             Hello world
           </span>
@@ -835,26 +1899,28 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       }
     >
       <button
-        className="css-1rg7573-Button"
+        className="emotion-8"
         data-testid="button-size-md"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
           <span
-            className="css-5zv1of-Button"
+            className="emotion-7"
           >
             Hello world
           </span>
@@ -869,26 +1935,28 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       }
     >
       <button
-        className="css-4lk8tm-Button"
+        className="emotion-14"
         data-testid="button-size-sm"
         disabled={false}
         onClick={[Function]}
-        type="button"
       >
         <span
-          className="css-1xr6sam-Button"
+          className="emotion-3"
         >
           <span
-            className="css-1kner5m-Button"
+            className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
           <span
-            className="css-5zv1of-Button"
+            className="emotion-7"
           >
             Hello world
           </span>
@@ -900,6 +1968,56 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Non Filled Button 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8833FF;
+  background-color: transparent;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: solid 1px rgba(136,51,255,0.5);
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: rgba(136,51,255,0.1);
+}
+
+.emotion-1:active {
+  background-color: rgba(136,51,255,0.2);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -916,14 +2034,7 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -932,17 +2043,16 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
     </button>
   </div>
   <button
-    className="css-1e3j1b5-Button"
+    className="emotion-1"
     data-testid="button"
     disabled={false}
     onClick={[Function]}
-    type="button"
   >
     <span
-      className="css-1xr6sam-Button"
+      className="emotion-2"
     >
       <span
-        className="css-l730ys-Button"
+        className="emotion-3"
       >
         Hello world
       </span>
@@ -952,6 +2062,56 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Regular Button 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8833FF;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: #6a00ff;
+}
+
+.emotion-1:active {
+  background-color: #50c;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -968,14 +2128,7 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -984,17 +2137,16 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
     </button>
   </div>
   <button
-    className="css-54uhic-Button"
+    className="emotion-1"
     data-testid="button"
     disabled={false}
     onClick={[Function]}
-    type="button"
   >
     <span
-      className="css-1xr6sam-Button"
+      className="emotion-2"
     >
       <span
-        className="css-l730ys-Button"
+        className="emotion-3"
       >
         Hello world
       </span>
@@ -1004,6 +2156,56 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
 `;
 
 exports[`Storyshots Design System/Button Transparent Button 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #8833FF;
+  background-color: transparent;
+  padding: 1rem 1rem;
+  height: 3.5rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover {
+  background-color: rgba(136,51,255,0.1);
+}
+
+.emotion-1:active {
+  background-color: rgba(136,51,255,0.2);
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 <div
   style={
     Object {
@@ -1020,14 +2222,7 @@ exports[`Storyshots Design System/Button Transparent Button 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
       turn 
@@ -1036,17 +2231,16 @@ exports[`Storyshots Design System/Button Transparent Button 1`] = `
     </button>
   </div>
   <button
-    className="css-149enxm-Button"
+    className="emotion-1"
     data-testid="button"
     disabled={false}
     onClick={[Function]}
-    type="button"
   >
     <span
-      className="css-1xr6sam-Button"
+      className="emotion-2"
     >
       <span
-        className="css-l730ys-Button"
+        className="emotion-3"
       >
         Hello world
       </span>
