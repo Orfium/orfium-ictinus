@@ -13,7 +13,7 @@ export const searchWrapper = (dark: boolean) => (theme: Theme): SerializedStyles
 
   return css`
     flex-grow: 1;
-    max-width: 520px;
+    max-width: ${rem(520)};
     ${themeFunctions.flex}
     ${themeFunctions.flexCenterVertical}
     height: ${rem(36)};

@@ -3,7 +3,7 @@ import { rem } from 'polished';
 
 import { Theme } from '../../theme';
 
-export const LABEL_TRANSFORM_LEFT_SPACING = '3px';
+export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
 
 export const labelStyle = ({
   size,
@@ -20,8 +20,8 @@ export const labelStyle = ({
   position: absolute;
   user-select: none;
   transform: ${!animateToTop
-    ? `translate(${rem(LABEL_TRANSFORM_LEFT_SPACING)}, 0)`
-    : `translate(${rem(LABEL_TRANSFORM_LEFT_SPACING)}, -95%) scale(0.8);`};
+    ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
+    : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
   font-size: ${theme.typography.fontSizes['16']};
   font-weight: ${theme.typography.weights.regular};
   color: ${error

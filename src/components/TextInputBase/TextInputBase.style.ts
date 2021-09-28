@@ -21,12 +21,12 @@ const wrapperStyleSwitch = (
   switch (styleType) {
     case 'outlined':
       return `
-        box-shadow: 0 0 0 1px
+        box-shadow: 0 0 0 ${rem(1)}
           ${error ? 'transparent' : theme.utils.getColor('lightGray', 400)};
         &:focus-within, &:hover {
-          box-shadow: 0 0 0 1px ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)
-          };
+          box-shadow: 0 0 0 ${rem(1)} ${
+        !disabled ? 'transparent' : theme.utils.getColor('lightGray', 400)
+      };
         }
       `;
     case 'elevated':
@@ -57,7 +57,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     position: relative;
     background-color: ${lean ? 'transparent' : backgroundColor};
     opacity: ${disabled && 0.5};
-    border: 2px solid transparent;
+    border: ${rem(2)} solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
     border-color: ${error ? theme.utils.getColor('error', 400, 'normal') : undefined};
 
@@ -125,7 +125,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   color: ${dark ? theme.palette.white : theme.palette.black};
   display: block;
   position: relative;
-  top: ${label && '7px'};
+  top: ${label && rem(7)};
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
@@ -152,7 +152,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(${rem(LABEL_TRANSFORM_LEFT_SPACING)}, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }

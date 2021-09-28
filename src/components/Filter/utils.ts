@@ -1,15 +1,13 @@
-import { darken, lighten, transparentize } from 'polished';
+import { darken, lighten, rem } from 'polished';
 
 import { Theme } from '../../theme';
-import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
+import { pickTextColorFromSwatches } from '../../theme/palette';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
-import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
-
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
-export const borderStyleParams = 'solid 1px';
+export const borderStyleParams = `solid ${rem(1)}`;
 
 export const getBackgroundColor = ({
   open,
@@ -81,10 +79,7 @@ export const getHoverBorder = ({
   return 'transparent';
 };
 
-export const getHoverBackgroundColor = (
-  theme: Theme,
-  calculatedColor: ColorShapeFromComponent,
-) => {
+export const getHoverBackgroundColor = (theme: Theme, calculatedColor: ColorShapeFromComponent) => {
   const value = 0.1;
   const color = theme.utils.getColor(calculatedColor.color, 100);
 

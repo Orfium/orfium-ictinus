@@ -46,7 +46,7 @@ export const inputStyle = ({
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(${rem(LABEL_TRANSFORM_LEFT_SPACING)}, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }
