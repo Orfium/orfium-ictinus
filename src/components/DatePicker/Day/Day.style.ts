@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, transparentize } from 'polished';
+import { darken, rem, transparentize } from 'polished';
 import { Theme } from 'theme';
 
 import { pickTextColorFromSwatches } from '../../../theme/palette';
@@ -34,8 +34,8 @@ export const dayWrapperStyle = ({
   color: ${isSelected
     ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
     : theme.utils.getColor('darkGray', 700)};
-  width: 40px;
-  padding: 0 4px;
+  width: ${rem(40)};
+  padding: 0 ${rem(4)};
   font-weight: ${isToday && 'bold'};
   opacity: ${disabled ? 0.5 : 1};
   background: ${isLast || isFirst
@@ -81,10 +81,10 @@ export const emptyDayStyle = () => () => css`
 export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Props) => (
   theme: Theme
 ) => css`
-  border: 1px solid ${isToday ? '#cfcfcf' : 'transparent'};
+  border: ${rem(1)} solid ${isToday ? '#cfcfcf' : 'transparent'};
   border-radius: ${(isToday || isSelected) && '100%'};
-  width: 39px;
-  height: 39px;
+  width: ${rem(39)};
+  height: ${rem(39)};
   display: flex;
   align-items: center;
   justify-content: center;
