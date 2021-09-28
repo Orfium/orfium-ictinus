@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'polished';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
@@ -26,10 +27,10 @@ function getShadowBox(styleType: formFieldStyles, isBulkSection: boolean) {
   }
 
   if (styleType === 'filled') {
-    return '0px 7px 8px -5px rgb(0 0 0 / 15%)';
+    return `0px ${rem(7)} ${rem(8)} ${rem(-5)} rgb(0 0 0 / 15%)`;
   }
 
-  return '0px 2px 4px rgba(0 0 0 / 15%)';
+  return `0px ${rem(2)} ${rem(4)} rgba(0 0 0 / 15%)`;
 }
 
 function getHeaderBg(isChecked: boolean, isBulkSection: boolean, theme: Theme) {
