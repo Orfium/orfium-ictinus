@@ -30,7 +30,12 @@ const Tooltip: React.FC<Props> = ({
   placement = 'top',
 }) => {
   return (
-    <Tippy data-testid={id} css={tooltipStyle({ size })} content={content} placement={placement}>
+    <Tippy
+      data-testid={id}
+      css={tooltipStyle({ size, placement })}
+      content={content}
+      placement={placement}
+    >
       {children}
     </Tippy>
   );
