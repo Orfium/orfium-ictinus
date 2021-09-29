@@ -2702,8 +2702,8 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
   opacity: 1!important;
 }
 
-.emotion-8.place-::after {
-  border--color: #0e0e17!important;
+.emotion-8.place-bottom::after {
+  border-bottom-color: #0e0e17!important;
 }
 
 .emotion-9 {
@@ -2766,6 +2766,25 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
   font-size: 0.875rem;
 }
 
+.emotion-21 {
+  color: #fff!important;
+  background-color: #0e0e17!important;
+  max-width: 16rem;
+  padding: 0.5rem!important;
+  font-size: 0.875rem!important;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-21.show {
+  opacity: 1!important;
+}
+
+.emotion-21.place-top::after {
+  border-top-color: #0e0e17!important;
+}
+
 .emotion-24 {
   position: relative;
   text-align: right;
@@ -2797,6 +2816,25 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
 
 .emotion-30 path {
   fill: #444d5f;
+}
+
+.emotion-32 {
+  color: #fff!important;
+  background-color: #0e0e17!important;
+  max-width: 16rem;
+  padding: 0.5rem!important;
+  font-size: 0.875rem!important;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-32.show {
+  opacity: 1!important;
+}
+
+.emotion-32.place-right::after {
+  border-right-color: #0e0e17!important;
 }
 
 .emotion-35 {
@@ -2946,7 +2984,7 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                 className="emotion-7"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-21"
                   data-testid="surname"
                   placement="top"
                 >
@@ -3001,7 +3039,7 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
                 className="emotion-7"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-32"
                   data-testid="age"
                   placement="right"
                 >

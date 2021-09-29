@@ -42,8 +42,65 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   opacity: 1!important;
 }
 
-.emotion-2.place-::after {
-  border--color: #0e0e17!important;
+.emotion-2.place-top::after {
+  border-top-color: #0e0e17!important;
+}
+
+.emotion-3 {
+  color: #fff!important;
+  background-color: #0e0e17!important;
+  max-width: 16rem;
+  padding: 0.5rem!important;
+  font-size: 0.875rem!important;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-3.show {
+  opacity: 1!important;
+}
+
+.emotion-3.place-bottom::after {
+  border-bottom-color: #0e0e17!important;
+}
+
+.emotion-4 {
+  color: #fff!important;
+  background-color: #0e0e17!important;
+  max-width: 16rem;
+  padding: 0.5rem!important;
+  font-size: 0.875rem!important;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-4.show {
+  opacity: 1!important;
+}
+
+.emotion-4.place-right::after {
+  border-right-color: #0e0e17!important;
+}
+
+.emotion-5 {
+  color: #fff!important;
+  background-color: #0e0e17!important;
+  max-width: 16rem;
+  padding: 0.5rem!important;
+  font-size: 0.875rem!important;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-5.show {
+  opacity: 1!important;
+}
+
+.emotion-5.place-left::after {
+  border-left-color: #0e0e17!important;
 }
 
 <div
@@ -86,7 +143,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       By hover here you can see useful info
     </div>
     <div
-      className="emotion-2"
+      className="emotion-3"
       data-testid="bottom"
       placement="bottom"
     >
@@ -98,7 +155,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       By hover here you can see useful info
     </div>
     <div
-      className="emotion-2"
+      className="emotion-4"
       data-testid="right"
       placement="right"
     >
@@ -110,7 +167,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       By hover here you can see useful info
     </div>
     <div
-      className="emotion-2"
+      className="emotion-5"
       data-testid="left"
       placement="left"
     >
@@ -162,8 +219,8 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   opacity: 1!important;
 }
 
-.emotion-2.place-::after {
-  border--color: #0e0e17!important;
+.emotion-2.place-right::after {
+  border-right-color: #0e0e17!important;
 }
 
 .emotion-3 {
@@ -181,8 +238,8 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   opacity: 1!important;
 }
 
-.emotion-3.place-::after {
-  border--color: #0e0e17!important;
+.emotion-3.place-right::after {
+  border-right-color: #0e0e17!important;
 }
 
 .emotion-4 {
@@ -200,8 +257,8 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   opacity: 1!important;
 }
 
-.emotion-4.place-::after {
-  border--color: #0e0e17!important;
+.emotion-4.place-right::after {
+  border-right-color: #0e0e17!important;
 }
 
 <div
