@@ -843,7 +843,64 @@ exports[`Storyshots Design System/Filter Filter with big text 1`] = `
                       <span
                         className="emotion-8"
                       >
-                        default item is a very long text that should be overflow ellipsis
+                        default item is a very long text that should not be overflow ellipsis
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-3"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-4"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-8"
+                      >
+                        default item is a very long text that should be overflow ellipsis because the max width of the component is smaller than the width of the text
                       </span>
                     </span>
                   </span>
@@ -918,7 +975,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 
 .emotion-3:hover>div,
 .emotion-3:active>div {
-  background-color: #d6b7ff;
+  background-color: #6a00ff;
   border: solid 1px transparent;
 }
 
@@ -929,8 +986,8 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #f3eaff;
+  color: #fff;
+  background-color: #8833FF;
   border: solid 1px transparent;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1006,13 +1063,13 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 }
 
 .emotion-10 {
-  fill: #0e0e17;
+  fill: #fff;
   width: 0.375rem;
   height: 0.375rem;
 }
 
 .emotion-10 path {
-  fill: #0e0e17;
+  fill: #fff;
 }
 
 .emotion-12 {
@@ -1039,8 +1096,8 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
 
 .emotion-12:hover>div,
 .emotion-12:active>div {
-  background-color: #e3002c;
-  border: solid 1px #e3002c;
+  background-color: #6a00ff;
+  border: solid 1px #6a00ff;
 }
 
 .emotion-13 {
@@ -1050,9 +1107,9 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #FF1744;
-  border: solid 1px #cc1236;
+  color: #fff;
+  background-color: #8833FF;
+  border: solid 1px #6c28cc;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1069,43 +1126,15 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07));
 }
 
-.emotion-21 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-21:hover>span,
-.emotion-21:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-21:hover>div,
-.emotion-21:active>div {
-  background-color: #6b6b7a;
-  border: solid 1px transparent;
-}
-
-.emotion-22 {
+.emotion-31 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #848494;
+  color: #fff;
+  background-color: #fdfdfd;
   border: solid 1px transparent;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1115,7 +1144,7 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-30 {
+.emotion-40 {
   background: none;
   border: none;
   display: -webkit-box;
@@ -1131,28 +1160,74 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   min-width: 9.375rem;
 }
 
-.emotion-30:hover>span,
-.emotion-30:active>span {
+.emotion-40:hover>span,
+.emotion-40:active>span {
   border-top: solid 1px undefined;
   border-bottom: solid 1px undefined;
 }
 
-.emotion-30:hover>div,
-.emotion-30:active>div {
-  background-color: #eaa4ee;
+.emotion-40:hover>div,
+.emotion-40:active>div {
+  background-color: #9c0fa6;
   border: solid 1px transparent;
 }
 
-.emotion-31 {
+.emotion-41 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #fdfdfd;
+  color: #fff;
+  background-color: #C813D5;
   border: solid 1px transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+}
+
+.emotion-49 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+}
+
+.emotion-49:hover>span,
+.emotion-49:active>span {
+  border-top: solid 1px undefined;
+  border-bottom: solid 1px undefined;
+}
+
+.emotion-49:hover>div,
+.emotion-49:active>div {
+  background-color: #9c0fa6;
+  border: solid 1px #9c0fa6;
+}
+
+.emotion-50 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #fff;
+  background-color: #C813D5;
+  border: solid 1px #a00faa;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1185,6 +1260,9 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
        on
     </button>
   </div>
+  <h2>
+    Primary
+  </h2>
   <div
     className="emotion-1"
   >
@@ -1317,13 +1395,13 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
             className="emotion-20"
           >
             <button
-              className="emotion-21"
+              className="emotion-3"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-22"
+                className="emotion-4"
               >
                 <span
                   className="emotion-5"
@@ -1374,7 +1452,242 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
             className="emotion-2"
           >
             <button
-              className="emotion-30"
+              className="emotion-3"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-31"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-8"
+                      >
+                        Default value
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>
+    Secondary
+  </h2>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-40"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-41"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-8"
+                      >
+                        Default value
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-49"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-50"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-8"
+                      >
+                        Default value
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-20"
+          >
+            <button
+              className="emotion-40"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-41"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <span
+                    className="emotion-6"
+                  >
+                    <span
+                      className="emotion-7"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-8"
+                      >
+                        Default value
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <button
+              className="emotion-40"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
@@ -1716,7 +2029,16 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   display: -ms-flexbox;
   display: flex;
   border-left: 0!important;
-  padding-right: 1rem;
+  padding-right: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 2.125rem;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }
@@ -1806,7 +2128,16 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   display: -ms-flexbox;
   display: flex;
   border-left: 0!important;
-  padding-right: 1rem;
+  padding-right: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 2.125rem;
   border-top-right-radius: 1.5rem;
   border-bottom-right-radius: 1.5rem;
 }

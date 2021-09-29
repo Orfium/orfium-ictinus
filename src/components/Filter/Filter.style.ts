@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import { rem } from 'polished';
 
 import { Theme } from '../../theme';
+import { BASE_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
 import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
 import {
@@ -12,7 +13,7 @@ import {
   borderStyleParams,
 } from './utils';
 
-export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) => (
+export const wrapperStyle = ({ styleType, hasSelectedValue, open }: ButtonStyleProps) => (
   theme: Theme
 ) => {
   const boxShadow = theme.elevation['02'];
@@ -21,7 +22,10 @@ export const wrapperStyle = ({ styleType, hasSelectedValue }: ButtonStyleProps) 
     position: 'relative' as const,
     display: 'inline-block',
     height: rem(36),
-    filter: styleType === 'elevated' && !hasSelectedValue ? `drop-shadow(${boxShadow})` : undefined,
+    filter:
+      styleType === 'elevated' && !hasSelectedValue && !open
+        ? `drop-shadow(${boxShadow})`
+        : undefined,
   };
 };
 
@@ -57,7 +61,7 @@ export const buttonWrapperStyle = ({
       borderTop: `${borderStyleParams} ${dividerHoverColor}`,
       borderBottom: `${borderStyleParams} ${dividerHoverColor}`,
     },
-    ':hover > div,:active > div': {
+    ':hover > div, :active > div': {
       backgroundColor:
         !disabled && !open
           ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
@@ -75,6 +79,11 @@ export const buttonWrapperStyle = ({
             })
           : 'transparent'
       }`,
+      // color: pickTextColorFromSwatches(activeCalculatedColor.color, open ? BASE_SHADE : 100),
+    },
+    // hack to change color to arrow and close icons
+    ':hover > div > span > span > svg path, :hover > div > span > svg path': {
+      // fill: pickTextColorFromSwatches(activeCalculatedColor.color, open ? BASE_SHADE : 100),
     },
   };
 };
@@ -173,7 +182,11 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
   return {
     ...buttonBaseStyle(props)(theme),
     borderLeft: '0 !important',
-    paddingRight: theme.spacing.md,
+    paddingRight: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: rem(34),
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
   };
@@ -230,11 +243,12 @@ export const menuStyle = () => (theme: Theme) => css`
   top: ${rem(48)};
   min-width: ${rem(280)};
   left: 0;
-  width: 100%;
   height: auto;
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
   border-radius: ${rem(4)};
   z-index: 1;
   overflow: hidden;
+  min-width: 100%;
+  max-width: ${rem(620)};
 `;

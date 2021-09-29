@@ -13,7 +13,7 @@ export type StyleType = 'filled' | 'outlined' | 'elevated' | 'transparent';
 export type FilterType = 'preset' | 'added';
 
 export type Props = {
-  /** the color of the button when the menu is opened based on our colors eg. red-500 */
+  /** the color of the button when the menu is opened based on our colors eg. red-400 */
   color: string;
   /** The type of the button - defaults to "primary" */
   buttonType?: AcceptedColorComponentTypes;

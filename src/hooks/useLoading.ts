@@ -1,9 +1,11 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useState, MouseEvent } from 'react';
 
-export const useLoading = (
-  clickHandler?: (setLoading?: (isLoading: boolean) => void) => void,
-  defaultState = false
-) => {
+export type ClickEvent = MouseEvent<HTMLButtonElement> | undefined;
+export type ClickHandler =
+  | ((setLoading?: (isLoading: boolean) => void, event?: ClickEvent) => void)
+  | undefined;
+
+export const useLoading = (clickHandler: ClickHandler, defaultState = false) => {
   const [loading, setLoading] = useState(defaultState);
 
   const updateLoadingState = useCallback(
@@ -13,11 +15,14 @@ export const useLoading = (
     [setLoading]
   );
 
-  const handleAsyncOperation = useCallback(() => {
-    if (clickHandler) {
-      clickHandler(updateLoadingState);
-    }
-  }, [updateLoadingState, clickHandler]);
+  const handleAsyncOperation = useCallback(
+    (event: ClickEvent) => {
+      if (clickHandler) {
+        clickHandler(updateLoadingState, event);
+      }
+    },
+    [updateLoadingState, clickHandler]
+  );
 
   return { loading, handleAsyncOperation };
 };

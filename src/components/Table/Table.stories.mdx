@@ -1,5 +1,5 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
-import { select } from '@storybook/addon-knobs';
+import { select, number } from '@storybook/addon-knobs';
 import Table from './Table';
 
 <Meta title="Design System/Table" component={Table} />
@@ -277,6 +277,7 @@ Table with expandable rows and nested header
         ],
         expanded: () => <div>Hey i am an expandable content</div>,
       }))}
+      actionWidth={number('Action Width', 3)}
     />
   </Story>
 </Preview>

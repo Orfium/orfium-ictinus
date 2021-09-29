@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import { css } from '@emotion/react';
+import React, { FC, useState } from 'react';
 
 import Button from '../../Button';
 
@@ -17,22 +18,36 @@ const AsyncButtonShowcase: FC<{ text: string; btnSize?: 'lg' | 'md' | 'sm' | und
   text,
   btnSize,
 }) => {
-  return (
-    <Button
-      type={'secondary'}
-      size={btnSize}
-      onClick={setLoading => {
-        setLoading?.(true);
+  const [state, setState] = useState('');
+  const [response, setResponse] = useState('');
 
-        serviceMock()
-          .then(res => {
-            console.log(res);
-          })
-          .finally(() => setLoading?.(false));
-      }}
-    >
-      {text}
-    </Button>
+  return (
+    <>
+      <Button
+        type={'secondary'}
+        size={btnSize}
+        onClick={(setLoading, event) => {
+          setLoading?.(true);
+          setState((event?.target as HTMLElement).innerText);
+          serviceMock()
+            .then(res => {
+              setResponse(res as string);
+            })
+            .finally(() => setLoading?.(false));
+        }}
+      >
+        {text}
+      </Button>
+      <div
+        css={css`
+          display: flex;
+          flex-direction: column;
+        `}
+      >
+        <div>Button inner text from event: {state}</div>
+        <div>Fake response: {response}</div>
+      </div>
+    </>
   );
 };
 
