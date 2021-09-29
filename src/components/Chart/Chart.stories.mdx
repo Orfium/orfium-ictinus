@@ -1,4 +1,4 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
 import LineChart from './LineChart';
 import BarChartShowCase from '../storyUtils/BarChartShowCase';
@@ -80,7 +80,7 @@ import { DonutChart } from '@orfium/ictinus';
 
 <Preview>
   <Story name="DonutChart" parameters={{ decorators: [withKnobs] }}>
-    <DonutChartShowCase 
+    <DonutChartShowCase
       chartValue={text('chartValue', 'value')}
       chartUnits={text('chartUnits', 'units')}/>
   </Story>
