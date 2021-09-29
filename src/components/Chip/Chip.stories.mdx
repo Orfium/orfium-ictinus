@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { select, text } from '@storybook/addon-knobs';
 import { colorShades, flatColors } from '../../theme/palette';
 import { flexCenterVertical } from '../../theme/functions';
@@ -37,7 +37,7 @@ Chip Styles
         >
         Filled Style
         </Chip>
-        <Chip styleType='outlined' size={select('size', ['sm', 'md'], 'md')} 
+        <Chip styleType='outlined' size={select('size', ['sm', 'md'], 'md')}
           fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
         >
         Outlined Style
@@ -58,7 +58,7 @@ Chip Sizes
         >
         Medium Size
         </Chip>
-        <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size='sm' 
+        <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size='sm'
           fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
         >
         Small Size
