@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { debounce } from 'lodash';
-import { rem } from 'polished';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import { rem } from 'theme/utils';
 import { generateTestDataId } from 'utils/helpers';
 
 import useCombinedRefs from '../../hooks/useCombinedRefs';

@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 export const contentStyles = (expanded: boolean, transitionDuration: number) => css`
   transition: opacity ${expanded ? transitionDuration + 100 : 0}ms ease,

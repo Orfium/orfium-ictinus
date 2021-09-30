@@ -1,6 +1,6 @@
-import { rem } from 'polished';
 import React, { useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { rem } from 'theme/utils';
 
 import useTheme from '../../../hooks/useTheme';
 import Wrapper from '../Wrapper';

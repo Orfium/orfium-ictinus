@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 import { Props } from './TextField';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';

@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, lighten, rem } from 'polished';
+import { darken, lighten } from 'polished';
+import { rem } from 'theme/utils';
 
 import { themeFunctions } from '../../../../index';
 import { Theme } from '../../../../theme';

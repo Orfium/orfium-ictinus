@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
+import { rem } from 'theme/utils';
 
 export const boldFont = (size: number, theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes[size]};

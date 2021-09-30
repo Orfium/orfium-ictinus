@@ -1,8 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
+import { rem } from 'theme/utils';
 
 const header = (checked: boolean, styleType: formFieldStyles, isBulkSection: boolean) => (
   theme: Theme

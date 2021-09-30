@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
@@ -22,7 +22,10 @@ export const wrapperStyle = ({ styleType, hasSelectedValue, open }: ButtonStyleP
     position: 'relative' as const,
     display: 'inline-block',
     height: rem(36),
-    filter: styleType === 'elevated' && !hasSelectedValue && !open ? `drop-shadow(${boxShadow})` : undefined,
+    filter:
+      styleType === 'elevated' && !hasSelectedValue && !open
+        ? `drop-shadow(${boxShadow})`
+        : undefined,
   };
 };
 
@@ -59,9 +62,7 @@ export const buttonWrapperStyle = ({
     },
     ':hover > div, :active > div': {
       backgroundColor:
-        !disabled && !open
-          ? getHoverBackgroundColor(theme, calculatedColor)
-          : undefined,
+        !disabled && !open ? getHoverBackgroundColor(theme, calculatedColor) : undefined,
       border: `${borderStyleParams} ${getHoverBorder({
         styleType,
         filterType,
@@ -74,7 +75,7 @@ export const buttonWrapperStyle = ({
     // hack to change color to arrow and close icons
     ':hover > div > span > span > svg path, :hover > div > span > svg path': {
       fill: pickTextColorFromSwatches(calculatedColor.color, open ? 400 : 100),
-    }
+    },
   };
 };
 
@@ -118,13 +119,7 @@ export const buttonBaseStyle = ({
 };
 
 export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
-  const {
-    open,
-    calculatedColor,
-    styleType,
-    hasSelectedValue,
-    filterType,
-  } = props;
+  const { open, calculatedColor, styleType, hasSelectedValue, filterType } = props;
 
   return {
     height: '100%',
@@ -212,10 +207,10 @@ export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (the
 };
 
 export const valueSpanStyle = () => css`
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-    display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
 `;
 
 export const menuStyle = () => (theme: Theme) => css`

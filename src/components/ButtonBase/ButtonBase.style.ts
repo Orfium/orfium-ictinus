@@ -1,4 +1,5 @@
-import { rem, transparentize } from 'polished';
+import { transparentize } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';

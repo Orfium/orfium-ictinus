@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 export const tickStyle = (fill: string) => (theme: Theme): SerializedStyles => css`
   width: inherit;

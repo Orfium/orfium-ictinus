@@ -1,4 +1,5 @@
-import { darken, lighten, rem } from 'polished';
+import { darken, lighten } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
