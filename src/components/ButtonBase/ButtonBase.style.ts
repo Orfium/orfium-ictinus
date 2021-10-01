@@ -97,7 +97,7 @@ export const buttonBaseStyle = ({
           )}`,
     cursor: 'pointer',
     transition: 'background-color 150ms linear',
-    ':hover': {
+    ':hover,:focus': {
       backgroundColor: !disabled
         ? stateBackgroundColor(theme, 'hover', calculatedColor, filled && !transparent)
         : undefined,
