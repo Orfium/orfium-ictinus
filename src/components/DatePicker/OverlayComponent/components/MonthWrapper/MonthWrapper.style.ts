@@ -20,7 +20,7 @@ export const monthHeaderNavigationIconWrapperStyle = ({
   position: 'left' | 'right';
 }) => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  margin: auto ${rem(1)};
+  margin: auto ${rem(5)};
   position: absolute;
   ${position === 'left' ? 'left: 0' : 'right: 0'};
   top: 0;
