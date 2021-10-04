@@ -1,6 +1,6 @@
-import { useLoading } from 'hooks/useLoading';
+import { ClickHandler, useLoading } from 'hooks/useLoading';
 import React, { useRef } from 'react';
-import { EventProps } from 'utils/common';
+import { ButtonProps, EventProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
 import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
@@ -12,9 +12,10 @@ import {
 } from './Button.style';
 import Loader from 'components/Loader';
 
-export type Props = ButtonBaseProps;
+export type Props = ButtonBaseProps & TestProps & onClickProp;
+type onClickProp = { onClick: ClickHandler };
 
-const Button: React.FC<Props & TestProps & EventProps> = props => {
+const Button = React.forwardRef<HTMLButtonElement, Props & ButtonProps>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
@@ -32,7 +33,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
   const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
 
   return (
-    <ButtonBase {...props} loading={loading} onClick={handleAsyncOperation}>
+    <ButtonBase {...props} ref={ref} loading={loading} onClick={handleAsyncOperation}>
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
@@ -63,6 +64,7 @@ const Button: React.FC<Props & TestProps & EventProps> = props => {
       </span>
     </ButtonBase>
   );
-};
+});
+Button.displayName = 'Button';
 
 export default Button;

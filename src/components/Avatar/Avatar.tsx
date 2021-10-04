@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { pickTextColorFromSwatches } from '../../theme/palette';
+import { DivProps } from '../../utils/common';
 import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
@@ -32,38 +33,45 @@ export type Props = {
 export type AvatarSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
 export type AvatarShapes = 'regular' | 'rounded' | 'circular';
 
-const Avatar: React.FC<Props> = ({
-  src = '',
-  iconName = 'user',
-  size = 'md',
-  color = 'lightGrey-600',
-  shape = 'circular',
-  children,
-  className,
-}) => {
-  const calculatedColor = calculateActualColorFromComponentProp(color);
+const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
+  (
+    {
+      src = '',
+      iconName = 'user',
+      size = 'md',
+      color = 'lightGrey-600',
+      shape = 'circular',
+      children,
+      className,
+    },
+    ref
+  ) => {
+    const calculatedColor = calculateActualColorFromComponentProp(color);
 
-  return (
-    <div
-      className={className}
-      css={avatarStyle({
-        shape,
-        size,
-        fill: calculatedColor.color,
-        fillShade: calculatedColor.shade,
-      })}
-    >
-      {src && <img src={src} />}
-      {!src && !children && iconName && (
-        <Icon
-          color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
-          name={iconName}
-          size={size === 'xs' ? 18 : 20}
-        />
-      )}
-      {!src && children}
-    </div>
-  );
-};
+    return (
+      <div
+        ref={ref}
+        className={className}
+        css={avatarStyle({
+          shape,
+          size,
+          fill: calculatedColor.color,
+          fillShade: calculatedColor.shade,
+        })}
+      >
+        {src && <img src={src} />}
+        {!src && !children && iconName && (
+          <Icon
+            color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
+            name={iconName}
+            size={size === 'xs' ? 18 : 20}
+          />
+        )}
+        {!src && children}
+      </div>
+    );
+  }
+);
+Avatar.displayName = 'Avatar';
 
 export default Avatar;

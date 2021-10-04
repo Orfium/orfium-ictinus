@@ -157,12 +157,12 @@ Select with icon options right and left of the text
   </Story>
 </Preview>
 
-# Disabled Select
+# Disabled/Locked Select
 
 Select disabled with label
 
 <Preview>
-  <Story name="Disabled Select">
+  <Story name="Disabled/Locked Select">
     <Stack>
       <Select
         disabled
@@ -177,6 +177,25 @@ Select disabled with label
       />
       <Select
         disabled
+        label={'Flavour'}
+        options={options}
+        styleType={'elevated'}
+      />
+    </Stack>
+    <Stack>
+      <Select
+        locked
+        label={'Flavour'}
+        options={options}
+      />
+      <Select
+        locked
+        label={'Flavour'}
+        options={options}
+        styleType={'outlined'}
+      />
+      <Select
+        locked
         label={'Flavour'}
         options={options}
         styleType={'elevated'}

@@ -76,6 +76,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       isSearchable = true,
       isVirtualized = false,
       styleType,
+      disabled,
+      locked,
       dataTestId,
       ...restInputProps
     },
@@ -162,6 +164,16 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       [open, theme.utils, setOpen, isSearchable, isLoading]
     );
 
+    const handleClick = () => {
+      if (!open) {
+        setOpen(true);
+        combinedRefs?.current?.focus();
+      } else if (!isSearchable) {
+        setOpen(false);
+        combinedRefs?.current?.blur();
+      }
+    };
+
     return (
       <ClickAwayListener
         onClick={() => {
@@ -170,15 +182,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         }}
       >
         <div
-          onClick={() => {
-            if (!open) {
-              setOpen(true);
-              combinedRefs?.current?.focus();
-            } else if (!isSearchable) {
-              setOpen(false);
-              combinedRefs?.current?.blur();
-            }
-          }}
+          {...(!(disabled || locked) && { onClick: handleClick })}
           css={selectWrapper({ open, status, styleType, isSearchable })}
         >
           <TextField
@@ -188,6 +192,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             onInput={handleOnInput}
             onChange={ON_CHANGE_MOCK}
             readOnly={!isSearchable}
+            disabled={disabled}
+            locked={locked}
             data-testid={generateTestDataId('select-input', dataTestId)}
             {...restInputProps}
             status={status}

@@ -36,72 +36,78 @@ export type Props = {
   id?: string;
 };
 
-const CheckBox: React.FC<Props> = ({
-  label,
-  checked,
-  onClick,
-  disabled = false,
-  intermediate = false,
-  dataTestIdSuffix,
-  filled = true,
-  id = generateUniqueID(),
-}) => {
-  const [isChecked, setIsChecked] = React.useState(Boolean(checked));
-  const inputRef = React.useRef<HTMLInputElement>(null);
+const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
+  (
+    {
+      label,
+      checked,
+      onClick,
+      disabled = false,
+      intermediate = false,
+      dataTestIdSuffix,
+      filled = true,
+      id = generateUniqueID(),
+    },
+    ref
+  ) => {
+    const [isChecked, setIsChecked] = React.useState(Boolean(checked));
+    const inputRef = React.useRef<HTMLInputElement>(null);
 
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const { color, shade } = calculateColorBetweenColorAndType('', 'primary');
+    const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+    const { color, shade } = calculateColorBetweenColorAndType('', 'primary');
 
-  useEffect(() => {
-    if (checked !== undefined) {
-      setIsChecked(checked);
-    }
-  }, [checked]);
+    useEffect(() => {
+      if (checked !== undefined) {
+        setIsChecked(checked);
+      }
+    }, [checked]);
 
-  const handleInputChange = (event: ChangeEvent) => {
-    const newChecked = !isChecked;
-    if (checked === undefined) {
-      setIsChecked(newChecked);
-    }
+    const handleInputChange = (event: ChangeEvent) => {
+      const newChecked = !isChecked;
+      if (checked === undefined) {
+        setIsChecked(newChecked);
+      }
 
-    if (!disabled && onClick) {
-      onClick(newChecked, event);
-    }
-  };
+      if (!disabled && onClick) {
+        onClick(newChecked, event);
+      }
+    };
 
-  return (
-    <span css={wrapperStyle({ disabled })}>
-      <span
-        css={checkboxWrapperStyle()}
-        onClick={e => {
-          e.stopPropagation();
-          if (e.currentTarget === e.target) {
-            inputRef?.current?.click();
-          }
-        }}
-      >
-        <input
-          data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
-          css={checkboxStyle({ intermediate, checked: isChecked, filled })}
-          id={`styled-checkbox-${id}`}
-          type="checkbox"
-          onClick={e => e.stopPropagation()}
-          onChange={handleInputChange}
-          disabled={disabled}
-          checked={isChecked}
-          ref={inputRef}
-        />
-        <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ checked: isChecked })}>
-          <Icon
-            name={intermediate ? 'minus' : 'checkmark'}
-            size={24}
-            color={filled ? `${pickTextColorFromSwatches(color, shade)}` : color}
+    return (
+      <span ref={ref} css={wrapperStyle({ disabled })}>
+        <span
+          css={checkboxWrapperStyle()}
+          onClick={e => {
+            e.stopPropagation();
+            if (e.currentTarget === e.target) {
+              inputRef?.current?.click();
+            }
+          }}
+        >
+          <input
+            data-testid={generateTestDataId('checkbox', dataTestIdSuffix)}
+            css={checkboxStyle({ intermediate, checked: isChecked, filled })}
+            id={`styled-checkbox-${id}`}
+            type="checkbox"
+            onClick={e => e.stopPropagation()}
+            onChange={handleInputChange}
+            disabled={disabled}
+            checked={isChecked}
+            ref={inputRef}
           />
-        </label>
+          <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ checked: isChecked })}>
+            <Icon
+              name={intermediate ? 'minus' : 'checkmark'}
+              size={24}
+              color={filled ? `${pickTextColorFromSwatches(color, shade)}` : 'primary'}
+            />
+          </label>
+        </span>
+        {label && <span css={labelStyle()}>{label}</span>}
       </span>
-      {label && <span css={labelStyle()}>{label}</span>}
-    </span>
-  );
-};
+    );
+  }
+);
+CheckBox.displayName = 'Checkbox';
 
 export default CheckBox;
