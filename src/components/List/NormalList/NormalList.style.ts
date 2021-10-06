@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 export const listStyle = ({
   width,

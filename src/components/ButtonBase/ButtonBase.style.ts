@@ -1,4 +1,5 @@
-import { rem, transparentize } from 'polished';
+import { transparentize } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
@@ -84,7 +85,7 @@ export const buttonBaseStyle = ({
     border:
       filled || transparent
         ? 'none'
-        : `solid 1px ${transparentize(
+        : `solid ${rem(1)} ${transparentize(
             0.5,
             defineBackgroundColor(
               theme,

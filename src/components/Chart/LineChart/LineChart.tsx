@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { rem } from 'theme/utils';
 
 import useTheme from '../../../hooks/useTheme';
 import Wrapper from '../Wrapper';
@@ -63,8 +64,8 @@ const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, 
           iconType="circle"
           iconSize={16}
           wrapperStyle={{
-            paddingTop: '50px',
-            paddingLeft: '13px',
+            paddingTop: rem(50),
+            paddingLeft: rem(13),
           }}
         />
       )}

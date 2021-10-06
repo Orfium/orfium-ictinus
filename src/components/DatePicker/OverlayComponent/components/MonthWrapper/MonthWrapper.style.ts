@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 export const monthWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   display: flex;
@@ -19,7 +20,7 @@ export const monthHeaderNavigationIconWrapperStyle = ({
   position: 'left' | 'right';
 }) => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  margin: auto 5px;
+  margin: auto ${rem(5)};
   position: absolute;
   ${position === 'left' ? 'left: 0' : 'right: 0'};
   top: 0;

@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { Props } from './TextArea';
@@ -17,7 +18,7 @@ export const inputStyle = ({
   color: ${dark ? theme.palette.white : theme.palette.black};
   display: block;
   position: relative;
-  top: ${label && '7px'};
+  top: ${label && rem('7px')};
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
@@ -45,7 +46,7 @@ export const inputStyle = ({
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }

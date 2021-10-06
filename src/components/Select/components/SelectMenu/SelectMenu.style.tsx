@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, rem } from 'polished';
+import { darken } from 'polished';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 import { Props } from './SelectMenu';
 import { Props as TextFieldProps } from 'components/TextField/TextField';

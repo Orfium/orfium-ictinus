@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 export const tickStyle = (fill: string) => (theme: Theme): SerializedStyles => css`
   width: inherit;
@@ -26,8 +27,8 @@ export const tooltipArrowStyle = () => (theme: Theme): SerializedStyles => css`
   content: '';
   position: absolute;
   border-style: solid;
-  margin-top: -5px;
-  border-width: 5px;
+  margin-top: ${rem(-5)};
+  border-width: ${rem(5)};
   border-color: transparent ${theme.utils.getColor('darkGray', 600)} transparent transparent;
   top: 50%;
   left: 100%;

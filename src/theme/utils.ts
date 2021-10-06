@@ -1,4 +1,4 @@
-import { shade, tint } from 'polished';
+import { shade, tint, rem as polishedRem } from 'polished';
 
 import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
@@ -49,3 +49,5 @@ export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
   iterateObject<PaletteConfig>(obj, (value: string, name: string) =>
     EXCLUDED.includes(name) ? value : colorShadesCreator(value, BASE_PERCENTAGE)
   ) as Palette;
+
+export const rem = (px: number | string): string => polishedRem(px, 16);
