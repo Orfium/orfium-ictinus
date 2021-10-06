@@ -97,6 +97,7 @@ export type AcceptedIconNames =
   | 'myEarnings'
   | 'notifications'
   | 'notifications2'
+  | 'oneWay'
   | 'others'
   | 'ownershipValidation'
   | 'pageFirst'
