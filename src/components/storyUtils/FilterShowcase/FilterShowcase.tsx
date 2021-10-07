@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { AcceptedColorComponentTypes } from '../../../utils/themeFunctions';
 import Filter from 'components/Filter';
 import { FilterOption, FilterType, StyleType } from 'components/Filter/types';
 
@@ -13,18 +12,16 @@ export const dummyUnrefinedData = Array.from({ length: 15 }, (value, index) => (
 interface Props {
   styleType: StyleType;
   filterType: FilterType;
-  color: string;
   items?: Array<FilterOption>;
   label?: string;
   defaultValue?: FilterOption;
   selectedItem?: FilterOption;
   isSearchable?: boolean;
-  buttonType?: AcceptedColorComponentTypes;
+  buttonType?: 'primary' | 'secondary';
 }
 const FilterShowcase = ({
   styleType,
   filterType,
-  color,
   items = dummyUnrefinedData,
   label = 'Label',
   defaultValue = { value: 18, label: 'Default value' },
@@ -35,7 +32,10 @@ const FilterShowcase = ({
   const [stateItem, setStateItem] = React.useState<FilterOption | undefined>(selectedItem);
 
   return (
-    <div>
+    <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+      <div>
+        {styleType}({buttonType}):{' '}
+      </div>
       <Filter
         styleType={styleType}
         filterType={filterType}
@@ -45,7 +45,6 @@ const FilterShowcase = ({
         onSelect={setStateItem}
         label={label}
         buttonType={buttonType}
-        color={color}
         isSearchable={isSearchable}
         onClear={() => {
           console.log('clear value');

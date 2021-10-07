@@ -2,30 +2,14 @@ import { css } from '@emotion/react';
 import { rem } from 'polished';
 
 import { Theme } from '../../theme';
-import { BASE_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
-import { stateBackgroundColor } from '../Button/utils';
 import { ButtonStyleProps } from './types';
-import {
-  getBackgroundColor,
-  getTextColor,
-  getBorder,
-  getHoverBorder,
-  borderStyleParams,
-} from './utils';
+import { borderStyleParams, getBackgroundColor, getBorder, getTextColor } from './utils';
 
-export const wrapperStyle = ({ styleType, hasSelectedValue, open }: ButtonStyleProps) => (
-  theme: Theme
-) => {
-  const boxShadow = theme.elevation['02'];
-
+export const wrapperStyle = () => () => {
   return {
     position: 'relative' as const,
     display: 'inline-block',
     height: rem(36),
-    filter:
-      styleType === 'elevated' && !hasSelectedValue && !open
-        ? `drop-shadow(${boxShadow})`
-        : undefined,
   };
 };
 
@@ -37,17 +21,9 @@ export const buttonSpanStyle = () => () => {
   };
 };
 
-export const buttonWrapperStyle = ({
-  calculatedColor,
-  activeCalculatedColor,
-  disabled,
-  open,
-  styleType,
-  hasSelectedValue,
-  filterType,
-}: ButtonStyleProps) => (theme: Theme) => {
-  const dividerHoverColor = filterType === 'added' ? 'transparent' : undefined;
-
+export const buttonWrapperStyle = ({ disabled, open, hasSelectedValue }: ButtonStyleProps) => (
+  theme: Theme
+) => {
   return {
     background: 'none',
     border: 'none',
@@ -56,34 +32,21 @@ export const buttonWrapperStyle = ({
     height: '100%',
     maxWidth: rem(270),
     minWidth: rem(150),
-    ':hover > span,:active > span': {
-      backgroundColor: dividerHoverColor,
-      borderTop: `${borderStyleParams} ${dividerHoverColor}`,
-      borderBottom: `${borderStyleParams} ${dividerHoverColor}`,
-    },
+
     ':hover > div, :active > div': {
       backgroundColor:
-        !disabled && !open
-          ? stateBackgroundColor(theme, 'hover', calculatedColor, true)
-          : undefined,
-      border: `${borderStyleParams} ${
-        !open
-          ? getHoverBorder({
-              styleType,
-              filterType,
-              theme,
-              open,
-              calculatedColor,
-              activeCalculatedColor,
-              hasSelectedValue,
-            })
-          : 'transparent'
-      }`,
-      // color: pickTextColorFromSwatches(activeCalculatedColor.color, open ? BASE_SHADE : 100),
+        !disabled && !open ? theme.utils.getColor('lightGrey', null, 'pale') : undefined,
     },
-    // hack to change color to arrow and close icons
-    ':hover > div > span > span > svg path, :hover > div > span > svg path': {
-      // fill: pickTextColorFromSwatches(activeCalculatedColor.color, open ? BASE_SHADE : 100),
+    // on focus change the two divs of added
+    ':focus > div': !open &&
+      !hasSelectedValue && {
+        border: `${borderStyleParams} ${theme.utils.getColor('blue', 500)}`,
+        backgroundColor: theme.utils.getColor('blue', 50),
+      },
+    // target the divider on focus
+    ':focus > span': !open && {
+      borderTop: `${borderStyleParams} ${theme.utils.getColor('blue', 500)}`,
+      borderBottom: `${borderStyleParams} ${theme.utils.getColor('blue', 500)}`,
     },
   };
 };
@@ -91,7 +54,6 @@ export const buttonWrapperStyle = ({
 export const buttonBaseStyle = ({
   calculatedColor,
   activeCalculatedColor,
-  buttonType,
   disabled,
   open,
   styleType,
@@ -100,7 +62,7 @@ export const buttonBaseStyle = ({
 }: ButtonStyleProps) => (theme: Theme) => {
   return {
     fontSize: theme.typography.fontSizes['13'],
-    cursor: 'pointer',
+    cursor: disabled ? 'not-allowed' : 'pointer',
     height: '100%',
     opacity: disabled ? 0.5 : 1,
     transition: 'all 150ms linear',
@@ -115,7 +77,6 @@ export const buttonBaseStyle = ({
       theme,
       open,
       styleType,
-      buttonType,
       hasSelectedValue,
       activeCalculatedColor,
       calculatedColor,
@@ -130,6 +91,18 @@ export const buttonBaseStyle = ({
       open,
     })}`,
     display: 'flex',
+    '&:hover': {
+      border: `${borderStyleParams} ${getBorder({
+        styleType,
+        theme,
+        hasSelectedValue,
+        activeCalculatedColor,
+        filterType,
+        calculatedColor,
+        open,
+        state: 'hover',
+      })}`,
+    },
   };
 };
 
@@ -189,6 +162,9 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
     width: rem(34),
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
+    '> span': {
+      marginLeft: rem(-5),
+    },
   };
 };
 
