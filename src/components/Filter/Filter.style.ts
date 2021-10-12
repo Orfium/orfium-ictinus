@@ -35,7 +35,7 @@ export const buttonWrapperStyle = ({ disabled, open, hasSelectedValue }: ButtonS
 
     ':hover > div, :active > div': {
       backgroundColor:
-        !disabled && !open ? theme.utils.getColor('lightGrey', null, 'pale') : undefined,
+        !disabled && !open ? theme.utils.getColor('darkGrey', null, 'pale') : undefined,
     },
     // on focus change the two divs of added
     ':focus > div': !open &&
