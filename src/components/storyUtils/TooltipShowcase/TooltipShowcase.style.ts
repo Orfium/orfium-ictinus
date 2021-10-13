@@ -1,7 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 
+import { rem } from '../../../theme/utils';
+
 export const customContentStyle = (): SerializedStyles => css`
-  padding: 16px;
+  padding: ${rem(16)};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,12 +16,12 @@ export const tooltipContainerStyle = (): SerializedStyles => css`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  height: ${rem(250)};
 `;
 
 export const tooltipRowStyle = (): SerializedStyles => css`
   display: flex;
-  width: 200px;
+  width: ${rem(200)};
   justify-content: space-between;
-  margin-bottom: 48px;
+  margin-bottom: ${rem(48)};
 `;

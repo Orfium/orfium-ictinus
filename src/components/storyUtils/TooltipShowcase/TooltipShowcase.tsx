@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
+import { rem } from '../../../theme/utils';
 import Card from '../../Card';
 import Chip from '../../Chip';
 import Tooltip from '../../Tooltip';
@@ -16,7 +17,7 @@ const CustomContent = () => {
       <div css={customContentStyle()}>
         <div
           css={css`
-            margin-bottom: 8px;
+            margin-bottom: ${rem(8)};
           `}
         >
           By hover here you can see:
