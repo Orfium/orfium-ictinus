@@ -6,12 +6,16 @@ import { pickTextColorFromSwatches } from '../../theme/palette';
 import { TooltipSize } from './Tooltip';
 import 'tippy.js/dist/tippy.css';
 
-export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
-  theme: Theme
-): SerializedStyles => {
+export const tooltipStyle = ({
+  size,
+  isTransparent,
+}: {
+  size: TooltipSize;
+  isTransparent: boolean;
+}) => (theme: Theme): SerializedStyles => {
   const color = theme.overrides.tooltip.background.color;
   const shade = theme.overrides.tooltip.background.shade;
-  const backgroundColor = theme.utils.getColor(color, shade);
+  const backgroundColor = isTransparent ? 'transparent' : theme.utils.getColor(color, shade);
 
   const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {
     if (size === 'large') {
