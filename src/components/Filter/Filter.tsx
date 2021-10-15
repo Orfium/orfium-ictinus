@@ -126,7 +126,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
       return theme.utils.getColor('neutralWhite', 100);
     }
     if (hasSelectedValue) {
-      return theme.utils.getColor(calculatedColor.color, calculatedColor.shade);
+      return theme.utils.getColor(calculatedColor.color, 550);
     }
 
     return theme.utils.getColor('darkGrey', 400);

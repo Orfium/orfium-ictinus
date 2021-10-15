@@ -5,6 +5,7 @@ import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } f
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
 export const borderStyleParams = 'solid 1px';
+export const focusBorderStyleParams = 'solid 2px';
 
 export const getBackgroundColor = ({
   open,
@@ -30,7 +31,6 @@ export const getTextColor = ({
   theme,
   hasSelectedValue,
   activeCalculatedColor,
-  calculatedColor,
 }: BaseColorProps) => {
   if (hasSelectedValue && !open) {
     return pickTextColorFromSwatches(activeCalculatedColor.color, 50);
@@ -51,7 +51,7 @@ export const getBorder = ({
   state = 'normal',
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
-    const calculatedShade = shade < 950 ? 100 : -100;
+    const calculatedShade = shade < 950 ? 50 : -50;
 
     return (shade + calculatedShade) as typeof colorShades[number];
   };

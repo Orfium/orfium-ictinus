@@ -3,7 +3,13 @@ import { rem } from 'polished';
 
 import { Theme } from '../../theme';
 import { ButtonStyleProps } from './types';
-import { borderStyleParams, getBackgroundColor, getBorder, getTextColor } from './utils';
+import {
+  borderStyleParams,
+  focusBorderStyleParams,
+  getBackgroundColor,
+  getBorder,
+  getTextColor,
+} from './utils';
 
 export const wrapperStyle = () => () => {
   return {
@@ -40,13 +46,13 @@ export const buttonWrapperStyle = ({ disabled, open, hasSelectedValue }: ButtonS
     // on focus change the two divs of added
     ':focus > div': !open &&
       !hasSelectedValue && {
-        border: `${borderStyleParams} ${theme.utils.getColor('blue', 500)}`,
+        border: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
         backgroundColor: theme.utils.getColor('blue', 50),
       },
     // target the divider on focus
     ':focus > span': !open && {
-      borderTop: `${borderStyleParams} ${theme.utils.getColor('blue', 500)}`,
-      borderBottom: `${borderStyleParams} ${theme.utils.getColor('blue', 500)}`,
+      borderTop: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
+      borderBottom: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
     },
   };
 };
