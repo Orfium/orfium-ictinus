@@ -3,8 +3,15 @@ import Icon from './Icon';
 import Stack from '../storyUtils/Stack';
 import PresentComponent from '../storyUtils/PresentComponent';
 import iconSelector from './assets/iconSelector';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Icon" component={Icon} />
+<Meta title="Design System/Icon" component={Icon} parameters={{
+  design: [{
+    type: 'figma',
+    name: 'Icons',
+    url: `${FIGMA_URL}?node-id=99%3A3192`,
+  }]
+}} />
 
 # Icon
 
