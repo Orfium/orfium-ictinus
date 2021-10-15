@@ -1,4 +1,4 @@
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 const defaultFontFamily = 'Roboto';
 

@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { flexCenter } from '../../theme/functions';
@@ -11,7 +12,7 @@ const topAppBarWrapper = (dark: boolean) => (theme: Theme): SerializedStyles => 
   justify-content: space-between;
   background-color: ${dark ? theme.palette.black : theme.palette.white};
   color: ${dark ? theme.palette.white : theme.palette.black};
-  height: ${DEFAULT_NAVBAR_HEIGHT}px;
+  height: ${rem(DEFAULT_NAVBAR_HEIGHT)};
   padding: 0 ${theme.spacing.md};
   box-shadow: ${theme.elevation['02']};
 `;

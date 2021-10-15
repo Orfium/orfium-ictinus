@@ -28,7 +28,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-2 {
   cursor: pointer;
-  margin: auto 5px;
+  margin: auto 0.3125rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -118,7 +118,8 @@ exports[`MonthWrapper should render correctly 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-7:hover {
+.emotion-7:hover,
+.emotion-7:focus {
   background-color: #e5e5e5;
 }
 
@@ -165,7 +166,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-13 {
   cursor: pointer;
-  margin: auto 5px;
+  margin: auto 0.3125rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -185,15 +186,15 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: space-around;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
   border-color: #e7e7e7;
 }
 
 .emotion-17 {
   color: #9b9b9b;
   padding: 1rem 0;
-  width: 39px;
+  width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
 }
@@ -209,15 +210,15 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #121212;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   opacity: 1;
 }
 
 .emotion-26 {
-  border: 1px solid transparent;
-  width: 39px;
-  height: 39px;
+  border: 0.0625rem solid transparent;
+  width: 2.4375rem;
+  height: 2.4375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -244,17 +245,17 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #121212;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-28 {
-  border: 1px solid #cfcfcf;
+  border: 0.0625rem solid #cfcfcf;
   border-radius: 100%;
-  width: 39px;
-  height: 39px;
+  width: 2.4375rem;
+  height: 2.4375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -281,8 +282,8 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #fff;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   opacity: 1;
   background: transparent;
   border-bottom-left-radius: 100%;
@@ -305,10 +306,10 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-30 {
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   border-radius: 100%;
-  width: 39px;
-  height: 39px;
+  width: 2.4375rem;
+  height: 2.4375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -335,8 +336,8 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #121212;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   opacity: 1;
   background: rgba(0,0,0,0.1);
 }
@@ -375,7 +376,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-2 {
   cursor: pointer;
-  margin: auto 5px;
+  margin: auto 0.3125rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -465,7 +466,8 @@ exports[`MonthWrapper should render correctly 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-7:hover {
+.emotion-7:hover,
+.emotion-7:focus {
   background-color: #e5e5e5;
 }
 
@@ -512,7 +514,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-13 {
   cursor: pointer;
-  margin: auto 5px;
+  margin: auto 0.3125rem;
   position: absolute;
   right: 0;
   top: 0;
@@ -532,15 +534,15 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: space-around;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
+  border-top: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
   border-color: #e7e7e7;
 }
 
 .emotion-17 {
   color: #9b9b9b;
   padding: 1rem 0;
-  width: 39px;
+  width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
 }
@@ -556,15 +558,15 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #121212;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   opacity: 1;
 }
 
 .emotion-26 {
-  border: 1px solid transparent;
-  width: 39px;
-  height: 39px;
+  border: 0.0625rem solid transparent;
+  width: 2.4375rem;
+  height: 2.4375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -591,17 +593,17 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #121212;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   font-weight: bold;
   opacity: 1;
 }
 
 .emotion-28 {
-  border: 1px solid #cfcfcf;
+  border: 0.0625rem solid #cfcfcf;
   border-radius: 100%;
-  width: 39px;
-  height: 39px;
+  width: 2.4375rem;
+  height: 2.4375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -628,8 +630,8 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #fff;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   opacity: 1;
   background: transparent;
   border-bottom-left-radius: 100%;
@@ -652,10 +654,10 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-30 {
-  border: 1px solid transparent;
+  border: 0.0625rem solid transparent;
   border-radius: 100%;
-  width: 39px;
-  height: 39px;
+  width: 2.4375rem;
+  height: 2.4375rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -682,8 +684,8 @@ exports[`MonthWrapper should render correctly 1`] = `
   cursor: pointer;
   position: relative;
   color: #121212;
-  width: 40px;
-  padding: 0 4px;
+  width: 2.5rem;
+  padding: 0 0.25rem;
   opacity: 1;
   background: rgba(0,0,0,0.1);
 }

@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem, tint } from 'polished';
+import { tint } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { NotificationStyleType, NotificationTypes } from './Notification';
@@ -20,7 +21,7 @@ export const notificationsContainerPerType = (
         background: white;
       `
     : `
-        border-left: ${typeToThemePalette(theme, type)} 4px solid;
+        border-left: ${typeToThemePalette(theme, type)} ${rem(4)} solid;
         background: ${tint(0.95, typeToThemePalette(theme, type))};
         box-shadow: ${theme.elevation['02']};
 `;

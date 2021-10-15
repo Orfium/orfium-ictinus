@@ -33,7 +33,7 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   justify-content: space-between;
   background-color: white;
   color: black;
-  height: 62px;
+  height: 3.875rem;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -124,7 +124,7 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   background-color: transparent;
   margin: 1rem 1.5rem 1rem 1rem;
   border-radius: 0.25rem;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .emotion-7 {
@@ -220,7 +220,8 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-11:hover {
+.emotion-11:hover,
+.emotion-11:focus {
   background-color: #e5e5e5;
 }
 
@@ -474,7 +475,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   justify-content: space-between;
   background-color: white;
   color: black;
-  height: 62px;
+  height: 3.875rem;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -565,7 +566,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   background-color: transparent;
   margin: 1rem 1.5rem 1rem 1rem;
   border-radius: 0.25rem;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .emotion-7 {
@@ -645,7 +646,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   user-select: none;
   position: relative;
   background-color: white;
-  border: 2px solid transparent;
+  border: 0.125rem solid transparent;
 }
 
 .emotion-10:hover {
@@ -730,10 +731,10 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 
 .emotion-13:focus+label,
 .emotion-13:not(:placeholder-shown)+label {
-  -webkit-transform: translate(3px, -35%) scale(0.8);
-  -moz-transform: translate(3px, -35%) scale(0.8);
-  -ms-transform: translate(3px, -35%) scale(0.8);
-  transform: translate(3px, -35%) scale(0.8);
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
   font-weight: 700;
 }
 
@@ -786,7 +787,8 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-26:hover {
+.emotion-26:hover,
+.emotion-26:focus {
   background-color: #e5e5e5;
 }
 
@@ -1104,7 +1106,7 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   justify-content: space-between;
   background-color: black;
   color: white;
-  height: 62px;
+  height: 3.875rem;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -1195,7 +1197,7 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   background-color: transparent;
   margin: 1rem 1.5rem 1rem 1rem;
   border-radius: 0.25rem;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .emotion-7 {
@@ -1291,7 +1293,8 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-11:hover {
+.emotion-11:hover,
+.emotion-11:focus {
   background-color: #1a1a1a;
 }
 
@@ -1545,7 +1548,7 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   justify-content: space-between;
   background-color: white;
   color: black;
-  height: 62px;
+  height: 3.875rem;
   padding: 0 1rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
@@ -1636,7 +1639,7 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   background-color: transparent;
   margin: 1rem 1.5rem 1rem 1rem;
   border-radius: 0.25rem;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .emotion-7 {
@@ -1732,7 +1735,8 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-11:hover {
+.emotion-11:hover,
+.emotion-11:focus {
   background-color: #e5e5e5;
 }
 

@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
+import { rem } from 'theme/utils';
 import { RequiredProperties } from 'utils/common';
 
 import { Props } from './Button';

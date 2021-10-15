@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 export const getDotsLayout = (delay: number, animation: string, theme: Theme, left?: number) => css`
-  left: ${left && `${left}px`};
+  left: ${left && rem(left)};
   width: ${rem(6)};
   height: ${rem(6)};
   border-radius: ${rem(5)};

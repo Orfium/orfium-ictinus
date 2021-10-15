@@ -1,8 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, lighten, rem } from 'polished';
+import { darken, lighten } from 'polished';
 import { flexCenterVertical } from 'theme/functions';
 import { colorShades, pickTextColorFromSwatches } from 'theme/palette';
 import { flatColors } from 'theme/palette';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { Props } from './Chip';
@@ -48,7 +49,7 @@ const wrapperStyleSwitch = (
       return `
         background-color: ${fill ? fillColor : 'transparent'};
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
-        border: 1px solid ${borderColor};
+        border: ${rem(1)} solid ${borderColor};
       `;
     }
     case 'filled':
@@ -58,9 +59,9 @@ const wrapperStyleSwitch = (
           fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
         };
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
-        border: 1px solid ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
-        };
+        border: ${rem(1)} solid ${
+        fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGray', 100)
+      };
       `;
   }
 };
