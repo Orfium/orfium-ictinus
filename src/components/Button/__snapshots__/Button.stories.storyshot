@@ -37,7 +37,8 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -80,7 +81,8 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-5:hover {
+.emotion-5:hover,
+.emotion-5:focus {
   background-color: #9c0fa6;
 }
 
@@ -113,7 +115,8 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-9:hover {
+.emotion-9:hover,
+.emotion-9:focus {
   background-color: #9c0fa6;
 }
 
@@ -136,7 +139,8 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-13:hover {
+.emotion-13:hover,
+.emotion-13:focus {
   background-color: #9c0fa6;
 }
 
@@ -345,7 +349,8 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -376,37 +381,11 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
 }
 
 .emotion-5 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-6 {
-  fill: #f3eaff;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-6 path {
-  fill: #f3eaff;
-}
-
-.emotion-7 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.emotion-11 {
+.emotion-7 {
   font-size: 1rem;
   font-weight: 500;
   color: #8833FF;
@@ -416,26 +395,27 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   height: 3.5rem;
   opacity: 1;
   border-radius: 0.25rem;
-  border: solid 1px rgba(136,51,255,0.5);
+  border: solid 0.0625rem rgba(136,51,255,0.5);
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
 }
 
-.emotion-11:hover {
+.emotion-7:hover,
+.emotion-7:focus {
   background-color: rgba(136,51,255,0.1);
 }
 
-.emotion-11:active {
+.emotion-7:active {
   background-color: rgba(136,51,255,0.2);
 }
 
-.emotion-13 {
+.emotion-9 {
   margin-left: 0;
   margin-right: 0;
 }
 
-.emotion-14 {
+.emotion-10 {
   font-size: 1rem;
   font-weight: 500;
   color: #36C152;
@@ -451,11 +431,12 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-14:hover {
+.emotion-10:hover,
+.emotion-10:focus {
   background-color: rgba(54,193,82,0.1);
 }
 
-.emotion-14:active {
+.emotion-10:active {
   background-color: rgba(54,193,82,0.2);
 }
 
@@ -505,31 +486,25 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
           <span
             className="emotion-4"
           >
-            <span
-              className="emotion-5"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-6"
-              />
-            </span>
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
           </span>
           <span
-            className="emotion-7"
+            className="emotion-5"
           >
             Hello world
           </span>
           <span
             className="emotion-4"
           >
-            <span
-              className="emotion-5"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-6"
-              />
-            </span>
+            <img
+              height="16"
+              src="https://brandmark.io/logo-rank/random/pepsi.png"
+              width="16"
+            />
           </span>
         </span>
       </button>
@@ -542,7 +517,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
       }
     >
       <button
-        className="emotion-11"
+        className="emotion-7"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
@@ -551,7 +526,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
           className="emotion-3"
         >
           <span
-            className="emotion-13"
+            className="emotion-9"
           >
             Hello world
           </span>
@@ -566,7 +541,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
       }
     >
       <button
-        className="emotion-14"
+        className="emotion-10"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
@@ -575,7 +550,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
           className="emotion-3"
         >
           <span
-            className="emotion-13"
+            className="emotion-9"
           >
             Hello world
           </span>
@@ -658,7 +633,8 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-5:hover {
+.emotion-5:hover,
+.emotion-5:focus {
   background-color: #ec254c;
 }
 
@@ -681,7 +657,8 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus {
   background-color: #df75e6;
 }
 
@@ -829,7 +806,8 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -872,7 +850,8 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-5:hover {
+.emotion-5:hover,
+.emotion-5:focus {
   background-color: #6a00ff;
 }
 
@@ -895,7 +874,8 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus {
   background-color: #6a00ff;
 }
 
@@ -1078,7 +1058,8 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-5:hover {
+.emotion-5:hover,
+.emotion-5:focus {
   background-color: #2b9941;
 }
 
@@ -1101,7 +1082,8 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus {
   background-color: #e3002c;
 }
 
@@ -1124,7 +1106,8 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-11:hover {
+.emotion-11:hover,
+.emotion-11:focus {
   background-color: #1b16ea;
 }
 
@@ -1147,7 +1130,8 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-14:hover {
+.emotion-14:hover,
+.emotion-14:focus {
   background-color: #cc5900;
 }
 
@@ -1170,7 +1154,8 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-17:hover {
+.emotion-17:hover,
+.emotion-17:focus {
   background-color: transparent;
 }
 
@@ -1390,7 +1375,8 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -1645,7 +1631,8 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover {
+.emotion-1:hover,
+.emotion-1:focus {
   background-color: #9c0fa6;
 }
 
@@ -1753,7 +1740,8 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -1829,7 +1817,8 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus {
   background-color: #6a00ff;
 }
 
@@ -1852,7 +1841,8 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-14:hover {
+.emotion-14:hover,
+.emotion-14:focus {
   background-color: #6a00ff;
 }
 
@@ -2016,13 +2006,14 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
   height: 3.5rem;
   opacity: 1;
   border-radius: 0.25rem;
-  border: solid 1px rgba(136,51,255,0.5);
+  border: solid 0.0625rem rgba(136,51,255,0.5);
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover {
+.emotion-1:hover,
+.emotion-1:focus {
   background-color: rgba(136,51,255,0.1);
 }
 
@@ -2116,7 +2107,8 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover {
+.emotion-1:hover,
+.emotion-1:focus {
   background-color: #6a00ff;
 }
 
@@ -2210,7 +2202,8 @@ exports[`Storyshots Design System/Button Transparent Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover {
+.emotion-1:hover,
+.emotion-1:focus {
   background-color: rgba(136,51,255,0.1);
 }
 

@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
 import { BASE_SHADE } from 'theme/palette';
+import { rem } from 'theme/utils';
 
 import { Props } from './Radio';
 

@@ -1,5 +1,5 @@
-import { rem } from 'polished';
 import React from 'react';
+import { rem } from 'theme/utils';
 
 import ActionsToolbox from '../../AssetMatching/components/ActionsToolbox/ActionsToolbox';
 import mocks from './mocks';

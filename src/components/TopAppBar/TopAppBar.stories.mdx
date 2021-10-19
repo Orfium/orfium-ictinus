@@ -1,4 +1,4 @@
-import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import TopAppBar from './TopAppBar';
 import Stack from '../storyUtils/Stack';
 import TextField from '../TextField';
@@ -18,13 +18,13 @@ A universal TopAppBar component.
 import { TopAppBar } from '@orfium/ictinus';
 
 <TopAppBar
-     dark={dark}
-     logoIcon={logoIcon}
-     onMenuIconClick={onMenuIconClick}
-     userMenu={userMenu}
-     additionalTools={<AdditionalToolsComponent />}
-     onSearchHandler={onSearchHandler}
-/>
+  dark={dark}
+  logoIcon={logoIcon}
+  onMenuIconClick={onMenuIconClick}
+  userMenu={userMenu}
+  additionalTools={<AdditionalToolsComponent />}
+  onSearchHandler={onSearchHandler}
+/>;
 ```
 
 # Props
@@ -35,23 +35,21 @@ import { TopAppBar } from '@orfium/ictinus';
 
 <Props of={UserMenu} />
 
-
 # TopAppBar with Logo Placeholder
 
 <Preview>
   <Story name="with Logo Placeholder">
-    <div style={{padding: 10}}>
+    <div style={{ padding: 10 }}>
       <TopAppBarShowcase />
     </div>
   </Story>
 </Preview>
 
-
 # TopAppBar with additionalTools
 
 <Preview>
   <Story name="with Additional Tools">
-    <div style={{padding: 10}}>
+    <div style={{ padding: 10 }}>
       <TopAppBarShowcase withAdditionalTools={true} />
     </div>
   </Story>
@@ -61,13 +59,11 @@ import { TopAppBar } from '@orfium/ictinus';
 
 <Preview>
   <Story name="with Dark theme enabled">
-    <div style={{padding: 10}}>
+    <div style={{ padding: 10 }}>
       <TopAppBarShowcase dark={true} />
     </div>
   </Story>
 </Preview>
-
-
 
 # TopAppBar Playground
 
@@ -75,9 +71,14 @@ TopAppBar Playground
 
 <Preview>
   <Story name="playground">
-    <div style={{padding: 10}}>
-      <TopAppBarShowcase dark={boolean('dark', false)} isSearchDisabled={boolean('disabled search', false)} provideSearchHandler={boolean('providerSearchHandler', false)} withAdditionalTools={boolean('withAdditionalTools', false)} withLogo={boolean('withLogo', false)} />
+    <div style={{ padding: 10 }}>
+      <TopAppBarShowcase
+        dark={boolean('dark', false)}
+        isSearchDisabled={boolean('disabled search', false)}
+        provideSearchHandler={boolean('providerSearchHandler', false)}
+        withAdditionalTools={boolean('withAdditionalTools', false)}
+        withLogo={boolean('withLogo', false)}
+      />
     </div>
   </Story>
 </Preview>
-

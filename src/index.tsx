@@ -1,16 +1,19 @@
 import { queriesSizes } from './hooks/useBreakpoints';
 import * as elevation from './theme/elevation';
-import { Elevation } from './theme/elevation';
 import * as themeFunctions from './theme/functions';
 // Types
 import * as overrides from './theme/overrides';
-import { Overrides } from './theme/overrides';
 import * as palette from './theme/palette';
-import { Palette } from './theme/palette';
 import * as spacing from './theme/spacing';
-import { Spacing } from './theme/spacing';
 import * as typography from './theme/typography';
-import { Typography } from './theme/typography';
+
+export type { Elevation } from './theme/elevation';
+export type { Overrides } from './theme/overrides';
+export type { Palette } from './theme/palette';
+export type { Spacing } from './theme/spacing';
+export type { Typography } from './theme/typography';
+export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
+export type { Theme } from './theme';
 
 export { default as Avatar } from './components/Avatar';
 export { default as Breadcrumb } from './components/Breadcrumb';
@@ -57,19 +60,13 @@ export { default as useBreakpoints } from './hooks/useBreakpoints';
 export { default as useEscape } from './hooks/useEscape';
 export { default as Filter } from './components/Filter';
 
-export { Theme, default as themeConfig } from './theme';
-export { AcceptedColorComponentTypes } from './utils/themeFunctions';
+export { default as themeConfig } from './theme';
 export {
   themeFunctions,
   palette,
   spacing,
   typography,
   elevation,
-  Spacing,
-  Palette,
-  Typography,
-  Elevation,
   overrides,
-  Overrides,
   queriesSizes,
 };

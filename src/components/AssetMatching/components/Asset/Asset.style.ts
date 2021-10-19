@@ -2,6 +2,7 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 import { BASE_SHADE } from 'theme/palette';
+import { rem } from 'theme/utils';
 
 export const boldFont = (size: number, theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes[size]};
@@ -37,7 +38,7 @@ const article = (isHighlighted: boolean = false) => (theme: Theme): SerializedSt
   flex-direction: column;
   background: ${isHighlighted ? theme.utils.getColor('lightGrey', 50) : 'transparent'};
   padding: ${theme.spacing.md};
-  border: 1px solid ${theme.utils.getColor('lightGrey', 150)};
+  border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 150)};
   border-radius: ${theme.spacing.xsm};
   :first-of-type {
     margin-right: ${theme.spacing.md};

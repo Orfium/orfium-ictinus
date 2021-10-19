@@ -1,5 +1,437 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/Filter Added Filter 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-4 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+}
+
+.emotion-4:hover>div,
+.emotion-4:active>div {
+  background-color: #F5F5F6;
+}
+
+.emotion-4:focus>div {
+  border: solid 0.125rem #246ce5;
+  background-color: #e9f1ff;
+}
+
+.emotion-4:focus>span {
+  border-top: solid 0.125rem #246ce5;
+  border-bottom: solid 0.125rem #246ce5;
+}
+
+.emotion-5 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #0e0e17;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem #cfd7e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 0.25rem 0 1rem;
+  border-radius: 1.5rem;
+  border-right: 0!important;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.emotion-5:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-7 {
+  margin-left: 0;
+  margin-right: 0.5rem;
+  max-width: 16.875rem;
+}
+
+.emotion-8 {
+  font-weight: 400;
+  max-width: 13.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.emotion-8 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-9 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-11 {
+  fill: #0e0e17;
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.emotion-11 path {
+  fill: #0e0e17;
+}
+
+.emotion-12 {
+  height: 100%;
+  width: 0.0625rem;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  background-color: #cfd7e5;
+  border-top: solid 0.0625rem #cfd7e5;
+  border-bottom: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-13 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #0e0e17;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem #cfd7e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-left: 0!important;
+  padding-right: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 2.125rem;
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.emotion-13:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-13>span {
+  margin-left: -0.3125rem;
+}
+
+.emotion-15 {
+  fill: #5b5b71;
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+
+.emotion-15 path {
+  fill: #5b5b71;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <h2>
+    Added
+  </h2>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div>
+          filled
+          (
+          primary
+          ):
+           
+        </div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-3"
+          >
+            <button
+              className="emotion-4"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-5"
+              >
+                <span
+                  className="emotion-6"
+                >
+                  <span
+                    className="emotion-7"
+                  >
+                    <span
+                      className="emotion-8"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-9"
+                      >
+                        Default value
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-10"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-11"
+                    />
+                  </span>
+                </span>
+              </div>
+              <span
+                className="emotion-12"
+              />
+              <div
+                className="emotion-13"
+              >
+                <span
+                  className="emotion-10"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-15"
+                  />
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div>
+          filled
+          (
+          secondary
+          ):
+           
+        </div>
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-3"
+          >
+            <button
+              className="emotion-4"
+              data-testid="filter"
+              disabled={false}
+              onClick={[Function]}
+            >
+              <div
+                className="emotion-5"
+              >
+                <span
+                  className="emotion-6"
+                >
+                  <span
+                    className="emotion-7"
+                  >
+                    <span
+                      className="emotion-8"
+                    >
+                      <div>
+                        Label :
+                      </div>
+                      <span
+                        className="emotion-9"
+                      >
+                        Default value
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-10"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-11"
+                    />
+                  </span>
+                </span>
+              </div>
+              <span
+                className="emotion-12"
+              />
+              <div
+                className="emotion-13"
+              >
+                <span
+                  className="emotion-10"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-15"
+                  />
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>
+    Transparent
+  </h2>
+  <div>
+    Transparent Styles are not available for added filters
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/Filter Async Filter 1`] = `
 .emotion-0 {
   background-color: transparent;
@@ -30,16 +462,19 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
   min-width: 9.375rem;
 }
 
-.emotion-2:hover>span,
-.emotion-2:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
 .emotion-2:hover>div,
 .emotion-2:active>div {
-  background-color: #78859f;
-  border: solid 1px transparent;
+  background-color: #F5F5F6;
+}
+
+.emotion-2:focus>div {
+  border: solid 0.125rem #246ce5;
+  background-color: #e9f1ff;
+}
+
+.emotion-2:focus>span {
+  border-top: solid 0.125rem #246ce5;
+  border-bottom: solid 0.125rem #246ce5;
 }
 
 .emotion-3 {
@@ -49,15 +484,19 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: #fff;
-  background-color: #5f6c85;
-  border: solid 1px transparent;
+  color: #0e0e17;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem #cfd7e5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 0 1rem 0 1rem;
   border-radius: 1.5rem;
+}
+
+.emotion-3:hover {
+  border: solid 0.0625rem #cfd7e5;
 }
 
 .emotion-4 {
@@ -126,13 +565,13 @@ exports[`Storyshots Design System/Filter Async Filter 1`] = `
 }
 
 .emotion-9 {
-  fill: #fff;
+  fill: #0e0e17;
   width: 0.375rem;
   height: 0.375rem;
 }
 
 .emotion-9 path {
-  fill: #fff;
+  fill: #0e0e17;
 }
 
 <div
@@ -239,16 +678,19 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
   min-width: 9.375rem;
 }
 
-.emotion-2:hover>span,
-.emotion-2:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
 .emotion-2:hover>div,
 .emotion-2:active>div {
-  background-color: #78859f;
-  border: solid 1px transparent;
+  background-color: #F5F5F6;
+}
+
+.emotion-2:focus>div {
+  border: solid 0.125rem #246ce5;
+  background-color: #e9f1ff;
+}
+
+.emotion-2:focus>span {
+  border-top: solid 0.125rem #246ce5;
+  border-bottom: solid 0.125rem #246ce5;
 }
 
 .emotion-3 {
@@ -258,15 +700,19 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
   opacity: 1;
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
-  color: #fff;
-  background-color: #5f6c85;
-  border: solid 1px transparent;
+  color: #0e0e17;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem #cfd7e5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   padding: 0 1rem 0 1rem;
   border-radius: 1.5rem;
+}
+
+.emotion-3:hover {
+  border: solid 0.0625rem #cfd7e5;
 }
 
 .emotion-4 {
@@ -335,13 +781,13 @@ exports[`Storyshots Design System/Filter Async Filter with min characters 1`] = 
 }
 
 .emotion-9 {
-  fill: #fff;
+  fill: #0e0e17;
   width: 0.375rem;
   height: 0.375rem;
 }
 
 .emotion-9 path {
-  fill: #fff;
+  fill: #0e0e17;
 }
 
 <div
@@ -427,12 +873,26 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
   position: relative;
   display: inline-block;
   height: 2.25rem;
 }
 
-.emotion-2 {
+.emotion-3 {
   background: none;
   border: none;
   display: -webkit-box;
@@ -448,19 +908,22 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   min-width: 9.375rem;
 }
 
-.emotion-2:hover>span,
-.emotion-2:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
+.emotion-3:hover>div,
+.emotion-3:active>div {
+  background-color: #F5F5F6;
 }
 
-.emotion-2:hover>div,
-.emotion-2:active>div {
-  background-color: #d3dae5;
-  border: solid 1px transparent;
+.emotion-3:focus>div {
+  border: solid 0.125rem #246ce5;
+  background-color: #e9f1ff;
 }
 
-.emotion-3 {
+.emotion-3:focus>span {
+  border-top: solid 0.125rem #246ce5;
+  border-bottom: solid 0.125rem #246ce5;
+}
+
+.emotion-4 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
@@ -468,8 +931,8 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
   color: #0e0e17;
-  background-color: #f3f5f8;
-  border: solid 1px transparent;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem #cfd7e5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -478,7 +941,11 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-4 {
+.emotion-4:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -490,13 +957,13 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   margin-left: 0;
   margin-right: 0.5rem;
   max-width: 16.875rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-weight: 400;
   max-width: 13.125rem;
   display: -webkit-box;
@@ -509,25 +976,25 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   align-items: center;
 }
 
-.emotion-6 div {
+.emotion-7 div {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
 }
 
-.emotion-6 span {
+.emotion-7 span {
   margin-left: 0.25rem;
   font-weight: 700;
 }
 
-.emotion-7 {
+.emotion-8 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
 }
 
-.emotion-8 {
+.emotion-9 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -543,13 +1010,13 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-10 {
   fill: #0e0e17;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-9 path {
+.emotion-10 path {
   fill: #0e0e17;
 }
 
@@ -577,47 +1044,56 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
        on
     </button>
   </div>
-  <div>
+  <div
+    className="emotion-1"
+  >
+    <div>
+      filled
+      (
+      primary
+      ):
+       
+    </div>
     <div
       role="button"
     >
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="filter"
           disabled={false}
           onClick={[Function]}
         >
           <div
-            className="emotion-3"
+            className="emotion-4"
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             >
               <span
-                className="emotion-5"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-6"
+                  className="emotion-7"
                 >
                   <div>
                     you can change me :
                   </div>
                   <span
-                    className="emotion-7"
+                    className="emotion-8"
                   >
                     Peach
                   </span>
                 </span>
               </span>
               <span
-                className="emotion-8"
+                className="emotion-9"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-10"
                 />
               </span>
             </span>
@@ -629,7 +1105,7 @@ exports[`Storyshots Design System/Filter Dynamic Filter Props 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Filter Filter with big text 1`] = `
+exports[`Storyshots Design System/Filter Preset Filter 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -642,9 +1118,9 @@ exports[`Storyshots Design System/Filter Filter with big text 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
@@ -652,286 +1128,6 @@ exports[`Storyshots Design System/Filter Filter with big text 1`] = `
 }
 
 .emotion-2 {
-  position: relative;
-  display: inline-block;
-  height: 2.25rem;
-}
-
-.emotion-3 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-3:hover>span,
-.emotion-3:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-3:hover>div,
-.emotion-3:active>div {
-  background-color: #677fad;
-  border: solid 1px transparent;
-}
-
-.emotion-4 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #889BBF;
-  border: solid 1px transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-6 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-  max-width: 16.875rem;
-}
-
-.emotion-7 {
-  font-weight: 400;
-  max-width: 13.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-7 div {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-.emotion-7 span {
-  margin-left: 0.25rem;
-  font-weight: 700;
-}
-
-.emotion-8 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.emotion-9 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  fill: #0e0e17;
-  width: 0.375rem;
-  height: 0.375rem;
-}
-
-.emotion-10 path {
-  fill: #0e0e17;
-}
-
-<div
-  style={
-    Object {
-      "margin": 5,
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-3"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-4"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        default item is a very long text that should not be overflow ellipsis
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-3"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-4"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        default item is a very long text that should be overflow ellipsis because the max width of the component is smaller than the width of the text
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Filter Filter with colors 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -939,1004 +1135,50 @@ exports[`Storyshots Design System/Filter Filter with colors 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  position: relative;
-  display: inline-block;
-  height: 2.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .emotion-3 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-3:hover>span,
-.emotion-3:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-3:hover>div,
-.emotion-3:active>div {
-  background-color: #6a00ff;
-  border: solid 1px transparent;
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
 }
 
 .emotion-4 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #fff;
-  background-color: #8833FF;
-  border: solid 1px transparent;
+  background: none;
+  border: none;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  max-width: 16.875rem;
+  min-width: 9.375rem;
+}
+
+.emotion-4:hover>div,
+.emotion-4:active>div {
+  background-color: #F5F5F6;
+}
+
+.emotion-4:focus>div {
+  border: solid 0.125rem #246ce5;
+  background-color: #e9f1ff;
+}
+
+.emotion-4:focus>span {
+  border-top: solid 0.125rem #246ce5;
+  border-bottom: solid 0.125rem #246ce5;
 }
 
 .emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-6 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-  max-width: 16.875rem;
-}
-
-.emotion-7 {
-  font-weight: 400;
-  max-width: 13.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-7 div {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-.emotion-7 span {
-  margin-left: 0.25rem;
-  font-weight: 700;
-}
-
-.emotion-8 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.emotion-9 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  fill: #fff;
-  width: 0.375rem;
-  height: 0.375rem;
-}
-
-.emotion-10 path {
-  fill: #fff;
-}
-
-.emotion-12 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-12:hover>span,
-.emotion-12:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-12:hover>div,
-.emotion-12:active>div {
-  background-color: #6a00ff;
-  border: solid 1px #6a00ff;
-}
-
-.emotion-13 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #fff;
-  background-color: #8833FF;
-  border: solid 1px #6c28cc;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-.emotion-20 {
-  position: relative;
-  display: inline-block;
-  height: 2.25rem;
-  -webkit-filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07));
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07));
-}
-
-.emotion-31 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #fff;
-  background-color: #fdfdfd;
-  border: solid 1px transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-.emotion-40 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-40:hover>span,
-.emotion-40:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-40:hover>div,
-.emotion-40:active>div {
-  background-color: #9c0fa6;
-  border: solid 1px transparent;
-}
-
-.emotion-41 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #fff;
-  background-color: #C813D5;
-  border: solid 1px transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-.emotion-49 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-49:hover>span,
-.emotion-49:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-49:hover>div,
-.emotion-49:active>div {
-  background-color: #9c0fa6;
-  border: solid 1px #9c0fa6;
-}
-
-.emotion-50 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #fff;
-  background-color: #C813D5;
-  border: solid 1px #a00faa;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-<div
-  style={
-    Object {
-      "margin": 5,
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <h2>
-    Primary
-  </h2>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-3"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-4"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-12"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-13"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-20"
-          >
-            <button
-              className="emotion-3"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-4"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-3"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-31"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <h2>
-    Secondary
-  </h2>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-40"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-41"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-49"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-50"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-20"
-          >
-            <button
-              className="emotion-40"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-41"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-40"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-31"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Filter Filter with style types 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  position: relative;
-  display: inline-block;
-  height: 2.25rem;
-}
-
-.emotion-3 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-3:hover>span,
-.emotion-3:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-3:hover>div,
-.emotion-3:active>div {
-  background-color: #d3dae5;
-  border: solid 1px transparent;
-}
-
-.emotion-4 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #f3f5f8;
-  border: solid 1px transparent;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-6 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-  max-width: 16.875rem;
-}
-
-.emotion-7 {
-  font-weight: 400;
-  max-width: 13.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-7 div {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-.emotion-7 span {
-  margin-left: 0.25rem;
-  font-weight: 700;
-}
-
-.emotion-8 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.emotion-9 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-10 {
-  fill: #0e0e17;
-  width: 0.375rem;
-  height: 0.375rem;
-}
-
-.emotion-10 path {
-  fill: #0e0e17;
-}
-
-.emotion-12 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-12:hover>span,
-.emotion-12:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
-}
-
-.emotion-12:hover>div,
-.emotion-12:active>div {
-  background-color: #d3dae5;
-  border: solid 1px #d3dae5;
-}
-
-.emotion-13 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #f3f5f8;
-  border: solid 1px #dbe1eb;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 1rem 0 1rem;
-  border-radius: 1.5rem;
-}
-
-.emotion-20 {
-  position: relative;
-  display: inline-block;
-  height: 2.25rem;
-  -webkit-filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07));
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.07));
-}
-
-.emotion-31 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
@@ -1945,7 +1187,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   transition: all 150ms linear;
   color: #0e0e17;
   background-color: #fdfdfd;
-  border: solid 1px transparent;
+  border: solid 0.0625rem #cfd7e5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1954,9 +1196,11 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-40 {
-  background: none;
-  border: none;
+.emotion-5:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1966,70 +1210,51 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
+}
+
+.emotion-7 {
+  margin-left: 0;
+  margin-right: 0.5rem;
   max-width: 16.875rem;
-  min-width: 9.375rem;
 }
 
-.emotion-40:hover>span,
-.emotion-40:active>span {
-  background-color: transparent;
-  border-top: solid 1px transparent;
-  border-bottom: solid 1px transparent;
-}
-
-.emotion-40:hover>div,
-.emotion-40:active>div {
-  background-color: #bd8eff;
-  border: solid 1px transparent;
-}
-
-.emotion-41 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #dbc1ff;
-  border: solid 1px transparent;
+.emotion-8 {
+  font-weight: 400;
+  max-width: 13.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 0.25rem 0 1rem;
-  border-radius: 1.5rem;
-  border-right: 0!important;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-.emotion-48 {
-  height: 100%;
-  width: 0.0625rem;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  background-color: transparent;
-  border-top: solid 1px transparent;
-  border-bottom: solid 1px transparent;
+.emotion-8 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
 }
 
-.emotion-49 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #dbc1ff;
-  border: solid 1px transparent;
+.emotion-8 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-9 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-10 {
+  padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  border-left: 0!important;
-  padding-right: 0;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2038,51 +1263,19 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  width: 2.125rem;
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
 }
 
-.emotion-51 {
-  fill: #444d5f;
-  width: 1.1875rem;
-  height: 1.1875rem;
+.emotion-11 {
+  fill: #0e0e17;
+  width: 0.375rem;
+  height: 0.375rem;
 }
 
-.emotion-51 path {
-  fill: #444d5f;
+.emotion-11 path {
+  fill: #0e0e17;
 }
 
-.emotion-53 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 9.375rem;
-}
-
-.emotion-53:hover>span,
-.emotion-53:active>span {
-  background-color: transparent;
-  border-top: solid 1px transparent;
-  border-bottom: solid 1px transparent;
-}
-
-.emotion-53:hover>div,
-.emotion-53:active>div {
-  background-color: #bd8eff;
-  border: solid 1px #bd8eff;
-}
-
-.emotion-54 {
+.emotion-26 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
@@ -2090,56 +1283,18 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
   color: #0e0e17;
-  background-color: #dbc1ff;
-  border: solid 1px #c399ff;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem transparent;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 0 0.25rem 0 1rem;
+  padding: 0 1rem 0 1rem;
   border-radius: 1.5rem;
-  border-right: 0!important;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
-.emotion-61 {
-  height: 100%;
-  width: 0.0625rem;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  background-color: transparent;
-  border-top: solid 1px #c399ff;
-  border-bottom: solid 1px #c399ff;
-}
-
-.emotion-62 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0e0e17;
-  background-color: #dbc1ff;
-  border: solid 1px #c399ff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  border-left: 0!important;
-  padding-right: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 2.125rem;
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+.emotion-26:hover {
+  border: solid 0.0625rem transparent;
 }
 
 <div
@@ -2179,47 +1334,56 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
         }
       }
     >
-      <div>
+      <div
+        className="emotion-2"
+      >
+        <div>
+          filled
+          (
+          primary
+          ):
+           
+        </div>
         <div
           role="button"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
           >
             <button
-              className="emotion-3"
+              className="emotion-4"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-4"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     >
                       <div>
                         Label :
                       </div>
                       <span
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         Default value
                       </span>
                     </span>
                   </span>
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </span>
@@ -2236,161 +1400,56 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
         }
       }
     >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-12"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-13"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
+      <div
+        className="emotion-2"
+      >
+        <div>
+          filled
+          (
+          secondary
+          ):
+           
         </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
         <div
           role="button"
         >
           <div
-            className="emotion-20"
+            className="emotion-3"
           >
             <button
-              className="emotion-3"
+              className="emotion-4"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-4"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     >
                       <div>
                         Label :
                       </div>
                       <span
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         Default value
                       </span>
                     </span>
                   </span>
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-3"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-31"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </span>
@@ -2402,7 +1461,7 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
     </div>
   </div>
   <h2>
-    Added
+    Transparent
   </h2>
   <div
     className="emotion-1"
@@ -2414,64 +1473,58 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
         }
       }
     >
-      <div>
+      <div
+        className="emotion-2"
+      >
+        <div>
+          transparent
+          (
+          primary
+          ):
+           
+        </div>
         <div
           role="button"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
           >
             <button
-              className="emotion-40"
+              className="emotion-4"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-41"
+                className="emotion-26"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     >
                       <div>
                         Label :
                       </div>
                       <span
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         Default value
                       </span>
                     </span>
                   </span>
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
-                </span>
-              </div>
-              <span
-                className="emotion-48"
-              />
-              <div
-                className="emotion-49"
-              >
-                <span
-                  className="emotion-9"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-51"
-                  />
                 </span>
               </div>
             </button>
@@ -2486,136 +1539,58 @@ exports[`Storyshots Design System/Filter Filter with style types 1`] = `
         }
       }
     >
-      <div>
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-2"
-          >
-            <button
-              className="emotion-53"
-              data-testid="filter"
-              disabled={false}
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-54"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <span
-                    className="emotion-6"
-                  >
-                    <span
-                      className="emotion-7"
-                    >
-                      <div>
-                        Label :
-                      </div>
-                      <span
-                        className="emotion-8"
-                      >
-                        Default value
-                      </span>
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-10"
-                    />
-                  </span>
-                </span>
-              </div>
-              <span
-                className="emotion-61"
-              />
-              <div
-                className="emotion-62"
-              >
-                <span
-                  className="emotion-9"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-51"
-                  />
-                </span>
-              </div>
-            </button>
-          </div>
+      <div
+        className="emotion-2"
+      >
+        <div>
+          transparent
+          (
+          secondary
+          ):
+           
         </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
         <div
           role="button"
         >
           <div
-            className="emotion-20"
+            className="emotion-3"
           >
             <button
-              className="emotion-40"
+              className="emotion-4"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-41"
+                className="emotion-26"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     >
                       <div>
                         Label :
                       </div>
                       <span
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         Default value
                       </span>
                     </span>
                   </span>
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
-                </span>
-              </div>
-              <span
-                className="emotion-48"
-              />
-              <div
-                className="emotion-49"
-              >
-                <span
-                  className="emotion-9"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-51"
-                  />
                 </span>
               </div>
             </button>
@@ -2650,12 +1625,26 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-3 {
   position: relative;
   display: inline-block;
   height: 2.25rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   background: none;
   border: none;
   display: -webkit-box;
@@ -2671,19 +1660,22 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   min-width: 9.375rem;
 }
 
-.emotion-3:hover>span,
-.emotion-3:active>span {
-  border-top: solid 1px undefined;
-  border-bottom: solid 1px undefined;
+.emotion-4:hover>div,
+.emotion-4:active>div {
+  background-color: #F5F5F6;
 }
 
-.emotion-3:hover>div,
-.emotion-3:active>div {
-  background-color: #d3dae5;
-  border: solid 1px transparent;
+.emotion-4:focus>div {
+  border: solid 0.125rem #246ce5;
+  background-color: #e9f1ff;
 }
 
-.emotion-4 {
+.emotion-4:focus>span {
+  border-top: solid 0.125rem #246ce5;
+  border-bottom: solid 0.125rem #246ce5;
+}
+
+.emotion-5 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
@@ -2691,8 +1683,8 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   -webkit-transition: all 150ms linear;
   transition: all 150ms linear;
   color: #0e0e17;
-  background-color: #f3f5f8;
-  border: solid 1px transparent;
+  background-color: #fdfdfd;
+  border: solid 0.0625rem #cfd7e5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2701,7 +1693,11 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-5 {
+.emotion-5:hover {
+  border: solid 0.0625rem #cfd7e5;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2713,13 +1709,13 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin-left: 0;
   margin-right: 0.5rem;
   max-width: 16.875rem;
 }
 
-.emotion-7 {
+.emotion-8 {
   font-weight: 400;
   max-width: 13.125rem;
   display: -webkit-box;
@@ -2732,25 +1728,25 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   align-items: center;
 }
 
-.emotion-7 div {
+.emotion-8 div {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
 }
 
-.emotion-7 span {
+.emotion-8 span {
   margin-left: 0.25rem;
   font-weight: 700;
 }
 
-.emotion-8 {
+.emotion-9 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
 }
 
-.emotion-9 {
+.emotion-10 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2766,13 +1762,13 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-11 {
   fill: #0e0e17;
   width: 0.375rem;
   height: 0.375rem;
 }
 
-.emotion-10 path {
+.emotion-11 path {
   fill: #0e0e17;
 }
 
@@ -2810,47 +1806,56 @@ exports[`Storyshots Design System/Filter Searchable Filter 1`] = `
         }
       }
     >
-      <div>
+      <div
+        className="emotion-2"
+      >
+        <div>
+          filled
+          (
+          primary
+          ):
+           
+        </div>
         <div
           role="button"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
           >
             <button
-              className="emotion-3"
+              className="emotion-4"
               data-testid="filter"
               disabled={false}
               onClick={[Function]}
             >
               <div
-                className="emotion-4"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     >
                       <div>
                         Label :
                       </div>
                       <span
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         Default value
                       </span>
                     </span>
                   </span>
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </span>

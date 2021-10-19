@@ -1,11 +1,13 @@
+import { rem } from 'theme/utils';
+
 import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
-export const borderStyleParams = 'solid 1px';
-export const focusBorderStyleParams = 'solid 2px';
+export const borderStyleParams = `solid ${rem(1)}`;
+export const focusBorderStyleParams = `solid ${rem(2)}`;
 
 export const getBackgroundColor = ({
   open,

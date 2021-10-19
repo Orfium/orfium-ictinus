@@ -1,6 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, lighten, rem } from 'polished';
+import { darken, lighten } from 'polished';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
 import { Props } from './TextInputBase';
@@ -21,10 +22,10 @@ const wrapperStyleSwitch = (
   switch (styleType) {
     case 'outlined':
       return `
-        box-shadow: 0 0 0 1px
+        box-shadow: 0 0 0 ${rem(1)}
           ${error ? 'transparent' : theme.utils.getColor('lightGrey', 200)};
         &:focus-within, &:hover {
-          box-shadow: 0 0 0 1px ${
+          box-shadow: 0 0 0 ${rem(1)} ${
             !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 200)
           };
         }
@@ -57,7 +58,7 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     position: relative;
     background-color: ${lean ? 'transparent' : backgroundColor};
     opacity: ${disabled && 0.5};
-    border: 2px solid transparent;
+    border: ${rem(2)} solid transparent;
     ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
     border-color: ${error ? theme.utils.getColor('error', 550, 'normal') : undefined};
 
@@ -123,7 +124,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   display: block;
   position: relative;
-  top: ${label && '7px'};
+  top: ${label && rem(7)};
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
@@ -150,7 +151,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }

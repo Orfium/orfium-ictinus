@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import { rem } from 'polished';
 import { Theme } from 'theme';
 import { flexCenter } from 'theme/functions';
+import { rem } from 'theme/utils';
 
 export const emptyStyle = () => (theme: Theme) => css`
   color: ${theme.utils.getColor('lightGrey', 750)};

@@ -5,7 +5,7 @@ import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 
-import { BASE_SHADE } from '../../theme/palette';
+import { BASE_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
 import Icon from '../Icon';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import Options from './components/Options/Options';
