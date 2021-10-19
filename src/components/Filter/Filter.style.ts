@@ -27,9 +27,12 @@ export const buttonSpanStyle = () => () => {
   };
 };
 
-export const buttonWrapperStyle = ({ disabled, open, hasSelectedValue }: ButtonStyleProps) => (
-  theme: Theme
-) => {
+export const buttonWrapperStyle = ({
+  disabled,
+  open,
+  hasSelectedValue,
+  calculatedColor,
+}: ButtonStyleProps) => (theme: Theme) => {
   return {
     background: 'none',
     border: 'none',
@@ -41,7 +44,11 @@ export const buttonWrapperStyle = ({ disabled, open, hasSelectedValue }: ButtonS
 
     ':hover > div, :active > div': {
       backgroundColor:
-        !disabled && !open ? theme.utils.getColor('darkGrey', null, 'pale') : undefined,
+        !disabled && !open
+          ? hasSelectedValue
+            ? theme.utils.getColor(calculatedColor.color, 100)
+            : theme.utils.getColor('darkGrey', null, 'pale')
+          : undefined,
     },
     // on focus change the two divs of added
     ':focus > div': !open &&
@@ -228,7 +235,6 @@ export const menuStyle = () => (theme: Theme) => css`
   height: auto;
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
-  border-radius: ${rem(4)};
   z-index: 1;
   overflow: hidden;
   min-width: 100%;
