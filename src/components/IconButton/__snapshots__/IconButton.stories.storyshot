@@ -32,7 +32,7 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
   height: 2.875rem;
   opacity: 1;
   border-radius: 100%;
-  border: solid 1px rgba(136,51,255,0.5);
+  border: solid 0.0625rem rgba(136,51,255,0.5);
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
@@ -50,7 +50,8 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
   align-items: center;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: rgba(136,51,255,0.1);
 }
 
@@ -188,7 +189,8 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   align-items: center;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -250,7 +252,8 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   align-items: center;
 }
 
-.emotion-5:hover {
+.emotion-5:hover,
+.emotion-5:focus {
   background-color: #6a00ff;
 }
 
@@ -286,7 +289,8 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   align-items: center;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus {
   background-color: #6a00ff;
 }
 
@@ -444,7 +448,8 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   align-items: center;
 }
 
-.emotion-2:hover {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #6a00ff;
 }
 
@@ -506,7 +511,8 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   align-items: center;
 }
 
-.emotion-5:hover {
+.emotion-5:hover,
+.emotion-5:focus {
   background-color: #2b9941;
 }
 
@@ -552,7 +558,8 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   align-items: center;
 }
 
-.emotion-8:hover {
+.emotion-8:hover,
+.emotion-8:focus {
   background-color: #e3002c;
 }
 

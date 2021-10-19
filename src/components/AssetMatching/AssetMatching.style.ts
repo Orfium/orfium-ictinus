@@ -2,9 +2,10 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
+import { rem } from 'theme/utils';
 
 const wrapperStyleSwitch = (theme: Theme) => ({
-  outlined: `border: 1px solid ${theme.utils.getColor('lightGrey', 200)}`,
+  outlined: `border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 200)}`,
   elevated: `box-shadow: ${theme.elevation['01']};`,
   filled: ``,
 });

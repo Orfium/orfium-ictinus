@@ -1,6 +1,191 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Asset Matching ActionsToolbox 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  margin-right: 0.5rem;
+}
+
+.emotion-5 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #646464;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  background-color: rgba(100,100,100,0.1);
+}
+
+.emotion-5:active {
+  background-color: rgba(100,100,100,0.2);
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: inherit;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: inherit;
+}
+
+.emotion-10 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-19 {
+  margin-right: 0.5rem;
+}
+
+.emotion-20 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5f6c85;
+  width: 2.875rem;
+  background-color: transparent;
+  padding: 0;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20:hover,
+.emotion-20:focus {
+  background-color: rgba(95,108,133,0.1);
+}
+
+.emotion-20:active {
+  background-color: rgba(95,108,133,0.2);
+}
+
+.emotion-22 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-22 path {
+  fill: #5f6c85;
+}
+
 <div
   style={
     Object {
@@ -17,94 +202,53 @@ exports[`Storyshots Design System/Asset Matching ActionsToolbox 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
-      turn
+      turn 
       dark
        on
     </button>
   </div>
   <div
-    css={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-        "marginTop": "0.625rem",
-      }
-    }
+    className="emotion-1"
   >
     <h2>
       ⬇️Toolbox for actions can be used separately for handling bulk actions⬇️
     </h2>
     <div
-      css={
-        Object {
-          "map": undefined,
-          "name": "qmf9se",
-          "next": undefined,
-          "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-          "toString": [Function],
-        }
-      }
+      className="emotion-2"
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "qmf9se",
-            "next": undefined,
-            "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-3"
       >
         <div
-          css={[Function]}
+          className="emotion-4"
           data-testid="primary_action"
         >
           <button
-            className="css-wyvyhc-Button"
+            className="emotion-5"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-6"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-7"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-116ea5o-Icon"
+                    className="emotion-9"
                   />
                 </span>
               </span>
               <span
-                className="css-5zv1of-Button"
+                className="emotion-10"
               >
                 Confirm
               </span>
@@ -112,33 +256,32 @@ exports[`Storyshots Design System/Asset Matching ActionsToolbox 1`] = `
           </button>
         </div>
         <div
-          css={[Function]}
+          className="emotion-4"
           data-testid="primary_action"
         >
           <button
-            className="css-wyvyhc-Button"
+            className="emotion-5"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
-            type="button"
           >
             <span
-              className="css-1xr6sam-Button"
+              className="emotion-6"
             >
               <span
-                className="css-1kner5m-Button"
+                className="emotion-7"
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-116ea5o-Icon"
+                    className="emotion-9"
                   />
                 </span>
               </span>
               <span
-                className="css-5zv1of-Button"
+                className="emotion-10"
               >
                 Reject
               </span>
@@ -150,40 +293,23 @@ exports[`Storyshots Design System/Asset Matching ActionsToolbox 1`] = `
         role="button"
       >
         <div
-          css={
-            Object {
-              "map": undefined,
-              "name": "1i430ov",
-              "next": undefined,
-              "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  position: relative;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-18"
         >
           <div
-            css={[Function]}
+            className="emotion-19"
           >
             <button
-              className="css-1dclq6n-IconButton"
-              color="neutralBlack-500"
+              className="emotion-20"
               data-testid="icon-button-menu_btn"
               disabled={false}
               onClick={[Function]}
             >
               <span
-                className="css-1gnbc76-Icon"
+                className="emotion-8"
                 onClick={[Function]}
               >
                 <span
-                  className="css-1k5aruc-Icon"
+                  className="emotion-22"
                 />
               </span>
             </button>
@@ -196,6 +322,733 @@ exports[`Storyshots Design System/Asset Matching ActionsToolbox 1`] = `
 `;
 
 exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  margin-bottom: 0.625rem;
+  margin-right: 0.625rem;
+}
+
+.emotion-2 {
+  margin-bottom: 0.625rem;
+  margin-left: 0.625rem;
+}
+
+.emotion-4>div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #cfd7e5;
+}
+
+.emotion-4 .selected {
+  background: #e7d6ff;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emotion-6 {
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: white;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 {
+  opacity: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-9:hover:before {
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-10 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-10+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-10+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-10:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-11 span {
+  padding: 0;
+}
+
+.emotion-11 svg {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #f3eaff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-13 path {
+  fill: #f3eaff;
+}
+
+.emotion-15 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin: 0 0.5rem 0 1rem;
+  color: #0e0e17;
+}
+
+.emotion-16 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #5f6c85;
+  margin-right: 0.5rem;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-19 {
+  margin-right: 0.5rem;
+}
+
+.emotion-20 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #646464;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-20:hover,
+.emotion-20:focus {
+  background-color: rgba(100,100,100,0.1);
+}
+
+.emotion-20:active {
+  background-color: rgba(100,100,100,0.2);
+}
+
+.emotion-21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-22 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-24 {
+  fill: inherit;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-24 path {
+  fill: inherit;
+}
+
+.emotion-25 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-33 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-34 {
+  margin-right: 0.5rem;
+}
+
+.emotion-35 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5f6c85;
+  width: 2.875rem;
+  background-color: transparent;
+  padding: 0;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-35:hover,
+.emotion-35:focus {
+  background-color: rgba(95,108,133,0.1);
+}
+
+.emotion-35:active {
+  background-color: rgba(95,108,133,0.2);
+}
+
+.emotion-37 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-37 path {
+  fill: #5f6c85;
+}
+
+.emotion-38 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.emotion-39 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: transparent;
+  padding: 1rem;
+  border: 0.0625rem solid #dbe1eb;
+  border-radius: 0.25rem;
+}
+
+.emotion-39:first-of-type {
+  margin-right: 1rem;
+}
+
+.emotion-40 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.emotion-41 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-42 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #5f6c85;
+  margin: 0;
+  font-style: italic;
+}
+
+.emotion-43 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-45 {
+  fill: #8833FF;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-45 path {
+  fill: #8833FF;
+}
+
+.emotion-46 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-47 {
+  color: #8833FF;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  cursor: default;
+}
+
+.emotion-48 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #5f6c85;
+  margin: 0;
+}
+
+.emotion-49 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-50 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5f6c85;
+  margin: 0;
+}
+
+.emotion-51 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.25rem;
+  color: #8833FF;
+  background: #e7d6ff;
+  border-radius: 0.25rem;
+  margin-left: 1.5rem;
+}
+
+.emotion-52 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-53 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-54 {
+  font-size: 0.6875rem;
+  margin-right: 2rem;
+  color: #8833FF;
+}
+
+.emotion-55 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-56 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0e0e17;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: default;
+  background: #dbe1eb;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-57 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-61 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #f3f5f8;
+  padding: 1rem;
+  border: 0.0625rem solid #dbe1eb;
+  border-radius: 0.25rem;
+}
+
+.emotion-61:first-of-type {
+  margin-right: 1rem;
+}
+
+.emotion-68 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-68:hover {
+  -webkit-transition: text-decoration 0.2s ease-in-out;
+  -moz-transition: text-decoration 0.2s ease-in-out;
+  -ms-transition: text-decoration 0.2s ease-in-out;
+  -o-transition: text-decoration 0.2s ease-in-out;
+  -webkit-transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #8833FF;
+}
+
+.emotion-68:hover a {
+  display: block;
+}
+
+.emotion-70 {
+  background: transparent;
+}
+
+.emotion-70 .tippy-content {
+  color: #fff;
+  background-color: #0e0e17;
+  max-width: 16rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-70 .tippy-arrow {
+  color: #0e0e17;
+}
+
+.emotion-71 {
+  display: none;
+  margin: auto 0.5rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-71:hover>span>svg>path {
+  -webkit-transition: fill 0.2s ease-in-out;
+  -moz-transition: fill 0.2s ease-in-out;
+  -ms-transition: fill 0.2s ease-in-out;
+  -o-transition: fill 0.2s ease-in-out;
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
+  fill: black;
+}
+
+.emotion-73 {
+  fill: #6c7c98;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.emotion-73 path {
+  fill: #6c7c98;
+}
+
+.emotion-83 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0e0e17;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: default;
+  background: transparent;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 <div
   style={
     Object {
@@ -212,29 +1065,17 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
-      turn
+      turn 
       dark
        on
     </button>
   </div>
   <div>
     <button
-      css={
-        Object {
-          "marginBottom": "0.625rem",
-          "marginRight": "0.625rem",
-        }
-      }
+      className="emotion-1"
       onClick={[Function]}
     >
       add action
@@ -245,66 +1086,39 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
       clear actions
     </button>
     <button
-      css={
-        Object {
-          "marginBottom": "0.625rem",
-          "marginLeft": "0.625rem",
-        }
-      }
+      className="emotion-2"
       onClick={[Function]}
     >
       reset actions
     </button>
     <button
-      css={
-        Object {
-          "marginBottom": "0.625rem",
-          "marginLeft": "0.625rem",
-        }
-      }
+      className="emotion-2"
       onClick={[Function]}
     >
       check from outside
     </button>
     <section
-      css={[Function]}
+      className="emotion-4"
     >
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "ctdg1z",
-            "next": undefined,
-            "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  width: 100%;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-5"
       >
         <header
-          className="css-1v4shhk-SectionHeader"
+          className="emotion-6"
         >
           <div
-            className="css-zj67xr-CheckBoxContainer"
+            className="emotion-7"
           >
             <span
-              className="css-58ep04-CheckBox"
+              className="emotion-8"
             >
               <span
-                className="css-7z71va-CheckBox"
+                className="emotion-9"
                 onClick={[Function]}
               >
                 <input
                   checked={false}
-                  className="css-tq8k5b-CheckBox"
+                  className="emotion-10"
                   data-testid="checkbox"
                   disabled={false}
                   id="styled-checkbox-"
@@ -313,30 +1127,30 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
                   type="checkbox"
                 />
                 <label
-                  className="css-8t9up8-CheckBox"
+                  className="emotion-11"
                   htmlFor="styled-checkbox-"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-12"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1shwk9n-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </label>
               </span>
             </span>
             <div
-              className="css-zj67xr-CheckBoxContainer"
+              className="emotion-7"
             >
               <span
-                className="css-1978th8-CheckBoxContainer"
+                className="emotion-15"
               >
                 95%
               </span>
               <span
-                className="css-wiu3iz-CheckBoxContainer"
+                className="emotion-16"
               >
                 Probability
                 <br />
@@ -345,65 +1159,38 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
             </div>
           </div>
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "qmf9se",
-                "next": undefined,
-                "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                "toString": [Function],
-              }
-            }
+            className="emotion-17"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "qmf9se",
-                  "next": undefined,
-                  "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-18"
             >
               <div
-                css={[Function]}
+                className="emotion-19"
                 data-testid="primary_action"
               >
                 <button
-                  className="css-wyvyhc-Button"
+                  className="emotion-20"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
-                  type="button"
                 >
                   <span
-                    className="css-1xr6sam-Button"
+                    className="emotion-21"
                   >
                     <span
-                      className="css-1kner5m-Button"
+                      className="emotion-22"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-12"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-116ea5o-Icon"
+                          className="emotion-24"
                         />
                       </span>
                     </span>
                     <span
-                      className="css-5zv1of-Button"
+                      className="emotion-25"
                     >
                       Confirm
                     </span>
@@ -411,33 +1198,32 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
                 </button>
               </div>
               <div
-                css={[Function]}
+                className="emotion-19"
                 data-testid="primary_action"
               >
                 <button
-                  className="css-wyvyhc-Button"
+                  className="emotion-20"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
-                  type="button"
                 >
                   <span
-                    className="css-1xr6sam-Button"
+                    className="emotion-21"
                   >
                     <span
-                      className="css-1kner5m-Button"
+                      className="emotion-22"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-12"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-116ea5o-Icon"
+                          className="emotion-24"
                         />
                       </span>
                     </span>
                     <span
-                      className="css-5zv1of-Button"
+                      className="emotion-25"
                     >
                       Reject
                     </span>
@@ -449,40 +1235,23 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
               role="button"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "1i430ov",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  position: relative;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-33"
               >
                 <div
-                  css={[Function]}
+                  className="emotion-34"
                 >
                   <button
-                    className="css-1dclq6n-IconButton"
-                    color="neutralBlack-500"
+                    className="emotion-35"
                     data-testid="icon-button-menu_btn"
                     disabled={false}
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-12"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-1k5aruc-Icon"
+                        className="emotion-37"
                       />
                     </span>
                   </button>
@@ -492,212 +1261,82 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
           </div>
         </header>
         <div
-          css={[Function]}
+          className="emotion-38"
         >
           <article
-            css={[Function]}
+            className="emotion-39"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "1qasdci",
-                  "next": undefined,
-                  "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-40"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "97an4l",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-41"
               >
                 <p
-                  css={[Function]}
+                  className="emotion-42"
                 >
                   Owned Recording
                 </p>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1ciyja9",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-43"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-12"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-8vh3ja-Icon"
+                      className="emotion-45"
                     />
                   </span>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "qmf9se",
-                        "next": undefined,
-                        "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-46"
                   >
                     <h3
-                      css={[Function]}
+                      className="emotion-47"
                     >
                       Too Funky
                     </h3>
                   </div>
                 </div>
                 <p
-                  css={[Function]}
+                  className="emotion-48"
                 >
                   ISWC: KS39729323
                 </p>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "zs17b",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-49"
               >
                 <p
-                  css={[Function]}
+                  className="emotion-50"
                 >
-                  Linked Sound
+                  Linked Sound 
                   <br />
                    Recordings
                 </p>
                 <span
-                  css={[Function]}
+                  className="emotion-51"
                 >
                   234
                 </span>
               </div>
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "r5p8pp",
-                  "next": undefined,
-                  "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-52"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "eo84ck",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-53"
               >
                 <h4
-                  css={[Function]}
+                  className="emotion-54"
                 >
                   Artists
                 </h4>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "h9kp2x",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-55"
                 >
                   <p
-                    className=""
-                    css={[Function]}
+                    className=" emotion-56"
                     data-itemid="george-michael"
                     data-testid="george-michael"
                     onMouseLeave={[Function]}
@@ -708,53 +1347,18 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
                 </div>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "ffu30o",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 0;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-57"
               >
                 <h4
-                  css={[Function]}
+                  className="emotion-54"
                 >
                   Writers
                 </h4>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "h9kp2x",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-55"
                 >
                   <p
-                    className=""
-                    css={[Function]}
+                    className=" emotion-56"
                     data-itemid="george-michael"
                     data-testid="george-michael"
                     onMouseLeave={[Function]}
@@ -767,306 +1371,103 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
             </div>
           </article>
           <article
-            css={[Function]}
+            className="emotion-61"
           >
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "1qasdci",
-                  "next": undefined,
-                  "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-40"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "97an4l",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-41"
               >
                 <p
-                  css={[Function]}
+                  className="emotion-42"
                 >
                   Owned Composition
                 </p>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1ciyja9",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-43"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-12"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-8vh3ja-Icon"
+                      className="emotion-45"
                     />
                   </span>
                   <div
-                    css={[Function]}
+                    className="emotion-68"
                   >
                     <h3
-                      css={[Function]}
+                      className="emotion-47"
                     >
                       Waiting for That Day
                     </h3>
                     <div
-                      css={[Function]}
-                      data-for="external-link-tooltip"
-                      data-tip={true}
+                      className="emotion-70"
+                      data-testid="external-link-tooltip"
+                      placement="right"
                     >
                       <a
-                        css={[Function]}
+                        className="emotion-71"
                         href="https://www.orfium.com"
                         rel="noreferrer"
                         target="_blank"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-12"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-l3sk37-Icon"
+                            className="emotion-73"
                           />
                         </span>
                       </a>
                     </div>
-                    <div
-                      className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-right type-dark"
-                      data-id="tooltip"
-                      id="external-link-tooltip"
-                    >
-                      <style
-                        aria-hidden="true"
-                        dangerouslySetInnerHTML={
-                          Object {
-                            "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                          }
-                        }
-                      />
+                    <div>
                       Open asset in MRC
                     </div>
                   </div>
                 </div>
                 <p
-                  css={[Function]}
+                  className="emotion-48"
                 >
                   ISWC: KS39729323
                 </p>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "zs17b",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-49"
               >
                 <p
-                  css={[Function]}
+                  className="emotion-50"
                 >
-                  Linked Sound
+                  Linked Sound 
                   <br />
                    Recordings
                 </p>
                 <span
-                  css={[Function]}
+                  className="emotion-51"
                 >
                   234
                 </span>
               </div>
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "r5p8pp",
-                  "next": undefined,
-                  "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-52"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "eo84ck",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-53"
               >
                 <h4
-                  css={[Function]}
+                  className="emotion-54"
                 >
                   Writers
                 </h4>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "h9kp2x",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-55"
                 >
                   <p
-                    className=""
-                    css={[Function]}
+                    className=" emotion-56"
                     data-itemid="george-michael"
                     data-testid="george-michael"
                     onMouseLeave={[Function]}
@@ -1075,8 +1476,7 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
                     George Michael
                   </p>
                   <p
-                    className=""
-                    css={[Function]}
+                    className=" emotion-83"
                     data-itemid="mick-jagger"
                     data-testid="mick-jagger"
                     onMouseLeave={[Function]}
@@ -1085,8 +1485,7 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
                     Mick Jagger
                   </p>
                   <p
-                    className=""
-                    css={[Function]}
+                    className=" emotion-83"
                     data-itemid="keith-richards"
                     data-testid="keith-richards"
                     onMouseLeave={[Function]}
@@ -1106,6 +1505,767 @@ exports[`Storyshots Design System/Asset Matching AssetMatching 1`] = `
 `;
 
 exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: space-between;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
+  width: 100%;
+}
+
+.emotion-2 {
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: transparent;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 0px 0px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  opacity: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-5:hover:before {
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-6 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-6+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-6+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-6:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-7 span {
+  padding: 0;
+}
+
+.emotion-7 svg {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #f3eaff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-9 path {
+  fill: #f3eaff;
+}
+
+.emotion-11 {
+  color: black;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13>div {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #cfd7e5;
+}
+
+.emotion-13 .selected {
+  background: #e7d6ff;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.emotion-15 {
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: white;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-24 {
+  font-size: 1.625rem;
+  font-weight: 700;
+  margin: 0 0.5rem 0 1rem;
+  color: #0e0e17;
+}
+
+.emotion-25 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #5f6c85;
+  margin-right: 0.5rem;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-28 {
+  margin-right: 0.5rem;
+}
+
+.emotion-29 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #646464;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-29:hover,
+.emotion-29:focus {
+  background-color: rgba(100,100,100,0.1);
+}
+
+.emotion-29:active {
+  background-color: rgba(100,100,100,0.2);
+}
+
+.emotion-30 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-31 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-33 {
+  fill: inherit;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-33 path {
+  fill: inherit;
+}
+
+.emotion-34 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-43 {
+  margin-right: 0.5rem;
+}
+
+.emotion-44 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5f6c85;
+  width: 2.875rem;
+  background-color: transparent;
+  padding: 0;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-44:hover,
+.emotion-44:focus {
+  background-color: rgba(95,108,133,0.1);
+}
+
+.emotion-44:active {
+  background-color: rgba(95,108,133,0.2);
+}
+
+.emotion-46 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-46 path {
+  fill: #5f6c85;
+}
+
+.emotion-47 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.emotion-48 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: transparent;
+  padding: 1rem;
+  border: 0.0625rem solid #dbe1eb;
+  border-radius: 0.25rem;
+}
+
+.emotion-48:first-of-type {
+  margin-right: 1rem;
+}
+
+.emotion-49 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.emotion-50 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-51 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #5f6c85;
+  margin: 0;
+  font-style: italic;
+}
+
+.emotion-52 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-54 {
+  fill: #8833FF;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-54 path {
+  fill: #8833FF;
+}
+
+.emotion-55 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-56 {
+  color: #8833FF;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  cursor: default;
+}
+
+.emotion-57 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #5f6c85;
+  margin: 0;
+}
+
+.emotion-58 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.emotion-59 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #5f6c85;
+  margin: 0;
+}
+
+.emotion-60 {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.25rem;
+  color: #8833FF;
+  background: #e7d6ff;
+  border-radius: 0.25rem;
+  margin-left: 1.5rem;
+}
+
+.emotion-61 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.emotion-62 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-63 {
+  font-size: 0.6875rem;
+  margin-right: 2rem;
+  color: #8833FF;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-65 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0e0e17;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: default;
+  background: #dbe1eb;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-66 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.emotion-70 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #f3f5f8;
+  padding: 1rem;
+  border: 0.0625rem solid #dbe1eb;
+  border-radius: 0.25rem;
+}
+
+.emotion-70:first-of-type {
+  margin-right: 1rem;
+}
+
+.emotion-77 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-77:hover {
+  -webkit-transition: text-decoration 0.2s ease-in-out;
+  -moz-transition: text-decoration 0.2s ease-in-out;
+  -ms-transition: text-decoration 0.2s ease-in-out;
+  -o-transition: text-decoration 0.2s ease-in-out;
+  -webkit-transition: text-decoration 0.2s ease-in-out;
+  transition: text-decoration 0.2s ease-in-out;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  color: #8833FF;
+}
+
+.emotion-77:hover a {
+  display: block;
+}
+
+.emotion-79 {
+  background: transparent;
+}
+
+.emotion-79 .tippy-content {
+  color: #fff;
+  background-color: #0e0e17;
+  max-width: 16rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-79 .tippy-arrow {
+  color: #0e0e17;
+}
+
+.emotion-80 {
+  display: none;
+  margin: auto 0.5rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-80:hover>span>svg>path {
+  -webkit-transition: fill 0.2s ease-in-out;
+  -moz-transition: fill 0.2s ease-in-out;
+  -ms-transition: fill 0.2s ease-in-out;
+  -o-transition: fill 0.2s ease-in-out;
+  -webkit-transition: fill 0.2s ease-in-out;
+  transition: fill 0.2s ease-in-out;
+  fill: black;
+}
+
+.emotion-82 {
+  fill: #6c7c98;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.emotion-82 path {
+  fill: #6c7c98;
+}
+
+.emotion-92 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #0e0e17;
+  margin: 0.25rem;
+  padding: 0.25rem;
+  cursor: default;
+  background: transparent;
+  white-space: nowrap;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
 <div
   style={
     Object {
@@ -1122,52 +2282,42 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
-      turn
+      turn 
       dark
        on
     </button>
   </div>
   <div
-    css={
-      Object {
-        "alignItems": "space-between",
-        "display": "flex",
-        "flexDirection": "column",
-        "marginTop": "0.625rem",
-        "textAlign": "center",
-        "width": "100%",
-      }
-    }
+    className="emotion-1"
   >
-    <h2>
+    <h2
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
       ⬇️Bulk actions Showcase⬇️
     </h2>
     <header
-      className="css-225umb-SectionHeader"
+      className="emotion-2"
     >
       <div
-        className="css-zj67xr-CheckBoxContainer"
+        className="emotion-3"
       >
         <span
-          className="css-58ep04-CheckBox"
+          className="emotion-4"
         >
           <span
-            className="css-7z71va-CheckBox"
+            className="emotion-5"
             onClick={[Function]}
           >
             <input
               checked={false}
-              className="css-tq8k5b-CheckBox"
+              className="emotion-6"
               data-testid="checkbox"
               disabled={false}
               id="styled-checkbox-"
@@ -1176,49 +2326,32 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
               type="checkbox"
             />
             <label
-              className="css-8t9up8-CheckBox"
+              className="emotion-7"
               htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1gnbc76-Icon"
+                className="emotion-8"
                 onClick={[Function]}
               >
                 <span
-                  className="css-1shwk9n-Icon"
+                  className="emotion-9"
                 />
               </span>
             </label>
           </span>
         </span>
         <div
-          className="css-zj67xr-CheckBoxContainer"
+          className="emotion-3"
         >
           <span
-            css={
-              Object {
-                "color": "black",
-              }
-            }
+            className="emotion-11"
           >
             no items selected
           </span>
         </div>
       </div>
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "qmf9se",
-            "next": undefined,
-            "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-12"
       >
         <button>
           Custom Action Element
@@ -1240,44 +2373,27 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
         }
       >
         <section
-          css={[Function]}
+          className="emotion-13"
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "ctdg1z",
-                "next": undefined,
-                "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  width: 100%;
-",
-                "toString": [Function],
-              }
-            }
+            className="emotion-14"
           >
             <header
-              className="css-1v4shhk-SectionHeader"
+              className="emotion-15"
             >
               <div
-                className="css-zj67xr-CheckBoxContainer"
+                className="emotion-3"
               >
                 <span
-                  className="css-58ep04-CheckBox"
+                  className="emotion-4"
                 >
                   <span
-                    className="css-7z71va-CheckBox"
+                    className="emotion-5"
                     onClick={[Function]}
                   >
                     <input
                       checked={false}
-                      className="css-tq8k5b-CheckBox"
+                      className="emotion-6"
                       data-testid="checkbox"
                       disabled={false}
                       id="styled-checkbox-"
@@ -1286,30 +2402,30 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                       type="checkbox"
                     />
                     <label
-                      className="css-8t9up8-CheckBox"
+                      className="emotion-7"
                       htmlFor="styled-checkbox-"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-1shwk9n-Icon"
+                          className="emotion-9"
                         />
                       </span>
                     </label>
                   </span>
                 </span>
                 <div
-                  className="css-zj67xr-CheckBoxContainer"
+                  className="emotion-3"
                 >
                   <span
-                    className="css-1978th8-CheckBoxContainer"
+                    className="emotion-24"
                   >
                     95%
                   </span>
                   <span
-                    className="css-wiu3iz-CheckBoxContainer"
+                    className="emotion-25"
                   >
                     Probability
                     <br />
@@ -1318,65 +2434,38 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                 </div>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "qmf9se",
-                    "next": undefined,
-                    "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-12"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "qmf9se",
-                      "next": undefined,
-                      "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-27"
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-28"
                     data-testid="primary_action"
                   >
                     <button
-                      className="css-wyvyhc-Button"
+                      className="emotion-29"
                       data-testid="button"
                       disabled={false}
                       onClick={[Function]}
-                      type="button"
                     >
                       <span
-                        className="css-1xr6sam-Button"
+                        className="emotion-30"
                       >
                         <span
-                          className="css-1kner5m-Button"
+                          className="emotion-31"
                         >
                           <span
-                            className="css-1gnbc76-Icon"
+                            className="emotion-8"
                             onClick={[Function]}
                           >
                             <span
-                              className="css-116ea5o-Icon"
+                              className="emotion-33"
                             />
                           </span>
                         </span>
                         <span
-                          className="css-5zv1of-Button"
+                          className="emotion-34"
                         >
                           Confirm
                         </span>
@@ -1384,33 +2473,32 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                     </button>
                   </div>
                   <div
-                    css={[Function]}
+                    className="emotion-28"
                     data-testid="primary_action"
                   >
                     <button
-                      className="css-wyvyhc-Button"
+                      className="emotion-29"
                       data-testid="button"
                       disabled={false}
                       onClick={[Function]}
-                      type="button"
                     >
                       <span
-                        className="css-1xr6sam-Button"
+                        className="emotion-30"
                       >
                         <span
-                          className="css-1kner5m-Button"
+                          className="emotion-31"
                         >
                           <span
-                            className="css-1gnbc76-Icon"
+                            className="emotion-8"
                             onClick={[Function]}
                           >
                             <span
-                              className="css-116ea5o-Icon"
+                              className="emotion-33"
                             />
                           </span>
                         </span>
                         <span
-                          className="css-5zv1of-Button"
+                          className="emotion-34"
                         >
                           Reject
                         </span>
@@ -1422,40 +2510,23 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                   role="button"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "1i430ov",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  position: relative;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-42"
                   >
                     <div
-                      css={[Function]}
+                      className="emotion-43"
                     >
                       <button
-                        className="css-1dclq6n-IconButton"
-                        color="neutralBlack-500"
+                        className="emotion-44"
                         data-testid="icon-button-menu_btn"
                         disabled={false}
                         onClick={[Function]}
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-8"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-1k5aruc-Icon"
+                            className="emotion-46"
                           />
                         </span>
                       </button>
@@ -1465,212 +2536,82 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
               </div>
             </header>
             <div
-              css={[Function]}
+              className="emotion-47"
             >
               <article
-                css={[Function]}
+                className="emotion-48"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1qasdci",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-49"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "97an4l",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-50"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-51"
                     >
                       Owned Recording
                     </p>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "1ciyja9",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-52"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-8vh3ja-Icon"
+                          className="emotion-54"
                         />
                       </span>
                       <div
-                        css={
-                          Object {
-                            "map": undefined,
-                            "name": "qmf9se",
-                            "next": undefined,
-                            "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                            "toString": [Function],
-                          }
-                        }
+                        className="emotion-55"
                       >
                         <h3
-                          css={[Function]}
+                          className="emotion-56"
                         >
                           Too Funky
                         </h3>
                       </div>
                     </div>
                     <p
-                      css={[Function]}
+                      className="emotion-57"
                     >
                       ISWC: KS39729323
                     </p>
                   </div>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "zs17b",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-58"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-59"
                     >
-                      Linked Sound
+                      Linked Sound 
                       <br />
                        Recordings
                     </p>
                     <span
-                      css={[Function]}
+                      className="emotion-60"
                     >
                       234
                     </span>
                   </div>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "r5p8pp",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-61"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "eo84ck",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-62"
                   >
                     <h4
-                      css={[Function]}
+                      className="emotion-63"
                     >
                       Artists
                     </h4>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "h9kp2x",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-64"
                     >
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-65"
                         data-itemid="george-michael"
                         data-testid="george-michael"
                         onMouseLeave={[Function]}
@@ -1681,53 +2622,18 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                     </div>
                   </div>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "ffu30o",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 0;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-66"
                   >
                     <h4
-                      css={[Function]}
+                      className="emotion-63"
                     >
                       Writers
                     </h4>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "h9kp2x",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-64"
                     >
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-65"
                         data-itemid="george-michael"
                         data-testid="george-michael"
                         onMouseLeave={[Function]}
@@ -1740,306 +2646,103 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                 </div>
               </article>
               <article
-                css={[Function]}
+                className="emotion-70"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1qasdci",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-49"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "97an4l",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-50"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-51"
                     >
                       Owned Composition
                     </p>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "1ciyja9",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-52"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-8vh3ja-Icon"
+                          className="emotion-54"
                         />
                       </span>
                       <div
-                        css={[Function]}
+                        className="emotion-77"
                       >
                         <h3
-                          css={[Function]}
+                          className="emotion-56"
                         >
                           Waiting for That Day
                         </h3>
                         <div
-                          css={[Function]}
-                          data-for="external-link-tooltip"
-                          data-tip={true}
+                          className="emotion-79"
+                          data-testid="external-link-tooltip"
+                          placement="right"
                         >
                           <a
-                            css={[Function]}
+                            className="emotion-80"
                             href="https://www.orfium.com"
                             rel="noreferrer"
                             target="_blank"
                           >
                             <span
-                              className="css-1gnbc76-Icon"
+                              className="emotion-8"
                               onClick={[Function]}
                             >
                               <span
-                                className="css-l3sk37-Icon"
+                                className="emotion-82"
                               />
                             </span>
                           </a>
                         </div>
-                        <div
-                          className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-right type-dark"
-                          data-id="tooltip"
-                          id="external-link-tooltip"
-                        >
-                          <style
-                            aria-hidden="true"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                              }
-                            }
-                          />
+                        <div>
                           Open asset in MRC
                         </div>
                       </div>
                     </div>
                     <p
-                      css={[Function]}
+                      className="emotion-57"
                     >
                       ISWC: KS39729323
                     </p>
                   </div>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "zs17b",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-58"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-59"
                     >
-                      Linked Sound
+                      Linked Sound 
                       <br />
                        Recordings
                     </p>
                     <span
-                      css={[Function]}
+                      className="emotion-60"
                     >
                       234
                     </span>
                   </div>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "r5p8pp",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-61"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "eo84ck",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-62"
                   >
                     <h4
-                      css={[Function]}
+                      className="emotion-63"
                     >
                       Writers
                     </h4>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "h9kp2x",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-64"
                     >
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-65"
                         data-itemid="george-michael"
                         data-testid="george-michael"
                         onMouseLeave={[Function]}
@@ -2048,8 +2751,7 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                         George Michael
                       </p>
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-92"
                         data-itemid="mick-jagger"
                         data-testid="mick-jagger"
                         onMouseLeave={[Function]}
@@ -2058,8 +2760,7 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                         Mick Jagger
                       </p>
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-92"
                         data-itemid="keith-richards"
                         data-testid="keith-richards"
                         onMouseLeave={[Function]}
@@ -2084,44 +2785,27 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
         }
       >
         <section
-          css={[Function]}
+          className="emotion-13"
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "ctdg1z",
-                "next": undefined,
-                "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  width: 100%;
-",
-                "toString": [Function],
-              }
-            }
+            className="emotion-14"
           >
             <header
-              className="css-1v4shhk-SectionHeader"
+              className="emotion-15"
             >
               <div
-                className="css-zj67xr-CheckBoxContainer"
+                className="emotion-3"
               >
                 <span
-                  className="css-58ep04-CheckBox"
+                  className="emotion-4"
                 >
                   <span
-                    className="css-7z71va-CheckBox"
+                    className="emotion-5"
                     onClick={[Function]}
                   >
                     <input
                       checked={false}
-                      className="css-tq8k5b-CheckBox"
+                      className="emotion-6"
                       data-testid="checkbox"
                       disabled={false}
                       id="styled-checkbox-"
@@ -2130,30 +2814,30 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                       type="checkbox"
                     />
                     <label
-                      className="css-8t9up8-CheckBox"
+                      className="emotion-7"
                       htmlFor="styled-checkbox-"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-1shwk9n-Icon"
+                          className="emotion-9"
                         />
                       </span>
                     </label>
                   </span>
                 </span>
                 <div
-                  className="css-zj67xr-CheckBoxContainer"
+                  className="emotion-3"
                 >
                   <span
-                    className="css-1978th8-CheckBoxContainer"
+                    className="emotion-24"
                   >
                     95%
                   </span>
                   <span
-                    className="css-wiu3iz-CheckBoxContainer"
+                    className="emotion-25"
                   >
                     Probability
                     <br />
@@ -2162,65 +2846,38 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                 </div>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "qmf9se",
-                    "next": undefined,
-                    "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-12"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "qmf9se",
-                      "next": undefined,
-                      "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-27"
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-28"
                     data-testid="primary_action"
                   >
                     <button
-                      className="css-wyvyhc-Button"
+                      className="emotion-29"
                       data-testid="button"
                       disabled={false}
                       onClick={[Function]}
-                      type="button"
                     >
                       <span
-                        className="css-1xr6sam-Button"
+                        className="emotion-30"
                       >
                         <span
-                          className="css-1kner5m-Button"
+                          className="emotion-31"
                         >
                           <span
-                            className="css-1gnbc76-Icon"
+                            className="emotion-8"
                             onClick={[Function]}
                           >
                             <span
-                              className="css-116ea5o-Icon"
+                              className="emotion-33"
                             />
                           </span>
                         </span>
                         <span
-                          className="css-5zv1of-Button"
+                          className="emotion-34"
                         >
                           Confirm
                         </span>
@@ -2228,33 +2885,32 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                     </button>
                   </div>
                   <div
-                    css={[Function]}
+                    className="emotion-28"
                     data-testid="primary_action"
                   >
                     <button
-                      className="css-wyvyhc-Button"
+                      className="emotion-29"
                       data-testid="button"
                       disabled={false}
                       onClick={[Function]}
-                      type="button"
                     >
                       <span
-                        className="css-1xr6sam-Button"
+                        className="emotion-30"
                       >
                         <span
-                          className="css-1kner5m-Button"
+                          className="emotion-31"
                         >
                           <span
-                            className="css-1gnbc76-Icon"
+                            className="emotion-8"
                             onClick={[Function]}
                           >
                             <span
-                              className="css-116ea5o-Icon"
+                              className="emotion-33"
                             />
                           </span>
                         </span>
                         <span
-                          className="css-5zv1of-Button"
+                          className="emotion-34"
                         >
                           Reject
                         </span>
@@ -2266,40 +2922,23 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                   role="button"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "1i430ov",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  position: relative;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-42"
                   >
                     <div
-                      css={[Function]}
+                      className="emotion-43"
                     >
                       <button
-                        className="css-1dclq6n-IconButton"
-                        color="neutralBlack-500"
+                        className="emotion-44"
                         data-testid="icon-button-menu_btn"
                         disabled={false}
                         onClick={[Function]}
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-8"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-1k5aruc-Icon"
+                            className="emotion-46"
                           />
                         </span>
                       </button>
@@ -2309,212 +2948,82 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
               </div>
             </header>
             <div
-              css={[Function]}
+              className="emotion-47"
             >
               <article
-                css={[Function]}
+                className="emotion-48"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1qasdci",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-49"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "97an4l",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-50"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-51"
                     >
                       Owned Recording
                     </p>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "1ciyja9",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-52"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-8vh3ja-Icon"
+                          className="emotion-54"
                         />
                       </span>
                       <div
-                        css={
-                          Object {
-                            "map": undefined,
-                            "name": "qmf9se",
-                            "next": undefined,
-                            "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                            "toString": [Function],
-                          }
-                        }
+                        className="emotion-55"
                       >
                         <h3
-                          css={[Function]}
+                          className="emotion-56"
                         >
                           Too Funky
                         </h3>
                       </div>
                     </div>
                     <p
-                      css={[Function]}
+                      className="emotion-57"
                     >
                       ISWC: KS39729323
                     </p>
                   </div>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "zs17b",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-58"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-59"
                     >
-                      Linked Sound
+                      Linked Sound 
                       <br />
                        Recordings
                     </p>
                     <span
-                      css={[Function]}
+                      className="emotion-60"
                     >
                       234
                     </span>
                   </div>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "r5p8pp",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-61"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "eo84ck",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-62"
                   >
                     <h4
-                      css={[Function]}
+                      className="emotion-63"
                     >
                       Artists
                     </h4>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "h9kp2x",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-64"
                     >
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-65"
                         data-itemid="george-michael"
                         data-testid="george-michael"
                         onMouseLeave={[Function]}
@@ -2525,53 +3034,18 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                     </div>
                   </div>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "ffu30o",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 0;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-66"
                   >
                     <h4
-                      css={[Function]}
+                      className="emotion-63"
                     >
                       Writers
                     </h4>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "h9kp2x",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-64"
                     >
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-65"
                         data-itemid="george-michael"
                         data-testid="george-michael"
                         onMouseLeave={[Function]}
@@ -2584,306 +3058,103 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                 </div>
               </article>
               <article
-                css={[Function]}
+                className="emotion-70"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1qasdci",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-49"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "97an4l",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-50"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-51"
                     >
                       Owned Composition
                     </p>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "1ciyja9",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-52"
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-8vh3ja-Icon"
+                          className="emotion-54"
                         />
                       </span>
                       <div
-                        css={[Function]}
+                        className="emotion-77"
                       >
                         <h3
-                          css={[Function]}
+                          className="emotion-56"
                         >
                           Waiting for That Day
                         </h3>
                         <div
-                          css={[Function]}
-                          data-for="external-link-tooltip"
-                          data-tip={true}
+                          className="emotion-79"
+                          data-testid="external-link-tooltip"
+                          placement="right"
                         >
                           <a
-                            css={[Function]}
+                            className="emotion-80"
                             href="https://www.orfium.com"
                             rel="noreferrer"
                             target="_blank"
                           >
                             <span
-                              className="css-1gnbc76-Icon"
+                              className="emotion-8"
                               onClick={[Function]}
                             >
                               <span
-                                className="css-l3sk37-Icon"
+                                className="emotion-82"
                               />
                             </span>
                           </a>
                         </div>
-                        <div
-                          className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-right type-dark"
-                          data-id="tooltip"
-                          id="external-link-tooltip"
-                        >
-                          <style
-                            aria-hidden="true"
-                            dangerouslySetInnerHTML={
-                              Object {
-                                "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                              }
-                            }
-                          />
+                        <div>
                           Open asset in MRC
                         </div>
                       </div>
                     </div>
                     <p
-                      css={[Function]}
+                      className="emotion-57"
                     >
                       ISWC: KS39729323
                     </p>
                   </div>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "zs17b",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-58"
                   >
                     <p
-                      css={[Function]}
+                      className="emotion-59"
                     >
-                      Linked Sound
+                      Linked Sound 
                       <br />
                        Recordings
                     </p>
                     <span
-                      css={[Function]}
+                      className="emotion-60"
                     >
                       234
                     </span>
                   </div>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "r5p8pp",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-61"
                 >
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "eo84ck",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-62"
                   >
                     <h4
-                      css={[Function]}
+                      className="emotion-63"
                     >
                       Writers
                     </h4>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "h9kp2x",
-                          "next": undefined,
-                          "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-64"
                     >
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-65"
                         data-itemid="george-michael"
                         data-testid="george-michael"
                         onMouseLeave={[Function]}
@@ -2892,8 +3163,7 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                         George Michael
                       </p>
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-92"
                         data-itemid="mick-jagger"
                         data-testid="mick-jagger"
                         onMouseLeave={[Function]}
@@ -2902,8 +3172,7 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                         Mick Jagger
                       </p>
                       <p
-                        className=""
-                        css={[Function]}
+                        className=" emotion-92"
                         data-itemid="keith-richards"
                         data-testid="keith-richards"
                         onMouseLeave={[Function]}
@@ -2920,44 +3189,27 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
         </section>
       </div>
       <section
-        css={[Function]}
+        className="emotion-13"
       >
         <div
-          css={
-            Object {
-              "map": undefined,
-              "name": "ctdg1z",
-              "next": undefined,
-              "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  width: 100%;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-14"
         >
           <header
-            className="css-1v4shhk-SectionHeader"
+            className="emotion-15"
           >
             <div
-              className="css-zj67xr-CheckBoxContainer"
+              className="emotion-3"
             >
               <span
-                className="css-58ep04-CheckBox"
+                className="emotion-4"
               >
                 <span
-                  className="css-7z71va-CheckBox"
+                  className="emotion-5"
                   onClick={[Function]}
                 >
                   <input
                     checked={false}
-                    className="css-tq8k5b-CheckBox"
+                    className="emotion-6"
                     data-testid="checkbox"
                     disabled={false}
                     id="styled-checkbox-"
@@ -2966,30 +3218,30 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                     type="checkbox"
                   />
                   <label
-                    className="css-8t9up8-CheckBox"
+                    className="emotion-7"
                     htmlFor="styled-checkbox-"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-1shwk9n-Icon"
+                        className="emotion-9"
                       />
                     </span>
                   </label>
                 </span>
               </span>
               <div
-                className="css-zj67xr-CheckBoxContainer"
+                className="emotion-3"
               >
                 <span
-                  className="css-1978th8-CheckBoxContainer"
+                  className="emotion-24"
                 >
                   95%
                 </span>
                 <span
-                  className="css-wiu3iz-CheckBoxContainer"
+                  className="emotion-25"
                 >
                   Probability
                   <br />
@@ -2998,65 +3250,38 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
               </div>
             </div>
             <div
-              css={
-                Object {
-                  "map": undefined,
-                  "name": "qmf9se",
-                  "next": undefined,
-                  "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                  "toString": [Function],
-                }
-              }
+              className="emotion-12"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "qmf9se",
-                    "next": undefined,
-                    "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-27"
               >
                 <div
-                  css={[Function]}
+                  className="emotion-28"
                   data-testid="primary_action"
                 >
                   <button
-                    className="css-wyvyhc-Button"
+                    className="emotion-29"
                     data-testid="button"
                     disabled={false}
                     onClick={[Function]}
-                    type="button"
                   >
                     <span
-                      className="css-1xr6sam-Button"
+                      className="emotion-30"
                     >
                       <span
-                        className="css-1kner5m-Button"
+                        className="emotion-31"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-8"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-116ea5o-Icon"
+                            className="emotion-33"
                           />
                         </span>
                       </span>
                       <span
-                        className="css-5zv1of-Button"
+                        className="emotion-34"
                       >
                         Confirm
                       </span>
@@ -3064,33 +3289,32 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                   </button>
                 </div>
                 <div
-                  css={[Function]}
+                  className="emotion-28"
                   data-testid="primary_action"
                 >
                   <button
-                    className="css-wyvyhc-Button"
+                    className="emotion-29"
                     data-testid="button"
                     disabled={false}
                     onClick={[Function]}
-                    type="button"
                   >
                     <span
-                      className="css-1xr6sam-Button"
+                      className="emotion-30"
                     >
                       <span
-                        className="css-1kner5m-Button"
+                        className="emotion-31"
                       >
                         <span
-                          className="css-1gnbc76-Icon"
+                          className="emotion-8"
                           onClick={[Function]}
                         >
                           <span
-                            className="css-116ea5o-Icon"
+                            className="emotion-33"
                           />
                         </span>
                       </span>
                       <span
-                        className="css-5zv1of-Button"
+                        className="emotion-34"
                       >
                         Reject
                       </span>
@@ -3102,40 +3326,23 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                 role="button"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "1i430ov",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  position: relative;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-42"
                 >
                   <div
-                    css={[Function]}
+                    className="emotion-43"
                   >
                     <button
-                      className="css-1dclq6n-IconButton"
-                      color="neutralBlack-500"
+                      className="emotion-44"
                       data-testid="icon-button-menu_btn"
                       disabled={false}
                       onClick={[Function]}
                     >
                       <span
-                        className="css-1gnbc76-Icon"
+                        className="emotion-8"
                         onClick={[Function]}
                       >
                         <span
-                          className="css-1k5aruc-Icon"
+                          className="emotion-46"
                         />
                       </span>
                     </button>
@@ -3145,212 +3352,82 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
             </div>
           </header>
           <div
-            css={[Function]}
+            className="emotion-47"
           >
             <article
-              css={[Function]}
+              className="emotion-48"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "1qasdci",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-49"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "97an4l",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-50"
                 >
                   <p
-                    css={[Function]}
+                    className="emotion-51"
                   >
                     Owned Recording
                   </p>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "1ciyja9",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-52"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-8vh3ja-Icon"
+                        className="emotion-54"
                       />
                     </span>
                     <div
-                      css={
-                        Object {
-                          "map": undefined,
-                          "name": "qmf9se",
-                          "next": undefined,
-                          "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-                          "toString": [Function],
-                        }
-                      }
+                      className="emotion-55"
                     >
                       <h3
-                        css={[Function]}
+                        className="emotion-56"
                       >
                         Too Funky
                       </h3>
                     </div>
                   </div>
                   <p
-                    css={[Function]}
+                    className="emotion-57"
                   >
                     ISWC: KS39729323
                   </p>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "zs17b",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-58"
                 >
                   <p
-                    css={[Function]}
+                    className="emotion-59"
                   >
-                    Linked Sound
+                    Linked Sound 
                     <br />
                      Recordings
                   </p>
                   <span
-                    css={[Function]}
+                    className="emotion-60"
                   >
                     234
                   </span>
                 </div>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "r5p8pp",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-61"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "eo84ck",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-62"
                 >
                   <h4
-                    css={[Function]}
+                    className="emotion-63"
                   >
                     Artists
                   </h4>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "h9kp2x",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-64"
                   >
                     <p
-                      className=""
-                      css={[Function]}
+                      className=" emotion-65"
                       data-itemid="george-michael"
                       data-testid="george-michael"
                       onMouseLeave={[Function]}
@@ -3361,53 +3438,18 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                   </div>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "ffu30o",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 0;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-66"
                 >
                   <h4
-                    css={[Function]}
+                    className="emotion-63"
                   >
                     Writers
                   </h4>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "h9kp2x",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-64"
                   >
                     <p
-                      className=""
-                      css={[Function]}
+                      className=" emotion-65"
                       data-itemid="george-michael"
                       data-testid="george-michael"
                       onMouseLeave={[Function]}
@@ -3420,306 +3462,103 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
               </div>
             </article>
             <article
-              css={[Function]}
+              className="emotion-70"
             >
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "1qasdci",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: space-between;
-  width: 100%;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-49"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "97an4l",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-50"
                 >
                   <p
-                    css={[Function]}
+                    className="emotion-51"
                   >
                     Owned Composition
                   </p>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "1ciyja9",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  justify-content: center;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-52"
                   >
                     <span
-                      className="css-1gnbc76-Icon"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="css-8vh3ja-Icon"
+                        className="emotion-54"
                       />
                     </span>
                     <div
-                      css={[Function]}
+                      className="emotion-77"
                     >
                       <h3
-                        css={[Function]}
+                        className="emotion-56"
                       >
                         Waiting for That Day
                       </h3>
                       <div
-                        css={[Function]}
-                        data-for="external-link-tooltip"
-                        data-tip={true}
+                        className="emotion-79"
+                        data-testid="external-link-tooltip"
+                        placement="right"
                       >
                         <a
-                          css={[Function]}
+                          className="emotion-80"
                           href="https://www.orfium.com"
                           rel="noreferrer"
                           target="_blank"
                         >
                           <span
-                            className="css-1gnbc76-Icon"
+                            className="emotion-8"
                             onClick={[Function]}
                           >
                             <span
-                              className="css-l3sk37-Icon"
+                              className="emotion-82"
                             />
                           </span>
                         </a>
                       </div>
-                      <div
-                        className="__react_component_tooltip t00000000-0000-0000-0000-000000000000 place-right type-dark"
-                        data-id="tooltip"
-                        id="external-link-tooltip"
-                      >
-                        <style
-                          aria-hidden="true"
-                          dangerouslySetInnerHTML={
-                            Object {
-                              "__html": "
-  	.t00000000-0000-0000-0000-000000000000 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t00000000-0000-0000-0000-000000000000.place-top {
-        margin-top: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-bottom {
-        margin-top: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-left {
-        margin-left: -10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t00000000-0000-0000-0000-000000000000.place-right {
-        margin-left: 10px;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t00000000-0000-0000-0000-000000000000.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                            }
-                          }
-                        />
+                      <div>
                         Open asset in MRC
                       </div>
                     </div>
                   </div>
                   <p
-                    css={[Function]}
+                    className="emotion-57"
                   >
                     ISWC: KS39729323
                   </p>
                 </div>
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "zs17b",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  align-items: start;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-58"
                 >
                   <p
-                    css={[Function]}
+                    className="emotion-59"
                   >
-                    Linked Sound
+                    Linked Sound 
                     <br />
                      Recordings
                   </p>
                   <span
-                    css={[Function]}
+                    className="emotion-60"
                   >
                     234
                   </span>
                 </div>
               </div>
               <div
-                css={
-                  Object {
-                    "map": undefined,
-                    "name": "r5p8pp",
-                    "next": undefined,
-                    "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-direction: column;
-  align-items: baseline;
-",
-                    "toString": [Function],
-                  }
-                }
+                className="emotion-61"
               >
                 <div
-                  css={
-                    Object {
-                      "map": undefined,
-                      "name": "eo84ck",
-                      "next": undefined,
-                      "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  order: 1;
-  align-items: baseline;
-  justify-content: space-between;
-",
-                      "toString": [Function],
-                    }
-                  }
+                  className="emotion-62"
                 >
                   <h4
-                    css={[Function]}
+                    className="emotion-63"
                   >
                     Writers
                   </h4>
                   <div
-                    css={
-                      Object {
-                        "map": undefined,
-                        "name": "h9kp2x",
-                        "next": undefined,
-                        "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  flex-wrap: wrap;
-",
-                        "toString": [Function],
-                      }
-                    }
+                    className="emotion-64"
                   >
                     <p
-                      className=""
-                      css={[Function]}
+                      className=" emotion-65"
                       data-itemid="george-michael"
                       data-testid="george-michael"
                       onMouseLeave={[Function]}
@@ -3728,8 +3567,7 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                       George Michael
                     </p>
                     <p
-                      className=""
-                      css={[Function]}
+                      className=" emotion-92"
                       data-itemid="mick-jagger"
                       data-testid="mick-jagger"
                       onMouseLeave={[Function]}
@@ -3738,8 +3576,7 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
                       Mick Jagger
                     </p>
                     <p
-                      className=""
-                      css={[Function]}
+                      className=" emotion-92"
                       data-itemid="keith-richards"
                       data-testid="keith-richards"
                       onMouseLeave={[Function]}
@@ -3760,6 +3597,337 @@ exports[`Storyshots Design System/Asset Matching BulkActionsShowcase 1`] = `
 `;
 
 exports[`Storyshots Design System/Asset Matching SectionHeader 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  margin-top: 0.625rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: space-between;
+  -webkit-box-align: space-between;
+  -ms-flex-align: space-between;
+  align-items: space-between;
+  width: 100%;
+  text-align: center;
+}
+
+.emotion-2 {
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background: transparent;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 0px 0px 0px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  opacity: 1;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-5 {
+  border-radius: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-5:before {
+  display: none;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  content: ' ';
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+}
+
+.emotion-5:hover:before {
+  display: block;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.emotion-6 {
+  border: 0;
+  border-radius: 0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.emotion-6+label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+
+.emotion-6+label:before {
+  content: '';
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
+  border-radius: 0.25rem;
+}
+
+.emotion-6:disabled+label {
+  cursor: not-allowed;
+}
+
+.emotion-7 span {
+  padding: 0;
+}
+
+.emotion-7 svg {
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: #f3eaff;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-9 path {
+  fill: #f3eaff;
+}
+
+.emotion-11 {
+  color: black;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-14 {
+  margin-right: 0.5rem;
+}
+
+.emotion-15 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #646464;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-15:hover,
+.emotion-15:focus {
+  background-color: rgba(100,100,100,0.1);
+}
+
+.emotion-15:active {
+  background-color: rgba(100,100,100,0.2);
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-19 {
+  fill: inherit;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-19 path {
+  fill: inherit;
+}
+
+.emotion-20 {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-28 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-29 {
+  margin-right: 0.5rem;
+}
+
+.emotion-30 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5f6c85;
+  width: 2.875rem;
+  background-color: transparent;
+  padding: 0;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-30:hover,
+.emotion-30:focus {
+  background-color: rgba(95,108,133,0.1);
+}
+
+.emotion-30:active {
+  background-color: rgba(95,108,133,0.2);
+}
+
+.emotion-32 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-32 path {
+  fill: #5f6c85;
+}
+
 <div
   style={
     Object {
@@ -3776,52 +3944,36 @@ exports[`Storyshots Design System/Asset Matching SectionHeader 1`] = `
     }
   >
     <button
-      css={
-        Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
-        }
-      }
+      className="emotion-0"
       onClick={[Function]}
     >
-      turn
+      turn 
       dark
        on
     </button>
   </div>
   <div
-    css={
-      Object {
-        "alignItems": "space-between",
-        "display": "flex",
-        "flexDirection": "column",
-        "marginTop": "0.625rem",
-        "textAlign": "center",
-        "width": "100%",
-      }
-    }
+    className="emotion-1"
   >
     <h2>
       ⬇️Header section can be used separately for handling bulk actions⬇️
     </h2>
     <header
-      className="css-225umb-SectionHeader"
+      className="emotion-2"
     >
       <div
-        className="css-zj67xr-CheckBoxContainer"
+        className="emotion-3"
       >
         <span
-          className="css-58ep04-CheckBox"
+          className="emotion-4"
         >
           <span
-            className="css-7z71va-CheckBox"
+            className="emotion-5"
             onClick={[Function]}
           >
             <input
               checked={false}
-              className="css-tq8k5b-CheckBox"
+              className="emotion-6"
               data-testid="checkbox"
               disabled={false}
               id="styled-checkbox-"
@@ -3830,94 +3982,63 @@ exports[`Storyshots Design System/Asset Matching SectionHeader 1`] = `
               type="checkbox"
             />
             <label
-              className="css-8t9up8-CheckBox"
+              className="emotion-7"
               htmlFor="styled-checkbox-"
             >
               <span
-                className="css-1gnbc76-Icon"
+                className="emotion-8"
                 onClick={[Function]}
               >
                 <span
-                  className="css-1shwk9n-Icon"
+                  className="emotion-9"
                 />
               </span>
             </label>
           </span>
         </span>
         <div
-          className="css-zj67xr-CheckBoxContainer"
+          className="emotion-3"
         >
           <span
-            css={
-              Object {
-                "color": "black",
-              }
-            }
+            className="emotion-11"
           >
             2 items selected
           </span>
         </div>
       </div>
       <div
-        css={
-          Object {
-            "map": undefined,
-            "name": "qmf9se",
-            "next": undefined,
-            "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-            "toString": [Function],
-          }
-        }
+        className="emotion-12"
       >
         <div
-          css={
-            Object {
-              "map": undefined,
-              "name": "qmf9se",
-              "next": undefined,
-              "styles": "
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-",
-              "toString": [Function],
-            }
-          }
+          className="emotion-13"
         >
           <div
-            css={[Function]}
+            className="emotion-14"
             data-testid="primary_action"
           >
             <button
-              className="css-192rcxk-Button"
+              className="emotion-15"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
-              type="button"
             >
               <span
-                className="css-1xr6sam-Button"
+                className="emotion-16"
               >
                 <span
-                  className="css-1kner5m-Button"
+                  className="emotion-17"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-116ea5o-Icon"
+                      className="emotion-19"
                     />
                   </span>
                 </span>
                 <span
-                  className="css-5zv1of-Button"
+                  className="emotion-20"
                 >
                   Confirm
                 </span>
@@ -3925,33 +4046,32 @@ exports[`Storyshots Design System/Asset Matching SectionHeader 1`] = `
             </button>
           </div>
           <div
-            css={[Function]}
+            className="emotion-14"
             data-testid="primary_action"
           >
             <button
-              className="css-192rcxk-Button"
+              className="emotion-15"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
-              type="button"
             >
               <span
-                className="css-1xr6sam-Button"
+                className="emotion-16"
               >
                 <span
-                  className="css-1kner5m-Button"
+                  className="emotion-17"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-116ea5o-Icon"
+                      className="emotion-19"
                     />
                   </span>
                 </span>
                 <span
-                  className="css-5zv1of-Button"
+                  className="emotion-20"
                 >
                   Reject
                 </span>
@@ -3963,40 +4083,23 @@ exports[`Storyshots Design System/Asset Matching SectionHeader 1`] = `
           role="button"
         >
           <div
-            css={
-              Object {
-                "map": undefined,
-                "name": "1i430ov",
-                "next": undefined,
-                "styles": "
-
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-;;
-  position: relative;
-",
-                "toString": [Function],
-              }
-            }
+            className="emotion-28"
           >
             <div
-              css={[Function]}
+              className="emotion-29"
             >
               <button
-                className="css-1dclq6n-IconButton"
-                color="neutralBlack-500"
+                className="emotion-30"
                 data-testid="icon-button-menu_btn"
                 disabled={false}
                 onClick={[Function]}
               >
                 <span
-                  className="css-1gnbc76-Icon"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="css-1k5aruc-Icon"
+                    className="emotion-32"
                   />
                 </span>
               </button>

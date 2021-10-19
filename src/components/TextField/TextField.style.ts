@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { rem } from 'theme/utils';
 
 import { Props } from './TextField';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
@@ -8,7 +9,7 @@ export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'rig
   theme: Theme
 ): SerializedStyles => css`
   line-height: 0.8;
-  height: 16px;
+  height: ${rem(16)};
   display: flex;
   align-items: center;
   margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
@@ -23,7 +24,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   display: block;
   position: relative;
-  top: ${label && '7px'};
+  top: ${label && rem('7px')};
   width: 100%;
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
@@ -52,7 +53,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   &:focus,
   &:not(:placeholder-shown) {
     & + label {
-      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}px, -35%) scale(0.8);
+      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8);
       font-weight: ${theme.typography.weights.bold};
     }
   }

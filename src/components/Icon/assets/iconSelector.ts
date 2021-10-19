@@ -104,6 +104,7 @@ import MusicNoteIcon from './music-note.svg';
 import MyEarnings from './myEarnings.svg';
 import NotificationsIcon from './notifications.svg';
 import Notifications2Icon from './notifications2.svg';
+import OneWay from './one-way.svg';
 import OthersIcon from './others.svg';
 import OwnershipValidationIcon from './ownership-validation.svg';
 import PageFirstIcon from './page-first.svg';
@@ -268,6 +269,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   myEarnings: MyEarnings,
   notifications: NotificationsIcon,
   notifications2: Notifications2Icon,
+  oneWay: OneWay,
   others: OthersIcon,
   ownershipValidation: OwnershipValidationIcon,
   pageFirst: PageFirstIcon, // "arrowToLeft" copy

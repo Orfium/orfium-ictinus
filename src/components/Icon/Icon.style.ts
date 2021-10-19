@@ -1,4 +1,4 @@
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { colorShades } from '../../theme/palette';

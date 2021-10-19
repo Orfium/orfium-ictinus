@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, rem } from 'polished';
+import { darken } from 'polished';
 import { Theme } from 'theme';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
+import { rem } from 'theme/utils';
 import { BASE_SHADE } from 'theme/palette';
 import { fillPickerBasedOnType } from 'utils/themeFunctions';
 

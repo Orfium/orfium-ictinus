@@ -1,5 +1,5 @@
-import { rem } from 'polished';
 import React, { useEffect, useState } from 'react';
+import { rem } from 'theme/utils';
 
 import AssetMatching from '../../AssetMatching/Assetmatching';
 import BulkActionsSection from '../../AssetMatching/components/SectionHeader/SectionHeader';

@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../../../theme';
 import { flexCenter } from '../../../../theme/functions';
@@ -8,7 +9,7 @@ const wrapper = (theme: Theme): SerializedStyles => css`
   background-color: transparent;
   margin: ${theme.spacing.md} ${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.md};
   border-radius: ${theme.spacing.xsm};
-  max-width: 400px;
+  max-width: ${rem(400)};
 `;
 
 export const placeholderWrapper = css`

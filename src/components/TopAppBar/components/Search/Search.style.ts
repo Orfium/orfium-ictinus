@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, lighten, rem } from 'polished';
+import { darken, lighten } from 'polished';
+import { rem } from 'theme/utils';
 
 import { themeFunctions } from '../../../../index';
 import { Theme } from '../../../../theme';
@@ -13,7 +14,7 @@ export const searchWrapper = (dark: boolean) => (theme: Theme): SerializedStyles
 
   return css`
     flex-grow: 1;
-    max-width: 520px;
+    max-width: ${rem(520)};
     ${themeFunctions.flex}
     ${themeFunctions.flexCenterVertical}
     height: ${rem(36)};

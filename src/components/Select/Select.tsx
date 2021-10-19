@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import { debounce } from 'lodash';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import { rem } from 'theme/utils';
 import { generateTestDataId } from 'utils/helpers';
 
 import useCombinedRefs from '../../hooks/useCombinedRefs';
@@ -149,7 +150,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         <div
           css={css`
             display: flex;
-            gap: 25px;
+            gap: ${rem(25)};
           `}
         >
           {isLoading && <Loader />}

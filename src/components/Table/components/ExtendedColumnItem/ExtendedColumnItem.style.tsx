@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
 import { flexCenterVertical } from 'theme/functions';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../../../theme';
 

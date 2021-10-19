@@ -1,4 +1,4 @@
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 export const spaces = {
   xsm: '4',

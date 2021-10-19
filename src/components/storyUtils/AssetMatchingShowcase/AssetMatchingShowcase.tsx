@@ -1,7 +1,7 @@
 import { uniqueId } from 'lodash';
-import { rem } from 'polished';
 import * as React from 'react';
 import { useState } from 'react';
+import { rem } from 'theme/utils';
 
 import { formFieldStyles } from '../../../theme/palette';
 import { MatchingAction } from '../../AssetMatching';

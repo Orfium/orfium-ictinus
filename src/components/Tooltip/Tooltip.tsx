@@ -13,6 +13,11 @@ type Props = {
   /** The placement where the tooltip will show */
   /** @default top */
   placement?: TooltipPlacement;
+  /** Whether the tooltip is transparent or not - for cases
+   * where the content is a custom component
+    */
+  /** @default false */
+  isTransparent?: boolean;
   /** The unique id in order to link content and tooltip */
   /** @default uuid */
   id?: string;
@@ -28,9 +33,15 @@ const Tooltip: React.FC<Props> = ({
   children,
   content,
   placement = 'top',
+  isTransparent = false,
 }) => {
   return (
-    <Tippy data-testid={id} css={tooltipStyle({ size })} content={content} placement={placement}>
+    <Tippy
+      data-testid={id}
+      css={tooltipStyle({ size, isTransparent })}
+      content={content}
+      placement={placement}
+    >
       {children}
     </Tippy>
   );

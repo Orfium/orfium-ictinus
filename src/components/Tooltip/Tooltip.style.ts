@@ -1,17 +1,21 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
+import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
 import { TooltipSize } from './Tooltip';
 import 'tippy.js/dist/tippy.css';
 
-export const tooltipStyle = ({ size }: { size: TooltipSize }) => (
-  theme: Theme
-): SerializedStyles => {
+export const tooltipStyle = ({
+  size,
+  isTransparent,
+}: {
+  size: TooltipSize;
+  isTransparent: boolean;
+}) => (theme: Theme): SerializedStyles => {
   const color = 'darkGrey';
   const shade = 850;
-  const backgroundColor = theme.utils.getColor(color, shade);
+  const backgroundColor = isTransparent ? 'transparent' : theme.utils.getColor(color, shade);
 
   const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {
     if (size === 'large') {
