@@ -21,7 +21,6 @@ const renderFilter = (props: Partial<Props> = {}) => {
     isSearchable: false,
     selectedItem: { label: 'option 1', value: 1 },
     onSelect: jest.fn(),
-    color: 'lightGrey-50',
   };
 
   return render(<Filter styleType={'filled'} {...{ ...defaultProps, ...props }} />);

@@ -1,4 +1,5 @@
 import { rem } from 'theme/utils';
+
 import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
@@ -6,6 +7,7 @@ import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } f
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
 export const borderStyleParams = `solid ${rem(1)}`;
+export const focusBorderStyleParams = `solid ${rem(2)}`;
 
 export const getBackgroundColor = ({
   open,
@@ -13,15 +15,14 @@ export const getBackgroundColor = ({
   hasSelectedValue,
   calculatedColor,
   activeCalculatedColor,
-  buttonType,
   styleType,
 }: BackgroundColorProps) => {
   if (open) {
     return theme.utils.getColor(activeCalculatedColor.color, 500);
-  } else if (hasSelectedValue || styleType === 'transparent') {
+  } else if (hasSelectedValue) {
+    return theme.utils.getColor(activeCalculatedColor.color, 50);
+  } else if (styleType === 'filled' || styleType === 'transparent') {
     return theme.utils.getColor('neutralWhite', 100);
-  } else if (styleType === 'filled' || styleType === 'outlined') {
-    return defineBackgroundColor(theme, calculatedColor, buttonType);
   }
 
   return defineBackgroundColor(theme, calculatedColor);
@@ -32,15 +33,14 @@ export const getTextColor = ({
   theme,
   hasSelectedValue,
   activeCalculatedColor,
-  calculatedColor,
 }: BaseColorProps) => {
   if (hasSelectedValue && !open) {
-    return theme.utils.getColor(activeCalculatedColor.color, 650);
+    return pickTextColorFromSwatches(activeCalculatedColor.color, 50);
   } else if (open) {
     return pickTextColorFromSwatches(activeCalculatedColor.color, activeCalculatedColor.shade);
   }
 
-  return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
+  return theme.utils.getColor('darkGrey', 850);
 };
 
 export const getBorder = ({
@@ -50,23 +50,31 @@ export const getBorder = ({
   calculatedColor,
   open,
   isDivider,
+  state = 'normal',
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
-    const calculatedShade = shade < 950 ? 100 : -100;
+    const calculatedShade = shade < 950 ? 50 : -50;
 
     return (shade + calculatedShade) as typeof colorShades[number];
   };
 
-  if ((styleType === 'outlined' && open) || (isDivider && !hasSelectedValue)) {
-    return 'transparent';
+  if (state === 'normal' && styleType === 'transparent' && !open && !hasSelectedValue) {
+    return `transparent`;
   }
-  if (styleType === 'outlined' || hasSelectedValue) {
+  if (isDivider && open) {
+    return `transparent`;
+  }
+  if (hasSelectedValue) {
     const shadeCalculated = addOrSubtract(calculatedColor.shade);
 
     return `${theme.utils.getColor(calculatedColor.color, shadeCalculated)}`;
   }
 
-  return 'transparent';
+  if (styleType === 'filled' && !open && !hasSelectedValue) {
+    return `${theme.utils.getColor('lightGrey', 200)}`;
+  }
+
+  return `transparent`;
 };
 
 export const getHoverBorder = ({
@@ -81,7 +89,7 @@ export const getHoverBorder = ({
   if (filterType === 'added' && styleType === 'filled') {
     return `transparent`;
   }
-  if (styleType === 'outlined' || hasSelectedValue) {
+  if (hasSelectedValue) {
     if (open) {
       return `${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
     }

@@ -31,74 +31,31 @@ import { Filter } from '@orfium/ictinus';
 <Props of={Filter} />
 
 
-# Filter with style types
+# Filters
 
 A filter with different style types and a selection handler to return selection on change and to pass selection callback.
 Here you can see our two different filter types as well.
-
 <Preview>
-  <Story name="Filter with style types">
+  <Story name="Preset Filter">
      <h2>Preset</h2>
-    <Stack>
-       <FilterShowcase styleType="filled" color="lightGrey-50" />
-       <FilterShowcase styleType="outlined" color="lightGrey-50" />
-       <FilterShowcase styleType="elevated" color="lightGrey-50" />
-       <FilterShowcase styleType="transparent" color="lightGrey-50" />
+    <Stack vertical>
+       <FilterShowcase styleType="filled" />
+       <FilterShowcase styleType="filled" buttonType={'secondary'} />
     </Stack>
+    <h2>Transparent</h2>
+    <Stack vertical>
+      <FilterShowcase styleType="transparent" />
+      <FilterShowcase styleType="transparent" buttonType={'secondary'} />
+    </Stack>
+  </Story>
+  <Story name="Added Filter">
     <h2>Added</h2>
-    <Stack>
-      <FilterShowcase styleType="filled" filterType="added" color="purple-150" />
-      <FilterShowcase styleType="outlined" filterType="added" color="purple-150" />
-      <FilterShowcase styleType="elevated" filterType="added" color="purple-150" />
+    <Stack vertical>
+      <FilterShowcase styleType="filled" filterType={'added'}/>
+      <FilterShowcase styleType="filled" filterType={'added'} buttonType={'secondary'} />
     </Stack>
-  </Story>
-</Preview>
-
-# Filter with colors
-
-A filter with colors and a selection handler to return selection on change and to pass selection callback
-
-<Preview>
-  <Story name="Filter with colors">
-    <h2>Primary</h2>
-    <Stack>
-       <FilterShowcase styleType="filled" buttonType='primary' />
-       <FilterShowcase styleType="outlined" buttonType='primary' />
-       <FilterShowcase styleType="elevated" buttonType='primary' />
-       <FilterShowcase styleType="transparent" buttonType='primary' />
-    </Stack>
-    <h2>Secondary</h2>
-    <Stack>
-       <FilterShowcase styleType="filled" buttonType='secondary' />
-       <FilterShowcase styleType="outlined" buttonType='secondary' />
-       <FilterShowcase styleType="elevated" buttonType='secondary'/>
-       <FilterShowcase styleType="transparent" buttonType='secondary' />
-    </Stack>
-  </Story>
-</Preview>
-
-# Filter with big text
-
-<Preview>
-  <Story name="Filter with big text">
-    <Stack>
-      <FilterShowcase
-        color="lightGrey-500"
-        styleType="filled"
-        defaultValue={{
-          label: 'default item is a very long text that should not be overflow ellipsis',
-          value: '1',
-        }}
-      />
-      <FilterShowcase
-        color="lightGrey-500"
-        styleType="filled"
-        defaultValue={{
-          label: 'default item is a very long text that should be overflow ellipsis because the max width of the component is smaller than the width of the text',
-          value: '1',
-        }}
-      />
-    </Stack>
+    <h2>Transparent</h2>
+    <div>Transparent Styles are not available for added filters</div>
   </Story>
 </Preview>
 
@@ -110,7 +67,7 @@ A filter that supports searching options
 <Preview>
   <Story name="Searchable Filter">
     <Stack>
-       <FilterShowcase styleType="filled" isSearchable color="lightGrey-50" />
+       <FilterShowcase styleType="filled" isSearchable  />
     </Stack>
   </Story>
 </Preview>
@@ -136,7 +93,7 @@ Filter that support asynchronous fetching, with loading status
   </Story>
 </Preview>
 
-# Dynamic Props - Knobs
+# Playground - Knobs
 <Preview>
   <Story name="Dynamic Filter Props" parameters={{ decorators: [withKnobs] }}>
     <FilterShowcase
@@ -144,8 +101,8 @@ Filter that support asynchronous fetching, with loading status
         label={text('text', 'you can change me')}
         selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }])}
         defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
-        styleType={select('styleType', ['filled', 'outlined', 'elevated', 'transparent'], 'filled')}
-        color={select('color', ['lightGrey-50', 'magenta-100', 'darkGrey-700', 'red-500'], 'lightGrey-50')}
+        styleType={select('styleType', ['filled', 'transparent'], 'filled')}
+        filterType={select('filterType', ['preset', 'added'], 'preset')}
         isSearchable={boolean('isSearchable', false)}
         buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
     />

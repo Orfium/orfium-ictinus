@@ -1,8 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { debounce } from 'lodash';
-import { useMemo } from 'react';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 
@@ -12,22 +11,22 @@ import ClickAwayListener from '../utils/ClickAwayListener';
 import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
 import {
-  buttonStyle,
-  childrenWrapperStyle,
   buttonSpanStyle,
-  labelSpanStyle,
-  wrapperStyle,
-  menuStyle,
+  buttonStyle,
   buttonWrapperStyle,
+  childrenWrapperStyle,
   dividedButtonStyle,
   divider,
+  labelSpanStyle,
+  menuStyle,
   valueSpanStyle,
+  wrapperStyle,
 } from './Filter.style';
 import { FilterOption, Props } from './types';
 import { getTextColor } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
-const Filter: React.FC<Props> = props => {
+const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
     items,
     onSelect,
@@ -35,7 +34,6 @@ const Filter: React.FC<Props> = props => {
     defaultValue,
     styleType,
     label = '',
-    color,
     buttonType = 'primary',
     filterType = 'preset',
     disabled = false,
@@ -54,7 +52,7 @@ const Filter: React.FC<Props> = props => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
-  const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
+  const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
 
   // The active calculated color is the base of the defined color. So till today the base is defined as '500'.
   const activeCalculatedColor = calculateColorBetweenColorAndType(
@@ -125,13 +123,13 @@ const Filter: React.FC<Props> = props => {
 
   const pickIconColor = () => {
     if (open) {
-      return theme.utils.getColor(activeCalculatedColor.color, 100);
+      return theme.utils.getColor('neutralWhite', 100);
     }
-    if (hasSelectedValue && !open) {
-      return theme.utils.getColor(activeCalculatedColor.color, activeCalculatedColor.shade);
+    if (hasSelectedValue) {
+      return theme.utils.getColor(calculatedColor.color, 550);
     }
 
-    return theme.utils.getColor('lightGrey', 750);
+    return theme.utils.getColor('darkGrey', 400);
   };
 
   /**
@@ -144,8 +142,9 @@ const Filter: React.FC<Props> = props => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle(buttonStyleProps)} data-testid={dataTestId}>
+      <div css={wrapperStyle()} data-testid={dataTestId}>
         <button
+          ref={ref}
           data-testid={generateTestDataId('filter', dataTestId)}
           onClick={handleOpen}
           disabled={disabled}
@@ -205,6 +204,6 @@ const Filter: React.FC<Props> = props => {
       </div>
     </ClickAwayListener>
   );
-};
+});
 
 export default Filter;
