@@ -3,8 +3,14 @@ import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Toast from './Toast';
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Toast" component={Toast} />
+<Meta title="Design System/Toast" component={Toast} parameters={{
+  design: {
+    type: 'figma',
+    url: `${FIGMA_URL}?node-id=10283%3A104363`,
+  },
+}} />
 
 # Toast
 

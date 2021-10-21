@@ -4,8 +4,41 @@ import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
 import iconSelector from '../Icon/assets/iconSelector';
 import { colorShades, flatColors, mainTypes } from '../../theme/palette';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/IconButton" component={IconButton} />
+<Meta
+  title="Design System/IconButton"
+  component={IconButton}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Icon Button',
+        url: `${FIGMA_URL}?node-id=8167%3A146863`,
+      },
+      {
+        type: 'figma',
+        name: 'Anatomy',
+        url: `${FIGMA_URL}?node-id=10324%3A104411`,
+      },
+      {
+        type: 'figma',
+        name: 'Doc: Button/Filled',
+        url: `${FIGMA_URL}?node-id=8145%3A145377`,
+      },
+      {
+        type: 'figma',
+        name: 'Doc: Button/Outlined',
+        url: `${FIGMA_URL}?node-id=8149%3A145615`,
+      },
+      {
+        type: 'figma',
+        name: 'Doc: Button/Transparent',
+        url: `${FIGMA_URL}?node-id=8166%3A146566`,
+      },
+    ],
+  }}
+/>
 
 # IconButton
 

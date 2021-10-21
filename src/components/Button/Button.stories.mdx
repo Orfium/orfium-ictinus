@@ -3,8 +3,35 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
 import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Button" component={Button} />
+<Meta title="Design System/Button" component={Button} parameters={{
+  design: [{
+    type: 'figma',
+    name: 'Button',
+    url: `${FIGMA_URL}?node-id=9660%3A117281`
+  },{
+    type: 'figma',
+    name: 'Anatomy',
+    url: `${FIGMA_URL}?node-id=10324%3A104411`
+  }, {
+    type: 'figma',
+    name: 'Icon Button',
+    url: `${FIGMA_URL}?node-id=8167%3A146863`,
+  },{
+    type: 'figma',
+    name: 'Doc: Button/Filled',
+    url: `${FIGMA_URL}?node-id=8145%3A145377`
+  },{
+    type: 'figma',
+    name: 'Doc: Button/Outlined',
+    url: `${FIGMA_URL}?node-id=8149%3A145615`
+  },{
+    type: 'figma',
+    name: 'Doc: Button/Transparent',
+    url: `${FIGMA_URL}?node-id=8166%3A146566`
+  }]
+}} />
 
 # Button
 

@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { ButtonHTMLAttributes } from 'react';
 
+/** URL currently used for figma */
+export const FIGMA_URL =
+  'https://www.figma.com/file/8kMPBNYHHXz2AtkzeeDmk5/Design-System-V4---%E2%9A%A0%EF%B8%8F-Working-File-(do-not-update-libraries)';
+
 /** A type to turn any type optional properties to required */
 export type RequiredProperties<T> = { [K in keyof T]-?: T[K] };
 

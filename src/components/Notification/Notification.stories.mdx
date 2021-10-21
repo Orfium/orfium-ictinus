@@ -9,8 +9,14 @@ import NotificationsContainer from '../Notification/NotificationsContainer';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
 import NotificationShowcase from '../storyUtils/NotificationShowcase';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Notification" component={InlineNotification} />
+<Meta title="Design System/Notification" component={InlineNotification} parameters={{
+  design: {
+    type: 'figma',
+    url: `${FIGMA_URL}?node-id=10283%3A104363`,
+  },
+}} />
 
 # Notification
 

@@ -3,8 +3,18 @@ import { select, number, boolean } from '@storybook/addon-knobs';
 
 import ListShowcase from '../storyUtils/ListShowcase';
 import List from './List';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/List" component={List} />
+<Meta
+  title="Design System/List"
+  component={List}
+  parameters={{
+    design: {
+      type: 'figma',
+      url: `${FIGMA_URL}?node-id=10019%3A116509`,
+    },
+  }}
+/>
 
 # List
 

@@ -1,8 +1,18 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import Avatar from './Avatar';
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Avatar" component={Avatar} />
+<Meta
+  title="Design System/Avatar"
+  component={Avatar}
+  parameters={{
+    design: {
+      type: 'figma',
+      url: `${FIGMA_URL}?node-id=9697%3A110165`,
+    },
+  }}
+/>
 
 # Avatar
 

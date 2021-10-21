@@ -4,8 +4,35 @@ import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Filter from '../Filter';
 import FilterShowcase, { AsyncFilterShowcase } from '../storyUtils/FilterShowcase';
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Filter" component={Filter} />
+<Meta title="Design System/Filter" component={Filter} parameters={{
+  design: [{
+    type: 'figma',
+    name: 'Filter',
+    url: `${FIGMA_URL}?node-id=10283%3A104359`,
+  },{
+    type: 'figma',
+    name: 'Anatomy',
+    url: `${FIGMA_URL}?node-id=10081%3A104078`,
+  }, {
+    type: 'figma',
+    name: 'Filter Pressed',
+    url: `${FIGMA_URL}?node-id=10283%3A104360`,
+  },{
+    type: 'figma',
+    name: 'Multiselect',
+    url: `${FIGMA_URL}?node-id=5156%3A73802`,
+  },{
+    type: 'figma',
+    name: 'Doc: Filter/Outlined',
+    url: `${FIGMA_URL}?node-id=10073%3A105241`,
+  },{
+    type: 'figma',
+    name: 'Doc: Filter/Transparent',
+    url: `${FIGMA_URL}?node-id=10073%3A105431`,
+  }]
+}} />
 
 # Filter
 

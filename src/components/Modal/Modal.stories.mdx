@@ -5,8 +5,14 @@ import ModalShowcase from '../storyUtils/ModalShowcase';
 import Stack from '../storyUtils/Stack';
 import Modal from './Modal';
 import ModalContent from './ModalContent';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Modal" component={Modal} />
+<Meta title="Design System/Modal" component={Modal} parameters={{
+  design: {
+    type: 'figma',
+      url: `${FIGMA_URL}?node-id=10283%3A104363`,
+  },
+}} />
 
 # Modal
 
