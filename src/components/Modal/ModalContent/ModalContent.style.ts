@@ -10,7 +10,7 @@ export const modalContentContainer = (theme: Theme): SerializedStyles => css`
   flex-direction: column;
   flex-wrap: wrap;
   text-align: left;
-  color: ${theme.utils.getColor('lightGray', 700, 'flat')};
+  color: ${theme.utils.getColor('lightGrey', 700, 'flat')};
   font-weight: ${theme.typography.weights.regular};
 `;
 
@@ -21,14 +21,14 @@ export const labelContainer = (theme: Theme): SerializedStyles => css`
 
 export const headingContainer = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['28']};
-  color: ${theme.palette.black};
+  color: ${theme.utils.getColor('darkGrey', 850)};
   font-weight: ${theme.typography.weights.medium};
   margin: 0 0 ${theme.spacing.xl} 0;
 `;
 
 export const messageContainer = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['16']};
-  color: ${theme.utils.getColor('lightGray', 600)};
+  color: ${theme.utils.getColor('lightGrey', 750)};
   max-height: ${rem(430)};
   overflow-y: hidden;
   margin: 0;

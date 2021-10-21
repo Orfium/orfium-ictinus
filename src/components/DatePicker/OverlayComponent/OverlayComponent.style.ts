@@ -1,15 +1,16 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
-import { rem } from 'theme/utils';
 
 import { flex } from '../../../theme/functions';
 
 export const overlayWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   ${flex};
+  border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
+  border-radius: ${theme.spacing.xsm};
 `;
 
 export const optionsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  border-right: ${rem(1)} solid #dfdfdf;
+  background-color: ${theme.utils.getColor('lightGrey', null, 'pale')};
 `;
 
 export const optionStyle = ({ selected }: { selected?: boolean }) => (
@@ -17,8 +18,32 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
 ): SerializedStyles => css`
   white-space: nowrap;
   padding: ${theme.spacing.md};
-  font-weight: ${selected ? theme.typography.weights.bold : theme.typography.weights.regular};
+  font-weight: ${selected ? theme.typography.weights.medium : theme.typography.weights.regular};
   cursor: pointer;
+  background-color: ${selected ? theme.utils.getColor('blue', 50) : 'transparent'};
+  position: relative;
+  font-size: ${theme.typography.fontSizes['13']};
+
+  &:hover {
+    background-color: ${theme.utils.getColor('lightGrey', 50)};
+  }
+
+  ${selected &&
+    `&:after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fff;
+    clear: both;
+    transform: rotate(90deg);
+  }`}
 `;
 
 export const buttonsMonthsWrapperStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (

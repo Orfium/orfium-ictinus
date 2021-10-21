@@ -1,11 +1,12 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
+import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
 
 export const LoaderLine = () => (theme: Theme): SerializedStyles => css`
   position: absolute;
   opacity: 0.4;
-  background: ${theme.utils.getColor('lightCoolGray', 400)};
+  background: ${theme.utils.getColor('lightGrey', 100)};
   width: 150%;
   height: ${rem(8)};
 `;
@@ -17,7 +18,7 @@ export const LoaderSubLine = (color: string) => css`
 `;
 
 export const LoaderDecLine = () => (theme: Theme): SerializedStyles => css`
-  ${LoaderSubLine(theme.utils.getColor('primary', 400, 'normal'))};
+  ${LoaderSubLine(theme.utils.getColor('primary', BASE_SHADE, 'normal'))};
 
   animation: decrease 2.3s 0.8s infinite;
   @keyframes decrease {
@@ -33,7 +34,7 @@ export const LoaderDecLine = () => (theme: Theme): SerializedStyles => css`
 `;
 
 export const LoaderIncLine = () => (theme: Theme): SerializedStyles => css`
-  ${LoaderSubLine(theme.utils.getColor('primary', 400, 'normal'))};
+  ${LoaderSubLine(theme.utils.getColor('primary', BASE_SHADE, 'normal'))};
 
   animation: increase 2.3s infinite;
   @keyframes increase {

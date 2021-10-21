@@ -58,7 +58,7 @@ const ExpandedButtonCell: React.FC<Props> = ({
               name={'chevronSmallDown'}
               size={'sm'}
               onClick={toggleChecked}
-              color={'lightGray-700'}
+              color={'lightGrey-700'}
               dataTestId={'expanded-button'}
             />
           </div>

@@ -18,8 +18,8 @@ export type Props = {
    *  @default 'md'
    * */
   size?: AvatarSizes;
-  /** the color of the button based on our colors eg. red-400
-   *  @default 'darkGray-400'
+  /** the color of the button based on our colors eg. red-500
+   *  @default 'darkGrey-500'
    * */
   color?: string;
   /** the shape of the avatar
@@ -30,7 +30,7 @@ export type Props = {
   className?: string;
 };
 
-export type AvatarSizes = 'xs' | 'sm' | 'md' | 'lg';
+export type AvatarSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
 export type AvatarShapes = 'regular' | 'rounded' | 'circular';
 
 const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
@@ -39,7 +39,7 @@ const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
       src = '',
       iconName = 'user',
       size = 'md',
-      color = 'lightGray-600',
+      color = 'lightGrey-600',
       shape = 'circular',
       children,
       className,

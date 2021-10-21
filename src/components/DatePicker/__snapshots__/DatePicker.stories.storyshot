@@ -30,10 +30,12 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
 }
 
 .emotion-3 {
-  border-right: 0.0625rem solid #dfdfdf;
+  background-color: #F9FAFC;
 }
 
 .emotion-4 {
@@ -41,6 +43,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   padding: 1rem;
   font-weight: 400;
   cursor: pointer;
+  background-color: transparent;
+  position: relative;
+  font-size: 0.8125rem;
+}
+
+.emotion-4:hover {
+  background-color: #f3f5f8;
 }
 
 .emotion-7 {
@@ -127,13 +136,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-13 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-13 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-14 {
@@ -172,6 +181,8 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-16 {
@@ -185,15 +196,16 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-17 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-24 {
@@ -206,7 +218,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -233,7 +245,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-26:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-27 {
@@ -241,7 +253,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -249,7 +261,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-28 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -270,7 +282,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-28:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-29 {
@@ -288,12 +300,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-29:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(35,45,125,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -319,7 +332,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #232d7d;
+  background: #8833FF;
 }
 
 .emotion-30:hover {
@@ -332,11 +345,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(35,45,125,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-83 {
@@ -344,6 +357,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-93 {
@@ -374,12 +388,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-138:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(35,45,125,0.1);
+  background: #e9f1ff;
   left: 0;
   right: initial;
   border-bottom-right-radius: 100%;
@@ -452,13 +467,15 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-346 {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -471,11 +488,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-346:hover,
 .emotion-346:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-346:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-347 {
@@ -506,13 +523,13 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-351 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
 .emotion-351 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-368 {
@@ -532,6 +549,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-368:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
@@ -564,15 +582,15 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-429 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #232d7d;
+  color: #8833FF;
   background-color: transparent;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(35,45,125,0.5);
+  border: solid 0.0625rem rgba(136,51,255,0.5);
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
@@ -580,11 +598,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-429:hover,
 .emotion-429:focus {
-  background-color: rgba(35,45,125,0.1);
+  background-color: rgba(136,51,255,0.1);
 }
 
 .emotion-429:active {
-  background-color: rgba(35,45,125,0.2);
+  background-color: rgba(136,51,255,0.2);
 }
 
 .emotion-431 {
@@ -593,10 +611,10 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-432 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: #fff;
-  background-color: #232d7d;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -609,11 +627,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-432:hover,
 .emotion-432:focus {
-  background-color: #181f55;
+  background-color: #6a00ff;
 }
 
 .emotion-432:active {
-  background-color: #0d102d;
+  background-color: #50c;
 }
 
 <div
@@ -4095,7 +4113,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   position: relative;
   background-color: white;
   border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfcfcf;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
 }
 
 .emotion-5:focus-within,
@@ -4104,13 +4122,13 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 }
 
 .emotion-5:hover {
-  background-color: #f7f7f7!important;
-  border-color: #cfcfcf;
+  background-color: #f3f5f8!important;
+  border-color: #cfd7e5;
   box-shadow: false;
 }
 
 .emotion-5:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -4145,7 +4163,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 .emotion-8 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -4159,24 +4177,24 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 }
 
 .emotion-8:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-8::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8:not(:focus):placeholder-shown+label {
@@ -4264,7 +4282,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 .emotion-18 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -4278,24 +4296,24 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 }
 
 .emotion-18:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-18::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18:not(:focus):placeholder-shown+label {
@@ -4532,13 +4550,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-6:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
   box-shadow: false;
 }
 
 .emotion-6:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -4573,7 +4591,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 .emotion-9 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -4587,24 +4605,24 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-9:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-9::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-9::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-9:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-9::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -4680,7 +4698,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   position: relative;
   background-color: white;
   border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfcfcf;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
 }
 
 .emotion-16:focus-within,
@@ -4689,13 +4707,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-16:hover {
-  background-color: #f7f7f7!important;
-  border-color: #cfcfcf;
+  background-color: #f3f5f8!important;
+  border-color: #cfd7e5;
   box-shadow: false;
 }
 
 .emotion-16:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -4714,18 +4732,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   position: relative;
   background-color: white;
   border: 0.125rem solid transparent;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
 }
 
 .emotion-26:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
 }
 
 .emotion-26:focus-within {
-  border-color: #cfcfcf;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  border-color: #cfd7e5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
   background-color: white;
 }
 
@@ -4744,11 +4762,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   position: relative;
   background-color: white;
   border: 0.125rem solid transparent;
-  border-color: #d40000;
+  border-color: #e5143d;
 }
 
 .emotion-37:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
   box-shadow: false;
 }
@@ -4762,7 +4780,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #d40000;
+  color: #e5143d;
   font-size: 0.75rem;
   line-height: 1;
   padding: 0.5rem 0 0;
@@ -4781,13 +4799,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-46 {
-  fill: #d40000;
+  fill: #FF1744;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-46 path {
-  fill: #d40000;
+  fill: #FF1744;
 }
 
 .emotion-57 {
@@ -4795,7 +4813,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #676767;
+  color: #5f6c85;
   font-size: 0.75rem;
   line-height: 1;
   padding: 0.5rem 0 0;
@@ -4814,13 +4832,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-59 {
-  fill: #676767;
+  fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-59 path {
-  fill: #676767;
+  fill: #5f6c85;
 }
 
 <div
@@ -5261,7 +5279,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   position: relative;
   background-color: white;
   border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfcfcf;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
 }
 
 .emotion-5:focus-within,
@@ -5270,13 +5288,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 }
 
 .emotion-5:hover {
-  background-color: #f7f7f7!important;
-  border-color: #cfcfcf;
+  background-color: #f3f5f8!important;
+  border-color: #cfd7e5;
   box-shadow: false;
 }
 
 .emotion-5:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -5311,7 +5329,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 .emotion-8 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -5325,24 +5343,24 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 }
 
 .emotion-8:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-8::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8:not(:focus):placeholder-shown+label {
@@ -5430,7 +5448,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 .emotion-18 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -5444,24 +5462,24 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 }
 
 .emotion-18:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-18::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-18:not(:focus):placeholder-shown+label {
@@ -5698,13 +5716,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
 }
 
 .emotion-5:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
   box-shadow: false;
 }
 
 .emotion-5:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -5739,7 +5757,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
 .emotion-8 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -5753,24 +5771,24 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
 }
 
 .emotion-8:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-8::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-8:not(:focus):placeholder-shown+label {
@@ -5976,13 +5994,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
 }
 
 .emotion-4:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
   box-shadow: false;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -6017,7 +6035,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
 .emotion-7 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -6031,24 +6049,24 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
 }
 
 .emotion-7:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-7::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7:not(:focus):placeholder-shown+label {
@@ -6242,13 +6260,13 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
 }
 
 .emotion-4:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
   box-shadow: false;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -6283,7 +6301,7 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
 .emotion-7 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -6297,24 +6315,24 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
 }
 
 .emotion-7:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
 .emotion-7::-webkit-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7::-moz-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7:-ms-input-placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7::placeholder {
-  color: #676767;
+  color: #444d5f;
 }
 
 .emotion-7:not(:focus):placeholder-shown+label {

@@ -1,10 +1,10 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { Theme } from 'theme';
+import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../../../theme';
-
 const spinnerBorderStyle = (theme: Theme, color?: string) =>
-  `${rem(2)} solid ${color || theme.utils.getColor('primary', 400, 'normal')};`;
+  `${rem(2)} solid ${color || theme.utils.getColor('primary', BASE_SHADE, 'normal')};`;
 
 export const spinnerContainer = () => (theme: Theme): SerializedStyles => css`
   width: ${rem(20)};

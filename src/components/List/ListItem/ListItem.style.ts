@@ -17,29 +17,20 @@ export const listItemStyle = ({
 }) => (theme: Theme): SerializedStyles => css`
   height: ${size === 'normal' ? rem(56) : rem(46)};
   font-size: ${theme.typography.fontSizes[size === 'normal' ? '16' : '14']};
-  background-color: ${theme.palette.white};
+  background-color: ${selected ? theme.utils.getColor('blue', 50) : theme.palette.white};
   display: flex;
   align-items: center;
   padding: 0px ${theme.spacing.md};
+  font-weight: ${selected && theme.typography.weights.medium};
 
   ${highlighted && 'font-weight: 500;'}
 
-  ${!(selected || disabled) &&
-    `
-        &:hover {
-           filter: brightness(97%);
-           transition: all 0.2s ease;
-         }
-    `}
+  &:hover {
+    background-color: ${theme.utils.getColor('lightGrey', 50)};
+  }
 
-  ${selected &&
+  ${disabled &&
     `
-        filter: brightness(93%);
-    `}
-
-    ${disabled &&
-      `
-        filter: brightness(93%);
         opacity: 0.5;
         cursor: not-allowed;
     `}

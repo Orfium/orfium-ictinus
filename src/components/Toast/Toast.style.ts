@@ -18,7 +18,7 @@ const toastContainerPerType = (
   theme: Theme
 ) =>
   styleType === 'outlined'
-    ? `border: ${rem(2)} solid ${theme.utils.getColor(type, 400, 'normal')}`
+    ? `border: ${rem(2)} solid ${theme.utils.getColor(type, 500, 'normal')}`
     : `box-shadow: ${theme.elevation['02']}
 `;
 
@@ -41,7 +41,7 @@ export const topContainer = (type: AcceptedColorComponentTypes) => (
   justify-content: space-between;
   overflow: hidden;
   height: ${rem(58)};
-  background: ${theme.utils.getColor(type, 400, 'normal')};
+  background: ${theme.utils.getColor(type, 500, 'normal')};
 `;
 
 export const infoContainer = () => (theme: Theme): SerializedStyles => css`

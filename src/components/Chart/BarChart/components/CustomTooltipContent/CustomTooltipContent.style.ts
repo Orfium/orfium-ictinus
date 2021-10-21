@@ -7,7 +7,7 @@ export const tooltipStyle = () => (theme: Theme) => {
     padding: `${theme.spacing.sm} ${theme.spacing.md}`,
     margin: theme.spacing.sm,
     color: theme.palette.white,
-    background: theme.utils.getColor('darkGray', 600),
+    background: theme.utils.getColor('darkGrey', 750),
     opacity: '90%',
     borderRadius: theme.spacing.xsm,
     minWidth: rem(200),

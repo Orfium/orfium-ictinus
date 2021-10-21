@@ -23,7 +23,7 @@ export const colorNameBox = (color: string, colorName: typeof flatColors[number]
   padding: 10px;
   display: flex;
   flex-direction: column;
-  color: ${pickTextColorFromSwatches(colorName, 400)}; // base shade
+  color: ${pickTextColorFromSwatches(colorName, 650)};
 `;
 
 export const colorBoxWrapper = css`
@@ -37,7 +37,8 @@ export const colorBox = (
   color: string,
   colorName: typeof flatColors[number],
   shade: typeof colorShades[number],
-  isSelectedColor: boolean
+  isSelectedColor: boolean,
+  isHoverable = true
 ) => css`
   height: 50px;
   width: calc(100% - 20px);
@@ -47,14 +48,20 @@ export const colorBox = (
   align-items: center;
   display: flex;
   padding: 0 10px;
-  cursor: pointer;
   font-weight: ${isSelectedColor ? 700 : 400};
   ${transition(0.2)};
   transform: scale(${isSelectedColor ? 1.1 : 1});
+
+  ${isHoverable &&
+    `
+  cursor: pointer;
   :hover {
     transform: scale(1.1);
   }
+  `}
+
   div:last-child {
     font-size: 14px;
+    text-transform: uppercase;
   }
 `;

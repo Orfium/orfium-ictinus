@@ -56,13 +56,13 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-4 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-4 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-5 {
@@ -101,13 +101,15 @@ exports[`MonthWrapper should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-7 {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -120,11 +122,11 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-7:hover,
 .emotion-7:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-7:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-8 {
@@ -155,13 +157,13 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-12 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
 .emotion-12 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-13 {
@@ -188,15 +190,16 @@ exports[`MonthWrapper should render correctly 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-17 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-24 {
@@ -209,7 +212,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -236,7 +239,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-26:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-27 {
@@ -244,7 +247,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -252,7 +255,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-28 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -273,7 +276,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-28:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-29 {
@@ -291,12 +294,13 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-29:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -322,7 +326,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #000;
+  background: #8833FF;
 }
 
 .emotion-30:hover {
@@ -335,11 +339,11 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-83 {
@@ -347,6 +351,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-0 {
@@ -404,13 +409,13 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-4 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-4 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-5 {
@@ -449,13 +454,15 @@ exports[`MonthWrapper should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-7 {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -468,11 +475,11 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-7:hover,
 .emotion-7:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-7:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-8 {
@@ -503,13 +510,13 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-12 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
 .emotion-12 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-13 {
@@ -536,15 +543,16 @@ exports[`MonthWrapper should render correctly 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-17 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-24 {
@@ -557,7 +565,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -584,7 +592,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-26:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-27 {
@@ -592,7 +600,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -600,7 +608,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-28 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -621,7 +629,7 @@ exports[`MonthWrapper should render correctly 1`] = `
 
 .emotion-28:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-29 {
@@ -639,12 +647,13 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-29:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -670,7 +679,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #000;
+  background: #8833FF;
 }
 
 .emotion-30:hover {
@@ -683,11 +692,11 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-83 {
@@ -695,6 +704,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 <div>

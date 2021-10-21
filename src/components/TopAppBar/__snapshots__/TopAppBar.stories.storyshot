@@ -32,10 +32,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 3.875rem;
   padding: 0 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: #0e0e17;
 }
 
 .emotion-2 {
@@ -93,13 +96,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 }
 
 .emotion-5 {
-  fill: #c8cade;
+  fill: #f3eaff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #c8cade;
+  fill: #f3eaff;
 }
 
 .emotion-6 {
@@ -206,10 +209,10 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 }
 
 .emotion-11 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -222,11 +225,11 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 
 .emotion-11:hover,
 .emotion-11:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-11:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-12 {
@@ -259,13 +262,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
-  background: #676767;
+  background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -282,7 +285,7 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
+  color: #0e0e17;
 }
 
 .emotion-14 img {
@@ -301,13 +304,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 }
 
 .emotion-19 {
-  fill: #000;
+  fill: #0e0e17;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-19 path {
-  fill: #000;
+  fill: #0e0e17;
 }
 
 <div
@@ -405,7 +408,7 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
                     className="emotion-14"
                   >
                     <img
-                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                      src="https://mui.com/static/images/avatar/1.jpg"
                     />
                   </div>
                 </span>
@@ -474,10 +477,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 3.875rem;
   padding: 0 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: #0e0e17;
 }
 
 .emotion-2 {
@@ -535,13 +541,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-5 {
-  fill: #c8cade;
+  fill: #f3eaff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #c8cade;
+  fill: #f3eaff;
 }
 
 .emotion-6 {
@@ -650,13 +656,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-10:hover {
-  background-color: #f7f7f7!important;
+  background-color: #f3f5f8!important;
   border-color: false;
   box-shadow: false;
 }
 
 .emotion-10:focus-within {
-  border-color: #cfcfcf;
+  border-color: #cfd7e5;
   background-color: white;
 }
 
@@ -691,7 +697,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 .emotion-13 {
   background: transparent;
   border: none;
-  color: black;
+  color: #0e0e17;
   display: block;
   position: relative;
   width: 100%;
@@ -705,7 +711,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-13:focus {
-  color: black;
+  color: #0e0e17;
   outline: none;
 }
 
@@ -773,10 +779,10 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-26 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -789,11 +795,11 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 
 .emotion-26:hover,
 .emotion-26:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-26:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-27 {
@@ -826,13 +832,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
-  background: #676767;
+  background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -849,7 +855,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
+  color: #0e0e17;
 }
 
 .emotion-29 img {
@@ -868,13 +874,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-34 {
-  fill: #000;
+  fill: #0e0e17;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-34 path {
-  fill: #000;
+  fill: #0e0e17;
 }
 
 <div
@@ -1036,7 +1042,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
                     className="emotion-29"
                   >
                     <img
-                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                      src="https://mui.com/static/images/avatar/1.jpg"
                     />
                   </div>
                 </span>
@@ -1105,10 +1111,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: black;
-  color: white;
   height: 3.875rem;
   padding: 0 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: white;
 }
 
 .emotion-2 {
@@ -1166,13 +1175,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 }
 
 .emotion-5 {
-  fill: #c8cade;
+  fill: #f3eaff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #c8cade;
+  fill: #f3eaff;
 }
 
 .emotion-6 {
@@ -1279,10 +1288,10 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 }
 
 .emotion-11 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: #fff;
-  background-color: #000;
+  background-color: #030303;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -1295,11 +1304,11 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 
 .emotion-11:hover,
 .emotion-11:focus {
-  background-color: #1a1a1a;
+  background-color: #000;
 }
 
 .emotion-11:active {
-  background-color: #333;
+  background-color: #000;
 }
 
 .emotion-12 {
@@ -1332,13 +1341,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
-  background: #676767;
+  background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1355,7 +1364,7 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
+  color: #0e0e17;
 }
 
 .emotion-14 img {
@@ -1478,7 +1487,7 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
                     className="emotion-14"
                   >
                     <img
-                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                      src="https://mui.com/static/images/avatar/1.jpg"
                     />
                   </div>
                 </span>
@@ -1547,10 +1556,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   -webkit-justify-content: space-between;
   justify-content: space-between;
   background-color: white;
-  color: black;
   height: 3.875rem;
   padding: 0 1rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.07);
+}
+
+.emotion-1>*:not(:last-of-type) {
+  color: #0e0e17;
 }
 
 .emotion-2 {
@@ -1608,13 +1620,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 }
 
 .emotion-5 {
-  fill: #c8cade;
+  fill: #f3eaff;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #c8cade;
+  fill: #f3eaff;
 }
 
 .emotion-6 {
@@ -1721,10 +1733,10 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 }
 
 .emotion-11 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -1737,11 +1749,11 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 
 .emotion-11:hover,
 .emotion-11:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-11:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-12 {
@@ -1774,13 +1786,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   border-radius: 100%;
-  background: #676767;
+  background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1797,7 +1809,7 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: #fff;
+  color: #0e0e17;
 }
 
 .emotion-14 img {
@@ -1816,13 +1828,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 }
 
 .emotion-19 {
-  fill: #000;
+  fill: #0e0e17;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-19 path {
-  fill: #000;
+  fill: #0e0e17;
 }
 
 <div
@@ -1920,7 +1932,7 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
                     className="emotion-14"
                   >
                     <img
-                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                      src="https://mui.com/static/images/avatar/1.jpg"
                     />
                   </div>
                 </span>

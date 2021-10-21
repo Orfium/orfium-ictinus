@@ -9,6 +9,8 @@ exports[`OverlayComponent should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
 }
 
 .emotion-1 {
@@ -94,13 +96,13 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-7 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-7 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-8 {
@@ -139,13 +141,15 @@ exports[`OverlayComponent should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-10 {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -158,11 +162,11 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-10:hover,
 .emotion-10:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-10:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-11 {
@@ -193,13 +197,13 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-15 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
 .emotion-15 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-16 {
@@ -226,15 +230,16 @@ exports[`OverlayComponent should render correctly 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-20 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-27 {
@@ -247,7 +252,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -274,7 +279,7 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-29:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-30 {
@@ -282,7 +287,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -290,7 +295,7 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-31 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -311,7 +316,7 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-31:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-32 {
@@ -329,12 +334,13 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-32:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -360,7 +366,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #000;
+  background: #8833FF;
 }
 
 .emotion-33:hover {
@@ -373,11 +379,11 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-86 {
@@ -385,6 +391,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-92 {
@@ -405,15 +412,15 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-93 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #000;
+  color: #8833FF;
   background-color: transparent;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0.5);
+  border: solid 0.0625rem rgba(136,51,255,0.5);
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
@@ -421,11 +428,11 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-93:hover,
 .emotion-93:focus {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(136,51,255,0.1);
 }
 
 .emotion-93:active {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(136,51,255,0.2);
 }
 
 .emotion-95 {
@@ -434,10 +441,10 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-96 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: #fff;
-  background-color: #000;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -450,11 +457,11 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-96:hover,
 .emotion-96:focus {
-  background-color: #1a1a1a;
+  background-color: #6a00ff;
 }
 
 .emotion-96:active {
-  background-color: #333;
+  background-color: #50c;
 }
 
 .emotion-0 {
@@ -465,6 +472,8 @@ exports[`OverlayComponent should render correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
 }
 
 .emotion-1 {
@@ -550,13 +559,13 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-7 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-7 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-8 {
@@ -595,13 +604,15 @@ exports[`OverlayComponent should render correctly 1`] = `
   -webkit-justify-content: center;
   justify-content: center;
   cursor: pointer;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-10 {
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
-  background-color: #fefefe;
+  color: #0e0e17;
+  background-color: #fdfdfd;
   padding: 0.5rem 1rem;
   height: 2.875rem;
   opacity: 1;
@@ -614,11 +625,11 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-10:hover,
 .emotion-10:focus {
-  background-color: #e5e5e5;
+  background-color: #e4e4e4;
 }
 
 .emotion-10:active {
-  background-color: #cbcbcb;
+  background-color: #cacaca;
 }
 
 .emotion-11 {
@@ -649,13 +660,13 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-15 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
 .emotion-15 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-16 {
@@ -682,15 +693,16 @@ exports[`OverlayComponent should render correctly 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-20 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-27 {
@@ -703,7 +715,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -730,7 +742,7 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-29:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-30 {
@@ -738,7 +750,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -746,7 +758,7 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-31 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -767,7 +779,7 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-31:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-32 {
@@ -785,12 +797,13 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-32:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -816,7 +829,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #000;
+  background: #8833FF;
 }
 
 .emotion-33:hover {
@@ -829,11 +842,11 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-86 {
@@ -841,6 +854,7 @@ exports[`OverlayComponent should render correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-92 {
@@ -861,15 +875,15 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-93 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  color: #000;
+  color: #8833FF;
   background-color: transparent;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0.5);
+  border: solid 0.0625rem rgba(136,51,255,0.5);
   cursor: pointer;
   -webkit-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
@@ -877,11 +891,11 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-93:hover,
 .emotion-93:focus {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(136,51,255,0.1);
 }
 
 .emotion-93:active {
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(136,51,255,0.2);
 }
 
 .emotion-95 {
@@ -890,10 +904,10 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-96 {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: #fff;
-  background-color: #000;
+  background-color: #8833FF;
   padding: 0.5rem 1rem;
   height: 2.25rem;
   opacity: 1;
@@ -906,11 +920,11 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-96:hover,
 .emotion-96:focus {
-  background-color: #1a1a1a;
+  background-color: #6a00ff;
 }
 
 .emotion-96:active {
-  background-color: #333;
+  background-color: #50c;
 }
 
 <div>
@@ -1489,6 +1503,8 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
 }
 
 .emotion-1 {
@@ -1575,13 +1591,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-7 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-7 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-8 {
@@ -1620,6 +1636,8 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-10 {
@@ -1633,15 +1651,16 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-11 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-18 {
@@ -1654,7 +1673,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -1681,7 +1700,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 
 .emotion-20:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-21 {
@@ -1689,7 +1708,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -1697,7 +1716,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-22 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -1718,7 +1737,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 
 .emotion-22:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-23 {
@@ -1736,12 +1755,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-23:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -1767,7 +1787,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #000;
+  background: #8833FF;
 }
 
 .emotion-24:hover {
@@ -1780,11 +1800,11 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-77 {
@@ -1792,6 +1812,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-87 {
@@ -1822,12 +1843,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-132:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: 0;
   right: initial;
   border-bottom-right-radius: 100%;
@@ -1844,6 +1866,8 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
 }
 
 .emotion-1 {
@@ -1930,13 +1954,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-7 {
-  fill: #9b9b9b;
+  fill: #0e0e17;
   width: 1.5625rem;
   height: 1.5625rem;
 }
 
 .emotion-7 path {
-  fill: #9b9b9b;
+  fill: #0e0e17;
 }
 
 .emotion-8 {
@@ -1975,6 +1999,8 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  font-weight: 500;
+  color: #0e0e17;
 }
 
 .emotion-10 {
@@ -1988,15 +2014,16 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   justify-content: space-around;
   border-top: 0.0625rem solid;
   border-bottom: 0.0625rem solid;
-  border-color: #e7e7e7;
+  border-color: #e7ebf2;
 }
 
 .emotion-11 {
-  color: #9b9b9b;
+  color: #5f6c85;
   padding: 1rem 0;
   width: 2.4375rem;
   font-size: 0.875rem;
   text-align: center;
+  font-weight: 500;
 }
 
 .emotion-18 {
@@ -2009,7 +2036,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
@@ -2036,7 +2063,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 
 .emotion-20:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-21 {
@@ -2044,7 +2071,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   font-weight: bold;
@@ -2052,7 +2079,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-22 {
-  border: 0.0625rem solid #cfcfcf;
+  border: 0.0625rem solid #93a5c5;
   border-radius: 100%;
   width: 2.4375rem;
   height: 2.4375rem;
@@ -2073,7 +2100,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 
 .emotion-22:hover {
   border-radius: 100%;
-  background: #f7f7f7;
+  background: #d4e4ff;
 }
 
 .emotion-23 {
@@ -2091,12 +2118,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-23:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: initial;
   right: 0;
   border-bottom-right-radius: false;
@@ -2122,7 +2150,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #000;
+  background: #8833FF;
 }
 
 .emotion-24:hover {
@@ -2135,11 +2163,11 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
-  color: #121212;
+  color: #0e0e17;
   width: 2.5rem;
   padding: 0 0.25rem;
   opacity: 1;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
 }
 
 .emotion-77 {
@@ -2147,6 +2175,7 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   text-align: center;
   cursor: pointer;
   position: relative;
+  background: transparent;
 }
 
 .emotion-87 {
@@ -2177,12 +2206,13 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
 }
 
 .emotion-132:after {
+  z-index: -1;
   content: ' ';
   height: 100%;
   width: 50%;
   position: absolute;
   top: 0;
-  background: rgba(0,0,0,0.1);
+  background: #e9f1ff;
   left: 0;
   right: initial;
   border-bottom-right-radius: 100%;

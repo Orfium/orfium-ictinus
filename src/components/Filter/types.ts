@@ -1,20 +1,20 @@
 import * as React from 'react';
 
 import { Theme } from '../../theme';
-import { AcceptedColorComponentTypes, ColorShapeFromComponent } from '../../utils/themeFunctions';
+import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 
 export type FilterOption = {
   value: string | number;
   label: string;
 };
 
-export type StyleType = 'filled' | 'outlined' | 'elevated' | 'transparent';
+export type StyleType = 'filled' | 'transparent';
 
 export type FilterType = 'preset' | 'added';
 
 export type Props = {
   /** The type of the button - defaults to "primary" */
-  buttonType?: AcceptedColorComponentTypes;
+  buttonType?: 'primary' | 'secondary';
   /** Items that are being declared as menu options */
   items: FilterOption[];
   /** The default value. The default value is not an item of the items, is a kind of extra item that
@@ -52,6 +52,7 @@ export type BaseColorProps = {
   open: boolean;
   theme: Theme;
   calculatedColor: ColorShapeFromComponent;
+  activeCalculatedColor: ColorShapeFromComponent;
   hasSelectedValue: boolean;
 };
 
@@ -69,9 +70,10 @@ export type BorderProps = BaseColorProps & {
   styleType: StyleType;
   filterType: FilterType;
   isDivider?: boolean;
+  state?: 'normal' | 'hover';
 };
 
-export type HoverBorderProps = Omit<BaseColorProps, 'open'> & {
+export type HoverBorderProps = BaseColorProps & {
   styleType: StyleType;
   filterType: FilterType;
 };

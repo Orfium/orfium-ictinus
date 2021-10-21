@@ -1,8 +1,8 @@
 import isEmpty from 'lodash/isEmpty';
 import { darken, lighten, transparentize } from 'polished';
+import { Theme } from 'theme';
+import { BASE_SHADE, mainTypes } from 'theme/palette';
 
-import { Theme } from '../../theme';
-import { mainTypes } from '../../theme/palette';
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
 
 /**
@@ -52,5 +52,5 @@ export const stateBackgroundColor = (
     return transparentize(1 - value, color);
   }
 
-  return calculatedColor.shade > 400 ? lighten(value, color) : darken(value, color);
+  return calculatedColor.shade > BASE_SHADE ? lighten(value, color) : darken(value, color);
 };

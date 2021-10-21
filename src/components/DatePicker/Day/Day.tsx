@@ -54,7 +54,7 @@ const Day: React.FC<Props> = ({
   );
 
   if (!day) {
-    return <td css={emptyDayStyle()} />;
+    return <td css={emptyDayStyle({ isBetween })} />;
   }
 
   return (

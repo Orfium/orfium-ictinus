@@ -1,5 +1,5 @@
 import debounce from 'lodash/debounce';
-import React, { useMemo, useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 
 import { MatchingAction } from '../types';
 import { useSelectedItem } from './SelectedItemContext';
@@ -36,31 +36,45 @@ export const useCategoryItemActions = (item: string, matchedCategoryItems?: stri
   };
 };
 
-// eslint-disable-next-line react/display-name
-export const createActionButton = (isButtonFilled = false, color: string) => (
-  action: MatchingAction
-) => (
-  <Button
-    type={'primary'}
-    color={color}
-    iconLeft={<Icon color={'inherit'} name={action.icon} />}
-    filled={isButtonFilled}
-    onClick={action?.onClick}
-  >
-    {action.text}
-  </Button>
-);
+export const createActionButton = (
+  isButtonFilled = false,
+  color: string,
+  isButtonTransparent: boolean | undefined
+  // eslint-disable-next-line react/display-name
+) => (action: MatchingAction) => {
+  const isTransparent = typeof isButtonTransparent === 'undefined' || isButtonTransparent;
+
+  return (
+    <Button
+      type={'primary'}
+      color={!isTransparent ? undefined : color}
+      iconLeft={<Icon color={!isTransparent ? 'primary' : 'inherit'} name={action.icon} />}
+      filled={isButtonFilled}
+      onClick={action?.onClick}
+      transparent={isTransparent}
+    >
+      {action.text}
+    </Button>
+  );
+};
 
 export const useMatchingActions = (
   actions: MatchingAction[],
   enhanceWithWrapperElement: (actionButton: JSX.Element, index: number) => JSX.Element,
   isButtonFilled = false,
-  color = 'neutralWhite-700'
+  color = 'neutralWhite-500',
+  isButtonTransparent: boolean | undefined
 ) => {
   const actionItems = useMemo(
-    () => actions.map(createActionButton(isButtonFilled, color)).map(enhanceWithWrapperElement),
+    () =>
+      actions.map((action, index) =>
+        enhanceWithWrapperElement(
+          createActionButton(isButtonFilled, color, isButtonTransparent)(action),
+          index
+        )
+      ),
     [actions, enhanceWithWrapperElement, isButtonFilled]
   );
 
-  return { actionItems };
+  return { actionItems, actions };
 };

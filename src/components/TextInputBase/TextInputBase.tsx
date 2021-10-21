@@ -57,7 +57,7 @@ const TextInputBase: FC<Props> = ({
   const hintMessageToShow = hintMsg && (
     <div css={errorMsgStyle({ status })}>
       <Icon
-        color={status === 'error' ? 'error' : theme.utils.getColor('lightGray', 600)}
+        color={status === 'error' ? 'error' : theme.utils.getColor('lightGrey', 650)}
         name={status === 'error' ? 'issues' : 'info'}
         size={12}
       />

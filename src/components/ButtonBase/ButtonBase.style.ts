@@ -26,7 +26,7 @@ export const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
 const fontSizeBasedOnSize = (theme: Theme, size: 'lg' | 'md' | 'sm') => {
   switch (size) {
     case 'sm':
-      return theme.typography.fontSizes['14'];
+      return theme.typography.fontSizes['13'];
     default:
       return theme.typography.fontSizes['16'];
   }
@@ -51,20 +51,28 @@ export const buttonBaseStyle = ({
   }
 >) => (theme: Theme) => {
   const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
+  const calculateButtonColor = () => {
+    if (type === 'link') {
+      return theme.utils.getColor('blue', 550);
+    }
+
+    if ((!filled && !transparent) || transparent) {
+      return defineBackgroundColor(
+        theme,
+        calculatedColor,
+        type,
+        hasSupplementaryIcons,
+        childrenCount > 0
+      );
+    }
+
+    return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
+  };
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
+    color: calculateButtonColor(),
     width: block ? '100%' : undefined,
-    color:
-      filled && !transparent
-        ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-        : defineBackgroundColor(
-            theme,
-            calculatedColor,
-            type,
-            hasSupplementaryIcons,
-            childrenCount > 0
-          ),
     backgroundColor:
       filled && !transparent
         ? defineBackgroundColor(
@@ -78,7 +86,7 @@ export const buttonBaseStyle = ({
     padding:
       size === 'sm' || size === 'md'
         ? `${theme.spacing.sm} ${theme.spacing.md}`
-        : `${theme.spacing.md} ${theme.spacing.lg}`,
+        : `${theme.spacing.md} ${theme.spacing.md}`,
     height: heightBasedOnSize(size),
     opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,

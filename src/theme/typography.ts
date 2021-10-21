@@ -2,6 +2,14 @@ import { rem } from 'theme/utils';
 
 const defaultFontFamily = 'Roboto';
 
+const weights = {
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  black: 900,
+} as const;
+
 export type Typography = {
   globalFontSize: number;
   fontSizes: {
@@ -20,13 +28,7 @@ export type Typography = {
     28: string;
     32: string;
   };
-  weights: {
-    light: number;
-    regular: number;
-    medium: number;
-    bold: number;
-    black: number;
-  };
+  weights: typeof weights;
   fontFamily: string;
 };
 
@@ -45,14 +47,6 @@ const fontSizes = {
   26: rem('26px'),
   28: rem('28px'),
   32: rem('32px'),
-};
-
-const weights = {
-  light: 300,
-  regular: 400,
-  medium: 500,
-  bold: 700,
-  black: 900,
 };
 
 const typography: Typography = {

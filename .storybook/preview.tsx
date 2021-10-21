@@ -3,6 +3,7 @@
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import { flatPaletteConfig } from '../src/theme/palette.config';
 
 const viewPorts = {
   desktop1920: {
@@ -93,7 +94,11 @@ const ThemeSwitcher = () => {
 export const decorators = [
   (Story: any) => {
     return (
-      <ThemeProvider>
+      <ThemeProvider
+        theme={{
+          palette: { primary: flatPaletteConfig.purple, secondary: flatPaletteConfig.magenta },
+        }}
+      >
         <ThemeSwitcher />
         <Story />
       </ThemeProvider>

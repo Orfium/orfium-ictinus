@@ -1,6 +1,5 @@
 import React from 'react';
 
-import { AcceptedColorComponentTypes } from '../../../utils/themeFunctions';
 import Filter from 'components/Filter';
 import { FilterOption, FilterType, StyleType } from 'components/Filter/types';
 
@@ -18,7 +17,7 @@ interface Props {
   defaultValue?: FilterOption;
   selectedItem?: FilterOption;
   isSearchable?: boolean;
-  buttonType?: AcceptedColorComponentTypes;
+  buttonType?: 'primary' | 'secondary';
 }
 const FilterShowcase = ({
   styleType,
@@ -28,12 +27,15 @@ const FilterShowcase = ({
   defaultValue = { value: 18, label: 'Default value' },
   selectedItem,
   isSearchable = false,
-  buttonType = 'primary'
+  buttonType = 'primary',
 }: Props) => {
   const [stateItem, setStateItem] = React.useState<FilterOption | undefined>(selectedItem);
 
   return (
-    <div>
+    <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+      <div>
+        {styleType}({buttonType}):{' '}
+      </div>
       <Filter
         styleType={styleType}
         filterType={filterType}

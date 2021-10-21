@@ -28,7 +28,7 @@ It gets 3 params:
 ```
 import { getColor } from 'theme';
 ...
-getColor(palette)('lightBlue', 400)
+getColor(palette)('lightBlue', 650)
 ```
 
 ##### 2) Hook
@@ -36,11 +36,11 @@ getColor(palette)('lightBlue', 400)
 ```
 const theme = useTheme();
 ...
-theme.utils.getColor('darkGray', 400);
+theme.utils.getColor('darkGrey', 650);
 ...
-theme.utils.getColor('primary', 400, 'normal');
+theme.utils.getColor('primary', BASE_SHADE, 'normal');
 ...
-theme.utils.getColor('primary', 400, 'text');
+theme.utils.getColor('primary', BASE_SHADE, 'text');
 ```
 
 ---
@@ -59,12 +59,12 @@ const color = getColorFromType('primary', theme)
 
 ### calculateActualColorFromComponentProp
 
-A utility to translate a color like red-400 to an object. This calculates on the color passed picked by our palette.
-So in case you run a red color for example `red-400` this will return
+A utility to translate a color like red-500 to an object. This calculates on the color passed picked by our palette.
+So in case you run a red color for example `red-500` this will return
 
 ```
 color: '#d40000'
-shade: 400
+shade: 500
 ```
 
 #### Usage <br/><br/>

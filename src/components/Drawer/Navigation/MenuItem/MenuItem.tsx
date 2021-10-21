@@ -1,7 +1,7 @@
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
-import { pickTextColorFromSwatches } from 'theme/palette';
+import { BASE_SHADE, pickTextColorFromSwatches } from 'theme/palette';
 
 import useTheme from '../../../../hooks/useTheme';
 import {
@@ -37,14 +37,18 @@ const MenuItem: React.FC<Props> = memo(
     const MenuItemContent = (
       <React.Fragment>
         <div css={arrowContainerStyle(expanded, hasSubMenus)}>
-          <Icon name="triangleRight" color={'black'} size={10} />
+          <Icon name="triangleRight" color={theme.utils.getColor('lightGrey', 650)} size={10} />
         </div>
         <div css={menuIconStyle(isCurrent)}>
           <Icon
             name={iconName}
-            color={isCurrent ? `${pickTextColorFromSwatches(color, shade)}` : 'neutralBlack'}
+            color={
+              isCurrent
+                ? pickTextColorFromSwatches(color, shade)
+                : theme.utils.getColor('lightGrey', hasSubMenus ? 850 : 650)
+            }
             size={20}
-            variant={isCurrent ? shade : 700}
+            variant={isCurrent ? shade : BASE_SHADE}
           />
         </div>
         <span className={'menu-item-text'} css={menuItemTextStyle(isCurrent)}>
@@ -89,7 +93,7 @@ const MenuItem: React.FC<Props> = memo(
                           <div css={subMenuIconStyle()}>
                             <Icon
                               name={subMenuItem.iconName}
-                              color={theme.utils.getColor('lightGray', 600)}
+                              color={theme.utils.getColor('lightGrey', 650)}
                               size={20}
                             />
                           </div>

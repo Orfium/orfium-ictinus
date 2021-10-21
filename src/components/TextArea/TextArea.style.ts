@@ -15,7 +15,7 @@ export const inputStyle = ({
 }: Props & TextInputWrapperProps) => (theme: Theme): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${dark ? theme.palette.white : theme.palette.black};
+  color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   display: block;
   position: relative;
   top: ${label && rem('7px')};
@@ -34,7 +34,7 @@ export const inputStyle = ({
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightGray', 600) : 'transparent'};
+    color: ${!label && placeholder ? theme.utils.getColor('lightGrey', 750) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {

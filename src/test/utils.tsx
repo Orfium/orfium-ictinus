@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import ThemeProvider from '../components/ThemeProvider';
+import { flatPaletteConfig } from '../theme/palette.config';
 
 export const selectDropdownOption = async (
   dropdownInput: HTMLInputElement,
@@ -14,7 +15,15 @@ export const selectDropdownOption = async (
 };
 
 const renderWithThemeProvider = (children: JSX.Element) => {
-  return render(<ThemeProvider theme={{ palette: { primary: '#000' } }}>{children}</ThemeProvider>);
+  return render(
+    <ThemeProvider
+      theme={{
+        palette: { primary: flatPaletteConfig.purple, secondary: flatPaletteConfig.magenta },
+      }}
+    >
+      {children}
+    </ThemeProvider>
+  );
 };
 
 export * from '@testing-library/react';

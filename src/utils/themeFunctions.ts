@@ -1,5 +1,5 @@
 import { Theme } from '../theme';
-import { colorShades, flatColors, mainTypes } from '../theme/palette';
+import { BASE_SHADE, colorShades, flatColors, mainTypes } from '../theme/palette';
 
 export type AcceptedColorComponentTypes = typeof mainTypes[number];
 
@@ -9,9 +9,9 @@ export type AcceptedColorComponentTypes = typeof mainTypes[number];
 export const getColorFromType = (
   type: AcceptedColorComponentTypes | string,
   theme: Theme,
-  variant: typeof colorShades[number] = 100
+  variant: typeof colorShades[number] = 50
 ) => {
-  const secondaryVariant = variant && variant !== 100 ? variant : 400;
+  const secondaryVariant = variant && variant !== 50 ? variant : BASE_SHADE;
 
   if (Object.values(mainTypes).includes(type as AcceptedColorComponentTypes)) {
     const colorTypeValue = type as AcceptedColorComponentTypes;
@@ -36,17 +36,17 @@ export const backgroundPickerBasedOnType = (type: AcceptedColorComponentTypes) =
 export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (theme: Theme) => {
   switch (type) {
     case 'primary':
-      return theme.utils.getColor('primary', 400, 'text');
+      return theme.utils.getColor('primary', BASE_SHADE, 'text');
     case 'secondary':
-      return theme.utils.getColor('secondary', 100, 'text');
+      return theme.utils.getColor('secondary', 50, 'text');
     default:
-      return theme.utils.getColor('light', 100, 'text');
+      return theme.utils.getColor('light', 50, 'text');
   }
 };
 
 export const fillPickerBasedOnType = (
   type: AcceptedColorComponentTypes | string,
-  variant: typeof colorShades[number] = 100
+  variant: typeof colorShades[number] = 50
 ) => (theme: Theme) => getColorFromType(type, theme, variant);
 
 /**
@@ -58,7 +58,7 @@ export type ColorShapeFromComponent = {
   shade: typeof colorShades[number];
 };
 /**
- * A utility to translate a color like red-400 to an object. This calculates on the color passed picked by our palette.
+ * A utility to translate a color like red-500 to an object. This calculates on the color passed picked by our palette.
  * So in case you run a red color for example `#d40000` this will return
  * returns an object or undefined
  * */
@@ -74,12 +74,12 @@ export const calculateActualColorFromComponentProp = (color: string): ColorShape
 
   if (!flatColors.includes(calculatedColor as typeof flatColors[number])) {
     throw new Error(
-      `You passed a wrong color for the first argument: ${color} - try something like red-400`
+      `You passed a wrong color for the first argument: ${color} - try something like red-500`
     );
   }
   if (!colorShades.includes(calculatedShade as typeof colorShades[number])) {
     throw new Error(
-      `You passed a wrong shade for the second argument: ${color} - try something like red-400`
+      `You passed a wrong shade for the second argument: ${color} - try something like red-500`
     );
   }
 

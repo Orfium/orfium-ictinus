@@ -58,8 +58,8 @@ const Modal: React.FC<Props> = ({
                 name={'close'}
                 filled={false}
                 transparent
+                color={'lightGrey-650'}
                 size={'sm'}
-                color={'lightGray-600'}
                 onClick={onClose}
                 dataTestId={'modal-close'}
               />

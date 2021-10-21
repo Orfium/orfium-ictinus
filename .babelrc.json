@@ -15,6 +15,7 @@
     "@emotion/babel-preset-css-prop"
   ],
   "plugins": [
+    "@emotion",
     [
       "module-resolver",
       {
@@ -22,7 +23,6 @@
         "root": ["./src"]
       }
     ],
-    "@emotion",
     [
       "@babel/plugin-proposal-private-property-in-object",
       {

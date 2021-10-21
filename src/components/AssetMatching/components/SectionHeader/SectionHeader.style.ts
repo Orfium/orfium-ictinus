@@ -2,7 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 import { formFieldStyles } from 'theme/palette';
-import { rem } from 'theme/utils';
 
 const header = (checked: boolean, styleType: formFieldStyles, isBulkSection: boolean) => (
   theme: Theme
@@ -12,7 +11,7 @@ const header = (checked: boolean, styleType: formFieldStyles, isBulkSection: boo
   border-top-right-radius: ${theme.spacing.sm};
   background: ${getHeaderBg(checked, isBulkSection, theme)};
   ${flex};
-  box-shadow: ${getShadowBox(styleType, isBulkSection)};
+  box-shadow: ${getShadowBox(styleType, isBulkSection, theme)};
   justify-content: space-between;
   ${transition(0.2)};
 `;
@@ -21,16 +20,16 @@ export default {
   header,
 };
 
-function getShadowBox(styleType: formFieldStyles, isBulkSection: boolean) {
+function getShadowBox(styleType: formFieldStyles, isBulkSection: boolean, theme: Theme) {
   if (isBulkSection) {
     return '0px 0px 0px';
   }
 
   if (styleType === 'filled') {
-    return `0px ${rem(7)} ${rem(8)} ${rem(-5)} rgb(0 0 0 / 15%)`;
+    return theme.elevation['02'];
   }
 
-  return `0px ${rem(2)} ${rem(4)} rgba(0 0 0 / 15%)`;
+  return theme.elevation['01'];
 }
 
 function getHeaderBg(isChecked: boolean, isBulkSection: boolean, theme: Theme) {

@@ -16,8 +16,8 @@ export const DEFAULT_USER_MENU = {
     alert(selectedItem);
   },
   items: ['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout'],
-  userAvatar: { src: 'https://material-ui.com/static/images/avatar/1.jpg', letter: 'PV' },
-  color: 'darkGray-600',
+  userAvatar: { src: 'https://mui.com/static/images/avatar/1.jpg', letter: 'PV' },
+  color: 'darkGrey-600',
 };
 
 const DEFAULT_ADDITIONAL_TOOLS = (

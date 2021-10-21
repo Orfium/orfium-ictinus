@@ -1,11 +1,11 @@
+import useTheme from 'hooks/useTheme';
 import React, { useState, Fragment } from 'react';
 import { BrowserRouter as Router, NavLink, Route, Switch, useLocation } from 'react-router-dom';
+import { flex } from 'theme/functions';
 
-import useTheme from '../../../hooks/useTheme';
-import { flex } from '../../../theme/functions';
-import Button from '../../Button';
-import Drawer from '../../Drawer';
 import { menuItems } from './MenuItems';
+import Button from 'components/Button';
+import Drawer from 'components/Drawer';
 
 const DisplayLocation = () => {
   const location = useLocation<{ test: string }>();
@@ -26,11 +26,19 @@ const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
         {expanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>
-        <Drawer expanded={expanded} menuItems={menuItems} setExpanded={setExpanded} renderHeader={renderHeader} />
+        <Drawer
+          expanded={expanded}
+          menuItems={menuItems}
+          setExpanded={setExpanded}
+          renderHeader={renderHeader}
+        />
         <div
           css={[
             flex,
-            `padding: 50px;flex-direction: column; align-items: center; background-color: ${theme.palette.flat.lightGray[100]}; width: 100%;  `,
+            `padding: 50px;flex-direction: column; align-items: center; background-color: ${theme.utils.getColor(
+              'lightGrey',
+              50
+            )}; width: 100%;  `,
           ]}
         >
           <div css={[flex, 'flex-direction: column']}>

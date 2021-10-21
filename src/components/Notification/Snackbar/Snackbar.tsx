@@ -67,7 +67,7 @@ const Snackbar: React.FC<Props> = ({
           onClick={closeCTA}
           data-testid={generateTestDataId('snackbar-close', dataTestId)}
         >
-          <Icon name="close" color={utils.getColor('lightGray', 500)} size={20} />
+          <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
         </span>
       </div>
       <div css={descriptionContainer()}>{description}</div>
@@ -76,7 +76,7 @@ const Snackbar: React.FC<Props> = ({
           css={actionContainer()}
           data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
         >
-          <Button transparent size="sm" onClick={secondaryCTA}>
+          <Button type={'link'} transparent size="sm" onClick={secondaryCTA}>
             {secondaryCTALabel}
           </Button>
         </div>
@@ -84,7 +84,7 @@ const Snackbar: React.FC<Props> = ({
           css={actionContainer()}
           data-testid={generateTestDataId('snackbar-primary', dataTestId)}
         >
-          <Button filled={true} size="sm" onClick={primaryCTA}>
+          <Button type={'link'} transparent size="sm" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>

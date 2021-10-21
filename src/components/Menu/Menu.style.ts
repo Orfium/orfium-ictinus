@@ -18,7 +18,7 @@ export const buttonSpanStyle = ({
   display: iconLeft || iconRight ? 'flex' : 'block',
   flexDirection: iconLeft || iconRight ? 'row' : 'column',
   alignItems: iconLeft || iconRight ? ('center' as const) : ('flex-start' as const),
-  '> :first-child': {
+  '> :first-of-type': {
     marginLeft: iconLeft || iconRight ? (size === 'sm' ? theme.spacing.sm : theme.spacing.md) : 0,
     marginRight: hasChildren ? theme.spacing.sm : 0,
   },

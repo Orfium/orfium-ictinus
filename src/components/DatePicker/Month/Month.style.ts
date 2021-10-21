@@ -7,15 +7,16 @@ export const weekDaysWrapperStyle = () => (theme: Theme): SerializedStyles => cs
   justify-content: space-around;
   border-top: ${rem(1)} solid;
   border-bottom: ${rem(1)} solid;
-  border-color: ${theme.utils.getColor('lightGray', 200)};
+  border-color: ${theme.utils.getColor('lightGrey', 100)};
 `;
 
 export const weekDayStyle = () => (theme: Theme): SerializedStyles => css`
-  color: ${theme.utils.getColor('lightGray', 500)};
+  color: ${theme.utils.getColor('lightGrey', 650)};
   padding: ${theme.spacing.md} 0;
   width: ${rem(39)};
   font-size: ${theme.typography.fontSizes['14']};
   text-align: center;
+  font-weight: ${theme.typography.weights.medium};
 `;
 
 export const datesWrapperStyle = () => (theme: Theme): SerializedStyles => css`

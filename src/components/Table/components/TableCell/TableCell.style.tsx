@@ -20,6 +20,6 @@ export const parentStyles = ({ isActive }: { isActive: boolean }) => (
 
   &:hover {
     ${activeStateStyles()};
-    background-color: ${theme.utils.getColor('lightGray', 100)};
+    background-color: ${theme.utils.getColor('lightGrey', 50)};
   }
 `;

@@ -1,15 +1,15 @@
-import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
 
+import useTheme from '../../../hooks/useTheme';
 import Separator from '../../Breadcrumb/Separator/Separator';
 import Icon from '../../Icon';
+import List from '../../List';
 import ClickAwayListener from '../../utils/ClickAwayListener';
 import { optionsStyle } from '../../utils/DropdownOptions';
 import {
   breadcrumbCollapsedStyles,
   breadcrumbCollapsedWrapperStyles,
   ClickAwayListenerStyle,
-  collapsedItemStyles,
   inlineBreadcrumbWrapperStyles,
 } from './BreadcrumbCollapsed.style';
 
@@ -21,23 +21,26 @@ type Props = {
 const BreadcrumbCollapsed: React.FC<Props> = props => {
   const [open, setOpen] = React.useState<boolean>(false);
   const { collapsedItems } = props;
+  const theme = useTheme();
   const expandHandler = () => {
     setOpen(prevState => !prevState);
   };
 
-  const listItems = collapsedItems.map(item => (
-    <li key={uniqueId('collapsed_')} css={collapsedItemStyles()}>
-      {item}
-    </li>
-  ));
-
   const collapsedItemsList = (
-    <ul style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })}>
-      {listItems}
-    </ul>
+    <div style={inlineBreadcrumbWrapperStyles} css={optionsStyle({ menuPosition: 'left' })}>
+      <List
+        data={collapsedItems}
+        rowSize={'small'}
+        dataTestId={'collapsed_'}
+        handleOptionClick={() => {
+          setOpen(false);
+        }}
+      />
+    </div>
   );
 
-  const iconColor = open ? 'lightGray100' : 'lightGray700';
+  const iconColor = 'lightGrey';
+  const iconColorShade = open ? 100 : 700;
 
   return (
     <ClickAwayListener
@@ -48,7 +51,11 @@ const BreadcrumbCollapsed: React.FC<Props> = props => {
     >
       <div css={breadcrumbCollapsedWrapperStyles()}>
         <span css={breadcrumbCollapsedStyles({ open })} onClick={expandHandler}>
-          <Icon name="dotsVertical" size={22} color={iconColor} />
+          <Icon
+            name="dotsVertical"
+            size={22}
+            color={theme.utils.getColor(iconColor, iconColorShade)}
+          />
         </span>
         <Separator />
         {open && collapsedItemsList}

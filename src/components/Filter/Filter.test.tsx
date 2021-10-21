@@ -10,26 +10,23 @@ const items = [
 ];
 type Props = React.ComponentProps<typeof Filter>;
 
-const renderFilter = (props:  Partial<Props> = {}) => {
+const renderFilter = (props: Partial<Props> = {}) => {
   const defaultProps = {
     defaultValue: {
-      label: 'option 3', value: 3,
+      label: 'option 3',
+      value: 3,
     },
     label: 'Label',
     items,
     isSearchable: false,
     selectedItem: { label: 'option 1', value: 1 },
     onSelect: jest.fn(),
-    color: 'lightCoolGray-400',
   };
 
-  return render(
-      <Filter styleType={'filled'} {...{...defaultProps, ...props}} />
-  )
+  return render(<Filter styleType={'filled'} {...{ ...defaultProps, ...props }} />);
 };
 
 describe('Generic Filter', () => {
-
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -44,7 +41,7 @@ describe('Generic Filter', () => {
     expect(screen.getByTestId('filter-menu')).toBeInTheDocument();
   });
 
-  it('should trigger onSelect property function when one item of the dropdown is clicked',  () => {
+  it('should trigger onSelect property function when one item of the dropdown is clicked', () => {
     const onSelect = jest.fn();
     renderFilter({ onSelect });
 
@@ -55,7 +52,7 @@ describe('Generic Filter', () => {
     expect(onSelect).toHaveBeenCalledWith(items[1]);
   });
 
-  it('should render a text input when isSearchable prop is true',  () => {
+  it('should render a text input when isSearchable prop is true', () => {
     renderFilter({ isSearchable: true });
 
     const button = screen.getByTestId('filter');
@@ -119,5 +116,4 @@ describe('Generic Filter', () => {
 
     await waitFor(() => expect(onAsyncSearch).toHaveBeenCalledTimes(1));
   });
-
 });
