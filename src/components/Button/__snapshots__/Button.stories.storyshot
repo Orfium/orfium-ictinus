@@ -381,11 +381,37 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
 }
 
 .emotion-5 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  fill: #f3eaff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-6 path {
+  fill: #f3eaff;
+}
+
+.emotion-7 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
 
-.emotion-7 {
+.emotion-11 {
   font-size: 1rem;
   font-weight: 500;
   color: #8833FF;
@@ -401,21 +427,21 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
+.emotion-11:hover,
+.emotion-11:focus {
   background-color: rgba(136,51,255,0.1);
 }
 
-.emotion-7:active {
+.emotion-11:active {
   background-color: rgba(136,51,255,0.2);
 }
 
-.emotion-9 {
+.emotion-13 {
   margin-left: 0;
   margin-right: 0;
 }
 
-.emotion-10 {
+.emotion-14 {
   font-size: 1rem;
   font-weight: 500;
   color: #36C152;
@@ -431,12 +457,12 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-10:hover,
-.emotion-10:focus {
+.emotion-14:hover,
+.emotion-14:focus {
   background-color: rgba(54,193,82,0.1);
 }
 
-.emotion-10:active {
+.emotion-14:active {
   background-color: rgba(54,193,82,0.2);
 }
 
@@ -486,25 +512,31 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
           <span
             className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
           <span
-            className="emotion-5"
+            className="emotion-7"
           >
             Hello world
           </span>
           <span
             className="emotion-4"
           >
-            <img
-              height="16"
-              src="https://brandmark.io/logo-rank/random/pepsi.png"
-              width="16"
-            />
+            <span
+              className="emotion-5"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+              />
+            </span>
           </span>
         </span>
       </button>
@@ -517,7 +549,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
       }
     >
       <button
-        className="emotion-7"
+        className="emotion-11"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
@@ -526,7 +558,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
           className="emotion-3"
         >
           <span
-            className="emotion-9"
+            className="emotion-13"
           >
             Hello world
           </span>
@@ -541,7 +573,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
       }
     >
       <button
-        className="emotion-10"
+        className="emotion-14"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
@@ -550,7 +582,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
           className="emotion-3"
         >
           <span
-            className="emotion-9"
+            className="emotion-13"
           >
             Hello world
           </span>
