@@ -752,12 +752,6 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
   padding-bottom: 0.5rem;
   font-weight: 700;
   font-size: 0.875rem;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  position: -webkit-sticky;
-  position: sticky;
-  background: white;
 }
 
 .emotion-4 {
@@ -901,6 +895,23 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
 
 .emotion-13 th:last-child {
   padding-right: 1rem;
+}
+
+.emotion-14 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: 50px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: -webkit-sticky;
+  position: sticky;
+  background: white;
 }
 
 .emotion-15 {
@@ -1077,7 +1088,7 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
         onClick={[Function]}
       >
         <th
-          className="emotion-3"
+          className="emotion-14"
         />
         <th
           className="emotion-15"
