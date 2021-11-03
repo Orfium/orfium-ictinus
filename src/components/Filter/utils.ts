@@ -21,8 +21,10 @@ export const getBackgroundColor = ({
     return theme.utils.getColor(activeCalculatedColor.color, 500);
   } else if (hasSelectedValue) {
     return theme.utils.getColor(activeCalculatedColor.color, 50);
-  } else if (styleType === 'filled' || styleType === 'transparent') {
+  } else if (styleType === 'filled') {
     return theme.utils.getColor('neutralWhite', 100);
+  } else if (styleType === 'transparent') {
+    return 'transparent';
   }
 
   return defineBackgroundColor(theme, calculatedColor);
