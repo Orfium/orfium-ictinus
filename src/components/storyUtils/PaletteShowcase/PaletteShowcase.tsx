@@ -47,7 +47,7 @@ const PaletteShowcase = () => {
 
       <div css={paletteWrapper}>
         {palette
-          .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
+          // .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
           .map(([colorName, colors]) => (
             <div key={colorName} css={paletteColorWrapper}>
               <div css={colorNameBox(colors[Math.round(colors.length / 2)], colorName)}>
@@ -63,6 +63,10 @@ const PaletteShowcase = () => {
                     font-size: 14px;
                   `}
                 >
+                  <div>
+                    {neutralColors.find(neutralColor => neutralColor === colorName) &&
+                      'system color'}
+                  </div>
                   Base (500)
                 </div>
               </div>

@@ -1,40 +1,36 @@
-import { shade, tint, rem as polishedRem } from 'polished';
+import { shade, tint, rem as polishedRem, parseToRgb as polishedParseToRgb } from 'polished';
 
 import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
 
-const BASE_PERCENTAGE = 0.1;
+const BASE_PERCENTAGE = 10;
+const SHADES = 18;
 
 const EXCLUDED = ['white', 'black', 'pale'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
-const reduceColorShades = (arr: string[]) =>
-  arr
-    .filter((value, index, arr) => arr.indexOf(value) === index)
-    .reverse()
-    .reduce((acc, _, index) => {
-      acc[`${(index + 1) * 50}`] = _;
-
-      return acc;
-    }, {} as generatedColorShades);
-
-const createShades = (func: (index: number) => string, numOfShades = 10) =>
-  new Array(numOfShades).fill(null).reduce((acc, __, index) => {
-    acc.push(func(index));
-
-    return acc;
-  }, []);
-
 export const colorShadesCreator = (
   base: string,
-  per: number,
-  numShade?: number
-): generatedColorShades =>
-  reduceColorShades([
-    ...createShades((index: number) => shade(per * index, base), numShade).reverse(),
-    ...createShades((index: number) => tint(per * index, base), numShade),
-  ]);
+  per: number = BASE_PERCENTAGE,
+  shadesCount: number = SHADES / 2
+): generatedColorShades => {
+  const newArray = (fn: (item: undefined, i: number) => string, length: number) =>
+    Array.from({ length }, fn);
+
+  const tints = (weight: number) => newArray((__, i) => tint(((i + 1) * per) / 100, base), weight);
+  const shades = (weight: number) =>
+    newArray((__, i) => shade(((i + 1) * per) / 100, base), weight);
+  const all = (weight = shadesCount) => {
+    return [...tints(weight).reverse(), base, ...shades(weight)];
+  };
+
+  return all().reduce((acc, _, index) => {
+    acc[`${(index + 1) * 50}`] = _;
+
+    return acc;
+  }, {} as generatedColorShades);
+};
 
 export const iterateObject = <T>(
   obj: T,
@@ -44,7 +40,9 @@ export const iterateObject = <T>(
     acc[value] =
       typeof obj[value] !== 'object'
         ? func(obj[value], value)
-        : EXCLUDED.includes(value) ? obj[value] : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
+        : EXCLUDED.includes(value)
+        ? obj[value]
+        : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
 
     return acc;
   }, {});
