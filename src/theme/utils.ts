@@ -10,18 +10,19 @@ const EXCLUDED = ['white', 'black', 'pale'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
-export const colorShades = (
-  hex: string,
+export const colorShadesCreator = (
+  base: string,
   per: number = BASE_PERCENTAGE,
   shadesCount: number = SHADES / 2
 ): generatedColorShades => {
   const newArray = (fn: (item: undefined, i: number) => string, length: number) =>
     Array.from({ length }, fn);
 
-  const tints = (weight: number) => newArray((__, i) => tint(((i + 1) * per) / 100, hex), weight);
-  const shades = (weight: number) => newArray((__, i) => shade(((i + 1) * per) / 100, hex), weight);
+  const tints = (weight: number) => newArray((__, i) => tint(((i + 1) * per) / 100, base), weight);
+  const shades = (weight: number) =>
+    newArray((__, i) => shade(((i + 1) * per) / 100, base), weight);
   const all = (weight = shadesCount) => {
-    return [...tints(weight).reverse(), hex, ...shades(weight)];
+    return [...tints(weight).reverse(), base, ...shades(weight)];
   };
 
   return all().reduce((acc, _, index) => {
@@ -30,12 +31,6 @@ export const colorShades = (
     return acc;
   }, {} as generatedColorShades);
 };
-
-export const colorShadesCreator = (
-  base: string,
-  per: number = BASE_PERCENTAGE,
-  shadesCount: number = SHADES / 2
-): generatedColorShades => colorShades(base, per, shadesCount);
 
 export const iterateObject = <T>(
   obj: T,
