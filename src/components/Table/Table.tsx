@@ -181,7 +181,6 @@ function Table<T>({
               {onCheck && (
                 <TableCell
                   component={'th'}
-                  sticky={fixedHeader}
                   width={50}
                   padded={padded}
                   dataTestIdPrefix={dataTestIdPrefix}
@@ -315,7 +314,7 @@ function Table<T>({
                 onSelectionAdd,
                 padded,
                 columns,
-                fixedHeader,
+                fixedHeader: false,
                 type,
                 columnCount,
                 columnsHasNumberArr,
