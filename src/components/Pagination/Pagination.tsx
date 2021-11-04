@@ -45,12 +45,13 @@ const Pagination = ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        color: theme.utils.getColor('darkGrey', 850),
         '> *': { padding: theme.spacing.sm },
       }}
     >
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          color="neutralBlack-500"
+          color="darkGrey-850"
           name="arrowToLeft"
           onClick={navigateToFirstPage}
           iconSize={20}
@@ -61,7 +62,7 @@ const Pagination = ({
         />
       )}
       <IconButton
-        color="neutralBlack-500"
+        color="darkGrey-850"
         name="arrowLeft"
         iconSize={20}
         size="sm"
@@ -76,7 +77,7 @@ const Pagination = ({
       </div>
 
       <IconButton
-        color="neutralBlack-500"
+        color="darkGrey-850"
         name="arrowRight"
         iconSize={20}
         size="sm"
@@ -87,7 +88,7 @@ const Pagination = ({
       />
       {!hideEnhancedPaginationButtons && (
         <IconButton
-          color="neutralBlack-500"
+          color="darkGrey-850"
           name="arrowToRight"
           iconSize={20}
           size="sm"

@@ -4,7 +4,7 @@ import { flexCenter } from '../../../theme/functions';
 
 export const container = css`
   ${flexCenter};
-  flex-direction: column;
+  flex-direction: row;
 `;
 
 export const inputWrapper = css`
