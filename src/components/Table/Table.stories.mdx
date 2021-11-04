@@ -254,6 +254,7 @@ Table with expandable rows and nested header
       columns={['Title', 'Name', 'Surname', 'Age']}
       type={select('type', ['normal', 'nested-header'], 'normal')}
       padded
+      fixedHeader
       onCheck={(g) => console.log('on table change: ', g)}
       topLeftText={'topLeftText'}
       topRightArea={() => (
