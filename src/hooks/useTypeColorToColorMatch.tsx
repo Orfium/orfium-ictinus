@@ -59,7 +59,7 @@ const calculateTypesShadeAndColors = (
     mainTypeAcc[mainType] = flatPaletteKeys.reduce((acc, paletteColor) => {
       const colorShadesKeys = keys(palette[paletteColor]); // the shades of the palette color currently in the iteration
       const foundShadeWithThatColor = colorShadesKeys.find(
-        shade => palette[paletteColor][shade] === typeColor
+        shade => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
       );
 
       // return either the found color as e.g { shade: 500, color: 'orange'} or the object as it was
