@@ -45,7 +45,7 @@ const MenuItem: React.FC<Props> = memo(
             color={
               isCurrent
                 ? pickTextColorFromSwatches(color, shade)
-                : theme.utils.getColor('lightGrey', hasSubMenus ? 850 : 650)
+                : theme.utils.getColor('lightGrey', 850)
             }
             size={20}
             variant={isCurrent ? shade : BASE_SHADE}

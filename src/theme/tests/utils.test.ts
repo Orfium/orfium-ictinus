@@ -6,9 +6,7 @@ import { magentaShades } from './const';
 
 describe('GetColor functionalities', () => {
   test('magenta base color to be shaded correctly', () => {
-    expect(colorShadesCreator(flatPaletteConfig.magenta as string, 0.1)).toStrictEqual(
-      magentaShades
-    );
+    expect(colorShadesCreator(flatPaletteConfig.magenta as string)).toStrictEqual(magentaShades);
   });
 
   test('that the getColor fetch the correct colors from what has being requested', () => {
@@ -22,7 +20,7 @@ describe('GetColor functionalities', () => {
 
 describe('pickTextColorFromSwatches functionalities', () => {
   test('pickTextColorFromSwatches works with the given colors and to return the correct color', () => {
-    const black = '#0e0e17';
+    const black = '#0f0f17';
     const white = '#fff';
 
     expect(pickTextColorFromSwatches('darkGrey', 300)).toBe(black);
