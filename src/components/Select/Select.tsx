@@ -80,7 +80,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       disabled,
       locked,
       dataTestId,
-      onBlur,
       ...restInputProps
     },
     ref
@@ -176,12 +175,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       }
     };
 
-    const handleBlur = (event: any) => {
-      if (onBlur && !open) {
-        onBlur(event);
-      }
-    };
-
     return (
       <ClickAwayListener
         onClick={() => {
@@ -207,7 +200,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             status={status}
             value={searchValue || inputValue.label}
             ref={combinedRefs}
-            onBlur={handleBlur}
           />
           {open && (
             <SelectMenu
