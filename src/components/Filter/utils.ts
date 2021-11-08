@@ -14,13 +14,12 @@ export const getBackgroundColor = ({
   theme,
   hasSelectedValue,
   calculatedColor,
-  activeCalculatedColor,
   styleType,
 }: BackgroundColorProps) => {
   if (open) {
-    return theme.utils.getColor(activeCalculatedColor.color, 500);
+    return theme.utils.getColor(calculatedColor.color, 500);
   } else if (hasSelectedValue) {
-    return theme.utils.getColor(activeCalculatedColor.color, 50);
+    return theme.utils.getColor(calculatedColor.color, 50);
   } else if (styleType === 'filled') {
     return theme.utils.getColor('neutralWhite', 100);
   } else if (styleType === 'transparent') {
@@ -34,12 +33,12 @@ export const getTextColor = ({
   open,
   theme,
   hasSelectedValue,
-  activeCalculatedColor,
+  calculatedColor,
 }: BaseColorProps) => {
   if (hasSelectedValue && !open) {
-    return pickTextColorFromSwatches(activeCalculatedColor.color, 50);
+    return pickTextColorFromSwatches(calculatedColor.color, 50);
   } else if (open) {
-    return pickTextColorFromSwatches(activeCalculatedColor.color, activeCalculatedColor.shade);
+    return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   }
 
   return theme.utils.getColor('darkGrey', 850);
@@ -63,9 +62,15 @@ export const getBorder = ({
   if (state === 'normal' && styleType === 'transparent' && !open && !hasSelectedValue) {
     return `transparent`;
   }
+
   if (isDivider && open) {
     return `transparent`;
   }
+
+  if (hasSelectedValue && open) {
+    return `transparent`;
+  }
+
   if (hasSelectedValue) {
     const shadeCalculated = addOrSubtract(calculatedColor.shade);
 
@@ -84,7 +89,6 @@ export const getHoverBorder = ({
   theme,
   open,
   calculatedColor,
-  activeCalculatedColor,
   hasSelectedValue,
   filterType,
 }: HoverBorderProps) => {
@@ -93,7 +97,7 @@ export const getHoverBorder = ({
   }
   if (hasSelectedValue) {
     if (open) {
-      return `${stateBackgroundColor(theme, 'hover', activeCalculatedColor, true)}`;
+      return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
     }
 
     return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;

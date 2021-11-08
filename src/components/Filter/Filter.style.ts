@@ -66,7 +66,6 @@ export const buttonWrapperStyle = ({
 
 export const buttonBaseStyle = ({
   calculatedColor,
-  activeCalculatedColor,
   disabled,
   open,
   styleType,
@@ -82,7 +81,6 @@ export const buttonBaseStyle = ({
     color: getTextColor({
       theme,
       open,
-      activeCalculatedColor,
       calculatedColor,
       hasSelectedValue,
     }),
@@ -91,14 +89,12 @@ export const buttonBaseStyle = ({
       open,
       styleType,
       hasSelectedValue,
-      activeCalculatedColor,
       calculatedColor,
     }),
     border: `${borderStyleParams} ${getBorder({
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -109,7 +105,6 @@ export const buttonBaseStyle = ({
         styleType,
         theme,
         hasSelectedValue,
-        activeCalculatedColor,
         filterType,
         calculatedColor,
         open,
@@ -120,14 +115,7 @@ export const buttonBaseStyle = ({
 };
 
 export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
-  const {
-    open,
-    activeCalculatedColor,
-    calculatedColor,
-    styleType,
-    hasSelectedValue,
-    filterType,
-  } = props;
+  const { open, calculatedColor, styleType, hasSelectedValue, filterType } = props;
 
   return {
     height: '100%',
@@ -137,7 +125,6 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -147,7 +134,6 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
@@ -156,7 +142,6 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       styleType,
       theme,
       hasSelectedValue,
-      activeCalculatedColor,
       filterType,
       calculatedColor,
       open,
