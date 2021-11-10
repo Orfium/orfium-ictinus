@@ -8,7 +8,7 @@ import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import TableRowWrapper from './components/TableRowWrapper';
-import { tableRowHeadersStyle, tableStyle } from './Table.style';
+import { tableRowHeadersStyle, tableStyle, tableCTAStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
@@ -47,6 +47,8 @@ type Props<T> = {
   columns: (string | ExtendedColumn)[];
   /** Boolean defining if the header is fixed or not. */
   fixedHeader?: boolean;
+  /** Boolean defining if the CTA's container is fixed or not. */
+  fixedCTA?: boolean;
   /** Type of the table which determine the headers display. */
   type?: TableType;
   /** Boolean defining the padding all over the table cells and rows. */
@@ -87,6 +89,7 @@ function Table<T>({
   columns,
   type = 'normal',
   fixedHeader = false,
+  fixedCTA = false,
   onCheck,
   padded = false,
   onSort,
@@ -175,7 +178,7 @@ function Table<T>({
   return (
     <React.Fragment>
       {(onCheck || topRightArea || topLeftText) && (
-        <table css={tableStyle()}>
+        <table css={tableCTAStyle(fixedCTA)}>
           <thead>
             <TableRow>
               {onCheck && (
@@ -314,7 +317,7 @@ function Table<T>({
                 onSelectionAdd,
                 padded,
                 columns,
-                fixedHeader: false,
+                fixedHeader: fixedHeader,
                 type,
                 columnCount,
                 columnsHasNumberArr,

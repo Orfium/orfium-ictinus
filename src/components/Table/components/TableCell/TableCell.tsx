@@ -1,4 +1,5 @@
 import useTheme from 'hooks/useTheme';
+import { rem } from 'polished';
 import * as React from 'react';
 
 import { parentStyles } from './TableCell.style';
@@ -77,11 +78,12 @@ const TableCell: React.FC<Props> = React.memo(
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           sticky && {
-            top: 0,
+            top: rem(64),
             left: 0,
             zIndex: 2,
             position: 'sticky',
             background: theme.palette.white,
+            boxShadow: `inset 0px -1px 0px 0px ${theme.utils.getColor('lightGrey', 250)}`,
           },
           type === 'financial' && {
             borderLeft: `1px solid ${theme.utils.getColor('lightGrey', 100)}`,

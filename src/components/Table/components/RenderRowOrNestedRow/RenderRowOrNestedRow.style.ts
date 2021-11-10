@@ -20,15 +20,21 @@ export const borderedRowStyle = ({
     },
   });
 
-export const expandableRowStyle = ({ isFirstRow }: { isFirstRow: boolean }) => (
-  theme: Theme
-): SerializedStyles =>
+export const expandableRowStyle = ({
+  isFirstRow,
+  fixedHeader,
+}: {
+  isFirstRow: boolean;
+  fixedHeader: boolean;
+}) => (theme: Theme): SerializedStyles =>
   css({
     flex: 1,
     flexDirection: 'row',
     display: 'flex',
     borderTop:
-      //Adds border to the first row only.
-      isFirstRow ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 250)}` : 'none',
+      //Adds border to the first row only if it doesn't have a fixed header
+      isFirstRow && !fixedHeader
+        ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 250)}`
+        : 'none',
     borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)}`,
   });
