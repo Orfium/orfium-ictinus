@@ -262,6 +262,7 @@ function Table<T>({
                       component={'th'}
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}
                       sticky={fixedHeader}
+                      paddedSticky={fixedCTA}
                       padded={padded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
                       isSortable={!isItemString(item) && item.isSortable}
@@ -299,6 +300,7 @@ function Table<T>({
                   <TableCell
                     component={'th'}
                     sticky={fixedHeader}
+                    paddedSticky={fixedCTA}
                     width={actionCellWidth}
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
