@@ -50,6 +50,9 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
         css={listItemStyle({ size, selected, highlighted, disabled })}
         ref={selected ? ref : null}
         onClick={handleListItemSelect}
+        onMouseDown={event => {
+          event.preventDefault();
+        }}
         data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
       >
         <div css={contentStyle()}>
