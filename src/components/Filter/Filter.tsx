@@ -54,15 +54,9 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
   const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
 
-  // The active calculated color is the base of the defined color. So till today the base is defined as '500'.
-  const activeCalculatedColor = calculateColorBetweenColorAndType(
-    `${calculatedColor.color}-${BASE_SHADE}`,
-    buttonType
-  );
   const iconColor = getTextColor({
     open,
     theme,
-    activeCalculatedColor,
     calculatedColor,
     hasSelectedValue,
   });
@@ -112,7 +106,6 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
   const buttonStyleProps = {
     calculatedColor,
-    activeCalculatedColor,
     buttonType,
     disabled,
     open,

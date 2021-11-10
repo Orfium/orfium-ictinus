@@ -52,7 +52,6 @@ export type BaseColorProps = {
   open: boolean;
   theme: Theme;
   calculatedColor: ColorShapeFromComponent;
-  activeCalculatedColor: ColorShapeFromComponent;
   hasSelectedValue: boolean;
 };
 
