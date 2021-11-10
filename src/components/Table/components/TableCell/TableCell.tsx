@@ -9,6 +9,7 @@ type Props = {
   component?: 'td' | 'th';
   width?: number | string;
   sticky?: boolean;
+  paddedSticky?: boolean;
   colSpan?: number;
   type?: 'financial' | 'normal';
   padded?: boolean;
@@ -26,6 +27,7 @@ const TableCell: React.FC<Props> = React.memo(
     component = 'td',
     width,
     sticky = false,
+    paddedSticky = false,
     colSpan,
     children,
     isSortable = false,
@@ -78,7 +80,7 @@ const TableCell: React.FC<Props> = React.memo(
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           sticky && {
-            top: rem(64),
+            top: paddedSticky ? rem(64) : 0,
             left: 0,
             zIndex: 2,
             position: 'sticky',

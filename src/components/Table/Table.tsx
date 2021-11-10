@@ -239,6 +239,7 @@ function Table<T>({
                 {onCheck && (
                   <TableCell
                     component={'th'}
+                    paddedSticky={fixedCTA}
                     sticky={fixedHeader}
                     width={50}
                     padded={padded}
