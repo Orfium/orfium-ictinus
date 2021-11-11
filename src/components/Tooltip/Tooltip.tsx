@@ -30,7 +30,7 @@ type Props = {
   interactive?: boolean;
   /** Number in ms to debounce the internal onMouseMove handler
    * which determines when an interactive tooltip should hide. */
-  /** @default 0 */
+  /** @default 100 */
   delay?: number;
   children: React.ReactElement;
 };
@@ -43,7 +43,7 @@ const Tooltip: React.FC<Props> = ({
   placement = 'top',
   isTransparent = false,
   interactive = false,
-  delay = 0,
+  delay = 100,
 }) => {
   return (
     <Tippy

@@ -41,7 +41,7 @@ const TooltipShowcase = () => {
           content="By hover here you can see useful info"
           placement={'left'}
           interactive={boolean('interactive', false)}
-          delay={number('delay', 0)}
+          delay={number('delay', 100)}
         >
           <button>Left</button>
         </Tooltip>
@@ -50,7 +50,7 @@ const TooltipShowcase = () => {
           content="By hover here you can see useful info"
           placement={'right'}
           interactive={boolean('interactive', false)}
-          delay={number('delay', 0)}
+          delay={number('delay', 100)}
         >
           <button>Right</button>
         </Tooltip>
@@ -62,7 +62,7 @@ const TooltipShowcase = () => {
           content="By hover here you can see useful info"
           placement={'top'}
           interactive={boolean('interactive', false)}
-          delay={number('delay', 0)}
+          delay={number('delay', 100)}
         >
           <button>Top</button>
         </Tooltip>
@@ -71,7 +71,7 @@ const TooltipShowcase = () => {
           content="By hover here you can see useful info"
           placement={'bottom'}
           interactive={boolean('interactive', false)}
-          delay={number('delay', 0)}
+          delay={number('delay', 100)}
         >
           <button>Bottom</button>
         </Tooltip>
@@ -83,7 +83,7 @@ const TooltipShowcase = () => {
         content={CustomContent()}
         placement={'right'}
         interactive={boolean('interactive', false)}
-        delay={number('delay', 0)}
+        delay={number('delay', 100)}
       >
         <button>Right</button>
       </Tooltip>
