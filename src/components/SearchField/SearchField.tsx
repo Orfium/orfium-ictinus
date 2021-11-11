@@ -28,7 +28,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
 
   return (
     <React.Fragment>
-      <TextInputBase styleType={'outlined'} leftIcon={'search'} rightIcon={'close'}>
+      <TextInputBase isSearch styleType={'outlined'} leftIcon={'search'} rightIcon={'close'}>
         <IconWrapper iconPosition={'left'}>
           <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
         </IconWrapper>

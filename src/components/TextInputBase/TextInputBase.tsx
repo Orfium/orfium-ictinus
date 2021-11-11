@@ -36,6 +36,8 @@ export type Props = {
   size?: 'md' | 'sm';
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
+  /** If the field is used as a Search component */
+  isSearch?: boolean;
 };
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
@@ -44,6 +46,7 @@ const TextInputBase: FC<Props> = ({
   leftIcon = null,
   label,
   lean = false,
+  isSearch = false,
   disabled,
   hintMsg,
   styleType = 'filled',
@@ -75,7 +78,7 @@ const TextInputBase: FC<Props> = ({
           width: 'fill-available',
         }}
       >
-        <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType })}>
+        <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType, isSearch })}>
           <div css={textFieldStyle({ size, label, leftIcon, lean })}>{children}</div>
         </div>
       </div>

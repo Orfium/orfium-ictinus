@@ -26,8 +26,8 @@ const wrapperStyleSwitch = (
           ${error ? 'transparent' : theme.utils.getColor('lightGrey', 200)};
         &:focus-within, &:hover {
           box-shadow: 0 0 0 ${rem(1)} ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 200)
-          };
+        !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 200)
+      };
         }
       `;
     case 'elevated':
@@ -43,15 +43,21 @@ const wrapperStyleSwitch = (
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }: Props) => (
-  theme: Theme
-): SerializedStyles => {
+export const wrapperStyle = ({
+  disabled,
+  locked,
+  status,
+  lean,
+  styleType,
+  dark,
+  isSearch,
+}: Props) => (theme: Theme): SerializedStyles => {
   const error = status === 'error';
   const backgroundColor = dark ? theme.utils.getColor('darkGrey', 750) : theme.palette.white;
 
   return css`
     transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
-    border-radius: ${theme.spacing.xsm};
+    border-radius: ${isSearch ? rem(100) : theme.spacing.xsm};
     cursor: ${disabled || locked ? 'not-allowed' : 'auto'};
     flex: 1 1 100%;
     user-select: none;
