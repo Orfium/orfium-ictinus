@@ -15,7 +15,7 @@ type Props = {
   placement?: TooltipPlacement;
   /** Whether the tooltip is transparent or not - for cases
    * where the content is a custom component
-    */
+   */
   /** @default false */
   isTransparent?: boolean;
   /** The unique id in order to link content and tooltip */
@@ -24,6 +24,14 @@ type Props = {
   /** The size of the tooltip to define different style */
   /** @default medium */
   size?: TooltipSize;
+  /** Determines if the tooltip is interactive, i.e. it can be
+   * hovered over or clicked without hiding */
+  /** @default false */
+  interactive?: boolean;
+  /** Number in ms to debounce the internal onMouseMove handler
+   * which determines when an interactive tooltip should hide. */
+  /** @default 0 */
+  delay?: number;
   children: React.ReactElement;
 };
 
@@ -34,6 +42,8 @@ const Tooltip: React.FC<Props> = ({
   content,
   placement = 'top',
   isTransparent = false,
+  interactive = false,
+  delay = 0,
 }) => {
   return (
     <Tippy
@@ -41,6 +51,8 @@ const Tooltip: React.FC<Props> = ({
       css={tooltipStyle({ size, isTransparent })}
       content={content}
       placement={placement}
+      interactive={interactive}
+      interactiveDebounce={delay}
     >
       {children}
     </Tippy>

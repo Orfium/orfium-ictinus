@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import { boolean, number } from '@storybook/addon-knobs';
 import React from 'react';
 
 import { rem } from '../../../theme/utils';
@@ -23,7 +24,7 @@ const CustomContent = () => {
           By hover here you can see:
         </div>
         <Chip fill="teal" shade="100">
-          useful custom info
+          <a href={'/'}>Go to homepage</a>
         </Chip>
       </div>
     </Card>
@@ -35,24 +36,55 @@ const TooltipShowcase = () => {
     <div css={tooltipContainerStyle()}>
       <h2>Tooltip with text-only content</h2>
       <div css={tooltipRowStyle()}>
-        <Tooltip id={'left'} content="By hover here you can see useful info" placement={'left'}>
+        <Tooltip
+          id={'left'}
+          content="By hover here you can see useful info"
+          placement={'left'}
+          interactive={boolean('interactive', false)}
+          delay={number('delay', 0)}
+        >
           <button>Left</button>
         </Tooltip>
-        <Tooltip id={'right'} content="By hover here you can see useful info" placement={'right'}>
+        <Tooltip
+          id={'right'}
+          content="By hover here you can see useful info"
+          placement={'right'}
+          interactive={boolean('interactive', false)}
+          delay={number('delay', 0)}
+        >
           <button>Right</button>
         </Tooltip>
       </div>
 
       <div css={tooltipRowStyle()}>
-        <Tooltip id={'top'} content="By hover here you can see useful info" placement={'top'}>
+        <Tooltip
+          id={'top'}
+          content="By hover here you can see useful info"
+          placement={'top'}
+          interactive={boolean('interactive', false)}
+          delay={number('delay', 0)}
+        >
           <button>Top</button>
         </Tooltip>
-        <Tooltip id={'bottom'} content="By hover here you can see useful info" placement={'bottom'}>
+        <Tooltip
+          id={'bottom'}
+          content="By hover here you can see useful info"
+          placement={'bottom'}
+          interactive={boolean('interactive', false)}
+          delay={number('delay', 0)}
+        >
           <button>Bottom</button>
         </Tooltip>
       </div>
       <h2>Tooltip with component content</h2>
-      <Tooltip id={'right'} isTransparent content={CustomContent()} placement={'right'}>
+      <Tooltip
+        id={'right'}
+        isTransparent
+        content={CustomContent()}
+        placement={'right'}
+        interactive={boolean('interactive', false)}
+        delay={number('delay', 0)}
+      >
         <button>Right</button>
       </Tooltip>
     </div>
