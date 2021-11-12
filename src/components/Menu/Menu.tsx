@@ -31,6 +31,8 @@ export type Props = {
   onSelect: (option: string) => void;
   /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
+  /** Define if the button is in disabled state */
+  disabled?: boolean;
   /** Menu position when open */
   menuPosition?: MenuPositionAllowed;
   /** The type of the button - defaults to "primary" */
@@ -64,6 +66,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     buttonType = 'primary',
     rightIconName,
     filled = true,
+    disabled = false,
     leftIconName,
     iconSize = 16,
     avatar,
@@ -85,6 +88,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           onClick={() => setOpen(!open)}
           type={buttonType}
           color={color}
+          disabled={disabled}
           filled={filled}
           iconRight={
             rightIconName ? <Icon name={rightIconName} color={iconColor} size={iconSize} /> : null
