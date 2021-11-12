@@ -59,6 +59,8 @@ type Props<T> = {
   onSort?: (column: string, order: SortingOrder) => void;
   /** Initial sorting column and order. Should be provided along with onSort */
   initialSort?: Sort;
+  /** If provided sort will only work with this option (asc or desc only). By default supports bidirectional sort*/
+  sortDir?: SortingOrder;
   /** Top left text on the table - showing a counter, text etc. */
   topLeftText?: string | JSX.Element;
   /** Top right area to define a custom component for buttons or other usage. */
@@ -94,6 +96,7 @@ function Table<T>({
   padded = false,
   onSort,
   initialSort = { column: '', order: 'desc' },
+  sortDir,
   topLeftText,
   topRightArea,
   actionWidth,
@@ -163,15 +166,24 @@ function Table<T>({
 
   const handleSorting = (column: string) => {
     setSorting(prevState => {
-      return prevState.column !== column
-        ? {
-            column,
-            order: 'asc',
-          }
-        : {
-            column,
-            order: prevState.order === 'asc' ? 'desc' : 'asc',
-          };
+      if (sortDir) {
+        return {
+          column,
+          order: sortDir,
+        };
+      }
+
+      if (prevState.column !== column) {
+        return {
+          column,
+          order: 'asc',
+        };
+      }
+
+      return {
+        column,
+        order: prevState.order === 'asc' ? 'desc' : 'asc',
+      };
     });
   };
 
