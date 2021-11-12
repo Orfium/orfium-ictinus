@@ -443,3 +443,45 @@ Fixed Header Table
     />
   </Story>
 </Preview>
+
+
+# Expandable Table with sort, fixed Header and cta's
+
+Table with expandable rows with sort, fixed Header and cta's
+
+<Preview>
+  <Story name="Table with expandable rows">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      type={select('type', ['normal', 'nested-header'], 'normal')}
+      padded
+      fixedHeader
+      fixedCTA
+      onCheck={(g) => console.log('on table change: ', g)}
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={new Array(50).fill(null).map((item, index) => ({
+        id: index + 1,
+        cells: [
+          {
+            content: (
+              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
+                'title'
+              </a>
+            ),
+          },
+          { content: 'firstname' },
+          { content: 'lastname' },
+          { content: 4.221 },
+        ],
+        expanded: () => <div>Hey i am an expandable content</div>,
+      }))}
+      actionWidth={number('Action Width', 3)}
+    />
+  </Story>
+</Preview>
+
