@@ -7,7 +7,9 @@ export const customContentStyle = (): SerializedStyles => css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   font-weight: 500;
+  height: 200px;
 `;
 
 export const tooltipContainerStyle = (): SerializedStyles => css`
