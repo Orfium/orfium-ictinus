@@ -44,6 +44,7 @@ export type Props = {
  * logic of all the hover, focus status etc and the styling of these centralized **/
 const TextInputBase: FC<Props> = ({
   leftIcon = null,
+  rightIcon,
   label,
   lean = false,
   isSearch = false,
@@ -78,7 +79,19 @@ const TextInputBase: FC<Props> = ({
           width: 'fill-available',
         }}
       >
-        <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType, isSearch })}>
+        <div
+          css={wrapperStyle({
+            dark,
+            locked,
+            disabled,
+            status,
+            lean,
+            styleType,
+            isSearch,
+            rightIcon,
+            size,
+          })}
+        >
           <div css={textFieldStyle({ size, label, leftIcon, lean })}>{children}</div>
         </div>
       </div>

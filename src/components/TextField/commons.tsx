@@ -6,7 +6,7 @@ export const IconWrapper: FC<{
   iconPosition: 'left' | 'right';
   onClick?: (e: MouseEvent<HTMLDivElement>) => void;
 }> = ({ children, iconPosition, onClick }) => (
-  <div onClick={onClick} css={iconWrapperStyle({ iconPosition })}>
+  <div onClick={onClick} css={iconWrapperStyle({ iconPosition, isClickable: Boolean(onClick) })}>
     {children}
   </div>
 );

@@ -22,18 +22,26 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
     size = DEFAULT_SIZE,
     dark = false,
     onClear,
-    value,
+    value = '',
     ...rest
   } = props;
 
+  const shouldShowClear = Boolean(onClear) && (value as string).length > 0;
+
   return (
     <React.Fragment>
-      <TextInputBase isSearch styleType={'outlined'} leftIcon={'search'} rightIcon={'close'}>
+      <TextInputBase
+        disabled={disabled}
+        isSearch
+        styleType={'outlined'}
+        leftIcon={'search'}
+        rightIcon={onClear ? 'close' : undefined}
+      >
         <IconWrapper iconPosition={'left'}>
           <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
         </IconWrapper>
 
-        <div css={{ width: '100% ' }}>
+        <div css={{ width: '100%' }}>
           <input
             css={searchStyle({ size, dark })}
             placeholder={placeholder}
@@ -44,10 +52,10 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
           />
         </div>
 
-        {onClear && (
+        {shouldShowClear && !disabled && (
           <IconWrapper
             onClick={() => {
-              onClear();
+              onClear?.();
             }}
             iconPosition={'right'}
           >
