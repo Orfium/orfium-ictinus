@@ -30,7 +30,6 @@ const RenderRowWithCells = React.memo(
       onSelectionChangeExist,
       padded,
       columns,
-      fixedHeader,
       tChange,
       row,
       type,
@@ -54,7 +53,7 @@ const RenderRowWithCells = React.memo(
         {onSelectionChangeExist && (
           <TableCell
             component={'th'}
-            sticky={fixedHeader}
+            sticky={false}
             width={50}
             padded={padded}
             dataTestIdPrefix={dataTestIdPrefix}
@@ -109,7 +108,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
   dataTestIdPrefix?: string;
   rowIndex?: number;
 }) => {
-  const { isRowSelected, columnCount } = React.useContext(TableRowContext);
+  const { isRowSelected, columnCount, fixedHeader } = React.useContext(TableRowContext);
   const { expanded } = row;
   const [checked, toggleChecked] = useToggle(false);
   const ExpandedComponent = expanded
@@ -128,7 +127,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
             dataTestIdPrefix={dataTestIdPrefix}
             rowIndex={rowIndex}
           >
-            <div css={expandableRowStyle({ isFirstRow: rowIndex === 1 })}>
+            <div css={expandableRowStyle({ isFirstRow: rowIndex === 1, fixedHeader })}>
               <table css={tableStyle()()}>
                 <tbody>
                   <RenderRowWithCells
