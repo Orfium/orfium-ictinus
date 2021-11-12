@@ -120,3 +120,24 @@ Menu with avatar and different button colour
     </Stack>
   </Story>
 </Preview>
+
+
+# Menu disabled
+
+Menu disabled
+
+<Preview>
+  <Story name="Disabled Menu">
+    <Stack>
+      <Menu
+        items={['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout']}
+        buttonText={'Tom Cruise'}
+        disabled
+        buttonType={'warning'}
+        color={'darkGrey-600'}
+        rightIconName={'arrowDown'}
+        avatar={{ src: '', letter: 'TC' }}
+      />
+    </Stack>
+  </Story>
+</Preview>
