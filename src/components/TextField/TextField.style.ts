@@ -9,8 +9,8 @@ export const iconWrapperStyle = ({
   iconPosition,
   isClickable,
 }: {
-  iconPosition: 'left' | 'right';
-  isClickable: boolean;
+  iconPosition?: 'left' | 'right';
+  isClickable?: boolean;
 }) => (theme: Theme): SerializedStyles => css`
   line-height: 0.8;
   height: ${rem(16)};
