@@ -451,12 +451,47 @@ Fixed Header Table
 Table with expandable rows with sort, fixed Header and cta's
 
 <Preview>
-  <Story name="Table with expandable rows">
+  <Story name="Table with expandable rows and sortDir">
     <Table
-      columns={['Title', 'Name', 'Surname', 'Age']}
-      type={select('type', ['normal', 'nested-header'], 'normal')}
+        columns={[
+        {
+          content: {
+            label: 'Title',
+            sortingKey: 'title'
+          },
+          isSortable: true,
+          tooltip: {
+            content: 'Tooltip Content',
+            placement: 'bottom'
+          }
+        },
+        'Name',
+        {
+          content: {
+            label: 'Surname',
+            sortingKey: 'surname'
+          },
+          tooltip: {
+            content: 'Tooltip Content',
+          }
+        },
+        {
+          content: {
+            label: 'Age',
+            sortingKey: 'age'
+          },
+          isSortable: true,
+          tooltip: {
+            content: 'Tooltip Content',
+            placement: 'right'
+          }
+        }]}
+      type={'normal'}
       padded
       fixedHeader
+      onSort={console.log}
+      fixedCTA
+      sortDir={'desc'}
       onCheck={(g) => console.log('on table change: ', g)}
       topLeftText={'topLeftText'}
       topRightArea={() => (
