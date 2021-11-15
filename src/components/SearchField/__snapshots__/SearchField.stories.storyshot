@@ -1,6 +1,326 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/SearchField Search Field Playground 1`] = `
+exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 6.25rem;
+  cursor: not-allowed;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  opacity: 0.5;
+  border: 0.125rem solid transparent;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+}
+
+.emotion-3:focus-within,
+.emotion-3:hover {
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+}
+
+.emotion-3:focus-within {
+  border-color: #246ce5;
+  background-color: #F4F8FF;
+}
+
+.emotion-3:before {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.emotion-3>input,
+.emotion-3>textarea {
+  color: #444d5f;
+  fill: #444d5f;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: inherit;
+  margin-right: 0.5rem;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-7 path {
+  fill: #5f6c85;
+}
+
+.emotion-8 {
+  width: 100%;
+}
+
+.emotion-9 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-9+label {
+  font-size: 1rem;
+}
+
+.emotion-9:focus {
+  color: #0f0f17;
+  outline: none;
+}
+
+.emotion-9:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-17 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-17+label {
+  font-size: 0.875rem;
+}
+
+.emotion-17:focus {
+  color: #0f0f17;
+  outline: none;
+}
+
+.emotion-17:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-8"
+            >
+              <input
+                className="emotion-9"
+                disabled={true}
+                onChange={[Function]}
+                placeholder="Search"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-8"
+            >
+              <input
+                className="emotion-17"
+                disabled={true}
+                onChange={[Function]}
+                placeholder="Search"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/SearchField Search Field with clear 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -170,6 +490,354 @@ exports[`Storyshots Design System/SearchField Search Field Playground 1`] = `
   cursor: not-allowed;
 }
 
+.emotion-10 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-20 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-20+label {
+  font-size: 0.875rem;
+}
+
+.emotion-20:focus {
+  color: #0f0f17;
+  outline: none;
+}
+
+.emotion-20:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-8"
+            >
+              <input
+                className="emotion-9"
+                onChange={[Function]}
+                placeholder="Search"
+                value="Search term"
+              />
+            </div>
+            <div
+              className="emotion-10"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-8"
+            >
+              <input
+                className="emotion-20"
+                onChange={[Function]}
+                placeholder="Search"
+                value="Search term"
+              />
+            </div>
+            <div
+              className="emotion-10"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 6.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 0.125rem solid transparent;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+}
+
+.emotion-3:focus-within,
+.emotion-3:hover {
+  box-shadow: 0 0 0 0.0625rem transparent;
+}
+
+.emotion-3:hover {
+  background-color: #f3f5f8!important;
+  border-color: #cfd7e5;
+  box-shadow: false;
+}
+
+.emotion-3:focus-within {
+  border-color: #246ce5;
+  background-color: #F4F8FF;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
+}
+
+.emotion-4>div {
+  position: relative;
+}
+
+.emotion-5 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: inherit;
+  margin-right: 0.5rem;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-7 path {
+  fill: #5f6c85;
+}
+
+.emotion-8 {
+  width: 100%;
+}
+
+.emotion-9 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-9+label {
+  font-size: 1rem;
+}
+
+.emotion-9:focus {
+  color: #0f0f17;
+  outline: none;
+}
+
+.emotion-9:disabled {
+  cursor: not-allowed;
+}
+
 .emotion-17 {
   background: transparent;
   border: none;
@@ -195,7 +863,159 @@ exports[`Storyshots Design System/SearchField Search Field Playground 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-19 {
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-8"
+            >
+              <input
+                className="emotion-9"
+                onChange={[Function]}
+                placeholder="Placeholder"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-8"
+            >
+              <input
+                className="emotion-17"
+                onChange={[Function]}
+                placeholder="Placeholder"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/SearchField Search Field with sizes 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+}
+
+.emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   border-radius: 6.25rem;
@@ -213,70 +1033,140 @@ exports[`Storyshots Design System/SearchField Search Field Playground 1`] = `
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
 }
 
-.emotion-19:focus-within,
-.emotion-19:hover {
+.emotion-3:focus-within,
+.emotion-3:hover {
   box-shadow: 0 0 0 0.0625rem transparent;
 }
 
-.emotion-19:hover {
+.emotion-3:hover {
   background-color: #f3f5f8!important;
   border-color: #cfd7e5;
   box-shadow: false;
 }
 
-.emotion-19:focus-within {
+.emotion-3:focus-within {
   border-color: #246ce5;
   background-color: #F4F8FF;
 }
 
-.emotion-27 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 6.25rem;
-  cursor: not-allowed;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.emotion-4 {
   position: relative;
-  background-color: white;
-  opacity: 0.5;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 12px 1rem;
 }
 
-.emotion-27:focus-within,
-.emotion-27:hover {
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+.emotion-4>div {
+  position: relative;
 }
 
-.emotion-27 {
-  min-width: 17.875rem;
+.emotion-5 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: inherit;
+  margin-right: 0.5rem;
 }
 
-.emotion-27:focus-within {
-  border-color: #246ce5;
-  background-color: #F4F8FF;
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
-.emotion-27:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
+.emotion-7 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-7 path {
+  fill: #5f6c85;
+}
+
+.emotion-8 {
   width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
 }
 
-.emotion-27>input,
-.emotion-27>textarea {
-  color: #444d5f;
-  fill: #444d5f;
+.emotion-9 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 1rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-9+label {
+  font-size: 1rem;
+}
+
+.emotion-9:focus {
+  color: #0f0f17;
+  outline: none;
+}
+
+.emotion-9:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-17 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  font-size: 0.875rem;
+  text-overflow: ellipsis;
+}
+
+.emotion-17+label {
+  font-size: 0.875rem;
+}
+
+.emotion-17:focus {
+  color: #0f0f17;
+  outline: none;
+}
+
+.emotion-17:disabled {
+  cursor: not-allowed;
 }
 
 <div
@@ -381,91 +1271,6 @@ exports[`Storyshots Design System/SearchField Search Field Playground 1`] = `
             >
               <input
                 className="emotion-17"
-                onChange={[Function]}
-                placeholder="Search"
-                value=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div
-        className="emotion-2"
-      >
-        <div
-          className="emotion-19"
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-5"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </div>
-            <div
-              className="emotion-8"
-            >
-              <input
-                className="emotion-17"
-                onChange={[Function]}
-                placeholder="Search"
-                value=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div
-        className="emotion-2"
-      >
-        <div
-          className="emotion-27"
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-5"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </div>
-            <div
-              className="emotion-8"
-            >
-              <input
-                className="emotion-17"
-                disabled={true}
                 onChange={[Function]}
                 placeholder="Search"
                 value=""
