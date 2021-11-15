@@ -1,32 +1,34 @@
 import React, { useState } from 'react';
 
 import Stack from '../storyUtils/Stack';
-import SearchField from './SearchField';
+import { Props as TextFieldProps } from '../TextField/TextField';
+import SearchField, { Props } from './SearchField';
 
-const SearchFieldShowcase = () => {
-  const [value, setValue] = useState('');
+const SearchFieldShowcase = ({
+  disabled,
+  onClear,
+  placeholder,
+  initialValue,
+}: (Props & TextFieldProps) & { initialValue?: string }) => {
+  const [value, setValue] = useState(initialValue ?? '');
 
   return (
     <Stack>
       <SearchField
+        disabled={disabled}
+        placeholder={placeholder}
         size={'md'}
         value={value}
         onChange={e => setValue(e.target.value)}
-        onClear={() => setValue('')}
+        onClear={onClear ? () => setValue('') : undefined}
       />
       <SearchField
+        disabled={disabled}
+        placeholder={placeholder}
         size={'sm'}
         value={value}
         onChange={e => setValue(e.target.value)}
-        onClear={() => setValue('')}
-      />
-      <SearchField size={'sm'} value={value} onChange={e => setValue(e.target.value)} />
-      <SearchField
-        disabled
-        size={'sm'}
-        value={value}
-        onChange={e => setValue(e.target.value)}
-        onClear={() => setValue('')}
+        onClear={onClear ? () => setValue('') : undefined}
       />
     </Stack>
   );

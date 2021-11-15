@@ -20,12 +20,42 @@ import { SearchField } from '@orfium/ictinus';
 
 <Props of={SearchField} />
 
-# Text Field Sizes
+# Search Field Sizes
 
-Regular SearchField and available sizes
+Search Field and available sizes
 
 <Preview>
-  <Story name="Search Field Playground">
+  <Story name="Search Field with sizes">
     <SearchFieldShowcase />
+  </Story>
+</Preview>
+
+# Search Field disabled
+
+Disabled Search Field
+
+<Preview>
+  <Story name="Search Field disabled">
+    <SearchFieldShowcase disabled />
+  </Story>
+</Preview>
+
+# Search Field with placeholder
+
+Search Field with placeholder
+
+<Preview>
+  <Story name="Search Field with placeholder">
+    <SearchFieldShowcase placeholder={'Placeholder'} />
+  </Story>
+</Preview>
+
+# Search Field with clear
+
+Search Field with clear functionality
+
+<Preview>
+  <Story name="Search Field with clear">
+    <SearchFieldShowcase initialValue={'Search term'} onClear/>
   </Story>
 </Preview>
