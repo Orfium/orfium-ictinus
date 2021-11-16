@@ -10,7 +10,7 @@ import TextInputBase from 'components/TextInputBase';
 
 export type Props = {
   /** A callback that's called when the user click the 'clear' icon */
-  onClear?: () => void;
+  onClear: () => void;
 };
 
 const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((props, ref) => {
@@ -26,7 +26,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
     ...rest
   } = props;
 
-  const shouldShowClear = Boolean(onClear) && (value as string).length > 0;
+  const shouldShowClear = (value as string).length > 0;
 
   return (
     <React.Fragment>
@@ -35,7 +35,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
         isSearch
         styleType={'outlined'}
         leftIcon={'search'}
-        rightIcon={onClear ? 'close' : undefined}
+        rightIcon={'close'}
       >
         <IconWrapper iconPosition={'left'}>
           <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
@@ -55,7 +55,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
         {shouldShowClear && !disabled && (
           <IconWrapper
             onClick={() => {
-              onClear?.();
+              onClear();
             }}
             iconPosition={'right'}
           >

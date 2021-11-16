@@ -16,6 +16,11 @@ export const searchStyle = ({ size, dark }: Pick<TextInputWrapperProps, 'size' |
   font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
   text-overflow: ellipsis;
 
+  ::placeholder,
+  ::-ms-input-placeholder {
+    color: ${theme.utils.getColor('lightGrey', 650)};
+  }
+
   & + label {
     font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
   }

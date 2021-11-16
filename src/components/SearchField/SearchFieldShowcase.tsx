@@ -6,10 +6,9 @@ import SearchField, { Props } from './SearchField';
 
 const SearchFieldShowcase = ({
   disabled,
-  onClear,
   placeholder,
   initialValue,
-}: (Props & TextFieldProps) & { initialValue?: string }) => {
+}: Partial<Props & TextFieldProps> & { initialValue?: string }) => {
   const [value, setValue] = useState(initialValue ?? '');
 
   return (
@@ -20,7 +19,7 @@ const SearchFieldShowcase = ({
         size={'md'}
         value={value}
         onChange={e => setValue(e.target.value)}
-        onClear={onClear ? () => setValue('') : undefined}
+        onClear={() => setValue('')}
       />
       <SearchField
         disabled={disabled}
@@ -28,7 +27,7 @@ const SearchFieldShowcase = ({
         size={'sm'}
         value={value}
         onChange={e => setValue(e.target.value)}
-        onClear={onClear ? () => setValue('') : undefined}
+        onClear={() => setValue('')}
       />
     </Stack>
   );
