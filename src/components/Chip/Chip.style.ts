@@ -8,31 +8,6 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 import { Props } from './Chip';
 
-/** Calculates the label specific height based on the size passed to it
- * These sizes are specific to this component thus these are placed here and not in the config **/
-const styleBasedOnSize = (
-  theme: Theme,
-  size?: 'md' | 'sm',
-  leftIcon?: JSX.Element,
-  rightIcon?: JSX.Element
-) => {
-  const hasIcon: boolean = leftIcon !== undefined || rightIcon !== undefined;
-  switch (size) {
-    case 'sm':
-      return `
-      height: ${rem(20)};
-      border-radius: ${rem(16.5)};
-      font-size: ${theme.typography.fontSizes['10']};
-      `;
-    default:
-      return `
-      height: ${rem(24)};
-      border-radius: ${rem(12.5)};
-      font-size: ${theme.typography.fontSizes['12']};
-      `;
-  }
-};
-
 const wrapperStyleSwitch = (
   theme: Theme,
   styleType?: 'filled' | 'outlined',
@@ -60,17 +35,19 @@ const wrapperStyleSwitch = (
         };
         color: ${fill ? pickTextColorFromSwatches(fill, shade) : '#232323'};
         border: ${rem(1)} solid ${
-          fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGrey', 50)
-        };
+        fill ? theme.utils.getColor(fill, shade) : theme.utils.getColor('lightGrey', 50)
+      };
       `;
   }
 };
 
-export const wrapperStyle = ({ styleType, size, fill, shade, leftIcon, rightIcon }: Props) => (
+export const wrapperStyle = ({ styleType, fill, shade, leftIcon, rightIcon }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flexCenterVertical};
-  ${styleBasedOnSize(theme, size, leftIcon, rightIcon)};
+  height: ${theme.spacing.lg};
+  border-radius: ${theme.spacing.lg};
+  font-size: ${theme.typography.fontSizes['12']};
   box-sizing: border-box;
   padding-left: ${leftIcon ? 'inherit' : rem(8)};
   padding-right: ${rightIcon ? 'inherit' : rem(8)};
@@ -78,13 +55,10 @@ export const wrapperStyle = ({ styleType, size, fill, shade, leftIcon, rightIcon
   width: fit-content;
 `;
 
-export const iconWrapperStyle = (
-  size: 'md' | 'sm',
-  iconHandler?: React.ReactEventHandler
-): SerializedStyles => css`
+export const iconWrapperStyle = (iconHandler?: React.ReactEventHandler): SerializedStyles => css`
   ${flexCenterVertical};
-  height: ${size === 'md' ? rem(16) : rem(14)};
-  width: ${size === 'md' ? rem(16) : rem(14)};
+  height: ${rem(16)};
+  width: ${rem(16)};
   & > * {
     max-height: 100%;
   }

@@ -12,10 +12,6 @@ export type Props = {
    * @default filled
    */
   styleType?: 'filled' | 'outlined';
-  /** This property define the size of the button.
-   *  @default md
-   * */
-  size?: 'md' | 'sm';
   /** Defines the fill color of the component, if filled */
   fill?: typeof flatColors[number];
   /** Defines the shade of the fill */
@@ -39,7 +35,6 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
   (
     {
       styleType = 'filled',
-      size = 'md',
       fill,
       shade,
       leftIcon,
@@ -55,16 +50,16 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={wrapperStyle({ styleType, size, fill, shade, leftIcon, rightIcon })}
+        css={wrapperStyle({ styleType, fill, shade, leftIcon, rightIcon })}
       >
         {leftIcon && (
-          <div onClick={leftIconHandler} css={iconWrapperStyle(size, leftIconHandler)}>
+          <div onClick={leftIconHandler} css={iconWrapperStyle(leftIconHandler)}>
             {leftIcon}
           </div>
         )}
         <div>{children}</div>
         {rightIcon && (
-          <div onClick={rightIconHandler} css={iconWrapperStyle(size, rightIconHandler)}>
+          <div onClick={rightIconHandler} css={iconWrapperStyle(rightIconHandler)}>
             {rightIcon}
           </div>
         )}

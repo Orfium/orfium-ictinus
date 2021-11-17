@@ -16,7 +16,7 @@ A compact component that will be used in inner DS component but outside DS as we
 
 ```js
 import { Chip } from '@orfium/ictinus';
-<Chip styleType='outlined' size='sm' fill='red'>
+<Chip styleType='outlined' fill='red'>
   Label text
 </Chip>;
 ```
@@ -32,12 +32,12 @@ Chip Styles
 <Preview>
   <Story name="Chip Styles">
     <Stack>
-        <Chip styleType='filled' size={select('size', ['sm', 'md'], 'md')}
+        <Chip styleType='filled'
           fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
         >
         Filled Style
         </Chip>
-        <Chip styleType='outlined' size={select('size', ['sm', 'md'], 'md')}
+        <Chip styleType='outlined'
           fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
         >
         Outlined Style
@@ -46,7 +46,7 @@ Chip Styles
   </Story>
 </Preview>
 
-# Chip Sizes
+<!-- # Chip Sizes
 
 Chip Sizes
 
@@ -65,7 +65,7 @@ Chip Sizes
         </Chip>
     </Stack>
   </Story>
-</Preview>
+</Preview> -->
 
 
 # Chip with Icons
@@ -74,7 +74,7 @@ Chip with Icons
 <Preview>
   <Story name="Chip with Icons">
     <Stack>
-      <ChipShowcase styleType={select('styleType', ['filled', 'outlined'], 'filled')} size={select('size', ['sm', 'md'], 'md')}
+      <ChipShowcase styleType={select('styleType', ['filled', 'outlined'], 'filled')}
         fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
       >
         <div>{text('text', 'Label Text')}</div>
@@ -90,7 +90,7 @@ Dynamic Chip Props
 <Preview>
   <Story name="Dynamic Chip Props">
     <Stack>
-      <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size={select('size', ['sm', 'md'], 'md')}
+      <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')}
         fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
       >
         <div>{text('text', 'change me!')}</div>
