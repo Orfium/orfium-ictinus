@@ -7,15 +7,8 @@ import { DivProps } from '../../utils/common';
 import { iconWrapperStyle, wrapperStyle } from './Chip.style';
 
 export type Props = {
-  /**
-   * Style of input field
-   * @default filled
-   */
-  styleType?: 'filled' | 'outlined';
   /** Defines the fill color of the component, if filled */
   fill?: typeof flatColors[number];
-  /** Defines the shade of the fill */
-  shade?: typeof colorShades[number];
   /** An optional icon to show to the left */
   leftIcon?: JSX.Element;
   /** */
@@ -34,9 +27,7 @@ type TestProps = {
 const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
   (
     {
-      styleType = 'filled',
       fill,
-      shade,
       leftIcon,
       onLeftIconClick: leftIconHandler,
       rightIcon,
@@ -50,7 +41,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={wrapperStyle({ styleType, fill, shade, leftIcon, rightIcon })}
+        css={wrapperStyle({ fill, leftIcon, rightIcon })}
       >
         {leftIcon && (
           <div onClick={leftIconHandler} css={iconWrapperStyle(leftIconHandler)}>

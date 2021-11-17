@@ -25,7 +25,7 @@ import { Chip } from '@orfium/ictinus';
 
 <Props of={Chip} />
 
-# Chip Styles
+<!-- # Chip Styles
 
 Chip Styles
 
@@ -44,7 +44,7 @@ Chip Styles
         </Chip>
     </Stack>
   </Story>
-</Preview>
+</Preview> -->
 
 <!-- # Chip Sizes
 
@@ -74,8 +74,8 @@ Chip with Icons
 <Preview>
   <Story name="Chip with Icons">
     <Stack>
-      <ChipShowcase styleType={select('styleType', ['filled', 'outlined'], 'filled')}
-        fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+      <ChipShowcase
+        fill={select('fill', flatColors.concat(undefined), flatColors[0])}
       >
         <div>{text('text', 'Label Text')}</div>
       </ChipShowcase>
@@ -90,8 +90,8 @@ Dynamic Chip Props
 <Preview>
   <Story name="Dynamic Chip Props">
     <Stack>
-      <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')}
-        fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+      <Chip
+        fill={select('fill', flatColors.concat(undefined), flatColors[0])} 
       >
         <div>{text('text', 'change me!')}</div>
       </Chip>

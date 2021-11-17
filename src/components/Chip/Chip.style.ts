@@ -41,7 +41,7 @@ const wrapperStyleSwitch = (
   }
 };
 
-export const wrapperStyle = ({ styleType, fill, shade, leftIcon, rightIcon }: Props) => (
+export const wrapperStyle = ({ fill = 'greyScale', leftIcon, rightIcon }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flexCenterVertical};
@@ -51,7 +51,9 @@ export const wrapperStyle = ({ styleType, fill, shade, leftIcon, rightIcon }: Pr
   box-sizing: border-box;
   padding-left: ${leftIcon ? 'inherit' : rem(8)};
   padding-right: ${rightIcon ? 'inherit' : rem(8)};
-  ${wrapperStyleSwitch(theme, styleType, fill, shade)};
+  background-color: ${theme.utils.getColor(fill, 50)};
+  color: ${theme.utils.getColor('darkGrey', 850)}; //use pickTextColorFromSwatches() instead
+  border: ${rem(1)} solid ${theme.utils.getColor(fill, 550)};
   width: fit-content;
 `;
 
