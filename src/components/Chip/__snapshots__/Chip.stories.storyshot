@@ -44,9 +44,9 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
   height: 1.5rem;
   border-radius: 1.5rem;
   font-size: 0.75rem;
+  font-weight: 500;
   box-sizing: border-box;
-  padding-left: inherit;
-  padding-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
   background-color: #f2f2f2;
   color: #0f0f17;
   border: 0.0625rem solid #737373;
@@ -79,64 +79,6 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
 
 .emotion-4>* {
   max-height: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  border-radius: 1.5rem;
-  font-size: 0.75rem;
-  box-sizing: border-box;
-  padding-left: 0.5rem;
-  padding-right: inherit;
-  background-color: #f2f2f2;
-  color: #0f0f17;
-  border: 0.0625rem solid #737373;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-9 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  border-radius: 1.5rem;
-  font-size: 0.75rem;
-  box-sizing: border-box;
-  padding-left: inherit;
-  padding-right: inherit;
-  background-color: #f2f2f2;
-  color: #0f0f17;
-  border: 0.0625rem solid #737373;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .emotion-10 {
@@ -216,7 +158,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
             </div>
             <div>
               <div>
-                Label Text
+                Label
               </div>
             </div>
           </div>
@@ -225,12 +167,12 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
           className="emotion-2"
         >
           <div
-            className="emotion-6"
+            className="emotion-3"
             data-testid="chip"
           >
             <div>
               <div>
-                Label Text
+                Label
               </div>
             </div>
             <div
@@ -246,7 +188,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
           className="emotion-2"
         >
           <div
-            className="emotion-9"
+            className="emotion-3"
             data-testid="chip"
           >
             <div
@@ -259,7 +201,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
             </div>
             <div>
               <div>
-                Label Text
+                Label
               </div>
             </div>
             <div
@@ -318,9 +260,9 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
   height: 1.5rem;
   border-radius: 1.5rem;
   font-size: 0.75rem;
+  font-weight: 500;
   box-sizing: border-box;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
   background-color: #f2f2f2;
   color: #0f0f17;
   border: 0.0625rem solid #737373;
