@@ -41,16 +41,16 @@ const wrapperStyleSwitch = (
   }
 };
 
-export const wrapperStyle = ({ fill = 'greyScale', leftIcon, rightIcon }: Props) => (
+export const chipStyle = ({ fill = 'greyScale', leftIcon, rightIcon }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flexCenterVertical};
   height: ${theme.spacing.lg};
   border-radius: ${theme.spacing.lg};
   font-size: ${theme.typography.fontSizes['12']};
+  font-weight: ${theme.typography.weights.medium};
   box-sizing: border-box;
-  padding-left: ${leftIcon ? 'inherit' : rem(8)};
-  padding-right: ${rightIcon ? 'inherit' : rem(8)};
+  padding: ${theme.spacing.xsm} ${theme.spacing.sm};
   background-color: ${theme.utils.getColor(fill, 50)};
   color: ${theme.utils.getColor('darkGrey', 850)}; //use pickTextColorFromSwatches() instead
   border: ${rem(1)} solid ${theme.utils.getColor(fill, 550)};

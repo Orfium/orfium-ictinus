@@ -4,7 +4,7 @@ import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
 import { DivProps } from '../../utils/common';
-import { iconWrapperStyle, wrapperStyle } from './Chip.style';
+import { iconWrapperStyle, chipStyle } from './Chip.style';
 
 export type Props = {
   /** Defines the fill color of the component, if filled */
@@ -41,7 +41,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={wrapperStyle({ fill, leftIcon, rightIcon })}
+        css={chipStyle({ fill, leftIcon, rightIcon })}
       >
         {leftIcon && (
           <div onClick={leftIconHandler} css={iconWrapperStyle(leftIconHandler)}>

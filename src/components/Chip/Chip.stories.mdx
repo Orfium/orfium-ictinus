@@ -17,7 +17,7 @@ A compact component that will be used in inner DS component but outside DS as we
 ```js
 import { Chip } from '@orfium/ictinus';
 <Chip styleType='outlined' fill='red'>
-  Label text
+  Label
 </Chip>;
 ```
 
@@ -77,7 +77,7 @@ Chip with Icons
       <ChipShowcase
         fill={select('fill', flatColors.concat(undefined), flatColors[0])}
       >
-        <div>{text('text', 'Label Text')}</div>
+        <div>{text('text', 'Label')}</div>
       </ChipShowcase>
     </Stack>
   </Story>
