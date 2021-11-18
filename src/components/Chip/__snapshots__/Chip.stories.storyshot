@@ -45,6 +45,7 @@ exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
   border-radius: 1.5rem;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: normal;
   box-sizing: border-box;
   padding: 0.25rem 0.5rem;
   background-color: #f2f2f2;
@@ -233,6 +234,7 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
   border-radius: 1.5rem;
   font-size: 0.75rem;
   font-weight: 500;
+  line-height: normal;
   box-sizing: border-box;
   padding: 0.25rem 0.5rem;
   background-color: #f2f2f2;
@@ -285,6 +287,206 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
           <div>
             change me!
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: #f2f2f2;
+  color: #0f0f17;
+  border: 0.0625rem solid #737373;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 100%;
+  background: #808080;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.6875rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  line-height: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  color: #0f0f17;
+}
+
+.emotion-4 img {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+        data-testid="chip"
+      >
+        <div>
+          Label
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+        data-testid="chip"
+      >
+        <div
+          style={
+            Object {
+              "marginRight": "4px",
+            }
+          }
+        >
+          <div
+            className="emotion-4"
+          >
+            
+            KN
+          </div>
+        </div>
+        <div>
+          Label
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-2"
+        data-testid="chip"
+      >
+        <div
+          style={
+            Object {
+              "marginRight": "4px",
+            }
+          }
+        >
+          <div
+            className="emotion-4"
+          >
+            <img
+              src="https://mui.com/static/images/avatar/1.jpg"
+            />
+          </div>
+        </div>
+        <div>
+          Label
         </div>
       </div>
     </div>

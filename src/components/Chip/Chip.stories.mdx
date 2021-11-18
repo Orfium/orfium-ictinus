@@ -67,6 +67,32 @@ Chip Sizes
   </Story>
 </Preview> -->
 
+# Read-Only Chips
+
+Read-Only Chips
+
+<Preview>
+  <Story name="Read-Only Chips">
+    <Stack>
+        <Chip
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        >
+        Label
+        </Chip>
+        <Chip thumbnail={{src: '', name: 'KN'}}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        >
+        Label
+        </Chip>
+        <Chip thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        >
+        Label
+        </Chip>
+    </Stack>
+  </Story>
+</Preview>
+
 
 # Chip with Icons
 

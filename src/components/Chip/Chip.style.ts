@@ -49,6 +49,7 @@ export const chipStyle = ({ fill = 'greyScale', leftIcon, rightIcon }: Props) =>
   border-radius: ${theme.spacing.lg};
   font-size: ${theme.typography.fontSizes['12']};
   font-weight: ${theme.typography.weights.medium};
+  line-height: normal;
   box-sizing: border-box;
   padding: ${theme.spacing.xsm} ${theme.spacing.sm};
   background-color: ${theme.utils.getColor(fill, 50)};
