@@ -38,18 +38,18 @@ describe('Chip', () => {
     expect(componentContainer).toHaveStyle(`background-color: ${expectedFillColor}`);
   });
 
-  test('that handlers are being called when icons are clicked', async () => {
-    const leftIconHandler = jest.fn();
-    const rightIconHandler = jest.fn();
-    const { getAllByRole } = render(
-      <Chip {...chipProps} onLeftIconClick={leftIconHandler} onRightIconClick={rightIconHandler}>
-        {chipLabel}
-      </Chip>
-    );
-    const icons = getAllByRole('img');
-    fireEvent.click(icons[0]);
-    expect(leftIconHandler).toHaveBeenCalledTimes(1);
-    fireEvent.click(icons[1]);
-    expect(rightIconHandler).toHaveBeenCalledTimes(1);
-  });
+  // test('that handlers are being called when icons are clicked', async () => {
+  //   const leftIconHandler = jest.fn();
+  //   const rightIconHandler = jest.fn();
+  //   const { getAllByRole } = render(
+  //     <Chip {...chipProps} onLeftIconClick={leftIconHandler} onRightIconClick={rightIconHandler}>
+  //       {chipLabel}
+  //     </Chip>
+  //   );
+  //   const icons = getAllByRole('img');
+  //   fireEvent.click(icons[0]);
+  //   expect(leftIconHandler).toHaveBeenCalledTimes(1);
+  //   fireEvent.click(icons[1]);
+  //   expect(rightIconHandler).toHaveBeenCalledTimes(1);
+  // });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { colorShades, flatColors } from 'theme/palette';
+import { flatColors } from 'theme/palette';
 import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
@@ -11,12 +11,8 @@ export type Props = {
   fill?: typeof flatColors[number];
   /** An optional icon to show to the left */
   leftIcon?: JSX.Element;
-  /** */
-  onLeftIconClick?: React.ReactEventHandler;
   /** An optional icon to show to the right */
   rightIcon?: JSX.Element;
-  /** */
-  onRightIconClick?: React.ReactEventHandler;
   /**  */
 };
 
@@ -25,35 +21,16 @@ type TestProps = {
 };
 
 const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
-  (
-    {
-      fill,
-      leftIcon,
-      onLeftIconClick: leftIconHandler,
-      rightIcon,
-      onRightIconClick: rightIconHandler,
-      dataTestId = '',
-      children,
-    },
-    ref
-  ) => {
+  ({ fill, leftIcon, rightIcon, dataTestId = '', children }, ref) => {
     return (
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
         css={chipStyle({ fill, leftIcon, rightIcon })}
       >
-        {leftIcon && (
-          <div onClick={leftIconHandler} css={iconWrapperStyle(leftIconHandler)}>
-            {leftIcon}
-          </div>
-        )}
+        {leftIcon && <div css={iconWrapperStyle()}>{leftIcon}</div>}
         <div>{children}</div>
-        {rightIcon && (
-          <div onClick={rightIconHandler} css={iconWrapperStyle(rightIconHandler)}>
-            {rightIcon}
-          </div>
-        )}
+        {rightIcon && <div css={iconWrapperStyle()}>{rightIcon}</div>}
       </div>
     );
   }
