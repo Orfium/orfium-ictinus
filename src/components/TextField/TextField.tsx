@@ -1,10 +1,11 @@
 import useTheme from 'hooks/useTheme';
-import React, { FC, InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import Icon from '../Icon';
 import Label from '../Label';
-import { iconWrapperStyle, inputStyle } from './TextField.style';
+import { IconWrapper } from './components/commons';
+import { inputStyle } from './TextField.style';
 import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
 
@@ -45,10 +46,6 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps>((props,
     ...rest
   } = props;
   const theme = useTheme();
-
-  const IconWrapper: FC<{ iconPosition: 'left' | 'right' }> = ({ children, iconPosition }) => (
-    <div css={iconWrapperStyle({ iconPosition })}>{children}</div>
-  );
 
   const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
     icon ? (

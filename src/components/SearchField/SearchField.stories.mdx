@@ -1,0 +1,51 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import Stack from '../storyUtils/Stack';
+import SearchField from './SearchField'; import SearchFieldShowcase from './SearchFieldShowcase';
+
+<Meta title="Design System/SearchField" component={SearchField} />
+
+# SearchField
+
+A Search field component based on the TextInputBase's styles.
+
+# Usage
+
+```js
+import { SearchField } from '@orfium/ictinus';
+
+<SearchField onInput={console.log} />;
+```
+
+# Props
+
+<Props of={SearchField} />
+
+# Search Field Sizes
+
+Search Field and available sizes
+
+<Preview>
+  <Story name="Search Field sizes">
+    <SearchFieldShowcase />
+  </Story>
+</Preview>
+
+# Search Field disabled
+
+Disabled Search Field
+
+<Preview>
+  <Story name="Search Field disabled">
+    <SearchFieldShowcase disabled />
+  </Story>
+</Preview>
+
+# Search Field with placeholder
+
+Search Field with placeholder
+
+<Preview>
+  <Story name="Search Field with placeholder">
+    <SearchFieldShowcase placeholder={'Placeholder'} />
+  </Story>
+</Preview>

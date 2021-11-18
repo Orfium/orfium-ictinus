@@ -36,14 +36,18 @@ export type Props = {
   size?: 'md' | 'sm';
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
+  /** If the field is used as a Search component */
+  isSearch?: boolean;
 };
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
 const TextInputBase: FC<Props> = ({
   leftIcon = null,
+  rightIcon,
   label,
   lean = false,
+  isSearch = false,
   disabled,
   hintMsg,
   styleType = 'filled',
@@ -75,7 +79,19 @@ const TextInputBase: FC<Props> = ({
           width: 'fill-available',
         }}
       >
-        <div css={wrapperStyle({ dark, locked, disabled, status, lean, styleType })}>
+        <div
+          css={wrapperStyle({
+            dark,
+            locked,
+            disabled,
+            status,
+            lean,
+            styleType,
+            isSearch,
+            rightIcon,
+            size,
+          })}
+        >
           <div css={textFieldStyle({ size, label, leftIcon, lean })}>{children}</div>
         </div>
       </div>
