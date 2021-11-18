@@ -34,7 +34,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       >
         {thumbnail && (
           <div style={{ marginRight: '4px' }}>
-            <Avatar size={'xxs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
+            <Avatar size={'xxxs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
               {thumbnail.name}
             </Avatar>
           </div>

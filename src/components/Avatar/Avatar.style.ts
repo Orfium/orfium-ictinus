@@ -16,6 +16,8 @@ const sizeBasedOnProp = (size: AvatarSizes) => {
       return rem(24);
     case 'xxs':
       return rem(20);
+    case 'xxxs':
+      return rem(16);
     default:
       return rem(56);
   }
@@ -40,6 +42,8 @@ const fontSizeBasedOnProp = (theme: Theme, size: AvatarSizes) => {
       return theme.typography.fontSizes['13'];
     case 'xxs':
       return theme.typography.fontSizes['11'];
+    case 'xxxs':
+      return theme.typography.fontSizes['8'];
     default:
       return theme.typography.fontSizes['18'];
   }
