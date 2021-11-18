@@ -3,13 +3,13 @@ import React from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import Icon from '../Icon';
-import { IconWrapper } from '../TextField/commons';
+import { IconWrapper } from '../TextField/components/commons';
 import { searchStyle } from './SearchField.style';
 import { Props as TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 
 export type Props = {
-  /** A callback that's called when the user click the 'clear' icon */
+  /** A callback that's called when the user clicks the 'clear' icon */
   onClear: () => void;
 };
 

@@ -4,7 +4,7 @@ import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import Icon from '../Icon';
 import Label from '../Label';
-import { IconWrapper } from './commons';
+import { IconWrapper } from './components/commons';
 import { inputStyle } from './TextField.style';
 import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';

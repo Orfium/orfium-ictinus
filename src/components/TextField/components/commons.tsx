@@ -1,6 +1,6 @@
 import React, { FC, MouseEvent } from 'react';
 
-import { iconWrapperStyle } from './TextField.style';
+import { iconWrapperStyle } from '../TextField.style';
 
 export const IconWrapper: FC<{
   iconPosition: 'left' | 'right';
