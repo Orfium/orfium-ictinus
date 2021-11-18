@@ -100,6 +100,8 @@ export const buttonBaseStyle = ({
       open,
     })}`,
     display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
     '&:hover': {
       border: `${borderStyleParams} ${getBorder({
         styleType,
