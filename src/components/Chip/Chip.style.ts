@@ -41,7 +41,7 @@ const wrapperStyleSwitch = (
   }
 };
 
-export const chipStyle = ({ fill = 'greyScale', leftIcon, rightIcon }: Props) => (
+export const chipStyle = ({ styleType, fill = 'greyScale' }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flexCenterVertical};
@@ -52,10 +52,22 @@ export const chipStyle = ({ fill = 'greyScale', leftIcon, rightIcon }: Props) =>
   line-height: normal;
   box-sizing: border-box;
   padding: ${theme.spacing.xsm} ${theme.spacing.sm};
-  background-color: ${theme.utils.getColor(fill, 50)};
+  background-color: ${styleType === 'read-only'
+    ? theme.utils.getColor(fill, 50)
+    : theme.palette.white};
   color: ${theme.utils.getColor('darkGrey', 850)}; //use pickTextColorFromSwatches() instead
-  border: ${rem(1)} solid ${theme.utils.getColor(fill, 550)};
+  border: ${rem(1)} solid
+    ${styleType === 'read-only'
+      ? theme.utils.getColor(fill, 550)
+      : theme.utils.getColor('lightGrey', 200)};
   width: fit-content;
+  transition: background-color 150ms linear;
+
+  &:hover {
+    background: ${styleType === 'read-only'
+      ? theme.utils.getColor(fill, 100)
+      : theme.utils.getColor('lightGrey', null, 'pale')};
+  }
 `;
 
 export const iconWrapperStyle = (iconHandler?: React.ReactEventHandler): SerializedStyles => css`

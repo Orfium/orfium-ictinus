@@ -95,6 +95,37 @@ Read-Only Chips
   </Story>
 </Preview>
 
+# Interactive Chips
+
+Interactive Chips
+
+<Preview>
+  <Story name="Interactive Chips">
+    <Stack>
+        <Chip
+          styleType={'interactive'}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        >
+        Label
+        </Chip>
+        <Chip 
+          styleType={'interactive'}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          thumbnail={{src: '', name: 'KN'}}
+        >
+        Label
+        </Chip>
+        <Chip 
+          styleType={'interactive'}
+          thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        >
+        Label
+        </Chip>
+    </Stack>
+  </Story>
+</Preview>
+
 
 # Chip with Icons
 

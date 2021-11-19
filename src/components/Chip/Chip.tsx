@@ -9,6 +9,11 @@ import { iconWrapperStyle, chipStyle } from './Chip.style';
 import Avatar from 'components/Avatar';
 
 export type Props = {
+  /**
+   * Determines whether the chip should be read-only or interactive.
+   * @default read-only
+   */
+  styleType?: 'read-only' | 'interactive';
   /** Defines the fill color of the component, if filled */
   fill?: typeof flatColors[number];
   /** An optional thumbnail to show to the left */
@@ -17,7 +22,6 @@ export type Props = {
   leftIcon?: JSX.Element;
   /** An optional icon to show to the right */
   rightIcon?: JSX.Element;
-  /**  */
 };
 
 type TestProps = {
@@ -25,12 +29,15 @@ type TestProps = {
 };
 
 const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
-  ({ fill, thumbnail, leftIcon, rightIcon, dataTestId = '', children }, ref) => {
+  (
+    { styleType = 'read-only', fill, thumbnail, leftIcon, rightIcon, dataTestId = '', children },
+    ref
+  ) => {
     return (
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={chipStyle({ fill, leftIcon, rightIcon })}
+        css={chipStyle({ styleType, fill })}
       >
         {thumbnail && (
           <div style={{ marginRight: '4px' }}>
