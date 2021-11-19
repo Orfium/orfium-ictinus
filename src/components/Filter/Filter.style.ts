@@ -40,7 +40,7 @@ export const buttonWrapperStyle = ({
     alignItems: 'center',
     height: '100%',
     maxWidth: rem(270),
-    minWidth: rem(150),
+    minWidth: rem(110),
 
     ':hover > div, :active > div': {
       backgroundColor:
