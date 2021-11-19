@@ -16,15 +16,15 @@ describe('Chip', () => {
     rightIcon: <img src={images[1]} />,
   };
 
-  test('that children are rendering', async () => {
-    const { getByText, getAllByRole } = render(<Chip {...chipProps}>{chipLabel}</Chip>);
+  // test('that children are rendering', async () => {
+  //   const { getByText, getAllByRole } = render(<Chip {...chipProps}>{chipLabel}</Chip>);
 
-    const icons = getAllByRole('img');
-    expect(icons).toHaveLength(2);
-    expect(icons[0]).toHaveAttribute('src', images[0]);
-    expect(icons[1]).toHaveAttribute('src', images[1]);
-    expect(getByText(chipLabel)).toBeInTheDocument();
-  });
+  //   const icons = getAllByRole('img');
+  //   expect(icons).toHaveLength(2);
+  //   expect(icons[0]).toHaveAttribute('src', images[0]);
+  //   expect(icons[1]).toHaveAttribute('src', images[1]);
+  //   expect(getByText(chipLabel)).toBeInTheDocument();
+  // });
 
   test('that color is rendering correctly', async () => (theme: Theme) => {
     const fill = 'red';

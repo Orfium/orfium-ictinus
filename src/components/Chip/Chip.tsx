@@ -5,8 +5,9 @@ import { TestId } from 'utils/types';
 
 import { BASE_SHADE } from '../../theme/palette';
 import { DivProps } from '../../utils/common';
-import { iconWrapperStyle, chipStyle } from './Chip.style';
+import { iconWrapperStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
 import Avatar from 'components/Avatar';
+import Icon from 'components/Icon';
 
 export type Props = {
   /**
@@ -18,10 +19,8 @@ export type Props = {
   fill?: typeof flatColors[number];
   /** An optional thumbnail to show to the left */
   thumbnail?: { src?: string; name?: string };
-  /** An optional icon to show to the left */
-  leftIcon?: JSX.Element;
-  /** An optional icon to show to the right */
-  rightIcon?: JSX.Element;
+  /** A callback that is being triggered when type is interactive and you press the X icon */
+  onClear?: () => void;
 };
 
 type TestProps = {
@@ -30,14 +29,21 @@ type TestProps = {
 
 const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
   (
-    { styleType = 'read-only', fill, thumbnail, leftIcon, rightIcon, dataTestId = '', children },
+    {
+      styleType = 'read-only',
+      fill,
+      thumbnail,
+      onClear,
+      dataTestId = '',
+      children,
+    },
     ref
   ) => {
     return (
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={chipStyle({ styleType, fill })}
+        css={chipStyle({ styleType, fill, onClear })}
       >
         {thumbnail && (
           <div style={{ marginRight: '4px' }}>
@@ -46,9 +52,21 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
             </Avatar>
           </div>
         )}
-        {leftIcon && <div css={iconWrapperStyle()}>{leftIcon}</div>}
         <div>{children}</div>
-        {rightIcon && <div css={iconWrapperStyle()}>{rightIcon}</div>}
+        {onClear && (
+          <div css={closeIconWrapperStyle()}>
+            <Icon
+              size={14}
+              name={'close'}
+              color={'darkGrey'}
+              variant={850}
+              onClick={e => {
+                e.stopPropagation();
+                onClear();
+              }}
+            />
+          </div>
+        )}
       </div>
     );
   }

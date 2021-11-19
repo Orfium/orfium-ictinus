@@ -75,19 +75,19 @@ Read-Only Chips
   <Story name="Read-Only Chips">
     <Stack>
         <Chip
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
         Label
         </Chip>
         <Chip 
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
           thumbnail={{src: '', name: 'KN'}}
         >
         Label
         </Chip>
         <Chip 
           thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
         Label
         </Chip>
@@ -104,13 +104,14 @@ Interactive Chips
     <Stack>
         <Chip
           styleType={'interactive'}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          onClear={() => alert('You clicked the remove icon!')}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
         Label
         </Chip>
         <Chip 
           styleType={'interactive'}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
           thumbnail={{src: '', name: 'KN'}}
         >
         Label
@@ -118,7 +119,7 @@ Interactive Chips
         <Chip 
           styleType={'interactive'}
           thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
         Label
         </Chip>
@@ -127,7 +128,7 @@ Interactive Chips
 </Preview>
 
 
-# Chip with Icons
+<!-- # Chip with Icons
 
 Chip with Icons
 <Preview>
@@ -140,7 +141,7 @@ Chip with Icons
       </ChipShowcase>
     </Stack>
   </Story>
-</Preview>
+</Preview> -->
 
 # Dynamic Chip Props
 

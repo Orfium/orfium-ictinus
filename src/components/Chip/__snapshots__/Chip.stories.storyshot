@@ -1,204 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Chip Chip with Icons 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  margin-bottom: 20px;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1.5rem;
-  border-radius: 1.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: normal;
-  box-sizing: border-box;
-  padding: 0.25rem 0.5rem;
-  background-color: #f2f2f2;
-  color: #0f0f17;
-  border: 0.0625rem solid #737373;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-}
-
-.emotion-3:hover {
-  background: #e5e5e5;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 1rem;
-  width: 1rem;
-  cursor: auto;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
-.emotion-4>* {
-  max-height: 100%;
-}
-
-<div
-  style={
-    Object {
-      "margin": 5,
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div>
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-            data-testid="chip"
-          >
-            <div
-              className="emotion-4"
-            >
-              <img
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-              />
-            </div>
-            <div>
-              <div>
-                Label
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-            data-testid="chip"
-          >
-            <div>
-              <div>
-                Label
-              </div>
-            </div>
-            <div
-              className="emotion-4"
-            >
-              <img
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-            data-testid="chip"
-          >
-            <div
-              className="emotion-4"
-            >
-              <img
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-              />
-            </div>
-            <div>
-              <div>
-                Label
-              </div>
-            </div>
-            <div
-              className="emotion-4"
-            >
-              <img
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
 .emotion-0 {
   background-color: transparent;
@@ -350,6 +151,73 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   line-height: normal;
   box-sizing: border-box;
   padding: 0.25rem 0.5rem;
+  background-color: #f2f2f2;
+  color: #0f0f17;
+  border: 0.0625rem solid #737373;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-2:hover {
+  background: #e5e5e5;
+}
+
+.emotion-3 {
+  margin-left: 0.25rem;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #0f0f17;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-5 path {
+  fill: #0f0f17;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
   background-color: white;
   color: #0f0f17;
   border: 0.0625rem solid #cfd7e5;
@@ -360,11 +228,11 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-6:hover {
   background: #F9FAFC;
 }
 
-.emotion-4 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -398,7 +266,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   color: #0f0f17;
 }
 
-.emotion-4 img {
+.emotion-7 img {
   border-radius: 100%;
   width: 100%;
   height: 100%;
@@ -445,6 +313,18 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         <div>
           Label
         </div>
+        <div
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-5"
+            />
+          </span>
+        </div>
       </div>
     </div>
     <div
@@ -455,7 +335,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
       }
     >
       <div
-        className="emotion-2"
+        className="emotion-6"
         data-testid="chip"
       >
         <div
@@ -466,7 +346,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           }
         >
           <div
-            className="emotion-4"
+            className="emotion-7"
           >
             
             KN
@@ -485,7 +365,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
       }
     >
       <div
-        className="emotion-2"
+        className="emotion-6"
         data-testid="chip"
       >
         <div
@@ -496,7 +376,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           }
         >
           <div
-            className="emotion-4"
+            className="emotion-7"
           >
             <img
               src="https://mui.com/static/images/avatar/1.jpg"
