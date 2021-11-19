@@ -1,3 +1,4 @@
+import { ClickEvent } from 'hooks/useLoading';
 import React from 'react';
 import { flatColors } from 'theme/palette';
 import { generateTestDataId } from 'utils/helpers';
@@ -15,11 +16,17 @@ export type Props = {
    * @default read-only
    */
   styleType?: 'read-only' | 'interactive';
-  /** Defines the fill color of the component, if filled */
+  /** Defines the fill color of the component, if filled. */
   fill?: typeof flatColors[number];
-  /** An optional thumbnail to show to the left */
+  /** An optional thumbnail to show to the left. */
   thumbnail?: { src?: string; name?: string };
-  /** A callback that is being triggered when type is interactive and you press the X icon */
+  /** Boolean defining if the chip is selected. */
+  isSelected?: boolean;
+  /** Boolean defining if the check icon is shown. */
+  isChecked?: boolean;
+  /** Callback function for onClick. */
+  onClick?: (event: ClickEvent) => void;
+  /** A callback that is being triggered when type is interactive and you press the X icon. */
   onClear?: () => void;
 };
 
@@ -33,6 +40,9 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       styleType = 'read-only',
       fill,
       thumbnail,
+      isSelected,
+      isChecked,
+      onClick,
       onClear,
       dataTestId = '',
       children,
@@ -43,10 +53,12 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={chipStyle({ styleType, fill, onClear })}
+        onClick={onClick}
+        css={chipStyle({ styleType, fill, isSelected, onClear, onClick })}
       >
+        {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
         {thumbnail && (
-          <div style={{ marginRight: '4px' }}>
+          <div>
             <Avatar size={'xxxs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
               {thumbnail.name}
             </Avatar>

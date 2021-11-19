@@ -77,19 +77,19 @@ Read-Only Chips
         <Chip
           fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
-        Label
+          Label
         </Chip>
         <Chip 
           fill={select('fill', flatColors.concat(undefined), flatColors[0])}
           thumbnail={{src: '', name: 'KN'}}
         >
-        Label
+          Label
         </Chip>
         <Chip 
           thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
           fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
-        Label
+         Label
         </Chip>
     </Stack>
   </Story>
@@ -107,14 +107,14 @@ Interactive Chips
           onClear={() => alert('You clicked the remove icon!')}
           fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
-        Label
+          Label
         </Chip>
         <Chip 
           styleType={'interactive'}
           fill={select('fill', flatColors.concat(undefined), flatColors[0])}
           thumbnail={{src: '', name: 'KN'}}
         >
-        Label
+          Label
         </Chip>
         <Chip 
           styleType={'interactive'}
@@ -123,6 +123,12 @@ Interactive Chips
         >
         Label
         </Chip>
+        <ChipShowcase
+          styleType={'interactive'}
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+        >
+          Label
+        </ChipShowcase>
     </Stack>
   </Story>
 </Preview>

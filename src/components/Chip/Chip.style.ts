@@ -41,9 +41,13 @@ const wrapperStyleSwitch = (
   }
 };
 
-export const chipStyle = ({ styleType, fill = 'greyScale', onClear }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const chipStyle = ({
+  styleType,
+  fill = 'greyScale',
+  isSelected,
+  onClear,
+  onClick,
+}: Props) => (theme: Theme): SerializedStyles => css`
   ${flexCenterVertical};
   height: ${theme.spacing.lg};
   border-radius: ${theme.spacing.lg};
@@ -52,26 +56,30 @@ export const chipStyle = ({ styleType, fill = 'greyScale', onClear }: Props) => 
   line-height: normal;
   box-sizing: border-box;
   padding: ${theme.spacing.xsm} ${theme.spacing.sm};
-  background-color: ${styleType === 'read-only' || onClear
+  background-color: ${styleType === 'read-only' || onClear || isSelected
     ? theme.utils.getColor(fill, 50)
     : theme.palette.white};
   color: ${theme.utils.getColor('darkGrey', 850)}; //use pickTextColorFromSwatches() instead
   border: ${rem(1)} solid
-    ${styleType === 'read-only' || onClear
+    ${styleType === 'read-only' || onClear || isSelected
       ? theme.utils.getColor(fill, 550)
       : theme.utils.getColor('lightGrey', 200)};
+  cursor: ${onClick ? 'pointer' : 'auto'};
   width: fit-content;
   transition: background-color 150ms linear;
 
   &:hover {
-    background: ${styleType === 'read-only' || onClear
+    background: ${styleType === 'read-only' || onClear || isSelected
       ? theme.utils.getColor(fill, 100)
       : theme.utils.getColor('lightGrey', null, 'pale')};
+  }
+
+  > :not(:last-child) {
+    margin-right: ${theme.spacing.xsm};
   }
 `;
 
 export const closeIconWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  margin-left: ${theme.spacing.xsm};
   cursor: pointer;
 `;
 

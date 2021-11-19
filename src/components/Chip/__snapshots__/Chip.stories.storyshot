@@ -47,6 +47,7 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
   background-color: #f2f2f2;
   color: #0f0f17;
   border: 0.0625rem solid #737373;
+  cursor: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -56,6 +57,10 @@ exports[`Storyshots Design System/Chip Dynamic Chip Props 1`] = `
 
 .emotion-2:hover {
   background: #e5e5e5;
+}
+
+.emotion-2>:not(:last-child) {
+  margin-right: 0.25rem;
 }
 
 <div
@@ -154,6 +159,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   background-color: #f2f2f2;
   color: #0f0f17;
   border: 0.0625rem solid #737373;
+  cursor: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -165,8 +171,11 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   background: #e5e5e5;
 }
 
+.emotion-2>:not(:last-child) {
+  margin-right: 0.25rem;
+}
+
 .emotion-3 {
-  margin-left: 0.25rem;
   cursor: pointer;
 }
 
@@ -221,6 +230,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   background-color: white;
   color: #0f0f17;
   border: 0.0625rem solid #cfd7e5;
+  cursor: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -230,6 +240,10 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
 
 .emotion-6:hover {
   background: #F9FAFC;
+}
+
+.emotion-6>:not(:last-child) {
+  margin-right: 0.25rem;
 }
 
 .emotion-7 {
@@ -270,6 +284,47 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   border-radius: 100%;
   width: 100%;
   height: 100%;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: white;
+  color: #0f0f17;
+  border: 0.0625rem solid #cfd7e5;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-10:hover {
+  background: #F9FAFC;
+}
+
+.emotion-10>:not(:last-child) {
+  margin-right: 0.25rem;
 }
 
 <div
@@ -338,13 +393,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         className="emotion-6"
         data-testid="chip"
       >
-        <div
-          style={
-            Object {
-              "marginRight": "4px",
-            }
-          }
-        >
+        <div>
           <div
             className="emotion-7"
           >
@@ -368,13 +417,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         className="emotion-6"
         data-testid="chip"
       >
-        <div
-          style={
-            Object {
-              "marginRight": "4px",
-            }
-          }
-        >
+        <div>
           <div
             className="emotion-7"
           >
@@ -383,6 +426,23 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
             />
           </div>
         </div>
+        <div>
+          Label
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        className="emotion-10"
+        data-testid="chip"
+        onClick={[Function]}
+      >
         <div>
           Label
         </div>
@@ -439,6 +499,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   background-color: #f2f2f2;
   color: #0f0f17;
   border: 0.0625rem solid #737373;
+  cursor: auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -448,6 +509,10 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
 
 .emotion-2:hover {
   background: #e5e5e5;
+}
+
+.emotion-2>:not(:last-child) {
+  margin-right: 0.25rem;
 }
 
 .emotion-4 {
@@ -544,13 +609,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         className="emotion-2"
         data-testid="chip"
       >
-        <div
-          style={
-            Object {
-              "marginRight": "4px",
-            }
-          }
-        >
+        <div>
           <div
             className="emotion-4"
           >
@@ -574,13 +633,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         className="emotion-2"
         data-testid="chip"
       >
-        <div
-          style={
-            Object {
-              "marginRight": "4px",
-            }
-          }
-        >
+        <div>
           <div
             className="emotion-4"
           >
