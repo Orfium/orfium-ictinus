@@ -6,7 +6,8 @@ import { TestId } from 'utils/types';
 
 import { BASE_SHADE } from '../../theme/palette';
 import { DivProps } from '../../utils/common';
-import { iconWrapperStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
+import { chipStyle, closeIconWrapperStyle } from './Chip.style';
+import Badge from './components/Badge';
 import Avatar from 'components/Avatar';
 import Icon from 'components/Icon';
 
@@ -24,6 +25,8 @@ export type Props = {
   isSelected?: boolean;
   /** Boolean defining if the check icon is shown. */
   isChecked?: boolean;
+  /** Defines the number value of the badge */
+  badgeNumber?: number;
   /** Callback function for onClick. */
   onClick?: (event: ClickEvent) => void;
   /** A callback that is being triggered when type is interactive and you press the X icon. */
@@ -42,6 +45,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       thumbnail,
       isSelected,
       isChecked,
+      badgeNumber,
       onClick,
       onClear,
       dataTestId = '',
@@ -65,6 +69,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
           </div>
         )}
         <div>{children}</div>
+        {badgeNumber && <Badge fill={fill} badgeNumber={badgeNumber} isSelected={isSelected} />}
         {onClear && (
           <div css={closeIconWrapperStyle()}>
             <Icon

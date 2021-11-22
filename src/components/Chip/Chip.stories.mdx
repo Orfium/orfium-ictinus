@@ -109,22 +109,16 @@ Interactive Chips
         >
           Label
         </Chip>
-        <Chip 
-          styleType={'interactive'}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
-          thumbnail={{src: '', name: 'KN'}}
-        >
-          Label
-        </Chip>
-        <Chip 
-          styleType={'interactive'}
-          thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
-        >
-        Label
-        </Chip>
         <ChipShowcase
           styleType={'interactive'}
+          isChecked
+          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+        >
+          Label
+        </ChipShowcase>
+        <ChipShowcase
+          styleType={'interactive'}
+          badgeNumber={5}
           fill={select('fill', flatColors.concat(undefined), flatColors[0])}
         >
           Label
