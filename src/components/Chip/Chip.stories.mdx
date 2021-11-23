@@ -16,7 +16,7 @@ A compact component that will be used in inner DS component but outside DS as we
 
 ```js
 import { Chip } from '@orfium/ictinus';
-<Chip styleType='outlined' fill='red'>
+<Chip>
   Label
 </Chip>;
 ```
@@ -24,48 +24,6 @@ import { Chip } from '@orfium/ictinus';
 # Props
 
 <Props of={Chip} />
-
-<!-- # Chip Styles
-
-Chip Styles
-
-<Preview>
-  <Story name="Chip Styles">
-    <Stack>
-        <Chip styleType='filled'
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
-        >
-        Filled Style
-        </Chip>
-        <Chip styleType='outlined'
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
-        >
-        Outlined Style
-        </Chip>
-    </Stack>
-  </Story>
-</Preview> -->
-
-<!-- # Chip Sizes
-
-Chip Sizes
-
-<Preview>
-  <Story name="Chip Sizes">
-    <Stack>
-        <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size='md'
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
-        >
-        Medium Size
-        </Chip>
-        <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size='sm'
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
-        >
-        Small Size
-        </Chip>
-    </Stack>
-  </Story>
-</Preview> -->
 
 # Read-Only Chips
 
@@ -75,19 +33,19 @@ Read-Only Chips
   <Story name="Read-Only Chips">
     <Stack>
         <Chip
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
         >
           Label
         </Chip>
         <Chip 
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
           thumbnail={{src: '', name: 'KN'}}
         >
           Label
         </Chip>
         <Chip 
           thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
         >
          Label
         </Chip>
@@ -105,21 +63,21 @@ Interactive Chips
         <Chip
           styleType={'interactive'}
           onClear={() => alert('You clicked the remove icon!')}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
         >
           Label
         </Chip>
         <ChipShowcase
           styleType={'interactive'}
           isChecked
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
         >
           Label
         </ChipShowcase>
         <ChipShowcase
           styleType={'interactive'}
           badgeNumber={5}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])}
+          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
         >
           Label
         </ChipShowcase>
@@ -142,19 +100,3 @@ Chip with Icons
     </Stack>
   </Story>
 </Preview> -->
-
-# Dynamic Chip Props
-
-Dynamic Chip Props
-
-<Preview>
-  <Story name="Dynamic Chip Props">
-    <Stack>
-      <Chip
-        fill={select('fill', flatColors.concat(undefined), flatColors[0])} 
-      >
-        <div>{text('text', 'change me!')}</div>
-      </Chip>
-    </Stack>
-  </Story>
-</Preview>

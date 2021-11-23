@@ -53,6 +53,16 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
     },
     ref
   ) => {
+    if (styleType === 'read-only' && (isSelected || isChecked || badgeNumber)) {
+      throw new Error(
+        'The properties isSelected, isChecked and badgeNumber are only for Interactive style type Chips.'
+      );
+    }
+
+    if (styleType === 'interactive' && thumbnail) {
+      throw new Error('The property thumbnail is only for Read-Only style type Chips.');
+    }
+
     return (
       <div
         ref={ref}
@@ -69,7 +79,14 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
           </div>
         )}
         <div>{children}</div>
-        {badgeNumber && <Badge fill={fill} badgeNumber={badgeNumber} isSelected={isSelected} />}
+        {badgeNumber && (
+          <Badge
+            fill={fill}
+            badgeNumber={badgeNumber}
+            isSelected={isSelected}
+            dataTestId={dataTestId}
+          />
+        )}
         {onClear && (
           <div css={closeIconWrapperStyle()}>
             <Icon
