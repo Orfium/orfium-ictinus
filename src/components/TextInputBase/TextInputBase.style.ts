@@ -1,5 +1,4 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken, lighten } from 'polished';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
@@ -26,8 +25,8 @@ const wrapperStyleSwitch = (
           ${error ? 'transparent' : theme.utils.getColor('lightGrey', 200)};
         &:focus-within, &:hover {
           box-shadow: 0 0 0 ${rem(1)} ${
-            !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 200)
-          };
+        !disabled ? 'transparent' : theme.utils.getColor('lightGrey', 200)
+      };
         }
       `;
     case 'elevated':
@@ -39,19 +38,28 @@ const wrapperStyleSwitch = (
       return ``;
   }
 };
+
 /**
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }: Props) => (
-  theme: Theme
-): SerializedStyles => {
+export const wrapperStyle = ({
+  disabled,
+  locked,
+  status,
+  lean,
+  styleType,
+  dark,
+  isSearch,
+  rightIcon,
+  size,
+}: Props) => (theme: Theme): SerializedStyles => {
   const error = status === 'error';
   const backgroundColor = dark ? theme.utils.getColor('darkGrey', 750) : theme.palette.white;
 
   return css`
     transition: background-color 0.25s, box-shadow 0.25s, border-color 0.25s;
-    border-radius: ${theme.spacing.xsm};
+    border-radius: ${isSearch ? rem(100) : theme.spacing.xsm};
     cursor: ${disabled || locked ? 'not-allowed' : 'auto'};
     flex: 1 1 100%;
     user-select: none;
@@ -62,6 +70,15 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     ${wrapperStyleSwitch(theme, lean, error, styleType, Boolean(disabled || locked))}
     border-color: ${error ? theme.utils.getColor('error', 550, 'normal') : undefined};
 
+    /** This is added to prevent the field from growing/shrinking when the Clear icon shows/hides. 
+        The values used are the minimum widths of this field */ 
+    ${isSearch &&
+      Boolean(rightIcon) &&
+      `&{
+      min-width: ${size === 'sm' ? rem(286) : rem(264)}
+      }`}
+    
+    
     ${!lean &&
       !disabled &&
       !locked &&
@@ -73,9 +90,13 @@ export const wrapperStyle = ({ disabled, locked, status, lean, styleType, dark }
     `}
 
     &:focus-within {
-      border-color: ${!lean && !error && theme.utils.getColor('lightGrey', 200)};
+      border-color: ${!lean &&
+        !error &&
+        (isSearch ? theme.utils.getColor('blue', 550) : theme.utils.getColor('lightGrey', 200))};
       box-shadow: ${styleType === 'elevated' && theme.elevation['02']};
-      background-color: ${theme.palette.white};
+      background-color: ${
+        isSearch ? theme.utils.getColor('blue', null, 'pale') : theme.palette.white
+      };
     }
 
     ${(disabled || locked) &&

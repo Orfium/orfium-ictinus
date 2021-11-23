@@ -5,13 +5,18 @@ import { rem } from 'theme/utils';
 import { Props } from './TextField';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
-export const iconWrapperStyle = ({ iconPosition }: { iconPosition: 'left' | 'right' }) => (
-  theme: Theme
-): SerializedStyles => css`
+export const iconWrapperStyle = ({
+  iconPosition,
+  isClickable,
+}: {
+  iconPosition?: 'left' | 'right';
+  isClickable?: boolean;
+}) => (theme: Theme): SerializedStyles => css`
   line-height: 0.8;
   height: ${rem(16)};
   display: flex;
   align-items: center;
+  cursor: ${isClickable ? 'pointer' : 'unset'};
   margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
   margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
 `;
