@@ -25,6 +25,7 @@ export type ListProps = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: SelectHandlerType;
+  isSearchable?: boolean;
 } & TestProps;
 
 const List = React.forwardRef<HTMLDivElement, ListProps>(
@@ -36,6 +37,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
       height,
       isVirtualized = false,
       selectedItem,
+      isSearchable,
       defaultOption,
       searchTerm,
       handleOptionClick,
@@ -44,7 +46,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
     ref
   ) => {
     return (
-      <div css={wrapperStyle({ width })}>
+      <div css={wrapperStyle({ width, isSearchable })}>
         {isVirtualized ? (
           <VirtualizedList
             items={data}
@@ -66,6 +68,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
             height={height}
             ref={ref}
             selectedItem={selectedItem}
+            isSearchable={isSearchable}
             defaultOption={defaultOption}
             searchTerm={searchTerm}
             handleOptionClick={handleOptionClick}
