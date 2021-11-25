@@ -36,7 +36,7 @@ exports[`Storyshots Design System/List List 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0px 1rem;
+  padding: 0px 1rem 0px 1rem;
 }
 
 .emotion-3:hover {
@@ -9179,6 +9179,232 @@ exports[`Storyshots Design System/List List 1`] = `
               className="emotion-4"
             >
               Item 649
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/List List Group 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-2 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-3 {
+  height: 3.5rem;
+  font-size: 0.8125rem;
+  background-color: white;
+  color: #5f6c85;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem;
+  font-weight: 700;
+}
+
+.emotion-4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-5 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.emotion-6 {
+  height: 3.5rem;
+  font-size: 1rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 2rem;
+}
+
+.emotion-6:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-7 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-15 {
+  height: 3.5rem;
+  font-size: 1rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0px 1rem 0px 1rem;
+}
+
+.emotion-15:hover {
+  background-color: #f3f5f8;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      data-testid="ictinus_list"
+    >
+      <ul
+        className="emotion-2"
+      >
+        <li>
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              Group 1
+            </div>
+          </div>
+          <ul
+            className="emotion-5"
+          >
+            <li>
+              <div
+                className="emotion-6"
+                data-testid="ictinus_list_item_00"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <div
+                  className="emotion-7"
+                >
+                  Option 1
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                className="emotion-6"
+                data-testid="ictinus_list_item_01"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <div
+                  className="emotion-7"
+                >
+                  Option 2
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              Group 2
+            </div>
+          </div>
+          <ul
+            className="emotion-5"
+          >
+            <li>
+              <div
+                className="emotion-6"
+                data-testid="ictinus_list_item_10"
+                onClick={[Function]}
+                onMouseDown={[Function]}
+              >
+                <div
+                  className="emotion-7"
+                >
+                  Option 3
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <div
+            className="emotion-15"
+            data-testid="ictinus_list_item_2"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+          >
+            <div
+              className="emotion-7"
+            >
+              Option 4
             </div>
           </div>
         </li>

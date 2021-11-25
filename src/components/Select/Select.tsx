@@ -21,6 +21,7 @@ export type SelectOption = {
   label: string;
   isDisabled?: boolean;
   tooltipInfo?: string;
+  options?: SelectOption[]
 };
 
 export type Props = {

@@ -5,6 +5,7 @@ import { TestProps } from 'utils/types';
 
 import { SelectOption } from '../../Select/Select';
 import ListItem from '../ListItem';
+import ListItemGroup from '../ListItemGroup';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
 import { listStyle } from './NormalList.style';
@@ -62,21 +63,35 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
               />
             </li>
           )}
-          {items.map((item, index) => (
-            <li key={generateUniqueID('list_item' + index)}>
-              <ListItem
-                content={item}
+          {items.map((item, index) =>
+            (item as SelectOption)?.options ? (
+              <ListItemGroup
+                key={generateUniqueID('list_item_group' + index)}
                 size={rowSize}
-                index={index}
+                content={item}
+                groupIndex={index}
                 ref={ref}
                 searchTerm={searchTerm}
-                disabled={(item as SelectOption)?.isDisabled}
                 dataTestId={dataTestId}
                 handleOptionClick={handleOptionClick}
-                selected={isSelected({ item, selectedItem })}
+                selectedItem={selectedItem}
               />
-            </li>
-          ))}
+            ) : (
+              <li key={generateUniqueID('list_item' + index)}>
+                <ListItem
+                  content={item}
+                  size={rowSize}
+                  index={index}
+                  ref={ref}
+                  searchTerm={searchTerm}
+                  disabled={(item as SelectOption)?.isDisabled}
+                  dataTestId={dataTestId}
+                  handleOptionClick={handleOptionClick}
+                  selected={isSelected({ item, selectedItem })}
+                />
+              </li>
+            )
+          )}
         </ul>
       </div>
     );

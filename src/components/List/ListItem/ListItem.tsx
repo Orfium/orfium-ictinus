@@ -11,7 +11,7 @@ type Props = {
   /** Content of the ListItem */
   content: ListItemType;
   /** Index, for test-id calculation */
-  index: number;
+  index: number | string;
   /** Selected state */
   selected?: boolean;
   /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
@@ -22,6 +22,8 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: SelectHandlerType;
+  /** Determines the left padding */
+  isGroupItem?: boolean;
 } & TestProps;
 
 const ListItem = React.forwardRef<HTMLDivElement, Props>(
@@ -36,6 +38,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       handleOptionClick,
       searchTerm,
       dataTestId,
+      isGroupItem,
     },
     ref
   ) => {
@@ -91,7 +94,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
 
     return (
       <div
-        css={listItemStyle({ size, selected, highlighted, disabled })}
+        css={listItemStyle({ size, selected, highlighted, disabled, isGroupItem })}
         ref={selected ? ref : null}
         onClick={handleListItemSelect}
         onMouseDown={event => {

@@ -37,3 +37,34 @@ List component.
     />
   </Story>
 </Preview>
+
+# List Group 
+
+List Group component.
+
+<Preview>
+  <Story name="List Group">
+    <List
+      data={[
+        {
+          value: 'group1',
+          label: 'Group 1',
+          options: [
+            { value: '1', label: 'Option 1' },
+            { value: '2', label: 'Option 2' },
+          ],
+        },
+        {
+          value: 'group2',
+          label: 'Group 2',
+          options: [
+            { value: '3', label: 'Option 3' },
+          ],
+        },
+        { value: '4', label: 'Option 4' },
+      ]}
+      rowSize={select('rowSize', ['small', 'normal'], 'normal')}
+      isVirtualized={boolean('isVirtualized', false)}
+    />
+  </Story>
+</Preview>
