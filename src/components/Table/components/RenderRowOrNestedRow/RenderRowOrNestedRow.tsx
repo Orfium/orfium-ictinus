@@ -65,24 +65,36 @@ const RenderRowWithCells = React.memo(
             </div>
           </TableCell>
         )}
-        {row.cells?.map(({ content, colSpan, type: cellType, align }, index) => (
-          <ContentCell
-            key={`${row.id}-${index}`}
-            cellCounter={index}
-            columnsHasNumberArr={columnsHasNumberArr}
-            columns={columns}
-            padded={padded}
-            colSpan={colSpan}
-            columnsWithWidth={columnsWithWidth}
-            content={content}
-            cellType={cellType}
-            rowType={type}
-            align={align}
-            dataTestIdPrefix={dataTestIdPrefix}
-            rowIndex={rowIndex}
-            index={index + 1}
-          />
-        ))}
+        {row.cells?.map(
+          (
+            { content, tooltipContent, hasTruncatedTooltip = true, colSpan, type: cellType, align },
+            index
+          ) => (
+            <ContentCell
+              key={`${row.id}-${index}`}
+              cellCounter={index}
+              columnsHasNumberArr={columnsHasNumberArr}
+              columns={columns}
+              tooltipContent={
+                hasTruncatedTooltip
+                  ? isComponentFunctionType(content)
+                    ? tooltipContent
+                    : tooltipContent ?? content.toString()
+                  : undefined
+              }
+              padded={padded}
+              colSpan={colSpan}
+              columnsWithWidth={columnsWithWidth}
+              content={content}
+              cellType={cellType}
+              rowType={type}
+              align={align}
+              dataTestIdPrefix={dataTestIdPrefix}
+              rowIndex={rowIndex}
+              index={index + 1}
+            />
+          )
+        )}
 
         <ExpandedButtonCell
           isExpandedExists={isExpandedExists}
