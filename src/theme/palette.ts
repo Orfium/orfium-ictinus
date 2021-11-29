@@ -27,6 +27,7 @@ export const flatColors = [
   'darkOrange',
   ...neutralColors,
 ] as const;
+
 /**
  * Here are listed all the colors available for our project
  * Pale colors are just colors without shades
