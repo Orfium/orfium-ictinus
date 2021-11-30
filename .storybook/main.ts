@@ -20,6 +20,9 @@ function getPackageDir(filepath: string) {
 }
 
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     '../docs/guides/INTRODUCTION.stories.@(md|mdx)',
     '../docs/guides/GETTING_STARTED.stories.@(md|mdx)',
