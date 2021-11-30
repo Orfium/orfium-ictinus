@@ -4,8 +4,11 @@ import { TruncationDiv } from './TruncatedContent.style';
 import Tooltip from 'components/Tooltip';
 
 type Props = {
+  /** The content of the tooltip */
   tooltipContent: string | undefined;
+  /** Flag for overriding other settings to always show the tooltip */
   shouldAlwaysShow?: boolean;
+  /** The placement of the tooltip */
   placement?: 'top' | 'bottom' | 'right' | 'left';
 };
 
