@@ -37,6 +37,7 @@ export const buttonWrapperStyle = ({
     background: 'none',
     border: 'none',
     display: 'flex',
+    padding: '0',
     alignItems: 'center',
     height: '100%',
     maxWidth: rem(270),
@@ -220,6 +221,7 @@ export const menuStyle = () => (theme: Theme) => css`
   min-width: ${rem(280)};
   left: 0;
   height: auto;
+  border-radius: ${theme.spacing.xsm};
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
   z-index: 1;

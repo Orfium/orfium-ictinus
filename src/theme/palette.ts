@@ -27,6 +27,7 @@ export const flatColors = [
   'darkOrange',
   ...neutralColors,
 ] as const;
+
 /**
  * Here are listed all the colors available for our project
  * Pale colors are just colors without shades
@@ -177,8 +178,8 @@ export const pickTextColorFromSwatches = (
     ],
     600: ['greyScale', 'darkGrey', 'red', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
     550: ['greyScale', 'darkGrey', 'red', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
-    500: ['darkGrey', 'magenta', 'purple', 'darkBlue', 'darkOrange'],
-    450: ['darkGrey', 'purple', 'darkBlue', 'darkOrange'],
+    500: ['darkGrey', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
+    450: ['darkGrey', 'purple', 'darkBlue', 'blue', 'darkOrange'],
     400: ['darkGrey', 'darkOrange'],
     350: ['darkGrey', 'darkOrange'],
   };

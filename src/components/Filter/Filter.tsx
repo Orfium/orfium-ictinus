@@ -188,6 +188,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
               items={filteredOptions}
               isVirtualized={isVirtualized}
               defaultValue={defaultValue}
+              isSearchable={isSearchable}
               selectedItem={selectedItem}
               onSelect={handleSelect}
               shouldDisplayDefaultOption={shouldDisplayDefaultOption}
