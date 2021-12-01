@@ -328,7 +328,7 @@ function Table<T>({
             <TableRowWrapper<T>
               key={row.id}
               {...{
-                row, // problem
+                row,
                 isRowSelected: selectedIds ? selectedIds.indexOf(row.id) !== -1 : false,
                 onSelectionAdd,
                 padded,
@@ -336,7 +336,7 @@ function Table<T>({
                 fixedHeader: fixedHeader,
                 type,
                 columnCount,
-                columnsWithWidth, // problem
+                columnsWithWidth,
                 onSelectionChangeExist: Boolean(onCheck),
                 expanded: Boolean(row.expanded),
                 actionWidth: actionWidth,
