@@ -2,13 +2,14 @@ import useBreakpoints from 'hooks/useBreakpoints';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
+import isEqual from 'react-fast-compare';
 
 import CheckBox from '../CheckBox';
 import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
 import TableRowWrapper from './components/TableRowWrapper';
-import { tableRowHeadersStyle, tableStyle, tableCTAStyle } from './Table.style';
+import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
@@ -335,7 +336,6 @@ function Table<T>({
                 fixedHeader: fixedHeader,
                 type,
                 columnCount,
-                columnsHasNumberArr,
                 columnsWithWidth,
                 onSelectionChangeExist: Boolean(onCheck),
                 expanded: Boolean(row.expanded),
@@ -351,4 +351,4 @@ function Table<T>({
   );
 }
 
-export default Table;
+export default React.memo(Table, isEqual);

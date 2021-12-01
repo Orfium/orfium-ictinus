@@ -6,10 +6,9 @@ import TableCell from '../../../TableCell';
 import { nestedHeaderStyle } from './ContentCell.style';
 
 type Props = {
-  columnsHasNumberArr: boolean[];
   columns: string[];
   padded: boolean;
-  columnsWithWidth: number[];
+  columnWidth?: number;
   content: number | string | ContentComponent<any>;
   colSpan?: number;
   cellType?: 'financial' | 'normal';
@@ -22,10 +21,9 @@ type Props = {
 };
 
 const ContentCell: React.FC<Props> = ({
-  columnsHasNumberArr,
   columns,
   padded,
-  columnsWithWidth,
+  columnWidth,
   content,
   colSpan,
   rowType,
@@ -36,7 +34,7 @@ const ContentCell: React.FC<Props> = ({
   rowIndex,
   index,
 }) => {
-  const isNumeral = columnsHasNumberArr[cellCounter];
+  const isNumeral = !Number.isNaN(Number(content));
 
   return (
     <TableCell
@@ -44,7 +42,7 @@ const ContentCell: React.FC<Props> = ({
       colSpan={colSpan}
       type={cellType}
       padded={padded}
-      width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
+      width={columnWidth ? `${columnWidth}%` : 'initial'}
       dataTestIdPrefix={dataTestIdPrefix}
       rowIndex={rowIndex}
       index={index}

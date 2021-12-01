@@ -25,7 +25,6 @@ const RenderRowWithCells = React.memo(
     rowIndex?: number;
   }) => {
     const {
-      columnsHasNumberArr,
       columnsWithWidth,
       onSelectionChangeExist,
       padded,
@@ -69,11 +68,10 @@ const RenderRowWithCells = React.memo(
           <ContentCell
             key={`${row.id}-${index}`}
             cellCounter={index}
-            columnsHasNumberArr={columnsHasNumberArr}
             columns={columns}
             padded={padded}
             colSpan={colSpan}
-            columnsWithWidth={columnsWithWidth}
+            columnWidth={columnsWithWidth[index]}
             content={content}
             cellType={cellType}
             rowType={type}
