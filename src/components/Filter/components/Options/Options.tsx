@@ -13,6 +13,7 @@ interface Props {
   selectedItem?: FilterOption;
   shouldDisplayDefaultOption: boolean;
   isVirtualized?: boolean;
+  isSearchable?: boolean;
   dataTestId?: string;
 }
 const Options: React.FC<Props> = ({
@@ -22,6 +23,7 @@ const Options: React.FC<Props> = ({
   selectedItem,
   shouldDisplayDefaultOption,
   isVirtualized,
+  isSearchable,
   dataTestId,
 }) => {
   return items.length ? (
@@ -30,6 +32,7 @@ const Options: React.FC<Props> = ({
       rowSize={'small'}
       defaultOption={shouldDisplayDefaultOption ? defaultValue : undefined}
       selectedItem={selectedItem}
+      isSearchable={isSearchable}
       handleOptionClick={(option: FilterOption) => onSelect(option)}
       isVirtualized={isVirtualized && items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER}
       height={

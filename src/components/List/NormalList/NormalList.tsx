@@ -26,6 +26,7 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: SelectHandlerType;
+  isSearchable?: boolean;
 } & TestProps;
 
 const NormalList = React.forwardRef<HTMLDivElement, Props>(
@@ -37,6 +38,7 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
       rowSize,
       selectedItem,
       defaultOption,
+      isSearchable,
       searchTerm,
       handleOptionClick,
       dataTestId,
@@ -45,7 +47,7 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
   ) => {
     return (
       <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
-        <ul css={listStyle({ width, height })}>
+        <ul css={listStyle({ width, height, isSearchable })}>
           {defaultOption && (
             <li key={generateUniqueID('list_item')}>
               <ListItem

@@ -34,7 +34,7 @@ const FilterShowcase = ({
   return (
     <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
       <div>
-        {styleType}({buttonType}):{' '}
+        {styleType}({buttonType}):&nbsp;
       </div>
       <Filter
         styleType={styleType}
