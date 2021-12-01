@@ -16,6 +16,8 @@ import { isItemString } from './utils';
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {
   content: number | string | ContentComponent<T>;
+  tooltipContent?: string;
+  hasTruncatedTooltip?: boolean;
   colSpan?: number;
   type?: 'financial' | 'normal';
   align?: 'left' | 'right';

@@ -1,6 +1,7 @@
 import React from 'react';
+import { isComponentFunctionType } from 'utils/helpers';
 
-import { isComponentFunctionType } from '../../../../../../utils/helpers';
+import TruncatedContent from '../../../../../TruncatedContent';
 import { ContentComponent, TableType } from '../../../../Table';
 import TableCell from '../../../TableCell';
 import { nestedHeaderStyle } from './ContentCell.style';
@@ -8,6 +9,7 @@ import { nestedHeaderStyle } from './ContentCell.style';
 type Props = {
   columns: string[];
   padded: boolean;
+  tooltipContent?: string;
   columnWidth?: number;
   content: number | string | ContentComponent<any>;
   colSpan?: number;
@@ -24,6 +26,7 @@ const ContentCell: React.FC<Props> = ({
   columns,
   padded,
   columnWidth,
+  tooltipContent,
   content,
   colSpan,
   rowType,
@@ -53,11 +56,18 @@ const ContentCell: React.FC<Props> = ({
           {columns[cellCounter]}
         </div>
       )}
-      {isComponentFunctionType(content) ? (
-        content({ content, colSpan })
-      ) : (
-        <span data-column={columns[cellCounter]}>{content}</span>
-      )}
+
+      <TruncatedContent
+        placement={'bottom'}
+        shouldAlwaysShow={isComponentFunctionType(content) && !!tooltipContent}
+        tooltipContent={tooltipContent}
+      >
+        {isComponentFunctionType(content) ? (
+          content({ content, colSpan })
+        ) : (
+          <span data-column={columns[cellCounter]}>{content}</span>
+        )}
+      </TruncatedContent>
     </TableCell>
   );
 };
