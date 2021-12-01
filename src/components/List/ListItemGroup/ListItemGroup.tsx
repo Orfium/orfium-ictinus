@@ -15,7 +15,11 @@ type Props = {
   /** Content of the ListItem */
   content: ListItemType;
   /** groupIndex, for test-id calculation */
-  groupIndex: number | string;
+  groupIndex: number;
+  /** Width of the list */
+  width?: number;
+  /** Height of the list */
+  height?: number;
   /** Selected Item */
   selectedItem?: ListItemType;
   /** Search Term to be highlighted in list items */
@@ -32,6 +36,8 @@ const ListItemGroup = React.forwardRef<HTMLDivElement, Props>(
           size={size}
           content={content as SelectOption}
           ref={ref} //TODO fix
+          searchTerm={searchTerm}
+          index={groupIndex}
           dataTestId={dataTestId} //TODO fix
         />
         <ul css={listStyle({})}>

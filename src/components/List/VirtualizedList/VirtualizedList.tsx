@@ -1,10 +1,12 @@
 import React from 'react';
-import { FixedSizeList as VList } from 'react-window';
+import { VariableSizeList as VList } from 'react-window';
 import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
 
 import { SelectOption } from '../../Select/Select';
 import ListItem from '../ListItem';
+import ListItemGroup from '../ListItemGroup';
+import { listStyle } from '../NormalList/NormalList.style';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected, MAX_LARGE_HEIGHT, MAX_SMALL_HEIGHT } from '../utils';
 
@@ -45,21 +47,46 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
       items.unshift(defaultOption);
     }
 
+    const itemSize = (index: number) => {
+      const sizeBase = rowSize === 'normal' ? 56 : 46;
+      
+      if ((items[index] as SelectOption)?.options) {
+        return (((items[index] as SelectOption)?.options?.length as number) + 1) * sizeBase;
+      }
+
+      return sizeBase;
+    };
+
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => {
       return (
         <span css={{ ...style }}>
-          <ListItem
-            size={rowSize}
-            content={items[index]}
-            index={index}
-            ref={ref}
-            disabled={(items[index] as SelectOption)?.isDisabled}
-            selected={isSelected({ item: items[index], selectedItem })}
-            searchTerm={searchTerm}
-            dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
-            highlighted={Boolean(defaultOption && index === 0)}
-            handleOptionClick={handleOptionClick}
-          />
+          {(items[index] as SelectOption)?.options ? (
+            <ul css={listStyle({ width: customWidth, height: customHeight })}>
+              <ListItemGroup
+                size={rowSize}
+                content={items[index]}
+                groupIndex={index}
+                ref={ref}
+                searchTerm={searchTerm}
+                dataTestId={dataTestId}
+                handleOptionClick={handleOptionClick}
+                selectedItem={selectedItem}
+              />
+            </ul>
+          ) : (
+            <ListItem
+              size={rowSize}
+              content={items[index]}
+              index={index}
+              ref={ref}
+              disabled={(items[index] as SelectOption)?.isDisabled}
+              selected={isSelected({ item: items[index], selectedItem })}
+              searchTerm={searchTerm}
+              dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
+              highlighted={Boolean(defaultOption && index === 0)}
+              handleOptionClick={handleOptionClick}
+            />
+          )}
         </span>
       );
     };
@@ -70,7 +97,7 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
         height={customHeight || rowSize === 'normal' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT}
         width={customWidth || '100%'}
         itemCount={items.length}
-        itemSize={rowSize === 'normal' ? 56 : 46}
+        itemSize={itemSize}
         css={{ overflowX: 'hidden' }}
       >
         {rowRenderer}
