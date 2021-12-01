@@ -8,7 +8,6 @@ type TableRowWrapperProps<T> = {
   row: Row<T>;
   isRowSelected: boolean;
   onSelectionAdd: (selection: Selection) => void;
-  columnsHasNumberArr: boolean[];
   columnsWithWidth: number[];
   padded: boolean;
   onSelectionChangeExist: boolean;
@@ -31,7 +30,6 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
     columns,
     fixedHeader,
     type,
-    columnsHasNumberArr,
     columnsWithWidth,
     columnCount,
     onSelectionChangeExist,
@@ -49,7 +47,6 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
     <TableRowContext.Provider
       value={{
         row,
-        columnsHasNumberArr,
         columnsWithWidth,
         onSelectionChangeExist,
         padded,

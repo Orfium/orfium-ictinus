@@ -1,6 +1,6 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { select, number } from '@storybook/addon-knobs';
-import Table from './Table';
+import Table from './Table'; import TableFilterShowcase from '../storyUtils/TableFilterShowcase/TableFilterShowcase';
 
 <Meta title="Design System/Table" component={Table} />
 
@@ -520,3 +520,12 @@ Table with expandable rows with sort, fixed Header and cta's
   </Story>
 </Preview>
 
+# Table with filtered data for performance
+
+Table with filtered data for performance
+
+<Preview>
+  <Story name="Table with filtered data for performance">
+    <TableFilterShowcase />
+  </Story>
+</Preview>
