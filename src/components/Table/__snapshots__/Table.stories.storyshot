@@ -799,7 +799,7 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
           </div>
         </td>
         <td
-          className="emotion-35"
+          className="emotion-37"
           data-testid="table_row_4_cell_3"
         >
           <div
@@ -24231,5 +24231,141 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
       </tr>
     </tbody>
   </table>
+</div>
+`;
+
+exports[`Storyshots Design System/Table Table with filtered data for performance 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-2 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e7ebf2;
+}
+
+.emotion-2 th:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-2 th:last-child {
+  padding-right: 1rem;
+}
+
+.emotion-3 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0;
+  width: initial;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.emotion-4 {
+  font-weight: 500;
+  color: #444d5f;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "margin": 20,
+      }
+    }
+  >
+    <p>
+      search more than 3 characters 
+    </p>
+    <input
+      onChange={[Function]}
+      placeholder="search"
+      value=""
+    />
+    <table
+      className="emotion-1"
+    >
+      <thead>
+        <tr
+          className="emotion-2"
+          onClick={[Function]}
+        >
+          <th
+            className="emotion-3"
+            data-testid="undefined_name"
+            onClick={[Function]}
+          >
+            <div
+              className="emotion-4"
+            >
+              name
+            </div>
+          </th>
+          <th
+            className="emotion-3"
+            data-testid="undefined_username"
+            onClick={[Function]}
+          >
+            <div
+              className="emotion-4"
+            >
+              username
+            </div>
+          </th>
+          <th
+            className="emotion-3"
+            data-testid="undefined_address"
+            onClick={[Function]}
+          >
+            <div
+              className="emotion-4"
+            >
+              address
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
 </div>
 `;
