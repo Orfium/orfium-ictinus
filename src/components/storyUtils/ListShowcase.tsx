@@ -22,11 +22,11 @@ const ListShowcase: React.FC<Props> = ({
     .map((__, index) => {
       return {
         value: index,
-        label: 'Item ' + index,
+        label: (isListGroup ? 'Group ' : 'Item ') + index,
         options: isListGroup
           ? [
-              { value: index, label: 'Child 1 of ' + index },
-              { value: index, label: 'Child 2 of ' + index },
+              { value: index, label: 'Option 1 of Group ' + index },
+              { value: index, label: 'Option 2 of Group ' + index },
             ]
           : undefined,
       };

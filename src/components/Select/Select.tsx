@@ -21,7 +21,7 @@ export type SelectOption = {
   label: string;
   isDisabled?: boolean;
   tooltipInfo?: string;
-  options?: SelectOption[]
+  options?: SelectOption[];
 };
 
 export type Props = {
@@ -142,7 +142,12 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       }
 
       return options.filter(
-        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
+        option =>
+          !searchValue ||
+          option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+          !!option.options?.find(option =>
+            option.label.toLowerCase().includes(searchValue.toLowerCase())
+          )
       );
     }, [searchValue, options, isAsync]);
 
