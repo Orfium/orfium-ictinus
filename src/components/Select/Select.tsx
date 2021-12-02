@@ -141,14 +141,25 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         return options;
       }
 
-      return options.filter(
-        option =>
-          !searchValue ||
-          option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
-          !!option.options?.find(option =>
-            option.label.toLowerCase().includes(searchValue.toLowerCase())
-          )
-      );
+      return options
+        .filter(
+          option =>
+            !searchValue ||
+            option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+            !!option.options?.find(option =>
+              option.label.toLowerCase().includes(searchValue.toLowerCase())
+            )
+        )
+        .map(option => {
+          return option.label.toLowerCase().includes(searchValue.toLowerCase())
+            ? option
+            : {
+                ...option,
+                options: option.options?.filter(option =>
+                  option.label.toLowerCase().includes(searchValue.toLowerCase())
+                ),
+              };
+        });
     }, [searchValue, options, isAsync]);
 
     const rightIconRender = useMemo(
