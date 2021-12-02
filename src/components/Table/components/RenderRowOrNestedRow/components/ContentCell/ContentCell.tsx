@@ -1,15 +1,16 @@
 import React from 'react';
+import { isComponentFunctionType } from 'utils/helpers';
 
-import { isComponentFunctionType } from '../../../../../../utils/helpers';
+import TruncatedContent from '../../../../../TruncatedContent';
 import { ContentComponent, TableType } from '../../../../Table';
 import TableCell from '../../../TableCell';
 import { nestedHeaderStyle } from './ContentCell.style';
 
 type Props = {
-  columnsHasNumberArr: boolean[];
   columns: string[];
   padded: boolean;
-  columnsWithWidth: number[];
+  tooltipContent?: string;
+  columnWidth?: number;
   content: number | string | ContentComponent<any>;
   colSpan?: number;
   cellType?: 'financial' | 'normal';
@@ -22,10 +23,10 @@ type Props = {
 };
 
 const ContentCell: React.FC<Props> = ({
-  columnsHasNumberArr,
   columns,
   padded,
-  columnsWithWidth,
+  columnWidth,
+  tooltipContent,
   content,
   colSpan,
   rowType,
@@ -36,7 +37,7 @@ const ContentCell: React.FC<Props> = ({
   rowIndex,
   index,
 }) => {
-  const isNumeral = columnsHasNumberArr[cellCounter];
+  const isNumeral = !Number.isNaN(Number(content));
 
   return (
     <TableCell
@@ -44,7 +45,7 @@ const ContentCell: React.FC<Props> = ({
       colSpan={colSpan}
       type={cellType}
       padded={padded}
-      width={columnsWithWidth[cellCounter] ? `${columnsWithWidth[cellCounter]}%` : 'initial'}
+      width={columnWidth ? `${columnWidth}%` : 'initial'}
       dataTestIdPrefix={dataTestIdPrefix}
       rowIndex={rowIndex}
       index={index}
@@ -55,11 +56,18 @@ const ContentCell: React.FC<Props> = ({
           {columns[cellCounter]}
         </div>
       )}
-      {isComponentFunctionType(content) ? (
-        content({ content, colSpan })
-      ) : (
-        <span data-column={columns[cellCounter]}>{content}</span>
-      )}
+
+      <TruncatedContent
+        placement={'bottom'}
+        shouldAlwaysShow={isComponentFunctionType(content) && !!tooltipContent}
+        tooltipContent={tooltipContent}
+      >
+        {isComponentFunctionType(content) ? (
+          content({ content, colSpan })
+        ) : (
+          <span data-column={columns[cellCounter]}>{content}</span>
+        )}
+      </TruncatedContent>
     </TableCell>
   );
 };

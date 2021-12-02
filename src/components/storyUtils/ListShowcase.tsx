@@ -37,6 +37,7 @@ const ListShowcase: React.FC<Props> = ({
       data={items}
       rowSize={rowSize}
       width={width}
+      defaultOption={{ value: '', label: 'All' }}
       height={height}
       isVirtualized={isVirtualized}
     />

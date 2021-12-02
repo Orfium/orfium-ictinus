@@ -26,6 +26,7 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: SelectHandlerType;
+  /** Defines if this is a searchable list or not **/
   isSearchable?: boolean;
 } & TestProps;
 
@@ -45,27 +46,12 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
     },
     ref
   ) => {
+    const newItems = defaultOption ? [defaultOption, ...items] : items;
+
     return (
       <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
         <ul css={listStyle({ width, height, isSearchable })}>
-          {defaultOption && (
-            <li key={generateUniqueID('list_item')}>
-              <ListItem
-                content={defaultOption}
-                size={rowSize}
-                index={0}
-                ref={ref}
-                highlighted
-                dataTestId={dataTestId ?? 'ictinus_list' + '_default_option'}
-                handleOptionClick={handleOptionClick}
-                disabled={(defaultOption as SelectOption)?.isDisabled}
-                selected={
-                  isUndefined(selectedItem) || isSelected({ item: defaultOption, selectedItem })
-                }
-              />
-            </li>
-          )}
-          {items.map((item, index) =>
+          {newItems.map((item, index) =>
             (item as SelectOption)?.options ? (
               <ListItemGroup
                 content={item}
@@ -84,11 +70,21 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
                   size={rowSize}
                   index={index}
                   ref={ref}
+                  highlighted={Boolean(defaultOption && index === 0)}
                   searchTerm={searchTerm}
                   disabled={(item as SelectOption)?.isDisabled}
-                  dataTestId={dataTestId}
+                  dataTestId={
+                    defaultOption && index === 0
+                      ? dataTestId ?? 'ictinus_list' + '_default_option'
+                      : dataTestId
+                  }
                   handleOptionClick={handleOptionClick}
-                  selected={isSelected({ item, selectedItem })}
+                  selected={
+                    defaultOption && index === 0
+                      ? isUndefined(selectedItem) ||
+                        isSelected({ item: defaultOption, selectedItem })
+                      : isSelected({ item, selectedItem })
+                  }
                 />
               </li>
             )

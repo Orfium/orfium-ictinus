@@ -22,7 +22,7 @@ import { List } from '@orfium/ictinus';
 
 <Props of={List} />
 
-# List
+# List with knobs
 
 List component.
 
@@ -35,6 +35,22 @@ List component.
       height={number('height', 650)}
       isVirtualized={boolean('isVirtualized', false)}
       isListGroup={boolean('isListGroup', false)}
+    />
+  </Story>
+</Preview>
+
+# Virtualized List with knobs
+
+Virtualized List component for large amounts of items.
+
+<Preview>
+  <Story name="Virtualized List">
+    <ListShowcase
+      itemsCount={number('itemsCount', 6500)}
+      rowSize={select('rowSize', ['small', 'normal'], 'normal')}
+      width={number('width', 650)}
+      height={number('height', 650)}
+      isVirtualized={boolean('isVirtualized', true)}
     />
   </Story>
 </Preview>

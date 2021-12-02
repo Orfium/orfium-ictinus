@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { VariableSizeList as VList } from 'react-window';
 import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
@@ -43,28 +43,29 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     },
     ref
   ) => {
-    if (defaultOption) {
-      items.unshift(defaultOption);
-    }
+    const data = useMemo(() => (defaultOption ? [defaultOption, ...items] : items), [
+      defaultOption,
+      items,
+    ]);
 
-    const itemSize = (index: number) => {
+    const itemSize = useCallback((index: number) => {
       const sizeBase = rowSize === 'normal' ? 56 : 46;
-      
-      if ((items[index] as SelectOption)?.options) {
-        return (((items[index] as SelectOption)?.options?.length as number) + 1) * sizeBase;
+
+      if ((data[index] as SelectOption)?.options) {
+        return (((data[index] as SelectOption)?.options?.length as number) + 1) * sizeBase;
       }
 
       return sizeBase;
-    };
+    }, [data, rowSize]);
 
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => {
       return (
         <span css={{ ...style }}>
-          {(items[index] as SelectOption)?.options ? (
+          {(data[index] as SelectOption)?.options ? (
             <ul css={listStyle({})}>
               <ListItemGroup
                 size={rowSize}
-                content={items[index]}
+                content={data[index]}
                 groupIndex={index}
                 ref={ref}
                 searchTerm={searchTerm}
@@ -76,11 +77,11 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
           ) : (
             <ListItem
               size={rowSize}
-              content={items[index]}
+              content={data[index]}
               index={index}
               ref={ref}
-              disabled={(items[index] as SelectOption)?.isDisabled}
-              selected={isSelected({ item: items[index], selectedItem })}
+              disabled={(data[index] as SelectOption)?.isDisabled}
+              selected={isSelected({ item: data[index], selectedItem })}
               searchTerm={searchTerm}
               dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
               highlighted={Boolean(defaultOption && index === 0)}
@@ -96,7 +97,7 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
         data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
         height={customHeight || rowSize === 'normal' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT}
         width={customWidth || '100%'}
-        itemCount={items.length}
+        itemCount={data.length}
         itemSize={itemSize}
         css={{ overflowX: 'hidden' }}
       >

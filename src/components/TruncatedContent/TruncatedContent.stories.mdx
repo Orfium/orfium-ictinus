@@ -1,0 +1,72 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import TruncatedContent from './TruncatedContent';
+import Table from '../Table';
+
+<Meta title="System/Truncated Text with Tooltip" component={TruncatedContent} />
+
+# Truncated Text with Tooltip
+
+A generic component that wraps around an element with a maximum width value and shows ellipsis if the text inside would
+overflow. In that case, a tooltip is shown as well.
+
+
+
+# Usage
+
+```js
+import { TruncatedContent } from '@orfium/ictinus';
+
+<TruncatedContent tooltipContent="Tooltip text" placement="left" />;
+```
+
+# Props
+
+<Props of={TruncatedContent} />
+
+# Text Truncation
+
+Regular Text with truncation and tooltip
+
+<Preview>
+  <Story name="Regular Text with truncation and tooltip">
+    <div style={{ width: 150 }}>
+      <TruncatedContent tooltipContent="This is a long text that will overflow">This is a long text that will overflow</TruncatedContent>
+    </div>
+  </Story>
+</Preview>
+
+# Table With Cell Tooltips
+
+Regular Table with cell tooltips
+
+<Preview>
+  <Story name="Regular Table with cell tooltips">
+    <Table
+      columns={[
+        'Column 1',
+        'Column 2',
+        'Column 3',
+        'Column 4'
+      ]}
+      dataTestIdPrefix="ictinus"
+      onSort={(column, order) => console.log(column, order)}
+      initialSort={{ column: 'title', order: 'asc' }}
+      padded
+      data={[
+        {
+          id: 1,
+          cells: [
+            { content: `Generated tooltip from the element's text content` },
+            { content: 'No tooltip', hasTruncatedTooltip: false },
+            { content: () => <span>JSX Content without tooltip</span> },
+            {
+              content: () => <span>JSX Content with forced tooltip</span>,
+              tooltipContent: 'This is a kinda long (that could be longer) tooltip from a prop',
+            },
+          ],
+        }
+      ]}
+    />
+  </Story>
+</Preview>
+

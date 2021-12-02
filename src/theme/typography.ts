@@ -13,6 +13,7 @@ const weights = {
 export type Typography = {
   globalFontSize: number;
   fontSizes: {
+    8: string;
     10: string;
     11: string;
     12: string;
@@ -33,6 +34,7 @@ export type Typography = {
 };
 
 const fontSizes = {
+  8: rem('8px'),
   10: rem('10px'),
   11: rem('11px'),
   12: rem('12px'),
