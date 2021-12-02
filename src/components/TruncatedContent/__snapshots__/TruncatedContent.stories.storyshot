@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell tooltips 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.emotion-2 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom-width: 0.0625rem;
+  border-bottom-style: solid;
+  border-bottom-color: #e7ebf2;
+}
+
+.emotion-2 th:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-2 th:last-child {
+  padding-right: 1rem;
+}
+
+.emotion-3 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.emotion-4 {
+  font-weight: 500;
+  color: #444d5f;
+}
+
+.emotion-11 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 0.0625rem solid #e7ebf2;
+}
+
+.emotion-11 td:first-of-type {
+  padding-left: 1rem;
+}
+
+.emotion-11 td:last-child {
+  padding-right: inherit;
+}
+
+.emotion-12 {
+  position: relative;
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+  width: initial;
+}
+
+.emotion-13 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-19 {
+  background: transparent;
+}
+
+.emotion-19 .tippy-content {
+  color: #fff;
+  background-color: #0f0f17;
+  max-width: 16rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: justify;
+}
+
+.emotion-19 .tippy-arrow {
+  color: #0f0f17;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <table
+    className="emotion-1"
+  >
+    <thead>
+      <tr
+        className="emotion-2"
+        onClick={[Function]}
+      >
+        <th
+          className="emotion-3"
+          data-testid="ictinus_column_1"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-4"
+          >
+            Column 1
+          </div>
+        </th>
+        <th
+          className="emotion-3"
+          data-testid="ictinus_column_2"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-4"
+          >
+            Column 2
+          </div>
+        </th>
+        <th
+          className="emotion-3"
+          data-testid="ictinus_column_3"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-4"
+          >
+            Column 3
+          </div>
+        </th>
+        <th
+          className="emotion-3"
+          data-testid="ictinus_column_4"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-4"
+          >
+            Column 4
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="emotion-11"
+        onClick={[Function]}
+      >
+        <td
+          className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_1"
+        >
+          <div
+            className="emotion-13"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <span
+              data-column="Column 1"
+            >
+              Generated tooltip from the element's text content
+            </span>
+          </div>
+        </td>
+        <td
+          className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_2"
+        >
+          <div
+            className="emotion-13"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <span
+              data-column="Column 2"
+            >
+              No tooltip
+            </span>
+          </div>
+        </td>
+        <td
+          className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_3"
+        >
+          <div
+            className="emotion-13"
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+          >
+            <span>
+              JSX Content without tooltip
+            </span>
+          </div>
+        </td>
+        <td
+          className="emotion-12"
+          data-testid="ictinus_table_row_1_cell_4"
+        >
+          <div
+            className="emotion-19"
+            interactive={false}
+            interactiveDebounce={100}
+            placement="bottom"
+          >
+            <div
+              className="emotion-13"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span>
+                JSX Content with forced tooltip
+              </span>
+            </div>
+          </div>
+          <div>
+            This is a kinda long (that could be longer) tooltip from a prop
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Storyshots System/Truncated Text with Tooltip Regular Text with truncation and tooltip 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    style={
+      Object {
+        "width": 150,
+      }
+    }
+  >
+    <div
+      className="emotion-1"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      This is a long text that will overflow
+    </div>
+  </div>
+</div>
+`;
