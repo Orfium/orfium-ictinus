@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { FixedSizeList as VList } from 'react-window';
 import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
@@ -41,20 +41,21 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     },
     ref
   ) => {
-    if (defaultOption) {
-      items.unshift(defaultOption);
-    }
+    const data = useMemo(() => (defaultOption ? [defaultOption, ...items] : items), [
+      defaultOption,
+      items,
+    ]);
 
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => {
       return (
         <span css={{ ...style }}>
           <ListItem
             size={rowSize}
-            content={items[index]}
+            content={data[index]}
             index={index}
             ref={ref}
-            disabled={(items[index] as SelectOption)?.isDisabled}
-            selected={isSelected({ item: items[index], selectedItem })}
+            disabled={(data[index] as SelectOption)?.isDisabled}
+            selected={isSelected({ item: data[index], selectedItem })}
             searchTerm={searchTerm}
             dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
             highlighted={Boolean(defaultOption && index === 0)}
@@ -69,7 +70,7 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
         data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
         height={customHeight || rowSize === 'normal' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT}
         width={customWidth || '100%'}
-        itemCount={items.length}
+        itemCount={data.length}
         itemSize={rowSize === 'normal' ? 56 : 46}
         css={{ overflowX: 'hidden' }}
       >

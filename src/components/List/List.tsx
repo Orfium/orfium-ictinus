@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+import isEqual from 'react-fast-compare';
 import { TestProps } from 'utils/types';
 
 import { wrapperStyle } from './List.style';
@@ -25,6 +26,7 @@ export type ListProps = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: SelectHandlerType;
+  /** Defines if this is searchable list or not **/
   isSearchable?: boolean;
 } & TestProps;
 
@@ -81,4 +83,4 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
 );
 List.displayName = 'List';
 
-export default List;
+export default memo(List, isEqual);
