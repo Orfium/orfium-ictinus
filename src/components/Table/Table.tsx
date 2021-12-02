@@ -14,15 +14,26 @@ import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
-export type Cell<T> = {
-  content: number | string | ContentComponent<T>;
-  tooltipContent?: string;
+
+type CellBase = {
   hasTruncatedTooltip?: boolean;
   colSpan?: number;
   type?: 'financial' | 'normal';
   align?: 'left' | 'right';
   widthPercentage?: number;
 };
+
+type JSXCell<T> = CellBase & {
+  content: ContentComponent<T>;
+  tooltipContent: string;
+};
+
+type NormalCell = CellBase & {
+  content: number | string;
+  tooltipContent?: string;
+};
+
+export type Cell<T> = NormalCell | JSXCell<T>;
 
 export type Row<T> = {
   id: string | number;
