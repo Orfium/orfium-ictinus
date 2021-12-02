@@ -30,8 +30,21 @@ export type Props = {
   className?: string;
 };
 
-export type AvatarSizes = 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
+export type AvatarSizes = 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
 export type AvatarShapes = 'regular' | 'rounded' | 'circular';
+
+const iconSizeBasedOnAvatar = (size: AvatarSizes) => {
+  switch (size) {
+    case 'xs':
+      return 18;
+    case 'xxs':
+      return 18;
+    case 'xxxs':
+      return 10;
+    default:
+      return 20;
+  }
+};
 
 const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
   (
@@ -64,7 +77,7 @@ const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
           <Icon
             color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
             name={iconName}
-            size={size === 'xs' ? 18 : 20}
+            size={iconSizeBasedOnAvatar(size)}
           />
         )}
         {!src && children}

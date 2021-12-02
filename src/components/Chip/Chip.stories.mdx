@@ -16,8 +16,8 @@ A compact component that will be used in inner DS component but outside DS as we
 
 ```js
 import { Chip } from '@orfium/ictinus';
-<Chip styleType='outlined' size='sm' fill='red'>
-  Label text
+<Chip>
+  Label
 </Chip>;
 ```
 
@@ -25,76 +25,78 @@ import { Chip } from '@orfium/ictinus';
 
 <Props of={Chip} />
 
-# Chip Styles
+# Read-Only Chips
 
-Chip Styles
+Read-Only Chips
 
 <Preview>
-  <Story name="Chip Styles">
+  <Story name="Read-Only Chips">
     <Stack>
-        <Chip styleType='filled' size={select('size', ['sm', 'md'], 'md')}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        <Chip
+          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
         >
-        Filled Style
+          Label
         </Chip>
-        <Chip styleType='outlined' size={select('size', ['sm', 'md'], 'md')}
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        <Chip 
+          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
+          thumbnail={{src: '', name: 'KN'}}
         >
-        Outlined Style
+          Label
+        </Chip>
+        <Chip 
+          thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
+          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
+        >
+         Label
         </Chip>
     </Stack>
   </Story>
 </Preview>
 
-# Chip Sizes
+# Interactive Chips
 
-Chip Sizes
+Interactive Chips
 
 <Preview>
-  <Story name="Chip Sizes">
+  <Story name="Interactive Chips">
     <Stack>
-        <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size='md'
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        <Chip
+          styleType={'interactive'}
+          onClear={() => alert('You clicked the remove icon!')}
+          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
         >
-        Medium Size
+          Label
         </Chip>
-        <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size='sm'
-          fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+        <ChipShowcase
+          styleType={'interactive'}
+          isChecked
+          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
         >
-        Small Size
-        </Chip>
+          Label
+        </ChipShowcase>
+        <ChipShowcase
+          styleType={'interactive'}
+          badgeNumber={5}
+          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
+        >
+          Label
+        </ChipShowcase>
     </Stack>
   </Story>
 </Preview>
 
 
-# Chip with Icons
+<!-- # Chip with Icons
 
 Chip with Icons
 <Preview>
   <Story name="Chip with Icons">
     <Stack>
-      <ChipShowcase styleType={select('styleType', ['filled', 'outlined'], 'filled')} size={select('size', ['sm', 'md'], 'md')}
-        fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
+      <ChipShowcase
+        fill={select('fill', flatColors.concat(undefined), flatColors[0])}
       >
-        <div>{text('text', 'Label Text')}</div>
+        <div>{text('text', 'Label')}</div>
       </ChipShowcase>
     </Stack>
   </Story>
-</Preview>
-
-# Dynamic Chip Props
-
-Dynamic Chip Props
-
-<Preview>
-  <Story name="Dynamic Chip Props">
-    <Stack>
-      <Chip styleType={select('styleType', ['filled', 'outlined'], 'filled')} size={select('size', ['sm', 'md'], 'md')}
-        fill={select('fill', flatColors.concat(undefined), flatColors[0])} shade={select('shade', colorShades.concat(undefined), colorShades[0])}
-      >
-        <div>{text('text', 'change me!')}</div>
-      </Chip>
-    </Stack>
-  </Story>
-</Preview>
+</Preview> -->

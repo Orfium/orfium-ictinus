@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { render, fireEvent } from '../../test';
-import { Theme } from '../../theme';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import Chip from './Chip';
 
 describe('Chip', () => {
@@ -11,45 +9,23 @@ describe('Chip', () => {
     'https://brandmark.io/logo-rank/random/twitter.png',
   ];
   const chipLabel = 'Label Text';
-  const chipProps = {
-    leftIcon: <img src={images[0]} />,
-    rightIcon: <img src={images[1]} />,
-  };
+  const badgeNumber = 3;
 
-  test('that children are rendering', async () => {
-    const { getByText, getAllByRole } = render(<Chip {...chipProps}>{chipLabel}</Chip>);
-
-    const icons = getAllByRole('img');
-    expect(icons).toHaveLength(2);
-    expect(icons[0]).toHaveAttribute('src', images[0]);
-    expect(icons[1]).toHaveAttribute('src', images[1]);
-    expect(getByText(chipLabel)).toBeInTheDocument();
-  });
-
-  test('that color is rendering correctly', async () => (theme: Theme) => {
-    const fill = 'red';
-    const shade = 700;
-    const expectedTextColor = pickTextColorFromSwatches(fill, shade);
-    const expectedFillColor = theme.utils.getColor(fill, shade);
-    const { getByTestId } = render(<Chip>{chipLabel}</Chip>);
-
-    const componentContainer = getByTestId('chip'); // the container in which styles are applied
-    expect(componentContainer).toHaveStyle(`color: ${expectedTextColor}`);
-    expect(componentContainer).toHaveStyle(`background-color: ${expectedFillColor}`);
-  });
-
-  test('that handlers are being called when icons are clicked', async () => {
-    const leftIconHandler = jest.fn();
-    const rightIconHandler = jest.fn();
-    const { getAllByRole } = render(
-      <Chip {...chipProps} onLeftIconClick={leftIconHandler} onRightIconClick={rightIconHandler}>
+  test('that Badge is rendered when badgeNumber prop is provided', async () => {
+    const { getByText, getByTestId } = render(
+      <Chip styleType={'interactive'} badgeNumber={badgeNumber}>
         {chipLabel}
       </Chip>
     );
-    const icons = getAllByRole('img');
-    fireEvent.click(icons[0]);
-    expect(leftIconHandler).toHaveBeenCalledTimes(1);
-    fireEvent.click(icons[1]);
-    expect(rightIconHandler).toHaveBeenCalledTimes(1);
+    expect(getByTestId('badge')).toBeInTheDocument();
+    expect(getByText(badgeNumber)).toBeInTheDocument();
+  });
+
+  test('that onClick handler is being called', async () => {
+    const onClick = jest.fn();
+    const { getByTestId } = render(<Chip onClick={onClick}>{chipLabel}</Chip>);
+    const chip = getByTestId('chip');
+    fireEvent.click(chip);
+    expect(onClick).toHaveBeenCalledTimes(1);
   });
 });
