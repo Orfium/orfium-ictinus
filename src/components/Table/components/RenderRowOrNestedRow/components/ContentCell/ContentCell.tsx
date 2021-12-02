@@ -57,13 +57,9 @@ const ContentCell: React.FC<Props> = ({
         </div>
       )}
 
-      <TruncatedContent
-        placement={'bottom'}
-        shouldAlwaysShow={isComponentFunctionType(content) && !!tooltipContent}
-        tooltipContent={tooltipContent}
-      >
+      <TruncatedContent placement={'bottom'} tooltipContent={tooltipContent}>
         {isComponentFunctionType(content) ? (
-          content({ content, colSpan })
+          content({ content, colSpan, tooltipContent: tooltipContent ?? '' })
         ) : (
           <span data-column={columns[cellCounter]}>{content}</span>
         )}

@@ -30,7 +30,8 @@ Regular Text with truncation and tooltip
 <Preview>
   <Story name="Regular Text with truncation and tooltip">
     <div style={{ width: 150 }}>
-      <TruncatedContent tooltipContent="This is a long text that will overflow">This is a long text that will overflow</TruncatedContent>
+      <TruncatedContent tooltipContent="This is a long text that will overflow">This is a long text that will
+        overflow</TruncatedContent>
     </div>
   </Story>
 </Preview>
@@ -60,7 +61,7 @@ Regular Table with cell tooltips
             { content: 'No tooltip', hasTruncatedTooltip: false },
             { content: () => <span>JSX Content without tooltip</span> },
             {
-              content: () => <span>JSX Content with forced tooltip</span>,
+              content: () => <span>JSX Content with long long long text and a forced tooltip</span>,
               tooltipContent: 'This is a kinda long (that could be longer) tooltip from a prop',
             },
           ],

@@ -6,18 +6,11 @@ import Tooltip from 'components/Tooltip';
 type Props = {
   /** The content of the tooltip */
   tooltipContent: string | undefined;
-  /** Flag for overriding other settings to always show the tooltip */
-  shouldAlwaysShow?: boolean;
   /** The placement of the tooltip */
   placement?: 'top' | 'bottom' | 'right' | 'left';
 };
 
-const TruncatedContent: React.FC<Props> = ({
-  children,
-  shouldAlwaysShow = false,
-  tooltipContent,
-  placement = 'bottom',
-}) => {
+const TruncatedContent: React.FC<Props> = ({ children, tooltipContent, placement = 'bottom' }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const targetRef = useRef<HTMLDivElement>(null);
@@ -33,21 +26,12 @@ const TruncatedContent: React.FC<Props> = ({
 
   const isTruncated = useMemo(() => {
     return !!target && target.scrollWidth > target.offsetWidth;
-  }, [target]);
+  }, [target, target?.offsetWidth]);
 
   const showTooltip = useCallback(
-    (
-      tooltipContent: string | undefined,
-      isHovered: boolean,
-      isTruncated: boolean,
-      shouldAlwaysShow: boolean
-    ) => {
+    (tooltipContent: string | undefined, isHovered: boolean, isTruncated: boolean) => {
       if (tooltipContent === undefined) {
         return false;
-      }
-
-      if (shouldAlwaysShow) {
-        return true;
       }
 
       return isHovered && isTruncated;
@@ -55,7 +39,7 @@ const TruncatedContent: React.FC<Props> = ({
     []
   );
 
-  return showTooltip(tooltipContent, isHovered, isTruncated, shouldAlwaysShow) ? (
+  return showTooltip(tooltipContent, isHovered, isTruncated) ? (
     <Tooltip placement={placement} content={tooltipContent}>
       <TruncationDiv
         ref={targetRef}
