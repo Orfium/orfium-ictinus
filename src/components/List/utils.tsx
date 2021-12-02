@@ -1,4 +1,5 @@
 import React from 'react';
+import Highlighter from 'react-highlight-words';
 
 import { ListItemType } from './types';
 
@@ -47,4 +48,39 @@ export const isSelected = ({
       : checkIfItemHasValue(selectedItem);
 
   return itemValue === selectedItemValue;
+};
+
+export const renderContent = (content: ListItemType, searchTerm?: string) => {
+  if (
+    searchTerm &&
+    content &&
+    !React.isValidElement(content) &&
+    typeof content === 'object' &&
+    !Array.isArray(content) &&
+    'label' in content &&
+    content?.label
+  ) {
+    return (
+      <Highlighter
+        highlightClassName="search-text"
+        highlightTag={'strong'}
+        searchWords={[searchTerm]}
+        autoEscape={true}
+        textToHighlight={content.label}
+      />
+    );
+  }
+
+  if (
+    content &&
+    !React.isValidElement(content) &&
+    typeof content === 'object' &&
+    !Array.isArray(content) &&
+    'label' in content &&
+    content?.label
+  ) {
+    return content.label;
+  }
+
+  return content;
 };

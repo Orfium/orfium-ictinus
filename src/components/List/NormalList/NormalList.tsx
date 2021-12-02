@@ -4,11 +4,11 @@ import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import { SelectOption } from '../../Select/Select';
+import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
 import ListItemGroup from '../ListItemGroup';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
-import { listStyle } from './NormalList.style';
 
 type Props = {
   items: ListItemType[];
@@ -68,9 +68,8 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
           {items.map((item, index) =>
             (item as SelectOption)?.options ? (
               <ListItemGroup
-                key={generateUniqueID('list_item_group' + index)}
-                size={rowSize}
                 content={item}
+                size={rowSize}
                 groupIndex={index}
                 ref={ref}
                 searchTerm={searchTerm}

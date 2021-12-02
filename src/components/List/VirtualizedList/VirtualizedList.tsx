@@ -4,9 +4,9 @@ import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
 
 import { SelectOption } from '../../Select/Select';
+import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
 import ListItemGroup from '../ListItemGroup';
-import { listStyle } from '../NormalList/NormalList.style';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected, MAX_LARGE_HEIGHT, MAX_SMALL_HEIGHT } from '../utils';
 
@@ -61,7 +61,7 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
       return (
         <span css={{ ...style }}>
           {(items[index] as SelectOption)?.options ? (
-            <ul css={listStyle({ width: customWidth, height: customHeight })}>
+            <ul css={listStyle({})}>
               <ListItemGroup
                 size={rowSize}
                 content={items[index]}

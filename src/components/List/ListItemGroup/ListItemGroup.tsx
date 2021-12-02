@@ -2,8 +2,8 @@ import React from 'react';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
+import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
-import { listStyle } from '../NormalList/NormalList.style';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
 import ListGroupTitle from './ListGroupTitle';
@@ -12,14 +12,10 @@ import { SelectOption } from 'components/Select/Select';
 type Props = {
   /** Size of the ListItem (translates to height) */
   size: ListRowSize;
-  /** Content of the ListItem */
+  /** Content of the ListItemGroup */
   content: ListItemType;
   /** groupIndex, for test-id calculation */
   groupIndex: number;
-  /** Width of the list */
-  width?: number;
-  /** Height of the list */
-  height?: number;
   /** Selected Item */
   selectedItem?: ListItemType;
   /** Search Term to be highlighted in list items */
@@ -33,12 +29,12 @@ const ListItemGroup = React.forwardRef<HTMLDivElement, Props>(
     return (
       <li>
         <ListGroupTitle
+          content={content}
           size={size}
-          content={content as SelectOption}
-          ref={ref} //TODO fix
-          searchTerm={searchTerm}
           index={groupIndex}
-          dataTestId={dataTestId} //TODO fix
+          ref={ref}
+          searchTerm={searchTerm}
+          dataTestId={dataTestId}
         />
         <ul css={listStyle({})}>
           {(content as SelectOption).options?.map((option, index) => (
