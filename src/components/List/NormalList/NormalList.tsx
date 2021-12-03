@@ -4,10 +4,11 @@ import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import { SelectOption } from '../../Select/Select';
+import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
+import ListItemGroup from '../ListItemGroup';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
-import { listStyle } from './NormalList.style';
 
 type Props = {
   items: ListItemType[];
@@ -50,30 +51,44 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
     return (
       <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
         <ul css={listStyle({ width, height, isSearchable })}>
-          {newItems.map((item, index) => (
-            <li key={generateUniqueID('list_item' + index)}>
-              <ListItem
+          {newItems.map((item, index) =>
+            (item as SelectOption)?.options ? (
+              <ListItemGroup
                 content={item}
                 size={rowSize}
-                index={index}
+                groupIndex={index}
                 ref={ref}
-                highlighted={Boolean(defaultOption && index === 0)}
                 searchTerm={searchTerm}
-                disabled={(item as SelectOption)?.isDisabled}
-                dataTestId={
-                  defaultOption && index === 0
-                    ? dataTestId ?? 'ictinus_list' + '_default_option'
-                    : dataTestId
-                }
+                dataTestId={dataTestId}
                 handleOptionClick={handleOptionClick}
-                selected={
-                  defaultOption && index === 0
-                    ? isUndefined(selectedItem) || isSelected({ item: defaultOption, selectedItem })
-                    : isSelected({ item, selectedItem })
-                }
+                selectedItem={selectedItem}
               />
-            </li>
-          ))}
+            ) : (
+              <li key={generateUniqueID('list_item' + index)}>
+                <ListItem
+                  content={item}
+                  size={rowSize}
+                  index={index}
+                  ref={ref}
+                  highlighted={Boolean(defaultOption && index === 0)}
+                  searchTerm={searchTerm}
+                  disabled={(item as SelectOption)?.isDisabled}
+                  dataTestId={
+                    defaultOption && index === 0
+                      ? dataTestId ?? 'ictinus_list' + '_default_option'
+                      : dataTestId
+                  }
+                  handleOptionClick={handleOptionClick}
+                  selected={
+                    defaultOption && index === 0
+                      ? isUndefined(selectedItem) ||
+                        isSelected({ item: defaultOption, selectedItem })
+                      : isSelected({ item, selectedItem })
+                  }
+                />
+              </li>
+            )
+          )}
         </ul>
       </div>
     );

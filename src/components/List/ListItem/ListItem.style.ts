@@ -9,18 +9,20 @@ export const listItemStyle = ({
   selected,
   highlighted,
   disabled,
+  isGroupItem,
 }: {
   size: ListRowSize;
   selected: boolean;
   highlighted: boolean;
   disabled: boolean;
+  isGroupItem?: boolean;
 }) => (theme: Theme): SerializedStyles => css`
   height: ${size === 'normal' ? rem(56) : rem(46)};
   font-size: ${theme.typography.fontSizes[size === 'normal' ? '16' : '14']};
   background-color: ${selected ? theme.utils.getColor('blue', 50) : theme.palette.white};
   display: flex;
   align-items: center;
-  padding: 0px ${theme.spacing.md};
+  padding: 0px ${theme.spacing.md} 0px ${isGroupItem ? theme.spacing.xl : theme.spacing.md};
   font-weight: ${selected && theme.typography.weights.medium};
 
   ${highlighted && 'font-weight: 500;'}

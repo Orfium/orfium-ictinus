@@ -11,7 +11,26 @@ const options = [
   { value: 'citrus', label: 'Citrus' },
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
 ];
+const groupOptions = [
+  {
+    value: 'group1',
+    label: 'Group 1',
+    options: [
+      { value: '1', label: 'Option 1' },
+      { value: '2', label: 'Option 2' },
+    ],
+  },
+  {
+    value: 'group2',
+    label: 'Group 2',
+    options: [
+      { value: '3', label: 'Option 3' },
+    ],
+  },
+  { value: '4', label: 'Option 4' },
+];
 const defaultValue = options[0];
+const defaultGroupValue = { value: '1', label: 'Option 1' };
 const handleSelectedOption = selectedOption => {
   console.log('On option change', selectedOption);
 }
@@ -277,6 +296,25 @@ Simple select component where searched term is highlighted in options
         options={options}
         handleSelectedOption={handleSelectedOption}
         styleType={'filled'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Simple Group Select 
+
+Simple select component with grouped data and searchable input
+
+<Preview>
+  <Story name="Simple Group Select">
+    <Stack>
+      <Select
+        label={'Group Select'}
+        options={groupOptions}
+        defaultValue={defaultGroupValue}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+        highlightSearch
       />
     </Stack>
   </Story>

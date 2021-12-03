@@ -1,8 +1,8 @@
 import React from 'react';
-import Highlighter from 'react-highlight-words';
 import { TestProps } from 'utils/types';
 
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
+import { renderContent } from '../utils';
 import { listItemStyle, contentStyle } from './ListItem.style';
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
   /** Content of the ListItem */
   content: ListItemType;
   /** Index, for test-id calculation */
-  index: number;
+  index: number | string;
   /** Selected state */
   selected?: boolean;
   /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
@@ -22,6 +22,8 @@ type Props = {
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
   handleOptionClick?: SelectHandlerType;
+  /** Determines the left padding */
+  isGroupItem?: boolean;
 } & TestProps;
 
 const ListItem = React.forwardRef<HTMLDivElement, Props>(
@@ -36,6 +38,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       handleOptionClick,
       searchTerm,
       dataTestId,
+      isGroupItem,
     },
     ref
   ) => {
@@ -44,54 +47,10 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
         handleOptionClick(content as never);
       }
     };
-    const renderContent = (content: ListItemType) => {
-      /**
-       * Check if list item is not react element because it can be
-       * and also checks if its object with property 'value'
-       * @TODO Typescript 4.4 will solve this in one constant
-       * **/
-      if (
-        searchTerm &&
-        content &&
-        !React.isValidElement(content) &&
-        typeof content === 'object' &&
-        !Array.isArray(content) &&
-        'label' in content &&
-        content?.label
-      ) {
-        return (
-          <Highlighter
-            highlightClassName="search-text"
-            highlightTag={'strong'}
-            searchWords={[searchTerm]}
-            autoEscape={true}
-            textToHighlight={content.label}
-          />
-        );
-      }
-
-      /**
-       * Check if list item is not react element because it can be
-       * and also checks if its object with property 'value'
-       * @TODO Typescript 4.4 will solve this in one constant
-       * **/
-      if (
-        content &&
-        !React.isValidElement(content) &&
-        typeof content === 'object' &&
-        !Array.isArray(content) &&
-        'label' in content &&
-        content?.label
-      ) {
-        return content.label;
-      }
-
-      return content;
-    };
 
     return (
       <div
-        css={listItemStyle({ size, selected, highlighted, disabled })}
+        css={listItemStyle({ size, selected, highlighted, disabled, isGroupItem })}
         ref={selected ? ref : null}
         onClick={handleListItemSelect}
         onMouseDown={event => {
@@ -101,7 +60,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       >
         <div css={contentStyle()}>
           {/** @TODO latest version typescript 4.4 is solving this as a constant */
-          renderContent(content)}
+          renderContent(content, searchTerm)}
         </div>
       </div>
     );
