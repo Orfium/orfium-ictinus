@@ -1,7 +1,9 @@
 import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
 
+import useTheme from '../../../hooks/useTheme';
 import { getLocaleFormat } from '../../../utils/helpers';
+import { FilterBase } from '../../Filter/Filter';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
@@ -14,11 +16,13 @@ const ON_CHANGE_MOCK = () => {};
 type Props = {
   handleFocus: () => void;
   handleClear: (event: React.KeyboardEvent) => void;
+  isFilter: boolean;
   isRangePicker: boolean;
   selectedDay: Range;
   /** Props for styling the input */
   inputProps?: TextFieldProps;
   dateFormatOverride?: DateFormatType;
+  open: boolean;
 };
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -29,48 +33,88 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
       handleFocus,
       handleClear,
       isRangePicker,
+      isFilter,
       inputProps,
       selectedDay,
       dateFormatOverride = 'MM/DD/YYYY',
+      open,
     },
     ref
   ) => {
+    const theme = useTheme();
     const formatDate = (date: Dayjs | undefined) => {
       return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
     };
 
     const getDateFormatted = React.useCallback(formatDate, []);
 
-    return (
-      <div css={rangeInputsWrapper()}>
-        {isRangePicker ? (
-          <TextField
-            ref={ref}
-            {...inputProps}
-            onFocus={handleFocus}
-            onKeyDown={handleClear}
-            onChange={ON_CHANGE_MOCK}
-            placeholder="Date (start) - Date (end)"
-            value={
+    const renderBase = React.useMemo(() => {
+      if (isFilter) {
+        return (
+          <FilterBase
+            dataTestId={''}
+            disabled={false}
+            handleOpen={handleFocus}
+            onClear={handleClear}
+            selectedItemLabel={
               selectedDay.from &&
               `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
             }
-            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+            open={open}
+            hasSelectedValue={Boolean(
+              selectedDay.from &&
+                `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+            )}
+            label={!selectedDay.from && 'Date (start) - Date (end)'}
+            iconName={'calendarEmpty'}
+            iconSize={19}
+            iconColor={theme.utils.getColor('darkGrey', 850)}
+            styleType={'filled'}
           />
-        ) : (
-          <TextField
-            ref={ref}
-            {...inputProps}
-            onFocus={handleFocus}
-            onKeyDown={handleClear}
-            onChange={ON_CHANGE_MOCK}
-            placeholder="Select date"
-            value={selectedDay.to && getDateFormatted(selectedDay.to)}
-            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
-          />
-        )}
-      </div>
-    );
+        );
+      }
+
+      return isRangePicker ? (
+        <TextField
+          ref={ref}
+          {...inputProps}
+          onFocus={handleFocus}
+          onKeyDown={handleClear}
+          onChange={ON_CHANGE_MOCK}
+          placeholder="Date (start) - Date (end)"
+          value={
+            selectedDay.from &&
+            `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+          }
+          rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+        />
+      ) : (
+        <TextField
+          ref={ref}
+          {...inputProps}
+          onFocus={handleFocus}
+          onKeyDown={handleClear}
+          onChange={ON_CHANGE_MOCK}
+          placeholder="Select date"
+          value={selectedDay.to && getDateFormatted(selectedDay.to)}
+          rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+        />
+      );
+    }, [
+      getDateFormatted,
+      handleClear,
+      handleFocus,
+      inputProps,
+      isFilter,
+      isRangePicker,
+      open,
+      ref,
+      selectedDay.from,
+      selectedDay.to,
+      theme.utils,
+    ]);
+
+    return <div css={rangeInputsWrapper()}>{renderBase}</div>;
   }
 );
 

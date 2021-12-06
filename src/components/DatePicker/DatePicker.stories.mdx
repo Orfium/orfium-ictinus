@@ -101,6 +101,23 @@ Implementation of the regular Range DatePicker on different sizes
         dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
       />
     </Stack>
+    <Stack vertical>
+      <DatePicker
+        inputProps={{ size: 'md', styleType: 'outlined' }}
+        isRangePicker
+        isFilter
+        isDefaultNow={false}
+        disableDates={select('disableDates', options, options[0])}
+        dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+      />
+      <DatePicker
+        inputProps={{ size: 'sm', styleType: 'outlined' }}
+        isRangePicker
+        isFilter
+        disableDates={select('disableDates', options, options[0])}
+        dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
+      />
+    </Stack>
   </Story>
 </Preview>
 

@@ -17,6 +17,7 @@ export type DisabledDates = {
 };
 
 export type Props = {
+  isFilter?: boolean;
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
@@ -77,6 +78,7 @@ const DatePicker: React.FC<Props> = ({
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
+  isFilter = false,
   isDefaultNow = true,
 }) => {
   const [open, setOpen] = useState(false);
@@ -199,12 +201,14 @@ const DatePicker: React.FC<Props> = ({
         visible={open}
         parent={() => (
           <DatePickInput
+            isFilter={isFilter}
             isRangePicker={isRangePicker}
             selectedDay={selectedRange}
             inputProps={inputProps}
             dateFormatOverride={dateFormatOverride}
             handleFocus={handleFocus}
             handleClear={handleClear}
+            open={open}
           />
         )}
       >

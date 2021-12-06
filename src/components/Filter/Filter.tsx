@@ -7,6 +7,7 @@ import { generateTestDataId } from 'utils/helpers';
 
 import { BASE_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
 import Icon from '../Icon';
+import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
@@ -22,7 +23,7 @@ import {
   valueSpanStyle,
   wrapperStyle,
 } from './Filter.style';
-import { FilterOption, Props } from './types';
+import { FilterOption, FilterType, Props, StyleType } from './types';
 import { getTextColor } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
@@ -104,27 +105,6 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     []
   );
 
-  const buttonStyleProps = {
-    calculatedColor,
-    buttonType,
-    disabled,
-    open,
-    styleType,
-    hasSelectedValue,
-    filterType,
-  };
-
-  const pickIconColor = () => {
-    if (open) {
-      return theme.utils.getColor('neutralWhite', 100);
-    }
-    if (hasSelectedValue) {
-      return theme.utils.getColor(calculatedColor.color, 550);
-    }
-
-    return theme.utils.getColor('darkGrey', 400);
-  };
-
   /**
    * for 'added' type design team decided that is not needed therefore in order not having to maintain
    * one more special case we dont render it
@@ -135,44 +115,22 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
   return (
     <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle()} data-testid={dataTestId}>
-        <button
-          ref={ref}
-          data-testid={generateTestDataId('filter', dataTestId)}
-          onClick={handleOpen}
-          disabled={disabled}
-          css={buttonWrapperStyle(buttonStyleProps)}
-        >
-          <div css={buttonStyle(buttonStyleProps)}>
-            <span css={buttonSpanStyle()}>
-              <span css={childrenWrapperStyle()}>
-                <span css={labelSpanStyle(open, hasSelectedValue)}>
-                  <div>{label && `${label} :`}</div>
-                  <span css={valueSpanStyle()}>{selectedItem?.label ?? defaultValue.label}</span>
-                </span>
-              </span>
-
-              <Icon name={iconName} color={iconColor} size={6} />
-            </span>
-          </div>
-
-          {filterType === 'added' && (
-            <>
-              <span css={divider(buttonStyleProps)} />
-              <div css={dividedButtonStyle(buttonStyleProps)}>
-                <Icon
-                  size={19}
-                  name={'closeTag'}
-                  color={pickIconColor()}
-                  onClick={e => {
-                    e.stopPropagation();
-                    onClear();
-                  }}
-                />
-              </div>
-            </>
-          )}
-        </button>
+      <FilterBase
+        ref={ref}
+        dataTestId={generateTestDataId('filter', dataTestId)}
+        handleOpen={handleOpen}
+        disabled={disabled}
+        onClear={onClear}
+        selectedItemLabel={selectedItem?.label ?? defaultValue.label}
+        open={open}
+        hasSelectedValue={hasSelectedValue}
+        label={label}
+        iconName={iconName}
+        iconColor={iconColor}
+        filterType={filterType}
+        buttonType={buttonType}
+        styleType={styleType}
+      >
         {open && (
           <div css={menuStyle()} data-testid={generateTestDataId('filter-menu', dataTestId)}>
             {isSearchable && (
@@ -195,8 +153,116 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
             />
           </div>
         )}
-      </div>
+      </FilterBase>
     </ClickAwayListener>
+  );
+});
+
+// eslint-disable-next-line react/display-name
+export const FilterBase = React.forwardRef<
+  HTMLButtonElement,
+  {
+    dataTestId: string;
+    disabled: boolean;
+    handleOpen: () => void;
+    onClear: () => void;
+    selectedItemLabel?: string;
+    open: boolean;
+    hasSelectedValue: boolean;
+    label?: string | undefined;
+    iconName: AcceptedIconNames;
+    iconColor: string;
+    iconSize?: number;
+    /** Defines the style type of the button */
+    styleType: StyleType;
+    /** Defines the filter type */
+    filterType?: FilterType;
+    buttonType?: 'primary' | 'secondary';
+  }
+>((props, ref) => {
+  const {
+    dataTestId,
+    handleOpen,
+    disabled,
+    onClear,
+    selectedItemLabel,
+    open,
+    hasSelectedValue,
+    label,
+    iconName,
+    iconColor,
+    iconSize = 6,
+    buttonType = 'primary',
+    filterType = 'preset',
+    styleType,
+    children,
+  } = props;
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
+  const theme = useTheme();
+
+  const buttonStyleProps = {
+    calculatedColor,
+    buttonType,
+    disabled,
+    open,
+    styleType,
+    hasSelectedValue,
+    filterType,
+  };
+
+  const pickIconColor = () => {
+    if (open) {
+      return theme.utils.getColor('neutralWhite', 100);
+    }
+    if (hasSelectedValue) {
+      return theme.utils.getColor(calculatedColor.color, 550);
+    }
+
+    return theme.utils.getColor('darkGrey', 400);
+  };
+
+  return (
+    <div css={wrapperStyle()} data-testid={dataTestId}>
+      <button
+        ref={ref}
+        data-testid={generateTestDataId('filter', dataTestId)}
+        onClick={handleOpen}
+        disabled={disabled}
+        css={buttonWrapperStyle(buttonStyleProps)}
+      >
+        <div css={buttonStyle(buttonStyleProps)}>
+          <span css={buttonSpanStyle()}>
+            <span css={childrenWrapperStyle()}>
+              <span css={labelSpanStyle(open, hasSelectedValue)}>
+                {label && <div>{label} :</div>}
+                <span css={valueSpanStyle()}>{selectedItemLabel}</span>
+              </span>
+            </span>
+
+            <Icon name={iconName} color={iconColor} size={iconSize} />
+          </span>
+        </div>
+
+        {filterType === 'added' && (
+          <>
+            <span css={divider(buttonStyleProps)} />
+            <div css={dividedButtonStyle(buttonStyleProps)}>
+              <Icon
+                size={19}
+                name={'closeTag'}
+                color={pickIconColor()}
+                onClick={e => {
+                  e.stopPropagation();
+                  onClear();
+                }}
+              />
+            </div>
+          </>
+        )}
+      </button>
+      {children}
+    </div>
   );
 });
 
