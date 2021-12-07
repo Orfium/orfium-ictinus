@@ -5,6 +5,7 @@
         "preset": "angular",
         "releaseRules": [
           {"type": "docs", "scope":"DOCUMENTATION", "release": "patch"},
+          {"type": "style", "release": "patch"}
         ]
       }],
       "@semantic-release/release-notes-generator",
