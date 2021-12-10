@@ -31,7 +31,7 @@ export type Props = {
 };
 
 export type AvatarSizes = 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
-export type AvatarShapes = 'regular' | 'rounded' | 'circular';
+export type AvatarShapes = 'circular';
 
 const iconSizeBasedOnAvatar = (size: AvatarSizes) => {
   switch (size) {
@@ -48,15 +48,7 @@ const iconSizeBasedOnAvatar = (size: AvatarSizes) => {
 
 const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
   (
-    {
-      src = '',
-      iconName = 'user',
-      size = 'md',
-      color = 'lightGrey-600',
-      shape = 'circular',
-      children,
-      className,
-    },
+    { src = '', iconName = 'user', size = 'md', color = 'lightGrey-600', children, className },
     ref
   ) => {
     const calculatedColor = calculateActualColorFromComponentProp(color);
@@ -66,7 +58,6 @@ const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
         ref={ref}
         className={className}
         css={avatarStyle({
-          shape,
           size,
           fill: calculatedColor.color,
           fillShade: calculatedColor.shade,

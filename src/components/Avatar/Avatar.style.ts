@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
-import { AvatarShapes, AvatarSizes } from './Avatar';
+import { AvatarSizes } from './Avatar';
 
 const sizeBasedOnProp = (size: AvatarSizes) => {
   switch (size) {
@@ -20,17 +20,6 @@ const sizeBasedOnProp = (size: AvatarSizes) => {
       return rem(16);
     default:
       return rem(56);
-  }
-};
-
-const shapeBasedOnProp = (shape: AvatarShapes) => {
-  switch (shape) {
-    case 'rounded':
-      return rem(4);
-    case 'circular':
-      return '100%';
-    default:
-      return rem(8);
   }
 };
 
@@ -50,12 +39,10 @@ const fontSizeBasedOnProp = (theme: Theme, size: AvatarSizes) => {
 };
 
 export const avatarStyle = ({
-  shape,
   size,
   fill,
   fillShade,
 }: {
-  shape: AvatarShapes;
   size: AvatarSizes;
   fill: typeof flatColors[number];
   fillShade: typeof colorShades[number];
@@ -63,7 +50,7 @@ export const avatarStyle = ({
   ${flex};
   width: ${sizeBasedOnProp(size)};
   height: ${sizeBasedOnProp(size)};
-  border-radius: ${shapeBasedOnProp(shape)};
+  border-radius: 100%;
   background: ${theme.utils.getColor(fill, fillShade)};
   overflow: hidden;
   position: relative;
