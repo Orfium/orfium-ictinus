@@ -2,6 +2,8 @@ import { css, SerializedStyles } from '@emotion/react';
 import rem from 'polished/lib/helpers/rem';
 import { Theme } from 'theme';
 
+import { getBorderColor } from 'components/Table/utils';
+
 export const borderedRowStyle = ({
   bordered,
   isCustomCell,
@@ -10,7 +12,7 @@ export const borderedRowStyle = ({
   isCustomCell?: boolean;
 }) => (theme: Theme): SerializedStyles =>
   css({
-    borderBottom: bordered ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)}` : 'none',
+    borderBottom: bordered ? `${rem(1)} solid ${getBorderColor(theme)}` : 'none',
     'td:first-of-type': {
       paddingLeft: theme.spacing.md,
     },
@@ -34,7 +36,7 @@ export const expandableRowStyle = ({
     borderTop:
       //Adds border to the first row only if it doesn't have a fixed header
       isFirstRow && !fixedHeader
-        ? `${rem(1)} solid ${theme.utils.getColor('lightGrey', 250)}`
+        ? `${rem(1)} solid ${getBorderColor(theme)}`
         : 'none',
-    borderBottom: `${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)}`,
+    borderBottom: `${rem(1)} solid ${getBorderColor(theme)}`,
   });
