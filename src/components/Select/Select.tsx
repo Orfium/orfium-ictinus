@@ -162,7 +162,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         });
     }, [searchValue, options, isAsync]);
 
-    const rightIconNameSelector = React.useCallback(() => {
+    const rightIconNameSelector = useMemo(() => {
       if (isSearchable) {
         return searchValue ? 'close' : 'search';
       }
@@ -192,9 +192,10 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           {isLoading && <Loader />}
           <Icon
             size={20}
-            name={rightIconNameSelector()}
+            name={rightIconNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
             onClick={handleIconClick}
+            dataTestId='select-right-icon'
           />
         </div>
       ),
