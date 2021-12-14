@@ -3,7 +3,7 @@ import React, { InputHTMLAttributes } from 'react';
 
 import useTheme from '../../../hooks/useTheme';
 import { getLocaleFormat } from '../../../utils/helpers';
-import { FilterBase } from '../../Filter/Filter';
+import FilterBase from '../../Filter/components/FilterBase';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
@@ -15,7 +15,7 @@ const ON_CHANGE_MOCK = () => {};
 
 type Props = {
   handleFocus: () => void;
-  handleClear: (event: React.KeyboardEvent) => void;
+  handleClear: (event?: React.KeyboardEvent) => void;
   isFilter: boolean;
   isRangePicker: boolean;
   selectedDay: Range;
@@ -52,9 +52,10 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
       if (isFilter) {
         return (
           <FilterBase
-            dataTestId={''}
+            dataTestId={'filter'}
             disabled={false}
             handleOpen={handleFocus}
+            filterType={'added'}
             onClear={handleClear}
             selectedItemLabel={
               selectedDay.from &&
@@ -65,7 +66,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
               selectedDay.from &&
                 `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
             )}
-            label={!selectedDay.from && 'Date (start) - Date (end)'}
+            label={!selectedDay.from ? 'Date (start) - Date (end)' : ''}
             iconName={'calendarEmpty'}
             iconSize={19}
             iconColor={theme.utils.getColor('darkGrey', 850)}

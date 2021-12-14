@@ -17,6 +17,7 @@ export type DisabledDates = {
 };
 
 export type Props = {
+  /** This property defines whether the DatePicker component's parent is a Select or a Filter */
   isFilter?: boolean;
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
@@ -81,7 +82,7 @@ const DatePicker: React.FC<Props> = ({
   isFilter = false,
   isDefaultNow = true,
 }) => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
 
   const [range, setRange] = useState<Range>(initDates(value, isDefaultNow));
@@ -108,7 +109,7 @@ const DatePicker: React.FC<Props> = ({
       const newRange = { from: startDate, to: endDate };
 
       if (newRange.to) {
-        setOpen(false);
+        setIsOpen(false);
       }
 
       setSelectedRange(newRange);
@@ -157,22 +158,28 @@ const DatePicker: React.FC<Props> = ({
   );
 
   const onCancel = useCallback(() => {
-    setOpen(false);
+    setIsOpen(false);
   }, []);
 
   const handleFocus = useCallback(() => {
-    setOpen(true);
+    setIsOpen(true);
   }, []);
 
   const handleClear = useCallback(
-    e => {
-      if (!isClearable) {
+    (e?) => {
+      if (!isClearable && !isFilter) {
         return false;
+      }
+
+      if (isFilter) {
+        setIsOpen(false);
+
+        return setSelectedRange({ to: undefined, from: undefined });
       }
 
       if (e.keyCode === 27) {
         // if escape
-        return setOpen(false);
+        return setIsOpen(false);
       }
 
       if (e.keyCode === 8) {
@@ -188,7 +195,7 @@ const DatePicker: React.FC<Props> = ({
         });
       }
     },
-    [isClearable]
+    [isClearable, isFilter]
   );
 
   const onApply = useCallback(() => {
@@ -198,7 +205,7 @@ const DatePicker: React.FC<Props> = ({
   return (
     <ClickAwayListener onClick={onCancel}>
       <PositionInScreen
-        visible={open}
+        visible={isOpen}
         parent={() => (
           <DatePickInput
             isFilter={isFilter}
@@ -208,7 +215,7 @@ const DatePicker: React.FC<Props> = ({
             dateFormatOverride={dateFormatOverride}
             handleFocus={handleFocus}
             handleClear={handleClear}
-            open={open}
+            open={isOpen}
           />
         )}
       >
