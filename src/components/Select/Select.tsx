@@ -164,22 +164,22 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
     const rightIconNameSelector = useMemo(() => {
       if (isSearchable) {
-        return searchValue ? 'close' : 'search';
+        return searchValue || inputValue.value ? 'close' : 'search';
       }
 
       return open ? 'chevronLargeUp' : 'chevronLargeDown';
-    }, [isSearchable, open, searchValue]);
+    }, [inputValue.value, isSearchable, open, searchValue]);
 
     const handleIconClick = React.useCallback(() => {
       if (isSearchable && open) {
         setOpen(!open);
       }
-      if (searchValue) {
+      if (isSearchable && (searchValue || inputValue.value)) {
         setSearchValue('');
-        setInputValue(defaultValue || selectedOption);
-        asyncSearch('')
+        setInputValue(emptyValue);
+        asyncSearch('');
       }
-    }, [asyncSearch, defaultValue, isSearchable, open, searchValue, selectedOption]);
+    }, [asyncSearch, inputValue.value, isSearchable, open, searchValue]);
 
     const rightIconRender = useMemo(
       () => (
@@ -195,7 +195,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             name={rightIconNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
             onClick={handleIconClick}
-            dataTestId='select-right-icon'
+            dataTestId="select-right-icon"
           />
         </div>
       ),
@@ -237,6 +237,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             status={status}
             value={searchValue || inputValue.label}
             ref={combinedRefs}
+            onBlur={() => setOpen(false)}
           />
           {open && (
             <SelectMenu
