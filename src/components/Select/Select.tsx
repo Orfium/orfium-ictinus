@@ -162,6 +162,25 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         });
     }, [searchValue, options, isAsync]);
 
+    const rightIconNameSelector = useMemo(() => {
+      if (isSearchable) {
+        return searchValue || inputValue.value ? 'close' : 'search';
+      }
+
+      return open ? 'chevronLargeUp' : 'chevronLargeDown';
+    }, [inputValue.value, isSearchable, open, searchValue]);
+
+    const handleIconClick = React.useCallback(() => {
+      if (isSearchable && open) {
+        setOpen(!open);
+      }
+      if (isSearchable && (searchValue || inputValue.value)) {
+        setSearchValue('');
+        setInputValue(emptyValue);
+        asyncSearch('');
+      }
+    }, [asyncSearch, inputValue.value, isSearchable, open, searchValue]);
+
     const rightIconRender = useMemo(
       () => (
         <div
@@ -173,13 +192,14 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           {isLoading && <Loader />}
           <Icon
             size={20}
-            name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
+            name={rightIconNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
-            onClick={() => isSearchable && open && setOpen(!open)}
+            onClick={handleIconClick}
+            dataTestId="select-right-icon"
           />
         </div>
       ),
-      [open, theme.utils, setOpen, isSearchable, isLoading]
+      [isLoading, rightIconNameSelector, theme.utils, handleIconClick]
     );
 
     const handleClick = () => {
