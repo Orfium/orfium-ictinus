@@ -1,6 +1,7 @@
 import { Dayjs } from 'dayjs';
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { FilterType } from '../Filter/types';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
@@ -17,8 +18,8 @@ export type DisabledDates = {
 };
 
 export type Props = {
-  /** This property defines whether the DatePicker component's parent is a Select or a Filter */
-  isFilter?: boolean;
+  /** This property defines whether the DatePicker component's parent is a Select or a Filter and the Filter's type */
+  filterType?: FilterType;
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
@@ -79,7 +80,7 @@ const DatePicker: React.FC<Props> = ({
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
-  isFilter = false,
+  filterType,
   isDefaultNow = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -167,11 +168,11 @@ const DatePicker: React.FC<Props> = ({
 
   const handleClear = useCallback(
     (e?) => {
-      if (!isClearable && !isFilter) {
+      if (!isClearable && filterType !== 'added') {
         return false;
       }
 
-      if (isFilter) {
+      if (filterType) {
         setIsOpen(false);
 
         return setSelectedRange({ to: undefined, from: undefined });
@@ -195,7 +196,7 @@ const DatePicker: React.FC<Props> = ({
         });
       }
     },
-    [isClearable, isFilter]
+    [isClearable, filterType]
   );
 
   const onApply = useCallback(() => {
@@ -208,7 +209,7 @@ const DatePicker: React.FC<Props> = ({
         visible={isOpen}
         parent={() => (
           <DatePickInput
-            isFilter={isFilter}
+            filterType={filterType}
             isRangePicker={isRangePicker}
             selectedDay={selectedRange}
             inputProps={inputProps}

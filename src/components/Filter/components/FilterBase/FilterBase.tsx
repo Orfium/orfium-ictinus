@@ -39,10 +39,12 @@ export const FilterBase = forwardRef<
     /** Defines the filter type */
     filterType?: FilterType;
     buttonType?: 'primary' | 'secondary';
+    isDatePicker?: boolean;
   }
 >((props, ref) => {
   const {
     dataTestId,
+    isDatePicker = false,
     handleOpen,
     disabled,
     onClear,
@@ -96,7 +98,11 @@ export const FilterBase = forwardRef<
           <span css={buttonSpanStyle()}>
             <span css={childrenWrapperStyle()}>
               <span css={labelSpanStyle(open, hasSelectedValue)}>
-                {label && <div>{label} :</div>}
+                {label && (
+                  <div>
+                    {label} {!isDatePicker ? ':' : ''}
+                  </div>
+                )}
                 <span css={valueSpanStyle()}>{selectedItemLabel}</span>
               </span>
             </span>

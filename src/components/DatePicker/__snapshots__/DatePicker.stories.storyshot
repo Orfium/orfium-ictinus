@@ -4334,185 +4334,6 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-25 {
-  position: relative;
-  display: inline-block;
-  height: 2.25rem;
-}
-
-.emotion-26 {
-  background: none;
-  border: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-  max-width: 16.875rem;
-  min-width: 6.875rem;
-}
-
-.emotion-26:hover>div,
-.emotion-26:active>div {
-  background-color: #e7d6ff;
-}
-
-.emotion-26:focus>span {
-  border-top: solid 0.125rem #1451dc;
-  border-bottom: solid 0.125rem #1451dc;
-}
-
-.emotion-27 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0f0f17;
-  background-color: #f3eaff;
-  border: solid 0.0625rem #7a2de5;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 100%;
-  padding: 0 0.25rem 0 1rem;
-  border-radius: 1.5rem;
-  border-right: 0!important;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.emotion-27:hover {
-  border: solid 0.0625rem #7a2de5;
-}
-
-.emotion-28 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  height: 100%;
-}
-
-.emotion-29 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-  max-width: 16.875rem;
-}
-
-.emotion-30 {
-  font-weight: 700;
-  max-width: 13.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-30 div {
-  -webkit-flex: none;
-  -ms-flex: none;
-  flex: none;
-}
-
-.emotion-30 span {
-  margin-left: 0.25rem;
-  font-weight: 700;
-}
-
-.emotion-31 {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  display: inline-block;
-}
-
-.emotion-33 {
-  fill: #0f0f17;
-  width: 1.1875rem;
-  height: 1.1875rem;
-}
-
-.emotion-33 path {
-  fill: #0f0f17;
-}
-
-.emotion-34 {
-  height: 100%;
-  width: 0.0625rem;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  background-color: #7a2de5;
-  border-top: solid 0.0625rem #7a2de5;
-  border-bottom: solid 0.0625rem #7a2de5;
-}
-
-.emotion-35 {
-  font-size: 0.8125rem;
-  cursor: pointer;
-  height: 100%;
-  opacity: 1;
-  -webkit-transition: all 150ms linear;
-  transition: all 150ms linear;
-  color: #0f0f17;
-  background-color: #f3eaff;
-  border: solid 0.0625rem #7a2de5;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  width: 2.125rem;
-  border-left: 0!important;
-  padding-right: 0;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-top-right-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
-}
-
-.emotion-35:hover {
-  border: solid 0.0625rem #7a2de5;
-}
-
-.emotion-35>span {
-  margin-left: -0.3125rem;
-}
-
-.emotion-37 {
-  fill: #7a2de5;
-  width: 1.1875rem;
-  height: 1.1875rem;
-}
-
-.emotion-37 path {
-  fill: #7a2de5;
-}
-
 <div
   style={
     Object {
@@ -4657,9 +4478,213 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
       </div>
     </div>
   </div>
+</div>
+`;
+
+exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+}
+
+.emotion-2 #TOOLTIP_ID_IS_TOOLTIP_BRO {
+  display: none!important;
+}
+
+.emotion-3 {
+  max-width: 17.5rem;
+}
+
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-5 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  min-width: 6.875rem;
+}
+
+.emotion-5:hover>div,
+.emotion-5:active>div {
+  background-color: #e7d6ff;
+}
+
+.emotion-5:focus>span {
+  border-top: solid 0.125rem #1451dc;
+  border-bottom: solid 0.125rem #1451dc;
+}
+
+.emotion-6 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: #0f0f17;
+  background-color: #f3eaff;
+  border: solid 0.0625rem #7a2de5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+}
+
+.emotion-6:hover {
+  border: solid 0.0625rem #7a2de5;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.emotion-8 {
+  margin-left: 0;
+}
+
+.emotion-9 {
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.emotion-9 span {
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+.emotion-10 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #0f0f17;
+  width: 1.1875rem;
+  height: 1.1875rem;
+}
+
+.emotion-12 path {
+  fill: #0f0f17;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
   <div
     className="emotion-1"
   >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      Preset:
+    </div>
     <div
       style={
         Object {
@@ -4677,58 +4702,43 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-25"
+              className="emotion-4"
               data-testid="filter"
             >
               <button
-                className="emotion-26"
+                className="emotion-5"
                 data-testid="filter-filter"
                 disabled={false}
                 onClick={[Function]}
               >
                 <div
-                  className="emotion-27"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-29"
+                      className="emotion-8"
                     >
                       <span
-                        className="emotion-30"
+                        className="emotion-9"
                       >
                         
                         <span
-                          className="emotion-31"
+                          className="emotion-10"
                         >
-                          11/03/2020 - 11/03/2020
+                          Select Dates : 11/03/2020 - 11/03/2020
                         </span>
                       </span>
                     </span>
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-33"
+                        className="emotion-12"
                       />
                     </span>
-                  </span>
-                </div>
-                <span
-                  className="emotion-34"
-                />
-                <div
-                  className="emotion-35"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-37"
-                    />
                   </span>
                 </div>
               </button>
@@ -4754,58 +4764,43 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-25"
+              className="emotion-4"
               data-testid="filter"
             >
               <button
-                className="emotion-26"
+                className="emotion-5"
                 data-testid="filter-filter"
                 disabled={false}
                 onClick={[Function]}
               >
                 <div
-                  className="emotion-27"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-28"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-29"
+                      className="emotion-8"
                     >
                       <span
-                        className="emotion-30"
+                        className="emotion-9"
                       >
                         
                         <span
-                          className="emotion-31"
+                          className="emotion-10"
                         >
-                          11/03/2020 - 11/03/2020
+                          Select Dates : 11/03/2020 - 11/03/2020
                         </span>
                       </span>
                     </span>
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-33"
+                        className="emotion-12"
                       />
                     </span>
-                  </span>
-                </div>
-                <span
-                  className="emotion-34"
-                />
-                <div
-                  className="emotion-35"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-37"
-                    />
                   </span>
                 </div>
               </button>

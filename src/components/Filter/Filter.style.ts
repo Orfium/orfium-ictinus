@@ -40,7 +40,6 @@ export const buttonWrapperStyle = ({
     padding: '0',
     alignItems: 'center',
     height: '100%',
-    maxWidth: rem(270),
     minWidth: rem(110),
 
     ':hover > div, :active > div': {
@@ -183,11 +182,9 @@ export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
   };
 };
 
-export const childrenWrapperStyle = () => (theme: Theme) => {
+export const childrenWrapperStyle = () => () => {
   return {
     marginLeft: 0,
-    marginRight: theme.spacing.sm,
-    maxWidth: rem(270),
   };
 };
 
@@ -195,7 +192,6 @@ export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (the
   return {
     fontWeight:
       open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
-    maxWidth: rem(210),
     display: 'flex',
     alignItems: 'center',
     div: {

@@ -4,6 +4,7 @@ import React, { InputHTMLAttributes } from 'react';
 import useTheme from '../../../hooks/useTheme';
 import { getLocaleFormat } from '../../../utils/helpers';
 import FilterBase from '../../Filter/components/FilterBase';
+import { FilterType } from '../../Filter/types';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
@@ -16,7 +17,7 @@ const ON_CHANGE_MOCK = () => {};
 type Props = {
   handleFocus: () => void;
   handleClear: (event?: React.KeyboardEvent) => void;
-  isFilter: boolean;
+  filterType?: FilterType;
   isRangePicker: boolean;
   selectedDay: Range;
   /** Props for styling the input */
@@ -33,7 +34,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
       handleFocus,
       handleClear,
       isRangePicker,
-      isFilter,
+      filterType,
       inputProps,
       selectedDay,
       dateFormatOverride = 'MM/DD/YYYY',
@@ -49,24 +50,27 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
     const getDateFormatted = React.useCallback(formatDate, []);
 
     const renderBase = React.useMemo(() => {
-      if (isFilter) {
+      if (filterType) {
         return (
           <FilterBase
+            isDatePicker
             dataTestId={'filter'}
             disabled={false}
             handleOpen={handleFocus}
-            filterType={'added'}
+            filterType={filterType}
             onClear={handleClear}
             selectedItemLabel={
               selectedDay.from &&
-              `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+              `Select Date${isRangePicker ? 's' : ''} : ${getDateFormatted(selectedDay.from)} ${
+                isRangePicker ? `- ${getDateFormatted(selectedDay.to)}` : ''
+              }`
             }
             open={open}
             hasSelectedValue={Boolean(
               selectedDay.from &&
                 `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
             )}
-            label={!selectedDay.from ? 'Date (start) - Date (end)' : ''}
+            label={!selectedDay.from ? `Select Date${isRangePicker ? 's' : ''}` : ''}
             iconName={'calendarEmpty'}
             iconSize={19}
             iconColor={theme.utils.getColor('darkGrey', 850)}
@@ -106,7 +110,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
       handleClear,
       handleFocus,
       inputProps,
-      isFilter,
+      filterType,
       isRangePicker,
       open,
       ref,
