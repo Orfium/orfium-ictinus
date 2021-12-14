@@ -237,7 +237,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             status={status}
             value={searchValue || inputValue.label}
             ref={combinedRefs}
-            onBlur={() => setOpen(false)}
           />
           {open && (
             <SelectMenu
