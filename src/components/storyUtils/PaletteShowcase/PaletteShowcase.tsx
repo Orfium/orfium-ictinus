@@ -77,12 +77,12 @@ const PaletteShowcase = () => {
                     onClick={() => {
                       setPaletteColor(color);
                     }}
-                    css={colorBox(
+                    css={colorBox({
                       color,
                       colorName,
-                      ((index + 1) * 50) as typeof colorShades[number],
-                      paletteColor === color
-                    )}
+                      shade: ((index + 1) * 50) as typeof colorShades[number],
+                      isSelectedColor: paletteColor === color,
+                    })}
                   >
                     <div>{(index + 1) * 50}</div>
                     <div css={{ textTransform: 'capitalize' }}>{color}</div>
@@ -116,7 +116,7 @@ const PaletteShowcase = () => {
             {palePalette.map(([colorName, color]) => (
               <div
                 key={`${color}-${colorName}`}
-                css={colorBox(color, colorName, 100, false, false)}
+                css={colorBox({ color, colorName, isSelectedColor: false, isHoverable: false })}
               >
                 <div>{colorName}</div>
                 <div css={{ textTransform: 'capitalize' }}>{color}</div>
