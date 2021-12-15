@@ -22,7 +22,7 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
     <div style={{ flex: 1 }}>
       <h1> Color Utility </h1>
       <div css={container}>
-        <div css={{ flexDirection: 'column' }}>
+        <div css={{ flexDirection: 'column', marginRight: '8px' }}>
           <div css={inputWrapper}>
             <TextField
               placeholder={color.normal || DEFAULT_COLOR}
@@ -50,7 +50,10 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
         <div css={colorBoxWrapper}>
           {colors.map(([shade, color]) => (
             // @ts-ignore
-            <div key={color} css={colorBox(color, 'yellow', shade, false, false)}>
+            <div
+              key={`${shade}-${color}`}
+              css={colorBox({ color, isSelectedColor: false, isHoverable: false })}
+            >
               <div>{shade}</div>
               <div css={{ textTransform: 'capitalize' }}>{color}</div>
             </div>
