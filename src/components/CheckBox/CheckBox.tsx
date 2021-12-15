@@ -76,7 +76,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
     return (
       <span ref={ref} css={wrapperStyle({ disabled })}>
         <span
-          css={checkboxWrapperStyle()}
+          css={checkboxWrapperStyle({disabled})}
           onClick={e => {
             e.stopPropagation();
             if (e.currentTarget === e.target) {
@@ -99,7 +99,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
             <Icon
               name={intermediate ? 'minus' : 'checkmark'}
               size={24}
-              color={filled ? `${pickTextColorFromSwatches(color, shade)}` : 'primary'}
+              color={pickTextColorFromSwatches(color, shade)}
             />
           </label>
         </span>

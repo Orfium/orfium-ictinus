@@ -12,7 +12,7 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   display: flex;
 `;
 
-export const checkboxWrapperStyle = () => (): SerializedStyles => css`
+export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
   border-radius: 100%;
   display: flex;
   width: ${rem(48)};
@@ -30,31 +30,27 @@ export const checkboxWrapperStyle = () => (): SerializedStyles => css`
     position: absolute;
   }
 
-  &:hover {
+  ${!disabled &&
+    `&:hover {
     &:before {
       display: block;
       background: rgba(0, 0, 0, 0.05);
     }
-  }
+  }`}
 `;
 
 const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }) => {
-  return filled
-    ? `background: ${
-        checked
-          ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
-          : theme.utils.getColor('lightGrey', 300)
-      }`
-    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${
-        checked
-          ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
-          : theme.utils.getColor('lightGrey', 300)
-      };`;
+  return checked
+    ? `background: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')}`
+    : filled
+    ? `background: ${theme.utils.getColor('lightGrey', 300)}`
+    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
+        'lightGrey',
+        300
+      )};`;
 };
 
-export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
-  theme: Theme
-): SerializedStyles => {
+export const checkboxStyle = ({ checked, filled }: Props) => (theme: Theme): SerializedStyles => {
   return css`
     border: 0;
     border-radius: ${rem(2)};
@@ -78,7 +74,7 @@ export const checkboxStyle = ({ intermediate, checked, filled }: Props) => (
       vertical-align: text-top;
       width: ${rem(24)};
       height: ${rem(24)};
-      ${getBackgroundColor({ intermediate, checked, filled, theme })};
+      ${getBackgroundColor({ checked, filled, theme })};
       border-radius: ${rem(4)};
     }
 
