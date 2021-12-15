@@ -1,7 +1,7 @@
 import { Dayjs } from 'dayjs';
 import React, { useCallback, useEffect, useState } from 'react';
 
-import { FilterType } from '../Filter/types';
+import { FilterType, StyleType } from '../Filter/types';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
@@ -18,8 +18,6 @@ export type DisabledDates = {
 };
 
 export type Props = {
-  /** This property defines whether the DatePicker component's parent is a Select or a Filter and the Filter's type */
-  filterType?: FilterType;
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
@@ -39,6 +37,12 @@ export type Props = {
   isClearable?: boolean;
   /** if the datepicker's default date is today instead of placeholder text */
   isDefaultNow?: boolean;
+  /** This property defines whether the DatePicker component's parent is a Select or a Filter and the Filter's type */
+  filterType?: FilterType;
+  /** The type of the filter button's palette - defaults to "primary" */
+  buttonType?: 'primary' | 'secondary';
+  /** Defines the style type of the filter button */
+  styleType?: StyleType;
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -81,6 +85,8 @@ const DatePicker: React.FC<Props> = ({
   dateFormatOverride = undefined,
   isClearable = false,
   filterType,
+  styleType,
+  buttonType,
   isDefaultNow = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -210,6 +216,8 @@ const DatePicker: React.FC<Props> = ({
         parent={() => (
           <DatePickInput
             filterType={filterType}
+            buttonType={buttonType}
+            styleType={styleType}
             isRangePicker={isRangePicker}
             selectedDay={selectedRange}
             inputProps={inputProps}

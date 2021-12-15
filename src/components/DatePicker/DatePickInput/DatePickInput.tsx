@@ -4,7 +4,7 @@ import React, { InputHTMLAttributes } from 'react';
 import useTheme from '../../../hooks/useTheme';
 import { getLocaleFormat } from '../../../utils/helpers';
 import FilterBase from '../../Filter/components/FilterBase';
-import { FilterType } from '../../Filter/types';
+import { FilterType, StyleType } from '../../Filter/types';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
@@ -24,6 +24,8 @@ type Props = {
   inputProps?: TextFieldProps;
   dateFormatOverride?: DateFormatType;
   open: boolean;
+  buttonType?: 'primary' | 'secondary';
+  styleType?: StyleType;
 };
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -32,6 +34,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     {
       handleFocus,
+      buttonType,
+      styleType,
       handleClear,
       isRangePicker,
       filterType,
@@ -56,6 +60,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             isDatePicker
             dataTestId={'filter'}
             disabled={false}
+            buttonType={buttonType || 'primary'}
+            styleType={styleType || 'filled'}
             handleOpen={handleFocus}
             filterType={filterType}
             onClear={handleClear}
@@ -74,7 +80,6 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             iconName={'calendarEmpty'}
             iconSize={19}
             iconColor={theme.utils.getColor('darkGrey', 850)}
-            styleType={'filled'}
           />
         );
       }
