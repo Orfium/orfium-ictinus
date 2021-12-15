@@ -7,7 +7,7 @@ const ThemeWrapper: React.FC = ({ children }) => {
   return (
     <ThemeProvider
       theme={{
-        palette: { primary: flatPaletteConfig.blue, secondary: flatPaletteConfig.darkGrey },
+        palette: { primary: flatPaletteConfig.blue, secondary: flatPaletteConfig.teal },
       }}
     >
       {children}
