@@ -1,7 +1,12 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 
 import { transition } from '../../../theme/functions';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../../theme/palette';
+import {
+  colorShades,
+  flatColors,
+  getAATextColor,
+  pickTextColorFromSwatches,
+} from '../../../theme/palette';
 
 export const paletteWrapper = css`
   display: grid;
@@ -16,14 +21,20 @@ export const paletteColorWrapper = css`
   margin: 10px;
 `;
 
-export const colorNameBox = (color: string, colorName: typeof flatColors[number]) => css`
+export const colorNameBox = (
+  color: string,
+  colorName?: typeof flatColors[number],
+  shade?: typeof colorShades[number]
+): SerializedStyles => css`
   height: 100px;
   background: ${color};
   width: calc(100% - 20px);
   padding: 10px;
   display: flex;
   flex-direction: column;
-  color: ${pickTextColorFromSwatches(colorName, 650)};
+  color: ${shade && colorName
+    ? pickTextColorFromSwatches(colorName, shade)
+    : getAATextColor(color)};
 `;
 
 export const colorBoxWrapper = css`
@@ -33,17 +44,27 @@ export const colorBoxWrapper = css`
   width: 100%;
 `;
 
-export const colorBox = (
-  color: string,
-  colorName: typeof flatColors[number],
-  shade: typeof colorShades[number],
-  isSelectedColor: boolean,
-  isHoverable = true
-) => css`
+type Props = {
+  color: string;
+  colorName?: typeof flatColors[number];
+  shade?: typeof colorShades[number];
+  isSelectedColor: boolean;
+  isHoverable?: boolean;
+};
+
+export const colorBox = ({
+  color,
+  colorName,
+  shade,
+  isSelectedColor,
+  isHoverable = true,
+}: Props): SerializedStyles => css`
   height: 50px;
   width: calc(100% - 20px);
   background: ${color};
-  color: ${pickTextColorFromSwatches(colorName, shade)};
+  color: ${shade && colorName
+    ? pickTextColorFromSwatches(colorName, shade)
+    : getAATextColor(color)};
   justify-content: space-between;
   align-items: center;
   display: flex;
