@@ -1,3 +1,5 @@
+import { getContrast } from 'polished';
+
 import { getColor } from './index';
 import { lightPaletteConfig } from './palette.config';
 import { enhancePaletteWithShades } from './utils';
@@ -117,76 +119,22 @@ export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
 
 /**
  * this function picks either white or black color based on the background that is passed
- * swatches are calculated based on accessibility by the design team and splited to those two colors
+ * swatches are calculated based on accessibility by getAATextColor function and splited to those two colors
  **/
 export const pickTextColorFromSwatches = (
   color: typeof flatColors[number],
   shade: typeof colorShades[number]
-) => {
-  const colors950To750: typeof flatColors[number][] = [
-    'greyScale',
-    'darkGrey',
-    'lightGrey',
-    'red',
-    'magenta',
-    'purple',
-    'darkBlue',
-    'blue',
-    'lightBlue',
-    'teal',
-    'green',
-    'yellow',
-    'orange',
-    'darkOrange',
-    'neutralBlack',
-  ];
-  const colorsForWhiteText: Partial<Record<
-    typeof colorShades[number],
-    typeof flatColors[number][]
-  >> = {
-    950: colors950To750,
-    900: colors950To750,
-    850: colors950To750,
-    800: colors950To750,
-    750: colors950To750,
-    700: [
-      'greyScale',
-      'darkGrey',
-      'lightGrey',
-      'red',
-      'magenta',
-      'purple',
-      'darkBlue',
-      'blue',
-      'lightBlue',
-      'green',
-      'orange',
-      'darkOrange',
-    ],
-    650: [
-      'greyScale',
-      'darkGrey',
-      'lightGrey',
-      'red',
-      'magenta',
-      'purple',
-      'darkBlue',
-      'blue',
-      'green',
-      'orange',
-      'darkOrange',
-    ],
-    600: ['greyScale', 'darkGrey', 'red', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
-    550: ['greyScale', 'darkGrey', 'red', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
-    500: ['darkGrey', 'magenta', 'purple', 'darkBlue', 'blue', 'darkOrange'],
-    450: ['darkGrey', 'purple', 'darkBlue', 'blue', 'darkOrange'],
-    400: ['darkGrey', 'darkOrange'],
-    350: ['darkGrey', 'darkOrange'],
-  };
-  const pickedShade = colorsForWhiteText[shade];
-  const pickedColor =
-    (pickedShade && pickedShade?.find(item => item === color)) || color === 'neutralBlack';
+): string => {
   const palette = enhancePaletteWithShades(lightPaletteConfig);
+  const hexColorCode = getColor(palette)(color, shade);
 
-  return pickedColor ? '#fff' : getColor(palette)('darkGrey', 850);
+  return getAATextColor(hexColorCode);
+};
+
+export const getAATextColor = (color: string): string => {
+  const palette = enhancePaletteWithShades(lightPaletteConfig);
+  const white = palette.white;
+  const black = palette.black;
+
+  return getContrast(color, black) > getContrast(color, white) ? black : white;
 };

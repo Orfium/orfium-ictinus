@@ -14,6 +14,7 @@ describe('Generic Select', () => {
     const handleSubmit = jest.fn();
 
     let selectInput: HTMLInputElement;
+    let clearIcon: HTMLElement;
 
     beforeEach(() => {
       render(
@@ -48,6 +49,18 @@ describe('Generic Select', () => {
       await selectDropdownOption(selectInput, dropdownList[1].label);
 
       expect(handleSubmit).toHaveBeenCalledTimes(1);
+    });
+
+    it('should revert input value back to “default”, when clear icon is clicked', async () => {
+      selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
+      userEvent.type(selectInput, 'Greece');
+
+      expect(selectInput.value).toBe('Greece');
+      
+      clearIcon = screen.getByTestId('select-right-icon');
+      userEvent.click(clearIcon);
+      
+      expect(selectInput.value).not.toBe('Greece');
     });
   });
 
