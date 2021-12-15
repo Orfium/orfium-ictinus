@@ -21,6 +21,7 @@ export type SelectOption = {
   label: string;
   isDisabled?: boolean;
   tooltipInfo?: string;
+  options?: SelectOption[];
 };
 
 export type Props = {
@@ -140,10 +141,45 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         return options;
       }
 
-      return options.filter(
-        option => !searchValue || option.label.toLowerCase().includes(searchValue.toLowerCase())
-      );
+      return options
+        .filter(
+          option =>
+            !searchValue ||
+            option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+            !!option.options?.find(option =>
+              option.label.toLowerCase().includes(searchValue.toLowerCase())
+            )
+        )
+        .map(option => {
+          return option.label.toLowerCase().includes(searchValue.toLowerCase())
+            ? option
+            : {
+                ...option,
+                options: option.options?.filter(option =>
+                  option.label.toLowerCase().includes(searchValue.toLowerCase())
+                ),
+              };
+        });
     }, [searchValue, options, isAsync]);
+
+    const rightIconNameSelector = useMemo(() => {
+      if (isSearchable) {
+        return searchValue || inputValue.value ? 'close' : 'search';
+      }
+
+      return open ? 'chevronLargeUp' : 'chevronLargeDown';
+    }, [inputValue.value, isSearchable, open, searchValue]);
+
+    const handleIconClick = React.useCallback(() => {
+      if (isSearchable && open) {
+        setOpen(!open);
+      }
+      if (isSearchable && (searchValue || inputValue.value)) {
+        setSearchValue('');
+        setInputValue(emptyValue);
+        asyncSearch('');
+      }
+    }, [asyncSearch, inputValue.value, isSearchable, open, searchValue]);
 
     const rightIconRender = useMemo(
       () => (
@@ -156,13 +192,14 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           {isLoading && <Loader />}
           <Icon
             size={20}
-            name={open ? 'chevronLargeUp' : 'chevronLargeDown'}
+            name={rightIconNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
-            onClick={() => isSearchable && open && setOpen(!open)}
+            onClick={handleIconClick}
+            dataTestId="select-right-icon"
           />
         </div>
       ),
-      [open, theme.utils, setOpen, isSearchable, isLoading]
+      [isLoading, rightIconNameSelector, theme.utils, handleIconClick]
     );
 
     const handleClick = () => {

@@ -1,34 +1,36 @@
+import { ClickEvent } from 'hooks/useLoading';
 import React from 'react';
-import { colorShades, flatColors } from 'theme/palette';
+import { flatColors } from 'theme/palette';
 import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
+import { BASE_SHADE } from '../../theme/palette';
 import { DivProps } from '../../utils/common';
-import { iconWrapperStyle, wrapperStyle } from './Chip.style';
+import { chipStyle, closeIconWrapperStyle } from './Chip.style';
+import Badge from './components/Badge';
+import Avatar from 'components/Avatar';
+import Icon from 'components/Icon';
 
 export type Props = {
   /**
-   * Style of input field
-   * @default filled
+   * Determines whether the chip should be read-only or interactive.
+   * @default read-only
    */
-  styleType?: 'filled' | 'outlined';
-  /** This property define the size of the button.
-   *  @default md
-   * */
-  size?: 'md' | 'sm';
-  /** Defines the fill color of the component, if filled */
+  styleType?: 'read-only' | 'interactive';
+  /** Defines the fill color of the component, if filled. */
   fill?: typeof flatColors[number];
-  /** Defines the shade of the fill */
-  shade?: typeof colorShades[number];
-  /** An optional icon to show to the left */
-  leftIcon?: JSX.Element;
-  /** */
-  onLeftIconClick?: React.ReactEventHandler;
-  /** An optional icon to show to the right */
-  rightIcon?: JSX.Element;
-  /** */
-  onRightIconClick?: React.ReactEventHandler;
-  /**  */
+  /** An optional thumbnail to show to the left. */
+  thumbnail?: { src?: string; name?: string };
+  /** Boolean defining if the chip is selected. */
+  isSelected?: boolean;
+  /** Boolean defining if the check icon is shown. */
+  isChecked?: boolean;
+  /** Defines the number value of the badge */
+  badgeNumber?: number;
+  /** Callback function for onClick. */
+  onClick?: (event: ClickEvent) => void;
+  /** A callback that is being triggered when type is interactive and you press the X icon. */
+  onClear?: () => void;
 };
 
 type TestProps = {
@@ -38,34 +40,65 @@ type TestProps = {
 const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
   (
     {
-      styleType = 'filled',
-      size = 'md',
+      styleType = 'read-only',
       fill,
-      shade,
-      leftIcon,
-      onLeftIconClick: leftIconHandler,
-      rightIcon,
-      onRightIconClick: rightIconHandler,
+      thumbnail,
+      isSelected,
+      isChecked,
+      badgeNumber,
+      onClick,
+      onClear,
       dataTestId = '',
       children,
     },
     ref
   ) => {
+    if (styleType === 'read-only' && (isSelected || isChecked || badgeNumber)) {
+      throw new Error(
+        'The properties isSelected, isChecked and badgeNumber are only for Interactive style type Chips.'
+      );
+    }
+
+    if (styleType === 'interactive' && thumbnail) {
+      throw new Error('The property thumbnail is only for Read-Only style type Chips.');
+    }
+
     return (
       <div
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
-        css={wrapperStyle({ styleType, size, fill, shade, leftIcon, rightIcon })}
+        onClick={onClick}
+        css={chipStyle({ styleType, fill, isSelected, onClear, onClick })}
       >
-        {leftIcon && (
-          <div onClick={leftIconHandler} css={iconWrapperStyle(size, leftIconHandler)}>
-            {leftIcon}
+        {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
+        {thumbnail && (
+          <div>
+            <Avatar size={'xxxs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
+              {thumbnail.name}
+            </Avatar>
           </div>
         )}
         <div>{children}</div>
-        {rightIcon && (
-          <div onClick={rightIconHandler} css={iconWrapperStyle(size, rightIconHandler)}>
-            {rightIcon}
+        {badgeNumber && (
+          <Badge
+            fill={fill}
+            badgeNumber={badgeNumber}
+            isSelected={isSelected}
+            dataTestId={dataTestId}
+          />
+        )}
+        {onClear && (
+          <div css={closeIconWrapperStyle()}>
+            <Icon
+              size={14}
+              name={'close'}
+              color={'darkGrey'}
+              variant={850}
+              onClick={e => {
+                e.stopPropagation();
+                onClear();
+              }}
+            />
           </div>
         )}
       </div>

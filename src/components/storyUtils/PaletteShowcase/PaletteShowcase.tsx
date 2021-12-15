@@ -114,7 +114,10 @@ const PaletteShowcase = () => {
             {/*
         // @ts-ignore */}
             {palePalette.map(([colorName, color]) => (
-              <div key={color} css={colorBox(color, colorName, 100, false, false)}>
+              <div
+                key={`${color}-${colorName}`}
+                css={colorBox(color, colorName, 100, false, false)}
+              >
                 <div>{colorName}</div>
                 <div css={{ textTransform: 'capitalize' }}>{color}</div>
               </div>
