@@ -15,7 +15,7 @@ export const notificationsContainer = (
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
-  height: ${rem(46)};
+  minheight: ${rem(46)};
   border-radius: ${theme.spacing.xsm};
   color: ${theme.utils.getColor('darkGrey', 850)};
   font-size: ${theme.typography.fontSizes[14]};

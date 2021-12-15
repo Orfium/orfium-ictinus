@@ -23,7 +23,7 @@ export type Props = {
   /** Show notification icon based on the type */
   withIcon?: boolean;
   /** The informative message of the Notification */
-  message: string;
+  message: string | React.ReactNode;
   /** The variant of the Notification */
   variant: CompactNotificationVariants;
   /** The type of the Notification */
