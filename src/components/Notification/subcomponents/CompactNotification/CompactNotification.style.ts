@@ -28,6 +28,10 @@ export const infoContainer = () => (theme: Theme): SerializedStyles => css`
   padding: 0 ${theme.spacing.md};
 `;
 
+export const messageContainer = () => (theme: Theme): SerializedStyles => css`
+  padding: ${theme.spacing.md} 0;
+`;
+
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;

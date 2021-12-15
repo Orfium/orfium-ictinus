@@ -14,6 +14,7 @@ import {
   notificationsContainer,
   headContainer,
   primaryActionContainer,
+  messageContainer,
 } from './CompactNotification.style';
 import { AcceptedIconNames } from 'components/Icon/types';
 
@@ -79,7 +80,7 @@ const CompactNotification: React.FC<Props> = ({
           </div>
         )}
         {variant === 'banner' && <div css={headContainer()}>{title}</div>}
-        <div>{message}</div>
+        <div css={messageContainer()}>{message}</div>
       </div>
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
