@@ -2,11 +2,12 @@ import { css } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
+import uniqueId from 'lodash/uniqueId';
 import values from 'lodash/values';
 import React from 'react';
 import { useState, Fragment, useRef } from 'react';
 import { flexCenter } from 'theme/functions';
-import { colorShades, flatColors, neutralColors, paleColors } from 'theme/palette';
+import { colorShades, flatColors, neutralColors, paleColors, BASE_SHADE } from 'theme/palette';
 
 import ColorUtility from '../ColorUtility/ColorUtility';
 import {
@@ -50,7 +51,7 @@ const PaletteShowcase = () => {
           // .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
           .map(([colorName, colors]) => (
             <div key={colorName} css={paletteColorWrapper}>
-              <div css={colorNameBox(colors[Math.round(colors.length / 2)], colorName)}>
+              <div css={colorNameBox(colors[Math.floor(colors.length / 2)], colorName, BASE_SHADE)}>
                 <div
                   css={css`
                     flex: 1;
@@ -67,13 +68,13 @@ const PaletteShowcase = () => {
                     {neutralColors.find(neutralColor => neutralColor === colorName) &&
                       'system color'}
                   </div>
-                  Base (500)
+                  Base ({BASE_SHADE})
                 </div>
               </div>
               <div css={colorBoxWrapper}>
                 {colors.map((color, index) => (
                   <div
-                    key={color}
+                    key={uniqueId(`${color}-${colorName}`)}
                     onClick={() => {
                       setPaletteColor(color);
                     }}
@@ -96,7 +97,7 @@ const PaletteShowcase = () => {
         <h3>PALE PALETTE</h3>
         <p>Another palette is the pale where is not having shades.</p>
         <div css={paletteColorWrapper}>
-          <div css={colorNameBox('white', 'yellow')}>
+          <div css={colorNameBox('white')}>
             <div
               css={css`
                 flex: 1;
@@ -115,7 +116,7 @@ const PaletteShowcase = () => {
         // @ts-ignore */}
             {palePalette.map(([colorName, color]) => (
               <div
-                key={`${color}-${colorName}`}
+                key={uniqueId(`${color}-${colorName}`)}
                 css={colorBox({ color, colorName, isSelectedColor: false, isHoverable: false })}
               >
                 <div>{colorName}</div>

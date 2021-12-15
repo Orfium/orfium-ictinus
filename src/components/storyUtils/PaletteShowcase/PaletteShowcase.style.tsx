@@ -21,14 +21,20 @@ export const paletteColorWrapper = css`
   margin: 10px;
 `;
 
-export const colorNameBox = (color: string, colorName: typeof flatColors[number]) => css`
+export const colorNameBox = (
+  color: string,
+  colorName?: typeof flatColors[number],
+  shade?: typeof colorShades[number]
+): SerializedStyles => css`
   height: 100px;
   background: ${color};
   width: calc(100% - 20px);
   padding: 10px;
   display: flex;
   flex-direction: column;
-  color: ${pickTextColorFromSwatches(colorName, 650)};
+  color: ${shade && colorName
+    ? pickTextColorFromSwatches(colorName, shade)
+    : getAATextColor(color)};
 `;
 
 export const colorBoxWrapper = css`
@@ -56,7 +62,9 @@ export const colorBox = ({
   height: 50px;
   width: calc(100% - 20px);
   background: ${color};
-  color: ${shade && colorName? pickTextColorFromSwatches(colorName, shade) : getAATextColor(color)};
+  color: ${shade && colorName
+    ? pickTextColorFromSwatches(colorName, shade)
+    : getAATextColor(color)};
   justify-content: space-between;
   align-items: center;
   display: flex;

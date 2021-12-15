@@ -134,7 +134,7 @@ export const pickTextColorFromSwatches = (
 export const getAATextColor = (color: string): string => {
   const palette = enhancePaletteWithShades(lightPaletteConfig);
   const white = palette.white;
-  const black = getColor(palette)('darkGrey', 850);
+  const black = palette.black;
 
   return getContrast(color, black) > getContrast(color, white) ? black : white;
 };

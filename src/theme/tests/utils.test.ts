@@ -20,7 +20,7 @@ describe('GetColor functionalities', () => {
 
 describe('pickTextColorFromSwatches functionalities', () => {
   test('pickTextColorFromSwatches works with the given colors and to return the correct color', () => {
-    const black = '#0f0f17';
+    const black = 'black';
     const white = 'white';
 
     expect(pickTextColorFromSwatches('darkGrey', 300)).toBe(black);
