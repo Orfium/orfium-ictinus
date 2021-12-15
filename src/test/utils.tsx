@@ -18,7 +18,7 @@ const renderWithThemeProvider = (children: JSX.Element) => {
   return render(
     <ThemeProvider
       theme={{
-        palette: { primary: flatPaletteConfig.purple, secondary: flatPaletteConfig.magenta },
+        palette: { primary: flatPaletteConfig.blue, secondary: flatPaletteConfig.darkGrey },
       }}
     >
       {children}
