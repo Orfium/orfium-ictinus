@@ -217,6 +217,7 @@ function Table<T>({
                         setSelectedIds(data.map(({ id }) => id));
                       }
                     }}
+                    filled={false}
                   />
                 </TableCell>
               )}
@@ -250,7 +251,9 @@ function Table<T>({
         {(onCheck || topRightArea || type === 'normal') && (
           <thead>
             {type === 'normal' && (
-              <TableRow css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck), fixedHeader)}>
+              <TableRow
+                css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck), fixedHeader)}
+              >
                 {onCheck && (
                   <TableCell
                     component={'th'}
