@@ -167,7 +167,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         return searchValue || inputValue.value ? 'close' : 'search';
       }
 
-      return open ? 'chevronLargeUp' : 'chevronLargeDown';
+      return open ? 'triangleUp' : 'triangleDown';
     }, [inputValue.value, isSearchable, open, searchValue]);
 
     const handleIconClick = React.useCallback(() => {
@@ -191,7 +191,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         >
           {isLoading && <Loader />}
           <Icon
-            size={20}
+            size={isSearchable ? 20 : 12}
             name={rightIconNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
             onClick={handleIconClick}
