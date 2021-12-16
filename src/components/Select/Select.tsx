@@ -199,7 +199,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           />
         </div>
       ),
-      [isLoading, rightIconNameSelector, theme.utils, handleIconClick]
+      [isLoading, isSearchable, rightIconNameSelector, theme.utils, handleIconClick]
     );
 
     const handleClick = () => {

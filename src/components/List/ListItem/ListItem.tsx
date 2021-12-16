@@ -52,7 +52,7 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       <div
         css={listItemStyle({ size, selected, highlighted, disabled, isGroupItem })}
         ref={selected ? ref : null}
-        onClick={handleListItemSelect}
+        onClick={!disabled ? handleListItemSelect : () => {}}
         onMouseDown={event => {
           event.preventDefault();
         }}
