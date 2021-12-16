@@ -122,6 +122,7 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
   return {
     height: '100%',
     width: rem(1),
+    minWidth: rem(1),
     transition: 'all 150ms linear',
     backgroundColor: getBorder({
       styleType,
