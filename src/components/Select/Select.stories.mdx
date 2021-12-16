@@ -322,18 +322,31 @@ Simple select component with grouped data and searchable input
 
 # Not Searchable Select
 
-Select that support asynchronous fetching, with loading status
+Not Searchable Select
 
 <Preview>
   <Story name="Not Searchable Select">
     <Stack>
       <Select
-        highlightSearch
         isSearchable={false}
         label={'Flavour'}
         options={options}
         handleSelectedOption={handleSelectedOption}
         styleType={'filled'}
+      />
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+      />
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'elevated'}
       />
     </Stack>
   </Story>

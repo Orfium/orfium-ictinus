@@ -1767,6 +1767,70 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   fill: #5f6c85;
 }
 
+.emotion-15 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 0.125rem solid transparent;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+}
+
+.emotion-15:focus-within,
+.emotion-15:hover {
+  box-shadow: 0 0 0 0.0625rem transparent;
+}
+
+.emotion-15:hover {
+  background-color: #f3f5f8!important;
+  border-color: #cfd7e5;
+  box-shadow: false;
+}
+
+.emotion-15:focus-within {
+  border-color: #cfd7e5;
+  background-color: white;
+}
+
+.emotion-26 {
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  border-radius: 0.25rem;
+  cursor: auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: white;
+  border: 0.125rem solid transparent;
+  box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
+}
+
+.emotion-26:hover {
+  background-color: #f3f5f8!important;
+  border-color: false;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+}
+
+.emotion-26:focus-within {
+  border-color: #cfd7e5;
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  background-color: white;
+}
+
 <div
   style={
     Object {
@@ -1813,6 +1877,142 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
           >
             <div
               className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    data-testid="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={true}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <div
+                    className="emotion-10"
+                  >
+                    <span
+                      className="emotion-11"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-12"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-15"
+            >
+              <div
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    data-testid="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={true}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <div
+                    className="emotion-10"
+                  >
+                    <span
+                      className="emotion-11"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-12"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-26"
             >
               <div
                 className="emotion-5"
