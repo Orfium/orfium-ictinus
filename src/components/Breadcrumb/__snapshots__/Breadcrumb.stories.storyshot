@@ -1,420 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Breadcrumb Advanced Breadcrumbs with options per data item 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex-wrap: nowrap;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.emotion-2>li {
-  margin: auto;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: default;
-  font-weight: 400;
-  color: #5f6c85;
-}
-
-.emotion-3 button {
-  height: auto;
-  background-color: white;
-  padding: 0.5rem;
-}
-
-.emotion-3 button:focus {
-  outline: none;
-  background-color: #c3cddf;
-}
-
-.emotion-3 button>span {
-  margin-left: 0;
-}
-
-.emotion-3>div>div>div {
-  top: 3rem;
-  box-shadow: #232336 0px 0px 1rem;
-}
-
-.emotion-4 {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: inherit;
-  padding: 0.5rem;
-}
-
-.emotion-4:hover {
-  color: #232336;
-}
-
-.emotion-5 {
-  margin: auto 0.5rem;
-  color: #5f6c85;
-  cursor: default;
-}
-
-.emotion-6 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-7 {
-  fill: black;
-  width: 0.625rem;
-  height: 0.625rem;
-}
-
-.emotion-7 path {
-  fill: black;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  position: relative;
-}
-
-.emotion-9 {
-  padding: 0.125rem;
-  margin-top: 0.0625rem;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  border-radius: 3rem;
-  background-color: #cfd7e5;
-}
-
-.emotion-11 {
-  fill: #515d72;
-  width: 1.375rem;
-  height: 1.375rem;
-}
-
-.emotion-11 path {
-  fill: #515d72;
-}
-
-.emotion-20 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: default;
-  font-weight: 500;
-  color: #0f0f17;
-}
-
-.emotion-20 button {
-  height: auto;
-  background-color: white;
-  padding: 0.5rem;
-}
-
-.emotion-20 button:focus {
-  outline: none;
-  background-color: #c3cddf;
-}
-
-.emotion-20 button>span {
-  margin-left: 0;
-}
-
-.emotion-20>div>div>div {
-  top: 3rem;
-  box-shadow: #232336 0px 0px 1rem;
-}
-
-.emotion-21 {
-  position: relative;
-  display: inline-block;
-}
-
-.emotion-22 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-}
-
-.emotion-22:hover,
-.emotion-22:focus {
-  background-color: #6a00ff;
-}
-
-.emotion-22:active {
-  background-color: #50c;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-24 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-25 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-27 {
-  fill: white;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-27 path {
-  fill: white;
-}
-
-<div
-  style={
-    Object {
-      "margin": 5,
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <ol
-        aria-label="Breadcrumb"
-        className="emotion-2"
-      >
-        <li>
-          <div
-            className="emotion-3"
-          >
-            <a
-              className="emotion-4"
-              href="/first-level"
-              onClick={[Function]}
-            >
-              First Level
-            </a>
-            <span
-              className="emotion-5"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </span>
-          </div>
-        </li>
-        <li
-          role="listitem"
-          style={
-            Object {
-              "margin": "auto",
-            }
-          }
-        >
-          <div
-            className="emotion-8"
-          >
-            <span
-              className="emotion-9"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-11"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-5"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </span>
-          </div>
-        </li>
-        <li>
-          <div
-            className="emotion-3"
-          >
-            <a
-              className="emotion-4"
-              href="/forth-level"
-              onClick={[Function]}
-            >
-              Forth Level
-            </a>
-            <span
-              className="emotion-5"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </span>
-          </div>
-        </li>
-        <li>
-          <div
-            className="emotion-20"
-          >
-            <div
-              role="button"
-            >
-              <div
-                className="emotion-21"
-              >
-                <button
-                  className="emotion-22"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-23"
-                  >
-                    <span
-                      className="emotion-24"
-                    >
-                      <span>
-                        Fifth Level
-                      </span>
-                    </span>
-                    <span
-                      className="emotion-25"
-                    >
-                      <span
-                        className="emotion-6"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-27"
-                        />
-                      </span>
-                    </span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
 .emotion-0 {
   background-color: transparent;
@@ -558,7 +143,7 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   fill: #515d72;
 }
 
-.emotion-20 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -568,90 +153,24 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   color: #0f0f17;
 }
 
-.emotion-20 button {
+.emotion-15 button {
   height: auto;
   background-color: white;
   padding: 0.5rem;
 }
 
-.emotion-20 button:focus {
+.emotion-15 button:focus {
   outline: none;
   background-color: #c3cddf;
 }
 
-.emotion-20 button>span {
+.emotion-15 button>span {
   margin-left: 0;
 }
 
-.emotion-20>div>div>div {
+.emotion-15>div>div>div {
   top: 3rem;
   box-shadow: #232336 0px 0px 1rem;
-}
-
-.emotion-21 {
-  position: relative;
-  display: inline-block;
-}
-
-.emotion-22 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-}
-
-.emotion-22:hover,
-.emotion-22:focus {
-  background-color: #6a00ff;
-}
-
-.emotion-22:active {
-  background-color: #50c;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-24 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-25 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-27 {
-  fill: white;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-27 path {
-  fill: white;
 }
 
 <div
@@ -764,71 +283,15 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
           </li>
           <li>
             <div
-              className="emotion-3"
+              className="emotion-15"
             >
               <a
                 className="emotion-4"
-                href="/forth-level"
+                href="/fifth-level"
                 onClick={[Function]}
               >
-                Forth Level
+                Fifth Level
               </a>
-              <span
-                className="emotion-5"
-              >
-                <span
-                  className="emotion-6"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-7"
-                  />
-                </span>
-              </span>
-            </div>
-          </li>
-          <li>
-            <div
-              className="emotion-20"
-            >
-              <div
-                role="button"
-              >
-                <div
-                  className="emotion-21"
-                >
-                  <button
-                    className="emotion-22"
-                    data-testid="button"
-                    disabled={false}
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-23"
-                    >
-                      <span
-                        className="emotion-24"
-                      >
-                        <span>
-                          Fifth Level
-                        </span>
-                      </span>
-                      <span
-                        className="emotion-25"
-                      >
-                        <span
-                          className="emotion-6"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-27"
-                          />
-                        </span>
-                      </span>
-                    </span>
-                  </button>
-                </div>
-              </div>
             </div>
           </li>
         </ol>
@@ -1208,7 +671,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
   fill: #515d72;
 }
 
-.emotion-20 {
+.emotion-15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1218,22 +681,22 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
   color: #0f0f17;
 }
 
-.emotion-20 button {
+.emotion-15 button {
   height: auto;
   background-color: white;
   padding: 0.5rem;
 }
 
-.emotion-20 button:focus {
+.emotion-15 button:focus {
   outline: none;
   background-color: #c3cddf;
 }
 
-.emotion-20 button>span {
+.emotion-15 button>span {
   margin-left: 0;
 }
 
-.emotion-20>div>div>div {
+.emotion-15>div>div>div {
   top: 3rem;
   box-shadow: #232336 0px 0px 1rem;
 }
@@ -1341,32 +804,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs with options 1`]
         </li>
         <li>
           <div
-            className="emotion-3"
-          >
-            <a
-              className="emotion-4"
-              href="/forth-level"
-              onClick={[Function]}
-            >
-              Forth Level
-            </a>
-            <span
-              className="emotion-5"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </span>
-          </div>
-        </li>
-        <li>
-          <div
-            className="emotion-20"
+            className="emotion-15"
           >
             <a
               className="emotion-4"

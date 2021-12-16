@@ -1,4 +1,3 @@
-import { last, pick } from 'lodash';
 import isEmpty from 'lodash/isEmpty';
 import uniqueId from 'lodash/uniqueId';
 import * as React from 'react';
@@ -14,8 +13,8 @@ export type Props = {
   data?: BreadcrumbItemData[];
 };
 
-const MAX_LIMIT_BREADCRUMB_LENGTH = 4;
-const MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE = 2;
+const MAX_LIMIT_BREADCRUMB_LENGTH = 3;
+const MAX_ITEMS_TO_SHOW_AFTER_COLLAPSE = 1;
 const MAX_ITEMS_TO_SHOW_BEFORE_COLLAPSE = 1;
 
 const Breadcrumb: React.FC<Props> = props => {
@@ -46,12 +45,6 @@ const Breadcrumb: React.FC<Props> = props => {
     dataItems,
   ]);
 
-  const {
-    label: lastItemLabel,
-    onChangeHandler: lastItemOnChangeHandler,
-    options: lastItemOptions,
-  } = pick(last(data), ['label', 'onChangeHandler', 'options']);
-
   const getBreadcrumbItem = React.useMemo(
     // eslint-disable-next-line react/display-name
     () => (child: React.ReactNode, index: number) => {
@@ -68,9 +61,6 @@ const Breadcrumb: React.FC<Props> = props => {
       return isLast ? (
         <BreadcrumbItem
           key={itemKey}
-          lastItemLabel={lastItemLabel}
-          onChangeHandler={lastItemOnChangeHandler}
-          options={lastItemOptions}
           childComponent={child}
           isLastItem={isLast}
         />
@@ -81,9 +71,6 @@ const Breadcrumb: React.FC<Props> = props => {
     [
       dataItems,
       collapsedItems,
-      lastItemLabel,
-      lastItemOnChangeHandler,
-      lastItemOptions,
       shouldCollapse,
     ]
   );

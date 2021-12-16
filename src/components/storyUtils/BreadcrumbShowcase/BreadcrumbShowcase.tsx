@@ -12,8 +12,6 @@ interface Props {
 const createNewDataConfig = (routeId: string) => ({
   to: `/extra-level-${routeId}`,
   label: `Extra Level ${routeId}`,
-  options: ['random option 1', 'random option 2'],
-  onChangeHandler: (text: string) => text && alert(text),
 });
 
 const browserHistory = createBrowserHistory();
