@@ -95,20 +95,20 @@ export const FilterBase = forwardRef<
         css={buttonWrapperStyle(buttonStyleProps)}
       >
         <div css={buttonStyle(buttonStyleProps)}>
-          <span css={buttonSpanStyle()}>
-            <span css={childrenWrapperStyle()}>
+          <div css={buttonSpanStyle()}>
+            <div css={childrenWrapperStyle()}>
               <span css={labelSpanStyle(open, hasSelectedValue)}>
                 {label && (
                   <div>
                     {label} {!isDatePicker ? ':' : ''}
                   </div>
                 )}
-                <span css={valueSpanStyle()}>{selectedItemLabel}</span>
+                {selectedItemLabel && <span css={valueSpanStyle()}>{selectedItemLabel}</span>}
               </span>
-            </span>
+            </div>
 
             <Icon name={iconName} color={iconColor} size={iconSize} />
-          </span>
+          </div>
         </div>
 
         {filterType === 'added' && (

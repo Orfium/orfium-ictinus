@@ -23,6 +23,7 @@ export const buttonSpanStyle = () => () => {
   return {
     display: 'flex',
     alignItems: 'center',
+    gap: rem(4),
     height: '100%',
   };
 };
@@ -186,6 +187,7 @@ export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
 
 export const childrenWrapperStyle = () => () => {
   return {
+    lineHeight: '15px',
     marginLeft: 0,
   };
 };
@@ -200,7 +202,6 @@ export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (the
       flex: 'none',
     },
     span: {
-      marginLeft: theme.spacing.xsm,
       fontWeight: theme.typography.weights.bold,
     },
   };

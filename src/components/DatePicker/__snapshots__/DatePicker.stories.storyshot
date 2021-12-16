@@ -4586,10 +4586,12 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 0.25rem;
   height: 100%;
 }
 
 .emotion-8 {
+  line-height: 15px;
   margin-left: 0;
 }
 
@@ -4612,7 +4614,6 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
 }
 
 .emotion-9 span {
-  margin-left: 0.25rem;
   font-weight: 700;
 }
 
@@ -4641,8 +4642,8 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
 
 .emotion-12 {
   fill: #0f0f17;
-  width: 1.1875rem;
-  height: 1.1875rem;
+  width: 0.875rem;
+  height: 0.875rem;
 }
 
 .emotion-12 path {
@@ -4705,10 +4706,10 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                 <div
                   className="emotion-6"
                 >
-                  <span
+                  <div
                     className="emotion-7"
                   >
-                    <span
+                    <div
                       className="emotion-8"
                     >
                       <span
@@ -4721,7 +4722,7 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                           Select Dates : 11/03/2020 - 11/03/2020
                         </span>
                       </span>
-                    </span>
+                    </div>
                     <span
                       className="emotion-11"
                       onClick={[Function]}
@@ -4730,7 +4731,7 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                         className="emotion-12"
                       />
                     </span>
-                  </span>
+                  </div>
                 </div>
               </button>
             </div>
@@ -4767,10 +4768,10 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                 <div
                   className="emotion-6"
                 >
-                  <span
+                  <div
                     className="emotion-7"
                   >
-                    <span
+                    <div
                       className="emotion-8"
                     >
                       <span
@@ -4783,7 +4784,7 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                           Select Dates : 11/03/2020 - 11/03/2020
                         </span>
                       </span>
-                    </span>
+                    </div>
                     <span
                       className="emotion-11"
                       onClick={[Function]}
@@ -4792,7 +4793,7 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                         className="emotion-12"
                       />
                     </span>
-                  </span>
+                  </div>
                 </div>
               </button>
             </div>

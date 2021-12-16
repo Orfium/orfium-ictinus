@@ -77,8 +77,8 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
                 `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
             )}
             label={!selectedDay.from ? `Select Date${isRangePicker ? 's' : ''}` : ''}
-            iconName={'calendarEmpty'}
-            iconSize={19}
+            iconName={selectedDay.from ? 'calendarFilled' : 'calendarEmpty'}
+            iconSize={14}
             iconColor={theme.utils.getColor('darkGrey', 850)}
           />
         );
