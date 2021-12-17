@@ -8,7 +8,7 @@ export type Props = {
   /** Show notification icon based on the type */
   withIcon?: boolean;
   /** The informative message of the Notification */
-  message: string;
+  message: string | React.ReactNode;
   /** The type of the Notification */
   type: NotificationTypes;
   /** The style type of the Notification. Defaults to elevated */

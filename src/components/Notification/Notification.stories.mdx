@@ -143,11 +143,8 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
           />
           <Banner
             withIcon={boolean('icon', true)}
-            title={text('title', 'This is the heading:')}
-            message={text('message', 'This is the info')}
+            message={<div style={{ maxWidth: '404px'}}>This is a very long text in order to check how the component wraps the text.This is a very long text in order to check how the component wraps the text </div>}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
-            primaryCTALabel={text('primaryCTALabel', 'Action')}
-            primaryCTA={() => console.log('action clicked')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
           />

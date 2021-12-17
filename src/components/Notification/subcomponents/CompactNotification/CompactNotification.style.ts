@@ -15,7 +15,7 @@ export const notificationsContainer = (
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
-  height: ${rem(46)};
+  minheight: ${rem(46)};
   border-radius: ${theme.spacing.xsm};
   color: ${theme.utils.getColor('darkGrey', 850)};
   font-size: ${theme.typography.fontSizes[14]};
@@ -26,6 +26,10 @@ export const infoContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;
   padding: 0 ${theme.spacing.md};
+`;
+
+export const messageContainer = () => (theme: Theme): SerializedStyles => css`
+  padding: ${theme.spacing.md} 0;
 `;
 
 export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
