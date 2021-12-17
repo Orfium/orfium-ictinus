@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { TestProps } from 'utils/types';
 
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
@@ -42,17 +42,17 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
     },
     ref
   ) => {
-    const handleListItemSelect = () => {
-      if (content && handleOptionClick) {
+    const handleListItemSelect = useCallback(() => {
+      if (content && handleOptionClick && !disabled) {
         handleOptionClick(content as never);
       }
-    };
+    }, [content, disabled, handleOptionClick]);
 
     return (
       <div
         css={listItemStyle({ size, selected, highlighted, disabled, isGroupItem })}
         ref={selected ? ref : null}
-        onClick={!disabled ? handleListItemSelect : () => {}}
+        onClick={handleListItemSelect}
         onMouseDown={event => {
           event.preventDefault();
         }}

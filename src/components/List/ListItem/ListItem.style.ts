@@ -24,6 +24,7 @@ export const listItemStyle = ({
   align-items: center;
   padding: 0px ${theme.spacing.md} 0px ${isGroupItem ? theme.spacing.xl : theme.spacing.md};
   font-weight: ${selected && theme.typography.weights.medium};
+  cursor: pointer;
 
   ${highlighted && 'font-weight: 500;'}
 
@@ -42,4 +43,5 @@ export const contentStyle = (): SerializedStyles => css`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  cursor: inherit;
 `;
