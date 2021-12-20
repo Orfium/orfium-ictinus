@@ -9,9 +9,9 @@ interface Props {
   initData: BreadcrumbItemData[];
 }
 
-const createNewDataConfig = (routeId: string) => ({
-  to: `/extra-level-${routeId}`,
-  label: `Extra Level ${routeId}`,
+const createNewDataConfig = (routeId: number) => ({
+  to: `/level-${routeId}`,
+  label: `Level ${routeId}`,
 });
 
 const browserHistory = createBrowserHistory();
@@ -20,8 +20,7 @@ const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
   const [data, setData] = useState<BreadcrumbItemData[]>(initData);
 
   const clickHandler = () => {
-    const randomId = uniqueId('level_');
-    const newDataConfig: BreadcrumbItemData = createNewDataConfig(randomId);
+    const newDataConfig: BreadcrumbItemData = createNewDataConfig(data.length + 1);
 
     setData(prevState => [...prevState, newDataConfig]);
   };
@@ -39,14 +38,14 @@ const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
   const routes = data.map(item => {
     return (
       <Route key={uniqueId('route_')} path={item.to}>
-        {() => <div>{item.label}</div>}
+        {() => <div style={{ marginTop: '8px' }}>Current: {item.label}</div>}
       </Route>
     );
   });
 
   return (
     <div>
-      <button type="button" onClick={clickHandler}>
+      <button type="button" onClick={clickHandler} style={{ marginBottom: '16px' }}>
         Add data to Breadcrumb
       </button>
       <Router history={browserHistory}>

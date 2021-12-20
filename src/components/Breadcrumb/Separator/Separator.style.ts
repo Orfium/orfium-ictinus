@@ -1,8 +1,7 @@
-import { css } from '@emotion/react';
+import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
-export const separatorStyles = () => (theme: Theme) => css`
-  margin: auto ${theme.spacing.sm};
-  color: ${theme.utils.getColor('lightGrey', 650)};
+export const separatorStyles = () => (theme: Theme): SerializedStyles => css`
+  margin: auto ${theme.spacing.md};
   cursor: default;
 `;
