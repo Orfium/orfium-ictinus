@@ -96,7 +96,7 @@ export const decorators = [
     return (
       <ThemeProvider
         theme={{
-          palette: { primary: flatPaletteConfig.purple, secondary: flatPaletteConfig.magenta },
+          palette: { primary: flatPaletteConfig.blue, secondary: flatPaletteConfig.teal },
         }}
       >
         <ThemeSwitcher />
