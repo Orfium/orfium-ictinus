@@ -113,7 +113,6 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         hasSelectedValue={hasSelectedValue}
         label={label as string}
         iconName={iconName}
-        iconColor={iconColor}
         filterType={filterType}
         buttonType={buttonType}
         styleType={styleType}

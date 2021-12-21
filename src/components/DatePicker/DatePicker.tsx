@@ -215,16 +215,18 @@ const DatePicker: React.FC<Props> = ({
         visible={isOpen}
         parent={() => (
           <DatePickInput
-            filterType={filterType}
-            buttonType={buttonType}
-            styleType={styleType}
+            filterConfig={{
+              filterType,
+              buttonType,
+              styleType,
+            }}
             isRangePicker={isRangePicker}
             selectedDay={selectedRange}
             inputProps={inputProps}
             dateFormatOverride={dateFormatOverride}
             handleFocus={handleFocus}
             handleClear={handleClear}
-            open={isOpen}
+            isOpen={isOpen}
           />
         )}
       >

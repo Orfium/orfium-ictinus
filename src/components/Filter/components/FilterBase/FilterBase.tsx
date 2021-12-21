@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode } from 'react';
+import React, { forwardRef, ReactNode, useCallback } from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from '../../../../hooks/useTypeColorToColorMatch';
@@ -16,31 +16,23 @@ import {
   valueSpanStyle,
   wrapperStyle,
 } from '../../Filter.style';
-import { FilterType, StyleType } from '../../types';
+import { Props } from '../../types';
 
-// eslint-disable-next-line react/display-name
+type FilterBaseProps = {
+  children?: ReactNode;
+  isDatePicker?: boolean;
+  handleOpen: () => void;
+  iconName: AcceptedIconNames;
+  onClear: () => void;
+  selectedItemLabel?: string;
+  open: boolean;
+  hasSelectedValue: boolean;
+};
+
 export const FilterBase = forwardRef<
   HTMLButtonElement,
-  {
-    dataTestId?: string;
-    children?: ReactNode;
-    disabled: boolean;
-    handleOpen: () => void;
-    onClear: () => void;
-    selectedItemLabel?: string;
-    open: boolean;
-    hasSelectedValue: boolean;
-    label?: string;
-    iconName: AcceptedIconNames;
-    iconColor: string;
-    iconSize?: number;
-    /** Defines the style type of the button */
-    styleType: StyleType;
-    /** Defines the filter type */
-    filterType?: FilterType;
-    buttonType?: 'primary' | 'secondary';
-    isDatePicker?: boolean;
-  }
+  FilterBaseProps &
+    Pick<Props, 'dataTestId' | 'disabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'>
 >((props, ref) => {
   const {
     dataTestId,
@@ -53,13 +45,12 @@ export const FilterBase = forwardRef<
     hasSelectedValue,
     label,
     iconName,
-    iconColor,
-    iconSize = 6,
     buttonType = 'primary',
     filterType = 'preset',
     styleType,
     children,
   } = props;
+
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
   const theme = useTheme();
@@ -74,16 +65,23 @@ export const FilterBase = forwardRef<
     filterType,
   };
 
-  const pickIconColor = () => {
-    if (open) {
-      return theme.utils.getColor('neutralWhite', 100);
-    }
-    if (hasSelectedValue) {
-      return theme.utils.getColor(calculatedColor.color, 550);
-    }
+  const pickIconColor = useCallback(
+    (isCloseButton = false) => {
+      if (open) {
+        return theme.utils.getColor('neutralWhite', 100);
+      }
+      if (isCloseButton) {
+        if (hasSelectedValue) {
+          return theme.utils.getColor(calculatedColor.color, 550);
+        }
 
-    return theme.utils.getColor('darkGrey', 400);
-  };
+        return theme.utils.getColor('darkGrey', 400);
+      }
+
+      return theme.utils.getColor('darkGrey', 850);
+    },
+    [calculatedColor.color, hasSelectedValue, open, theme.utils]
+  );
 
   return (
     <div css={wrapperStyle()} data-testid={dataTestId}>
@@ -107,7 +105,7 @@ export const FilterBase = forwardRef<
               </span>
             </div>
 
-            <Icon name={iconName} color={iconColor} size={iconSize} />
+            <Icon name={iconName} size={14} color={pickIconColor()} />
           </div>
         </div>
 
@@ -118,7 +116,7 @@ export const FilterBase = forwardRef<
               <Icon
                 size={19}
                 name={'closeTag'}
-                color={pickIconColor()}
+                color={pickIconColor(true)}
                 onClick={e => {
                   e.stopPropagation();
                   onClear();
@@ -132,5 +130,6 @@ export const FilterBase = forwardRef<
     </div>
   );
 });
+FilterBase.displayName = 'FilterBase';
 
 export default FilterBase;
