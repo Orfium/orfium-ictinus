@@ -34,7 +34,6 @@ export const rightIconContainer = (
   isSearchable: boolean
 ) => (): SerializedStyles => css`
   display: flex;
-  gap: ${rem(25)};
   cursor: pointer;
   transform: rotate(${open && !isSearchable ? '180' : '0'}deg);
   ${transition(0.2)}
