@@ -1,5 +1,3 @@
-import useTheme from 'hooks/useTheme';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { debounce } from 'lodash';
 import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
@@ -11,7 +9,6 @@ import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
 import { menuStyle } from './Filter.style';
 import { FilterOption, Props } from './types';
-import { getTextColor } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
 const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
@@ -36,18 +33,9 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
 
-  const theme = useTheme();
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
-  const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
 
-  const iconColor = getTextColor({
-    open: isOpen,
-    theme,
-    calculatedColor,
-    hasSelectedValue,
-  });
   const iconName = isOpen ? 'triangleUp' : 'triangleDown';
 
   const handleSelect = (option: FilterOption) => {
@@ -143,5 +131,5 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     </ClickAwayListener>
   );
 });
-
+Filter.displayName = 'Filter';
 export default Filter;

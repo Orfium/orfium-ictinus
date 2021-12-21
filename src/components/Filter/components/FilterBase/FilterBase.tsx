@@ -17,6 +17,7 @@ import {
   wrapperStyle,
 } from '../../Filter.style';
 import { Props } from '../../types';
+import { getTextColor } from '../../utils';
 
 type FilterBaseProps = {
   children?: ReactNode;
@@ -55,20 +56,15 @@ export const FilterBase = forwardRef<
   const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
   const theme = useTheme();
 
-  const buttonStyleProps = {
-    calculatedColor,
-    buttonType,
-    disabled,
-    open,
-    styleType,
-    hasSelectedValue,
-    filterType,
-  };
-
   const pickIconColor = useCallback(
     (isCloseButton = false) => {
       if (open) {
-        return theme.utils.getColor('neutralWhite', 100);
+        return getTextColor({
+          theme,
+          open,
+          calculatedColor,
+          hasSelectedValue,
+        });
       }
       if (isCloseButton) {
         if (hasSelectedValue) {
@@ -80,8 +76,18 @@ export const FilterBase = forwardRef<
 
       return theme.utils.getColor('darkGrey', 850);
     },
-    [calculatedColor.color, hasSelectedValue, open, theme.utils]
+    [calculatedColor.color, hasSelectedValue, open, theme.utils, theme.palette]
   );
+
+  const buttonStyleProps = {
+    calculatedColor,
+    buttonType,
+    disabled,
+    open,
+    styleType,
+    hasSelectedValue,
+    filterType,
+  };
 
   return (
     <div css={wrapperStyle()} data-testid={dataTestId}>
@@ -98,14 +104,14 @@ export const FilterBase = forwardRef<
               <span css={labelSpanStyle(open, hasSelectedValue)}>
                 {label && (
                   <div>
-                    {label} {!isDatePicker ? ':' : ''}
+                    {label} {!isDatePicker ? <>:&nbsp;</> : ''}
                   </div>
                 )}
                 {selectedItemLabel && <span css={valueSpanStyle()}>{selectedItemLabel}</span>}
               </span>
             </div>
 
-            <Icon name={iconName} size={14} color={pickIconColor()} />
+            <Icon name={iconName} size={isDatePicker ? 14 : 7} color={pickIconColor()} />
           </div>
         </div>
 
