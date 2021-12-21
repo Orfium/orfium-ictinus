@@ -185,7 +185,7 @@ export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
 
 export const childrenWrapperStyle = () => () => {
   return {
-    lineHeight: '15px',
+    lineHeight: rem(15),
     marginLeft: 0,
   };
 };

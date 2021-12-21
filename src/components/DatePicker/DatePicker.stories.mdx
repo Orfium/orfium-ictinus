@@ -126,13 +126,13 @@ Implementation of the DatePicker with a Filter instead of a Select
       <DatePicker
         inputProps={{ size: 'md', styleType: 'outlined' }}
         isRangePicker={select('isRangePicker', rangePickerOptions, rangePickerOptions[0])}
-        filterType={select('filterType', filterTypeOptions, filterTypeOptions[0])}
+        filterConfig={{filterType: select('filterType', filterTypeOptions, filterTypeOptions[0])}}
         isDefaultNow={false}
       />
       <DatePicker
         inputProps={{ size: 'sm', styleType: 'outlined' }}
         isRangePicker={select('isRangePicker', rangePickerOptions, rangePickerOptions[0])}
-        filterType={select('filterType', filterTypeOptions, filterTypeOptions[0])}
+        filterConfig={{filterType: select('filterType', filterTypeOptions, filterTypeOptions[0])}}
       />
     </Stack>
   </Story>
