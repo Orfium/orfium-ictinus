@@ -37,12 +37,15 @@ export type Props = {
   isClearable?: boolean;
   /** if the datepicker's default date is today instead of placeholder text */
   isDefaultNow?: boolean;
-  /** This property defines whether the DatePicker component's parent is a Select or a Filter and the Filter's type */
-  filterType?: FilterType;
-  /** The type of the filter button's palette - defaults to "primary" */
-  buttonType?: 'primary' | 'secondary';
-  /** Defines the style type of the filter button */
-  styleType?: StyleType;
+  /** Style properties for the DatePicker with a filter base */
+  filterConfig?: {
+    /** The type of the filter button's palette - defaults to "primary" */
+    buttonType?: 'primary' | 'secondary';
+    /** Defines the style type of the filter button */
+    styleType?: StyleType;
+    /** This property defines the Filter's type */
+    filterType?: FilterType;
+  };
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -84,9 +87,7 @@ const DatePicker: React.FC<Props> = ({
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
-  filterType,
-  styleType,
-  buttonType,
+  filterConfig,
   isDefaultNow = true,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -174,11 +175,11 @@ const DatePicker: React.FC<Props> = ({
 
   const handleClear = useCallback(
     (e?) => {
-      if (!isClearable && filterType !== 'added') {
+      if (!isClearable && filterConfig?.filterType !== 'added') {
         return false;
       }
 
-      if (filterType) {
+      if (filterConfig?.filterType) {
         setIsOpen(false);
 
         return setSelectedRange({ to: undefined, from: undefined });
@@ -202,7 +203,7 @@ const DatePicker: React.FC<Props> = ({
         });
       }
     },
-    [isClearable, filterType]
+    [isClearable, filterConfig?.filterType]
   );
 
   const onApply = useCallback(() => {
@@ -215,11 +216,7 @@ const DatePicker: React.FC<Props> = ({
         visible={isOpen}
         parent={() => (
           <DatePickInput
-            filterConfig={{
-              filterType,
-              buttonType,
-              styleType,
-            }}
+            filterConfig={filterConfig}
             isRangePicker={isRangePicker}
             selectedDay={selectedRange}
             inputProps={inputProps}
