@@ -58,10 +58,11 @@ export const buttonWrapperStyle = ({
         backgroundColor: theme.utils.getColor('blue', 50),
       },
     // target the divider on focus
-    ':focus > span': !open && {
-      borderTop: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-      borderBottom: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-    },
+    ':focus > span': !open &&
+      !hasSelectedValue && {
+        borderTop: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
+        borderBottom: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
+      },
   };
 };
 
