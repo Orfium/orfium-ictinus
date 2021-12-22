@@ -1,6 +1,7 @@
 import { Dayjs } from 'dayjs';
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { FilterType, StyleType } from '../Filter/types';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
@@ -36,6 +37,15 @@ export type Props = {
   isClearable?: boolean;
   /** if the datepicker's default date is today instead of placeholder text */
   isDefaultNow?: boolean;
+  /** Style properties for the DatePicker with a filter base */
+  filterConfig?: {
+    /** The type of the filter button's palette - defaults to "primary" */
+    buttonType?: 'primary' | 'secondary';
+    /** Defines the style type of the filter button */
+    styleType?: StyleType;
+    /** This property defines the Filter's type */
+    filterType?: FilterType;
+  };
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -77,9 +87,10 @@ const DatePicker: React.FC<Props> = ({
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
+  filterConfig,
   isDefaultNow = true,
 }) => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
 
   const [range, setRange] = useState<Range>(initDates(value, isDefaultNow));
@@ -106,7 +117,7 @@ const DatePicker: React.FC<Props> = ({
       const newRange = { from: startDate, to: endDate };
 
       if (newRange.to) {
-        setOpen(false);
+        setIsOpen(false);
       }
 
       setSelectedRange(newRange);
@@ -155,22 +166,28 @@ const DatePicker: React.FC<Props> = ({
   );
 
   const onCancel = useCallback(() => {
-    setOpen(false);
+    setIsOpen(false);
   }, []);
 
   const handleFocus = useCallback(() => {
-    setOpen(true);
+    setIsOpen(true);
   }, []);
 
   const handleClear = useCallback(
-    e => {
-      if (!isClearable) {
+    (e?) => {
+      if (!isClearable && filterConfig?.filterType !== 'added') {
         return false;
+      }
+
+      if (filterConfig?.filterType) {
+        setIsOpen(false);
+
+        return setSelectedRange({ to: undefined, from: undefined });
       }
 
       if (e.keyCode === 27) {
         // if escape
-        return setOpen(false);
+        return setIsOpen(false);
       }
 
       if (e.keyCode === 8) {
@@ -186,7 +203,7 @@ const DatePicker: React.FC<Props> = ({
         });
       }
     },
-    [isClearable]
+    [isClearable, filterConfig?.filterType]
   );
 
   const onApply = useCallback(() => {
@@ -196,15 +213,17 @@ const DatePicker: React.FC<Props> = ({
   return (
     <ClickAwayListener onClick={onCancel}>
       <PositionInScreen
-        visible={open}
+        visible={isOpen}
         parent={() => (
           <DatePickInput
+            filterConfig={filterConfig}
             isRangePicker={isRangePicker}
             selectedDay={selectedRange}
             inputProps={inputProps}
             dateFormatOverride={dateFormatOverride}
             handleFocus={handleFocus}
             handleClear={handleClear}
+            isOpen={isOpen}
           />
         )}
       >
