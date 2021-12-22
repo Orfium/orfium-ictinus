@@ -11,10 +11,10 @@ export const breadcrumbStyles = () => (): SerializedStyles => css`
   margin: 0;
 `;
 
-export const breadcrumbLinkStyles = () => (theme: Theme): SerializedStyles => css`
+export const breadcrumbLinkStyles = (isLast: boolean) => (theme: Theme): SerializedStyles => css`
   text-decoration: none;
   color: inherit;
   &:hover {
-    color: ${theme.utils.getColor('darkGrey', 650)};
+    color: ${isLast ? theme.utils.getColor('blue', 650) : theme.utils.getColor('darkGrey', 650)};
   }
 `;

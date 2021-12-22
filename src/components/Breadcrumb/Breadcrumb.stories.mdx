@@ -35,12 +35,12 @@ import { Breadcrumb } from '@orfium/ictinus';
 
 <Props of={Breadcrumb} />
 
-# Simple Breadcrumb (up to 3 levels)
+# Simple Breadcrumbs (up to 3 levels)
 
-A simple Breadcrumb example
+A simple Breadcrumbs example
 
 <Preview>
-  <Story name="Simple Breadcrumb">
+  <Story name="Simple Breadcrumbs">
     <Stack>
       <Breadcrumb>
         <div>Level 1</div>
@@ -51,12 +51,12 @@ A simple Breadcrumb example
   </Story>
 </Preview>
 
-# Simple Breadcrumb (more than 3 levels)
+# Active Breadcrumbs
 
-A simple Breadcrumb with n levels example
+Active Breadcrumbs
 
 <Preview>
-  <Story name="Simple Breadcrumb with data">
+  <Story name="Active Breadcrumbs">
     <Stack>
       <Router>
         <Breadcrumb
@@ -74,6 +74,34 @@ A simple Breadcrumb with n levels example
           <Route path="/third-level">{() => <div style={{marginTop: '8px'}}>Current: Level 3</div>}</Route>
           <Route path="/forth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 4</div>}</Route>
           <Route path="/fifth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 5</div>}</Route>
+        </Switch>
+      </Router>
+    </Stack>
+  </Story>
+</Preview>
+
+# Active Breadcrumbs with inactive last breadcrumb
+
+Active Breadcrumbs with inactive last breadcrumb
+
+<Preview>
+  <Story name="Active Breadcrumbs with inactive last breadcrumb">
+    <Stack>
+      <Router>
+        <Breadcrumb
+          data={[
+            { to: '/first-level', label: 'Level 1' },
+            { to: '/second-level', label: 'Level 2' },
+            { to: '/third-level', label: 'Level 3' },
+            { to: '/forth-level', label: 'Level 4' },
+            { to: '', label: 'Level 5' },
+          ]}
+        />
+        <Switch>
+          <Route path="/first-level">{() => <div style={{marginTop: '8px'}}>Current: Level 1</div>}</Route>
+          <Route path="/second-level">{() => <div style={{marginTop: '8px'}}>Current: Level 2</div>}</Route>
+          <Route path="/third-level">{() => <div style={{marginTop: '8px'}}>Current: Level 3</div>}</Route>
+          <Route path="/forth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 4</div>}</Route>
         </Switch>
       </Router>
     </Stack>

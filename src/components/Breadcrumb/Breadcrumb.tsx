@@ -14,16 +14,26 @@ export type Props = {
 
 const Breadcrumb: React.FC<Props> = props => {
   const { children, data = [] } = props;
-  const passDataToRouterLink = ({ to, label }: BreadcrumbItemData) => (
-    <Link css={breadcrumbLinkStyles()} key={to} to={to}>
-      {label}
-    </Link>
-  );
-  const childrenCollection = React.Children.toArray(children);
-  const dataItems = isEmpty(data) ? childrenCollection : data.map(passDataToRouterLink);
 
   const isLastItem = (dataItems: React.ReactNode[], itemIndex: number) =>
     itemIndex === dataItems.length - 1;
+
+  const passDataToRouterLink = (dataItem: BreadcrumbItemData, index: number) => {
+    const { to, label } = dataItem;
+
+    const isLast = isLastItem(data, index);
+
+    return to ? (
+      <Link css={breadcrumbLinkStyles(isLast)} key={to} to={to}>
+        {label}
+      </Link>
+    ) : (
+      <div>{label}</div>
+    );
+  };
+  
+  const childrenCollection = React.Children.toArray(children);
+  const dataItems = isEmpty(data) ? childrenCollection : data.map(passDataToRouterLink);
 
   const getBreadcrumbItem = React.useMemo(
     // eslint-disable-next-line react/display-name
