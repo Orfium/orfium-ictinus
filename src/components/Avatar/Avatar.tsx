@@ -22,27 +22,22 @@ export type Props = {
    *  @default 'darkGrey-500'
    * */
   color?: string;
-  /** the shape of the avatar
-   *  @default 'circular'
-   * */
-  shape?: AvatarShapes;
   /** The class name of the avatar component if its styled **/
   className?: string;
 };
 
-export type AvatarSizes = 'xxxs' | 'xxs' | 'xs' | 'sm' | 'md' | 'lg';
-export type AvatarShapes = 'circular';
+export type AvatarSizes =   'xs' | 'sm' | 'md' | 'lg';
 
 const iconSizeBasedOnAvatar = (size: AvatarSizes) => {
   switch (size) {
+    case 'md':
+      return 16;
+    case 'sm':
+      return 12;
     case 'xs':
-      return 18;
-    case 'xxs':
-      return 18;
-    case 'xxxs':
       return 10;
     default:
-      return 20;
+      return 28;
   }
 };
 
