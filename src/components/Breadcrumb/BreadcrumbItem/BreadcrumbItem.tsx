@@ -11,9 +11,7 @@ type Props = {
   /** Defines the label of the current level of breadcrumb */
 };
 
-const BreadcrumbItem: React.FC<Props> = props => {
-  const { childComponent, isLastItem = false } = props;
-
+const BreadcrumbItem: React.FC<Props> = ({ childComponent, isLastItem = false }) => {
   return (
     <li>
       <div css={breadcrumbItemStyles({ active: isLastItem })}>
