@@ -44,12 +44,12 @@ export type Props = {
    * A function accepting a boolean representing the current expansion state. Returns the
    * collapsible/expandable content. Mutually exclusive with children.
    */
-  content?: (x: boolean) => React.ReactElement;
+  content?: (x: boolean) => React.ReactNode;
   /**
    * A function accepting a boolean representing the current expansion state. Returns the
    * collapsible/expandable content. Mutually exclusive with content.
    */
-  children?: (x: boolean) => React.ReactElement;
+  children?: (x: boolean) => React.ReactNode;
 } & TestProps;
 
 function ExpandCollapse(props: Props) {
