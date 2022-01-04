@@ -37,101 +37,91 @@ import { Breadcrumb } from '@orfium/ictinus';
 
 # Simple Breadcrumbs (up to 3 levels)
 
-A simple Breadcrumb example
+A simple Breadcrumbs example
 
 <Preview>
   <Story name="Simple Breadcrumbs">
     <Stack>
       <Breadcrumb>
-        <div>First Level</div>
-        <div>Second Level</div>
-        <div>Third Level</div>
+        <div>Level 1</div>
+        <div>Level 2</div>
+        <div>Level 3</div>
       </Breadcrumb>
     </Stack>
   </Story>
 </Preview>
 
-# Simple Breadcrumbs (more than 3 levels)
+# Active Breadcrumbs
 
-A simple Breadcrumb with n levels example
+Active Breadcrumbs
 
 <Preview>
-  <Story name="Simple Breadcrumbs with options">
+  <Story name="Active Breadcrumbs">
     <Stack>
       <Router>
         <Breadcrumb
           data={[
-            { to: '/first-level', label: 'First Level' },
-            { to: '/second-level', label: 'Second Level' },
-            { to: '/third-level', label: 'Third Level' },
-            { to: '/forth-level', label: 'Forth Level' },
-            { to: '/fifth-level', label: 'Fifth Level' },
+            { to: '/first-level', label: 'Level 1' },
+            { to: '/second-level', label: 'Level 2' },
+            { to: '/third-level', label: 'Level 3' },
+            { to: '/forth-level', label: 'Level 4' },
+            { to: '/fifth-level', label: 'Level 5' },
           ]}
         />
         <Switch>
-          <Route path="/first-level">{() => <div>first level</div>}</Route>
-          <Route path="/second-level">{() => <div>second level</div>}</Route>
-          <Route path="/third-level">{() => <div>third level</div>}</Route>
-          <Route path="/forth-level">{() => <div>forth level</div>}</Route>
-          <Route path="/fifth-level">{() => <div>fifth level</div>}</Route>
+          <Route path="/first-level">{() => <div style={{marginTop: '8px'}}>Current: Level 1</div>}</Route>
+          <Route path="/second-level">{() => <div style={{marginTop: '8px'}}>Current: Level 2</div>}</Route>
+          <Route path="/third-level">{() => <div style={{marginTop: '8px'}}>Current: Level 3</div>}</Route>
+          <Route path="/forth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 4</div>}</Route>
+          <Route path="/fifth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 5</div>}</Route>
         </Switch>
       </Router>
     </Stack>
   </Story>
 </Preview>
 
-# Advanced Breadcrumbs (with dd in levels)
+# Active Breadcrumbs with inactive last breadcrumb
 
-A advanced Breadcrumb with dd levels example
+Active Breadcrumbs with inactive last breadcrumb
 
 <Preview>
-  <Story name="Advanced Breadcrumbs with options per data item">
+  <Story name="Active Breadcrumbs with inactive last breadcrumb">
     <Stack>
       <Router>
         <Breadcrumb
           data={[
-            { to: '/first-level', label: 'First Level', options: ['ITEM 1', 'ITEM 2'] },
-            { to: '/second-level', label: 'Second Level', options: ['ITEM 1', 'ITEM 2'] },
-            { to: '/third-level', label: 'Third Level', options: ['ITEM 1', 'ITEM 2'] },
-            { to: '/forth-level', label: 'Forth Level', options: ['ITEM 1', 'ITEM 2'] },
-            {
-              to: '',
-              label: 'Fifth Level',
-              options: ['ITEM 1', 'ITEM 2'],
-              onChangeHandler: text => text && alert(text),
-            },
+            { to: '/first-level', label: 'Level 1' },
+            { to: '/second-level', label: 'Level 2' },
+            { to: '/third-level', label: 'Level 3' },
+            { to: '/forth-level', label: 'Level 4' },
+            { to: '', label: 'Level 5' },
           ]}
         />
         <Switch>
-          <Route path="/first-level">{() => <div>first level</div>}</Route>
-          <Route path="/second-level">{() => <div>second level</div>}</Route>
-          <Route path="/third-level">{() => <div>third level</div>}</Route>
-          <Route path="/forth-level">{() => <div>forth level</div>}</Route>
+          <Route path="/first-level">{() => <div style={{marginTop: '8px'}}>Current: Level 1</div>}</Route>
+          <Route path="/second-level">{() => <div style={{marginTop: '8px'}}>Current: Level 2</div>}</Route>
+          <Route path="/third-level">{() => <div style={{marginTop: '8px'}}>Current: Level 3</div>}</Route>
+          <Route path="/forth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 4</div>}</Route>
         </Switch>
       </Router>
     </Stack>
   </Story>
 </Preview>
 
-# Breadcrumb showcase (with dd in levels)
+# Breadcrumb showcase
 
-A Breadcrumb showcase with dd levels example
+A Breadcrumb showcase
 
 <Preview>
   <Story name="Breadcrumb showcase">
     <Stack>
       <BreadcrumbShowcase
         initData={[
-          { to: '/first-level', label: 'First Level', options: ['ITEM 1', 'ITEM 2'] },
-          { to: '/second-level', label: 'Second Level', options: ['ITEM 1', 'ITEM 2'] },
-          { to: '/third-level', label: 'Third Level', options: ['ITEM 1', 'ITEM 2'] },
-          { to: '/forth-level', label: 'Forth Level', options: ['ITEM 1', 'ITEM 2'] },
-          {
-            to: '/fifth-level',
-            label: 'Fifth Level',
-            options: ['ITEM 1', 'ITEM 2'],
-            onChangeHandler: text => text && alert(text),
-          },
+          { to: '/first-level', label: 'Level 1' },
+          { to: '/second-level', label: 'Level 2' },
+          { to: '/third-level', label: 'Level 3' },
+          { to: '/forth-level', label: 'Level 4' },
+          { to: '/fifth-level', label: 'Level 5' },
         ]}
       />
     </Stack>

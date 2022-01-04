@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import { rem } from 'theme/utils';
+import { css, SerializedStyles } from '@emotion/react';
+import { BASE_SHADE } from 'theme/palette';
 
 import { Theme } from '../../../theme';
 import { RequiredProperties } from '../../../utils/common';
@@ -10,28 +10,12 @@ type StyleProps = {
 
 export const breadcrumbItemStyles = ({ active }: RequiredProperties<StyleProps>) => (
   theme: Theme
-) => css`
+): SerializedStyles => css`
   display: flex;
   cursor: default;
+  font-size: ${theme.typography.fontSizes[15]};
   font-weight: ${active ? theme.typography.weights.medium : theme.typography.weights.regular};
-  color: ${active ? theme.utils.getColor('darkGrey', 850) : theme.utils.getColor('lightGrey', 650)};
-
-  & button {
-    height: auto;
-    background-color: white;
-    padding: ${theme.spacing.sm};
-    &:focus {
-      outline: none;
-      background-color: ${theme.utils.getColor('lightGrey', 250)};
-    }
-
-    & > span {
-      margin-left: 0;
-    }
-  }
-
-  & > div > div > div {
-    top: 3rem;
-    box-shadow: ${theme.utils.getColor('darkGrey', 650)} 0px 0px ${rem(16)};
-  }
+  color: ${active
+    ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
+    : theme.utils.getColor('lightGrey', 650)};
 `;
