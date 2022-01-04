@@ -59,7 +59,7 @@ const ButtonBase = React.forwardRef<
     loading = false,
     children,
     dataTestId = '',
-    buttonType,
+    buttonType = 'button',
     onClick,
     onBlur,
   } = props;
