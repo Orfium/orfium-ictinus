@@ -45,7 +45,7 @@ export const avatarStyle = ({
   width: ${sizeBasedOnProp(size)};
   height: ${sizeBasedOnProp(size)};
   border-radius: 100%;
-  border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 150)};
+  border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
   box-sizing: border-box;
   background: ${theme.utils.getColor(fill, fillShade)};
   overflow: hidden;

@@ -30,7 +30,7 @@ const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProp
     },
     ref
   ) => {
-    const clampedMax = maxAvatars < 2 ? 2 : maxAvatars;
+    const clampedMax = maxAvatars < 1 ? 1 : maxAvatars;
 
     const children = React.Children.toArray(childrenProp);
 
