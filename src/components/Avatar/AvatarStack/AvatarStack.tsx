@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { DivProps } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
 import Avatar, { AvatarSizes } from '../Avatar';
-import { avatarStackStyle } from './AvatarStack.style';
+import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';
 
 export type Props = {
   /** the maximum number of avatars to be displayed **/
@@ -30,27 +30,35 @@ const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProp
     },
     ref
   ) => {
-    const clampedMax = maxAvatars < 1 ? 1 : maxAvatars;
+    if (maxAvatars < 1) {
+      throw new Error('maxAvatars prop must be greater than 0');
+    }
 
     const children = React.Children.toArray(childrenProp);
 
-    const extraAvatars = children.length > clampedMax ? children.length - clampedMax : 0;
+    const extraAvatars = children.length > maxAvatars ? children.length - maxAvatars : 0;
+
+    const renderContent = useCallback(
+      () =>
+        children.slice(0, children.length - extraAvatars).map((child, index) => {
+          return (
+            <div key={index} css={avatarWrapperStyle({ zIndex: children.length - index, size })}>
+              {child}
+            </div>
+          );
+        }),
+      [children, extraAvatars, size]
+    );
 
     return (
       <div
         ref={ref}
         data-testid={generateTestDataId('avatarstack', dataTestId)}
-        style={{ display: 'flex' }}
+        css={avatarStackStyle({ size })}
       >
-        {children.slice(0, children.length - extraAvatars).map((child, index) => {
-          return (
-            <div key={index} css={avatarStackStyle({ zIndex: children.length - index, size })}>
-              {child}
-            </div>
-          );
-        })}
+        {renderContent()}
         {extraAvatars ? (
-          <div css={avatarStackStyle({ zIndex: 0, size })}>
+          <div css={avatarWrapperStyle({ zIndex: 0, size })}>
             <Avatar size={size} color={color}>
               +{extraAvatars}
             </Avatar>

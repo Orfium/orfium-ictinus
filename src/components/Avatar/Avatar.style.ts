@@ -6,16 +6,16 @@ import { flex } from '../../theme/functions';
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
 import { AvatarSizes } from './Avatar';
 
-const sizeBasedOnProp = (size: AvatarSizes) => {
+export const sizeBasedOnProp = (size: AvatarSizes): number => {
   switch (size) {
     case 'md':
-      return rem(24);
+      return 24;
     case 'sm':
-      return rem(20);
+      return 20;
     case 'xs':
-      return rem(16);
+      return 16;
     default:
-      return rem(46);
+      return 46;
   }
 };
 
@@ -42,8 +42,8 @@ export const avatarStyle = ({
   fillShade: typeof colorShades[number];
 }) => (theme: Theme): SerializedStyles => css`
   ${flex};
-  width: ${sizeBasedOnProp(size)};
-  height: ${sizeBasedOnProp(size)};
+  width: ${rem(sizeBasedOnProp(size))};
+  height: ${rem(sizeBasedOnProp(size))};
   border-radius: 100%;
   border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
   box-sizing: border-box;

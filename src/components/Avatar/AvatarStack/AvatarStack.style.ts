@@ -1,20 +1,22 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { flex } from 'theme/functions';
 import { rem } from 'theme/utils';
 
 import { AvatarSizes } from '../Avatar';
+import { sizeBasedOnProp } from '../Avatar.style';
 
-const iconMarginLeft = (size: AvatarSizes) => {
-  switch (size) {
-    case 'lg':
-      return rem(-8);
-    case 'xs':
-      return rem(-2);
-    default:
-      return rem(-4);
-  }
-};
+const OVERLAP_FACTOR = 0.8;
 
-export const avatarStackStyle = ({
+export const avatarStackStyle = ({ size }: { size: AvatarSizes }) => (): SerializedStyles =>
+  css`
+    ${flex};
+
+    div:last-child {
+      width: ${rem(sizeBasedOnProp(size))};
+    }
+  `;
+
+export const avatarWrapperStyle = ({
   zIndex,
   size,
 }: {
@@ -23,5 +25,5 @@ export const avatarStackStyle = ({
 }) => (): SerializedStyles =>
   css`
     z-index: ${zIndex};
-    margin-left: ${iconMarginLeft(size)};
+    width: ${rem(sizeBasedOnProp(size) * OVERLAP_FACTOR)};
   `;
