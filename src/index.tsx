@@ -16,6 +16,7 @@ export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { Theme } from './theme';
 
 export { default as Avatar } from './components/Avatar';
+export { default as AvatarStack } from './components/Avatar/AvatarStack';
 export { default as Breadcrumb } from './components/Breadcrumb';
 export { default as Button } from './components/Button';
 export { default as Card } from './components/Card';

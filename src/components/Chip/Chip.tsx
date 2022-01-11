@@ -73,7 +73,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
         {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
         {thumbnail && (
           <div>
-            <Avatar size={'xxxs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
+            <Avatar size={'xs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
               {thumbnail.name}
             </Avatar>
           </div>

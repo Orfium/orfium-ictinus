@@ -6,35 +6,29 @@ import { flex } from '../../theme/functions';
 import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
 import { AvatarSizes } from './Avatar';
 
-const sizeBasedOnProp = (size: AvatarSizes) => {
+export const sizeBasedOnProp = (size: AvatarSizes): number => {
   switch (size) {
-    case 'sm':
-      return rem(36);
     case 'md':
-      return rem(46);
+      return 24;
+    case 'sm':
+      return 20;
     case 'xs':
-      return rem(24);
-    case 'xxs':
-      return rem(20);
-    case 'xxxs':
-      return rem(16);
+      return 16;
     default:
-      return rem(56);
+      return 46;
   }
 };
 
 const fontSizeBasedOnProp = (theme: Theme, size: AvatarSizes) => {
   switch (size) {
-    case 'sm':
-      return theme.typography.fontSizes['14'];
-    case 'xs':
-      return theme.typography.fontSizes['13'];
-    case 'xxs':
+    case 'md':
       return theme.typography.fontSizes['11'];
-    case 'xxxs':
+    case 'sm':
+      return theme.typography.fontSizes['10'];
+    case 'xs':
       return theme.typography.fontSizes['8'];
     default:
-      return theme.typography.fontSizes['18'];
+      return theme.typography.fontSizes['16'];
   }
 };
 
@@ -48,13 +42,16 @@ export const avatarStyle = ({
   fillShade: typeof colorShades[number];
 }) => (theme: Theme): SerializedStyles => css`
   ${flex};
-  width: ${sizeBasedOnProp(size)};
-  height: ${sizeBasedOnProp(size)};
+  width: ${rem(sizeBasedOnProp(size))};
+  height: ${rem(sizeBasedOnProp(size))};
   border-radius: 100%;
+  border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
+  box-sizing: border-box;
   background: ${theme.utils.getColor(fill, fillShade)};
   overflow: hidden;
   position: relative;
   font-size: ${fontSizeBasedOnProp(theme, size)};
+  font-weight: ${theme.typography.weights.medium};
   align-items: center;
   flex-shrink: 0;
   line-height: 1;
