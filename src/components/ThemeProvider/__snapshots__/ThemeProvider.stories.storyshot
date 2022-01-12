@@ -23,9 +23,12 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover,
 .emotion-1:focus {
   background-color: #1b16ea;
+}
+
+.emotion-1:hover {
+  background-color: #413ed6;
 }
 
 .emotion-1:active {

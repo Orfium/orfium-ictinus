@@ -3,6 +3,7 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
+import { getHover } from '../../theme/states';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './ButtonBase';
@@ -38,8 +39,6 @@ export const buttonBaseStyle = ({
   calculatedColor,
   size,
   block,
-  iconLeft,
-  iconRight,
   isIconButton,
   disabled,
   transparent,
@@ -50,24 +49,20 @@ export const buttonBaseStyle = ({
     childrenCount: number;
   }
 >) => (theme: Theme) => {
-  const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
   const calculateButtonColor = () => {
     if (type === 'link') {
       return theme.utils.getColor('blue', 550);
     }
 
     if ((!filled && !transparent) || transparent) {
-      return defineBackgroundColor(
-        theme,
-        calculatedColor,
-        type,
-        hasSupplementaryIcons,
-        childrenCount > 0
-      );
+      return defineBackgroundColor(theme, calculatedColor, type, childrenCount > 0);
     }
 
     return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   };
+
+  const isOutlined = !filled && !transparent;
+
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
@@ -75,13 +70,7 @@ export const buttonBaseStyle = ({
     width: block ? '100%' : undefined,
     backgroundColor:
       filled && !transparent
-        ? defineBackgroundColor(
-            theme,
-            calculatedColor,
-            type,
-            hasSupplementaryIcons,
-            childrenCount > 0
-          )
+        ? defineBackgroundColor(theme, calculatedColor, type, childrenCount > 0)
         : 'transparent',
     padding:
       size === 'sm' || size === 'md'
@@ -95,19 +84,22 @@ export const buttonBaseStyle = ({
         ? 'none'
         : `solid ${rem(1)} ${transparentize(
             0.5,
-            defineBackgroundColor(
-              theme,
-              calculatedColor,
-              type,
-              hasSupplementaryIcons,
-              childrenCount > 0
-            )
+            defineBackgroundColor(theme, calculatedColor, type, childrenCount > 0)
           )}`,
     cursor: 'pointer',
     transition: 'background-color 150ms linear',
-    ':hover,:focus': {
+    ':focus': {
       backgroundColor: !disabled
         ? stateBackgroundColor(theme, 'hover', calculatedColor, filled && !transparent)
+        : undefined,
+    },
+    ':hover': {
+      backgroundColor: !disabled
+        ? getHover({
+            theme,
+            color: calculatedColor.color,
+            shade: isOutlined || transparent ? 0 : calculatedColor.shade,
+          })
         : undefined,
     },
     ':active': {

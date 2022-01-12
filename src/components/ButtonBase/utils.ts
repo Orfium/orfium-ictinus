@@ -14,10 +14,9 @@ export const defineBackgroundColor = (
   theme: Theme,
   color: ColorShapeFromComponent | undefined,
   type?: typeof mainTypes[number],
-  iconExists?: boolean,
   childrenExists?: boolean
 ): string => {
-  if ((!childrenExists && iconExists) || type === 'link') {
+  if (type === 'link') {
     return 'transparent';
   }
 
