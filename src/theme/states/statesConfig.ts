@@ -17,6 +17,19 @@ type StatesConfig = {
       };
     };
   };
+  pressed: {
+    backgroundColor: {
+      step: number;
+    };
+  };
+  disabled: {
+    opacity: {
+      amount: number;
+    };
+    cursor: {
+      name: string;
+    };
+  };
 };
 
 export const statesConfig: StatesConfig = {
@@ -34,6 +47,19 @@ export const statesConfig: StatesConfig = {
         name: 'magenta',
         shade: 500,
       },
+    },
+  },
+  pressed: {
+    backgroundColor: {
+      step: 100,
+    },
+  },
+  disabled: {
+    opacity: {
+      amount: 0.5,
+    },
+    cursor: {
+      name: 'not-allowed',
     },
   },
 };

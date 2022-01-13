@@ -31,10 +31,15 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 }
 
 .emotion-1:active:not(:disabled) {
-  background-color: #1511bc;
+  background-color: #3a37be;
 }
 
 .emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

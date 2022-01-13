@@ -45,10 +45,15 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-1:active:not(:disabled) {
-  background-color: #07369f;
+  background-color: #1248c4;
 }
 
 .emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -14015,10 +14020,15 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-1:active:not(:disabled) {
-  background-color: #07369f;
+  background-color: #1248c4;
 }
 
 .emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

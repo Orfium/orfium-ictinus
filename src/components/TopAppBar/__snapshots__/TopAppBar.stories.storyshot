@@ -231,10 +231,15 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 }
 
 .emotion-11:active:not(:disabled) {
-  background-color: #cbcbcb;
+  background-color: #fdfdfd;
 }
 
 .emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -812,10 +817,15 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-26:active:not(:disabled) {
-  background-color: #cbcbcb;
+  background-color: #fdfdfd;
 }
 
 .emotion-26:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-26:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1332,10 +1342,15 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 }
 
 .emotion-11:active:not(:disabled) {
-  background-color: #000;
+  background-color: #020202;
 }
 
 .emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1788,10 +1803,15 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 }
 
 .emotion-11:active:not(:disabled) {
-  background-color: #cbcbcb;
+  background-color: #fdfdfd;
 }
 
 .emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

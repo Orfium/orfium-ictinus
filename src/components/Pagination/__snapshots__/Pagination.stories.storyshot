@@ -66,10 +66,15 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: rgba(15,15,23,0.2);
+  background-color: #d6d6db;
 }
 
 .emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -267,10 +272,15 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: rgba(15,15,23,0.2);
+  background-color: #d6d6db;
 }
 
 .emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

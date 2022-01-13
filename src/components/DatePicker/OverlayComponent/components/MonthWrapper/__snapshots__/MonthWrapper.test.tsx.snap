@@ -128,10 +128,15 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-7:active:not(:disabled) {
-  background-color: #cbcbcb;
+  background-color: #fdfdfd;
 }
 
 .emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -488,10 +493,15 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-7:active:not(:disabled) {
-  background-color: #cbcbcb;
+  background-color: #fdfdfd;
 }
 
 .emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

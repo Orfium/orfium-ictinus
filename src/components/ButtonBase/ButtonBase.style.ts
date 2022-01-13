@@ -2,12 +2,12 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { pickTextColorFromSwatches } from '../../theme/palette';
-import { getFocus, getHover } from '../../theme/states';
+import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { buttonConfig } from '../Button/config';
 import { Props } from './ButtonBase';
-import { defineBackgroundColor, stateBackgroundColor } from './utils';
+import { defineBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it **/
 export const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') =>
@@ -74,17 +74,13 @@ export const buttonBaseStyle = ({
       }),
     },
     ':active:not(:disabled)': {
-      backgroundColor: stateBackgroundColor(
+      backgroundColor: getPressed({
         theme,
-        'active',
-        calculatedColor,
-        filled && !transparent
-      ),
+        color: calculatedColor.color,
+        shade: isOutlined || transparent ? 0 : calculatedColor.shade,
+      }),
     },
-    ':disabled': {
-      opacity: 0.5,
-      cursor: 'not-allowed',
-    },
+    ':disabled': getDisabled(),
   };
 
   if (isIconButton) {

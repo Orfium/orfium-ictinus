@@ -45,10 +45,15 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: #07369f;
+  background-color: #1248c4;
 }
 
 .emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -212,10 +217,15 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: #07369f;
+  background-color: #1248c4;
 }
 
 .emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

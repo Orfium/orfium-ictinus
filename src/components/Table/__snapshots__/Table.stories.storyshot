@@ -4839,10 +4839,15 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 }
 
 .emotion-47:active:not(:disabled) {
-  background-color: rgba(81,93,114,0.2);
+  background-color: #e7ebf2;
 }
 
 .emotion-47:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-47:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -13945,10 +13950,15 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
 }
 
 .emotion-71:active:not(:disabled) {
-  background-color: rgba(81,93,114,0.2);
+  background-color: #e7ebf2;
 }
 
 .emotion-71:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-71:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }

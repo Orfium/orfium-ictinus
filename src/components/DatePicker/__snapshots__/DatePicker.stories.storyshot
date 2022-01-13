@@ -494,10 +494,15 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-346:active:not(:disabled) {
-  background-color: #cbcbcb;
+  background-color: #fdfdfd;
 }
 
 .emotion-346:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-346:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -611,10 +616,15 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-429:active:not(:disabled) {
-  background-color: rgba(23,91,245,0.2);
+  background-color: #d0defd;
 }
 
 .emotion-429:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-429:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -647,10 +657,15 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-432:active:not(:disabled) {
-  background-color: #07369f;
+  background-color: #1248c4;
 }
 
 .emotion-432:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-432:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
