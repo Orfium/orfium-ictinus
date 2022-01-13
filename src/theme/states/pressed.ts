@@ -9,7 +9,9 @@ export type GetPressedProps = {
   shade?: typeof colorShades[number] | 0;
 };
 
-export type GetPressedResponse = string;
+export type GetPressedResponse = {
+  backgroundColor: string;
+};
 
 const backgroundColorStep = statesConfig.pressed.backgroundColor.step;
 
@@ -24,5 +26,5 @@ export const getPressed = ({
 }: GetPressedProps): GetPressedResponse => {
   const calculatedShade = getShadeWithStep({ shade, step: backgroundColorStep });
 
-  return theme.utils.getColor(color, calculatedShade);
+  return { backgroundColor: theme.utils.getColor(color, calculatedShade) };
 };

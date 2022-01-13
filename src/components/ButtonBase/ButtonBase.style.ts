@@ -71,14 +71,14 @@ export const buttonBaseStyle = ({
         theme,
         color: calculatedColor.color,
         shade: isOutlined || transparent ? 0 : calculatedColor.shade,
-      }),
+      }).backgroundColor,
     },
     ':active:not(:disabled)': {
       backgroundColor: getPressed({
         theme,
         color: calculatedColor.color,
         shade: isOutlined || transparent ? 0 : calculatedColor.shade,
-      }),
+      }).backgroundColor,
     },
     ':disabled': getDisabled(),
   };

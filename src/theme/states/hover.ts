@@ -9,7 +9,9 @@ export type GetHoverProps = {
   shade?: typeof colorShades[number] | 0;
 };
 
-export type GetHoverResponse = string;
+export type GetHoverResponse = {
+  backgroundColor: string;
+};
 
 const backgroundColorStep = statesConfig.hover.backgroundColor.step;
 
@@ -24,5 +26,5 @@ export const getHover = ({
 }: GetHoverProps): GetHoverResponse => {
   const calculatedShade = getShadeWithStep({ shade, step: backgroundColorStep });
 
-  return theme.utils.getColor(color, calculatedShade);
+  return { backgroundColor: theme.utils.getColor(color, calculatedShade) };
 };

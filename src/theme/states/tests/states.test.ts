@@ -9,21 +9,21 @@ describe('Global states - getHover ', () => {
   const testTheme = theme('light');
 
   test('with only theme as prop', () => {
-    const color = getHover({ theme: testTheme });
+    const hoverResponse = getHover({ theme: testTheme });
 
-    expect(color).toBe(testTheme.utils.getColor('lightGrey', 50));
+    expect(hoverResponse.backgroundColor).toBe(testTheme.utils.getColor('lightGrey', 50));
   });
 
   test('with color and shade as prop', () => {
-    const color = getHover({ theme: testTheme, color: 'lightBlue', shade: 200 });
+    const hoverResponse = getHover({ theme: testTheme, color: 'lightBlue', shade: 200 });
 
-    expect(color).toBe(testTheme.utils.getColor('lightBlue', 250));
+    expect(hoverResponse.backgroundColor).toBe(testTheme.utils.getColor('lightBlue', 250));
   });
 
   test('with color and shade out of bound as prop', () => {
-    const color = getHover({ theme: testTheme, color: 'lightBlue', shade: 950 });
+    const hoverResponse = getHover({ theme: testTheme, color: 'lightBlue', shade: 950 });
 
-    expect(color).toBe(testTheme.utils.getColor('lightBlue', 900));
+    expect(hoverResponse.backgroundColor).toBe(testTheme.utils.getColor('lightBlue', 900));
   });
 });
 
@@ -71,21 +71,21 @@ describe('Global states - getPressed ', () => {
   const testTheme = theme('light');
 
   test('with only theme as prop', () => {
-    const color = getPressed({ theme: testTheme });
+    const pressedResponse = getPressed({ theme: testTheme });
 
-    expect(color).toBe(testTheme.utils.getColor('lightGrey', 100));
+    expect(pressedResponse.backgroundColor).toBe(testTheme.utils.getColor('lightGrey', 100));
   });
 
   test('with color and shade as prop', () => {
-    const color = getPressed({ theme: testTheme, color: 'lightBlue', shade: 200 });
+    const pressedResponse = getPressed({ theme: testTheme, color: 'lightBlue', shade: 200 });
 
-    expect(color).toBe(testTheme.utils.getColor('lightBlue', 300));
+    expect(pressedResponse.backgroundColor).toBe(testTheme.utils.getColor('lightBlue', 300));
   });
 
   test('with color and shade out of bound as prop', () => {
-    const color = getPressed({ theme: testTheme, color: 'lightBlue', shade: 950 });
+    const pressedResponse = getPressed({ theme: testTheme, color: 'lightBlue', shade: 950 });
 
-    expect(color).toBe(testTheme.utils.getColor('lightBlue', 850));
+    expect(pressedResponse.backgroundColor).toBe(testTheme.utils.getColor('lightBlue', 850));
   });
 });
 
