@@ -477,25 +477,29 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   color: black;
   background-color: #fefefe;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-346:focus {
-  background-color: #e5e5e5;
+.emotion-346:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-346:hover {
+.emotion-346:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-346:active {
+.emotion-346:active:not(:disabled) {
   background-color: #cbcbcb;
+}
+
+.emotion-346:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-347 {
@@ -590,25 +594,29 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   color: #175BF5;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(23,91,245,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-429:focus {
-  background-color: rgba(23,91,245,0.1);
+.emotion-429:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-429:hover {
+.emotion-429:hover:not(:disabled) {
   background-color: #e7eefe;
 }
 
-.emotion-429:active {
+.emotion-429:active:not(:disabled) {
   background-color: rgba(23,91,245,0.2);
+}
+
+.emotion-429:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-431 {
@@ -622,25 +630,29 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-432:focus {
-  background-color: #0946d0;
+.emotion-432:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-432:hover {
+.emotion-432:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-432:active {
+.emotion-432:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-432:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div

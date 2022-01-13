@@ -151,25 +151,29 @@ exports[`OverlayComponent should render correctly 1`] = `
   color: black;
   background-color: #fefefe;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus {
-  background-color: #e5e5e5;
+.emotion-10:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-10:hover {
+.emotion-10:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-10:active {
+.emotion-10:active:not(:disabled) {
   background-color: #cbcbcb;
+}
+
+.emotion-10:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-11 {
@@ -420,25 +424,29 @@ exports[`OverlayComponent should render correctly 1`] = `
   color: #175BF5;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(23,91,245,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-93:focus {
-  background-color: rgba(23,91,245,0.1);
+.emotion-93:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-93:hover {
+.emotion-93:hover:not(:disabled) {
   background-color: #e7eefe;
 }
 
-.emotion-93:active {
+.emotion-93:active:not(:disabled) {
   background-color: rgba(23,91,245,0.2);
+}
+
+.emotion-93:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-95 {
@@ -452,25 +460,29 @@ exports[`OverlayComponent should render correctly 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-96:focus {
-  background-color: #0946d0;
+.emotion-96:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-96:hover {
+.emotion-96:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-96:active {
+.emotion-96:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-96:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-0 {
@@ -623,25 +635,29 @@ exports[`OverlayComponent should render correctly 1`] = `
   color: black;
   background-color: #fefefe;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus {
-  background-color: #e5e5e5;
+.emotion-10:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-10:hover {
+.emotion-10:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-10:active {
+.emotion-10:active:not(:disabled) {
   background-color: #cbcbcb;
+}
+
+.emotion-10:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-11 {
@@ -892,25 +908,29 @@ exports[`OverlayComponent should render correctly 1`] = `
   color: #175BF5;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(23,91,245,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-93:focus {
-  background-color: rgba(23,91,245,0.1);
+.emotion-93:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-93:hover {
+.emotion-93:hover:not(:disabled) {
   background-color: #e7eefe;
 }
 
-.emotion-93:active {
+.emotion-93:active:not(:disabled) {
   background-color: rgba(23,91,245,0.2);
+}
+
+.emotion-93:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-95 {
@@ -924,25 +944,29 @@ exports[`OverlayComponent should render correctly 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-96:focus {
-  background-color: #0946d0;
+.emotion-96:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-96:hover {
+.emotion-96:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-96:active {
+.emotion-96:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-96:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div>

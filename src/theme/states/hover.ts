@@ -10,12 +10,13 @@ type GetHoverProps = {
 
 const backgroundColorStep = statesConfig.hover.backgroundColor.step;
 
+/**
+ * On hover background is darken by one step in shade.
+ * If we exceed the maximum value then we lighten it.
+ * This will be reviewed when dark theme is implemented. **/
 export const getHover = ({ theme, color = 'lightGrey', shade = 0 }: GetHoverProps): string => {
   let calculatedShade = shade;
 
-  // On hover background is darken by one step in shade.
-  // If we exceed the maximum value then we lighten it.
-  // This will be reviewed when dark theme is implemented.
   if (shade + backgroundColorStep > 950) {
     calculatedShade -= backgroundColorStep;
   } else {

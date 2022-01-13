@@ -26,16 +26,15 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: #175BF5;
-  width: 2.875rem;
+  width: 46px;
   background-color: transparent;
   padding: 0;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 100%;
-  border: solid 0.0625rem rgba(23,91,245,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,16 +49,21 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
   align-items: center;
 }
 
-.emotion-2:focus {
-  background-color: rgba(23,91,245,0.1);
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background-color: #e7eefe;
 }
 
-.emotion-2:active {
+.emotion-2:active:not(:disabled) {
   background-color: rgba(23,91,245,0.2);
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -169,16 +173,15 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
-  width: 2.25rem;
+  width: 36px;
   background-color: #175BF5;
   padding: 0;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -193,16 +196,21 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   align-items: center;
 }
 
-.emotion-2:focus {
-  background-color: #0946d0;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2:active {
+.emotion-2:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -235,16 +243,15 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  width: 2.875rem;
+  width: 46px;
   background-color: #175BF5;
   padding: 0;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -259,32 +266,36 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   align-items: center;
 }
 
-.emotion-5:focus {
-  background-color: #0946d0;
+.emotion-5:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-5:hover {
+.emotion-5:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-5:active {
+.emotion-5:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-5:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  width: 3.5rem;
+  width: 56px;
   background-color: #175BF5;
   padding: 0;
-  height: 3.5rem;
-  opacity: 1;
+  height: 56px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,16 +310,21 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
   align-items: center;
 }
 
-.emotion-8:focus {
-  background-color: #0946d0;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-8:hover {
+.emotion-8:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-8:active {
+.emotion-8:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-8:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -440,16 +456,15 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
-  width: 2.25rem;
+  width: 36px;
   background-color: #175BF5;
   padding: 0;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -464,16 +479,21 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   align-items: center;
 }
 
-.emotion-2:focus {
-  background-color: #0946d0;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2:active {
+.emotion-2:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -506,16 +526,15 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   color: black;
-  width: 2.25rem;
+  width: 36px;
   background-color: #36C152;
   padding: 0;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -530,16 +549,21 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   align-items: center;
 }
 
-.emotion-5:focus {
-  background-color: #2b9941;
+.emotion-5:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-5:hover {
+.emotion-5:hover:not(:disabled) {
   background-color: #30ad49;
 }
 
-.emotion-5:active {
+.emotion-5:active:not(:disabled) {
   background-color: #207130;
+}
+
+.emotion-5:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-7 {
@@ -556,16 +580,15 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   color: black;
-  width: 2.25rem;
+  width: 36px;
   background-color: #FF1744;
   padding: 0;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -580,16 +603,21 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   align-items: center;
 }
 
-.emotion-8:focus {
-  background-color: #e3002c;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-8:hover {
+.emotion-8:hover:not(:disabled) {
   background-color: #e5143d;
 }
 
-.emotion-8:active {
+.emotion-8:active:not(:disabled) {
   background-color: #b00022;
+}
+
+.emotion-8:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div

@@ -14,25 +14,29 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus {
-  background-color: #0946d0;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-1:active {
+.emotion-1:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -240,25 +244,29 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   color: #1451dc;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
+  height: 36px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-16:focus {
-  background-color: transparent;
+.emotion-16:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-16:hover {
+.emotion-16:hover:not(:disabled) {
   background-color: #f3f5f8;
 }
 
-.emotion-16:active {
+.emotion-16:active:not(:disabled) {
   background-color: transparent;
+}
+
+.emotion-16:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-17 {
@@ -638,25 +646,29 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus {
-  background-color: #0946d0;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-1:active {
+.emotion-1:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -768,25 +780,29 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus {
-  background-color: #0946d0;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-1:active {
+.emotion-1:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -898,25 +914,29 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus {
-  background-color: #0946d0;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-1:active {
+.emotion-1:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -1028,25 +1048,29 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus {
-  background-color: #0946d0;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:hover {
+.emotion-1:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-1:active {
+.emotion-1:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {

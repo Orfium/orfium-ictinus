@@ -33,13 +33,29 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   color: white;
   background-color: #28283e;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 0.5;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #232336;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #50507c;
+}
+
+.emotion-3:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-4 {
@@ -259,25 +275,29 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   color: white;
   background-color: #28283e;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus {
-  background-color: #3c3c5d;
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-3:hover {
+.emotion-3:hover:not(:disabled) {
   background-color: #232336;
 }
 
-.emotion-3:active {
+.emotion-3:active:not(:disabled) {
   background-color: #50507c;
+}
+
+.emotion-3:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-4 {
@@ -392,25 +412,29 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   color: black;
   background-color: #e7ebf2;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-32:focus {
-  background-color: #c6cfe0;
+.emotion-32:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-32:hover {
+.emotion-32:hover:not(:disabled) {
   background-color: #dbe1eb;
 }
 
-.emotion-32:active {
+.emotion-32:active:not(:disabled) {
   background-color: #a5b4ce;
+}
+
+.emotion-32:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-35 {
@@ -775,25 +799,29 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   color: white;
   background-color: #28283e;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus {
-  background-color: #3c3c5d;
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-3:hover {
+.emotion-3:hover:not(:disabled) {
   background-color: #232336;
 }
 
-.emotion-3:active {
+.emotion-3:active:not(:disabled) {
   background-color: #50507c;
+}
+
+.emotion-3:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-4 {
@@ -908,25 +936,29 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   color: black;
   background-color: #d6d6db;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-14:focus {
-  background-color: #bbbbc3;
+.emotion-14:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-14:hover {
+.emotion-14:hover:not(:disabled) {
   background-color: #c1c1c9;
 }
 
-.emotion-14:active {
+.emotion-14:active:not(:disabled) {
   background-color: #a0a0ab;
+}
+
+.emotion-14:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-23 {
@@ -945,25 +977,29 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   color: #28283e;
   background-color: transparent;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(40,40,62,0.5);
+  border: solid 0.0625rem #28283e;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-25:focus {
-  background-color: rgba(40,40,62,0.1);
+.emotion-25:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-25:hover {
+.emotion-25:hover:not(:disabled) {
   background-color: #eaeaed;
 }
 
-.emotion-25:active {
+.emotion-25:active:not(:disabled) {
   background-color: rgba(40,40,62,0.2);
+}
+
+.emotion-25:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-34 {
@@ -1221,25 +1257,29 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
   color: white;
   background-color: #175BF5;
   padding: 0.5rem 1rem;
-  height: 2.875rem;
-  opacity: 1;
+  height: 46px;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus {
-  background-color: #0946d0;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2:active {
+.emotion-2:active:not(:disabled) {
   background-color: #07369f;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
