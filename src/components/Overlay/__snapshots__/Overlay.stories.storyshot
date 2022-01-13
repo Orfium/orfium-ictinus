@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Overlay Overlay 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0.5rem 1rem;
+  height: 2.875rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-1:hover,
+.emotion-1:focus {
+  background-color: #0946d0;
+}
+
+.emotion-1:active {
+  background-color: #07369f;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div>
+    <button
+      className="emotion-1"
+      data-testid="button"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="emotion-2"
+      >
+        <span
+          className="emotion-3"
+        >
+          Open Overlay
+        </span>
+      </span>
+    </button>
+  </div>
+</div>
+`;
