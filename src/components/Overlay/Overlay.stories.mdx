@@ -1,0 +1,32 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import Overlay from './Overlay';
+import OverlayShowcase from '../storyUtils/OverlayShowcase';
+
+<Meta title="Design System/Overlay" component={Overlay} />
+
+# Overlay
+
+Description goes here
+
+# Usage
+
+```js
+import { Overlay } from '@orfium/ictinus';
+
+<Overlay/>;
+```
+
+# Props
+
+<Props of={Overlay} />
+
+# Overlay
+
+Overlay
+
+<Preview>
+  <Story name="Overlay" parameters={{ decorators: [withKnobs] }}>
+    <OverlayShowcase anchor={select( 'anchor', ['top', 'left', 'bottom', 'right'],'left')} size={text('size', '33%')}/>
+  </Story>
+</Preview>
