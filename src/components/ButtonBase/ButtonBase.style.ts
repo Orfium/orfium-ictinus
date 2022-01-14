@@ -5,16 +5,16 @@ import { pickTextColorFromSwatches } from '../../theme/palette';
 import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
-import { buttonConfig } from '../Button/config';
 import { Props } from './ButtonBase';
+import { buttonConfig, buttonSizes } from './config';
 import { defineBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it **/
-export const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') =>
-  buttonConfig.sizes[size] || buttonConfig.sizes.default;
+export const heightBasedOnSize = (size: typeof buttonSizes[number]) =>
+  rem(buttonConfig.sizes[size] || buttonConfig.sizes.default);
 
 /** Calculates the button specific font size based on the size passed to it **/
-const fontSizeBasedOnSize = (theme: Theme, size: 'lg' | 'md' | 'sm') =>
+const fontSizeBasedOnSize = (theme: Theme, size: typeof buttonSizes[number]) =>
   theme.typography.fontSizes[buttonConfig.fontSize[size] || buttonConfig.fontSize.default];
 
 export const buttonBaseStyle = ({

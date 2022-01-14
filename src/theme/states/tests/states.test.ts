@@ -4,6 +4,7 @@ import { GetFocusResponse } from '../focus';
 import { getDisabled, getFocus, getHover, getPressed } from '../index';
 import { statesConfig } from '../statesConfig';
 import { getShadeWithStep } from '../utils';
+import { MAX_SHADE } from '../../palette';
 
 describe('Global states - getHover ', () => {
   const testTheme = theme('light');
@@ -21,7 +22,7 @@ describe('Global states - getHover ', () => {
   });
 
   test('with color and shade out of bound as prop', () => {
-    const hoverResponse = getHover({ theme: testTheme, color: 'lightBlue', shade: 950 });
+    const hoverResponse = getHover({ theme: testTheme, color: 'lightBlue', shade: MAX_SHADE });
 
     expect(hoverResponse.backgroundColor).toBe(testTheme.utils.getColor('lightBlue', 900));
   });
@@ -83,7 +84,7 @@ describe('Global states - getPressed ', () => {
   });
 
   test('with color and shade out of bound as prop', () => {
-    const pressedResponse = getPressed({ theme: testTheme, color: 'lightBlue', shade: 950 });
+    const pressedResponse = getPressed({ theme: testTheme, color: 'lightBlue', shade: MAX_SHADE });
 
     expect(pressedResponse.backgroundColor).toBe(testTheme.utils.getColor('lightBlue', 850));
   });
@@ -112,7 +113,7 @@ describe('Global states - utils ', () => {
   });
 
   test('getShadeWithStep out of bounds', () => {
-    const shade = getShadeWithStep({ shade: 950, step: 50 });
+    const shade = getShadeWithStep({ shade: MAX_SHADE, step: 50 });
 
     expect(shade).toBe(900);
   });

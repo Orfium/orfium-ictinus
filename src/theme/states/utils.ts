@@ -1,4 +1,4 @@
-import { colorShades } from '../palette';
+import { colorShades, MAX_SHADE } from '../palette';
 
 type GetShadeWithStepProps = {
   shade: typeof colorShades[number] | 0;
@@ -11,7 +11,7 @@ export const getShadeWithStep = ({
 }: GetShadeWithStepProps): typeof colorShades[number] => {
   let calculatedShade = shade;
 
-  if (shade + step > 950) {
+  if (shade + step > MAX_SHADE) {
     calculatedShade -= step;
   } else {
     calculatedShade += step;

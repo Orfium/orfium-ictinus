@@ -6,8 +6,6 @@ import { enhancePaletteWithShades } from './utils';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
-export const BASE_SHADE = 500;
-
 /**
  * Here are listed all the colors available for our project
  * Flat colors are the actual colors of the system
@@ -77,6 +75,11 @@ export const colorShades = [
   900,
   950,
 ] as const;
+
+export const MIN_SHADE = 50;
+export const BASE_SHADE = 500;
+export const MAX_SHADE = 950;
+
 /**
  * mainTypes are not colors per se but a type of color
  * for example error is red but also defines a state that's why is listed here and not in flat colors

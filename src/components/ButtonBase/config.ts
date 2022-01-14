@@ -1,11 +1,17 @@
 import { colorShades, flatColors } from '../../theme/palette';
 
+export const LG = 'lg';
+export const MD = 'md';
+export const SM = 'sm';
+
+export const buttonSizes = [LG, MD, SM] as const;
+
 type ButtonConfig = {
   sizes: {
-    [key in 'lg' | 'md' | 'sm' | 'default']: number;
+    [key in typeof buttonSizes[number] | 'default']: number;
   };
   fontSize: {
-    [key in 'sm' | 'default']: number;
+    [key in typeof SM | 'default']: number;
   };
   types: {
     link: {

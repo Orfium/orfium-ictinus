@@ -1,6 +1,6 @@
 import { rem } from 'theme/utils';
 
-import { colorShades, pickTextColorFromSwatches } from '../../theme/palette';
+import { colorShades, MAX_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
 import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
 
@@ -54,7 +54,7 @@ export const getBorder = ({
   state = 'normal',
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
-    const calculatedShade = shade < 950 ? 50 : -50;
+    const calculatedShade = shade < MAX_SHADE ? 50 : -50;
 
     return (shade + calculatedShade) as typeof colorShades[number];
   };
