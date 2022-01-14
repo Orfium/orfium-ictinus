@@ -30,15 +30,13 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -47,19 +45,19 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -358,15 +356,13 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -375,19 +371,19 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -695,15 +691,13 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: not-allowed;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -712,31 +706,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  background-color: white;
   opacity: 0.5;
-  border: 0.125rem solid transparent;
+  cursor: not-allowed;
+  min-width: 16.5rem;
+  background-color: white;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-4:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-4>input,
-.emotion-4>textarea {
-  color: #444d5f;
-  fill: #444d5f;
+  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-5 {
@@ -913,99 +890,11 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   fill: #5f6c85;
 }
 
-.emotion-15 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  opacity: 0.5;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-15:focus-within,
-.emotion-15:hover {
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-15:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-15:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-15>input,
-.emotion-15>textarea {
-  color: #444d5f;
-  fill: #444d5f;
-}
-
-.emotion-26 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  opacity: 0.5;
-  border: 0.125rem solid transparent;
-  box-shadow: initial;
-}
-
-.emotion-26:focus-within {
-  border-color: #cfd7e5;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
-}
-
-.emotion-26:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-26>input,
-.emotion-26>textarea {
-  color: #444d5f;
-  fill: #444d5f;
-}
-
 .emotion-38 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: not-allowed;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -1014,30 +903,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: not-allowed;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-38:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-38:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-38>input,
-.emotion-38>textarea {
-  color: #444d5f;
-  fill: #444d5f;
+  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-45 {
@@ -1048,92 +921,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 
 .emotion-45 path {
   fill: #5f6c85;
-}
-
-.emotion-48 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-48:focus-within,
-.emotion-48:hover {
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-48:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-48:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-48>input,
-.emotion-48>textarea {
-  color: #444d5f;
-  fill: #444d5f;
-}
-
-.emotion-58 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: not-allowed;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: initial;
-}
-
-.emotion-58:focus-within {
-  border-color: #cfd7e5;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
-}
-
-.emotion-58:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-58>input,
-.emotion-58>textarea {
-  color: #444d5f;
-  fill: #444d5f;
 }
 
 <div
@@ -1247,7 +1034,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-15"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
@@ -1314,7 +1101,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-26"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
@@ -1447,7 +1234,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-48"
+              className="emotion-38"
             >
               <div
                 className="emotion-5"
@@ -1509,7 +1296,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-58"
+              className="emotion-38"
             >
               <div
                 className="emotion-5"
@@ -1601,15 +1388,13 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -1618,19 +1403,19 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -1807,70 +1592,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   fill: #5f6c85;
 }
 
-.emotion-15 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-15:focus-within,
-.emotion-15:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-15:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
-}
-
-.emotion-15:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-26 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-26:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-26:focus-within {
-  border-color: #cfd7e5;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
-}
-
 <div
   style={
     Object {
@@ -1984,7 +1705,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-15"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
@@ -2052,7 +1773,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-26"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
@@ -2145,15 +1866,13 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -2162,25 +1881,19 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-4:focus-within,
-.emotion-4:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -2642,15 +2355,13 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -2659,19 +2370,19 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -2972,15 +2683,13 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -2989,19 +2698,19 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-3:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-3:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-4 {
@@ -3440,15 +3149,13 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -3457,25 +3164,19 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-4:focus-within,
-.emotion-4:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -4043,15 +3744,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-5 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #e5143d;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -4060,19 +3759,19 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  border-color: #e5143d;
 }
 
 .emotion-5:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-5:focus-within {
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-6 {
@@ -4282,75 +3981,11 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   fill: #FF1744;
 }
 
-.emotion-19 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem transparent;
-  border-color: #e5143d;
-}
-
-.emotion-19:focus-within,
-.emotion-19:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-19:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
-}
-
-.emotion-19:focus-within {
-  background-color: white;
-}
-
-.emotion-33 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
-  border-color: #e5143d;
-}
-
-.emotion-33:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-33:focus-within {
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
-}
-
 .emotion-48 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -4359,19 +3994,19 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-48:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-48:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-52 {
@@ -4436,70 +4071,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 
 .emotion-59 path {
   fill: #5f6c85;
-}
-
-.emotion-62 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-62:focus-within,
-.emotion-62:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-62:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
-}
-
-.emotion-62:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-76 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-76:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-76:focus-within {
-  border-color: #cfd7e5;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
 }
 
 <div
@@ -4638,7 +4209,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 className="emotion-4"
               >
                 <div
-                  className="emotion-19"
+                  className="emotion-5"
                 >
                   <div
                     className="emotion-6"
@@ -4719,7 +4290,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 className="emotion-4"
               >
                 <div
-                  className="emotion-33"
+                  className="emotion-5"
                 >
                   <div
                     className="emotion-6"
@@ -4893,7 +4464,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 className="emotion-4"
               >
                 <div
-                  className="emotion-62"
+                  className="emotion-48"
                 >
                   <div
                     className="emotion-6"
@@ -4974,7 +4545,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 className="emotion-4"
               >
                 <div
-                  className="emotion-76"
+                  className="emotion-48"
                 >
                   <div
                     className="emotion-6"
@@ -5082,15 +4653,13 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -5099,19 +4668,19 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -5426,15 +4995,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   align-items: center;
   position: relative;
   width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -5443,19 +5010,19 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -5632,70 +5199,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   fill: #5f6c85;
 }
 
-.emotion-15 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-15:focus-within,
-.emotion-15:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-15:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
-}
-
-.emotion-15:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-26 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-26:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-26:focus-within {
-  border-color: #cfd7e5;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
-}
-
 <div
   style={
     Object {
@@ -5809,7 +5312,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-15"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
@@ -5877,7 +5380,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-26"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
