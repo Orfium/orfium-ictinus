@@ -2,7 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { pickTextColorFromSwatches } from '../../../theme/palette';
 import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
 type Props = {
@@ -32,7 +31,7 @@ export const dayWrapperStyle = ({
   cursor: pointer;
   position: relative;
   color: ${isSelected
-    ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+    ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
     : theme.utils.getColor('darkGrey', 850)};
   width: ${rem(40)};
   padding: 0 ${rem(4)};

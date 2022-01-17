@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { pickTextColorFromSwatches } from '../../theme/palette';
+import { useTheme } from '../../index';
 import { DivProps } from '../../utils/common';
 import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Icon from '../Icon';
@@ -26,7 +26,7 @@ export type Props = {
   className?: string;
 };
 
-export type AvatarSizes =   'xs' | 'sm' | 'md' | 'lg';
+export type AvatarSizes = 'xs' | 'sm' | 'md' | 'lg';
 
 const iconSizeBasedOnAvatar = (size: AvatarSizes) => {
   switch (size) {
@@ -46,6 +46,7 @@ const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
     { src = '', iconName = 'user', size = 'md', color = 'lightGrey-600', children, className },
     ref
   ) => {
+    const theme = useTheme();
     const calculatedColor = calculateActualColorFromComponentProp(color);
 
     return (
@@ -61,7 +62,7 @@ const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
         {src && <img src={src} />}
         {!src && !children && iconName && (
           <Icon
-            color={pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
+            color={theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
             name={iconName}
             size={iconSizeBasedOnAvatar(size)}
           />
