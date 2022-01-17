@@ -16,9 +16,9 @@ export type Props = {
   /** Callback fired when the component requests to be closed. */
   onClose: () => void;
   /** Side from which the overlay will appear. */
-  anchor: AnchorType;
+  anchor?: AnchorType;
   /**Based on the anchor, defines the size of the overlay as a percentage of the screens's size. */
-  size: number;
+  size?: number;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
