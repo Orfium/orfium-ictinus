@@ -1,6 +1,6 @@
 import { statesConfig } from './statesConfig';
 
-export type GetDisabledResponse = {
+export type GetDisabled = {
   style: {
     opacity: number;
     cursor: string;
@@ -15,7 +15,7 @@ const cursor = statesConfig.disabled.cursor.name;
 /**
  * On disabled opacity is dropped in half and cursor is 'not-allowed'
  * **/
-export const getDisabled = (): GetDisabledResponse => {
+export const getDisabled = (): GetDisabled => {
   return {
     style: {
       opacity: opacityAmount,
