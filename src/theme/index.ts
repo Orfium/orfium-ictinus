@@ -3,7 +3,7 @@ import overrides from './overrides';
 import { getAAColor, getAAColorFromSwatches, getColor } from './palette';
 import { darkPaletteConfig, lightPaletteConfig } from './palette.config';
 import spacing from './spacing';
-import { TextColorTypes, Theme } from './types';
+import { TextColorTypes, Theme, ThemeConfig } from './types';
 import typography from './typography';
 import { enhancePaletteWithShades } from './utils';
 
@@ -28,5 +28,5 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
   };
 };
 
-export { TextColorTypes, Theme };
+export { TextColorTypes, Theme, ThemeConfig };
 export default defaultTheme;
