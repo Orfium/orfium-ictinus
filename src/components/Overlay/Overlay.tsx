@@ -1,36 +1,47 @@
+import useEscape from 'hooks/useEscape';
 import React from 'react';
 import { DivProps } from 'utils/common';
+import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
 import { BackdropStyle, closeIconContainer, contentStyle, OverlayStyle } from './Overlay.style';
 import IconButton from 'components/IconButton';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
+export type AnchorType = 'bottom' | 'left' | 'right' | 'top';
+
 export type Props = {
-  /**  If true, the modal is open. Defaults to false. */
+  /**  If true, the overlay is open.*/
   open: boolean;
   /** Callback fired when the component requests to be closed. */
   onClose: () => void;
-  anchor: 'bottom' | 'left' | 'right' | 'top';
-  size: string;
+  /** Side from which the overlay will appear. */
+  anchor: AnchorType;
+  /**Based on the anchor, defines the size of the overlay as a percentage of the screens's size. */
+  size: number;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
 
-const getAnchorStyle = ({ anchor, size }: { anchor: any; size: any }) => {
+const getAnchorStyle = ({ anchor, size }: { anchor: AnchorType; size: number }) => {
   return anchor === 'top' || anchor === 'bottom'
-    ? { display: 'flex', height: size, width: '100%' }
-    : { display: 'flex', height: '100%', width: size };
+    ? { display: 'flex', height: `${size}%`, width: '100%' }
+    : { display: 'flex', height: '100%', width: `${size}%` };
 };
 
 const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
-  ({ open, onClose, anchor = 'top', size = '50%', children }, ref) => {
-    console.log({ open });
+  ({ open, onClose, anchor = 'left', size = 33, dataTestId, children }, ref) => {
+    useEscape(() => {
+      onClose();
+    });
 
-    return open ? (
-      <div css={BackdropStyle({ anchor })}>
+    return (
+      <div
+        css={BackdropStyle({ open, anchor })}
+        data-testid={generateTestDataId('overlay-container', dataTestId)}
+      >
         <ClickAwayListener onClick={() => onClose()} cssStyles={getAnchorStyle({ anchor, size })}>
-          <div ref={ref} css={OverlayStyle()}>
+          <div ref={ref} css={OverlayStyle({ open, anchor })}>
             <div css={closeIconContainer()}>
               <IconButton
                 name={'close'}
@@ -46,7 +57,7 @@ const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
           </div>
         </ClickAwayListener>
       </div>
-    ) : null;
+    );
   }
 );
 

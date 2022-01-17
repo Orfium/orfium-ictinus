@@ -7,14 +7,14 @@ import OverlayShowcase from '../storyUtils/OverlayShowcase';
 
 # Overlay
 
-Description goes here
+A universal Overlay component.
 
 # Usage
 
 ```js
 import { Overlay } from '@orfium/ictinus';
 
-<Overlay/>;
+<Overlay opem={true} onClose={() => {}}/>;
 ```
 
 # Props
@@ -23,10 +23,8 @@ import { Overlay } from '@orfium/ictinus';
 
 # Overlay
 
-Overlay
-
 <Preview>
   <Story name="Overlay" parameters={{ decorators: [withKnobs] }}>
-    <OverlayShowcase anchor={select( 'anchor', ['top', 'left', 'bottom', 'right'],'left')} size={text('size', '33%')}/>
+    <OverlayShowcase anchor={select( 'anchor', ['left', 'top', 'right', 'bottom'],'left')} size={text('size', 33)}/>
   </Story>
 </Preview>

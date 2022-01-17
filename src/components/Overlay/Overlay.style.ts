@@ -1,37 +1,49 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'polished';
+import { transparentize } from 'polished';
 import { Theme } from 'theme';
 import { flex, transition } from 'theme/functions';
 
-const LeftAnchorStyle = (): SerializedStyles => css``;
+import { AnchorType } from './Overlay';
 
-const RightAnchorStyle = (): SerializedStyles => css`
-  justify-content: end;
+const JustifyContentEnd = (): SerializedStyles => css`
+  justify-content: flex-end;
 `;
 
-const TopAnchorStyle = (): SerializedStyles => css`
+const FlexDirectionColumn = (): SerializedStyles => css`
   flex-direction: column;
 `;
 
-const BottomAnchorStyle = (): SerializedStyles => css`
-  flex-direction: column;
-  justify-content: end;
-`;
-
-const getAnchorStyle = ({ anchor }: { anchor: any }) => {
+const getStyleBasedOnAnchor = (anchor: AnchorType) => {
   switch (anchor) {
-    case 'bottom':
-      return BottomAnchorStyle();
     case 'top':
-      return TopAnchorStyle();
+      return FlexDirectionColumn();
     case 'right':
-      return RightAnchorStyle();
+      return JustifyContentEnd();
+    case 'bottom':
+      return css`
+        ${JustifyContentEnd()} ${FlexDirectionColumn()}
+      `;
     default:
-      return LeftAnchorStyle();
+      return css``;
   }
 };
 
-export const BackdropStyle = ({ anchor }: { anchor: any }) => (): SerializedStyles => css`
+const transformBasedOnProps = (open: boolean, anchor: AnchorType) => {
+  switch (anchor) {
+    case 'top':
+      return open ? 'translateY(0)' : 'translateY(-100%)';
+    case 'right':
+      return open ? 'translateX(0)' : 'translateX(100%)';
+    case 'bottom':
+      return open ? 'translateY(0)' : 'translateY(100%)';
+    default:
+      return open ? 'translateX(0)' : 'translateX(-100%)';
+  }
+};
+
+export const BackdropStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
+  theme: Theme
+): SerializedStyles => css`
   ${flex};
   position: fixed;
   width: 100vw;
@@ -41,16 +53,24 @@ export const BackdropStyle = ({ anchor }: { anchor: any }) => (): SerializedStyl
   bottom: 0;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  ${getAnchorStyle({ anchor })}
+  background-color: ${transparentize(0.25, theme.palette.black)};
+  visibility: ${open ? 'visible' : 'hidden'};
+  opacity: ${open ? 1 : 0};
+  ${transition(0.2)}
+  ${getStyleBasedOnAnchor(anchor)}
 `;
 
-export const OverlayStyle = () => (theme: Theme): SerializedStyles => css`
+export const OverlayStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
+  theme: Theme
+): SerializedStyles => css`
   ${flex}
   flex-direction: column;
+  overflow-y: auto;
   background-color: ${theme.palette.white};
   width: 100%;
   height: auto;
+  transform: ${transformBasedOnProps(open, anchor)};
+  ${transition(0.3)}
 `;
 
 export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
@@ -60,7 +80,5 @@ export const closeIconContainer = () => (theme: Theme): SerializedStyles => css`
 `;
 
 export const contentStyle = () => (theme: Theme): SerializedStyles => css`
-  ${flex}
   padding: ${theme.spacing.xl};
-  height: 100%;
 `;
