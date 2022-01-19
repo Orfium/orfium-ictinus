@@ -35,9 +35,12 @@ export const tooltipStyle = ({
       max-width: ${rem(256)};
       padding: ${theme.spacing.sm};
       font-size: ${defineFontSizeBasedOnTooltipSize(size)};
+      font-weight: ${theme.typography.weights.regular};
       line-height: 110%;
       border-radius: ${theme.spacing.sm};
       text-align: start;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
     .tippy-arrow {
       color: ${backgroundColor};
