@@ -85,9 +85,12 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
   text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-19 .tippy-arrow {
