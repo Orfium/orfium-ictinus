@@ -3,10 +3,10 @@ import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
+import { textInputSizes } from './config';
 import { errorMsgStyle, flexContainer, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
-import { textInputSizes } from './config';
 
 export type Props = {
   /** The label of the text field that will be used as a placeholder and a label */
