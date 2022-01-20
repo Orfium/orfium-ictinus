@@ -3,7 +3,7 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
-import { colorShades, flatColors, pickTextColorFromSwatches } from '../../theme/palette';
+import { colorShades, flatColors } from '../../theme/palette';
 import { AvatarSizes } from './Avatar';
 
 export const sizeBasedOnProp = (size: AvatarSizes): number => {
@@ -57,7 +57,7 @@ export const avatarStyle = ({
   line-height: 1;
   user-select: none;
   justify-content: center;
-  color: ${pickTextColorFromSwatches(fill, fillShade)};
+  color: ${theme.utils.getAAColorFromSwatches(fill, fillShade)};
 
   img {
     border-radius: 100%;
