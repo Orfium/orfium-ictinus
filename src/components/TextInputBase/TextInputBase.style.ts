@@ -13,7 +13,6 @@ export const flexContainer = () => (): SerializedStyles =>
     display: 'flex',
     alignItems: 'center',
     position: 'relative',
-    width: '-webkit-fill-available',
   });
 
 const borderConfig = textInputConfig.types.outlined.border;
