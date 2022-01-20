@@ -13351,16 +13351,13 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-729 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -13369,25 +13366,19 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-729:focus-within,
-.emotion-729:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-729:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-729:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-730 {
@@ -27326,16 +27317,13 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-729 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -27344,25 +27332,19 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-729:focus-within,
-.emotion-729:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-729:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-729:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-730 {

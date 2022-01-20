@@ -32,16 +32,13 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 6.25rem;
-  cursor: not-allowed;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -50,41 +47,14 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  background-color: white;
   opacity: 0.5;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-3 {
+  cursor: not-allowed;
   min-width: 17.875rem;
+  background-color: white;
 }
 
 .emotion-3:focus-within {
-  border-color: #1451dc;
-  background-color: #F4F8FF;
-}
-
-.emotion-3:before {
-  content: '';
-  background-color: rgba(255, 255, 255, 0.15);
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.emotion-3>input,
-.emotion-3>textarea {
-  color: #444d5f;
-  fill: #444d5f;
+  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-4 {
@@ -390,16 +360,13 @@ exports[`Storyshots Design System/SearchField Search Field sizes 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 6.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -408,29 +375,19 @@ exports[`Storyshots Design System/SearchField Search Field sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-3 {
+  opacity: 1;
+  cursor: auto;
   min-width: 17.875rem;
+  background-color: white;
 }
 
 .emotion-3:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-3:focus-within {
-  border-color: #1451dc;
-  background-color: #F4F8FF;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-4 {
@@ -734,16 +691,13 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 6.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -752,29 +706,19 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   -ms-user-select: none;
   user-select: none;
   position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-3:focus-within,
-.emotion-3:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-3 {
+  opacity: 1;
+  cursor: auto;
   min-width: 17.875rem;
+  background-color: white;
 }
 
 .emotion-3:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-3:focus-within {
-  border-color: #1451dc;
-  background-color: #F4F8FF;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-4 {

@@ -3,7 +3,8 @@ import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
-import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import { textInputSizes } from './config';
+import { errorMsgStyle, flexContainer, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
@@ -33,7 +34,7 @@ export type Props = {
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Sets the size of the textField */
-  size?: 'md' | 'sm';
+  size?: typeof textInputSizes[number];
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
   /** If the field is used as a Search component */
@@ -71,14 +72,7 @@ const TextInputBase: FC<Props> = ({
 
   return (
     <React.Fragment>
-      <div
-        css={{
-          display: 'flex',
-          alignItems: 'center',
-          position: 'relative',
-          width: 'fill-available',
-        }}
-      >
+      <div css={flexContainer()}>
         <div
           css={wrapperStyle({
             dark,

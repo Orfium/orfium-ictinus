@@ -649,16 +649,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-10 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -667,19 +664,19 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-10:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-10:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-11 {
