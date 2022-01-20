@@ -1,7 +1,6 @@
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
-import { pickTextColorFromSwatches } from 'theme/palette';
 
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
 import { TestId } from '../../utils/types';
@@ -13,6 +12,7 @@ import {
   markerStyle,
 } from './CheckBox.style';
 import Icon from 'components/Icon';
+import { useTheme } from '../../index';
 
 export type Props = {
   /** The label of the checkbox. */
@@ -53,6 +53,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
     const [isChecked, setIsChecked] = React.useState(Boolean(checked));
     const inputRef = React.useRef<HTMLInputElement>(null);
 
+    const theme = useTheme();
     const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
     const { color, shade } = calculateColorBetweenColorAndType('', 'primary');
 
@@ -76,7 +77,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
     return (
       <span ref={ref} css={wrapperStyle({ disabled })}>
         <span
-          css={checkboxWrapperStyle({disabled})}
+          css={checkboxWrapperStyle({ disabled })}
           onClick={e => {
             e.stopPropagation();
             if (e.currentTarget === e.target) {
@@ -99,7 +100,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
             <Icon
               name={intermediate ? 'minus' : 'checkmark'}
               size={24}
-              color={pickTextColorFromSwatches(color, shade)}
+              color={theme.utils.getAAColorFromSwatches(color, shade)}
             />
           </label>
         </span>
