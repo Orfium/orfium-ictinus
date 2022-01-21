@@ -1,6 +1,7 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
+import Icon from '../Icon';
 import Stack from '../storyUtils/Stack';
 import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
 import { FIGMA_URL } from '../../utils/common';
@@ -173,7 +174,11 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 # Dynamic Button Props - Knobs
 <Preview>
   <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
-    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')} block={boolean('block', false)}>{text('text', 'change me!')}</Button>
+    <Stack vertical>
+      <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')} block={boolean('block', false)}>{text('text', 'change me!')}</Button>
+      <Button filled={false} size={'sm'} iconLeft={<Icon name="close" size={16} color='black' />}>Hello world</Button>
+      <Button filled={false} size={'sm'}>Hello world</Button>
+    </Stack>
   </Story>
 </Preview>
 

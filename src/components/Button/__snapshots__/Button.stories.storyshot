@@ -380,6 +380,10 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   display: inline-flex;
 }
 
+.emotion-4>span {
+  padding: 0;
+}
+
 .emotion-5 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -1406,6 +1410,10 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
   display: inline-flex;
 }
 
+.emotion-4>span {
+  padding: 0;
+}
+
 .emotion-5 {
   margin-left: 0.5rem;
   margin-right: 0;
@@ -1569,6 +1577,20 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
 }
 
 .emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
   font-size: 1rem;
   font-weight: 500;
   color: #000;
@@ -1583,16 +1605,16 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
+.emotion-2:hover,
+.emotion-2:focus {
   background-color: #cc9f00;
 }
 
-.emotion-1:active {
+.emotion-2:active {
   background-color: #970;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1607,8 +1629,74 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-4 {
   margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #232d7d;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  height: 2.25rem;
+  opacity: 1;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem rgba(35,45,125,0.5);
+  cursor: pointer;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-5:hover,
+.emotion-5:focus {
+  background-color: rgba(35,45,125,0.1);
+}
+
+.emotion-5:active {
+  background-color: rgba(35,45,125,0.2);
+}
+
+.emotion-7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-7>span {
+  padding: 0;
+}
+
+.emotion-8 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-9 {
+  fill: black;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: black;
+}
+
+.emotion-10 {
+  margin-left: 0.5rem;
   margin-right: 0;
 }
 
@@ -1636,22 +1724,94 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
        on
     </button>
   </div>
-  <button
+  <div
     className="emotion-1"
-    data-testid="button"
-    disabled={false}
-    onClick={[Function]}
   >
-    <span
-      className="emotion-2"
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
     >
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-2"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
       >
-        change me!
-      </span>
-    </span>
-  </button>
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          >
+            change me!
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="emotion-5"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-7"
+          >
+            <span
+              className="emotion-8"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-9"
+              />
+            </span>
+          </span>
+          <span
+            className="emotion-10"
+          >
+            Hello world
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <button
+        className="emotion-5"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+      >
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          >
+            Hello world
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
@@ -1721,6 +1881,10 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+}
+
+.emotion-4>span {
+  padding: 0;
 }
 
 .emotion-5 {

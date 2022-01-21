@@ -16,6 +16,14 @@ export const buttonSpanStyle = () => () => {
 
 export const iconStyle = () => () => ({
   display: 'inline-flex',
+
+  // This fixes the issue in DS3, where the alignment of the button was wrong because
+  // of the icon's extra height. It can and should be removed in DS4, in case this
+  // somehow makes it there. We could remove the padding in icon ( which is a better solution )
+  // but it would affect the alignment in all the icons.
+  '& > span': {
+    padding: 0,
+  },
 });
 
 export const childrenWrapperStyle = ({
