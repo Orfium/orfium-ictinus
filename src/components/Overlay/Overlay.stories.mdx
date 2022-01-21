@@ -2,6 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Overlay from './Overlay';
 import OverlayShowcase from '../storyUtils/OverlayShowcase';
+import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Overlay" component={Overlay} />
 
@@ -24,7 +25,20 @@ import { Overlay } from '@orfium/ictinus';
 # Overlay
 
 <Preview>
-  <Story name="Overlay" parameters={{ decorators: [withKnobs] }}>
-    <OverlayShowcase anchor={select( 'anchor', ['left', 'top', 'right', 'bottom'],'left')} size={text('size', 33)}/>
+  <Story name="Overlay">
+    <Stack>
+      <OverlayShowcase anchor={'left'} size={33}/>
+      <OverlayShowcase anchor={'top'} size={33}/>
+      <OverlayShowcase anchor={'right'} size={33}/>
+      <OverlayShowcase anchor={'bottom'} size={33}/>
+    </Stack>
+  </Story>
+</Preview>
+
+# Overlay Playground
+
+<Preview>
+  <Story name="Overlay Playground" parameters={{ decorators: [withKnobs] }}>
+    <OverlayShowcase anchor={select( 'anchor', ['left', 'top', 'right', 'bottom'],'left')} size={text('size', 33)} playground/>
   </Story>
 </Preview>

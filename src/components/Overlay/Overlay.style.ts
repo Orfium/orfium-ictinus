@@ -5,23 +5,23 @@ import { flex, transition } from 'theme/functions';
 
 import { AnchorType } from './Overlay';
 
-const JustifyContentEnd = (): SerializedStyles => css`
+const justifyContentEnd = (): SerializedStyles => css`
   justify-content: flex-end;
 `;
 
-const FlexDirectionColumn = (): SerializedStyles => css`
+const flexDirectionColumn = (): SerializedStyles => css`
   flex-direction: column;
 `;
 
 const getStyleBasedOnAnchor = (anchor: AnchorType) => {
   switch (anchor) {
     case 'top':
-      return FlexDirectionColumn();
+      return flexDirectionColumn();
     case 'right':
-      return JustifyContentEnd();
+      return justifyContentEnd();
     case 'bottom':
       return css`
-        ${JustifyContentEnd()} ${FlexDirectionColumn()}
+        ${justifyContentEnd()} ${flexDirectionColumn()}
       `;
     default:
       return css``;
@@ -41,14 +41,14 @@ const transformBasedOnProps = (open: boolean, anchor: AnchorType) => {
   }
 };
 
-export const BackdropStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
+export const backdropStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flex};
   position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 3000;
+  z-index: 2500;
   right: 0;
   bottom: 0;
   top: 0;
@@ -60,7 +60,7 @@ export const BackdropStyle = ({ open, anchor }: { open: boolean; anchor: AnchorT
   ${getStyleBasedOnAnchor(anchor)}
 `;
 
-export const OverlayStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
+export const overlayStyle = ({ open, anchor }: { open: boolean; anchor: AnchorType }) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flex}

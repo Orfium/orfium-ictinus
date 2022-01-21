@@ -2,13 +2,19 @@ import React, { useState } from 'react';
 
 import Button from '../../Button';
 import Overlay from '../../Overlay';
+import { AnchorType } from '../../Overlay/Overlay';
 
-const OverlayShowcase: React.FC = ({ anchor, size }: any) => {
+const OverlayShowcase: React.FC<{ anchor: AnchorType; size: number; playground?: boolean }> = ({
+  anchor,
+  size,
+  playground,
+}) => {
   const [open, setOpen] = useState<boolean>(false);
+  const buttonLabel = playground ? 'Open Overlay' : anchor;
 
   return (
     <div>
-      <Button onClick={() => setOpen(!open)}>Open Overlay</Button>
+      <Button onClick={() => setOpen(!open)}>{buttonLabel}</Button>
       <Overlay
         open={open}
         onClose={() => {

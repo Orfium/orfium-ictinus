@@ -4,7 +4,7 @@ import { DivProps } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
-import { BackdropStyle, closeIconContainer, contentStyle, OverlayStyle } from './Overlay.style';
+import { backdropStyle, closeIconContainer, contentStyle, overlayStyle } from './Overlay.style';
 import IconButton from 'components/IconButton';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
@@ -37,11 +37,11 @@ const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
 
     return (
       <div
-        css={BackdropStyle({ open, anchor })}
+        css={backdropStyle({ open, anchor })}
         data-testid={generateTestDataId('overlay-container', dataTestId)}
       >
         <ClickAwayListener onClick={() => onClose()} cssStyles={getAnchorStyle({ anchor, size })}>
-          <div ref={ref} css={OverlayStyle({ open, anchor })}>
+          <div ref={ref} css={overlayStyle({ open, anchor })}>
             <div css={closeIconContainer()}>
               <IconButton
                 name={'close'}
