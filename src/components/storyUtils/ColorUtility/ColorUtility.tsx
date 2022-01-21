@@ -1,7 +1,7 @@
 import { toPairs } from 'lodash';
 import React from 'react';
 
-import { TextField } from '../../../index';
+import { TextField, useTheme } from '../../../index';
 import { colorShadesCreator } from '../../../theme/utils';
 import { colorBox, colorBoxWrapper } from '../PaletteShowcase/PaletteShowcase.style';
 import ColorBox from './ColorBox';
@@ -11,6 +11,8 @@ import { useColors } from './useColors';
 const DEFAULT_COLOR = 'white';
 
 const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
+  const theme = useTheme();
+
   const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors(
     defaultColor
   );
@@ -18,6 +20,7 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
   const palette = colorShadesCreator(color.normal);
   const colors = toPairs(palette);
 
+  // @ts-ignore
   return (
     <div style={{ flex: 1 }}>
       <h1> Color Utility </h1>
@@ -49,10 +52,15 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
         </div>
         <div css={colorBoxWrapper}>
           {colors.map(([shade, color]) => (
-            // @ts-ignore
             <div
               key={`${shade}-${color}`}
-              css={colorBox({ color, isSelectedColor: false, isHoverable: false })}
+              css={colorBox({
+                // @ts-ignore
+                theme,
+                color,
+                isSelectedColor: false,
+                isHoverable: false,
+              })}
             >
               <div>{shade}</div>
               <div css={{ textTransform: 'capitalize' }}>{color}</div>

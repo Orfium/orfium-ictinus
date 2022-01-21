@@ -51,7 +51,15 @@ const PaletteShowcase = () => {
           // .filter(([colorName]) => !neutralColors.find(neutralColor => neutralColor === colorName))
           .map(([colorName, colors]) => (
             <div key={colorName} css={paletteColorWrapper}>
-              <div css={colorNameBox(colors[Math.floor(colors.length / 2)], colorName, BASE_SHADE)}>
+              <div
+                css={colorNameBox(
+                  // @ts-ignore
+                  theme,
+                  colors[Math.floor(colors.length / 2)],
+                  colorName,
+                  BASE_SHADE
+                )}
+              >
                 <div
                   css={css`
                     flex: 1;
@@ -79,6 +87,8 @@ const PaletteShowcase = () => {
                       setPaletteColor(color);
                     }}
                     css={colorBox({
+                      // @ts-ignore
+                      theme,
                       color,
                       colorName,
                       shade: ((index + 1) * 50) as typeof colorShades[number],
@@ -97,7 +107,13 @@ const PaletteShowcase = () => {
         <h3>PALE PALETTE</h3>
         <p>Another palette is the pale where is not having shades.</p>
         <div css={paletteColorWrapper}>
-          <div css={colorNameBox('white')}>
+          <div
+            css={colorNameBox(
+              // @ts-ignore
+              theme,
+              'white'
+            )}
+          >
             <div
               css={css`
                 flex: 1;
@@ -117,7 +133,14 @@ const PaletteShowcase = () => {
             {palePalette.map(([colorName, color]) => (
               <div
                 key={uniqueId(`${color}-${colorName}`)}
-                css={colorBox({ color, colorName, isSelectedColor: false, isHoverable: false })}
+                css={colorBox({
+                  //@ts-ignore
+                  theme,
+                  color,
+                  colorName,
+                  isSelectedColor: false,
+                  isHoverable: false,
+                })}
               >
                 <div>{colorName}</div>
                 <div css={{ textTransform: 'capitalize' }}>{color}</div>

@@ -1,12 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 
+import { Theme } from '../../../theme';
 import { transition } from '../../../theme/functions';
-import {
-  colorShades,
-  flatColors,
-  getAATextColor,
-  pickTextColorFromSwatches,
-} from '../../../theme/palette';
+import { colorShades, flatColors } from '../../../theme/palette';
 
 export const paletteWrapper = css`
   display: grid;
@@ -22,6 +18,7 @@ export const paletteColorWrapper = css`
 `;
 
 export const colorNameBox = (
+  theme: Theme,
   color: string,
   colorName?: typeof flatColors[number],
   shade?: typeof colorShades[number]
@@ -33,8 +30,10 @@ export const colorNameBox = (
   display: flex;
   flex-direction: column;
   color: ${shade && colorName
-    ? pickTextColorFromSwatches(colorName, shade)
-    : getAATextColor(color)};
+    ? //@ts-ignore
+      theme.utils.getAAColorFromSwatches(colorName, shade)
+    : //@ts-ignore
+      theme.utils.getAAColor(color)};
 `;
 
 export const colorBoxWrapper = css`
@@ -45,6 +44,7 @@ export const colorBoxWrapper = css`
 `;
 
 type Props = {
+  theme: Theme;
   color: string;
   colorName?: typeof flatColors[number];
   shade?: typeof colorShades[number];
@@ -53,6 +53,7 @@ type Props = {
 };
 
 export const colorBox = ({
+  theme,
   color,
   colorName,
   shade,
@@ -63,8 +64,10 @@ export const colorBox = ({
   width: calc(100% - 20px);
   background: ${color};
   color: ${shade && colorName
-    ? pickTextColorFromSwatches(colorName, shade)
-    : getAATextColor(color)};
+    ? //@ts-ignore
+      theme.utils.getAAColorFromSwatches(colorName, shade)
+    : //@ts-ignore
+      theme.utils.getAAColor(color)};
   justify-content: space-between;
   align-items: center;
   display: flex;

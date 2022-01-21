@@ -3,6 +3,7 @@ import { boolean, number } from '@storybook/addon-knobs';
 import React from 'react';
 
 import { rem } from '../../../theme/utils';
+import Button from '../../Button';
 import Card from '../../Card';
 import Chip from '../../Chip';
 import Tooltip from '../../Tooltip';
@@ -32,49 +33,57 @@ const CustomContent = () => {
   );
 };
 
-const TooltipShowcase = () => {
+const TooltipShowcase = ({ content }: { content: string }) => {
   return (
     <div css={tooltipContainerStyle()}>
       <h2>Tooltip with text-only content</h2>
       <div css={tooltipRowStyle()}>
         <Tooltip
           id={'left'}
-          content="By hover here you can see useful info"
+          content={content}
           placement={'left'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
         >
-          <button>Left</button>
+          <Button type="primary" transparent>
+            Left
+          </Button>
         </Tooltip>
         <Tooltip
           id={'right'}
-          content="By hover here you can see useful info"
+          content={content}
           placement={'right'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
         >
-          <button>Right</button>
+          <Button type="primary" transparent>
+            Right
+          </Button>
         </Tooltip>
       </div>
 
       <div css={tooltipRowStyle()}>
         <Tooltip
           id={'top'}
-          content="By hover here you can see useful info"
+          content={content}
           placement={'top'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
         >
-          <button>Top</button>
+          <Button type="primary" transparent>
+            Top
+          </Button>
         </Tooltip>
         <Tooltip
           id={'bottom'}
-          content="By hover here you can see useful info"
+          content={content}
           placement={'bottom'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
         >
-          <button>Bottom</button>
+          <Button type="primary" transparent>
+            Bottom
+          </Button>
         </Tooltip>
       </div>
       <h2>Tooltip with component content</h2>
@@ -86,7 +95,9 @@ const TooltipShowcase = () => {
         interactive={boolean('interactive', false)}
         delay={number('delay', 100)}
       >
-        <button>Right</button>
+        <Button type="primary" transparent>
+          Right
+        </Button>
       </Tooltip>
     </div>
   );

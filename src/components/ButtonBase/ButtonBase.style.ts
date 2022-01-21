@@ -2,7 +2,6 @@ import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './ButtonBase';
@@ -66,7 +65,7 @@ export const buttonBaseStyle = ({
       );
     }
 
-    return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
+    return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   };
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
