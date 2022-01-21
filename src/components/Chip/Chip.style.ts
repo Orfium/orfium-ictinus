@@ -13,6 +13,7 @@ export const chipStyle = ({
   onClear,
   onClick,
 }: Props) => (theme: Theme): SerializedStyles => {
+  const isInteractive = styleType === 'interactive';
   const customFilled = styleType === 'read-only' || onClear || isSelected;
 
   return css`
@@ -39,12 +40,10 @@ export const chipStyle = ({
     }
 
     &:focus-visible:not(:disabled) {
-      outline: ${styleType === 'read-only'
-        ? 'none'
-        : getFocus({ theme, borderWidth: 1 }).styleOutline};
+      outline: ${!isInteractive ? 'none' : getFocus({ theme, borderWidth: 1 }).styleOutline};
     }
 
-    ${styleType !== 'read-only' &&
+    ${isInteractive &&
       `
     &:active:not(:disabled) {
       background: ${
