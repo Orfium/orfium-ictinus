@@ -2,10 +2,11 @@ import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
+import { getFocus, getHover, getPressed } from '../../theme/states';
 import { ButtonStyleProps } from './types';
 import {
   borderStyleParams,
-  focusBorderStyleParams,
+  focusBorderWidth,
   getBackgroundColor,
   getBorder,
   getTextColor,
@@ -43,25 +44,37 @@ export const buttonWrapperStyle = ({
     height: '100%',
     minWidth: rem(110),
 
-    ':hover > div, :active > div': {
+    ':hover > div': {
       backgroundColor:
         !disabled && !open
           ? hasSelectedValue
-            ? theme.utils.getColor(calculatedColor.color, 100)
-            : theme.utils.getColor('darkGrey', null, 'pale')
+            ? getHover({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+                .backgroundColor
+            : getHover({ theme }).backgroundColor
+          : undefined,
+    },
+
+    ':active > div': {
+      backgroundColor:
+        !disabled && !open
+          ? hasSelectedValue
+            ? getPressed({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+                .backgroundColor
+            : getPressed({ theme }).backgroundColor
           : undefined,
     },
     // on focus change the two divs of added
-    ':focus > div': !open &&
+    ':focus-visible > div': !open &&
+      !disabled &&
       !hasSelectedValue && {
-        border: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-        backgroundColor: theme.utils.getColor('blue', 50),
+        border: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
       },
     // target the divider on focus
     ':focus > span': !open &&
+      !disabled &&
       !hasSelectedValue && {
-        borderTop: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-        borderBottom: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
+        borderTop: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
+        borderBottom: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
       },
   };
 };
