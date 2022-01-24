@@ -4570,9 +4570,12 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   min-width: 6.875rem;
 }
 
-.emotion-5:hover>div,
+.emotion-5:hover>div {
+  background-color: #1451dc;
+}
+
 .emotion-5:active>div {
-  background-color: #d0defd;
+  background-color: #1248c4;
 }
 
 .emotion-6 {

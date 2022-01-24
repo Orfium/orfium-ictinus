@@ -1,10 +1,10 @@
 import theme from '../../index';
+import { MAX_SHADE } from '../../palette';
 import { rem } from '../../utils';
-import { GetFocusResponse } from '../focus';
+import { GetFocus } from '../focus';
 import { getDisabled, getFocus, getHover, getPressed } from '../index';
 import { statesConfig } from '../statesConfig';
 import { getShadeWithStep } from '../utils';
-import { MAX_SHADE } from '../../palette';
 
 describe('Global states - getHover ', () => {
   const testTheme = theme('light');
@@ -31,7 +31,7 @@ describe('Global states - getHover ', () => {
 describe('Global states - getFocus ', () => {
   const testTheme = theme('light');
 
-  const expected = (focusResponse: GetFocusResponse, expectedResultBorder: string) => {
+  const expected = (focusResponse: GetFocus, expectedResultBorder: string) => {
     expect(focusResponse.borderWidth).toBe(expectedResultBorder);
     expect(focusResponse.styleBorder).toBe(
       `${expectedResultBorder} solid ${testTheme.utils.getColor(
