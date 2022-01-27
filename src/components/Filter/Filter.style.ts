@@ -35,6 +35,8 @@ export const buttonWrapperStyle = ({
   hasSelectedValue,
   calculatedColor,
 }: ButtonStyleProps) => (theme: Theme) => {
+  const activeAndClosed = !disabled && !open;
+
   return {
     background: 'none',
     border: 'none',
@@ -44,38 +46,37 @@ export const buttonWrapperStyle = ({
     height: '100%',
     minWidth: rem(110),
 
+    // If is active and not disabled and not visited global states applied
+    // else it's using the global states function with calculated color
     ':hover > div': {
-      backgroundColor:
-        !disabled && !open
-          ? hasSelectedValue
-            ? getHover({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
-                .backgroundColor
-            : getHover({ theme }).backgroundColor
-          : undefined,
+      backgroundColor: activeAndClosed
+        ? hasSelectedValue
+          ? getHover({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+              .backgroundColor
+          : getHover({ theme }).backgroundColor
+        : undefined,
     },
 
+    // If is active and not disabled and not visited global states applied
+    // else it's using the global states function with calculated color
     ':active > div': {
-      backgroundColor:
-        !disabled && !open
-          ? hasSelectedValue
-            ? getPressed({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
-                .backgroundColor
-            : getPressed({ theme }).backgroundColor
-          : undefined,
+      backgroundColor: activeAndClosed
+        ? hasSelectedValue
+          ? getPressed({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+              .backgroundColor
+          : getPressed({ theme }).backgroundColor
+        : undefined,
     },
+
     // on focus change the two divs of added
-    ':focus-visible > div': !open &&
-      !disabled &&
-      !hasSelectedValue && {
-        border: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
-      },
+    ':focus-visible > div': activeAndClosed && {
+      border: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
+    },
     // target the divider on focus
-    ':focus > span': !open &&
-      !disabled &&
-      !hasSelectedValue && {
-        borderTop: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
-        borderBottom: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
-      },
+    ':focus > span': activeAndClosed && {
+      borderTop: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
+      borderBottom: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
+    },
   };
 };
 
