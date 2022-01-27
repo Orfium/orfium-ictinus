@@ -1,7 +1,6 @@
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
@@ -46,7 +45,7 @@ export const buttonBaseStyle = ({
       return backGroundColor;
     }
 
-    return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
+    return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   };
 
   const borderWidth = isOutlined ? buttonConfig.types.outlined.border.width : 0;

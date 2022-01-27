@@ -1,6 +1,6 @@
 import { rem } from 'theme/utils';
 
-import { colorShades, MAX_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
+import { colorShades, MAX_SHADE } from '../../theme/palette';
 import { defineBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps } from './types';
 
@@ -36,9 +36,9 @@ export const getTextColor = ({
   calculatedColor,
 }: BaseColorProps) => {
   if (hasSelectedValue && !open) {
-    return pickTextColorFromSwatches(calculatedColor.color, 50);
+    return theme.utils.getAAColorFromSwatches(calculatedColor.color, 50);
   } else if (open) {
-    return pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade);
+    return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   }
 
   return theme.utils.getColor('darkGrey', 850);

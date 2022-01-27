@@ -1,5 +1,4 @@
-import { getColor } from '../index';
-import { BASE_SHADE, pickTextColorFromSwatches } from '../palette';
+import { BASE_SHADE, getAAColor, getAAColorFromSwatches, getColor } from '../palette';
 import { flatPaletteConfig, lightPaletteConfig } from '../palette.config';
 import { colorShadesCreator, enhancePaletteWithShades } from '../utils';
 import { magentaShades } from './const';
@@ -18,15 +17,34 @@ describe('GetColor functionalities', () => {
   });
 });
 
-describe('pickTextColorFromSwatches functionalities', () => {
-  test('pickTextColorFromSwatches works with the given colors and to return the correct color', () => {
+describe('getAAColorFromSwatches functionalities', () => {
+  const palette = enhancePaletteWithShades(lightPaletteConfig);
+
+  test('getAAColorFromSwatches works with the given colors and to return the correct color', () => {
     const black = 'black';
     const white = 'white';
+    const getAAColorFromSwatchesFun = getAAColorFromSwatches(palette);
+    expect(getAAColorFromSwatchesFun('darkGrey', 300)).toBe(black);
+    expect(getAAColorFromSwatchesFun('darkBlue', 650)).toBe(white);
+    expect(getAAColorFromSwatchesFun('magenta', 650)).toBe(white);
+    expect(getAAColorFromSwatchesFun('green', 600)).toBe(black);
+    expect(getAAColorFromSwatchesFun('green', 850)).toBe(white);
+  });
+});
 
-    expect(pickTextColorFromSwatches('darkGrey', 300)).toBe(black);
-    expect(pickTextColorFromSwatches('darkBlue', 650)).toBe(white);
-    expect(pickTextColorFromSwatches('magenta', 650)).toBe(white);
-    expect(pickTextColorFromSwatches('green', 600)).toBe(black);
-    expect(pickTextColorFromSwatches('green', 850)).toBe(white);
+describe('getAAColor functionalities', () => {
+  const palette = enhancePaletteWithShades(lightPaletteConfig);
+
+  test('getAAColor works with the given colors and to return the correct color', () => {
+    const black = 'black';
+    const white = 'white';
+    const getColorFun = getColor(palette);
+    const getAAColorFun = getAAColor(palette);
+
+    expect(getAAColorFun(getColorFun('darkGrey', 300))).toBe(black);
+    expect(getAAColorFun(getColorFun('darkBlue', 650))).toBe(white);
+    expect(getAAColorFun(getColorFun('magenta', 650))).toBe(white);
+    expect(getAAColorFun(getColorFun('green', 600))).toBe(black);
+    expect(getAAColorFun(getColorFun('green', 850))).toBe(white);
   });
 });

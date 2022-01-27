@@ -1,8 +1,6 @@
 import { getContrast } from 'polished';
 
-import { getColor } from './index';
-import { lightPaletteConfig } from './palette.config';
-import { enhancePaletteWithShades } from './utils';
+import { TextColorTypes } from './index';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
@@ -120,22 +118,59 @@ export type Palette = {
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
 
+export type GetColor = {
+  (color: typeof flatColors[number], variant: typeof colorShades[number]): string;
+  (color: typeof flatColors[number], variant: typeof colorShades[number], scope: 'flat'): string;
+  (color: TextColorTypes, variant: typeof colorShades[number], scope: 'text'): string;
+  (color: typeof mainTypes[number], variant: typeof colorShades[number], scope: 'normal'): string;
+  (color: typeof paleColors[number], variant: null, scope: 'pale'): string;
+};
+
+export const getColor = (palette: Palette): GetColor => (
+  color:
+    | typeof flatColors[number]
+    | TextColorTypes
+    | typeof mainTypes[number]
+    | typeof paleColors[number],
+  variant: typeof colorShades[number] | null,
+  scope: 'flat' | 'text' | 'normal' | 'pale' = 'flat'
+) => {
+  const endColor =
+    variant === null
+      ? palette?.[scope]?.[color]
+      : scope === 'normal'
+      ? palette[color][variant]
+      : palette?.[scope]?.[color]?.[variant];
+
+  if (!endColor) {
+    throw new Error('No color found with that name');
+  }
+
+  return endColor;
+};
+
 /**
  * this function picks either white or black color based on the background that is passed
- * swatches are calculated based on accessibility by getAATextColor function and splited to those two colors
+ * swatches are calculated based on accessibility by getAAColor function and splited to those two colors
  **/
-export const pickTextColorFromSwatches = (
+export type GetAAColorFromSwatches = {
+  (color: typeof flatColors[number], variant: typeof colorShades[number]): string;
+};
+
+export const getAAColorFromSwatches = (palette: Palette): GetAAColorFromSwatches => (
   color: typeof flatColors[number],
   shade: typeof colorShades[number]
 ): string => {
-  const palette = enhancePaletteWithShades(lightPaletteConfig);
   const hexColorCode = getColor(palette)(color, shade);
 
-  return getAATextColor(hexColorCode);
+  return getAAColor(palette)(hexColorCode);
 };
 
-export const getAATextColor = (color: string): string => {
-  const palette = enhancePaletteWithShades(lightPaletteConfig);
+export type GetAAColor = {
+  (color: string): string;
+};
+
+export const getAAColor = (palette: Palette): GetAAColor => (color: string): string => {
   const white = palette.white;
   const black = palette.black;
 

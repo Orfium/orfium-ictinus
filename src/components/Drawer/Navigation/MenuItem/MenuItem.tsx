@@ -1,7 +1,7 @@
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
-import { BASE_SHADE, pickTextColorFromSwatches } from 'theme/palette';
+import { BASE_SHADE } from 'theme/palette';
 
 import useTheme from '../../../../hooks/useTheme';
 import {
@@ -44,7 +44,7 @@ const MenuItem: React.FC<Props> = memo(
             name={iconName}
             color={
               isCurrent
-                ? pickTextColorFromSwatches(color, shade)
+                ? theme.utils.getAAColorFromSwatches(color, shade)
                 : theme.utils.getColor('lightGrey', 850)
             }
             size={20}

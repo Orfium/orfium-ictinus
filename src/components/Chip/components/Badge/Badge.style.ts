@@ -1,7 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
-import { pickTextColorFromSwatches } from 'theme/palette';
 
 import { Props } from '../../Chip';
 
@@ -22,6 +21,6 @@ export const badgeStyle = ({ fill = 'greyScale', isSelected }: Props) => (
   line-height: normal;
   justify-content: center;
   color: ${isSelected
-    ? pickTextColorFromSwatches(fill, 550)
-    : pickTextColorFromSwatches('lightGrey', 200)};
+    ? theme.utils.getAAColorFromSwatches(fill, 550)
+    : theme.utils.getAAColorFromSwatches('lightGrey', 200)};
 `;
