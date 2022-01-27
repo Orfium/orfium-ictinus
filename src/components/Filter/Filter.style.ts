@@ -10,6 +10,7 @@ import {
   getBackgroundColor,
   getBorder,
   getTextColor,
+  transparentFocusBorderWidth,
 } from './utils';
 
 export const wrapperStyle = () => () => {
@@ -34,8 +35,10 @@ export const buttonWrapperStyle = ({
   open,
   hasSelectedValue,
   calculatedColor,
+  styleType,
 }: ButtonStyleProps) => (theme: Theme) => {
   const activeAndClosed = !disabled && !open;
+  const borderWidth = styleType === 'filled' ? focusBorderWidth : transparentFocusBorderWidth;
 
   return {
     background: 'none',
@@ -70,12 +73,12 @@ export const buttonWrapperStyle = ({
 
     // on focus change the two divs of added
     ':focus-visible > div': activeAndClosed && {
-      border: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
+      border: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
     },
     // target the divider on focus
     ':focus > span': activeAndClosed && {
-      borderTop: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
-      borderBottom: getFocus({ theme, borderWidth: focusBorderWidth }).styleBorder,
+      borderTop: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+      borderBottom: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
     },
   };
 };

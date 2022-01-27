@@ -8,6 +8,7 @@ export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
 export const borderStyleParams = `solid ${rem(1)}`;
 export const focusBorderWidth = 2;
+export const transparentFocusBorderWidth = 0;
 
 export const getBackgroundColor = ({
   open,
