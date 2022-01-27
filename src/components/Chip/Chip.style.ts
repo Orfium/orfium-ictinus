@@ -54,7 +54,7 @@ export const chipStyle = ({
         }).backgroundColor
       };
     }
-    ,
+
     
       :disabled {
         opacity: ${getDisabled().opacity};

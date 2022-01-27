@@ -31,6 +31,7 @@ import { getColor } from 'theme';
 getColor(palette)('lightBlue', 650)
 ```
 
+
 ##### 2) Hook
 
 ```
@@ -90,3 +91,191 @@ const calculatedColor = calculateColorBetweenColorAndType(color, type);
 
 console.log(calculatedColor.color, calculatedColor.shade);
 ```
+
+---
+
+### getAAColorFromSwatches
+
+This util is provided from core `theme` or you can use it as a standalone function.
+In case of standalone you must provide the [Palette](/?path=/story/system-theme--page#theme-palette).
+
+It gets 2 params:
+
+1. color
+2. shade
+
+And returns the AA color for that.
+   <br />
+   <br />
+
+#### Usages <br/><br/>
+
+##### 1) Standalone function
+
+```
+import { getAAColorFromSwatches } from 'theme';
+...
+getAAColorFromSwatches(palette)('lightBlue', 650)
+```
+
+
+##### 2) Hook
+
+```
+const theme = useTheme();
+...
+theme.utils.getAAColorFromSwatches('darkGrey', 650);
+...
+theme.utils.getAAColorFromSwatches('primary', BASE_SHADE);
+...
+```
+
+---
+
+
+### getAAColor
+
+This util is provided from core `theme` or you can use it as a standalone function.
+In case of standalone you must provide the [Palette](/?path=/story/system-theme--page#theme-palette).
+
+It gets 1 param:
+
+1. color in HEX
+
+And returns the AA color for that.
+   <br />
+   <br />
+
+#### Usages <br/><br/>
+
+##### 1) Standalone function
+
+```
+import { getAAColor } from 'theme';
+...
+getAAColor(palette)('#745673')
+```
+
+
+##### 2) Hook
+
+```
+const theme = useTheme();
+...
+theme.utils.getAAColor(palette)('#745673');
+...
+```
+
+
+
+---
+
+
+### getHover
+
+A util that returns the global state for hovered components.
+
+It gets 3 params:
+
+1. theme,
+2. color ( default lightGrey ),
+3. shade ( default 0)
+
+Returns:
+```
+{
+    backgroundColor: string
+}
+```
+
+#### Usage <br/><br/>
+
+```
+background: getHover({theme, color: 'blue', shade: 500}).backgroundColor;
+background: getHover({theme, color: 'blue'}).backgroundColor;
+background: getHover({theme}).backgroundColor;
+```
+
+---
+
+
+### getFocus
+
+A util that returns the global state for focused components.
+
+It gets 2 params:
+
+1. theme,
+2. borderWidth ( default 0 ),
+
+
+Returns:
+```
+{
+  borderWidth: string;
+  focusColor: string;
+  styleBorder: string;
+  styleOutline: string;
+}
+```
+
+#### Usage <br/><br/>
+
+```
+border: `${getFocus({theme, borderWidth: 2 }).borderWidth solid getFocus({theme, borderWidth: 2 }).focusColor}`;
+border: getFocus({theme}).styleBorder;
+outline: getFocus({theme}).styleOutline;
+```
+
+---
+
+
+### getPressed
+
+A util that returns the global state for pressed components.
+
+It gets 3 params:
+
+1. theme,
+2. color ( default lightGrey ),
+3. shade ( default 0)
+
+Returns:
+```
+{
+  backgroundColor: string
+}
+```
+
+#### Usage <br/><br/>
+
+```
+background: getPressed({theme, color: 'blue', shade: 500}).backgroundColor;
+background: getPressed({theme, color: 'blue'}).backgroundColor;
+background: getPressed({theme}).backgroundColor;
+```
+
+---
+
+
+### getDisabled
+
+A util that returns the global state for disbaled components.
+
+It gets 0 params and returns:
+
+```
+{
+  opacity: number;
+  cursor: string;
+}
+```
+
+#### Usage <br/><br/>
+
+```
+cursor: getDisabled({theme, color: 'blue', shade: 500}).cursor;
+opacity: getDisabled({theme, color: 'blue', shade: 500}).opacity;
+```
+
+---
