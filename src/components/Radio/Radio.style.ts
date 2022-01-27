@@ -56,13 +56,13 @@ const determineBoxShadow = ({
   disabled,
   filled,
 }: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (theme: Theme) => {
-  if (disabled && !checked) {
-    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGrey', 250)}`;
-  }
   if (checked) {
     return `${boxShadowSpread('2px')} currentColor, ${boxShadowSpread(
       '4px'
     )} ${theme.utils.getColor('neutralWhite', 50)}, ${boxShadowSpread('12px')} currentColor`;
+  }
+  if (disabled) {
+    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGrey', 250)}`;
   }
   if (filled) {
     return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGrey', 300)}`;
