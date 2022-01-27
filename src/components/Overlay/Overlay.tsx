@@ -17,20 +17,20 @@ export type Props = {
   onClose: () => void;
   /** Side from which the overlay will appear. */
   anchor?: AnchorType;
-  /**Based on the anchor, defines the size of the overlay as a percentage of the screens's size. */
-  size?: number;
+  /**Based on the anchor, defines the size of the overlay. */
+  size: string;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
 
-const getAnchorStyle = ({ anchor, size }: { anchor: AnchorType; size: number }) => {
+const getAnchorStyle = ({ anchor, size }: { anchor: AnchorType; size: string }) => {
   return anchor === 'top' || anchor === 'bottom'
-    ? { display: 'flex', height: `${size}%`, width: '100%' }
-    : { display: 'flex', height: '100%', width: `${size}%` };
+    ? { display: 'flex', height: size, width: '100%' }
+    : { display: 'flex', height: '100%', width: size };
 };
 
 const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
-  ({ open, onClose, anchor = 'left', size = 33, dataTestId, children }, ref) => {
+  ({ open, onClose, anchor = 'left', size, dataTestId, children }, ref) => {
     useEscape(() => {
       onClose();
     });
