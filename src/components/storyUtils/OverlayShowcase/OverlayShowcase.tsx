@@ -4,7 +4,7 @@ import Button from '../../Button';
 import Overlay from '../../Overlay';
 import { AnchorType } from '../../Overlay/Overlay';
 
-const OverlayShowcase: React.FC<{ anchor: AnchorType; size: number; playground?: boolean }> = ({
+const OverlayShowcase: React.FC<{ anchor: AnchorType; size: string; playground?: boolean }> = ({
   anchor,
   size,
   playground,
