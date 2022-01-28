@@ -44,6 +44,7 @@ export { default as NotificationVisual } from './components/Notification/Notific
 export { default as Banner } from './components/Notification/Banner';
 export { default as Snackbar } from './components/Notification/Snackbar';
 
+export { default as Overlay } from './components/Overlay';
 export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';
