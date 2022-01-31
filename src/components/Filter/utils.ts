@@ -1,13 +1,14 @@
 import { rem } from 'theme/utils';
 
-import { colorShades } from '../../theme/palette';
-import { defineBackgroundColor, stateBackgroundColor } from '../Button/utils';
-import { BackgroundColorProps, BaseColorProps, BorderProps, HoverBorderProps } from './types';
+import { colorShades, MAX_SHADE } from '../../theme/palette';
+import { defineBackgroundColor } from '../Button/utils';
+import { BackgroundColorProps, BaseColorProps, BorderProps } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 
 export const borderStyleParams = `solid ${rem(1)}`;
-export const focusBorderStyleParams = `solid ${rem(2)}`;
+export const focusBorderWidth = 2;
+export const transparentFocusBorderWidth = 0;
 
 export const getBackgroundColor = ({
   open,
@@ -54,7 +55,7 @@ export const getBorder = ({
   state = 'normal',
 }: BorderProps) => {
   const addOrSubtract = (shade: typeof colorShades[number]) => {
-    const calculatedShade = shade < 950 ? 50 : -50;
+    const calculatedShade = shade < MAX_SHADE ? 50 : -50;
 
     return (shade + calculatedShade) as typeof colorShades[number];
   };
@@ -82,26 +83,4 @@ export const getBorder = ({
   }
 
   return `transparent`;
-};
-
-export const getHoverBorder = ({
-  styleType,
-  theme,
-  open,
-  calculatedColor,
-  hasSelectedValue,
-  filterType,
-}: HoverBorderProps) => {
-  if (filterType === 'added' && styleType === 'filled') {
-    return `transparent`;
-  }
-  if (hasSelectedValue) {
-    if (open) {
-      return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
-    }
-
-    return `${stateBackgroundColor(theme, 'hover', calculatedColor, true)}`;
-  }
-
-  return 'transparent';
 };

@@ -2,13 +2,15 @@ import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
+import { getFocus, getHover, getPressed } from '../../theme/states';
 import { ButtonStyleProps } from './types';
 import {
   borderStyleParams,
-  focusBorderStyleParams,
+  focusBorderWidth,
   getBackgroundColor,
   getBorder,
   getTextColor,
+  transparentFocusBorderWidth,
 } from './utils';
 
 export const wrapperStyle = () => () => {
@@ -33,7 +35,11 @@ export const buttonWrapperStyle = ({
   open,
   hasSelectedValue,
   calculatedColor,
+  styleType,
 }: ButtonStyleProps) => (theme: Theme) => {
+  const activeAndClosed = !disabled && !open;
+  const borderWidth = styleType === 'filled' ? focusBorderWidth : transparentFocusBorderWidth;
+
   return {
     background: 'none',
     border: 'none',
@@ -43,26 +49,37 @@ export const buttonWrapperStyle = ({
     height: '100%',
     minWidth: rem(110),
 
-    ':hover > div, :active > div': {
-      backgroundColor:
-        !disabled && !open
-          ? hasSelectedValue
-            ? theme.utils.getColor(calculatedColor.color, 100)
-            : theme.utils.getColor('darkGrey', null, 'pale')
-          : undefined,
+    // If is active and not disabled and not visited global states applied
+    // else it's using the global states function with calculated color
+    ':hover > div': {
+      backgroundColor: activeAndClosed
+        ? hasSelectedValue
+          ? getHover({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+              .backgroundColor
+          : getHover({ theme }).backgroundColor
+        : undefined,
     },
+
+    // If is active and not disabled and not visited global states applied
+    // else it's using the global states function with calculated color
+    ':active > div': {
+      backgroundColor: activeAndClosed
+        ? hasSelectedValue
+          ? getPressed({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+              .backgroundColor
+          : getPressed({ theme }).backgroundColor
+        : undefined,
+    },
+
     // on focus change the two divs of added
-    ':focus > div': !open &&
-      !hasSelectedValue && {
-        border: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-        backgroundColor: theme.utils.getColor('blue', 50),
-      },
+    ':focus-visible > div': activeAndClosed && {
+      border: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+    },
     // target the divider on focus
-    ':focus > span': !open &&
-      !hasSelectedValue && {
-        borderTop: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-        borderBottom: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-      },
+    ':focus > span': activeAndClosed && {
+      borderTop: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+      borderBottom: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+    },
   };
 };
 

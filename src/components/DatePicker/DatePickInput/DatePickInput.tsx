@@ -1,7 +1,6 @@
 import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
 
-import useTheme from '../../../hooks/useTheme';
 import { getLocaleFormat } from '../../../utils/helpers';
 import FilterBase from '../../Filter/components/FilterBase';
 import { FilterType, StyleType } from '../../Filter/types';

@@ -45,7 +45,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   box-sizing: border-box;
   padding: 0.25rem 0.5rem;
   background-color: #ececfd;
-  color: #0f0f17;
+  color: black;
   border: 0.0625rem solid #413ed6;
   cursor: auto;
   width: -webkit-fit-content;
@@ -55,8 +55,21 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background: #dad9fb;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
+}
+
+.emotion-2:active:not(:disabled) {
+  background: #c8c7f9;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2>:not(:last-child) {
@@ -116,7 +129,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   box-sizing: border-box;
   padding: 0.25rem 0.5rem;
   background-color: white;
-  color: #0f0f17;
+  color: black;
   border: 0.0625rem solid #cfd7e5;
   cursor: pointer;
   width: -webkit-fit-content;
@@ -126,8 +139,21 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-6:hover {
-  background: #F9FAFC;
+.emotion-6:hover:not(:disabled) {
+  background: #f3f5f8;
+}
+
+.emotion-6:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
+}
+
+.emotion-6:active:not(:disabled) {
+  background: #c8c7f9;
+}
+
+.emotion-6:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-6>:not(:last-child) {
@@ -197,9 +223,10 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         }
       }
     >
-      <div
+      <button
         className="emotion-2"
         data-testid="chip"
+        disabled={false}
       >
         <div>
           Label
@@ -216,7 +243,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
             />
           </span>
         </div>
-      </div>
+      </button>
     </div>
     <div
       style={
@@ -225,15 +252,16 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         }
       }
     >
-      <div
+      <button
         className="emotion-6"
         data-testid="chip"
+        disabled={false}
         onClick={[Function]}
       >
         <div>
           Label
         </div>
-      </div>
+      </button>
     </div>
     <div
       style={
@@ -242,9 +270,10 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         }
       }
     >
-      <div
+      <button
         className="emotion-6"
         data-testid="chip"
+        disabled={false}
         onClick={[Function]}
       >
         <div>
@@ -256,7 +285,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         >
           5
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </div>
@@ -307,7 +336,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   box-sizing: border-box;
   padding: 0.25rem 0.5rem;
   background-color: #ffe7ec;
-  color: #0f0f17;
+  color: black;
   border: 0.0625rem solid #e5143d;
   cursor: auto;
   width: -webkit-fit-content;
@@ -317,8 +346,12 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-2:hover {
+.emotion-2:hover:not(:disabled) {
   background: #ffd0d9;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  outline: none;
 }
 
 .emotion-2>:not(:last-child) {
@@ -402,14 +435,15 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         }
       }
     >
-      <div
+      <button
         className="emotion-2"
         data-testid="chip"
+        disabled={false}
       >
         <div>
           Label
         </div>
-      </div>
+      </button>
     </div>
     <div
       style={
@@ -418,9 +452,10 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         }
       }
     >
-      <div
+      <button
         className="emotion-2"
         data-testid="chip"
+        disabled={false}
       >
         <div>
           <div
@@ -433,7 +468,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         <div>
           Label
         </div>
-      </div>
+      </button>
     </div>
     <div
       style={
@@ -442,9 +477,10 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         }
       }
     >
-      <div
+      <button
         className="emotion-2"
         data-testid="chip"
+        disabled={false}
       >
         <div>
           <div
@@ -458,7 +494,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
         <div>
           Label
         </div>
-      </div>
+      </button>
     </div>
   </div>
 </div>

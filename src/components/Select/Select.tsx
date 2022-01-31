@@ -183,9 +183,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
     const rightIconRender = useMemo(
       () => (
-        <div
-          css={rightIconContainer(open, isSearchable)}
-        >
+        <div css={rightIconContainer(open, isSearchable)}>
           {isLoading && <Loader />}
           <Icon
             size={isSearchable ? 20 : 12}
@@ -218,7 +216,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       >
         <div
           {...(!(disabled || locked) && { onClick: handleClick })}
-          css={selectWrapper({ open, status, styleType, isSearchable })}
+          css={selectWrapper({ isSearchable })}
         >
           <TextField
             styleType={styleType}

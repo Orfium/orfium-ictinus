@@ -177,21 +177,33 @@ exports[`TopAppBar should render correctly 1`] = `
   background-color: #fefefe;
   padding: 0.5rem 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  background-color: #e5e5e5;
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:active {
-  background-color: #cbcbcb;
+.emotion-7:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
@@ -470,21 +482,33 @@ exports[`TopAppBar should render correctly 1`] = `
   background-color: #fefefe;
   padding: 0.5rem 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  background-color: #e5e5e5;
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:active {
-  background-color: #cbcbcb;
+.emotion-7:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
@@ -849,21 +873,33 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   background-color: #030303;
   padding: 0.5rem 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  background-color: #000;
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:active {
-  background-color: #000;
+.emotion-7:hover:not(:disabled) {
+  background-color: #020202;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #020202;
+}
+
+.emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
@@ -1142,21 +1178,33 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   background-color: #030303;
   padding: 0.5rem 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  background-color: #000;
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:active {
-  background-color: #000;
+.emotion-7:hover:not(:disabled) {
+  background-color: #020202;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #020202;
+}
+
+.emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {

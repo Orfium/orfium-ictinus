@@ -1,0 +1,85 @@
+import Button from '../../src/components/Button';
+import Chip from '../../src/components/Chip';
+import TextField from '../../src/components/TextField';
+import Filter from '../../src/components/Filter';
+import ThemeWrapper from '../../src/components/storyUtils/ThemeWrapper';
+import Stack from '../../src/components/storyUtils/Stack';
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Guide/Global states" />
+
+# Global States<br/><br/>
+
+In order to provide a consistent feel among apps that use Ictinus, we have common styling rules on the interactions of the user with some components
+
+## Hover
+
+When hovering, the background color is darkened by one step in shade ( +50 ).
+
+
+- If no background color exists, transparent or white, then on hover we use lightGrey-50
+- If it goes out of bounds, it's lightened by one step ( -50 )
+
+
+## Focused
+
+When focused, the border is set to Magenta-500 with width the current width of the component + 1.
+
+All Text components are excluded from this rule, as the focused and active rules result in the same state.
+
+## Pressed
+
+When pressed, the background color is darkened by two steps in shade ( +100 ).
+
+
+- If no background color exists, transparent or white, then on pressed we use lightGrey-100
+- If it goes out of bounds, it's lightened by two steps ( -100 )
+
+## Populated
+
+No Global rule is defined for this yet.
+
+
+## Disabled
+
+Apply opacity 50% to whatever style each component has.
+
+
+
+
+<br/><br/><br/><br/>
+
+Play around to see the styles in action
+
+Default
+
+<ThemeWrapper>
+    <Stack>
+        <Button size={'lg'} dataTestId={'size-lg'}>Hello world</Button>
+        <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'}>Label</Chip>
+        <TextField label={'Label'} size={'md'} styleType={'elevated'} />
+        <Filter
+          styleType="filled"
+          defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
+          items={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'banana', label: 'Banana' }]}
+          label={'Label'}
+        />
+    </Stack>
+</ThemeWrapper>
+
+Disabled
+
+<ThemeWrapper>
+    <Stack>
+        <Button size={'lg'} dataTestId={'size-lg'} disabled>Hello world</Button>
+        <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'} disabled>Label</Chip>
+        <TextField label={'Label'} size={'md'} styleType={'elevated'} disabled />
+        <Filter
+          styleType="filled"
+          disabled
+          defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
+          items={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'banana', label: 'Banana' }]}
+          label={'Label'}
+        />
+    </Stack>
+</ThemeWrapper>

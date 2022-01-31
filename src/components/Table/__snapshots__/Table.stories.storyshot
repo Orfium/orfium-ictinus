@@ -4814,12 +4814,11 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   background-color: transparent;
   padding: 0;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4834,13 +4833,26 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   align-items: center;
 }
 
-.emotion-47:hover,
-.emotion-47:focus {
-  background-color: rgba(81,93,114,0.1);
+.emotion-47:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-47:active {
-  background-color: rgba(81,93,114,0.2);
+.emotion-47:hover:not(:disabled) {
+  background-color: #f3f5f8;
+}
+
+.emotion-47:active:not(:disabled) {
+  background-color: #e7ebf2;
+}
+
+.emotion-47:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-47:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-49 {
@@ -13916,12 +13928,11 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
   background-color: transparent;
   padding: 0;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13936,13 +13947,26 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
   align-items: center;
 }
 
-.emotion-71:hover,
-.emotion-71:focus {
-  background-color: rgba(81,93,114,0.1);
+.emotion-71:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-71:active {
-  background-color: rgba(81,93,114,0.2);
+.emotion-71:hover:not(:disabled) {
+  background-color: #f3f5f8;
+}
+
+.emotion-71:active:not(:disabled) {
+  background-color: #e7ebf2;
+}
+
+.emotion-71:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-71:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-73 {

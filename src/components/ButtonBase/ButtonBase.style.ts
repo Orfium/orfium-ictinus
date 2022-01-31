@@ -1,35 +1,20 @@
-import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
+import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './ButtonBase';
-import { defineBackgroundColor, stateBackgroundColor } from './utils';
+import { buttonConfig, buttonSizes } from './config';
+import { defineBackgroundColor } from './utils';
 
-/** Calculates the button specific height based on the size passed to it
- * These sizes are specific to this button thus these are placed here and not in the config **/
-export const heightBasedOnSize = (size: 'lg' | 'md' | 'sm') => {
-  switch (size) {
-    case 'lg':
-      return rem(56);
-    case 'sm':
-      return rem(36);
-    default:
-      return rem(46);
-  }
-};
+/** Calculates the button specific height based on the size passed to it **/
+export const heightBasedOnSize = (size: typeof buttonSizes[number]) =>
+  rem(buttonConfig.sizes[size] || buttonConfig.sizes.default);
 
-/** Calculates the button specific font size based on the size passed to it
- * These sizes are specific to this button thus these are placed here and not in the config **/
-const fontSizeBasedOnSize = (theme: Theme, size: 'lg' | 'md' | 'sm') => {
-  switch (size) {
-    case 'sm':
-      return theme.typography.fontSizes['13'];
-    default:
-      return theme.typography.fontSizes['16'];
-  }
-};
+/** Calculates the button specific font size based on the size passed to it **/
+const fontSizeBasedOnSize = (theme: Theme, size: typeof buttonSizes[number]) =>
+  theme.typography.fontSizes[buttonConfig.fontSize[size] || buttonConfig.fontSize.default];
 
 export const buttonBaseStyle = ({
   type,
@@ -37,10 +22,7 @@ export const buttonBaseStyle = ({
   calculatedColor,
   size,
   block,
-  iconLeft,
-  iconRight,
   isIconButton,
-  disabled,
   transparent,
   childrenCount,
 }: RequiredProperties<
@@ -49,71 +31,55 @@ export const buttonBaseStyle = ({
     childrenCount: number;
   }
 >) => (theme: Theme) => {
-  const hasSupplementaryIcons = Boolean(iconLeft || iconRight);
+  const backGroundColor = defineBackgroundColor(theme, calculatedColor, type, childrenCount > 0);
+  const isOutlined = !filled && !transparent;
+
   const calculateButtonColor = () => {
     if (type === 'link') {
-      return theme.utils.getColor('blue', 550);
+      const color = buttonConfig.types.link.color;
+
+      return theme.utils.getColor(color.name, color.shade);
     }
 
-    if ((!filled && !transparent) || transparent) {
-      return defineBackgroundColor(
-        theme,
-        calculatedColor,
-        type,
-        hasSupplementaryIcons,
-        childrenCount > 0
-      );
+    if (isOutlined || transparent) {
+      return backGroundColor;
     }
 
     return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   };
+
+  const borderWidth = isOutlined ? buttonConfig.types.outlined.border.width : 0;
+
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
     color: calculateButtonColor(),
     width: block ? '100%' : undefined,
-    backgroundColor:
-      filled && !transparent
-        ? defineBackgroundColor(
-            theme,
-            calculatedColor,
-            type,
-            hasSupplementaryIcons,
-            childrenCount > 0
-          )
-        : 'transparent',
-    padding:
-      size === 'sm' || size === 'md'
-        ? `${theme.spacing.sm} ${theme.spacing.md}`
-        : `${theme.spacing.md} ${theme.spacing.md}`,
+    backgroundColor: isOutlined || transparent ? 'transparent' : backGroundColor,
+    padding: size === 'lg' ? theme.spacing.md : `${theme.spacing.sm} ${theme.spacing.md}`,
     height: heightBasedOnSize(size),
-    opacity: disabled ? 0.5 : 1,
     borderRadius: theme.spacing.xsm,
-    border:
-      filled || transparent
-        ? 'none'
-        : `solid ${rem(1)} ${transparentize(
-            0.5,
-            defineBackgroundColor(
-              theme,
-              calculatedColor,
-              type,
-              hasSupplementaryIcons,
-              childrenCount > 0
-            )
-          )}`,
+    border: isOutlined ? `solid ${rem(borderWidth)} ${backGroundColor}` : 'none',
     cursor: 'pointer',
-    transition: 'background-color 150ms linear',
-    ':hover,:focus': {
-      backgroundColor: !disabled
-        ? stateBackgroundColor(theme, 'hover', calculatedColor, filled && !transparent)
-        : undefined,
+    transition: 'background-color,border 150ms linear',
+    ':focus-visible:not(:disabled)': {
+      outline: getFocus({ theme, borderWidth: borderWidth }).styleOutline,
     },
-    ':active': {
-      backgroundColor: !disabled
-        ? stateBackgroundColor(theme, 'active', calculatedColor, filled && !transparent)
-        : undefined,
+    ':hover:not(:disabled)': {
+      backgroundColor: getHover({
+        theme,
+        color: calculatedColor.color,
+        shade: isOutlined || transparent ? 0 : calculatedColor.shade,
+      }).backgroundColor,
     },
+    ':active:not(:disabled)': {
+      backgroundColor: getPressed({
+        theme,
+        color: calculatedColor.color,
+        shade: isOutlined || transparent ? 0 : calculatedColor.shade,
+      }).backgroundColor,
+    },
+    ':disabled': getDisabled(),
   };
 
   if (isIconButton) {
