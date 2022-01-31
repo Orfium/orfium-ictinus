@@ -26,7 +26,7 @@ export const chipStyle = ({
     box-sizing: border-box;
     padding: ${theme.spacing.xsm} ${theme.spacing.sm};
     background-color: ${customFilled ? theme.utils.getColor(fill, 50) : theme.palette.white};
-    color: ${theme.utils.getColor('darkGrey', 850)};
+    color: ${theme.utils.getAAColorFromSwatches(fill, 50)};
     border: ${rem(1)} solid
       ${customFilled ? theme.utils.getColor(fill, 550) : theme.utils.getColor('lightGrey', 200)};
     cursor: ${onClick ? 'pointer' : 'auto'};
