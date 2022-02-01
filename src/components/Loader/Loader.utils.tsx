@@ -7,16 +7,16 @@ import { LoaderType } from './Loader';
 
 export const loaderTypes = ['dots', 'indeterminate', 'spinner'] as const;
 
-const loadersConfig = (dataTestId?: string): Record<LoaderType, JSX.Element> => ({
+const loadersConfig = (dataTestId?: string, color?: string): Record<LoaderType, JSX.Element> => ({
   dots: <DotsLoader dataTestId={dataTestId} />,
   indeterminate: <IndeterminateLoader dataTestId={dataTestId} />,
-  spinner: <Spinner dataTestId={dataTestId} />,
+  spinner: <Spinner dataTestId={dataTestId} color={color} />,
 });
 
-export const getLoader = (type?: LoaderType, dataTestId?: string) => {
+export const getLoader = (type?: LoaderType, dataTestId?: string, color?: string) => {
   if (!type) {
     return null;
   }
 
-  return loadersConfig(dataTestId)[type];
+  return loadersConfig(dataTestId, color)[type];
 };

@@ -6,9 +6,12 @@ import { spinnerContainer } from './Spinner.style';
 
 interface Props {
   dataTestId?: TestId;
+  color?: string;
 }
-const Spinner: FC<Props> = ({ dataTestId }) => {
-  return <div data-testid={generateTestDataId('spinner', dataTestId)} css={spinnerContainer()} />;
+const Spinner: FC<Props> = ({ dataTestId, color }) => {
+  return (
+    <div data-testid={generateTestDataId('spinner', dataTestId)} css={spinnerContainer(color)} />
+  );
 };
 
 export default Spinner;

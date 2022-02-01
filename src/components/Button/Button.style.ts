@@ -35,9 +35,3 @@ export const childrenWrapperStyle = ({
     marginRight: rightIconExists ? theme.spacing.sm : 0,
   };
 };
-
-export const centralizedLoader: (clientWidth?: number) => SerializedStyles = clientWidth => css`
-  width: ${clientWidth ? rem(clientWidth) : 'auto'};
-  ${flex};
-  justify-content: center;
-`;
