@@ -138,7 +138,7 @@ function ExpandCollapse(props: Props) {
 
   return (
     <Component data-testid={generateTestDataId('expand-collapse', dataTestId)}>
-      <div>{textAndControl(handleStateChange, expanded)}</div>
+      {textAndControl(handleStateChange, expanded)}
       <div css={contentStyles(expanded, transitionDuration)} ref={contentRef}>
         {renderFunction(expanded)}
       </div>

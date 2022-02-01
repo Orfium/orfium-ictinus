@@ -2,15 +2,15 @@ import { css, SerializedStyles } from '@emotion/react';
 import { darken } from 'polished';
 import { Theme } from 'theme';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
-import { rem } from 'theme/utils';
 import { BASE_SHADE } from 'theme/palette';
+import { rem } from 'theme/utils';
 import { fillPickerBasedOnType } from 'utils/themeFunctions';
+
+import { getFocus, getHover, getPressed } from '../../../theme/states';
 
 const ICON_PADDING = 39;
 
-export const navigationContainerStyle = (expanded: boolean) => (
-  theme: Theme
-): SerializedStyles => css`
+export const navigationContainerStyle = (expanded: boolean) => (): SerializedStyles => css`
   ${transition(10.2)};
   width: 100%;
   background-color: white;
@@ -38,9 +38,18 @@ export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
   font-size: ${rem(16)};
   font-weight: ${theme.typography.weights.regular};
   padding: 0 ${theme.spacing.md};
+  background: transparent;
+  border: 0 solid transparent;
+  display: flex;
+  text-align: left;
+  text-decoration: none;
 
   &:hover {
-    background-color: ${theme.utils.getColor('lightGrey', 50)};
+    background-color: ${getHover({ theme }).backgroundColor};
+  }
+
+  &:focus-visible {
+    outline: ${getFocus({ theme }).styleOutline};
   }
 `;
 
@@ -64,20 +73,23 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   padding-left: ${rem(ICON_PADDING)};
 
   &:hover {
-    background-color: ${theme.utils.getColor('lightGrey', 50)} !important;
+    background-color: ${getHover({ theme }).backgroundColor}; !important;
   }
   &.active {
-    background-color: ${theme.utils.getColor('blue', 50)} !important;
     font-weight: 500;
   }
   &.active {
     font-weight: ${theme.typography.weights.bold};
-    background-color: ${darken(0.03, theme.utils.getColor('lightGrey', 50))};
-    color: ${theme.utils.getColor('darkGrey', 850)};
+    background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
+    color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
 
     path {
       fill: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')} !important;
     }
+  }
+
+  &:focus-visible {
+    outline: ${getFocus({ theme }).styleOutline};
   }
   text-decoration: none;
 `;
