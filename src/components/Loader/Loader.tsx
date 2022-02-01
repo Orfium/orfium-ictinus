@@ -10,17 +10,11 @@ type Props = {
   type?: LoaderType;
   /** The data test id if needed */
   dataTestId?: string;
-  /** Color of the loader. Only applicable to Spinner for now */
+  /** Color of the loader. Define AA color otherwise it gets Primary be default */
   color?: string;
 };
 
 const Loader: React.FC<Props> = ({ type = 'dots', dataTestId, color }) => {
-  if (Boolean(color) && type !== 'spinner') {
-    console.warn(
-      'Seems you tried using color prop with something other than Spinner. This is not supported for now! :( '
-    );
-  }
-
   return <div css={loaderContainer()}>{getLoader(type, dataTestId, color)}</div>;
 };
 
