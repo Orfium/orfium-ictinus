@@ -17,19 +17,16 @@ type Props = {
   searchTerm?: string;
 } & TestProps;
 
-const ListGroupTitle = React.forwardRef<HTMLDivElement, Props>(
-  ({ size, content, index, searchTerm, dataTestId }, ref) => {
-    return (
-      <div
-        css={listGroupTitleStyle({ size, disabled: (content as SelectOption).isDisabled })}
-        ref={ref}
-        data-testid={dataTestId ?? 'ictinus_list' + ('_group_title_' + index)}
-      >
-        <div css={contentStyle()}>{renderContent(content, searchTerm)}</div>
-      </div>
-    );
-  }
-);
+const ListGroupTitle: React.FC<Props> = ({ size, content, index, searchTerm, dataTestId }) => {
+  return (
+    <div
+      css={listGroupTitleStyle({ size, disabled: (content as SelectOption).isDisabled })}
+      data-testid={dataTestId ?? 'ictinus_list' + ('_group_title_' + index)}
+    >
+      <div css={contentStyle()}>{renderContent(content, searchTerm)}</div>
+    </div>
+  );
+};
 ListGroupTitle.displayName = 'ListGroupTitle';
 
 export default ListGroupTitle;
