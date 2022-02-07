@@ -17,8 +17,8 @@ export const LoaderSubLine = (color: string) => css`
   height: ${rem(8)};
 `;
 
-export const LoaderDecLine = () => (theme: Theme): SerializedStyles => css`
-  ${LoaderSubLine(theme.utils.getColor('primary', BASE_SHADE, 'normal'))};
+export const LoaderDecLine = (color?: string) => (theme: Theme): SerializedStyles => css`
+  ${LoaderSubLine(color || theme.utils.getColor('primary', BASE_SHADE, 'normal'))};
 
   animation: decrease 2.3s 0.8s infinite;
   @keyframes decrease {
@@ -33,8 +33,8 @@ export const LoaderDecLine = () => (theme: Theme): SerializedStyles => css`
   }
 `;
 
-export const LoaderIncLine = () => (theme: Theme): SerializedStyles => css`
-  ${LoaderSubLine(theme.utils.getColor('primary', BASE_SHADE, 'normal'))};
+export const LoaderIncLine = (color?: string) => (theme: Theme): SerializedStyles => css`
+  ${LoaderSubLine(color || theme.utils.getColor('primary', BASE_SHADE, 'normal'))};
 
   animation: increase 2.3s infinite;
   @keyframes increase {
