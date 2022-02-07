@@ -1,19 +1,12 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
-import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
+import { DEFAULT_SIZE, getTextFieldPadding, getTextFieldSize } from 'utils/size-utils';
 
 import { getDisabled, getHover, getPressed } from '../../theme/states';
 import { textInputConfig } from './config';
 import { Props } from './TextInputBase';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
-
-export const flexContainer = () => (): SerializedStyles =>
-  css({
-    display: 'flex',
-    alignItems: 'center',
-    position: 'relative',
-  });
 
 const borderConfig = textInputConfig.types.outlined.border;
 
@@ -31,6 +24,10 @@ const wrapperStyleSwitch = (
   }
 
   const backgroundColor = dark ? theme.utils.getColor('darkGrey', 750) : theme.palette.white;
+  const borderColorName = !error ? borderConfig.color.pressed.name : borderConfig.color.error.name;
+  const borderColorShade = !error
+    ? borderConfig.color.pressed.shade
+    : borderConfig.color.error.shade;
 
   const events = disabled
     ? {
@@ -44,8 +41,8 @@ const wrapperStyleSwitch = (
         },
         '&:focus-within': {
           boxShadow: `0 0 0 ${rem(borderConfig.width + 1)} ${theme.utils.getColor(
-            borderConfig.color.pressed.name,
-            borderConfig.color.pressed.shade
+            borderColorName,
+            borderColorShade
           )}`,
           backgroundColor: getPressed({ theme }).backgroundColor,
         },
@@ -68,12 +65,16 @@ export const wrapperStyle = ({
   lean,
   dark,
   isSearch,
-  rightIcon,
+  isTextArea,
   size,
 }: Props) => (theme: Theme): SerializedStyles => {
   const error = status === 'error';
+  const textFieldSize = !(lean || isTextArea) ? getTextFieldSize(size) : getTextFieldSize();
 
   return css({
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative',
     transition: `background-color 0.25s, box-shadow 0.25s, border-color 0.25s`,
     boxShadow: `0 0 0 ${rem(borderConfig.width)} ${
       error
@@ -83,19 +84,14 @@ export const wrapperStyle = ({
     borderRadius: isSearch ? rem(100) : theme.spacing.xsm,
     flex: '1 1 100%',
     userSelect: 'none',
-    position: 'relative',
     opacity: disabled ? getDisabled().opacity : 1,
     cursor: disabled || locked ? getDisabled().cursor : 'auto',
-    /** This is added to prevent the field from growing/shrinking when the Clear icon shows/hides.
-        The values used are the minimum widths of this field */
-    minWidth: isSearch && Boolean(rightIcon) && size === 'sm' ? rem(286) : rem(264),
+    ...textFieldSize,
     ...wrapperStyleSwitch(theme, dark, lean, error, Boolean(disabled || locked)),
   });
 };
 
-export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon, lean }: Props) => (
-  theme: Theme
-): SerializedStyles => {
+export const textFieldStyle = ({ lean, isTextArea }: Props) => (theme: Theme): SerializedStyles => {
   return css`
     position: relative;
     display: inline-flex;
@@ -103,7 +99,7 @@ export const textFieldStyle = ({ size = DEFAULT_SIZE, label = '', leftIcon, lean
     align-items: center;
     vertical-align: top;
     width: fill-available;
-    ${!lean && getTextFieldSize(theme, label, Boolean(leftIcon))[size]}
+    ${!lean && `${getTextFieldPadding(theme, isTextArea)};`}
 
     > div {
       position: relative;
@@ -120,13 +116,12 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   display: block;
   position: relative;
   top: ${label && rem(7)};
-  width: 100%;
   z-index: 1;
-  font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+  font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};
   text-overflow: ellipsis;
 
   & + label {
-    font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+    font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};
   }
 
   &:focus {
@@ -134,7 +129,7 @@ export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
   }
 
   &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightGrey', 750) : 'transparent'};
+    color: ${!label && placeholder ? theme.utils.getColor('lightGrey', 650) : 'transparent'};
   }
 
   &:not(:focus):placeholder-shown {

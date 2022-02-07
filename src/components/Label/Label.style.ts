@@ -1,5 +1,4 @@
 import { css, SerializedStyles } from '@emotion/react';
-
 import { Theme } from 'theme';
 import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
@@ -27,7 +26,7 @@ export const labelStyle = ({
   font-weight: ${theme.typography.weights.regular};
   color: ${error
     ? theme.utils.getColor('error', BASE_SHADE, 'normal')
-    : theme.utils.getColor('lightGrey', 750)};
+    : theme.utils.getColor('lightGrey', 650)};
   align-items: center;
   display: flex;
   top: 0;

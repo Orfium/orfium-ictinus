@@ -4,9 +4,9 @@ import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import Icon from '../Icon';
 import { IconWrapper } from '../TextField/components/commons';
-import { searchStyle } from './SearchField.style';
 import { Props as TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
+import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type Props = {
   /** A callback that's called when the user clicks the 'clear' icon */
@@ -32,6 +32,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
     <React.Fragment>
       <TextInputBase
         disabled={disabled}
+        size={size}
         isSearch
         styleType={'outlined'}
         leftIcon={'search'}
@@ -43,7 +44,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps>((
 
         <div css={{ width: '100%' }}>
           <input
-            css={searchStyle({ size, dark })}
+            css={inputStyle({ size, dark, placeholder })}
             placeholder={placeholder}
             disabled={disabled}
             value={value}
