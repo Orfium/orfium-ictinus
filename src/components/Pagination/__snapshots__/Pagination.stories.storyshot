@@ -38,12 +38,11 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
   background-color: transparent;
   padding: 0;
   height: 2.25rem;
-  opacity: 0.5;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -56,6 +55,28 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #eaeaed;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #d6d6db;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -82,43 +103,6 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
 
 .emotion-4 path {
   fill: #0f0f17;
-}
-
-.emotion-8 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #0f0f17;
-  width: 2.25rem;
-  background-color: transparent;
-  padding: 0;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8:hover,
-.emotion-8:focus {
-  background-color: rgba(15,15,23,0.1);
-}
-
-.emotion-8:active {
-  background-color: rgba(15,15,23,0.2);
 }
 
 <div
@@ -153,6 +137,7 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
       data-testid="icon-button"
       disabled={true}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="emotion-3"
@@ -168,6 +153,7 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
       data-testid="icon-button"
       disabled={true}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="emotion-3"
@@ -185,10 +171,11 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
       3
     </div>
     <button
-      className="emotion-8"
+      className="emotion-2"
       data-testid="icon-button"
       disabled={false}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="emotion-3"
@@ -200,10 +187,11 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
       </span>
     </button>
     <button
-      className="emotion-8"
+      className="emotion-2"
       data-testid="icon-button"
       disabled={false}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="emotion-3"
@@ -256,12 +244,11 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
   background-color: transparent;
   padding: 0;
   height: 2.25rem;
-  opacity: 0.5;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -274,6 +261,28 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #eaeaed;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #d6d6db;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -300,43 +309,6 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
 
 .emotion-4 path {
   fill: #0f0f17;
-}
-
-.emotion-5 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #0f0f17;
-  width: 2.25rem;
-  background-color: transparent;
-  padding: 0;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  background-color: rgba(15,15,23,0.1);
-}
-
-.emotion-5:active {
-  background-color: rgba(15,15,23,0.2);
 }
 
 <div
@@ -371,6 +343,7 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
       data-testid="icon-button"
       disabled={true}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="emotion-3"
@@ -388,10 +361,11 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
       3
     </div>
     <button
-      className="emotion-5"
+      className="emotion-2"
       data-testid="icon-button"
       disabled={false}
       onClick={[Function]}
+      type="button"
     >
       <span
         className="emotion-3"

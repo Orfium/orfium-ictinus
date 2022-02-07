@@ -103,7 +103,8 @@ exports[`Storyshots Design System/Table Financial Table 1`] = `
   vertical-align: text-top;
   width: 1.5rem;
   height: 1.5rem;
-  background: #b7c3d8;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
   border-radius: 0.25rem;
 }
 
@@ -923,7 +924,8 @@ exports[`Storyshots Design System/Table Fixed Header Table 1`] = `
   vertical-align: text-top;
   width: 1.5rem;
   height: 1.5rem;
-  background: #b7c3d8;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
   border-radius: 0.25rem;
 }
 
@@ -3266,9 +3268,12 @@ exports[`Storyshots Design System/Table Regular Table with sorting and tooltips 
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
   text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-8 .tippy-arrow {
@@ -4543,7 +4548,8 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   vertical-align: text-top;
   width: 1.5rem;
   height: 1.5rem;
-  background: #b7c3d8;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
   border-radius: 0.25rem;
 }
 
@@ -4808,12 +4814,11 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   background-color: transparent;
   padding: 0;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4828,13 +4833,26 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
   align-items: center;
 }
 
-.emotion-47:hover,
-.emotion-47:focus {
-  background-color: rgba(81,93,114,0.1);
+.emotion-47:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-47:active {
-  background-color: rgba(81,93,114,0.2);
+.emotion-47:hover:not(:disabled) {
+  background-color: #f3f5f8;
+}
+
+.emotion-47:active:not(:disabled) {
+  background-color: #e7ebf2;
+}
+
+.emotion-47:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-47:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-49 {
@@ -5144,6 +5162,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -5311,6 +5330,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -5478,6 +5498,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -5645,6 +5666,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -5812,6 +5834,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -5979,6 +6002,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -6146,6 +6170,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -6313,6 +6338,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -6480,6 +6506,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -6647,6 +6674,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -6814,6 +6842,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -6981,6 +7010,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -7148,6 +7178,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -7315,6 +7346,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -7482,6 +7514,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -7649,6 +7682,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -7816,6 +7850,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -7983,6 +8018,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -8150,6 +8186,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -8317,6 +8354,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -8484,6 +8522,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -8651,6 +8690,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -8818,6 +8858,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -8985,6 +9026,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -9152,6 +9194,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -9319,6 +9362,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -9486,6 +9530,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -9653,6 +9698,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -9820,6 +9866,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -9987,6 +10034,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -10154,6 +10202,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -10321,6 +10370,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -10488,6 +10538,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -10655,6 +10706,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -10822,6 +10874,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -10989,6 +11042,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -11156,6 +11210,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -11323,6 +11378,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -11490,6 +11546,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -11657,6 +11714,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -11824,6 +11882,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -11991,6 +12050,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -12158,6 +12218,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -12325,6 +12386,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -12492,6 +12554,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -12659,6 +12722,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -12826,6 +12890,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -12993,6 +13058,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -13160,6 +13226,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -13327,6 +13394,7 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -13460,7 +13528,8 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
   vertical-align: text-top;
   width: 1.5rem;
   height: 1.5rem;
-  background: #b7c3d8;
+  background: inherit;
+  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
   border-radius: 0.25rem;
 }
 
@@ -13645,9 +13714,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
   text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-20 .tippy-arrow {
@@ -13856,12 +13928,11 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
   background-color: transparent;
   padding: 0;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 100%;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -13876,13 +13947,26 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
   align-items: center;
 }
 
-.emotion-71:hover,
-.emotion-71:focus {
-  background-color: rgba(81,93,114,0.1);
+.emotion-71:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-71:active {
-  background-color: rgba(81,93,114,0.2);
+.emotion-71:hover:not(:disabled) {
+  background-color: #f3f5f8;
+}
+
+.emotion-71:active:not(:disabled) {
+  background-color: #e7ebf2;
+}
+
+.emotion-71:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-71:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-73 {
@@ -14351,6 +14435,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -14552,6 +14637,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -14753,6 +14839,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -14954,6 +15041,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -15155,6 +15243,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -15356,6 +15445,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -15557,6 +15647,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -15758,6 +15849,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -15959,6 +16051,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -16160,6 +16253,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -16361,6 +16455,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -16562,6 +16657,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -16763,6 +16859,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -16964,6 +17061,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -17165,6 +17263,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -17366,6 +17465,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -17567,6 +17667,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -17768,6 +17869,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -17969,6 +18071,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -18170,6 +18273,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -18371,6 +18475,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -18572,6 +18677,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -18773,6 +18879,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -18974,6 +19081,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -19175,6 +19283,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -19376,6 +19485,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -19577,6 +19687,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -19778,6 +19889,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -19979,6 +20091,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -20180,6 +20293,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -20381,6 +20495,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -20582,6 +20697,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -20783,6 +20899,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -20984,6 +21101,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -21185,6 +21303,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -21386,6 +21505,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -21587,6 +21707,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -21788,6 +21909,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -21989,6 +22111,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -22190,6 +22313,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -22391,6 +22515,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -22592,6 +22717,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -22793,6 +22919,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -22994,6 +23121,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -23195,6 +23323,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -23396,6 +23525,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -23597,6 +23727,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -23798,6 +23929,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -23999,6 +24131,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"
@@ -24200,6 +24333,7 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                             data-testid="icon-button-expanded-button"
                             disabled={false}
                             onClick={[Function]}
+                            type="button"
                           >
                             <span
                               className="emotion-8"

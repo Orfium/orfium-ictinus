@@ -2,13 +2,15 @@ import { css } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
+import { getFocus, getHover, getPressed } from '../../theme/states';
 import { ButtonStyleProps } from './types';
 import {
   borderStyleParams,
-  focusBorderStyleParams,
+  focusBorderWidth,
   getBackgroundColor,
   getBorder,
   getTextColor,
+  transparentFocusBorderWidth,
 } from './utils';
 
 export const wrapperStyle = () => () => {
@@ -23,6 +25,7 @@ export const buttonSpanStyle = () => () => {
   return {
     display: 'flex',
     alignItems: 'center',
+    gap: rem(4),
     height: '100%',
   };
 };
@@ -32,7 +35,11 @@ export const buttonWrapperStyle = ({
   open,
   hasSelectedValue,
   calculatedColor,
+  styleType,
 }: ButtonStyleProps) => (theme: Theme) => {
+  const activeAndClosed = !disabled && !open;
+  const borderWidth = styleType === 'filled' ? focusBorderWidth : transparentFocusBorderWidth;
+
   return {
     background: 'none',
     border: 'none',
@@ -40,27 +47,38 @@ export const buttonWrapperStyle = ({
     padding: '0',
     alignItems: 'center',
     height: '100%',
-    maxWidth: rem(270),
     minWidth: rem(110),
 
-    ':hover > div, :active > div': {
-      backgroundColor:
-        !disabled && !open
-          ? hasSelectedValue
-            ? theme.utils.getColor(calculatedColor.color, 100)
-            : theme.utils.getColor('darkGrey', null, 'pale')
-          : undefined,
+    // If is active and not disabled and not visited global states applied
+    // else it's using the global states function with calculated color
+    ':hover > div': {
+      backgroundColor: activeAndClosed
+        ? hasSelectedValue
+          ? getHover({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+              .backgroundColor
+          : getHover({ theme }).backgroundColor
+        : undefined,
     },
+
+    // If is active and not disabled and not visited global states applied
+    // else it's using the global states function with calculated color
+    ':active > div': {
+      backgroundColor: activeAndClosed
+        ? hasSelectedValue
+          ? getPressed({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+              .backgroundColor
+          : getPressed({ theme }).backgroundColor
+        : undefined,
+    },
+
     // on focus change the two divs of added
-    ':focus > div': !open &&
-      !hasSelectedValue && {
-        border: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-        backgroundColor: theme.utils.getColor('blue', 50),
-      },
+    ':focus-visible > div': activeAndClosed && {
+      border: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+    },
     // target the divider on focus
-    ':focus > span': !open && {
-      borderTop: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
-      borderBottom: `${focusBorderStyleParams} ${theme.utils.getColor('blue', 550)}`,
+    ':focus > span': activeAndClosed && {
+      borderTop: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+      borderBottom: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
     },
   };
 };
@@ -123,6 +141,8 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
   return {
     height: '100%',
     width: rem(1),
+    position: 'relative' as const,
+    minWidth: rem(1),
     transition: 'all 150ms linear',
     backgroundColor: getBorder({
       styleType,
@@ -156,16 +176,14 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
   return {
     ...buttonBaseStyle(props)(theme),
     borderLeft: '0 !important',
-    paddingRight: '0',
+    paddingLeft: rem(4),
+    paddingRight: rem(4),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     width: rem(34),
     borderTopRightRadius: theme.spacing.lg,
     borderBottomRightRadius: theme.spacing.lg,
-    '> span': {
-      marginLeft: rem(-5),
-    },
   };
 };
 
@@ -183,11 +201,10 @@ export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
   };
 };
 
-export const childrenWrapperStyle = () => (theme: Theme) => {
+export const childrenWrapperStyle = () => () => {
   return {
+    lineHeight: rem(15),
     marginLeft: 0,
-    marginRight: theme.spacing.sm,
-    maxWidth: rem(270),
   };
 };
 
@@ -195,14 +212,12 @@ export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (the
   return {
     fontWeight:
       open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
-    maxWidth: rem(210),
     display: 'flex',
     alignItems: 'center',
     div: {
       flex: 'none',
     },
     span: {
-      marginLeft: theme.spacing.xsm,
       fontWeight: theme.typography.weights.bold,
     },
   };

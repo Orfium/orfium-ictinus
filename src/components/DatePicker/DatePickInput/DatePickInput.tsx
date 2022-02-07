@@ -2,6 +2,8 @@ import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
 
 import { getLocaleFormat } from '../../../utils/helpers';
+import FilterBase from '../../Filter/components/FilterBase';
+import { FilterType, StyleType } from '../../Filter/types';
 import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
@@ -12,13 +14,26 @@ import { rangeInputsWrapper } from './DatePickInput.style';
 const ON_CHANGE_MOCK = () => {};
 
 type Props = {
+  /** Handles the focus state of the component */
   handleFocus: () => void;
-  handleClear: (event: React.KeyboardEvent) => void;
+  /** Handles the clear action for the datepicker */
+  handleClear: (event?: React.KeyboardEvent) => void;
+  /** Defines whether the component selects a single date or a range */
   isRangePicker: boolean;
+  /** Style properties for the DatePicker with a filter base */
+  filterConfig?: {
+    buttonType?: 'primary' | 'secondary';
+    styleType?: StyleType;
+    filterType?: FilterType;
+  };
+  /** The selected day */
   selectedDay: Range;
   /** Props for styling the input */
   inputProps?: TextFieldProps;
+  /** Overrides the default date format */
   dateFormatOverride?: DateFormatType;
+  /** Defines whether the component is open */
+  isOpen: boolean;
 };
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -27,11 +42,13 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
   (
     {
       handleFocus,
+      filterConfig,
       handleClear,
       isRangePicker,
       inputProps,
       selectedDay,
       dateFormatOverride = 'MM/DD/YYYY',
+      isOpen,
     },
     ref
   ) => {
@@ -41,36 +58,64 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
     const getDateFormatted = React.useCallback(formatDate, []);
 
-    return (
-      <div css={rangeInputsWrapper()}>
-        {isRangePicker ? (
-          <TextField
-            ref={ref}
-            {...inputProps}
-            onFocus={handleFocus}
-            onKeyDown={handleClear}
-            onChange={ON_CHANGE_MOCK}
-            placeholder="Date (start) - Date (end)"
-            value={
+    const renderBase = () => {
+      if (filterConfig?.filterType) {
+        return (
+          <FilterBase
+            isDatePicker
+            dataTestId={'filter'}
+            disabled={false}
+            buttonType={filterConfig?.buttonType || 'primary'}
+            styleType={filterConfig?.styleType || 'filled'}
+            handleOpen={handleFocus}
+            filterType={filterConfig.filterType}
+            onClear={handleClear}
+            selectedItemLabel={
               selectedDay.from &&
-              `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+              `Select Date${isRangePicker ? 's' : ''} : ${getDateFormatted(selectedDay.from)} ${
+                isRangePicker ? `- ${getDateFormatted(selectedDay.to)}` : ''
+              }`
             }
-            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+            open={isOpen}
+            hasSelectedValue={Boolean(
+              selectedDay.from &&
+                `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+            )}
+            label={!selectedDay.from ? `Select Date${isRangePicker ? 's' : ''}` : ''}
+            iconName={selectedDay.from ? 'calendarFilled' : 'calendarEmpty'}
           />
-        ) : (
-          <TextField
-            ref={ref}
-            {...inputProps}
-            onFocus={handleFocus}
-            onKeyDown={handleClear}
-            onChange={ON_CHANGE_MOCK}
-            placeholder="Select date"
-            value={selectedDay.to && getDateFormatted(selectedDay.to)}
-            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
-          />
-        )}
-      </div>
-    );
+        );
+      }
+
+      return isRangePicker ? (
+        <TextField
+          ref={ref}
+          {...inputProps}
+          onFocus={handleFocus}
+          onKeyDown={handleClear}
+          onChange={ON_CHANGE_MOCK}
+          placeholder="Date (start) - Date (end)"
+          value={
+            selectedDay.from &&
+            `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
+          }
+          rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+        />
+      ) : (
+        <TextField
+          ref={ref}
+          {...inputProps}
+          onFocus={handleFocus}
+          onKeyDown={handleClear}
+          onChange={ON_CHANGE_MOCK}
+          placeholder="Select date"
+          value={selectedDay.to && getDateFormatted(selectedDay.to)}
+          rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+        />
+      );
+    };
+
+    return <div css={rangeInputsWrapper()}>{renderBase()}</div>;
   }
 );
 

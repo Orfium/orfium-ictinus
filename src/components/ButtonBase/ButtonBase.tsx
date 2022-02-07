@@ -2,11 +2,12 @@ import React from 'react';
 
 import { ClickEvent } from '../../hooks/useLoading';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
-import { ButtonProps, EventProps } from '../../utils/common';
+import { ButtonProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
 import { buttonBaseStyle } from './ButtonBase.style';
+import { buttonSizes } from './config';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;
@@ -19,7 +20,7 @@ export type Props = {
   /** the color of the button based on our colors eg. red-500 */
   color?: string;
   /** This property define the size of the button. Defaults to 'md' */
-  size?: 'lg' | 'md' | 'sm';
+  size?: typeof buttonSizes[number];
   /** This property will make the button fit to its parent width. Defaults to false */
   block?: boolean;
   /** Property indicating if the component is filled with a color based on the type */
@@ -59,7 +60,7 @@ const ButtonBase = React.forwardRef<
     loading = false,
     children,
     dataTestId = '',
-    buttonType,
+    buttonType = 'button',
     onClick,
     onBlur,
   } = props;

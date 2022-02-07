@@ -1,29 +1,14 @@
-import useTheme from 'hooks/useTheme';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import { debounce } from 'lodash';
 import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { generateTestDataId } from 'utils/helpers';
 
-import { BASE_SHADE, pickTextColorFromSwatches } from '../../theme/palette';
-import Icon from '../Icon';
 import ClickAwayListener from '../utils/ClickAwayListener';
+import FilterBase from './components/FilterBase';
 import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
-import {
-  buttonSpanStyle,
-  buttonStyle,
-  buttonWrapperStyle,
-  childrenWrapperStyle,
-  dividedButtonStyle,
-  divider,
-  labelSpanStyle,
-  menuStyle,
-  valueSpanStyle,
-  wrapperStyle,
-} from './Filter.style';
+import { menuStyle } from './Filter.style';
 import { FilterOption, Props } from './types';
-import { getTextColor } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
 const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
@@ -45,25 +30,16 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     isVirtualized = false,
     onClear = () => {},
   } = props;
-  const [open, setOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
 
-  const theme = useTheme();
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
-  const calculatedColor = calculateColorBetweenColorAndType('', buttonType);
 
-  const iconColor = getTextColor({
-    open,
-    theme,
-    calculatedColor,
-    hasSelectedValue,
-  });
-  const iconName = open ? 'triangleUp' : 'triangleDown';
+  const iconName = isOpen ? 'triangleUp' : 'triangleDown';
 
   const handleSelect = (option: FilterOption) => {
-    setOpen(false);
+    setIsOpen(false);
     onSelect(option);
   };
 
@@ -94,7 +70,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
   const handleOpen = () => {
     setSearchValue('');
-    setOpen(!open);
+    setIsOpen(!isOpen);
   };
 
   const debouncedOnChange = React.useCallback(
@@ -103,27 +79,6 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     }, 400),
     []
   );
-
-  const buttonStyleProps = {
-    calculatedColor,
-    buttonType,
-    disabled,
-    open,
-    styleType,
-    hasSelectedValue,
-    filterType,
-  };
-
-  const pickIconColor = () => {
-    if (open) {
-      return theme.utils.getColor('neutralWhite', 100);
-    }
-    if (hasSelectedValue) {
-      return theme.utils.getColor(calculatedColor.color, 550);
-    }
-
-    return theme.utils.getColor('darkGrey', 400);
-  };
 
   /**
    * for 'added' type design team decided that is not needed therefore in order not having to maintain
@@ -134,46 +89,23 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   }
 
   return (
-    <ClickAwayListener onClick={() => setOpen(false)}>
-      <div css={wrapperStyle()} data-testid={dataTestId}>
-        <button
-          ref={ref}
-          data-testid={generateTestDataId('filter', dataTestId)}
-          onClick={handleOpen}
-          disabled={disabled}
-          css={buttonWrapperStyle(buttonStyleProps)}
-        >
-          <div css={buttonStyle(buttonStyleProps)}>
-            <span css={buttonSpanStyle()}>
-              <span css={childrenWrapperStyle()}>
-                <span css={labelSpanStyle(open, hasSelectedValue)}>
-                  <div>{label && `${label} :`}</div>
-                  <span css={valueSpanStyle()}>{selectedItem?.label ?? defaultValue.label}</span>
-                </span>
-              </span>
-
-              <Icon name={iconName} color={iconColor} size={6} />
-            </span>
-          </div>
-
-          {filterType === 'added' && (
-            <>
-              <span css={divider(buttonStyleProps)} />
-              <div css={dividedButtonStyle(buttonStyleProps)}>
-                <Icon
-                  size={19}
-                  name={'closeTag'}
-                  color={pickIconColor()}
-                  onClick={e => {
-                    e.stopPropagation();
-                    onClear();
-                  }}
-                />
-              </div>
-            </>
-          )}
-        </button>
-        {open && (
+    <ClickAwayListener onClick={() => setIsOpen(false)}>
+      <FilterBase
+        ref={ref}
+        dataTestId={dataTestId}
+        handleOpen={handleOpen}
+        disabled={disabled}
+        onClear={onClear}
+        selectedItemLabel={selectedItem?.label ?? defaultValue.label}
+        open={isOpen}
+        hasSelectedValue={hasSelectedValue}
+        label={label as string}
+        iconName={iconName}
+        filterType={filterType}
+        buttonType={buttonType}
+        styleType={styleType}
+      >
+        {isOpen && (
           <div css={menuStyle()} data-testid={generateTestDataId('filter-menu', dataTestId)}>
             {isSearchable && (
               <SearchInput
@@ -195,9 +127,9 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
             />
           </div>
         )}
-      </div>
+      </FilterBase>
     </ClickAwayListener>
   );
 });
-
+Filter.displayName = 'Filter';
 export default Filter;

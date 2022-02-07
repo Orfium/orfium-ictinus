@@ -96,13 +96,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 }
 
 .emotion-5 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-6 {
@@ -213,23 +213,35 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   font-weight: 500;
   color: black;
   background-color: #fefefe;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
-  background-color: #e5e5e5;
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-11:active {
-  background-color: #cbcbcb;
+.emotion-11:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-12 {
@@ -265,10 +277,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 100%;
+  border: 0.0625rem solid #e7ebf2;
+  box-sizing: border-box;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
+  font-weight: 500;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -397,6 +412,7 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
               data-testid="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-12"
@@ -541,13 +557,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-5 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-6 {
@@ -633,16 +649,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-10 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -651,19 +664,19 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-10:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-10:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-11 {
@@ -783,23 +796,35 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   font-weight: 500;
   color: black;
   background-color: #fefefe;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-26:hover,
-.emotion-26:focus {
-  background-color: #e5e5e5;
+.emotion-26:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-26:active {
-  background-color: #cbcbcb;
+.emotion-26:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-26:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-26:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-26:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-27 {
@@ -835,10 +860,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 100%;
+  border: 0.0625rem solid #e7ebf2;
+  box-sizing: border-box;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
+  font-weight: 500;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1031,6 +1059,7 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
               data-testid="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-27"
@@ -1175,13 +1204,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 }
 
 .emotion-5 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-6 {
@@ -1292,23 +1321,35 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   font-weight: 500;
   color: white;
   background-color: #030303;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
-  background-color: #000;
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-11:active {
-  background-color: #000;
+.emotion-11:hover:not(:disabled) {
+  background-color: #020202;
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: #020202;
+}
+
+.emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-12 {
@@ -1344,10 +1385,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 100%;
+  border: 0.0625rem solid #e7ebf2;
+  box-sizing: border-box;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
+  font-weight: 500;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1476,6 +1520,7 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
               data-testid="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-12"
@@ -1620,13 +1665,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 }
 
 .emotion-5 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-6 {
@@ -1737,23 +1782,35 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   font-weight: 500;
   color: black;
   background-color: #fefefe;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
-  background-color: #e5e5e5;
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-11:active {
-  background-color: #cbcbcb;
+.emotion-11:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-12 {
@@ -1789,10 +1846,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   border-radius: 100%;
+  border: 0.0625rem solid #e7ebf2;
+  box-sizing: border-box;
   background: #6c7c98;
   overflow: hidden;
   position: relative;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
+  font-weight: 500;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1921,6 +1981,7 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
               data-testid="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-12"

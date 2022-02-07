@@ -13,7 +13,7 @@ import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
 import SelectMenu from './components/SelectMenu/SelectMenu';
-import { selectWrapper } from './Select.style';
+import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 
 export type SelectOption = {
@@ -167,8 +167,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
         return searchValue || inputValue.value ? 'close' : 'search';
       }
 
-      return open ? 'chevronLargeUp' : 'chevronLargeDown';
-    }, [inputValue.value, isSearchable, open, searchValue]);
+      return 'triangleDown';
+    }, [inputValue.value, isSearchable, searchValue]);
 
     const handleIconClick = React.useCallback(() => {
       if (isSearchable && open) {
@@ -183,15 +183,10 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
 
     const rightIconRender = useMemo(
       () => (
-        <div
-          css={css`
-            display: flex;
-            gap: ${rem(25)};
-          `}
-        >
+        <div css={rightIconContainer(open, isSearchable)}>
           {isLoading && <Loader />}
           <Icon
-            size={20}
+            size={isSearchable ? 20 : 12}
             name={rightIconNameSelector}
             color={theme.utils.getColor('lightGrey', 650)}
             onClick={handleIconClick}
@@ -199,7 +194,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
           />
         </div>
       ),
-      [isLoading, rightIconNameSelector, theme.utils, handleIconClick]
+      [open, isLoading, isSearchable, rightIconNameSelector, theme.utils, handleIconClick]
     );
 
     const handleClick = () => {
@@ -221,7 +216,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
       >
         <div
           {...(!(disabled || locked) && { onClick: handleClick })}
-          css={selectWrapper({ open, status, styleType, isSearchable })}
+          css={selectWrapper({ isSearchable })}
         >
           <TextField
             styleType={styleType}

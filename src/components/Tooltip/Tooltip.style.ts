@@ -2,7 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import { TooltipSize } from './Tooltip';
 import 'tippy.js/dist/tippy.css';
 
@@ -30,14 +29,17 @@ export const tooltipStyle = ({
   return css`
     background: transparent;
     .tippy-content {
-      color: ${pickTextColorFromSwatches(color, shade)};
+      color: ${theme.utils.getAAColorFromSwatches(color, shade)};
       background-color: ${backgroundColor};
       max-width: ${rem(256)};
       padding: ${theme.spacing.sm};
       font-size: ${defineFontSizeBasedOnTooltipSize(size)};
+      font-weight: ${theme.typography.weights.regular};
       line-height: 110%;
       border-radius: ${theme.spacing.sm};
       text-align: start;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
     .tippy-arrow {
       color: ${backgroundColor};

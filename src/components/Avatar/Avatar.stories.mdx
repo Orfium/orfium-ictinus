@@ -1,5 +1,6 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import Avatar from './Avatar';
+import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
 
@@ -28,12 +29,10 @@ Avatar with icon
 <Preview>
   <Story name="Avatar with icon">
     <Stack>
-      <Avatar size={'xxxs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
-      <Avatar size={'xxs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
-      <Avatar size={'xs'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
-      <Avatar size={'sm'} color={`magenta-${BASE_SHADE}`} iconName={'user'} />
-      <Avatar size={'md'} color={'lightBlue-100'} iconName={'user'} />
-      <Avatar size={'lg'} iconName={'user'} />
+      <Avatar size={'xs'} color={`blue-${BASE_SHADE}`} iconName={'user'} />
+      <Avatar size={'sm'} color={`blue-${BASE_SHADE}`} iconName={'user'} />
+      <Avatar size={'md'} color={`blue-${BASE_SHADE}`} iconName={'user'} />
+      <Avatar size={'lg'} color={`blue-${BASE_SHADE}`} iconName={'user'} />
     </Stack>
   </Story>
 </Preview>
@@ -45,12 +44,10 @@ Avatar with letter
 <Preview>
   <Story name="Avatar with letter">
     <Stack>
-      <Avatar size={'xxxs'} color={`magenta-${BASE_SHADE}`}>CZ</Avatar>
-      <Avatar size={'xxs'} color={`magenta-${BASE_SHADE}`}>CZ</Avatar>
-      <Avatar size={'xs'} color={`magenta-${BASE_SHADE}`}>CZ</Avatar>
-      <Avatar size={'sm'} color={`magenta-${BASE_SHADE}`}>CZ</Avatar>
-      <Avatar size={'md'} color={'lightBlue-100'}>GR</Avatar>
-      <Avatar size={'lg'}>G</Avatar>
+      <Avatar size={'xs'} color={`blue-${BASE_SHADE}`}>JN</Avatar>
+      <Avatar size={'sm'} color={`blue-${BASE_SHADE}`}>JN</Avatar>
+      <Avatar size={'md'} color={`blue-${BASE_SHADE}`}>JN</Avatar>
+      <Avatar size={'lg'} color={`blue-${BASE_SHADE}`}>JN</Avatar>
     </Stack>
   </Story>
 </Preview>
@@ -62,12 +59,73 @@ Avatar with src
 <Preview>
   <Story name="Avatar with src">
     <Stack>
-      <Avatar size={'xxxs'} src={'https://mui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
-      <Avatar size={'xxs'} src={'https://mui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
-      <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
-      <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/1.jpg'}>CZ</Avatar>
-      <Avatar size={'md'} src={'https://mui.com/static/images/avatar/1.jpg'}>GR</Avatar>
-      <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/1.jpg'}>G</Avatar>
+      <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      <Avatar size={'md'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+    </Stack>
+  </Story>
+</Preview>
+
+# Avatar Stack
+
+A universal AvatarStack component that renders its children as a stack.
+
+# Usage
+
+```js
+import { Avatar, AvatarStack } from '@orfium/ictinus';
+
+<AvatarStack>
+  <Avatar/>
+  <Avatar/>
+  <Avatar/>
+</AvatarStack>
+```
+
+# Props
+
+<Props of={AvatarStack} />
+
+# Avatar Stack
+
+Avatar Stack
+
+<Preview>
+  <Story name="Avatar Stack">
+    <Stack vertical>
+      <AvatarStack size={'lg'} color={`blue-${BASE_SHADE}`}>
+        <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/6.jpg'}>JN</Avatar>
+        <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/5.jpg'}>JN</Avatar>
+        <Avatar size={'lg'} color={`blue-${BASE_SHADE}`}>JN</Avatar>
+        <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/3.jpg'}>JN</Avatar>
+        <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/2.jpg'}>JN</Avatar>
+        <Avatar size={'lg'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      </AvatarStack>
+      <AvatarStack maxAvatars={3} color={`blue-${BASE_SHADE}`}>
+        <Avatar src={'https://mui.com/static/images/avatar/6.jpg'}>JN</Avatar>
+        <Avatar color={`blue-${BASE_SHADE}`} iconName={'user'} />
+        <Avatar src={'https://mui.com/static/images/avatar/4.jpg'}>JN</Avatar>
+        <Avatar src={'https://mui.com/static/images/avatar/3.jpg'}>JN</Avatar>
+        <Avatar src={'https://mui.com/static/images/avatar/2.jpg'}>JN</Avatar>
+        <Avatar src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      </AvatarStack>
+      <AvatarStack size={'sm'} color={`blue-${BASE_SHADE}`}>
+        <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/6.jpg'}>JN</Avatar>
+        <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/5.jpg'}>JN</Avatar>
+        <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/4.jpg'}>JN</Avatar>
+        <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/3.jpg'}>JN</Avatar>
+        <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/2.jpg'}>JN</Avatar>
+        <Avatar size={'sm'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      </AvatarStack>
+      <AvatarStack size={'xs'} color={`blue-${BASE_SHADE}`}>
+        <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/6.jpg'}>JN</Avatar>
+        <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/5.jpg'}>JN</Avatar>
+        <Avatar size={'xs'} color={`blue-${BASE_SHADE}`}>JN</Avatar>
+        <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/3.jpg'}>JN</Avatar>
+        <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/2.jpg'}>JN</Avatar>
+        <Avatar size={'xs'} src={'https://mui.com/static/images/avatar/1.jpg'}>JN</Avatar>
+      </AvatarStack>
     </Stack>
   </Story>
 </Preview>

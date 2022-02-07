@@ -26,24 +26,36 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
+  background-color: #175BF5;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
-  background-color: #6a00ff;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:active {
-  background-color: #50c;
+.emotion-2:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -66,30 +78,6 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
   margin-right: 0;
 }
 
-.emotion-5 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #C813D5;
-  padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  background-color: #9c0fa6;
-}
-
-.emotion-5:active {
-  background-color: #700b77;
-}
-
 .emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -103,49 +91,73 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
 .emotion-9 {
   font-size: 1rem;
   font-weight: 500;
-  color: white;
-  background-color: #C813D5;
-  padding: 0.5rem 1rem;
+  color: black;
+  background-color: #1DE9B6;
+  padding: 0 1rem;
   height: 2.875rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-9:hover,
-.emotion-9:focus {
-  background-color: #9c0fa6;
+.emotion-9:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-9:active {
-  background-color: #700b77;
+.emotion-9:hover:not(:disabled) {
+  background-color: #1ad1a3;
+}
+
+.emotion-9:active:not(:disabled) {
+  background-color: #17ba91;
+}
+
+.emotion-9:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-9:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-13 {
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #C813D5;
-  padding: 1rem 1rem;
+  background-color: #175BF5;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-13:hover,
-.emotion-13:focus {
-  background-color: #9c0fa6;
+.emotion-13:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-13:active {
-  background-color: #700b77;
+.emotion-13:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-13:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-13:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-13:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -187,6 +199,7 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -207,10 +220,11 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
       }
     >
       <button
-        className="emotion-5"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -247,6 +261,7 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -283,6 +298,7 @@ exports[`Storyshots Design System/Button Async Button 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -338,24 +354,36 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   font-weight: 500;
   color: white;
   width: 100%;
-  background-color: #8833FF;
-  padding: 1rem 1rem;
+  background-color: #175BF5;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
-  background-color: #6a00ff;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:active {
-  background-color: #50c;
+.emotion-2:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -397,13 +425,13 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
 }
 
 .emotion-6 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-6 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-7 {
@@ -414,26 +442,38 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
 .emotion-11 {
   font-size: 1rem;
   font-weight: 500;
-  color: #8833FF;
+  color: #175BF5;
   width: 100%;
   background-color: transparent;
-  padding: 1rem 1rem;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(136,51,255,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
-  background-color: rgba(136,51,255,0.1);
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-11:active {
-  background-color: rgba(136,51,255,0.2);
+.emotion-11:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-13 {
@@ -447,23 +487,35 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   color: #36C152;
   width: 100%;
   background-color: transparent;
-  padding: 1rem 1rem;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
-  background-color: rgba(54,193,82,0.1);
+.emotion-14:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-14:active {
-  background-color: rgba(54,193,82,0.2);
+.emotion-14:hover:not(:disabled) {
+  background-color: #eaf8ed;
+}
+
+.emotion-14:active:not(:disabled) {
+  background-color: #d6f2dc;
+}
+
+.emotion-14:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-14:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -505,6 +557,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -553,6 +606,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -577,6 +631,7 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -620,14 +675,35 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
   font-weight: 500;
   color: black;
   background-color: #FF1744;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 0.5;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #e5143d;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #cc1236;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -655,23 +731,35 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
   font-weight: 500;
   color: white;
   background-color: #cc1236;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
-  background-color: #ec254c;
+.emotion-5:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-5:active {
-  background-color: #f05472;
+.emotion-5:hover:not(:disabled) {
+  background-color: #b2102f;
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: #990d28;
+}
+
+.emotion-5:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-5:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
@@ -679,23 +767,35 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
   font-weight: 500;
   color: black;
   background-color: #e9a0ee;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
-  background-color: #df75e6;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-8:active {
-  background-color: #d549df;
+.emotion-8:hover:not(:disabled) {
+  background-color: #e389ea;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #de71e5;
+}
+
+.emotion-8:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-8:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -737,6 +837,7 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
         data-testid="button"
         disabled={true}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -761,6 +862,7 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -785,6 +887,7 @@ exports[`Storyshots Design System/Button Button Colors 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -827,24 +930,36 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 1rem 1rem;
+  background-color: #175BF5;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
-  background-color: #6a00ff;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:active {
-  background-color: #50c;
+.emotion-2:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -871,48 +986,72 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
+  background-color: #175BF5;
+  padding: 0 1rem;
   height: 2.875rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-5:hover,
-.emotion-5:focus {
-  background-color: #6a00ff;
+.emotion-5:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-5:active {
-  background-color: #50c;
+.emotion-5:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-5:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-5:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-5:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
+  background-color: #175BF5;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
-  background-color: #6a00ff;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-8:active {
-  background-color: #50c;
+.emotion-8:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-8:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-8:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -954,6 +1093,7 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -978,6 +1118,7 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1002,6 +1143,7 @@ exports[`Storyshots Design System/Button Button Sizes 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1045,14 +1187,35 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   font-weight: 500;
   color: black;
   background-color: #36C152;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 0.5;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-2:hover:not(:disabled) {
+  background-color: #30ad49;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #2b9a41;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -1075,52 +1238,40 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   margin-right: 0;
 }
 
-.emotion-5 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  background-color: #36C152;
-  padding: 0.5rem 1rem;
-  height: 2.25rem;
-  opacity: 1;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
-}
-
-.emotion-5:hover,
-.emotion-5:focus {
-  background-color: #2b9941;
-}
-
-.emotion-5:active {
-  background-color: #207130;
-}
-
 .emotion-8 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: black;
   background-color: #FF1744;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
-  background-color: #e3002c;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-8:active {
-  background-color: #b00022;
+.emotion-8:hover:not(:disabled) {
+  background-color: #e5143d;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #cc1236;
+}
+
+.emotion-8:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-8:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-11 {
@@ -1128,23 +1279,35 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   font-weight: 500;
   color: white;
   background-color: #4945EE;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-11:hover,
-.emotion-11:focus {
-  background-color: #1b16ea;
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-11:active {
-  background-color: #1511bc;
+.emotion-11:hover:not(:disabled) {
+  background-color: #413ed6;
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: #3a37be;
+}
+
+.emotion-11:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-11:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-14 {
@@ -1152,23 +1315,35 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   font-weight: 500;
   color: black;
   background-color: #FF6F00;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
-  background-color: #cc5900;
+.emotion-14:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-14:active {
-  background-color: #994300;
+.emotion-14:hover:not(:disabled) {
+  background-color: #e56300;
+}
+
+.emotion-14:active:not(:disabled) {
+  background-color: #cc5800;
+}
+
+.emotion-14:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-14:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-17 {
@@ -1176,23 +1351,35 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
   font-weight: 500;
   color: #1451dc;
   background-color: transparent;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-17:hover,
-.emotion-17:focus {
-  background-color: transparent;
+.emotion-17:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-17:active {
-  background-color: transparent;
+.emotion-17:hover:not(:disabled) {
+  background-color: #f3f5f8;
+}
+
+.emotion-17:active:not(:disabled) {
+  background-color: #e7ebf2;
+}
+
+.emotion-17:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-17:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -1234,6 +1421,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
         data-testid="button"
         disabled={true}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1254,10 +1442,11 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
       }
     >
       <button
-        className="emotion-5"
+        className="emotion-2"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1282,6 +1471,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1306,6 +1496,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1330,6 +1521,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1354,6 +1546,7 @@ exports[`Storyshots Design System/Button Button Types 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1396,24 +1589,36 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 1rem 1rem;
+  background-color: #175BF5;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
-  background-color: #6a00ff;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:active {
-  background-color: #50c;
+.emotion-2:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -1455,13 +1660,13 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
 }
 
 .emotion-6 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-6 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-7 {
@@ -1480,13 +1685,13 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
 }
 
 .emotion-22 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 1.125rem;
   height: 1.125rem;
 }
 
 .emotion-22 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 <div
@@ -1528,6 +1733,7 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1564,6 +1770,7 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1600,6 +1807,7 @@ exports[`Storyshots Design System/Button Button with icon 1`] = `
         data-testid="button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1651,25 +1859,37 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
 .emotion-1 {
   font-size: 1rem;
   font-weight: 500;
-  color: white;
-  background-color: #C813D5;
-  padding: 1rem 1rem;
+  color: black;
+  background-color: #1DE9B6;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
-  background-color: #9c0fa6;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:active {
-  background-color: #700b77;
+.emotion-1:hover:not(:disabled) {
+  background-color: #1ad1a3;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #17ba91;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -1721,6 +1941,7 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
     data-testid="button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="emotion-2"
@@ -1761,24 +1982,36 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 1rem 1rem;
+  background-color: #175BF5;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-2:hover,
-.emotion-2:focus {
-  background-color: #6a00ff;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-2:active {
-  background-color: #50c;
+.emotion-2:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-2:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-2:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-3 {
@@ -1820,13 +2053,13 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
 }
 
 .emotion-6 {
-  fill: #f3eaff;
+  fill: #e7eefe;
   width: 0.875rem;
   height: 0.875rem;
 }
 
 .emotion-6 path {
-  fill: #f3eaff;
+  fill: #e7eefe;
 }
 
 .emotion-7 {
@@ -1838,48 +2071,72 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
+  background-color: #175BF5;
+  padding: 0 1rem;
   height: 2.875rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-8:hover,
-.emotion-8:focus {
-  background-color: #6a00ff;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-8:active {
-  background-color: #50c;
+.emotion-8:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-8:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-8:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-14 {
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
+  background-color: #175BF5;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-14:hover,
-.emotion-14:focus {
-  background-color: #6a00ff;
+.emotion-14:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-14:active {
-  background-color: #50c;
+.emotion-14:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-14:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-14:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-14:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -1921,6 +2178,7 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
         data-testid="button-size-lg"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1957,6 +2215,7 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
         data-testid="button-size-md"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -1993,6 +2252,7 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
         data-testid="button-size-sm"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
@@ -2032,25 +2292,37 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
 .emotion-1 {
   font-size: 1rem;
   font-weight: 500;
-  color: #8833FF;
+  color: #175BF5;
   background-color: transparent;
-  padding: 1rem 1rem;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(136,51,255,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
-  background-color: rgba(136,51,255,0.1);
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-1:active {
-  background-color: rgba(136,51,255,0.2);
+.emotion-1:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -2102,6 +2374,7 @@ exports[`Storyshots Design System/Button Non Filled Button 1`] = `
     data-testid="button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="emotion-2"
@@ -2128,24 +2401,36 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 1rem 1rem;
+  background-color: #175BF5;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
-  background-color: #6a00ff;
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:active {
-  background-color: #50c;
+.emotion-1:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -2197,6 +2482,7 @@ exports[`Storyshots Design System/Button Regular Button 1`] = `
     data-testid="button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="emotion-2"
@@ -2222,25 +2508,37 @@ exports[`Storyshots Design System/Button Transparent Button 1`] = `
 .emotion-1 {
   font-size: 1rem;
   font-weight: 500;
-  color: #8833FF;
+  color: #175BF5;
   background-color: transparent;
-  padding: 1rem 1rem;
+  padding: 1rem;
   height: 3.5rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-1:hover,
-.emotion-1:focus {
-  background-color: rgba(136,51,255,0.1);
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-1:active {
-  background-color: rgba(136,51,255,0.2);
+.emotion-1:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-2 {
@@ -2292,6 +2590,7 @@ exports[`Storyshots Design System/Button Transparent Button 1`] = `
     data-testid="button"
     disabled={false}
     onClick={[Function]}
+    type="button"
   >
     <span
       className="emotion-2"

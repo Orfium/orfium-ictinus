@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { useTheme } from '../../index';
-import { pickTextColorFromSwatches } from '../../theme/palette';
 import { EventProps } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 import { defineBackgroundColor } from '../Button/utils';
@@ -25,7 +24,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, Props & TestProps & Event
     const calculatedColor = calculateColorBetweenColorAndType(color, type);
     const iconColor =
       filled && !transparent
-        ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+        ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
         : defineBackgroundColor(theme, calculatedColor, type, true, true);
 
     return (

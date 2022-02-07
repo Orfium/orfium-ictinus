@@ -31,13 +31,15 @@ export type Props = {
   onClick?: (event: ClickEvent) => void;
   /** A callback that is being triggered when type is interactive and you press the X icon. */
   onClear?: () => void;
+  /** Boolean defining if the chip is disabled. Interactive only. */
+  disabled?: boolean;
 };
 
 type TestProps = {
   dataTestId?: TestId;
 };
 
-const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
+const Chip = React.forwardRef<HTMLButtonElement, Props & TestProps & DivProps>(
   (
     {
       styleType = 'read-only',
@@ -45,6 +47,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
       thumbnail,
       isSelected,
       isChecked,
+      disabled = false,
       badgeNumber,
       onClick,
       onClear,
@@ -53,9 +56,9 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
     },
     ref
   ) => {
-    if (styleType === 'read-only' && (isSelected || isChecked || badgeNumber)) {
+    if (styleType === 'read-only' && (isSelected || isChecked || badgeNumber || disabled)) {
       throw new Error(
-        'The properties isSelected, isChecked and badgeNumber are only for Interactive style type Chips.'
+        'The properties isSelected, isChecked, badgeNumber and disabled are only for Interactive style type Chips.'
       );
     }
 
@@ -64,16 +67,17 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
     }
 
     return (
-      <div
+      <button
         ref={ref}
         data-testid={generateTestDataId('chip', dataTestId)}
         onClick={onClick}
-        css={chipStyle({ styleType, fill, isSelected, onClear, onClick })}
+        disabled={disabled}
+        css={chipStyle({ styleType, fill, isSelected, onClear, onClick, disabled })}
       >
         {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
         {thumbnail && (
           <div>
-            <Avatar size={'xxxs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
+            <Avatar size={'xs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
               {thumbnail.name}
             </Avatar>
           </div>
@@ -88,7 +92,7 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
           />
         )}
         {onClear && (
-          <div css={closeIconWrapperStyle()}>
+          <div css={closeIconWrapperStyle(disabled)}>
             <Icon
               size={14}
               name={'close'}
@@ -96,12 +100,14 @@ const Chip = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
               variant={850}
               onClick={e => {
                 e.stopPropagation();
-                onClear();
+                if (!disabled) {
+                  onClear();
+                }
               }}
             />
           </div>
         )}
-      </div>
+      </button>
     );
   }
 );

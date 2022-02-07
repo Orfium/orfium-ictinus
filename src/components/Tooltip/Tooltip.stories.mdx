@@ -1,6 +1,8 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { text, withKnobs } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
-import TooltipShowcase from '../storyUtils/TooltipShowcase'; import Stack from '../storyUtils/Stack';
+import TooltipShowcase from '../storyUtils/TooltipShowcase'; 
+import Stack from '../storyUtils/Stack';
 
 <Meta title="Design System/Tooltip" component={Tooltip} />
 
@@ -30,8 +32,8 @@ import { Tooltip } from '@orfium/ictinus';
 Tooltip use to show info in any direction defined. If there is no space in the screen then it moves to the available space.
 
 <Preview>
-  <Story name="Generic Tooltip">
-    <TooltipShowcase />
+  <Story name="Generic Tooltip" parameters={{ decorators: [withKnobs] }}>
+    <TooltipShowcase content={text('content', 'By hovering here you can see useful info')}/>
   </Story>
 </Preview>
 

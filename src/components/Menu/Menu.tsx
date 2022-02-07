@@ -2,7 +2,6 @@ import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import isEmpty from 'lodash/isEmpty';
 import * as React from 'react';
-import { pickTextColorFromSwatches } from 'theme/palette';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
@@ -77,7 +76,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
   const iconColor = filled
-    ? pickTextColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+    ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
     : defineBackgroundColor(theme, calculatedColor, buttonType, true, true);
 
   return (
@@ -95,7 +94,7 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
           }
           iconLeft={
             !isEmpty(avatar) ? (
-              <Avatar size={'xxs'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
+              <Avatar size={'sm'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
                 {avatar?.letter}
               </Avatar>
             ) : leftIconName ? (

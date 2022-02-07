@@ -110,23 +110,35 @@ exports[`MonthWrapper should render correctly 1`] = `
   font-weight: 500;
   color: black;
   background-color: #fefefe;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.875rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  background-color: #e5e5e5;
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:active {
-  background-color: #cbcbcb;
+.emotion-7:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
@@ -326,7 +338,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #8833FF;
+  background: #175BF5;
 }
 
 .emotion-30:hover {
@@ -463,23 +475,35 @@ exports[`MonthWrapper should render correctly 1`] = `
   font-weight: 500;
   color: black;
   background-color: #fefefe;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.875rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-7:hover,
-.emotion-7:focus {
-  background-color: #e5e5e5;
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-7:active {
-  background-color: #cbcbcb;
+.emotion-7:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-7:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-7:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-8 {
@@ -679,7 +703,7 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #8833FF;
+  background: #175BF5;
 }
 
 .emotion-30:hover {
@@ -737,6 +761,7 @@ exports[`MonthWrapper should render correctly 1`] = `
             <button
               class="emotion-7"
               data-testid="button"
+              type="button"
             >
               <span
                 class="emotion-8"

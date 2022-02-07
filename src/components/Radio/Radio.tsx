@@ -45,7 +45,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
+const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const {
     checked: externallyControlledChecked,
     onChange,
@@ -63,15 +63,15 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
   const radioGroup = useRadioGroup();
   const theme = useTheme();
 
-  function handleFocus() {
+  const handleFocus = () => {
     setFocused(true);
-  }
+  };
 
-  function handleBlur() {
+  const handleBlur = () => {
     setFocused(false);
-  }
+  };
 
-  function handleChange(e: React.SyntheticEvent) {
+  const handleChange = (e: React.SyntheticEvent) => {
     if (disabled) return;
 
     if (externallyControlledChecked === undefined) {
@@ -85,7 +85,7 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
     if (radioGroup) {
       radioGroup.onChange(e);
     }
-  }
+  };
 
   // Checked value is either the externally controlled value,
   // or based on the radioGroup provided values,
@@ -125,7 +125,8 @@ function Radio(props: Props, ref: React.Ref<HTMLInputElement>) {
       </span>
     </span>
   );
-}
+});
 
-export const RadioWithoutForwardRef = Radio;
-export default React.forwardRef(Radio);
+Radio.displayName = 'Radio';
+
+export default Radio;

@@ -6,14 +6,14 @@ import { rem } from 'theme/utils';
 const spinnerBorderStyle = (theme: Theme, color?: string) =>
   `${rem(2)} solid ${color || theme.utils.getColor('primary', BASE_SHADE, 'normal')};`;
 
-export const spinnerContainer = () => (theme: Theme): SerializedStyles => css`
-  width: ${rem(20)};
-  height: ${rem(20)};
+export const spinnerContainer = (color?: string) => (theme: Theme): SerializedStyles => css`
+  width: ${theme.spacing.lg};
+  height: ${theme.spacing.lg};
   margin: auto;
   box-sizing: border-box;
-  border-top: ${spinnerBorderStyle(theme)};
-  border-right: ${spinnerBorderStyle(theme)};
-  border-bottom: ${spinnerBorderStyle(theme)};
+  border-top: ${spinnerBorderStyle(theme, color)};
+  border-right: ${spinnerBorderStyle(theme, color)};
+  border-bottom: ${spinnerBorderStyle(theme, color)};
   border-left: ${spinnerBorderStyle(theme, 'transparent')};
   border-radius: 50%;
   animation: spin 1.1s infinite linear;

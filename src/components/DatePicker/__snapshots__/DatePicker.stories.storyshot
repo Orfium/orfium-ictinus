@@ -332,7 +332,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  background: #8833FF;
+  background: #175BF5;
 }
 
 .emotion-30:hover {
@@ -476,23 +476,35 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   font-weight: 500;
   color: black;
   background-color: #fefefe;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.875rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-346:hover,
-.emotion-346:focus {
-  background-color: #e5e5e5;
+.emotion-346:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-346:active {
-  background-color: #cbcbcb;
+.emotion-346:hover:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-346:active:not(:disabled) {
+  background-color: #fdfdfd;
+}
+
+.emotion-346:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-346:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-347 {
@@ -584,25 +596,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 .emotion-429 {
   font-size: 0.8125rem;
   font-weight: 500;
-  color: #8833FF;
+  color: #175BF5;
   background-color: transparent;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(136,51,255,0.5);
+  border: solid 0.0625rem #175BF5;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-429:hover,
-.emotion-429:focus {
-  background-color: rgba(136,51,255,0.1);
+.emotion-429:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
 }
 
-.emotion-429:active {
-  background-color: rgba(136,51,255,0.2);
+.emotion-429:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-429:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-429:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-429:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .emotion-431 {
@@ -614,24 +638,36 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   font-size: 0.8125rem;
   font-weight: 500;
   color: white;
-  background-color: #8833FF;
-  padding: 0.5rem 1rem;
+  background-color: #175BF5;
+  padding: 0 1rem;
   height: 2.25rem;
-  opacity: 1;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
-  -webkit-transition: background-color 150ms linear;
-  transition: background-color 150ms linear;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
 }
 
-.emotion-432:hover,
-.emotion-432:focus {
-  background-color: #6a00ff;
+.emotion-432:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-432:active {
-  background-color: #50c;
+.emotion-432:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-432:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-432:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-432:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div
@@ -3364,6 +3400,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                         data-testid="button"
                         disabled={false}
                         onClick={[Function]}
+                        type="button"
                       >
                         <span
                           className="emotion-347"
@@ -4011,6 +4048,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
               data-testid="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-347"
@@ -4027,6 +4065,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
               data-testid="button"
               disabled={false}
               onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-347"
@@ -4093,16 +4132,13 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-5 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -4111,25 +4147,19 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-5:focus-within,
-.emotion-5:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-5:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-5:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-6 {
@@ -4481,6 +4511,337 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 </div>
 `;
 
+exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+}
+
+.emotion-2 #TOOLTIP_ID_IS_TOOLTIP_BRO {
+  display: none!important;
+}
+
+.emotion-3 {
+  max-width: 17.5rem;
+}
+
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+  height: 2.25rem;
+}
+
+.emotion-5 {
+  background: none;
+  border: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+  min-width: 6.875rem;
+}
+
+.emotion-5:hover>div {
+  background-color: #1451dc;
+}
+
+.emotion-5:active>div {
+  background-color: #1248c4;
+}
+
+.emotion-5:focus-visible>div {
+  border: 0.1875rem solid #C813D5;
+}
+
+.emotion-5:focus>span {
+  border-top: 0.1875rem solid #C813D5;
+  border-bottom: 0.1875rem solid #C813D5;
+}
+
+.emotion-6 {
+  font-size: 0.8125rem;
+  cursor: pointer;
+  height: 100%;
+  opacity: 1;
+  -webkit-transition: all 150ms linear;
+  transition: all 150ms linear;
+  color: black;
+  background-color: #e7eefe;
+  border: solid 0.0625rem #1451dc;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem 0 1rem;
+  border-radius: 1.5rem;
+}
+
+.emotion-6:hover {
+  border: solid 0.0625rem #1451dc;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  height: 100%;
+}
+
+.emotion-8 {
+  line-height: 0.9375rem;
+  margin-left: 0;
+}
+
+.emotion-9 {
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-9 div {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.emotion-9 span {
+  font-weight: 700;
+}
+
+.emotion-10 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.emotion-11 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-12 {
+  fill: #0f0f17;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-12 path {
+  fill: #0f0f17;
+}
+
+<div
+  style={
+    Object {
+      "margin": 5,
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <button
+      className="emotion-0"
+      onClick={[Function]}
+    >
+      turn 
+      dark
+       on
+    </button>
+  </div>
+  <div
+    className="emotion-1"
+  >
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+              data-testid="filter"
+            >
+              <button
+                className="emotion-5"
+                data-testid="filter-filter"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <div
+                    className="emotion-7"
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      >
+                        
+                        <span
+                          className="emotion-10"
+                        >
+                          Select Dates : 11/03/2020 - 11/03/2020
+                        </span>
+                      </span>
+                    </div>
+                    <span
+                      className="emotion-11"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-12"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 5,
+        }
+      }
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+              data-testid="filter"
+            >
+              <button
+                className="emotion-5"
+                data-testid="filter-filter"
+                disabled={false}
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-6"
+                >
+                  <div
+                    className="emotion-7"
+                  >
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                      >
+                        
+                        <span
+                          className="emotion-10"
+                        >
+                          Select Dates : 11/03/2020 - 11/03/2020
+                        </span>
+                      </span>
+                    </div>
+                    <span
+                      className="emotion-11"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-12"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 .emotion-0 {
   background-color: transparent;
@@ -4528,16 +4889,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-6 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -4546,19 +4904,19 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-6:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-6:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-7 {
@@ -4685,75 +5043,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   fill: #676767;
 }
 
-.emotion-16 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-16:focus-within,
-.emotion-16:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-16:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
-}
-
-.emotion-16:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
-}
-
-.emotion-26 {
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  border-radius: 0.25rem;
-  cursor: auto;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  position: relative;
-  background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-26:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-}
-
-.emotion-26:focus-within {
-  border-color: #cfd7e5;
-  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
-  background-color: white;
-}
-
 .emotion-37 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #e5143d;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -4762,19 +5056,19 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  border-color: #e5143d;
 }
 
 .emotion-37:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-37:focus-within {
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-44 {
@@ -4958,7 +5252,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-16"
+                    className="emotion-6"
                   >
                     <div
                       className="emotion-7"
@@ -5016,7 +5310,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-26"
+                    className="emotion-6"
                   >
                     <div
                       className="emotion-7"
@@ -5261,16 +5555,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-5 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -5279,25 +5570,19 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-}
-
-.emotion-5:focus-within,
-.emotion-5:hover {
-  box-shadow: 0 0 0 0.0625rem transparent;
 }
 
 .emotion-5:hover {
-  background-color: #f3f5f8!important;
-  border-color: #cfd7e5;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-5:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-6 {
@@ -5696,16 +5981,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-5 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -5714,19 +5996,19 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-5:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-5:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-6 {
@@ -5975,16 +6257,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -5993,19 +6272,19 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -6242,16 +6521,13 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
 }
 
 .emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  cursor: auto;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;
@@ -6260,19 +6536,19 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   -ms-user-select: none;
   user-select: none;
   position: relative;
+  opacity: 1;
+  cursor: auto;
+  min-width: 16.5rem;
   background-color: white;
-  border: 0.125rem solid transparent;
 }
 
 .emotion-4:hover {
-  background-color: #f3f5f8!important;
-  border-color: false;
-  box-shadow: false;
+  background-color: #f3f5f8;
 }
 
 .emotion-4:focus-within {
-  border-color: #cfd7e5;
-  background-color: white;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
