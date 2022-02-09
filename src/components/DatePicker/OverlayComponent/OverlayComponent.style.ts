@@ -7,6 +7,7 @@ export const overlayWrapperStyle = () => (theme: Theme): SerializedStyles => css
   ${flex};
   border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
   border-radius: ${theme.spacing.xsm};
+  width: fit-content;
 `;
 
 export const optionsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
