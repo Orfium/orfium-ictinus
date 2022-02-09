@@ -80,6 +80,7 @@ export type AcceptedIconNames =
   | 'help'
   | 'hourglass'
   | 'income'
+  | 'infoFilled'
   | 'info'
   | 'issues'
   | 'keyword'
