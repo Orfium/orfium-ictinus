@@ -86,6 +86,7 @@ import HeartStrokeIcon from './heart-stroke.svg';
 import HelpIcon from './help.svg';
 import HourglassIcon from './hourglass.svg';
 import IncomeIcon from './income.svg';
+import InfoFilledIcon from './info-filled.svg';
 import InfoIcon from './info.svg';
 import IssuesIcon from './issues.svg';
 import KeywordIcon from './keyword.svg';
@@ -252,6 +253,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   help: HelpIcon,
   hourglass: HourglassIcon,
   income: IncomeIcon,
+  infoFilled: InfoFilledIcon,
   info: InfoIcon,
   issues: IssuesIcon,
   keyword: KeywordIcon,
