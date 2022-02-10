@@ -76,10 +76,10 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   &:hover {
     background-color: ${getHover({ theme }).backgroundColor}; !important;
   }
-  &.active {
-    font-weight: 500;
+  &.active:hover {
+    background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
   }
-  &.active {
+  &.active  {
     font-weight: ${theme.typography.weights.bold};
     background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
     color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
