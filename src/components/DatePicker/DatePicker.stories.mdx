@@ -60,6 +60,7 @@ Implementation of both of our types DatePicker(range) and DayPicker
 <Preview>
   <Story name="Calendar" parameters={{ decorators: [withKnobs] }}>
     <Stack vertical>
+    <div style={{ backgroundColor: 'white'}}>
       <OverlayComponent
         isRangePicker
         extraOptions={extraOptions}
@@ -87,6 +88,7 @@ Implementation of both of our types DatePicker(range) and DayPicker
         onDaySelect={() => {
         }}
       />
+      </div>
     </Stack>
   </Story>
 </Preview>
