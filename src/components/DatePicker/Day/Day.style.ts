@@ -2,6 +2,7 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
+import { getHover, getPressed } from '../../../theme/states';
 import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
 type Props = {
@@ -79,7 +80,7 @@ export const emptyDayStyle = ({ isBetween }: { isBetween: boolean }) => (theme: 
   background: ${isBetween ? theme.utils.getColor('blue', 50) : 'transparent'};
 `;
 
-export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Props) => (
+export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled, isBetween }: Props) => (
   theme: Theme
 ) => css`
   border: ${rem(1)} solid ${isToday ? theme.utils.getColor('lightGrey', 450) : 'transparent'};
@@ -96,6 +97,9 @@ export const dayStyle = ({ isSelected, calculatedColor, isToday, disabled }: Pro
   ${!disabled &&
     `&:hover {
             border-radius: 100%;
-            background: ${!isSelected && theme.utils.getColor('blue', 100)};
+            background: ${!isSelected &&
+              (!isBetween
+                ? getHover({ theme }).backgroundColor
+                : getHover({ theme, color: 'blue', shade: 50 }).backgroundColor)};
           }`}
 `;
