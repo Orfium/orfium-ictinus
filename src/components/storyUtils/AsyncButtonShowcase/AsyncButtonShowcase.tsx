@@ -14,17 +14,18 @@ const serviceMock = (isSuccess = true) =>
     }, 3000);
   });
 
-const AsyncButtonShowcase: FC<{ text: string; btnSize?: 'lg' | 'md' | 'sm' | undefined }> = ({
-  text,
-  btnSize,
-}) => {
+const AsyncButtonShowcase: FC<{
+  text: string;
+  btnSize?: 'lg' | 'md' | 'sm' | undefined;
+  type?: 'primary' | 'secondary';
+}> = ({ text, btnSize, type = 'primary' }) => {
   const [state, setState] = useState('');
   const [response, setResponse] = useState('');
 
   return (
     <>
       <Button
-        type={'secondary'}
+        type={type}
         size={btnSize}
         onClick={(setLoading, event) => {
           setLoading?.(true);

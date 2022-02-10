@@ -56,7 +56,7 @@ export const buttonBaseStyle = ({
     color: calculateButtonColor(),
     width: block ? '100%' : undefined,
     backgroundColor: isOutlined || transparent ? 'transparent' : backGroundColor,
-    padding: size === 'lg' ? theme.spacing.md : `${theme.spacing.sm} ${theme.spacing.md}`,
+    padding: size === 'lg' ? theme.spacing.md : `0 ${theme.spacing.md}`,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
     border: isOutlined ? `solid ${rem(borderWidth)} ${backGroundColor}` : 'none',

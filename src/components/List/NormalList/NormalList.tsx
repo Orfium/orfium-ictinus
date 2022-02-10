@@ -54,6 +54,7 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
           {newItems.map((item, index) =>
             (item as SelectOption)?.options ? (
               <ListItemGroup
+                key={generateUniqueID('list_item_group_' + index)}
                 content={item}
                 size={rowSize}
                 groupIndex={index}
