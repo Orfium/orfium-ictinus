@@ -1,16 +1,11 @@
 import { ClickHandler, useLoading } from 'hooks/useLoading';
 import React, { useRef } from 'react';
-import { ButtonProps, EventProps } from 'utils/common';
+import { ButtonProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
 import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
-import {
-  buttonSpanStyle,
-  childrenWrapperStyle,
-  iconStyle,
-  centralizedLoader,
-} from './Button.style';
-import Loader from 'components/Loader';
+import { buttonSpanStyle, childrenWrapperStyle, iconStyle } from './Button.style';
+import ButtonLoader from './ButtonLoader';
 
 export type Props = ButtonBaseProps & TestProps & onClickProp;
 type onClickProp = { onClick: ClickHandler };
@@ -52,9 +47,7 @@ const Button = React.forwardRef<HTMLButtonElement, Props & ButtonProps>((props, 
           })}
         >
           {loading ? (
-            <div css={centralizedLoader(innerButtonWidth)}>
-              <Loader type={'spinner'} />
-            </div>
+            <ButtonLoader innerButtonWidth={innerButtonWidth} color={color} type={type} />
           ) : (
             children
           )}

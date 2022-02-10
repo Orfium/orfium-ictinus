@@ -10,14 +10,15 @@ import {
 
 type Props = {
   dataTestId?: string;
+  color?: string;
 };
 
-const IndeterminateLoader: React.FC<Props> = ({ dataTestId }) => {
+const IndeterminateLoader: React.FC<Props> = ({ dataTestId, color }) => {
   return (
     <div css={LoaderContainer()} data-testid={generateTestDataId('dots-loading', dataTestId)}>
       <div css={LoaderLine()} />
-      <div css={LoaderDecLine()} />
-      <div css={LoaderIncLine()} />
+      <div css={LoaderDecLine(color)} />
+      <div css={LoaderIncLine(color)} />
     </div>
   );
 };

@@ -32,7 +32,6 @@ const ListItemGroup = React.forwardRef<HTMLDivElement, Props>(
           content={content}
           size={size}
           index={groupIndex}
-          ref={ref}
           searchTerm={searchTerm}
           dataTestId={dataTestId}
         />
