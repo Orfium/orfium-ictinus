@@ -5,6 +5,7 @@ import { defineBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
+export const HAS_SELECTED_VALUE_COLOR_SHADE = 50;
 
 export const borderStyleParams = `solid ${rem(1)}`;
 export const focusBorderWidth = 2;
@@ -20,7 +21,7 @@ export const getBackgroundColor = ({
   if (open) {
     return theme.utils.getColor(calculatedColor.color, 500);
   } else if (hasSelectedValue) {
-    return theme.utils.getColor(calculatedColor.color, 50);
+    return theme.utils.getColor(calculatedColor.color, HAS_SELECTED_VALUE_COLOR_SHADE);
   } else if (styleType === 'filled') {
     return theme.utils.getColor('neutralWhite', 100);
   } else if (styleType === 'transparent') {

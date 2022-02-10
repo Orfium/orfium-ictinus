@@ -10,6 +10,7 @@ import {
   getBackgroundColor,
   getBorder,
   getTextColor,
+  HAS_SELECTED_VALUE_COLOR_SHADE,
   transparentFocusBorderWidth,
 } from './utils';
 
@@ -54,7 +55,7 @@ export const buttonWrapperStyle = ({
     ':hover > div': {
       backgroundColor: activeAndClosed
         ? hasSelectedValue
-          ? getHover({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
+          ? getHover({ theme, color: calculatedColor.color, shade: HAS_SELECTED_VALUE_COLOR_SHADE })
               .backgroundColor
           : getHover({ theme }).backgroundColor
         : undefined,
@@ -65,18 +66,21 @@ export const buttonWrapperStyle = ({
     ':active > div': {
       backgroundColor: activeAndClosed
         ? hasSelectedValue
-          ? getPressed({ theme, color: calculatedColor.color, shade: calculatedColor.shade })
-              .backgroundColor
+          ? getPressed({
+              theme,
+              color: calculatedColor.color,
+              shade: HAS_SELECTED_VALUE_COLOR_SHADE,
+            }).backgroundColor
           : getPressed({ theme }).backgroundColor
         : undefined,
     },
 
     // on focus change the two divs of added
-    ':focus-visible > div': activeAndClosed && {
+    ':focus-visible > div': {
       border: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
     },
     // target the divider on focus
-    ':focus > span': activeAndClosed && {
+    ':focus-visible > span': {
       borderTop: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
       borderBottom: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
     },
