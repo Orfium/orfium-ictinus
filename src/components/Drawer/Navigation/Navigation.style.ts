@@ -35,6 +35,7 @@ const itemStyle = (theme: Theme): SerializedStyles => css`
 
 export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
   ${itemStyle(theme)};
+  width: 100%;
   font-size: ${rem(16)};
   font-weight: ${theme.typography.weights.regular};
   padding: 0 ${theme.spacing.md};
