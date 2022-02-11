@@ -107,7 +107,7 @@ export const textFieldStyle = ({ lean, isTextArea }: Props) => (theme: Theme): S
   `;
 };
 
-export const inputStyle = ({ label, placeholder, size, dark }: Props) => (
+export const inputStyle = ({ label, placeholder, size = DEFAULT_SIZE, dark }: Props) => (
   theme: Theme
 ): SerializedStyles => css`
   background: transparent;
