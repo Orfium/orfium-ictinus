@@ -1,18 +1,44 @@
+import { rem } from 'polished';
+
 import { Theme } from '../theme';
+import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
 
 type Size = 'md' | 'sm';
-export const DEFAULT_SIZE: Size = 'sm';
+export const DEFAULT_SIZE: Size = 'md';
 
-type SizeConfig = (theme: Theme, label: string, shouldMoveLeft?: boolean) => Record<Size, string>;
 
-export const getTextFieldSize: SizeConfig = theme => {
-  const paddingMD = `16px ${theme.spacing.md}`;
-  const paddingSM = `12px ${theme.spacing.md}`;
+const getTextFieldHeight = (size?: Size): string => {
+  switch (size) {
+    case 'md':
+      return rem(MD_HEIGHT);
+    case 'sm':
+      return rem(SM_HEIGHT);
+    default:
+      return 'auto';
+  }
+};
 
-  return {
-    md: `padding: ${paddingMD};`,
-    sm: `padding: ${paddingSM};`,
-  };
+const getTextFieldWidth = (size?: Size): string => {
+  switch (size) {
+    case 'md':
+      return rem(MIN_WIDTH);
+    case 'sm':
+      return rem(MIN_WIDTH);
+    default:
+      return 'auto';
+  }
+};
+
+export const getTextFieldPadding = (theme: Theme, isTextArea?: boolean): string =>
+  isTextArea ? `padding: ${theme.spacing.sm}` : `padding: 0 ${theme.spacing.md}`;
+
+export const getTextFieldSize = (
+  size?: Size
+): {
+  minWidth: string;
+  height: string;
+} => {
+  return { minWidth: getTextFieldWidth(size), height: getTextFieldHeight(size) };
 };
 
 export const getSpacingBySize: (size: Size, theme: Theme) => string = (size, theme) => {

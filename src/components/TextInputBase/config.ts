@@ -3,6 +3,12 @@ import { colorShades, flatColors } from '../../theme/palette';
 export const MD = 'md';
 export const SM = 'sm';
 
+export const MD_HEIGHT = 46;
+export const SM_HEIGHT = 36;
+
+export const MIN_WIDTH = 266;
+
+
 export const textInputSizes = [MD, SM] as const;
 export const textInputStates = ['default', 'pressed', 'error'] as const;
 

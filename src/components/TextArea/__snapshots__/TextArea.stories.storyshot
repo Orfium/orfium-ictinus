@@ -32,9 +32,6 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
@@ -46,23 +43,23 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
   opacity: 1;
   cursor: auto;
-  min-width: 16.5rem;
+  min-width: auto;
+  height: auto;
   background-color: white;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -79,60 +76,59 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 12px 1rem;
+  padding: 0.5rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
+  resize: both;
   background: transparent;
   border: none;
   color: #0f0f17;
   display: block;
   position: relative;
-  width: 100%;
   z-index: 1;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-overflow: ellipsis;
-  resize: both;
 }
 
-.emotion-6+label {
-  font-size: 0.875rem;
+.emotion-5+label {
+  font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
-  color: #444d5f;
+.emotion-5::-webkit-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::-moz-placeholder {
-  color: #444d5f;
+.emotion-5::-moz-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:-ms-input-placeholder {
-  color: #444d5f;
+.emotion-5:-ms-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::placeholder {
-  color: #444d5f;
+.emotion-5::placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -140,7 +136,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
@@ -187,17 +183,13 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                cols={10}
-                placeholder="Label"
-                required={false}
-                rows={10}
-              />
-            </div>
+              cols={10}
+              placeholder="Label"
+              required={false}
+              rows={10}
+            />
           </div>
         </div>
       </div>
@@ -218,17 +210,13 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                cols={35}
-                placeholder="Label"
-                required={false}
-                rows={20}
-              />
-            </div>
+              cols={35}
+              placeholder="Label"
+              required={false}
+              rows={20}
+            />
           </div>
         </div>
       </div>
@@ -269,9 +257,6 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
@@ -283,23 +268,23 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
   opacity: 1;
   cursor: auto;
-  min-width: 16.5rem;
+  min-width: auto;
+  height: auto;
   background-color: white;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -316,60 +301,59 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 12px 1rem;
+  padding: 0.5rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
+  resize: both;
   background: transparent;
   border: none;
   color: #0f0f17;
   display: block;
   position: relative;
-  width: 100%;
   z-index: 1;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-overflow: ellipsis;
-  resize: both;
 }
 
-.emotion-6+label {
-  font-size: 0.875rem;
+.emotion-5+label {
+  font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
-  color: #444d5f;
+.emotion-5::-webkit-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::-moz-placeholder {
-  color: #444d5f;
+.emotion-5::-moz-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:-ms-input-placeholder {
-  color: #444d5f;
+.emotion-5:-ms-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::placeholder {
-  color: #444d5f;
+.emotion-5::placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -377,7 +361,7 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
@@ -424,15 +408,11 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                placeholder="placeholder here"
-                required={false}
-              />
-            </div>
+              placeholder="placeholder here"
+              required={false}
+            />
           </div>
         </div>
       </div>
@@ -453,15 +433,11 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                placeholder="placeholder here"
-                required={false}
-              />
-            </div>
+              placeholder="placeholder here"
+              required={false}
+            />
           </div>
         </div>
       </div>
@@ -482,15 +458,11 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                placeholder="placeholder here"
-                required={false}
-              />
-            </div>
+              placeholder="placeholder here"
+              required={false}
+            />
           </div>
         </div>
       </div>
@@ -531,9 +503,6 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
@@ -545,23 +514,23 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
   opacity: 1;
   cursor: auto;
-  min-width: 16.5rem;
+  min-width: auto;
+  height: auto;
   background-color: white;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -578,60 +547,59 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 12px 1rem;
+  padding: 0.5rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
+  resize: both;
   background: transparent;
   border: none;
   color: #0f0f17;
   display: block;
   position: relative;
-  width: 100%;
   z-index: 1;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-overflow: ellipsis;
-  resize: both;
 }
 
-.emotion-6+label {
-  font-size: 0.875rem;
+.emotion-5+label {
+  font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
-  color: #444d5f;
+.emotion-5::-webkit-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::-moz-placeholder {
-  color: #444d5f;
+.emotion-5::-moz-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:-ms-input-placeholder {
-  color: #444d5f;
+.emotion-5:-ms-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::placeholder {
-  color: #444d5f;
+.emotion-5::placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -639,7 +607,7 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
@@ -686,17 +654,13 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-                status="normal"
-              />
-            </div>
+              disabled={false}
+              placeholder="Label"
+              required={false}
+              status="normal"
+            />
           </div>
         </div>
       </div>
@@ -737,9 +701,6 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.emotion-3 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
@@ -751,18 +712,18 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
   opacity: 0.5;
   cursor: not-allowed;
-  min-width: 16.5rem;
+  min-width: auto;
+  height: auto;
   background-color: white;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.0625rem transparent;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -779,60 +740,59 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 12px 1rem;
+  padding: 0.5rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
+  resize: none;
   background: transparent;
   border: none;
   color: #0f0f17;
   display: block;
   position: relative;
-  width: 100%;
   z-index: 1;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-overflow: ellipsis;
-  resize: none;
 }
 
-.emotion-6+label {
-  font-size: 0.875rem;
+.emotion-5+label {
+  font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
-  color: #444d5f;
+.emotion-5::-webkit-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::-moz-placeholder {
-  color: #444d5f;
+.emotion-5::-moz-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:-ms-input-placeholder {
-  color: #444d5f;
+.emotion-5:-ms-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6::placeholder {
-  color: #444d5f;
+.emotion-5::placeholder {
+  color: #5f6c85;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -840,7 +800,7 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
@@ -887,16 +847,12 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-            </div>
+              disabled={true}
+              placeholder="Label"
+              required={false}
+            />
           </div>
         </div>
       </div>
@@ -917,16 +873,12 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-            </div>
+              disabled={true}
+              placeholder="Label"
+              required={false}
+            />
           </div>
         </div>
       </div>
@@ -947,16 +899,12 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
           <div
             className="emotion-4"
           >
-            <div
+            <textarea
               className="emotion-5"
-            >
-              <textarea
-                className="emotion-6"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-            </div>
+              disabled={true}
+              placeholder="Label"
+              required={false}
+            />
           </div>
         </div>
       </div>
@@ -997,9 +945,6 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-}
-
-.emotion-4 {
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #e5143d;
@@ -1011,23 +956,23 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
   opacity: 1;
   cursor: auto;
-  min-width: 16.5rem;
+  min-width: auto;
+  height: auto;
   background-color: white;
 }
 
-.emotion-4:hover {
+.emotion-3:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-4:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
+.emotion-3:focus-within {
+  box-shadow: 0 0 0 0.125rem #e5143d;
   background-color: #e7ebf2;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1044,60 +989,59 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 12px 1rem;
+  padding: 0.5rem;
 }
 
-.emotion-5>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-5 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
+  resize: both;
   background: transparent;
   border: none;
   color: #0f0f17;
   display: block;
   position: relative;
-  width: 100%;
   z-index: 1;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   text-overflow: ellipsis;
-  resize: both;
 }
 
-.emotion-7+label {
-  font-size: 0.875rem;
+.emotion-6+label {
+  font-size: 0.9375rem;
 }
 
-.emotion-7:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
-  color: #444d5f;
+.emotion-6::-webkit-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-7::-moz-placeholder {
-  color: #444d5f;
+.emotion-6::-moz-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-7:-ms-input-placeholder {
-  color: #444d5f;
+.emotion-6:-ms-input-placeholder {
+  color: #5f6c85;
 }
 
-.emotion-7::placeholder {
-  color: #444d5f;
+.emotion-6::placeholder {
+  color: #5f6c85;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-6:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -1105,11 +1049,11 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   font-weight: 700;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1120,11 +1064,11 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0.5rem 0 0;
 }
 
-.emotion-8 svg {
+.emotion-7 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-8 span {
+.emotion-7 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1132,7 +1076,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0 0.125rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1148,17 +1092,26 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #FF1744;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #FF1744;
 }
 
-.emotion-29 {
+.emotion-25 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
@@ -1170,23 +1123,23 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
   opacity: 1;
   cursor: auto;
-  min-width: 16.5rem;
+  min-width: auto;
+  height: auto;
   background-color: white;
 }
 
-.emotion-29:hover {
+.emotion-25:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-29:focus-within {
+.emotion-25:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-33 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1197,11 +1150,11 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0.5rem 0 0;
 }
 
-.emotion-33 svg {
+.emotion-29 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-33 span {
+.emotion-29 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1209,13 +1162,13 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0 0.125rem;
 }
 
-.emotion-35 {
+.emotion-31 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-35 path {
+.emotion-31 path {
   fill: #5f6c85;
 }
 
@@ -1272,28 +1225,24 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               <div
                 className="emotion-5"
               >
-                <div
+                <textarea
                   className="emotion-6"
-                >
-                  <textarea
-                    className="emotion-7"
-                    placeholder="Label"
-                    required={false}
-                    status="error"
-                  />
-                </div>
+                  placeholder="Label"
+                  required={false}
+                  status="error"
+                />
               </div>
             </div>
           </div>
           <div
-            className="emotion-8"
+            className="emotion-7"
           >
             <span
-              className="emotion-9"
+              className="emotion-8"
               onClick={[Function]}
             >
               <span
-                className="emotion-10"
+                className="emotion-9"
               />
             </span>
             Error in Text Area
@@ -1315,28 +1264,24 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               <div
                 className="emotion-5"
               >
-                <div
+                <textarea
                   className="emotion-6"
-                >
-                  <textarea
-                    className="emotion-7"
-                    placeholder="Label"
-                    required={false}
-                    status="error"
-                  />
-                </div>
+                  placeholder="Label"
+                  required={false}
+                  status="error"
+                />
               </div>
             </div>
           </div>
           <div
-            className="emotion-8"
+            className="emotion-7"
           >
             <span
-              className="emotion-9"
+              className="emotion-8"
               onClick={[Function]}
             >
               <span
-                className="emotion-10"
+                className="emotion-9"
               />
             </span>
             Error in Text Area
@@ -1358,28 +1303,24 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               <div
                 className="emotion-5"
               >
-                <div
+                <textarea
                   className="emotion-6"
-                >
-                  <textarea
-                    className="emotion-7"
-                    placeholder="Label"
-                    required={false}
-                    status="error"
-                  />
-                </div>
+                  placeholder="Label"
+                  required={false}
+                  status="error"
+                />
               </div>
             </div>
           </div>
           <div
-            className="emotion-8"
+            className="emotion-7"
           >
             <span
-              className="emotion-9"
+              className="emotion-8"
               onClick={[Function]}
             >
               <span
-                className="emotion-10"
+                className="emotion-9"
               />
             </span>
             Error in Text Area
@@ -1405,36 +1346,32 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            className="emotion-3"
+            className="emotion-25"
           >
             <div
-              className="emotion-29"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
               >
-                <div
+                <textarea
                   className="emotion-6"
-                >
-                  <textarea
-                    className="emotion-7"
-                    placeholder="Label"
-                    required={false}
-                    status="hint"
-                  />
-                </div>
+                  placeholder="Label"
+                  required={false}
+                  status="hint"
+                />
               </div>
             </div>
           </div>
           <div
-            className="emotion-33"
+            className="emotion-29"
           >
             <span
-              className="emotion-9"
+              className="emotion-8"
               onClick={[Function]}
             >
               <span
-                className="emotion-35"
+                className="emotion-31"
               />
             </span>
             Error in Text Area
@@ -1448,36 +1385,32 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            className="emotion-3"
+            className="emotion-25"
           >
             <div
-              className="emotion-29"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
               >
-                <div
+                <textarea
                   className="emotion-6"
-                >
-                  <textarea
-                    className="emotion-7"
-                    placeholder="Label"
-                    required={false}
-                    status="hint"
-                  />
-                </div>
+                  placeholder="Label"
+                  required={false}
+                  status="hint"
+                />
               </div>
             </div>
           </div>
           <div
-            className="emotion-33"
+            className="emotion-29"
           >
             <span
-              className="emotion-9"
+              className="emotion-8"
               onClick={[Function]}
             >
               <span
-                className="emotion-35"
+                className="emotion-31"
               />
             </span>
             Error in Text Area
@@ -1491,36 +1424,32 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           }
         >
           <div
-            className="emotion-3"
+            className="emotion-25"
           >
             <div
-              className="emotion-29"
+              className="emotion-4"
             >
               <div
                 className="emotion-5"
               >
-                <div
+                <textarea
                   className="emotion-6"
-                >
-                  <textarea
-                    className="emotion-7"
-                    placeholder="Label"
-                    required={false}
-                    status="hint"
-                  />
-                </div>
+                  placeholder="Label"
+                  required={false}
+                  status="hint"
+                />
               </div>
             </div>
           </div>
           <div
-            className="emotion-33"
+            className="emotion-29"
           >
             <span
-              className="emotion-9"
+              className="emotion-8"
               onClick={[Function]}
             >
               <span
-                className="emotion-35"
+                className="emotion-31"
               />
             </span>
             Error in Text Area

@@ -56,10 +56,10 @@ Regular TextField and available sizes
 Regular TextField with label options. Label that will float, placeholder and no placeholder
 
 <Preview>
-  <Story name="Text Field with Label">
+  <Story name="Text Field with and without Label">
     <Stack>
       <TextField label={'Label'} size={'md'} styleType={'outlined'} />
-      <TextField placeholder={'Label'} size={'md'} styleType={'outlined'} />
+      <TextField placeholder={'Placeholder'} size={'md'} styleType={'outlined'} />
       <TextField size={'md'} styleType={'outlined'} />
     </Stack>
   </Story>
@@ -70,7 +70,7 @@ Regular TextField with label options. Label that will float, placeholder and no 
 TextField with icon options right and left of the text
 
 <Preview>
-  <Story name="Text Field with Placeholder, icon and size">
+  <Story name="Text Field with Icons">
     <Stack>
       <TextField
         size={select('size', ['md', 'sm'], 'md')}
@@ -172,25 +172,13 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
 
 <Preview>
   <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
-    <Stack>
+    <Stack vertical>
       <Stack>
         <TextField
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'error'}
-          styleType={'filled'}
-        />
-        <TextField
-          hintMsg={text('custom error message', 'Error in Text Field')}
-          label={'Label'}
-          status={'error'}
           styleType={'outlined'}
-        />
-        <TextField
-          hintMsg={text('custom error message', 'Error in Text Field')}
-          label={'Label'}
-          status={'error'}
-          styleType={'elevated'}
         />
         <div style={{ width: '200px' }}>
           <TextField
@@ -199,7 +187,7 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
             }
             label={'Label'}
             status={'error'}
-            styleType={'filled'}
+            styleType={'outlined'}
           />
         </div>
       </Stack>
@@ -208,19 +196,7 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
           hintMsg={text('custom error message', 'Error in Text Field')}
           label={'Label'}
           status={'hint'}
-          styleType={'filled'}
-        />
-        <TextField
-          hintMsg={text('custom error message', 'Error in Text Field')}
-          label={'Label'}
-          status={'hint'}
           styleType={'outlined'}
-        />
-        <TextField
-          hintMsg={text('custom error message', 'Error in Text Field')}
-          label={'Label'}
-          status={'hint'}
-          styleType={'elevated'}
         />
         <div style={{ width: '200px' }}>
           <TextField
@@ -229,7 +205,7 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
             }
             label={'Label'}
             status={'hint'}
-            styleType={'filled'}
+            styleType={'outlined'}
           />
         </div>
       </Stack>

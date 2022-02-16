@@ -46,7 +46,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
 
   return (
     <React.Fragment>
-      <TextInputBase {...props}>
+      <TextInputBase isTextArea {...props}>
         <div css={{ width: '100% ' }}>
           <textarea
             css={inputStyle({ placeholder, resizeEnabled: !disabled && resizeEnabled })}

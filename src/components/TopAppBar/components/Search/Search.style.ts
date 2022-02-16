@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 
 import { themeFunctions } from '../../../../index';
 import { Theme } from '../../../../theme';
-import { inputStyle } from '../../../TextField/TextField.style';
+import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 const getBackground = (dark: boolean, theme: Theme) =>
   dark ? theme.utils.getColor('darkGrey', 650) : theme.utils.getColor('lightGrey', 50);
@@ -42,7 +42,6 @@ export const customInputStyle = (searchPlaceholder: string, dark: boolean) => (t
     placeholder: searchPlaceholder,
     size: 'sm',
     dark,
-    lean: true,
   })(theme);
 
   const rest = `

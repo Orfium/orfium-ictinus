@@ -5,9 +5,9 @@ import { DEFAULT_SIZE } from 'utils/size-utils';
 import Icon from '../Icon';
 import Label from '../Label';
 import { IconWrapper } from './components/commons';
-import { inputStyle } from './TextField.style';
 import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
+import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */

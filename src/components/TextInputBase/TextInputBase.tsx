@@ -4,7 +4,7 @@ import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { textInputSizes } from './config';
-import { errorMsgStyle, flexContainer, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
@@ -39,16 +39,16 @@ export type Props = {
   status?: 'success' | 'normal' | 'hint' | 'error';
   /** If the field is used as a Search component */
   isSearch?: boolean;
+  /** If the field is used as a TextArea component */
+  isTextArea?: boolean;
 };
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
 const TextInputBase: FC<Props> = ({
-  leftIcon = null,
-  rightIcon,
-  label,
   lean = false,
   isSearch = false,
+  isTextArea = false,
   disabled,
   hintMsg,
   styleType = 'filled',
@@ -72,22 +72,20 @@ const TextInputBase: FC<Props> = ({
 
   return (
     <React.Fragment>
-      <div css={flexContainer()}>
-        <div
-          css={wrapperStyle({
-            dark,
-            locked,
-            disabled,
-            status,
-            lean,
-            styleType,
-            isSearch,
-            rightIcon,
-            size,
-          })}
-        >
-          <div css={textFieldStyle({ size, label, leftIcon, lean })}>{children}</div>
-        </div>
+      <div
+        css={wrapperStyle({
+          dark,
+          locked,
+          disabled,
+          status,
+          lean,
+          styleType,
+          isSearch,
+          isTextArea,
+          size,
+        })}
+      >
+        <div css={textFieldStyle({ lean, isTextArea })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>
