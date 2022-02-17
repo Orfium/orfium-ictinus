@@ -28,3 +28,20 @@ export const getLocaleFormat = (dateFormat: string | undefined) => {
 
   return dateFormat ? dateFormat : localeFormat;
 };
+
+/**
+ *  A function that takes an array of errors and the component props and throws an error
+ *  if the condition is met
+ * */
+export const propsHandler = <T>(
+  errors: { condition: (p: T) => boolean; message: string }[],
+  props: T
+) => {
+  errors.map(error => {
+    if (error.condition(props)) {
+      throw new Error(error.message);
+    }
+  });
+
+  return props;
+};

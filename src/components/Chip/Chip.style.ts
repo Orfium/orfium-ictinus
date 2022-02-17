@@ -12,7 +12,9 @@ export const chipStyle = ({
   isSelected,
   onClear,
   onClick,
-}: Props) => (theme: Theme): SerializedStyles => {
+}: Pick<Props, 'styleType' | 'fill' | 'isSelected' | 'onClear' | 'onClick'>) => (
+  theme: Theme
+): SerializedStyles => {
   const isInteractive = styleType === 'interactive';
   const customFilled = styleType === 'read-only' || onClear || isSelected;
 
