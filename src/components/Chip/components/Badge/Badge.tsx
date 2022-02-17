@@ -2,7 +2,7 @@ import React from 'react';
 import { generateTestDataId } from 'utils/helpers';
 import { TestId } from 'utils/types';
 
-import { Props } from '../../Chip';
+import { Props } from '../../Chip.types';
 import { badgeStyle } from './Badge.style';
 
 type TestProps = {
