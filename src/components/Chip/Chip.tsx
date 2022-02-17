@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateTestDataId, errorHandler } from 'utils/helpers';
+import { generateTestDataId, propsHandler } from 'utils/helpers';
 
 import { BASE_SHADE } from '../../theme/palette';
 import { chipStyle, closeIconWrapperStyle } from './Chip.style';
@@ -22,10 +22,7 @@ const Chip = React.forwardRef<HTMLButtonElement, ChipProps>((props, ref) => {
     dataTestId,
     children,
     badgeNumber,
-  } = errorHandler<ChipProps>(errors, {
-    ...defaultProps,
-    ...props,
-  });
+  } = propsHandler<ChipProps>(errors, { ...defaultProps, ...props });
 
   return (
     <button
