@@ -60,6 +60,7 @@
     "eslint-plugin-import": "^2.23.2",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "express": "^4.17.3",
     "history": "^4.10.1",
     "husky": "^6.0.0",
     "identity-obj-proxy": "^3.0.0",
@@ -79,6 +80,7 @@
     "styled-components": "^5.2.0",
     "ts-jest": "^26.5.6",
     "ts-loader": "^9.1.2",
+    "typedoc": "^0.22.12",
     "typescript": "4.2.4",
     "url-loader": "^4.1.0"
   },
@@ -123,7 +125,9 @@
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:update": "jest -u"
+    "test:update": "jest -u",
+    "documentation:generate": "typedoc --out typeDocs src",
+    "documentation:up": "node server/docs-server.js"
   },
   "keywords": [
     "Orfium",
