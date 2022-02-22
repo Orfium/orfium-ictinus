@@ -72,7 +72,7 @@ jobs:
         run: |
           rm -rf $GITHUB_WORKSPACE/docs-repo/${GITHUB_REPOSITORY#*/}
           mkdir -p $GITHUB_WORKSPACE/docs-repo/${GITHUB_REPOSITORY#*/}
-          cp -r docs/* $GITHUB_WORKSPACE/docs-repo/${GITHUB_REPOSITORY#*/}/
+          cp -r typeDocs/* $GITHUB_WORKSPACE/docs-repo/${GITHUB_REPOSITORY#*/}/
           cd $GITHUB_WORKSPACE/docs-repo/
           git config --global user.email "github-service-account@orfium.com"
           git config --global user.name "orfium-org"
