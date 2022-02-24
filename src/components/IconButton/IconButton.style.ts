@@ -1,8 +1,7 @@
-import { Theme } from '../../theme';
 import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from '../Button/Button';
-import { buttonBaseStyle, heightBasedOnSize } from '../ButtonBase/ButtonBase.style';
+import { heightBasedOnSize } from '../ButtonBase/ButtonBase.style';
 
 export const iconButtonStyle = ({
   size,
@@ -12,7 +11,7 @@ export const iconButtonStyle = ({
     iconExists: boolean;
     childrenCount: number;
   }
->) => (theme: Theme) => {
+>) => () => {
   return {
     display: 'flex',
     justifyContent: 'center',

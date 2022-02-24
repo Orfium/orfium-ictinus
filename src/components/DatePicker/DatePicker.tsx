@@ -194,8 +194,6 @@ const DatePicker: React.FC<Props> = ({
         //backspace
         return setSelectedRange(range => {
           if (range.from && range.to) {
-            // setRange(range => ({ ...range, from: undefined }));
-
             return { ...range, to: undefined };
           }
 
