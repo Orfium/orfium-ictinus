@@ -5,7 +5,6 @@ import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
-import IconButton from '../../../IconButton';
 import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, closeActionContainer } from '../../Notification.style';
 import {

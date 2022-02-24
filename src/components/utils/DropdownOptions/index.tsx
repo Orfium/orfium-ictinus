@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import { darken } from 'polished';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../../theme';

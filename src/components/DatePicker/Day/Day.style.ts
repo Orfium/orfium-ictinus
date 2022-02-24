@@ -2,7 +2,7 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { getHover, getPressed } from '../../../theme/states';
+import { getHover } from '../../../theme/states';
 import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
 type Props = {
