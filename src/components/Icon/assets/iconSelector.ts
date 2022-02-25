@@ -12,6 +12,7 @@ import ArtistIcon from './artist.svg';
 import AssetMatchingIcon from './asset-matching.svg';
 import AssetIcon from './asset.svg';
 import AutoIcon from './auto.svg';
+import Broadcast from './broadcast.svg';
 import CalendarEmptyIcon from './calendar-empty.svg';
 import CalendarFilledIcon from './calendar-filled.svg';
 import CatalogFilesIcon from './catalog-files.svg';
@@ -189,6 +190,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   asset: AssetIcon,
   assetMatching: AssetMatchingIcon,
   auto: AutoIcon,
+  broadcast: Broadcast,
   calendarEmpty: CalendarEmptyIcon,
   calendarFilled: CalendarFilledIcon,
   catalog: CatalogIcon,
