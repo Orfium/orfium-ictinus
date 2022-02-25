@@ -15,6 +15,7 @@ export type AcceptedIconNames =
   | 'asset'
   | 'assetMatching'
   | 'auto'
+  | 'broadcast'
   | 'calendarEmpty'
   | 'calendarFilled'
   | 'catalog'
