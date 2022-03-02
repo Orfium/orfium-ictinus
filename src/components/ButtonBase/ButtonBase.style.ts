@@ -6,7 +6,7 @@ import { RequiredProperties } from '../../utils/common';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
 import { Props } from './ButtonBase';
 import { buttonConfig, buttonSizes } from './config';
-import { defineBackgroundColor } from './utils';
+import { calculateButtonColor, defineBackgroundColor } from './utils';
 
 /** Calculates the button specific height based on the size passed to it **/
 export const heightBasedOnSize = (size: typeof buttonSizes[number]) =>
@@ -33,29 +33,22 @@ export const buttonBaseStyle = ({
 >) => (theme: Theme) => {
   const backGroundColor = defineBackgroundColor(theme, calculatedColor, type, childrenCount > 0);
   const isOutlined = !filled && !transparent;
-
-  const calculateButtonColor = () => {
-    if (type === 'link') {
-      const color = buttonConfig.types.link.color;
-
-      return theme.utils.getColor(color.name, color.shade);
-    }
-
-    if (isOutlined || transparent) {
-      return backGroundColor;
-    }
-
-    return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
-  };
+  const isBackgroundTransparent = isOutlined || transparent;
 
   const borderWidth = isOutlined ? buttonConfig.types.outlined.border.width : 0;
 
   const baseButtonStyles = {
     fontSize: fontSizeBasedOnSize(theme, size),
     fontWeight: theme.typography.weights.medium,
-    color: calculateButtonColor(),
+    color: calculateButtonColor({
+      type,
+      isBackgroundTransparent,
+      backGroundColor,
+      calculatedColor,
+      theme,
+    }),
     width: block ? '100%' : undefined,
-    backgroundColor: isOutlined || transparent ? 'transparent' : backGroundColor,
+    backgroundColor: isBackgroundTransparent ? 'transparent' : backGroundColor,
     padding: size === 'lg' ? theme.spacing.md : `0 ${theme.spacing.md}`,
     height: heightBasedOnSize(size),
     borderRadius: theme.spacing.xsm,
@@ -69,14 +62,14 @@ export const buttonBaseStyle = ({
       backgroundColor: getHover({
         theme,
         color: calculatedColor.color,
-        shade: isOutlined || transparent ? 0 : calculatedColor.shade,
+        shade: isBackgroundTransparent ? 0 : calculatedColor.shade,
       }).backgroundColor,
     },
     ':active:not(:disabled)': {
       backgroundColor: getPressed({
         theme,
         color: calculatedColor.color,
-        shade: isOutlined || transparent ? 0 : calculatedColor.shade,
+        shade: isBackgroundTransparent ? 0 : calculatedColor.shade,
       }).backgroundColor,
     },
     ':disabled': getDisabled(),

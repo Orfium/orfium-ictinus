@@ -4,7 +4,6 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../../../theme';
 import { NotificationStyleType, NotificationTypes } from '../../Notification';
 import { notificationsContainerPerType } from '../../Notification.style';
-import { CompactNotificationVariants } from './CompactNotification';
 
 export const notificationsContainer = (
   type: NotificationTypes,
@@ -15,7 +14,7 @@ export const notificationsContainer = (
   justify-content: space-between;
   overflow: hidden;
   width: 100%;
-  minheight: ${rem(46)};
+  min-height: ${rem(46)};
   border-radius: ${theme.spacing.xsm};
   color: ${theme.utils.getColor('darkGrey', 850)};
   font-size: ${theme.typography.fontSizes[14]};

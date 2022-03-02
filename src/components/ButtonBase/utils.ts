@@ -3,6 +3,8 @@ import { Theme } from 'theme';
 import { mainTypes } from 'theme/palette';
 
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
+import { buttonConfig } from './config';
+import { Props } from './ButtonBase';
 
 /**
  * This function defines what background-color to show based on type or color passed
@@ -28,4 +30,35 @@ export const defineBackgroundColor = (
   }
 
   return 'transparent';
+};
+
+/**
+ * This function defines what color to show based on type or color passed
+ * if type is link uses the link color
+ * if it's background is transparent ( transparent or Outlined ) then it uses the background color
+ * else it uses the calculated color
+ */
+export const calculateButtonColor = ({
+  type,
+  isBackgroundTransparent,
+  backGroundColor,
+  calculatedColor,
+  theme,
+}: Pick<Props, 'type'> & {
+  calculatedColor: ColorShapeFromComponent;
+  isBackgroundTransparent: boolean;
+  backGroundColor: string;
+  theme: Theme;
+}) => {
+  if (type === 'link') {
+    const color = buttonConfig.types.link.color;
+
+    return theme.utils.getColor(color.name, color.shade);
+  }
+
+  if (isBackgroundTransparent) {
+    return backGroundColor;
+  }
+
+  return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
 };

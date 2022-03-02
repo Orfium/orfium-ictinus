@@ -1,4 +1,4 @@
-import { shade, tint, rem as polishedRem, parseToRgb as polishedParseToRgb } from 'polished';
+import { shade, tint, rem as polishedRem } from 'polished';
 
 import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';

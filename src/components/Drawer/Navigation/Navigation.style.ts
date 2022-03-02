@@ -1,5 +1,4 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { darken } from 'polished';
 import { Theme } from 'theme';
 import { flexCenter, flexCenterVertical, transition } from 'theme/functions';
 import { BASE_SHADE } from 'theme/palette';
