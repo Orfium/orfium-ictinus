@@ -1,5 +1,5 @@
-import { errorHandler } from '../helpers';
 import { PropsValidationError } from '../errors';
+import { errorHandler } from '../helpers';
 
 describe('The usability of errorHandler to be correct', () => {
   const errors = [
