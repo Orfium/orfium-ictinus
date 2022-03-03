@@ -33,7 +33,7 @@ export const getLocaleFormat = (dateFormat: string | undefined) => {
  *  A function that takes an array of errors and the component props and throws an error
  *  if the condition is met
  * */
-export const propsHandler = <T>(
+export const errorHandler = <T>(
   errors: { condition: (p: T) => boolean; message: string }[],
   props: T
 ) => {
@@ -42,6 +42,4 @@ export const propsHandler = <T>(
       throw new Error(error.message);
     }
   });
-
-  return props;
 };

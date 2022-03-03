@@ -1,6 +1,6 @@
 import { ClickEvent } from '../../hooks/useLoading';
 import { flatColors } from '../../theme/palette';
-import { DivProps } from '../../utils/common';
+import { ButtonProps } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 
 export const READ_ONLY = 'read-only' as const;
@@ -32,4 +32,4 @@ export type Props = {
   disabled?: boolean;
 };
 
-export type ChipProps = Props & TestProps & DivProps;
+export type ChipProps = Props & TestProps & ButtonProps;

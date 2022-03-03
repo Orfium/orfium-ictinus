@@ -16,7 +16,6 @@ export const errors = [
   {
     condition: ({ styleType, thumbnail }: Props): boolean =>
       Boolean(styleType === INTERACTIVE && thumbnail),
-    message:
-      'The properties isSelected, isChecked, badgeNumber and disabled are only for Interactive style type Chips.',
+    message: 'The property thumbnail is only for Read-Only style type Chips.',
   },
 ];
