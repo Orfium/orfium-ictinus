@@ -1,7 +1,7 @@
 import { debounce } from 'lodash';
 import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
-import { generateTestDataId } from 'utils/helpers';
+import { errorHandler, generateTestDataId } from 'utils/helpers';
 
 import ClickAwayListener from '../utils/ClickAwayListener';
 import FilterBase from './components/FilterBase';
@@ -9,6 +9,7 @@ import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
 import { menuStyle } from './Filter.style';
 import { FilterOption, Props } from './types';
+import { errors } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
 const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
@@ -30,6 +31,9 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     isVirtualized = false,
     onClear = () => {},
   } = props;
+
+  errorHandler<Props>(errors, props);
+
   const [isOpen, setIsOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
 
@@ -79,14 +83,6 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     }, 400),
     []
   );
-
-  /**
-   * for 'added' type design team decided that is not needed therefore in order not having to maintain
-   * one more special case we dont render it
-   **/
-  if (filterType === 'added' && styleType === 'transparent') {
-    throw new Error('This filterType and styleType is not supported');
-  }
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
