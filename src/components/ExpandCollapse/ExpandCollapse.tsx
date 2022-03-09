@@ -3,8 +3,8 @@ import * as React from 'react';
 import { errorHandler, generateTestDataId } from '../../utils/helpers';
 import { contentStyles } from './ExpandCollapse.style';
 import { Props } from './ExpandCollapse.types';
-import { errors } from './utils';
 import { useManageContentRef } from './useManageContentRef';
+import { errors } from './utils';
 
 const ExpandCollapse = (props: Props) => {
   const {

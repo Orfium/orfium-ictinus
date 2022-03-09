@@ -28,33 +28,17 @@ export type SharedProps = {
    * @default 200
    */
   transitionDuration?: number;
+  /**
+   * A function accepting a boolean representing the current expansion state. Returns the
+   * collapsible/expandable content. Mutually exclusive with children.
+   */
+  content?: (x: boolean) => React.ReactNode;
+  /**
+   * A function accepting a boolean representing the current expansion state. Returns the
+   * collapsible/expandable content. Mutually exclusive with content.
+   */
+  children?: (x: boolean) => React.ReactNode;
 } & TestProps;
-
-export type ContentProps = {
-  /**
-   * A function accepting a boolean representing the current expansion state. Returns the
-   * collapsible/expandable content. Mutually exclusive with children.
-   */
-  content: undefined;
-  /**
-   * A function accepting a boolean representing the current expansion state. Returns the
-   * collapsible/expandable content. Mutually exclusive with content.
-   */
-  children: (x: boolean) => React.ReactNode;
-};
-
-export type ChildrenProps = {
-  /**
-   * A function accepting a boolean representing the current expansion state. Returns the
-   * collapsible/expandable content. Mutually exclusive with children.
-   */
-  content: (x: boolean) => React.ReactNode;
-  /**
-   * A function accepting a boolean representing the current expansion state. Returns the
-   * collapsible/expandable content. Mutually exclusive with content.
-   */
-  children: undefined;
-};
 
 export type ExternalProps = {
   /**
@@ -82,4 +66,4 @@ export type InternalProps = {
   onChange: undefined;
 };
 
-export type Props = SharedProps & (InternalProps | ExternalProps) & (ContentProps | ChildrenProps);
+export type Props = SharedProps & (InternalProps | ExternalProps);
