@@ -4,6 +4,7 @@ import { errorHandler, generateTestDataId } from '../../utils/helpers';
 import { contentStyles } from './ExpandCollapse.style';
 import { Props } from './ExpandCollapse.types';
 import { errors } from './utils';
+import { useManageContentRef } from './useManageContentRef';
 
 const ExpandCollapse = (props: Props) => {
   const {
@@ -23,7 +24,6 @@ const ExpandCollapse = (props: Props) => {
   const [internallyControlledExpanded, setInternallyControlledExpanded] = React.useState(
     initiallyExpanded
   );
-  const contentRef = React.useRef<HTMLDivElement>(null);
 
   const Component = component;
 
@@ -32,6 +32,8 @@ const ExpandCollapse = (props: Props) => {
 
   const expanded = externallyControlledExpanded ?? internallyControlledExpanded;
 
+  const contentRef = useManageContentRef(expanded, transitionDuration);
+
   const handleStateChange = (e: React.SyntheticEvent) => {
     if (typeof externallyControlledExpanded !== 'boolean') {
       setInternallyControlledExpanded(state => !state);
@@ -39,44 +41,6 @@ const ExpandCollapse = (props: Props) => {
       onChange(e);
     }
   };
-
-  const manageContentHeight = () => {
-    if (contentRef.current === null) {
-      throw new Error('Uninitialised element ref');
-    }
-
-    if (expanded) {
-      contentRef.current.style.height = ``;
-    } else {
-      contentRef.current.style.height = `0`;
-    }
-  };
-
-  const manageContentVisibility = () => {
-    if (contentRef.current === null) {
-      throw new Error('Uninitialised element ref');
-    }
-
-    let timeout: number;
-
-    if (expanded) {
-      contentRef.current.style.visibility = '';
-    } else {
-      timeout = window.setTimeout(() => {
-        if (contentRef.current === null) {
-          throw new Error('Uninitialised element ref');
-        }
-        contentRef.current.style.visibility = 'hidden';
-      }, transitionDuration);
-    }
-
-    return function() {
-      clearTimeout(timeout);
-    };
-  };
-
-  React.useLayoutEffect(manageContentHeight, [expanded]);
-  React.useLayoutEffect(manageContentVisibility, [expanded, transitionDuration]);
 
   return (
     <Component data-testid={generateTestDataId('expand-collapse', dataTestId)}>
