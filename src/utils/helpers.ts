@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
 import * as React from 'react';
 import { TestId } from 'utils/types';
-import { PropsValidationError } from './errors';
 
 /** A function that generates a unique id by making a value randomly based on time also */
 export const generateUniqueID = (elementType = ''): string =>
@@ -35,11 +34,15 @@ export const getLocaleFormat = (dateFormat: string | undefined) => {
  *  if the condition is met
  * */
 export const errorHandler = <T>(
-  errors: { condition: (p: T) => boolean; error: Error }[],
+  errors: { condition: (p: T) => boolean; error: Error | ((p: T) => Error) }[],
   props: T
 ) =>
   errors.map(({ condition, error }) => {
     if (condition(props)) {
-      throw error;
+      if (typeof error === 'function') {
+        throw error(props);
+      } else {
+        throw error;
+      }
     }
   });
