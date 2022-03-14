@@ -5,6 +5,7 @@ import { generateTestDataId } from 'utils/helpers';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
+import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
@@ -59,7 +60,7 @@ const ON_CHANGE_MOCK = () => {};
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
-const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
+const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
   (
     {
       handleSelectedOption = () => {},
@@ -225,7 +226,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps>(
             readOnly={!isSearchable}
             disabled={disabled}
             locked={locked}
-            data-testid={generateTestDataId('select-input', dataTestId)}
+            dataTestId={generateTestDataId('select-input', dataTestId)}
             {...restInputProps}
             status={status}
             value={searchValue || inputValue.label}
