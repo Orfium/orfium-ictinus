@@ -52,7 +52,6 @@ export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
 
 export type DateFormatType =
   | 'MM/DD/YYYY'
-  | 'DD/MM/YYYY'
   | 'MMMM D, YYYY'
   | 'dddd, MMMM D, YYYY'
   | 'M/D/YYYY'
