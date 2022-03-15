@@ -3,6 +3,8 @@ import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
+import { generateTestDataId } from '../../utils/helpers';
+import { TestProps } from '../../utils/types';
 import { textInputSizes } from './config';
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import Icon from 'components/Icon';
@@ -45,13 +47,14 @@ export type Props = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<Props> = ({
+const TextInputBase: FC<Props & TestProps> = ({
   lean = false,
   isSearch = false,
   isTextArea = false,
   disabled,
   hintMsg,
   styleType = 'filled',
+  dataTestId,
   status = 'normal',
   locked = false,
   size = DEFAULT_SIZE,
@@ -60,7 +63,7 @@ const TextInputBase: FC<Props> = ({
 }) => {
   const theme = useTheme();
   const hintMessageToShow = hintMsg && (
-    <div css={errorMsgStyle({ status })}>
+    <div data-testid={generateTestDataId('error', dataTestId)} css={errorMsgStyle({ status })}>
       <Icon
         color={status === 'error' ? 'error' : theme.utils.getColor('lightGrey', 650)}
         name={status === 'error' ? 'issues' : 'info'}
@@ -73,6 +76,7 @@ const TextInputBase: FC<Props> = ({
   return (
     <React.Fragment>
       <div
+        data-testid={dataTestId}
         css={wrapperStyle({
           dark,
           locked,
