@@ -2,6 +2,7 @@ import omit from 'lodash/omit';
 import * as React from 'react';
 
 import { formFieldStyles } from '../../theme/palette';
+import { TestProps } from '../../utils/types';
 import TextInputBase from '../TextInputBase/TextInputBase';
 import { inputStyle } from './TextArea.style';
 
@@ -34,7 +35,7 @@ export type Props = {
   onInput?: React.EventHandler<any>;
 };
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
+const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props, ref) => {
   const {
     id = undefined,
     placeholder = '',

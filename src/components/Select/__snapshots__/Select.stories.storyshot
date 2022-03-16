@@ -33,9 +33,6 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -94,6 +91,9 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -264,6 +264,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
       >
         <div
           className="emotion-3"
+          data-testid="select-input"
         >
           <div
             className="emotion-4"
@@ -273,7 +274,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
             >
               <input
                 className="emotion-6"
-                data-testid="select-input"
+                dataTestId="select-input"
                 disabled={false}
                 onChange={[Function]}
                 onInput={[Function]}
@@ -349,9 +350,6 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -410,6 +408,9 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -580,6 +581,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
       >
         <div
           className="emotion-3"
+          data-testid="select-input"
         >
           <div
             className="emotion-4"
@@ -589,7 +591,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
             >
               <input
                 className="emotion-6"
-                data-testid="select-input"
+                dataTestId="select-input"
                 disabled={false}
                 onChange={[Function]}
                 onInput={[Function]}
@@ -674,9 +676,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -730,6 +729,9 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -878,9 +880,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -938,6 +937,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -947,7 +947,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={true}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1001,6 +1001,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1010,7 +1011,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={true}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1064,6 +1065,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1073,7 +1075,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={true}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1131,6 +1133,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         >
           <div
             className="emotion-34"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1140,7 +1143,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={true}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1189,6 +1192,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         >
           <div
             className="emotion-34"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1198,7 +1202,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={true}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1247,6 +1251,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         >
           <div
             className="emotion-34"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1256,7 +1261,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={true}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1340,9 +1345,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1401,6 +1403,9 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -1578,6 +1583,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1587,7 +1593,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1642,6 +1648,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1651,7 +1658,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1706,6 +1713,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -1715,7 +1723,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -1800,9 +1808,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1861,6 +1866,9 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -2009,9 +2017,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2042,6 +2047,9 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   z-index: 1;
   font-size: 0.8125rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-16+label {
@@ -2128,6 +2136,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -2137,7 +2146,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -2192,6 +2201,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
         >
           <div
             className="emotion-13"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -2201,7 +2211,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
               >
                 <input
                   className="emotion-16"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -2286,9 +2296,6 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2347,6 +2354,9 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -2524,6 +2534,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -2533,7 +2544,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -2604,9 +2615,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2665,6 +2673,9 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-5+label {
@@ -2839,6 +2850,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
       >
         <div
           className="emotion-2"
+          data-testid="select-input"
         >
           <div
             className="emotion-3"
@@ -2848,7 +2860,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
             >
               <input
                 className="emotion-5"
-                data-testid="select-input"
+                dataTestId="select-input"
                 disabled={false}
                 onChange={[Function]}
                 onInput={[Function]}
@@ -2896,6 +2908,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
     >
       <div
         className="emotion-2"
+        data-testid="select-input"
       >
         <div
           className="emotion-3"
@@ -2905,7 +2918,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
           >
             <input
               className="emotion-5"
-              data-testid="select-input"
+              dataTestId="select-input"
               disabled={false}
               onChange={[Function]}
               onInput={[Function]}
@@ -2959,6 +2972,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
       >
         <div
           className="emotion-2"
+          data-testid="select-input"
         >
           <div
             className="emotion-3"
@@ -2968,7 +2982,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
             >
               <input
                 className="emotion-5"
-                data-testid="select-input"
+                dataTestId="select-input"
                 disabled={false}
                 onChange={[Function]}
                 onInput={[Function]}
@@ -3052,9 +3066,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3129,6 +3140,9 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-7+label {
@@ -3306,6 +3320,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -3329,7 +3344,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
               >
                 <input
                   className="emotion-7"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -3384,6 +3399,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -3393,7 +3409,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
               >
                 <input
                   className="emotion-7"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -3445,6 +3461,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -3468,7 +3485,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
               >
                 <input
                   className="emotion-7"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -3550,9 +3567,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #e5143d;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3611,6 +3625,9 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-7+label {
@@ -3792,9 +3809,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3932,6 +3946,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             >
               <div
                 className="emotion-4"
+                data-testid="select-input"
               >
                 <div
                   className="emotion-5"
@@ -3941,7 +3956,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   >
                     <input
                       className="emotion-7"
-                      data-testid="select-input"
+                      dataTestId="select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -3979,6 +3994,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
               </div>
               <div
                 className="emotion-13"
+                data-testid="error-select-input"
               >
                 <span
                   className="emotion-11"
@@ -4009,6 +4025,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             >
               <div
                 className="emotion-4"
+                data-testid="select-input"
               >
                 <div
                   className="emotion-5"
@@ -4018,7 +4035,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   >
                     <input
                       className="emotion-7"
-                      data-testid="select-input"
+                      dataTestId="select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -4056,6 +4073,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
               </div>
               <div
                 className="emotion-13"
+                data-testid="error-select-input"
               >
                 <span
                   className="emotion-11"
@@ -4086,6 +4104,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             >
               <div
                 className="emotion-4"
+                data-testid="select-input"
               >
                 <div
                   className="emotion-5"
@@ -4095,7 +4114,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   >
                     <input
                       className="emotion-7"
-                      data-testid="select-input"
+                      dataTestId="select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -4133,6 +4152,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
               </div>
               <div
                 className="emotion-13"
+                data-testid="error-select-input"
               >
                 <span
                   className="emotion-11"
@@ -4175,6 +4195,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             >
               <div
                 className="emotion-44"
+                data-testid="select-input"
               >
                 <div
                   className="emotion-5"
@@ -4184,7 +4205,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   >
                     <input
                       className="emotion-7"
-                      data-testid="select-input"
+                      dataTestId="select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -4222,6 +4243,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
               </div>
               <div
                 className="emotion-53"
+                data-testid="error-select-input"
               >
                 <span
                   className="emotion-11"
@@ -4252,6 +4274,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             >
               <div
                 className="emotion-44"
+                data-testid="select-input"
               >
                 <div
                   className="emotion-5"
@@ -4261,7 +4284,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   >
                     <input
                       className="emotion-7"
-                      data-testid="select-input"
+                      dataTestId="select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -4299,6 +4322,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
               </div>
               <div
                 className="emotion-53"
+                data-testid="error-select-input"
               >
                 <span
                   className="emotion-11"
@@ -4329,6 +4353,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
             >
               <div
                 className="emotion-44"
+                data-testid="select-input"
               >
                 <div
                   className="emotion-5"
@@ -4338,7 +4363,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   >
                     <input
                       className="emotion-7"
-                      data-testid="select-input"
+                      dataTestId="select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -4376,6 +4401,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
               </div>
               <div
                 className="emotion-53"
+                data-testid="error-select-input"
               >
                 <span
                   className="emotion-11"
@@ -4438,9 +4464,6 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4499,6 +4522,9 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -4676,6 +4702,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -4685,7 +4712,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -4770,9 +4797,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -4831,6 +4855,9 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -5008,6 +5035,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -5017,7 +5045,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -5072,6 +5100,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -5081,7 +5110,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
@@ -5136,6 +5165,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         >
           <div
             className="emotion-3"
+            data-testid="select-input"
           >
             <div
               className="emotion-4"
@@ -5145,7 +5175,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
               >
                 <input
                   className="emotion-6"
-                  data-testid="select-input"
+                  dataTestId="select-input"
                   disabled={false}
                   onChange={[Function]}
                   onInput={[Function]}
