@@ -82,7 +82,6 @@ export const wrapperStyle = ({
         : theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)
     }`,
     borderRadius: isSearch ? rem(100) : theme.spacing.xsm,
-    flex: '1 1 100%',
     userSelect: 'none',
     opacity: disabled ? getDisabled().opacity : 1,
     cursor: disabled || locked ? getDisabled().cursor : 'auto',
