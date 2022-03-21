@@ -17,11 +17,10 @@ import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';
 import CustomTooltip from './components/CustomTooltip';
 import CustomTooltipContent from './components/CustomTooltipContent';
-import { getValues, customTickFormatter } from './utils';
+import { getValues, customTickFormatter, getBarColors, getColoringOptions } from './utils';
 
 const multiplyFactor = 9.5;
 const yAxisWidthDefault = 160;
-const lightenFactor = 0.2;
 
 export type HoverInfo = {
   name: string;
@@ -78,39 +77,14 @@ const WrappedChart = Wrapper(RechartsBarChart);
 const BarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
-  const barColors = useMemo(() => {
-    return data.map(obj => {
-      if (obj?.options?.color) {
-        if (obj?.options?.coloringOption === 'all') {
-          return lighten(lightenFactor, obj?.options?.color);
-        }
-
-        return obj?.options?.color;
-      }
-
-      return theme.palette.flat.darkBlue[100];
-    });
-  }, [data, theme.palette.flat.darkBlue]);
+  const barColors = useMemo(() => getBarColors(data, theme.palette.flat.darkBlue[100]), [
+    data,
+    theme.palette.flat.darkBlue,
+  ]);
 
   const findMaxInData = useCallback(operator => max(data.map(operator)), [data]);
 
-  const setColoringOptions = useCallback(
-    operator => {
-      return data.reduce((acc, cur, index) => {
-        const definedColoringOPt = cur.options?.coloringOption;
-        if (definedColoringOPt === 'all') {
-          if (operator && operator(cur)) {
-            acc[operator(cur)] = cur.options?.color;
-          } else {
-            acc[index] = cur.options?.color;
-          }
-        }
-
-        return acc;
-      }, {});
-    },
-    [data]
-  );
+  const setColoringOptions = useCallback(op => getColoringOptions(data, op), [data]);
 
   const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);
 
