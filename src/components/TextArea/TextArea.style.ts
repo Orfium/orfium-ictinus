@@ -9,5 +9,5 @@ export const inputStyle = ({ resizeEnabled, ...rest }: Props & TextInputWrapperP
   theme: Theme
 ): SerializedStyles => css`
   resize: ${!resizeEnabled ? 'none' : 'both'};
-  ${baseInputStyle({ ...rest })(theme)}
+  ${baseInputStyle({ ...rest })(theme)};
 `;

@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 import { DEFAULT_SIZE, getTextFieldPadding, getTextFieldSize } from 'utils/size-utils';
 
 import { getDisabled, getHover, getPressed } from '../../theme/states';
-import { textInputConfig } from './config';
+import { MIN_WIDTH, textInputConfig } from './config';
 import { Props } from './TextInputBase';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
@@ -106,9 +106,13 @@ export const textFieldStyle = ({ lean, isTextArea }: Props) => (theme: Theme): S
   `;
 };
 
-export const inputStyle = ({ label, placeholder, size = DEFAULT_SIZE, dark }: Props) => (
-  theme: Theme
-): SerializedStyles => css`
+export const inputStyle = ({
+  label,
+  placeholder,
+  size = DEFAULT_SIZE,
+  dark,
+  isTextArea,
+}: Props) => (theme: Theme): SerializedStyles => css`
   background: transparent;
   border: none;
   color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
@@ -118,7 +122,7 @@ export const inputStyle = ({ label, placeholder, size = DEFAULT_SIZE, dark }: Pr
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};
   text-overflow: ellipsis;
-  width: 0;
+  width: ${isTextArea ? rem(MIN_WIDTH) : 0};
   min-width: 100%;
 
   & + label {
