@@ -37,12 +37,13 @@ export const iterateObject = <T>(
   func: (value: string, name: string) => generatedColorShades | string
 ): Record<string, unknown> =>
   Object.keys(obj).reduce((acc, value) => {
-    acc[value] =
-      typeof obj[value] !== 'object'
-        ? func(obj[value], value)
-        : EXCLUDED.includes(value)
-        ? obj[value]
-        : iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
+    if (typeof obj[value] !== 'object') {
+      acc[value] = func(obj[value], value);
+    } else if (EXCLUDED.includes(value)) {
+      acc[value] = obj[value];
+    } else {
+      acc[value] = iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
+    }
 
     return acc;
   }, {});
