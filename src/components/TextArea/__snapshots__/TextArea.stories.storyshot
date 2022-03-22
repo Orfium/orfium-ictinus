@@ -36,9 +36,6 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -97,6 +94,9 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-5+label {
@@ -261,9 +261,6 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -322,6 +319,9 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-5+label {
@@ -507,9 +507,6 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -568,6 +565,9 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-5+label {
@@ -705,9 +705,6 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -761,6 +758,9 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-5+label {
@@ -949,9 +949,6 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #e5143d;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1010,6 +1007,9 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
 }
 
 .emotion-6+label {
@@ -1116,9 +1116,6 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   box-shadow: 0 0 0 0.0625rem #cfd7e5;
   border-radius: 0.25rem;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1236,6 +1233,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           </div>
           <div
             className="emotion-7"
+            data-testid="error"
           >
             <span
               className="emotion-8"
@@ -1275,6 +1273,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           </div>
           <div
             className="emotion-7"
+            data-testid="error"
           >
             <span
               className="emotion-8"
@@ -1314,6 +1313,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           </div>
           <div
             className="emotion-7"
+            data-testid="error"
           >
             <span
               className="emotion-8"
@@ -1365,6 +1365,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           </div>
           <div
             className="emotion-29"
+            data-testid="error"
           >
             <span
               className="emotion-8"
@@ -1404,6 +1405,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           </div>
           <div
             className="emotion-29"
+            data-testid="error"
           >
             <span
               className="emotion-8"
@@ -1443,6 +1445,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
           </div>
           <div
             className="emotion-29"
+            data-testid="error"
           >
             <span
               className="emotion-8"

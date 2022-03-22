@@ -82,7 +82,6 @@ export const wrapperStyle = ({
         : theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)
     }`,
     borderRadius: isSearch ? rem(100) : theme.spacing.xsm,
-    flex: '1 1 100%',
     userSelect: 'none',
     opacity: disabled ? getDisabled().opacity : 1,
     cursor: disabled || locked ? getDisabled().cursor : 'auto',
@@ -119,6 +118,7 @@ export const inputStyle = ({ label, placeholder, size = DEFAULT_SIZE, dark }: Pr
   z-index: 1;
   font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};
   text-overflow: ellipsis;
+  width: fill-available;
 
   & + label {
     font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};

@@ -67,7 +67,7 @@ const PositionInScreen: React.FC<Props> = ({
       {showTooltip && (
         <div
           css={itemContainer(x + offsetX, y + offsetY)}
-          id={'TOOLTIP_ID_IS_TOOLTIP_BRO'}
+          id={'unique-tooltip-id'}
           ref={itemRef}
         >
           {children}

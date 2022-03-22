@@ -1,7 +1,8 @@
 import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
 
-import { getLocaleFormat } from '../../../utils/helpers';
+import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
+import { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
 import { FilterType, StyleType } from '../../Filter/types';
 import Icon from '../../Icon';
@@ -47,12 +48,13 @@ const getLabels = (isRangePicker: boolean, formattedTo: string) => ({
   to: isRangePicker ? `- ${formattedTo}` : '',
 });
 
-const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
+const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
   (
     {
       handleFocus,
       filterConfig = {},
       handleClear,
+      dataTestId,
       isRangePicker,
       inputProps,
       selectedDay,
@@ -77,7 +79,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
         return (
           <FilterBase
             isDatePicker
-            dataTestId={'filter'}
+            dataTestId={generateTestDataId('filter', dataTestId)}
             disabled={false}
             buttonType={buttonType}
             styleType={styleType}
@@ -102,6 +104,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
             {...inputProps}
             onFocus={handleFocus}
             onKeyDown={handleClear}
+            dataTestId={dataTestId}
             onChange={ON_CHANGE_MOCK}
             placeholder="Date (start) - Date (end)"
             value={selectedDay.from && `${formattedFrom} - ${formattedTo}`}
@@ -116,6 +119,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps>(
           {...inputProps}
           onFocus={handleFocus}
           onKeyDown={handleClear}
+          dataTestId={dataTestId}
           onChange={ON_CHANGE_MOCK}
           placeholder="Select date"
           value={selectedDay.to && formattedFrom}

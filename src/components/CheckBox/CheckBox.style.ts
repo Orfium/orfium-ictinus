@@ -19,6 +19,7 @@ export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyle
   height: ${rem(48)};
   justify-content: center;
   align-items: center;
+  position: relative;
 
   &:before {
     display: none;

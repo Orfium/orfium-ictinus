@@ -1,6 +1,7 @@
 import { Dayjs } from 'dayjs';
 import React, { useCallback, useEffect, useState } from 'react';
 
+import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -52,6 +53,7 @@ export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
 
 export type DateFormatType =
   | 'MM/DD/YYYY'
+  | 'DD/MM/YYYY'
   | 'MMMM D, YYYY'
   | 'dddd, MMMM D, YYYY'
   | 'M/D/YYYY'
@@ -76,7 +78,7 @@ export const extraOptions: ExtraOption[] = [
   },
 ];
 
-const DatePicker: React.FC<Props> = ({
+const DatePicker: React.FC<Props & TestProps> = ({
   isRangePicker = false,
   onChange,
   disableDates,
@@ -89,6 +91,7 @@ const DatePicker: React.FC<Props> = ({
   isClearable = false,
   filterConfig,
   isDefaultNow = true,
+  dataTestId,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
@@ -222,6 +225,7 @@ const DatePicker: React.FC<Props> = ({
             handleFocus={handleFocus}
             handleClear={handleClear}
             isOpen={isOpen}
+            dataTestId={dataTestId}
           />
         )}
       >

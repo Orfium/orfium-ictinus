@@ -10,7 +10,7 @@ export const container = (withOverflow?: boolean, visible?: boolean) => (
   width: 100%;
   height: inherit;
 
-  #TOOLTIP_ID_IS_TOOLTIP_BRO {
+  #unique-tooltip-id {
     display: ${visible ? 'block !important' : 'none !important'};
   }
 `;
@@ -22,7 +22,7 @@ export const itemContainer = (clientX: number, clientY: number) => (
   opacity: 1 !important;
   top: ${clientY + 'px'};
   left: ${clientX + 'px'};
-  z-index: 10;
+  z-index: 999999999;
   width: fit-content;
   height: fit-content;
 `;
