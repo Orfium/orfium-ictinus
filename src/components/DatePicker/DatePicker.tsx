@@ -114,9 +114,11 @@ const DatePicker: React.FC<Props & TestProps> = ({
   }, []);
 
   const applyRangeAndClose = useCallback(
-    (range: Range) => {
-      const startDate = range.to && range.from?.isAfter(range.to) ? range.to : range.from;
-      const endDate = range.to && range.from?.isAfter(range.to) ? range.from : range.to;
+    (oldState: Range) => {
+      const startDate =
+        oldState.to && oldState.from?.isAfter(oldState.to) ? oldState.to : oldState.from;
+      const endDate =
+        oldState.to && oldState.from?.isAfter(oldState.to) ? oldState.from : oldState.to;
       const newRange = { from: startDate, to: endDate };
 
       if (newRange.to) {
@@ -143,8 +145,8 @@ const DatePicker: React.FC<Props & TestProps> = ({
       const endOfDay = day.endOf('day');
       // in case is a day picker
       if (!isRangePicker) {
-        return setRange(range => {
-          if (range.from && range.to && day.isBetween(range.from, range.to)) {
+        return setRange(oldState => {
+          if (oldState.from && oldState.to && day.isBetween(oldState.from, oldState.to)) {
             return { from: undefined, to: undefined };
           }
 
@@ -153,16 +155,16 @@ const DatePicker: React.FC<Props & TestProps> = ({
       }
 
       // in case is range picker
-      return setRange(range => {
-        if (range.from && range.to) {
+      return setRange(oldState => {
+        if (oldState.from && oldState.to) {
           return { from: startOfDay, to: undefined };
         }
 
-        if (!range.from) {
-          return { ...range, from: startOfDay };
+        if (!oldState.from) {
+          return { ...oldState, from: startOfDay };
         }
 
-        return { ...range, to: endOfDay };
+        return { ...oldState, to: endOfDay };
       });
     },
     [isRangePicker]
@@ -195,9 +197,9 @@ const DatePicker: React.FC<Props & TestProps> = ({
 
       if (e.keyCode === 8) {
         //backspace
-        return setSelectedRange(range => {
-          if (range.from && range.to) {
-            return { ...range, to: undefined };
+        return setSelectedRange(oldState => {
+          if (oldState.from && oldState.to) {
+            return { ...oldState, to: undefined };
           }
 
           return { to: undefined, from: undefined };
