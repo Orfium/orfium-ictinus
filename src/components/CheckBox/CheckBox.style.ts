@@ -12,6 +12,15 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   display: flex;
 `;
 
+const hoverStyle = (disabled?: boolean) =>
+  !disabled &&
+  `&:hover {
+    &:before {
+      display: block;
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }`;
+
 export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
   border-radius: 100%;
   display: flex;
@@ -31,24 +40,22 @@ export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyle
     position: absolute;
   }
 
-  ${!disabled &&
-    `&:hover {
-    &:before {
-      display: block;
-      background: rgba(0, 0, 0, 0.05);
-    }
-  }`}
+  ${hoverStyle(disabled)}
 `;
 
 const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }) => {
-  return checked
-    ? `background: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')}`
-    : filled
-    ? `background: ${theme.utils.getColor('lightGrey', 300)}`
-    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
-        'lightGrey',
-        300
-      )};`;
+  if (checked) {
+    return `background: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')}`;
+  }
+
+  if (filled) {
+    return `background: ${theme.utils.getColor('lightGrey', 300)}`;
+  }
+
+  return `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
+    'lightGrey',
+    300
+  )};`;
 };
 
 export const checkboxStyle = ({ checked, filled }: Props) => (theme: Theme): SerializedStyles => {
