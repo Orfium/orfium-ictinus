@@ -9,7 +9,6 @@ export const selectWrapper = ({
 }) => (): SerializedStyles => css`
   position: relative;
   min-width: ${rem(150)};
-  max-width: ${rem(620)};
 
   * {
     cursor: ${!isSearchable && 'pointer'};
