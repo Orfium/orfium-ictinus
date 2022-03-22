@@ -126,6 +126,7 @@ import PublicPerformanceIcon from './publicPerformance.svg';
 import PublisherIcon from './publisher.svg';
 import RecordLabelIconV2 from './record-label-v2.svg';
 import RecordLabelIcon from './record-label.svg';
+import Recording from './recording.svg';
 import ReferenceFileIcon from './reference-file.svg';
 import RefreshIcon from './refresh.svg';
 import RelationsIcon from './relations.svg';
@@ -285,6 +286,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   publicPerformance: PublicPerformanceIcon,
   processManagement: ProcessManagementIcon, // "ticTacToeArrow" copy
   publisher: PublisherIcon,
+  recording: Recording,
   recordLabel: RecordLabelIcon,
   recordLabelV2: RecordLabelIconV2,
   referenceFile: ReferenceFileIcon,
