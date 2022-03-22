@@ -12,36 +12,38 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   display: flex;
 `;
 
-const hoverStyle = (disabled?: boolean) =>
-  !disabled &&
-  `&:hover {
+export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyles => {
+  const hoverStyle =
+    !disabled &&
+    `&:hover {
     &:before {
       display: block;
       background: rgba(0, 0, 0, 0.05);
     }
   }`;
 
-export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
-  border-radius: 100%;
-  display: flex;
-  width: ${rem(48)};
-  height: ${rem(48)};
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  &:before {
-    display: none;
+  return css`
     border-radius: 100%;
-    transition: all 0.2s;
-    content: ' ';
+    display: flex;
     width: ${rem(48)};
     height: ${rem(48)};
-    position: absolute;
-  }
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-  ${hoverStyle(disabled)}
-`;
+    &:before {
+      display: none;
+      border-radius: 100%;
+      transition: all 0.2s;
+      content: ' ';
+      width: ${rem(48)};
+      height: ${rem(48)};
+      position: absolute;
+    }
+
+    ${hoverStyle}
+  `;
+};
 
 const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }) => {
   if (checked) {
