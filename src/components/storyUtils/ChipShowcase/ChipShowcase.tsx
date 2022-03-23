@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 import Chip from '../../Chip';
-import { Props } from '../../Chip/Chip';
+import { ChipProps } from '../../Chip/Chip.types';
 
-const ChipShowcase: React.FC<Props> = ({ children, isChecked, ...props }) => {
+const ChipShowcase: React.FC<ChipProps> = ({ children, isChecked, ...props }) => {
   const [selected, setSelected] = useState(false);
 
   return (
