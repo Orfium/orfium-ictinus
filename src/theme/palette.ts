@@ -1,6 +1,8 @@
 import { getContrast } from 'polished';
 
 import { TextColorTypes } from './index';
+import { errorHandler } from '../utils/helpers';
+import { getColorErrors } from './utils';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
@@ -142,9 +144,7 @@ export const getColor = (palette: Palette): GetColor => (
       ? palette[color][variant]
       : palette?.[scope]?.[color]?.[variant];
 
-  if (!endColor) {
-    throw new Error('No color found with that name');
-  }
+  errorHandler<string>(getColorErrors, endColor);
 
   return endColor;
 };
