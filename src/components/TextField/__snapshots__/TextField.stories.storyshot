@@ -42,7 +42,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -94,9 +94,8 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-5+label {
@@ -191,7 +190,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.25rem;
   background-color: white;
 }
@@ -215,9 +214,8 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   z-index: 1;
   font-size: 0.8125rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-10+label {
@@ -398,7 +396,7 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -450,9 +448,8 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-5+label {
@@ -696,7 +693,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -764,9 +761,8 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -1191,7 +1187,7 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -1285,9 +1281,8 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-8+label {
@@ -1573,7 +1568,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -1625,9 +1620,8 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-5+label {
@@ -1711,9 +1705,8 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-10+label {
@@ -1766,9 +1759,8 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-14+label {
@@ -1968,7 +1960,7 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   user-select: none;
   opacity: 0.5;
   cursor: not-allowed;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -2015,9 +2007,8 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-5+label {
@@ -2261,7 +2252,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   user-select: none;
   opacity: 1;
   cursor: not-allowed;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -2308,9 +2299,8 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -2447,7 +2437,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   user-select: none;
   opacity: 1;
   cursor: not-allowed;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.25rem;
   background-color: white;
 }
@@ -2466,9 +2456,8 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   z-index: 1;
   font-size: 0.8125rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-31+label {
@@ -2897,7 +2886,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -2949,9 +2938,8 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -3095,7 +3083,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
