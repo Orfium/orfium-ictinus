@@ -111,6 +111,7 @@ export type AcceptedIconNames =
   | 'processManagement'
   | 'publicPerformance'
   | 'publisher'
+  | 'recording'
   | 'recordLabel'
   | 'recordLabelV2'
   | 'referenceFile'
