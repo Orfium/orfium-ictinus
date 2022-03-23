@@ -1,7 +1,16 @@
 import { shade, tint, rem as polishedRem } from 'polished';
 
-import { generatedColorShades, Palette } from './palette';
+import { PropsValidationError } from '../utils/errors';
+import {
+  colorShades,
+  flatColors,
+  generatedColorShades,
+  mainTypes,
+  paleColors,
+  Palette,
+} from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
+import { TextColorTypes } from './types';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;
@@ -54,3 +63,10 @@ export const enhancePaletteWithShades = (obj: PaletteConfig): Palette =>
   ) as Palette;
 
 export const rem = (px: number | string): string => polishedRem(px, 16);
+
+export const getColorErrors = [
+  {
+    condition: (endColor: string): boolean => !endColor,
+    error: new PropsValidationError('No color found with that name'),
+  },
+];

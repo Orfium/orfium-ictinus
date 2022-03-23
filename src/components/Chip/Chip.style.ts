@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
-import { Props } from './Chip';
+import { Props } from './Chip.types';
 
 export const chipStyle = ({
   styleType,
@@ -12,7 +12,9 @@ export const chipStyle = ({
   isSelected,
   onClear,
   onClick,
-}: Props) => (theme: Theme): SerializedStyles => {
+}: Pick<Props, 'styleType' | 'fill' | 'isSelected' | 'onClear' | 'onClick'>) => (
+  theme: Theme
+): SerializedStyles => {
   const isInteractive = styleType === 'interactive';
   const customFilled = styleType === 'read-only' || onClear || isSelected;
 

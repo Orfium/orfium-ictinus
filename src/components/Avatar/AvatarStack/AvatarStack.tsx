@@ -1,23 +1,12 @@
 import React, { useCallback } from 'react';
 import { DivProps } from 'utils/common';
-import { generateTestDataId } from 'utils/helpers';
-import { TestId } from 'utils/types';
+import { errorHandler, generateTestDataId } from 'utils/helpers';
+import { TestProps } from 'utils/types';
 
-import Avatar, { AvatarSizes } from '../Avatar';
+import Avatar from '../Avatar';
 import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';
-
-export type Props = {
-  /** the maximum number of avatars to be displayed **/
-  maxAvatars?: number;
-  /** The size of the extra avatar, if any **/
-  size?: AvatarSizes;
-  /** the color of the extra avatar based on our colors eg. red-500 **/
-  color?: string;
-};
-
-type TestProps = {
-  dataTestId?: TestId;
-};
+import { Props } from './AvatarStack.types';
+import { errors } from './utils';
 
 const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
   (
@@ -30,9 +19,7 @@ const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProp
     },
     ref
   ) => {
-    if (maxAvatars < 1) {
-      throw new Error('maxAvatars prop must be greater than 0');
-    }
+    errorHandler<Props>(errors, { maxAvatars });
 
     const children = React.Children.toArray(childrenProp);
 
@@ -71,3 +58,6 @@ const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProp
 AvatarStack.displayName = 'AvatarStack';
 
 export default AvatarStack;
+
+//TODO: Remove on v5 and change import where necessary
+export { Props };
