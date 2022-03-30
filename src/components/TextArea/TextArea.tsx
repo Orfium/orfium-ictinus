@@ -50,7 +50,11 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props
       <TextInputBase isTextArea {...props}>
         <div css={{ width: '100% ' }}>
           <textarea
-            css={inputStyle({ placeholder, resizeEnabled: !disabled && resizeEnabled })}
+            css={inputStyle({
+              placeholder,
+              resizeEnabled: !disabled && resizeEnabled,
+              isTextArea: true,
+            })}
             placeholder={placeholder}
             required={required}
             id={id}

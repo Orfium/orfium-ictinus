@@ -2,9 +2,9 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
 
-import { Props } from '../../Chip';
+import { BadgeProps } from './Badge';
 
-export const badgeStyle = ({ fill = 'greyScale', isSelected }: Props) => (
+export const badgeStyle = ({ fill = 'greyScale', isSelected }: BadgeProps) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flex};

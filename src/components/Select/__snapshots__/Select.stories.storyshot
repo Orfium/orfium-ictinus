@@ -16,7 +16,6 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -39,7 +38,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -91,9 +90,8 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -347,7 +345,6 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -370,7 +367,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -422,9 +419,8 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -687,7 +683,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -710,7 +705,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   user-select: none;
   opacity: 0.5;
   cursor: not-allowed;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -757,9 +752,8 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -914,7 +908,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   user-select: none;
   opacity: 1;
   cursor: not-allowed;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -1366,7 +1360,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-2 * {
@@ -1393,7 +1386,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -1445,9 +1438,8 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -1847,7 +1839,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -1870,7 +1861,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -1922,9 +1913,8 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -2079,7 +2069,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.25rem;
   background-color: white;
 }
@@ -2103,9 +2093,8 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   z-index: 1;
   font-size: 0.8125rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-16+label {
@@ -2349,7 +2338,6 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -2372,7 +2360,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -2424,9 +2412,8 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -2682,7 +2669,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 .emotion-1 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-2 {
@@ -2705,7 +2691,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -2757,9 +2743,8 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-5+label {
@@ -3147,7 +3132,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -3170,7 +3154,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -3238,9 +3222,8 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-7+label {
@@ -3662,7 +3645,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 .emotion-3 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-4 {
@@ -3685,7 +3667,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -3737,9 +3719,8 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-7+label {
@@ -3927,7 +3908,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -4573,7 +4554,6 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -4596,7 +4576,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -4648,9 +4628,8 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {
@@ -4920,7 +4899,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 .emotion-2 {
   position: relative;
   min-width: 9.375rem;
-  max-width: 38.75rem;
 }
 
 .emotion-3 {
@@ -4943,7 +4921,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 16.625rem;
+  min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
@@ -4995,9 +4973,8 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
+  width: 0;
+  min-width: 100%;
 }
 
 .emotion-6+label {

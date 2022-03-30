@@ -1,5 +1,7 @@
 import { Theme } from '../theme';
 import { BASE_SHADE, colorShades, flatColors, mainTypes } from '../theme/palette';
+import { PropsValidationError } from './errors';
+import { errorHandler } from './helpers';
 
 export type AcceptedColorComponentTypes = typeof mainTypes[number];
 
@@ -57,6 +59,33 @@ export type ColorShapeFromComponent = {
   color: typeof flatColors[number];
   shade: typeof colorShades[number];
 };
+
+type ErrorProp = { color: string; colorAfterSplit: string[] };
+
+export const errors = [
+  {
+    condition: ({ colorAfterSplit }: ErrorProp): boolean => Boolean(colorAfterSplit.length !== 2),
+    error: ({ color }: ErrorProp): PropsValidationError =>
+      new PropsValidationError(`Error trying to translate your component color: ${color}`),
+  },
+  {
+    condition: ({ colorAfterSplit }: ErrorProp): boolean =>
+      Boolean(!flatColors.includes(colorAfterSplit[0] as typeof flatColors[number])),
+    error: ({ color }: ErrorProp): PropsValidationError =>
+      new PropsValidationError(
+        `You passed a wrong color for the first argument: ${color} - try something like red-500`
+      ),
+  },
+  {
+    condition: ({ colorAfterSplit }: ErrorProp): boolean =>
+      Boolean(!colorShades.includes(Number(colorAfterSplit[1]) as typeof colorShades[number])),
+    error: ({ color }: ErrorProp): PropsValidationError =>
+      new PropsValidationError(
+        `You passed a wrong shade for the second argument: ${color} - try something like red-500`
+      ),
+  },
+];
+
 /**
  * A utility to translate a color like red-500 to an object. This calculates on the color passed picked by our palette.
  * So in case you run a red color for example `#d40000` this will return
@@ -65,23 +94,10 @@ export type ColorShapeFromComponent = {
 export const calculateActualColorFromComponentProp = (color: string): ColorShapeFromComponent => {
   const colorAfterSplit = color.split('-');
 
-  if (colorAfterSplit.length !== 2) {
-    throw new Error(`Error trying to translate your component color: ${color}`);
-  }
+  errorHandler<ErrorProp>(errors, { color, colorAfterSplit });
 
   const calculatedColor = colorAfterSplit[0];
   const calculatedShade = Number(colorAfterSplit[1]);
-
-  if (!flatColors.includes(calculatedColor as typeof flatColors[number])) {
-    throw new Error(
-      `You passed a wrong color for the first argument: ${color} - try something like red-500`
-    );
-  }
-  if (!colorShades.includes(calculatedShade as typeof colorShades[number])) {
-    throw new Error(
-      `You passed a wrong shade for the second argument: ${color} - try something like red-500`
-    );
-  }
 
   return {
     color: calculatedColor as typeof flatColors[number],
