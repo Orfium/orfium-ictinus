@@ -11,42 +11,70 @@ export const MIN_WIDTH = 150;
 export const textInputSizes = [MD, SM] as const;
 export const textInputStates = ['default', 'pressed', 'error'] as const;
 
-type TextInputConfig = {
-  types: {
-    outlined: {
-      border: {
-        width: number;
-        color: {
-          [key in typeof textInputStates[number]]: {
-            name: typeof flatColors[number];
-            shade: typeof colorShades[number];
-          };
+type TextInputType = {
+  outlined: {
+    border: {
+      width: number;
+      color: {
+        [key in typeof textInputStates[number]]: {
+          name: typeof flatColors[number];
+          shade: typeof colorShades[number];
         };
       };
     };
   };
+}
+type TextInputConfig = {
+  types: {
+    light: TextInputType;
+    dark: TextInputType;
+  }
+
 };
 
 export const textInputConfig: TextInputConfig = {
   types: {
-    outlined: {
-      border: {
-        width: 1,
-        color: {
-          default: {
-            name: 'lightGrey',
-            shade: 200,
-          },
-          pressed: {
-            name: 'blue',
-            shade: 550,
-          },
-          error: {
-            name: 'red',
-            shade: 550,
+    light: {
+      outlined: {
+        border: {
+          width: 1,
+          color: {
+            default: {
+              name: 'lightGrey',
+              shade: 200,
+            },
+            pressed: {
+              name: 'blue',
+              shade: 550,
+            },
+            error: {
+              name: 'red',
+              shade: 550,
+            },
           },
         },
       },
     },
+    dark: {
+      outlined: {
+        border: {
+          width: 1,
+          color: {
+            default: {
+              name: 'darkGrey',
+              shade: 500,
+            },
+            pressed: {
+              name: 'blue',
+              shade: 350,
+            },
+            error: {
+              name: 'red',
+              shade: 200,
+            },
+          },
+        },
+      },
+    }
   },
 };

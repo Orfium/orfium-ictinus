@@ -37,8 +37,8 @@ export const palePaletteConfig: Record<typeof paleColors[number], string> = {
 
 export const lightPaletteConfig: PaletteConfig = {
   // Primary Palette
-  primary: flatPaletteConfig.darkBlue,
-  secondary: flatPaletteConfig.yellow,
+  primary: flatPaletteConfig.blue,
+  secondary: flatPaletteConfig.teal,
 
   //rest
   success: flatPaletteConfig.green, //550 shade
@@ -68,15 +68,16 @@ export const lightPaletteConfig: PaletteConfig = {
 
 export const darkPaletteConfig: PaletteConfig = {
   // Primary Palette
-  primary: flatPaletteConfig.darkGrey,
-  secondary: flatPaletteConfig.lightGrey,
+  primary: flatPaletteConfig.teal,
+  secondary: flatPaletteConfig.blue,
 
   //rest
-  success: flatPaletteConfig.green,
+  success: flatPaletteConfig.green, //550 shade
   error: flatPaletteConfig.red,
   warning: flatPaletteConfig.orange,
   info: flatPaletteConfig.darkBlue,
-  light: flatPaletteConfig.lightGrey,
+  light: flatPaletteConfig.greyScale,
+  link: '#246CE5',
 
   flat: {
     ...flatPaletteConfig,
@@ -88,8 +89,8 @@ export const darkPaletteConfig: PaletteConfig = {
 
   text: {
     primary: flatPaletteConfig.darkGrey,
-    secondary: flatPaletteConfig.greyScale,
-    light: flatPaletteConfig.lightGrey,
+    secondary: flatPaletteConfig.lightGrey,
+    light: flatPaletteConfig.greyScale,
   },
 
   white: 'white',

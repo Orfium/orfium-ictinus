@@ -13,14 +13,20 @@ export type GetPressed = {
   backgroundColor: string;
 };
 
-const backgroundColorStep = statesConfig.pressed.backgroundColor.step;
-
 /**
  * On pressed background is darken by two steps in shade.
  * If we exceed the maximum value then we lighten it by two steps.
  * This will be reviewed when dark theme is implemented. **/
-export const getPressed = ({ theme, color = 'lightGrey', shade = 0 }: Props): GetPressed => {
-  const calculatedShade = getShadeWithStep({ shade, step: backgroundColorStep });
+export const getPressed = ({ theme, color, shade }: Props): GetPressed => {
+  const backgroundColorStep = statesConfig[theme.colorScheme].pressed.backgroundColor.step;
+  const endColor = color || (theme.colorScheme === 'dark' ? 'darkGrey' : 'lightGrey');
+  const endShade = shade || (theme.colorScheme === 'dark' ? 700 : 0);
 
-  return { backgroundColor: theme.utils.getColor(color, calculatedShade) };
+  const calculatedShade = getShadeWithStep({
+    shade: endShade,
+    step: backgroundColorStep,
+    colorScheme: theme.colorScheme,
+  });
+
+  return { backgroundColor: theme.utils.getColor(endColor, calculatedShade) };
 };

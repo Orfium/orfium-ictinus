@@ -1,14 +1,23 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { BASE_SHADE } from 'theme/palette';
+import { ColorScheme } from 'theme/types';
 import { rem } from 'theme/utils';
 
 import { Props } from './Radio';
 
-const hoverColor = 'rgba(0, 0, 0, 0.05)';
+const lightHoverColor = 'rgba(14, 14, 23, 0.07)';
+const darkHoverColor = 'rgba(255, 255, 255, 0.1)';
 
-const focusedRadio = css`
-  box-shadow: 0 0 0 ${rem('12px')} ${hoverColor};
+const boxShadow = ({
+  inset = false,
+  colorScheme,
+}: {
+  inset?: boolean;
+  colorScheme: ColorScheme;
+}) => css`
+  box-shadow: 0 0 0 ${rem('6px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor},
+    inset 0 0 0 ${rem('6px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor};
 `;
 
 export const inputStyles: SerializedStyles = css`
@@ -28,47 +37,44 @@ export const inputStyles: SerializedStyles = css`
   }
 `;
 
-export const customRadioInnerHover = (focused: boolean, disabled: boolean): SerializedStyles => css`
+export const customRadioInnerHover = (focused: boolean, disabled: boolean) => (
+  theme: Theme
+): SerializedStyles => css`
   position: absolute;
   border-radius: 50%;
   width: ${rem('24px')};
   height: ${rem('24px')};
   transition: all 0.2s ease;
-  ${focused && !disabled && `box-shadow: inset 0 0 0 ${rem('12px')} ${hoverColor};`};
+  // ${focused && !disabled && boxShadow({ inset: true, colorScheme: theme.colorScheme })};
 `;
 
-export const customRadioWrapperStyles = (
-  focused: boolean,
-  disabled: boolean
+export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) => (
+  theme: Theme
 ): SerializedStyles => css`
   position: relative;
   border-radius: 50%;
   width: ${rem('24px')};
   height: ${rem('24px')};
   transition: box-shadow 0.3s ease;
-  ${focused && !disabled && focusedRadio};
+  ${focused && !disabled && boxShadow({ colorScheme: theme.colorScheme })};
 `;
 
-const boxShadowSpread = (spread: string | number) => `inset 0px 0px 0px ${rem(spread)}`;
-
-const determineBoxShadow = ({
+const determineColorBasedOnState = ({
   checked,
   disabled,
   filled,
 }: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (theme: Theme) => {
   if (checked) {
-    return `${boxShadowSpread('2px')} currentColor, ${boxShadowSpread(
-      '4px'
-    )} ${theme.utils.getColor('neutralWhite', 50)}, ${boxShadowSpread('12px')} currentColor`;
+    return `currentColor`;
   }
   if (disabled) {
-    return `${boxShadowSpread(filled ? '12px' : '2px')} ${theme.utils.getColor('lightGrey', 250)}`;
+    return `${theme.utils.getColor('lightGrey', 250)}`;
   }
   if (filled) {
-    return `${boxShadowSpread('12px')} ${theme.utils.getColor('lightGrey', 300)}`;
+    return `${theme.utils.getColor('lightGrey', 300)}`;
   }
 
-  return `${boxShadowSpread('2px')} ${theme.utils.getColor('lightGrey', 300)}`;
+  return `${theme.utils.getColor('lightGrey', 300)}`;
 };
 
 export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'filled'>) => (
@@ -80,8 +86,33 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'f
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    box-shadow: ${determineBoxShadow(props)(theme)};
     position: absolute;
+    // background-color: ${determineColorBasedOnState(props)(theme)};
+    &:before {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      margin: ${rem('2px')} ${rem('12px')} ${rem('2px')} ${rem('2px')};
+      border: solid 2px ${determineColorBasedOnState(props)(theme)};
+      border-radius: 50%;
+      width: ${rem('20px')};
+      height: ${rem('20px')};
+      vertical-align: top;
+      transition: border-color 0.2s;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: ${rem('1px')};
+      left: ${rem('1px')};
+      border-radius: 50%;
+      width: ${rem('12px')};
+      height: ${rem('12px')};
+      background-color: ${determineColorBasedOnState(props)(theme)};
+      transform: translate(5px, 5px) scale(${props.checked ? '1' : '0'});
+      transition: transform 0.2s;
+    }
   `;
 };
 
@@ -90,8 +121,8 @@ export const wrapperStyles = (disabled: boolean) => (theme: Theme): SerializedSt
 
   border-radius: 50%;
 
-  width: ${rem('48px')};
-  height: ${rem('48px')};
+  width: ${rem('36px')};
+  height: ${rem('36px')};
 
   color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
   border: 0;

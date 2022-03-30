@@ -1,6 +1,6 @@
-import { colorShades, flatColors } from '../palette';
+import { colorSchemes, colorShades, flatColors } from '../palette';
 
-type StatesConfig = {
+type StateConfig = {
   hover: {
     backgroundColor: {
       step: number;
@@ -32,7 +32,7 @@ type StatesConfig = {
   };
 };
 
-export const statesConfig: StatesConfig = {
+export const lightStatesConfig: StateConfig = {
   hover: {
     backgroundColor: {
       step: 50,
@@ -62,4 +62,41 @@ export const statesConfig: StatesConfig = {
       name: 'not-allowed',
     },
   },
+};
+
+export const darkStatesConfig: StateConfig = {
+  hover: {
+    backgroundColor: {
+      step: 50,
+    },
+  },
+  focus: {
+    border: {
+      width: {
+        step: 1,
+      },
+      color: {
+        name: 'magenta',
+        shade: 500,
+      },
+    },
+  },
+  pressed: {
+    backgroundColor: {
+      step: 100,
+    },
+  },
+  disabled: {
+    opacity: {
+      amount: 0.5,
+    },
+    cursor: {
+      name: 'not-allowed',
+    },
+  },
+};
+
+export const statesConfig: Record<typeof colorSchemes[number], StateConfig> = {
+  light: lightStatesConfig,
+  dark: darkStatesConfig,
 };

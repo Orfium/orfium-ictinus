@@ -14,8 +14,8 @@ export type GetFocus = {
   styleOutline: string;
 };
 
-const borderWidthStep = statesConfig.focus.border.width.step;
-const borderColor = statesConfig.focus.border.color;
+const borderWidthStep = statesConfig['light'].focus.border.width.step;
+const borderColor = statesConfig['light'].focus.border.color;
 
 /**
  * On focus border is darken by one step in shade.

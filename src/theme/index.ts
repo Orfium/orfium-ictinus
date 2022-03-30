@@ -3,11 +3,11 @@ import overrides from './overrides';
 import { getAAColor, getAAColorFromSwatches, getColor } from './palette';
 import { darkPaletteConfig, lightPaletteConfig } from './palette.config';
 import spacing from './spacing';
-import { TextColorTypes, Theme, ThemeConfig } from './types';
+import { ColorScheme, TextColorTypes, Theme, ThemeConfig } from './types';
 import typography from './typography';
 import { enhancePaletteWithShades } from './utils';
 
-const defaultTheme = (theming: 'dark' | 'light'): Theme => {
+const defaultTheme = (theming: ColorScheme): Theme => {
   const palette =
     theming === 'light'
       ? enhancePaletteWithShades(lightPaletteConfig)

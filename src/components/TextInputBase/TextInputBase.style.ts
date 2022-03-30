@@ -4,15 +4,14 @@ import { rem } from 'theme/utils';
 import { DEFAULT_SIZE, getTextFieldPadding, getTextFieldSize } from 'utils/size-utils';
 
 import { getDisabled, getHover, getPressed } from '../../theme/states';
+import { ColorScheme } from '../../theme/types';
 import { MIN_WIDTH, textInputConfig } from './config';
 import { Props } from './TextInputBase';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
-const borderConfig = textInputConfig.types.outlined.border;
-
 const wrapperStyleSwitch = (
   theme: Theme,
-  dark?: boolean,
+  colorScheme: ColorScheme = 'light',
   lean?: boolean,
   error?: boolean,
   disabled?: boolean
@@ -22,8 +21,10 @@ const wrapperStyleSwitch = (
       backgroundColor: 'transparent',
     };
   }
+  const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
-  const backgroundColor = dark ? theme.utils.getColor('darkGrey', 750) : theme.palette.white;
+  const backgroundColor =
+    colorScheme === 'dark' ? theme.utils.getColor('darkGrey', 700) : theme.palette.white;
   const borderColorName = !error ? borderConfig.color.pressed.name : borderConfig.color.error.name;
   const borderColorShade = !error
     ? borderConfig.color.pressed.shade
@@ -68,8 +69,10 @@ export const wrapperStyle = ({
   isTextArea,
   size,
 }: Props) => (theme: Theme): SerializedStyles => {
+  const colorScheme = dark ? 'dark' : theme.colorScheme;
   const error = status === 'error';
   const textFieldSize = !(lean || isTextArea) ? getTextFieldSize(size) : getTextFieldSize();
+  const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
   return css({
     display: 'flex',
@@ -86,7 +89,7 @@ export const wrapperStyle = ({
     opacity: disabled ? getDisabled().opacity : 1,
     cursor: disabled || locked ? getDisabled().cursor : 'auto',
     ...textFieldSize,
-    ...wrapperStyleSwitch(theme, dark, lean, error, Boolean(disabled || locked)),
+    ...wrapperStyleSwitch(theme, colorScheme, lean, error, Boolean(disabled || locked)),
   });
 };
 
@@ -115,7 +118,7 @@ export const inputStyle = ({
 }: Props) => (theme: Theme): SerializedStyles => css`
   background: transparent;
   border: none;
-  color: ${dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
+  color: ${theme.colorScheme === 'dark' || dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
   display: block;
   position: relative;
   top: ${label && rem(7)};

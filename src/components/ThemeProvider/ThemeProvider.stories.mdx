@@ -14,7 +14,7 @@ A component that will hold all components as childs. These component is the firs
 ```js
 import { ThemeProvider } from '@orfium/ictinus';
 
-<ThemeProvider theme={{ colors: { primary: 'red' } }}>
+<ThemeProvider theme={{ palette: { primary: '#2D2D46' } }}>
   ...
 </ThemeProvider>
 ```
@@ -24,10 +24,14 @@ import { ThemeProvider } from '@orfium/ictinus';
 <Props of={ThemeProvider} />
 
 # Theme with button
+
+This is a demo of how you wrap a component on this provider. Because preview is also automatically wrapped in the provider
+some things like dark mode switcher will not work as intended.
+
 <Preview>
   <Story name="Setting up a button example">
-    <ThemeProvider theme={{ colors: { primary: 'red' } }}>
-        <Button bg={'green'}>Hello world</Button>
+    <ThemeProvider theme={{ palette: { primary: '#2D2D46' } }}>
+        <Button>Hello world</Button>
       </ThemeProvider>
   </Story>
 </Preview>
