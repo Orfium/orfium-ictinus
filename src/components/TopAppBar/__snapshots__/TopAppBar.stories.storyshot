@@ -96,13 +96,13 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 }
 
 .emotion-5 {
-  fill: #e7eefe;
+  fill: #ececfd;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #e7eefe;
+  fill: #ececfd;
 }
 
 .emotion-6 {
@@ -331,128 +331,142 @@ exports[`Storyshots Design System/TopAppBar playground 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "padding": 10,
+        "margin": 15,
       }
     }
   >
     <div
-      aria-label="Top Application Banner"
-      className="emotion-1"
-      role="banner"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
     >
       <div
-        className="emotion-2"
+        aria-label="Top Application Banner"
+        className="emotion-1"
+        role="banner"
       >
         <div
-          className="emotion-3"
-          data-testid="menu-handler"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <span
-            className="emotion-4"
+          <div
+            className="emotion-3"
+            data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-5"
-            />
-          </span>
-        </div>
-        <div
-          className="emotion-6"
-        >
-          <div
-            className="emotion-7"
-          >
-            <strong>
-              LOGO
-            </strong>
-            PLACEHOLDER
-          </div>
-        </div>
-      </div>
-      <div
-        className="emotion-8"
-      />
-      <div
-        className="emotion-9"
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-10"
-            data-testid="userMenu"
-          >
-            <button
-              className="emotion-11"
-              data-testid="button"
-              disabled={false}
+              className="emotion-4"
               onClick={[Function]}
-              type="button"
             >
               <span
-                className="emotion-12"
+                className="emotion-5"
+              />
+            </span>
+          </div>
+          <div
+            className="emotion-6"
+          >
+            <div
+              className="emotion-7"
+            >
+              <strong>
+                LOGO
+              </strong>
+              PLACEHOLDER
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-8"
+        />
+        <div
+          className="emotion-9"
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="emotion-10"
+              data-testid="userMenu"
+            >
+              <button
+                className="emotion-11"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
                 <span
-                  className="emotion-13"
+                  className="emotion-12"
                 >
-                  <div
-                    className="emotion-14"
+                  <span
+                    className="emotion-13"
                   >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                </span>
-                <span
-                  className="emotion-15"
-                >
-                  <span>
-                    <span
-                      className="emotion-16"
+                    <div
+                      className="emotion-14"
                     >
-                      Tom Cruise
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-15"
+                  >
+                    <span>
+                      <span
+                        className="emotion-16"
+                      >
+                        Tom Cruise
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-13"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
                     </span>
                   </span>
                 </span>
-                <span
-                  className="emotion-13"
-                >
-                  <span
-                    className="emotion-4"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-19"
-                    />
-                  </span>
-                </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -557,13 +571,13 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 }
 
 .emotion-5 {
-  fill: #e7eefe;
+  fill: #ececfd;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #e7eefe;
+  fill: #ececfd;
 }
 
 .emotion-6 {
@@ -909,180 +923,194 @@ exports[`Storyshots Design System/TopAppBar with Additional Tools 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "padding": 10,
+        "margin": 15,
       }
     }
   >
     <div
-      aria-label="Top Application Banner"
-      className="emotion-1"
-      role="banner"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
     >
       <div
-        className="emotion-2"
+        aria-label="Top Application Banner"
+        className="emotion-1"
+        role="banner"
       >
         <div
-          className="emotion-3"
-          data-testid="menu-handler"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <span
-            className="emotion-4"
+          <div
+            className="emotion-3"
+            data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-5"
-            />
-          </span>
-        </div>
-        <div
-          className="emotion-6"
-        >
-          <div
-            className="emotion-7"
-          >
-            <strong>
-              LOGO
-            </strong>
-            PLACEHOLDER
-          </div>
-        </div>
-      </div>
-      <div
-        className="emotion-8"
-      >
-        <div
-          className="emotion-9"
-        >
-          <div
-            className="emotion-10"
-          >
-            <div
-              className="emotion-11"
-            >
-              <input
-                className="emotion-12"
-                disabled={false}
-                required={false}
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-9"
-        >
-          <div
-            className="emotion-10"
-          >
-            <div
-              className="emotion-11"
-            >
-              <input
-                className="emotion-12"
-                disabled={false}
-                required={false}
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-9"
-        >
-          <div
-            className="emotion-10"
-          >
-            <div
-              className="emotion-11"
-            >
-              <input
-                className="emotion-12"
-                disabled={false}
-                required={false}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="emotion-21"
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-22"
-            data-testid="userMenu"
-          >
-            <button
-              className="emotion-23"
-              data-testid="button"
-              disabled={false}
+              className="emotion-4"
               onClick={[Function]}
-              type="button"
             >
               <span
-                className="emotion-24"
+                className="emotion-5"
+              />
+            </span>
+          </div>
+          <div
+            className="emotion-6"
+          >
+            <div
+              className="emotion-7"
+            >
+              <strong>
+                LOGO
+              </strong>
+              PLACEHOLDER
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-8"
+        >
+          <div
+            className="emotion-9"
+          >
+            <div
+              className="emotion-10"
+            >
+              <div
+                className="emotion-11"
+              >
+                <input
+                  className="emotion-12"
+                  disabled={false}
+                  required={false}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="emotion-9"
+          >
+            <div
+              className="emotion-10"
+            >
+              <div
+                className="emotion-11"
+              >
+                <input
+                  className="emotion-12"
+                  disabled={false}
+                  required={false}
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            className="emotion-9"
+          >
+            <div
+              className="emotion-10"
+            >
+              <div
+                className="emotion-11"
+              >
+                <input
+                  className="emotion-12"
+                  disabled={false}
+                  required={false}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-21"
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="emotion-22"
+              data-testid="userMenu"
+            >
+              <button
+                className="emotion-23"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
                 <span
-                  className="emotion-25"
+                  className="emotion-24"
                 >
-                  <div
-                    className="emotion-26"
+                  <span
+                    className="emotion-25"
                   >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                </span>
-                <span
-                  className="emotion-27"
-                >
-                  <span>
-                    <span
-                      className="emotion-28"
+                    <div
+                      className="emotion-26"
                     >
-                      Tom Cruise
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-27"
+                  >
+                    <span>
+                      <span
+                        className="emotion-28"
+                      >
+                        Tom Cruise
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-25"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-31"
+                      />
                     </span>
                   </span>
                 </span>
-                <span
-                  className="emotion-25"
-                >
-                  <span
-                    className="emotion-4"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-31"
-                    />
-                  </span>
-                </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1187,13 +1215,13 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 }
 
 .emotion-5 {
-  fill: #e7eefe;
+  fill: #ececfd;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #e7eefe;
+  fill: #ececfd;
 }
 
 .emotion-6 {
@@ -1422,128 +1450,142 @@ exports[`Storyshots Design System/TopAppBar with Dark theme enabled 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "padding": 10,
+        "margin": 15,
       }
     }
   >
     <div
-      aria-label="Top Application Banner"
-      className="emotion-1"
-      role="banner"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
     >
       <div
-        className="emotion-2"
+        aria-label="Top Application Banner"
+        className="emotion-1"
+        role="banner"
       >
         <div
-          className="emotion-3"
-          data-testid="menu-handler"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <span
-            className="emotion-4"
+          <div
+            className="emotion-3"
+            data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-5"
-            />
-          </span>
-        </div>
-        <div
-          className="emotion-6"
-        >
-          <div
-            className="emotion-7"
-          >
-            <strong>
-              LOGO
-            </strong>
-            PLACEHOLDER
-          </div>
-        </div>
-      </div>
-      <div
-        className="emotion-8"
-      />
-      <div
-        className="emotion-9"
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-10"
-            data-testid="userMenu"
-          >
-            <button
-              className="emotion-11"
-              data-testid="button"
-              disabled={false}
+              className="emotion-4"
               onClick={[Function]}
-              type="button"
             >
               <span
-                className="emotion-12"
+                className="emotion-5"
+              />
+            </span>
+          </div>
+          <div
+            className="emotion-6"
+          >
+            <div
+              className="emotion-7"
+            >
+              <strong>
+                LOGO
+              </strong>
+              PLACEHOLDER
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-8"
+        />
+        <div
+          className="emotion-9"
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="emotion-10"
+              data-testid="userMenu"
+            >
+              <button
+                className="emotion-11"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
                 <span
-                  className="emotion-13"
+                  className="emotion-12"
                 >
-                  <div
-                    className="emotion-14"
+                  <span
+                    className="emotion-13"
                   >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                </span>
-                <span
-                  className="emotion-15"
-                >
-                  <span>
-                    <span
-                      className="emotion-16"
+                    <div
+                      className="emotion-14"
                     >
-                      Tom Cruise
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-15"
+                  >
+                    <span>
+                      <span
+                        className="emotion-16"
+                      >
+                        Tom Cruise
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-13"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
                     </span>
                   </span>
                 </span>
-                <span
-                  className="emotion-13"
-                >
-                  <span
-                    className="emotion-4"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-19"
-                    />
-                  </span>
-                </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -1648,13 +1690,13 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 }
 
 .emotion-5 {
-  fill: #e7eefe;
+  fill: #ececfd;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .emotion-5 path {
-  fill: #e7eefe;
+  fill: #ececfd;
 }
 
 .emotion-6 {
@@ -1883,128 +1925,142 @@ exports[`Storyshots Design System/TopAppBar with Logo Placeholder 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "padding": 10,
+        "margin": 15,
       }
     }
   >
     <div
-      aria-label="Top Application Banner"
-      className="emotion-1"
-      role="banner"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "padding": 10,
+        }
+      }
     >
       <div
-        className="emotion-2"
+        aria-label="Top Application Banner"
+        className="emotion-1"
+        role="banner"
       >
         <div
-          className="emotion-3"
-          data-testid="menu-handler"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <span
-            className="emotion-4"
+          <div
+            className="emotion-3"
+            data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-5"
-            />
-          </span>
-        </div>
-        <div
-          className="emotion-6"
-        >
-          <div
-            className="emotion-7"
-          >
-            <strong>
-              LOGO
-            </strong>
-            PLACEHOLDER
-          </div>
-        </div>
-      </div>
-      <div
-        className="emotion-8"
-      />
-      <div
-        className="emotion-9"
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-10"
-            data-testid="userMenu"
-          >
-            <button
-              className="emotion-11"
-              data-testid="button"
-              disabled={false}
+              className="emotion-4"
               onClick={[Function]}
-              type="button"
             >
               <span
-                className="emotion-12"
+                className="emotion-5"
+              />
+            </span>
+          </div>
+          <div
+            className="emotion-6"
+          >
+            <div
+              className="emotion-7"
+            >
+              <strong>
+                LOGO
+              </strong>
+              PLACEHOLDER
+            </div>
+          </div>
+        </div>
+        <div
+          className="emotion-8"
+        />
+        <div
+          className="emotion-9"
+        >
+          <div
+            role="button"
+          >
+            <div
+              className="emotion-10"
+              data-testid="userMenu"
+            >
+              <button
+                className="emotion-11"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
               >
                 <span
-                  className="emotion-13"
+                  className="emotion-12"
                 >
-                  <div
-                    className="emotion-14"
+                  <span
+                    className="emotion-13"
                   >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
-                </span>
-                <span
-                  className="emotion-15"
-                >
-                  <span>
-                    <span
-                      className="emotion-16"
+                    <div
+                      className="emotion-14"
                     >
-                      Tom Cruise
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                  </span>
+                  <span
+                    className="emotion-15"
+                  >
+                    <span>
+                      <span
+                        className="emotion-16"
+                      >
+                        Tom Cruise
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-13"
+                  >
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
                     </span>
                   </span>
                 </span>
-                <span
-                  className="emotion-13"
-                >
-                  <span
-                    className="emotion-4"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-19"
-                    />
-                  </span>
-                </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
       </div>

@@ -163,7 +163,7 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
   vertical-align: text-top;
   width: 1.5rem;
   height: 1.5rem;
-  background: #175BF5;
+  background: #4945EE;
   border-radius: 0.25rem;
 }
 
@@ -262,593 +262,607 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <span
-        className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <span
-          className="emotion-3"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            className="emotion-4"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
-          >
-            <span
-              className="emotion-6"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
-        </span>
-      </span>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
-      <span
-        className="emotion-2"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="emotion-3"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-3"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={false}
+              className="emotion-4"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-2"
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-14"
+        >
+          <span
+            className="emotion-15"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-2"
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-14"
+        >
+          <span
+            className="emotion-15"
+            onClick={[Function]}
+          >
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-2"
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              className="emotion-4"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-14"
+        >
+          <span
+            className="emotion-15"
+            onClick={[Function]}
+          >
+            <input
+              checked={false}
+              className="emotion-4"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
+              onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
+            >
+              <span
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+        </span>
+      </div>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
-      <span
-        className="emotion-14"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="emotion-15"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-3"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={false}
+              className="emotion-47"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="emotion-2"
       >
         <span
-          className="emotion-3"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-3"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="emotion-14"
       >
         <span
-          className="emotion-15"
-          onClick={[Function]}
+          className="emotion-14"
         >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-15"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="emotion-2"
       >
         <span
-          className="emotion-3"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <input
-            checked={false}
-            className="emotion-4"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-3"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="emotion-14"
       >
         <span
-          className="emotion-15"
-          onClick={[Function]}
+          className="emotion-14"
         >
-          <input
-            checked={false}
-            className="emotion-4"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-15"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={true}
+              className="emotion-10"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-11"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="emotion-2"
       >
         <span
-          className="emotion-3"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <input
-            checked={false}
-            className="emotion-47"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-3"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={false}
+              className="emotion-47"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <span
-        className="emotion-2"
       >
         <span
-          className="emotion-3"
-          onClick={[Function]}
+          className="emotion-14"
         >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-15"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={false}
+              className="emotion-47"
+              data-testid="checkbox"
+              disabled={true}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
         </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <span
-        className="emotion-14"
-      >
-        <span
-          className="emotion-15"
-          onClick={[Function]}
-        >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
-          >
-            <span
-              className="emotion-6"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <span
-        className="emotion-2"
-      >
-        <span
-          className="emotion-3"
-          onClick={[Function]}
-        >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
-          >
-            <span
-              className="emotion-6"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <span
-        className="emotion-14"
-      >
-        <span
-          className="emotion-15"
-          onClick={[Function]}
-        >
-          <input
-            checked={true}
-            className="emotion-10"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-11"
-            htmlFor="styled-checkbox-"
-          >
-            <span
-              className="emotion-6"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <span
-        className="emotion-2"
-      >
-        <span
-          className="emotion-3"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            className="emotion-47"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
-          >
-            <span
-              className="emotion-6"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
-        </span>
-      </span>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <span
-        className="emotion-14"
-      >
-        <span
-          className="emotion-15"
-          onClick={[Function]}
-        >
-          <input
-            checked={false}
-            className="emotion-47"
-            data-testid="checkbox"
-            disabled={true}
-            id="styled-checkbox-"
-            onChange={[Function]}
-            onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
-          >
-            <span
-              className="emotion-6"
-              onClick={[Function]}
-            >
-              <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
-        </span>
-      </span>
+      </div>
     </div>
   </div>
 </div>
@@ -1025,7 +1039,7 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
   vertical-align: text-top;
   width: 1.5rem;
   height: 1.5rem;
-  background: #175BF5;
+  background: #4945EE;
   border-radius: 0.25rem;
 }
 
@@ -1124,664 +1138,678 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div>
     <div
-      className="emotion-1"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <span
-          className="emotion-2"
-        >
-          <span
-            className="emotion-3"
-            onClick={[Function]}
-          >
-            <input
-              checked={false}
-              className="emotion-4"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-5"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Not checked single
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <span
-          className="emotion-2"
-        >
-          <span
-            className="emotion-3"
-            onClick={[Function]}
-          >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Checked Single
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <span
-          className="emotion-16"
-        >
-          <span
-            className="emotion-17"
-            onClick={[Function]}
-          >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={true}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Disabled single
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <span
-          className="emotion-2"
-        >
-          <span
-            className="emotion-3"
-            onClick={[Function]}
-          >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Checked intermediate
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <span
-          className="emotion-16"
-        >
-          <span
-            className="emotion-17"
-            onClick={[Function]}
-          >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={true}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Disabled checked intermediate
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <span
-          className="emotion-2"
-        >
-          <span
-            className="emotion-3"
-            onClick={[Function]}
-          >
-            <input
-              checked={false}
-              className="emotion-4"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-5"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Not checked intermediate
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <span
-          className="emotion-16"
-        >
-          <span
-            className="emotion-17"
-            onClick={[Function]}
-          >
-            <input
-              checked={false}
-              className="emotion-4"
-              data-testid="checkbox"
-              disabled={true}
-              id="styled-checkbox-"
-              onChange={[Function]}
-              onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-5"
-              htmlFor="styled-checkbox-"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
-          </span>
-          <span
-            className="emotion-8"
-          >
-            Disabled not checked intermediate
-          </span>
-        </span>
-      </div>
+        turn 
+        dark
+         on
+      </button>
     </div>
-    <div
-      className="emotion-1"
-    >
+    <div>
       <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
+        className="emotion-1"
       >
-        <span
-          className="emotion-2"
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
         >
           <span
-            className="emotion-3"
-            onClick={[Function]}
+            className="emotion-2"
           >
-            <input
-              checked={false}
-              className="emotion-54"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-3"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-5"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={false}
+                className="emotion-4"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-5"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Not checked single
+            </span>
           </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
           <span
-            className="emotion-8"
+            className="emotion-2"
           >
-            Not checked single
+            <span
+              className="emotion-3"
+              onClick={[Function]}
+            >
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Checked Single
+            </span>
           </span>
-        </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <span
+            className="emotion-16"
+          >
+            <span
+              className="emotion-17"
+              onClick={[Function]}
+            >
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={true}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Disabled single
+            </span>
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <span
+            className="emotion-2"
+          >
+            <span
+              className="emotion-3"
+              onClick={[Function]}
+            >
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Checked intermediate
+            </span>
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <span
+            className="emotion-16"
+          >
+            <span
+              className="emotion-17"
+              onClick={[Function]}
+            >
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={true}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Disabled checked intermediate
+            </span>
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <span
+            className="emotion-2"
+          >
+            <span
+              className="emotion-3"
+              onClick={[Function]}
+            >
+              <input
+                checked={false}
+                className="emotion-4"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-5"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Not checked intermediate
+            </span>
+          </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          <span
+            className="emotion-16"
+          >
+            <span
+              className="emotion-17"
+              onClick={[Function]}
+            >
+              <input
+                checked={false}
+                className="emotion-4"
+                data-testid="checkbox"
+                disabled={true}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-5"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Disabled not checked intermediate
+            </span>
+          </span>
+        </div>
       </div>
       <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
+        className="emotion-1"
       >
-        <span
-          className="emotion-2"
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
         >
           <span
-            className="emotion-3"
-            onClick={[Function]}
+            className="emotion-2"
           >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-3"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={false}
+                className="emotion-54"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-5"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Not checked single
+            </span>
           </span>
-          <span
-            className="emotion-8"
-          >
-            Checked Single
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
           }
-        }
-      >
-        <span
-          className="emotion-16"
         >
           <span
-            className="emotion-17"
-            onClick={[Function]}
+            className="emotion-2"
           >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={true}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-3"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Checked Single
+            </span>
           </span>
-          <span
-            className="emotion-8"
-          >
-            Disabled single
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
           }
-        }
-      >
-        <span
-          className="emotion-2"
         >
           <span
-            className="emotion-3"
-            onClick={[Function]}
+            className="emotion-16"
           >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-17"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={true}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Disabled single
+            </span>
           </span>
-          <span
-            className="emotion-8"
-          >
-            Checked intermediate
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
           }
-        }
-      >
-        <span
-          className="emotion-16"
         >
           <span
-            className="emotion-17"
-            onClick={[Function]}
+            className="emotion-2"
           >
-            <input
-              checked={true}
-              className="emotion-11"
-              data-testid="checkbox"
-              disabled={true}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-3"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-12"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Checked intermediate
+            </span>
           </span>
-          <span
-            className="emotion-8"
-          >
-            Disabled checked intermediate
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
           }
-        }
-      >
-        <span
-          className="emotion-2"
         >
           <span
-            className="emotion-3"
-            onClick={[Function]}
+            className="emotion-16"
           >
-            <input
-              checked={false}
-              className="emotion-54"
-              data-testid="checkbox"
-              disabled={false}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-17"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-5"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={true}
+                className="emotion-11"
+                data-testid="checkbox"
+                disabled={true}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-12"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Disabled checked intermediate
+            </span>
           </span>
-          <span
-            className="emotion-8"
-          >
-            Not checked intermediate
-          </span>
-        </span>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
           }
-        }
-      >
-        <span
-          className="emotion-16"
         >
           <span
-            className="emotion-17"
-            onClick={[Function]}
+            className="emotion-2"
           >
-            <input
-              checked={false}
-              className="emotion-54"
-              data-testid="checkbox"
-              disabled={true}
-              id="styled-checkbox-"
-              onChange={[Function]}
+            <span
+              className="emotion-3"
               onClick={[Function]}
-              type="checkbox"
-            />
-            <label
-              className="emotion-5"
-              htmlFor="styled-checkbox-"
             >
-              <span
-                className="emotion-6"
+              <input
+                checked={false}
+                className="emotion-54"
+                data-testid="checkbox"
+                disabled={false}
+                id="styled-checkbox-"
+                onChange={[Function]}
                 onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-5"
+                htmlFor="styled-checkbox-"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </label>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Not checked intermediate
+            </span>
           </span>
+        </div>
+        <div
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
           <span
-            className="emotion-8"
+            className="emotion-16"
           >
-            Disabled not checked intermediate
+            <span
+              className="emotion-17"
+              onClick={[Function]}
+            >
+              <input
+                checked={false}
+                className="emotion-54"
+                data-testid="checkbox"
+                disabled={true}
+                id="styled-checkbox-"
+                onChange={[Function]}
+                onClick={[Function]}
+                type="checkbox"
+              />
+              <label
+                className="emotion-5"
+                htmlFor="styled-checkbox-"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </label>
+            </span>
+            <span
+              className="emotion-8"
+            >
+              Disabled not checked intermediate
+            </span>
           </span>
-        </span>
+        </div>
       </div>
     </div>
   </div>
@@ -1931,70 +1959,84 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <span
-        className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <span
-          className="emotion-3"
-          onClick={[Function]}
+          className="emotion-2"
         >
-          <input
-            checked={false}
-            className="emotion-4"
-            data-testid="checkbox"
-            disabled={false}
-            id="styled-checkbox-"
-            onChange={[Function]}
+          <span
+            className="emotion-3"
             onClick={[Function]}
-            type="checkbox"
-          />
-          <label
-            className="emotion-5"
-            htmlFor="styled-checkbox-"
           >
-            <span
-              className="emotion-6"
+            <input
+              checked={false}
+              className="emotion-4"
+              data-testid="checkbox"
+              disabled={false}
+              id="styled-checkbox-"
+              onChange={[Function]}
               onClick={[Function]}
+              type="checkbox"
+            />
+            <label
+              className="emotion-5"
+              htmlFor="styled-checkbox-"
             >
               <span
-                className="emotion-7"
-              />
-            </span>
-          </label>
+                className="emotion-6"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-7"
+                />
+              </span>
+            </label>
+          </span>
+          
         </span>
-        
-      </span>
+      </div>
     </div>
   </div>
 </div>

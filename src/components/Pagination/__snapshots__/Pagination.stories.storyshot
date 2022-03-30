@@ -108,100 +108,114 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <button
-      className="emotion-2"
-      data-testid="icon-button"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-0"
         onClick={[Function]}
       >
-        <span
-          className="emotion-4"
-        />
-      </span>
-    </button>
-    <button
-      className="emotion-2"
-      data-testid="icon-button"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="emotion-3"
-        onClick={[Function]}
-      >
-        <span
-          className="emotion-4"
-        />
-      </span>
-    </button>
-    <div>
-      Page 
-      1
-       of 
-      3
+        turn 
+        dark
+         on
+      </button>
     </div>
-    <button
-      className="emotion-2"
-      data-testid="icon-button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
+    <div
+      className="emotion-1"
     >
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-2"
+        data-testid="icon-button"
+        disabled={true}
         onClick={[Function]}
+        type="button"
       >
         <span
-          className="emotion-4"
-        />
-      </span>
-    </button>
-    <button
-      className="emotion-2"
-      data-testid="icon-button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="emotion-3"
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-4"
+          />
+        </span>
+      </button>
+      <button
+        className="emotion-2"
+        data-testid="icon-button"
+        disabled={true}
         onClick={[Function]}
+        type="button"
       >
         <span
-          className="emotion-4"
-        />
-      </span>
-    </button>
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-4"
+          />
+        </span>
+      </button>
+      <div>
+        Page 
+        1
+         of 
+        3
+      </div>
+      <button
+        className="emotion-2"
+        data-testid="icon-button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-4"
+          />
+        </span>
+      </button>
+      <button
+        className="emotion-2"
+        data-testid="icon-button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-4"
+          />
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 `;
@@ -314,68 +328,82 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <button
-      className="emotion-2"
-      data-testid="icon-button"
-      disabled={true}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-0"
         onClick={[Function]}
       >
-        <span
-          className="emotion-4"
-        />
-      </span>
-    </button>
-    <div>
-      Page 
-      1
-       of 
-      3
+        turn 
+        dark
+         on
+      </button>
     </div>
-    <button
-      className="emotion-2"
-      data-testid="icon-button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
+    <div
+      className="emotion-1"
     >
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-2"
+        data-testid="icon-button"
+        disabled={true}
         onClick={[Function]}
+        type="button"
       >
         <span
-          className="emotion-4"
-        />
-      </span>
-    </button>
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-4"
+          />
+        </span>
+      </button>
+      <div>
+        Page 
+        1
+         of 
+        3
+      </div>
+      <button
+        className="emotion-2"
+        data-testid="icon-button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <span
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <span
+            className="emotion-4"
+          />
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 `;
