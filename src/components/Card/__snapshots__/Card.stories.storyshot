@@ -61,58 +61,72 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <div
-        className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <p>
-          (Card inside a lightGrey container to test the transparency/radius/elevation props)
-        </p>
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
         <div
-          className="emotion-3"
+          className="emotion-2"
         >
+          <p>
+            (Card inside a lightGrey container to test the transparency/radius/elevation props)
+          </p>
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <div>
-                Card with 01 elevation
+              <div
+                className="emotion-5"
+              >
+                <div>
+                  Card with 01 elevation
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod
+                </p>
               </div>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tristique eros at fringilla fringilla. Donec volutpat lobortis euismod
-              </p>
             </div>
           </div>
         </div>

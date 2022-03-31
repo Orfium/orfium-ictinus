@@ -192,100 +192,114 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
       <button
-        className="emotion-2"
-        data-testid="chip"
-        disabled={false}
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <div>
-          Label
-        </div>
-        <div
-          className="emotion-3"
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <button
+          className="emotion-2"
+          data-testid="chip"
+          disabled={false}
         >
-          <span
-            className="emotion-4"
-            onClick={[Function]}
+          <div>
+            Label
+          </div>
+          <div
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
-            />
-          </span>
-        </div>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+              className="emotion-4"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-5"
+              />
+            </span>
+          </div>
+        </button>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <button
-        className="emotion-6"
-        data-testid="chip"
-        disabled={false}
-        onClick={[Function]}
       >
-        <div>
-          Label
-        </div>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <button
-        className="emotion-6"
-        data-testid="chip"
-        disabled={false}
-        onClick={[Function]}
-      >
-        <div>
-          Label
-        </div>
-        <div
-          className="emotion-8"
-          data-testid="badge"
+        <button
+          className="emotion-6"
+          data-testid="chip"
+          disabled={false}
+          onClick={[Function]}
         >
-          5
-        </div>
-      </button>
+          <div>
+            Label
+          </div>
+        </button>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <button
+          className="emotion-6"
+          data-testid="chip"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <div>
+            Label
+          </div>
+          <div
+            className="emotion-8"
+            data-testid="badge"
+          >
+            5
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </div>
@@ -404,97 +418,111 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
       <button
-        className="emotion-2"
-        data-testid="chip"
-        disabled={false}
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <div>
-          Label
-        </div>
+        turn 
+        dark
+         on
       </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
-      <button
-        className="emotion-2"
-        data-testid="chip"
-        disabled={false}
-      >
-        <div>
-          <div
-            className="emotion-4"
-          >
-            
-            KN
-          </div>
-        </div>
-        <div>
-          Label
-        </div>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <button
-        className="emotion-2"
-        data-testid="chip"
-        disabled={false}
       >
-        <div>
-          <div
-            className="emotion-4"
-          >
-            <img
-              src="https://mui.com/static/images/avatar/1.jpg"
-            />
+        <button
+          className="emotion-2"
+          data-testid="chip"
+          disabled={false}
+        >
+          <div>
+            Label
           </div>
-        </div>
-        <div>
-          Label
-        </div>
-      </button>
+        </button>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <button
+          className="emotion-2"
+          data-testid="chip"
+          disabled={false}
+        >
+          <div>
+            <div
+              className="emotion-4"
+            >
+              
+              KN
+            </div>
+          </div>
+          <div>
+            Label
+          </div>
+        </button>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <button
+          className="emotion-2"
+          data-testid="chip"
+          disabled={false}
+        >
+          <div>
+            <div
+              className="emotion-4"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/1.jpg"
+              />
+            </div>
+          </div>
+          <div>
+            Label
+          </div>
+        </button>
+      </div>
     </div>
   </div>
 </div>

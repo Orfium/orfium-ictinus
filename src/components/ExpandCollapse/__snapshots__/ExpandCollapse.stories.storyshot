@@ -21,133 +21,147 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div>
     <div
-      data-testid="expand-collapse"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      <span>
-        Text
-      </span>
       <button
+        className="emotion-0"
         onClick={[Function]}
       >
-         
-        expand
+        turn 
+        dark
+         on
       </button>
+    </div>
+    <div>
       <div
-        className="emotion-1"
+        data-testid="expand-collapse"
       >
-        <div>
+        <span>
+          Text
+        </span>
+        <button
+          onClick={[Function]}
+        >
+           
+          expand
+        </button>
+        <div
+          className="emotion-1"
+        >
           <div>
-            Some
-          </div>
-          <div>
-            content
-          </div>
-          <div>
-            here
+            <div>
+              Some
+            </div>
+            <div>
+              content
+            </div>
+            <div>
+              here
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      data-testid="expand-collapse"
-    >
-      <span>
-        Text
-      </span>
-      <button
-        onClick={[Function]}
-      >
-        expand/collapse
-      </button>
       <div
-        className="emotion-1"
+        data-testid="expand-collapse"
       >
-        <div>
+        <span>
+          Text
+        </span>
+        <button
+          onClick={[Function]}
+        >
+          expand/collapse
+        </button>
+        <div
+          className="emotion-1"
+        >
           <div>
-            Some
-          </div>
-          <div>
-            content
-          </div>
-          <div>
-            here
-          </div>
-          <div
-            data-testid="expand-collapse"
-          >
-            <span>
-              Text
-            </span>
-            <button
-              onClick={[Function]}
-            >
-              expand/collapse
-            </button>
+            <div>
+              Some
+            </div>
+            <div>
+              content
+            </div>
+            <div>
+              here
+            </div>
             <div
-              className="emotion-1"
+              data-testid="expand-collapse"
             >
-              <div>
+              <span>
+                Text
+              </span>
+              <button
+                onClick={[Function]}
+              >
+                expand/collapse
+              </button>
+              <div
+                className="emotion-1"
+              >
                 <div>
-                  Some
-                </div>
-                <div>
-                  content
-                </div>
-                <div>
-                  here
+                  <div>
+                    Some
+                  </div>
+                  <div>
+                    content
+                  </div>
+                  <div>
+                    here
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      data-testid="expand-collapse"
-    >
-      <span>
-        Text
-      </span>
-      <button
-        onClick={[Function]}
-      >
-        expand/collapse
-      </button>
       <div
-        className="emotion-1"
+        data-testid="expand-collapse"
       >
-        <div>
+        <span>
+          Text
+        </span>
+        <button
+          onClick={[Function]}
+        >
+          expand/collapse
+        </button>
+        <div
+          className="emotion-1"
+        >
           <div>
-            Some
-          </div>
-          <div>
-            content
-          </div>
-          <div>
-            here
+            <div>
+              Some
+            </div>
+            <div>
+              content
+            </div>
+            <div>
+              here
+            </div>
           </div>
         </div>
       </div>

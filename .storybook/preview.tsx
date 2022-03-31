@@ -2,8 +2,7 @@
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
 import ThemeProvider from '../src/components/ThemeProvider';
-import { ThemeSwitchProvider, useThemeSwitch } from '../src/hooks/useThemeSwitch';
-import { flatPaletteConfig } from '../src/theme/palette.config';
+import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
 
 const viewPorts = {
   desktop1920: {
@@ -79,8 +78,8 @@ const ThemeSwitcher = () => {
       <button
         onClick={themeSwitchState.toggle}
         css={{
-          backgroundColor: themeSwitchState.dark ? '#000' : 'transparent',
-          color: themeSwitchState.dark ? '#fff' : '#000',
+          backgroundColor: themeSwitchState.dark ? '#fff' : 'transparent',
+          color: '#000',
           outline: 'none',
           borderRadius: 4,
         }}
@@ -91,30 +90,40 @@ const ThemeSwitcher = () => {
   );
 };
 
+const Wrapper: React.FC = ({ children }) => {
+  const themeSwitchState = useThemeSwitch();
+  return (
+    <div
+      style={{
+        backgroundColor: themeSwitchState.dark ? '#0E0E17' : '#F2F2F2',
+        width: '100%',
+        height: '100vh',
+        position: 'relative',
+        flex: 1,
+        flexDirection: 'column',
+        padding: 5,
+      }}
+    >
+      {children}
+    </div>
+  );
+};
+
 export const decorators = [
   (Story: any) => {
     return (
-      <ThemeProvider
-        theme={{
-          palette: { primary: flatPaletteConfig.blue, secondary: flatPaletteConfig.teal },
-        }}
-      >
-        <ThemeSwitcher />
-        <Story />
-      </ThemeProvider>
-    );
-  },
-  (Story: any) => {
-    return (
-      <ThemeSwitchProvider>
-        <Story />
-      </ThemeSwitchProvider>
+      <Wrapper>
+        <div style={{ margin: 15 }}>
+          <ThemeSwitcher />
+          <Story />
+        </div>
+      </Wrapper>
     );
   },
   (Story: any) => (
-    <div style={{ margin: 5 }}>
+    <ThemeProvider theme={{}}>
       <Story />
-    </div>
+    </ThemeProvider>
   ),
 ];
 export const parameters = {

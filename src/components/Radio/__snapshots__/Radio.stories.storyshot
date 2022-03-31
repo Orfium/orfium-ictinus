@@ -27,7 +27,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 0.5;
   cursor: pointer;
@@ -117,101 +117,115 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <span
-        className="emotion-2"
-        data-testid="radio-input"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <input
-          checked={false}
-          className="emotion-3"
-          disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="on"
-        />
-        <span
-          className="emotion-4"
-        >
-          <span
-            className="emotion-5"
-          />
-          <span
-            className="emotion-6"
-          />
-        </span>
-      </span>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
-      <span
-        className="emotion-2"
-        data-testid="radio-input"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <input
-          checked={false}
-          className="emotion-3"
-          disabled={true}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="on"
-        />
         <span
-          className="emotion-4"
+          className="emotion-2"
+          data-testid="radio-input"
         >
-          <span
-            className="emotion-10"
+          <input
+            checked={false}
+            className="emotion-3"
+            disabled={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            required={false}
+            type="radio"
+            value="on"
           />
           <span
-            className="emotion-6"
-          />
+            className="emotion-4"
+          >
+            <span
+              className="emotion-5"
+            />
+            <span
+              className="emotion-6"
+            />
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-2"
+          data-testid="radio-input"
+        >
+          <input
+            checked={false}
+            className="emotion-3"
+            disabled={true}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            required={false}
+            type="radio"
+            value="on"
+          />
+          <span
+            className="emotion-4"
+          >
+            <span
+              className="emotion-10"
+            />
+            <span
+              className="emotion-6"
+            />
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -230,7 +244,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 0.5;
   cursor: pointer;
@@ -309,55 +323,69 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <span
-    className="emotion-1"
-    data-testid="radio-input"
-  >
-    <input
-      checked={true}
-      className="emotion-2"
-      disabled={true}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
-      required={false}
-      type="radio"
-      value="on"
-    />
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
     <span
-      className="emotion-3"
+      className="emotion-1"
+      data-testid="radio-input"
     >
-      <span
-        className="emotion-4"
+      <input
+        checked={true}
+        className="emotion-2"
+        disabled={true}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="on"
       />
       <span
-        className="emotion-5"
-      />
+        className="emotion-3"
+      >
+        <span
+          className="emotion-4"
+        />
+        <span
+          className="emotion-5"
+        />
+      </span>
     </span>
-  </span>
+  </div>
 </div>
 `;
 
@@ -388,7 +416,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -478,101 +506,115 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <span
-        className="emotion-2"
-        data-testid="radio-input"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <input
-          checked={false}
-          className="emotion-3"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="on"
-        />
-        <span
-          className="emotion-4"
-        >
-          <span
-            className="emotion-5"
-          />
-          <span
-            className="emotion-6"
-          />
-        </span>
-      </span>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
-      <span
-        className="emotion-2"
-        data-testid="radio-input"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <input
-          checked={false}
-          className="emotion-3"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="on"
-        />
         <span
-          className="emotion-4"
+          className="emotion-2"
+          data-testid="radio-input"
         >
-          <span
-            className="emotion-10"
+          <input
+            checked={false}
+            className="emotion-3"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            required={false}
+            type="radio"
+            value="on"
           />
           <span
-            className="emotion-6"
-          />
+            className="emotion-4"
+          >
+            <span
+              className="emotion-5"
+            />
+            <span
+              className="emotion-6"
+            />
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-2"
+          data-testid="radio-input"
+        >
+          <input
+            checked={false}
+            className="emotion-3"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            required={false}
+            type="radio"
+            value="on"
+          />
+          <span
+            className="emotion-4"
+          >
+            <span
+              className="emotion-10"
+            />
+            <span
+              className="emotion-6"
+            />
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -605,7 +647,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -695,101 +737,115 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <span
-        className="emotion-2"
-        data-testid="radio-input"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <input
-          checked={false}
-          className="emotion-3"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="on"
-        />
-        <span
-          className="emotion-4"
-        >
-          <span
-            className="emotion-5"
-          />
-          <span
-            className="emotion-6"
-          />
-        </span>
-      </span>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
-      <span
-        className="emotion-2"
-        data-testid="radio-input"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <input
-          checked={false}
-          className="emotion-3"
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onMouseLeave={[Function]}
-          onMouseOver={[Function]}
-          required={false}
-          type="radio"
-          value="on"
-        />
         <span
-          className="emotion-4"
+          className="emotion-2"
+          data-testid="radio-input"
         >
-          <span
-            className="emotion-10"
+          <input
+            checked={false}
+            className="emotion-3"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            required={false}
+            type="radio"
+            value="on"
           />
           <span
-            className="emotion-6"
-          />
+            className="emotion-4"
+          >
+            <span
+              className="emotion-5"
+            />
+            <span
+              className="emotion-6"
+            />
+          </span>
         </span>
-      </span>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <span
+          className="emotion-2"
+          data-testid="radio-input"
+        >
+          <input
+            checked={false}
+            className="emotion-3"
+            disabled={false}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            required={false}
+            type="radio"
+            value="on"
+          />
+          <span
+            className="emotion-4"
+          >
+            <span
+              className="emotion-10"
+            />
+            <span
+              className="emotion-6"
+            />
+          </span>
+        </span>
+      </div>
     </div>
   </div>
 </div>
@@ -808,7 +864,7 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -887,55 +943,69 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <span
-    className="emotion-1"
-    data-testid="radio-input"
-  >
-    <input
-      checked={true}
-      className="emotion-2"
-      disabled={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
-      required={false}
-      type="radio"
-      value="on"
-    />
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
     <span
-      className="emotion-3"
+      className="emotion-1"
+      data-testid="radio-input"
     >
-      <span
-        className="emotion-4"
+      <input
+        checked={true}
+        className="emotion-2"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="on"
       />
       <span
-        className="emotion-5"
-      />
+        className="emotion-3"
+      >
+        <span
+          className="emotion-4"
+        />
+        <span
+          className="emotion-5"
+        />
+      </span>
     </span>
-  </span>
+  </div>
 </div>
 `;
 
@@ -952,7 +1022,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -1055,7 +1125,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 0.5;
   cursor: pointer;
@@ -1110,196 +1180,210 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="a"
-      />
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <span
-          className="emotion-4"
-        />
-        <span
-          className="emotion-5"
-        />
-      </span>
-    </span>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="b"
-      />
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div>
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-9"
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="a"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
-    >
-      <input
-        checked={true}
-        className="emotion-2"
-        disabled={false}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="c"
-      />
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-14"
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="b"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-9"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="emotion-16"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="d"
-      />
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-19"
+        <input
+          checked={true}
+          className="emotion-2"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="c"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-14"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="emotion-16"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="e"
-      />
       <span
-        className="emotion-3"
+        className="emotion-16"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-24"
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="d"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-19"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="emotion-16"
-      data-testid="radio-input"
-    >
-      <input
-        checked={true}
-        className="emotion-2"
-        disabled={true}
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="g"
-      />
       <span
-        className="emotion-3"
+        className="emotion-16"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-14"
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="e"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-24"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
+      <span
+        className="emotion-16"
+        data-testid="radio-input"
+      >
+        <input
+          checked={true}
+          className="emotion-2"
+          disabled={true}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="g"
+        />
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-14"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
+      </span>
+    </div>
   </div>
 </div>
 `;
@@ -1317,7 +1401,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -1396,54 +1480,68 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <span
-    className="emotion-1"
-    data-testid="radio-input"
-  >
-    <input
-      checked={true}
-      className="emotion-2"
-      disabled={false}
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onMouseLeave={[Function]}
-      onMouseOver={[Function]}
-      required={false}
-      type="radio"
-      value="on"
-    />
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
     <span
-      className="emotion-3"
+      className="emotion-1"
+      data-testid="radio-input"
     >
-      <span
-        className="emotion-4"
+      <input
+        checked={true}
+        className="emotion-2"
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onMouseLeave={[Function]}
+        onMouseOver={[Function]}
+        required={false}
+        type="radio"
+        value="on"
       />
       <span
-        className="emotion-5"
-      />
+        className="emotion-3"
+      >
+        <span
+          className="emotion-4"
+        />
+        <span
+          className="emotion-5"
+        />
+      </span>
     </span>
-  </span>
+  </div>
 </div>
 `;
