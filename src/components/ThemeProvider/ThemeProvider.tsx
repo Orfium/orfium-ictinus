@@ -1,12 +1,13 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { css, Global } from '@emotion/react';
-import { useThemeSwitch } from 'hooks/useThemeSwitch';
+import { ThemeSwitchProvider, useThemeSwitch } from 'hooks/useThemeSwitch';
 import { keys, merge, pick } from 'lodash';
 import { normalize } from 'polished';
 import React from 'react';
 import theme, { Theme, ThemeConfig } from 'theme';
 
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
+import { ColorScheme } from '../../theme/types';
 import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';
 import 'utils/initLocaleFormat';
@@ -41,16 +42,24 @@ export const globalStyles = (theme: Theme) => css`
 `;
 
 const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
+  return (
+    <ThemeSwitchProvider>
+      <ThemeProviderContents theme={theme}>{children}</ThemeProviderContents>
+    </ThemeSwitchProvider>
+  );
+};
+
+const ThemeProviderContents: React.FC<Props> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
+  const colorScheme = themeSwitchState.dark ? 'dark' : ('light' as ColorScheme);
   const newTheme = {
     ...theme,
+    colorScheme,
     palette: theme?.palette ? enhancePaletteWithShades(theme.palette) : {},
   };
 
   return (
-    <EmotionThemeProvider
-      theme={deepMergeTheme(newTheme, themeSwitchState.dark ? 'dark' : 'light')}
-    >
+    <EmotionThemeProvider theme={deepMergeTheme(newTheme, colorScheme)}>
       <TypeColorToColorMatchProvider>
         <Global styles={globalStyles} />
         {children}
