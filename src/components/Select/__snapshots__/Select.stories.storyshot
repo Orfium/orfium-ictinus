@@ -229,82 +229,96 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
-      role="button"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      <div
-        className="emotion-2"
+      <button
+        className="emotion-0"
         onClick={[Function]}
       >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        role="button"
+      >
         <div
-          className="emotion-3"
-          data-testid="select-input"
+          className="emotion-2"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
+            data-testid="select-input"
           >
             <div
-              className="emotion-5"
-            >
-              <input
-                className="emotion-6"
-                dataTestId="select-input"
-                disabled={false}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                placeholder="Flavour"
-                readOnly={false}
-                required={false}
-                value=""
-              />
-              <label
-                className="emotion-7"
-              >
-                Flavour
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-8"
+              className="emotion-4"
             >
               <div
-                className="emotion-9"
+                className="emotion-5"
               >
-                <span
-                  className="emotion-10"
-                  data-testid="select-right-icon"
-                  onClick={[Function]}
+                <input
+                  className="emotion-6"
+                  dataTestId="select-input"
+                  disabled={false}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Flavour"
+                  readOnly={false}
+                  required={false}
+                  value=""
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-8"
+              >
+                <div
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-11"
-                  />
-                </span>
+                    className="emotion-10"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-11"
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -544,82 +558,96 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
-      role="button"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      <div
-        className="emotion-2"
+      <button
+        className="emotion-0"
         onClick={[Function]}
       >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        role="button"
+      >
         <div
-          className="emotion-3"
-          data-testid="select-input"
+          className="emotion-2"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
+            data-testid="select-input"
           >
             <div
-              className="emotion-5"
-            >
-              <input
-                className="emotion-6"
-                dataTestId="select-input"
-                disabled={false}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                onKeyPress={[Function]}
-                placeholder="Flavour"
-                readOnly={false}
-                required={false}
-                value=""
-              />
-              <label
-                className="emotion-7"
-              >
-                Flavour
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-8"
+              className="emotion-4"
             >
               <div
-                className="emotion-9"
+                className="emotion-5"
               >
-                <span
-                  className="emotion-10"
-                  data-testid="select-right-icon"
-                  onClick={[Function]}
+                <input
+                  className="emotion-6"
+                  dataTestId="select-input"
+                  disabled={false}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  placeholder="Flavour"
+                  readOnly={false}
+                  required={false}
+                  value=""
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-8"
+              >
+                <div
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-11"
-                  />
-                </span>
+                    className="emotion-10"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-11"
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -892,81 +920,286 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={true}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
+                  >
+                    <span
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+              data-testid="select-input"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
+                  >
+                    <span
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+              data-testid="select-input"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
+                  >
+                    <span
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-34"
+              data-testid="select-input"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
                 >
                   <span
                     className="emotion-10"
-                    data-testid="select-right-icon"
                     onClick={[Function]}
                   >
                     <span
@@ -979,58 +1212,53 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-34"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={true}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
                 >
                   <span
                     className="emotion-10"
-                    data-testid="select-right-icon"
                     onClick={[Function]}
                   >
                     <span
@@ -1043,58 +1271,53 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-34"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={true}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
+                >
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={true}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
                 >
                   <span
                     className="emotion-10"
-                    data-testid="select-right-icon"
                     onClick={[Function]}
                   >
                     <span
@@ -1102,187 +1325,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                     />
                   </span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="emotion-1"
-  >
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div
-        role="button"
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-34"
-            data-testid="select-input"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={true}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
-              >
-                <span
-                  className="emotion-10"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-11"
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div
-        role="button"
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-34"
-            data-testid="select-input"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={true}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
-              >
-                <span
-                  className="emotion-10"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-11"
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div
-        role="button"
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-34"
-            data-testid="select-input"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={true}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
-              >
-                <span
-                  className="emotion-10"
-                  onClick={[Function]}
-                >
-                  <span
-                    className="emotion-11"
-                  />
-                </span>
               </div>
             </div>
           </div>
@@ -1535,218 +1577,232 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={true}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={true}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={true}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={true}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={true}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={true}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2085,153 +2141,167 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-13"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-13"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-16"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-16"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2481,88 +2551,102 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value=""
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2798,34 +2882,105 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "width": 250,
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "width": 250,
+        }
       }
-    }
-  >
+    >
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-1"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-2"
+            data-testid="select-input"
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <input
+                  className="emotion-5"
+                  dataTestId="select-input"
+                  disabled={false}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  readOnly={false}
+                  required={false}
+                  value="Chocolate"
+                />
+                <label
+                  className="emotion-6"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-7"
+              >
+                <div
+                  className="emotion-8"
+                >
+                  <span
+                    className="emotion-9"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       role="button"
     >
@@ -2883,122 +3038,65 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
         </div>
       </div>
     </div>
-  </div>
-  <div
-    role="button"
-  >
     <div
-      className="emotion-1"
-      onClick={[Function]}
-    >
-      <div
-        className="emotion-2"
-        data-testid="select-input"
-      >
-        <div
-          className="emotion-3"
-        >
-          <div
-            className="emotion-4"
-          >
-            <input
-              className="emotion-5"
-              dataTestId="select-input"
-              disabled={false}
-              onChange={[Function]}
-              onInput={[Function]}
-              onKeyDown={[Function]}
-              placeholder="Flavour"
-              readOnly={false}
-              required={false}
-              value="Chocolate"
-            />
-            <label
-              className="emotion-6"
-            >
-              Flavour
-               
-            </label>
-          </div>
-          <div
-            className="emotion-7"
-          >
-            <div
-              className="emotion-8"
-            >
-              <span
-                className="emotion-9"
-                data-testid="select-right-icon"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-10"
-                />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    style={
-      Object {
-        "width": 100,
+      style={
+        Object {
+          "width": 100,
+        }
       }
-    }
-  >
-    <div
-      role="button"
     >
       <div
-        className="emotion-1"
-        onClick={[Function]}
+        role="button"
       >
         <div
-          className="emotion-2"
-          data-testid="select-input"
+          className="emotion-1"
+          onClick={[Function]}
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
+            data-testid="select-input"
           >
             <div
-              className="emotion-4"
-            >
-              <input
-                className="emotion-5"
-                dataTestId="select-input"
-                disabled={false}
-                onChange={[Function]}
-                onInput={[Function]}
-                onKeyDown={[Function]}
-                placeholder="Flavour"
-                readOnly={false}
-                required={false}
-                value="Chocolate"
-              />
-              <label
-                className="emotion-6"
-              >
-                Flavour
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-7"
+              className="emotion-3"
             >
               <div
-                className="emotion-8"
+                className="emotion-4"
               >
-                <span
-                  className="emotion-9"
-                  data-testid="select-right-icon"
-                  onClick={[Function]}
+                <input
+                  className="emotion-5"
+                  dataTestId="select-input"
+                  disabled={false}
+                  onChange={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Flavour"
+                  readOnly={false}
+                  required={false}
+                  value="Chocolate"
+                />
+                <label
+                  className="emotion-6"
+                >
+                  Flavour
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-7"
+              >
+                <div
+                  className="emotion-8"
                 >
                   <span
-                    className="emotion-10"
-                  />
-                </span>
+                    className="emotion-9"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -3263,241 +3361,255 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <img
-                  height="16"
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  style={
-                    Object {
-                      "background": "red",
-                    }
-                  }
-                  width="16"
-                />
-              </div>
-              <div
-                className="emotion-6"
-              >
-                <input
-                  className="emotion-7"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-8"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-9"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-10"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-11"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <img
+                    height="16"
+                    src="https://brandmark.io/logo-rank/random/pepsi.png"
+                    style={
+                      Object {
+                        "background": "red",
+                      }
+                    }
+                    width="16"
+                  />
+                </div>
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <div
+                    className="emotion-10"
                   >
                     <span
-                      className="emotion-12"
-                    />
-                  </span>
+                      className="emotion-11"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-12"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-6"
+                className="emotion-4"
               >
-                <input
-                  className="emotion-7"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-8"
+                <div
+                  className="emotion-6"
                 >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-9"
-              >
-                <img
-                  height="16"
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  style={
-                    Object {
-                      "background": "red",
+                  <input
+                    className="emotion-7"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <img
+                    height="16"
+                    src="https://brandmark.io/logo-rank/random/pepsi.png"
+                    style={
+                      Object {
+                        "background": "red",
+                      }
                     }
-                  }
-                  width="16"
-                />
+                    width="16"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
-                <img
-                  height="16"
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  style={
-                    Object {
-                      "background": "red",
-                    }
-                  }
-                  width="16"
-                />
-              </div>
-              <div
-                className="emotion-6"
-              >
-                <input
-                  className="emotion-7"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-8"
+                <div
+                  className="emotion-5"
                 >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-9"
-              >
-                <img
-                  height="16"
-                  src="https://brandmark.io/logo-rank/random/pepsi.png"
-                  style={
-                    Object {
-                      "background": "red",
+                  <img
+                    height="16"
+                    src="https://brandmark.io/logo-rank/random/pepsi.png"
+                    style={
+                      Object {
+                        "background": "red",
+                      }
                     }
-                  }
-                  width="16"
-                />
+                    width="16"
+                  />
+                </div>
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-8"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-9"
+                >
+                  <img
+                    height="16"
+                    src="https://brandmark.io/logo-rank/random/pepsi.png"
+                    style={
+                      Object {
+                        "background": "red",
+                      }
+                    }
+                    width="16"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -3877,522 +3989,536 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        className="emotion-1"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
+          className="emotion-1"
         >
           <div
-            role="button"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-3"
-              onClick={[Function]}
+              role="button"
             >
               <div
-                className="emotion-4"
-                data-testid="select-input"
+                className="emotion-3"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-6"
-                  >
-                    <input
-                      className="emotion-7"
-                      dataTestId="select-input"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Label"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-8"
-                    >
-                      Label
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-9"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-10"
+                      className="emotion-6"
                     >
-                      <span
-                        className="emotion-11"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        className="emotion-7"
+                        dataTestId="select-input"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-8"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-9"
+                    >
+                      <div
+                        className="emotion-10"
                       >
                         <span
-                          className="emotion-12"
-                        />
-                      </span>
+                          className="emotion-11"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-12"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="emotion-13"
-                data-testid="error-select-input"
-              >
-                <span
-                  className="emotion-11"
-                  onClick={[Function]}
+                <div
+                  className="emotion-13"
+                  data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-15"
-                  />
-                </span>
-                Error in Select
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-15"
+                    />
+                  </span>
+                  Error in Select
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
           <div
-            role="button"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-3"
-              onClick={[Function]}
+              role="button"
             >
               <div
-                className="emotion-4"
-                data-testid="select-input"
+                className="emotion-3"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-6"
-                  >
-                    <input
-                      className="emotion-7"
-                      dataTestId="select-input"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Label"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-8"
-                    >
-                      Label
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-9"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-10"
+                      className="emotion-6"
                     >
-                      <span
-                        className="emotion-11"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        className="emotion-7"
+                        dataTestId="select-input"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-8"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-9"
+                    >
+                      <div
+                        className="emotion-10"
                       >
                         <span
-                          className="emotion-12"
-                        />
-                      </span>
+                          className="emotion-11"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-12"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="emotion-13"
-                data-testid="error-select-input"
-              >
-                <span
-                  className="emotion-11"
-                  onClick={[Function]}
+                <div
+                  className="emotion-13"
+                  data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-15"
-                  />
-                </span>
-                Error in Select
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-15"
+                    />
+                  </span>
+                  Error in Select
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
           <div
-            role="button"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-3"
-              onClick={[Function]}
+              role="button"
             >
               <div
-                className="emotion-4"
-                data-testid="select-input"
+                className="emotion-3"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-6"
-                  >
-                    <input
-                      className="emotion-7"
-                      dataTestId="select-input"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Label"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-8"
-                    >
-                      Label
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-9"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-10"
+                      className="emotion-6"
                     >
-                      <span
-                        className="emotion-11"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        className="emotion-7"
+                        dataTestId="select-input"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-8"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-9"
+                    >
+                      <div
+                        className="emotion-10"
                       >
                         <span
-                          className="emotion-12"
-                        />
-                      </span>
+                          className="emotion-11"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-12"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="emotion-13"
-                data-testid="error-select-input"
-              >
-                <span
-                  className="emotion-11"
-                  onClick={[Function]}
+                <div
+                  className="emotion-13"
+                  data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-15"
-                  />
-                </span>
-                Error in Select
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-15"
+                    />
+                  </span>
+                  Error in Select
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-1"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
+          className="emotion-1"
         >
           <div
-            role="button"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-3"
-              onClick={[Function]}
+              role="button"
             >
               <div
-                className="emotion-44"
-                data-testid="select-input"
+                className="emotion-3"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-44"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-6"
-                  >
-                    <input
-                      className="emotion-7"
-                      dataTestId="select-input"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Label"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-48"
-                    >
-                      Label
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-9"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-10"
+                      className="emotion-6"
                     >
-                      <span
-                        className="emotion-11"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        className="emotion-7"
+                        dataTestId="select-input"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-48"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-9"
+                    >
+                      <div
+                        className="emotion-10"
                       >
                         <span
-                          className="emotion-12"
-                        />
-                      </span>
+                          className="emotion-11"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-12"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="emotion-53"
-                data-testid="error-select-input"
-              >
-                <span
-                  className="emotion-11"
-                  onClick={[Function]}
+                <div
+                  className="emotion-53"
+                  data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-55"
-                  />
-                </span>
-                Error in Select
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-55"
+                    />
+                  </span>
+                  Error in Select
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
           <div
-            role="button"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-3"
-              onClick={[Function]}
+              role="button"
             >
               <div
-                className="emotion-44"
-                data-testid="select-input"
+                className="emotion-3"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-44"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-6"
-                  >
-                    <input
-                      className="emotion-7"
-                      dataTestId="select-input"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Label"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-48"
-                    >
-                      Label
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-9"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-10"
+                      className="emotion-6"
                     >
-                      <span
-                        className="emotion-11"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        className="emotion-7"
+                        dataTestId="select-input"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-48"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-9"
+                    >
+                      <div
+                        className="emotion-10"
                       >
                         <span
-                          className="emotion-12"
-                        />
-                      </span>
+                          className="emotion-11"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-12"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="emotion-53"
-                data-testid="error-select-input"
-              >
-                <span
-                  className="emotion-11"
-                  onClick={[Function]}
+                <div
+                  className="emotion-53"
+                  data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-55"
-                  />
-                </span>
-                Error in Select
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-55"
+                    />
+                  </span>
+                  Error in Select
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
           <div
-            role="button"
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
           >
             <div
-              className="emotion-3"
-              onClick={[Function]}
+              role="button"
             >
               <div
-                className="emotion-44"
-                data-testid="select-input"
+                className="emotion-3"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-44"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-6"
-                  >
-                    <input
-                      className="emotion-7"
-                      dataTestId="select-input"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Label"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-48"
-                    >
-                      Label
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-9"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-10"
+                      className="emotion-6"
                     >
-                      <span
-                        className="emotion-11"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        className="emotion-7"
+                        dataTestId="select-input"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-48"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-9"
+                    >
+                      <div
+                        className="emotion-10"
                       >
                         <span
-                          className="emotion-12"
-                        />
-                      </span>
+                          className="emotion-11"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-12"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                className="emotion-53"
-                data-testid="error-select-input"
-              >
-                <span
-                  className="emotion-11"
-                  onClick={[Function]}
+                <div
+                  className="emotion-53"
+                  data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-55"
-                  />
-                </span>
-                Error in Select
+                    className="emotion-11"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-55"
+                    />
+                  </span>
+                  Error in Select
+                </div>
               </div>
             </div>
           </div>
@@ -4641,88 +4767,102 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Group Select"
-                  readOnly={false}
-                  required={false}
-                  value="Option 1"
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Group Select
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Group Select"
+                    readOnly={false}
+                    required={false}
+                    value="Option 1"
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Group Select
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -4972,218 +5112,232 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        role="button"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-2"
-          onClick={[Function]}
+          role="button"
         >
           <div
-            className="emotion-3"
-            data-testid="select-input"
+            className="emotion-2"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
+              data-testid="select-input"
             >
               <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  dataTestId="select-input"
-                  disabled={false}
-                  onChange={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Flavour"
-                  readOnly={false}
-                  required={false}
-                  value="Chocolate"
-                />
-                <label
-                  className="emotion-7"
-                >
-                  Flavour
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-8"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-9"
+                  className="emotion-5"
                 >
-                  <span
-                    className="emotion-10"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
+                  <input
+                    className="emotion-6"
+                    dataTestId="select-input"
+                    disabled={false}
+                    onChange={[Function]}
+                    onInput={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Flavour"
+                    readOnly={false}
+                    required={false}
+                    value="Chocolate"
+                  />
+                  <label
+                    className="emotion-7"
+                  >
+                    Flavour
+                     
+                  </label>
+                </div>
+                <div
+                  className="emotion-8"
+                >
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      data-testid="select-right-icon"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

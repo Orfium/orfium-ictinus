@@ -87,7 +87,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
 
 .emotion-7 {
   position: absolute;
-  background: #175BF5;
+  background: #4945EE;
   height: 0.5rem;
   -webkit-animation: decrease 2.3s 0.8s infinite;
   animation: decrease 2.3s 0.8s infinite;
@@ -95,7 +95,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
 
 .emotion-8 {
   position: absolute;
-  background: #175BF5;
+  background: #4945EE;
   height: 0.5rem;
   -webkit-animation: increase 2.3s infinite;
   animation: increase 2.3s infinite;
@@ -106,9 +106,9 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   height: 1.5rem;
   margin: auto;
   box-sizing: border-box;
-  border-top: 0.125rem solid #175BF5;
-  border-right: 0.125rem solid #175BF5;
-  border-bottom: 0.125rem solid #175BF5;
+  border-top: 0.125rem solid #4945EE;
+  border-right: 0.125rem solid #4945EE;
+  border-bottom: 0.125rem solid #4945EE;
   border-left: 0.125rem solid transparent;
   border-radius: 50%;
   -webkit-animation: spin 1.1s infinite linear;
@@ -118,99 +118,113 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "margin": 10,
-      }
-    }
-  >
-    <strong>
-      dots
-      : 
-    </strong>
     <div
-      className="emotion-1"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "margin": 10,
+        }
+      }
+    >
+      <strong>
+        dots
+        : 
+      </strong>
       <div
-        className="emotion-2"
-        data-testid="dots-loading"
+        className="emotion-1"
       >
         <div
-          className="emotion-3"
-        />
+          className="emotion-2"
+          data-testid="dots-loading"
+        >
+          <div
+            className="emotion-3"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    style={
-      Object {
-        "margin": 10,
-      }
-    }
-  >
-    <strong>
-      indeterminate
-      : 
-    </strong>
     <div
-      className="emotion-1"
+      style={
+        Object {
+          "margin": 10,
+        }
+      }
     >
+      <strong>
+        indeterminate
+        : 
+      </strong>
       <div
-        className="emotion-5"
-        data-testid="dots-loading"
+        className="emotion-1"
       >
         <div
-          className="emotion-6"
-        />
-        <div
-          className="emotion-7"
-        />
-        <div
-          className="emotion-8"
-        />
+          className="emotion-5"
+          data-testid="dots-loading"
+        >
+          <div
+            className="emotion-6"
+          />
+          <div
+            className="emotion-7"
+          />
+          <div
+            className="emotion-8"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    style={
-      Object {
-        "margin": 10,
-      }
-    }
-  >
-    <strong>
-      spinner
-      : 
-    </strong>
     <div
-      className="emotion-1"
+      style={
+        Object {
+          "margin": 10,
+        }
+      }
     >
+      <strong>
+        spinner
+        : 
+      </strong>
       <div
-        className="emotion-10"
-        data-testid="spinner"
-      />
+        className="emotion-1"
+      >
+        <div
+          className="emotion-10"
+          data-testid="spinner"
+        />
+      </div>
     </div>
   </div>
 </div>

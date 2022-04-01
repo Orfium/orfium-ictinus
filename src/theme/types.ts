@@ -6,6 +6,7 @@ import { Spacing } from './spacing';
 import { Typography } from './typography';
 
 export type TextColorTypes = 'primary' | 'secondary' | 'light';
+export type ColorScheme = 'light' | 'dark';
 
 export type ThemeConfig = {
   palette: PaletteConfig;
@@ -13,7 +14,6 @@ export type ThemeConfig = {
   spacing: Spacing;
   elevation: Elevation;
   overrides: Overrides;
-  isDark: boolean;
 };
 
 export type Theme = {
@@ -21,7 +21,7 @@ export type Theme = {
   typography: Typography;
   spacing: Spacing;
   elevation: Elevation;
-  isDark: boolean;
+  colorScheme: ColorScheme;
   overrides: Overrides;
   utils: {
     getColor: GetColor;

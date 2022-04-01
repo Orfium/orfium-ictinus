@@ -6,6 +6,8 @@ import { getColorErrors } from './utils';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
+export const colorSchemes = ['light', 'dark'] as const;
+
 /**
  * Here are listed all the colors available for our project
  * Flat colors are the actual colors of the system

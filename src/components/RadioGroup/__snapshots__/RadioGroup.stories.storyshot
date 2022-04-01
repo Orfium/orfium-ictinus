@@ -13,7 +13,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -103,121 +103,135 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "color": "#82e616",
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
       }
-    }
-  >
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
     >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={false}
-        name="group"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="a"
-      />
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <span
-          className="emotion-4"
-        />
-        <span
-          className="emotion-5"
-        />
-      </span>
-    </span>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "color": "#82e616",
+        }
+      }
     >
-      <input
-        checked={true}
-        className="emotion-2"
-        disabled={false}
-        name="group"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="b"
-      />
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-9"
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={false}
+          name="group"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="a"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={false}
-        name="group"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="c"
-      />
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-4"
+        <input
+          checked={true}
+          className="emotion-2"
+          disabled={false}
+          name="group"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="b"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-9"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
+      <span
+        className="emotion-1"
+        data-testid="radio-input"
+      >
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={false}
+          name="group"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="c"
+        />
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
+      </span>
+    </div>
   </div>
 </div>
 `;
@@ -235,7 +249,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
-  color: #175BF5;
+  color: #4945EE;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -325,121 +339,135 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "color": "#82e616",
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
       }
-    }
-  >
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
     >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={false}
-        name="group"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="a"
-      />
-      <span
-        className="emotion-3"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <span
-          className="emotion-4"
-        />
-        <span
-          className="emotion-5"
-        />
-      </span>
-    </span>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "color": "#82e616",
+        }
+      }
     >
-      <input
-        checked={true}
-        className="emotion-2"
-        disabled={false}
-        name="group"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="b"
-      />
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-9"
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={false}
+          name="group"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="a"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
-    <span
-      className="emotion-1"
-      data-testid="radio-input"
-    >
-      <input
-        checked={false}
-        className="emotion-2"
-        disabled={false}
-        name="group"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onFocus={[Function]}
-        onMouseLeave={[Function]}
-        onMouseOver={[Function]}
-        required={false}
-        type="radio"
-        value="c"
-      />
       <span
-        className="emotion-3"
+        className="emotion-1"
+        data-testid="radio-input"
       >
-        <span
-          className="emotion-4"
+        <input
+          checked={true}
+          className="emotion-2"
+          disabled={false}
+          name="group"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="b"
         />
         <span
-          className="emotion-5"
-        />
+          className="emotion-3"
+        >
+          <span
+            className="emotion-9"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
       </span>
-    </span>
+      <span
+        className="emotion-1"
+        data-testid="radio-input"
+      >
+        <input
+          checked={false}
+          className="emotion-2"
+          disabled={false}
+          name="group"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOver={[Function]}
+          required={false}
+          type="radio"
+          value="c"
+        />
+        <span
+          className="emotion-3"
+        >
+          <span
+            className="emotion-4"
+          />
+          <span
+            className="emotion-5"
+          />
+        </span>
+      </span>
+    </div>
   </div>
 </div>
 `;
