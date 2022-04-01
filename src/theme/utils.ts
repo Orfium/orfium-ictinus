@@ -41,6 +41,18 @@ export const colorShadesCreator = (
   }, {} as generatedColorShades);
 };
 
+/**
+ * Recursive function that iterates over the theme.
+ * If, upon iteration it finds an object then it goes one level depper
+ * if the value exists in the exclusion array, it returns the value as is (useful for white and black colors),
+ * otherwise,if it finds a non object value ,it runs the callback it was passed as a prop,
+ *
+ *
+ * @param obj {Object}  Object The collection to iterate over.
+ * @param func {Function} callback to create colorShades.
+ * @returns {Record<string, unknown>>} Each level will have generatedColorShades and in whole it will return
+ * a complete palette.
+ */
 export const iterateObject = <T>(
   obj: T,
   func: (value: string, name: string) => generatedColorShades | string
