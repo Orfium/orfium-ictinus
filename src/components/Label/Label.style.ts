@@ -6,7 +6,6 @@ import { rem } from 'theme/utils';
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
 
 export const labelStyle = ({
-  size,
   animateToTop,
   error,
 }: {

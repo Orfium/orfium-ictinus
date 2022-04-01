@@ -58,7 +58,7 @@ const Day: React.FC<Props> = ({
   }
 
   return (
-    <td style={{ padding: 0 }} onClick={disabled ? () => {} : onDayClick}>
+    <td style={{ padding: 0 }} onClick={disabled ? undefined : onDayClick}>
       <div
         css={dayWrapperStyle({
           isSelected,

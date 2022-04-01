@@ -39,11 +39,20 @@ type Props = {
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
+const formatDate = (dateFormatOverride: string) => (date: Dayjs | undefined) => {
+  return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
+};
+
+const getLabels = (isRangePicker: boolean, formattedTo: string) => ({
+  selectDate: `Select Date${isRangePicker ? 's' : ''}`,
+  to: isRangePicker ? `- ${formattedTo}` : '',
+});
+
 const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
   (
     {
       handleFocus,
-      filterConfig,
+      filterConfig = {},
       handleClear,
       dataTestId,
       isRangePicker,
@@ -54,57 +63,57 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
     },
     ref
   ) => {
-    const formatDate = (date: Dayjs | undefined) => {
-      return date ? dayjs(date).format(getLocaleFormat(dateFormatOverride)) : '';
-    };
+    const getDateFormatted = React.useCallback(formatDate(dateFormatOverride), [
+      dateFormatOverride,
+    ]);
 
-    const getDateFormatted = React.useCallback(formatDate, []);
+    const formattedFrom = getDateFormatted(selectedDay.from);
+    const formattedTo = getDateFormatted(selectedDay.to);
+
+    const labels = getLabels(isRangePicker, formattedTo);
+
+    const { buttonType = 'primary', styleType = 'filled', filterType } = filterConfig;
 
     const renderBase = () => {
-      if (filterConfig?.filterType) {
+      if (filterType) {
         return (
           <FilterBase
             isDatePicker
             dataTestId={generateTestDataId('filter', dataTestId)}
             disabled={false}
-            buttonType={filterConfig?.buttonType || 'primary'}
-            styleType={filterConfig?.styleType || 'filled'}
+            buttonType={buttonType}
+            styleType={styleType}
             handleOpen={handleFocus}
-            filterType={filterConfig.filterType}
+            filterType={filterType}
             onClear={handleClear}
             selectedItemLabel={
-              selectedDay.from &&
-              `Select Date${isRangePicker ? 's' : ''} : ${getDateFormatted(selectedDay.from)} ${
-                isRangePicker ? `- ${getDateFormatted(selectedDay.to)}` : ''
-              }`
+              selectedDay.from && `${labels.selectDate} : ${formattedFrom} ${labels.to}`
             }
             open={isOpen}
-            hasSelectedValue={Boolean(
-              selectedDay.from &&
-                `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
-            )}
-            label={!selectedDay.from ? `Select Date${isRangePicker ? 's' : ''}` : ''}
+            hasSelectedValue={Boolean(selectedDay.from && `${formattedFrom} - ${formattedTo}`)}
+            label={!selectedDay.from ? labels.selectDate : ''}
             iconName={selectedDay.from ? 'calendarFilled' : 'calendarEmpty'}
           />
         );
       }
 
-      return isRangePicker ? (
-        <TextField
-          ref={ref}
-          {...inputProps}
-          onFocus={handleFocus}
-          onKeyDown={handleClear}
-          dataTestId={dataTestId}
-          onChange={ON_CHANGE_MOCK}
-          placeholder="Date (start) - Date (end)"
-          value={
-            selectedDay.from &&
-            `${getDateFormatted(selectedDay.from)} - ${getDateFormatted(selectedDay.to)}`
-          }
-          rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
-        />
-      ) : (
+      if (isRangePicker) {
+        return (
+          <TextField
+            ref={ref}
+            {...inputProps}
+            onFocus={handleFocus}
+            onKeyDown={handleClear}
+            dataTestId={dataTestId}
+            onChange={ON_CHANGE_MOCK}
+            placeholder="Date (start) - Date (end)"
+            value={selectedDay.from && `${formattedFrom} - ${formattedTo}`}
+            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+          />
+        );
+      }
+
+      return (
         <TextField
           ref={ref}
           {...inputProps}
@@ -113,7 +122,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
           dataTestId={dataTestId}
           onChange={ON_CHANGE_MOCK}
           placeholder="Select date"
-          value={selectedDay.to && getDateFormatted(selectedDay.to)}
+          value={selectedDay.to && formattedFrom}
           rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
         />
       );

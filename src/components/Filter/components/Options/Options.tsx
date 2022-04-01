@@ -26,18 +26,21 @@ const Options: React.FC<Props> = ({
   isSearchable,
   dataTestId,
 }) => {
+  const shouldBeVirtualized = items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER;
+
+  const height = shouldBeVirtualized ? FILTER_OPTIONS_MAX_HEIGHT : undefined;
+  const defaultOption = shouldDisplayDefaultOption ? defaultValue : undefined;
+
   return items.length ? (
     <List
       data={items.filter(option => option.value !== defaultValue.value)}
       rowSize={'small'}
-      defaultOption={shouldDisplayDefaultOption ? defaultValue : undefined}
+      defaultOption={defaultOption}
       selectedItem={selectedItem}
       isSearchable={isSearchable}
       handleOptionClick={(option: FilterOption) => onSelect(option)}
-      isVirtualized={isVirtualized && items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER}
-      height={
-        items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER ? FILTER_OPTIONS_MAX_HEIGHT : undefined
-      }
+      isVirtualized={isVirtualized && shouldBeVirtualized}
+      height={height}
       dataTestId={dataTestId}
     />
   ) : (
