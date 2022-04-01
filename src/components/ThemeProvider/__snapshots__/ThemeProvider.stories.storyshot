@@ -67,43 +67,57 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <button
-    className="emotion-1"
-    data-testid="button"
-    disabled={false}
-    onClick={[Function]}
-    type="button"
-  >
-    <span
-      className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <button
+      className="emotion-1"
+      data-testid="button"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
     >
       <span
-        className="emotion-3"
+        className="emotion-2"
       >
-        Hello world
+        <span
+          className="emotion-3"
+        >
+          Hello world
+        </span>
       </span>
-    </span>
-  </button>
+    </button>
+  </div>
 </div>
 `;

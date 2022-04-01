@@ -546,291 +546,305 @@ exports[`Storyshots Design System/Avatar Avatar Stack 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <div
-        className="emotion-2"
-        data-testid="avatarstack"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <div
-          className="emotion-3"
-        >
-          <div
-            className="emotion-4"
-          >
-            <img
-              src="https://mui.com/static/images/avatar/6.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-5"
-        >
-          <div
-            className="emotion-4"
-          >
-            <img
-              src="https://mui.com/static/images/avatar/5.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-7"
-        >
-          <div
-            className="emotion-8"
-          >
-            
-            JN
-          </div>
-        </div>
-        <div
-          className="emotion-9"
-        >
-          <div
-            className="emotion-4"
-          >
-            <img
-              src="https://mui.com/static/images/avatar/3.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-11"
-        >
-          <div
-            className="emotion-8"
-          >
-            
-            +
-            2
-          </div>
-        </div>
-      </div>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
       <div
-        className="emotion-13"
-        data-testid="avatarstack"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-14"
+          className="emotion-2"
+          data-testid="avatarstack"
         >
           <div
-            className="emotion-15"
+            className="emotion-3"
           >
-            <img
-              src="https://mui.com/static/images/avatar/6.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-16"
-        >
-          <div
-            className="emotion-17"
-          >
-            
-            <span
-              className="emotion-18"
-              onClick={[Function]}
+            <div
+              className="emotion-4"
             >
-              <span
-                className="emotion-19"
+              <img
+                src="https://mui.com/static/images/avatar/6.jpg"
               />
-            </span>
+            </div>
           </div>
-        </div>
-        <div
-          className="emotion-20"
-        >
           <div
-            className="emotion-15"
+            className="emotion-5"
           >
-            <img
-              src="https://mui.com/static/images/avatar/4.jpg"
-            />
+            <div
+              className="emotion-4"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/5.jpg"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          className="emotion-22"
-        >
           <div
-            className="emotion-17"
+            className="emotion-7"
           >
-            
-            +
-            3
+            <div
+              className="emotion-8"
+            >
+              
+              JN
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
-      <div
-        className="emotion-24"
-        data-testid="avatarstack"
-      >
-        <div
-          className="emotion-25"
-        >
           <div
-            className="emotion-26"
+            className="emotion-9"
           >
-            <img
-              src="https://mui.com/static/images/avatar/6.jpg"
-            />
+            <div
+              className="emotion-4"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/3.jpg"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          className="emotion-27"
-        >
           <div
-            className="emotion-26"
+            className="emotion-11"
           >
-            <img
-              src="https://mui.com/static/images/avatar/5.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-29"
-        >
-          <div
-            className="emotion-26"
-          >
-            <img
-              src="https://mui.com/static/images/avatar/4.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-31"
-        >
-          <div
-            className="emotion-26"
-          >
-            <img
-              src="https://mui.com/static/images/avatar/3.jpg"
-            />
-          </div>
-        </div>
-        <div
-          className="emotion-33"
-        >
-          <div
-            className="emotion-34"
-          >
-            
-            +
-            2
+            <div
+              className="emotion-8"
+            >
+              
+              +
+              2
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-35"
-        data-testid="avatarstack"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
         <div
-          className="emotion-36"
+          className="emotion-13"
+          data-testid="avatarstack"
         >
           <div
-            className="emotion-37"
+            className="emotion-14"
           >
-            <img
-              src="https://mui.com/static/images/avatar/6.jpg"
-            />
+            <div
+              className="emotion-15"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/6.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-16"
+          >
+            <div
+              className="emotion-17"
+            >
+              
+              <span
+                className="emotion-18"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-19"
+                />
+              </span>
+            </div>
+          </div>
+          <div
+            className="emotion-20"
+          >
+            <div
+              className="emotion-15"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/4.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-22"
+          >
+            <div
+              className="emotion-17"
+            >
+              
+              +
+              3
+            </div>
           </div>
         </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
         <div
-          className="emotion-38"
+          className="emotion-24"
+          data-testid="avatarstack"
         >
           <div
-            className="emotion-37"
+            className="emotion-25"
           >
-            <img
-              src="https://mui.com/static/images/avatar/5.jpg"
-            />
+            <div
+              className="emotion-26"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/6.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-27"
+          >
+            <div
+              className="emotion-26"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/5.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-29"
+          >
+            <div
+              className="emotion-26"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/4.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-31"
+          >
+            <div
+              className="emotion-26"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/3.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-33"
+          >
+            <div
+              className="emotion-34"
+            >
+              
+              +
+              2
+            </div>
           </div>
         </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
         <div
-          className="emotion-40"
+          className="emotion-35"
+          data-testid="avatarstack"
         >
           <div
-            className="emotion-41"
+            className="emotion-36"
           >
-            
-            JN
+            <div
+              className="emotion-37"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/6.jpg"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          className="emotion-42"
-        >
           <div
-            className="emotion-37"
+            className="emotion-38"
           >
-            <img
-              src="https://mui.com/static/images/avatar/3.jpg"
-            />
+            <div
+              className="emotion-37"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/5.jpg"
+              />
+            </div>
           </div>
-        </div>
-        <div
-          className="emotion-44"
-        >
           <div
-            className="emotion-41"
+            className="emotion-40"
           >
-            
-            +
-            2
+            <div
+              className="emotion-41"
+            >
+              
+              JN
+            </div>
+          </div>
+          <div
+            className="emotion-42"
+          >
+            <div
+              className="emotion-37"
+            >
+              <img
+                src="https://mui.com/static/images/avatar/3.jpg"
+              />
+            </div>
+          </div>
+          <div
+            className="emotion-44"
+          >
+            <div
+              className="emotion-41"
+            >
+              
+              +
+              2
+            </div>
           </div>
         </div>
       </div>
@@ -1092,112 +1106,126 @@ exports[`Storyshots Design System/Avatar Avatar with icon 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <div
-        className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        
-        <span
-          className="emotion-3"
-          onClick={[Function]}
-        >
-          <span
-            className="emotion-4"
-          />
-        </span>
-      </div>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
       <div
-        className="emotion-5"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        
-        <span
-          className="emotion-3"
-          onClick={[Function]}
+        <div
+          className="emotion-2"
         >
+          
           <span
-            className="emotion-7"
-          />
-        </span>
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-4"
+            />
+          </span>
+        </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-8"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        
-        <span
-          className="emotion-3"
-          onClick={[Function]}
+        <div
+          className="emotion-5"
         >
+          
           <span
-            className="emotion-10"
-          />
-        </span>
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-7"
+            />
+          </span>
+        </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-11"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        
-        <span
-          className="emotion-3"
-          onClick={[Function]}
+        <div
+          className="emotion-8"
         >
+          
           <span
-            className="emotion-13"
-          />
-        </span>
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-10"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-11"
+        >
+          
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-13"
+            />
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -1401,84 +1429,98 @@ exports[`Storyshots Design System/Avatar Avatar with letter 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <div
-        className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        
-        JN
-      </div>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
       <div
-        className="emotion-3"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        
-        JN
+        <div
+          className="emotion-2"
+        >
+          
+          JN
+        </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-4"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        
-        JN
+        <div
+          className="emotion-3"
+        >
+          
+          JN
+        </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-5"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        
-        JN
+        <div
+          className="emotion-4"
+        >
+          
+          JN
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-5"
+        >
+          
+          JN
+        </div>
       </div>
     </div>
   </div>
@@ -1682,88 +1724,102 @@ exports[`Storyshots Design System/Avatar Avatar with src 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <div
-        className="emotion-2"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <img
-          src="https://mui.com/static/images/avatar/1.jpg"
-        />
-      </div>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
       <div
-        className="emotion-3"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <img
-          src="https://mui.com/static/images/avatar/1.jpg"
-        />
+        <div
+          className="emotion-2"
+        >
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-4"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <img
-          src="https://mui.com/static/images/avatar/1.jpg"
-        />
+        <div
+          className="emotion-3"
+        >
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
       </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
-    >
       <div
-        className="emotion-5"
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <img
-          src="https://mui.com/static/images/avatar/1.jpg"
-        />
+        <div
+          className="emotion-4"
+        >
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-5"
+        >
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
       </div>
     </div>
   </div>

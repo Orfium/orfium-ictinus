@@ -18,7 +18,7 @@ const defaultTheme = (theming: 'dark' | 'light'): Theme => {
     typography,
     spacing,
     elevation,
-    isDark: false,
+    colorScheme: theming,
     overrides,
     utils: {
       getColor: getColor(palette),

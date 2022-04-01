@@ -100,141 +100,134 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <table
-    className="emotion-1"
-  >
-    <thead>
-      <tr
-        className="emotion-2"
+      <button
+        className="emotion-0"
         onClick={[Function]}
       >
-        <th
-          className="emotion-3"
-          data-testid="ictinus_column_1"
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <table
+      className="emotion-1"
+    >
+      <thead>
+        <tr
+          className="emotion-2"
           onClick={[Function]}
         >
-          <div
-            className="emotion-4"
+          <th
+            className="emotion-3"
+            data-testid="ictinus_column_1"
+            onClick={[Function]}
           >
-            Column 1
-          </div>
-        </th>
-        <th
-          className="emotion-3"
-          data-testid="ictinus_column_2"
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-4"
-          >
-            Column 2
-          </div>
-        </th>
-        <th
-          className="emotion-3"
-          data-testid="ictinus_column_3"
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-4"
-          >
-            Column 3
-          </div>
-        </th>
-        <th
-          className="emotion-3"
-          data-testid="ictinus_column_4"
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-4"
-          >
-            Column 4
-          </div>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr
-        className="emotion-11"
-        onClick={[Function]}
-      >
-        <td
-          className="emotion-12"
-          data-testid="ictinus_table_row_1_cell_1"
-        >
-          <div
-            className="emotion-13"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-          >
-            <span
-              data-column="Column 1"
+            <div
+              className="emotion-4"
             >
-              Generated tooltip from the element's text content
-            </span>
-          </div>
-        </td>
-        <td
-          className="emotion-12"
-          data-testid="ictinus_table_row_1_cell_2"
-        >
-          <div
-            className="emotion-13"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+              Column 1
+            </div>
+          </th>
+          <th
+            className="emotion-3"
+            data-testid="ictinus_column_2"
+            onClick={[Function]}
           >
-            <span
-              data-column="Column 2"
+            <div
+              className="emotion-4"
             >
-              No tooltip
-            </span>
-          </div>
-        </td>
-        <td
-          className="emotion-12"
-          data-testid="ictinus_table_row_1_cell_3"
-        >
-          <div
-            className="emotion-13"
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
+              Column 2
+            </div>
+          </th>
+          <th
+            className="emotion-3"
+            data-testid="ictinus_column_3"
+            onClick={[Function]}
           >
-            <span>
-              JSX Content without tooltip
-            </span>
-          </div>
-        </td>
-        <td
-          className="emotion-12"
-          data-testid="ictinus_table_row_1_cell_4"
+            <div
+              className="emotion-4"
+            >
+              Column 3
+            </div>
+          </th>
+          <th
+            className="emotion-3"
+            data-testid="ictinus_column_4"
+            onClick={[Function]}
+          >
+            <div
+              className="emotion-4"
+            >
+              Column 4
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          className="emotion-11"
+          onClick={[Function]}
         >
-          <div
-            className="emotion-19"
-            interactive={false}
-            interactiveDebounce={100}
-            placement="bottom"
+          <td
+            className="emotion-12"
+            data-testid="ictinus_table_row_1_cell_1"
+          >
+            <div
+              className="emotion-13"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span
+                data-column="Column 1"
+              >
+                Generated tooltip from the element's text content
+              </span>
+            </div>
+          </td>
+          <td
+            className="emotion-12"
+            data-testid="ictinus_table_row_1_cell_2"
+          >
+            <div
+              className="emotion-13"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+            >
+              <span
+                data-column="Column 2"
+              >
+                No tooltip
+              </span>
+            </div>
+          </td>
+          <td
+            className="emotion-12"
+            data-testid="ictinus_table_row_1_cell_3"
           >
             <div
               className="emotion-13"
@@ -242,17 +235,38 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
               onMouseLeave={[Function]}
             >
               <span>
-                JSX Content with forced tooltip
+                JSX Content without tooltip
               </span>
             </div>
-          </div>
-          <div>
-            This is a kinda long (that could be longer) tooltip from a prop
-          </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+          <td
+            className="emotion-12"
+            data-testid="ictinus_table_row_1_cell_4"
+          >
+            <div
+              className="emotion-19"
+              interactive={false}
+              interactiveDebounce={100}
+              placement="bottom"
+            >
+              <div
+                className="emotion-13"
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+              >
+                <span>
+                  JSX Content with forced tooltip
+                </span>
+              </div>
+            </div>
+            <div>
+              This is a kinda long (that could be longer) tooltip from a prop
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 `;
 
@@ -273,40 +287,54 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Text with truncat
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
-      }
-    }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    style={
-      Object {
-        "width": 150,
+        "margin": 15,
       }
     }
   >
     <div
-      className="emotion-1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      This is a long text that will overflow
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      style={
+        Object {
+          "width": 150,
+        }
+      }
+    >
+      <div
+        className="emotion-1"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        This is a long text that will overflow
+      </div>
     </div>
   </div>
 </div>

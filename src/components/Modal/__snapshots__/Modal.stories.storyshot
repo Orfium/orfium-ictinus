@@ -26,7 +26,7 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #175BF5;
+  background-color: #4945EE;
   padding: 0 1rem;
   height: 2.875rem;
   border-radius: 0.25rem;
@@ -41,11 +41,11 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
+  background-color: #413ed6;
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: #1248c4;
+  background-color: #3a37be;
 }
 
 .emotion-2:disabled {
@@ -81,91 +81,105 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
     >
       <div
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flexDirection": "column",
-            "justifyContent": "center",
-            "padding": "1rem",
-            "width": 768,
+            "margin": 5,
           }
         }
       >
         <div
           style={
             Object {
-              "height": "100%",
-              "width": "100%",
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 768,
             }
           }
         >
-          <button
-            className="emotion-2"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="emotion-3"
-            >
-              <span
-                className="emotion-4"
-              >
-                Open Modal
-              </span>
-            </span>
-          </button>
           <div
             style={
               Object {
-                "height": "1800px",
+                "height": "100%",
+                "width": "100%",
               }
             }
-          />
-        </div>
-        <p
-          style={
-            Object {
-              "paddingTop": "8px",
+          >
+            <button
+              className="emotion-2"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                className="emotion-3"
+              >
+                <span
+                  className="emotion-4"
+                >
+                  Open Modal
+                </span>
+              </span>
+            </button>
+            <div
+              style={
+                Object {
+                  "height": "1800px",
+                }
+              }
+            />
+          </div>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
             }
-          }
-        >
-          
-        </p>
+          >
+            
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -198,7 +212,7 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: #175BF5;
+  background-color: #4945EE;
   padding: 0 1rem;
   height: 2.875rem;
   border-radius: 0.25rem;
@@ -213,11 +227,11 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
+  background-color: #413ed6;
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: #1248c4;
+  background-color: #3a37be;
 }
 
 .emotion-2:disabled {
@@ -253,91 +267,105 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
-  >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
   >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
     >
       <div
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
-            "flexDirection": "column",
-            "justifyContent": "center",
-            "padding": "1rem",
-            "width": 768,
+            "margin": 5,
           }
         }
       >
         <div
           style={
             Object {
-              "height": "100%",
-              "width": "100%",
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 768,
             }
           }
         >
-          <button
-            className="emotion-2"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="emotion-3"
-            >
-              <span
-                className="emotion-4"
-              >
-                Open Modal
-              </span>
-            </span>
-          </button>
           <div
             style={
               Object {
-                "height": "1800px",
+                "height": "100%",
+                "width": "100%",
               }
             }
-          />
-        </div>
-        <p
-          style={
-            Object {
-              "paddingTop": "8px",
+          >
+            <button
+              className="emotion-2"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                className="emotion-3"
+              >
+                <span
+                  className="emotion-4"
+                >
+                  Open Modal
+                </span>
+              </span>
+            </button>
+            <div
+              style={
+                Object {
+                  "height": "1800px",
+                }
+              }
+            />
+          </div>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
             }
-          }
-        >
-          
-        </p>
+          >
+            
+          </p>
+        </div>
       </div>
     </div>
   </div>
