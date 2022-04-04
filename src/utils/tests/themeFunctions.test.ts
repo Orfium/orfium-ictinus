@@ -52,7 +52,7 @@ describe('The usability of getColorFromType to be correct', () => {
     const testColor = 'primary';
     const color = getColorFromType(testColor, theme('light'));
 
-    expect(color).toBe('#ececfd');
+    expect(color).toBe('#e7eefe');
   });
   test('getColorFromType to get a color from the palette and return the correct color', () => {
     const testColor = 'lightBlue';

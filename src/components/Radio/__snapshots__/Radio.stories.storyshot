@@ -25,9 +25,9 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
 .emotion-2 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 0.5;
   cursor: pointer;
@@ -90,8 +90,39 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.75rem #c3cddf;
   position: absolute;
+}
+
+.emotion-5:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px #c3cddf;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #c3cddf;
+  -webkit-transform: translate(5px, 5px) scale(0);
+  -moz-transform: translate(5px, 5px) scale(0);
+  -ms-transform: translate(5px, 5px) scale(0);
+  transform: translate(5px, 5px) scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-6 {
@@ -101,17 +132,6 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   height: 1.5rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-
-.emotion-10 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem #c3cddf;
-  position: absolute;
 }
 
 <div
@@ -218,7 +238,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
             className="emotion-4"
           >
             <span
-              className="emotion-10"
+              className="emotion-5"
             />
             <span
               className="emotion-6"
@@ -242,9 +262,9 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
 .emotion-1 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 0.5;
   cursor: pointer;
@@ -307,8 +327,39 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem currentColor,inset 0px 0px 0px 0.25rem #fefefe,inset 0px 0px 0px 0.75rem currentColor;
   position: absolute;
+}
+
+.emotion-4:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px currentColor;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-4:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: currentColor;
+  -webkit-transform: translate(5px, 5px) scale(1);
+  -moz-transform: translate(5px, 5px) scale(1);
+  -ms-transform: translate(5px, 5px) scale(1);
+  transform: translate(5px, 5px) scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-5 {
@@ -414,9 +465,9 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
 .emotion-2 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -479,8 +530,39 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.75rem #b7c3d8;
   position: absolute;
+}
+
+.emotion-5:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px #b7c3d8;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #b7c3d8;
+  -webkit-transform: translate(5px, 5px) scale(0);
+  -moz-transform: translate(5px, 5px) scale(0);
+  -ms-transform: translate(5px, 5px) scale(0);
+  transform: translate(5px, 5px) scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-6 {
@@ -490,17 +572,6 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   height: 1.5rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-
-.emotion-10 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
-  position: absolute;
 }
 
 <div
@@ -607,7 +678,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
             className="emotion-4"
           >
             <span
-              className="emotion-10"
+              className="emotion-5"
             />
             <span
               className="emotion-6"
@@ -645,9 +716,9 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
 .emotion-2 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -710,8 +781,39 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.75rem #b7c3d8;
   position: absolute;
+}
+
+.emotion-5:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px #b7c3d8;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #b7c3d8;
+  -webkit-transform: translate(5px, 5px) scale(0);
+  -moz-transform: translate(5px, 5px) scale(0);
+  -ms-transform: translate(5px, 5px) scale(0);
+  transform: translate(5px, 5px) scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-6 {
@@ -721,17 +823,6 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   height: 1.5rem;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-
-.emotion-10 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
-  position: absolute;
 }
 
 <div
@@ -838,7 +929,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
             className="emotion-4"
           >
             <span
-              className="emotion-10"
+              className="emotion-5"
             />
             <span
               className="emotion-6"
@@ -862,9 +953,9 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
 .emotion-1 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -927,8 +1018,39 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem currentColor,inset 0px 0px 0px 0.25rem #fefefe,inset 0px 0px 0px 0.75rem currentColor;
   position: absolute;
+}
+
+.emotion-4:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px currentColor;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-4:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: currentColor;
+  -webkit-transform: translate(5px, 5px) scale(1);
+  -moz-transform: translate(5px, 5px) scale(1);
+  -ms-transform: translate(5px, 5px) scale(1);
+  transform: translate(5px, 5px) scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-5 {
@@ -1020,9 +1142,9 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
 .emotion-1 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -1085,8 +1207,39 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.75rem #b7c3d8;
   position: absolute;
+}
+
+.emotion-4:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px #b7c3d8;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-4:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #b7c3d8;
+  -webkit-transform: translate(5px, 5px) scale(0);
+  -moz-transform: translate(5px, 5px) scale(0);
+  -ms-transform: translate(5px, 5px) scale(0);
+  transform: translate(5px, 5px) scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-5 {
@@ -1098,17 +1251,6 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: all 0.2s ease;
 }
 
-.emotion-9 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
-  position: absolute;
-}
-
 .emotion-14 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1116,16 +1258,47 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem currentColor,inset 0px 0px 0px 0.25rem #fefefe,inset 0px 0px 0px 0.75rem currentColor;
   position: absolute;
+}
+
+.emotion-14:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px currentColor;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-14:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: currentColor;
+  -webkit-transform: translate(5px, 5px) scale(1);
+  -moz-transform: translate(5px, 5px) scale(1);
+  -ms-transform: translate(5px, 5px) scale(1);
+  transform: translate(5px, 5px) scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-16 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 0.5;
   cursor: pointer;
@@ -1162,19 +1335,39 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.75rem #c3cddf;
   position: absolute;
 }
 
-.emotion-24 {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
+.emotion-19:before {
+  content: '';
+  display: inline-block;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem #c3cddf;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px #c3cddf;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-19:after {
+  content: '';
+  display: block;
   position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #c3cddf;
+  -webkit-transform: translate(5px, 5px) scale(0);
+  -moz-transform: translate(5px, 5px) scale(0);
+  -ms-transform: translate(5px, 5px) scale(0);
+  transform: translate(5px, 5px) scale(0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 <div
@@ -1264,7 +1457,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           className="emotion-3"
         >
           <span
-            className="emotion-9"
+            className="emotion-4"
           />
           <span
             className="emotion-5"
@@ -1348,7 +1541,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           className="emotion-3"
         >
           <span
-            className="emotion-24"
+            className="emotion-19"
           />
           <span
             className="emotion-5"
@@ -1399,9 +1592,9 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
 .emotion-1 {
   position: relative;
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  color: #4945EE;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: #175BF5;
   border: 0;
   opacity: 1;
   cursor: pointer;
@@ -1464,8 +1657,39 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 0.125rem currentColor,inset 0px 0px 0px 0.25rem #fefefe,inset 0px 0px 0px 0.75rem currentColor;
   position: absolute;
+}
+
+.emotion-4:before {
+  content: '';
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0.125rem 0.75rem 0.125rem 0.125rem;
+  border: solid 2px currentColor;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  -webkit-transition: border-color 0.2s;
+  transition: border-color 0.2s;
+}
+
+.emotion-4:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0.0625rem;
+  left: 0.0625rem;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: currentColor;
+  -webkit-transform: translate(5px, 5px) scale(1);
+  -moz-transform: translate(5px, 5px) scale(1);
+  -ms-transform: translate(5px, 5px) scale(1);
+  transform: translate(5px, 5px) scale(1);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
 }
 
 .emotion-5 {

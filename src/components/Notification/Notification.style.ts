@@ -50,11 +50,6 @@ export const iconContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.sm};
 `;
 
-export const closeActionContainer = () => (theme: Theme): SerializedStyles => css`
-  cursor: pointer;
-  margin-left: ${theme.spacing.md};
-`;
-
 export const boldMessageContainer = () => (theme: Theme): SerializedStyles => css`
   font-weight: ${theme.typography.weights.bold};
 `;

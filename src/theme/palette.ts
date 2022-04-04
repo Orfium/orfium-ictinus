@@ -139,12 +139,15 @@ export const getColor = (palette: Palette): GetColor => (
   variant: typeof colorShades[number] | null,
   scope: 'flat' | 'text' | 'normal' | 'pale' = 'flat'
 ) => {
-  const endColor =
-    variant === null
-      ? palette?.[scope]?.[color]
-      : scope === 'normal'
-      ? palette[color][variant]
-      : palette?.[scope]?.[color]?.[variant];
+  let endColor;
+
+  if (variant === null) {
+    endColor = palette?.[scope]?.[color];
+  } else if (scope === 'normal') {
+    endColor = palette[color][variant];
+  } else {
+    endColor = palette?.[scope]?.[color]?.[variant];
+  }
 
   errorHandler<string>(getColorErrors, endColor);
 

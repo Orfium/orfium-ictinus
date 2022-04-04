@@ -12,43 +12,52 @@ export const wrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css
   display: flex;
 `;
 
-export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyles => css`
-  border-radius: 100%;
-  display: flex;
-  width: ${rem(48)};
-  height: ${rem(48)};
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  &:before {
-    display: none;
-    border-radius: 100%;
-    transition: all 0.2s;
-    content: ' ';
-    width: ${rem(48)};
-    height: ${rem(48)};
-    position: absolute;
-  }
-
-  ${!disabled &&
+export const checkboxWrapperStyle = ({ disabled }: Props) => (): SerializedStyles => {
+  const hoverStyle =
+    !disabled &&
     `&:hover {
     &:before {
       display: block;
       background: rgba(0, 0, 0, 0.05);
     }
-  }`}
-`;
+  }`;
+
+  return css`
+    border-radius: 100%;
+    display: flex;
+    width: ${rem(48)};
+    height: ${rem(48)};
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      display: none;
+      border-radius: 100%;
+      transition: all 0.2s;
+      content: ' ';
+      width: ${rem(48)};
+      height: ${rem(48)};
+      position: absolute;
+    }
+
+    ${hoverStyle}
+  `;
+};
 
 const getBackgroundColor = ({ checked, filled, theme }: Props & { theme: Theme }) => {
-  return checked
-    ? `background: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')}`
-    : filled
-    ? `background: ${theme.utils.getColor('lightGrey', 300)}`
-    : `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
-        'lightGrey',
-        300
-      )};`;
+  if (checked) {
+    return `background: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')}`;
+  }
+
+  if (filled) {
+    return `background: ${theme.utils.getColor('lightGrey', 300)}`;
+  }
+
+  return `background: inherit; box-shadow: inset 0px 0px 0px ${rem('2px')} ${theme.utils.getColor(
+    'lightGrey',
+    300
+  )};`;
 };
 
 export const checkboxStyle = ({ checked, filled }: Props) => (theme: Theme): SerializedStyles => {

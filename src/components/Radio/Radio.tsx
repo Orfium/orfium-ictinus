@@ -113,7 +113,7 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
         checked={checkedValue}
         ref={ref}
       />
-      <span css={customRadioWrapperStyles(focused, disabled)}>
+      <span css={customRadioWrapperStyles(focused, disabled)(theme)}>
         <span
           css={customRadioStyles({
             checked: checkedValue,
@@ -121,7 +121,7 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
             filled,
           })(theme)}
         />
-        <span css={customRadioInnerHover(focused, disabled)} />
+        <span css={customRadioInnerHover(focused, disabled)(theme)} />
       </span>
     </span>
   );
