@@ -9,13 +9,7 @@ import { Props } from './Radio';
 const lightHoverColor = 'rgba(14, 14, 23, 0.07)';
 const darkHoverColor = 'rgba(255, 255, 255, 0.1)';
 
-const boxShadow = ({
-  inset = false,
-  colorScheme,
-}: {
-  inset?: boolean;
-  colorScheme: ColorScheme;
-}) => css`
+const boxShadow = ({ colorScheme }: { colorScheme: ColorScheme }) => css`
   box-shadow: 0 0 0 ${rem('6px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor},
     inset 0 0 0 ${rem('6px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor};
 `;
@@ -45,7 +39,7 @@ export const customRadioInnerHover = (focused: boolean, disabled: boolean) => (
   width: ${rem('24px')};
   height: ${rem('24px')};
   transition: all 0.2s ease;
-  // ${focused && !disabled && boxShadow({ inset: true, colorScheme: theme.colorScheme })};
+  ${focused && !disabled && boxShadow({ colorScheme: theme.colorScheme })};
 `;
 
 export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) => (
@@ -87,7 +81,6 @@ export const customRadioStyles = (props: Pick<Props, 'checked' | 'disabled' | 'f
     height: 100%;
     box-sizing: border-box;
     position: absolute;
-    // background-color: ${determineColorBasedOnState(props)(theme)};
     &:before {
       content: '';
       display: inline-block;
