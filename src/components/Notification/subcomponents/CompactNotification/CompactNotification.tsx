@@ -6,7 +6,7 @@ import { TestId } from '../../../../utils/types';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
 import { NotificationStyleType, NotificationTypes } from '../../Notification';
-import { iconContainer, closeActionContainer } from '../../Notification.style';
+import { iconContainer, actionContainer } from '../../Notification.style';
 import {
   actionsContainer,
   infoContainer,
@@ -42,11 +42,11 @@ export type Props = {
   dataTestId?: TestId;
 
   /** The secondary call-to-action label of the Notification */
-  secondaryCTALabel?: string | undefined;
+  secondaryCTALabel?: string;
   /** The secondary call-to-action of the Notification */
-  secondaryCTA?: (() => void) | undefined;
+  secondaryCTA?: () => void;
   /** The description of the Notification (only for toast) */
-  description?: string | undefined;
+  description?: string;
   /** The closing call-to-action of the Toast */
 };
 
@@ -95,7 +95,7 @@ const CompactNotification: React.FC<Props> = ({
         )}
         {closeCTA && (
           <span
-            css={closeActionContainer()}
+            css={actionContainer()}
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >

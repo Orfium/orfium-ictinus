@@ -8,7 +8,6 @@ import { NotificationStyleType, NotificationTypes } from '../Notification';
 import {
   actionContainer,
   iconContainer,
-  closeActionContainer,
   actionsContainer,
   boldMessageContainer,
 } from '../Notification.style';
@@ -63,7 +62,7 @@ const Snackbar: React.FC<Props> = ({
           <div css={boldMessageContainer()}>{message}</div>
         </div>
         <span
-          css={closeActionContainer()}
+          css={actionContainer()}
           onClick={closeCTA}
           data-testid={generateTestDataId('snackbar-close', dataTestId)}
         >
