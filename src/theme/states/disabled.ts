@@ -9,8 +9,8 @@ export type GetDisabled = {
   cursor: string;
 };
 
-const opacityAmount = statesConfig.disabled.opacity.amount;
-const cursor = statesConfig.disabled.cursor.name;
+const opacityAmount = statesConfig['light'].disabled.opacity.amount;
+const cursor = statesConfig['light'].disabled.cursor.name;
 
 /**
  * On disabled opacity is dropped in half and cursor is 'not-allowed'

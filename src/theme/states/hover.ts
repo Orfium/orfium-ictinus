@@ -13,14 +13,20 @@ export type GetHover = {
   backgroundColor: string;
 };
 
-const backgroundColorStep = statesConfig.hover.backgroundColor.step;
-
 /**
  * On hover background is darken by one step in shade.
  * If we exceed the maximum value then we lighten it.
  * This will be reviewed when dark theme is implemented. **/
-export const getHover = ({ theme, color = 'lightGrey', shade = 0 }: Props): GetHover => {
-  const calculatedShade = getShadeWithStep({ shade, step: backgroundColorStep });
+export const getHover = ({ theme, color, shade }: Props): GetHover => {
+  const backgroundColorStep = statesConfig[theme.colorScheme].hover.backgroundColor.step;
+  const endColor = color || (theme.colorScheme === 'dark' ? 'darkGrey' : 'lightGrey');
+  const endShade = shade || (theme.colorScheme === 'dark' ? 700 : 0);
 
-  return { backgroundColor: theme.utils.getColor(color, calculatedShade) };
+  const calculatedShade = getShadeWithStep({
+    shade: endShade,
+    step: backgroundColorStep,
+    colorScheme: theme.colorScheme,
+  });
+
+  return { backgroundColor: theme.utils.getColor(endColor, calculatedShade) };
 };
