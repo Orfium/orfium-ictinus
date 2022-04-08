@@ -1,11 +1,11 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
-import { DEFAULT_SIZE, getTextFieldPadding, getTextFieldSize } from 'utils/size-utils';
+import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
 import { getDisabled, getHover, getPressed } from '../../theme/states';
 import { ColorScheme } from '../../theme/types';
-import { MIN_WIDTH, textInputConfig } from './config';
+import { textInputConfig } from './config';
 import { Props } from './TextInputBase';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
@@ -66,12 +66,12 @@ export const wrapperStyle = ({
   lean,
   dark,
   isSearch,
-  isTextArea,
   size,
+  sx,
 }: Props) => (theme: Theme): SerializedStyles => {
   const colorScheme = dark ? 'dark' : theme.colorScheme;
   const error = status === 'error';
-  const textFieldSize = !(lean || isTextArea) ? getTextFieldSize(size) : getTextFieldSize();
+  const textFieldSize = !lean ? getTextFieldSize(size) : getTextFieldSize();
   const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
   return css({
@@ -90,89 +90,94 @@ export const wrapperStyle = ({
     cursor: disabled || locked ? getDisabled().cursor : 'auto',
     ...textFieldSize,
     ...wrapperStyleSwitch(theme, colorScheme, lean, error, Boolean(disabled || locked)),
+    ...sx?.wrapper,
   });
 };
 
-export const textFieldStyle = ({ lean, isTextArea }: Props) => (theme: Theme): SerializedStyles => {
-  return css`
-    position: relative;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
-    vertical-align: top;
-    width: fill-available;
-    ${!lean && `${getTextFieldPadding(theme, isTextArea)};`}
+export const textFieldStyle = ({ lean, sx }: Props) => (theme: Theme): SerializedStyles => {
+  return css({
+    position: 'relative',
+    display: 'inline-flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    verticalAlign: 'top',
+    width: 'fill-available',
+    padding: !lean ? `0 ${theme.spacing.md}` : '',
 
-    > div {
-      position: relative;
-    }
-  `;
+    '> div': {
+      position: 'relative',
+    },
+
+    ...sx?.textField,
+  });
 };
 
-export const inputStyle = ({
-  label,
-  placeholder,
-  size = DEFAULT_SIZE,
-  dark,
-  isTextArea,
-}: Props) => (theme: Theme): SerializedStyles => css`
-  background: transparent;
-  border: none;
-  color: ${theme.colorScheme === 'dark' || dark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
-  display: block;
-  position: relative;
-  top: ${label && rem(7)};
-  z-index: 1;
-  font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};
-  text-overflow: ellipsis;
-  width: ${isTextArea ? rem(MIN_WIDTH) : 0};
-  min-width: 100%;
+export const inputStyle = ({ label, placeholder, size = DEFAULT_SIZE, dark, sx }: Props) => (
+  theme: Theme
+): SerializedStyles =>
+  css({
+    background: 'transparent',
+    border: 'none',
+    color:
+      theme.colorScheme === 'dark' || dark
+        ? theme.palette.white
+        : theme.utils.getColor('darkGrey', 850),
+    display: 'block',
+    position: 'relative',
+    top: label ? rem(7) : undefined,
+    zIndex: 1,
+    fontSize: theme.typography.fontSizes[size === 'md' ? '15' : '13'],
+    textOverflow: 'ellipsis',
+    width: 0,
+    minWidth: '100%',
 
-  & + label {
-    font-size: ${theme.typography.fontSizes[size === 'md' ? '15' : '13']};
-  }
+    '& + label': {
+      fontSize: theme.typography.fontSizes[size === 'md' ? '15' : '13'],
+    },
 
-  &:focus {
-    outline: none;
-  }
+    '&:focus': {
+      outline: 'none',
+    },
 
-  &::placeholder {
-    color: ${!label && placeholder ? theme.utils.getColor('lightGrey', 650) : 'transparent'};
-  }
+    '&::placeholder': {
+      color: !label && placeholder ? theme.utils.getColor('lightGrey', 650) : 'transparent',
+    },
 
-  &:not(:focus):placeholder-shown {
-    & + label {
-      font-weight: normal;
-    }
-  }
+    '&:not(:focus):placeholder-shown': {
+      '& + label': {
+        fontWeight: 'normal',
+      },
+    },
 
-  &:focus,
-  &:not(:placeholder-shown) {
-    & + label {
-      transform: translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8);
-      font-weight: ${theme.typography.weights.bold};
-    }
-  }
+    '&:focus, &:not(:placeholder-shown)': {
+      '& + label': {
+        transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
+        fontWeight: theme.typography.weights.bold,
+      },
+    },
 
-  &:disabled {
-    cursor: not-allowed;
-  }
-`;
+    '&:disabled': {
+      cursor: 'not-allowed',
+    },
+    ...sx?.input,
+  });
 
-export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedStyles => css`
-  display: flex;
-  color: ${status === 'error'
-    ? theme.utils.getColor('error', 550, 'normal')
-    : theme.utils.getColor('lightGrey', 650)};
-  font-size: ${theme.typography.fontSizes['12']};
-  line-height: 1;
-  padding: ${rem(8)} 0 0;
-  svg {
-    padding: 0 ${rem(2)};
-  }
+export const errorMsgStyle = ({ status }: Props) => (theme: Theme): SerializedStyles =>
+  css({
+    display: 'flex',
+    color:
+      status === 'error'
+        ? theme.utils.getColor('error', 550, 'normal')
+        : theme.utils.getColor('lightGrey', 650),
+    fontSize: theme.typography.fontSizes['12'],
+    lineHeight: 1,
+    padding: `${rem(8)} 0 0`,
+    svg: {
+      padding: `0 ${rem(2)}`,
+    },
 
-  span {
-    align-items: stretch;
-    padding: 0 ${rem(2)};
-  }
-`;
+    span: {
+      alignItems: 'stretch',
+      padding: `0 ${rem(2)}`,
+    },
+  });

@@ -9,6 +9,7 @@ import { textInputSizes } from './config';
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
+import { CSSObject } from '@emotion/serialize';
 
 export type Props = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -43,6 +44,12 @@ export type Props = {
   isSearch?: boolean;
   /** If the field is used as a TextArea component */
   isTextArea?: boolean;
+  /** Sx prop to override specific properties */
+  sx?: {
+    wrapper?: CSSObject;
+    textField?: CSSObject;
+    input?: CSSObject;
+  };
 };
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
@@ -60,6 +67,7 @@ const TextInputBase: FC<Props & TestProps> = ({
   size = DEFAULT_SIZE,
   dark = false,
   children,
+  sx,
 }) => {
   const theme = useTheme();
   const hintMessageToShow = hintMsg && (
@@ -87,9 +95,10 @@ const TextInputBase: FC<Props & TestProps> = ({
           isSearch,
           isTextArea,
           size,
+          sx,
         })}
       >
-        <div css={textFieldStyle({ lean, isTextArea })}>{children}</div>
+        <div css={textFieldStyle({ lean, isTextArea, sx })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>

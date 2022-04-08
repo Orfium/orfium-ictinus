@@ -6,7 +6,6 @@ import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config
 type Size = 'md' | 'sm';
 export const DEFAULT_SIZE: Size = 'md';
 
-
 const getTextFieldHeight = (size?: Size): string => {
   switch (size) {
     case 'md':
@@ -28,9 +27,6 @@ const getTextFieldWidth = (size?: Size): string => {
       return 'auto';
   }
 };
-
-export const getTextFieldPadding = (theme: Theme, isTextArea?: boolean): string =>
-  isTextArea ? `padding: ${theme.spacing.sm}` : `padding: 0 ${theme.spacing.md}`;
 
 export const getTextFieldSize = (
   size?: Size
