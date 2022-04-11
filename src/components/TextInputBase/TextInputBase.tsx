@@ -40,8 +40,6 @@ export type Props = {
   size?: typeof textInputSizes[number];
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
-  /** If the field is used as a Search component */
-  isSearch?: boolean;
   /** Sx prop to override specific properties */
   sx?: {
     wrapper?: CSSObject;
@@ -54,7 +52,6 @@ export type Props = {
  * logic of all the hover, focus status etc and the styling of these centralized **/
 const TextInputBase: FC<Props & TestProps> = ({
   lean = false,
-  isSearch = false,
   disabled,
   hintMsg,
   styleType = 'filled',
@@ -89,7 +86,6 @@ const TextInputBase: FC<Props & TestProps> = ({
           status,
           lean,
           styleType,
-          isSearch,
           size,
           sx,
         })}
