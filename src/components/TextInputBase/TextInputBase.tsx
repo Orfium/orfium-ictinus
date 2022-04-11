@@ -1,3 +1,4 @@
+import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
 import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
@@ -9,7 +10,6 @@ import { textInputSizes } from './config';
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
-import { CSSObject } from '@emotion/serialize';
 
 export type Props = {
   /** The label of the text field that will be used as a placeholder and a label */
@@ -42,8 +42,6 @@ export type Props = {
   status?: 'success' | 'normal' | 'hint' | 'error';
   /** If the field is used as a Search component */
   isSearch?: boolean;
-  /** If the field is used as a TextArea component */
-  isTextArea?: boolean;
   /** Sx prop to override specific properties */
   sx?: {
     wrapper?: CSSObject;
@@ -57,7 +55,6 @@ export type Props = {
 const TextInputBase: FC<Props & TestProps> = ({
   lean = false,
   isSearch = false,
-  isTextArea = false,
   disabled,
   hintMsg,
   styleType = 'filled',
@@ -93,12 +90,11 @@ const TextInputBase: FC<Props & TestProps> = ({
           lean,
           styleType,
           isSearch,
-          isTextArea,
           size,
           sx,
         })}
       >
-        <div css={textFieldStyle({ lean, isTextArea, sx })}>{children}</div>
+        <div css={textFieldStyle({ lean, sx })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>
