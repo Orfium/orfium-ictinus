@@ -20,6 +20,8 @@ export type Props = {
   dataTestId?: TestId;
   /**  If true, the modal will close also with esc button. Defaults to true. */
   closeOnEsc?: boolean;
+  /** If false, the content won't have any padding */
+  isContentPadded?: boolean;
 };
 
 const Modal: React.FC<Props> = ({
@@ -29,6 +31,7 @@ const Modal: React.FC<Props> = ({
   children,
   contentProps,
   closeOnEsc = true,
+  isContentPadded = true,
 }) => {
   useEscape(() => {
     if (closeOnEsc) {
@@ -64,7 +67,7 @@ const Modal: React.FC<Props> = ({
                 dataTestId={'modal-close'}
               />
             </div>
-            <div css={modalContainer}>
+            <div css={modalContainer({ isContentPadded })}>
               {contentProps ? <ModalContent {...contentProps} /> : children}
             </div>
           </Card>
