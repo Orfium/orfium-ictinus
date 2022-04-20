@@ -49,6 +49,7 @@ export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';
 export { default as Select } from './components/Select';
+export { default as Switch } from './components/Switch';
 export { default as Table } from './components/Table';
 export { default as TextField } from './components/TextField';
 export { default as SearchField } from './components/SearchField';
