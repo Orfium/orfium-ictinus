@@ -3,6 +3,7 @@ import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
+import { Props } from './Modal';
 
 export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   position: fixed;
@@ -22,11 +23,16 @@ export const cardSizing = css`
   max-height: ${rem(684)};
 `;
 
-export const modalContainer = (theme: Theme): SerializedStyles => css`
+export const modalContainer = ({ isContentPadded }: Pick<Props, 'isContentPadded'>) => (
+  theme: Theme
+): SerializedStyles => css`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: ${theme.spacing.lg} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl};
+
+  padding: ${isContentPadded
+    ? `${theme.spacing.lg} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl}`
+    : undefined};
 `;
 
 export const closeContainer = (theme: Theme) => css`
