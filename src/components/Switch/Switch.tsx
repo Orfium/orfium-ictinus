@@ -36,7 +36,7 @@ const Switch: React.FC<Props & TestProps> = ({
       <label>
         {labelPlacement === 'left' ? (
           <Wrapper checked={checked} disabled={disabled}>
-            <Label>{label}</Label>
+            <Label data-testid={`${dataTestId}_label`}>{label}</Label>
             {component}
           </Wrapper>
         ) : (
