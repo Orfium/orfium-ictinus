@@ -14,13 +14,13 @@ jobs:
     env:
       PRODUCT: ictinus
       CI: false
-      CSP_HEADER: "default-src 'self'; connect-src ${{ secrets.REACT_APP_API_BASE_URL }} https://*.s3.amazonaws.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
+      # CSP_HEADER: "default-src 'self'; connect-src ${{ secrets.REACT_APP_API_BASE_URL }} https://*.s3.amazonaws.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
       # Add all the env vars needed for yarn build to work. For secret values, add them first to your repo and then here
       # Example of secret:
       # SECRET_ENV: ${{ secrets.mysecret }}
       NODE_ENV: staging
       REACT_APP_STAGE: staging
-      REACT_APP_API_BASE_URL: ${{ secrets.REACT_APP_API_BASE_URL }}
+      # REACT_APP_API_BASE_URL: ${{ secrets.REACT_APP_API_BASE_URL }}
 
     environment:
       name: review-${{ github.event.pull_request.number }}
@@ -33,18 +33,10 @@ jobs:
         with:
           node-version: '12' # Replace with your node version
 
-      - name: Sets npm and yarn config
-        run: |
-          npm config set //npm.pkg.github.com/:_authToken ${{ secrets.ORG_PGP_TOKEN }}
-          npm config set @orfium:registry https://npm.pkg.github.com
-          npm config set always-auth true
-          yarn config set @orfium:registry https://npm.pkg.github.com
-          yarn config set registry https://npm.pkg.github.com
-
       - name: Install dependencies and build app
         run: |
           yarn install
-          yarn build
+          yarn build:storybook
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -89,5 +81,5 @@ jobs:
           S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}" --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
           DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}" --query 'Stacks[0].Outputs[?OutputKey==`FeCloudFrontDistributionId`].OutputValue' --output text)
           INVALIDATION_ID=`aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*" | jq -r .Invalidation.Id`
-          aws s3 sync build/ s3://${S3_BUCKET_NAME}/
+          aws s3 sync storybook-static/ s3://${S3_BUCKET_NAME}/
           aws cloudfront wait invalidation-completed --distribution-id $DISTRIBUTION_ID --id $INVALIDATION_ID
