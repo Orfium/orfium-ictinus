@@ -24,36 +24,57 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
 
 .emotion-2 {
   display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-width: 9.375rem;
   gap: 0.5rem;
-}
-
-.emotion-2 .react-switch-handle {
-  border: 2px solid #b7c3d8!important;
-  box-sizing: border-box!important;
-}
-
-.emotion-2 .react-switch-handle:hover {
-  box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
-  background: #dbe1eb!important;
 }
 
 .emotion-3 {
   font-size: 0.875rem;
   color: #0f0f17;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 .react-switch-handle {
+  border: 2px solid #b7c3d8!important;
+  box-sizing: border-box!important;
+}
+
+.emotion-4 .react-switch-handle:hover {
+  box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
+  background: #dbe1eb!important;
+}
+
+.emotion-4 .react-switch-bg:hover~.react-switch-handle {
+  box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
+  background: #dbe1eb!important;
 }
 
 <div
@@ -105,9 +126,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
       >
         <label>
           <div
-            checked={false}
             className="emotion-2"
-            disabled={false}
           >
             <span
               className="emotion-3"
@@ -116,97 +135,103 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
               Label showcase
             </span>
             <div
-              style={
-                Object {
-                  "MozTransition": "opacity 0.25s",
-                  "MozUserSelect": "none",
-                  "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-                  "WebkitTransition": "opacity 0.25s",
-                  "WebkitUserSelect": "none",
-                  "borderRadius": 4,
-                  "direction": "ltr",
-                  "display": "inline-block",
-                  "msUserSelect": "none",
-                  "opacity": 1,
-                  "position": "relative",
-                  "textAlign": "left",
-                  "touchAction": "none",
-                  "transition": "opacity 0.25s",
-                  "userSelect": "none",
-                }
-              }
+              checked={false}
+              className="emotion-4"
+              disabled={false}
             >
               <div
-                className="react-switch-bg"
-                onClick={[Function]}
-                onMouseDown={[Function]}
                 style={
                   Object {
-                    "MozTransition": "background 0.25s",
-                    "WebkitTransition": "background 0.25s",
-                    "background": "#dbe1eb",
+                    "MozTransition": "opacity 0.25s",
+                    "MozUserSelect": "none",
+                    "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
+                    "WebkitTransition": "opacity 0.25s",
+                    "WebkitUserSelect": "none",
                     "borderRadius": 4,
-                    "cursor": "pointer",
-                    "height": 8,
-                    "margin": 6,
-                    "position": "relative",
-                    "transition": "background 0.25s",
-                    "width": 36,
-                  }
-                }
-              />
-              <div
-                className="react-switch-handle"
-                onClick={[Function]}
-                onMouseDown={[Function]}
-                onTouchCancel={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-                style={
-                  Object {
-                    "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                    "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                    "background": "#f3f5f8",
-                    "border": 0,
-                    "borderRadius": "50%",
-                    "boxShadow": null,
-                    "cursor": "pointer",
+                    "direction": "ltr",
                     "display": "inline-block",
-                    "height": 20,
-                    "outline": 0,
-                    "position": "absolute",
-                    "top": 0,
-                    "transform": "translateX(0px)",
-                    "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
-                    "width": 20,
+                    "msUserSelect": "none",
+                    "opacity": 1,
+                    "position": "relative",
+                    "textAlign": "left",
+                    "touchAction": "none",
+                    "transition": "opacity 0.25s",
+                    "userSelect": "none",
                   }
                 }
-              />
-              <input
-                aria-checked={false}
-                checked={false}
-                data-testid="switch"
-                disabled={false}
-                onBlur={[Function]}
-                onChange={[Function]}
-                onFocus={[Function]}
-                onKeyUp={[Function]}
-                role="switch"
-                style={
-                  Object {
-                    "border": 0,
-                    "clip": "rect(0 0 0 0)",
-                    "height": 1,
-                    "margin": -1,
-                    "overflow": "hidden",
-                    "padding": 0,
-                    "position": "absolute",
-                    "width": 1,
+              >
+                <div
+                  className="react-switch-bg"
+                  onClick={[Function]}
+                  onMouseDown={[Function]}
+                  style={
+                    Object {
+                      "MozTransition": "background 0.25s",
+                      "WebkitTransition": "background 0.25s",
+                      "background": "#dbe1eb",
+                      "borderRadius": 4,
+                      "cursor": "pointer",
+                      "height": 8,
+                      "margin": 6,
+                      "position": "relative",
+                      "transition": "background 0.25s",
+                      "width": 36,
+                    }
                   }
-                }
-                type="checkbox"
-              />
+                />
+                <div
+                  className="react-switch-handle"
+                  onClick={[Function]}
+                  onMouseDown={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  style={
+                    Object {
+                      "MozTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                      "WebkitTransition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                      "background": "#f3f5f8",
+                      "border": 0,
+                      "borderRadius": "50%",
+                      "boxShadow": null,
+                      "cursor": "pointer",
+                      "display": "inline-block",
+                      "height": 20,
+                      "outline": 0,
+                      "position": "absolute",
+                      "top": 0,
+                      "transform": "translateX(0px)",
+                      "transition": "background-color 0.25s, transform 0.25s, box-shadow 0.15s",
+                      "width": 20,
+                    }
+                  }
+                />
+                <input
+                  aria-checked={false}
+                  checked={false}
+                  data-testid="switch"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyUp={[Function]}
+                  role="switch"
+                  style={
+                    Object {
+                      "border": 0,
+                      "clip": "rect(0 0 0 0)",
+                      "height": 1,
+                      "margin": -1,
+                      "overflow": "hidden",
+                      "padding": 0,
+                      "position": "absolute",
+                      "width": 1,
+                    }
+                  }
+                  type="checkbox"
+                />
+              </div>
             </div>
           </div>
         </label>
