@@ -1,3 +1,4 @@
+       
 name: PR
 on:
   pull_request:
@@ -7,18 +8,78 @@ on:
       - 'v3.x'
 
 jobs:
-  tests:
-    name: Tests
+  deploy-review-app:
+    name: Deploy Review App
     runs-on: ubuntu-latest
+    env:
+      PRODUCT: ictinus
+      CI: false
+      # CSP_HEADER: "default-src 'self'; connect-src ${{ secrets.REACT_APP_API_BASE_URL }} https://*.s3.amazonaws.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
+      # Add all the env vars needed for yarn build to work. For secret values, add them first to your repo and then here
+      # Example of secret:
+      # SECRET_ENV: ${{ secrets.mysecret }}
+      NODE_ENV: staging
+      REACT_APP_STAGE: staging
+      # REACT_APP_API_BASE_URL: ${{ secrets.REACT_APP_API_BASE_URL }}
 
+    environment:
+      name: review-${{ github.event.pull_request.number }}
+      url: https://ictinus-pr-${{ github.event.pull_request.number }}.dev.orfium.xyz
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
         with:
-          fetch-depth: 0
+          node-version: '12' # Replace with your node version
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Install dependencies and build app
+        run: |
+          yarn install
+          yarn build:storybook
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.DEV_CD_USER_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.DEV_CD_USER_AWS_SECRET_ACCESS_KEY }}
+          aws-region: "us-east-1"
 
-      - name: Run Tests
-        run: yarn test
+      - name: Check deployment existence
+        id: check-stack-existence
+        run: |
+          if aws cloudformation describe-stacks --stack-name ${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}; then
+            echo "::set-output name=stack_exists::1";
+          else
+            echo "::set-output name=stack_exists::0";
+          fi
+      - name: Set up S3-Cloudfront
+        if: steps.check-stack-existence.outputs.stack_exists == '0'
+        id: review-app-setup
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.4
+        with:
+          name: "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}"
+          role-arn: "arn:aws:iam::102867326982:role/OrfiumCloudFormationExecRole"
+          template: >-
+            https://orfium-cf-templates.s3.amazonaws.com/aws-cloudfront-s3-frontend.yml
+          parameter-overrides: >-
+            CSPHeaderValue=${{ env.CSP_HEADER }},
+            FeDomainName=${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}.dev.orfium.xyz,
+            CreateDNSRecord=true,
+            HostedZoneName=dev.orfium.xyz,
+            TLSCertificateArn=arn:aws:acm:us-east-1:102867326982:certificate/a944c841-aaa5-4612-b58c-a27630b335e5
+          no-fail-on-empty-changeset: "1"
+          tags: >
+            [
+              {"Key": "Name", "Value": "review-frontend"},
+              {"Key": "info:creator", "Value": "github-actions"},
+              {"Key": "info:maintainer", "Value": "devops.dpt"},
+              {"Key": "info:product", "Value": "${{ env.PRODUCT }}"},
+              {"Key": "info:env", "Value": "test"}
+            ]
+      - name: Upload to S3 and invalidate cache
+        run: |
+          S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}" --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}" --query 'Stacks[0].Outputs[?OutputKey==`FeCloudFrontDistributionId`].OutputValue' --output text)
+          INVALIDATION_ID=`aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*" | jq -r .Invalidation.Id`
+          aws s3 sync storybook-static/ s3://${S3_BUCKET_NAME}/
+          aws cloudfront wait invalidation-completed --distribution-id $DISTRIBUTION_ID --id $INVALIDATION_ID
