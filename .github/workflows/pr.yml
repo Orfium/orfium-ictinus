@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies and build app
         run: |
           yarn install
-          yarn build
+          yarn build:storybook
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -81,5 +81,5 @@ jobs:
           S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}" --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
           DISTRIBUTION_ID=$(aws cloudformation describe-stacks --stack-name "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}" --query 'Stacks[0].Outputs[?OutputKey==`FeCloudFrontDistributionId`].OutputValue' --output text)
           INVALIDATION_ID=`aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID --paths "/*" | jq -r .Invalidation.Id`
-          aws s3 sync build/ s3://${S3_BUCKET_NAME}/
+          aws s3 sync storybook-static/ s3://${S3_BUCKET_NAME}/
           aws cloudfront wait invalidation-completed --distribution-id $DISTRIBUTION_ID --id $INVALIDATION_ID
