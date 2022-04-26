@@ -16,7 +16,8 @@ export const Wrapper = styled.div<{ checked: boolean; disabled: boolean }>`
 
     :hover {
       box-shadow: ${({ disabled }) => (!disabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
-      background: ${({ theme }) => theme.utils.getColor('lightGrey', 150)} !important;
+      background: ${({ theme, checked }) =>
+        !checked ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
     }
   }
 `;
