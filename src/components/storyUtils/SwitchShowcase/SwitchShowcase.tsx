@@ -4,12 +4,14 @@ import Switch from '../../Switch';
 
 interface Props {
   hasLabel?: boolean;
+  label?: string;
   labelPlacement?: 'left' | 'right';
   isDisabled?: boolean;
 }
 
 const SwitchShowcase: React.FC<Props> = ({
   hasLabel = true,
+  label = 'Label showcase text',
   labelPlacement,
   isDisabled = false,
 }) => {
@@ -21,7 +23,7 @@ const SwitchShowcase: React.FC<Props> = ({
 
   return (
     <Switch
-      label={hasLabel ? 'Label showcase' : undefined}
+      label={hasLabel ? label : undefined}
       checked={isChecked}
       labelPlacement={labelPlacement}
       disabled={isDisabled}

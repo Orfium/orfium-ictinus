@@ -63,6 +63,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
 }
 
 .emotion-4 .react-switch-handle {
+  cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
 }
@@ -70,6 +71,10 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
 .emotion-4 .react-switch-handle:hover {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
+}
+
+.emotion-4 .react-switch-bg {
+  cursor: unset!important;
 }
 
 .emotion-4 .react-switch-bg:hover~.react-switch-handle {
@@ -132,7 +137,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
               className="emotion-3"
               data-testid="switch_label"
             >
-              Label showcase
+              Label showcase text
             </span>
             <div
               checked={false}
@@ -175,7 +180,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
                       "margin": 6,
                       "position": "relative",
                       "transition": "background 0.25s",
-                      "width": 36,
+                      "width": 30,
                     }
                   }
                 />

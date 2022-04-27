@@ -13,22 +13,28 @@ export const Container = styled.div`
 
 export const SwitchWrapper = styled.div<{ checked: boolean; disabled: boolean }>`
   ${flex};
+
   .react-switch-handle {
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'unset')} !important;
     border: ${({ theme, checked }) =>
       !checked ? `2px solid ${theme.utils.getColor('lightGrey', 300)}` : 0} !important;
     box-sizing: border-box !important;
 
     :hover {
       box-shadow: ${({ disabled }) => (!disabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
-      background: ${({ theme, checked }) =>
-        !checked ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
+      background: ${({ theme, checked, disabled }) =>
+        !checked && !disabled ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
     }
+  }
+
+  .react-switch-bg {
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'unset')} !important;
   }
 
   .react-switch-bg:hover ~ .react-switch-handle {
     box-shadow: ${({ disabled }) => (!disabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
-    background: ${({ theme, checked }) =>
-      !checked ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
+    background: ${({ theme, checked, disabled }) =>
+      !checked && !disabled ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
   }
 `;
 
