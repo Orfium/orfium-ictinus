@@ -22,8 +22,6 @@ export const NotificationContainerWithinDOMElement = (props: {
   const { children, id } = props;
   const [divEl, setDivEl] = useState<HTMLDivElement | null>(null);
 
-  console.log('yolo');
-
   return (
     <div
       ref={el => {

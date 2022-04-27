@@ -15,7 +15,6 @@ type Props = {
 
 const NotificationsContainer: React.FC<Props> = props => {
   const { children, position, parent = document.body } = props;
-  console.log(parent);
 
   if (parent === null) {
     return null;
