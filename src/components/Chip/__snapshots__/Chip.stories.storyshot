@@ -240,6 +240,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           className="emotion-2"
           data-testid="chip"
           disabled={false}
+          role="button"
         >
           <div>
             Label
@@ -270,6 +271,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           data-testid="chip"
           disabled={false}
           onClick={[Function]}
+          role="button"
         >
           <div>
             Label
@@ -288,6 +290,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           data-testid="chip"
           disabled={false}
           onClick={[Function]}
+          role="button"
         >
           <div>
             Label
@@ -462,15 +465,15 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           }
         }
       >
-        <button
+        <div
+          aria-readonly="true"
           className="emotion-2"
           data-testid="chip"
-          disabled={false}
         >
           <div>
             Label
           </div>
-        </button>
+        </div>
       </div>
       <div
         style={
@@ -479,10 +482,10 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           }
         }
       >
-        <button
+        <div
+          aria-readonly="true"
           className="emotion-2"
           data-testid="chip"
-          disabled={false}
         >
           <div>
             <div
@@ -495,7 +498,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           <div>
             Label
           </div>
-        </button>
+        </div>
       </div>
       <div
         style={
@@ -504,10 +507,10 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           }
         }
       >
-        <button
+        <div
+          aria-readonly="true"
           className="emotion-2"
           data-testid="chip"
-          disabled={false}
         >
           <div>
             <div
@@ -521,7 +524,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           <div>
             Label
           </div>
-        </button>
+        </div>
       </div>
     </div>
   </div>

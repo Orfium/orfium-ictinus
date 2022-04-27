@@ -21,11 +21,37 @@ describe('Chip', () => {
     expect(getByText(badgeNumber)).toBeInTheDocument();
   });
 
-  test('that onClick handler is being called', async () => {
+  test('that read-only Chip is not a button', async () => {
+    const { queryByRole, debug } = render(<Chip>{chipLabel}</Chip>);
+    debug();
+    expect(queryByRole('button')).not.toBeInTheDocument();
+    expect(document.querySelector('button[data-testid="chip"]')).not.toBeInTheDocument();
+  });
+
+  test('that interactive Chip is a button', async () => {
+    const { getByRole, debug } = render(<Chip styleType={'interactive'}>{chipLabel}</Chip>);
+    debug();
+    expect(getByRole('button')).toBeInTheDocument();
+    expect(document.querySelector('button[data-testid="chip"]')).toBeInTheDocument();
+  });
+
+  test('that onClick handler is being called on interactive Chip', async () => {
+    const onClick = jest.fn();
+    const { getByTestId } = render(
+      <Chip styleType={'interactive'} onClick={onClick}>
+        {chipLabel}
+      </Chip>
+    );
+    const chip = getByTestId('chip');
+    fireEvent.click(chip);
+    expect(onClick).toHaveBeenCalledTimes(1);
+  });
+
+  test('that onClick handler is not being called on read-only Chip', async () => {
     const onClick = jest.fn();
     const { getByTestId } = render(<Chip onClick={onClick}>{chipLabel}</Chip>);
     const chip = getByTestId('chip');
     fireEvent.click(chip);
-    expect(onClick).toHaveBeenCalledTimes(1);
+    expect(onClick).toHaveBeenCalledTimes(0);
   });
 });
