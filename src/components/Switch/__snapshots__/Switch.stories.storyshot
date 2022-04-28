@@ -43,7 +43,6 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  min-width: 9.375rem;
   gap: 0.5rem;
 }
 
@@ -66,6 +65,10 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
+  -webkit-transform: translateX(0)!important;
+  -moz-transform: translateX(0)!important;
+  -ms-transform: translateX(0)!important;
+  transform: translateX(0)!important;
 }
 
 .emotion-4 .react-switch-handle:hover {
@@ -75,6 +78,8 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
 
 .emotion-4 .react-switch-bg {
   cursor: unset!important;
+  margin-right: 0!important;
+  margin-left: 0!important;
 }
 
 .emotion-4 .react-switch-bg:hover~.react-switch-handle {
@@ -180,7 +185,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
                       "margin": 6,
                       "position": "relative",
                       "transition": "background 0.25s",
-                      "width": 30,
+                      "width": 36,
                     }
                   }
                 />

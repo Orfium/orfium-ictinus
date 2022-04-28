@@ -65,7 +65,7 @@ const Switch: React.FC<Props & TestProps> = ({
         uncheckedIcon={false}
         checkedIcon={false}
         height={8}
-        width={30}
+        width={36}
         activeBoxShadow={`${rgba(14, 14, 23, 0.1)} 0 0 2px 3px`}
         disabled={disabled}
       />
