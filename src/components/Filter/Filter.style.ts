@@ -243,7 +243,7 @@ export const menuStyle = () => (theme: Theme) => css`
   border-radius: ${theme.spacing.xsm};
   background-color: ${theme.palette.white};
   box-shadow: ${theme.elevation['02']};
-  z-index: 1;
+  z-index: 500;
   overflow: hidden;
   min-width: 100%;
   max-width: ${rem(620)};
