@@ -54,7 +54,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props
 
   return (
     <React.Fragment>
-      <TextInputBase isTextArea {...props} sx={sx}>
+      <TextInputBase {...props} sx={sx}>
         <div css={{ width: '100% ' }}>
           <textarea
             css={baseInputStyle({
