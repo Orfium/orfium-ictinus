@@ -3,12 +3,10 @@ import * as React from 'react';
 
 import { useTheme } from '../../index';
 import { formFieldStyles } from '../../theme/palette';
-import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
-import { MIN_WIDTH } from '../TextInputBase/config';
 import TextInputBase from '../TextInputBase/TextInputBase';
-import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 import { sxProp } from './TextArea.style';
+import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
