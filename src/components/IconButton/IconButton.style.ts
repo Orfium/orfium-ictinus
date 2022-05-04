@@ -9,7 +9,7 @@ export const sxProp = ({ size }: Pick<Props, 'size'>) => {
       alignItems: 'center',
       borderRadius: '100%',
       padding: 0,
-      width: heightBasedOnSize(size),
+      width: heightBasedOnSize(size || 'default'),
     },
   };
 };
