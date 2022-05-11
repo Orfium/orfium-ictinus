@@ -51,6 +51,8 @@ export type Props = {
   isLoading?: boolean;
   /** if options list is virtualized */
   isVirtualized?: boolean;
+  /** A callback that's called when the user clicks the 'clear' icon */
+  onClear?: () => void;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -80,6 +82,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       disabled,
       locked,
       dataTestId,
+      onClear,
       ...restInputProps
     },
     ref
@@ -177,8 +180,12 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
         setSearchValue('');
         setInputValue(emptyValue);
         asyncSearch('');
+
+        if (onClear) {
+          onClear();
+        }
       }
-    }, [asyncSearch, inputValue.value, isSearchable, open, searchValue]);
+    }, [asyncSearch, inputValue.value, isSearchable, onClear, open, searchValue]);
 
     const rightIconRender = useMemo(
       () => (
