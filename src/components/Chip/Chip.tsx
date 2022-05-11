@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ForwardedRef, Fragment } from 'react';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
 
 import { BASE_SHADE } from '../../theme/palette';
@@ -9,7 +9,7 @@ import { defaultProps, errors } from './utils';
 import Avatar from 'components/Avatar';
 import Icon from 'components/Icon';
 
-const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(
+const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
   (
     {
       styleType = defaultProps.styleType,
@@ -32,14 +32,8 @@ const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(
 
     errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, disabled });
 
-    return (
-      <button
-        ref={ref}
-        data-testid={generateTestDataId('chip', dataTestId)}
-        onClick={onClick}
-        disabled={disabled}
-        css={chipStyle({ styleType, fill, isSelected, onClear, onClick })}
-      >
+    const contents = (
+      <Fragment>
         {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
         {thumbnail && (
           <div>
@@ -73,6 +67,32 @@ const Chip = React.forwardRef<HTMLButtonElement, ChipProps>(
             />
           </div>
         )}
+      </Fragment>
+    );
+
+    if (styleType === 'read-only') {
+      return (
+        <div
+          ref={ref as ForwardedRef<HTMLDivElement>}
+          data-testid={generateTestDataId('chip', dataTestId)}
+          css={chipStyle({ styleType, fill, isSelected })}
+          aria-readonly="true"
+        >
+          {contents}
+        </div>
+      );
+    }
+
+    return (
+      <button
+        role="button"
+        ref={ref as ForwardedRef<HTMLButtonElement>}
+        data-testid={generateTestDataId('chip', dataTestId)}
+        css={chipStyle({ styleType, fill, isSelected, onClear, onClick })}
+        onClick={onClick}
+        disabled={disabled}
+      >
+        {contents}
       </button>
     );
   }
