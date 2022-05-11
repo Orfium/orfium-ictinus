@@ -41,6 +41,6 @@ export const SwitchWrapper = styled.div<{ checked: boolean; disabled: boolean }>
 `;
 
 export const Label = styled.span`
-  font-size: ${({ theme }) => theme.typography.fontSizes[14]};
+  font-size: ${({ theme }) => theme.typography.fontSizes[15]};
   color: ${({ theme }) => theme.utils.getColor('darkGrey', 850)};
 `;
