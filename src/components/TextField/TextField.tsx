@@ -1,4 +1,5 @@
 import useTheme from 'hooks/useTheme';
+import { omit } from 'lodash';
 import React, { InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
@@ -74,7 +75,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
               required={required}
               id={id}
               disabled={disabled || locked}
-              {...rest}
+              {...omit(rest, 'dataTestId')}
               ref={ref}
             />
             {label && (
