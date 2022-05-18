@@ -4,6 +4,7 @@ import Select from './Select';
 import Stack from '../storyUtils/Stack';
 import SelectShowcase from '../storyUtils/SelectShowcase';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
+import { FIGMA_URL } from '../../utils/common';
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
@@ -50,7 +51,26 @@ const handleSelectedOption = selectedOption => {
   console.log('On option change', selectedOption);
 }
 
-<Meta title="Design System/Select" component={Select} />
+<Meta
+    title="Design System/Select"
+    component={Select}
+    parameters={{
+        design: [{
+            type: 'figma',
+            name: 'Select',
+            url: `${FIGMA_URL}?node-id=10019%3A116506`,
+        },
+        {
+            type: 'figma',
+            name: 'Active',
+            url: `${FIGMA_URL}?node-id=10019%3A116507`,
+        },
+        {
+            type: 'figma',
+            name: 'Edge cases',
+            url: `${FIGMA_URL}?node-id=1879%3A101`,
+        }],
+    }} />
 
 # Select
 
