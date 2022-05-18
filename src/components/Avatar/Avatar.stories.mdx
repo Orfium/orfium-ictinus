@@ -3,8 +3,18 @@ import Avatar from './Avatar';
 import AvatarStack from './AvatarStack';
 import Stack from '../storyUtils/Stack';
 import { BASE_SHADE } from '../../theme/palette';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Avatar" component={Avatar} />
+<Meta
+    title="Design System/Avatar"
+    component={Avatar}
+    parameters={{
+        design: [{
+            type: 'figma',
+            name: 'Avatar',
+            url: `${FIGMA_URL}?node-id=3325%3A58246`,
+        }],
+    }} />
 
 # Avatar
 
