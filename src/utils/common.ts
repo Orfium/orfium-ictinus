@@ -21,3 +21,7 @@ export type DivProps = Omit<React.HTMLProps<HTMLDivElement>, 'size' | 'css'>;
 export type FlexDirectionProperty = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 
 export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
+
+/** URL currently used for figma version 4.5 frozen */
+export const FIGMA_URL =
+  'https://www.figma.com/file/3deO7jGtkly8ij4TiIUpzY/Design-System-V4.5-(%E2%9D%84%EF%B8%8FDO-NOT-EDIT)';
