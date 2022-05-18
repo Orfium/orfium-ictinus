@@ -16,10 +16,10 @@ const positionOptions = {
   'bottom-right': `bottom:0; right: 0; align-items: flex-end;`,
 };
 
-export const notificationsContainer = (currentPosition: string) => (
+export const notificationsContainer = (currentPosition: string, parent: HTMLElement) => (
   theme: Theme
 ): SerializedStyles => css`
-  position: fixed;
+  position: ${parent === document.body ? 'fixed' : 'absolute'};
   ${getPositionStyle(positionOptions[currentPosition])};
   max-width: 66%;
   display: flex;
