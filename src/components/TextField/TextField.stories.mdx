@@ -5,8 +5,17 @@ import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/TextField" component={TextField} />
+<Meta
+     title="Design System/TextField"
+     component={TextField}
+     parameters={{
+            design: [{
+                type: 'figma',
+                url: `${FIGMA_URL}?node-id=10019%3A116505`,
+            }],
+        }} />
 
 # TextField
 

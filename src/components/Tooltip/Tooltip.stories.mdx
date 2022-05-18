@@ -3,8 +3,17 @@ import { text, withKnobs } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
 import TooltipShowcase from '../storyUtils/TooltipShowcase'; 
 import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Tooltip" component={Tooltip} />
+<Meta
+    title="Design System/Tooltip"
+    component={Tooltip}
+    parameters={{
+            design: [{
+                type: 'figma',
+                url: `${FIGMA_URL}?node-id=10283%3A104370`,
+            }],
+        }} />
 
 # Tooltip
 
