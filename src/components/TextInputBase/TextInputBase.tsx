@@ -1,3 +1,4 @@
+import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
 import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
@@ -39,18 +40,18 @@ export type Props = {
   size?: typeof textInputSizes[number];
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
-  /** If the field is used as a Search component */
-  isSearch?: boolean;
-  /** If the field is used as a TextArea component */
-  isTextArea?: boolean;
+  /** Sx prop to override specific properties */
+  sx?: {
+    wrapper?: CSSObject;
+    textField?: CSSObject;
+    input?: CSSObject;
+  };
 };
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
 const TextInputBase: FC<Props & TestProps> = ({
   lean = false,
-  isSearch = false,
-  isTextArea = false,
   disabled,
   hintMsg,
   styleType = 'filled',
@@ -60,6 +61,7 @@ const TextInputBase: FC<Props & TestProps> = ({
   size = DEFAULT_SIZE,
   dark = false,
   children,
+  sx,
 }) => {
   const theme = useTheme();
   const hintMessageToShow = hintMsg && (
@@ -84,12 +86,11 @@ const TextInputBase: FC<Props & TestProps> = ({
           status,
           lean,
           styleType,
-          isSearch,
-          isTextArea,
           size,
+          sx,
         })}
       >
-        <div css={textFieldStyle({ lean, isTextArea })}>{children}</div>
+        <div css={textFieldStyle({ lean, sx })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>

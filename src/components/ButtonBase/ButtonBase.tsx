@@ -1,3 +1,4 @@
+import { CSSObject } from '@emotion/serialize';
 import React from 'react';
 
 import { ClickEvent } from '../../hooks/useLoading';
@@ -39,6 +40,10 @@ export type Props = {
   disabled?: boolean;
   /** Defines the button type */
   buttonType?: 'submit' | 'reset' | 'button';
+  /** Sx prop to override specific properties */
+  sx?: {
+    container?: CSSObject;
+  };
 };
 
 //@TODO fix props to not overwrite button props
@@ -53,20 +58,21 @@ const ButtonBase = React.forwardRef<
     block = false,
     filled = true,
     transparent = false,
-    isIconButton = false,
     iconLeft = null,
     iconRight = null,
     disabled = false,
     loading = false,
     children,
     dataTestId = '',
+    dataTestPrefixId = '',
     buttonType = 'button',
     onClick,
     onBlur,
+    sx,
   } = props;
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
-  const testIdName = `${isIconButton ? 'icon-' : ''}button`;
+  const testIdName = `${dataTestPrefixId}button`;
 
   return (
     <button
@@ -82,10 +88,10 @@ const ButtonBase = React.forwardRef<
         color,
         transparent,
         calculatedColor,
-        isIconButton,
         disabled,
         iconLeft,
         iconRight,
+        sx,
         childrenCount: React.Children.count(children),
       })}
       onClick={event => {
