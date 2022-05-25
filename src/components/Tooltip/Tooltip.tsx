@@ -36,7 +36,6 @@ type Props = {
 };
 
 const Tooltip: React.FC<Props> = ({
-  id,
   size = 'medium',
   children,
   content,
@@ -47,7 +46,6 @@ const Tooltip: React.FC<Props> = ({
 }) => {
   return (
     <Tippy
-      data-testid={id}
       css={tooltipStyle({ size, isTransparent })}
       content={content}
       placement={placement}
