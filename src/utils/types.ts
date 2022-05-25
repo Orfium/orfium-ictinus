@@ -6,4 +6,5 @@ export type TestId = string;
 
 export type TestProps = {
   dataTestId?: TestId;
+  dataTestPrefixId?: string;
 };

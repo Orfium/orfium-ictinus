@@ -1,10 +1,12 @@
 import omit from 'lodash/omit';
 import * as React from 'react';
 
+import { useTheme } from '../../index';
 import { formFieldStyles } from '../../theme/palette';
 import { TestProps } from '../../utils/types';
 import TextInputBase from '../TextInputBase/TextInputBase';
-import { inputStyle } from './TextArea.style';
+import { sxProp } from './TextArea.style';
+import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */
@@ -45,15 +47,17 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props
     ...rest
   } = props;
 
+  const theme = useTheme();
+  const sx = sxProp(!disabled && resizeEnabled, theme);
+
   return (
     <React.Fragment>
-      <TextInputBase isTextArea {...props}>
+      <TextInputBase {...props} sx={sx}>
         <div css={{ width: '100% ' }}>
           <textarea
-            css={inputStyle({
+            css={baseInputStyle({
               placeholder,
-              resizeEnabled: !disabled && resizeEnabled,
-              isTextArea: true,
+              sx,
             })}
             placeholder={placeholder}
             required={required}
