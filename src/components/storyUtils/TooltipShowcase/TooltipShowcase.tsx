@@ -39,7 +39,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
       <h2>Tooltip with text-only content</h2>
       <div css={tooltipRowStyle()}>
         <Tooltip
-          id={'left'}
           content={content}
           placement={'left'}
           interactive={boolean('interactive', false)}
@@ -50,7 +49,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
           </Button>
         </Tooltip>
         <Tooltip
-          id={'right'}
           content={content}
           placement={'right'}
           interactive={boolean('interactive', false)}
@@ -64,7 +62,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
 
       <div css={tooltipRowStyle()}>
         <Tooltip
-          id={'top'}
           content={content}
           placement={'top'}
           interactive={boolean('interactive', false)}
@@ -75,7 +72,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
           </Button>
         </Tooltip>
         <Tooltip
-          id={'bottom'}
           content={content}
           placement={'bottom'}
           interactive={boolean('interactive', false)}
@@ -88,7 +84,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
       </div>
       <h2>Tooltip with component content</h2>
       <Tooltip
-        id={'right'}
         isTransparent
         content={CustomContent()}
         placement={'right'}
