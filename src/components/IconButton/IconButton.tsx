@@ -7,6 +7,7 @@ import { TestProps } from '../../utils/types';
 import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { sxProp } from './IconButton.style';
 import ButtonBase, { Props as ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
 export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRight'> & {
@@ -27,8 +28,10 @@ const IconButton = React.forwardRef<HTMLButtonElement, Props & TestProps & Event
         ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
         : defineBackgroundColor(theme, calculatedColor, type, true, true);
 
+    const sx = sxProp({ size: props.size });
+
     return (
-      <ButtonBase {...props} ref={ref} isIconButton>
+      <ButtonBase {...props} ref={ref} sx={sx} dataTestPrefixId={'icon-'}>
         <Icon name={name} color={iconColor} size={iconSize} />
       </ButtonBase>
     );

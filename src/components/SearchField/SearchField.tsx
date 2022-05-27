@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
+import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import { IconWrapper } from '../TextField/components/commons';
@@ -37,10 +38,10 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & 
           dataTestId={dataTestId}
           disabled={disabled}
           size={size}
-          isSearch
           styleType={'outlined'}
           leftIcon={'search'}
           rightIcon={'close'}
+          sx={{ wrapper: { borderRadius: rem(100) } }}
         >
           <IconWrapper iconPosition={'left'}>
             <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />

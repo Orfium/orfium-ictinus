@@ -1,13 +1,18 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { CSSObject } from '@emotion/serialize';
 
 import { Theme } from '../../theme';
-import { Props } from './TextArea';
-import { Props as TextInputWrapperProps } from 'components/TextInputBase';
-import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
+import { rem } from '../../theme/utils';
+import { MIN_WIDTH } from '../TextInputBase/config';
 
-export const inputStyle = ({ resizeEnabled, ...rest }: Props & TextInputWrapperProps) => (
+export const sxProp = (
+  resizeEnabled: boolean,
   theme: Theme
-): SerializedStyles => css`
-  resize: ${!resizeEnabled ? 'none' : 'both'};
-  ${baseInputStyle({ ...rest })(theme)};
-`;
+): { wrapper: CSSObject; textField: CSSObject; input: CSSObject } => ({
+  wrapper: { width: 'auto', height: 'auto' },
+  textField: { padding: theme.spacing.sm },
+  input: {
+    width: rem(MIN_WIDTH),
+    minWidth: rem(MIN_WIDTH),
+    resize: !resizeEnabled ? 'none' : 'both',
+  },
+});

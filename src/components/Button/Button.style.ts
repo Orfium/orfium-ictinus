@@ -1,5 +1,4 @@
 import { Theme } from 'theme';
-import { RequiredProperties } from 'utils/common';
 
 import { Props } from './Button';
 
@@ -19,11 +18,9 @@ export const childrenWrapperStyle = ({
   iconLeft,
   iconRight,
   hasChildren,
-}: RequiredProperties<
-  Omit<Props, 'block' | 'isIconButton' | 'buttonType' | 'dataTestId' | 'onClick'> & {
-    hasChildren: boolean;
-  }
->) => (theme: Theme) => {
+}: Omit<Props, 'block' | 'isIconButton' | 'buttonType' | 'dataTestId' | 'onClick'> & {
+  hasChildren: boolean;
+}) => (theme: Theme) => {
   const rightIconExists = hasChildren && iconRight;
   const leftIconExists = hasChildren && iconLeft;
 
