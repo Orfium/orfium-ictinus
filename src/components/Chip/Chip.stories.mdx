@@ -5,8 +5,28 @@ import { flexCenterVertical } from '../../theme/functions';
 import Stack from '../storyUtils/Stack';
 import ChipShowcase from '../storyUtils/ChipShowcase';
 import Chip from './Chip';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Chip" component={Chip} />
+<Meta
+    title="Design System/Chip"
+    component={Chip}
+    parameters={{
+        design: [{
+            type: 'figma',
+            name: 'Anatomy',
+            url: `${FIGMA_URL}?node-id=10038%3A104524`,
+        },
+        {
+            type: 'figma',
+            name: 'Rules',
+            url: `${FIGMA_URL}?node-id=10037%3A121257`,
+        },
+        {
+            type: 'figma',
+            name: 'Chip',
+            url: `${FIGMA_URL}?node-id=10062%3A105272`,
+        }],
+    }} />
 
 # Card
 

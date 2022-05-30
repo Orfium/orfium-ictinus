@@ -4,8 +4,23 @@ import IconButton from './IconButton';
 import Stack from '../storyUtils/Stack';
 import iconSelector from '../Icon/assets/iconSelector';
 import { colorShades, flatColors, mainTypes } from '../../theme/palette';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/IconButton" component={IconButton} />
+<Meta
+    title="Design System/IconButton"
+    component={IconButton}
+    parameters={{
+        design: [{
+            type: 'figma',
+            name: 'Buttons',
+            url: `${FIGMA_URL}?node-id=574%3A7239`,
+        },
+        {
+            type: 'figma',
+            name: 'Documentation',
+            url: `${FIGMA_URL}?node-id=8167%3A146863`,
+        }],
+    }} />
 
 # IconButton
 

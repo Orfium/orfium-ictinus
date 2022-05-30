@@ -2,8 +2,43 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { select, number } from '@storybook/addon-knobs';
 import Table from './Table';
 import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/Table" component={Table} />
+<Meta
+    title="Design System/Table"
+    component={Table}
+    parameters={{
+        design: [{
+            type: 'figma',
+            name: 'Table Cell',
+            url: `${FIGMA_URL}?node-id=10283%3A104367`,
+        },
+        {
+            type: 'figma',
+            name: 'Table Header',
+            url: `${FIGMA_URL}?node-id=10283%3A104369`,
+        },
+        {
+            type: 'figma',
+            name: 'Table Title',
+            url: `${FIGMA_URL}?node-id=10283%3A104366`,
+        },
+        {
+            type: 'figma',
+            name: 'Documentation: Examples',
+            url: `${FIGMA_URL}?node-id=921%3A155`,
+        },
+        {
+            type: 'figma',
+            name: 'Documentation: Sorting',
+            url: `${FIGMA_URL}?node-id=7428%3A117692`,
+        },
+        {
+            type: 'figma',
+            name: 'Documentation: Spacing Row Rules',
+            url: `${FIGMA_URL}?node-id=7848%3A131938`,
+        }],
+    }} />
 
 # Table
 

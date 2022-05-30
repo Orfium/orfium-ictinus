@@ -38,6 +38,7 @@ module.exports = {
     '@storybook/addon-storysource/register',
     '@storybook/addon-docs',
     'storybook-addon-pseudo-states',
+    'storybook-addon-designs',
   ],
   webpackFinal: async (config: any) => {
     // do mutation to the config

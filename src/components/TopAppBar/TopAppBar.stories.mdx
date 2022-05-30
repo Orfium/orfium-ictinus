@@ -5,8 +5,17 @@ import TextField from '../TextField';
 import TopAppBarShowcase from '../storyUtils/TopAppBarShowcase';
 import { boolean } from '@storybook/addon-knobs';
 import UserMenu from './components/UserMenu/UserMenu';
+import { FIGMA_URL } from '../../utils/common';
 
-<Meta title="Design System/TopAppBar" component={TopAppBar} />
+<Meta
+    title="Design System/TopAppBar"
+    component={TopAppBar}
+    parameters={{
+            design: [{
+                type: 'figma',
+                url: `${FIGMA_URL}?node-id=1213%3A74735`,
+            }],
+        }} />
 
 # TopAppBar
 

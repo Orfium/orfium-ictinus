@@ -4,6 +4,7 @@ import DatePicker, { extraOptions } from './DatePicker';
 import { currentDay } from './utils';
 import dayjs from 'dayjs';
 import Stack from '../storyUtils/Stack'; import OverlayComponent from './OverlayComponent';
+import { FIGMA_URL } from '../../utils/common';
 const mockDate = currentDay;
 const disableDates = {
   days: [mockDate.toDate(), mockDate.subtract(1, 'day').toDate(), mockDate.subtract(2, 'day').toDate(), mockDate.subtract(4, 'day').toDate()]
@@ -35,7 +36,21 @@ const rangePickerOptions = [true, false];
 const filterTypeOptions = ['preset', 'added'];
 
 
-<Meta title="Design System/DatePicker" component={DatePicker} />
+<Meta
+    title="Design System/DatePicker"
+    component={DatePicker}
+    parameters={{
+        design: [{
+            type: 'figma',
+            name: 'Dates',
+            url: `${FIGMA_URL}?node-id=1637%3A37861`,
+        },
+        {
+            type: 'figma',
+            name: 'DatePicker',
+            url: `${FIGMA_URL}?node-id=10283%3A104356`,
+        }],
+    }} />
 
 # DatePicker
 
