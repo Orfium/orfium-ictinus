@@ -1,0 +1,57 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import Slider from './Slider';
+import Stack from '../storyUtils/Stack'; import SwitchShowcase from "../storyUtils/SwitchShowcase"; import {
+    boolean,
+    select, withKnobs, text
+} from "@storybook/addon-knobs"; import SliderShowcase from "../storyUtils/SliderShowcase/SliderShowcase";
+
+<Meta title="Design System/Slider" component={Slider} />
+
+# Slider
+
+An interactive Slider component meant to serve as an alternative way of toggling between states.
+
+# Usage
+
+```js
+import { Slider } from '@orfium/ictinus';
+
+<Slider />
+```
+
+# Props
+
+<Props of={Slider} />
+
+# Range Slider
+
+<Preview>
+  <Story name="Range Slider" parameters={{ decorators: [withKnobs] }}>
+      <SliderShowcase isSelector={false} disabled={boolean('disabled', false)}/>
+  </Story>
+</Preview>
+
+# Range Slider with Increments
+
+<Preview>
+  <Story name="Range Slider with Increments" parameters={{ decorators: [withKnobs] }}>
+        <SliderShowcase isSelector={false} disabled={boolean('disabled', false)} hasIncrements={true} />
+  </Story>
+</Preview>
+
+# Selector Slider
+
+<Preview>
+  <Story name="Selector Slider" parameters={{ decorators: [withKnobs] }}>
+        <SliderShowcase isSelector={true} disabled={boolean('disabled', false)}/>
+  </Story>
+</Preview>
+
+# Selector Slider with Increments
+
+<Preview>
+    <Story name="Selector Slider with Increments" parameters={{ decorators: [withKnobs] }}>
+        <SliderShowcase disabled={boolean('disabled', false)} isSelector={true} hasIncrements={true} />
+    </Story>
+</Preview>
+
