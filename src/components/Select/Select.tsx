@@ -6,7 +6,8 @@ import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
 import { TestProps } from '../../utils/types';
-import Icon from '../Icon';
+import Icon, { OwnProps as IconProps } from '../Icon';
+import { AcceptedIconNames } from '../Icon/types'
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -15,13 +16,17 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 
-export type SelectOption = {
+export type SelectOptionValues =  {
   value: string | number;
   label: string;
+  iconProps?: IconProps
+}
+
+export type SelectOption = {
   isDisabled?: boolean;
   tooltipInfo?: string;
   options?: SelectOption[];
-};
+} & SelectOptionValues;
 
 export type Props = {
   /** The function that is used to return the selected options */

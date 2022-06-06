@@ -2,11 +2,9 @@ import * as React from 'react';
 
 import { Theme } from '../../theme';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
+import { SelectOptionValues } from '../Select/Select';
 
-export type FilterOption = {
-  value: string | number;
-  label: string;
-};
+export type FilterOption = SelectOptionValues;
 
 export type StyleType = 'filled' | 'transparent';
 
