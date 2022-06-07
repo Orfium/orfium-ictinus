@@ -8,7 +8,7 @@ import UserMenu from './components/UserMenu/UserMenu';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/TopAppBar"
+    title="Design System/TopNavBar"
     component={TopAppBar}
     parameters={{
             design: [{
@@ -24,16 +24,21 @@ A universal TopAppBar component.
 # Usage
 
 ```js
-import { TopAppBar } from '@orfium/ictinus';
+import { TopNavBar } from '@orfium/ictinus';
 
-<TopAppBar
-  dark={dark}
-  logoIcon={logoIcon}
-  onMenuIconClick={onMenuIconClick}
-  userMenu={userMenu}
-  additionalTools={<AdditionalToolsComponent />}
-  onSearchHandler={onSearchHandler}
-/>;
+<TopNavBar
+    dark={false}
+    logoIcon={<Icon />}
+    onMenuIconClick={() => {}}
+    userMenu={{
+      items: ['item1', 'item2'],
+      userAvatar: { letter: 'JD', src: 'http://lorem.com/john-doe-profile.jpg' },
+      userName: 'John Doe',
+      onSelect: () => {},
+    }}
+    additionalTools={<div>Extra Information</div>}
+    onSearchHandler={() => {}}
+  />
 ```
 
 # Props
