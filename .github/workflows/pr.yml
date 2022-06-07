@@ -23,8 +23,10 @@ jobs:
       - name: Run Tests
         run: yarn test
 
-      - name: Run Chromatic
-        run: npx chromatic --project-token=${{ secrets.CHROMATIC_CODE }} --exit-zero-on-changes
+      - name: Publish to Chromatic
+        uses: chromaui/action@v1
+        with:
+          projectToken: ${{ secrets.CHROMATIC_CODE }}
 
   deploy-review-app:
     name: Deploy Review App
