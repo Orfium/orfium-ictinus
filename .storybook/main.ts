@@ -40,6 +40,12 @@ module.exports = {
     'storybook-addon-pseudo-states',
     'storybook-addon-designs',
   ],
+  features: {
+    storyStoreV7: true,
+  },
+  core: {
+    builder: 'webpack5',
+  },
   webpackFinal: async (config: any) => {
     // do mutation to the config
     // Edit config with care. Make sure to preserve the following config options:
