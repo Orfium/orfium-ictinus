@@ -73,17 +73,6 @@ module.exports = {
       use: ['url-loader'],
     });
 
-    /**
-     * this code here helps resolving the emotion react and emotion styled. Without this we are getting
-     * an error of "Can't resolve '@emotion/styled/base'"
-     * solution: https://github.com/storybookjs/storybook/issues/13277
-     */
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@emotion/core': getPackageDir('@emotion/react'),
-      '@emotion/styled': getPackageDir('@emotion/styled'),
-    };
-
     return config;
   },
 };
