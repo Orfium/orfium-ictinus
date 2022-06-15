@@ -6,7 +6,7 @@ on:
 jobs:
   delete-review-app:
     env:
-      PRODUCT: product-name-here
+      PRODUCT: ictinus
     runs-on: ubuntu-latest
     steps:
       - uses: strumwolf/delete-deployment-environment@v2
