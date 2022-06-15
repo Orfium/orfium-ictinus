@@ -39,7 +39,7 @@ const MenuItem: React.FC<Props> = memo(
         <div css={arrowContainerStyle(expanded, hasSubMenus)}>
           <Icon name="triangleRight" color={theme.utils.getColor('lightGrey', 650)} size={10} />
         </div>
-        <div css={menuIconStyle(isCurrent)}>
+        <div css={menuIconStyle(isCurrent && hasSubMenus)}>
           <Icon
             name={iconName}
             color={

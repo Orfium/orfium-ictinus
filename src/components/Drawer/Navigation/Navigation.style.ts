@@ -32,8 +32,31 @@ const itemStyle = (theme: Theme): SerializedStyles => css`
   cursor: default;
 `;
 
+const menuStateStyles = (theme: Theme): SerializedStyles => css`
+  &:hover {
+    background-color: ${getHover({ theme }).backgroundColor}; !important;
+  }
+  &.active:hover {
+    background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
+  }
+  &.active  {
+    font-weight: ${theme.typography.weights.bold};
+    background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
+    color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
+
+    path {
+      fill: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')} !important;
+    }
+  }
+
+  &:focus-visible {
+    outline: ${getFocus({ theme }).styleOutline};
+  }
+`;
+
 export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
   ${itemStyle(theme)};
+  ${transition(0.2)};
   width: 100%;
   font-size: ${rem(16)};
   font-weight: ${theme.typography.weights.regular};
@@ -55,6 +78,8 @@ export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
 
 export const menuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   ${menuItemStyle()(theme)};
+  ${menuStateStyles(theme)};
+
   text-decoration: none;
 `;
 
@@ -66,31 +91,13 @@ export const menuItemTextStyle = (current: boolean) => (theme: Theme): Serialize
 export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   ${itemStyle(theme)};
   ${transition(0.2)};
+  ${menuStateStyles(theme)};
   box-sizing: border-box;
   font-size: ${theme.typography.fontSizes['14']};
   color: ${theme.utils.getColor('darkGrey', 850)};
   margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
   padding-left: ${rem(ICON_PADDING)};
 
-  &:hover {
-    background-color: ${getHover({ theme }).backgroundColor}; !important;
-  }
-  &.active:hover {
-    background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
-  }
-  &.active  {
-    font-weight: ${theme.typography.weights.bold};
-    background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
-    color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
-
-    path {
-      fill: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')} !important;
-    }
-  }
-
-  &:focus-visible {
-    outline: ${getFocus({ theme }).styleOutline};
-  }
   text-decoration: none;
 `;
 
@@ -108,7 +115,7 @@ export const arrowContainerStyle = (open: boolean, show: boolean) => (
   }
 `;
 
-export const menuIconStyle = (current: boolean) => (theme: Theme): SerializedStyles => css`
+export const menuIconStyle = (shouldFill: boolean) => (theme: Theme): SerializedStyles => css`
   ${transition(0.2)};
   ${flexCenter};
   margin-right: ${theme.spacing.sm};
@@ -116,7 +123,7 @@ export const menuIconStyle = (current: boolean) => (theme: Theme): SerializedSty
   height: ${rem(32)};
   border-radius: 50%;
   flex-shrink: 0;
-  ${current ? `background-color: ${fillPickerBasedOnType('primary', BASE_SHADE)(theme)}; ` : ''}
+  ${shouldFill ? `background-color: ${fillPickerBasedOnType('primary', BASE_SHADE)(theme)}; ` : ''}
 `;
 
 export const subMenuIconStyle = () => (theme: Theme): SerializedStyles => css`
