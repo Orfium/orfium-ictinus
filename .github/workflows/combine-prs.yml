@@ -24,4 +24,4 @@ jobs:
       combineBranchName: github.event.inputs.combineBranchName
       ignoreLabel: github.event.inputs.ignoreLabel
     secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+      token: ${{ secrets.DEPENDABOT_ACCESS_TOKEN }}
