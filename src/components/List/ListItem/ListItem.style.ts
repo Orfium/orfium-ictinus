@@ -44,4 +44,10 @@ export const contentStyle = (): SerializedStyles => css`
   overflow: hidden;
   text-overflow: ellipsis;
   cursor: inherit;
+  flex: 1;
+  flex-direction: row;
+  display: flex;
+  > div {
+    flex: 1;
+  }
 `;
