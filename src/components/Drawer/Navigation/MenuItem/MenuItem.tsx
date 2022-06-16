@@ -67,7 +67,7 @@ const MenuItem: React.FC<Props> = memo(
               return (
                 <button
                   type={'button'}
-                  css={menuItemStyle()}
+                  css={menuItemStyle(isCurrent)}
                   data-testid={url}
                   onClick={handleClick}
                 >

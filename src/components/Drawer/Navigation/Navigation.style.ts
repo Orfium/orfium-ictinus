@@ -5,9 +5,11 @@ import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
 import { fillPickerBasedOnType } from 'utils/themeFunctions';
 
-import { getFocus, getHover, getPressed } from '../../../theme/states';
+import { getFocus, getHover } from '../../../theme/states';
 
 const ICON_PADDING = 39;
+
+//TODO The whole logic and styling here is off compared to the designs and needs to be changed in the next version.
 
 export const navigationContainerStyle = (expanded: boolean) => (): SerializedStyles => css`
   ${transition(10.2)};
@@ -37,12 +39,12 @@ const menuStateStyles = (theme: Theme): SerializedStyles => css`
     background-color: ${getHover({ theme }).backgroundColor}; !important;
   }
   &.active:hover {
-    background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
+    background-color: ${theme.utils.getColor('primary', 100, 'normal')} !important;
   }
   &.active  {
     font-weight: ${theme.typography.weights.bold};
-    background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
-    color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
+    background-color: ${theme.utils.getColor('primary', 50, 'normal')} !important;
+    color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
 
     path {
       fill: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')} !important;
@@ -54,9 +56,10 @@ const menuStateStyles = (theme: Theme): SerializedStyles => css`
   }
 `;
 
-export const menuItemStyle = () => (theme: Theme): SerializedStyles => css`
+export const menuItemStyle = (isCurrent?: boolean) => (theme: Theme): SerializedStyles => css`
   ${itemStyle(theme)};
-  ${transition(0.2)};
+  ${transition(0.2, 'background-color')};
+  color: ${isCurrent ? theme.utils.getColor('primary', BASE_SHADE, 'normal') : ''};
   width: 100%;
   font-size: ${rem(16)};
   font-weight: ${theme.typography.weights.regular};
@@ -84,13 +87,12 @@ export const menuLinkStyle = () => (theme: Theme): SerializedStyles => css`
 `;
 
 export const menuItemTextStyle = (current: boolean) => (theme: Theme): SerializedStyles => css`
-  ${transition(0.2)};
   font-weight: ${current ? theme.typography.weights.bold : 'initial'};
 `;
 
 export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
   ${itemStyle(theme)};
-  ${transition(0.2)};
+  ${transition(0.2, 'background-color')};
   ${menuStateStyles(theme)};
   box-sizing: border-box;
   font-size: ${theme.typography.fontSizes['14']};
@@ -104,7 +106,7 @@ export const subMenuLinkStyle = () => (theme: Theme): SerializedStyles => css`
 export const arrowContainerStyle = (open: boolean, show: boolean) => (
   theme: Theme
 ): SerializedStyles => css`
-  ${transition(0.2)};
+  ${transition(0.2, 'background-color')};
   ${flexCenter};
   width: ${rem(24)};
   height: ${rem(24)};
