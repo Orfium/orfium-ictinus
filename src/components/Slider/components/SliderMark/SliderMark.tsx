@@ -4,7 +4,8 @@ import { IMarkProps } from 'react-range/lib/types';
 
 import useTheme from '../../../../hooks/useTheme';
 import { TestProps } from '../../../../utils/types';
-import { Mark } from './SliderMark.style';
+import { STEP_WITH_INCREMENTS } from '../../Slider';
+import { Mark, MarkHoverCircle } from './SliderMark.style';
 
 type Props = {
   values: number[];
@@ -36,13 +37,18 @@ const SliderMark: FC<Props & TestProps> = ({
       : theme.utils.getColor('blue', disabled ? 250 : 500);
   }, [disabled, index, isSelector, theme.utils, values]);
 
+  const labelValue = useMemo(() => (STEP_WITH_INCREMENTS * index).toString(), [index]);
+
   return (
     <Mark
       data-testid={`${dataTestPrefixId}mark_${index}`}
       {...restProps}
+      labelValue={labelValue}
       restStyleProps={restProps.style}
       background={backgroundStyle}
-    />
+    >
+      <MarkHoverCircle disabled={disabled} />
+    </Mark>
   );
 };
 

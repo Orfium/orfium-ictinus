@@ -25,7 +25,7 @@ interface Props {
 }
 
 const STEP = 1;
-const STEP_WITH_INCREMENTS = 20;
+export const STEP_WITH_INCREMENTS = 20;
 export const MIN = 0;
 export const MAX = 100;
 
