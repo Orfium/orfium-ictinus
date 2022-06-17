@@ -7,13 +7,17 @@ export const Container = styled.div`
   ${flex};
   flex-direction: column;
   gap: ${rem(22)};
-  max-width: ${rem(170)};
+  max-width: ${rem(185)};
 `;
 
-//TODO: Finish implementing this when Prefix/Suffix component is implemented
-export const InputContainer = styled.div`
+export const InputsContainer = styled.div`
   ${flex};
-  gap: ${rem(64)};
+  margin-left: ${rem(-12)};
+  gap: ${rem(20)};
   align-items: center;
   justify-content: space-between;
+`;
+
+export const InputContainer = styled.div`
+  width: ${rem(80)};
 `;

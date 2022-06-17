@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
 import { Range } from 'react-range';
 
+import useTheme from '../../hooks/useTheme';
 import { TestProps } from '../../utils/types';
+import TextField from '../TextField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
-import { Container } from './Slider.style';
+import { Container, InputContainer, InputsContainer } from './Slider.style';
 
 interface Props {
   /** Determines the position of the rendered thumbs. Defaults to [0, 100] */
@@ -38,6 +40,8 @@ const Slider: React.FC<Props & TestProps> = ({
   disabled = false,
   dataTestPrefixId,
 }) => {
+  const theme = useTheme();
+
   useEffect(() => {
     if (isSelector && values.length > 1) {
       throw new Error(
@@ -45,6 +49,18 @@ const Slider: React.FC<Props & TestProps> = ({
       );
     }
   }, [values, isSelector]);
+
+  const sanitizeValues = (value: number) => {
+    if (value < 0) {
+      return 0;
+    }
+
+    if (value > 100) {
+      return 100;
+    }
+
+    return value;
+  };
 
   return (
     <Container data-testid={`${dataTestPrefixId ?? ''}slider_component`}>
@@ -92,6 +108,44 @@ const Slider: React.FC<Props & TestProps> = ({
           />
         )}
       />
+      {!isSelector && !hasIncrements && (
+        <InputsContainer>
+          <InputContainer>
+            <TextField
+              hasMinWidthCompat={false}
+              size={'sm'}
+              value={values[0]}
+              onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+                const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
+                onChange([sanitizedValue, values[1]]);
+              }}
+              rightIcon={<>%</>}
+              sx={{
+                textField: {
+                  color: theme.utils.getColor('lightGrey', 650),
+                },
+              }}
+            />
+          </InputContainer>
+          <InputContainer>
+            <TextField
+              hasMinWidthCompat={false}
+              size={'sm'}
+              value={values[1]}
+              onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+                const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
+                onChange([values[0], sanitizedValue]);
+              }}
+              rightIcon={<>%</>}
+              sx={{
+                textField: {
+                  color: theme.utils.getColor('lightGrey', 650),
+                },
+              }}
+            />
+          </InputContainer>
+        </InputsContainer>
+      )}
     </Container>
   );
 };
