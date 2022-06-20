@@ -3633,7 +3633,6 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   color: #0f0f17;
   display: block;
   position: relative;
-  top: 0.4375rem;
   z-index: 1;
   font-size: 0.9375rem;
   text-overflow: ellipsis;
@@ -3682,38 +3681,7 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   cursor: not-allowed;
 }
 
-.emotion-7 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #5f6c85;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  white-space: nowrap;
-}
-
-.emotion-13 {
+.emotion-11 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -3779,112 +3747,6 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
         <div
           style={
             Object {
-              "width": "60px",
-            }
-          }
-        >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <div
-                className="emotion-4"
-              >
-                <div
-                  style={
-                    Object {
-                      "color": "gray",
-                    }
-                  }
-                >
-                  $
-                </div>
-              </div>
-              <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  disabled={false}
-                  placeholder={54}
-                  required={false}
-                />
-                <label
-                  className="emotion-7"
-                >
-                  54
-                   
-                </label>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "width": "60px",
-            }
-          }
-        >
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-6"
-                  disabled={false}
-                  placeholder={54}
-                  required={false}
-                />
-                <label
-                  className="emotion-7"
-                >
-                  54
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-13"
-              >
-                <div
-                  style={
-                    Object {
-                      "color": "gray",
-                    }
-                  }
-                >
-                  %
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          style={
-            Object {
               "width": "80px",
             }
           }
@@ -3914,18 +3776,103 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
                 <input
                   className="emotion-6"
                   disabled={false}
-                  placeholder={54}
                   required={false}
                 />
-                <label
-                  className="emotion-7"
-                >
-                  54
-                   
-                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "width": "80px",
+            }
+          }
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-5"
+              >
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  required={false}
+                />
               </div>
               <div
-                className="emotion-13"
+                className="emotion-11"
+              >
+                <div
+                  style={
+                    Object {
+                      "color": "gray",
+                    }
+                  }
+                >
+                  %
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "width": "120px",
+            }
+          }
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <div
+                  style={
+                    Object {
+                      "color": "gray",
+                    }
+                  }
+                >
+                  $
+                </div>
+              </div>
+              <div
+                className="emotion-5"
+              >
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  required={false}
+                />
+              </div>
+              <div
+                className="emotion-11"
               >
                 <div
                   style={
