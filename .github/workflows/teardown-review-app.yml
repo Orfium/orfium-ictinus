@@ -2,27 +2,16 @@ name: Teardown review env
 on:
   pull_request:
     types: [closed]
-
+  workflow_dispatch:
+    inputs:
+      pr-number:
+        description: 'The PR number of the env you want to teardown'
+        required: true
 jobs:
   delete-review-app:
-    env:
-      PRODUCT: ictinus
-    runs-on: ubuntu-latest
-    steps:
-      - uses: strumwolf/delete-deployment-environment@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          environment: review-${{ github.event.pull_request.number }}
-          onlyRemoveDeployments: true
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.DEV_CD_USER_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.DEV_CD_USER_AWS_SECRET_ACCESS_KEY }}
-          aws-region: "us-east-1"
-      - name: Delete Cloudformation stack, S3 files and S3 bucket
-        run: |
-          STACKNAME=${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}
-          S3_BUCKET_NAME=$(aws cloudformation describe-stacks --stack-name "$STACKNAME" --query 'Stacks[0].Outputs[?OutputKey==`S3BucketName`].OutputValue' --output text)
-          aws cloudformation delete-stack --stack-name $STACKNAME
-          aws s3 rb s3://$S3_BUCKET_NAME --force
+    uses: Orfium/orfium-github-actions/.github/workflows/teardown-review-app.yml@master
+    with:
+      product: ictinus
+      pr-number: ${{ github.event.pull_request.number }}${{ inputs.pr-number }}
+    secrets:
+      token: ${{ secrets.REVIEW_TEARDOWN_TOKEN }}
