@@ -9,7 +9,7 @@ interface Props {
   onChange?: (values: number[]) => void;
 }
 
-const SliderShowcase: React.FC<Props> = props => {
+const SliderShowcase: React.FC<Props> = (props) => {
   const [values, setValues] = useState(props.isSelector ? [0] : [0, 100]);
 
   const handleChange = (values: number[]) => {
@@ -17,7 +17,13 @@ const SliderShowcase: React.FC<Props> = props => {
   };
 
   return (
-    <Slider values={values} {...props} onChange={props.onChange ? props.onChange : handleChange} />
+    <div style={{ marginLeft: '12px' }}>
+      <Slider
+        values={values}
+        {...props}
+        onChange={props.onChange ? props.onChange : handleChange}
+      />
+    </div>
   );
 };
 

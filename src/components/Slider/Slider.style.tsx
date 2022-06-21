@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const InputsContainer = styled.div`
   ${flex};
-  margin-left: ${rem(-12)};
+  margin-left: ${rem(-13)};
   gap: ${rem(20)};
   align-items: center;
   justify-content: space-between;

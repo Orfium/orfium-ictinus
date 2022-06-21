@@ -12,22 +12,24 @@ export const Mark = styled.div<{
   border-radius: 100%;
   background: ${({ background }) => background};
   position: relative;
-  
+
   :hover {
     background: ${({ theme }) => theme.utils.getColor('blue', 600)};
 
     ::before {
       content: '${({ labelValue }) => (labelValue ? `${labelValue}%` : ' ')}';
       color: white;
-      font-size: ${({ theme }) => theme.typography.fontSizes[9]};
+      display: flex;
+      justify-content: center;
+      font-size: ${({ theme }) => theme.typography.fontSizes[11]};
       background: black;
       position: absolute;
       padding: ${({ theme }) => theme.spacing.sm};
       box-sizing: border-box;
       top: ${rem(-35)};
-      left: ${rem(-13)};
-      width: ${rem(33)};
-      height: ${rem(25)};
+      left: ${rem(-17)};
+      width: ${rem(35)};
+      height: ${rem(27)};
       border-radius: 2px;
     }
 
