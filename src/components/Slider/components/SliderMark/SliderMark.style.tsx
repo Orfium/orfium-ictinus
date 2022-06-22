@@ -27,7 +27,7 @@ export const Mark = styled.div<{
       padding: ${({ theme }) => theme.spacing.sm};
       box-sizing: border-box;
       top: ${rem(-35)};
-      left: ${rem(-17)};
+      left: ${rem(-14.5)};
       width: ${rem(35)};
       height: ${rem(27)};
       border-radius: 2px;

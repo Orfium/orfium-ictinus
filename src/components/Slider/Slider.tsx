@@ -18,7 +18,8 @@ interface Props {
   isSelector?: boolean;
   /** Determines if the Slider will show increments along its track */
   hasIncrements?: boolean;
-
+  /** Use this to change the slider's initial values (e.g. [80, 100]) */
+  initialValues?: number[];
   /** Called when a thumb is moved, provides new values */
   onChange: (values: number[]) => void;
   /** Called when a change is finished (mouse/touch up, or keyup), provides current values.
@@ -33,6 +34,7 @@ export const MAX = 100;
 
 const Slider: React.FC<Props & TestProps> = ({
   values,
+  initialValues = [MIN, MAX],
   onChange,
   onFinalChange,
   isSelector = false,
@@ -51,11 +53,11 @@ const Slider: React.FC<Props & TestProps> = ({
   }, [values, isSelector]);
 
   const sanitizeValues = (value: number) => {
-    if (value < 0) {
+    if (value < MIN) {
       return 0;
     }
 
-    if (value > 100) {
+    if (value > MAX) {
       return 100;
     }
 
@@ -104,7 +106,7 @@ const Slider: React.FC<Props & TestProps> = ({
             restProps={props}
             disabled={disabled}
             value={value}
-            values={values}
+            initialValues={initialValues}
           />
         )}
       />

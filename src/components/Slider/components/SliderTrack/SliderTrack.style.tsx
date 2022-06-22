@@ -8,7 +8,7 @@ export const Track = styled.div<{
 }>`
   height: ${rem(3)};
 
-  max-width: ${rem(170)};
+  max-width: ${rem(190)};
 
   border-radius: 4px;
   background: ${({ background }) => background};

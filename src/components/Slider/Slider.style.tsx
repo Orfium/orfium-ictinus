@@ -7,12 +7,12 @@ export const Container = styled.div`
   ${flex};
   flex-direction: column;
   gap: ${rem(22)};
-  max-width: ${rem(185)};
+  max-width: ${rem(197)};
 `;
 
 export const InputsContainer = styled.div`
   ${flex};
-  margin-left: ${rem(-13)};
+  margin-left: ${rem(-7)};
   gap: ${rem(20)};
   align-items: center;
   justify-content: space-between;
