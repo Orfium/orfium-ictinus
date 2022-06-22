@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { ReactElement, useEffect, useMemo, useRef } from 'react';
 import { Range } from 'react-range';
 
 import useTheme from '../../hooks/useTheme';
@@ -8,49 +8,53 @@ import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
+import { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 
-interface Props {
-  /** Determines the position of the rendered thumbs. Defaults to [0, 100] */
-  values: number[];
+type CommonProps = {
   /** Determines if the Slider is disabled or not */
   disabled?: boolean;
-  /** Determines whether the Slider is a Range or a Selector */
-  isSelector?: boolean;
   /** Determines if the Slider will show increments along its track */
   hasIncrements?: boolean;
-  /** Use this to change the slider's initial values (e.g. [80, 100]) */
-  initialValues?: number[];
   /** Called when a thumb is moved, provides new values */
   onChange: (values: number[]) => void;
   /** Called when a change is finished (mouse/touch up, or keyup), provides current values.
    * Use this event when you have to make for example ajax request with new values. */
   onFinalChange?: (values: number[]) => void;
-}
+  /** Determines the position of the rendered thumbs and the type of the Slider. 1 value means it's a Selector,
+   * while 2 values mean it's a Range. Defaults to [0, 100] */
+  values: [number] | [number, number];
+};
 
 const STEP = 1;
 export const STEP_WITH_INCREMENTS = 20;
 export const MIN = 0;
 export const MAX = 100;
 
-const Slider: React.FC<Props & TestProps> = ({
+const Slider: React.FC<CommonProps & TestProps> = ({
   values,
-  initialValues = [MIN, MAX],
   onChange,
   onFinalChange,
-  isSelector = false,
   hasIncrements = false,
   disabled = false,
   dataTestPrefixId,
 }) => {
   const theme = useTheme();
 
-  useEffect(() => {
-    if (isSelector && values.length > 1) {
-      throw new Error(
-        'The Selector type Slider can only accept one initial value in the array, since it only has one thumb. Try changing the `initialValues` prop.'
-      );
-    }
-  }, [values, isSelector]);
+  const initialValueRef = useRef<[number] | [number, number]>(values);
+
+  const isSelector = initialValueRef.current.length === 1;
+
+  if (isSelector && values.length !== 1) {
+    throw new Error(
+      'The Selector type Slider can only accept one initial value in the array, since it only has one thumb. Try changing the `values` prop.'
+    );
+  }
+
+  if (!isSelector && values.length !== 2) {
+    throw new Error(
+      'The Range type Slider only accepts two initial values in the array, since it has two thumbs. Try changing the `values` prop.'
+    );
+  }
 
   const sanitizeValues = (value: number) => {
     if (value < MIN) {
@@ -64,6 +68,69 @@ const Slider: React.FC<Props & TestProps> = ({
     return value;
   };
 
+  const handleRenderMark = ({ props, index }: { props: IMarkProps; index: number }) => {
+    /** We don't show marks for the first and last increments of the Slider (0%, 100%) */
+    const isNotFirstOrLastMark = isSelector
+      ? index > MIN
+      : index > MIN && index < MAX / STEP_WITH_INCREMENTS;
+
+    return (
+      hasIncrements &&
+      isNotFirstOrLastMark && (
+        <SliderMark
+          key={`mark_${index}`}
+          dataTestPrefixId={dataTestPrefixId}
+          restProps={props}
+          values={values}
+          index={index}
+          isSelector={isSelector}
+          disabled={disabled}
+        />
+      )
+    );
+  };
+
+  const handleRenderTrack = ({
+    props,
+    children,
+  }: {
+    props: ITrackProps;
+    children: React.ReactNode;
+  }) => {
+    return (
+      <SliderTrack
+        dataTestPrefixId={dataTestPrefixId}
+        isSelector={isSelector}
+        restProps={props}
+        values={values}
+        disabled={disabled}
+      >
+        {children}
+      </SliderTrack>
+    );
+  };
+
+  const handleRenderThumb = ({
+    props,
+    value,
+    index,
+  }: {
+    props: IThumbProps;
+    value: number;
+    index: number;
+  }) => {
+    return (
+      <SliderThumb
+        key={`thumb_${index}`}
+        dataTestId={`${dataTestPrefixId ?? ''}thumb_${index}`}
+        restProps={props}
+        disabled={disabled}
+        value={value}
+        initialValue={initialValueRef.current?.[index]}
+      />
+    );
+  };
+
   return (
     <Container data-testid={`${dataTestPrefixId ?? ''}slider_component`}>
       <Range
@@ -74,43 +141,11 @@ const Slider: React.FC<Props & TestProps> = ({
         values={values}
         onChange={onChange}
         onFinalChange={onFinalChange}
-        renderMark={({ props, index }) =>
-          hasIncrements &&
-          (isSelector ? index > MIN : index > MIN && index < MAX / STEP_WITH_INCREMENTS) && (
-            <SliderMark
-              key={`mark_${index}`}
-              dataTestPrefixId={dataTestPrefixId}
-              restProps={props}
-              values={values}
-              index={index}
-              isSelector={isSelector}
-              disabled={disabled}
-            />
-          )
-        }
-        renderTrack={({ props, children }) => (
-          <SliderTrack
-            dataTestPrefixId={dataTestPrefixId}
-            isSelector={isSelector}
-            restProps={props}
-            values={values}
-            disabled={disabled}
-          >
-            {children}
-          </SliderTrack>
-        )}
-        renderThumb={({ props, value, index }) => (
-          <SliderThumb
-            key={`thumb_${index}`}
-            dataTestId={`${dataTestPrefixId ?? ''}thumb_${index}`}
-            restProps={props}
-            disabled={disabled}
-            value={value}
-            initialValues={initialValues}
-          />
-        )}
+        renderMark={handleRenderMark}
+        renderTrack={handleRenderTrack}
+        renderThumb={handleRenderThumb}
       />
-      {!isSelector && !hasIncrements && (
+      {!isSelector && !hasIncrements && values.length === 2 && (
         <InputsContainer>
           <InputContainer>
             <TextField

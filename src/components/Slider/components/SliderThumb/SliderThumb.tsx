@@ -8,18 +8,18 @@ import { Thumb } from './SliderThumb.style';
 interface ThumbProps {
   disabled: boolean;
   value: number;
-  initialValues: number[];
+  initialValue: number | undefined;
   restProps: IThumbProps;
 }
 
 const SliderThumb: FC<ThumbProps & TestProps> = ({
   disabled,
   value,
-  initialValues,
+  initialValue,
   dataTestId,
   restProps,
 }) => {
-  const isChanged = useMemo(() => !initialValues.includes(value), [initialValues, value]);
+  const isChanged = useMemo(() => initialValue !== value, [initialValue, value]);
 
   return (
     <Thumb
