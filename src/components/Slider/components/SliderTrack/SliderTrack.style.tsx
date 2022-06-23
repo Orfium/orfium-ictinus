@@ -7,9 +7,6 @@ export const Track = styled.div<{
   restStyleProps: CSSProperties;
 }>`
   height: ${rem(3)};
-
-  max-width: ${rem(190)};
-
   border-radius: 4px;
   background: ${({ background }) => background};
 `;
