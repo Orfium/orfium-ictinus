@@ -28,12 +28,12 @@ const SliderMark: FC<Props & TestProps> = ({
   const backgroundStyle = useMemo(() => {
     if (!isSelector) {
       return index * 20 < values[0] || index * 20 > values[1]
-        ? theme.utils.getColor('blue', 150)
+        ? theme.utils.getColor('blue', disabled ? 250 : 150)
         : theme.utils.getColor('blue', disabled ? 250 : 500);
     }
 
     return index * 20 > values[0]
-      ? theme.utils.getColor('blue', 150)
+      ? theme.utils.getColor('blue', disabled ? 250 : 150)
       : theme.utils.getColor('blue', disabled ? 250 : 500);
   }, [disabled, index, isSelector, theme.utils, values]);
 
@@ -43,7 +43,8 @@ const SliderMark: FC<Props & TestProps> = ({
     <Mark
       data-testid={`${dataTestPrefixId}mark_${index}`}
       {...restProps}
-      labelValue={labelValue}
+      disabled={disabled}
+      labelValue={labelValue ? `${labelValue}%` : ' '}
       restStyleProps={restProps.style}
       background={backgroundStyle}
     >

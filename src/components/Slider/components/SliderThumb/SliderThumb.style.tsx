@@ -17,6 +17,7 @@ export const Thumb = styled.div<{
   border: 2px solid ${({ theme, disabled }) => theme.utils.getColor('blue', disabled ? 250 : 500)};
   ${({ restStyleProps }) => ({ ...restStyleProps })};
   box-sizing: border-box;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'unset')} !important;
 
   &::after {
     content: '';

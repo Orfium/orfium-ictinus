@@ -4,6 +4,7 @@ import { CSSProperties } from 'react';
 
 export const Mark = styled.div<{
   background: string;
+  disabled: boolean;
   labelValue: string;
   restStyleProps: CSSProperties;
 }>`
@@ -12,14 +13,16 @@ export const Mark = styled.div<{
   border-radius: 100%;
   background: ${({ background }) => background};
   position: relative;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'unset')};
 
   :hover {
-    background: ${({ theme }) => theme.utils.getColor('blue', 600)};
+    background: ${({ theme, disabled }) =>
+      !disabled ? theme.utils.getColor('blue', 600) : undefined};
 
     ::before {
-      content: '${({ labelValue }) => (labelValue ? `${labelValue}%` : ' ')}';
+      content: '${({ labelValue }) => labelValue}';
       color: white;
-      display: flex;
+      display: ${({ disabled }) => (disabled ? 'none' : 'flex')};
       justify-content: center;
       font-size: ${({ theme }) => theme.typography.fontSizes[11]};
       background: black;
@@ -35,6 +38,7 @@ export const Mark = styled.div<{
 
     ::after {
       content: ' ';
+      display: ${({ disabled }) => (disabled ? 'none' : 'unset')};
       position: absolute;
       top: ${rem(-10)};
       left: ${rem(-2.5)};

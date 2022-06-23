@@ -149,6 +149,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
         <InputsContainer>
           <InputContainer>
             <TextField
+              disabled={disabled}
               hasMinWidthCompat={false}
               size={'sm'}
               value={values[0]}
@@ -166,6 +167,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
           </InputContainer>
           <InputContainer>
             <TextField
+              disabled={disabled}
               hasMinWidthCompat={false}
               size={'sm'}
               value={values[1]}

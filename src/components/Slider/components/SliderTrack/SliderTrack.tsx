@@ -50,6 +50,7 @@ const SliderTrack: FC<Props & TestProps> = ({
     <Track
       data-testid={`${dataTestPrefixId}track_component`}
       {...restProps}
+      disabled={disabled}
       restStyleProps={restProps.style}
       background={backgroundStyle}
     >
