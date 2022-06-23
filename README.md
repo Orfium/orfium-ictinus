@@ -6,6 +6,8 @@ An internal UI kit library that is opinionated. Primary focus is to solve UI dup
 
 ![npm](https://img.shields.io/npm/v/@orfium/ictinus)
 [![pan](https://github.com/Orfium/orfium-ictinus/workflows/CI/badge.svg)](https://github.com/Orfium/orfium-ictinus/actions)
+![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
+![minzip size](https://img.shields.io/bundlephobia/minzip/@orfium/ictinus)
 
 ## 📦 Installation
 

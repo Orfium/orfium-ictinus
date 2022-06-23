@@ -134,6 +134,17 @@
     "documentation:generate": "typedoc --out typeDocs src",
     "documentation:up": "node server/docs-server.js"
   },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.stories.{ts,tsx,js,jsx,mdx,md}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/",
+      "/docs/"
+    ]
+  },
   "keywords": [
     "Orfium",
     "typescript",
