@@ -140,6 +140,50 @@ TextField with icon options right and left of the text
   </Story>
 </Preview>
 
+# TextField with prefix/suffix
+
+Regular TextField with a prefix or a suffix
+
+<Preview>
+    <Story name="TextField with prefix/suffix">
+        <Stack>
+            <div style={{width: '80px'}}>
+            <TextField
+                size={select('size', ['md', 'sm'], 'md')}
+                hasMinWidthCompat={false}
+                leftIcon={
+                    <div style={{color: 'gray'}}>$</div>
+                }
+                styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+            />
+            </div>
+            <div style={{width: '80px'}}>
+            <TextField
+                size={select('size', ['md', 'sm'], 'md')}
+                hasMinWidthCompat={false}
+                rightIcon={
+                    <div style={{color: 'gray'}}>%</div>
+                }
+                styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+            />
+            </div>
+            <div style={{width: '120px'}}>
+            <TextField
+                size={select('size', ['md', 'sm'], 'md')}
+                hasMinWidthCompat={false}
+                leftIcon={
+                    <div style={{color: 'gray'}}>$</div>
+                }
+                rightIcon={
+                    <div style={{color: 'gray'}}>%</div>
+                }
+                styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+            />
+            </div>
+        </Stack>
+    </Story>
+</Preview>
+
 # TextField disabled with label
 
 Regular TextField disabled with label
