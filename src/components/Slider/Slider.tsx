@@ -156,6 +156,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
               onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
                 const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
                 onChange([sanitizedValue, values[1]]);
+                onFinalChange?.([sanitizedValue, values[1]]);
               }}
               rightIcon={<>%</>}
               sx={{
@@ -174,6 +175,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
               onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
                 const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
                 onChange([values[0], sanitizedValue]);
+                onFinalChange?.([values[0], sanitizedValue]);
               }}
               rightIcon={<>%</>}
               sx={{
