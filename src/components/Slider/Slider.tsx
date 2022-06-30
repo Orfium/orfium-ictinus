@@ -153,10 +153,15 @@ const Slider: React.FC<CommonProps & TestProps> = ({
               hasMinWidthCompat={false}
               size={'sm'}
               value={values[0]}
-              onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
                 onChange([sanitizedValue, values[1]]);
-                onFinalChange?.([sanitizedValue, values[1]]);
+              }}
+              onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
+                if (onFinalChange) {
+                  const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
+                  onFinalChange([sanitizedValue, values[1]]);
+                }
               }}
               rightIcon={<>%</>}
               sx={{
@@ -172,10 +177,15 @@ const Slider: React.FC<CommonProps & TestProps> = ({
               hasMinWidthCompat={false}
               size={'sm'}
               value={values[1]}
-              onChange={(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
                 onChange([values[0], sanitizedValue]);
-                onFinalChange?.([values[0], sanitizedValue]);
+              }}
+              onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
+                if (onFinalChange) {
+                  const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
+                  onFinalChange([values[0], sanitizedValue]);
+                }
               }}
               rightIcon={<>%</>}
               sx={{
