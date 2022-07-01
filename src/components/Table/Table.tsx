@@ -70,6 +70,8 @@ type Props<T> = {
   topRightArea?: (data: Row<T>[], selectionData?: Selection[]) => React.Component | JSX.Element;
   /** Action cell width for Table with Expandable Rows (in %)*/
   actionWidth?: number;
+  /** If true, table's expandable rows will be expanded on initial render. */
+  initialExpanded?: boolean;
   /** Data test id prefix for all th/td elements */
   dataTestIdPrefix?: string;
 };
@@ -103,6 +105,7 @@ function Table<T>({
   topLeftText,
   topRightArea,
   actionWidth,
+  initialExpanded = false,
   dataTestIdPrefix,
 }: Props<T>) {
   const breakpoints = useBreakpoints();
@@ -345,6 +348,7 @@ function Table<T>({
                 onSelectionChangeExist: Boolean(onCheck),
                 expanded: Boolean(row.expanded),
                 actionWidth: actionWidth,
+                initialExpanded,
               }}
               dataTestIdPrefix={dataTestIdPrefix}
               rowIndex={index + 1}

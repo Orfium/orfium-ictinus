@@ -118,14 +118,16 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
   row,
   dataTestIdPrefix,
   rowIndex,
+  initialExpanded,
 }: {
   row: Row<T>;
   dataTestIdPrefix?: string;
   rowIndex?: number;
+  initialExpanded: boolean;
 }) => {
   const { isRowSelected, columnCount, fixedHeader } = React.useContext(TableRowContext);
   const { expanded } = row;
-  const [checked, toggleChecked] = useToggle(false);
+  const [checked, toggleChecked] = useToggle(initialExpanded);
   const ExpandedComponent = expanded
     ? expanded({ row, selected: isRowSelected, expanded: checked })
     : null;
