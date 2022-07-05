@@ -63,7 +63,7 @@ const MenuItem: React.FC<Props> = memo(
           <ExpandCollapse
             expanded={expanded}
             onChange={() => toggleMenuItem(url)}
-            textAndControl={handleClick => {
+            textAndControl={(handleClick) => {
               return (
                 <button
                   type={'button'}
@@ -80,7 +80,7 @@ const MenuItem: React.FC<Props> = memo(
               return (
                 <React.Fragment>
                   {options.map(
-                    subMenuItem =>
+                    (subMenuItem) =>
                       subMenuItem.visible && (
                         <NavLink
                           exact
@@ -98,7 +98,7 @@ const MenuItem: React.FC<Props> = memo(
                           <div css={subMenuIconStyle()}>
                             <Icon
                               name={subMenuItem.iconName}
-                              color={theme.utils.getColor('lightGrey', 650)}
+                              color={theme.utils.getColor('lightGrey', 750)}
                               size={20}
                             />
                           </div>
