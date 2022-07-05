@@ -49,6 +49,7 @@ export { default as Pagination } from './components/Pagination';
 export { default as Radio } from './components/Radio';
 export { default as RadioGroup } from './components/RadioGroup';
 export { default as Select } from './components/Select';
+export { default as Slider } from './components/Slider';
 export { default as Switch } from './components/Switch';
 export { default as Table } from './components/Table';
 export { default as TextField } from './components/TextField';
@@ -66,12 +67,4 @@ export { default as Filter } from './components/Filter';
 export { default as TruncatedContent } from './components/TruncatedContent';
 
 export { default as themeConfig } from './theme';
-export {
-  themeFunctions,
-  palette,
-  spacing,
-  typography,
-  elevation,
-  overrides,
-  queriesSizes,
-};
+export { themeFunctions, palette, spacing, typography, elevation, overrides, queriesSizes };

@@ -29,11 +29,16 @@ const getTextFieldWidth = (size?: Size): string => {
 };
 
 export const getTextFieldSize = (
+  hasMinWidthCompat = true,
   size?: Size
 ): {
-  minWidth: string;
+  minWidth?: string;
   height: string;
 } => {
+  if (!hasMinWidthCompat) {
+    return { height: getTextFieldHeight(size) };
+  }
+
   return { minWidth: getTextFieldWidth(size), height: getTextFieldHeight(size) };
 };
 

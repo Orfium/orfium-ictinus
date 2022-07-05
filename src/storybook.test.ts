@@ -37,6 +37,7 @@ function createNodeMock(element: ReactElement) {
 }
 
 initStoryshots({
+  storyNameRegex: /^(?!.*DontTest).*/,
   test: ({ story, context }) => {
     const converter = new Stories2SnapsConverter();
     const options = { createNodeMock };

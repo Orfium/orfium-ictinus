@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, useEffect } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { TestProps } from '../../utils/types';
@@ -24,9 +24,17 @@ export type Props = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
+  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
+   * of the TextField. It will be replaced by a fullWidth prop. */
+  hasMinWidthCompat?: boolean;
 } & TextInputWrapperProps;
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+
+console.warn(
+  'Deprecation warning! min-width will be removed from the component in v5 of ictinus. ' +
+    'hasMinWidthCompat prop has been added to temporarily disable min-width when necessary'
+);
 
 const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
   (props, ref) => {
@@ -46,6 +54,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
       styleType: __styleType,
       readOnly,
       status,
+      hasMinWidthCompat = true,
       ...rest
     } = props;
     const theme = useTheme();
@@ -65,7 +74,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
 
     return (
       <React.Fragment>
-        <TextInputBase {...props}>
+        <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
           {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
           <div css={{ width: '100% ' }}>
             <input

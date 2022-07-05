@@ -59,12 +59,21 @@ const wrapperStyleSwitch = (
  * this wrapper must remain simple and not mess with children properties as it will be used
  * in custom implementation needed eg: datepicker
  * */
-export const wrapperStyle = ({ disabled, locked, status, lean, dark, size, sx }: Props) => (
-  theme: Theme
-): SerializedStyles => {
+export const wrapperStyle = ({
+  disabled,
+  locked,
+  status,
+  lean,
+  dark,
+  size,
+  sx,
+  hasMinWidthCompat,
+}: Props) => (theme: Theme): SerializedStyles => {
   const colorScheme = dark ? 'dark' : theme.colorScheme;
   const error = status === 'error';
-  const textFieldSize = !lean ? getTextFieldSize(size) : getTextFieldSize();
+  const textFieldSize = !lean
+    ? getTextFieldSize(hasMinWidthCompat, size)
+    : getTextFieldSize(hasMinWidthCompat);
   const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
   return css({
