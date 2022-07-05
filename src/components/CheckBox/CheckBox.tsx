@@ -78,7 +78,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
       <span ref={ref} css={wrapperStyle({ disabled })}>
         <span
           css={checkboxWrapperStyle({ disabled })}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
             if (e.currentTarget === e.target) {
               inputRef?.current?.click();
@@ -90,7 +90,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
             css={checkboxStyle({ intermediate, checked: isChecked, filled })}
             id={`styled-checkbox-${id}`}
             type="checkbox"
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
             onChange={handleInputChange}
             disabled={disabled}
             checked={isChecked}
@@ -99,7 +99,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, Props>(
           <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ checked: isChecked })}>
             <Icon
               name={intermediate ? 'minus' : 'checkmark'}
-              size={24}
+              size={28}
               color={theme.utils.getAAColorFromSwatches(color, shade)}
             />
           </label>
