@@ -5,40 +5,43 @@ import TableFilterShowcase from '../storyUtils/TableFilterShowcase';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Table"
-    component={Table}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Table Cell',
-            url: `${FIGMA_URL}?node-id=10283%3A104367`,
-        },
-        {
-            type: 'figma',
-            name: 'Table Header',
-            url: `${FIGMA_URL}?node-id=10283%3A104369`,
-        },
-        {
-            type: 'figma',
-            name: 'Table Title',
-            url: `${FIGMA_URL}?node-id=10283%3A104366`,
-        },
-        {
-            type: 'figma',
-            name: 'Documentation: Examples',
-            url: `${FIGMA_URL}?node-id=921%3A155`,
-        },
-        {
-            type: 'figma',
-            name: 'Documentation: Sorting',
-            url: `${FIGMA_URL}?node-id=7428%3A117692`,
-        },
-        {
-            type: 'figma',
-            name: 'Documentation: Spacing Row Rules',
-            url: `${FIGMA_URL}?node-id=7848%3A131938`,
-        }],
-    }} />
+  title="Design System/Table"
+  component={Table}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Table Cell',
+        url: `${FIGMA_URL}?node-id=10283%3A104367`,
+      },
+      {
+        type: 'figma',
+        name: 'Table Header',
+        url: `${FIGMA_URL}?node-id=10283%3A104369`,
+      },
+      {
+        type: 'figma',
+        name: 'Table Title',
+        url: `${FIGMA_URL}?node-id=10283%3A104366`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation: Examples',
+        url: `${FIGMA_URL}?node-id=921%3A155`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation: Sorting',
+        url: `${FIGMA_URL}?node-id=7428%3A117692`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation: Spacing Row Rules',
+        url: `${FIGMA_URL}?node-id=7848%3A131938`,
+      },
+    ],
+  }}
+/>
 
 # Table
 
@@ -169,35 +172,36 @@ Regular Table with sorting and column tooltips
         {
           content: {
             label: 'Title',
-            sortingKey: 'title'
+            sortingKey: 'title',
           },
           isSortable: true,
           tooltip: {
             content: 'Tooltip Content',
-            placement: 'bottom'
-          }
+            placement: 'bottom',
+          },
         },
         'Name',
         {
           content: {
             label: 'Surname',
-            sortingKey: 'surname'
+            sortingKey: 'surname',
           },
           tooltip: {
             content: 'Tooltip Content',
-          }
+          },
         },
         {
           content: {
             label: 'Age',
-            sortingKey: 'age'
+            sortingKey: 'age',
           },
           isSortable: true,
           tooltip: {
             content: 'Tooltip Content',
-            placement: 'right'
-          }
-        }]}
+            placement: 'right',
+          },
+        },
+      ]}
       dataTestIdPrefix="ictinus"
       onSort={(column, order) => console.log(column, order)}
       initialSort={{ column: 'title', order: 'asc' }}
@@ -316,6 +320,46 @@ Table with expandable rows and nested header
         expanded: () => <div>Hey i am an expandable content</div>,
       }))}
       actionWidth={number('Action Width', 3)}
+    />
+  </Story>
+</Preview>
+
+# Table with Expandable Rows - Expanded on Page Load
+
+Table with Expandable Rows - Expanded on Page Load
+
+<Preview>
+  <Story name="Table with Expandable Rows - Expanded on Page Load">
+    <Table
+      columns={['Title', 'Name', 'Surname', 'Age']}
+      padded
+      fixedHeader
+      fixedCTA
+      onCheck={(g) => console.log('on table change: ', g)}
+      topLeftText={'topLeftText'}
+      topRightArea={() => (
+        <div>
+          <div>top right section</div>
+        </div>
+      )}
+      data={new Array(50).fill(null).map((item, index) => ({
+        id: index + 1,
+        cells: [
+          {
+            content: (
+              <a href="www.youtube.com" onClick={(e) => e.stopPropagation()}>
+                'title'
+              </a>
+            ),
+          },
+          { content: 'firstname' },
+          { content: 'lastname' },
+          { content: 4.221 },
+        ],
+        expanded: () => <div>Hey i am an expandable content</div>,
+      }))}
+      actionWidth={number('Action Width', 3)}
+      initialExpanded
     />
   </Story>
 </Preview>
@@ -481,7 +525,6 @@ Fixed Header Table
   </Story>
 </Preview>
 
-
 # Expandable Table with sort, fixed Header and cta's
 
 Table with expandable rows with sort, fixed Header and cta's
@@ -493,35 +536,36 @@ Table with expandable rows with sort, fixed Header and cta's
         {
           content: {
             label: 'Title',
-            sortingKey: 'title'
+            sortingKey: 'title',
           },
           isSortable: true,
           tooltip: {
             content: 'Tooltip Content',
-            placement: 'bottom'
-          }
+            placement: 'bottom',
+          },
         },
         'Name',
         {
           content: {
             label: 'Surname',
-            sortingKey: 'surname'
+            sortingKey: 'surname',
           },
           tooltip: {
             content: 'Tooltip Content',
-          }
+          },
         },
         {
           content: {
             label: 'Age',
-            sortingKey: 'age'
+            sortingKey: 'age',
           },
           isSortable: true,
           tooltip: {
             content: 'Tooltip Content',
-            placement: 'right'
-          }
-        }]}
+            placement: 'right',
+          },
+        },
+      ]}
       type={'normal'}
       padded
       fixedHeader
