@@ -50,7 +50,7 @@ describe('Day', () => {
       <table>
         <tbody>
           <tr>
-            <Day day={day} month={month} year={year} disabled />
+            <Day day={day} month={month} year={year} isDisabled />
           </tr>
         </tbody>
       </table>
@@ -84,7 +84,7 @@ describe('Day', () => {
       <table>
         <tbody>
           <tr>
-            <Day day={day} month={month} year={year} onSelect={onDaySelect} disabled />
+            <Day day={day} month={month} year={year} onSelect={onDaySelect} isDisabled />
           </tr>
         </tbody>
       </table>
