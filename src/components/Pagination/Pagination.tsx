@@ -11,21 +11,21 @@ type Props = {
   count: number;
   /** An onChange callback that will return the page on navigation **/
   onChange?: (page: number) => void;
-  /** Hide the enhanced button functionality, this way the jump to first and last page will be hidden **/
-  hideEnhancedPaginationButtons?: boolean;
+  /** Show enhanced button functionality, this way the jump to first and last page will be shown. Default to false **/
+  isEnhancedPaginationVisible?: boolean;
   /** Manually disable next page buttons **/
-  nextPageDisabled?: boolean;
+  isNextPageDisabled?: boolean;
   /** Manually disable previous page buttons **/
-  prevPageDisabled?: boolean;
+  isPrevPageDisabled?: boolean;
 };
 
 const Pagination = ({
   page = 1,
   count,
   onChange = () => {},
-  hideEnhancedPaginationButtons = false,
-  nextPageDisabled,
-  prevPageDisabled,
+  isEnhancedPaginationVisible = false,
+  isNextPageDisabled,
+  isPrevPageDisabled,
 }: Props) => {
   const theme = useTheme();
   const {
@@ -49,7 +49,7 @@ const Pagination = ({
         '> *': { padding: theme.spacing.sm },
       }}
     >
-      {!hideEnhancedPaginationButtons && (
+      {isEnhancedPaginationVisible && (
         <IconButton
           color="darkGrey-850"
           name="arrowToLeft"
@@ -58,7 +58,7 @@ const Pagination = ({
           size="sm"
           transparent
           filled={false}
-          disabled={prevPageDisabled || !hasPrevPage}
+          disabled={isPrevPageDisabled || !hasPrevPage}
         />
       )}
       <IconButton
@@ -69,7 +69,7 @@ const Pagination = ({
         transparent
         filled={false}
         onClick={navigateToPrevPage}
-        disabled={prevPageDisabled || !hasPrevPage}
+        disabled={isPrevPageDisabled || !hasPrevPage}
       />
 
       <div>
@@ -84,9 +84,9 @@ const Pagination = ({
         transparent
         filled={false}
         onClick={navigateToNextPage}
-        disabled={nextPageDisabled || !hasNextPage}
+        disabled={isNextPageDisabled || !hasNextPage}
       />
-      {!hideEnhancedPaginationButtons && (
+      {isEnhancedPaginationVisible && (
         <IconButton
           color="darkGrey-850"
           name="arrowToRight"
@@ -95,7 +95,7 @@ const Pagination = ({
           transparent
           filled={false}
           onClick={navigateToLastPage}
-          disabled={nextPageDisabled || !hasNextPage}
+          disabled={isNextPageDisabled || !hasNextPage}
         />
       )}
     </div>
