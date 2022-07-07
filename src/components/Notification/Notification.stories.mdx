@@ -26,7 +26,7 @@ import NotificationShowcase, { NotificationContainerWithinDOMElement } from '../
 import { InlineNotification } from '@orfium/ictinus';
 
 <InlineNotification
-  withIcon
+  hasIcon
   message="Message"
   type="info"
   primaryCTALabel='Action'
@@ -45,7 +45,7 @@ import { InlineNotification } from '@orfium/ictinus';
     <Stack>
       <PresentComponent name="" width={768}>
         <InlineNotification
-          withIcon={boolean('withIcon', true)}
+          hasIcon={boolean('hasIcon', true)}
           styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -53,7 +53,7 @@ import { InlineNotification } from '@orfium/ictinus';
       </PresentComponent>
       <PresentComponent name="" width={768}>
         <InlineNotification
-          withIcon={boolean('withIcon', true)}
+          hasIcon={boolean('hasIcon', true)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
@@ -64,7 +64,7 @@ import { InlineNotification } from '@orfium/ictinus';
       </PresentComponent>
       <PresentComponent name="" width={768}>
         <InlineNotification
-          withIcon={boolean('withIcon', true)}
+          hasIcon={boolean('hasIcon', true)}
           message={text('message', 'Informative Message')}
           styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -74,7 +74,7 @@ import { InlineNotification } from '@orfium/ictinus';
       </PresentComponent>
       <PresentComponent name="" width={768}>
         <InlineNotification
-          withIcon={boolean('withIcon', true)}
+          hasIcon={boolean('hasIcon', true)}
           message={text('message', 'Informative Message')}
           type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
           styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
@@ -98,7 +98,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
 
 <NotificationsContainer position='bottom-right'>
   <Banner
-    withIcon
+    hasIcon
     title="Title"
     message="Informative Message"
     type="info"
@@ -122,7 +122,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
           )}
         >
           <Banner
-            withIcon={boolean('icon', true)}
+            hasIcon={boolean('icon', true)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -132,7 +132,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
           />
           <Banner
-            withIcon={boolean('icon', true)}
+            hasIcon={boolean('icon', true)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -142,7 +142,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
             closeCTA={() => console.log('close action clicked')}
           />
           <Banner
-            withIcon={boolean('icon', true)}
+            hasIcon={boolean('icon', true)}
             message={<div style={{ maxWidth: '404px'}}>This is a very long text in order to check how the component wraps the text.This is a very long text in order to check how the component wraps the text </div>}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
@@ -295,7 +295,7 @@ import { Snackbar } from '@orfium/ictinus';
           )}
         >
           <Banner
-            withIcon={boolean('icon', true)}
+            hasIcon={boolean('icon', true)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -338,7 +338,7 @@ import { Snackbar } from '@orfium/ictinus';
             />
           </Toast>
           <Banner
-            withIcon={boolean('icon', true)}
+            hasIcon={boolean('icon', true)}
             title={text('title', 'This is the heading:')}
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}

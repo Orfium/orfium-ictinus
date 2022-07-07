@@ -6,7 +6,7 @@ import CompactNotification from '../subcomponents/CompactNotification';
 
 export type Props = {
   /** Show notification icon based on the type */
-  withIcon?: boolean;
+  hasIcon?: boolean;
   /** The title (message heading) of the Notification */
   title: string;
   /** The informative message of the Notification */
@@ -26,7 +26,7 @@ export type Props = {
 };
 
 const Banner: React.FC<Props> = ({
-  withIcon = false,
+  hasIcon = false,
   title,
   message,
   type,
@@ -38,7 +38,7 @@ const Banner: React.FC<Props> = ({
 }) => {
   return (
     <CompactNotification
-      withIcon={withIcon}
+      hasIcon={hasIcon}
       message={message}
       title={title}
       variant="banner"

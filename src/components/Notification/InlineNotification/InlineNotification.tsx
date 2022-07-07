@@ -6,7 +6,7 @@ import CompactNotification from '../subcomponents/CompactNotification';
 
 export type Props = {
   /** Show notification icon based on the type */
-  withIcon?: boolean;
+  hasIcon?: boolean;
   /** The informative message of the Notification */
   message: string | React.ReactNode;
   /** The type of the Notification */
@@ -24,7 +24,7 @@ export type Props = {
 };
 
 const InlineNotification: React.FC<Props> = ({
-  withIcon = false,
+  hasIcon = false,
   message,
   type,
   styleType = 'elevated',
@@ -35,7 +35,7 @@ const InlineNotification: React.FC<Props> = ({
 }) => {
   return (
     <CompactNotification
-      withIcon={withIcon}
+      hasIcon={hasIcon}
       message={message}
       variant="inline"
       type={type}

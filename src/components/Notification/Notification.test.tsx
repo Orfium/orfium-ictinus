@@ -11,7 +11,7 @@ import Snackbar from './Snackbar';
 
 describe('Inline Notification', () => {
   const data = {
-    withIcon: true,
+    hasIcon: true,
     message: 'message',
     type: 'info' as NotificationTypes,
     primaryCTALabel: 'primaryCTALabel',
@@ -65,7 +65,7 @@ describe('Inline Notification', () => {
 
 describe('Notifications Container', () => {
   const data = {
-    withIcon: true,
+    hasIcon: true,
     title: 'Message heading',
     message: 'Informative Message',
     type: 'info' as NotificationTypes,
