@@ -33,7 +33,7 @@
     "react/boolean-prop-naming": [
       "error",
       {
-        "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+        "rule": "^(is)[A-Z]([A-Za-z0-9]?)+",
         "message": "It is better if your prop ({{ propName }}) starts with `is` or `has`"
       }
     ],
