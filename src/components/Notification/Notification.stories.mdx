@@ -170,7 +170,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
 import { Toast, NotificationVisual } from '@orfium/ictinus';
 
 <NotificationsContainer position="bottom-right">
-  <Toast message="message" type="info" expanded closeCTA={closeCTA}>
+  <Toast message="message" type="info" isExpanded closeCTA={closeCTA}>
     <NotificationVisual
       title="title"
       primaryCTALabel="Primary CTA Label"
@@ -197,7 +197,7 @@ import { Toast, NotificationVisual } from '@orfium/ictinus';
           <Toast
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
-            expanded
+            isExpanded
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
           >
@@ -322,7 +322,7 @@ import { Snackbar } from '@orfium/ictinus';
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
-            expanded
+            isExpanded
             closeCTA={() => console.log('close action clicked')}
           >
             <NotificationVisual
@@ -351,7 +351,7 @@ import { Snackbar } from '@orfium/ictinus';
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
-            expanded
+            isExpanded
             closeCTA={() => console.log('close action clicked')}
           >
             <NotificationVisual
@@ -409,7 +409,7 @@ import { Snackbar } from '@orfium/ictinus';
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
-            expanded
+            isExpanded
             closeCTA={() => console.log('close action clicked')}
           >
             <NotificationVisual
@@ -464,7 +464,7 @@ Notifications contained within a specific parent
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
-            expanded
+            isExpanded
             closeCTA={() => console.log('close action clicked')}
           >
             <NotificationVisual
