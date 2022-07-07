@@ -127,7 +127,7 @@
     "build:partial:types": "tsc --emitDeclarationOnly",
     "build": "yarn build:partial:style && yarn build:partial:nostyle && yarn build:partial:types",
     "build:storybook": "build-storybook",
-    "lint": "eslint './src/**/*.{ts,tsx}'",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
