@@ -41,7 +41,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         <Tooltip
           content={content}
           placement={'left'}
-          interactive={boolean('interactive', false)}
+          isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
           <Button type="primary" transparent>
@@ -51,7 +51,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         <Tooltip
           content={content}
           placement={'right'}
-          interactive={boolean('interactive', false)}
+          isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
           <Button type="primary" transparent>
@@ -64,7 +64,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         <Tooltip
           content={content}
           placement={'top'}
-          interactive={boolean('interactive', false)}
+          isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
           <Button type="primary" transparent>
@@ -74,7 +74,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         <Tooltip
           content={content}
           placement={'bottom'}
-          interactive={boolean('interactive', false)}
+          isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
           <Button type="primary" transparent>
@@ -87,7 +87,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         isTransparent
         content={CustomContent()}
         placement={'right'}
-        interactive={boolean('interactive', false)}
+        isInteractive={boolean('isInteractive', false)}
         delay={number('delay', 100)}
       >
         <Button type="primary" transparent>
