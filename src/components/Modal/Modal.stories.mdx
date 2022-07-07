@@ -29,7 +29,7 @@ import { FIGMA_URL } from '../../utils/common';
 ```js
 import { Modal } from '@orfium/ictinus';
 
-<Modal open={true} onClose={closeCallback}>
+<Modal isOpen={true} onClose={closeCallback}>
   {'some content here'}
 </Modal>;
 ```
@@ -63,7 +63,7 @@ import { Modal } from '@orfium/ictinus';
 import { Modal, ModalContent } from '@orfium/ictinus';
 
 <Modal
-  open={true}
+  isOpen={true}
   onClose={closeFunc}
   contentProps={{
     label: 'Label',
@@ -83,7 +83,7 @@ import { Modal, ModalContent } from '@orfium/ictinus';
     <Stack>
       <PresentComponent name="" width={768}>
         <ModalShowcase
-          closeOnEsc={boolean('close on Esc', false)}
+          hasCloseOnEscEnabled={boolean('close on Esc', false)}
           contentProps={{
             label: text('label', 'Label'),
             heading: text('heading', 'Heading'),

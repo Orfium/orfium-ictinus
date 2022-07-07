@@ -16,7 +16,7 @@ describe('Modal', () => {
     const closeCTA = jest.fn();
 
     const { findByText, findByTestId } = render(
-      <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
         {data.message}
       </Modal>
     );
@@ -32,7 +32,7 @@ describe('Modal', () => {
     const closeCTA = jest.fn();
 
     const { findByText, findByTestId } = render(
-      <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
         <ModalContent heading={data.heading} message={data.message} dataTestId={'content'} />
       </Modal>
     );
@@ -51,7 +51,7 @@ describe('Modal', () => {
     const closeCTA = jest.fn();
 
     const { findByTestId } = render(
-      <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
         {data.message}
       </Modal>
     );
@@ -68,7 +68,7 @@ describe('Modal', () => {
     const secondaryCTA = jest.fn();
 
     const { findByTestId } = render(
-      <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
         <ModalContent
           heading={data.heading}
           message={data.message}
@@ -96,16 +96,16 @@ describe('Modal', () => {
     const closeCTA = jest.fn();
 
     render(
-      <Modal open={true} onClose={closeCTA} dataTestId={'modal'}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'}>
         {data.message}
       </Modal>
     );
 
     fireEvent.keyDown(document.body, {
-        key: "Escape",
-        keyCode: 27,
-        which: 27
-      })
+      key: 'Escape',
+      keyCode: 27,
+      which: 27,
+    });
 
     expect(closeCTA).toHaveBeenCalledTimes(1);
   });
@@ -114,16 +114,16 @@ describe('Modal', () => {
     const closeCTA = jest.fn();
 
     render(
-      <Modal open={true} onClose={closeCTA} dataTestId={'modal'} closeOnEsc={false}>
+      <Modal isOpen={true} onClose={closeCTA} dataTestId={'modal'} hasCloseOnEscEnabled={false}>
         {data.message}
       </Modal>
     );
 
     fireEvent.keyDown(document.body, {
-      key: "Escape",
+      key: 'Escape',
       keyCode: 27,
-      which: 27
-    })
+      which: 27,
+    });
 
     expect(closeCTA).toHaveBeenCalledTimes(0);
   });

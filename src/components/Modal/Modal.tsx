@@ -11,7 +11,7 @@ import ModalContent, { Props as ModalContentProps } from './ModalContent/ModalCo
 
 export type Props = {
   /**  If true, the modal is open. Defaults to false. */
-  open: boolean;
+  isOpen: boolean;
   /** Callback fired when the component requests to be closed. */
   onClose: () => void;
   /** If contentProps are defined then ModalContent will be used instead of children. Otherwise, you can use the Modal as a wrapper  */
@@ -19,28 +19,28 @@ export type Props = {
   /** The data test id if needed */
   dataTestId?: TestId;
   /**  If true, the modal will close also with esc button. Defaults to true. */
-  closeOnEsc?: boolean;
+  hasCloseOnEscEnabled?: boolean;
   /** If false, the content won't have any padding */
   isContentPadded?: boolean;
 };
 
 const Modal: React.FC<Props> = ({
-  open = false,
+  isOpen = false,
   onClose,
   dataTestId,
   children,
   contentProps,
-  closeOnEsc = true,
+  hasCloseOnEscEnabled = true,
   isContentPadded = true,
 }) => {
   useEscape(() => {
-    if (closeOnEsc) {
+    if (hasCloseOnEscEnabled) {
       onClose();
     }
   });
 
   useEffect(() => {
-    if (open) {
+    if (isOpen) {
       document.body.style.overflow = 'hidden';
     }
 
