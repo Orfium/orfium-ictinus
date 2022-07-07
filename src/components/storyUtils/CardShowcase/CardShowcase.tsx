@@ -7,11 +7,11 @@ import { showcaseContainerStyle } from './CardShowcase.style';
 
 type Props = {
   elevated?: keyof Elevation;
-  transparent?: boolean;
+  isTransparent?: boolean;
   radius?: keyof Spacing;
 };
 
-const CardShowcase: React.FC<Props> = ({ elevated, transparent, radius }) => {
+const CardShowcase: React.FC<Props> = ({ elevated, isTransparent, radius }) => {
   const CardContent = () => (
     <div css={{ padding: '16px' }}>
       <div>{`Card with ${elevated ? elevated : 'no'} elevation`}</div>
@@ -26,7 +26,7 @@ const CardShowcase: React.FC<Props> = ({ elevated, transparent, radius }) => {
     <div css={showcaseContainerStyle}>
       <p>(Card inside a lightGrey container to test the transparency/radius/elevation props)</p>
       <div css={{ width: '749px' }}>
-        <Card elevated={elevated} transparent={transparent} radius={radius}>
+        <Card elevated={elevated} isTransparent={isTransparent} radius={radius}>
           <CardContent />
         </Card>
       </div>
