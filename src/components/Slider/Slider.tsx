@@ -1,5 +1,6 @@
 import React, { ReactElement, useEffect, useMemo, useRef } from 'react';
 import { Range } from 'react-range';
+import { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 
 import useTheme from '../../hooks/useTheme';
 import { TestProps } from '../../utils/types';
@@ -8,7 +9,6 @@ import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
-import { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 
 type CommonProps = {
   /** Determines if the Slider is disabled or not */
@@ -19,7 +19,7 @@ type CommonProps = {
   onChange: (values: number[]) => void;
   /** Called when a change is finished (mouse/touch up, or keyup), provides current values.
    * Use this event when you have to make for example ajax request with new values. */
-  onFinalChange?: (values: number[]) => void;
+  onBlur?: (values: number[]) => void;
   /** Determines the position of the rendered thumbs and the type of the Slider. 1 value means it's a Selector,
    * while 2 values mean it's a Range. Defaults to [0, 100] */
   values: [number] | [number, number];
@@ -33,7 +33,7 @@ export const MAX = 100;
 const Slider: React.FC<CommonProps & TestProps> = ({
   values,
   onChange,
-  onFinalChange,
+  onBlur,
   hasIncrements = false,
   disabled = false,
   dataTestPrefixId,
@@ -140,7 +140,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
         disabled={disabled}
         values={values}
         onChange={onChange}
-        onFinalChange={onFinalChange}
+        onFinalChange={onBlur}
         renderMark={handleRenderMark}
         renderTrack={handleRenderTrack}
         renderThumb={handleRenderThumb}
@@ -158,9 +158,9 @@ const Slider: React.FC<CommonProps & TestProps> = ({
                 onChange([sanitizedValue, values[1]]);
               }}
               onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-                if (onFinalChange) {
+                if (onBlur) {
                   const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '0'));
-                  onFinalChange([sanitizedValue, values[1]]);
+                  onBlur([sanitizedValue, values[1]]);
                 }
               }}
               rightIcon={<>%</>}
@@ -182,9 +182,9 @@ const Slider: React.FC<CommonProps & TestProps> = ({
                 onChange([values[0], sanitizedValue]);
               }}
               onBlur={(e: React.FocusEvent<HTMLInputElement>) => {
-                if (onFinalChange) {
+                if (onBlur) {
                   const sanitizedValue = sanitizeValues(parseInt(e?.target.value || '100'));
-                  onFinalChange([values[0], sanitizedValue]);
+                  onBlur([values[0], sanitizedValue]);
                 }
               }}
               rightIcon={<>%</>}
