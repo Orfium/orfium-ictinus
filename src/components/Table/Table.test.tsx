@@ -27,7 +27,7 @@ describe('Table', () => {
       <Table
         columns={['Title', 'Name', 'Surname', 'Age']}
         type="nested-header"
-        padded
+        isPadded
         data={data}
       />
     );
