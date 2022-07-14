@@ -59,7 +59,7 @@ const ContentCell: React.FC<Props> = ({
 
       <TruncatedContent
         placement={'bottom'}
-        shouldAlwaysShow={isComponentFunctionType(content) && !!tooltipContent}
+        isAlwaysVisible={isComponentFunctionType(content) && !!tooltipContent}
         tooltipContent={tooltipContent}
       >
         {isComponentFunctionType(content) ? (

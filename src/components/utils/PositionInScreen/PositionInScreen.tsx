@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { container, itemContainer } from './PositionInScreen.style';
 
 type Props = {
-  visible: boolean;
-  withOverflow?: boolean;
+  isVisible: boolean;
+  isOverflowAllowed?: boolean;
   offsetX?: number;
   offsetY?: number;
   parent: any;
@@ -13,7 +13,7 @@ type Props = {
 const usePositionInScreen = (
   parentRef: React.MutableRefObject<any>,
   itemRef: React.MutableRefObject<any>,
-  visible?: boolean
+  isVisible?: boolean
 ) => {
   const [position, setPosition] = useState({ x: -1, y: -1 });
   useEffect(() => {
@@ -42,34 +42,30 @@ const usePositionInScreen = (
     }
 
     setPosition({ x: itemX, y: itemY });
-  }, [parentRef, itemRef, visible]);
+  }, [parentRef, itemRef, isVisible]);
 
   return position;
 };
 
 const PositionInScreen: React.FC<Props> = ({
-  visible,
+  isVisible,
   parent,
-  withOverflow,
+  isOverflowAllowed,
   offsetX = 0,
   offsetY = 0,
   children,
 }) => {
   const wrapperRef = useRef(null);
   const itemRef = useRef(null);
-  const { x, y } = usePositionInScreen(wrapperRef, itemRef, visible);
-  const showTooltip = visible && x !== -1 && y !== -1;
+  const { x, y } = usePositionInScreen(wrapperRef, itemRef, isVisible);
+  const isTooltipVisible = isVisible && x !== -1 && y !== -1;
   const ParentComp = parent;
 
   return (
-    <div css={container(withOverflow, showTooltip)} ref={wrapperRef}>
+    <div css={container(isOverflowAllowed, isTooltipVisible)} ref={wrapperRef}>
       <ParentComp />
-      {showTooltip && (
-        <div
-          css={itemContainer(x + offsetX, y + offsetY)}
-          id={'unique-tooltip-id'}
-          ref={itemRef}
-        >
+      {isTooltipVisible && (
+        <div css={itemContainer(x + offsetX, y + offsetY)} id={'unique-tooltip-id'} ref={itemRef}>
           {children}
         </div>
       )}

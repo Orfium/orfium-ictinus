@@ -16,14 +16,14 @@ export type Props = {
   /** Property indicating the label name to be displayed for Y axis */
   labelY?: string;
   /**  Define if the legend will be displayed */
-  showLegend?: boolean;
+  isLegendVisible?: boolean;
   /** Function passed as property, so that the user can select colors for each line. If no function is passed or no color is picked for one or more lines, color will be selected randomly  */
   color?: (dataLabel: string) => string;
 };
 
 const WrappedChart = Wrapper(AreaChart);
 
-const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, color }) => {
+const LineChart: React.FC<Props> = ({ data, labelX, labelY, isLegendVisible = false, color }) => {
   const theme = useTheme();
 
   const uniqueKeyNames = useMemo(() => getKeyNames(data), [data]);
@@ -58,7 +58,7 @@ const LineChart: React.FC<Props> = ({ data, labelX, labelY, showLegend = false, 
         label={labelY && { value: labelY, angle: -90, position: 'left', offset: 15 }}
       />
       <CartesianGrid vertical={false} />
-      {showLegend && (
+      {isLegendVisible && (
         <Legend
           align="left"
           iconType="circle"

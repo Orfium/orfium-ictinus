@@ -27,9 +27,9 @@ type Props = {
   /** Determines if the tooltip is interactive, i.e. it can be
    * hovered over or clicked without hiding */
   /** @default false */
-  interactive?: boolean;
+  isInteractive?: boolean;
   /** Number in ms to debounce the internal onMouseMove handler
-   * which determines when an interactive tooltip should hide. */
+   * which determines when an isInteractive tooltip should hide. */
   /** @default 100 */
   delay?: number;
   children: React.ReactElement;
@@ -41,7 +41,7 @@ const Tooltip: React.FC<Props> = ({
   content,
   placement = 'top',
   isTransparent = false,
-  interactive = false,
+  isInteractive = false,
   delay = 100,
 }) => {
   return (
@@ -49,7 +49,7 @@ const Tooltip: React.FC<Props> = ({
       css={tooltipStyle({ size, isTransparent })}
       content={content}
       placement={placement}
-      interactive={interactive}
+      interactive={isInteractive}
       interactiveDebounce={delay}
     >
       {children}

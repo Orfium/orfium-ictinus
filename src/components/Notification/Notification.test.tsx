@@ -194,7 +194,7 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const closeCTA = jest.fn();
 
     const { findByTestId } = render(
-      <Toast {...toastData} expanded closeCTA={closeCTA}>
+      <Toast {...toastData} isExpanded closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
       </Toast>
     );
@@ -210,7 +210,7 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const closeCTA = jest.fn();
 
     const { findByTestId } = render(
-      <Toast {...toastData} expanded closeCTA={closeCTA}>
+      <Toast {...toastData} isExpanded closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
       </Toast>
     );
