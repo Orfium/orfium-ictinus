@@ -24,6 +24,7 @@ export const tooltipStyle =
 
     return css`
       background: transparent;
+
       .tippy-content {
         color: ${theme.utils.getAAColorFromSwatches(color, shade)};
         background-color: ${backgroundColor};
@@ -37,6 +38,7 @@ export const tooltipStyle =
         white-space: pre-wrap;
         word-break: break-word;
       }
+
       .tippy-arrow {
         color: ${backgroundColor};
       }
