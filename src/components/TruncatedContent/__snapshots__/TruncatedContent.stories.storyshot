@@ -75,28 +75,6 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
   white-space: nowrap;
 }
 
-.emotion-19 {
-  background: transparent;
-}
-
-.emotion-19 .tippy-content {
-  color: white;
-  background-color: #0f0f17;
-  max-width: 16rem;
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 110%;
-  border-radius: 0.5rem;
-  text-align: start;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-19 .tippy-arrow {
-  color: #0f0f17;
-}
-
 <div
   style={
     Object {
@@ -244,23 +222,13 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
             data-testid="ictinus_table_row_1_cell_4"
           >
             <div
-              className="emotion-19"
-              interactive={false}
-              interactiveDebounce={100}
-              placement="bottom"
+              className="emotion-13"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <div
-                className="emotion-13"
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-              >
-                <span>
-                  JSX Content with forced tooltip
-                </span>
-              </div>
-            </div>
-            <div>
-              This is a kinda long (that could be longer) tooltip from a prop
+              <span>
+                JSX Content with forced tooltip
+              </span>
             </div>
           </td>
         </tr>
