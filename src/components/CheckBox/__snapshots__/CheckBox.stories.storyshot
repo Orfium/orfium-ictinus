@@ -23,37 +23,50 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
 }
 
 .emotion-2 {
-  opacity: 1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  opacity: 1;
+  gap: 0.125rem;
 }
 
 .emotion-3 {
-  border-radius: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
   position: relative;
 }
 
@@ -63,8 +76,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   content: ' ';
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   position: absolute;
 }
 
@@ -76,8 +89,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
 .emotion-4 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -94,8 +107,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #b7c3d8;
   border-radius: 0.25rem;
 }
@@ -132,8 +145,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
 
 .emotion-7 {
   fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-7 path {
@@ -143,8 +156,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
 .emotion-10 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -161,8 +174,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #175BF5;
   border-radius: 0.25rem;
 }
@@ -182,37 +195,50 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
 }
 
 .emotion-14 {
-  opacity: 0.3;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  opacity: 0.3;
+  gap: 0.125rem;
 }
 
 .emotion-15 {
-  border-radius: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
   position: relative;
 }
 
@@ -222,16 +248,16 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   content: ' ';
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   position: absolute;
 }
 
 .emotion-47 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -248,8 +274,8 @@ exports[`Storyshots Design System/CheckBox CheckBox 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: inherit;
   box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
   border-radius: 0.25rem;
@@ -891,37 +917,50 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 }
 
 .emotion-2 {
-  opacity: 1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  opacity: 1;
+  gap: 0.125rem;
 }
 
 .emotion-3 {
-  border-radius: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
   position: relative;
 }
 
@@ -931,8 +970,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   content: ' ';
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   position: absolute;
 }
 
@@ -944,8 +983,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 .emotion-4 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -962,8 +1001,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #b7c3d8;
   border-radius: 0.25rem;
 }
@@ -1000,8 +1039,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 
 .emotion-7 {
   fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-7 path {
@@ -1009,7 +1048,6 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 }
 
 .emotion-8 {
-  padding-left: 0.25rem;
   font-size: 0.9375rem;
   font-weight: 400;
   color: #191927;
@@ -1019,8 +1057,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 .emotion-11 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -1037,8 +1075,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #175BF5;
   border-radius: 0.25rem;
 }
@@ -1058,37 +1096,50 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
 }
 
 .emotion-16 {
-  opacity: 0.3;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  opacity: 0.3;
+  gap: 0.125rem;
 }
 
 .emotion-17 {
-  border-radius: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
   position: relative;
 }
 
@@ -1098,16 +1149,16 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   content: ' ';
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   position: absolute;
 }
 
 .emotion-54 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -1124,8 +1175,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Label 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: inherit;
   box-shadow: inset 0px 0px 0px 0.125rem #b7c3d8;
   border-radius: 0.25rem;
@@ -1839,37 +1890,50 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 }
 
 .emotion-2 {
-  opacity: 1;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  opacity: 1;
+  gap: 0.125rem;
 }
 
 .emotion-3 {
-  border-radius: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 3rem;
-  height: 3rem;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border-radius: 100%;
+  width: 2.25rem;
+  height: 2.25rem;
   position: relative;
 }
 
@@ -1879,8 +1943,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   content: ' ';
-  width: 3rem;
-  height: 3rem;
+  width: 2.25rem;
+  height: 2.25rem;
   position: absolute;
 }
 
@@ -1892,8 +1956,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 .emotion-4 {
   border: 0;
   border-radius: 0.125rem;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   position: absolute;
   opacity: 0;
 }
@@ -1910,8 +1974,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
   transition: all 0.2s;
   display: inline-block;
   vertical-align: text-top;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
   background: #b7c3d8;
   border-radius: 0.25rem;
 }
@@ -1948,8 +2012,8 @@ exports[`Storyshots Design System/CheckBox CheckBox with Props 1`] = `
 
 .emotion-7 {
   fill: white;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-7 path {
