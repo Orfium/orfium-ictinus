@@ -2,7 +2,6 @@ import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { flexCenter } from '../../theme/functions';
 import { BASE_SHADE } from '../../theme/palette';
 import { Props } from './CheckBox';
 
@@ -10,8 +9,10 @@ export const wrapperStyle =
   ({ disabled }: Props) =>
   (): SerializedStyles =>
     css`
-      ${flexCenter};
       opacity: ${disabled ? 0.3 : 1};
+      justify-content: center;
+      align-items: center;
+      display: flex;
       gap: ${rem(2)};
     `;
 
@@ -28,10 +29,12 @@ export const checkboxWrapperStyle =
   }`;
 
     return css`
-      ${flexCenter};
       border-radius: 100%;
+      display: flex;
       width: ${rem(36)};
       height: ${rem(36)};
+      justify-content: center;
+      align-items: center;
       position: relative;
 
       &:before {
