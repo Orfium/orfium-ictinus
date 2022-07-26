@@ -243,6 +243,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
             status={status}
             value={searchValue || inputValue.label}
             ref={combinedRefs}
+            autoComplete="off"
           />
           {open && (
             <SelectMenu
