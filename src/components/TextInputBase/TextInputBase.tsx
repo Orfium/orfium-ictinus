@@ -21,19 +21,19 @@ export type Props = {
   /** An optional icon to show to the right */
   rightIcon?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
-  required?: boolean;
+  isRequired?: boolean;
   /** If the text field is disabled */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** If the text field is locked. Locked state is unique to this and the system */
-  locked?: boolean;
+  isLocked?: boolean;
   /** dark mode of the text field */
-  dark?: boolean;
+  isDark?: boolean;
   /** Error message */
   hintMsg?: React.ReactNode | string;
   /** value of the input */
   value?: string | number;
   /** if the input will be without default style for use inside the library */
-  lean?: boolean;
+  isLean?: boolean;
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Sets the size of the textField */
@@ -46,20 +46,20 @@ export type Props = {
     textField?: CSSObject;
     input?: CSSObject;
   };
-};
+} & TestProps;
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<Props & TestProps> = ({
-  lean = false,
-  disabled,
+const TextInputBase: FC<Props> = ({
+  isLean = false,
+  isDisabled,
   hintMsg,
   styleType = 'filled',
   dataTestId,
   status = 'normal',
-  locked = false,
+  isLocked = false,
   size = DEFAULT_SIZE,
-  dark = false,
+  isDark = false,
   children,
   sx,
 }) => {
@@ -80,17 +80,17 @@ const TextInputBase: FC<Props & TestProps> = ({
       <div
         data-testid={dataTestId}
         css={wrapperStyle({
-          dark,
-          locked,
-          disabled,
+          isDark,
+          isLocked,
+          isDisabled,
           status,
-          lean,
+          isLean,
           styleType,
           size,
           sx,
         })}
       >
-        <div css={textFieldStyle({ lean, sx })}>{children}</div>
+        <div css={textFieldStyle({ isLean, sx })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>
