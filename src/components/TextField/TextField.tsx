@@ -80,12 +80,11 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
             />
             {label && (
               <Label
-                size={size}
                 htmlFor={id}
                 label={label}
-                required={required}
-                animateToTop={Boolean(rest.value)}
-                error={status === 'error'}
+                isRequired={required}
+                isAnimated={Boolean(rest.value)}
+                hasError={status === 'error'}
               />
             )}
           </div>

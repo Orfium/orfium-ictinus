@@ -88,6 +88,12 @@
       }
     ],
     /* Typescript rules */
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "variable", "types": ["boolean"],
+        "format": ["camelCase"],
+        "prefix": ["is", "has"] }
+    ],
     "@typescript-eslint/no-unused-expressions": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn",
@@ -118,6 +124,7 @@
       "jsx": true
     },
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": ["./tsconfig.json"] // Specify it only for TypeScript files
   }
 }
