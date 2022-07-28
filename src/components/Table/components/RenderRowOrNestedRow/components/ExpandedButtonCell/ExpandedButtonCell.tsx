@@ -7,7 +7,7 @@ import IconButton from 'components/IconButton';
 
 type Props = {
   isExpandedExists: boolean;
-  checked: boolean;
+  isChecked: boolean;
   toggleChecked: () => void;
   actionWidth?: number;
   dataTestIdPrefix?: string;
@@ -17,7 +17,7 @@ type Props = {
 
 const ExpandedButtonCell: React.FC<Props> = ({
   isExpandedExists,
-  checked,
+  isChecked,
   toggleChecked,
   actionWidth,
   dataTestIdPrefix,
@@ -49,9 +49,9 @@ const ExpandedButtonCell: React.FC<Props> = ({
               transition: '0.3s all ease-in-out',
               transformOrigin: 'center',
               width: 'fit-content',
-              transform: `rotate(${checked ? '180' : '0'}deg)`,
+              transform: `rotate(${isChecked ? '180' : '0'}deg)`,
             }}
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             <IconButton
               transparent

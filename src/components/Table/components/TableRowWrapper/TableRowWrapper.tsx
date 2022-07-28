@@ -9,13 +9,13 @@ type TableRowWrapperProps<T> = {
   isRowSelected: boolean;
   onSelectionAdd: (selection: Selection) => void;
   columnsWithWidth: number[];
-  padded: boolean;
-  onSelectionChangeExist: boolean;
+  isPadded: boolean;
+  hasOnSelectionChange: boolean;
   columnCount: number;
   columns: string[];
-  fixedHeader: boolean;
+  hasFixedHeader: boolean;
   type: TableType;
-  expanded: boolean;
+  isExpanded: boolean;
   actionWidth?: number;
   dataTestIdPrefix?: string;
   rowIndex?: number;
@@ -26,14 +26,14 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
     row,
     isRowSelected,
     onSelectionAdd,
-    padded,
+    isPadded,
     columns,
-    fixedHeader,
+    hasFixedHeader,
     type,
     columnsWithWidth,
     columnCount,
-    onSelectionChangeExist,
-    expanded,
+    hasOnSelectionChange,
+    isExpanded,
     actionWidth,
     dataTestIdPrefix,
     rowIndex,
@@ -48,15 +48,15 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
       value={{
         row,
         columnsWithWidth,
-        onSelectionChangeExist,
-        padded,
+        hasOnSelectionChange,
+        isPadded,
         columns,
-        fixedHeader,
+        hasFixedHeader,
         tChange,
         type,
         columnCount,
         isRowSelected,
-        bordered: !expanded,
+        bordered: !isExpanded,
         actionWidth,
       }}
     >
