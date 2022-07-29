@@ -54,7 +54,7 @@ const ExpandedButtonCell: React.FC<Props> = ({
             onClick={(e) => e.stopPropagation()}
           >
             <IconButton
-              transparent
+              isTransparent
               name={'chevronSmallDown'}
               size={'sm'}
               onClick={toggleChecked}

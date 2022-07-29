@@ -56,9 +56,9 @@ const Pagination = ({
           onClick={navigateToFirstPage}
           iconSize={20}
           size="sm"
-          transparent
-          filled={false}
-          disabled={isPrevPageDisabled || !hasPrevPage}
+          isTransparent
+          isFilled={false}
+          isDisabled={isPrevPageDisabled || !hasPrevPage}
         />
       )}
       <IconButton
@@ -66,10 +66,10 @@ const Pagination = ({
         name="arrowLeft"
         iconSize={20}
         size="sm"
-        transparent
-        filled={false}
+        isTransparent
+        isFilled={false}
         onClick={navigateToPrevPage}
-        disabled={isPrevPageDisabled || !hasPrevPage}
+        isDisabled={isPrevPageDisabled || !hasPrevPage}
       />
 
       <div>
@@ -81,10 +81,10 @@ const Pagination = ({
         name="arrowRight"
         iconSize={20}
         size="sm"
-        transparent
-        filled={false}
+        isTransparent
+        isFilled={false}
         onClick={navigateToNextPage}
-        disabled={isNextPageDisabled || !hasNextPage}
+        isDisabled={isNextPageDisabled || !hasNextPage}
       />
       {isEnhancedPaginationVisible && (
         <IconButton
@@ -92,10 +92,10 @@ const Pagination = ({
           name="arrowToRight"
           iconSize={20}
           size="sm"
-          transparent
-          filled={false}
+          isTransparent
+          isFilled={false}
           onClick={navigateToLastPage}
-          disabled={isNextPageDisabled || !hasNextPage}
+          isDisabled={isNextPageDisabled || !hasNextPage}
         />
       )}
     </div>

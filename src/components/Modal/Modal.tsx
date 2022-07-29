@@ -54,8 +54,8 @@ const Modal: React.FC<Props> = ({
             <div css={closeContainer}>
               <IconButton
                 name={'close'}
-                filled={false}
-                transparent
+                isFilled={false}
+                isTransparent
                 color={'lightGrey-650'}
                 size={'sm'}
                 onClick={onClose}
