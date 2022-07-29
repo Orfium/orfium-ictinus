@@ -12,18 +12,18 @@ const Navigation: React.FC<NavigationProps> = ({ menuItems, expanded }) => {
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 
   const toggleMenuItem = useCallback((newUrl: string): void => {
-    setOpenMenuItems(openMenuItems => (openMenuItems.indexOf(newUrl) !== -1 ? [] : [newUrl]));
+    setOpenMenuItems((openMenuItems) => (openMenuItems.indexOf(newUrl) !== -1 ? [] : [newUrl]));
   }, []);
 
   return (
     <div css={navigationContainerStyle(expanded)}>
       {menuItems.map(
-        menuItem =>
+        (menuItem) =>
           menuItem.visible && (
             <MenuItem
               key={menuItem.url}
               isCurrent={currentMenuItem === menuItem.url}
-              expanded={openMenuItems.includes(menuItem.url)}
+              isExpanded={openMenuItems.includes(menuItem.url)}
               toggleMenuItem={toggleMenuItem}
               {...menuItem}
             />
