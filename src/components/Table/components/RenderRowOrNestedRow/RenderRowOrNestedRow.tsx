@@ -33,7 +33,7 @@ const RenderRowWithCells = React.memo(
       row,
       type,
       isRowSelected,
-      bordered,
+      isBordered,
       actionWidth,
     } = React.useContext(TableRowContext);
     const { expanded } = row;
@@ -45,7 +45,7 @@ const RenderRowWithCells = React.memo(
         isSelected={isRowSelected}
         onClick={isExpandedExists ? toggleChecked : undefined}
         css={borderedRowStyle({
-          bordered,
+          isBordered,
           isCustomCell: isExpandedExists || isComponentFunctionType(lastItem.content),
         })}
       >

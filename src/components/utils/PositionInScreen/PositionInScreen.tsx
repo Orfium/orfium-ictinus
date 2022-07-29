@@ -25,9 +25,9 @@ const usePositionInScreen = (
       ? itemRef?.current?.children[0]?.getBoundingClientRect()
       : { width: 0, height: 0 };
 
-    const itemYOutOfScreenHeight = itemY + parrentOffsetHeight + height > window.innerHeight;
+    const isItemYOutOfScreenHeight = itemY + parrentOffsetHeight + height > window.innerHeight;
 
-    if (itemYOutOfScreenHeight) {
+    if (isItemYOutOfScreenHeight) {
       itemY -= height;
       if (itemY < 0) {
         itemY = 0;
@@ -36,8 +36,8 @@ const usePositionInScreen = (
       itemY += parrentOffsetHeight;
     }
 
-    const itemXOutOfScreenWidth = itemX + width > window.innerWidth;
-    if (itemXOutOfScreenWidth) {
+    const isItemXOutOfScreenWidth = itemX + width > window.innerWidth;
+    if (isItemXOutOfScreenWidth) {
       itemX = window.innerWidth - width;
     }
 

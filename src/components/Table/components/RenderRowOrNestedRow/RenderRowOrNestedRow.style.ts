@@ -5,10 +5,10 @@ import { Theme } from 'theme';
 import { getBorderColor } from 'components/Table/utils';
 
 export const borderedRowStyle =
-  ({ bordered, isCustomCell }: { bordered: boolean; isCustomCell?: boolean }) =>
+  ({ isBordered, isCustomCell }: { isBordered: boolean; isCustomCell?: boolean }) =>
   (theme: Theme): SerializedStyles =>
     css({
-      borderBottom: bordered ? `${rem(1)} solid ${getBorderColor(theme)}` : 'none',
+      borderBottom: isBordered ? `${rem(1)} solid ${getBorderColor(theme)}` : 'none',
       'td:first-of-type': {
         paddingLeft: theme.spacing.md,
       },

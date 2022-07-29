@@ -13,7 +13,7 @@ export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   hasFixedHeader: boolean;
   tChange: () => void;
   type: TableType;
-  bordered: boolean;
+  isBordered: boolean;
   actionWidth?: number;
 };
 
@@ -33,5 +33,5 @@ export const TableRowContext = React.createContext<
   hasFixedHeader: false,
   tChange: () => {},
   type: 'normal',
-  bordered: false,
+  isBordered: false,
 }) as React.Context<TableRowContextProps<{ [key: string]: unknown }>>;
