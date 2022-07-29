@@ -25,7 +25,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: Props) => {
         <Icon size={20} name="search" color={theme.utils.getColor('lightGrey', 650)} />
       </div>
     ),
-    [open, theme.utils, isLoading]
+    [theme.utils, isLoading]
   );
 
   return (
