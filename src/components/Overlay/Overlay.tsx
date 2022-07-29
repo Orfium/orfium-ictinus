@@ -45,8 +45,8 @@ const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
             <div css={closeIconContainer()}>
               <IconButton
                 name={'close'}
-                filled={false}
-                transparent
+                isFilled={false}
+                isTransparent
                 color={'lightGrey-650'}
                 size={'sm'}
                 onClick={onClose}
