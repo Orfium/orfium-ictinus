@@ -8,7 +8,7 @@ import Drawer from './Drawer';
 
 describe('Drawer', () => {
   let queries: any;
-  let expanded = true;
+  let isExpanded = true;
 
   beforeEach(async () => {
     // @ts-ignore - set what matches will be
@@ -17,10 +17,10 @@ describe('Drawer', () => {
     queries = render(
       <Router>
         <Drawer
-          expanded={expanded}
+          isExpanded={isExpanded}
           menuItems={menuItems}
           setExpanded={() => {
-            expanded = false;
+            isExpanded = false;
           }}
         />
       </Router>

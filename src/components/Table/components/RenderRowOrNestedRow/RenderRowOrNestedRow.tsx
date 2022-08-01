@@ -62,9 +62,9 @@ const RenderRowWithCells = React.memo(
             <div onClick={(e) => e.stopPropagation()}>
               <CheckBox
                 dataTestIdSuffix={'row-check'}
-                checked={isRowSelected}
+                isChecked={isRowSelected}
                 onClick={tChange}
-                filled={false}
+                isFilled={false}
               />
             </div>
           </TableCell>
