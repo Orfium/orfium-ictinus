@@ -27,7 +27,7 @@ A universal TopAppBar component.
 import { TopNavBar } from '@orfium/ictinus';
 
 <TopNavBar
-    dark={false}
+    isDark={false}
     logoIcon={<Icon />}
     onMenuIconClick={() => {}}
     userMenu={{
@@ -64,7 +64,7 @@ import { TopNavBar } from '@orfium/ictinus';
 <Preview>
   <Story name="with Additional Tools">
     <div style={{ padding: 10 }}>
-      <TopAppBarShowcase withAdditionalTools={true} />
+      <TopAppBarShowcase hasAdditionalTools={true} />
     </div>
   </Story>
 </Preview>
@@ -74,7 +74,7 @@ import { TopNavBar } from '@orfium/ictinus';
 <Preview>
   <Story name="with Dark theme enabled">
     <div style={{ padding: 10 }}>
-      <TopAppBarShowcase dark={true} />
+      <TopAppBarShowcase isDark={true} />
     </div>
   </Story>
 </Preview>
@@ -87,11 +87,11 @@ TopAppBar Playground
   <Story name="playground">
     <div style={{ padding: 10 }}>
       <TopAppBarShowcase
-        dark={boolean('dark', false)}
+        isDark={boolean('isDark', false)}
         isSearchDisabled={boolean('disabled search', false)}
-        provideSearchHandler={boolean('providerSearchHandler', false)}
-        withAdditionalTools={boolean('withAdditionalTools', false)}
-        withLogo={boolean('withLogo', false)}
+        hasSearchHandler={boolean('hasSearchHandler', false)}
+        hasAdditionalTools={boolean('hasAdditionalTools', false)}
+        hasLogo={boolean('hasLogo', false)}
       />
     </div>
   </Story>

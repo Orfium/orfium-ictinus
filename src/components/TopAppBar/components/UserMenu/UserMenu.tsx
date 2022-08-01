@@ -8,19 +8,13 @@ export type UserMenuProps = {
   userName: string;
   userAvatar: { src: string; letter: string; color?: string };
   onSelect: (selectedItem: string) => void;
-};
+} & { isDark?: boolean };
 
-const UserMenu: FC<UserMenuProps & { dark?: boolean }> = ({
-  items,
-  userAvatar,
-  userName,
-  onSelect,
-  dark = false,
-}) => (
+const UserMenu: FC<UserMenuProps> = ({ items, userAvatar, userName, onSelect, isDark = false }) => (
   <Menu
     items={items}
     size={'sm'}
-    color={dark ? 'neutralBlack-500' : 'neutralWhite-100'}
+    color={isDark ? 'neutralBlack-500' : 'neutralWhite-100'}
     buttonText={<span css={Styles.buttonTextStyle}>{userName}</span>}
     buttonType={'warning'}
     rightIconName={'chevronLargeDown'}
