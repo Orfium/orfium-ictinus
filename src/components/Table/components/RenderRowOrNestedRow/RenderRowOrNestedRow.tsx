@@ -146,7 +146,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
               <table css={tableStyle()()}>
                 <tbody>
                   <RenderRowWithCells
-                    {...{ isChecked, toggleIsChecked }}
+                    {...{ isChecked, toggleChecked: toggleIsChecked }}
                     dataTestIdPrefix={dataTestIdPrefix}
                     rowIndex={rowIndex}
                   />
