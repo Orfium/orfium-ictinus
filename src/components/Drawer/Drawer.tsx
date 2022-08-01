@@ -1,4 +1,3 @@
-
 import useBreakpoints from 'hooks/useBreakpoints';
 import omit from 'lodash/omit';
 import React from 'react';
@@ -9,7 +8,7 @@ import { MenuItem } from './types';
 
 export type Props = {
   /** Defines if the drawer is expanded */
-  expanded: boolean;
+  isExpanded: boolean;
   /** Changes if the drawer is expanded */
   setExpanded: (v: boolean) => void;
   /** The menu items to be displayed in the drawer */
@@ -18,13 +17,13 @@ export type Props = {
   renderHeader?: () => React.ReactNode;
 };
 
-const Drawer: React.FC<Props> = props => {
+const Drawer: React.FC<Props> = (props) => {
   const breakpoints = useBreakpoints();
   const isSmallDesktop = breakpoints.des1200 && !breakpoints.des1440;
 
   return (
     <div
-      css={drawerContainerStyle(props.expanded, breakpoints.des1200, !breakpoints.des1440)}
+      css={drawerContainerStyle(props.isExpanded, breakpoints.des1200, !breakpoints.des1440)}
       onMouseEnter={() => isSmallDesktop && props.setExpanded(true)}
       onMouseLeave={() => isSmallDesktop && props.setExpanded(false)}
     >
