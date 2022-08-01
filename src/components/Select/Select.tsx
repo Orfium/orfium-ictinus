@@ -236,7 +236,7 @@ const Select: React.FC<Props> = (props) => {
           onKeyDown={handleOnKeyDown}
           onInput={handleOnInput}
           onChange={ON_CHANGE_MOCK}
-          readOnly={!isSearchable}
+          isReadOnly={!isSearchable}
           isDisabled={isDisabled}
           isLocked={isLocked}
           dataTestId={generateTestDataId('select-input', dataTestId)}

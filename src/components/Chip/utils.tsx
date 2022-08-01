@@ -9,8 +9,8 @@ export const defaultProps = {
 
 export const errors = [
   {
-    condition: ({ styleType, isSelected, isChecked, badgeNumber, disabled }: Props): boolean =>
-      Boolean(styleType === READ_ONLY && (isSelected || isChecked || badgeNumber || disabled)),
+    condition: ({ styleType, isSelected, isChecked, badgeNumber, isDisabled }: Props): boolean =>
+      Boolean(styleType === READ_ONLY && (isSelected || isChecked || badgeNumber || isDisabled)),
     error: new PropsValidationError(
       'The properties isSelected, isChecked, badgeNumber and disabled are only for Interactive style type Chips.'
     ),

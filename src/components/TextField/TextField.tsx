@@ -48,7 +48,7 @@ const TextField: React.FC<Props> = (props) => {
     isLean,
     hintMsg: __hintMsg,
     styleType: __styleType,
-    isReadOnly = false,
+    isReadOnly,
     status,
     ref,
     ...rest

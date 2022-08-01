@@ -31,37 +31,37 @@ describe('Month', () => {
   });
 
   it('should check calculateDisabledDays', () => {
-    const disabledAfter = calculateDisabledDays(day, month, year, {
+    const isDisabledAfter = calculateDisabledDays(day, month, year, {
       after: mockDate.subtract(3, 'day').toDate(),
     });
-    const disabledBefore = calculateDisabledDays(day, month, year, {
+    const isDisabledBefore = calculateDisabledDays(day, month, year, {
       before: mockDate.add(3, 'day').toDate(),
     });
-    const disabledBeforeAndAfter = calculateDisabledDays(day, month, year, {
+    const isDisabledBeforeAndAfter = calculateDisabledDays(day, month, year, {
       before: mockDate.subtract(1, 'day').toDate(),
       after: mockDate.add(1, 'day').toDate(),
     });
-    const disabledArray = calculateDisabledDays(day, month, year, {
+    const isDisabledArray = calculateDisabledDays(day, month, year, {
       days: [mockDate.subtract(1, 'day').toDate()],
     });
 
-    expect(disabledAfter).toBeTruthy();
-    expect(disabledBefore).toBeTruthy();
-    expect(disabledBeforeAndAfter).toBeFalsy();
-    expect(disabledArray).toBeFalsy();
+    expect(isDisabledAfter).toBeTruthy();
+    expect(isDisabledBefore).toBeTruthy();
+    expect(isDisabledBeforeAndAfter).toBeFalsy();
+    expect(isDisabledArray).toBeFalsy();
   });
 
   it('should check calculatedDayIsBetween', () => {
     const wrongDate = mockDate.subtract(3, 'day');
     const correctDate = mockDate;
-    const faultyDay = calculatedDayIsBetween(
+    const isFaultyDay = calculatedDayIsBetween(
       day,
       month,
       year,
       wrongDate.startOf('day'),
       wrongDate.endOf('day')
     );
-    const truthyDay = calculatedDayIsBetween(
+    const isTruthyDay = calculatedDayIsBetween(
       day,
       month,
       year,
@@ -69,8 +69,8 @@ describe('Month', () => {
       correctDate.endOf('day')
     );
 
-    expect(faultyDay).toBeFalsy();
-    expect(truthyDay).toBeTruthy();
+    expect(isFaultyDay).toBeFalsy();
+    expect(isTruthyDay).toBeTruthy();
   });
 
   it('should check calculateSelectedDayPosition', () => {

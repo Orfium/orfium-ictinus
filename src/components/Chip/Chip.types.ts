@@ -29,7 +29,7 @@ export type Props = {
   /** A callback that is being triggered when type is interactive and you press the X icon. */
   onClear?: () => void;
   /** Boolean defining if the chip is disabled. Interactive only. */
-  disabled?: boolean;
+  isDisabled?: boolean;
 };
 
 export type ChipProps = Props & TestProps & ButtonProps;

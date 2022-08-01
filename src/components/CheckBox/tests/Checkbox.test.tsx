@@ -34,7 +34,7 @@ describe('Checkbox Component', () => {
 
   it('should NOT invoke the onClick function if the button is disabled', () => {
     const mockOnClick = jest.fn();
-    wrapper = render(<CheckBox disabled onClick={mockOnClick} dataTestIdSuffix={'disabled'} />);
+    wrapper = render(<CheckBox isDisabled onClick={mockOnClick} dataTestIdSuffix={'disabled'} />);
     const { getByTestId } = wrapper;
 
     const checkbox = getByTestId('checkbox-disabled');
@@ -51,7 +51,7 @@ describe('Checkbox Component', () => {
     const mockOnClick = jest.fn();
 
     wrapper = render(
-      <CheckBox checked={isChecked} onClick={mockOnClick} dataTestIdSuffix={'controlled'} />
+      <CheckBox isChecked={isChecked} onClick={mockOnClick} dataTestIdSuffix={'controlled'} />
     );
 
     const { getByTestId } = wrapper;
