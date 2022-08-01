@@ -76,7 +76,7 @@ export const FilterBase: React.FC<FilterBaseProps> = (props) => {
 
       return theme.utils.getColor('darkGrey', 850);
     },
-    [calculatedColor.color, hasSelectedValue, open, theme.utils, theme.palette]
+    [calculatedColor, hasSelectedValue, isOpen, theme]
   );
 
   const buttonStyleProps = {
