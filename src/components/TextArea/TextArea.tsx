@@ -14,11 +14,11 @@ export type Props = {
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
   /** If the text field value is required */
-  required?: boolean;
+  isRequired?: boolean;
   /** If the text field is disabled */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** If the text area can be resized */
-  resizeEnabled?: boolean;
+  isResizeEnabled?: boolean;
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Error message */
@@ -35,20 +35,22 @@ export type Props = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-};
+  ref: React.ForwardedRef<HTMLTextAreaElement>;
+} & TestProps;
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props, ref) => {
+const TextArea: React.FC<Props> = (props) => {
   const {
     id = undefined,
     placeholder = '',
-    required = false,
-    disabled,
-    resizeEnabled = true,
+    isRequired = false,
+    isDisabled,
+    isResizeEnabled = true,
+    ref,
     ...rest
   } = props;
 
   const theme = useTheme();
-  const sx = sxProp(!disabled && resizeEnabled, theme);
+  const sx = sxProp(!isDisabled && isResizeEnabled, theme);
 
   return (
     <React.Fragment>
@@ -60,9 +62,9 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props
               sx,
             })}
             placeholder={placeholder}
-            required={required}
+            required={isRequired}
             id={id}
-            disabled={disabled}
+            disabled={isDisabled}
             {...omit(rest, ['styleType', 'hintMsg'])}
             ref={ref}
           />
@@ -70,8 +72,10 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props
       </TextInputBase>
     </React.Fragment>
   );
-});
+};
 
 TextArea.displayName = 'TextArea';
 
-export default TextArea;
+export default React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => (
+  <TextArea {...props} ref={ref} />
+));

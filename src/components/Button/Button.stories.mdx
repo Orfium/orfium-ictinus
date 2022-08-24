@@ -108,7 +108,7 @@ Button types based on the system approved literals for `success, error, info, wa
 <Preview>
   <Story name="Button Types">
     <Stack>
-        <Button size={'sm'} disabled type='success'>Success</Button>
+        <Button size={'sm'} isDisabled type='success'>Success</Button>
         <Button size={'sm'} type='success'>Success</Button>
         <Button size={'sm'} type='error'>Error</Button>
         <Button size={'sm'} type='info'>Info</Button>
@@ -124,7 +124,7 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 <Preview>
   <Story name="Button Colors">
     <Stack>
-        <Button size={'sm'} disabled color={'red-500'}>Disabled</Button>
+        <Button size={'sm'} isDisabled color={'red-500'}>Disabled</Button>
         <Button size={'sm'} color={'red-600'}>Red 600</Button>
         <Button size={'sm'} color={'magenta-200'}>Magenta 200</Button>
     </Stack>
@@ -134,7 +134,7 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 # Regular Button
 <Preview>
   <Story name="Regular Button">
-    <Button filled={true} size={'lg'}>Hello world</Button>
+    <Button isFilled={true} size={'lg'}>Hello world</Button>
   </Story>
 </Preview>
 
@@ -142,9 +142,9 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 <Preview>
   <Story name="Button with icon">
     <Stack>
-      <Button filled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button filled={true} size={'lg'} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button filled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dotsVertical'} color={'primary'} size={18} />}>Hello world</Button>
+      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
+      <Button isFilled={true} size={'lg'} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
+      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dotsVertical'} color={'primary'} size={18} />}>Hello world</Button>
     </Stack>
   </Story>
 </Preview>
@@ -152,14 +152,14 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 # Non Filled Button
 <Preview>
   <Story name="Non Filled Button">
-    <Button filled={false} size={'lg'}>Hello world</Button>
+    <Button isFilled={false} size={'lg'}>Hello world</Button>
   </Story>
 </Preview>
 
 # Transparent Button
 <Preview>
   <Story name="Transparent Button">
-    <Button type='primary' size={'lg'} transparent>Hello world</Button>
+    <Button type='primary' size={'lg'} isTransparent>Hello world</Button>
   </Story>
 </Preview>
 
@@ -167,9 +167,9 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 <Preview>
   <Story name="Block Button">
     <Stack isVertical>
-      <Button filled={true} size={'lg'} block iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button filled={false} size={'lg'} block>Hello world</Button>
-      <Button type='success' size={'lg'} transparent block>Hello world</Button>
+      <Button isFilled={true} size={'lg'} isBlock iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
+      <Button isFilled={false} size={'lg'} isBlock>Hello world</Button>
+      <Button type='success' size={'lg'} isTransparent isBlock>Hello world</Button>
     </Stack>
   </Story>
 </Preview>
@@ -177,7 +177,7 @@ Button colors based on the system palette. Check <a href="/?path=/story/guide-co
 # Dynamic Button Props - Knobs
 <Preview>
   <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
-    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'], 'secondary')} filled={boolean('filled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')} block={boolean('block', false)}>{text('text', 'change me!')}</Button>
+    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'], 'secondary')} isFilled={boolean('isFilled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')} isBlock={boolean('isBlock', false)}>{text('text', 'change me!')}</Button>
   </Story>
 </Preview>
 

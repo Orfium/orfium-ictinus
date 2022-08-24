@@ -20,7 +20,7 @@ export type Props = {
    * */
   value?: string | number;
   /** Whether the radio input is selected or not. Defining this prop means the radio input is controlled */
-  checked?: boolean;
+  isChecked?: boolean;
   /** The onChange event handler for the radio input */
   onChange?: React.ReactEventHandler;
   /** The name of the radio input, in case you want to manually form a radio group */
@@ -29,53 +29,54 @@ export type Props = {
    *
    *  @default false
    * */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** ID property of the radio input */
   id?: string;
   /** Whether the radio input is required to be selected in the context of a form
    *
    * @default false
    * */
-  required?: boolean;
+  isRequired?: boolean;
   /** Whether the radio input is filled or outlined
    *
    * @default true
    * */
-  filled?: boolean;
+  isFilled?: boolean;
   dataTestId?: TestId;
+  ref: React.ForwardedRef<HTMLInputElement>;
 };
 
-const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+const Radio: React.FC<Props> = (props, ref) => {
   const {
-    checked: externallyControlledChecked,
+    isChecked: isExternallyControlledChecked,
     onChange,
     // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
     value = 'on',
     name,
-    disabled = false,
+    isDisabled = false,
     id,
-    required = false,
-    filled = true,
+    isRequired = false,
+    isFilled = true,
     dataTestId,
   } = props;
-  const [focused, setFocused] = React.useState(false);
-  const [internallyControlledChecked, setInternallyControlledChecked] = React.useState(false);
+  const [isFocused, setIsFocused] = React.useState(false);
+  const [isInternallyControlledChecked, setIsInternallyControlledChecked] = React.useState(false);
   const radioGroup = useRadioGroup();
   const theme = useTheme();
 
   const handleFocus = () => {
-    setFocused(true);
+    setIsFocused(true);
   };
 
   const handleBlur = () => {
-    setFocused(false);
+    setIsFocused(false);
   };
 
   const handleChange = (e: React.SyntheticEvent) => {
-    if (disabled) return;
+    if (isDisabled) return;
 
-    if (externallyControlledChecked === undefined) {
-      setInternallyControlledChecked((e.target as HTMLInputElement).checked);
+    if (isExternallyControlledChecked === undefined) {
+      setIsInternallyControlledChecked((e.target as HTMLInputElement).checked);
     }
 
     if (onChange) {
@@ -90,13 +91,16 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   // Checked value is either the externally controlled value,
   // or based on the radioGroup provided values,
   // or the internally controlled value
-  const checkedValue =
-    externallyControlledChecked ??
-    (radioGroup ? (radioGroup && radioGroup.value) === value : internallyControlledChecked);
+  const isCheckedValue =
+    isExternallyControlledChecked ??
+    (radioGroup ? (radioGroup && radioGroup.value) === value : isInternallyControlledChecked);
   const nameValue = name ?? (radioGroup && radioGroup.name);
 
   return (
-    <span css={wrapperStyles(disabled)} data-testid={generateTestDataId('radio-input', dataTestId)}>
+    <span
+      css={wrapperStyles(isDisabled)}
+      data-testid={generateTestDataId('radio-input', dataTestId)}
+    >
       <input
         css={inputStyles}
         onFocus={handleFocus}
@@ -107,26 +111,28 @@ const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
         onChange={handleChange}
         name={nameValue}
         value={value}
-        disabled={disabled}
+        disabled={isDisabled}
         id={id}
-        required={required}
-        checked={checkedValue}
+        required={isRequired}
+        checked={isCheckedValue}
         ref={ref}
       />
-      <span css={customRadioWrapperStyles(focused, disabled)(theme)}>
+      <span css={customRadioWrapperStyles(isFocused, isDisabled)(theme)}>
         <span
           css={customRadioStyles({
-            checked: checkedValue,
-            disabled,
-            filled,
+            isChecked: isCheckedValue,
+            isDisabled,
+            isFilled,
           })(theme)}
         />
-        <span css={customRadioInnerHover(focused, disabled)(theme)} />
+        <span css={customRadioInnerHover(isFocused, isDisabled)(theme)} />
       </span>
     </span>
   );
-});
+};
 
 Radio.displayName = 'Radio';
 
-export default Radio;
+export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
+  <Radio {...props} ref={ref} />
+));

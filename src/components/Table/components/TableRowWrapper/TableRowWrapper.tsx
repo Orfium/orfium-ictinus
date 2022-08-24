@@ -56,7 +56,7 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
         type,
         columnCount,
         isRowSelected,
-        bordered: !isExpanded,
+        isBordered: !isExpanded,
         actionWidth,
       }}
     >

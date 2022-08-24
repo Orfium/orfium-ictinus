@@ -7,7 +7,6 @@ import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 import Icon, { OwnProps as IconProps } from '../Icon';
-import { AcceptedIconNames } from '../Icon/types'
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -16,17 +15,19 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 
-export type SelectOptionValues =  {
+export type SelectOptionValues = {
   value: string | number;
   label: string;
-  iconProps?: IconProps
-}
+  iconProps?: IconProps;
+};
 
 export type SelectOption = {
   isDisabled?: boolean;
   tooltipInfo?: string;
   options?: SelectOption[];
 } & SelectOptionValues;
+
+type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
 export type Props = {
   /** The function that is used to return the selected options */
@@ -37,7 +38,7 @@ export type Props = {
   /** the value of the select if select is controlled */
   selectedOption?: SelectOption;
   /** if the select has tags */
-  multi?: boolean;
+  isMulti?: boolean;
   /** Options for the select dropdown */
   options: SelectOption[];
   /** if the component is used asynchronously */
@@ -47,7 +48,7 @@ export type Props = {
   /** after how many characters to start searching (default = 0) */
   minCharactersToSearch?: number;
   /** if searched text should be highlighted in available options */
-  highlightSearch?: boolean;
+  hasHighlightSearch?: boolean;
   /** if the options are searchable */
   isSearchable?: boolean;
   /** data-testid suffix */
@@ -58,210 +59,211 @@ export type Props = {
   isVirtualized?: boolean;
   /** A callback that's called when the user clicks the 'clear' icon */
   onClear?: () => void;
-} & TextFieldProps;
+  ref: React.ForwardedRef<HTMLInputElement>;
+} & TextFieldProps &
+  InputProps &
+  TestProps;
 
 const emptyValue = { label: '', value: '' };
-
 // Mocks onChange to avoid readonly warning for TextField Component
+
 const ON_CHANGE_MOCK = () => {};
 
-type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+const Select: React.FC<Props> = (props) => {
+  const {
+    handleSelectedOption = () => {},
+    defaultValue = undefined,
+    selectedOption = emptyValue,
+    isMulti = false,
+    options,
+    isAsync = false,
+    isLoading = false,
+    asyncSearch = () => {},
+    status = 'normal',
+    minCharactersToSearch = 0,
+    hasHighlightSearch = false,
+    isSearchable = true,
+    isVirtualized = false,
+    styleType,
+    isDisabled,
+    isLocked,
+    dataTestId,
+    onClear,
+    ref,
+    ...restInputProps
+  } = props;
 
-const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
-  (
-    {
-      handleSelectedOption = () => {},
-      defaultValue = undefined,
-      selectedOption = emptyValue,
-      multi = false,
-      options,
-      isAsync = false,
-      isLoading = false,
-      asyncSearch = () => {},
-      status = 'normal',
-      minCharactersToSearch = 0,
-      highlightSearch = false,
-      isSearchable = true,
-      isVirtualized = false,
-      styleType,
-      disabled,
-      locked,
-      dataTestId,
-      onClear,
-      ...restInputProps
+  const theme = useTheme();
+  const [isOpen, setIsOpen] = React.useState(false);
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const combinedRefs = useCombinedRefs(inputRef, ref);
+  const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
+  const [searchValue, setSearchValue] = React.useState('');
+
+  useEffect(() => {
+    setInputValue(defaultValue || selectedOption);
+  }, [defaultValue, selectedOption]);
+
+  const handleOptionClick = (option: SelectOption) => {
+    setInputValue(option);
+    setIsOpen(false);
+
+    if (isSearchable) {
+      setSearchValue('');
+    }
+    handleSelectedOption(option);
+  };
+
+  const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    const isBackspaceKey = e.keyCode === 8;
+
+    if (isBackspaceKey) {
+      setInputValue(emptyValue);
+      debouncedOnChange('');
+    }
+  };
+
+  const debouncedOnChange = React.useCallback(
+    debounce((term) => {
+      asyncSearch(term);
+    }, 400),
+    []
+  );
+
+  const handleOnInput = React.useCallback(
+    (event: ChangeEvent) => {
+      handleSearch({
+        event,
+        isSearchable,
+        isAsync,
+        setSearchValue,
+        onChange: debouncedOnChange,
+        minCharactersToSearch,
+      });
     },
-    ref
-  ) => {
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
-    const inputRef = React.useRef<HTMLInputElement>(null);
-    const combinedRefs = useCombinedRefs(inputRef, ref);
-    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
-    const [searchValue, setSearchValue] = React.useState('');
+    [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
+  );
 
-    useEffect(() => {
-      setInputValue(defaultValue || selectedOption);
-    }, [defaultValue, selectedOption]);
+  const filteredOptions = useMemo(() => {
+    if (isAsync) {
+      return options;
+    }
 
-    const handleOptionClick = (option: SelectOption) => {
-      setInputValue(option);
-      setOpen(false);
+    return options
+      .filter(
+        (option) =>
+          !searchValue ||
+          option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+          !!option.options?.find((option) =>
+            option.label.toLowerCase().includes(searchValue.toLowerCase())
+          )
+      )
+      .map((option) => {
+        return option.label.toLowerCase().includes(searchValue.toLowerCase())
+          ? option
+          : {
+              ...option,
+              options: option.options?.filter((option) =>
+                option.label.toLowerCase().includes(searchValue.toLowerCase())
+              ),
+            };
+      });
+  }, [searchValue, options, isAsync]);
 
-      if (isSearchable) {
+  const rightIconNameSelector = useMemo(() => {
+    if (isSearchable) {
+      return searchValue || inputValue.value ? 'close' : 'search';
+    }
+
+    return 'triangleDown';
+  }, [inputValue.value, isSearchable, searchValue]);
+
+  const handleIconClick = React.useCallback(() => {
+    if (isSearchable && isOpen) {
+      setIsOpen(!isOpen);
+    }
+    if (isSearchable && (searchValue || inputValue.value)) {
+      setSearchValue('');
+      setInputValue(emptyValue);
+      asyncSearch('');
+
+      if (onClear) {
+        onClear();
+      }
+    }
+  }, [asyncSearch, inputValue.value, isSearchable, onClear, isOpen, searchValue]);
+
+  const rightIconRender = useMemo(
+    () => (
+      <div css={rightIconContainer(isOpen, isSearchable)}>
+        {isLoading && <Loader />}
+        <Icon
+          size={isSearchable ? 20 : 12}
+          name={rightIconNameSelector}
+          color={theme.utils.getColor('lightGrey', 650)}
+          onClick={handleIconClick}
+          dataTestId="select-right-icon"
+        />
+      </div>
+    ),
+    [isOpen, isLoading, isSearchable, rightIconNameSelector, theme.utils, handleIconClick]
+  );
+
+  const handleClick = () => {
+    if (!isOpen) {
+      setIsOpen(true);
+      combinedRefs?.current?.focus();
+    } else if (!isSearchable) {
+      setIsOpen(false);
+      combinedRefs?.current?.blur();
+    }
+  };
+
+  return (
+    <ClickAwayListener
+      onClick={() => {
+        setIsOpen(false);
         setSearchValue('');
-      }
-      handleSelectedOption(option);
-    };
-
-    const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-      const isBackspaceKey = e.keyCode === 8;
-
-      if (isBackspaceKey) {
-        setInputValue(emptyValue);
-        debouncedOnChange('');
-      }
-    };
-
-    const debouncedOnChange = React.useCallback(
-      debounce(term => {
-        asyncSearch(term);
-      }, 400),
-      []
-    );
-
-    const handleOnInput = React.useCallback(
-      (event: ChangeEvent) => {
-        handleSearch({
-          event,
-          isSearchable,
-          isAsync,
-          setSearchValue,
-          onChange: debouncedOnChange,
-          minCharactersToSearch,
-        });
-      },
-      [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
-    );
-
-    const filteredOptions = useMemo(() => {
-      if (isAsync) {
-        return options;
-      }
-
-      return options
-        .filter(
-          option =>
-            !searchValue ||
-            option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
-            !!option.options?.find(option =>
-              option.label.toLowerCase().includes(searchValue.toLowerCase())
-            )
-        )
-        .map(option => {
-          return option.label.toLowerCase().includes(searchValue.toLowerCase())
-            ? option
-            : {
-                ...option,
-                options: option.options?.filter(option =>
-                  option.label.toLowerCase().includes(searchValue.toLowerCase())
-                ),
-              };
-        });
-    }, [searchValue, options, isAsync]);
-
-    const rightIconNameSelector = useMemo(() => {
-      if (isSearchable) {
-        return searchValue || inputValue.value ? 'close' : 'search';
-      }
-
-      return 'triangleDown';
-    }, [inputValue.value, isSearchable, searchValue]);
-
-    const handleIconClick = React.useCallback(() => {
-      if (isSearchable && open) {
-        setOpen(!open);
-      }
-      if (isSearchable && (searchValue || inputValue.value)) {
-        setSearchValue('');
-        setInputValue(emptyValue);
-        asyncSearch('');
-
-        if (onClear) {
-          onClear();
-        }
-      }
-    }, [asyncSearch, inputValue.value, isSearchable, onClear, open, searchValue]);
-
-    const rightIconRender = useMemo(
-      () => (
-        <div css={rightIconContainer(open, isSearchable)}>
-          {isLoading && <Loader />}
-          <Icon
-            size={isSearchable ? 20 : 12}
-            name={rightIconNameSelector}
-            color={theme.utils.getColor('lightGrey', 650)}
-            onClick={handleIconClick}
-            dataTestId="select-right-icon"
-          />
-        </div>
-      ),
-      [open, isLoading, isSearchable, rightIconNameSelector, theme.utils, handleIconClick]
-    );
-
-    const handleClick = () => {
-      if (!open) {
-        setOpen(true);
-        combinedRefs?.current?.focus();
-      } else if (!isSearchable) {
-        setOpen(false);
-        combinedRefs?.current?.blur();
-      }
-    };
-
-    return (
-      <ClickAwayListener
-        onClick={() => {
-          setOpen(false);
-          setSearchValue('');
-        }}
+      }}
+    >
+      <div
+        {...(!(isDisabled || isLocked) && { onClick: handleClick })}
+        css={selectWrapper({ isSearchable })}
       >
-        <div
-          {...(!(disabled || locked) && { onClick: handleClick })}
-          css={selectWrapper({ isSearchable })}
-        >
-          <TextField
-            styleType={styleType}
-            rightIcon={rightIconRender}
-            onKeyDown={handleOnKeyDown}
-            onInput={handleOnInput}
-            onChange={ON_CHANGE_MOCK}
-            readOnly={!isSearchable}
-            disabled={disabled}
-            locked={locked}
-            dataTestId={generateTestDataId('select-input', dataTestId)}
-            {...restInputProps}
+        <TextField
+          styleType={styleType}
+          rightIcon={rightIconRender}
+          onKeyDown={handleOnKeyDown}
+          onInput={handleOnInput}
+          onChange={ON_CHANGE_MOCK}
+          readOnly={!isSearchable}
+          isDisabled={isDisabled}
+          isLocked={isLocked}
+          dataTestId={generateTestDataId('select-input', dataTestId)}
+          {...restInputProps}
+          status={status}
+          value={searchValue || inputValue.label}
+          ref={combinedRefs}
+        />
+        {isOpen && (
+          <SelectMenu
+            filteredOptions={filteredOptions}
+            handleOptionClick={handleOptionClick}
+            selectedOption={inputValue.value}
+            size={restInputProps.size}
             status={status}
-            value={searchValue || inputValue.label}
-            ref={combinedRefs}
+            isLoading={isLoading}
+            isVirtualized={isVirtualized}
+            searchTerm={hasHighlightSearch ? searchValue : undefined}
           />
-          {open && (
-            <SelectMenu
-              filteredOptions={filteredOptions}
-              handleOptionClick={handleOptionClick}
-              selectedOption={inputValue.value}
-              size={restInputProps.size}
-              status={status}
-              isLoading={isLoading}
-              isVirtualized={isVirtualized}
-              searchTerm={highlightSearch ? searchValue : undefined}
-            />
-          )}
-        </div>
-      </ClickAwayListener>
-    );
-  }
-);
+        )}
+      </div>
+    </ClickAwayListener>
+  );
+};
 
 Select.displayName = 'Select';
 
-export default Select;
+export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
+  <Select {...props} ref={ref} />
+));

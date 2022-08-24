@@ -13,67 +13,68 @@ import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 export type Props = {
   /** A callback that's called when the user clicks the 'clear' icon */
   onClear: () => void;
-};
+  ref: React.ForwardedRef<HTMLInputElement>;
+} & TextFieldProps &
+  TestProps;
 
-const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & TestProps>(
-  (props, ref) => {
-    const theme = useTheme();
+const SearchField: React.FC<Props> = ({
+  placeholder = 'Search',
+  isDisabled,
+  size = DEFAULT_SIZE,
+  isDark = false,
+  onClear,
+  dataTestId,
+  value = '',
+  ref,
+  ...rest
+}) => {
+  const theme = useTheme();
 
-    const {
-      placeholder = 'Search',
-      disabled,
-      size = DEFAULT_SIZE,
-      dark = false,
-      onClear,
-      dataTestId,
-      value = '',
-      ...rest
-    } = props;
+  const isClearVisible = (value as string).length > 0;
 
-    const shouldShowClear = (value as string).length > 0;
+  return (
+    <React.Fragment>
+      <TextInputBase
+        dataTestId={dataTestId}
+        isDisabled={isDisabled}
+        size={size}
+        styleType={'outlined'}
+        leftIcon={'search'}
+        rightIcon={'close'}
+        sx={{ wrapper: { borderRadius: rem(100) } }}
+      >
+        <IconWrapper iconPosition={'left'}>
+          <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
+        </IconWrapper>
 
-    return (
-      <React.Fragment>
-        <TextInputBase
-          dataTestId={dataTestId}
-          disabled={disabled}
-          size={size}
-          styleType={'outlined'}
-          leftIcon={'search'}
-          rightIcon={'close'}
-          sx={{ wrapper: { borderRadius: rem(100) } }}
-        >
-          <IconWrapper iconPosition={'left'}>
-            <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
+        <div css={{ width: '100%' }}>
+          <input
+            css={inputStyle({ size, isDark, placeholder })}
+            placeholder={placeholder}
+            disabled={isDisabled}
+            value={value}
+            ref={ref}
+            {...rest}
+          />
+        </div>
+
+        {isClearVisible && !isDisabled && (
+          <IconWrapper
+            onClick={() => {
+              onClear();
+            }}
+            iconPosition={'right'}
+          >
+            <Icon name={'close'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
           </IconWrapper>
-
-          <div css={{ width: '100%' }}>
-            <input
-              css={inputStyle({ size, dark, placeholder })}
-              placeholder={placeholder}
-              disabled={disabled}
-              value={value}
-              ref={ref}
-              {...rest}
-            />
-          </div>
-
-          {shouldShowClear && !disabled && (
-            <IconWrapper
-              onClick={() => {
-                onClear();
-              }}
-              iconPosition={'right'}
-            >
-              <Icon name={'close'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
-            </IconWrapper>
-          )}
-        </TextInputBase>
-      </React.Fragment>
-    );
-  }
-);
+        )}
+      </TextInputBase>
+    </React.Fragment>
+  );
+};
 
 SearchField.displayName = 'SearchField';
 
-export default SearchField;
+export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
+  <SearchField {...props} ref={ref} />
+));

@@ -7,46 +7,47 @@ import ButtonBase, { Props as ButtonBaseProps } from '../ButtonBase/ButtonBase';
 import { buttonSpanStyle, childrenWrapperStyle, iconStyle } from './Button.style';
 import ButtonLoader from './ButtonLoader';
 
-export type Props = ButtonBaseProps & TestProps & onClickProp;
 type onClickProp = { onClick: ClickHandler };
+export type Props = Omit<ButtonBaseProps, 'onClick'> & TestProps & onClickProp & ButtonProps;
 
-const Button = React.forwardRef<HTMLButtonElement, Props & ButtonProps>((props, ref) => {
+const Button: React.FC<Props> = (props) => {
   const {
     size = 'md',
     type = 'primary',
     color = '',
-    filled = true,
-    transparent = false,
+    isFilled = true,
+    isTransparent = false,
     iconLeft = null,
     iconRight = null,
-    disabled = false,
+    isDisabled = false,
     children,
     onClick,
+    ref,
   } = props;
-  const { loading, handleAsyncOperation } = useLoading(onClick);
+  const { isLoading, handleAsyncOperation } = useLoading(onClick);
   const childrenWrapperRef = useRef<HTMLSpanElement>(null);
   const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
 
   return (
-    <ButtonBase {...props} ref={ref} loading={loading} onClick={handleAsyncOperation}>
+    <ButtonBase {...props} ref={ref} isLoading={isLoading} onClick={handleAsyncOperation}>
       <span css={buttonSpanStyle()}>
         {iconLeft && <span css={iconStyle()}>{iconLeft}</span>}
         <span
           ref={childrenWrapperRef}
           css={childrenWrapperStyle({
             type,
-            loading,
-            filled,
+            isLoading,
+            isFilled,
             size,
             color,
-            transparent,
+            isTransparent,
             iconLeft,
             iconRight,
-            disabled,
+            isDisabled,
             hasChildren: Boolean(React.Children.count(children)),
           })}
         >
-          {loading ? (
+          {isLoading ? (
             <ButtonLoader innerButtonWidth={innerButtonWidth} color={color} type={type} />
           ) : (
             children
@@ -57,7 +58,10 @@ const Button = React.forwardRef<HTMLButtonElement, Props & ButtonProps>((props, 
       </span>
     </ButtonBase>
   );
-});
+};
+
 Button.displayName = 'Button';
 
-export default Button;
+export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => (
+  <Button {...props} ref={ref} />
+));
