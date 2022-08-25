@@ -3,11 +3,11 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from '../../../theme';
 
 export const container =
-  (withOverflow?: boolean, isVisible?: boolean) =>
-  (theme: Theme): SerializedStyles =>
+  (hasOverflow?: boolean, isVisible?: boolean) =>
+  (__theme: Theme): SerializedStyles =>
     css`
-      overflow: ${withOverflow ? 'hidden' : 'inherit'};
-      text-overflow: ${withOverflow ? 'ellipsis' : 'inherit'};
+      overflow: ${hasOverflow ? 'hidden' : 'inherit'};
+      text-overflow: ${hasOverflow ? 'ellipsis' : 'inherit'};
       width: 100%;
       height: inherit;
 
@@ -18,7 +18,7 @@ export const container =
 
 export const itemContainer =
   (clientX: number, clientY: number) =>
-  (theme: Theme): SerializedStyles =>
+  (__theme: Theme): SerializedStyles =>
     css`
       position: fixed;
       opacity: 1 !important;
