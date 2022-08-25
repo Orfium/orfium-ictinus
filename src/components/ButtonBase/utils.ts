@@ -3,8 +3,8 @@ import { Theme } from 'theme';
 import { mainTypes } from 'theme/palette';
 
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
-import { buttonConfig } from './config';
 import { Props } from './ButtonBase';
+import { buttonConfig } from './config';
 
 /**
  * This function defines what background-color to show based on type or color passed
@@ -15,7 +15,7 @@ export const defineBackgroundColor = (
   theme: Theme,
   color: ColorShapeFromComponent | undefined,
   type?: typeof mainTypes[number],
-  childrenExists?: boolean
+  hasChildren?: boolean
 ): string => {
   if (type === 'link') {
     return 'transparent';
@@ -25,7 +25,7 @@ export const defineBackgroundColor = (
     return theme.utils.getColor(color.color, color.shade);
   }
 
-  if (childrenExists && type) {
+  if (hasChildren && type) {
     return getColorFromType(type, theme);
   }
 

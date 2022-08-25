@@ -14,10 +14,10 @@ export const defineBackgroundColor = (
   theme: Theme,
   color: ColorShapeFromComponent | undefined,
   type?: typeof mainTypes[number],
-  iconExists?: boolean,
-  childrenExists?: boolean
+  hasIcon?: boolean,
+  hasChildren?: boolean
 ): string => {
-  if (!childrenExists && iconExists) {
+  if (!hasChildren && hasIcon) {
     return 'transparent';
   }
 
@@ -25,7 +25,7 @@ export const defineBackgroundColor = (
     return theme.utils.getColor(color.color, color.shade);
   }
 
-  if (childrenExists && type) {
+  if (hasChildren && type) {
     return getColorFromType(type, theme);
   }
 
@@ -42,12 +42,12 @@ export const stateBackgroundColor = (
   theme: Theme,
   state: 'hover' | 'active',
   calculatedColor: ColorShapeFromComponent,
-  filled: boolean
+  isFilled: boolean
 ) => {
   const value = state === 'hover' ? 0.1 : 0.2;
   const color = defineBackgroundColor(theme, calculatedColor);
 
-  if (!filled) {
+  if (!isFilled) {
     // value here is reverted to follow tranparentize e.g (1 - 0.1 = 0.9)
     return transparentize(1 - value, color);
   }
