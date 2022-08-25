@@ -66,11 +66,11 @@ export const menuLinkStyle =
     `;
 
 export const menuItemTextStyle =
-  (current: boolean) =>
+  (isCurrent: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
-      font-weight: ${current ? theme.typography.weights.bold : 'initial'};
+      font-weight: ${isCurrent ? theme.typography.weights.bold : 'initial'};
     `;
 
 export const subMenuLinkStyle =
@@ -108,22 +108,22 @@ export const subMenuLinkStyle =
 `;
 
 export const arrowContainerStyle =
-  (open: boolean, show: boolean) =>
+  (isOpen: boolean, isVisible: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
       ${flexCenter};
       width: ${rem(24)};
       height: ${rem(24)};
-      opacity: ${show ? '1' : '0'};
-      transform: ${open ? 'rotate(90deg)' : 'rotate(0deg);'};
+      opacity: ${isVisible ? '1' : '0'};
+      transform: ${isOpen ? 'rotate(90deg)' : 'rotate(0deg);'};
       path {
         background-color: ${theme.utils.getColor('lightGrey', 750)};
       }
     `;
 
 export const menuIconStyle =
-  (current: boolean) =>
+  (isCurrent: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
@@ -133,7 +133,9 @@ export const menuIconStyle =
       height: ${rem(32)};
       border-radius: 50%;
       flex-shrink: 0;
-      ${current ? `background-color: ${fillPickerBasedOnType('primary', BASE_SHADE)(theme)}; ` : ''}
+      ${isCurrent
+        ? `background-color: ${fillPickerBasedOnType('primary', BASE_SHADE)(theme)}; `
+        : ''}
     `;
 
 export const subMenuIconStyle =
