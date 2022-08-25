@@ -13,7 +13,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
   (
     {
       styleType = defaultProps.styleType,
-      isDisabled = defaultProps.disabled,
+      isDisabled = defaultProps.isDisabled,
       dataTestId = defaultProps.dataTestId,
       ...rest
     },

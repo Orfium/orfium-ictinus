@@ -1,11 +1,12 @@
 import { PropsValidationError } from '../../utils/errors';
+import { TestProps } from '../../utils/types';
 import { INTERACTIVE, Props, READ_ONLY, styleType } from './Chip.types';
 
 export const defaultProps = {
-  disabled: false,
+  isDisabled: false,
   styleType: READ_ONLY as typeof styleType[number],
   dataTestId: '',
-};
+} as Pick<Props & TestProps, 'isDisabled' | 'styleType' | 'dataTestId'>;
 
 export const errors = [
   {
