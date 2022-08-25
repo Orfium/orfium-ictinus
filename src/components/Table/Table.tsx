@@ -29,12 +29,12 @@ export type Row<T> = {
   cells: Cell<T>[];
   expanded?: ({
     row,
-    selected,
-    expanded,
+    isSelected,
+    isExpanded,
   }: {
     row: Row<T>;
-    selected: boolean;
-    expanded: boolean;
+    isSelected: boolean;
+    isExpanded: boolean;
   }) => React.Component | JSX.Element;
   rowSpan?: number;
 };
