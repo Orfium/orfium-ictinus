@@ -22,11 +22,15 @@ jest.mock(
 );
 
 // because scrollIntoView doesn't exist in jest
-window.HTMLElement.prototype.scrollIntoView = function() {};
+window.HTMLElement.prototype.scrollIntoView = function () {};
 
 Object.defineProperty(window, 'matchMedia', {
+  // We don't need this to follow our naming conventions
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
+    // We don't need this to follow our naming conventions
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     matches: false,
     media: query,
     onchange: null,
