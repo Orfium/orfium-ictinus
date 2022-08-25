@@ -44,10 +44,10 @@ const ListItemGroup = React.forwardRef<HTMLDivElement, Props>(
                 index={'' + groupIndex + index}
                 ref={ref}
                 searchTerm={searchTerm}
-                disabled={option?.isDisabled}
+                isDisabled={option?.isDisabled}
                 dataTestId={dataTestId}
                 handleOptionClick={handleOptionClick}
-                selected={isSelected({ item: option, selectedItem })}
+                isSelected={isSelected({ item: option, selectedItem })}
                 isGroupItem
               />
             </li>
