@@ -28,12 +28,9 @@ type FilterBaseProps = {
   selectedItemLabel?: string;
   isOpen: boolean;
   hasSelectedValue: boolean;
-} & Pick<
-  Props,
-  'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType' | 'ref'
->;
+} & Pick<Props, 'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'>;
 
-export const FilterBase: React.FC<FilterBaseProps> = (props) => {
+export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((props, ref) => {
   const {
     dataTestId,
     isDatePicker = false,
@@ -49,7 +46,6 @@ export const FilterBase: React.FC<FilterBaseProps> = (props) => {
     filterType = 'preset',
     styleType,
     children,
-    ref,
   } = props;
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
@@ -135,10 +131,8 @@ export const FilterBase: React.FC<FilterBaseProps> = (props) => {
       {children}
     </div>
   );
-};
+});
 
 FilterBase.displayName = 'FilterBase';
 
-export default React.forwardRef<HTMLButtonElement, FilterBaseProps>((props, ref) => (
-  <FilterBase {...props} ref={ref} />
-));
+export default FilterBase;

@@ -44,13 +44,12 @@ export type Props = {
   sx?: {
     container?: CSSObject;
   };
-  ref: React.ForwardedRef<HTMLButtonElement>;
 } & TestProps &
   EventButtonProps &
   ButtonProps;
 
 //@TODO fix props to not overwrite button props
-const ButtonBase: React.FC<Props> = (props) => {
+const ButtonBase = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
@@ -69,7 +68,6 @@ const ButtonBase: React.FC<Props> = (props) => {
     onClick,
     onBlur,
     sx,
-    ref,
   } = props;
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
@@ -106,10 +104,8 @@ const ButtonBase: React.FC<Props> = (props) => {
       {children}
     </button>
   );
-};
+});
 
 ButtonBase.displayName = 'ButtonBase';
 
-export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => (
-  <ButtonBase {...props} ref={ref} />
-));
+export default ButtonBase;

@@ -44,7 +44,6 @@ export type Props = {
   isVirtualized?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
-  ref: React.ForwardedRef<HTMLButtonElement>;
 };
 
 export type BaseColorProps = {

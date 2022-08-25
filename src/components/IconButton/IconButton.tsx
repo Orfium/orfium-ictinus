@@ -15,20 +15,11 @@ export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRig
   iconSize?: number;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
-  ref: React.ForwardedRef<HTMLButtonElement>;
 } & TestProps &
   EventProps;
 
-const IconButton: React.FC<Props> = (props) => {
-  const {
-    iconSize,
-    color = '',
-    type = 'primary',
-    isFilled = true,
-    name,
-    isTransparent,
-    ref,
-  } = props;
+const IconButton = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
+  const { iconSize, color = '', type = 'primary', isFilled = true, name, isTransparent } = props;
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, type);
@@ -44,9 +35,8 @@ const IconButton: React.FC<Props> = (props) => {
       <Icon name={name} color={iconColor} size={iconSize} />
     </ButtonBase>
   );
-};
+});
+
 IconButton.displayName = 'IconButton';
 
-export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => (
-  <IconButton {...props} ref={ref} />
-));
+export default IconButton;

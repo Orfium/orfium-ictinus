@@ -35,17 +35,15 @@ export type Props = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-  ref: React.ForwardedRef<HTMLTextAreaElement>;
 } & TestProps;
 
-const TextArea: React.FC<Props> = (props) => {
+const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
   const {
     id = undefined,
     placeholder = '',
     isRequired = false,
     isDisabled,
     isResizeEnabled = true,
-    ref,
     ...rest
   } = props;
 
@@ -72,10 +70,8 @@ const TextArea: React.FC<Props> = (props) => {
       </TextInputBase>
     </React.Fragment>
   );
-};
+});
 
 TextArea.displayName = 'TextArea';
 
-export default React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => (
-  <TextArea {...props} ref={ref} />
-));
+export default TextArea;

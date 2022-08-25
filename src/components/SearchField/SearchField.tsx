@@ -13,21 +13,21 @@ import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 export type Props = {
   /** A callback that's called when the user clicks the 'clear' icon */
   onClear: () => void;
-  ref: React.ForwardedRef<HTMLInputElement>;
 } & TextFieldProps &
   TestProps;
 
-const SearchField: React.FC<Props> = ({
-  placeholder = 'Search',
-  isDisabled,
-  size = DEFAULT_SIZE,
-  isDark = false,
-  onClear,
-  dataTestId,
-  value = '',
-  ref,
-  ...rest
-}) => {
+const SearchField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+  const {
+    placeholder = 'Search',
+    isDisabled,
+    size = DEFAULT_SIZE,
+    isDark = false,
+    onClear,
+    dataTestId,
+    value = '',
+    ...rest
+  } = props;
+
   const theme = useTheme();
 
   const isClearVisible = (value as string).length > 0;
@@ -71,10 +71,8 @@ const SearchField: React.FC<Props> = ({
       </TextInputBase>
     </React.Fragment>
   );
-};
+});
 
 SearchField.displayName = 'SearchField';
 
-export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
-  <SearchField {...props} ref={ref} />
-));
+export default SearchField;

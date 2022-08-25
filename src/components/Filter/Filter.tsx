@@ -12,7 +12,7 @@ import { FilterOption, Props } from './types';
 import { errors } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
-const Filter: React.FC<Props> = (props) => {
+const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
     items,
     onSelect,
@@ -30,7 +30,6 @@ const Filter: React.FC<Props> = (props) => {
     isLoading = false,
     isVirtualized = false,
     onClear = () => {},
-    ref,
   } = props;
 
   errorHandler<Props>(errors, props);
@@ -127,9 +126,8 @@ const Filter: React.FC<Props> = (props) => {
       </FilterBase>
     </ClickAwayListener>
   );
-};
+});
+
 Filter.displayName = 'Filter';
 
-export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => (
-  <Filter {...props} ref={ref} />
-));
+export default Filter;
