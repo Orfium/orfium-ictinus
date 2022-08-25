@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ menuItems, isExpanded }) => {
     <div css={navigationContainerStyle(isExpanded)}>
       {menuItems.map(
         (menuItem) =>
-          menuItem.visible && (
+          menuItem.isVisible && (
             <MenuItem
               key={menuItem.url}
               isCurrent={currentMenuItem === menuItem.url}
