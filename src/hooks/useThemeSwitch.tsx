@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 const defaultContextData = {
-  dark: false,
+  isDark: false,
   toggle: () => {},
 };
 
@@ -12,15 +12,15 @@ const useThemeSwitch = () => {
 
 const ThemeSwitchProvider: React.FC<{ [key: string]: unknown }> = ({ children }) => {
   const [themeState, setThemeState] = React.useState({
-    dark: false,
+    isDark: false,
   });
 
   return (
     <ThemeContext.Provider
       value={{
-        dark: themeState.dark,
+        isDark: themeState.isDark,
         toggle: () => {
-          setThemeState((themeState: any) => ({ dark: !themeState.dark }));
+          setThemeState((themeState: any) => ({ isDark: !themeState.isDark }));
         },
       }}
     >
