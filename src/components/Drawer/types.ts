@@ -7,7 +7,7 @@ export type MenuItem = {
   name: string;
   url: string;
   state?: Record<string, any> | null;
-  visible: boolean;
+  isVisible: boolean;
   iconName: AcceptedIconNames;
   isActive?<Params extends { [K in keyof Params]?: string }, S = LocationState>(
     match: match<Params> | null,

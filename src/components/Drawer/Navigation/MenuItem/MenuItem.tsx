@@ -81,7 +81,7 @@ const MenuItem: React.FC<Props> = memo(
                 <React.Fragment>
                   {options.map(
                     (subMenuItem) =>
-                      subMenuItem.visible && (
+                      subMenuItem.isVisible && (
                         <NavLink
                           exact
                           to={{
