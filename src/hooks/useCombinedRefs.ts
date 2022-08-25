@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-const useCombinedRefs = <T extends any>(...refs: React.Ref<T>[]): React.RefObject<T> => {
+const useCombinedRefs = <T>(...refs: React.Ref<T>[]): React.RefObject<T> => {
   const targetRef = React.useRef<T>(null);
 
   React.useEffect(() => {
-    refs.forEach(ref => {
+    refs.forEach((ref) => {
       if (!ref) {
         return;
       }
