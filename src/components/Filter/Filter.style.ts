@@ -213,10 +213,10 @@ export const childrenWrapperStyle = () => () => {
   };
 };
 
-export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
+export const labelSpanStyle = (isOpen: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
   return {
     fontWeight:
-      open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
+      isOpen || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
     display: 'flex',
     alignItems: 'center',
     div: {
