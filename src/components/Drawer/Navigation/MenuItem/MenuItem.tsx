@@ -21,12 +21,12 @@ type Props = {
   /** Defines the current menu item whose submenu item is currently selected */
   isCurrent: boolean;
   /** Defines if the menu item is expanded */
-  expanded: boolean;
+  isExpanded: boolean;
   toggleMenuItem: (newUrl: string) => void;
 } & MenuItemProps;
 
 const MenuItem: React.FC<Props> = memo(
-  ({ isCurrent, expanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
+  ({ isCurrent, isExpanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
     const theme = useTheme();
 
     const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
@@ -36,7 +36,7 @@ const MenuItem: React.FC<Props> = memo(
 
     const MenuItemContent = (
       <React.Fragment>
-        <div css={arrowContainerStyle(expanded, hasSubMenus)}>
+        <div css={arrowContainerStyle(isExpanded, hasSubMenus)}>
           <Icon name="triangleRight" color={theme.utils.getColor('lightGrey', 650)} size={10} />
         </div>
         <div css={menuIconStyle(isCurrent)}>
@@ -61,9 +61,9 @@ const MenuItem: React.FC<Props> = memo(
       <React.Fragment>
         {hasSubMenus ? (
           <ExpandCollapse
-            expanded={expanded}
+            isExpanded={isExpanded}
             onChange={() => toggleMenuItem(url)}
-            textAndControl={handleClick => {
+            textAndControl={(handleClick) => {
               return (
                 <button
                   type={'button'}
@@ -80,7 +80,7 @@ const MenuItem: React.FC<Props> = memo(
               return (
                 <React.Fragment>
                   {options.map(
-                    subMenuItem =>
+                    (subMenuItem) =>
                       subMenuItem.visible && (
                         <NavLink
                           exact

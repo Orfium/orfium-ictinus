@@ -21,7 +21,7 @@ export type SharedProps = {
    *
    * @default false
    */
-  initiallyExpanded?: boolean;
+  isInitiallyExpanded?: boolean;
   /**
    * The duration for the appear transition
    *
@@ -46,7 +46,7 @@ export type ExternalProps = {
    *
    * @default false
    */
-  expanded: boolean;
+  isExpanded: boolean;
   /**
    * Change handler for the case when the component is controlled
    */
@@ -59,7 +59,7 @@ export type InternalProps = {
    *
    * @default false
    */
-  expanded: undefined;
+  isExpanded: undefined;
   /**
    * Change handler for the case when the component is controlled
    */

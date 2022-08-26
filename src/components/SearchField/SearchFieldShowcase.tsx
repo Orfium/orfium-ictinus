@@ -18,7 +18,7 @@ const SearchFieldShowcase = ({
         placeholder={placeholder}
         size={'md'}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={(e: any) => setValue(e.target.value)}
         onClear={() => setValue('')}
       />
       <SearchField
@@ -26,7 +26,7 @@ const SearchFieldShowcase = ({
         placeholder={placeholder}
         size={'sm'}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={(e: any) => setValue(e.target.value)}
         onClear={() => setValue('')}
       />
     </Stack>

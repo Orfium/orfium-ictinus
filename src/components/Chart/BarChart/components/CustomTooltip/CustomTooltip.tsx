@@ -9,22 +9,22 @@ type Props = {
 
 const CustomTooltip: React.FC<Props> = ({ content, fill }) => {
   const wrapperRef = useRef<null | HTMLDivElement>(null);
-  const [active, setActive] = useState(false);
-  const [truncated, setTrancated] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+  const [isTruncated, setIsTrancated] = useState(false);
 
   useEffect(() => {
-    setTrancated(
+    setIsTrancated(
       wrapperRef.current ? wrapperRef.current.scrollWidth > wrapperRef.current.clientWidth : false
     );
-  }, [setTrancated]);
+  }, [setIsTrancated]);
 
   const setActiveOnCallback = useCallback(() => {
-    setActive(true);
-  }, [setActive]);
+    setIsActive(true);
+  }, [setIsActive]);
 
   const setActiveOffCallback = useCallback(() => {
-    setActive(false);
-  }, [setActive]);
+    setIsActive(false);
+  }, [setIsActive]);
 
   return (
     <div
@@ -34,7 +34,7 @@ const CustomTooltip: React.FC<Props> = ({ content, fill }) => {
       css={tickStyle(fill)}
     >
       {content}
-      {active && truncated && (
+      {isActive && isTruncated && (
         <div>
           <div css={tooltipStyle()}>{content}</div>
           <div css={tooltipArrowStyle()} />

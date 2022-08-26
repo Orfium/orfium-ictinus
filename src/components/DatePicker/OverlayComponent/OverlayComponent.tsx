@@ -47,8 +47,8 @@ const OverlayComponent: React.FC<Props> = ({
 
   const handleArrow = useCallback(
     (direction: 'forward' | 'back' = 'back') => {
-      setDate(curDate => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
-      setDate2(curDate => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
+      setDate((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
+      setDate2((curDate) => curDate.month(curDate.month() + (direction === 'forward' ? 1 : -1)));
     },
     [date, date2]
   );
@@ -57,7 +57,7 @@ const OverlayComponent: React.FC<Props> = ({
     <div css={overlayWrapperStyle()}>
       {extraOptions.length > 0 && isRangePicker && (
         <div css={optionsWrapperStyle()}>
-          {extraOptions.map(option => (
+          {extraOptions.map((option) => (
             <div
               key={option.value}
               css={optionStyle({ selected: selectedOption === option.value })}
@@ -97,14 +97,14 @@ const OverlayComponent: React.FC<Props> = ({
 
         {!isRangePicker && (
           <div css={buttonsWrapperStyle()}>
-            <Button filled={false} size={'sm'} onClick={onCancel} type={'primary'}>
+            <Button isFilled={false} size={'sm'} onClick={onCancel} type={'primary'}>
               Cancel
             </Button>
             <Button
               size={'sm'}
               onClick={onApply}
               type={'primary'}
-              disabled={Boolean(!selectedDays.from || !selectedDays.to)}
+              isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}
             >
               Apply
             </Button>

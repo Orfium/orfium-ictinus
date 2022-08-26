@@ -31,7 +31,7 @@ export type Props = {
   /** The selected item of the menu. This is an item of the the items list */
   selectedItem?: FilterOption;
   /** Defines if the button is in disabled state */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** if the options are searchable */
   isSearchable?: boolean;
   /** the function to fetch new options */
@@ -44,10 +44,11 @@ export type Props = {
   isVirtualized?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
+  ref: React.ForwardedRef<HTMLButtonElement>;
 };
 
 export type BaseColorProps = {
-  open: boolean;
+  isOpen: boolean;
   theme: Theme;
   calculatedColor: ColorShapeFromComponent;
   hasSelectedValue: boolean;
@@ -58,7 +59,7 @@ export type BackgroundColorProps = BaseColorProps & {
 };
 
 export type ButtonStyleProps = Omit<BaseColorProps, 'theme'> & {
-  disabled?: boolean;
+  isDisabled?: boolean;
   styleType: StyleType;
   filterType: FilterType;
 };
