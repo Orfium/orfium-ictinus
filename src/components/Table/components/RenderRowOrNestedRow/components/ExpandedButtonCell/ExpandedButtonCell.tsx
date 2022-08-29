@@ -8,7 +8,7 @@ import IconButton from 'components/IconButton';
 type Props = {
   isExpandedExists: boolean;
   isChecked: boolean;
-  toggleChecked: () => void;
+  toggleIsChecked: () => void;
   actionWidth?: number;
   dataTestIdPrefix?: string;
   rowIndex?: number;
@@ -18,7 +18,7 @@ type Props = {
 const ExpandedButtonCell: React.FC<Props> = ({
   isExpandedExists,
   isChecked,
-  toggleChecked,
+  toggleIsChecked,
   actionWidth,
   dataTestIdPrefix,
   rowIndex,
@@ -57,7 +57,7 @@ const ExpandedButtonCell: React.FC<Props> = ({
               isTransparent
               name={'chevronSmallDown'}
               size={'sm'}
-              onClick={toggleChecked}
+              onClick={toggleIsChecked}
               color={'lightGrey-700'}
               dataTestId={'expanded-button'}
             />
