@@ -59,7 +59,6 @@ export type Props = {
   isVirtualized?: boolean;
   /** A callback that's called when the user clicks the 'clear' icon */
   onClear?: () => void;
-  ref: React.ForwardedRef<HTMLInputElement>;
 } & TextFieldProps &
   InputProps &
   TestProps;
@@ -69,7 +68,7 @@ const emptyValue = { label: '', value: '' };
 
 const ON_CHANGE_MOCK = () => {};
 
-const Select: React.FC<Props> = (props) => {
+const Select = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const {
     handleSelectedOption = () => {},
     defaultValue = undefined,
@@ -89,7 +88,6 @@ const Select: React.FC<Props> = (props) => {
     isLocked,
     dataTestId,
     onClear,
-    ref,
     ...restInputProps
   } = props;
 
@@ -236,7 +234,7 @@ const Select: React.FC<Props> = (props) => {
           onKeyDown={handleOnKeyDown}
           onInput={handleOnInput}
           onChange={ON_CHANGE_MOCK}
-          readOnly={!isSearchable}
+          isReadOnly={!isSearchable}
           isDisabled={isDisabled}
           isLocked={isLocked}
           dataTestId={generateTestDataId('select-input', dataTestId)}
@@ -260,10 +258,8 @@ const Select: React.FC<Props> = (props) => {
       </div>
     </ClickAwayListener>
   );
-};
+});
 
 Select.displayName = 'Select';
 
-export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
-  <Select {...props} ref={ref} />
-));
+export default Select;

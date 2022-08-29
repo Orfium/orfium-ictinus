@@ -206,8 +206,8 @@ function Table<T>({
                   index={0}
                 >
                   <CheckBox
-                    checked={Boolean(selectedIds && selectedIds.length > 0)}
-                    intermediate={
+                    isChecked={Boolean(selectedIds && selectedIds.length > 0)}
+                    isIntermediate={
                       selectedIds && selectedIds.length > 0 && selectedIds?.length !== data.length
                     }
                     onClick={() => {
@@ -217,7 +217,7 @@ function Table<T>({
                         setSelectedIds(data.map(({ id }) => id));
                       }
                     }}
-                    filled={false}
+                    isFilled={false}
                   />
                 </TableCell>
               )}

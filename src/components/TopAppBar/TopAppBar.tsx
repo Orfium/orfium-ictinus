@@ -16,12 +16,12 @@ const TopAppBar: FC<TopAppBarProps> = ({
   onSearchHandler,
   onKeyPressHandler,
   isSearchDisabled = false,
-  dark = false,
+  isDark = false,
 }) => {
   const breakpoints = useBreakpoints();
 
   return (
-    <div role="banner" aria-label="Top Application Banner" css={Styles.topAppBarWrapper(dark)}>
+    <div role="banner" aria-label="Top Application Banner" css={Styles.topAppBarWrapper(isDark)}>
       <div css={Styles.mainSection(Boolean(onSearchHandler))}>
         {!breakpoints.des1200 && <SidebarMenuIcon onMenuIconClick={onMenuIconClick} />}
         <LogoPlaceholder logoIcon={logoIcon} />
@@ -32,13 +32,13 @@ const TopAppBar: FC<TopAppBarProps> = ({
             searchPlaceholder={searchPlaceholder}
             searchDefaultValue={searchDefaultValue}
             isSearchDisabled={isSearchDisabled}
-            dark={dark}
+            isDark={isDark}
           />
         )}
       </div>
       <div css={Styles.additionalToolsSection(Boolean(additionalTools))}>{additionalTools}</div>
       <div css={Styles.topAppBarSection}>
-        <UserMenu dark={dark} {...userMenu} />
+        <UserMenu isDark={isDark} {...userMenu} />
       </div>
     </div>
   );

@@ -43,10 +43,9 @@ export type Props = {
    * */
   isFilled?: boolean;
   dataTestId?: TestId;
-  ref: React.ForwardedRef<HTMLInputElement>;
 };
 
-const Radio: React.FC<Props> = (props, ref) => {
+const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const {
     isChecked: isExternallyControlledChecked,
     onChange,
@@ -129,10 +128,8 @@ const Radio: React.FC<Props> = (props, ref) => {
       </span>
     </span>
   );
-};
+});
 
 Radio.displayName = 'Radio';
 
-export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
-  <Radio {...props} ref={ref} />
-));
+export default Radio;

@@ -147,9 +147,9 @@ Regular TextField disabled with label
 <Preview>
   <Story name="TextField disabled with label">
     <Stack>
-      <TextField disabled label={'Label'} size={'md'} styleType={'filled'} />
-      <TextField disabled label={'Label'} size={'md'} styleType={'outlined'} />
-      <TextField disabled label={'Label'} size={'md'} styleType={'elevated'} />
+      <TextField isDisabled label={'Label'} size={'md'} styleType={'filled'} />
+      <TextField isDisabled label={'Label'} size={'md'} styleType={'outlined'} />
+      <TextField isDisabled label={'Label'} size={'md'} styleType={'elevated'} />
     </Stack>
   </Story>
 </Preview>
@@ -162,14 +162,14 @@ Regular TextField locked with label. Locked state defined a locked text field bu
   <Story name="TextField locked with label">
     <Stack>
       <Stack>
-        <TextField locked label={'Label'} size={'md'} styleType={'filled'} />
-        <TextField locked label={'Label'} size={'md'} styleType={'outlined'} />
-        <TextField locked label={'Label'} size={'md'} styleType={'elevated'} />
+        <TextField isLocked label={'Label'} size={'md'} styleType={'filled'} />
+        <TextField isLocked label={'Label'} size={'md'} styleType={'outlined'} />
+        <TextField isLocked label={'Label'} size={'md'} styleType={'elevated'} />
       </Stack>
       <Stack>
-        <TextField locked label={'Label'} size={'sm'} styleType={'filled'} />
-        <TextField locked label={'Label'} size={'sm'} styleType={'outlined'} />
-        <TextField locked label={'Label'} size={'sm'} styleType={'elevated'} />
+        <TextField isLocked label={'Label'} size={'sm'} styleType={'filled'} />
+        <TextField isLocked label={'Label'} size={'sm'} styleType={'outlined'} />
+        <TextField isLocked label={'Label'} size={'sm'} styleType={'elevated'} />
       </Stack>
     </Stack>
   </Story>
@@ -232,9 +232,9 @@ Regular Text Field with KNOBS
       <TextField
         label={text('Label', 'Label')}
         size={select('Size', ['md', 'sm'], 'md')}
-        lean={boolean('Lean version', false)}
-        locked={boolean('Locked', false)}
-        disabled={boolean('Disabled', false)}
+        isLean={boolean('Lean version', false)}
+        isLocked={boolean('isLocked', false)}
+        isDisabled={boolean('isDisabled', false)}
         leftIcon={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
         rightIcon={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
@@ -244,9 +244,9 @@ Regular Text Field with KNOBS
       <TextField
         label={text('Label', 'Label')}
         size={select('Size', ['md', 'sm'], 'md')}
-        lean={boolean('Lean version', false)}
-        locked={boolean('Locked', false)}
-        disabled={boolean('Disabled', false)}
+        isLean={boolean('Lean version', false)}
+        isLocked={boolean('isLocked', false)}
+        isDisabled={boolean('isDisabled', false)}
         leftIcon={
           <Icon
             name={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}

@@ -11,30 +11,30 @@ export type SearchProps = {
   onSearchHandler?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyPressHandler?: (event: React.KeyboardEvent<HTMLInputElement>) => void;
   isSearchDisabled?: boolean;
-};
+} & { isDark?: boolean };
 
-const Search: FC<SearchProps & { dark?: boolean }> = ({
+const Search: FC<SearchProps> = ({
   searchPlaceholder = 'Search',
   searchDefaultValue = '',
   onSearchHandler,
   onKeyPressHandler,
   isSearchDisabled = false,
-  dark = false,
+  isDark = false,
 }) => {
   const theme = useTheme();
 
   return (
-    <div aria-disabled={isSearchDisabled} css={searchWrapper(dark)}>
+    <div aria-disabled={isSearchDisabled} css={searchWrapper(isDark)}>
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon
           name={'search'}
-          color={dark ? theme.palette.white : theme.utils.getColor('lightGrey', 650)}
+          color={isDark ? theme.palette.white : theme.utils.getColor('lightGrey', 650)}
           size={20}
         />{' '}
       </div>
       <input
         readOnly={false}
-        css={customInputStyle(searchPlaceholder, dark)}
+        css={customInputStyle(searchPlaceholder, isDark)}
         placeholder={searchPlaceholder}
         defaultValue={searchDefaultValue}
         id={'top-nav-search'}

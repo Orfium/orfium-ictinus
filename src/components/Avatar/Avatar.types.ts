@@ -1,4 +1,5 @@
 import { AcceptedIconNames } from '../Icon/types';
+import { DivProps } from '../../utils/common';
 
 export type Props = {
   /** the src of the image to show **/
@@ -17,6 +18,6 @@ export type Props = {
   color?: string;
   /** The class name of the avatar component if its styled **/
   className?: string;
-};
+} & DivProps;
 
 export type AvatarSizes = 'xs' | 'sm' | 'md' | 'lg';

@@ -13,24 +13,16 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
   (
     {
       styleType = defaultProps.styleType,
-      disabled = defaultProps.disabled,
+      isDisabled = defaultProps.disabled,
       dataTestId = defaultProps.dataTestId,
       ...rest
     },
     ref
   ) => {
-    const {
-      onClick,
-      isChecked,
-      thumbnail,
-      fill,
-      isSelected,
-      onClear,
-      children,
-      badgeNumber,
-    } = rest;
+    const { onClick, isChecked, thumbnail, fill, isSelected, onClear, children, badgeNumber } =
+      rest;
 
-    errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, disabled });
+    errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, isDisabled });
 
     const contents = (
       <Fragment>
@@ -52,15 +44,15 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
           />
         )}
         {onClear && (
-          <div css={closeIconWrapperStyle(disabled)}>
+          <div css={closeIconWrapperStyle(isDisabled)}>
             <Icon
               size={14}
               name={'close'}
               color={'darkGrey'}
               variant={850}
-              onClick={e => {
+              onClick={(e) => {
                 e.stopPropagation();
-                if (!disabled) {
+                if (!isDisabled) {
                   onClear();
                 }
               }}
@@ -90,7 +82,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
         data-testid={generateTestDataId('chip', dataTestId)}
         css={chipStyle({ styleType, fill, isSelected, onClear, onClick })}
         onClick={onClick}
-        disabled={disabled}
+        disabled={isDisabled}
       >
         {contents}
       </button>
