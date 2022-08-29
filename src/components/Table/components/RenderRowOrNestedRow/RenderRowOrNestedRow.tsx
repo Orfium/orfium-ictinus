@@ -15,12 +15,12 @@ import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.sty
 const RenderRowWithCells = React.memo(
   ({
     isChecked = false,
-    toggleChecked = () => {},
+    toggleIsChecked = () => {},
     dataTestIdPrefix,
     rowIndex,
   }: {
     isChecked?: boolean;
-    toggleChecked?: () => void;
+    toggleIsChecked?: () => void;
     dataTestIdPrefix?: string;
     rowIndex?: number;
   }) => {
@@ -43,7 +43,7 @@ const RenderRowWithCells = React.memo(
     return (
       <TableRow
         isSelected={isRowSelected}
-        onClick={isExpandedExists ? toggleChecked : undefined}
+        onClick={isExpandedExists ? toggleIsChecked : undefined}
         css={borderedRowStyle({
           isBordered,
           isCustomCell: isExpandedExists || isComponentFunctionType(lastItem.content),
@@ -102,7 +102,7 @@ const RenderRowWithCells = React.memo(
         <ExpandedButtonCell
           isExpandedExists={isExpandedExists}
           isChecked={isChecked}
-          toggleChecked={toggleChecked}
+          toggleIsChecked={toggleIsChecked}
           actionWidth={actionWidth}
           dataTestIdPrefix={dataTestIdPrefix}
           rowIndex={rowIndex}

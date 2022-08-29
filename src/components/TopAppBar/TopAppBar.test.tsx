@@ -27,7 +27,7 @@ describe('TopAppBar', () => {
 
   it('should render correctly on dark', () => {
     const { container } = render(
-      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} dark />
+      <TopAppBar onMenuIconClick={onMenuIconClickMock} userMenu={DEFAULT_USER_MENU} isDark />
     );
     expect(container).toMatchSnapshot();
   });

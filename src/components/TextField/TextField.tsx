@@ -11,7 +11,9 @@ import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
-type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly'>>;
+type InputProps = Partial<
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly' | 'disabled'>
+>;
 
 export type Props = {
   /** The id of the text field that will be used as for in label too */

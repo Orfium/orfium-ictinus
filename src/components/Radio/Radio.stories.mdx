@@ -26,7 +26,7 @@ If the `checked` prop is not defined it means the `Radio` is not controlled.
 ```jsx
 import { Radio } from '@orfium/ictinus';
 
-<Radio checked={value === 'a'} value={'a'} onChange={() => {}} />;
+<Radio isChecked={value === 'a'} value={'a'} onChange={() => {}} />;
 ```
 
 # Props
@@ -39,7 +39,7 @@ import { Radio } from '@orfium/ictinus';
   <Story name="Not selected Radio  (`checked === undefined`)">
     <Stack>
       <Radio />
-      <Radio filled={false} />
+      <Radio isFilled={false} />
     </Stack>
   </Story>
 </Preview>
@@ -49,8 +49,8 @@ import { Radio } from '@orfium/ictinus';
 <Preview>
   <Story name="Not selected Radio (`checked === false`)">
     <Stack>
-      <Radio checked={false} />
-      <Radio filled={false} checked={false} />
+      <Radio isChecked={false} />
+      <Radio isFilled={false} isChecked={false} />
     </Stack>
   </Story>
 </Preview>
@@ -59,7 +59,7 @@ import { Radio } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Selected Radio">
-    <Radio checked={true} />
+    <Radio isChecked={true} />
   </Story>
 </Preview>
 
@@ -68,8 +68,8 @@ import { Radio } from '@orfium/ictinus';
 <Preview>
   <Story name="Disabled not selected Radio">
     <Stack>
-      <Radio checked={false} disabled={true} />
-      <Radio filled={false} checked={false} disabled={true} />
+      <Radio isChecked={false} isDisabled={true} />
+      <Radio isFilled={false} isChecked={false} isDisabled={true} />
     </Stack>
   </Story>
 </Preview>
@@ -78,7 +78,7 @@ import { Radio } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Disabled selected Radio">
-    <Radio checked={true} disabled={true} />
+    <Radio isChecked={true} isDisabled={true} />
   </Story>
 </Preview>
 
@@ -95,6 +95,6 @@ import { Radio } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Radio Playground"  parameters={{ decorators: [withKnobs] }}>
-    <Radio checked={boolean("checked", true)} disabled={boolean("disabled", false)}  filled={boolean("filled", false)} />
+    <Radio isChecked={boolean("isChecked", true)} isDisabled={boolean("isDisabled", false)}  isFilled={boolean("isFilled", false)} />
   </Story>
 </Preview>
