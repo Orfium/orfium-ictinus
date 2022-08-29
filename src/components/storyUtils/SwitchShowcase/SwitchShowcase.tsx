@@ -18,15 +18,15 @@ const SwitchShowcase: React.FC<Props> = ({
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleSwitch = () => {
-    setIsChecked(prevState => !prevState);
+    setIsChecked((prevState) => !prevState);
   };
 
   return (
     <Switch
       label={hasLabel ? label : undefined}
-      checked={isChecked}
+      isChecked={isChecked}
       labelPlacement={labelPlacement}
-      disabled={isDisabled}
+      isDisabled={isDisabled}
       onChange={toggleSwitch}
     />
   );

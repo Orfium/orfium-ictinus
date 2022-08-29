@@ -60,7 +60,7 @@ const OverlayComponent: React.FC<Props> = ({
           {extraOptions.map((option) => (
             <div
               key={option.value}
-              css={optionStyle({ selected: selectedOption === option.value })}
+              css={optionStyle({ isSelected: selectedOption === option.value })}
               onClick={() => setSelectedOption(option.value)}
             >
               {option.label}

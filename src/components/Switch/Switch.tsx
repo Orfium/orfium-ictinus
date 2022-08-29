@@ -52,7 +52,7 @@ const Switch: React.FC<Props> = ({
   };
 
   return addLabel(
-    <SwitchWrapper checked={isChecked} disabled={isDisabled}>
+    <SwitchWrapper isChecked={isChecked} isDisabled={isDisabled}>
       <ReactSwitch
         data-testid={dataTestId}
         checked={isChecked}

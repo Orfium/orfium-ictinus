@@ -3,34 +3,43 @@ import { Theme } from 'theme';
 
 import { flex } from '../../../theme/functions';
 
-export const overlayWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  ${flex};
-  border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
-  border-radius: ${theme.spacing.xsm};
-  width: fit-content;
-`;
+export const overlayWrapperStyle =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${flex};
+      border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
+      border-radius: ${theme.spacing.xsm};
+      width: fit-content;
+    `;
 
-export const optionsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  background-color: ${theme.utils.getColor('lightGrey', null, 'pale')};
-`;
+export const optionsWrapperStyle =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      background-color: ${theme.utils.getColor('lightGrey', null, 'pale')};
+    `;
 
-export const optionStyle = ({ selected }: { selected?: boolean }) => (
-  theme: Theme
-): SerializedStyles => css`
-  white-space: nowrap;
-  padding: ${theme.spacing.md};
-  font-weight: ${selected ? theme.typography.weights.medium : theme.typography.weights.regular};
-  cursor: pointer;
-  background-color: ${selected ? theme.utils.getColor('blue', 50) : 'transparent'};
-  position: relative;
-  font-size: ${theme.typography.fontSizes['13']};
+export const optionStyle =
+  ({ isSelected }: { isSelected?: boolean }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      white-space: nowrap;
+      padding: ${theme.spacing.md};
+      font-weight: ${isSelected
+        ? theme.typography.weights.medium
+        : theme.typography.weights.regular};
+      cursor: pointer;
+      background-color: ${isSelected ? theme.utils.getColor('blue', 50) : 'transparent'};
+      position: relative;
+      font-size: ${theme.typography.fontSizes['13']};
 
-  &:hover {
-    background-color: ${theme.utils.getColor('lightGrey', 50)};
-  }
+      &:hover {
+        background-color: ${theme.utils.getColor('lightGrey', 50)};
+      }
 
-  ${selected &&
-    `&:after {
+      ${isSelected &&
+      `&:after {
     content: '';
     position: absolute;
     right: -10px;
@@ -45,37 +54,42 @@ export const optionStyle = ({ selected }: { selected?: boolean }) => (
     clear: both;
     transform: rotate(90deg);
   }`}
-`;
+    `;
 
-export const buttonsMonthsWrapperStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
-  theme: Theme
-): SerializedStyles => css`
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: ${isRangePicker && theme.spacing.md};
-`;
-export const monthsWrapperStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
-  theme: Theme
-): SerializedStyles => css`
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  padding: 0 ${theme.spacing.lg};
-  z-index: 10;
+export const buttonsMonthsWrapperStyle =
+  ({ isRangePicker }: { isRangePicker: boolean }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      margin-bottom: ${isRangePicker && theme.spacing.md};
+    `;
+export const monthsWrapperStyle =
+  ({ isRangePicker }: { isRangePicker: boolean }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      padding: 0 ${theme.spacing.lg};
+      z-index: 10;
 
-  > div:first-of-type {
-    margin-right: ${isRangePicker ? theme.spacing.lg : 0};
-  }
-`;
+      > div:first-of-type {
+        margin-right: ${isRangePicker ? theme.spacing.lg : 0};
+      }
+    `;
 
-export const buttonsWrapperStyle = () => (theme: Theme): SerializedStyles => css`
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: ${theme.spacing.md};
-  margin-right: ${theme.spacing.lg};
+export const buttonsWrapperStyle =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: ${theme.spacing.md};
+      margin-right: ${theme.spacing.lg};
 
-  > button {
-    margin: ${theme.spacing.sm} 0 ${theme.spacing.sm} ${theme.spacing.sm};
-  }
-`;
+      > button {
+        margin: ${theme.spacing.sm} 0 ${theme.spacing.sm} ${theme.spacing.sm};
+      }
+    `;

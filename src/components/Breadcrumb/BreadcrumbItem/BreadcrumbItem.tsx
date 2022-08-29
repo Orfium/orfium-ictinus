@@ -14,7 +14,7 @@ type Props = {
 const BreadcrumbItem: React.FC<Props> = ({ childComponent, isLastItem = false }) => {
   return (
     <li>
-      <div css={breadcrumbItemStyles({ active: isLastItem })}>
+      <div css={breadcrumbItemStyles({ isActive: isLastItem })}>
         {childComponent}
         <Separator isLastItem={isLastItem} />
       </div>

@@ -10,7 +10,7 @@ import ButtonLoader from './ButtonLoader';
 type onClickProp = { onClick: ClickHandler };
 export type Props = Omit<ButtonBaseProps, 'onClick'> & TestProps & onClickProp & ButtonProps;
 
-const Button: React.FC<Props> = (props) => {
+const Button = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
@@ -22,7 +22,6 @@ const Button: React.FC<Props> = (props) => {
     isDisabled = false,
     children,
     onClick,
-    ref,
   } = props;
   const { isLoading, handleAsyncOperation } = useLoading(onClick);
   const childrenWrapperRef = useRef<HTMLSpanElement>(null);
@@ -58,10 +57,8 @@ const Button: React.FC<Props> = (props) => {
       </span>
     </ButtonBase>
   );
-};
+});
 
 Button.displayName = 'Button';
 
-export default React.forwardRef<HTMLButtonElement, Props>((props, ref) => (
-  <Button {...props} ref={ref} />
-));
+export default Button;

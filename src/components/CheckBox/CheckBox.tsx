@@ -34,20 +34,20 @@ export type Props = {
   dataTestIdSuffix?: TestId;
   /** Disables auto generated id for snapshots*/
   id?: string;
-  ref?: React.ForwardedRef<HTMLSpanElement>;
 };
 
-const CheckBox: React.FC<Props> = ({
-  label,
-  isChecked,
-  onClick,
-  isDisabled = false,
-  isIntermediate = false,
-  dataTestIdSuffix,
-  isFilled = true,
-  id = generateUniqueID(),
-  ref,
-}) => {
+const CheckBox = React.forwardRef<HTMLSpanElement, Props>((props, ref) => {
+  const {
+    label,
+    isChecked,
+    onClick,
+    isDisabled = false,
+    isIntermediate = false,
+    dataTestIdSuffix,
+    isFilled = true,
+    id = generateUniqueID(),
+  } = props;
+
   const [isCheckedState, setIsCheckedState] = React.useState(Boolean(isChecked));
   const inputRef = React.useRef<HTMLInputElement>(null);
 
@@ -105,9 +105,8 @@ const CheckBox: React.FC<Props> = ({
       {label && <span css={labelStyle()}>{label}</span>}
     </span>
   );
-};
+});
+
 CheckBox.displayName = 'Checkbox';
 
-export default React.forwardRef<HTMLSpanElement, Props>((props, ref) => (
-  <CheckBox {...props} ref={ref} />
-));
+export default CheckBox;

@@ -30,12 +30,11 @@ export type Props = {
   onInput?: React.EventHandler<any>;
   /** Boolean to make the input readonly. Default to false. */
   isReadOnly?: boolean;
-  ref: React.ForwardedRef<HTMLInputElement>;
 } & TextInputWrapperProps &
   InputProps &
   TestProps;
 
-const TextField: React.FC<Props> = (props) => {
+const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const {
     id = undefined,
     rightIcon = null,
@@ -52,7 +51,6 @@ const TextField: React.FC<Props> = (props) => {
     styleType: __styleType,
     isReadOnly,
     status,
-    ref,
     ...rest
   } = props;
   const theme = useTheme();
@@ -110,10 +108,8 @@ const TextField: React.FC<Props> = (props) => {
       </TextInputBase>
     </React.Fragment>
   );
-};
+});
 
 TextField.displayName = 'TextField';
 
-export default React.forwardRef<HTMLInputElement, Props>((props, ref) => (
-  <TextField {...props} ref={ref} />
-));
+export default TextField;
