@@ -5,8 +5,8 @@ export type ClickHandler =
   | ((setLoading?: (isLoading: boolean) => void, event?: ClickEvent) => void)
   | undefined;
 
-export const useLoading = (clickHandler: ClickHandler, defaultState = false) => {
-  const [isLoading, setIsLoading] = useState(defaultState);
+export const useLoading = (clickHandler: ClickHandler, isLoadingInitialState = false) => {
+  const [isLoading, setIsLoading] = useState(isLoadingInitialState);
 
   const updateLoadingState = useCallback(
     (isLoadingProp: boolean) => {

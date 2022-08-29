@@ -5,7 +5,7 @@ import { rem } from '../../theme/utils';
 import { MIN_WIDTH } from '../TextInputBase/config';
 
 export const sxProp = (
-  resizeEnabled: boolean,
+  isResizeEnabled: boolean,
   theme: Theme
 ): { wrapper: CSSObject; textField: CSSObject; input: CSSObject } => ({
   wrapper: { width: 'auto', height: 'auto' },
@@ -13,6 +13,6 @@ export const sxProp = (
   input: {
     width: rem(MIN_WIDTH),
     minWidth: rem(MIN_WIDTH),
-    resize: !resizeEnabled ? 'none' : 'both',
+    resize: !isResizeEnabled ? 'none' : 'both',
   },
 });

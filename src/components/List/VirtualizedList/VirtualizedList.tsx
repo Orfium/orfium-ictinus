@@ -43,20 +43,23 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
     },
     ref
   ) => {
-    const data = useMemo(() => (defaultOption ? [defaultOption, ...items] : items), [
-      defaultOption,
-      items,
-    ]);
+    const data = useMemo(
+      () => (defaultOption ? [defaultOption, ...items] : items),
+      [defaultOption, items]
+    );
 
-    const itemSize = useCallback((index: number) => {
-      const sizeBase = rowSize === 'normal' ? 56 : 46;
+    const itemSize = useCallback(
+      (index: number) => {
+        const sizeBase = rowSize === 'normal' ? 56 : 46;
 
-      if ((data[index] as SelectOption)?.options) {
-        return (((data[index] as SelectOption)?.options?.length as number) + 1) * sizeBase;
-      }
+        if ((data[index] as SelectOption)?.options) {
+          return (((data[index] as SelectOption)?.options?.length as number) + 1) * sizeBase;
+        }
 
-      return sizeBase;
-    }, [data, rowSize]);
+        return sizeBase;
+      },
+      [data, rowSize]
+    );
 
     const rowRenderer = ({ index, style }: { index: number; style: CSSProperties }) => {
       return (
@@ -80,11 +83,11 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
               content={data[index]}
               index={index}
               ref={ref}
-              disabled={(data[index] as SelectOption)?.isDisabled}
-              selected={isSelected({ item: data[index], selectedItem })}
+              isDisabled={(data[index] as SelectOption)?.isDisabled}
+              isSelected={isSelected({ item: data[index], selectedItem })}
               searchTerm={searchTerm}
               dataTestId={dataTestId + `${defaultOption && index === 0 && 'default'}`}
-              highlighted={Boolean(defaultOption && index === 0)}
+              isHighlighted={Boolean(defaultOption && index === 0)}
               handleOptionClick={handleOptionClick}
             />
           )}

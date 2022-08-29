@@ -127,7 +127,7 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
   const { expanded } = row;
   const [isChecked, toggleIsChecked] = useToggle(false);
   const ExpandedComponent = expanded
-    ? expanded({ row, selected: isRowSelected, expanded: isChecked })
+    ? expanded({ row, isSelected: isRowSelected, isExpanded: isChecked })
     : null;
 
   return (

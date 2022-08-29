@@ -90,9 +90,12 @@
     /* Typescript rules */
     "@typescript-eslint/naming-convention": [
       "error",
-      { "selector": "variable", "types": ["boolean"],
-        "format": ["PascalCase"],// As per documentation, prefix is trimmed before checking for format , so we need pascal case for values like `isBoolean`  https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/naming-convention.md#format-options
-        "prefix": ["is", "has"] }
+      {
+        "selector": ["variable", "parameter", "property"],
+        "types": ["boolean"],
+        "format": ["PascalCase"], // As per documentation, prefix is trimmed before checking for format , so we need pascal case for values like `isBoolean`  https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/naming-convention.md#format-options
+        "prefix": ["is", "has"]
+      }
     ],
     "@typescript-eslint/no-unused-expressions": "warn",
     "@typescript-eslint/no-unused-vars": [

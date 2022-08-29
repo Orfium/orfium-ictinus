@@ -1,7 +1,7 @@
 import { getContrast } from 'polished';
 
-import { TextColorTypes } from './index';
 import { errorHandler } from '../utils/helpers';
+import { TextColorTypes } from './index';
 import { getColorErrors } from './utils';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;

@@ -6,21 +6,21 @@ import { useTheme } from '../../index';
 import { TestProps } from '../../utils/types';
 import { Label, SwitchWrapper, Container } from './Switch.style';
 
-interface Props {
+type Props = {
   label?: string;
   labelPlacement?: 'left' | 'right';
-  checked: boolean;
+  isChecked: boolean;
   onChange: (
     checked?: boolean,
     event?: React.SyntheticEvent<MouseEvent | KeyboardEvent> | MouseEvent
   ) => void;
-  disabled?: boolean;
-}
+  isDisabled?: boolean;
+} & TestProps;
 
-const Switch: React.FC<Props & TestProps> = ({
-  disabled = false,
+const Switch: React.FC<Props> = ({
+  isDisabled = false,
   label,
-  checked,
+  isChecked,
   onChange,
   labelPlacement = 'left',
   dataTestId = 'switch',
@@ -52,10 +52,10 @@ const Switch: React.FC<Props & TestProps> = ({
   };
 
   return addLabel(
-    <SwitchWrapper checked={checked} disabled={disabled}>
+    <SwitchWrapper checked={isChecked} disabled={isDisabled}>
       <ReactSwitch
         data-testid={dataTestId}
-        checked={checked}
+        checked={isChecked}
         onChange={onChange}
         offHandleColor={theme.utils.getColor('lightGrey', 50)}
         offColor={theme.utils.getColor('lightGrey', 150)}
@@ -67,7 +67,7 @@ const Switch: React.FC<Props & TestProps> = ({
         height={8}
         width={36}
         activeBoxShadow={`${rgba(14, 14, 23, 0.1)} 0 0 2px 3px`}
-        disabled={disabled}
+        disabled={isDisabled}
       />
     </SwitchWrapper>
   );

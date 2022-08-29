@@ -32,7 +32,7 @@ export const inputStyles: SerializedStyles = css`
 `;
 
 export const customRadioInnerHover =
-  (focused: boolean, disabled: boolean) =>
+  (isFocused: boolean, isDisabled: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       position: absolute;
@@ -40,11 +40,11 @@ export const customRadioInnerHover =
       width: ${rem('24px')};
       height: ${rem('24px')};
       transition: all 0.2s ease;
-      ${focused && !disabled && boxShadow({ colorScheme: theme.colorScheme })};
+      ${isFocused && !isDisabled && boxShadow({ colorScheme: theme.colorScheme })};
     `;
 
 export const customRadioWrapperStyles =
-  (focused: boolean, disabled: boolean) =>
+  (isFocused: boolean, isDisabled: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       position: relative;
@@ -52,7 +52,7 @@ export const customRadioWrapperStyles =
       width: ${rem('24px')};
       height: ${rem('24px')};
       transition: box-shadow 0.3s ease;
-      ${focused && !disabled && boxShadow({ colorScheme: theme.colorScheme })};
+      ${isFocused && !isDisabled && boxShadow({ colorScheme: theme.colorScheme })};
     `;
 
 const determineColorBasedOnState =
@@ -110,7 +110,7 @@ export const customRadioStyles =
   };
 
 export const wrapperStyles =
-  (disabled: boolean) =>
+  (isDisabled: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       position: relative;
@@ -122,7 +122,7 @@ export const wrapperStyles =
 
       color: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')};
       border: 0;
-      opacity: ${disabled ? 0.5 : 1};
+      opacity: ${isDisabled ? 0.5 : 1};
       cursor: pointer;
       margin: 0;
       display: inline-flex;
