@@ -10,7 +10,7 @@ describe('Overlay', () => {
     const closeCTA = jest.fn();
 
     const { findByText, findByTestId } = render(
-      <Overlay open={true} size={'33%'} onClose={closeCTA}>
+      <Overlay isOpen={true} size={'33%'} onClose={closeCTA}>
         {content}
       </Overlay>
     );
@@ -25,7 +25,7 @@ describe('Overlay', () => {
   test('Overlay closeCTA works properly when clicked', async () => {
     const closeCTA = jest.fn();
 
-    const { findByTestId } = render(<Overlay open={true} size={'33%'} onClose={closeCTA} />);
+    const { findByTestId } = render(<Overlay isOpen={true} size={'33%'} onClose={closeCTA} />);
 
     const closeButton = await findByTestId('icon-button-overlay-close');
     fireEvent.click(closeButton);
@@ -36,7 +36,7 @@ describe('Overlay', () => {
   test('Overlay closeCTA will get triggered when Esc button is clicked', async () => {
     const closeCTA = jest.fn();
 
-    render(<Overlay open={true} size={'33%'} onClose={closeCTA} />);
+    render(<Overlay isOpen={true} size={'33%'} onClose={closeCTA} />);
 
     fireEvent.keyDown(document.body, {
       key: 'Escape',
