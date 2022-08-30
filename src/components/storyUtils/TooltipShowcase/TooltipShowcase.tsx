@@ -25,7 +25,7 @@ const CustomContent = () => {
         >
           By hover here you can see:
         </div>
-        <Chip fill="teal" shade="100">
+        <Chip fill="teal">
           <a href={'/'}>Go to homepage</a>
         </Chip>
       </div>
@@ -44,7 +44,15 @@ const TooltipShowcase = ({ content }: { content: string }) => {
           isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
-          <Button type="primary" transparent>
+          <Button
+            onClick={() =>
+              console.log(
+                'The C language combines all the power of assembly language with all the ease-of-use of assembly language.'
+              )
+            }
+            type="primary"
+            isTransparent
+          >
             Left
           </Button>
         </Tooltip>
@@ -54,7 +62,15 @@ const TooltipShowcase = ({ content }: { content: string }) => {
           isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
-          <Button type="primary" transparent>
+          <Button
+            onClick={() =>
+              console.log(
+                'A SQL query goes into a bar, walks up to two tables and asks, “Can I join you?'
+              )
+            }
+            type="primary"
+            isTransparent
+          >
             Right
           </Button>
         </Tooltip>
@@ -67,7 +83,15 @@ const TooltipShowcase = ({ content }: { content: string }) => {
           isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
-          <Button type="primary" transparent>
+          <Button
+            onClick={() =>
+              console.log(
+                'How do you tell HTML from HTML5? Try it out in Internet Explorer. Did it work? No? It’s HTML5.'
+              )
+            }
+            type="primary"
+            isTransparent
+          >
             Top
           </Button>
         </Tooltip>
@@ -77,7 +101,13 @@ const TooltipShowcase = ({ content }: { content: string }) => {
           isInteractive={boolean('isInteractive', false)}
           delay={number('delay', 100)}
         >
-          <Button type="primary" transparent>
+          <Button
+            onClick={() =>
+              console.log('Knock knock.\n' + '\n' + 'Race condition.\n' + '\n' + 'Who’s there?')
+            }
+            type="primary"
+            isTransparent
+          >
             Bottom
           </Button>
         </Tooltip>
@@ -90,7 +120,11 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         isInteractive={boolean('isInteractive', false)}
         delay={number('delay', 100)}
       >
-        <Button type="primary" transparent>
+        <Button
+          onClick={() => console.log('Hardware (noun): the part of a computer that you can kick.')}
+          type="primary"
+          isTransparent
+        >
           Right
         </Button>
       </Tooltip>
