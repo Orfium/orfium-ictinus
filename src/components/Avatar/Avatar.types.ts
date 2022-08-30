@@ -1,7 +1,7 @@
 import { DivProps } from '../../utils/common';
 import { AcceptedIconNames } from '../Icon/types';
 
-export type Props = {
+export type AvatarProps = {
   /** the src of the image to show **/
   src?: string;
   /** The icon name to pick from our library of icons

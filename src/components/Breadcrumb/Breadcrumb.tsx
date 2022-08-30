@@ -7,7 +7,7 @@ import { breadcrumbLinkStyles, breadcrumbStyles } from './Breadcrumb.style';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
 import { BreadcrumbItemData } from './types';
 
-export type Props = {
+export type BreadcrumbProps = {
   /** Defines the data for constructing the related breadcrumb items */
   data?: BreadcrumbItemData[];
 };
@@ -15,7 +15,7 @@ export type Props = {
 const isLastItem = (dataItems: React.ReactNode[], itemIndex: number) =>
   itemIndex === dataItems.length - 1;
 
-const Breadcrumb: React.FC<Props> = ({ children, data = [] }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ children, data = [] }) => {
   const passDataToRouterLink = React.useCallback(
     (dataItem: BreadcrumbItemData, index: number) => {
       const { to, label } = dataItem;
