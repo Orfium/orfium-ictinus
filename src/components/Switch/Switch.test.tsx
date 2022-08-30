@@ -8,7 +8,7 @@ const mockChange = jest.fn();
 
 describe('Switch', () => {
   it('will correctly call onChange when clicked', () => {
-    render(<Switch checked={false} onChange={mockChange} />);
+    render(<Switch isChecked={false} onChange={mockChange} />);
     const switchComponent = screen.getByTestId('switch');
 
     userEvent.click(switchComponent);
@@ -18,7 +18,7 @@ describe('Switch', () => {
   });
 
   it('will render the Switch with a label', () => {
-    render(<Switch checked={false} label={'This is a label'} onChange={() => void 0} />);
+    render(<Switch isChecked={false} label={'This is a label'} onChange={() => void 0} />);
 
     const label = screen.getByTestId('switch_label');
 
@@ -27,7 +27,7 @@ describe('Switch', () => {
   });
 
   it('will render the Switch without a label', async () => {
-    render(<Switch checked={false} onChange={() => void 0} />);
+    render(<Switch isChecked={false} onChange={() => void 0} />);
 
     expect(await screen.queryByTestId('switch_label')).toBeNull();
   });
