@@ -29,7 +29,7 @@ const getAnchorStyle = ({ anchor, size }: { anchor: AnchorType; size: string }) 
     : { display: 'flex', height: '100%', width: size };
 };
 
-const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
+const Overlay = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Props & DivProps>>(
   ({ open, onClose, anchor = 'left', size, dataTestId, children }, ref) => {
     useEscape(() => {
       onClose();

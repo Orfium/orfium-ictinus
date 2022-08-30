@@ -16,7 +16,7 @@ export type ButtonProps = Partial<
 >;
 
 //@TODO fix props to not overwrite div props from base
-export type DivProps = Omit<React.HTMLProps<HTMLDivElement>, 'size' | 'css'>;
+export type DivProps = Partial<Omit<React.HTMLProps<HTMLDivElement>, 'size' | 'css'>>;
 
 export type FlexDirectionProperty = 'row' | 'column' | 'row-reverse' | 'column-reverse';
 
