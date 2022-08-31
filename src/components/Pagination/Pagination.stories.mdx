@@ -4,15 +4,18 @@ import Pagination from './Pagination';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Pagination"
-    component={Pagination}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Pagination',
-            url: `${FIGMA_URL}?node-id=1621%3A445`,
-        }],
-    }} />
+  title="Design System/Pagination"
+  component={Pagination}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Pagination',
+        url: `${FIGMA_URL}?node-id=1621%3A445`,
+      },
+    ],
+  }}
+/>
 
 # Pagination
 
@@ -36,25 +39,28 @@ Simple pagination with all buttons
 
 <Preview>
   <Story name="Pagination" parameters={{ decorators: [withKnobs] }}>
-    <Pagination count={3}
-                page={1}
-                isNextPageDisabled={boolean('nextPageDisabled', false)}
-                isPrevPageDisabled={boolean('prevPageDisabled', false)}
+    <Pagination
+      count={3}
+      page={1}
+      isEnhancedPaginationVisible={boolean('isEnhancedPaginationVisible', true)}
+      isNextPageDisabled={boolean('isNextPageDisabled', false)}
+      isPrevPageDisabled={boolean('isPrevPageDisabled', false)}
     />
   </Story>
 </Preview>
 
-# Pagination
+# Pagination Without all buttons
 
 Simple pagination without jumping on first or last page
 
 <Preview>
   <Story name="Pagination without all buttons" parameters={{ decorators: [withKnobs] }}>
-    <Pagination count={3}
-                page={1}
-                isEnhancedPaginationVisible={boolean('isEnhancedPaginationVisible', true)}
-                nextPageDisabled={boolean('nextPageDisabled', false)}
-                prevPageDisabled={boolean('prevPageDisabled', false)}
+    <Pagination
+      count={3}
+      page={1}
+      isEnhancedPaginationVisible={false}
+      isNextPageDisabled={boolean('isNextPageDisabled', false)}
+      isPrevPageDisabled={boolean('isPrevPageDisabled', false)}
     />
   </Story>
 </Preview>
