@@ -42,9 +42,9 @@ const Modal: React.FC<Props> = ({
     return () => {
       document.body.style.overflow = 'unset';
     };
-  }, [open]);
+  }, [isOpen]);
 
-  if (!open) return null;
+  if (!isOpen) return null;
 
   return (
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>

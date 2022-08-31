@@ -1,571 +1,1081 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Design System/Drawer Drawer 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.emotion-5 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 19.25rem;
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  min-height: 100%;
+  z-index: 100;
+  position: absolute;
+  border-right: 0.0625rem solid #cfd7e5;
+}
+
+.emotion-6 {
+  -webkit-transition: all 10.2s ease-in-out;
+  -moz-transition: all 10.2s ease-in-out;
+  -ms-transition: all 10.2s ease-in-out;
+  -o-transition: all 10.2s ease-in-out;
+  -webkit-transition: all 10.2s ease-in-out;
+  transition: all 10.2s ease-in-out;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+}
+
+.emotion-6 .menu-item-text,
+.emotion-6 .submenu-item-text {
+  opacity: 1;
+  width: 12.75rem;
+  white-space: nowrap;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.75rem;
+  color: #0f0f17;
+  cursor: default;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  background: transparent;
+  border: 0 solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-7:focus-visible {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-8 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-8 path {
+  background-color: #444d5f;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #5f6c85;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.emotion-10 path {
+  fill: #5f6c85;
+}
+
+.emotion-11 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-13 {
+  fill: #282e39;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #282e39;
+}
+
+.emotion-14 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-weight: initial;
+}
+
+.emotion-15 {
+  -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
+  transition: opacity 0ms ease,transform 0ms ease;
+  opacity: 0;
+  -webkit-transform: translateY(-0.625rem);
+  -moz-transform: translateY(-0.625rem);
+  -ms-transform: translateY(-0.625rem);
+  transform: translateY(-0.625rem);
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.75rem;
+  color: #0f0f17;
+  cursor: default;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  color: #0f0f17;
+  margin: 0.25rem 0 0.25rem 0;
+  padding-left: 2.4375rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-16:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-16.active:hover {
+  background-color: #b9cdfc!important;
+}
+
+.emotion-16.active {
+  font-weight: 700;
+  background-color: #d0defd!important;
+  color: black;
+}
+
+.emotion-16.active path {
+  fill: #175BF5!important;
+}
+
+.emotion-16:focus-visible {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-19 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-19 path {
+  fill: #5f6c85;
+}
+
+.emotion-70 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.75rem;
+  color: #0f0f17;
+  cursor: default;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  background: transparent;
+  border: 0 solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-70:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-70:focus-visible {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-71 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-71 path {
+  background-color: #444d5f;
+}
+
+.emotion-78 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f3f5f8;
+  width: 100%;
+}
+
+.emotion-79 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-80 {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.emotion-81 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  margin: 5px;
+}
+
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      css={
+    <div
+      style={
         Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
-      onClick={[Function]}
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div>
-    <button
-      className="css-11vz8yb-Button"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="css-1xr6sam-Button"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div>
+      <button
+        className="emotion-1"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
       >
         <span
-          className="css-l730ys-Button"
+          className="emotion-2"
         >
-          Hide
-           Drawer
+          <span
+            className="emotion-3"
+          >
+            Hide
+             Drawer
+          </span>
         </span>
-      </span>
-    </button>
-    <div
-      className="css-149do7h-DrawerShowcase"
-    >
+      </button>
       <div
-        className="css-srge5m-Drawer"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+        className="emotion-4"
       >
         <div
-          className="css-g74eqw-Navigation"
+          className="emotion-5"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
-            data-testid="expand-collapse"
+            className="emotion-6"
           >
-            <div>
-              <div
-                className="css-1w9fcyl"
+            <div
+              data-testid="expand-collapse"
+            >
+              <button
+                className="emotion-7"
                 data-testid="/menu1"
                 onClick={[Function]}
+                type="button"
               >
                 <div
-                  className="css-7bki3z"
+                  className="emotion-8"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-196hwjy-Icon"
+                      className="emotion-10"
                     />
                   </span>
                 </div>
                 <div
-                  className="css-safda5"
+                  className="emotion-11"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1qs0yug-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text css-hfcirz"
+                  className="menu-item-text emotion-14"
                 >
                   Long Menu Item Name
                 </span>
+              </button>
+              <div
+                className="emotion-15"
+              >
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu1"
+                  href="/submenu1"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu1
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu2"
+                  href="/submenu2"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu2
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu3"
+                  href="/submenu3"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu3
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu4"
+                  href="/submenu4"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu4
+                  </span>
+                </a>
               </div>
             </div>
             <div
-              className="css-1agut24-ExpandCollapse"
+              data-testid="expand-collapse"
             >
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu1"
-                href="/submenu1"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu1
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu2"
-                href="/submenu2"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu2
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu3"
-                href="/submenu3"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu3
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu4"
-                href="/submenu4"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu4
-                </span>
-              </a>
-            </div>
-          </div>
-          <div
-            data-testid="expand-collapse"
-          >
-            <div>
-              <div
-                className="css-1w9fcyl"
+              <button
+                className="emotion-7"
                 data-testid="/menu2"
                 onClick={[Function]}
+                type="button"
               >
                 <div
-                  className="css-7bki3z"
+                  className="emotion-8"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-196hwjy-Icon"
+                      className="emotion-10"
                     />
                   </span>
                 </div>
                 <div
-                  className="css-safda5"
+                  className="emotion-11"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1qs0yug-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text css-hfcirz"
+                  className="menu-item-text emotion-14"
                 >
                   Menu2
                 </span>
+              </button>
+              <div
+                className="emotion-15"
+              >
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu5"
+                  href="/submenu5"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu5
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu6"
+                  href="/submenu6"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu6
+                  </span>
+                </a>
               </div>
             </div>
             <div
-              className="css-1agut24-ExpandCollapse"
+              data-testid="expand-collapse"
             >
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu5"
-                href="/submenu5"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu5
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu6"
-                href="/submenu6"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu6
-                </span>
-              </a>
-            </div>
-          </div>
-          <div
-            data-testid="expand-collapse"
-          >
-            <div>
-              <div
-                className="css-1w9fcyl"
+              <button
+                className="emotion-7"
                 data-testid="/menu3"
                 onClick={[Function]}
+                type="button"
               >
                 <div
-                  className="css-7bki3z"
+                  className="emotion-8"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-196hwjy-Icon"
+                      className="emotion-10"
                     />
                   </span>
                 </div>
                 <div
-                  className="css-safda5"
+                  className="emotion-11"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1qs0yug-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text css-hfcirz"
+                  className="menu-item-text emotion-14"
                 >
                   Menu3
                 </span>
+              </button>
+              <div
+                className="emotion-15"
+              >
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu7"
+                  href="/submenu7"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu7
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu8"
+                  href="/submenu8"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu8
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu9"
+                  href="/submenu9"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu9
+                  </span>
+                </a>
               </div>
             </div>
-            <div
-              className="css-1agut24-ExpandCollapse"
+            <a
+              aria-current={null}
+              className="emotion-70"
+              data-testid="/menu4"
+              href="/menu4"
+              onClick={[Function]}
             >
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu7"
-                href="/submenu7"
-                id="submenu-item-link"
-                onClick={[Function]}
+              <div
+                className="emotion-71"
               >
-                <div
-                  className="css-4wwri5"
+                <span
+                  className="emotion-9"
+                  onClick={[Function]}
                 >
                   <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu7
+                    className="emotion-10"
+                  />
                 </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu8"
-                href="/submenu8"
-                id="submenu-item-link"
-                onClick={[Function]}
+              </div>
+              <div
+                className="emotion-11"
               >
-                <div
-                  className="css-4wwri5"
+                <span
+                  className="emotion-9"
+                  onClick={[Function]}
                 >
                   <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu8
+                    className="emotion-13"
+                  />
                 </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu9"
-                href="/submenu9"
-                id="submenu-item-link"
-                onClick={[Function]}
+              </div>
+              <span
+                className="menu-item-text emotion-14"
               >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu9
-                </span>
-              </a>
-            </div>
+                Menu4
+              </span>
+            </a>
           </div>
-          <a
-            aria-current={null}
-            className="css-98x36w"
-            data-testid="/menu4"
-            href="/menu4"
-            onClick={[Function]}
+        </div>
+        <div
+          className="emotion-78"
+        >
+          <div
+            className="emotion-79"
           >
-            <div
-              className="css-1a2s2gk"
-            >
-              <span
-                className="css-1gnbc76-Icon"
-                onClick={[Function]}
-              >
-                <span
-                  className="css-196hwjy-Icon"
-                />
-              </span>
-            </div>
-            <div
-              className="css-safda5"
-            >
-              <span
-                className="css-1gnbc76-Icon"
-                onClick={[Function]}
-              >
-                <span
-                  className="css-1qs0yug-Icon"
-                />
-              </span>
-            </div>
             <span
-              className="menu-item-text css-hfcirz"
+              className="emotion-80"
+            >
+              Click an option to navigate directly to Route
+            </span>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu1"
+              onClick={[Function]}
+            >
+              SubMenu1
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu2"
+              onClick={[Function]}
+            >
+              SubMenu2
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu3"
+              onClick={[Function]}
+            >
+              SubMenu3
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu4"
+              onClick={[Function]}
+            >
+              SubMenu4
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu5"
+              onClick={[Function]}
+            >
+              SubMenu5
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu6"
+              onClick={[Function]}
+            >
+              SubMenu6
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu7"
+              onClick={[Function]}
+            >
+              SubMenu7
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu8"
+              onClick={[Function]}
+            >
+              SubMenu8
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu9"
+              onClick={[Function]}
+            >
+              SubMenu9
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/menu4"
+              onClick={[Function]}
             >
               Menu4
-            </span>
-          </a>
+            </a>
+          </div>
+          <br />
+          <br />
+           Current Route:
+          <br />
         </div>
-      </div>
-      <div
-        className="css-1dxsln2-DrawerShowcase"
-      >
-        <div
-          className="css-1m2o4ts-DrawerShowcase"
-        >
-          <span
-            className="css-dkgyuk-DrawerShowcase"
-          >
-            Click an option to navigate directly to Route
-          </span>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu1"
-            onClick={[Function]}
-          >
-            SubMenu1
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu2"
-            onClick={[Function]}
-          >
-            SubMenu2
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu3"
-            onClick={[Function]}
-          >
-            SubMenu3
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu4"
-            onClick={[Function]}
-          >
-            SubMenu4
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu5"
-            onClick={[Function]}
-          >
-            SubMenu5
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu6"
-            onClick={[Function]}
-          >
-            SubMenu6
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu7"
-            onClick={[Function]}
-          >
-            SubMenu7
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu8"
-            onClick={[Function]}
-          >
-            SubMenu8
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu9"
-            onClick={[Function]}
-          >
-            SubMenu9
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/menu4"
-            onClick={[Function]}
-          >
-            Menu4
-          </a>
-        </div>
-        <br />
-        <br />
-         Current Route:
-        <br />
       </div>
     </div>
   </div>
@@ -573,581 +1083,1091 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
 `;
 
 exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-1:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-1:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-1:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-1:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-1:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.emotion-5 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  width: 19.25rem;
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  height: 100%;
+  min-height: 100%;
+  z-index: 100;
+  position: absolute;
+  border-right: 0.0625rem solid #cfd7e5;
+}
+
+.emotion-6 {
+  -webkit-transition: all 10.2s ease-in-out;
+  -moz-transition: all 10.2s ease-in-out;
+  -ms-transition: all 10.2s ease-in-out;
+  -o-transition: all 10.2s ease-in-out;
+  -webkit-transition: all 10.2s ease-in-out;
+  transition: all 10.2s ease-in-out;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  padding: 1.5rem 0;
+  box-sizing: border-box;
+}
+
+.emotion-6 .menu-item-text,
+.emotion-6 .submenu-item-text {
+  opacity: 1;
+  width: 12.75rem;
+  white-space: nowrap;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.75rem;
+  color: #0f0f17;
+  cursor: default;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  background: transparent;
+  border: 0 solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-7:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-7:focus-visible {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-8 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-8 path {
+  background-color: #444d5f;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #5f6c85;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.emotion-10 path {
+  fill: #5f6c85;
+}
+
+.emotion-11 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-13 {
+  fill: #282e39;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #282e39;
+}
+
+.emotion-14 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-weight: initial;
+}
+
+.emotion-15 {
+  -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
+  transition: opacity 0ms ease,transform 0ms ease;
+  opacity: 0;
+  -webkit-transform: translateY(-0.625rem);
+  -moz-transform: translateY(-0.625rem);
+  -ms-transform: translateY(-0.625rem);
+  transform: translateY(-0.625rem);
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.75rem;
+  color: #0f0f17;
+  cursor: default;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  color: #0f0f17;
+  margin: 0.25rem 0 0.25rem 0;
+  padding-left: 2.4375rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-16:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-16.active:hover {
+  background-color: #b9cdfc!important;
+}
+
+.emotion-16.active {
+  font-weight: 700;
+  background-color: #d0defd!important;
+  color: black;
+}
+
+.emotion-16.active path {
+  fill: #175BF5!important;
+}
+
+.emotion-16:focus-visible {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.emotion-19 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-19 path {
+  fill: #5f6c85;
+}
+
+.emotion-70 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 2.75rem;
+  color: #0f0f17;
+  cursor: default;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 1rem;
+  background: transparent;
+  border: 0 solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.emotion-70:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-70:focus-visible {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-71 {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  opacity: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-71 path {
+  background-color: #444d5f;
+}
+
+.emotion-78 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #f3f5f8;
+  width: 100%;
+}
+
+.emotion-79 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-80 {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.emotion-81 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  margin: 5px;
+}
+
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      css={
+    <div
+      style={
         Object {
-          "backgroundColor": "transparent",
-          "borderRadius": 4,
-          "color": "#000",
-          "outline": "none",
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
-      onClick={[Function]}
     >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div>
-    <button
-      className="css-11vz8yb-Button"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="css-1xr6sam-Button"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div>
+      <button
+        className="emotion-1"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
       >
         <span
-          className="css-l730ys-Button"
+          className="emotion-2"
         >
-          Hide
-           Drawer
+          <span
+            className="emotion-3"
+          >
+            Hide
+             Drawer
+          </span>
         </span>
-      </span>
-    </button>
-    <div
-      className="css-149do7h-DrawerShowcase"
-    >
+      </button>
       <div
-        className="css-srge5m-Drawer"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+        className="emotion-4"
       >
         <div
-          style={
-            Object {
-              "background": "yellow",
-              "padding": "20px",
-            }
-          }
-        >
-          here is a title
-        </div>
-        <div
-          className="css-g74eqw-Navigation"
+          className="emotion-5"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
-            data-testid="expand-collapse"
+            style={
+              Object {
+                "background": "yellow",
+                "padding": "20px",
+              }
+            }
           >
-            <div>
-              <div
-                className="css-1w9fcyl"
+            here is a title
+          </div>
+          <div
+            className="emotion-6"
+          >
+            <div
+              data-testid="expand-collapse"
+            >
+              <button
+                className="emotion-7"
                 data-testid="/menu1"
                 onClick={[Function]}
+                type="button"
               >
                 <div
-                  className="css-7bki3z"
+                  className="emotion-8"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-196hwjy-Icon"
+                      className="emotion-10"
                     />
                   </span>
                 </div>
                 <div
-                  className="css-safda5"
+                  className="emotion-11"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1qs0yug-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text css-hfcirz"
+                  className="menu-item-text emotion-14"
                 >
                   Long Menu Item Name
                 </span>
+              </button>
+              <div
+                className="emotion-15"
+              >
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu1"
+                  href="/submenu1"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu1
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu2"
+                  href="/submenu2"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu2
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu3"
+                  href="/submenu3"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu3
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu4"
+                  href="/submenu4"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu4
+                  </span>
+                </a>
               </div>
             </div>
             <div
-              className="css-1agut24-ExpandCollapse"
+              data-testid="expand-collapse"
             >
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu1"
-                href="/submenu1"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu1
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu2"
-                href="/submenu2"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu2
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu3"
-                href="/submenu3"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu3
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu4"
-                href="/submenu4"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu4
-                </span>
-              </a>
-            </div>
-          </div>
-          <div
-            data-testid="expand-collapse"
-          >
-            <div>
-              <div
-                className="css-1w9fcyl"
+              <button
+                className="emotion-7"
                 data-testid="/menu2"
                 onClick={[Function]}
+                type="button"
               >
                 <div
-                  className="css-7bki3z"
+                  className="emotion-8"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-196hwjy-Icon"
+                      className="emotion-10"
                     />
                   </span>
                 </div>
                 <div
-                  className="css-safda5"
+                  className="emotion-11"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1qs0yug-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text css-hfcirz"
+                  className="menu-item-text emotion-14"
                 >
                   Menu2
                 </span>
+              </button>
+              <div
+                className="emotion-15"
+              >
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu5"
+                  href="/submenu5"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu5
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu6"
+                  href="/submenu6"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu6
+                  </span>
+                </a>
               </div>
             </div>
             <div
-              className="css-1agut24-ExpandCollapse"
+              data-testid="expand-collapse"
             >
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu5"
-                href="/submenu5"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu5
-                </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu6"
-                href="/submenu6"
-                id="submenu-item-link"
-                onClick={[Function]}
-              >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu6
-                </span>
-              </a>
-            </div>
-          </div>
-          <div
-            data-testid="expand-collapse"
-          >
-            <div>
-              <div
-                className="css-1w9fcyl"
+              <button
+                className="emotion-7"
                 data-testid="/menu3"
                 onClick={[Function]}
+                type="button"
               >
                 <div
-                  className="css-7bki3z"
+                  className="emotion-8"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-196hwjy-Icon"
+                      className="emotion-10"
                     />
                   </span>
                 </div>
                 <div
-                  className="css-safda5"
+                  className="emotion-11"
                 >
                   <span
-                    className="css-1gnbc76-Icon"
+                    className="emotion-9"
                     onClick={[Function]}
                   >
                     <span
-                      className="css-1qs0yug-Icon"
+                      className="emotion-13"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text css-hfcirz"
+                  className="menu-item-text emotion-14"
                 >
                   Menu3
                 </span>
+              </button>
+              <div
+                className="emotion-15"
+              >
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu7"
+                  href="/submenu7"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu7
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu8"
+                  href="/submenu8"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu8
+                  </span>
+                </a>
+                <a
+                  aria-current={null}
+                  className="emotion-16"
+                  data-testid="/submenu9"
+                  href="/submenu9"
+                  id="submenu-item-link"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="emotion-17"
+                  >
+                    <span
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-19"
+                      />
+                    </span>
+                  </div>
+                  <span
+                    className="submenu-item-text"
+                  >
+                    SubMenu9
+                  </span>
+                </a>
               </div>
             </div>
-            <div
-              className="css-1agut24-ExpandCollapse"
+            <a
+              aria-current={null}
+              className="emotion-70"
+              data-testid="/menu4"
+              href="/menu4"
+              onClick={[Function]}
             >
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu7"
-                href="/submenu7"
-                id="submenu-item-link"
-                onClick={[Function]}
+              <div
+                className="emotion-71"
               >
-                <div
-                  className="css-4wwri5"
+                <span
+                  className="emotion-9"
+                  onClick={[Function]}
                 >
                   <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu7
+                    className="emotion-10"
+                  />
                 </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu8"
-                href="/submenu8"
-                id="submenu-item-link"
-                onClick={[Function]}
+              </div>
+              <div
+                className="emotion-11"
               >
-                <div
-                  className="css-4wwri5"
+                <span
+                  className="emotion-9"
+                  onClick={[Function]}
                 >
                   <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu8
+                    className="emotion-13"
+                  />
                 </span>
-              </a>
-              <a
-                aria-current={null}
-                className="css-1s81brx"
-                data-testid="/submenu9"
-                href="/submenu9"
-                id="submenu-item-link"
-                onClick={[Function]}
+              </div>
+              <span
+                className="menu-item-text emotion-14"
               >
-                <div
-                  className="css-4wwri5"
-                >
-                  <span
-                    className="css-1gnbc76-Icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="css-8m5nqn-Icon"
-                    />
-                  </span>
-                </div>
-                <span
-                  className="submenu-item-text"
-                >
-                  SubMenu9
-                </span>
-              </a>
-            </div>
+                Menu4
+              </span>
+            </a>
           </div>
-          <a
-            aria-current={null}
-            className="css-98x36w"
-            data-testid="/menu4"
-            href="/menu4"
-            onClick={[Function]}
+        </div>
+        <div
+          className="emotion-78"
+        >
+          <div
+            className="emotion-79"
           >
-            <div
-              className="css-1a2s2gk"
-            >
-              <span
-                className="css-1gnbc76-Icon"
-                onClick={[Function]}
-              >
-                <span
-                  className="css-196hwjy-Icon"
-                />
-              </span>
-            </div>
-            <div
-              className="css-safda5"
-            >
-              <span
-                className="css-1gnbc76-Icon"
-                onClick={[Function]}
-              >
-                <span
-                  className="css-1qs0yug-Icon"
-                />
-              </span>
-            </div>
             <span
-              className="menu-item-text css-hfcirz"
+              className="emotion-80"
+            >
+              Click an option to navigate directly to Route
+            </span>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu1"
+              onClick={[Function]}
+            >
+              SubMenu1
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu2"
+              onClick={[Function]}
+            >
+              SubMenu2
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu3"
+              onClick={[Function]}
+            >
+              SubMenu3
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu4"
+              onClick={[Function]}
+            >
+              SubMenu4
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu5"
+              onClick={[Function]}
+            >
+              SubMenu5
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu6"
+              onClick={[Function]}
+            >
+              SubMenu6
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu7"
+              onClick={[Function]}
+            >
+              SubMenu7
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu8"
+              onClick={[Function]}
+            >
+              SubMenu8
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/submenu9"
+              onClick={[Function]}
+            >
+              SubMenu9
+            </a>
+            <a
+              aria-current={null}
+              className="emotion-81"
+              href="/menu4"
+              onClick={[Function]}
             >
               Menu4
-            </span>
-          </a>
+            </a>
+          </div>
+          <br />
+          <br />
+           Current Route:
+          <br />
         </div>
-      </div>
-      <div
-        className="css-1dxsln2-DrawerShowcase"
-      >
-        <div
-          className="css-1m2o4ts-DrawerShowcase"
-        >
-          <span
-            className="css-dkgyuk-DrawerShowcase"
-          >
-            Click an option to navigate directly to Route
-          </span>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu1"
-            onClick={[Function]}
-          >
-            SubMenu1
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu2"
-            onClick={[Function]}
-          >
-            SubMenu2
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu3"
-            onClick={[Function]}
-          >
-            SubMenu3
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu4"
-            onClick={[Function]}
-          >
-            SubMenu4
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu5"
-            onClick={[Function]}
-          >
-            SubMenu5
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu6"
-            onClick={[Function]}
-          >
-            SubMenu6
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu7"
-            onClick={[Function]}
-          >
-            SubMenu7
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu8"
-            onClick={[Function]}
-          >
-            SubMenu8
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/submenu9"
-            onClick={[Function]}
-          >
-            SubMenu9
-          </a>
-          <a
-            aria-current={null}
-            className="css-2ayec8"
-            href="/menu4"
-            onClick={[Function]}
-          >
-            Menu4
-          </a>
-        </div>
-        <br />
-        <br />
-         Current Route:
-        <br />
       </div>
     </div>
   </div>
