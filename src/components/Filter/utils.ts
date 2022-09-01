@@ -1,9 +1,9 @@
 import { rem } from 'theme/utils';
 
 import { colorShades, MAX_SHADE } from '../../theme/palette';
+import { PropsValidationError } from '../../utils/errors';
 import { defineBackgroundColor } from '../Button/utils';
 import { BackgroundColorProps, BaseColorProps, BorderProps, Props } from './types';
-import { PropsValidationError } from '../../utils/errors';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 export const HAS_SELECTED_VALUE_COLOR_SHADE = 50;

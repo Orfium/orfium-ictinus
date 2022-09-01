@@ -30,9 +30,17 @@ export type Props = {
   onInput?: React.EventHandler<any>;
   /** Boolean to make the input readonly. Default to false. */
   isReadOnly?: boolean;
+  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
+   * of the TextField. It will be replaced by a fullWidth prop. */
+  hasMinWidthCompat?: boolean;
 } & TextInputWrapperProps &
   InputProps &
   TestProps;
+
+console.warn(
+  'Deprecation warning! min-width will be removed from the component in v5 of ictinus. ' +
+    'hasMinWidthCompat prop has been added to temporarily disable min-width when necessary'
+);
 
 const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
   const {
@@ -51,6 +59,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
     styleType: __styleType,
     isReadOnly,
     status,
+    hasMinWidthCompat = true,
     ...rest
   } = props;
   const theme = useTheme();
@@ -70,7 +79,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
 
   return (
     <React.Fragment>
-      <TextInputBase {...props}>
+      <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
         {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
         <div css={{ width: '100% ' }}>
           <input
@@ -85,6 +94,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
           />
           {label && (
             <Label
+              size={size}
               htmlFor={id}
               label={label}
               isRequired={isRequired}

@@ -10,14 +10,17 @@ describe('Size utils', () => {
       const mockStylesSM = { minWidth: rem(MIN_WIDTH), height: rem(SM_HEIGHT) };
       const mockStylesAUTO = { minWidth: 'auto', height: 'auto' };
 
-      expect(getTextFieldSize('md').minWidth).toBe(mockStylesMD.minWidth);
-      expect(getTextFieldSize('md').height).toBe(mockStylesMD.height);
+      expect(getTextFieldSize(true, 'md').minWidth).toBe(mockStylesMD.minWidth);
+      expect(getTextFieldSize(true, 'md').height).toBe(mockStylesMD.height);
 
-      expect(getTextFieldSize('sm').minWidth).toBe(mockStylesSM.minWidth);
-      expect(getTextFieldSize('sm').height).toBe(mockStylesSM.height);
+      expect(getTextFieldSize(true, 'sm').minWidth).toBe(mockStylesSM.minWidth);
+      expect(getTextFieldSize(true, 'sm').height).toBe(mockStylesSM.height);
 
       expect(getTextFieldSize().minWidth).toBe(mockStylesAUTO.minWidth);
       expect(getTextFieldSize().height).toBe(mockStylesAUTO.height);
+
+      expect(getTextFieldSize(false).height).toBe(mockStylesAUTO.height);
+      expect(getTextFieldSize(false).minWidth).toBeUndefined();
     });
   });
 });

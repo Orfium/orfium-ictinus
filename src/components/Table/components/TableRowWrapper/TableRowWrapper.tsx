@@ -17,6 +17,7 @@ type TableRowWrapperProps<T> = {
   type: TableType;
   isExpanded: boolean;
   actionWidth?: number;
+  isInitiallyExpanded: boolean;
   dataTestIdPrefix?: string;
   rowIndex?: number;
 };
@@ -35,6 +36,7 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
     hasOnSelectionChange,
     isExpanded,
     actionWidth,
+    isInitiallyExpanded,
     dataTestIdPrefix,
     rowIndex,
   } = props;
@@ -60,7 +62,12 @@ const TableRowWrapper = <T extends Record<string, unknown>>(props: TableRowWrapp
         actionWidth,
       }}
     >
-      <RenderRowOrNestedRow<T> row={row} dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} />
+      <RenderRowOrNestedRow<T>
+        row={row}
+        dataTestIdPrefix={dataTestIdPrefix}
+        rowIndex={rowIndex}
+        isInitiallyExpanded={isInitiallyExpanded}
+      />
     </TableRowContext.Provider>
   );
 };

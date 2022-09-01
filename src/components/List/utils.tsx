@@ -1,8 +1,8 @@
 import React from 'react';
 import Highlighter from 'react-highlight-words';
 
-import { ListItemType } from './types';
 import Icon from '../Icon';
+import { ListItemType } from './types';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
 export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;
@@ -80,7 +80,11 @@ export const renderContent = (content: ListItemType, searchTerm?: string) => {
     'label' in content &&
     content?.label
   ) {
-    return <><div>{content.label}</div> {content?.iconProps && <Icon {...content.iconProps}/>}</>;
+    return (
+      <>
+        <div>{content.label}</div> {content?.iconProps && <Icon {...content.iconProps} />}
+      </>
+    );
   }
 
   return content;

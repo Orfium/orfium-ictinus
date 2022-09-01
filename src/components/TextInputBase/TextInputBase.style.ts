@@ -66,11 +66,13 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ isDisabled, isLocked, status, isLean, isDark, size, sx }: Props) =>
+  ({ isDisabled, isLocked, status, isLean, isDark, size, sx, hasMinWidthCompat }: Props) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = isDark ? 'dark' : theme.colorScheme;
     const hasError = status === 'error';
-    const textFieldSize = !isLean ? getTextFieldSize(size) : getTextFieldSize();
+    const textFieldSize = !isLean
+      ? getTextFieldSize(hasMinWidthCompat, size)
+      : getTextFieldSize(hasMinWidthCompat);
     const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
     return css({

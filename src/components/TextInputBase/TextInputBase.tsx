@@ -16,9 +16,11 @@ export type Props = {
   label?: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
-  /** An optional icon to show to the left */
+  /** An optional icon to show to the left
+   * TODO This prop will be renamed to 'prefix', like: https://ant.design/components/input/#components-input-demo-presuffix */
   leftIcon?: AcceptedIconNames | JSX.Element | null;
-  /** An optional icon to show to the right */
+  /** An optional icon to show to the right
+   * TODO This prop will be renamed to 'suffix', like: https://ant.design/components/input/#components-input-demo-presuffix */
   rightIcon?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
   isRequired?: boolean;
@@ -46,6 +48,9 @@ export type Props = {
     textField?: CSSObject;
     input?: CSSObject;
   };
+  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
+   * of the TextField. It will be replaced by a fullWidth prop. */
+  hasMinWidthCompat?: boolean;
 } & TestProps;
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
@@ -62,6 +67,7 @@ const TextInputBase: FC<Props> = ({
   isDark = false,
   children,
   sx,
+  hasMinWidthCompat = true,
 }) => {
   const theme = useTheme();
   const hintMessageToShow = hintMsg && (
@@ -88,6 +94,7 @@ const TextInputBase: FC<Props> = ({
           styleType,
           size,
           sx,
+          hasMinWidthCompat,
         })}
       >
         <div css={textFieldStyle({ isLean, sx })}>{children}</div>

@@ -1,5 +1,5 @@
-import { AcceptedIconNames } from '../Icon/types';
 import { DivProps } from '../../utils/common';
+import { AcceptedIconNames } from '../Icon/types';
 
 export type Props = {
   /** the src of the image to show **/

@@ -12,6 +12,7 @@ export type Props = {
   /** If the label must be moved to the top */
   isAnimated?: boolean;
   htmlFor?: string;
+  size?: string;
 };
 
 const Label: React.FC<Props> = ({
