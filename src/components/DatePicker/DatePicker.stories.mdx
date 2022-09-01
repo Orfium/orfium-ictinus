@@ -74,7 +74,7 @@ Implementation of both of our types DatePicker(range) and DayPicker
 
 <Preview>
   <Story name="Calendar" parameters={{ decorators: [withKnobs] }}>
-    <Stack vertical>
+    <Stack isVertical>
     <div style={{ backgroundColor: 'white'}}>
       <OverlayComponent
         isRangePicker
@@ -114,7 +114,7 @@ Implementation of the regular Range DatePicker on different sizes
 
 <Preview>
   <Story name="DatePicker Range" parameters={{ decorators: [withKnobs] }}>
-    <Stack vertical>
+    <Stack isVertical>
       <DatePicker
         inputProps={{ size: 'md', styleType: 'outlined' }}
         isRangePicker
@@ -139,7 +139,7 @@ Implementation of the DatePicker with a Filter instead of a Select
 
 <Preview>
   <Story name="DatePicker with Filter" parameters={{ decorators: [withKnobs] }}>
-    <Stack vertical>
+    <Stack isVertical>
       <DatePicker
         inputProps={{ size: 'md', styleType: 'outlined' }}
         isRangePicker={select('isRangePicker', rangePickerOptions, rangePickerOptions[0])}

@@ -13,7 +13,7 @@ import Stack from '../storyUtils/Stack';
 ```js
 import { Toast } from '@orfium/ictinus';
 
-<Toast message="message" type="primary" expanded closeCTA={closeCTA}>
+<Toast message="message" type="primary" isExpanded closeCTA={closeCTA}>
   <div>Content</div>
 </Toast>;
 ```
@@ -31,18 +31,18 @@ import { Toast } from '@orfium/ictinus';
         <Toast
           message="Secondary colored Toast"
           type="secondary"
-          expanded
+          isExpanded
           closeCTA={() => console.log('close action clicked')}
         ></Toast>
         <Toast
           message="Primary colored Toast"
           type="primary"
-          expanded
+          isExpanded
           closeCTA={() => console.log('close action clicked')}
         ></Toast>
         <Toast
           message="Default colored Toast"
-          expanded
+          isExpanded
           closeCTA={() => console.log('close action clicked')}
         >
           <div>

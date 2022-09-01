@@ -3,10 +3,10 @@ import { Props } from './ExpandCollapse.types';
 
 export const errors = [
   {
-    condition: ({ expanded, onChange }: Props): boolean =>
+    condition: ({ isExpanded, onChange }: Props): boolean =>
       Boolean(
-        (expanded === undefined && onChange) ||
-          (onChange === undefined && typeof expanded === 'boolean')
+        (isExpanded === undefined && onChange) ||
+          (onChange === undefined && typeof isExpanded === 'boolean')
       ),
     error: new PropsValidationError(
       'If expanded is defined onChange must be defined too and vice versa'

@@ -5,9 +5,9 @@ import TopAppBar from '../TopAppBar';
 import { TopAppBarProps } from '../TopAppBar/TopAppBar.types';
 
 interface Props extends TopAppBarProps {
-  withLogo?: boolean;
-  withAdditionalTools?: boolean;
-  provideSearchHandler?: boolean;
+  hasLogo?: boolean;
+  hasAdditionalTools?: boolean;
+  hasSearchHandler?: boolean;
 }
 
 export const DEFAULT_USER_MENU = {
@@ -33,17 +33,17 @@ const DEFAULT_ON_CLICK = () => {
 };
 
 const TopAppBarShowcase: FC<Props> = ({
-  withLogo = false,
-  withAdditionalTools = false,
-  provideSearchHandler = false,
+  hasLogo = false,
+  hasAdditionalTools = false,
+  hasSearchHandler = false,
   additionalTools = DEFAULT_ADDITIONAL_TOOLS,
   userMenu = DEFAULT_USER_MENU,
   onMenuIconClick = DEFAULT_ON_CLICK,
   isSearchDisabled = false,
-  dark = false,
+  isDark = false,
 }) => {
   const [state, setState] = useState('');
-  const logoIcon = withLogo && (
+  const logoIcon = hasLogo && (
     <img src={'https://cdn.orfium.com/dist/0c5279a27dfc65b6b41b52634cbe7b80.svg'} alt={'logo'} />
   );
 
@@ -54,15 +54,15 @@ const TopAppBarShowcase: FC<Props> = ({
   return (
     <>
       <TopAppBar
-        dark={dark}
+        isDark={isDark}
         logoIcon={logoIcon || undefined}
         onMenuIconClick={onMenuIconClick}
         userMenu={userMenu}
-        additionalTools={withAdditionalTools ? additionalTools : []}
-        onSearchHandler={provideSearchHandler ? onSearchHandler : undefined}
+        additionalTools={hasAdditionalTools ? additionalTools : []}
+        onSearchHandler={hasSearchHandler ? onSearchHandler : undefined}
         isSearchDisabled={isSearchDisabled}
       />
-      {provideSearchHandler && <div style={{ marginTop: 50 }}>Search value: {state}</div>}
+      {hasSearchHandler && <div style={{ marginTop: 50 }}>Search value: {state}</div>}
     </>
   );
 };

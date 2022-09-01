@@ -21,7 +21,7 @@ export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 
 export type Props = {
   /** Show notification icon based on the type */
-  withIcon?: boolean;
+  hasIcon?: boolean;
   /** The informative message of the Notification */
   message: string | React.ReactNode;
   /** The variant of the Notification */
@@ -54,7 +54,7 @@ export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
   type === 'warning' ? 'alert' : type;
 
 const CompactNotification: React.FC<Props> = ({
-  withIcon = false,
+  hasIcon = false,
   message,
   variant,
   type,
@@ -73,7 +73,7 @@ const CompactNotification: React.FC<Props> = ({
       {...(variant == 'banner' && { 'notification-type': 'banner' })}
     >
       <div css={infoContainer()}>
-        {withIcon && (
+        {hasIcon && (
           <div css={iconContainer()}>
             <Icon name={typeToIconName(type)} color={type} size={20} />
           </div>

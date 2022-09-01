@@ -11,7 +11,7 @@ interface Props {
   onSelect: (option: FilterOption) => void;
   defaultValue: FilterOption;
   selectedItem?: FilterOption;
-  shouldDisplayDefaultOption: boolean;
+  isDefaultOptionVisible: boolean;
   isVirtualized?: boolean;
   isSearchable?: boolean;
   dataTestId?: string;
@@ -21,25 +21,25 @@ const Options: React.FC<Props> = ({
   onSelect,
   defaultValue,
   selectedItem,
-  shouldDisplayDefaultOption,
+  isDefaultOptionVisible,
   isVirtualized,
   isSearchable,
   dataTestId,
 }) => {
-  const shouldBeVirtualized = items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER;
+  const isForcedVirtualized = items.length > MAX_NON_VIRTUALIZED_ITEMS_FILTER;
 
-  const height = shouldBeVirtualized ? FILTER_OPTIONS_MAX_HEIGHT : undefined;
-  const defaultOption = shouldDisplayDefaultOption ? defaultValue : undefined;
+  const height = isForcedVirtualized ? FILTER_OPTIONS_MAX_HEIGHT : undefined;
+  const defaultOption = isDefaultOptionVisible ? defaultValue : undefined;
 
   return items.length ? (
     <List
-      data={items.filter(option => option.value !== defaultValue.value)}
+      data={items.filter((option) => option.value !== defaultValue.value)}
       rowSize={'small'}
       defaultOption={defaultOption}
       selectedItem={selectedItem}
       isSearchable={isSearchable}
       handleOptionClick={(option: FilterOption) => onSelect(option)}
-      isVirtualized={isVirtualized && shouldBeVirtualized}
+      isVirtualized={isVirtualized && isForcedVirtualized}
       height={height}
       dataTestId={dataTestId}
     />

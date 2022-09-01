@@ -14,7 +14,7 @@ export type Props = {
   isBetween?: boolean;
   isLast?: boolean;
   isFirst?: boolean;
-  disabled?: boolean;
+  isDisabled?: boolean;
 };
 
 const Day: React.FC<Props> = ({
@@ -26,17 +26,12 @@ const Day: React.FC<Props> = ({
   isBetween = false,
   isLast = false,
   isFirst = false,
-  disabled = false,
+  isDisabled = false,
 }) => {
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType('', 'primary');
   const date = React.useMemo(
-    () =>
-      day &&
-      currentDay
-        .month(month)
-        .date(day)
-        .year(year),
+    () => day && currentDay.month(month).date(day).year(year),
     [year, day, month]
   );
   const isToday = React.useMemo(() => {
@@ -44,7 +39,7 @@ const Day: React.FC<Props> = ({
   }, [year, month, day]);
 
   const onDayClick = React.useCallback(
-    e => {
+    (e) => {
       e.preventDefault();
       if (onSelect && date) {
         onSelect(date);
@@ -58,7 +53,7 @@ const Day: React.FC<Props> = ({
   }
 
   return (
-    <td style={{ padding: 0 }} onClick={disabled ? undefined : onDayClick}>
+    <td style={{ padding: 0 }} onClick={isDisabled ? undefined : onDayClick}>
       <div
         css={dayWrapperStyle({
           isSelected,
@@ -67,7 +62,7 @@ const Day: React.FC<Props> = ({
           isLast,
           isFirst,
           isToday,
-          disabled,
+          isDisabled,
         })}
       >
         <div
@@ -78,7 +73,7 @@ const Day: React.FC<Props> = ({
             isLast,
             isFirst,
             isToday,
-            disabled,
+            isDisabled,
           })}
         >
           {day}

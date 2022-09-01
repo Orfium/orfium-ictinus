@@ -5,6 +5,7 @@ import * as React from 'react';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
+import { TestProps } from '../../utils/types';
 import Avatar from '../Avatar';
 import Button from '../Button';
 import { defineBackgroundColor } from '../Button/utils';
@@ -23,7 +24,7 @@ export type Props = {
   /** This property define the size of the button. Defaults to 'md' */
   size?: 'lg' | 'md' | 'sm';
   /** Property indicating if the component is filled with a color based on the type */
-  filled?: boolean;
+  isFilled?: boolean;
   /** Returns the items selected on the menu */
   selectedItem?: string | null;
   /** A callback that is being triggered when an items has been clicked */
@@ -31,7 +32,7 @@ export type Props = {
   /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
   /** Define if the button is in disabled state */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** Menu position when open */
   menuPosition?: MenuPositionAllowed;
   /** The type of the button - defaults to "primary" */
@@ -48,13 +49,10 @@ export type Props = {
     letter: string;
     color?: string;
   };
-};
+} & TestProps &
+  EventProps;
 
-export type TestProps = {
-  dataTestId?: string;
-};
-
-const Menu: React.FC<Props & TestProps & EventProps> = props => {
+const Menu: React.FC<Props> = (props) => {
   const {
     items,
     onSelect,
@@ -64,31 +62,31 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
     menuPosition = 'left',
     buttonType = 'primary',
     rightIconName,
-    filled = true,
-    disabled = false,
+    isFilled = true,
+    isDisabled = false,
     leftIconName,
     iconSize = 16,
     avatar,
     dataTestId,
   } = props;
-  const [open, setOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
   const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
-  const iconColor = filled
+  const iconColor = isFilled
     ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
     : defineBackgroundColor(theme, calculatedColor, buttonType, true, true);
 
   return (
-    <ClickAwayListener onClick={() => setOpen(false)}>
+    <ClickAwayListener onClick={() => setIsOpen(false)}>
       <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
           size={size}
-          onClick={() => setOpen(!open)}
+          onClick={() => setIsOpen(!open)}
           type={buttonType}
           color={color}
-          disabled={disabled}
-          filled={filled}
+          isDisabled={isDisabled}
+          isFilled={isFilled}
           iconRight={
             rightIconName ? <Icon name={rightIconName} color={iconColor} size={iconSize} /> : null
           }
@@ -104,14 +102,14 @@ const Menu: React.FC<Props & TestProps & EventProps> = props => {
         >
           <span>{buttonText}</span>
         </Button>
-        {open && (
+        {isOpen && (
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
                 data={items}
                 rowSize={'small'}
                 handleOptionClick={(option: string) => {
-                  setOpen(false);
+                  setIsOpen(false);
                   onSelect(option);
                 }}
               />

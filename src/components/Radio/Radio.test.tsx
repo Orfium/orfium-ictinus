@@ -29,7 +29,7 @@ describe('Radio', () => {
 
   it('disabled should not change to checked on click', () => {
     const { container } = render(
-      <Radio disabled={true} onChange={mockOnClick} dataTestId={'test-disabled'} />
+      <Radio isDisabled={true} onChange={mockOnClick} dataTestId={'test-disabled'} />
     );
 
     const radio = container.querySelector('input[type="radio"]') as HTMLInputElement;

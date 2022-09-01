@@ -7,23 +7,23 @@ import { navigationContainerStyle } from './Navigation.style';
 
 type NavigationProps = Props;
 
-const Navigation: React.FC<NavigationProps> = ({ menuItems, expanded }) => {
+const Navigation: React.FC<NavigationProps> = ({ menuItems, isExpanded }) => {
   const [openMenuItems, setOpenMenuItems] = useState<string[]>([]); // we identify open menuitems by their url
   const [currentMenuItem] = useLocationToGetCurrentMenuItem(menuItems, setOpenMenuItems);
 
   const toggleMenuItem = useCallback((newUrl: string): void => {
-    setOpenMenuItems(openMenuItems => (openMenuItems.indexOf(newUrl) !== -1 ? [] : [newUrl]));
+    setOpenMenuItems((openMenuItems) => (openMenuItems.indexOf(newUrl) !== -1 ? [] : [newUrl]));
   }, []);
 
   return (
-    <div css={navigationContainerStyle(expanded)}>
+    <div css={navigationContainerStyle(isExpanded)}>
       {menuItems.map(
-        menuItem =>
-          menuItem.visible && (
+        (menuItem) =>
+          menuItem.isVisible && (
             <MenuItem
               key={menuItem.url}
               isCurrent={currentMenuItem === menuItem.url}
-              expanded={openMenuItems.includes(menuItem.url)}
+              isExpanded={openMenuItems.includes(menuItem.url)}
               toggleMenuItem={toggleMenuItem}
               {...menuItem}
             />

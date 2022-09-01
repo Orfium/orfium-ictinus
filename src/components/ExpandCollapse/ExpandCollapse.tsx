@@ -13,30 +13,31 @@ const ExpandCollapse = (props: Props) => {
     transitionDuration = 200,
     content,
     children,
-    initiallyExpanded = false,
-    expanded: externallyControlledExpanded,
+    isInitiallyExpanded = false,
+    isExpanded: isExternallyControlledExpanded,
     onChange,
     dataTestId,
   } = props;
 
   errorHandler<Props>(errors, props);
 
-  const [internallyControlledExpanded, setInternallyControlledExpanded] = React.useState(
-    initiallyExpanded
-  );
+  const [isInternallyControlledExpanded, setInternallyControlledExpanded] =
+    React.useState(isInitiallyExpanded);
 
   const Component = component;
 
   //Case of renderFunction being undefined is handled in error cases.
   const renderFunction = (content ?? children) as (x: boolean) => React.ReactNode;
 
-  const expanded = externallyControlledExpanded ?? internallyControlledExpanded;
+  const isExpanded = isExternallyControlledExpanded ?? isInternallyControlledExpanded;
 
-  const contentRef = useManageContentRef(expanded, transitionDuration);
+  const contentRef = useManageContentRef(isExpanded, transitionDuration);
 
   const handleStateChange = (e: React.SyntheticEvent) => {
-    if (typeof externallyControlledExpanded !== 'boolean') {
-      setInternallyControlledExpanded(state => !state);
+    if (typeof isExternallyControlledExpanded !== 'boolean') {
+      setInternallyControlledExpanded(
+        (isInternallyControlledExpandedOldState) => !isInternallyControlledExpandedOldState
+      );
     } else if (onChange) {
       onChange(e);
     }
@@ -44,9 +45,9 @@ const ExpandCollapse = (props: Props) => {
 
   return (
     <Component data-testid={generateTestDataId('expand-collapse', dataTestId)}>
-      {textAndControl(handleStateChange, expanded)}
-      <div css={contentStyles(expanded, transitionDuration)} ref={contentRef}>
-        {renderFunction(expanded)}
+      {textAndControl(handleStateChange, isExpanded)}
+      <div css={contentStyles(isExpanded, transitionDuration)} ref={contentRef}>
+        {renderFunction(isExpanded)}
       </div>
     </Component>
   );

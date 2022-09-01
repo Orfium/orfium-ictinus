@@ -11,6 +11,10 @@ import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
+type InputProps = Partial<
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly' | 'disabled'>
+>;
+
 export type Props = {
   /** The id of the text field that will be used as for in label too */
   id?: string;
@@ -24,88 +28,87 @@ export type Props = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-} & TextInputWrapperProps;
+  /** Boolean to make the input readonly. Default to false. */
+  isReadOnly?: boolean;
+} & TextInputWrapperProps &
+  InputProps &
+  TestProps;
 
-type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+  const {
+    id = undefined,
+    rightIcon = null,
+    leftIcon = null,
+    label,
+    placeholder = '',
+    isRequired = false,
+    isDisabled,
+    isLocked = false,
+    size = DEFAULT_SIZE,
+    isDark = false,
+    isLean,
+    hintMsg: __hintMsg,
+    styleType: __styleType,
+    isReadOnly,
+    status,
+    ...rest
+  } = props;
+  const theme = useTheme();
 
-const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
-  (props, ref) => {
-    const {
-      id = undefined,
-      rightIcon = null,
-      leftIcon = null,
-      label,
-      placeholder = '',
-      required = false,
-      disabled,
-      locked = false,
-      size = DEFAULT_SIZE,
-      dark = false,
-      lean,
-      hintMsg: __hintMsg,
-      styleType: __styleType,
-      readOnly,
-      status,
-      ...rest
-    } = props;
-    const theme = useTheme();
+  const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
+    icon ? (
+      typeof icon === 'string' ? (
+        <Icon
+          name={icon as AcceptedIconNames}
+          size={24}
+          color={theme.utils.getColor('lightGrey', 650)}
+        />
+      ) : (
+        icon
+      )
+    ) : null;
 
-    const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
-      icon ? (
-        typeof icon === 'string' ? (
-          <Icon
-            name={icon as AcceptedIconNames}
-            size={24}
-            color={theme.utils.getColor('lightGrey', 650)}
+  return (
+    <React.Fragment>
+      <TextInputBase {...props}>
+        {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
+        <div css={{ width: '100% ' }}>
+          <input
+            readOnly={isReadOnly}
+            css={inputStyle({ label, placeholder, size, isDark, isLean })}
+            placeholder={!label && placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
+            required={isRequired}
+            id={id}
+            disabled={isDisabled || isLocked}
+            {...omit(rest, 'dataTestId')}
+            ref={ref}
           />
-        ) : (
-          icon
-        )
-      ) : null;
-
-    return (
-      <React.Fragment>
-        <TextInputBase {...props}>
-          {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
-          <div css={{ width: '100% ' }}>
-            <input
-              readOnly={readOnly}
-              css={inputStyle({ label, placeholder, size, dark, lean })}
-              placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
-              required={required}
-              id={id}
-              disabled={disabled || locked}
-              {...omit(rest, 'dataTestId')}
-              ref={ref}
+          {label && (
+            <Label
+              htmlFor={id}
+              label={label}
+              isRequired={isRequired}
+              isAnimated={Boolean(rest.value)}
+              hasError={status === 'error'}
             />
-            {label && (
-              <Label
-                size={size}
-                htmlFor={id}
-                label={label}
-                required={required}
-                animateToTop={Boolean(rest.value)}
-                error={status === 'error'}
-              />
-            )}
-          </div>
-          {rightIcon && !locked && (
-            <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
           )}
-          {locked && (
-            <IconWrapper iconPosition={'right'}>
-              <Icon
-                name="lock"
-                size={size === 'md' ? 20 : 16}
-                color={theme.utils.getColor('lightGrey', 650)}
-              />
-            </IconWrapper>
-          )}
-        </TextInputBase>
-      </React.Fragment>
-    );
-  }
-);
+        </div>
+        {rightIcon && !isLocked && (
+          <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
+        )}
+        {isLocked && (
+          <IconWrapper iconPosition={'right'}>
+            <Icon
+              name="lock"
+              size={size === 'md' ? 20 : 16}
+              color={theme.utils.getColor('lightGrey', 650)}
+            />
+          </IconWrapper>
+        )}
+      </TextInputBase>
+    </React.Fragment>
+  );
+});
 
 TextField.displayName = 'TextField';
 

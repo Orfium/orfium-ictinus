@@ -12,7 +12,7 @@ export type AnchorType = 'bottom' | 'left' | 'right' | 'top';
 
 export type Props = {
   /**  If true, the overlay is open.*/
-  open: boolean;
+  isOpen: boolean;
   /** Callback fired when the component requests to be closed. */
   onClose: () => void;
   /** Side from which the overlay will appear. */
@@ -30,23 +30,23 @@ const getAnchorStyle = ({ anchor, size }: { anchor: AnchorType; size: string }) 
 };
 
 const Overlay = React.forwardRef<HTMLDivElement, Props & DivProps>(
-  ({ open, onClose, anchor = 'left', size, dataTestId, children }, ref) => {
+  ({ isOpen, onClose, anchor = 'left', size, dataTestId, children }, ref) => {
     useEscape(() => {
       onClose();
     });
 
     return (
       <div
-        css={backdropStyle({ open, anchor })}
+        css={backdropStyle({ isOpen, anchor })}
         data-testid={generateTestDataId('overlay-container', dataTestId)}
       >
         <ClickAwayListener onClick={() => onClose()} cssStyles={getAnchorStyle({ anchor, size })}>
-          <div ref={ref} css={overlayStyle({ open, anchor })}>
+          <div ref={ref} css={overlayStyle({ isOpen, anchor })}>
             <div css={closeIconContainer()}>
               <IconButton
                 name={'close'}
-                filled={false}
-                transparent
+                isFilled={false}
+                isTransparent
                 color={'lightGrey-650'}
                 size={'sm'}
                 onClick={onClose}

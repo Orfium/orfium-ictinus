@@ -22,5 +22,5 @@ export interface TopAppBarProps {
   /** User menu props */
   userMenu: UserMenuProps;
   /** Flag indicating the theme mode */
-  dark?: boolean;
+  isDark?: boolean;
 }

@@ -10,33 +10,33 @@ export const Container = styled.div`
   gap: ${({ theme }) => theme.spacing.sm};
 `;
 
-export const SwitchWrapper = styled.div<{ checked: boolean; disabled: boolean }>`
+export const SwitchWrapper = styled.div<{ isChecked: boolean; isDisabled: boolean }>`
   ${flex};
 
   .react-switch-handle {
-    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'unset')} !important;
-    border: ${({ theme, checked }) =>
-      !checked ? `2px solid ${theme.utils.getColor('lightGrey', 300)}` : 0} !important;
+    cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'unset')} !important;
+    border: ${({ theme, isChecked }) =>
+      !isChecked ? `2px solid ${theme.utils.getColor('lightGrey', 300)}` : 0} !important;
     box-sizing: border-box !important;
-    transform: translateX(${({ checked }) => (checked ? rem(16) : 0)}) !important;
+    transform: translateX(${({ isChecked }) => (isChecked ? rem(16) : 0)}) !important;
 
     :hover {
-      box-shadow: ${({ disabled }) => (!disabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
-      background: ${({ theme, checked, disabled }) =>
-        !checked && !disabled ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
+      box-shadow: ${({ isDisabled }) => (!isDisabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
+      background: ${({ theme, isChecked, isDisabled }) =>
+        !isChecked && !isDisabled ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
     }
   }
 
   .react-switch-bg {
-    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'unset')} !important;
+    cursor: ${({ isDisabled }) => (isDisabled ? 'not-allowed' : 'unset')} !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
   }
 
   .react-switch-bg:hover ~ .react-switch-handle {
-    box-shadow: ${({ disabled }) => (!disabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
-    background: ${({ theme, checked, disabled }) =>
-      !checked && !disabled ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
+    box-shadow: ${({ isDisabled }) => (!isDisabled ? `${rgba(14, 14, 23, 0.1)} 0 0 0 5px` : 0)};
+    background: ${({ theme, isChecked, isDisabled }) =>
+      !isChecked && !isDisabled ? theme.utils.getColor('lightGrey', 150) : undefined} !important;
   }
 `;
 

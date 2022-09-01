@@ -7,14 +7,14 @@ type Props = {
   /** The content of the tooltip */
   tooltipContent: string | undefined;
   /** Flag for overriding other settings to always show the tooltip */
-  shouldAlwaysShow?: boolean;
+  isAlwaysVisible?: boolean;
   /** The placement of the tooltip */
   placement?: 'top' | 'bottom' | 'right' | 'left';
 };
 
 const TruncatedContent: React.FC<Props> = ({
   children,
-  shouldAlwaysShow = false,
+  isAlwaysVisible = false,
   tooltipContent,
   placement = 'bottom',
 }) => {
@@ -40,13 +40,13 @@ const TruncatedContent: React.FC<Props> = ({
       tooltipContent: string | undefined,
       isHovered: boolean,
       isTruncated: boolean,
-      shouldAlwaysShow: boolean
+      isAlwaysVisible: boolean
     ) => {
       if (tooltipContent === undefined) {
         return false;
       }
 
-      if (shouldAlwaysShow) {
+      if (isAlwaysVisible) {
         return true;
       }
 
@@ -55,7 +55,7 @@ const TruncatedContent: React.FC<Props> = ({
     []
   );
 
-  return showTooltip(tooltipContent, isHovered, isTruncated, shouldAlwaysShow) ? (
+  return showTooltip(tooltipContent, isHovered, isTruncated, isAlwaysVisible) ? (
     <Tooltip placement={placement} content={tooltipContent}>
       <TruncationDiv
         ref={targetRef}

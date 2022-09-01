@@ -1,4 +1,4 @@
-import React, { forwardRef, ReactNode, useCallback } from 'react';
+import React, { ReactNode, useCallback } from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from '../../../../hooks/useTypeColorToColorMatch';
@@ -26,23 +26,19 @@ type FilterBaseProps = {
   iconName: AcceptedIconNames;
   onClear: () => void;
   selectedItemLabel?: string;
-  open: boolean;
+  isOpen: boolean;
   hasSelectedValue: boolean;
-};
+} & Pick<Props, 'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'>;
 
-export const FilterBase = forwardRef<
-  HTMLButtonElement,
-  FilterBaseProps &
-    Pick<Props, 'dataTestId' | 'disabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'>
->((props, ref) => {
+export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((props, ref) => {
   const {
     dataTestId,
     isDatePicker = false,
     handleOpen,
-    disabled,
+    isDisabled,
     onClear,
     selectedItemLabel,
-    open,
+    isOpen,
     hasSelectedValue,
     label,
     iconName,
@@ -58,10 +54,10 @@ export const FilterBase = forwardRef<
 
   const pickIconColor = useCallback(
     (isCloseButton = false) => {
-      if (open) {
+      if (isOpen) {
         return getTextColor({
           theme,
-          open,
+          isOpen,
           calculatedColor,
           hasSelectedValue,
         });
@@ -76,14 +72,14 @@ export const FilterBase = forwardRef<
 
       return theme.utils.getColor('darkGrey', 850);
     },
-    [calculatedColor.color, hasSelectedValue, open, theme.utils, theme.palette]
+    [calculatedColor, hasSelectedValue, isOpen, theme]
   );
 
   const buttonStyleProps = {
     calculatedColor,
     buttonType,
-    disabled,
-    open,
+    isDisabled,
+    isOpen,
     styleType,
     hasSelectedValue,
     filterType,
@@ -95,13 +91,13 @@ export const FilterBase = forwardRef<
         ref={ref}
         data-testid={generateTestDataId('filter', dataTestId)}
         onClick={handleOpen}
-        disabled={disabled}
+        disabled={isDisabled}
         css={buttonWrapperStyle(buttonStyleProps)}
       >
         <div css={buttonStyle(buttonStyleProps)}>
           <div css={buttonSpanStyle()}>
             <div css={childrenWrapperStyle()}>
-              <span css={labelSpanStyle(open, hasSelectedValue)}>
+              <span css={labelSpanStyle(isOpen, hasSelectedValue)}>
                 {label && (
                   <div>
                     {label} {!isDatePicker ? <>:&nbsp;</> : ''}
@@ -123,7 +119,7 @@ export const FilterBase = forwardRef<
                 size={19}
                 name={'closeTag'}
                 color={pickIconColor(true)}
-                onClick={e => {
+                onClick={(e) => {
                   e.stopPropagation();
                   onClear();
                 }}
@@ -136,6 +132,7 @@ export const FilterBase = forwardRef<
     </div>
   );
 });
+
 FilterBase.displayName = 'FilterBase';
 
 export default FilterBase;

@@ -7,8 +7,8 @@ import IconButton from 'components/IconButton';
 
 type Props = {
   isExpandedExists: boolean;
-  checked: boolean;
-  toggleChecked: () => void;
+  isChecked: boolean;
+  toggleIsChecked: () => void;
   actionWidth?: number;
   dataTestIdPrefix?: string;
   rowIndex?: number;
@@ -17,8 +17,8 @@ type Props = {
 
 const ExpandedButtonCell: React.FC<Props> = ({
   isExpandedExists,
-  checked,
-  toggleChecked,
+  isChecked,
+  toggleIsChecked,
   actionWidth,
   dataTestIdPrefix,
   rowIndex,
@@ -49,15 +49,15 @@ const ExpandedButtonCell: React.FC<Props> = ({
               transition: '0.3s all ease-in-out',
               transformOrigin: 'center',
               width: 'fit-content',
-              transform: `rotate(${checked ? '180' : '0'}deg)`,
+              transform: `rotate(${isChecked ? '180' : '0'}deg)`,
             }}
-            onClick={e => e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
           >
             <IconButton
-              transparent
+              isTransparent
               name={'chevronSmallDown'}
               size={'sm'}
-              onClick={toggleChecked}
+              onClick={toggleIsChecked}
               color={'lightGrey-700'}
               dataTestId={'expanded-button'}
             />

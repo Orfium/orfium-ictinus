@@ -51,7 +51,7 @@ const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
 
 const ThemeProviderContents: React.FC<Props> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
-  const colorScheme = themeSwitchState.dark ? 'dark' : ('light' as ColorScheme);
+  const colorScheme = themeSwitchState.isDark ? 'dark' : ('light' as ColorScheme);
   const newTheme = {
     ...theme,
     colorScheme,

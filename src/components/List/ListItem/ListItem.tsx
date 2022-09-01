@@ -13,11 +13,11 @@ type Props = {
   /** Index, for test-id calculation */
   index: number | string;
   /** Selected state */
-  selected?: boolean;
+  isSelected?: boolean;
   /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
-  highlighted?: boolean;
+  isHighlighted?: boolean;
   /** Disabled state */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
   /** Option Click handler for SelectOption[] data case */
@@ -32,9 +32,9 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
       size,
       content,
       index,
-      selected = false,
-      highlighted = false,
-      disabled = false,
+      isSelected = false,
+      isHighlighted = false,
+      isDisabled = false,
       handleOptionClick,
       searchTerm,
       dataTestId,
@@ -43,24 +43,26 @@ const ListItem = React.forwardRef<HTMLDivElement, Props>(
     ref
   ) => {
     const handleListItemSelect = useCallback(() => {
-      if (content && handleOptionClick && !disabled) {
+      if (content && handleOptionClick && !isDisabled) {
         handleOptionClick(content as never);
       }
-    }, [content, disabled, handleOptionClick]);
+    }, [content, isDisabled, handleOptionClick]);
 
     return (
       <div
-        css={listItemStyle({ size, selected, highlighted, disabled, isGroupItem })}
-        ref={selected ? ref : null}
+        css={listItemStyle({ size, isSelected, isHighlighted, isDisabled, isGroupItem })}
+        ref={isSelected ? ref : null}
         onClick={handleListItemSelect}
-        onMouseDown={event => {
+        onMouseDown={(event) => {
           event.preventDefault();
         }}
         data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
       >
         <div css={contentStyle()}>
-          {/** @TODO latest version typescript 4.4 is solving this as a constant */
-          renderContent(content, searchTerm)}
+          {
+            /** @TODO latest version typescript 4.4 is solving this as a constant */
+            renderContent(content, searchTerm)
+          }
         </div>
       </div>
     );

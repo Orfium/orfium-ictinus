@@ -15,28 +15,28 @@ export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRig
   iconSize?: number;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
-};
+} & TestProps &
+  EventProps;
 
-const IconButton = React.forwardRef<HTMLButtonElement, Props & TestProps & EventProps>(
-  (props, ref) => {
-    const { iconSize, color = '', type = 'primary', filled = true, name, transparent } = props;
-    const theme = useTheme();
-    const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-    const calculatedColor = calculateColorBetweenColorAndType(color, type);
-    const iconColor =
-      filled && !transparent
-        ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-        : defineBackgroundColor(theme, calculatedColor, type, true, true);
+const IconButton = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
+  const { iconSize, color = '', type = 'primary', isFilled = true, name, isTransparent } = props;
+  const theme = useTheme();
+  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
+  const calculatedColor = calculateColorBetweenColorAndType(color, type);
+  const iconColor =
+    isFilled && !isTransparent
+      ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
+      : defineBackgroundColor(theme, calculatedColor, type, true, true);
 
-    const sx = sxProp({ size: props.size });
+  const sx = sxProp({ size: props.size });
 
-    return (
-      <ButtonBase {...props} ref={ref} sx={sx} dataTestPrefixId={'icon-'}>
-        <Icon name={name} color={iconColor} size={iconSize} />
-      </ButtonBase>
-    );
-  }
-);
+  return (
+    <ButtonBase {...props} ref={ref} sx={sx} dataTestPrefixId={'icon-'}>
+      <Icon name={name} color={iconColor} size={iconSize} />
+    </ButtonBase>
+  );
+});
+
 IconButton.displayName = 'IconButton';
 
 export default IconButton;

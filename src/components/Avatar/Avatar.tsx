@@ -1,14 +1,13 @@
 import React from 'react';
 
 import { useTheme } from '../../index';
-import { DivProps } from '../../utils/common';
 import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Icon from '../Icon';
 import { avatarStyle } from './Avatar.style';
 import { Props, AvatarSizes } from './Avatar.types';
 import { iconSizeBasedOnAvatar } from './utils';
 
-const Avatar = React.forwardRef<HTMLDivElement, Props & DivProps>(
+const Avatar = React.forwardRef<HTMLDivElement, Props>(
   (
     { src = '', iconName = 'user', size = 'md', color = 'lightGrey-600', children, className },
     ref

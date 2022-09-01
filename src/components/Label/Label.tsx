@@ -1,32 +1,29 @@
 import * as React from 'react';
 
-import { DEFAULT_SIZE } from '../../utils/size-utils';
 import { labelStyle } from './Label.style';
 
 export type Props = {
   /** If the label has error */
-  error?: boolean;
+  hasError?: boolean;
   /** The label that is going to be displayed */
   label: string;
   /** If the label value is required */
-  required: boolean;
+  isRequired: boolean;
   /** If the label must be moved to the top */
-  animateToTop?: boolean;
+  isAnimated?: boolean;
   htmlFor?: string;
-  size?: string;
 };
 
 const Label: React.FC<Props> = ({
-  error = false,
+  hasError = false,
   htmlFor,
   label,
-  required = false,
-  animateToTop = false,
-  size = DEFAULT_SIZE,
+  isRequired = false,
+  isAnimated = false,
 }) => {
   return (
-    <label htmlFor={htmlFor} css={labelStyle({ size, animateToTop, error })}>
-      {label} {required && '*'}
+    <label htmlFor={htmlFor} css={labelStyle({ isAnimated, hasError })}>
+      {label} {isRequired && '*'}
     </label>
   );
 };

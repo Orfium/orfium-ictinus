@@ -14,18 +14,20 @@ export const iconStyle = () => () => ({
   display: 'inline-flex',
 });
 
-export const childrenWrapperStyle = ({
-  iconLeft,
-  iconRight,
-  hasChildren,
-}: Omit<Props, 'block' | 'isIconButton' | 'buttonType' | 'dataTestId' | 'onClick'> & {
-  hasChildren: boolean;
-}) => (theme: Theme) => {
-  const rightIconExists = hasChildren && iconRight;
-  const leftIconExists = hasChildren && iconLeft;
+export const childrenWrapperStyle =
+  ({
+    iconLeft,
+    iconRight,
+    hasChildren,
+  }: Omit<Props, 'block' | 'isIconButton' | 'buttonType' | 'dataTestId' | 'onClick' | 'ref'> & {
+    hasChildren: boolean;
+  }) =>
+  (theme: Theme) => {
+    const rightIconExists = hasChildren && iconRight;
+    const leftIconExists = hasChildren && iconLeft;
 
-  return {
-    marginLeft: leftIconExists ? theme.spacing.sm : 0,
-    marginRight: rightIconExists ? theme.spacing.sm : 0,
+    return {
+      marginLeft: leftIconExists ? theme.spacing.sm : 0,
+      marginRight: rightIconExists ? theme.spacing.sm : 0,
+    };
   };
-};

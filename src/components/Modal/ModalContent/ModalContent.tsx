@@ -53,11 +53,11 @@ const ModalContent: React.FC<Props> = ({
         {Boolean(secondaryCTA && secondaryCTALabel) && (
           <Button
             type={'primary'}
-            filled={false}
+            isFilled={false}
             onClick={secondaryCTA}
             size={'md'}
             dataTestId={'modal-content-secondaryCTA'}
-            transparent
+            isTransparent
           >
             {secondaryCTALabel}
           </Button>

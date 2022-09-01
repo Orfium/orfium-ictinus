@@ -1,6 +1,5 @@
 import useTheme from 'hooks/useTheme';
 import max from 'lodash/max';
-import { lighten } from 'polished';
 import React, { useCallback, useMemo } from 'react';
 import {
   BarChart as RechartsBarChart,
@@ -77,14 +76,14 @@ const WrappedChart = Wrapper(RechartsBarChart);
 const BarChart: React.FC<Props> = ({ data }) => {
   const theme = useTheme();
 
-  const barColors = useMemo(() => getBarColors(data, theme.palette.flat.darkBlue[100]), [
-    data,
-    theme.palette.flat.darkBlue,
-  ]);
+  const barColors = useMemo(
+    () => getBarColors(data, theme.palette.flat.darkBlue[100]),
+    [data, theme.palette.flat.darkBlue]
+  );
 
-  const findMaxInData = useCallback(operator => max(data.map(operator)), [data]);
+  const findMaxInData = useCallback((operator) => max(data.map(operator)), [data]);
 
-  const setColoringOptions = useCallback(op => getColoringOptions(data, op), [data]);
+  const setColoringOptions = useCallback((op) => getColoringOptions(data, op), [data]);
 
   const maxLabelLength = findMaxInData((obj: Data) => obj.name.length);
 
@@ -117,7 +116,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
         tickMargin={24}
         tickCount={tickCount}
         domain={[0, maxDomainValue]}
-        tickFormatter={tick => {
+        tickFormatter={(tick) => {
           return customTickFormatter(tick, maxDomainValue);
         }}
       />
@@ -138,7 +137,7 @@ const BarChart: React.FC<Props> = ({ data }) => {
       <YAxis
         type="category"
         dataKey="name"
-        tick={props => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
+        tick={(props) => <CustomYAxisTick {...props} colors={tickColoringOptions} />}
         width={yAxisWidth}
         axisLine={false}
         tickLine={false}

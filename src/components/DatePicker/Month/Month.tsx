@@ -41,10 +41,7 @@ export type Props = {
 
 const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
-    const monthDate = currentDay
-      .month(month)
-      .year(year)
-      .date(1);
+    const monthDate = currentDay.month(month).year(year).date(1);
     const daysOfMonth = monthDate.daysInMonth();
     const startDay = monthDate.day();
     const daysPerWeekCount = 7;
@@ -70,7 +67,7 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
   return (
     <React.Fragment>
       <div css={weekDaysWrapperStyle()}>
-        {DAYS.map(day => (
+        {DAYS.map((day) => (
           <div key={day} css={weekDayStyle()}>
             {day.substr(0, 2)}
           </div>
@@ -91,7 +88,7 @@ const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabl
                   month={month}
                   day={day}
                   onSelect={onDaySelect}
-                  disabled={Boolean(disabledDatesCalculated(day, month, year, disabledDates))}
+                  isDisabled={Boolean(disabledDatesCalculated(day, month, year, disabledDates))}
                   isSelected={Boolean(
                     calculateSelected(day, month, year, selectedDays.from, selectedDays.to)
                   )}

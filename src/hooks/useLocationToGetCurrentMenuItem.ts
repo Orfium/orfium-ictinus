@@ -13,11 +13,11 @@ const useLocationToGetCurrentMenuItem = (
   // we need to show an indication on the currently selected option
   // we get that information from the current URL and then comparing it with the urls of each menuItem
   useLayoutEffect(() => {
-    menuItems.forEach(menuItem => {
-      const menuItemUrls = menuItem.options.map(subMenuItem => subMenuItem.url);
-      const urlFound =
+    menuItems.forEach((menuItem) => {
+      const menuItemUrls = menuItem.options.map((subMenuItem) => subMenuItem.url);
+      const isUrlFound =
         menuItemUrls.includes(location.pathname) || menuItem.url === location.pathname;
-      if (urlFound) {
+      if (isUrlFound) {
         setCurrentMenuItem(menuItem.url);
         setOpenMenuItems([menuItem.url]); // expand the current menu item
       }

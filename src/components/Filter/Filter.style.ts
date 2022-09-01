@@ -31,116 +31,117 @@ export const buttonSpanStyle = () => () => {
   };
 };
 
-export const buttonWrapperStyle = ({
-  disabled,
-  open,
-  hasSelectedValue,
-  calculatedColor,
-  styleType,
-}: ButtonStyleProps) => (theme: Theme) => {
-  const activeAndClosed = !disabled && !open;
-  const borderWidth = styleType === 'filled' ? focusBorderWidth : transparentFocusBorderWidth;
+export const buttonWrapperStyle =
+  ({ isDisabled, isOpen, hasSelectedValue, calculatedColor, styleType }: ButtonStyleProps) =>
+  (theme: Theme) => {
+    const isActiveAndClosed = !isDisabled && !isOpen;
+    const borderWidth = styleType === 'filled' ? focusBorderWidth : transparentFocusBorderWidth;
 
-  return {
-    background: 'none',
-    border: 'none',
-    display: 'flex',
-    padding: '0',
-    alignItems: 'center',
-    height: '100%',
-    minWidth: rem(110),
+    return {
+      background: 'none',
+      border: 'none',
+      display: 'flex',
+      padding: '0',
+      alignItems: 'center',
+      height: '100%',
+      minWidth: rem(110),
 
-    // If is active and not disabled and not visited global states applied
-    // else it's using the global states function with calculated color
-    ':hover > div': {
-      backgroundColor: activeAndClosed
-        ? hasSelectedValue
-          ? getHover({ theme, color: calculatedColor.color, shade: HAS_SELECTED_VALUE_COLOR_SHADE })
-              .backgroundColor
-          : getHover({ theme }).backgroundColor
-        : undefined,
-    },
+      // If is active and not disabled and not visited global states applied
+      // else it's using the global states function with calculated color
+      ':hover > div': {
+        backgroundColor: isActiveAndClosed
+          ? hasSelectedValue
+            ? getHover({
+                theme,
+                color: calculatedColor.color,
+                shade: HAS_SELECTED_VALUE_COLOR_SHADE,
+              }).backgroundColor
+            : getHover({ theme }).backgroundColor
+          : undefined,
+      },
 
-    // If is active and not disabled and not visited global states applied
-    // else it's using the global states function with calculated color
-    ':active > div': {
-      backgroundColor: activeAndClosed
-        ? hasSelectedValue
-          ? getPressed({
-              theme,
-              color: calculatedColor.color,
-              shade: HAS_SELECTED_VALUE_COLOR_SHADE,
-            }).backgroundColor
-          : getPressed({ theme }).backgroundColor
-        : undefined,
-    },
+      // If is active and not disabled and not visited global states applied
+      // else it's using the global states function with calculated color
+      ':active > div': {
+        backgroundColor: isActiveAndClosed
+          ? hasSelectedValue
+            ? getPressed({
+                theme,
+                color: calculatedColor.color,
+                shade: HAS_SELECTED_VALUE_COLOR_SHADE,
+              }).backgroundColor
+            : getPressed({ theme }).backgroundColor
+          : undefined,
+      },
 
-    // on focus change the two divs of added
-    ':focus-visible > div': {
-      border: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
-    },
-    // target the divider on focus
-    ':focus-visible > span': {
-      borderTop: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
-      borderBottom: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
-    },
+      // on focus change the two divs of added
+      ':focus-visible > div': {
+        border: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+      },
+      // target the divider on focus
+      ':focus-visible > span': {
+        borderTop: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+        borderBottom: getFocus({ theme, borderWidth: borderWidth }).styleBorder,
+      },
+    };
   };
-};
 
-export const buttonBaseStyle = ({
-  calculatedColor,
-  disabled,
-  open,
-  styleType,
-  hasSelectedValue,
-  filterType,
-}: ButtonStyleProps) => (theme: Theme) => {
-  return {
-    fontSize: theme.typography.fontSizes['13'],
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    height: '100%',
-    opacity: disabled ? 0.5 : 1,
-    transition: 'all 150ms linear',
-    color: getTextColor({
-      theme,
-      open,
-      calculatedColor,
-      hasSelectedValue,
-    }),
-    backgroundColor: getBackgroundColor({
-      theme,
-      open,
-      styleType,
-      hasSelectedValue,
-      calculatedColor,
-    }),
-    border: `${borderStyleParams} ${getBorder({
-      styleType,
-      theme,
-      hasSelectedValue,
-      filterType,
-      calculatedColor,
-      open,
-    })}`,
-    display: 'flex',
-    justifyContent: 'center',
-    width: '100%',
-    '&:hover': {
+export const buttonBaseStyle =
+  ({
+    calculatedColor,
+    isDisabled,
+    isOpen,
+    styleType,
+    hasSelectedValue,
+    filterType,
+  }: ButtonStyleProps) =>
+  (theme: Theme) => {
+    return {
+      fontSize: theme.typography.fontSizes['13'],
+      cursor: isDisabled ? 'not-allowed' : 'pointer',
+      height: '100%',
+      opacity: isDisabled ? 0.5 : 1,
+      transition: 'all 150ms linear',
+      color: getTextColor({
+        theme,
+        isOpen,
+        calculatedColor,
+        hasSelectedValue,
+      }),
+      backgroundColor: getBackgroundColor({
+        theme,
+        isOpen,
+        styleType,
+        hasSelectedValue,
+        calculatedColor,
+      }),
       border: `${borderStyleParams} ${getBorder({
         styleType,
         theme,
         hasSelectedValue,
         filterType,
         calculatedColor,
-        open,
-        state: 'hover',
+        isOpen,
       })}`,
-    },
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%',
+      '&:hover': {
+        border: `${borderStyleParams} ${getBorder({
+          styleType,
+          theme,
+          hasSelectedValue,
+          filterType,
+          calculatedColor,
+          isOpen,
+          state: 'hover',
+        })}`,
+      },
+    };
   };
-};
 
 export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
-  const { open, calculatedColor, styleType, hasSelectedValue, filterType } = props;
+  const { isOpen, calculatedColor, styleType, hasSelectedValue, filterType } = props;
 
   return {
     height: '100%',
@@ -154,7 +155,7 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       hasSelectedValue,
       filterType,
       calculatedColor,
-      open,
+      isOpen,
       isDivider: true,
     }),
     borderTop: `${borderStyleParams} ${getBorder({
@@ -163,7 +164,7 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       hasSelectedValue,
       filterType,
       calculatedColor,
-      open,
+      isOpen,
     })}`,
     borderBottom: `${borderStyleParams} ${getBorder({
       styleType,
@@ -171,7 +172,7 @@ export const divider = (props: ButtonStyleProps) => (theme: Theme) => {
       hasSelectedValue,
       filterType,
       calculatedColor,
-      open,
+      isOpen,
     })}`,
   };
 };
@@ -212,10 +213,10 @@ export const childrenWrapperStyle = () => () => {
   };
 };
 
-export const labelSpanStyle = (open: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
+export const labelSpanStyle = (isOpen: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
   return {
     fontWeight:
-      open || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
+      isOpen || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
     display: 'flex',
     alignItems: 'center',
     div: {
@@ -234,17 +235,18 @@ export const valueSpanStyle = () => css`
   display: inline-block;
 `;
 
-export const menuStyle = () => (theme: Theme) => css`
-  position: absolute;
-  top: ${rem(48)};
-  min-width: ${rem(280)};
-  left: 0;
-  height: auto;
-  border-radius: ${theme.spacing.xsm};
-  background-color: ${theme.palette.white};
-  box-shadow: ${theme.elevation['02']};
-  z-index: 500;
-  overflow: hidden;
-  min-width: 100%;
-  max-width: ${rem(620)};
-`;
+export const menuStyle = () => (theme: Theme) =>
+  css`
+    position: absolute;
+    top: ${rem(48)};
+    min-width: ${rem(280)};
+    left: 0;
+    height: auto;
+    border-radius: ${theme.spacing.xsm};
+    background-color: ${theme.palette.white};
+    box-shadow: ${theme.elevation['02']};
+    z-index: 500;
+    overflow: hidden;
+    min-width: 100%;
+    max-width: ${rem(620)};
+  `;

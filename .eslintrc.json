@@ -2,18 +2,12 @@
   "extends": [
     "eslint:recommended",
     "prettier",
-    "prettier/react",
-    "prettier/@typescript-eslint",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:import/typescript"
   ],
-  "plugins": [
-    "react",
-    "@emotion",
-    "@typescript-eslint",
-    "import"
-  ],
+  "plugins": ["react", "@emotion", "@typescript-eslint", "import"],
   "env": {
     "node": true,
     "browser": true,
@@ -36,6 +30,13 @@
     "react/button-has-type": "warn",
     "react/no-array-index-key": "warn",
     "react/no-render-return-value": 0,
+    "react/boolean-prop-naming": [
+      "error",
+      {
+        "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+        "message": "Wrong name on boolean prop. Change ({{ propName }}) to start with `is` or `has`"
+      }
+    ],
     /* JSX rules */
     "react/jsx-key": "error",
     /* eslint basic rules */
@@ -67,17 +68,7 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          [
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "object"
-          ]
-        ],
+        "groups": ["builtin", "external", ["internal", "parent", "sibling", "index", "object"]],
         "pathGroups": [
           {
             "pattern": "react",
@@ -88,9 +79,7 @@
             "group": "internal"
           }
         ],
-        "pathGroupsExcludedImportTypes": [
-          "react"
-        ],
+        "pathGroupsExcludedImportTypes": ["react"],
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
@@ -99,6 +88,15 @@
       }
     ],
     /* Typescript rules */
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": ["variable", "parameter", "property"],
+        "types": ["boolean"],
+        "format": ["PascalCase"], // As per documentation, prefix is trimmed before checking for format , so we need pascal case for values like `isBoolean`  https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/naming-convention.md#format-options
+        "prefix": ["is", "has"]
+      }
+    ],
     "@typescript-eslint/no-unused-expressions": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn",
@@ -129,6 +127,7 @@
       "jsx": true
     },
     "ecmaVersion": 2018,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": ["./tsconfig.json"] // Specify it only for TypeScript files
   }
 }

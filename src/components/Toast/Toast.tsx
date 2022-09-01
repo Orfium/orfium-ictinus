@@ -28,7 +28,7 @@ export type Props = {
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
-  expanded?: boolean;
+  isExpanded?: boolean;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
@@ -42,11 +42,11 @@ const Toast: React.FC<Props> = ({
   type = 'primary',
   styleType = 'elevated',
   closeCTA,
-  expanded = false,
+  isExpanded = false,
   children,
   dataTestId,
 }) => {
-  const [isExpanded, setExpanded] = useState(expanded);
+  const [isExpandedState, setIsExpandedState] = useState(isExpanded);
 
   return (
     <div
@@ -64,8 +64,8 @@ const Toast: React.FC<Props> = ({
         </div>
         <div css={actionIconsContainer()}>
           <span
-            css={chevronIconContainer(isExpanded)}
-            onClick={() => setExpanded(!isExpanded)}
+            css={chevronIconContainer(isExpandedState)}
+            onClick={() => setIsExpandedState(!isExpandedState)}
             data-testid={generateTestDataId('toast-expand', dataTestId)}
           >
             <Icon name="chevronLargeDown" color="#fff" size={20} />
@@ -81,7 +81,7 @@ const Toast: React.FC<Props> = ({
         </div>
       </div>
       <div
-        css={expandedContainer(type, isExpanded)}
+        css={expandedContainer(type, isExpandedState)}
         data-testid={generateTestDataId('expanded-container', dataTestId)}
       >
         {children}

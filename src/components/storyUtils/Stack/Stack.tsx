@@ -1,12 +1,12 @@
 import React from 'react';
 
 type Props = {
-  vertical?: boolean;
+  isVertical?: boolean;
 };
 
-const Stack: React.FC<Props> = ({ vertical = false, children }) => {
+const Stack: React.FC<Props> = ({ isVertical = false, children }) => {
   return (
-    <div css={{ display: 'flex', flexDirection: vertical ? 'column' : 'row', flexWrap: 'wrap' }}>
+    <div css={{ display: 'flex', flexDirection: isVertical ? 'column' : 'row', flexWrap: 'wrap' }}>
       {React.Children.toArray(children).map((item, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <div key={index} style={{ margin: 5 }}>

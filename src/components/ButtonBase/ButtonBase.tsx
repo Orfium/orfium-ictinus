@@ -23,13 +23,13 @@ export type Props = {
   /** This property define the size of the button. Defaults to 'md' */
   size?: typeof buttonSizes[number];
   /** This property will make the button fit to its parent width. Defaults to false */
-  block?: boolean;
+  isBlock?: boolean;
   /** Property indicating if the component is filled with a color based on the type */
-  filled?: boolean;
+  isFilled?: boolean;
   /** Property indicating if the component is async and loading */
-  loading?: boolean;
+  isLoading?: boolean;
   /** Property indicating if the component is transparent with a color based on the type */
-  transparent?: boolean;
+  isTransparent?: boolean;
   /** An optional boolean to show if the button is icon */
   isIconButton?: boolean;
   /** An optional icon to put on the right of the button */
@@ -37,31 +37,30 @@ export type Props = {
   /** An optional icon to put on the left of the button */
   iconLeft?: React.Component | JSX.Element | null;
   /** Define if the button is in disabled state */
-  disabled?: boolean;
+  isDisabled?: boolean;
   /** Defines the button type */
   buttonType?: 'submit' | 'reset' | 'button';
   /** Sx prop to override specific properties */
   sx?: {
     container?: CSSObject;
   };
-};
+} & TestProps &
+  EventButtonProps &
+  ButtonProps;
 
 //@TODO fix props to not overwrite button props
-const ButtonBase = React.forwardRef<
-  HTMLButtonElement,
-  ButtonProps & Props & TestProps & EventButtonProps
->((props, ref) => {
+const ButtonBase = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
     color = '',
-    block = false,
-    filled = true,
-    transparent = false,
+    isBlock = false,
+    isFilled = true,
+    isTransparent = false,
     iconLeft = null,
     iconRight = null,
-    disabled = false,
-    loading = false,
+    isDisabled = false,
+    isLoading = false,
     children,
     dataTestId = '',
     dataTestPrefixId = '',
@@ -81,31 +80,32 @@ const ButtonBase = React.forwardRef<
       data-testid={generateTestDataId(testIdName, dataTestId)}
       css={buttonBaseStyle({
         type,
-        loading,
-        filled,
+        isLoading,
+        isFilled,
         size,
-        block,
+        isBlock,
         color,
-        transparent,
+        isTransparent,
         calculatedColor,
-        disabled,
+        isDisabled,
         iconLeft,
         iconRight,
         sx,
         childrenCount: React.Children.count(children),
       })}
-      onClick={event => {
+      onClick={(event) => {
         if (onClick) {
           onClick(event);
         }
       }}
       onBlur={onBlur}
-      disabled={disabled || loading}
+      disabled={isDisabled || isLoading}
     >
       {children}
     </button>
   );
 });
+
 ButtonBase.displayName = 'ButtonBase';
 
 export default ButtonBase;

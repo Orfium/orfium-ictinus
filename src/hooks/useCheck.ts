@@ -3,10 +3,10 @@ import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 export type OnCheckHandler = (val: boolean, e?: ChangeEvent) => void;
 
 export const useCheck = (isChecked: boolean, onCheck?: OnCheckHandler) => {
-  const [checked, setIsChecked] = useState(() => isChecked);
+  const [isCheckedState, setIsCheckedState] = useState(() => isChecked);
 
   useEffect(() => {
-    setIsChecked(isChecked);
+    setIsCheckedState(isChecked);
   }, [isChecked]);
 
   const handleCheck = useCallback(
@@ -15,10 +15,10 @@ export const useCheck = (isChecked: boolean, onCheck?: OnCheckHandler) => {
         onCheck(checkedCheckbox, e);
       }
 
-      setIsChecked(checkedCheckbox);
+      setIsCheckedState(checkedCheckbox);
     },
-    [onCheck, setIsChecked]
+    [onCheck, setIsCheckedState]
   );
 
-  return { checked, handleCheck };
+  return { isCheckedState, handleCheck };
 };

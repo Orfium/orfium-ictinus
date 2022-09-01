@@ -31,7 +31,7 @@ A universal IconButton component that with the help of Button hold the icon insi
 ```js
 import { IconButton } from '@orfium/ictinus';
 
-<IconButton onClick={() => {}})} name={'add'} />
+<IconButton onClick={() => {}} name={'add'} />
 ```
 
 # Props
@@ -74,8 +74,8 @@ IconButton with different acceptable sizes
       <IconButton
         type={select('type', mainTypes, 'primary')}
         size={select('size', ['sm', 'md', 'lg'], 'md')}
-        filled={boolean('filled', false)}
-        transparent={boolean('transparent', false)}
+        isFilled={boolean('isFilled', false)}
+        isTransparent={boolean('isTransparent', false)}
         name={select(
           'name',
           Object.keys(iconSelector)

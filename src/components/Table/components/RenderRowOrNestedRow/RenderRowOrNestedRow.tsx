@@ -14,26 +14,26 @@ import { borderedRowStyle, expandableRowStyle } from './RenderRowOrNestedRow.sty
 
 const RenderRowWithCells = React.memo(
   ({
-    checked = false,
-    toggleChecked = () => {},
+    isChecked = false,
+    toggleIsChecked = () => {},
     dataTestIdPrefix,
     rowIndex,
   }: {
-    checked?: boolean;
-    toggleChecked?: () => void;
+    isChecked?: boolean;
+    toggleIsChecked?: () => void;
     dataTestIdPrefix?: string;
     rowIndex?: number;
   }) => {
     const {
       columnsWithWidth,
-      onSelectionChangeExist,
-      padded,
+      hasOnSelectionChange,
+      isPadded,
       columns,
       tChange,
       row,
       type,
       isRowSelected,
-      bordered,
+      isBordered,
       actionWidth,
     } = React.useContext(TableRowContext);
     const { expanded } = row;
@@ -42,29 +42,29 @@ const RenderRowWithCells = React.memo(
 
     return (
       <TableRow
-        selected={isRowSelected}
-        onClick={isExpandedExists ? toggleChecked : undefined}
+        isSelected={isRowSelected}
+        onClick={isExpandedExists ? toggleIsChecked : undefined}
         css={borderedRowStyle({
-          bordered,
+          isBordered,
           isCustomCell: isExpandedExists || isComponentFunctionType(lastItem.content),
         })}
       >
-        {onSelectionChangeExist && (
+        {hasOnSelectionChange && (
           <TableCell
             component={'th'}
-            sticky={false}
+            isSticky={false}
             width={50}
-            padded={padded}
+            isPadded={isPadded}
             dataTestIdPrefix={dataTestIdPrefix}
             rowIndex={rowIndex}
             index={0}
           >
-            <div onClick={e => e.stopPropagation()}>
+            <div onClick={(e) => e.stopPropagation()}>
               <CheckBox
                 dataTestIdSuffix={'row-check'}
-                checked={isRowSelected}
+                isChecked={isRowSelected}
                 onClick={tChange}
-                filled={false}
+                isFilled={false}
               />
             </div>
           </TableCell>
@@ -86,7 +86,7 @@ const RenderRowWithCells = React.memo(
                     : tooltipContent ?? content.toString()
                   : undefined
               }
-              padded={padded}
+              isPadded={isPadded}
               colSpan={colSpan}
               content={content}
               cellType={cellType}
@@ -101,8 +101,8 @@ const RenderRowWithCells = React.memo(
 
         <ExpandedButtonCell
           isExpandedExists={isExpandedExists}
-          checked={checked}
-          toggleChecked={toggleChecked}
+          isChecked={isChecked}
+          toggleIsChecked={toggleIsChecked}
           actionWidth={actionWidth}
           dataTestIdPrefix={dataTestIdPrefix}
           rowIndex={rowIndex}
@@ -123,11 +123,11 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
   dataTestIdPrefix?: string;
   rowIndex?: number;
 }) => {
-  const { isRowSelected, columnCount, fixedHeader } = React.useContext(TableRowContext);
+  const { isRowSelected, columnCount, hasFixedHeader } = React.useContext(TableRowContext);
   const { expanded } = row;
-  const [checked, toggleChecked] = useToggle(false);
+  const [isChecked, toggleIsChecked] = useToggle(false);
   const ExpandedComponent = expanded
-    ? expanded({ row, selected: isRowSelected, expanded: checked })
+    ? expanded({ row, isSelected: isRowSelected, isExpanded: isChecked })
     : null;
 
   return (
@@ -135,23 +135,23 @@ const RenderRowOrNestedRow = <T extends { [key: string]: unknown }>({
       {!expanded ? (
         <RenderRowWithCells dataTestIdPrefix={dataTestIdPrefix} rowIndex={rowIndex} />
       ) : (
-        <TableRow nested selected={isRowSelected}>
+        <TableRow isNested isSelected={isRowSelected}>
           <TableCell
             colSpan={columnCount}
-            padded={false}
+            isPadded={false}
             dataTestIdPrefix={dataTestIdPrefix}
             rowIndex={rowIndex}
           >
-            <div css={expandableRowStyle({ isFirstRow: rowIndex === 1, fixedHeader })}>
+            <div css={expandableRowStyle({ isFirstRow: rowIndex === 1, hasFixedHeader })}>
               <table css={tableStyle()()}>
                 <tbody>
                   <RenderRowWithCells
-                    {...{ checked, toggleChecked }}
+                    {...{ isChecked, toggleIsChecked }}
                     dataTestIdPrefix={dataTestIdPrefix}
                     rowIndex={rowIndex}
                   />
-                  {checked && (
-                    <TableRow nested>
+                  {isChecked && (
+                    <TableRow isNested>
                       <TableCell
                         colSpan={columnCount}
                         dataTestIdPrefix={dataTestIdPrefix}

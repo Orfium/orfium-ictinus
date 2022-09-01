@@ -20,7 +20,7 @@ type Props = {
 const ListGroupTitle: React.FC<Props> = ({ size, content, index, searchTerm, dataTestId }) => {
   return (
     <div
-      css={listGroupTitleStyle({ size, disabled: (content as SelectOption).isDisabled })}
+      css={listGroupTitleStyle({ size, isDisabled: (content as SelectOption).isDisabled })}
       data-testid={dataTestId ?? 'ictinus_list' + ('_group_title_' + index)}
     >
       <div css={contentStyle()}>{renderContent(content, searchTerm)}</div>

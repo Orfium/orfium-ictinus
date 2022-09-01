@@ -36,7 +36,7 @@ function generateArrayOfYears(date: Dayjs): SelectOption[] {
   const min = new Date().getFullYear() - span;
   const years = range(min, max);
 
-  return years.map(year => ({
+  return years.map((year) => ({
     value: year.toString(),
     label: `${date.format('MMMM')} ${year.toString()}`,
   }));
@@ -52,7 +52,7 @@ const MonthWrapper = ({
   disabledDates,
   isRangePicker = false,
 }: Props) => {
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const theme = useTheme();
   const years = useMemo(() => generateArrayOfYears(date), [date]);
@@ -76,14 +76,14 @@ const MonthWrapper = ({
 
           <ClickAwayListener
             onClick={() => {
-              setOpen(false);
+              setIsOpen(false);
             }}
           >
             <div css={monthHeaderTitleWrapperStyle({ isRangePicker })}>
               <div css={monthHeaderTitleStyle({ isRangePicker })}>
                 {!isRangePicker ? (
                   <Button
-                    onClick={() => setOpen(!open)}
+                    onClick={() => setIsOpen(!isOpen)}
                     color={'neutralWhite-100'}
                     iconRight={
                       <Icon
@@ -101,12 +101,12 @@ const MonthWrapper = ({
                   </div>
                 )}
               </div>
-              {open && (
+              {isOpen && (
                 <SelectMenu
                   filteredOptions={years}
-                  handleOptionClick={e => {
+                  handleOptionClick={(e) => {
                     setDate(date.year(Number(e.value)));
-                    setOpen(false);
+                    setIsOpen(false);
                   }}
                   selectedOption={date.format('YYYY')}
                 />

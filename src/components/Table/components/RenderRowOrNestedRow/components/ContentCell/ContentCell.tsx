@@ -8,7 +8,7 @@ import { nestedHeaderStyle } from './ContentCell.style';
 
 type Props = {
   columns: string[];
-  padded: boolean;
+  isPadded: boolean;
   tooltipContent?: string;
   columnWidth?: number;
   content: number | string | ContentComponent<any>;
@@ -24,7 +24,7 @@ type Props = {
 
 const ContentCell: React.FC<Props> = ({
   columns,
-  padded,
+  isPadded,
   columnWidth,
   tooltipContent,
   content,
@@ -44,7 +44,7 @@ const ContentCell: React.FC<Props> = ({
       textAlign={align ? align : isNumeral ? 'right' : 'left'}
       colSpan={colSpan}
       type={cellType}
-      padded={padded}
+      isPadded={isPadded}
       width={columnWidth ? `${columnWidth}%` : 'initial'}
       dataTestIdPrefix={dataTestIdPrefix}
       rowIndex={rowIndex}
@@ -59,7 +59,7 @@ const ContentCell: React.FC<Props> = ({
 
       <TruncatedContent
         placement={'bottom'}
-        shouldAlwaysShow={isComponentFunctionType(content) && !!tooltipContent}
+        isAlwaysVisible={isComponentFunctionType(content) && !!tooltipContent}
         tooltipContent={tooltipContent}
       >
         {isComponentFunctionType(content) ? (

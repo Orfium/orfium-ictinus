@@ -29,12 +29,12 @@ export type Row<T> = {
   cells: Cell<T>[];
   expanded?: ({
     row,
-    selected,
-    expanded,
+    isSelected,
+    isExpanded,
   }: {
     row: Row<T>;
-    selected: boolean;
-    expanded: boolean;
+    isSelected: boolean;
+    isExpanded: boolean;
   }) => React.Component | JSX.Element;
   rowSpan?: number;
 };
@@ -49,13 +49,13 @@ type Props<T> = {
   /** An array of titles or objects to define columns. */
   columns: (string | ExtendedColumn)[];
   /** Boolean defining if the header is fixed or not. */
-  fixedHeader?: boolean;
+  hasFixedHeader?: boolean;
   /** Boolean defining if the CTA's container is fixed or not. */
-  fixedCTA?: boolean;
+  hasFixedCTA?: boolean;
   /** Type of the table which determine the headers display. */
   type?: TableType;
   /** Boolean defining the padding all over the table cells and rows. */
-  padded?: boolean;
+  isPadded?: boolean;
   /** Function that once provided on each check will return the selection. */
   onCheck?: (data: Selection[]) => void;
   /** Function that once provided will provide the currently selected sorting configuration */
@@ -93,10 +93,10 @@ function Table<T>({
   data,
   columns,
   type = 'normal',
-  fixedHeader = false,
-  fixedCTA = false,
+  hasFixedHeader = false,
+  hasFixedCTA = false,
   onCheck,
-  padded = false,
+  isPadded = false,
   onSort,
   initialSort = { column: '', order: 'desc' },
   sortDir,
@@ -112,7 +112,7 @@ function Table<T>({
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
 
-  const hasExpandableRows = data.some(row => Boolean(row.expanded));
+  const hasExpandableRows = data.some((row) => Boolean(row.expanded));
 
   const columnCount = getColumnCount(columns, onCheck, hasExpandableRows);
 
@@ -139,7 +139,7 @@ function Table<T>({
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
         ? [...selectedIds, rowId]
-        : selectedIds.filter(item => item !== rowId)
+        : selectedIds.filter((item) => item !== rowId)
     );
   }, []);
 
@@ -168,7 +168,7 @@ function Table<T>({
   );
 
   const handleSorting = (column: string) => {
-    setSorting(prevState => {
+    setSorting((prevState) => {
       if (sortDir) {
         return {
           column,
@@ -193,21 +193,21 @@ function Table<T>({
   return (
     <React.Fragment>
       {(onCheck || topRightArea || topLeftText) && (
-        <table css={tableCTAStyle(fixedCTA)}>
+        <table css={tableCTAStyle(hasFixedCTA)}>
           <thead>
             <TableRow>
               {onCheck && (
                 <TableCell
                   component={'th'}
                   width={50}
-                  padded={padded}
+                  isPadded={isPadded}
                   dataTestIdPrefix={dataTestIdPrefix}
                   rowIndex={0}
                   index={0}
                 >
                   <CheckBox
-                    checked={Boolean(selectedIds && selectedIds.length > 0)}
-                    intermediate={
+                    isChecked={Boolean(selectedIds && selectedIds.length > 0)}
+                    isIntermediate={
                       selectedIds && selectedIds.length > 0 && selectedIds?.length !== data.length
                     }
                     onClick={() => {
@@ -217,11 +217,16 @@ function Table<T>({
                         setSelectedIds(data.map(({ id }) => id));
                       }
                     }}
-                    filled={false}
+                    isFilled={false}
                   />
                 </TableCell>
               )}
-              <TableCell padded={padded} dataTestIdPrefix={dataTestIdPrefix} rowIndex={0} index={1}>
+              <TableCell
+                isPadded={isPadded}
+                dataTestIdPrefix={dataTestIdPrefix}
+                rowIndex={0}
+                index={1}
+              >
                 {selectedIds && selectedIds?.length > 0 ? (
                   <span>
                     <b>{selectedIds.length}</b> {pluralize('item', selectedIds.length)} selected
@@ -233,7 +238,7 @@ function Table<T>({
               {topRightArea && (
                 <TableCell
                   textAlign={'right'}
-                  padded={padded}
+                  isPadded={isPadded}
                   colSpan={columnCount - (onCheck ? 2 : 1)}
                   dataTestIdPrefix={dataTestIdPrefix}
                   rowIndex={0}
@@ -252,15 +257,15 @@ function Table<T>({
           <thead>
             {type === 'normal' && (
               <TableRow
-                css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck), fixedHeader)}
+                css={tableRowHeadersStyle(hasExpandableRows, Boolean(onCheck), hasFixedHeader)}
               >
                 {onCheck && (
                   <TableCell
                     component={'th'}
-                    paddedSticky={fixedCTA}
-                    sticky={fixedHeader}
+                    isPaddedSticky={hasFixedCTA}
+                    isSticky={hasFixedHeader}
                     width={50}
-                    padded={padded}
+                    isPadded={isPadded}
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
                 )}
@@ -279,9 +284,9 @@ function Table<T>({
                       }
                       component={'th'}
                       key={`${isItemString(item) ? item : item.content.sortingKey}`}
-                      sticky={fixedHeader}
-                      paddedSticky={fixedCTA}
-                      padded={padded}
+                      isSticky={hasFixedHeader}
+                      isPaddedSticky={hasFixedCTA}
+                      isPadded={isPadded}
                       width={columnsWithWidth[index] ? `${columnsWithWidth[index]}%` : 'initial'}
                       isSortable={!isItemString(item) && item.isSortable}
                       isActive={!isItemString(item) && item.content.sortingKey === sorting.column}
@@ -292,14 +297,8 @@ function Table<T>({
                       }}
                       dataTestIdPrefix={`${dataTestIdPrefix}_${
                         !isItemString(item)
-                          ? item.content.sortingKey
-                              .trim()
-                              .toLowerCase()
-                              .replace(/ /g, '_')
-                          : item
-                              .trim()
-                              .toLowerCase()
-                              .replace(/ /g, '_')
+                          ? item.content.sortingKey.trim().toLowerCase().replace(/ /g, '_')
+                          : item.trim().toLowerCase().replace(/ /g, '_')
                       }`}
                     >
                       {isItemString(item) ? (
@@ -317,8 +316,8 @@ function Table<T>({
                 {hasExpandableRows && (
                   <TableCell
                     component={'th'}
-                    sticky={fixedHeader}
-                    paddedSticky={fixedCTA}
+                    isSticky={hasFixedHeader}
+                    isPaddedSticky={hasFixedCTA}
                     width={actionCellWidth}
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
@@ -329,21 +328,21 @@ function Table<T>({
         )}
         <tbody>
           {data.map((row, index) => (
-            // @ts-ignore
+            /* @ts-ignore */
             <TableRowWrapper<T>
               key={row.id}
               {...{
                 row,
                 isRowSelected: selectedIds ? selectedIds.indexOf(row.id) !== -1 : false,
                 onSelectionAdd,
-                padded,
+                isPadded,
                 columns,
-                fixedHeader: fixedHeader,
+                hasFixedHeader: hasFixedHeader,
                 type,
                 columnCount,
                 columnsWithWidth,
-                onSelectionChangeExist: Boolean(onCheck),
-                expanded: Boolean(row.expanded),
+                hasOnSelectionChange: Boolean(onCheck),
+                isExpanded: Boolean(row.expanded),
                 actionWidth: actionWidth,
               }}
               dataTestIdPrefix={dataTestIdPrefix}

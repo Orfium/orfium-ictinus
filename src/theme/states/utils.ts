@@ -12,10 +12,11 @@ export const getShadeWithStep = ({
   step = 50,
   colorScheme,
 }: Props): typeof colorShades[number] => {
-  const calculation = colorScheme === 'light' ? shade + step > MAX_SHADE : shade - step > MIN_SHADE;
+  const isOutOfBoundsForColorScheme =
+    colorScheme === 'light' ? shade + step > MAX_SHADE : shade - step > MIN_SHADE;
   let calculatedShade = shade;
 
-  if (calculation) {
+  if (isOutOfBoundsForColorScheme) {
     calculatedShade -= step;
   } else {
     calculatedShade += step;

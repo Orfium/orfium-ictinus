@@ -6,16 +6,15 @@ import { Props as ModalContentProps } from '../../Modal/ModalContent/ModalConten
 
 type Props = {
   contentProps?: ModalContentProps;
-  closeOnEsc?: boolean;
 };
 
-const ModalShowcase: React.FC<Props> = ({ children, contentProps, closeOnEsc = true }) => {
+const ModalShowcase: React.FC<Props> = ({ children, contentProps }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <Button onClick={() => setOpen(!open)}>Open Modal</Button>
-      <Modal open={open} onClose={() => setOpen(false)} contentProps={contentProps} closeOnEsc={closeOnEsc}>
+      <Modal isOpen={open} onClose={() => setOpen(false)} contentProps={contentProps}>
         {contentProps ? null : children}
       </Modal>
       {/** empty div with height to test the body's overflow functionality when toggling the modal */}

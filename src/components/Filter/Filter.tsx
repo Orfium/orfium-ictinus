@@ -22,7 +22,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     label = '',
     buttonType = 'primary',
     filterType = 'preset',
-    disabled = false,
+    isDisabled = false,
     dataTestId,
     isSearchable = false,
     minCharactersToSearch = 0,
@@ -66,11 +66,11 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     }
 
     return items.filter(
-      item => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
+      (item) => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
     );
   }, [searchValue, items, onAsyncSearch]);
 
-  const shouldDisplayDefaultOption = searchValue === '' && !!items.length;
+  const isDefaultOptionVisible = searchValue === '' && !!items.length;
 
   const handleOpen = () => {
     setSearchValue('');
@@ -90,10 +90,10 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         ref={ref}
         dataTestId={dataTestId}
         handleOpen={handleOpen}
-        disabled={disabled}
+        isDisabled={isDisabled}
         onClear={onClear}
         selectedItemLabel={selectedItem?.label ?? defaultValue.label}
-        open={isOpen}
+        isOpen={isOpen}
         hasSelectedValue={hasSelectedValue}
         label={label as string}
         iconName={iconName}
@@ -119,7 +119,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
               isSearchable={isSearchable}
               selectedItem={selectedItem}
               onSelect={handleSelect}
-              shouldDisplayDefaultOption={shouldDisplayDefaultOption}
+              isDefaultOptionVisible={isDefaultOptionVisible}
             />
           </div>
         )}
@@ -127,5 +127,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     </ClickAwayListener>
   );
 });
+
 Filter.displayName = 'Filter';
+
 export default Filter;

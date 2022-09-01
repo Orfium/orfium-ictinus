@@ -5,14 +5,14 @@ export type ClickHandler =
   | ((setLoading?: (isLoading: boolean) => void, event?: ClickEvent) => void)
   | undefined;
 
-export const useLoading = (clickHandler: ClickHandler, defaultState = false) => {
-  const [loading, setLoading] = useState(defaultState);
+export const useLoading = (clickHandler: ClickHandler, isLoadingInitialState = false) => {
+  const [isLoading, setIsLoading] = useState(isLoadingInitialState);
 
   const updateLoadingState = useCallback(
-    (isLoading: boolean) => {
-      setLoading(isLoading);
+    (isLoadingProp: boolean) => {
+      setIsLoading(isLoadingProp);
     },
-    [setLoading]
+    [setIsLoading]
   );
 
   const handleAsyncOperation = useCallback(
@@ -24,5 +24,5 @@ export const useLoading = (clickHandler: ClickHandler, defaultState = false) => 
     [updateLoadingState, clickHandler]
   );
 
-  return { loading, handleAsyncOperation };
+  return { isLoading, handleAsyncOperation };
 };

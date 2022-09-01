@@ -220,18 +220,18 @@ Select disabled with label
   <Story name="Disabled/Locked Select">
     <Stack>
       <Select
-        disabled
+        isDisabled
         label={'Flavour'}
         options={options}
       />
       <Select
-        disabled
+        isDisabled
         label={'Flavour'}
         options={options}
         styleType={'outlined'}
       />
       <Select
-        disabled
+        isDisabled
         label={'Flavour'}
         options={options}
         styleType={'elevated'}
@@ -239,18 +239,18 @@ Select disabled with label
     </Stack>
     <Stack>
       <Select
-        locked
+        isLocked
         label={'Flavour'}
         options={options}
       />
       <Select
-        locked
+        isLocked
         label={'Flavour'}
         options={options}
         styleType={'outlined'}
       />
       <Select
-        locked
+        isLocked
         label={'Flavour'}
         options={options}
         styleType={'elevated'}
@@ -327,7 +327,7 @@ Simple select component where searched term is highlighted in options
   <Story name="Select with Highlight">
     <Stack>
       <Select
-        highlightSearch
+        hasHighlightSearch
         label={'Flavour'}
         options={options}
         handleSelectedOption={handleSelectedOption}
@@ -350,7 +350,7 @@ Simple select component with grouped data and searchable input
         defaultValue={defaultGroupValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'filled'}
-        highlightSearch
+        hasHighlightSearch
       />
     </Stack>
   </Story>

@@ -5,15 +5,15 @@ import { Row, TableType } from './Table';
 export type TableRowContextProps<T extends { [key: string]: unknown }> = {
   row: Row<T>;
   columnsWithWidth: number[];
-  padded: boolean;
-  onSelectionChangeExist: boolean;
+  isPadded: boolean;
+  hasOnSelectionChange: boolean;
   isRowSelected: boolean;
   columnCount: number;
   columns: string[];
-  fixedHeader: boolean;
+  hasFixedHeader: boolean;
   tChange: () => void;
   type: TableType;
-  bordered: boolean;
+  isBordered: boolean;
   actionWidth?: number;
 };
 
@@ -25,13 +25,13 @@ export const TableRowContext = React.createContext<
     cells: [],
   },
   columnsWithWidth: [],
-  padded: false,
-  onSelectionChangeExist: false,
+  isPadded: false,
+  hasOnSelectionChange: false,
   isRowSelected: false,
   columnCount: 0,
   columns: [],
-  fixedHeader: false,
+  hasFixedHeader: false,
   tChange: () => {},
   type: 'normal',
-  bordered: false,
+  isBordered: false,
 }) as React.Context<TableRowContextProps<{ [key: string]: unknown }>>;

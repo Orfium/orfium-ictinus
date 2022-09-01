@@ -13,13 +13,13 @@ export const focusBorderWidth = 2;
 export const transparentFocusBorderWidth = 0;
 
 export const getBackgroundColor = ({
-  open,
+  isOpen,
   theme,
   hasSelectedValue,
   calculatedColor,
   styleType,
 }: BackgroundColorProps) => {
-  if (open) {
+  if (isOpen) {
     return theme.utils.getColor(calculatedColor.color, 500);
   } else if (hasSelectedValue) {
     return theme.utils.getColor(calculatedColor.color, HAS_SELECTED_VALUE_COLOR_SHADE);
@@ -33,14 +33,14 @@ export const getBackgroundColor = ({
 };
 
 export const getTextColor = ({
-  open,
+  isOpen,
   theme,
   hasSelectedValue,
   calculatedColor,
 }: BaseColorProps) => {
-  if (hasSelectedValue && !open) {
+  if (hasSelectedValue && !isOpen) {
     return theme.utils.getAAColorFromSwatches(calculatedColor.color, 50);
-  } else if (open) {
+  } else if (isOpen) {
     return theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade);
   }
 
@@ -52,7 +52,7 @@ export const getBorder = ({
   theme,
   hasSelectedValue,
   calculatedColor,
-  open,
+  isOpen,
   isDivider,
   state = 'normal',
 }: BorderProps) => {
@@ -62,15 +62,15 @@ export const getBorder = ({
     return (shade + calculatedShade) as typeof colorShades[number];
   };
 
-  if (state === 'normal' && styleType === 'transparent' && !open && !hasSelectedValue) {
+  if (state === 'normal' && styleType === 'transparent' && !isOpen && !hasSelectedValue) {
     return `transparent`;
   }
 
-  if (isDivider && open) {
+  if (isDivider && isOpen) {
     return `transparent`;
   }
 
-  if (hasSelectedValue && open) {
+  if (hasSelectedValue && isOpen) {
     return `transparent`;
   }
 
@@ -80,7 +80,7 @@ export const getBorder = ({
     return `${theme.utils.getColor(calculatedColor.color, shadeCalculated)}`;
   }
 
-  if (styleType === 'filled' && !open && !hasSelectedValue) {
+  if (styleType === 'filled' && !isOpen && !hasSelectedValue) {
     return `${theme.utils.getColor('lightGrey', 200)}`;
   }
 

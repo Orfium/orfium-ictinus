@@ -1,10 +1,16 @@
 import * as React from 'react';
 
-const useToggle = (initialState = false): [boolean, () => void] => {
-  const [state, setState] = React.useState(initialState);
-  const toggle = React.useCallback(() => setState(state => !state), []);
+const useToggle = (isToggledInitialState = false): [boolean, () => void] => {
+  const [isToggled, setIsToggled] = React.useState(isToggledInitialState);
+  const toggle = React.useCallback(
+    () =>
+      setIsToggled((isToggledOldState) => {
+        return !isToggledOldState;
+      }),
+    [setIsToggled]
+  );
 
-  return [state, toggle];
+  return [isToggled, toggle];
 };
 
 export default useToggle;

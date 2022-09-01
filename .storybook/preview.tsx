@@ -78,13 +78,13 @@ const ThemeSwitcher = () => {
       <button
         onClick={themeSwitchState.toggle}
         css={{
-          backgroundColor: themeSwitchState.dark ? '#fff' : 'transparent',
+          backgroundColor: themeSwitchState.isDark ? '#fff' : 'transparent',
           color: '#000',
           outline: 'none',
           borderRadius: 4,
         }}
       >
-        turn {themeSwitchState.dark ? 'light' : 'dark'} on
+        turn {themeSwitchState.isDark ? 'light' : 'dark'} on
       </button>
     </div>
   );
@@ -95,7 +95,7 @@ const Wrapper: React.FC = ({ children }) => {
   return (
     <div
       style={{
-        backgroundColor: themeSwitchState.dark ? '#0E0E17' : '#F2F2F2',
+        backgroundColor: themeSwitchState.isDark ? '#0E0E17' : '#F2F2F2',
         width: '100%',
         height: '100vh',
         position: 'relative',

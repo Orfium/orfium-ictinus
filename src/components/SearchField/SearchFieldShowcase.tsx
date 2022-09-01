@@ -5,7 +5,7 @@ import { Props as TextFieldProps } from '../TextField/TextField';
 import SearchField, { Props } from './SearchField';
 
 const SearchFieldShowcase = ({
-  disabled,
+  isDisabled,
   placeholder,
   initialValue,
 }: Partial<Props & TextFieldProps> & { initialValue?: string }) => {
@@ -14,19 +14,19 @@ const SearchFieldShowcase = ({
   return (
     <Stack>
       <SearchField
-        disabled={disabled}
+        isDisabled={isDisabled}
         placeholder={placeholder}
         size={'md'}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={(e: any) => setValue(e.target.value)}
         onClear={() => setValue('')}
       />
       <SearchField
-        disabled={disabled}
+        isDisabled={isDisabled}
         placeholder={placeholder}
         size={'sm'}
         value={value}
-        onChange={e => setValue(e.target.value)}
+        onChange={(e: any) => setValue(e.target.value)}
         onClear={() => setValue('')}
       />
     </Stack>

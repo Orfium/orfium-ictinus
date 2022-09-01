@@ -13,13 +13,13 @@ const ThemeSwitcher = () => {
       <button
         onClick={themeSwitchState.toggle}
         css={{
-          backgroundColor: themeSwitchState.dark ? '#fff' : 'transparent',
+          backgroundColor: themeSwitchState.isDark ? '#fff' : 'transparent',
           color: '#000',
           outline: 'none',
           borderRadius: 4,
         }}
       >
-        turn {themeSwitchState.dark ? 'light' : 'dark'} on
+        turn {themeSwitchState.isDark ? 'light' : 'dark'} on
       </button>
     </div>
   );

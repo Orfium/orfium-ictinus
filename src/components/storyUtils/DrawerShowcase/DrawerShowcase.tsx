@@ -14,7 +14,7 @@ const DisplayLocation = () => {
 };
 
 interface Props {
-  renderHeader?: React.FC;
+  renderHeader?: () => React.FC;
 }
 const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
   const theme = useTheme();
@@ -22,12 +22,12 @@ const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
 
   return (
     <Router>
-      <Button type="primary" size="sm" onClick={() => setExpanded(prev => !prev)}>
+      <Button type="primary" size="sm" onClick={() => setExpanded((prev) => !prev)}>
         {expanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>
         <Drawer
-          expanded={expanded}
+          isExpanded={expanded}
           menuItems={menuItems}
           setExpanded={setExpanded}
           renderHeader={renderHeader}
@@ -45,7 +45,7 @@ const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
             <span css={['font-weight: bold; margin: 5px']}>
               Click an option to navigate directly to Route
             </span>
-            {menuItems.map(menuItem => {
+            {menuItems.map((menuItem) => {
               const hasSubMenus = menuItem.options.length > 0;
               if (!hasSubMenus) {
                 return (
@@ -59,7 +59,7 @@ const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
                   </NavLink>
                 );
               } else
-                return menuItem.options.map(subMenuItem => (
+                return menuItem.options.map((subMenuItem) => (
                   <NavLink
                     css={['text-decoration: none; color: inherit; margin: 5px']}
                     key={subMenuItem.url}

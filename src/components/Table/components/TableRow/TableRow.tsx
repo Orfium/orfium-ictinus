@@ -3,12 +3,12 @@ import * as React from 'react';
 import useTheme from '../../../../hooks/useTheme';
 
 type Props = {
-  selected?: boolean;
-  nested?: boolean;
+  isSelected?: boolean;
+  isNested?: boolean;
   onClick?: () => void;
 };
 
-const TableRow: React.FC<Props> = ({ nested, selected, children, onClick, ...rest }) => {
+const TableRow: React.FC<Props> = ({ isNested, isSelected, children, onClick, ...rest }) => {
   const theme = useTheme();
 
   return (
@@ -18,7 +18,7 @@ const TableRow: React.FC<Props> = ({ nested, selected, children, onClick, ...res
       }}
       css={[
         {
-          backgroundColor: selected ? theme.utils.getColor('blue', 50) : undefined,
+          backgroundColor: isSelected ? theme.utils.getColor('blue', 50) : undefined,
           paddingTop: theme.spacing.xsm,
           paddingBottom: theme.spacing.xsm,
           cursor: onClick && 'pointer',
@@ -27,8 +27,8 @@ const TableRow: React.FC<Props> = ({ nested, selected, children, onClick, ...res
           },
 
           '> td': {
-            paddingTop: nested ? 0 : undefined,
-            paddingBottom: nested ? 0 : undefined,
+            paddingTop: isNested ? 0 : undefined,
+            paddingBottom: isNested ? 0 : undefined,
           },
         },
       ]}

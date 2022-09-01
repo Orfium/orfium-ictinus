@@ -16,6 +16,9 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   -webkit-justify-content: center;
@@ -24,102 +27,411 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 250px;
+  height: 15.625rem;
 }
 
 .emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 12.5rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.emotion-3 {
   background: transparent;
 }
 
-.emotion-2 .tippy-content {
-  color: #fff;
-  background-color: #0e0e17;
+.emotion-3 .tippy-content {
+  color: white;
+  background-color: #0f0f17;
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
-  text-align: justify;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
-.emotion-2 .tippy-arrow {
-  color: #0e0e17;
+.emotion-3 .tippy-arrow {
+  color: #0f0f17;
+}
+
+.emotion-4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #175BF5;
+  background-color: transparent;
+  padding: 0 1rem;
+  height: 2.875rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-4:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-4:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-4:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-4:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-4:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-20 {
+  background: transparent;
+}
+
+.emotion-20 .tippy-content {
+  color: white;
+  background-color: transparent;
+  max-width: 16rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.emotion-20 .tippy-arrow {
+  color: transparent;
+}
+
+.emotion-24 {
+  box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
+  background: white;
+  border-radius: 0.25rem;
+}
+
+.emotion-25 {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  font-weight: 500;
+  height: 200px;
+}
+
+.emotion-26 {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.emotion-27 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: #e8fcf7;
+  color: black;
+  border: 0.0625rem solid #1ad1a3;
+  cursor: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-27:hover:not(:disabled) {
+  background: #d1faf0;
+}
+
+.emotion-27:focus-visible:not(:disabled) {
+  outline: none;
+}
+
+.emotion-27>:not(:last-child) {
+  margin-right: 0.25rem;
 }
 
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
-      className="emotion-2"
-      data-testid="top"
-      placement="top"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
     >
-      <button>
-        Top
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
       </button>
     </div>
-    <div>
-      By hover here you can see useful info
-    </div>
     <div
-      className="emotion-2"
-      data-testid="bottom"
-      placement="bottom"
+      className="emotion-1"
     >
-      <button>
-        Bottom
-      </button>
-    </div>
-    <div>
-      By hover here you can see useful info
-    </div>
-    <div
-      className="emotion-2"
-      data-testid="right"
-      placement="right"
-    >
-      <button>
-        Right
-      </button>
-    </div>
-    <div>
-      By hover here you can see useful info
-    </div>
-    <div
-      className="emotion-2"
-      data-testid="left"
-      placement="left"
-    >
-      <button>
-        Left
-      </button>
-    </div>
-    <div>
-      By hover here you can see useful info
+      <h2>
+        Tooltip with text-only content
+      </h2>
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="left"
+        >
+          <button
+            className="emotion-4"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+              >
+                Left
+              </span>
+            </span>
+          </button>
+        </div>
+        <div>
+          By hovering here you can see useful info
+        </div>
+        <div
+          className="emotion-3"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="right"
+        >
+          <button
+            className="emotion-4"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+              >
+                Right
+              </span>
+            </span>
+          </button>
+        </div>
+        <div>
+          By hovering here you can see useful info
+        </div>
+      </div>
+      <div
+        className="emotion-2"
+      >
+        <div
+          className="emotion-3"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="top"
+        >
+          <button
+            className="emotion-4"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+              >
+                Top
+              </span>
+            </span>
+          </button>
+        </div>
+        <div>
+          By hovering here you can see useful info
+        </div>
+        <div
+          className="emotion-3"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="bottom"
+        >
+          <button
+            className="emotion-4"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-5"
+            >
+              <span
+                className="emotion-6"
+              >
+                Bottom
+              </span>
+            </span>
+          </button>
+        </div>
+        <div>
+          By hovering here you can see useful info
+        </div>
+      </div>
+      <h2>
+        Tooltip with component content
+      </h2>
+      <div
+        className="emotion-20"
+        interactive={false}
+        interactiveDebounce={100}
+        placement="right"
+      >
+        <button
+          className="emotion-4"
+          data-testid="button"
+          disabled={false}
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className="emotion-5"
+          >
+            <span
+              className="emotion-6"
+            >
+              Right
+            </span>
+          </span>
+        </button>
+      </div>
+      <div>
+        <div
+          className="emotion-24"
+        >
+          <div
+            className="emotion-25"
+          >
+            <div
+              className="emotion-26"
+            >
+              By hover here you can see:
+            </div>
+            <div
+              aria-readonly="true"
+              className="emotion-27"
+              data-testid="chip"
+            >
+              <div>
+                <a
+                  href="/"
+                >
+                  Go to homepage
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -152,18 +464,21 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
 }
 
 .emotion-2 .tippy-content {
-  color: #fff;
-  background-color: #0e0e17;
+  color: white;
+  background-color: #0f0f17;
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 1rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
-  text-align: justify;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-2 .tippy-arrow {
-  color: #0e0e17;
+  color: #0f0f17;
 }
 
 .emotion-3 {
@@ -171,18 +486,21 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
 }
 
 .emotion-3 .tippy-content {
-  color: #fff;
-  background-color: #0e0e17;
+  color: white;
+  background-color: #0f0f17;
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 0.875rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
-  text-align: justify;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-3 .tippy-arrow {
-  color: #0e0e17;
+  color: #0f0f17;
 }
 
 .emotion-4 {
@@ -190,105 +508,125 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
 }
 
 .emotion-4 .tippy-content {
-  color: #fff;
-  background-color: #0e0e17;
+  color: white;
+  background-color: #0f0f17;
   max-width: 16rem;
   padding: 0.5rem;
   font-size: 0.75rem;
+  font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
-  text-align: justify;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 .emotion-4 .tippy-arrow {
-  color: #0e0e17;
+  color: #0f0f17;
 }
 
 <div
   style={
     Object {
-      "margin": 5,
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
     }
   }
 >
   <div
     style={
       Object {
-        "display": "flex",
-        "justifyContent": "flex-end",
+        "margin": 15,
       }
     }
   >
-    <button
-      className="emotion-0"
-      onClick={[Function]}
-    >
-      turn 
-      dark
-       on
-    </button>
-  </div>
-  <div
-    className="emotion-1"
-  >
     <div
       style={
         Object {
-          "margin": 5,
+          "display": "flex",
+          "justifyContent": "flex-end",
         }
       }
     >
-      <div
-        className="emotion-2"
-        data-testid="right1"
-        placement="right"
+      <button
+        className="emotion-0"
+        onClick={[Function]}
       >
-        <button>
-          Large
-        </button>
-      </div>
-      <div>
-        By hover here you can see useful info
-      </div>
+        turn 
+        dark
+         on
+      </button>
     </div>
     <div
-      style={
-        Object {
-          "margin": 5,
-        }
-      }
+      className="emotion-1"
     >
       <div
-        className="emotion-3"
-        data-testid="right2"
-        placement="right"
-      >
-        <button>
-          Medium
-        </button>
-      </div>
-      <div>
-        By hover here you can see useful info
-      </div>
-    </div>
-    <div
-      style={
-        Object {
-          "margin": 5,
+        style={
+          Object {
+            "margin": 5,
+          }
         }
-      }
-    >
-      <div
-        className="emotion-4"
-        data-testid="right3"
-        placement="right"
       >
-        <button>
-          Small
-        </button>
+        <div
+          className="emotion-2"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="right"
+        >
+          <button>
+            Large
+          </button>
+        </div>
+        <div>
+          By hover here you can see useful info
+        </div>
       </div>
-      <div>
-        By hover here you can see useful info
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="right"
+        >
+          <button>
+            Medium
+          </button>
+        </div>
+        <div>
+          By hover here you can see useful info
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-4"
+          interactive={false}
+          interactiveDebounce={100}
+          placement="right"
+        >
+          <button>
+            Small
+          </button>
+        </div>
+        <div>
+          By hover here you can see useful info
+        </div>
       </div>
     </div>
   </div>

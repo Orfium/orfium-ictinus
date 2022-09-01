@@ -35,7 +35,8 @@ type Props = {
   dateFormatOverride?: DateFormatType;
   /** Defines whether the component is open */
   isOpen: boolean;
-};
+} & InputProps &
+  TestProps;
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
@@ -48,7 +49,7 @@ const getLabels = (isRangePicker: boolean, formattedTo: string) => ({
   to: isRangePicker ? `- ${formattedTo}` : '',
 });
 
-const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
+const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
   (
     {
       handleFocus,
@@ -80,7 +81,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
           <FilterBase
             isDatePicker
             dataTestId={generateTestDataId('filter', dataTestId)}
-            disabled={false}
+            isDisabled={false}
             buttonType={buttonType}
             styleType={styleType}
             handleOpen={handleFocus}
@@ -89,7 +90,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
             selectedItemLabel={
               selectedDay.from && `${labels.selectDate} : ${formattedFrom} ${labels.to}`
             }
-            open={isOpen}
+            isOpen={isOpen}
             hasSelectedValue={Boolean(selectedDay.from && `${formattedFrom} - ${formattedTo}`)}
             label={!selectedDay.from ? labels.selectDate : ''}
             iconName={selectedDay.from ? 'calendarFilled' : 'calendarEmpty'}

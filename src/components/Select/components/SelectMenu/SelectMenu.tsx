@@ -18,7 +18,7 @@ export type Props = {
   searchTerm?: string;
 };
 
-const SelectMenu: React.FC<Props> = props => {
+const SelectMenu: React.FC<Props> = (props) => {
   const {
     size = 'sm',
     status = 'normal',
@@ -49,13 +49,13 @@ const SelectMenu: React.FC<Props> = props => {
         selectedItem={selectedOption}
       />
     ) : (
-      <div css={optionStyle({ selected: false, noResultsExist: true })}>No options</div>
+      <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>No options</div>
     );
 
   return (
     <div css={menuStyle(props)}>
       {isLoading ? (
-        <div css={optionStyle({ selected: false, noResultsExist: true })}>Loading...</div>
+        <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
       ) : (
         renderOptions()
       )}

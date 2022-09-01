@@ -12,7 +12,10 @@ export type EventProps = {
 
 //@TODO fix props to not overwrite button props from base
 export type ButtonProps = Partial<
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'size' | 'css' | 'onBlur' | 'onClick' | 'type'>
+  Omit<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    'size' | 'css' | 'onBlur' | 'onClick' | 'type' | 'disabled'
+  >
 >;
 
 //@TODO fix props to not overwrite div props from base

@@ -10,11 +10,11 @@ type Props = {
   textAlign?: 'left' | 'right';
   component?: 'td' | 'th';
   width?: number | string;
-  sticky?: boolean;
-  paddedSticky?: boolean;
+  isSticky?: boolean;
+  isPaddedSticky?: boolean;
   colSpan?: number;
   type?: 'financial' | 'normal';
-  padded?: boolean;
+  isPadded?: boolean;
   dataTestIdPrefix?: string;
   rowIndex?: number;
   index?: number | string;
@@ -28,14 +28,14 @@ const TableCell: React.FC<Props> = React.memo(
     textAlign = 'left',
     component = 'td',
     width,
-    sticky = false,
-    paddedSticky = false,
+    isSticky = false,
+    isPaddedSticky = false,
     colSpan,
     children,
     isSortable = false,
     isActive = false,
     type = 'normal',
-    padded = false,
+    isPadded = false,
     dataTestIdPrefix,
     rowIndex,
     onClick,
@@ -52,7 +52,7 @@ const TableCell: React.FC<Props> = React.memo(
           {
             position: 'relative',
             textAlign,
-            padding: `${theme.spacing.xsm} ${padded ? theme.spacing.sm : 0}`,
+            padding: `${theme.spacing.xsm} ${isPadded ? theme.spacing.sm : 0}`,
             width,
           },
           component === 'th' && {
@@ -62,8 +62,8 @@ const TableCell: React.FC<Props> = React.memo(
             fontSize: theme.typography.fontSizes['14'],
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
-          sticky && {
-            top: paddedSticky ? rem(64) : 0,
+          isSticky && {
+            top: isPaddedSticky ? rem(64) : 0,
             left: 0,
             zIndex: 2,
             position: 'sticky',

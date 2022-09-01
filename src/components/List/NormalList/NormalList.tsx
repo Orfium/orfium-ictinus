@@ -71,16 +71,16 @@ const NormalList = React.forwardRef<HTMLDivElement, Props>(
                   size={rowSize}
                   index={index}
                   ref={ref}
-                  highlighted={Boolean(defaultOption && index === 0)}
+                  isHighlighted={Boolean(defaultOption && index === 0)}
                   searchTerm={searchTerm}
-                  disabled={(item as SelectOption)?.isDisabled}
+                  isDisabled={(item as SelectOption)?.isDisabled}
                   dataTestId={
                     defaultOption && index === 0
                       ? dataTestId ?? 'ictinus_list' + '_default_option'
                       : dataTestId
                   }
                   handleOptionClick={handleOptionClick}
-                  selected={
+                  isSelected={
                     defaultOption && index === 0
                       ? isUndefined(selectedItem) ||
                         isSelected({ item: defaultOption, selectedItem })

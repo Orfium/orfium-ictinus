@@ -89,17 +89,17 @@ Regular TextArea disabled with label
   <Story name="TextArea disabled with label">
     <Stack>
       <TextArea
-        disabled
+        isDisabled
         placeholder={'Label'}
         styleType={'filled'}
       />
       <TextArea
-        disabled
+        isDisabled
         placeholder={'Label'}
         styleType={'outlined'}
       />
       <TextArea
-        disabled
+        isDisabled
         placeholder={'Label'}
         styleType={'elevated'}
       />
@@ -167,7 +167,7 @@ Regular Text Area with KNOBS
     <Stack>
       <TextArea
         placeholder={text('Label', 'Label')}
-        disabled={boolean('Disabled', false)}
+        isDisabled={boolean('isDisabled', false)}
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
         hintMsg={text('custom hint message', 'Hint in Text Area')}
         status={select('status', ['hint', 'error', 'normal'], 'normal')}

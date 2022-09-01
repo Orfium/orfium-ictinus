@@ -65,7 +65,7 @@ Regular Table with simple rows
     <Table
       columns={['Title', 'Name', 'Surname', 'Age', 'Sauron Age']}
       dataTestIdPrefix="ictinus"
-      padded
+      isPadded
       topLeftText={'topLeftText'}
       topRightArea={() => (
         <div>
@@ -201,7 +201,7 @@ Regular Table with sorting and column tooltips
       dataTestIdPrefix="ictinus"
       onSort={(column, order) => console.log(column, order)}
       initialSort={{ column: 'title', order: 'asc' }}
-      padded
+      isPadded
       data={[
         {
           id: 1,
@@ -289,9 +289,9 @@ Table with expandable rows and nested header
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
       type={select('type', ['normal', 'nested-header'], 'normal')}
-      padded
-      fixedHeader
-      fixedCTA
+      isPadded
+      hasFixedHeader
+      hasFixedCTA
       onCheck={(g) => console.log('on table change: ', g)}
       topLeftText={'topLeftText'}
       topRightArea={() => (
@@ -329,7 +329,7 @@ Financial Table that has lines at the end as it requires a financial Orfium tabl
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
       onCheck={console.log}
-      padded
+      isPadded
       topLeftText={'topLeftText'}
       topRightArea={() => (
         <div>
@@ -386,8 +386,8 @@ Fixed Header Table
     <Table
       columns={['Title', 'Name', 'Surname', 'Age']}
       onCheck={console.log}
-      padded
-      fixedHeader
+      isPadded
+      hasFixedHeader
       topLeftText={'topLeftText'}
       topRightArea={() => (
         <div>
@@ -523,10 +523,10 @@ Table with expandable rows with sort, fixed Header and cta's
           }
         }]}
       type={'normal'}
-      padded
-      fixedHeader
+      isPadded
+      hasFixedHeader
       onSort={console.log}
-      fixedCTA
+      hasFixedCTA
       sortDir={'desc'}
       onCheck={(g) => console.log('on table change: ', g)}
       topLeftText={'topLeftText'}
