@@ -4,7 +4,7 @@ import Slider from '../../Slider';
 
 interface Props {
   isSelector?: boolean;
-  disabled: boolean;
+  isDisabled: boolean;
   hasIncrements?: boolean;
   onChange?: (values: number[]) => void;
 }

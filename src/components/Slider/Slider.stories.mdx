@@ -27,7 +27,7 @@ import { Slider } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Range Slider (DontTest)" parameters={{ decorators: [withKnobs] }}>
-      <SliderShowcase isSelector={false} disabled={boolean('disabled', false)}/>
+      <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)}/>
   </Story>
 </Preview>
 
@@ -35,7 +35,7 @@ import { Slider } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Range Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
-        <SliderShowcase isSelector={false} disabled={boolean('disabled', false)} hasIncrements={true} />
+        <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)} hasIncrements={true} />
   </Story>
 </Preview>
 
@@ -43,7 +43,7 @@ import { Slider } from '@orfium/ictinus';
 
 <Preview>
   <Story name="Selector Slider (DontTest)" parameters={{ decorators: [withKnobs] }}>
-        <SliderShowcase isSelector={true} disabled={boolean('disabled', false)}/>
+        <SliderShowcase isSelector={true} isDisabled={boolean('isDisabled', false)}/>
   </Story>
 </Preview>
 
@@ -51,7 +51,7 @@ import { Slider } from '@orfium/ictinus';
 
 <Preview>
     <Story name="Selector Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
-        <SliderShowcase disabled={boolean('disabled', false)} isSelector={true} hasIncrements={true} />
+        <SliderShowcase isDisabled={boolean('isDisabled', false)} isSelector={true} hasIncrements={true} />
     </Story>
 </Preview>
 
