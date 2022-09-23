@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useMemo, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Range } from 'react-range';
 import { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 
@@ -84,7 +84,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
           values={values}
           index={index}
           isSelector={isSelector}
-          disabled={isDisabled}
+          isDisabled={isDisabled}
         />
       )
     );
@@ -103,7 +103,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
         isSelector={isSelector}
         restProps={props}
         values={values}
-        disabled={isDisabled}
+        isDisabled={isDisabled}
       >
         {children}
       </SliderTrack>
@@ -124,7 +124,7 @@ const Slider: React.FC<CommonProps & TestProps> = ({
         key={`thumb_${index}`}
         dataTestId={`${dataTestPrefixId ?? ''}thumb_${index}`}
         restProps={props}
-        disabled={isDisabled}
+        isDisabled={isDisabled}
         value={value}
         initialValue={initialValueRef.current?.[index]}
       />
