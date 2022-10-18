@@ -47,8 +47,18 @@ const ModalContent: React.FC<Props> = ({
       data-testid={generateTestDataId('modal-content', dataTestId)}
     >
       {Boolean(label) && <p css={labelContainer}>{label}</p>}
-      <h5 css={headingContainer}>{heading}</h5>
-      <p css={messageContainer}>{message}</p>
+      <h5
+        css={headingContainer}
+        data-testid={generateTestDataId('modal-content-header', dataTestId)}
+      >
+        {heading}
+      </h5>
+      <p
+        css={messageContainer}
+        data-testid={generateTestDataId('modal-content-message', dataTestId)}
+      >
+        {message}
+      </p>
       <div css={actionsContainer}>
         {Boolean(secondaryCTA && secondaryCTALabel) && (
           <Button
