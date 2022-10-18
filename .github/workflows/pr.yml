@@ -29,6 +29,7 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
   deploy-review-app:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Deploy Review App
     runs-on: ubuntu-latest
     env:
