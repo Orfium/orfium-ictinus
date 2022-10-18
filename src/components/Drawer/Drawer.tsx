@@ -1,4 +1,3 @@
-
 import useBreakpoints from 'hooks/useBreakpoints';
 import omit from 'lodash/omit';
 import React from 'react';
@@ -18,7 +17,7 @@ export type Props = {
   renderHeader?: () => React.ReactNode;
 };
 
-const Drawer: React.FC<Props> = props => {
+const Drawer: React.FC<Props> = (props) => {
   const breakpoints = useBreakpoints();
   const isSmallDesktop = breakpoints.des1200 && !breakpoints.des1440;
 
@@ -27,6 +26,7 @@ const Drawer: React.FC<Props> = props => {
       css={drawerContainerStyle(props.expanded, breakpoints.des1200, !breakpoints.des1440)}
       onMouseEnter={() => isSmallDesktop && props.setExpanded(true)}
       onMouseLeave={() => isSmallDesktop && props.setExpanded(false)}
+      data-testid={'sidebar'}
     >
       {props.renderHeader?.()}
       <Navigation {...omit(props, 'renderHeader')} />
