@@ -58,7 +58,8 @@ export type DateFormatType =
   | 'dddd, MMMM D, YYYY'
   | 'M/D/YYYY'
   | 'MMM D, YYYY'
-  | 'ddd, MMM D, YYYY';
+  | 'ddd, MMM D, YYYY'
+  | 'DD MMM YYYY';
 
 export const extraOptions: ExtraOption[] = [
   {
