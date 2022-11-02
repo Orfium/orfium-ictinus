@@ -65,7 +65,12 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & 
               }}
               iconPosition={'right'}
             >
-              <Icon name={'close'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
+              <Icon
+                name={'close'}
+                size={20}
+                color={theme.utils.getColor('lightGrey', 650)}
+                dataTestId={'search-clear'}
+              />
             </IconWrapper>
           )}
         </TextInputBase>
