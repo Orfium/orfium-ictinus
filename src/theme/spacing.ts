@@ -1,21 +1,14 @@
-import { rem } from 'polished';
-
 import spacingFigma from './constants/spacing';
+import { getFigmaTokensValue } from './utils';
 
 export type SpacingKey = keyof typeof spacingFigma;
 
-const getSpace = (val: SpacingKey): string => rem(Number(spacingFigma[val].value));
-
-export const spaces = {
-  get: getSpace,
-} as const;
-
-const spacing: Spacing = {
-  get: getSpace,
+export type Spacing = {
+  get: (val: SpacingKey) => string;
 };
 
-export type Spacing = {
-  get: typeof spaces.get;
+const spacing: Spacing = {
+  get: getFigmaTokensValue<SpacingKey>(spacingFigma),
 };
 
 export default spacing;
