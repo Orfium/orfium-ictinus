@@ -58,20 +58,26 @@ const SearchField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
           />
         </div>
 
-        {isClearVisible && !isDisabled && (
-          <IconWrapper
-            onClick={() => {
-              onClear();
-            }}
-            iconPosition={'right'}
-          >
-            <Icon name={'close'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
-          </IconWrapper>
-        )}
-      </TextInputBase>
-    </React.Fragment>
-  );
-});
+          {isClearVisible && !isDisabled && (
+            <IconWrapper
+              onClick={() => {
+                onClear();
+              }}
+              iconPosition={'right'}
+            >
+              <Icon
+                name={'close'}
+                size={20}
+                color={theme.utils.getColor('lightGrey', 650)}
+                dataTestId={'search-clear'}
+              />
+            </IconWrapper>
+          )}
+        </TextInputBase>
+      </React.Fragment>
+    );
+  }
+);
 
 SearchField.displayName = 'SearchField';
 
