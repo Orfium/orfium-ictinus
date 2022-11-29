@@ -29,11 +29,11 @@ export const tooltipStyle =
         color: ${theme.utils.getAAColorFromSwatches(color, shade)};
         background-color: ${backgroundColor};
         max-width: ${rem(256)};
-        padding: ${theme.spacing.sm};
+        padding: ${theme.spacing.get('4')};
         font-size: ${defineFontSizeBasedOnTooltipSize(size)};
         font-weight: ${theme.typography.weights.regular};
         line-height: 110%;
-        border-radius: ${theme.spacing.sm};
+        border-radius: ${theme.spacing.get('4')};
         text-align: start;
         white-space: pre-wrap;
         word-break: break-word;

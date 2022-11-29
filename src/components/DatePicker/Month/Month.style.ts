@@ -12,7 +12,7 @@ export const weekDaysWrapperStyle = () => (theme: Theme): SerializedStyles => cs
 
 export const weekDayStyle = () => (theme: Theme): SerializedStyles => css`
   color: ${theme.utils.getColor('lightGrey', 650)};
-  padding: ${theme.spacing.md} 0;
+  padding: ${theme.spacing.get('6')} 0;
   width: ${rem(39)};
   font-size: ${theme.typography.fontSizes['14']};
   text-align: center;
@@ -21,5 +21,5 @@ export const weekDayStyle = () => (theme: Theme): SerializedStyles => css`
 
 export const datesWrapperStyle = () => (theme: Theme): SerializedStyles => css`
   border-collapse: separate;
-  border-spacing: 0 ${theme.spacing.sm};
+  border-spacing: 0 ${theme.spacing.get('4')};
 `;

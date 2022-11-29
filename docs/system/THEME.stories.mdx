@@ -13,14 +13,14 @@ Ictinus has an internal system for storing and using parameters such as `spacing
 
 The theme configuration is the core of the whole app as we said. This consist of `params` but also `utils` vital for the theme to function. The parameters that we store are shown below.
 
-| Property   | Type                                                                                                                  |
-| ---------- | --------------------------------------------------------------------------------------------------------------------- |
-| palette    | [Palette](/?path=/story/system-theme--page#theme-palette)                                                             |
-| typography | [Typography](/?path=/story/guide-typography--page)                                                                    |
-| spacing    | [Spacing](/?path=/story/system-theme--page#theme-spacing)                                                             |
-| elevation  | [Elevation](/?path=/docs/system-theme--page#theme-elevation)                                                          |
-| colorScheme     | string ('light' or 'dark')                                                                                                                |
-| utils      | [Utility Functions](/story/system-utils--page)                                                                        |
+| Property    | Type                                                         |
+| ----------- | ------------------------------------------------------------ |
+| palette     | [Palette](/?path=/story/system-theme--page#theme-palette)    |
+| typography  | [Typography](/?path=/story/guide-typography--page)           |
+| spacing     | [Spacing](/?path=/story/system-theme--page#theme-spacing)    |
+| elevation   | [Elevation](/?path=/docs/system-theme--page#theme-elevation) |
+| colorScheme | string ('light' or 'dark')                                   |
+| utils       | [Utility Functions](/story/system-utils--page)               |
 
 <br />
 <br />
@@ -82,6 +82,6 @@ These metrics are being translated from **_px_** to **_rem_** in order to be fle
 ```
 const theme = useTheme();
 ...
-css={{ padding: theme.spacing.sm }}
+css={{ padding: theme.spacing.get('4') }}
 
 ```

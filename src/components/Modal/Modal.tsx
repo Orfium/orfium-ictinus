@@ -50,7 +50,7 @@ const Modal: React.FC<Props> = ({
     <div css={backgroundContainer} data-testid={generateTestDataId('modal-container', dataTestId)}>
       <ClickAwayListener onClick={onClose}>
         <div css={cardSizing}>
-          <Card elevated={'02'} radius={'xsm'}>
+          <Card elevated={'02'} radius={'3'}>
             <div css={closeContainer}>
               <IconButton
                 name={'close'}

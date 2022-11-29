@@ -25,9 +25,9 @@ export const notificationsContainer = (currentPosition: string, parent: HTMLElem
   display: flex;
   flex-direction: column;
   z-index: 2500;
-  margin: ${theme.spacing.sm} ${theme.spacing.md} ${theme.spacing.md};
+  margin: ${theme.spacing.get('4')} ${theme.spacing.get('6')} ${theme.spacing.get('6')};
   > div {
-    margin: ${theme.spacing.sm} 0;
+    margin: ${theme.spacing.get('4')} 0;
   }
 
   div[notification-type='toast'] {

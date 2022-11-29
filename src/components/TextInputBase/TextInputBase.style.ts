@@ -85,7 +85,7 @@ export const wrapperStyle =
           ? theme.utils.getColor(borderConfig.color.error.name, borderConfig.color.error.shade)
           : theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)
       }`,
-      borderRadius: theme.spacing.xsm,
+      borderRadius: theme.spacing.get('3'),
       userSelect: 'none',
       opacity: isDisabled ? getDisabled().opacity : 1,
       cursor: isDisabled || isLocked ? getDisabled().cursor : 'auto',
@@ -111,7 +111,7 @@ export const textFieldStyle =
       alignItems: 'center',
       verticalAlign: 'top',
       width: 'fill-available',
-      padding: !isLean ? `0 ${theme.spacing.md}` : '',
+      padding: !isLean ? `0 ${theme.spacing.get('6')}` : '',
 
       '> div': {
         position: 'relative',

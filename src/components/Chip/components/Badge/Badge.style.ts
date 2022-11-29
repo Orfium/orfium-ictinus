@@ -8,8 +8,8 @@ export const badgeStyle = ({ fill = 'greyScale', isSelected }: BadgeProps) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flex};
-  width: ${theme.spacing.md};
-  height: ${theme.spacing.md};
+  width: ${theme.spacing.get('6')};
+  height: ${theme.spacing.get('6')};
   border-radius: 100%;
   background: ${isSelected
     ? theme.utils.getColor(fill, 550)

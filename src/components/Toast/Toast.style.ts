@@ -50,14 +50,14 @@ export const infoContainer =
   (theme: Theme): SerializedStyles =>
     css`
       ${flexCenter};
-      padding: 0 ${theme.spacing.md};
+      padding: 0 ${theme.spacing.get('6')};
     `;
 
 export const infoIconContainer =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      padding-right: ${theme.spacing.sm};
+      padding-right: ${theme.spacing.get('4')};
     `;
 
 export const actionIconsContainer =
@@ -66,7 +66,7 @@ export const actionIconsContainer =
     css`
       display: flex;
       align-items: center;
-      padding-right: ${theme.spacing.md};
+      padding-right: ${theme.spacing.get('6')};
     `;
 
 export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyles =>
