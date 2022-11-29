@@ -77,8 +77,6 @@ const Menu: React.FC<Props> = (props) => {
     ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
     : defineBackgroundColor(theme, calculatedColor, buttonType, true, true);
 
-  console.log('isOpen', isOpen);
-
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
       <div css={wrapperStyle()} data-testid={dataTestId}>
