@@ -16,12 +16,12 @@ const getButtonMargin =
     if (iconLeft || iconRight) {
       if (size === 'sm') {
         return theme.spacing.get('4');
-      } else {
-        return theme.spacing.get('6');
       }
-    } else {
-      return 0;
+
+      return theme.spacing.get('6');
     }
+
+    return 0;
   };
 
 export const buttonSpanStyle =
