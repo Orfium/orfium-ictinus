@@ -1,3 +1,4 @@
+import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
 import { PropsValidationError } from '../utils/errors';
@@ -76,11 +77,11 @@ export const getColorErrors = [
 ];
 
 /**
- * 
+ *
  * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
  * @returns the value of the figma token item converted into rem
  */
 export const getFigmaTokensValue =
   <T extends string | number | symbol>(figmaTokensObject: Record<T, Record<string, string>>) =>
   (val: T): string =>
-    rem(Number(figmaTokensObject[val].value));
+    rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
