@@ -1,4 +1,5 @@
 import { rem } from 'polished';
+import { SpacingKey } from 'theme/spacing';
 
 import { Theme } from '../theme';
 import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
@@ -42,6 +43,6 @@ export const getTextFieldSize = (
   return { minWidth: getTextFieldWidth(size), height: getTextFieldHeight(size) };
 };
 
-export const getSpacingBySize: (size: Size, theme: Theme) => string = (size, theme) => {
-  return theme.spacing[size];
+export const getSpacingBySize: (size: SpacingKey, theme: Theme) => string = (size, theme) => {
+  return theme.spacing.get(size);
 };

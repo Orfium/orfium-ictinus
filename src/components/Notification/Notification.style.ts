@@ -35,19 +35,19 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: ${theme.spacing.md};
+  margin-top: ${theme.spacing.get('6')};
   position: sticky;
-  bottom: ${theme.spacing.md};
+  bottom: ${theme.spacing.get('6')};
   top: 100%;
 `;
 
 export const actionContainer = () => (theme: Theme): SerializedStyles => css`
   cursor: pointer;
-  margin-left: ${theme.spacing.md};
+  margin-left: ${theme.spacing.get('6')};
 `;
 
 export const iconContainer = () => (theme: Theme): SerializedStyles => css`
-  padding-right: ${theme.spacing.sm};
+  padding-right: ${theme.spacing.get('4')};
 `;
 
 export const boldMessageContainer = () => (theme: Theme): SerializedStyles => css`

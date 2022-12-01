@@ -1,16 +1,9 @@
+import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
 import { PropsValidationError } from '../utils/errors';
-import {
-  colorShades,
-  flatColors,
-  generatedColorShades,
-  mainTypes,
-  paleColors,
-  Palette,
-} from './palette';
+import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
-import { TextColorTypes } from './types';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;
@@ -82,3 +75,13 @@ export const getColorErrors = [
     error: new PropsValidationError('No color found with that name'),
   },
 ];
+
+/**
+ *
+ * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
+ * @returns the value of the figma token item converted into rem
+ */
+export const getFigmaTokensValue =
+  <T extends string | number | symbol>(figmaTokensObject: Record<T, Record<string, string>>) =>
+  (val: T): string =>
+    rem(Number(get(figmaTokensObject, [val, 'value'], '0')));

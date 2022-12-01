@@ -14,6 +14,6 @@ export const iconWrapperStyle = ({
   display: flex;
   align-items: center;
   cursor: ${isClickable ? 'pointer' : 'unset'};
-  margin-left: ${iconPosition === 'right' ? theme.spacing.sm : 'inherit'};
-  margin-right: ${iconPosition === 'left' ? theme.spacing.sm : 0};
+  margin-left: ${iconPosition === 'right' ? theme.spacing.get('4') : 'inherit'};
+  margin-right: ${iconPosition === 'left' ? theme.spacing.get('4') : 0};
 `;

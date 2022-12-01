@@ -27,7 +27,7 @@ export const childrenWrapperStyle =
     const leftIconExists = hasChildren && iconLeft;
 
     return {
-      marginLeft: leftIconExists ? theme.spacing.sm : 0,
-      marginRight: rightIconExists ? theme.spacing.sm : 0,
+      marginLeft: leftIconExists ? theme.spacing.get('4') : 0,
+      marginRight: rightIconExists ? theme.spacing.get('4') : 0,
     };
   };

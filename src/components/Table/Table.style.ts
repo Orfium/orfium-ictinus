@@ -24,17 +24,17 @@ export const tableRowHeadersStyle =
   (hasExpandableRows: boolean, hasOnCheck: boolean, hasFixedHeader: boolean) =>
   (theme: Theme): SerializedStyles =>
     css({
-      paddingTop: theme.spacing.md,
-      paddingBottom: theme.spacing.md,
+      paddingTop: theme.spacing.get('6'),
+      paddingBottom: theme.spacing.get('6'),
       borderBottomWidth: rem(hasExpandableRows || hasFixedHeader ? 0 : 1),
       borderBottomStyle: 'solid',
       borderBottomColor: getBorderColor(theme),
 
       'th:first-of-type': {
-        paddingLeft: hasOnCheck ? undefined : theme.spacing.md,
+        paddingLeft: hasOnCheck ? undefined : theme.spacing.get('6'),
       },
 
       'th:last-child': {
-        paddingRight: hasExpandableRows ? undefined : theme.spacing.md,
+        paddingRight: hasExpandableRows ? undefined : theme.spacing.get('6'),
       },
     });

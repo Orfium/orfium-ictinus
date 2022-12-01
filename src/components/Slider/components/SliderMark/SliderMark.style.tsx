@@ -27,7 +27,7 @@ export const Mark = styled.div<{
       font-size: ${({ theme }) => theme.typography.fontSizes[11]};
       background: black;
       position: absolute;
-      padding: ${({ theme }) => theme.spacing.sm};
+      padding: ${({ theme }) => theme.spacing.get('4')};
       box-sizing: border-box;
       top: ${rem(-35)};
       left: ${rem(-14.5)};

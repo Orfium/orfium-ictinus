@@ -7,8 +7,8 @@ const spinnerBorderStyle = (theme: Theme, color?: string) =>
   `${rem(2)} solid ${color || theme.utils.getColor('primary', BASE_SHADE, 'normal')};`;
 
 export const spinnerContainer = (color?: string) => (theme: Theme): SerializedStyles => css`
-  width: ${theme.spacing.lg};
-  height: ${theme.spacing.lg};
+  width: ${theme.spacing.get('8')};
+  height: ${theme.spacing.get('8')};
   margin: auto;
   box-sizing: border-box;
   border-top: ${spinnerBorderStyle(theme, color)};

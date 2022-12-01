@@ -25,7 +25,8 @@ export const listItemStyle =
       background-color: ${isSelected ? theme.utils.getColor('blue', 50) : theme.palette.white};
       display: flex;
       align-items: center;
-      padding: 0px ${theme.spacing.md} 0px ${isGroupItem ? theme.spacing.xl : theme.spacing.md};
+      padding: 0px ${theme.spacing.get('6')} 0px
+        ${isGroupItem ? theme.spacing.get('9') : theme.spacing.get('6')};
       font-weight: ${isSelected && theme.typography.weights.medium};
       cursor: pointer;
 

@@ -15,7 +15,7 @@ import {
 
 const CustomContent = () => {
   return (
-    <Card elevated="02" radius="xsm">
+    <Card elevated="02" radius="3">
       <div css={customContentStyle()}>
         <div
           css={css`

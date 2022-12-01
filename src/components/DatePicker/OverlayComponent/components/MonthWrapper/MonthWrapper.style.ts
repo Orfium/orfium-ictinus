@@ -32,7 +32,7 @@ export const monthHeaderNavigationIconWrapperStyle = ({
 export const monthHeaderTitleWrapperStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
   theme: Theme
 ): SerializedStyles => css`
-  margin: ${isRangePicker && `${theme.spacing.md} 0`};
+  margin: ${isRangePicker && `${theme.spacing.get('6')} 0`};
   padding: 0;
   align-content: center;
   text-align: center;
@@ -46,8 +46,8 @@ export const monthHeaderTitleWrapperStyle = ({ isRangePicker }: { isRangePicker:
 export const monthHeaderTitleStyle = ({ isRangePicker }: { isRangePicker: boolean }) => (
   theme: Theme
 ): SerializedStyles => css`
-  margin: 0 ${theme.spacing.sm};
-  padding: ${theme.spacing.sm};
+  margin: 0 ${theme.spacing.get('4')};
+  padding: ${theme.spacing.get('4')};
   display: flex;
   justify-content: center;
   cursor: ${!isRangePicker && 'pointer'};
