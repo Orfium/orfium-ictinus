@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-type Props = {
+type UsePaginationProps = {
   page: number;
   count: number;
   onChange: (page: number) => void;
 };
 
-const usePagination = ({ page = 1, count = 1, onChange: handleChange }: Props) => {
+const usePagination = ({ page = 1, count = 1, onChange: handleChange }: UsePaginationProps) => {
   const [currentPage, setCurrentPage] = React.useState(page);
   const nextPage = currentPage + 1;
   const prevPage = currentPage - 1;

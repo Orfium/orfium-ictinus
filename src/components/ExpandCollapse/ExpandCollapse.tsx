@@ -2,11 +2,11 @@ import * as React from 'react';
 
 import { errorHandler, generateTestDataId } from '../../utils/helpers';
 import { contentStyles } from './ExpandCollapse.style';
-import { Props } from './ExpandCollapse.types';
+import { ExpandCollapseProps } from './ExpandCollapse.types';
 import { useManageContentRef } from './useManageContentRef';
 import { errors } from './utils';
 
-const ExpandCollapse = (props: Props) => {
+const ExpandCollapse = (props: ExpandCollapseProps) => {
   const {
     textAndControl,
     component = 'div',
@@ -19,7 +19,7 @@ const ExpandCollapse = (props: Props) => {
     dataTestId,
   } = props;
 
-  errorHandler<Props>(errors, props);
+  errorHandler<ExpandCollapseProps>(errors, props);
 
   const [isInternallyControlledExpanded, setInternallyControlledExpanded] =
     React.useState(isInitiallyExpanded);
@@ -54,6 +54,3 @@ const ExpandCollapse = (props: Props) => {
 };
 
 export default ExpandCollapse;
-
-//TODO: Remove on v5 and change import where necessary
-export { Props };

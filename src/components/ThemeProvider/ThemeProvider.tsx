@@ -12,7 +12,7 @@ import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';
 import 'utils/initLocaleFormat';
 
-type Props = {
+export type ThemeProviderProps = {
   /** Theme properties to override or pass theming down to library */
   theme?: DeepPartial<ThemeConfig>;
 };
@@ -41,7 +41,7 @@ export const globalStyles = (theme: Theme) => css`
   }
 `;
 
-const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
+const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme = {}, children }) => {
   return (
     <ThemeSwitchProvider>
       <ThemeProviderContents theme={theme}>{children}</ThemeProviderContents>
@@ -49,7 +49,7 @@ const ThemeProvider: React.FC<Props> = ({ theme = {}, children }) => {
   );
 };
 
-const ThemeProviderContents: React.FC<Props> = ({ theme = {}, children }) => {
+const ThemeProviderContents: React.FC<ThemeProviderProps> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
   const colorScheme = themeSwitchState.isDark ? 'dark' : ('light' as ColorScheme);
   const newTheme = {
@@ -69,5 +69,3 @@ const ThemeProviderContents: React.FC<Props> = ({ theme = {}, children }) => {
 };
 
 export default ThemeProvider;
-
-//force deployment

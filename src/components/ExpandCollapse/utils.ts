@@ -1,9 +1,9 @@
 import { PropsValidationError } from '../../utils/errors';
-import { Props } from './ExpandCollapse.types';
+import { ExpandCollapseProps } from './ExpandCollapse.types';
 
 export const errors = [
   {
-    condition: ({ isExpanded, onChange }: Props): boolean =>
+    condition: ({ isExpanded, onChange }: ExpandCollapseProps): boolean =>
       Boolean(
         (isExpanded === undefined && onChange) ||
           (onChange === undefined && typeof isExpanded === 'boolean')
@@ -13,7 +13,7 @@ export const errors = [
     ),
   },
   {
-    condition: ({ content, children }: Props): boolean =>
+    condition: ({ content, children }: ExpandCollapseProps): boolean =>
       Boolean(content === undefined && children === undefined),
     error: new PropsValidationError('Either content or children must be defined'),
   },

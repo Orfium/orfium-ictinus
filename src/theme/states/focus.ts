@@ -2,7 +2,7 @@ import { Theme } from '../index';
 import { rem } from '../utils';
 import { statesConfig } from './statesConfig';
 
-export type Props = {
+export type GetFocusProps = {
   theme: Theme;
   borderWidth?: number;
 };
@@ -21,7 +21,7 @@ const borderColor = statesConfig['light'].focus.border.color;
  * On focus border is darken by one step in shade.
  * If we exceed the maximum value then we lighten it.
  * This will be reviewed when dark theme is implemented. **/
-export const getFocus = ({ theme, borderWidth = 0 }: Props): GetFocus => {
+export const getFocus = ({ theme, borderWidth = 0 }: GetFocusProps): GetFocus => {
   const calculatedBorderWidth = borderWidth + borderWidthStep;
 
   const focusColor = theme.utils.getColor(borderColor.name, borderColor.shade);
