@@ -1,14 +1,18 @@
 const fontWeight = {
   regular: {
-    value: 'Regular',
+    value: '400',
     type: 'fontWeights',
   },
   medium: {
-    value: 'Medium',
+    value: '500',
+    type: 'fontWeights',
+  },
+  semiBold: {
+    value: '600',
     type: 'fontWeights',
   },
   bold: {
-    value: 'Bold',
+    value: '700',
     type: 'fontWeights',
   },
 } as const;
