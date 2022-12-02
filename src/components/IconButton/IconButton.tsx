@@ -8,9 +8,9 @@ import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import { sxProp } from './IconButton.style';
-import ButtonBase, { Props as ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
+import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
-export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRight'> & {
+export type IconButtonProps = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRight'> & {
   /** Property indicating the size of the icon. Defaults to 16 */
   iconSize?: number;
   /** This property defines witch icon to use */
@@ -18,7 +18,7 @@ export type Props = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRig
 } & TestProps &
   EventProps;
 
-const IconButton = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
+const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
   const { iconSize, color = '', type = 'primary', isFilled = true, name, isTransparent } = props;
   const theme = useTheme();
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
