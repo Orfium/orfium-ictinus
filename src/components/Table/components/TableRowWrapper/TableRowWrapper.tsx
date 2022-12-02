@@ -4,7 +4,7 @@ import { Row, Selection, TableType } from '../../Table';
 import { TableRowContext } from '../../TableRowContext';
 import RenderRowOrNestedRow from '../RenderRowOrNestedRow/RenderRowOrNestedRow';
 
-type TableRowWrapperProps<T> = {
+export type TableRowWrapperProps<T> = {
   row: Row<T>;
   isRowSelected: boolean;
   onSelectionAdd: (selection: Selection) => void;

@@ -19,7 +19,7 @@ import { AcceptedIconNames } from 'components/Icon/types';
 
 export type CompactNotificationVariants = 'inline' | 'banner' | 'card';
 
-export type Props = {
+export type CompactNotificationProps = {
   /** Show notification icon based on the type */
   hasIcon?: boolean;
   /** The informative message of the Notification */
@@ -53,7 +53,7 @@ export type Props = {
 export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
   type === 'warning' ? 'alert' : type;
 
-const CompactNotification: React.FC<Props> = ({
+const CompactNotification: React.FC<CompactNotificationProps> = ({
   hasIcon = false,
   message,
   variant,

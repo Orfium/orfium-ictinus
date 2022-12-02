@@ -6,7 +6,7 @@ import { ContentComponent, TableType } from '../../../../Table';
 import TableCell from '../../../TableCell';
 import { nestedHeaderStyle } from './ContentCell.style';
 
-type Props = {
+type ContentCellProps = {
   columns: string[];
   isPadded: boolean;
   tooltipContent?: string;
@@ -22,7 +22,7 @@ type Props = {
   index?: number;
 };
 
-const ContentCell: React.FC<Props> = ({
+const ContentCell: React.FC<ContentCellProps> = ({
   columns,
   isPadded,
   columnWidth,
@@ -57,10 +57,7 @@ const ContentCell: React.FC<Props> = ({
         </div>
       )}
 
-      <TruncatedContent
-        placement={'bottom'}
-        tooltipContent={tooltipContent}
-      >
+      <TruncatedContent placement={'bottom'} tooltipContent={tooltipContent}>
         {isComponentFunctionType(content) ? (
           content({ content, colSpan })
         ) : (
