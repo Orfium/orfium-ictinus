@@ -5,7 +5,7 @@ import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { renderContent } from '../utils';
 import { listItemStyle, contentStyle } from './ListItem.style';
 
-type Props = {
+export type ListItemProps = {
   /** Size of the ListItem (translates to height) */
   size: ListRowSize;
   /** Content of the ListItem */
@@ -26,7 +26,7 @@ type Props = {
   isGroupItem?: boolean;
 } & TestProps;
 
-const ListItem = React.forwardRef<HTMLDivElement, Props>(
+const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
   (
     {
       size,

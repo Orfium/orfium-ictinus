@@ -3,12 +3,12 @@ import { generateTestDataId } from 'utils/helpers';
 
 import { dotsContainer, dotsWrapper } from './DotsLoader.style';
 
-type Props = {
+export type DotsLoaderProps = {
   dataTestId?: string;
   color?: string;
 };
 
-const DotsLoader: React.FC<Props> = ({ dataTestId, color }) => {
+const DotsLoader: React.FC<DotsLoaderProps> = ({ dataTestId, color }) => {
   return (
     <div css={dotsWrapper} data-testid={generateTestDataId('dots-loading', dataTestId)}>
       <div css={dotsContainer(color)} />

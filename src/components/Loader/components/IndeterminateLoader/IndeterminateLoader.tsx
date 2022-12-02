@@ -8,12 +8,12 @@ import {
   LoaderIncLine,
 } from './IndeterminateLoader.style';
 
-type Props = {
+export type IndeterminateLoaderProps = {
   dataTestId?: string;
   color?: string;
 };
 
-const IndeterminateLoader: React.FC<Props> = ({ dataTestId, color }) => {
+const IndeterminateLoader: React.FC<IndeterminateLoaderProps> = ({ dataTestId, color }) => {
   return (
     <div css={LoaderContainer()} data-testid={generateTestDataId('dots-loading', dataTestId)}>
       <div css={LoaderLine()} />

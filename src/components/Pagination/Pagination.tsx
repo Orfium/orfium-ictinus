@@ -4,7 +4,7 @@ import usePagination from '../../hooks/usePagination';
 import useTheme from '../../hooks/useTheme';
 import IconButton from '../IconButton';
 
-type Props = {
+export type PaginationProps = {
   /** The current page you are on if you need to control it, defaults to 1 **/
   page: number;
   /** The total pages **/
@@ -26,7 +26,7 @@ const Pagination = ({
   isEnhancedPaginationVisible = false,
   isNextPageDisabled,
   isPrevPageDisabled,
-}: Props) => {
+}: PaginationProps) => {
   const theme = useTheme();
   const {
     currentPage,

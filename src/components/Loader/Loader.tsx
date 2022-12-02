@@ -5,7 +5,7 @@ import { getLoader, loaderTypes } from './Loader.utils';
 
 export type LoaderType = typeof loaderTypes[number];
 
-type Props = {
+type LoaderProps = {
   /** Loader type. Defaults to dots **/
   type?: LoaderType;
   /** The data test id if needed */
@@ -14,7 +14,7 @@ type Props = {
   color?: string;
 };
 
-const Loader: React.FC<Props> = ({ type = 'dots', dataTestId, color }) => {
+const Loader: React.FC<LoaderProps> = ({ type = 'dots', dataTestId, color }) => {
   return <div css={loaderContainer()}>{getLoader(type, dataTestId, color)}</div>;
 };
 
