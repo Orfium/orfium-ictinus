@@ -10,7 +10,7 @@ type Data = {
   color?: string;
 };
 
-export type Props = {
+export type DonutChartProps = {
   /** This property defines the data to be shown in the Donut Chart */
   data: Data[];
   /** This property defines the value to be shown in the Donut Chart label */
@@ -21,9 +21,9 @@ export type Props = {
 
 const WrappedChart = Wrapper(PieChart);
 
-const DonutChart: React.FC<Props> = ({ data, value, units }) => {
+const DonutChart: React.FC<DonutChartProps> = ({ data, value, units }) => {
   const Colors = useMemo(() => {
-    return data.map(obj => obj?.color || '');
+    return data.map((obj) => obj?.color || '');
   }, [data]);
 
   return (

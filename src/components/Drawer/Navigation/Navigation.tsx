@@ -1,11 +1,11 @@
 import useLocationToGetCurrentMenuItem from 'hooks/useLocationToGetCurrentMenuItem';
 import React, { useCallback, useState } from 'react';
 
-import { Props } from '../Drawer';
+import { DrawerProps } from '../Drawer';
 import MenuItem from './MenuItem/MenuItem';
 import { navigationContainerStyle } from './Navigation.style';
 
-type NavigationProps = Props;
+type NavigationProps = DrawerProps;
 
 const Navigation: React.FC<NavigationProps> = ({ menuItems, isExpanded }) => {
   const [openMenuItems, setOpenMenuItems] = useState<string[]>([]); // we identify open menuitems by their url

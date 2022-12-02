@@ -5,7 +5,7 @@ import { rem } from 'theme/utils';
 import { getHover } from '../../../theme/states';
 import { ColorShapeFromComponent } from '../../../utils/themeFunctions';
 
-type Props = {
+type DayStyleProps = {
   day?: number;
   isSelected?: boolean;
   isBetween?: boolean;
@@ -25,7 +25,7 @@ export const dayWrapperStyle =
     isFirst,
     isToday,
     isDisabled,
-  }: Props & { isToday: boolean; calculatedColor: ColorShapeFromComponent }) =>
+  }: DayStyleProps & { isToday: boolean; calculatedColor: ColorShapeFromComponent }) =>
   (theme: Theme): SerializedStyles =>
     css`
       vertical-align: middle;
@@ -85,7 +85,7 @@ export const emptyDayStyle =
     `;
 
 export const dayStyle =
-  ({ isSelected, calculatedColor, isToday, isDisabled, isBetween }: Props) =>
+  ({ isSelected, calculatedColor, isToday, isDisabled, isBetween }: DayStyleProps) =>
   (theme: Theme) =>
     css`
       border: ${rem(1)} solid ${isToday ? theme.utils.getColor('lightGrey', 450) : 'transparent'};

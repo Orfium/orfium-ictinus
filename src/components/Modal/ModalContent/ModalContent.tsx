@@ -11,7 +11,7 @@ import {
   modalContentContainer,
 } from './ModalContent.style';
 
-export type Props = {
+export type ModalContentProps = {
   /** The label of the modal. */
   label?: string;
   /** The heading of the modal. */
@@ -30,7 +30,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const ModalContent: React.FC<Props> = ({
+const ModalContent: React.FC<ModalContentProps> = ({
   label,
   heading,
   message,

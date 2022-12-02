@@ -10,7 +10,7 @@ import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 export type AnchorType = 'bottom' | 'left' | 'right' | 'top';
 
-export type Props = {
+export type OverlayProps = {
   /**  If true, the overlay is open.*/
   isOpen: boolean;
   /** Callback fired when the component requests to be closed. */
@@ -29,7 +29,7 @@ const getAnchorStyle = ({ anchor, size }: { anchor: AnchorType; size: string }) 
     : { display: 'flex', height: '100%', width: size };
 };
 
-const Overlay = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Props & DivProps>>(
+const Overlay = React.forwardRef<HTMLDivElement, React.PropsWithChildren<OverlayProps & DivProps>>(
   ({ isOpen, onClose, anchor = 'left', size, dataTestId, children }, ref) => {
     useEscape(() => {
       onClose();

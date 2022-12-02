@@ -6,7 +6,7 @@ import { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
 import { FilterType, StyleType } from '../../Filter/types';
 import Icon from '../../Icon';
-import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
+import TextField, { TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
 import { Range } from '../OverlayComponent/OverlayComponent';
 import { rangeInputsWrapper } from './DatePickInput.style';
@@ -14,7 +14,7 @@ import { rangeInputsWrapper } from './DatePickInput.style';
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
 
-type Props = {
+export type DatePickInputProps = {
   /** Handles the focus state of the component */
   handleFocus: () => void;
   /** Handles the clear action for the datepicker */
@@ -49,7 +49,7 @@ const getLabels = (isRangePicker: boolean, formattedTo: string) => ({
   to: isRangePicker ? `- ${formattedTo}` : '',
 });
 
-const DatePickInput = React.forwardRef<HTMLInputElement, Props>(
+const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
   (
     {
       handleFocus,

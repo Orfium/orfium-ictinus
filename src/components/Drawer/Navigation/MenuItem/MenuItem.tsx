@@ -13,19 +13,19 @@ import {
   subMenuIconStyle,
   menuLinkStyle,
 } from '../Navigation.style';
-import { MenuItem as MenuItemProps } from 'components/Drawer/types';
+import { DrawerMenuItem } from 'components/Drawer/types';
 import ExpandCollapse from 'components/ExpandCollapse';
 import Icon from 'components/Icon';
 
-type Props = {
+export type MenuItemProps = {
   /** Defines the current menu item whose submenu item is currently selected */
   isCurrent: boolean;
   /** Defines if the menu item is expanded */
   isExpanded: boolean;
   toggleMenuItem: (newUrl: string) => void;
-} & MenuItemProps;
+} & DrawerMenuItem;
 
-const MenuItem: React.FC<Props> = memo(
+const MenuItem: React.FC<MenuItemProps> = memo(
   ({ isCurrent, isExpanded, name, url, iconName, options, toggleMenuItem, state: linkState }) => {
     const theme = useTheme();
 
