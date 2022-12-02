@@ -8,7 +8,7 @@ export type Spacing = {
 };
 
 const spacing: Spacing = {
-  get: getFigmaTokensValue<SpacingKey>(spacingFigma),
+  get: getFigmaTokensValue<SpacingKey>(spacingFigma, 'pixels') as (val: SpacingKey) => string,
 };
 
 export default spacing;

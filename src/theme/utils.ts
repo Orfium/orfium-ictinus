@@ -77,11 +77,25 @@ export const getColorErrors = [
 ];
 
 /**
- *
  * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
- * @returns the value of the figma token item converted into rem
+ * @param type 'pixels' refers to all the string values that need to be converted to rem
+ *             'string' refers to all the string values that need no conversion (e.g. opacity, font-family etc)
+ *             'number' refers to all the string values that need to be converted to numbers (e.g. font-weight)
  */
 export const getFigmaTokensValue =
-  <T extends string | number | symbol>(figmaTokensObject: Record<T, Record<string, string>>) =>
-  (val: T): string =>
-    rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
+  <T extends string | number | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: 'pixels' | 'string' | 'number'
+  ) =>
+  (val: T): string | number => {
+    switch (type) {
+      case 'pixels':
+        return rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
+      case 'string':
+        return get(figmaTokensObject, [val, 'value'], '0');
+      case 'number':
+        return Number(get(figmaTokensObject, [val, 'value'], '0'));
+      default:
+        return get(figmaTokensObject, [val, 'value'], '0');
+    }
+  };
