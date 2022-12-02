@@ -10,7 +10,7 @@ import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
 
-type CommonProps = {
+export type SliderProps = {
   /** Determines if the Slider is disabled or not */
   isDisabled?: boolean;
   /** Determines if the Slider will show increments along its track */
@@ -30,7 +30,7 @@ export const STEP_WITH_INCREMENTS = 20;
 export const MIN = 0;
 export const MAX = 100;
 
-const Slider: React.FC<CommonProps & TestProps> = ({
+const Slider: React.FC<SliderProps & TestProps> = ({
   values,
   onChange,
   onBlur,

@@ -14,7 +14,7 @@ import {
 } from './CheckBox.style';
 import Icon from 'components/Icon';
 
-export type Props = {
+export type CheckboxProps = {
   /** The label of the checkbox. */
   label?: string;
   /** Boolean defining if the checkbox is checked. */
@@ -36,7 +36,7 @@ export type Props = {
   id?: string;
 };
 
-const CheckBox = React.forwardRef<HTMLSpanElement, Props>((props, ref) => {
+const CheckBox = React.forwardRef<HTMLSpanElement, CheckboxProps>((props, ref) => {
   const {
     label,
     isChecked,

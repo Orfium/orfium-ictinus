@@ -3,8 +3,8 @@ import { darken } from 'polished';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import { Props } from './SelectMenu';
-import { Props as TextFieldProps } from 'components/TextField/TextField';
+import { SelectMenuProps } from './SelectMenu';
+import { TextFieldProps } from 'components/TextField/TextField';
 
 export const MAX_LARGE_HEIGHT = 277;
 export const MAX_SMALL_HEIGHT = 265;
@@ -34,7 +34,7 @@ export const optionStyle =
   };
 
 export const menuStyle =
-  ({ status, size, isVirtualized }: Props & Omit<TextFieldProps, 'ref'>) =>
+  ({ status, size, isVirtualized }: SelectMenuProps & Omit<TextFieldProps, 'ref'>) =>
   (theme: Theme): SerializedStyles =>
     css`
       background-color: ${theme.palette.white};

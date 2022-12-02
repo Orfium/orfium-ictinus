@@ -6,7 +6,7 @@ import { useTheme } from '../../index';
 import { TestProps } from '../../utils/types';
 import { Label, SwitchWrapper, Container } from './Switch.style';
 
-type Props = {
+export type SwitchProps = {
   label?: string;
   labelPlacement?: 'left' | 'right';
   isChecked: boolean;
@@ -17,7 +17,7 @@ type Props = {
   isDisabled?: boolean;
 } & TestProps;
 
-const Switch: React.FC<Props> = ({
+const Switch: React.FC<SwitchProps> = ({
   isDisabled = false,
   label,
   isChecked,

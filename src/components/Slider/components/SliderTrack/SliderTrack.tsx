@@ -8,14 +8,14 @@ import { TestProps } from '../../../../utils/types';
 import { MAX, MIN } from '../../Slider';
 import { Track } from './SliderTrack.style';
 
-type Props = {
+export type SliderTrackProps = {
   values: number[];
   isDisabled: boolean;
   isSelector: boolean;
   restProps: ITrackProps;
 };
 
-const SliderTrack: FC<Props & TestProps> = ({
+const SliderTrack: FC<SliderTrackProps & TestProps> = ({
   values,
   isDisabled,
   isSelector,

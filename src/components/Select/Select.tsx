@@ -8,10 +8,10 @@ import { ChangeEvent } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 import Icon, { OwnProps as IconProps } from '../Icon';
 import TextField from '../TextField';
-import { Props as TextFieldProps } from '../TextField/TextField';
+import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
-import SelectMenu from './components/SelectMenu/SelectMenu';
+import SelectMenu from './components/SelectMenu';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 
@@ -29,7 +29,7 @@ export type SelectOption = {
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
-export type Props = {
+export type SelectProps = {
   /** The function that is used to return the selected options */
   handleSelectedOption?: (selectedOption: SelectOption) => void;
   /** the default value of the select if needed */
@@ -68,7 +68,7 @@ const emptyValue = { label: '', value: '' };
 
 const ON_CHANGE_MOCK = () => {};
 
-const Select = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const {
     handleSelectedOption = () => {},
     defaultValue = undefined,

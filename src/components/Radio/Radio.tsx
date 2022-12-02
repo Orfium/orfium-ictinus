@@ -12,7 +12,7 @@ import {
   wrapperStyles,
 } from './Radio.style';
 
-export type Props = {
+export type RadioProps = {
   /** The value of the radio input. If no value is passed the default value, according to spec, is "on"
    *  https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio#value
    *
@@ -45,7 +45,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const Radio = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+const Radio = React.forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
   const {
     isChecked: isExternallyControlledChecked,
     onChange,
