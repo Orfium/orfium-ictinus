@@ -19,8 +19,8 @@ export const labelStyle =
       transform: ${!isAnimated
         ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
         : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
-      font-size: ${theme.typography.fontSizes['16']};
-      font-weight: ${theme.typography.weights.regular};
+      font-size: ${theme.typography.fontSizes.get('4')};
+      font-weight: ${theme.typography.weights.get('regular')};
       color: ${hasError
         ? theme.utils.getColor('error', BASE_SHADE, 'normal')
         : theme.utils.getColor('lightGrey', 650)};

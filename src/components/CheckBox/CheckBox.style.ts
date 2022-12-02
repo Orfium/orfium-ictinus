@@ -122,7 +122,7 @@ export const labelStyle =
     css`
       padding-left: ${rem(4)};
       font-size: ${theme.typography.fontSizes['15']};
-      font-weight: ${theme.typography.weights.regular};
+      font-weight: ${theme.typography.weights.get('regular')};
       color: ${theme.utils.getColor('darkGrey', 750)};
       white-space: nowrap;
     `;

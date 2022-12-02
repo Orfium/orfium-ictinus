@@ -11,23 +11,23 @@ export const modalContentContainer = (theme: Theme): SerializedStyles => css`
   flex-wrap: wrap;
   text-align: left;
   color: ${theme.utils.getColor('lightGrey', 700, 'flat')};
-  font-weight: ${theme.typography.weights.regular};
+  font-weight: ${theme.typography.weights.get('regular')};
 `;
 
 export const labelContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes['14']};
+  font-size: ${theme.typography.fontSizes.get('3')};
   margin: 0 0 ${theme.spacing.get('3')} 0;
 `;
 
 export const headingContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes['28']};
+  font-size: ${theme.typography.fontSizes.get('9')};
   color: ${theme.utils.getColor('darkGrey', 850)};
-  font-weight: ${theme.typography.weights.medium};
+  font-weight: ${theme.typography.weights.get('medium')};
   margin: 0 0 ${theme.spacing.get('9')} 0;
 `;
 
 export const messageContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes['16']};
+  font-size: ${theme.typography.fontSizes.get('4')};
   color: ${theme.utils.getColor('lightGrey', 750)};
   max-height: ${rem(430)};
   overflow-y: hidden;

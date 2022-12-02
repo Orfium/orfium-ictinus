@@ -15,7 +15,7 @@ export const listGroupTitleStyle =
       display: flex;
       align-items: center;
       padding: 0px ${theme.spacing.get('6')};
-      font-weight: ${theme.typography.weights.bold};
+      font-weight: ${theme.typography.weights.get('bold')};
 
       ${isDisabled &&
       `

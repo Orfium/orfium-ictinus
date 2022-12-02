@@ -51,5 +51,5 @@ export const iconContainer = () => (theme: Theme): SerializedStyles => css`
 `;
 
 export const boldMessageContainer = () => (theme: Theme): SerializedStyles => css`
-  font-weight: ${theme.typography.weights.bold};
+  font-weight: ${theme.typography.weights.get('bold')};
 `;

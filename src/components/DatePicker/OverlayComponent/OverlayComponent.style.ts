@@ -27,8 +27,8 @@ export const optionStyle =
       white-space: nowrap;
       padding: ${theme.spacing.get('6')};
       font-weight: ${isSelected
-        ? theme.typography.weights.medium
-        : theme.typography.weights.regular};
+        ? theme.typography.weights.get('medium')
+        : theme.typography.weights.get('regular')};
       cursor: pointer;
       background-color: ${isSelected ? theme.utils.getColor('blue', 50) : 'transparent'};
       position: relative;

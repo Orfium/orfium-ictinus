@@ -3,7 +3,7 @@ import { rem } from 'theme/utils';
 
 export const tooltipStyle = () => (theme: Theme) => {
   return {
-    fontSize: theme.typography.fontSizes['14'],
+    fontSize: theme.typography.fontSizes.get('3'),
     padding: `${theme.spacing.get('4')} ${theme.spacing.get('6')}`,
     margin: theme.spacing.get('4'),
     color: theme.palette.white,

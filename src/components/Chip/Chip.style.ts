@@ -22,8 +22,8 @@ export const chipStyle =
       ${flexCenterVertical};
       height: ${theme.spacing.get('8')};
       border-radius: ${theme.spacing.get('8')};
-      font-size: ${theme.typography.fontSizes['12']};
-      font-weight: ${theme.typography.weights.medium};
+      font-size: ${theme.typography.fontSizes.get('2')};
+      font-weight: ${theme.typography.weights.get('medium')};
       line-height: normal;
       box-sizing: border-box;
       padding: ${theme.spacing.get('3')} ${theme.spacing.get('4')};
