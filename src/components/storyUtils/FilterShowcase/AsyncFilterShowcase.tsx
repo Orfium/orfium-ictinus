@@ -8,11 +8,13 @@ export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, inde
   label: `test option ${index}`,
 }));
 
-type Props = {
+type AsyncFilterShowcaseProps = {
   minCharactersToSearch?: number;
 };
 
-export const AsyncFilterShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
+export const AsyncFilterShowcase: React.FC<AsyncFilterShowcaseProps> = ({
+  minCharactersToSearch = 0,
+}) => {
   const defaultValue = { value: 18, label: 'Default value' };
   const [stateItem, setStateItem] = React.useState<FilterOption | undefined>();
   const [items, setOptions] = useState<FilterOption[]>(dummyUnrefinedData);
@@ -21,12 +23,12 @@ export const AsyncFilterShowcase: React.FC<Props> = ({ minCharactersToSearch = 0
   const handleAsyncSearch = (term: string) => {
     setIsLoading(true);
 
-    return new Promise<FilterOption[]>(resolve => {
+    return new Promise<FilterOption[]>((resolve) => {
       setTimeout(() => {
         resolve(dummyUnrefinedData);
       }, 1500);
-    }).then(values => {
-      const filteredValues = values.filter(option => option.label.includes(term));
+    }).then((values) => {
+      const filteredValues = values.filter((option) => option.label.includes(term));
 
       setOptions(filteredValues);
       setIsLoading(false);

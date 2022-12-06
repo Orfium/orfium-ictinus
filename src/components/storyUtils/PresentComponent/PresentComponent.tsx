@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-type Props = {
+type PresentComponentProps = {
   name: string;
   width?: string;
 };
 
-const PresentComponent: React.FC<Props> = ({ name, width = 'auto', children }) => {
+const PresentComponent: React.FC<PresentComponentProps> = ({ name, width = 'auto', children }) => {
   return (
     <div
       style={{

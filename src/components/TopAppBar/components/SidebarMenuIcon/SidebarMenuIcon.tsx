@@ -3,11 +3,11 @@ import React from 'react';
 import Icon from '../../../Icon';
 import Styles from './SidebarMenuIcon.style';
 
-interface Props {
+export interface SidebarMenuIconProps {
   onMenuIconClick: () => void;
 }
 
-const SidebarMenuIcon = ({ onMenuIconClick }: Props) => {
+const SidebarMenuIcon = ({ onMenuIconClick }: SidebarMenuIconProps) => {
   return (
     <div css={Styles.iconWrapper} onClick={onMenuIconClick} data-testid={'menu-handler'}>
       <Icon color={'primary'} name={'menu'} size={24} />

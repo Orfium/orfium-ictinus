@@ -66,4 +66,4 @@ export type InternalProps = {
   onChange: undefined;
 };
 
-export type Props = SharedProps & (InternalProps | ExternalProps);
+export type ExpandCollapseProps = SharedProps & (InternalProps | ExternalProps);
