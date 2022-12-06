@@ -7,24 +7,18 @@ import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
 
-type Props = {
+export type ExtendedColumnItemProps = {
   item: ExtendedColumn | string;
   isNumerical?: boolean;
   sorting?: Sort;
 };
 
-const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => {
+const ExtendedColumnItem: React.FC<ExtendedColumnItemProps> = ({ item, sorting, isNumerical }) => {
   const theme = useTheme();
 
   const itemContentLowerCase = !isItemString(item)
-    ? item.content.sortingKey
-        .trim()
-        .toLowerCase()
-        .replace(/ /g, '_')
-    : item
-        .trim()
-        .toLowerCase()
-        .replace(/ /g, '_');
+    ? item.content.sortingKey.trim().toLowerCase().replace(/ /g, '_')
+    : item.trim().toLowerCase().replace(/ /g, '_');
 
   const sortingItem = () =>
     //TODO: Remove type check when backwards-compatibility is removed

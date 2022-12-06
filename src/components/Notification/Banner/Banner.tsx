@@ -4,7 +4,7 @@ import { TestId } from '../../../utils/types';
 import { NotificationStyleType, NotificationTypes } from '../Notification';
 import CompactNotification from '../subcomponents/CompactNotification';
 
-export type Props = {
+export type BannerProps = {
   /** Show notification icon based on the type */
   hasIcon?: boolean;
   /** The title (message heading) of the Notification */
@@ -25,7 +25,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const Banner: React.FC<Props> = ({
+const Banner: React.FC<BannerProps> = ({
   hasIcon = false,
   title,
   message,

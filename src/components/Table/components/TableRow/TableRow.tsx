@@ -2,13 +2,19 @@ import * as React from 'react';
 
 import useTheme from '../../../../hooks/useTheme';
 
-type Props = {
+export type TableRowProps = {
   isSelected?: boolean;
   isNested?: boolean;
   onClick?: () => void;
 };
 
-const TableRow: React.FC<Props> = ({ isNested, isSelected, children, onClick, ...rest }) => {
+const TableRow: React.FC<TableRowProps> = ({
+  isNested,
+  isSelected,
+  children,
+  onClick,
+  ...rest
+}) => {
   const theme = useTheme();
 
   return (
