@@ -29,9 +29,9 @@ function getNumWeeksForMonth(year: number, month: number) {
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thurdsday', 'Friday', 'Saturday', 'Sunday'];
 
-type WeekRow = number[];
+export type WeekRow = number[];
 
-export type Props = {
+export type MonthProps = {
   year: number;
   month: number;
   onDaySelect?: (date: Dayjs) => void;
@@ -39,7 +39,7 @@ export type Props = {
   disabledDates?: DisabledDates;
 };
 
-const Month: React.FC<Props> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
+const Month: React.FC<MonthProps> = ({ year, month, onDaySelect, selectedDays, disabledDates }) => {
   const weeksWithDays = React.useMemo<WeekRow[]>(() => {
     const monthDate = currentDay.month(month).year(year).date(1);
     const daysOfMonth = monthDate.daysInMonth();

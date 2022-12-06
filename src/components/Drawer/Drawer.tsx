@@ -4,20 +4,20 @@ import React from 'react';
 
 import { drawerContainerStyle } from './Drawer.style';
 import Navigation from './Navigation/Navigation';
-import { MenuItem } from './types';
+import { DrawerMenuItem } from './types';
 
-export type Props = {
+export type DrawerProps = {
   /** Defines if the drawer is expanded */
   isExpanded: boolean;
   /** Changes if the drawer is expanded */
   setExpanded: (v: boolean) => void;
   /** The menu items to be displayed in the drawer */
-  menuItems: MenuItem[];
+  menuItems: DrawerMenuItem[];
   /** Render prop function to display something over the Navigation */
   renderHeader?: () => React.ReactNode;
 };
 
-const Drawer: React.FC<Props> = (props) => {
+const Drawer: React.FC<DrawerProps> = (props) => {
   const breakpoints = useBreakpoints();
   const isSmallDesktop = breakpoints.des1200 && !breakpoints.des1440;
 

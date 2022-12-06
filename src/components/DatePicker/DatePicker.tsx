@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
-import { Props as TextFieldProps } from '../TextField/TextField';
+import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
 import { datePickerStyles } from './DatePicker.style';
@@ -18,7 +18,7 @@ export type DisabledDates = {
   before?: Date;
 };
 
-export type Props = {
+export type DatePickerProps = {
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
@@ -79,7 +79,7 @@ export const extraOptions: ExtraOption[] = [
   },
 ];
 
-const DatePicker: React.FC<Props & TestProps> = ({
+const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   isRangePicker = false,
   onChange,
   disableDates,

@@ -3,7 +3,7 @@ import { match } from 'react-router';
 
 import { AcceptedIconNames } from 'components/Icon/types';
 
-export type MenuItem = {
+export type DrawerMenuItem = {
   name: string;
   url: string;
   state?: Record<string, any> | null;
@@ -13,5 +13,5 @@ export type MenuItem = {
     match: match<Params> | null,
     location: Location<S>
   ): boolean;
-  options: MenuItem[];
+  options: DrawerMenuItem[];
 };

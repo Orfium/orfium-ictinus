@@ -2,12 +2,12 @@ import React, { useState, useRef, useCallback, useEffect } from 'react';
 
 import { tickStyle, tooltipStyle, tooltipArrowStyle } from './CustomTooltip.style';
 
-type Props = {
+type CustomTooltipProps = {
   content: React.ReactNode;
   fill: string;
 };
 
-const CustomTooltip: React.FC<Props> = ({ content, fill }) => {
+const CustomTooltip: React.FC<CustomTooltipProps> = ({ content, fill }) => {
   const wrapperRef = useRef<null | HTMLDivElement>(null);
   const [isActive, setIsActive] = useState(false);
   const [isTruncated, setIsTrancated] = useState(false);

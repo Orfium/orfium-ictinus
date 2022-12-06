@@ -5,7 +5,7 @@ import React from 'react';
 import { currentDay } from '../utils';
 import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
 
-export type Props = {
+export type DayProps = {
   day?: number;
   month: number;
   year: number;
@@ -17,7 +17,7 @@ export type Props = {
   isDisabled?: boolean;
 };
 
-const Day: React.FC<Props> = ({
+const Day: React.FC<DayProps> = ({
   day,
   month,
   year,
@@ -83,4 +83,4 @@ const Day: React.FC<Props> = ({
   );
 };
 
-export default React.memo<Props>(Day);
+export default React.memo<DayProps>(Day);
