@@ -6,7 +6,7 @@ import { ListItemType, ListRowSize } from 'components/List/types';
 import { renderContent } from 'components/List/utils';
 import { SelectOption } from 'components/Select/Select';
 
-type Props = {
+export type ListGroupTitleProps = {
   /** Size of the ListGroupTitle (translates to height) */
   size: ListRowSize;
   /** Content of the ListItem */
@@ -17,7 +17,13 @@ type Props = {
   searchTerm?: string;
 } & TestProps;
 
-const ListGroupTitle: React.FC<Props> = ({ size, content, index, searchTerm, dataTestId }) => {
+const ListGroupTitle: React.FC<ListGroupTitleProps> = ({
+  size,
+  content,
+  index,
+  searchTerm,
+  dataTestId,
+}) => {
   return (
     <div
       css={listGroupTitleStyle({ size, isDisabled: (content as SelectOption).isDisabled })}

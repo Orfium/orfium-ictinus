@@ -8,11 +8,11 @@ import FilterBase from './components/FilterBase';
 import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
 import { menuStyle } from './Filter.style';
-import { FilterOption, Props } from './types';
+import { FilterOption, FilterProps } from './types';
 import { errors } from './utils';
 import handleSearch from 'components/utils/handleSearch';
 
-const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
+const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => {
   const {
     items,
     onSelect,
@@ -32,7 +32,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     onClear = () => {},
   } = props;
 
-  errorHandler<Props>(errors, props);
+  errorHandler<FilterProps>(errors, props);
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');

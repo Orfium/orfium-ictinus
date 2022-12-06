@@ -10,7 +10,7 @@ import ListItemGroup from '../ListItemGroup';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected, MAX_LARGE_HEIGHT, MAX_SMALL_HEIGHT } from '../utils';
 
-type Props = {
+type VirtualizedListProps = {
   items: ListItemType[];
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: ListRowSize;
@@ -28,7 +28,7 @@ type Props = {
   handleOptionClick?: SelectHandlerType;
 } & TestProps;
 
-const VirtualizedList = React.forwardRef<HTMLDivElement, Props>(
+const VirtualizedList = React.forwardRef<HTMLDivElement, VirtualizedListProps>(
   (
     {
       items,

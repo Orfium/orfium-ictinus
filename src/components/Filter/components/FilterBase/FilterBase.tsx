@@ -16,10 +16,10 @@ import {
   valueSpanStyle,
   wrapperStyle,
 } from '../../Filter.style';
-import { Props } from '../../types';
+import { FilterProps } from '../../types';
 import { getTextColor } from '../../utils';
 
-type FilterBaseProps = {
+export type FilterBaseProps = {
   children?: ReactNode;
   isDatePicker?: boolean;
   handleOpen: () => void;
@@ -28,7 +28,10 @@ type FilterBaseProps = {
   selectedItemLabel?: string;
   isOpen: boolean;
   hasSelectedValue: boolean;
-} & Pick<Props, 'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'>;
+} & Pick<
+  FilterProps,
+  'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'
+>;
 
 export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((props, ref) => {
   const {

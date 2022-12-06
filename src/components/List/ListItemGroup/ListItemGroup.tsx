@@ -9,7 +9,7 @@ import { isSelected } from '../utils';
 import ListGroupTitle from './ListGroupTitle';
 import { SelectOption } from 'components/Select/Select';
 
-type Props = {
+export type ListItemGroupProps = {
   /** Size of the ListItem (translates to height) */
   size: ListRowSize;
   /** Content of the ListItemGroup */
@@ -24,7 +24,7 @@ type Props = {
   handleOptionClick?: SelectHandlerType;
 } & TestProps;
 
-const ListItemGroup = React.forwardRef<HTMLDivElement, Props>(
+const ListItemGroup = React.forwardRef<HTMLDivElement, ListItemGroupProps>(
   ({ size, content, groupIndex, selectedItem, searchTerm, handleOptionClick, dataTestId }, ref) => {
     return (
       <li>

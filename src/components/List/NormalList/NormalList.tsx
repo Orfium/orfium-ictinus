@@ -10,7 +10,7 @@ import ListItemGroup from '../ListItemGroup';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
 
-type Props = {
+type NormalListProps = {
   items: ListItemType[];
   /** Size of the list's row (height of ListItem Component)  */
   rowSize: ListRowSize;
@@ -30,7 +30,7 @@ type Props = {
   isSearchable?: boolean;
 } & TestProps;
 
-const NormalList = React.forwardRef<HTMLDivElement, Props>(
+const NormalList = React.forwardRef<HTMLDivElement, NormalListProps>(
   (
     {
       items,
