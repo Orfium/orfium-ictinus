@@ -43,7 +43,7 @@ export type Selection = string | number;
 
 export type TableType = 'normal' | 'nested-header';
 
-type TableProps<T> = {
+export type TableProps<T> = {
   /** The data for the table that needs to display. */
   data: Row<T>[];
   /** An array of titles or objects to define columns. */
