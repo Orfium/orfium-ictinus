@@ -18,14 +18,14 @@ const useClickAwayListener = (ref: React.MutableRefObject<any>, onClick: () => v
 
 export type HTMLTagsAllowed = 'div' | 'li' | 'span';
 
-type Props = {
+type ClickAwayListenerProps = {
   onClick: () => void;
   CustomHtmlTag?: HTMLTagsAllowed;
   ariaRole?: string;
   cssStyles?: { [key: string]: unknown };
 };
 
-const ClickAwayListener: React.FC<Props> = ({
+const ClickAwayListener: React.FC<ClickAwayListenerProps> = ({
   onClick,
   CustomHtmlTag = 'div',
   ariaRole = 'button',

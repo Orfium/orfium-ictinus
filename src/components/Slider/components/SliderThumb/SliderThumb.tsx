@@ -5,14 +5,14 @@ import { IThumbProps } from 'react-range/lib/types';
 import { TestProps } from '../../../../utils/types';
 import { Thumb } from './SliderThumb.style';
 
-interface ThumbProps {
+export interface SliderThumbProps {
   isDisabled: boolean;
   value: number;
   initialValue: number | undefined;
   restProps: IThumbProps;
 }
 
-const SliderThumb: FC<ThumbProps & TestProps> = ({
+const SliderThumb: FC<SliderThumbProps & TestProps> = ({
   isDisabled,
   value,
   initialValue,

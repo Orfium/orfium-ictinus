@@ -7,7 +7,7 @@ import { TestProps } from '../../../../utils/types';
 import { STEP_WITH_INCREMENTS } from '../../Slider';
 import { Mark, MarkHoverCircle } from './SliderMark.style';
 
-type Props = {
+export type SliderMarkProps = {
   values: number[];
   isDisabled: boolean;
   index: number;
@@ -15,7 +15,7 @@ type Props = {
   restProps: IMarkProps;
 };
 
-const SliderMark: FC<Props & TestProps> = ({
+const SliderMark: FC<SliderMarkProps & TestProps> = ({
   values,
   index,
   isDisabled,
