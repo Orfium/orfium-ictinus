@@ -8,14 +8,14 @@ import Icon from '../Icon';
 import Label from '../Label';
 import { IconWrapper } from './components/commons';
 import { AcceptedIconNames } from 'components/Icon/types';
-import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
+import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 type InputProps = Partial<
   Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly' | 'disabled'>
 >;
 
-export type Props = {
+export type TextFieldProps = {
   /** The id of the text field that will be used as for in label too */
   id?: string;
   /** Callback fired when the `input` is blurred. */
@@ -33,7 +33,7 @@ export type Props = {
   /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
    * of the TextField. It will be replaced by a fullWidth prop. */
   hasMinWidthCompat?: boolean;
-} & TextInputWrapperProps &
+} & TextInputBaseProps &
   InputProps &
   TestProps;
 
@@ -42,7 +42,7 @@ console.warn(
     'hasMinWidthCompat prop has been added to temporarily disable min-width when necessary'
 );
 
-const TextField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
     id = undefined,
     rightIcon = null,

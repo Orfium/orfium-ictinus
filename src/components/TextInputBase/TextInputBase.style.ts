@@ -6,7 +6,7 @@ import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 import { getDisabled, getHover, getPressed } from '../../theme/states';
 import { ColorScheme } from '../../theme/types';
 import { textInputConfig } from './config';
-import { Props } from './TextInputBase';
+import { TextInputBaseProps } from './TextInputBase';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
 const wrapperStyleSwitch = ({
@@ -19,7 +19,7 @@ const wrapperStyleSwitch = ({
   theme: Theme;
   colorScheme: ColorScheme;
   hasError?: boolean;
-} & Pick<Props, 'isLean' | 'isDisabled'>) => {
+} & Pick<TextInputBaseProps, 'isLean' | 'isDisabled'>) => {
   if (isLean) {
     return {
       backgroundColor: 'transparent',
@@ -66,7 +66,16 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ isDisabled, isLocked, status, isLean, isDark, size, sx, hasMinWidthCompat }: Props) =>
+  ({
+    isDisabled,
+    isLocked,
+    status,
+    isLean,
+    isDark,
+    size,
+    sx,
+    hasMinWidthCompat,
+  }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = isDark ? 'dark' : theme.colorScheme;
     const hasError = status === 'error';
@@ -102,7 +111,7 @@ export const wrapperStyle =
   };
 
 export const textFieldStyle =
-  ({ isLean, sx }: Props) =>
+  ({ isLean, sx }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
     return css({
       position: 'relative',
@@ -122,7 +131,7 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, size = DEFAULT_SIZE, isDark, sx }: Props) =>
+  ({ label, placeholder, size = DEFAULT_SIZE, isDark, sx }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles =>
     css({
       background: 'transparent',
@@ -172,7 +181,7 @@ export const inputStyle =
     });
 
 export const errorMsgStyle =
-  ({ status }: Props) =>
+  ({ status }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles =>
     css({
       display: 'flex',

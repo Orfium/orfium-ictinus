@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
 import { ColorShapeFromComponent } from '../../utils/themeFunctions';
-import { Props } from './ButtonBase';
+import { ButtonBaseProps } from './ButtonBase';
 import { buttonConfig, buttonSizes } from './config';
 import { calculateButtonColor, defineBackgroundColor } from './utils';
 
@@ -26,7 +26,7 @@ export const buttonBaseStyle =
     isTransparent,
     childrenCount,
     sx,
-  }: Omit<Props, 'buttonType' | 'ref'> & {
+  }: Omit<ButtonBaseProps, 'buttonType' | 'ref'> & {
     calculatedColor: ColorShapeFromComponent;
     childrenCount: number;
   }) =>

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
 import Stack from '../storyUtils/Stack';
-import { Props as TextFieldProps } from '../TextField/TextField';
-import SearchField, { Props } from './SearchField';
+import { TextFieldProps } from '../TextField/TextField';
+import SearchField, { SearchFieldProps } from './SearchField';
 
 const SearchFieldShowcase = ({
   isDisabled,
   placeholder,
   initialValue,
-}: Partial<Props & TextFieldProps> & { initialValue?: string }) => {
+}: Partial<SearchFieldProps & TextFieldProps> & { initialValue?: string }) => {
   const [value, setValue] = useState(initialValue ?? '');
 
   return (

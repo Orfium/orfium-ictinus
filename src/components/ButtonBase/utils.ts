@@ -3,7 +3,7 @@ import { Theme } from 'theme';
 import { mainTypes } from 'theme/palette';
 
 import { ColorShapeFromComponent, getColorFromType } from '../../utils/themeFunctions';
-import { Props } from './ButtonBase';
+import { ButtonBaseProps } from './ButtonBase';
 import { buttonConfig } from './config';
 
 /**
@@ -44,7 +44,7 @@ export const calculateButtonColor = ({
   backGroundColor,
   calculatedColor,
   theme,
-}: Pick<Props, 'type'> & {
+}: Pick<ButtonBaseProps, 'type'> & {
   calculatedColor: ColorShapeFromComponent;
   isBackgroundTransparent: boolean;
   backGroundColor: string;

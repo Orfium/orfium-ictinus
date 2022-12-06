@@ -11,7 +11,7 @@ import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.sty
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
-export type Props = {
+export type TextInputBaseProps = {
   /** The label of the text field that will be used as a placeholder and a label */
   label?: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
@@ -55,7 +55,7 @@ export type Props = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<Props> = ({
+const TextInputBase: FC<TextInputBaseProps> = ({
   isLean = false,
   isDisabled,
   hintMsg,

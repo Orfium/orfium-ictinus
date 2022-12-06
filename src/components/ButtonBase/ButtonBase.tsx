@@ -3,7 +3,7 @@ import React from 'react';
 
 import { ClickEvent } from '../../hooks/useLoading';
 import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
-import { ButtonProps } from '../../utils/common';
+import { CommonButtonProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
@@ -15,7 +15,7 @@ export type EventButtonProps = {
   onBlur?: () => void;
 };
 
-export type Props = {
+export type ButtonBaseProps = {
   /** Type indicating the type of the button */
   type?: AcceptedColorComponentTypes;
   /** the color of the button based on our colors eg. red-500 */
@@ -46,10 +46,10 @@ export type Props = {
   };
 } & TestProps &
   EventButtonProps &
-  ButtonProps;
+  CommonButtonProps;
 
 //@TODO fix props to not overwrite button props
-const ButtonBase = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
+const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, ref) => {
   const {
     size = 'md',
     type = 'primary',
