@@ -1,6 +1,6 @@
-import { AvatarSizes } from '../Avatar';
+import { AvatarSizes } from '../Avatar.types';
 
-export type Props = {
+export type AvatarStackProps = {
   /** the maximum number of avatars to be displayed **/
   maxAvatars?: number;
   /** The size of the extra avatar, if any **/

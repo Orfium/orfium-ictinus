@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
 import { colorShades, flatColors } from '../../theme/palette';
-import { AvatarSizes } from './Avatar';
+import { AvatarSizes } from './Avatar.types';
 
 export const sizeBasedOnProp = (size: AvatarSizes): number => {
   switch (size) {
@@ -32,36 +32,39 @@ const fontSizeBasedOnProp = (theme: Theme, size: AvatarSizes) => {
   }
 };
 
-export const avatarStyle = ({
-  size,
-  fill,
-  fillShade,
-}: {
-  size: AvatarSizes;
-  fill: typeof flatColors[number];
-  fillShade: typeof colorShades[number];
-}) => (theme: Theme): SerializedStyles => css`
-  ${flex};
-  width: ${rem(sizeBasedOnProp(size))};
-  height: ${rem(sizeBasedOnProp(size))};
-  border-radius: 100%;
-  border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
-  box-sizing: border-box;
-  background: ${theme.utils.getColor(fill, fillShade)};
-  overflow: hidden;
-  position: relative;
-  font-size: ${fontSizeBasedOnProp(theme, size)};
-  font-weight: ${theme.typography.weights.medium};
-  align-items: center;
-  flex-shrink: 0;
-  line-height: 1;
-  user-select: none;
-  justify-content: center;
-  color: ${theme.utils.getAAColorFromSwatches(fill, fillShade)};
+export const avatarStyle =
+  ({
+    size,
+    fill,
+    fillShade,
+  }: {
+    size: AvatarSizes;
+    fill: typeof flatColors[number];
+    fillShade: typeof colorShades[number];
+  }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${flex};
+      width: ${rem(sizeBasedOnProp(size))};
+      height: ${rem(sizeBasedOnProp(size))};
+      border-radius: 100%;
+      border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
+      box-sizing: border-box;
+      background: ${theme.utils.getColor(fill, fillShade)};
+      overflow: hidden;
+      position: relative;
+      font-size: ${fontSizeBasedOnProp(theme, size)};
+      font-weight: ${theme.typography.weights.medium};
+      align-items: center;
+      flex-shrink: 0;
+      line-height: 1;
+      user-select: none;
+      justify-content: center;
+      color: ${theme.utils.getAAColorFromSwatches(fill, fillShade)};
 
-  img {
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
-  }
-`;
+      img {
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+      }
+    `;

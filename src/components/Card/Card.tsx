@@ -3,7 +3,7 @@ import React from 'react';
 
 import { cardStyle } from './Card.style';
 
-export type Props = {
+export type CardProps = {
   /** Elevation of Card */
   elevated?: keyof Elevation;
   /** Transparency of Card: if false the Card's background is white, otherwise it's transparent */
@@ -12,7 +12,7 @@ export type Props = {
   radius?: keyof Spacing;
 };
 
-const Card: React.FC<Props> = ({ elevated, isTransparent = false, radius, children }) => {
+const Card: React.FC<CardProps> = ({ elevated, isTransparent = false, radius, children }) => {
   return <div css={cardStyle({ elevated, isTransparent, radius })}>{children}</div>;
 };
 

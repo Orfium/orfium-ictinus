@@ -1,6 +1,6 @@
 import { ClickEvent } from '../../hooks/useLoading';
 import { flatColors } from '../../theme/palette';
-import { ButtonProps } from '../../utils/common';
+import { CommonButtonProps } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 
 export const READ_ONLY = 'read-only' as const;
@@ -8,7 +8,7 @@ export const INTERACTIVE = 'interactive' as const;
 
 export const styleType = [READ_ONLY, INTERACTIVE] as const;
 
-export type Props = {
+export type ChipBaseProps = {
   /**
    * Determines whether the chip should be read-only or interactive.
    * @default read-only
@@ -32,4 +32,4 @@ export type Props = {
   isDisabled?: boolean;
 };
 
-export type ChipProps = Props & TestProps & ButtonProps;
+export type ChipProps = ChipBaseProps & TestProps & CommonButtonProps;

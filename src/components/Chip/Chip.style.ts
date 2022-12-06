@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
-import { Props } from './Chip.types';
+import { ChipProps } from './Chip.types';
 
 export const chipStyle =
   ({
@@ -13,7 +13,7 @@ export const chipStyle =
     isSelected,
     onClear,
     onClick,
-  }: Pick<Props, 'styleType' | 'fill' | 'isSelected' | 'onClear' | 'onClick'>) =>
+  }: Pick<ChipProps, 'styleType' | 'fill' | 'isSelected' | 'onClear' | 'onClick'>) =>
   (theme: Theme): SerializedStyles => {
     const isInteractive = styleType === 'interactive';
     const customFilled = styleType === 'read-only' || onClear || isSelected;
@@ -57,7 +57,7 @@ export const chipStyle =
       };
     }
 
-    
+
       :disabled {
         opacity: ${getDisabled().opacity};
         cursor: ${getDisabled().cursor};

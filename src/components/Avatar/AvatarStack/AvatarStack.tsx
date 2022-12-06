@@ -5,10 +5,10 @@ import { TestProps } from 'utils/types';
 
 import Avatar from '../Avatar';
 import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';
-import { Props } from './AvatarStack.types';
+import { AvatarStackProps } from './AvatarStack.types';
 import { errors } from './utils';
 
-const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProps>(
+const AvatarStack = React.forwardRef<HTMLDivElement, AvatarStackProps & TestProps & DivProps>(
   (
     {
       maxAvatars = 4,
@@ -19,7 +19,7 @@ const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProp
     },
     ref
   ) => {
-    errorHandler<Props>(errors, { maxAvatars });
+    errorHandler<AvatarStackProps>(errors, { maxAvatars });
 
     const children = React.Children.toArray(childrenProp);
 
@@ -58,6 +58,3 @@ const AvatarStack = React.forwardRef<HTMLDivElement, Props & TestProps & DivProp
 AvatarStack.displayName = 'AvatarStack';
 
 export default AvatarStack;
-
-//TODO: Remove on v5 and change import where necessary
-export { Props };
