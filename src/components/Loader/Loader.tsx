@@ -5,7 +5,7 @@ import { getLoader, loaderTypes } from './Loader.utils';
 
 export type LoaderType = typeof loaderTypes[number];
 
-type LoaderProps = {
+export type LoaderProps = {
   /** Loader type. Defaults to dots **/
   type?: LoaderType;
   /** The data test id if needed */

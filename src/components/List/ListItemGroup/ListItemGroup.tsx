@@ -9,7 +9,7 @@ import { isSelected } from '../utils';
 import ListGroupTitle from './ListGroupTitle';
 import { SelectOption } from 'components/Select/Select';
 
-type ListItemGroupProps = {
+export type ListItemGroupProps = {
   /** Size of the ListItem (translates to height) */
   size: ListRowSize;
   /** Content of the ListItemGroup */
