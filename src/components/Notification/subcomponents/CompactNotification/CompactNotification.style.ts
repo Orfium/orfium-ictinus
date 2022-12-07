@@ -17,7 +17,7 @@ export const notificationsContainer = (
   min-height: ${rem(46)};
   border-radius: ${theme.spacing.get('3')};
   color: ${theme.utils.getColor('darkGrey', 850)};
-  font-size: ${theme.typography.fontSizes[14]};
+  font-size: ${theme.typography.fontSizes.get('3')};
   ${notificationsContainerPerType(type, styleType, theme)};
 `;
 
@@ -35,12 +35,12 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   align-items: center;
   padding-right: ${theme.spacing.get('6')};
-  font-weight: ${theme.typography.weights.medium};
+  font-weight: ${theme.typography.weights.get('medium')};
 `;
 
 export const headContainer = () => (theme: Theme): SerializedStyles => css`
   padding-right: ${theme.spacing.get('3')};
-  font-weight: ${theme.typography.weights.medium};
+  font-weight: ${theme.typography.weights.get('medium')};
 `;
 
 export const primaryActionContainer = () => (): SerializedStyles => css`

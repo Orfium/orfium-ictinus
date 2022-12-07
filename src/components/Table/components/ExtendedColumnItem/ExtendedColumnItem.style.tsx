@@ -11,6 +11,6 @@ export const containerStyles = (gap: string) => (): SerializedStyles => css`
 `;
 
 export const contentStyles = () => (theme: Theme): SerializedStyles => css`
-  font-weight: ${theme.typography.weights.medium};
+  font-weight: ${theme.typography.weights.get('medium')};
   color: ${theme.utils.getColor('lightGrey', 750)};
 `;

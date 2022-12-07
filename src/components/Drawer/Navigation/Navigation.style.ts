@@ -40,7 +40,7 @@ export const menuItemStyle =
       ${itemStyle(theme)};
       width: 100%;
       font-size: ${rem(16)};
-      font-weight: ${theme.typography.weights.regular};
+      font-weight: ${theme.typography.weights.get('regular')};
       padding: 0 ${theme.spacing.get('6')};
       background: transparent;
       border: 0 solid transparent;
@@ -70,7 +70,7 @@ export const menuItemTextStyle =
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
-      font-weight: ${isCurrent ? theme.typography.weights.bold : 'initial'};
+      font-weight: ${isCurrent ? theme.typography.weights.get('bold') : 'initial'};
     `;
 
 export const subMenuLinkStyle =
@@ -80,7 +80,7 @@ export const subMenuLinkStyle =
   ${itemStyle(theme)};
   ${transition(0.2)};
   box-sizing: border-box;
-  font-size: ${theme.typography.fontSizes['14']};
+  font-size: ${theme.typography.fontSizes.get('3')};
   color: ${theme.utils.getColor('darkGrey', 850)};
   margin: ${theme.spacing.get('3')} 0 ${theme.spacing.get('3')} 0;
   padding-left: ${rem(ICON_PADDING)};
@@ -92,7 +92,7 @@ export const subMenuLinkStyle =
     background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
   }
   &.active  {
-    font-weight: ${theme.typography.weights.bold};
+    font-weight: ${theme.typography.weights.get('bold')};
     background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
     color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
 

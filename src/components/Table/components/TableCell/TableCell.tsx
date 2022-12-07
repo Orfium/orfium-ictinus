@@ -58,8 +58,8 @@ const TableCell: React.FC<Props> = React.memo(
           component === 'th' && {
             paddingTop: theme.spacing.get('4'),
             paddingBottom: theme.spacing.get('4'),
-            fontWeight: theme.typography.weights.bold,
-            fontSize: theme.typography.fontSizes['14'],
+            fontWeight: theme.typography.weights.get('bold'),
+            fontSize: theme.typography.fontSizes.get('3'),
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           isSticky && {

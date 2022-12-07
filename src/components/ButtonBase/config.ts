@@ -11,7 +11,7 @@ type ButtonConfig = {
     [key in typeof buttonSizes[number] | 'default']: number;
   };
   fontSize: {
-    [key in typeof SM | 'default']: number;
+    [key in typeof SM | 'default']: number | string;
   };
   types: {
     link: {
@@ -37,7 +37,7 @@ export const buttonConfig: ButtonConfig = {
   },
   fontSize: {
     sm: 13,
-    default: 16,
+    default: '4',
   },
   types: {
     link: {

@@ -14,9 +14,9 @@ export const weekDayStyle = () => (theme: Theme): SerializedStyles => css`
   color: ${theme.utils.getColor('lightGrey', 650)};
   padding: ${theme.spacing.get('6')} 0;
   width: ${rem(39)};
-  font-size: ${theme.typography.fontSizes['14']};
+  font-size: ${theme.typography.fontSizes.get('3')};
   text-align: center;
-  font-weight: ${theme.typography.weights.medium};
+  font-weight: ${theme.typography.weights.get('medium')};
 `;
 
 export const datesWrapperStyle = () => (theme: Theme): SerializedStyles => css`

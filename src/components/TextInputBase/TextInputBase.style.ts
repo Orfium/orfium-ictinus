@@ -161,7 +161,7 @@ export const inputStyle =
       '&:focus, &:not(:placeholder-shown)': {
         '& + label': {
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
-          fontWeight: theme.typography.weights.bold,
+          fontWeight: theme.typography.weights.get('bold'),
         },
       },
 
@@ -180,7 +180,7 @@ export const errorMsgStyle =
         status === 'error'
           ? theme.utils.getColor('error', 550, 'normal')
           : theme.utils.getColor('lightGrey', 650),
-      fontSize: theme.typography.fontSizes['12'],
+      fontSize: theme.typography.fontSizes.get('2'),
       lineHeight: 1,
       padding: `${rem(8)} 0 0`,
       svg: {

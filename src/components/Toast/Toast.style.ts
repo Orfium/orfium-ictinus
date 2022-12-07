@@ -84,7 +84,7 @@ export const expandedContainer =
       min-height: ${isExpanded ? rem(146) : rem(0)};
       ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
       height: ${!isExpanded ? rem(0) : 'inherit'};
-      font-size: ${theme.typography.fontSizes['14']};
+      font-size: ${theme.typography.fontSizes.get('3')};
       position: relative;
       background: ${theme.palette.white};
     `;

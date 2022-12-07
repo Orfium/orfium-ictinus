@@ -1,5 +1,5 @@
 import spacingFigma from './constants/spacing';
-import { getFigmaTokensValue } from './utils';
+import { FigmaTokenValueType, getFigmaTokensValue } from './utils';
 
 export type SpacingKey = keyof typeof spacingFigma;
 
@@ -8,7 +8,7 @@ export type Spacing = {
 };
 
 const spacing: Spacing = {
-  get: getFigmaTokensValue<SpacingKey>(spacingFigma),
+  get: getFigmaTokensValue<SpacingKey>(spacingFigma, FigmaTokenValueType.Pixels),
 };
 
 export default spacing;

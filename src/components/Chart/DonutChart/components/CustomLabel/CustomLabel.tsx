@@ -26,7 +26,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ viewBox, value, units }) => {
           x="50%"
           dy="-7"
           alignmentBaseline="middle"
-          fontSize={theme.typography.fontSizes['16']}
+          fontSize={theme.typography.fontSizes.get('4')}
           fill={theme.palette.black}
         >
           {value}

@@ -76,12 +76,48 @@ export const getColorErrors = [
   },
 ];
 
+export type GetFigmaTokensValue<T extends string | number | symbol> = {
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'pixels'): (val: T) => string;
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'string'): (val: T) => string;
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'number'): (val: T) => number;
+};
+
+export enum FigmaTokenValueType {
+  Pixels = 'pixels',
+  String = 'string',
+  Number = 'number',
+}
 /**
- *
  * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
- * @returns the value of the figma token item converted into rem
+ * @param type 'pixels' refers to all the string values that need to be converted to rem
+ *             'string' refers to all the string values that need no conversion (e.g. opacity, font-family etc)
+ *             'number' refers to all the string values that need to be converted to numbers (e.g. font-weight)
  */
-export const getFigmaTokensValue =
-  <T extends string | number | symbol>(figmaTokensObject: Record<T, Record<string, string>>) =>
-  (val: T): string =>
-    rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
+export const getFigmaTokensValue: {
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType.Number
+  ): (val: T) => number;
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType.String
+  ): (val: T) => string;
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType.Pixels
+  ): (val: T) => string;
+} =
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType
+  ) =>
+  (val: T): any => {
+    switch (type) {
+      case FigmaTokenValueType.Pixels:
+        return rem(Number(get(figmaTokensObject, [val, 'value'], '0'))) as string;
+      case FigmaTokenValueType.String:
+        return get(figmaTokensObject, [val, 'value'], '0') as string;
+      case FigmaTokenValueType.Number:
+        return Number(get(figmaTokensObject, [val, 'value'], '0')) as number;
+    }
+  };
