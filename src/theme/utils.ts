@@ -76,26 +76,51 @@ export const getColorErrors = [
   },
 ];
 
+export type GetFigmaTokensValue<T extends string | number | symbol> = {
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'pixels'): (val: T) => string;
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'string'): (val: T) => string;
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'number'): (val: T) => number;
+};
+
+export enum FigmaTokenValueType {
+  Pixels = 'pixels',
+  String = 'string',
+  Number = 'number',
+}
 /**
  * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
  * @param type 'pixels' refers to all the string values that need to be converted to rem
  *             'string' refers to all the string values that need no conversion (e.g. opacity, font-family etc)
  *             'number' refers to all the string values that need to be converted to numbers (e.g. font-weight)
  */
-export const getFigmaTokensValue =
-  <T extends string | number | symbol>(
+export const getFigmaTokensValue: {
+  <T extends string | symbol>(
     figmaTokensObject: Record<T, Record<string, string>>,
-    type: 'pixels' | 'string' | 'number'
+    type: FigmaTokenValueType.Number
+  ): (val: T) => number;
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType.String
+  ): (val: T) => string;
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType.Pixels
+  ): (val: T) => string;
+} =
+  <T extends string | symbol>(
+    figmaTokensObject: Record<T, Record<string, string>>,
+    type: FigmaTokenValueType
   ) =>
-  (val: T): string | number => {
+  (val: T): any => {
     switch (type) {
-      case 'pixels':
-        return rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
-      case 'string':
-        return get(figmaTokensObject, [val, 'value'], '0');
-      case 'number':
-        return Number(get(figmaTokensObject, [val, 'value'], '0'));
-      default:
-        return get(figmaTokensObject, [val, 'value'], '0');
+      case FigmaTokenValueType.Pixels:
+        return rem(Number(get(figmaTokensObject, [val, 'value'], '0'))) as string;
+        break;
+      case FigmaTokenValueType.String:
+        return get(figmaTokensObject, [val, 'value'], '0') as string;
+        break;
+      case FigmaTokenValueType.Number:
+        return Number(get(figmaTokensObject, [val, 'value'], '0')) as number;
+        break;
     }
   };

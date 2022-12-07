@@ -7,7 +7,7 @@ import letterSpacingFigma from './constants/letterSpacing';
 import lineHeightFigma from './constants/lineHeight';
 import textCaseFigma from './constants/textCase';
 import textDecorationFigma from './constants/textDecoration';
-import { getFigmaTokensValue } from './utils';
+import { FigmaTokenValueType, getFigmaTokensValue } from './utils';
 
 export type FontSizeKey = keyof typeof fontSizeFigma;
 export type FontWeightKey = keyof typeof fontWeightFigma;
@@ -63,7 +63,7 @@ export type Typography = {
 };
 
 const fontSizes: FontSize = {
-  get: getFigmaTokensValue<FontSizeKey>(fontSizeFigma, 'pixels') as (val: FontSizeKey) => string,
+  get: getFigmaTokensValue<FontSizeKey>(fontSizeFigma, FigmaTokenValueType.Pixels),
   /** @TODO remove this custom font-sizes */
   '8': rem('8px'),
   '11': rem('11px'),
@@ -72,37 +72,27 @@ const fontSizes: FontSize = {
 };
 
 const weights: FontWeight = {
-  get: getFigmaTokensValue<FontWeightKey>(fontWeightFigma, 'number') as (
-    val: FontWeightKey
-  ) => number,
+  get: getFigmaTokensValue<FontWeightKey>(fontWeightFigma, FigmaTokenValueType.Number),
 };
 
 const fontFamilies: FontFamily = {
-  get: getFigmaTokensValue<FontFamilyKey>(fontFamilyFigma, 'string') as (
-    val: FontFamilyKey
-  ) => string,
+  get: getFigmaTokensValue<FontFamilyKey>(fontFamilyFigma, FigmaTokenValueType.String),
 };
 
 const lineHeights: LineHeight = {
-  get: getFigmaTokensValue<LineHeightKey>(lineHeightFigma, 'pixels') as (
-    val: LineHeightKey
-  ) => string,
+  get: getFigmaTokensValue<LineHeightKey>(lineHeightFigma, FigmaTokenValueType.Pixels),
 };
 
 const letterSpacings: LetterSpacing = {
-  get: getFigmaTokensValue<LetterSpacingKey>(letterSpacingFigma, 'string') as (
-    val: LetterSpacingKey
-  ) => string,
+  get: getFigmaTokensValue<LetterSpacingKey>(letterSpacingFigma, FigmaTokenValueType.String),
 };
 
 const textCases: TextCase = {
-  get: getFigmaTokensValue<TextCaseKey>(textCaseFigma, 'string') as (val: TextCaseKey) => string,
+  get: getFigmaTokensValue<TextCaseKey>(textCaseFigma, FigmaTokenValueType.String),
 };
 
 const textDecorations: TextDecoration = {
-  get: getFigmaTokensValue<TextDecorationKey>(textDecorationFigma, 'string') as (
-    val: TextDecorationKey
-  ) => string,
+  get: getFigmaTokensValue<TextDecorationKey>(textDecorationFigma, FigmaTokenValueType.String),
 };
 
 const defaultFontFamily = fontFamilies.get('roboto');
