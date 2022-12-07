@@ -2,7 +2,7 @@ import React from 'react';
 
 import DotsLoader from './components/DotsLoader';
 import IndeterminateLoader from './components/IndeterminateLoader';
-import { Spinner } from './components/Spinner';
+import Spinner from './components/Spinner';
 import { LoaderType } from './Loader';
 
 export const loaderTypes = ['dots', 'indeterminate', 'spinner'] as const;

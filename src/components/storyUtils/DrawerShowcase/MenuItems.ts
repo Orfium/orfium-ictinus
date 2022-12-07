@@ -1,6 +1,6 @@
-import { MenuItem } from '../../Drawer/types';
+import { DrawerMenuItem } from '../../Drawer';
 
-export const menuItems: MenuItem[] = [
+export const menuItems: DrawerMenuItem[] = [
   {
     name: 'Long Menu Item Name',
     url: '/menu1',
