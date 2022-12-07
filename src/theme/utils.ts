@@ -115,12 +115,9 @@ export const getFigmaTokensValue: {
     switch (type) {
       case FigmaTokenValueType.Pixels:
         return rem(Number(get(figmaTokensObject, [val, 'value'], '0'))) as string;
-        break;
       case FigmaTokenValueType.String:
         return get(figmaTokensObject, [val, 'value'], '0') as string;
-        break;
       case FigmaTokenValueType.Number:
         return Number(get(figmaTokensObject, [val, 'value'], '0')) as number;
-        break;
     }
   };
