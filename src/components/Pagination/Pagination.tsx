@@ -46,7 +46,7 @@ const Pagination = ({
         alignItems: 'center',
         justifyContent: 'space-between',
         color: theme.utils.getColor('darkGrey', 850),
-        '> *': { padding: theme.spacing.sm },
+        '> *': { padding: theme.spacing.get('4') },
       }}
     >
       {isEnhancedPaginationVisible && (

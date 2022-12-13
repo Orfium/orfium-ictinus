@@ -81,12 +81,12 @@ export const closeIconContainer =
     css`
       ${flex};
       justify-content: flex-end;
-      padding: ${theme.spacing.sm} ${theme.spacing.sm} 0 0;
+      padding: ${theme.spacing.get('4')} ${theme.spacing.get('4')} 0 0;
     `;
 
 export const contentStyle =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      padding: ${theme.spacing.xl};
+      padding: ${theme.spacing.get('9')};
     `;

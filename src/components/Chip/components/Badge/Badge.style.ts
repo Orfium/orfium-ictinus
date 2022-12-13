@@ -8,14 +8,14 @@ export const badgeStyle = ({ fill = 'greyScale', isSelected }: BadgeProps) => (
   theme: Theme
 ): SerializedStyles => css`
   ${flex};
-  width: ${theme.spacing.md};
-  height: ${theme.spacing.md};
+  width: ${theme.spacing.get('6')};
+  height: ${theme.spacing.get('6')};
   border-radius: 100%;
   background: ${isSelected
     ? theme.utils.getColor(fill, 550)
     : theme.utils.getColor('lightGrey', 200)};
-  font-size: ${theme.typography.fontSizes['10']};
-  font-weight: ${theme.typography.weights.medium};
+  font-size: ${theme.typography.fontSizes.get('1')};
+  font-weight: ${theme.typography.weights.get('medium')};
   align-items: center;
   flex-shrink: 0;
   line-height: normal;

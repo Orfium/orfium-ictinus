@@ -3,13 +3,13 @@ import { rem } from 'theme/utils';
 
 export const tooltipStyle = () => (theme: Theme) => {
   return {
-    fontSize: theme.typography.fontSizes['14'],
-    padding: `${theme.spacing.sm} ${theme.spacing.md}`,
-    margin: theme.spacing.sm,
+    fontSize: theme.typography.fontSizes.get('3'),
+    padding: `${theme.spacing.get('4')} ${theme.spacing.get('6')}`,
+    margin: theme.spacing.get('4'),
     color: theme.palette.white,
     background: theme.utils.getColor('darkGrey', 750),
     opacity: '90%',
-    borderRadius: theme.spacing.xsm,
+    borderRadius: theme.spacing.get('3'),
     minWidth: rem(200),
     whiteSpace: 'nowrap' as const,
   };
@@ -17,7 +17,7 @@ export const tooltipStyle = () => (theme: Theme) => {
 
 export const tooltipHrStyle = () => (theme: Theme) => {
   return {
-    margin: `${theme.spacing.md} 0px`,
+    margin: `${theme.spacing.get('6')} 0px`,
     height: '1px',
     borderWidth: 0,
     backgroundColor: theme.palette.white,
@@ -36,11 +36,11 @@ export const tooltipLiStyle = () => (theme: Theme) => {
     width: '100%',
     display: 'flex',
     justifyContent: 'space-between',
-    height: theme.spacing.md,
-    padding: `${theme.spacing.sm} 0px`,
+    height: theme.spacing.get('6'),
+    padding: `${theme.spacing.get('4')} 0px`,
     'div:last-child': {
-      marginLeft: theme.spacing.md,
-      span: { marginLeft: theme.spacing.xsm },
+      marginLeft: theme.spacing.get('6'),
+      span: { marginLeft: theme.spacing.get('3') },
     },
   };
 };

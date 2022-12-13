@@ -17,8 +17,8 @@ export const optionStyle =
   }: { isSelected: boolean; hasNoResultsExist?: boolean } & Omit<TextFieldProps, 'ref'>) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      padding: ${theme.spacing.md};
-      font-size: ${theme.typography.fontSizes[size === 'md' ? '16' : '14']};
+      padding: ${theme.spacing.get('6')};
+      font-size: ${theme.typography.fontSizes.get(size === 'md' ? '4' : '3')};
       background-color: ${isSelected ? darken(0.07, theme.palette.white) : theme.palette.white};
       cursor: default;
       color: ${hasNoResultsExist ? theme.utils.getColor('lightGrey', 750) : 'initial'};

@@ -52,14 +52,14 @@ const TableCell: React.FC<Props> = React.memo(
           {
             position: 'relative',
             textAlign,
-            padding: `${theme.spacing.xsm} ${isPadded ? theme.spacing.sm : 0}`,
+            padding: `${theme.spacing.get('3')} ${isPadded ? theme.spacing.get('4') : 0}`,
             width,
           },
           component === 'th' && {
-            paddingTop: theme.spacing.sm,
-            paddingBottom: theme.spacing.sm,
-            fontWeight: theme.typography.weights.bold,
-            fontSize: theme.typography.fontSizes['14'],
+            paddingTop: theme.spacing.get('4'),
+            paddingBottom: theme.spacing.get('4'),
+            fontWeight: theme.typography.weights.get('bold'),
+            fontSize: theme.typography.fontSizes.get('3'),
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           isSticky && {

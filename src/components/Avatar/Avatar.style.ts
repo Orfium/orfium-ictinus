@@ -24,11 +24,11 @@ const fontSizeBasedOnProp = (theme: Theme, size: AvatarSizes) => {
     case 'md':
       return theme.typography.fontSizes['11'];
     case 'sm':
-      return theme.typography.fontSizes['10'];
+      return theme.typography.fontSizes.get('1');
     case 'xs':
       return theme.typography.fontSizes['8'];
     default:
-      return theme.typography.fontSizes['16'];
+      return theme.typography.fontSizes.get('4');
   }
 };
 
@@ -51,7 +51,7 @@ export const avatarStyle = ({
   overflow: hidden;
   position: relative;
   font-size: ${fontSizeBasedOnProp(theme, size)};
-  font-weight: ${theme.typography.weights.medium};
+  font-weight: ${theme.typography.weights.get('medium')};
   align-items: center;
   flex-shrink: 0;
   line-height: 1;

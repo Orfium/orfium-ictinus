@@ -40,8 +40,8 @@ export const menuItemStyle =
       ${itemStyle(theme)};
       width: 100%;
       font-size: ${rem(16)};
-      font-weight: ${theme.typography.weights.regular};
-      padding: 0 ${theme.spacing.md};
+      font-weight: ${theme.typography.weights.get('regular')};
+      padding: 0 ${theme.spacing.get('6')};
       background: transparent;
       border: 0 solid transparent;
       display: flex;
@@ -70,7 +70,7 @@ export const menuItemTextStyle =
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
-      font-weight: ${isCurrent ? theme.typography.weights.bold : 'initial'};
+      font-weight: ${isCurrent ? theme.typography.weights.get('bold') : 'initial'};
     `;
 
 export const subMenuLinkStyle =
@@ -80,9 +80,9 @@ export const subMenuLinkStyle =
   ${itemStyle(theme)};
   ${transition(0.2)};
   box-sizing: border-box;
-  font-size: ${theme.typography.fontSizes['14']};
+  font-size: ${theme.typography.fontSizes.get('3')};
   color: ${theme.utils.getColor('darkGrey', 850)};
-  margin: ${theme.spacing.xsm} 0 ${theme.spacing.xsm} 0;
+  margin: ${theme.spacing.get('3')} 0 ${theme.spacing.get('3')} 0;
   padding-left: ${rem(ICON_PADDING)};
 
   &:hover {
@@ -92,7 +92,7 @@ export const subMenuLinkStyle =
     background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
   }
   &.active  {
-    font-weight: ${theme.typography.weights.bold};
+    font-weight: ${theme.typography.weights.get('bold')};
     background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
     color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
 
@@ -128,7 +128,7 @@ export const menuIconStyle =
     css`
       ${transition(0.2)};
       ${flexCenter};
-      margin-right: ${theme.spacing.sm};
+      margin-right: ${theme.spacing.get('4')};
       width: ${rem(32)};
       height: ${rem(32)};
       border-radius: 50%;
@@ -145,6 +145,6 @@ export const subMenuIconStyle =
       ${flexCenter};
       width: ${rem(32)};
       height: ${rem(32)};
-      margin-right: ${theme.spacing.sm};
+      margin-right: ${theme.spacing.get('4')};
       flex-shrink: 0;
     `;
