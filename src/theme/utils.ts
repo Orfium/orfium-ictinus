@@ -136,11 +136,11 @@ export const getFigmaTokensValue: {
   (val: T): any => {
     switch (type) {
       case FigmaTokenValueType.Pixels:
-        return rem(Number(get(figmaTokensObject, [val, 'value'], '0'))) as string;
+        return rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
       case FigmaTokenValueType.String:
         return get(figmaTokensObject, [val, 'value'], '0') as string;
       case FigmaTokenValueType.Number:
-        return Number(get(figmaTokensObject, [val, 'value'], '0')) as number;
+        return Number(get(figmaTokensObject, [val, 'value'], '0'));
       case FigmaTokenValueType.BoxShadow:
         return getFigmaTokensBoxShadowValue(figmaTokensObject, val);
     }
