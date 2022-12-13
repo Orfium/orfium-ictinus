@@ -1,5 +1,5 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
-import { withKnobs, boolean, array, select, text } from "@storybook/addon-knobs";
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import LineChart from './LineChart';
 import BarChartShowCase from '../storyUtils/BarChartShowCase';
 import BarChart from './BarChart';
@@ -8,7 +8,12 @@ import DonutChartShowCase from '../storyUtils/DonutChartShowCase';
 import { color } from './LineChart/story.utils';
 import { initData } from './LineChart/mockedData';
 
-<Meta title="Design System/Chart"/>
+<Meta
+  title="Design System/Chart"
+  parameters={{
+    chromatic: { delay: 1000 },
+  }}
+/>
 
 # LineChart
 
@@ -19,7 +24,7 @@ A universal LineChart component for showing both single line and multiple line c
 ```js
 import { LineChart } from '@orfium/ictinus';
 
-<LineChart data={[]}/>
+<LineChart data={[]} />;
 ```
 
 # Props
@@ -38,7 +43,6 @@ import { LineChart } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-
 # BarChart
 
 A universal BarChart component.
@@ -48,19 +52,18 @@ A universal BarChart component.
 ```js
 import { BarChart } from '@orfium/ictinus';
 
-<BarChart data={[]}/>
+<BarChart data={[]} />;
 ```
 
 # Props
 
-<Props of={BarChart}/>
+<Props of={BarChart} />
 
 <Preview>
   <Story name="BarChart" parameters={{ decorators: [withKnobs] }}>
-    <BarChartShowCase/>
+    <BarChartShowCase />
   </Story>
 </Preview>
-
 
 # DonutChart
 
@@ -71,18 +74,18 @@ A universal DonutChart component.
 ```js
 import { DonutChart } from '@orfium/ictinus';
 
-<DonutChart data={[]}/>
+<DonutChart data={[]} />;
 ```
 
 # Props
 
-<Props of={DonutChart}/>
+<Props of={DonutChart} />
 
 <Preview>
   <Story name="DonutChart" parameters={{ decorators: [withKnobs] }}>
     <DonutChartShowCase
       chartValue={text('chartValue', 'value')}
-      chartUnits={text('chartUnits', 'units')}/>
+      chartUnits={text('chartUnits', 'units')}
+    />
   </Story>
 </Preview>
-
