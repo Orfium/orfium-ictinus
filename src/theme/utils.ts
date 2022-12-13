@@ -86,7 +86,28 @@ export enum FigmaTokenValueType {
   Pixels = 'pixels',
   String = 'string',
   Number = 'number',
+  BoxShadow = 'boxShadow',
 }
+
+/** The type of the object inside the theme/constants folder  */
+export type FigmaTokensObject<T extends string | symbol> = Record<
+  T,
+  Record<string, string | Record<string, string>>
+>;
+
+const getFigmaTokensBoxShadowValue = <T extends string | symbol>(
+  figmaTokensObject: FigmaTokensObject<T>,
+  val: T
+) => {
+  const x = rem(Number(get(figmaTokensObject, [val, 'value', 'x'], '0')));
+  const y = rem(Number(get(figmaTokensObject, [val, 'value', 'y'], '0')));
+  const blur = rem(Number(get(figmaTokensObject, [val, 'value', 'blur'], '0')));
+  const spread = rem(Number(get(figmaTokensObject, [val, 'value', 'spread'], '0')));
+  const color = get(figmaTokensObject, [val, 'value', 'color'], 'transparent');
+
+  return `${x} ${y} ${blur} ${spread} ${color}`;
+};
+
 /**
  * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
  * @param type 'pixels' refers to all the string values that need to be converted to rem
@@ -95,29 +116,32 @@ export enum FigmaTokenValueType {
  */
 export const getFigmaTokensValue: {
   <T extends string | symbol>(
-    figmaTokensObject: Record<T, Record<string, string>>,
+    figmaTokensObject: FigmaTokensObject<T>,
     type: FigmaTokenValueType.Number
   ): (val: T) => number;
   <T extends string | symbol>(
-    figmaTokensObject: Record<T, Record<string, string>>,
+    figmaTokensObject: FigmaTokensObject<T>,
     type: FigmaTokenValueType.String
   ): (val: T) => string;
   <T extends string | symbol>(
-    figmaTokensObject: Record<T, Record<string, string>>,
+    figmaTokensObject: FigmaTokensObject<T>,
     type: FigmaTokenValueType.Pixels
   ): (val: T) => string;
-} =
   <T extends string | symbol>(
-    figmaTokensObject: Record<T, Record<string, string>>,
-    type: FigmaTokenValueType
-  ) =>
+    figmaTokensObject: FigmaTokensObject<T>,
+    type: FigmaTokenValueType.BoxShadow
+  ): (val: T) => string;
+} =
+  <T extends string | symbol>(figmaTokensObject: FigmaTokensObject<T>, type: FigmaTokenValueType) =>
   (val: T): any => {
     switch (type) {
       case FigmaTokenValueType.Pixels:
-        return rem(Number(get(figmaTokensObject, [val, 'value'], '0'))) as string;
+        return rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
       case FigmaTokenValueType.String:
         return get(figmaTokensObject, [val, 'value'], '0') as string;
       case FigmaTokenValueType.Number:
-        return Number(get(figmaTokensObject, [val, 'value'], '0')) as number;
+        return Number(get(figmaTokensObject, [val, 'value'], '0'));
+      case FigmaTokenValueType.BoxShadow:
+        return getFigmaTokensBoxShadowValue(figmaTokensObject, val);
     }
   };
