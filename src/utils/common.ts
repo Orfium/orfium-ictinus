@@ -27,4 +27,4 @@ export type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 /** URL currently used for figma version 4.5 frozen */
 export const FIGMA_URL =
-  'https://www.figma.com/file/3deO7jGtkly8ij4TiIUpzY/Design-System-V4.5-(%E2%9D%84%EF%B8%8FDO-NOT-EDIT)';
+  'https://www.figma.com/file/8kMPBNYHHXz2AtkzeeDmk5/Design-System-V5.0---Working-File';
