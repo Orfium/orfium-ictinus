@@ -5,7 +5,7 @@ import { menuStyle, optionStyle } from './SelectMenu.style';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 
-export type Props = {
+export type SelectMenuProps = {
   /** Sets the size of the menu */
   size?: 'md' | 'sm';
   /** The status of the button regarding the status which is in - default normal */
@@ -18,7 +18,7 @@ export type Props = {
   searchTerm?: string;
 };
 
-const SelectMenu: React.FC<Props> = (props) => {
+const SelectMenu: React.FC<SelectMenuProps> = (props) => {
   const {
     size = 'sm',
     status = 'normal',

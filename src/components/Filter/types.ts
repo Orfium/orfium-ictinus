@@ -10,7 +10,7 @@ export type StyleType = 'filled' | 'transparent';
 
 export type FilterType = 'preset' | 'added';
 
-export type Props = {
+export type FilterProps = {
   /** The type of the button - defaults to "primary" */
   buttonType?: 'primary' | 'secondary';
   /** Items that are being declared as menu options */

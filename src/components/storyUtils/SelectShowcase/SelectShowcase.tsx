@@ -9,22 +9,22 @@ export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, inde
   label: `Test option ${index}`,
 }));
 
-type Props = {
+type SelectShowcaseProps = {
   minCharactersToSearch?: number;
 };
 
-const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
+const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch = 0 }) => {
   const [options, setOptions] = useState<SelectOption[]>(dummyUnrefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
 
   const mockedApiCall = (term: string) => {
-    new Promise<SelectOption[]>(resolve => {
+    new Promise<SelectOption[]>((resolve) => {
       setTimeout(() => {
         resolve(dummyUnrefinedData);
         setIsLoading(false);
       }, 1500);
-    }).then(values => {
-      const filteredValues = values.filter(option => option.label.includes(term));
+    }).then((values) => {
+      const filteredValues = values.filter((option) => option.label.includes(term));
       setOptions(filteredValues);
     });
   };

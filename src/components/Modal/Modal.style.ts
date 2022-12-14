@@ -3,7 +3,7 @@ import { transparentize } from 'polished';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { Props } from './Modal';
+import { ModalProps } from './Modal';
 
 export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   position: fixed;
@@ -24,7 +24,7 @@ export const cardSizing = css`
 `;
 
 export const modalContainer =
-  ({ isContentPadded }: Pick<Props, 'isContentPadded'>) =>
+  ({ isContentPadded }: Pick<ModalProps, 'isContentPadded'>) =>
   (theme: Theme): SerializedStyles =>
     css`
       display: flex;

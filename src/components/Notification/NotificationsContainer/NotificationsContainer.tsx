@@ -4,16 +4,20 @@ import ReactDOM from 'react-dom';
 
 import { notificationsContainer } from './NotificationsContainer.style';
 
-type Positions = 'top-right' | 'top-left' | 'bottom-left' | 'bottom-right';
+export type NotificationsContainerPositions =
+  | 'top-right'
+  | 'top-left'
+  | 'bottom-left'
+  | 'bottom-right';
 
-type Props = {
+export type NotificationsContainerProps = {
   /** Notifications Container position */
-  position: Positions;
+  position: NotificationsContainerPositions;
   children: ReactNode;
   parent?: HTMLElement | null;
 };
 
-const NotificationsContainer: React.FC<Props> = props => {
+const NotificationsContainer: React.FC<NotificationsContainerProps> = (props) => {
   const { children, position, parent = document.body } = props;
 
   if (parent === null) {

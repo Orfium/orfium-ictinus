@@ -15,7 +15,7 @@ import {
   overlayWrapperStyle,
 } from './OverlayComponent.style';
 
-type Props = {
+export type OverlayComponentProps = {
   selectedOption?: string;
   onCancel?: () => void;
   onApply?: () => void;
@@ -31,7 +31,7 @@ export type Range = {
   from?: Dayjs;
   to?: Dayjs;
 };
-const OverlayComponent: React.FC<Props> = ({
+const OverlayComponent: React.FC<OverlayComponentProps> = ({
   selectedOption,
   setSelectedOption = () => {},
   isRangePicker = false,

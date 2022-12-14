@@ -3,12 +3,12 @@ import { Theme } from 'theme';
 import { BASE_SHADE } from 'theme/palette';
 import { rem } from 'theme/utils';
 
-import { Props } from './Label';
+import { LabelProps } from './Label';
 
 export const LABEL_TRANSFORM_LEFT_SPACING = rem(3);
 
 export const labelStyle =
-  ({ isAnimated, hasError }: Pick<Props, 'isAnimated' | 'hasError'>) =>
+  ({ isAnimated, hasError }: Pick<LabelProps, 'isAnimated' | 'hasError'>) =>
   (theme: Theme): SerializedStyles =>
     css`
       transition: transform 0.25s, opacity 0.25s ease-in-out;

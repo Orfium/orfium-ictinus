@@ -43,7 +43,7 @@ export const colorBoxWrapper = css`
   width: 100%;
 `;
 
-type Props = {
+type ColorBoxProps = {
   theme: Theme;
   color: string;
   colorName?: typeof flatColors[number];
@@ -59,7 +59,7 @@ export const colorBox = ({
   shade,
   isSelectedColor,
   isHoverable = true,
-}: Props): SerializedStyles => css`
+}: ColorBoxProps): SerializedStyles => css`
   height: 50px;
   width: calc(100% - 20px);
   background: ${color};
@@ -77,7 +77,7 @@ export const colorBox = ({
   transform: scale(${isSelectedColor ? 1.1 : 1});
 
   ${isHoverable &&
-    `
+  `
   cursor: pointer;
   :hover {
     transform: scale(1.1);

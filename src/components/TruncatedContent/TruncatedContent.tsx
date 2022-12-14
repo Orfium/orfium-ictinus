@@ -3,7 +3,7 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { TruncationDiv } from './TruncatedContent.style';
 import Tooltip from 'components/Tooltip';
 
-type Props = {
+export type TruncatedContentProps = {
   /** The content of the tooltip */
   tooltipContent: string | undefined;
   /** Flag for overriding other settings to always show the tooltip */
@@ -12,7 +12,7 @@ type Props = {
   placement?: 'top' | 'bottom' | 'right' | 'left';
 };
 
-const TruncatedContent: React.FC<Props> = ({
+const TruncatedContent: React.FC<TruncatedContentProps> = ({
   children,
   isAlwaysVisible = false,
   tooltipContent,

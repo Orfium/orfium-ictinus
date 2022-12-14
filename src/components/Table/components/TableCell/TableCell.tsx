@@ -6,7 +6,7 @@ import { parentStyles } from './TableCell.style';
 import { getTestId } from './utils';
 import { getBorderColor } from 'components/Table/utils';
 
-type Props = {
+export type TableCellProps = {
   textAlign?: 'left' | 'right';
   component?: 'td' | 'th';
   width?: number | string;
@@ -23,7 +23,7 @@ type Props = {
   onClick?: () => void;
 };
 
-const TableCell: React.FC<Props> = React.memo(
+const TableCell: React.FC<TableCellProps> = React.memo(
   ({
     textAlign = 'left',
     component = 'td',

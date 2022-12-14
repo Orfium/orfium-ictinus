@@ -5,13 +5,13 @@ import { SpacingKey } from '../../../theme/spacing';
 import Card from '../../Card';
 import { showcaseContainerStyle } from './CardShowcase.style';
 
-type Props = {
+type CardShowcaseProps = {
   elevated?: keyof Elevation;
   isTransparent?: boolean;
   radius?: SpacingKey;
 };
 
-const CardShowcase: React.FC<Props> = ({ elevated, isTransparent, radius }) => {
+const CardShowcase: React.FC<CardShowcaseProps> = ({ elevated, isTransparent, radius }) => {
   const CardContent = () => (
     <div css={{ padding: '16px' }}>
       <div>{`Card with ${elevated ? elevated : 'no'} elevation`}</div>

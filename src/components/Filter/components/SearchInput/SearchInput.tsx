@@ -8,14 +8,14 @@ import Loader from '../../../Loader';
 import TextField from '../../../TextField';
 import { textFieldWrapper, iconWrapper } from './SearchInput.style';
 
-interface Props {
+export type SearchInputProps = {
   value: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   dataTestId?: string;
   isLoading?: boolean;
-}
+};
 
-const SearchInput = ({ onChange, value, dataTestId, isLoading }: Props) => {
+const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProps) => {
   const theme = useTheme();
 
   const rightIcon = useMemo(

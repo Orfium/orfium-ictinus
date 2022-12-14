@@ -3,10 +3,10 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
 import { BASE_SHADE } from '../../theme/palette';
-import { Props } from './CheckBox';
+import { CheckboxProps } from './CheckBox';
 
 export const wrapperStyle =
-  ({ isDisabled }: Props) =>
+  ({ isDisabled }: CheckboxProps) =>
   (): SerializedStyles =>
     css`
       opacity: ${isDisabled ? 0.3 : 1};
@@ -16,7 +16,7 @@ export const wrapperStyle =
     `;
 
 export const checkboxWrapperStyle =
-  ({ isDisabled }: Props) =>
+  ({ isDisabled }: CheckboxProps) =>
   (): SerializedStyles => {
     const hoverStyle =
       !isDisabled &&
@@ -50,7 +50,7 @@ export const checkboxWrapperStyle =
     `;
   };
 
-const getBackgroundColor = ({ isChecked, isFilled, theme }: Props & { theme: Theme }) => {
+const getBackgroundColor = ({ isChecked, isFilled, theme }: CheckboxProps & { theme: Theme }) => {
   if (isChecked) {
     return `background: ${theme.utils.getColor('primary', BASE_SHADE, 'normal')}`;
   }
@@ -66,7 +66,7 @@ const getBackgroundColor = ({ isChecked, isFilled, theme }: Props & { theme: The
 };
 
 export const checkboxStyle =
-  ({ isChecked, isFilled }: Props) =>
+  ({ isChecked, isFilled }: CheckboxProps) =>
   (theme: Theme): SerializedStyles => {
     return css`
       border: 0;
@@ -102,7 +102,7 @@ export const checkboxStyle =
     `;
   };
 
-export const markerStyle = ({ isChecked }: Props): SerializedStyles => {
+export const markerStyle = ({ isChecked }: CheckboxProps): SerializedStyles => {
   return css`
     span {
       padding: 0;

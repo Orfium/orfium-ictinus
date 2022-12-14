@@ -15,7 +15,7 @@ import { typeToIconName } from '../subcomponents/CompactNotification/CompactNoti
 import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import Icon from 'components/Icon';
 
-export type Props = {
+export type SnackbarProps = {
   /** The informative message of the Toast */
   message: string;
   /** The type of the Notification */
@@ -38,7 +38,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const Snackbar: React.FC<Props> = ({
+const Snackbar: React.FC<SnackbarProps> = ({
   message,
   type,
   styleType = 'elevated',

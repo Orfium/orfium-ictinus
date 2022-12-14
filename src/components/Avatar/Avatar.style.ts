@@ -4,7 +4,7 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 import { flex } from '../../theme/functions';
 import { colorShades, flatColors } from '../../theme/palette';
-import { AvatarSizes } from './Avatar';
+import { AvatarSizes } from './Avatar.types';
 
 export const sizeBasedOnProp = (size: AvatarSizes): number => {
   switch (size) {
@@ -59,9 +59,9 @@ export const avatarStyle = ({
   justify-content: center;
   color: ${theme.utils.getAAColorFromSwatches(fill, fillShade)};
 
-  img {
-    border-radius: 100%;
-    width: 100%;
-    height: 100%;
-  }
-`;
+      img {
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+      }
+    `;

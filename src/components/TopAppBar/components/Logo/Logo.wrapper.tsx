@@ -8,11 +8,11 @@ const PlaceHolder = () => (
   </div>
 );
 
-interface Props {
+interface LogoWrapperProps {
   logoIcon?: JSX.Element;
 }
 
-const LogoWrapper: FC<Props> = ({ logoIcon }) => (
+const LogoWrapper: FC<LogoWrapperProps> = ({ logoIcon }) => (
   <div css={Styles.wrapper}>{logoIcon || <PlaceHolder />}</div>
 );
 

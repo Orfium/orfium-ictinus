@@ -8,7 +8,7 @@ import TextInputBase from '../TextInputBase/TextInputBase';
 import { sxProp } from './TextArea.style';
 import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 
-export type Props = {
+export type TextAreaProps = {
   /** The id of the text field that will be used as for in label too */
   id?: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
@@ -37,7 +37,7 @@ export type Props = {
   onInput?: React.EventHandler<any>;
 } & TestProps;
 
-const TextArea = React.forwardRef<HTMLTextAreaElement, Props>((props, ref) => {
+const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, ref) => {
   const {
     id = undefined,
     placeholder = '',

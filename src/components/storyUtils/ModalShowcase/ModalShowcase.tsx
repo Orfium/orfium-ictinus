@@ -4,11 +4,11 @@ import Button from '../../Button';
 import Modal from '../../Modal/Modal';
 import { Props as ModalContentProps } from '../../Modal/ModalContent/ModalContent';
 
-type Props = {
+type ModalShowcaseProps = {
   contentProps?: ModalContentProps;
 };
 
-const ModalShowcase: React.FC<Props> = ({ children, contentProps }) => {
+const ModalShowcase: React.FC<ModalShowcaseProps> = ({ children, contentProps }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (

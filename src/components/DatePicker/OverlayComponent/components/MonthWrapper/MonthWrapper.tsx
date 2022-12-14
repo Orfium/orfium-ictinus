@@ -19,7 +19,7 @@ import SelectMenu from 'components/Select/components/SelectMenu';
 import { SelectOption } from 'components/Select/Select';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
-type Props = {
+type MonthWrapperProps = {
   showedArrows?: 'left' | 'right' | 'both';
   isRangePicker?: boolean;
   date: Dayjs;
@@ -51,7 +51,7 @@ const MonthWrapper = ({
   showedArrows = 'both',
   disabledDates,
   isRangePicker = false,
-}: Props) => {
+}: MonthWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const theme = useTheme();

@@ -7,9 +7,9 @@ import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
-import ModalContent, { Props as ModalContentProps } from './ModalContent/ModalContent';
+import ModalContent, { ModalContentProps } from './ModalContent/ModalContent';
 
-export type Props = {
+export type ModalProps = {
   /**  If true, the modal is open. Defaults to false. */
   isOpen: boolean;
   /** Callback fired when the component requests to be closed. */
@@ -22,7 +22,7 @@ export type Props = {
   isContentPadded?: boolean;
 };
 
-const Modal: React.FC<Props> = ({
+const Modal: React.FC<ModalProps> = ({
   isOpen = false,
   onClose,
   dataTestId,

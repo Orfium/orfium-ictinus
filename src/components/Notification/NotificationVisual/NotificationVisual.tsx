@@ -6,7 +6,7 @@ import Button from '../../Button';
 import { actionContainer, actionsContainer, boldMessageContainer } from '../Notification.style';
 import { visualContainer, descriptionContainer } from './NotificationVisual.style';
 
-export type Props = {
+export type NotificationVisualProps = {
   /** The message heading of the Notification */
   title: string | undefined;
   /** The primary call-to-action label of the Notification */
@@ -23,7 +23,7 @@ export type Props = {
   dataTestId?: TestId;
 };
 
-const NotificationVisual: React.FC<Props> = ({
+const NotificationVisual: React.FC<NotificationVisualProps> = ({
   title,
   primaryCTALabel = 'OK',
   primaryCTA,

@@ -3,7 +3,7 @@ import { rem } from 'theme/utils';
 import { colorShades, MAX_SHADE } from '../../theme/palette';
 import { PropsValidationError } from '../../utils/errors';
 import { defineBackgroundColor } from '../Button/utils';
-import { BackgroundColorProps, BaseColorProps, BorderProps, Props } from './types';
+import { BackgroundColorProps, BaseColorProps, BorderProps, FilterProps } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 export const HAS_SELECTED_VALUE_COLOR_SHADE = 50;
@@ -93,7 +93,7 @@ export const errors = [
      * for 'added' type design team decided that is not needed therefore in order not having to maintain
      * one more special case we dont render it
      **/
-    condition: ({ filterType, styleType }: Props): boolean =>
+    condition: ({ filterType, styleType }: FilterProps): boolean =>
       Boolean(filterType === 'added' && styleType === 'transparent'),
     error: new PropsValidationError('This filterType and styleType is not supported'),
   },

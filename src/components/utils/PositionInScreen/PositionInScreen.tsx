@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { container, itemContainer } from './PositionInScreen.style';
 
-type Props = {
+type PositionInScreenProps = {
   isVisible: boolean;
   isOverflowAllowed?: boolean;
   offsetX?: number;
@@ -47,7 +47,7 @@ const usePositionInScreen = (
   return position;
 };
 
-const PositionInScreen: React.FC<Props> = ({
+const PositionInScreen: React.FC<PositionInScreenProps> = ({
   isVisible,
   parent,
   isOverflowAllowed,

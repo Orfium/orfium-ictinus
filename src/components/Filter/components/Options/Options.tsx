@@ -6,7 +6,7 @@ import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/utils';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
 
-interface Props {
+export interface Props {
   items: FilterOption[];
   onSelect: (option: FilterOption) => void;
   defaultValue: FilterOption;

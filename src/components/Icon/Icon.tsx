@@ -21,9 +21,9 @@ export type OwnProps = {
   variant?: typeof colorShades[number];
 };
 
-type Props = OwnProps & TestProps;
+export type IconProps = OwnProps & TestProps;
 
-const Icon = React.forwardRef<HTMLSpanElement, Props>(
+const Icon = React.forwardRef<HTMLSpanElement, IconProps>(
   ({ variant, name, color = 'primary', size = 16, dataTestId, onClick = () => {} }, ref) => {
     const Icon = iconSelector[name];
 

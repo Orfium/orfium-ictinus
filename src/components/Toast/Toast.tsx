@@ -18,7 +18,7 @@ import {
   expandedContainer,
 } from './Toast.style';
 
-export type Props = {
+export type ToastProps = {
   /** The informative message of the Toast */
   message: string;
   /** The type of the Toast, will determine the color and the icon */
@@ -37,7 +37,7 @@ export const isNotificationTypes = (type: string): type is NotificationTypes => 
   return ['success', 'error', 'warning', 'info'].includes(type);
 };
 
-const Toast: React.FC<Props> = ({
+const Toast: React.FC<ToastProps> = ({
   message,
   type = 'primary',
   styleType = 'elevated',

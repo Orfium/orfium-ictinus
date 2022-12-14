@@ -4,7 +4,7 @@ import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 import { spinnerContainer } from './Spinner.style';
 
-interface Props {
+export interface Props {
   dataTestId?: TestId;
   color?: string;
 }

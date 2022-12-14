@@ -5,7 +5,7 @@ import React from 'react';
 import TableCell from '../../../TableCell';
 import IconButton from 'components/IconButton';
 
-type Props = {
+type ExpandedButtonCellProps = {
   isExpandedExists: boolean;
   isChecked: boolean;
   toggleIsChecked: () => void;
@@ -15,7 +15,7 @@ type Props = {
   index?: number;
 };
 
-const ExpandedButtonCell: React.FC<Props> = ({
+const ExpandedButtonCell: React.FC<ExpandedButtonCellProps> = ({
   isExpandedExists,
   isChecked,
   toggleIsChecked,

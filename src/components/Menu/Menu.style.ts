@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 import { Theme } from '../../theme';
 import { RequiredProperties } from '../../utils/common';
-import { Props } from '../Button/Button';
+import { ButtonProps } from '../Button/Button';
 
 export const wrapperStyle = () => () =>
   css`
@@ -11,7 +11,7 @@ export const wrapperStyle = () => () =>
   `;
 
 const getButtonMargin =
-  ({ iconLeft, iconRight, size }: Pick<Props, 'iconLeft' | 'iconRight' | 'size'>) =>
+  ({ iconLeft, iconRight, size }: Pick<ButtonProps, 'iconLeft' | 'iconRight' | 'size'>) =>
   (theme: Theme) => {
     if (iconLeft || iconRight) {
       if (size === 'sm') {
@@ -30,7 +30,7 @@ export const buttonSpanStyle =
     iconLeft,
     iconRight,
     hasChildren,
-  }: RequiredProperties<Props & { hasChildren: boolean }>) =>
+  }: RequiredProperties<ButtonProps & { hasChildren: boolean }>) =>
   (theme: Theme) => ({
     display: iconLeft || iconRight ? 'flex' : 'block',
     flexDirection: iconLeft || iconRight ? 'row' : 'column',

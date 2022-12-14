@@ -3,12 +3,12 @@ import { ResponsiveContainer, AreaChartProps, BarChartProps } from 'recharts';
 
 type ChartProps = AreaChartProps & BarChartProps;
 
-type Props = ChartProps & {
+type ChartWrapperProps = ChartProps & {
   aspect?: number;
 };
 
 function Wrapper(Component: any) {
-  const WrappedChart = ({ children, ...rest }: Props) => {
+  const WrappedChart = ({ children, ...rest }: ChartWrapperProps) => {
     if (process.env.NODE_ENV !== 'test') {
       return (
         <ResponsiveContainer aspect={rest?.aspect}>

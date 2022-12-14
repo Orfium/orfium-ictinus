@@ -8,7 +8,7 @@ import CustomTooltip from './components/CustomTooltip';
 import GradientLine from './components/GradientLine';
 import { Data, getKeyNames, colorPicker } from './utils';
 
-export type Props = {
+export type LineChartProps = {
   /** This property defines the data to be shown in the Line Chart */
   data: Data[];
   /** Property indicating the label name to be displayed for X axis */
@@ -23,7 +23,13 @@ export type Props = {
 
 const WrappedChart = Wrapper(AreaChart);
 
-const LineChart: React.FC<Props> = ({ data, labelX, labelY, isLegendVisible = false, color }) => {
+const LineChart: React.FC<LineChartProps> = ({
+  data,
+  labelX,
+  labelY,
+  isLegendVisible = false,
+  color,
+}) => {
   const theme = useTheme();
 
   const uniqueKeyNames = useMemo(() => getKeyNames(data), [data]);

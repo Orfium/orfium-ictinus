@@ -1,6 +1,6 @@
 import { Theme } from 'theme';
 
-import { Props } from './Button';
+import { ButtonProps } from './Button';
 
 export const buttonSpanStyle = () => () => {
   return {
@@ -19,7 +19,10 @@ export const childrenWrapperStyle =
     iconLeft,
     iconRight,
     hasChildren,
-  }: Omit<Props, 'block' | 'isIconButton' | 'buttonType' | 'dataTestId' | 'onClick' | 'ref'> & {
+  }: Omit<
+    ButtonProps,
+    'block' | 'isIconButton' | 'buttonType' | 'dataTestId' | 'onClick' | 'ref'
+  > & {
     hasChildren: boolean;
   }) =>
   (theme: Theme) => {

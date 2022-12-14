@@ -3,10 +3,10 @@ import { Elevation } from 'index';
 import { SpacingKey } from 'theme/spacing';
 
 import { Theme } from '../../theme';
-import { Props } from './Card';
+import { CardProps } from './Card';
 
 export const cardStyle =
-  ({ elevated, isTransparent, radius }: Props) =>
+  ({ elevated, isTransparent, radius }: CardProps) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${elevated && cardElevation(theme, elevated, isTransparent, radius)};

@@ -6,17 +6,17 @@ import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import { IconWrapper } from '../TextField/components/commons';
-import { Props as TextFieldProps } from 'components/TextField/TextField';
+import { TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
-export type Props = {
+export type SearchFieldProps = {
   /** A callback that's called when the user clicks the 'clear' icon */
   onClear: () => void;
 } & TextFieldProps &
   TestProps;
 
-const SearchField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
+const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props, ref) => {
   const {
     placeholder = 'Search',
     isDisabled,
@@ -58,26 +58,25 @@ const SearchField = React.forwardRef<HTMLInputElement, Props>((props, ref) => {
           />
         </div>
 
-          {isClearVisible && !isDisabled && (
-            <IconWrapper
-              onClick={() => {
-                onClear();
-              }}
-              iconPosition={'right'}
-            >
-              <Icon
-                name={'close'}
-                size={20}
-                color={theme.utils.getColor('lightGrey', 650)}
-                dataTestId={'search-clear'}
-              />
-            </IconWrapper>
-          )}
-        </TextInputBase>
-      </React.Fragment>
-    );
-  }
-);
+        {isClearVisible && !isDisabled && (
+          <IconWrapper
+            onClick={() => {
+              onClear();
+            }}
+            iconPosition={'right'}
+          >
+            <Icon
+              name={'close'}
+              size={20}
+              color={theme.utils.getColor('lightGrey', 650)}
+              dataTestId={'search-clear'}
+            />
+          </IconWrapper>
+        )}
+      </TextInputBase>
+    </React.Fragment>
+  );
+});
 
 SearchField.displayName = 'SearchField';
 

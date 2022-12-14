@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { labelStyle } from './Label.style';
 
-export type Props = {
+export type LabelProps = {
   /** If the label has error */
   hasError?: boolean;
   /** The label that is going to be displayed */
@@ -15,7 +15,7 @@ export type Props = {
   size?: string;
 };
 
-const Label: React.FC<Props> = ({
+const Label: React.FC<LabelProps> = ({
   hasError = false,
   htmlFor,
   label,

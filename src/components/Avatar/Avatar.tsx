@@ -4,10 +4,10 @@ import { useTheme } from '../../index';
 import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Icon from '../Icon';
 import { avatarStyle } from './Avatar.style';
-import { Props, AvatarSizes } from './Avatar.types';
+import { AvatarProps, AvatarSizes } from './Avatar.types';
 import { iconSizeBasedOnAvatar } from './utils';
 
-const Avatar = React.forwardRef<HTMLDivElement, Props>(
+const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   (
     { src = '', iconName = 'user', size = 'md', color = 'lightGrey-600', children, className },
     ref
@@ -41,6 +41,3 @@ const Avatar = React.forwardRef<HTMLDivElement, Props>(
 Avatar.displayName = 'Avatar';
 
 export default Avatar;
-
-//TODO: Remove on v5 and change import where necessary
-export { Props, AvatarSizes };

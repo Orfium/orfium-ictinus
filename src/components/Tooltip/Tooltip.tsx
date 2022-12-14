@@ -7,7 +7,7 @@ export type TooltipSize = 'large' | 'medium' | 'small';
 
 export type TooltipPlacement = 'top' | 'right' | 'bottom' | 'left';
 
-type Props = {
+export type TooltipProps = {
   /** The plain text to show inside the tooltip */
   content: React.ReactNode;
   /** The placement where the tooltip will show */
@@ -35,7 +35,7 @@ type Props = {
   children: React.ReactElement;
 };
 
-const Tooltip: React.FC<Props> = ({
+const Tooltip: React.FC<TooltipProps> = ({
   size = 'medium',
   children,
   content,

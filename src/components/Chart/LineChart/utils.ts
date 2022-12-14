@@ -6,17 +6,21 @@ export type Data = {
   [prop: string]: number | string | undefined;
 };
 
-type Props = {
+type ColorPickerProps = {
   theme: Theme;
   uniqueKeyNames: string[];
   color?: (dataLabel: string) => string;
 };
 
 export const getKeyNames = (data: Data[]): string[] => {
-  return uniq(flatten(data.map(object => keys(omit(object, 'name')))));
+  return uniq(flatten(data.map((object) => keys(omit(object, 'name')))));
 };
 
-export const colorPicker = ({ theme, uniqueKeyNames, color }: Props): Record<string, string> => {
+export const colorPicker = ({
+  theme,
+  uniqueKeyNames,
+  color,
+}: ColorPickerProps): Record<string, string> => {
   const colorSample = sampleSize(theme.palette.flat, uniqueKeyNames.length);
 
   return uniqueKeyNames.reduce<Record<string, string>>((acc, key, index) => {

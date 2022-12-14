@@ -42,7 +42,7 @@ export type Data = {
   options?: Option;
 };
 
-export type Props = {
+export type BarChartProps = {
   /** This property defines the data to be shown in the Line Chart */
   data: Data[];
 };
@@ -73,7 +73,7 @@ const CustomYAxisTick = ({ colors, y, width, payload }: YAxisProp) => {
 
 const WrappedChart = Wrapper(RechartsBarChart);
 
-const BarChart: React.FC<Props> = ({ data }) => {
+const BarChart: React.FC<BarChartProps> = ({ data }) => {
   const theme = useTheme();
 
   const barColors = useMemo(

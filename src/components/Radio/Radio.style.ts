@@ -4,7 +4,7 @@ import { BASE_SHADE } from 'theme/palette';
 import { ColorScheme } from 'theme/types';
 import { rem } from 'theme/utils';
 
-import { Props } from './Radio';
+import { RadioProps } from './Radio';
 
 const lightHoverColor = 'rgba(14, 14, 23, 0.07)';
 const darkHoverColor = 'rgba(255, 255, 255, 0.1)';
@@ -56,7 +56,11 @@ export const customRadioWrapperStyles =
     `;
 
 const determineColorBasedOnState =
-  ({ isChecked, isDisabled, isFilled }: Pick<Props, 'isChecked' | 'isDisabled' | 'isFilled'>) =>
+  ({
+    isChecked,
+    isDisabled,
+    isFilled,
+  }: Pick<RadioProps, 'isChecked' | 'isDisabled' | 'isFilled'>) =>
   (theme: Theme) => {
     if (isChecked) {
       return `currentColor`;
@@ -72,7 +76,7 @@ const determineColorBasedOnState =
   };
 
 export const customRadioStyles =
-  (props: Pick<Props, 'isChecked' | 'isDisabled' | 'isFilled'>) =>
+  (props: Pick<RadioProps, 'isChecked' | 'isDisabled' | 'isFilled'>) =>
   (theme: Theme): SerializedStyles => {
     return css`
       transition: all 0.2s ease;
