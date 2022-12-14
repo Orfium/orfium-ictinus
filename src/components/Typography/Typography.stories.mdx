@@ -1,0 +1,115 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import Typography, { TypographyComponent } from './Typography';
+import Stack from '../storyUtils/Stack';
+import { FIGMA_URL } from '../../utils/common';
+
+<Meta
+  title="Design System/Typography"
+  component={Typography}
+  parameters={{
+    design: [
+      {
+        name: 'Typography',
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=14861%3A61126`,
+      },
+    ],
+  }}
+/>
+
+# Typography
+
+A global component that is used to represent any text
+
+# Usage
+
+```js
+import { Typography } from '@orfium/ictinus';
+
+<Typography type={'body01'}>Hello world!</Typography>;
+```
+
+# Props
+
+<Props of={Typography} />
+
+# Type prop use
+
+General use of Typography based on available types
+
+<Preview>
+  <Story name="Type prop use">
+    <Stack isVertical>
+      <Typography type={'headline01'}>Headline 01</Typography>
+      <Typography type={'headline02'}>Headline 02</Typography>
+      <Typography type={'headline03'}>Headline 03</Typography>
+      <Typography type={'headline04'}>Headline 04</Typography>
+      <Typography type={'headline05'}>Headline 05</Typography>
+      <Typography type={'title01'}>Title 01</Typography>
+      <Typography type={'title02'}>Title 02</Typography>
+      <Typography type={'title03'}>Title 03</Typography>
+      <Typography type={'label01'}>Label 01</Typography>
+      <Typography type={'label02'}>Label 02</Typography>
+      <Typography type={'label03'}>Label 03</Typography>
+      <Typography type={'body01'}>Body 01</Typography>
+      <Typography type={'body02'}>Body 02</Typography>
+      <Typography type={'body03'}>Body 03</Typography>
+    </Stack>
+  </Story>
+</Preview>
+
+# Component prop use
+
+Define Typography based on custom component - below are listed by default value
+
+You can define component to be any of the following `h1`, `h2`, `h3`, `h4`, `h5`, `h6`, `p`, `span`
+
+<Preview>
+  <Story name="Component prop use">
+    <Stack isVertical>
+      <Typography type={'headline01'} component="h1">
+        Headline 01 - H1
+      </Typography>
+      <Typography type={'headline02'} component="h2">
+        Headline 02 - H2
+      </Typography>
+      <Typography type={'headline03'} component="h3">
+        Headline 03 - H3
+      </Typography>
+      <Typography type={'headline04'} component="h4">
+        Headline 04 - H4
+      </Typography>
+      <Typography type={'headline05'} component="h5">
+        Headline 05 - H5
+      </Typography>
+      <Typography type={'title01'} component="h6">
+        Title 01 - H6
+      </Typography>
+      <Typography type={'title02'} component="h6">
+        Title 02 - H6
+      </Typography>
+      <Typography type={'title03'} component="h6">
+        Title 03 - H6
+      </Typography>
+      <Typography type={'label01'} component="span">
+        Label 01 - SPAN
+      </Typography>
+      <Typography type={'label02'} component="span">
+        Label 02 - SPAN
+      </Typography>
+      <Typography type={'label03'} component="span">
+        Label 03 - SPAN
+      </Typography>
+      <Typography type={'body01'} component="p">
+        Body 01 - P
+      </Typography>
+      <Typography type={'body02'} component="p">
+        Body 02 - P
+      </Typography>
+      <Typography type={'body03'} component="p">
+        Body 03 - P
+      </Typography>
+    </Stack>
+  </Story>
+</Preview>

@@ -1,5 +1,6 @@
 import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import { css, Global } from '@emotion/react';
+import emotionReset from 'emotion-reset';
 import { ThemeSwitchProvider, useThemeSwitch } from 'hooks/useThemeSwitch';
 import { keys, merge, pick } from 'lodash';
 import { normalize } from 'polished';
@@ -22,6 +23,7 @@ const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light')
 
 export const globalStyles = (theme: Theme) => css`
   @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+  ${emotionReset}
   ${normalize()};
 
   body,

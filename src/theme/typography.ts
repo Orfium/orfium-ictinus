@@ -98,7 +98,7 @@ const textDecorations: TextDecoration = {
 const defaultFontFamily = fontFamilies.get('roboto');
 
 const typography: Typography = {
-  globalFontSize: 16,
+  globalFontSize: 16, // @deprecated Use fontSize.get instead
   fontSizes,
   weights,
   fontFamilies,
