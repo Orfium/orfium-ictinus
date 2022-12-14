@@ -22,17 +22,19 @@ export type ThemeConfig = {
 };
 
 export type Theme = {
-  palette: Palette;
-  typography: Typography;
-  spacing: Spacing;
-  elevation: Elevation;
+  globals: {
+    colors: Palette;
+    typography: Typography;
+    spacing: Spacing;
+    elevation: Elevation;
+    borderRadius: BorderRadius;
+    borderWidth: BorderWidth;
+    boxShadow: BoxShadow;
+    opacity: Opacity;
+    sizing: Sizing;
+  };
   colorScheme: ColorScheme;
   overrides: Overrides;
-  borderRadius: BorderRadius;
-  borderWidth: BorderWidth;
-  boxShadow: BoxShadow;
-  opacity: Opacity;
-  sizing: Sizing;
   utils: {
     getColor: GetColor;
     getAAColorFromSwatches: GetAAColorFromSwatches;

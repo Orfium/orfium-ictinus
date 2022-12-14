@@ -19,17 +19,19 @@ const defaultTheme = (theming: ColorScheme): Theme => {
       : enhancePaletteWithShades(darkPaletteConfig);
 
   return {
-    palette,
-    typography,
-    spacing,
-    elevation,
+    globals: {
+      colors: palette,
+      typography,
+      spacing,
+      elevation,
+      borderRadius,
+      borderWidth,
+      boxShadow,
+      opacity,
+      sizing,
+    },
     colorScheme: theming,
     overrides,
-    borderRadius,
-    borderWidth,
-    boxShadow,
-    opacity,
-    sizing,
     utils: {
       getColor: getColor(palette),
       getAAColorFromSwatches: getAAColorFromSwatches(palette),
