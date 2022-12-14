@@ -154,6 +154,7 @@ Implementation of the DatePicker with a Filter instead of a Select
         isDefaultNow={false}
       />
       <DatePicker
+        value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
         inputProps={{ size: 'sm', styleType: 'outlined' }}
         isRangePicker={select('isRangePicker', rangePickerOptions, rangePickerOptions[0])}
         filterConfig={{ filterType: select('filterType', filterTypeOptions, filterTypeOptions[0]) }}
@@ -175,6 +176,7 @@ Implementation of the simple DayPicker on different sizes
         disableDates={select('disableDates', options, options[0])}
       />
       <DatePicker
+        value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
         inputProps={{ size: 'sm', styleType: 'outlined' }}
         disableDates={select('disableDates', options, options[0])}
       />
@@ -190,22 +192,29 @@ Component can take all the properties of the TextField and styles
   <Story name="DayPicker Input props" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Stack>
-        <DatePicker disableDates={select('disableDates', options, options[0])} />
         <DatePicker
+          value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
+          disableDates={select('disableDates', options, options[0])}
+        />
+        <DatePicker
+          value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
           inputProps={{ styleType: 'outlined' }}
           disableDates={select('disableDates', options, options[0])}
         />
         <DatePicker
+          value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
           inputProps={{ styleType: 'elevated' }}
           disableDates={select('disableDates', options, options[0])}
         />
       </Stack>
       <Stack>
         <DatePicker
+          value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
           inputProps={{ hintMsg: 'Wrong Date', status: 'error' }}
           disableDates={select('disableDates', options, options[0])}
         />
         <DatePicker
+          value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
           inputProps={{ hintMsg: 'Dates are important', status: 'hint' }}
           disableDates={select('disableDates', options, options[0])}
         />
@@ -221,7 +230,10 @@ Some disable dates functionality
 <Preview>
   <Story name="DayPicker with disabled dates">
     <Stack>
-      <DatePicker disableDates={disableDates} />
+      <DatePicker
+        value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
+        disableDates={disableDates}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -251,6 +263,7 @@ This datepicker has a predefined initial value that can be used both for initial
     parameters={{ decorators: [withKnobs] }}
   >
     <DatePicker
+      value={{ from: currentDay.toDate(), to: currentDay.toDate() }}
       disableDates={select('disableDates', options, options[0])}
       inputLabel={text('inputLabel', 'Custom Date')}
       isRangePicker={boolean('isRangePicker', false)}

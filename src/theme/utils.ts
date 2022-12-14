@@ -1,16 +1,9 @@
+import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
 import { PropsValidationError } from '../utils/errors';
-import {
-  colorShades,
-  flatColors,
-  generatedColorShades,
-  mainTypes,
-  paleColors,
-  Palette,
-} from './palette';
+import { generatedColorShades, Palette } from './palette';
 import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
-import { TextColorTypes } from './types';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;
@@ -82,3 +75,73 @@ export const getColorErrors = [
     error: new PropsValidationError('No color found with that name'),
   },
 ];
+
+export type GetFigmaTokensValue<T extends string | number | symbol> = {
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'pixels'): (val: T) => string;
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'string'): (val: T) => string;
+  (figmaTokensObject: Record<T, Record<string, string>>, type: 'number'): (val: T) => number;
+};
+
+export enum FigmaTokenValueType {
+  Pixels = 'pixels',
+  String = 'string',
+  Number = 'number',
+  BoxShadow = 'boxShadow',
+}
+
+/** The type of the object inside the theme/constants folder  */
+export type FigmaTokensObject<T extends string | symbol> = Record<
+  T,
+  Record<string, string | Record<string, string>>
+>;
+
+const getFigmaTokensBoxShadowValue = <T extends string | symbol>(
+  figmaTokensObject: FigmaTokensObject<T>,
+  val: T
+) => {
+  const x = rem(Number(get(figmaTokensObject, [val, 'value', 'x'], '0')));
+  const y = rem(Number(get(figmaTokensObject, [val, 'value', 'y'], '0')));
+  const blur = rem(Number(get(figmaTokensObject, [val, 'value', 'blur'], '0')));
+  const spread = rem(Number(get(figmaTokensObject, [val, 'value', 'spread'], '0')));
+  const color = get(figmaTokensObject, [val, 'value', 'color'], 'transparent');
+
+  return `${x} ${y} ${blur} ${spread} ${color}`;
+};
+
+/**
+ * @param figmaTokensObject The parsed objects from Figma Tokens in the src/theme/constants/ dir
+ * @param type 'pixels' refers to all the string values that need to be converted to rem
+ *             'string' refers to all the string values that need no conversion (e.g. opacity, font-family etc)
+ *             'number' refers to all the string values that need to be converted to numbers (e.g. font-weight)
+ */
+export const getFigmaTokensValue: {
+  <T extends string | symbol>(
+    figmaTokensObject: FigmaTokensObject<T>,
+    type: FigmaTokenValueType.Number
+  ): (val: T) => number;
+  <T extends string | symbol>(
+    figmaTokensObject: FigmaTokensObject<T>,
+    type: FigmaTokenValueType.String
+  ): (val: T) => string;
+  <T extends string | symbol>(
+    figmaTokensObject: FigmaTokensObject<T>,
+    type: FigmaTokenValueType.Pixels
+  ): (val: T) => string;
+  <T extends string | symbol>(
+    figmaTokensObject: FigmaTokensObject<T>,
+    type: FigmaTokenValueType.BoxShadow
+  ): (val: T) => string;
+} =
+  <T extends string | symbol>(figmaTokensObject: FigmaTokensObject<T>, type: FigmaTokenValueType) =>
+  (val: T): any => {
+    switch (type) {
+      case FigmaTokenValueType.Pixels:
+        return rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
+      case FigmaTokenValueType.String:
+        return get(figmaTokensObject, [val, 'value'], '0') as string;
+      case FigmaTokenValueType.Number:
+        return Number(get(figmaTokensObject, [val, 'value'], '0'));
+      case FigmaTokenValueType.BoxShadow:
+        return getFigmaTokensBoxShadowValue(figmaTokensObject, val);
+    }
+  };

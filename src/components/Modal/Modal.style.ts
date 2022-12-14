@@ -32,7 +32,9 @@ export const modalContainer =
       flex-wrap: wrap;
 
       padding: ${isContentPadded
-        ? `${theme.spacing.lg} ${theme.spacing.xl} ${theme.spacing.xl} ${theme.spacing.xl}`
+        ? `${theme.spacing.get('8')} ${theme.spacing.get('9')} ${theme.spacing.get(
+            '9'
+          )} ${theme.spacing.get('9')}`
         : undefined};
     `;
 
@@ -40,7 +42,7 @@ export const closeContainer = (theme: Theme) => css`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: ${theme.spacing.sm} ${theme.spacing.sm} 0 0;
+  padding: ${theme.spacing.get('4')} ${theme.spacing.get('4')} 0 0;
   box-sizing: border-box;
 
   //TODO: REMOVE THIS AFTER BUTTONS REFACTOR

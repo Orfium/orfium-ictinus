@@ -86,6 +86,6 @@ export const colorBox = ({
 
   div:last-child {
     font-size: 14px;
-    text-transform: uppercase;
+    text-transform: ${theme.typography.textCases.get('uppercase')};
   }
 `;

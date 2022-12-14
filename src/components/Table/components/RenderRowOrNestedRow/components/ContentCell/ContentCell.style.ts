@@ -4,7 +4,7 @@ import { Theme } from 'theme';
 export const nestedHeaderStyle = () => (theme: Theme): SerializedStyles =>
   css({
     color: theme.utils.getColor('lightGrey', 750),
-    fontSize: theme.typography.fontSizes['12'],
-    paddingBottom: theme.spacing.xsm,
-    fontWeight: theme.typography.weights.bold,
+    fontSize: theme.typography.fontSizes.get('2'),
+    paddingBottom: theme.spacing.get('3'),
+    fontWeight: theme.typography.weights.get('bold'),
   });

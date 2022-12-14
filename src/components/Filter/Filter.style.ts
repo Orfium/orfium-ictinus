@@ -187,8 +187,8 @@ export const dividedButtonStyle = (props: ButtonStyleProps) => (theme: Theme) =>
     alignItems: 'center',
     justifyContent: 'center',
     width: rem(34),
-    borderTopRightRadius: theme.spacing.lg,
-    borderBottomRightRadius: theme.spacing.lg,
+    borderTopRightRadius: theme.spacing.get('8'),
+    borderBottomRightRadius: theme.spacing.get('8'),
   };
 };
 
@@ -198,8 +198,10 @@ export const buttonStyle = (props: ButtonStyleProps) => (theme: Theme) => {
 
   return {
     ...buttonBaseStyle(props)(theme),
-    padding: `0 ${!isPreset ? theme.spacing.xsm : theme.spacing.md} 0 ${theme.spacing.md}`,
-    borderRadius: theme.spacing.lg,
+    padding: `0 ${
+      !isPreset ? theme.spacing.get('3') : theme.spacing.get('6')
+    } 0 ${theme.spacing.get('6')}`,
+    borderRadius: theme.spacing.get('8'),
     borderRight: !isPreset ? '0 !important' : undefined,
     borderTopRightRadius: !isPreset ? 0 : undefined,
     borderBottomRightRadius: !isPreset ? 0 : undefined,
@@ -216,14 +218,16 @@ export const childrenWrapperStyle = () => () => {
 export const labelSpanStyle = (isOpen: boolean, hasSelectedValue: boolean) => (theme: Theme) => {
   return {
     fontWeight:
-      isOpen || hasSelectedValue ? theme.typography.weights.bold : theme.typography.weights.regular,
+      isOpen || hasSelectedValue
+        ? theme.typography.weights.get('bold')
+        : theme.typography.weights.get('regular'),
     display: 'flex',
     alignItems: 'center',
     div: {
       flex: 'none',
     },
     span: {
-      fontWeight: theme.typography.weights.bold,
+      fontWeight: theme.typography.weights.get('bold'),
     },
   };
 };
@@ -242,7 +246,7 @@ export const menuStyle = () => (theme: Theme) =>
     min-width: ${rem(280)};
     left: 0;
     height: auto;
-    border-radius: ${theme.spacing.xsm};
+    border-radius: ${theme.spacing.get('3')};
     background-color: ${theme.palette.white};
     box-shadow: ${theme.elevation['02']};
     z-index: 500;

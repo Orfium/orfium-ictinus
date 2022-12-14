@@ -14,8 +14,8 @@ export const listGroupTitleStyle =
       color: ${theme.utils.getColor('lightGrey', 650)};
       display: flex;
       align-items: center;
-      padding: 0px ${theme.spacing.md};
-      font-weight: ${theme.typography.weights.bold};
+      padding: 0px ${theme.spacing.get('6')};
+      font-weight: ${theme.typography.weights.get('bold')};
 
       ${isDisabled &&
       `

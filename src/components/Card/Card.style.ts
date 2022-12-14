@@ -1,5 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { Elevation, Spacing } from 'index';
+import { Elevation } from 'index';
+import { SpacingKey } from 'theme/spacing';
 
 import { Theme } from '../../theme';
 import { CardProps } from './Card';
@@ -15,9 +16,9 @@ export const cardElevation = (
   theme: Theme,
   elevated: keyof Elevation,
   isTransparent?: boolean | undefined,
-  radius?: keyof Spacing | undefined
+  radius?: SpacingKey | undefined
 ): SerializedStyles => css`
   box-shadow: ${theme.elevation[elevated]};
   background: ${isTransparent ? 'transparent' : theme.palette.white};
-  border-radius: ${radius ? theme.spacing[radius] : 0};
+  border-radius: ${radius ? theme.spacing.get(radius) : 0};
 `;

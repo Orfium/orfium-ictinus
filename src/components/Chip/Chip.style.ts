@@ -20,13 +20,13 @@ export const chipStyle =
 
     return css`
       ${flexCenterVertical};
-      height: ${theme.spacing.lg};
-      border-radius: ${theme.spacing.lg};
-      font-size: ${theme.typography.fontSizes['12']};
-      font-weight: ${theme.typography.weights.medium};
+      height: ${theme.spacing.get('8')};
+      border-radius: ${theme.spacing.get('8')};
+      font-size: ${theme.typography.fontSizes.get('2')};
+      font-weight: ${theme.typography.weights.get('medium')};
       line-height: normal;
       box-sizing: border-box;
-      padding: ${theme.spacing.xsm} ${theme.spacing.sm};
+      padding: ${theme.spacing.get('3')} ${theme.spacing.get('4')};
       background-color: ${customFilled ? theme.utils.getColor(fill, 50) : theme.palette.white};
       color: ${theme.utils.getAAColorFromSwatches(fill, 50)};
       border: ${rem(1)} solid
@@ -65,7 +65,7 @@ export const chipStyle =
     `}
 
       > :not(:last-child) {
-        margin-right: ${theme.spacing.xsm};
+        margin-right: ${theme.spacing.get('3')};
       }
     `;
   };

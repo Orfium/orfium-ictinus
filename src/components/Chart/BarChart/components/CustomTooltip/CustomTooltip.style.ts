@@ -19,8 +19,8 @@ export const tooltipStyle = () => (theme: Theme): SerializedStyles => css`
   color: ${theme.palette.white};
   background-color: ${theme.utils.getColor('darkGrey', 750)};
   opacity: 90%;
-  border-radius: ${theme.spacing.xsm};
-  padding: ${theme.spacing.sm};
+  border-radius: ${theme.spacing.get('3')};
+  padding: ${theme.spacing.get('4')};
 `;
 
 export const tooltipArrowStyle = () => (theme: Theme): SerializedStyles => css`

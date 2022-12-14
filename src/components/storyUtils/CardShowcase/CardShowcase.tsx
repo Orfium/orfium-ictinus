@@ -1,14 +1,14 @@
 import React from 'react';
 
 import { Elevation } from '../../../theme/elevation';
-import { Spacing } from '../../../theme/spacing';
+import { SpacingKey } from '../../../theme/spacing';
 import Card from '../../Card';
 import { showcaseContainerStyle } from './CardShowcase.style';
 
 type CardShowcaseProps = {
   elevated?: keyof Elevation;
   isTransparent?: boolean;
-  radius?: keyof Spacing;
+  radius?: SpacingKey;
 };
 
 const CardShowcase: React.FC<CardShowcaseProps> = ({ elevated, isTransparent, radius }) => {

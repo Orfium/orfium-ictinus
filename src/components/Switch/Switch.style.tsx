@@ -7,7 +7,7 @@ export const Container = styled.div`
   ${flexCenterVertical};
   flex-direction: row;
   justify-content: space-between;
-  gap: ${({ theme }) => theme.spacing.sm};
+  gap: ${({ theme }) => theme.spacing.get('4')};
 `;
 
 export const SwitchWrapper = styled.div<{ isChecked: boolean; isDisabled: boolean }>`

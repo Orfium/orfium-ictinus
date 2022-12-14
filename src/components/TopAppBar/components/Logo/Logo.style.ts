@@ -7,8 +7,9 @@ import { flexCenter } from '../../../../theme/functions';
 const wrapper = (theme: Theme): SerializedStyles => css`
   ${flexCenter};
   background-color: transparent;
-  margin: ${theme.spacing.md} ${theme.spacing.lg} ${theme.spacing.md} ${theme.spacing.md};
-  border-radius: ${theme.spacing.xsm};
+  margin: ${theme.spacing.get('6')} ${theme.spacing.get('8')} ${theme.spacing.get('6')}
+    ${theme.spacing.get('6')};
+  border-radius: ${theme.spacing.get('3')};
   max-width: ${rem(400)};
 `;
 

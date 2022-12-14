@@ -15,7 +15,7 @@ const topAppBarWrapper =
       justify-content: space-between;
       background-color: ${isDark ? theme.palette.black : theme.palette.white};
       height: ${rem(DEFAULT_NAVBAR_HEIGHT)};
-      padding: 0 ${theme.spacing.md};
+      padding: 0 ${theme.spacing.get('6')};
       box-shadow: ${theme.elevation['02']};
       > *:not(:last-of-type) {
         color: ${isDark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
@@ -32,7 +32,7 @@ const additionalToolsSection =
   (theme: Theme): SerializedStyles =>
     css`
       ${topAppBarSection};
-      margin: 0 ${theme.spacing.md};
+      margin: 0 ${theme.spacing.get('6')};
       flex-grow: ${hasAdditionalTools ? 1 : 0};
     `;
 

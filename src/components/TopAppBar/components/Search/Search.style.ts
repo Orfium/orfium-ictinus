@@ -21,8 +21,8 @@ export const searchWrapper =
       ${themeFunctions.flexCenterVertical}
     height: ${rem(36)};
       background-color: ${background};
-      padding-left: ${theme.spacing.md};
-      border-radius: ${theme.spacing.xsm};
+      padding-left: ${theme.spacing.get('6')};
+      border-radius: ${theme.spacing.get('3')};
 
       &[aria-disabled='true'] {
         opacity: 0.5;

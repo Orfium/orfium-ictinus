@@ -1,4 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
+import { FontSizeKey } from 'theme/typography';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
@@ -14,7 +15,11 @@ export const heightBasedOnSize = (size: typeof buttonSizes[number] | 'default') 
 
 /** Calculates the button specific font size based on the size passed to it **/
 const fontSizeBasedOnSize = (theme: Theme, size: typeof buttonSizes[number] | 'default') =>
-  theme.typography.fontSizes[buttonConfig.fontSize[size] ?? buttonConfig.fontSize.default];
+  /** @TODO revisit this when all custom fontSizes are gone and we can use only
+   * the fontSizes.get() function. Refactor buttonConfig logic */
+  buttonConfig.fontSize[size]
+    ? theme.typography.fontSizes[buttonConfig.fontSize[size]]
+    : theme.typography.fontSizes.get(buttonConfig.fontSize.default as FontSizeKey);
 
 export const buttonBaseStyle =
   ({
@@ -39,7 +44,7 @@ export const buttonBaseStyle =
 
     const baseButtonStyles = {
       fontSize: fontSizeBasedOnSize(theme, size || 'default'),
-      fontWeight: theme.typography.weights.medium,
+      fontWeight: theme.typography.weights.get('medium'),
       color: calculateButtonColor({
         type,
         isBackgroundTransparent: Boolean(isBackgroundTransparent),
@@ -49,9 +54,9 @@ export const buttonBaseStyle =
       }),
       width: isBlock ? '100%' : undefined,
       backgroundColor: isBackgroundTransparent ? 'transparent' : backGroundColor,
-      padding: size === 'lg' ? theme.spacing.md : `0 ${theme.spacing.md}`,
+      padding: size === 'lg' ? theme.spacing.get('6') : `0 ${theme.spacing.get('6')}`,
       height: heightBasedOnSize(size || 'default'),
-      borderRadius: theme.spacing.xsm,
+      borderRadius: theme.spacing.get('3'),
       border: isOutlined ? `solid ${rem(borderWidth)} ${backGroundColor}` : 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
