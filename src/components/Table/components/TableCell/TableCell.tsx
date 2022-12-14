@@ -52,14 +52,16 @@ const TableCell: React.FC<TableCellProps> = React.memo(
           {
             position: 'relative',
             textAlign,
-            padding: `${theme.spacing.get('3')} ${isPadded ? theme.spacing.get('4') : 0}`,
+            padding: `${theme.globals.spacing.get('3')} ${
+              isPadded ? theme.globals.spacing.get('4') : 0
+            }`,
             width,
           },
           component === 'th' && {
-            paddingTop: theme.spacing.get('4'),
-            paddingBottom: theme.spacing.get('4'),
-            fontWeight: theme.typography.weights.get('bold'),
-            fontSize: theme.typography.fontSizes.get('3'),
+            paddingTop: theme.globals.spacing.get('4'),
+            paddingBottom: theme.globals.spacing.get('4'),
+            fontWeight: theme.globals.typography.weights.get('bold'),
+            fontSize: theme.globals.typography.fontSizes.get('3'),
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           isSticky && {
@@ -67,7 +69,7 @@ const TableCell: React.FC<TableCellProps> = React.memo(
             left: 0,
             zIndex: 2,
             position: 'sticky',
-            background: theme.palette.white,
+            background: theme.globals.colors.white,
             boxShadow: `inset 0px -1px 0px 0px ${getBorderColor(theme)}`,
           },
           type === 'financial' && {

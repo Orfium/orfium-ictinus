@@ -9,7 +9,7 @@ export const overlayWrapperStyle =
     css`
       ${flex};
       border: 1px solid ${theme.utils.getColor('lightGrey', 100)};
-      border-radius: ${theme.spacing.get('3')};
+      border-radius: ${theme.globals.spacing.get('3')};
       width: fit-content;
     `;
 
@@ -25,14 +25,14 @@ export const optionStyle =
   (theme: Theme): SerializedStyles =>
     css`
       white-space: nowrap;
-      padding: ${theme.spacing.get('6')};
+      padding: ${theme.globals.spacing.get('6')};
       font-weight: ${isSelected
-        ? theme.typography.weights.get('medium')
-        : theme.typography.weights.get('regular')};
+        ? theme.globals.typography.weights.get('medium')
+        : theme.globals.typography.weights.get('regular')};
       cursor: pointer;
       background-color: ${isSelected ? theme.utils.getColor('blue', 50) : 'transparent'};
       position: relative;
-      font-size: ${theme.typography.fontSizes['13']};
+      font-size: ${theme.globals.typography.fontSizes['13']};
 
       &:hover {
         background-color: ${theme.utils.getColor('lightGrey', 50)};
@@ -63,7 +63,7 @@ export const buttonsMonthsWrapperStyle =
       display: flex;
       flex-direction: column;
       position: relative;
-      margin-bottom: ${isRangePicker && theme.spacing.get('6')};
+      margin-bottom: ${isRangePicker && theme.globals.spacing.get('6')};
     `;
 export const monthsWrapperStyle =
   ({ isRangePicker }: { isRangePicker: boolean }) =>
@@ -72,11 +72,11 @@ export const monthsWrapperStyle =
       display: flex;
       flex-direction: row;
       position: relative;
-      padding: 0 ${theme.spacing.get('8')};
+      padding: 0 ${theme.globals.spacing.get('8')};
       z-index: 10;
 
       > div:first-of-type {
-        margin-right: ${isRangePicker ? theme.spacing.get('8') : 0};
+        margin-right: ${isRangePicker ? theme.globals.spacing.get('8') : 0};
       }
     `;
 
@@ -86,10 +86,11 @@ export const buttonsWrapperStyle =
     css`
       display: flex;
       justify-content: flex-end;
-      margin-bottom: ${theme.spacing.get('6')};
-      margin-right: ${theme.spacing.get('8')};
+      margin-bottom: ${theme.globals.spacing.get('6')};
+      margin-right: ${theme.globals.spacing.get('8')};
 
       > button {
-        margin: ${theme.spacing.get('4')} 0 ${theme.spacing.get('4')} ${theme.spacing.get('4')};
+        margin: ${theme.globals.spacing.get('4')} 0 ${theme.globals.spacing.get('4')}
+          ${theme.globals.spacing.get('4')};
       }
     `;

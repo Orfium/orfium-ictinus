@@ -9,13 +9,13 @@ export const listGroupTitleStyle =
   (theme: Theme): SerializedStyles =>
     css`
       height: ${size === 'normal' ? rem(56) : rem(46)};
-      font-size: ${theme.typography.fontSizes[size === 'normal' ? '13' : '11']};
-      background-color: ${theme.palette.white};
+      font-size: ${theme.globals.typography.fontSizes[size === 'normal' ? '13' : '11']};
+      background-color: ${theme.globals.colors.white};
       color: ${theme.utils.getColor('lightGrey', 650)};
       display: flex;
       align-items: center;
-      padding: 0px ${theme.spacing.get('6')};
-      font-weight: ${theme.typography.weights.get('bold')};
+      padding: 0px ${theme.globals.spacing.get('6')};
+      font-weight: ${theme.globals.typography.weights.get('bold')};
 
       ${isDisabled &&
       `

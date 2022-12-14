@@ -44,5 +44,5 @@ export const getTextFieldSize = (
 };
 
 export const getSpacingBySize: (size: SpacingKey, theme: Theme) => string = (size, theme) => {
-  return theme.spacing.get(size);
+  return theme.globals.spacing.get(size);
 };

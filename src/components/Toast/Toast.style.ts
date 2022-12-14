@@ -19,7 +19,7 @@ const toastContainerPerType = (
 ) =>
   styleType === 'outlined'
     ? `border: ${rem(2)} solid ${theme.utils.getColor(type, 500, 'normal')}`
-    : `box-shadow: ${theme.elevation['02']}
+    : `box-shadow: ${theme.globals.elevation['02']}
 `;
 
 export const toastContainer =
@@ -37,7 +37,7 @@ export const topContainer =
   (type: AcceptedColorComponentTypes) =>
   (theme: Theme): SerializedStyles =>
     css`
-      color: ${theme.palette.white};
+      color: ${theme.globals.colors.white};
       display: flex;
       justify-content: space-between;
       overflow: hidden;
@@ -50,14 +50,14 @@ export const infoContainer =
   (theme: Theme): SerializedStyles =>
     css`
       ${flexCenter};
-      padding: 0 ${theme.spacing.get('6')};
+      padding: 0 ${theme.globals.spacing.get('6')};
     `;
 
 export const infoIconContainer =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      padding-right: ${theme.spacing.get('4')};
+      padding-right: ${theme.globals.spacing.get('4')};
     `;
 
 export const actionIconsContainer =
@@ -66,7 +66,7 @@ export const actionIconsContainer =
     css`
       display: flex;
       align-items: center;
-      padding-right: ${theme.spacing.get('6')};
+      padding-right: ${theme.globals.spacing.get('6')};
     `;
 
 export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyles =>
@@ -84,7 +84,7 @@ export const expandedContainer =
       min-height: ${isExpanded ? rem(146) : rem(0)};
       ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
       height: ${!isExpanded ? rem(0) : 'inherit'};
-      font-size: ${theme.typography.fontSizes.get('3')};
+      font-size: ${theme.globals.typography.fontSizes.get('3')};
       position: relative;
-      background: ${theme.palette.white};
+      background: ${theme.globals.colors.white};
     `;

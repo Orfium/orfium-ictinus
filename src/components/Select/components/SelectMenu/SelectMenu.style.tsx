@@ -17,9 +17,11 @@ export const optionStyle =
   }: { isSelected: boolean; hasNoResultsExist?: boolean } & Omit<TextFieldProps, 'ref'>) =>
   (theme: Theme): SerializedStyles => {
     return css`
-      padding: ${theme.spacing.get('6')};
-      font-size: ${theme.typography.fontSizes.get(size === 'md' ? '4' : '3')};
-      background-color: ${isSelected ? darken(0.07, theme.palette.white) : theme.palette.white};
+      padding: ${theme.globals.spacing.get('6')};
+      font-size: ${theme.globals.typography.fontSizes.get(size === 'md' ? '4' : '3')};
+      background-color: ${isSelected
+        ? darken(0.07, theme.globals.colors.white)
+        : theme.globals.colors.white};
       cursor: default;
       color: ${hasNoResultsExist ? theme.utils.getColor('lightGrey', 750) : 'initial'};
       text-align: ${hasNoResultsExist ? 'center' : 'initial'};
@@ -28,7 +30,7 @@ export const optionStyle =
       overflow-x: hidden;
 
       &:hover {
-        background-color: ${darken(0.03, theme.palette.white)};
+        background-color: ${darken(0.03, theme.globals.colors.white)};
       }
     `;
   };
@@ -37,9 +39,9 @@ export const menuStyle =
   ({ status, size, isVirtualized }: SelectMenuProps & Omit<TextFieldProps, 'ref'>) =>
   (theme: Theme): SerializedStyles =>
     css`
-      background-color: ${theme.palette.white};
+      background-color: ${theme.globals.colors.white};
       border-radius: 4px;
-      box-shadow: ${theme.elevation['02']};
+      box-shadow: ${theme.globals.elevation['02']};
       top: ${status !== 'normal' ? '70%' : '110%'};
       z-index: 500;
       position: absolute;

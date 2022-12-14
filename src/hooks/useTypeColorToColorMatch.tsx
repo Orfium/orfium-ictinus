@@ -59,7 +59,7 @@ const calculateTypesShadeAndColors = (
     mainTypeAcc[mainType] = flatPaletteKeys.reduce((acc, paletteColor) => {
       const colorShadesKeys = keys(palette[paletteColor]); // the shades of the palette color currently in the iteration
       const foundShadeWithThatColor = colorShadesKeys.find(
-        shade => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
+        (shade) => palette[paletteColor][shade].toLowerCase() === typeColor.toLowerCase()
       );
 
       // return either the found color as e.g { shade: 500, color: 'orange'} or the object as it was
@@ -74,10 +74,10 @@ const calculateTypesShadeAndColors = (
 
 const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
   const theme = useTheme();
-  const types = pick(theme.palette, mainTypes);
+  const types = pick(theme.globals.colors, mainTypes);
 
   const typesShadesColor = React.useMemo(() => {
-    return calculateTypesShadeAndColors(types, theme.palette.flat);
+    return calculateTypesShadeAndColors(types, theme.globals.colors.flat);
   }, [types, theme]);
 
   const calculateColorBetweenColorAndType = React.useCallback(

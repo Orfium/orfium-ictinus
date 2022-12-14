@@ -16,7 +16,7 @@ export const tableCTAStyle =
       tableLayout: 'fixed',
       position: isFixed ? 'sticky' : undefined,
       top: isFixed ? 0 : undefined,
-      background: isFixed ? theme.palette.white : undefined,
+      background: isFixed ? theme.globals.colors.white : undefined,
       zIndex: isFixed ? 3 : undefined,
     });
 
@@ -24,17 +24,17 @@ export const tableRowHeadersStyle =
   (hasExpandableRows: boolean, hasOnCheck: boolean, hasFixedHeader: boolean) =>
   (theme: Theme): SerializedStyles =>
     css({
-      paddingTop: theme.spacing.get('6'),
-      paddingBottom: theme.spacing.get('6'),
+      paddingTop: theme.globals.spacing.get('6'),
+      paddingBottom: theme.globals.spacing.get('6'),
       borderBottomWidth: rem(hasExpandableRows || hasFixedHeader ? 0 : 1),
       borderBottomStyle: 'solid',
       borderBottomColor: getBorderColor(theme),
 
       'th:first-of-type': {
-        paddingLeft: hasOnCheck ? undefined : theme.spacing.get('6'),
+        paddingLeft: hasOnCheck ? undefined : theme.globals.spacing.get('6'),
       },
 
       'th:last-child': {
-        paddingRight: hasExpandableRows ? undefined : theme.spacing.get('6'),
+        paddingRight: hasExpandableRows ? undefined : theme.globals.spacing.get('6'),
       },
     });

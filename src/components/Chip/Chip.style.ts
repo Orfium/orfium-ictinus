@@ -20,14 +20,16 @@ export const chipStyle =
 
     return css`
       ${flexCenterVertical};
-      height: ${theme.spacing.get('8')};
-      border-radius: ${theme.spacing.get('8')};
-      font-size: ${theme.typography.fontSizes.get('2')};
-      font-weight: ${theme.typography.weights.get('medium')};
+      height: ${theme.globals.spacing.get('8')};
+      border-radius: ${theme.globals.spacing.get('8')};
+      font-size: ${theme.globals.typography.fontSizes.get('2')};
+      font-weight: ${theme.globals.typography.weights.get('medium')};
       line-height: normal;
       box-sizing: border-box;
-      padding: ${theme.spacing.get('3')} ${theme.spacing.get('4')};
-      background-color: ${customFilled ? theme.utils.getColor(fill, 50) : theme.palette.white};
+      padding: ${theme.globals.spacing.get('3')} ${theme.globals.spacing.get('4')};
+      background-color: ${customFilled
+        ? theme.utils.getColor(fill, 50)
+        : theme.globals.colors.white};
       color: ${theme.utils.getAAColorFromSwatches(fill, 50)};
       border: ${rem(1)} solid
         ${customFilled ? theme.utils.getColor(fill, 550) : theme.utils.getColor('lightGrey', 200)};
@@ -65,7 +67,7 @@ export const chipStyle =
     `}
 
       > :not(:last-child) {
-        margin-right: ${theme.spacing.get('3')};
+        margin-right: ${theme.globals.spacing.get('3')};
       }
     `;
   };

@@ -9,7 +9,7 @@ export const sxProp = (
   theme: Theme
 ): { wrapper: CSSObject; textField: CSSObject; input: CSSObject } => ({
   wrapper: { width: 'auto', height: 'auto' },
-  textField: { padding: theme.spacing.get('4') },
+  textField: { padding: theme.globals.spacing.get('4') },
   input: {
     width: rem(MIN_WIDTH),
     minWidth: rem(MIN_WIDTH),

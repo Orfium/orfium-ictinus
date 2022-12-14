@@ -41,7 +41,7 @@ const ExpandedButtonCell: React.FC<ExpandedButtonCellProps> = ({
           css={{
             display: 'flex',
             justifyContent: 'center',
-            padding: `${theme.spacing.get('3')} ${theme.spacing.get('4')}`,
+            padding: `${theme.globals.spacing.get('3')} ${theme.globals.spacing.get('4')}`,
           }}
         >
           <div

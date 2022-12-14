@@ -14,10 +14,10 @@ export const breadcrumbItemStyles =
     css`
       display: flex;
       cursor: default;
-      font-size: ${theme.typography.fontSizes['15']};
+      font-size: ${theme.globals.typography.fontSizes['15']};
       font-weight: ${isActive
-        ? theme.typography.weights.get('medium')
-        : theme.typography.weights.get('regular')};
+        ? theme.globals.typography.weights.get('medium')
+        : theme.globals.typography.weights.get('regular')};
       color: ${isActive
         ? theme.utils.getColor('primary', BASE_SHADE, 'normal')
         : theme.utils.getColor('lightGrey', 650)};

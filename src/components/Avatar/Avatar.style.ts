@@ -22,42 +22,45 @@ export const sizeBasedOnProp = (size: AvatarSizes): number => {
 const fontSizeBasedOnProp = (theme: Theme, size: AvatarSizes) => {
   switch (size) {
     case 'md':
-      return theme.typography.fontSizes['11'];
+      return theme.globals.typography.fontSizes['11'];
     case 'sm':
-      return theme.typography.fontSizes.get('1');
+      return theme.globals.typography.fontSizes.get('1');
     case 'xs':
-      return theme.typography.fontSizes['8'];
+      return theme.globals.typography.fontSizes['8'];
     default:
-      return theme.typography.fontSizes.get('4');
+      return theme.globals.typography.fontSizes.get('4');
   }
 };
 
-export const avatarStyle = ({
-  size,
-  fill,
-  fillShade,
-}: {
-  size: AvatarSizes;
-  fill: typeof flatColors[number];
-  fillShade: typeof colorShades[number];
-}) => (theme: Theme): SerializedStyles => css`
-  ${flex};
-  width: ${rem(sizeBasedOnProp(size))};
-  height: ${rem(sizeBasedOnProp(size))};
-  border-radius: 100%;
-  border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
-  box-sizing: border-box;
-  background: ${theme.utils.getColor(fill, fillShade)};
-  overflow: hidden;
-  position: relative;
-  font-size: ${fontSizeBasedOnProp(theme, size)};
-  font-weight: ${theme.typography.weights.get('medium')};
-  align-items: center;
-  flex-shrink: 0;
-  line-height: 1;
-  user-select: none;
-  justify-content: center;
-  color: ${theme.utils.getAAColorFromSwatches(fill, fillShade)};
+export const avatarStyle =
+  ({
+    size,
+    fill,
+    fillShade,
+  }: {
+    size: AvatarSizes;
+    fill: typeof flatColors[number];
+    fillShade: typeof colorShades[number];
+  }) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      ${flex};
+      width: ${rem(sizeBasedOnProp(size))};
+      height: ${rem(sizeBasedOnProp(size))};
+      border-radius: 100%;
+      border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 100)};
+      box-sizing: border-box;
+      background: ${theme.utils.getColor(fill, fillShade)};
+      overflow: hidden;
+      position: relative;
+      font-size: ${fontSizeBasedOnProp(theme, size)};
+      font-weight: ${theme.globals.typography.weights.get('medium')};
+      align-items: center;
+      flex-shrink: 0;
+      line-height: 1;
+      user-select: none;
+      justify-content: center;
+      color: ${theme.utils.getAAColorFromSwatches(fill, fillShade)};
 
       img {
         border-radius: 100%;

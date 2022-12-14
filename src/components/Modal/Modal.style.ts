@@ -12,7 +12,7 @@ export const backgroundContainer = (theme: Theme): SerializedStyles => css`
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: ${transparentize(0.8, theme.palette.white)};
+  background-color: ${transparentize(0.8, theme.globals.colors.white)};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,9 +32,9 @@ export const modalContainer =
       flex-wrap: wrap;
 
       padding: ${isContentPadded
-        ? `${theme.spacing.get('8')} ${theme.spacing.get('9')} ${theme.spacing.get(
+        ? `${theme.globals.spacing.get('8')} ${theme.globals.spacing.get(
             '9'
-          )} ${theme.spacing.get('9')}`
+          )} ${theme.globals.spacing.get('9')} ${theme.globals.spacing.get('9')}`
         : undefined};
     `;
 
@@ -42,7 +42,7 @@ export const closeContainer = (theme: Theme) => css`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: ${theme.spacing.get('4')} ${theme.spacing.get('4')} 0 0;
+  padding: ${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('4')} 0 0;
   box-sizing: border-box;
 
   //TODO: REMOVE THIS AFTER BUTTONS REFACTOR

@@ -21,13 +21,15 @@ export const listItemStyle =
   (theme: Theme): SerializedStyles =>
     css`
       height: ${size === 'normal' ? rem(56) : rem(46)};
-      font-size: ${theme.typography.fontSizes.get(size === 'normal' ? '4' : '3')};
-      background-color: ${isSelected ? theme.utils.getColor('blue', 50) : theme.palette.white};
+      font-size: ${theme.globals.typography.fontSizes.get(size === 'normal' ? '4' : '3')};
+      background-color: ${isSelected
+        ? theme.utils.getColor('blue', 50)
+        : theme.globals.colors.white};
       display: flex;
       align-items: center;
-      padding: 0px ${theme.spacing.get('6')} 0px
-        ${isGroupItem ? theme.spacing.get('9') : theme.spacing.get('6')};
-      font-weight: ${isSelected && theme.typography.weights.get('medium')};
+      padding: 0px ${theme.globals.spacing.get('6')} 0px
+        ${isGroupItem ? theme.globals.spacing.get('9') : theme.globals.spacing.get('6')};
+      font-weight: ${isSelected && theme.globals.typography.weights.get('medium')};
       cursor: pointer;
 
       ${isHighlighted && 'font-weight: 500;'}

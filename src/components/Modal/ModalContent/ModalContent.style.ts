@@ -11,23 +11,23 @@ export const modalContentContainer = (theme: Theme): SerializedStyles => css`
   flex-wrap: wrap;
   text-align: left;
   color: ${theme.utils.getColor('lightGrey', 700, 'flat')};
-  font-weight: ${theme.typography.weights.get('regular')};
+  font-weight: ${theme.globals.typography.weights.get('regular')};
 `;
 
 export const labelContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes.get('3')};
-  margin: 0 0 ${theme.spacing.get('3')} 0;
+  font-size: ${theme.globals.typography.fontSizes.get('3')};
+  margin: 0 0 ${theme.globals.spacing.get('3')} 0;
 `;
 
 export const headingContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes.get('9')};
+  font-size: ${theme.globals.typography.fontSizes.get('9')};
   color: ${theme.utils.getColor('darkGrey', 850)};
-  font-weight: ${theme.typography.weights.get('medium')};
-  margin: 0 0 ${theme.spacing.get('9')} 0;
+  font-weight: ${theme.globals.typography.weights.get('medium')};
+  margin: 0 0 ${theme.globals.spacing.get('9')} 0;
 `;
 
 export const messageContainer = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.typography.fontSizes.get('4')};
+  font-size: ${theme.globals.typography.fontSizes.get('4')};
   color: ${theme.utils.getColor('lightGrey', 750)};
   max-height: ${rem(430)};
   overflow-y: hidden;
@@ -40,9 +40,9 @@ export const actionsContainer = (theme: Theme): SerializedStyles => css`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  margin: ${theme.spacing.get('9')} 0 0 0;
+  margin: ${theme.globals.spacing.get('9')} 0 0 0;
 
   button {
-    margin-left: ${theme.spacing.get('6')};
+    margin-left: ${theme.globals.spacing.get('6')};
   }
 `;

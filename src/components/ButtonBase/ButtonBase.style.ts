@@ -18,8 +18,8 @@ const fontSizeBasedOnSize = (theme: Theme, size: typeof buttonSizes[number] | 'd
   /** @TODO revisit this when all custom fontSizes are gone and we can use only
    * the fontSizes.get() function. Refactor buttonConfig logic */
   buttonConfig.fontSize[size]
-    ? theme.typography.fontSizes[buttonConfig.fontSize[size]]
-    : theme.typography.fontSizes.get(buttonConfig.fontSize.default as FontSizeKey);
+    ? theme.globals.typography.fontSizes[buttonConfig.fontSize[size]]
+    : theme.globals.typography.fontSizes.get(buttonConfig.fontSize.default as FontSizeKey);
 
 export const buttonBaseStyle =
   ({
@@ -44,7 +44,7 @@ export const buttonBaseStyle =
 
     const baseButtonStyles = {
       fontSize: fontSizeBasedOnSize(theme, size || 'default'),
-      fontWeight: theme.typography.weights.get('medium'),
+      fontWeight: theme.globals.typography.weights.get('medium'),
       color: calculateButtonColor({
         type,
         isBackgroundTransparent: Boolean(isBackgroundTransparent),
@@ -54,9 +54,10 @@ export const buttonBaseStyle =
       }),
       width: isBlock ? '100%' : undefined,
       backgroundColor: isBackgroundTransparent ? 'transparent' : backGroundColor,
-      padding: size === 'lg' ? theme.spacing.get('6') : `0 ${theme.spacing.get('6')}`,
+      padding:
+        size === 'lg' ? theme.globals.spacing.get('6') : `0 ${theme.globals.spacing.get('6')}`,
       height: heightBasedOnSize(size || 'default'),
-      borderRadius: theme.spacing.get('3'),
+      borderRadius: theme.globals.spacing.get('3'),
       border: isOutlined ? `solid ${rem(borderWidth)} ${backGroundColor}` : 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
