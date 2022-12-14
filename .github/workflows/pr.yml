@@ -19,11 +19,6 @@ jobs:
       - name: Run Tests
         run: yarn test
 
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
   deploy-review-app:
     name: Deploy Review App
     runs-on: ubuntu-latest
