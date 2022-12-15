@@ -17,7 +17,7 @@ const defaultTheme = (theming: ColorScheme): Theme => {
 
   return {
     globals: {
-      colors: enhancePaletteWithShades(paletteConfig),
+      colors: palette,
       typography,
       spacing,
       elevation,
