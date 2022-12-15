@@ -5,7 +5,7 @@ import elevation from './elevation';
 import opacity from './opacity';
 import overrides from './overrides';
 import { getAAColor, getAAColorFromSwatches, getColor } from './palette';
-import { darkPaletteConfig, lightPaletteConfig } from './palette.config';
+import { paletteConfig } from './palette.config';
 import sizing from './sizing';
 import spacing from './spacing';
 import { ColorScheme, TextColorTypes, Theme, ThemeConfig } from './types';
@@ -13,14 +13,11 @@ import typography from './typography';
 import { enhancePaletteWithShades } from './utils';
 
 const defaultTheme = (theming: ColorScheme): Theme => {
-  const palette =
-    theming === 'light'
-      ? enhancePaletteWithShades(lightPaletteConfig)
-      : enhancePaletteWithShades(darkPaletteConfig);
+  const palette = enhancePaletteWithShades(paletteConfig);
 
   return {
     globals: {
-      colors: palette,
+      colors: enhancePaletteWithShades(paletteConfig),
       typography,
       spacing,
       elevation,
