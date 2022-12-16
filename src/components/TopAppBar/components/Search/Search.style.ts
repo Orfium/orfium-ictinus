@@ -21,8 +21,8 @@ export const searchWrapper =
       ${themeFunctions.flexCenterVertical}
     height: ${rem(36)};
       background-color: ${background};
-      padding-left: ${theme.spacing.get('6')};
-      border-radius: ${theme.spacing.get('3')};
+      padding-left: ${theme.globals.spacing.get('6')};
+      border-radius: ${theme.globals.spacing.get('3')};
 
       &[aria-disabled='true'] {
         opacity: 0.5;
@@ -54,7 +54,7 @@ export const customInputStyle = (searchPlaceholder: string, isDark: boolean) => 
 
   
     &:focus {
-      color: ${isDark ? theme.palette.white : theme.utils.getColor('darkGrey', 850)};
+      color: ${isDark ? theme.globals.colors.white : theme.utils.getColor('darkGrey', 850)};
       outline: none;
     }
    

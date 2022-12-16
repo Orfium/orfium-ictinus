@@ -25,8 +25,8 @@ const TableRow: React.FC<TableRowProps> = ({
       css={[
         {
           backgroundColor: isSelected ? theme.utils.getColor('blue', 50) : undefined,
-          paddingTop: theme.spacing.get('3'),
-          paddingBottom: theme.spacing.get('3'),
+          paddingTop: theme.globals.spacing.get('3'),
+          paddingBottom: theme.globals.spacing.get('3'),
           cursor: onClick && 'pointer',
           '&:hover': {
             backgroundColor: onClick && theme.utils.getColor('lightGrey', 50),

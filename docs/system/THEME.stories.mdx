@@ -66,7 +66,7 @@ The table below shows the elevation metrics that are used
 #### Usage
 
 ```
-box-shadow: ${theme.elevation['02']};
+box-shadow: ${theme.globals.elevation['02']};
 ```
 
 <br />
@@ -82,6 +82,6 @@ These metrics are being translated from **_px_** to **_rem_** in order to be fle
 ```
 const theme = useTheme();
 ...
-css={{ padding: theme.spacing.get('4') }}
+css={{ padding: theme.globals.spacing.get('4') }}
 
 ```

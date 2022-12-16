@@ -14,12 +14,12 @@ export const tooltipStyle =
 
     const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {
       if (size === 'large') {
-        return theme.typography.fontSizes.get('4');
+        return theme.globals.typography.fontSizes.get('4');
       } else if (size === 'small') {
-        return theme.typography.fontSizes.get('2');
+        return theme.globals.typography.fontSizes.get('2');
       }
 
-      return theme.typography.fontSizes.get('3');
+      return theme.globals.typography.fontSizes.get('3');
     };
 
     return css`
@@ -29,11 +29,11 @@ export const tooltipStyle =
         color: ${theme.utils.getAAColorFromSwatches(color, shade)};
         background-color: ${backgroundColor};
         max-width: ${rem(256)};
-        padding: ${theme.spacing.get('4')};
+        padding: ${theme.globals.spacing.get('4')};
         font-size: ${defineFontSizeBasedOnTooltipSize(size)};
-        font-weight: ${theme.typography.weights.get('regular')};
+        font-weight: ${theme.globals.typography.weights.get('regular')};
         line-height: 110%;
-        border-radius: ${theme.spacing.get('4')};
+        border-radius: ${theme.globals.spacing.get('4')};
         text-align: start;
         white-space: pre-wrap;
         word-break: break-word;

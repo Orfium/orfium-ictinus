@@ -1,5 +1,5 @@
 import theme from '../../theme';
-import { lightPaletteConfig } from '../../theme/palette.config';
+import { paletteConfig } from '../../theme/palette.config';
 import { getColorFromType, calculateActualColorFromComponentProp } from '../themeFunctions';
 
 describe('The usability of calculateActualColorFromComponentProp to be correct', () => {
@@ -46,7 +46,7 @@ describe('The usability of getColorFromType to be correct', () => {
     const testColor = 'secondary';
     const color = getColorFromType(testColor, theme('light'));
 
-    expect(color).toBe(lightPaletteConfig.secondary);
+    expect(color).toBe(paletteConfig.secondary);
   });
   test('getColorFromType to get specific the primary to get the special case of 100 shade', () => {
     const testColor = 'primary';
@@ -58,6 +58,6 @@ describe('The usability of getColorFromType to be correct', () => {
     const testColor = 'lightBlue';
     const color = getColorFromType(testColor, theme('light'));
 
-    expect(color).toBe(lightPaletteConfig?.flat?.lightBlue);
+    expect(color).toBe(paletteConfig?.flat?.lightBlue);
   });
 });

@@ -1,5 +1,5 @@
 import { BASE_SHADE, getAAColor, getAAColorFromSwatches, getColor } from '../palette';
-import { flatPaletteConfig, lightPaletteConfig } from '../palette.config';
+import { flatPaletteConfig, paletteConfig } from '../palette.config';
 import { colorShadesCreator, enhancePaletteWithShades } from '../utils';
 import { magentaShades } from './const';
 
@@ -9,7 +9,7 @@ describe('GetColor functionalities', () => {
   });
 
   test('that the getColor fetch the correct colors from what has being requested', () => {
-    const palette = enhancePaletteWithShades(lightPaletteConfig);
+    const palette = enhancePaletteWithShades(paletteConfig);
     const getColorFun = getColor(palette);
     expect(getColorFun('teal', 550)).toStrictEqual('#1ad1a3');
     expect(getColorFun('magenta', 250)).toStrictEqual(magentaShades['250']);
@@ -18,7 +18,7 @@ describe('GetColor functionalities', () => {
 });
 
 describe('getAAColorFromSwatches functionalities', () => {
-  const palette = enhancePaletteWithShades(lightPaletteConfig);
+  const palette = enhancePaletteWithShades(paletteConfig);
 
   test('getAAColorFromSwatches works with the given colors and to return the correct color', () => {
     const black = 'black';
@@ -33,7 +33,7 @@ describe('getAAColorFromSwatches functionalities', () => {
 });
 
 describe('getAAColor functionalities', () => {
-  const palette = enhancePaletteWithShades(lightPaletteConfig);
+  const palette = enhancePaletteWithShades(paletteConfig);
 
   test('getAAColor works with the given colors and to return the correct color', () => {
     const black = 'black';

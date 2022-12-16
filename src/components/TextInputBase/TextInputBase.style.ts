@@ -28,7 +28,7 @@ const wrapperStyleSwitch = ({
   const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
   const backgroundColor =
-    colorScheme === 'dark' ? theme.utils.getColor('darkGrey', 700) : theme.palette.white;
+    colorScheme === 'dark' ? theme.utils.getColor('darkGrey', 700) : theme.globals.colors.white;
   const borderColorName = !hasError
     ? borderConfig.color.pressed.name
     : borderConfig.color.error.name;
@@ -94,7 +94,7 @@ export const wrapperStyle =
           ? theme.utils.getColor(borderConfig.color.error.name, borderConfig.color.error.shade)
           : theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)
       }`,
-      borderRadius: theme.spacing.get('3'),
+      borderRadius: theme.globals.spacing.get('3'),
       userSelect: 'none',
       opacity: isDisabled ? getDisabled().opacity : 1,
       cursor: isDisabled || isLocked ? getDisabled().cursor : 'auto',
@@ -120,7 +120,7 @@ export const textFieldStyle =
       alignItems: 'center',
       verticalAlign: 'top',
       width: 'fill-available',
-      padding: !isLean ? `0 ${theme.spacing.get('6')}` : '',
+      padding: !isLean ? `0 ${theme.globals.spacing.get('6')}` : '',
 
       '> div': {
         position: 'relative',
@@ -138,19 +138,19 @@ export const inputStyle =
       border: 'none',
       color:
         theme.colorScheme === 'dark' || isDark
-          ? theme.palette.white
+          ? theme.globals.colors.white
           : theme.utils.getColor('darkGrey', 850),
       display: 'block',
       position: 'relative',
       top: label ? rem(7) : undefined,
       zIndex: 1,
-      fontSize: theme.typography.fontSizes[size === 'md' ? '15' : '13'],
+      fontSize: theme.globals.typography.fontSizes[size === 'md' ? '15' : '13'],
       textOverflow: 'ellipsis',
       width: 0,
       minWidth: '100%',
 
       '& + label': {
-        fontSize: theme.typography.fontSizes[size === 'md' ? '15' : '13'],
+        fontSize: theme.globals.typography.fontSizes[size === 'md' ? '15' : '13'],
       },
 
       '&:focus': {
@@ -170,7 +170,7 @@ export const inputStyle =
       '&:focus, &:not(:placeholder-shown)': {
         '& + label': {
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
-          fontWeight: theme.typography.weights.get('bold'),
+          fontWeight: theme.globals.typography.weights.get('bold'),
         },
       },
 
@@ -189,7 +189,7 @@ export const errorMsgStyle =
         status === 'error'
           ? theme.utils.getColor('error', 550, 'normal')
           : theme.utils.getColor('lightGrey', 650),
-      fontSize: theme.typography.fontSizes.get('2'),
+      fontSize: theme.globals.typography.fontSizes.get('2'),
       lineHeight: 1,
       padding: `${rem(8)} 0 0`,
       svg: {

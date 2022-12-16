@@ -10,11 +10,11 @@ export const borderedRowStyle =
     css({
       borderBottom: isBordered ? `${rem(1)} solid ${getBorderColor(theme)}` : 'none',
       'td:first-of-type': {
-        paddingLeft: theme.spacing.get('6'),
+        paddingLeft: theme.globals.spacing.get('6'),
       },
 
       'td:last-child': {
-        paddingRight: isCustomCell ? 'inherit' : theme.spacing.get('6'),
+        paddingRight: isCustomCell ? 'inherit' : theme.globals.spacing.get('6'),
       },
     });
 

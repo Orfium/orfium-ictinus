@@ -7,7 +7,7 @@ export const Container = styled.div`
   ${flexCenterVertical};
   flex-direction: row;
   justify-content: space-between;
-  gap: ${({ theme }) => theme.spacing.get('4')};
+  gap: ${({ theme }) => theme.globals.spacing.get('4')};
 `;
 
 export const SwitchWrapper = styled.div<{ isChecked: boolean; isDisabled: boolean }>`
@@ -41,6 +41,6 @@ export const SwitchWrapper = styled.div<{ isChecked: boolean; isDisabled: boolea
 `;
 
 export const Label = styled.span`
-  font-size: ${({ theme }) => theme.typography.fontSizes[15]};
+  font-size: ${({ theme }) => theme.globals.typography.fontSizes[15]};
   color: ${({ theme }) => theme.utils.getColor('darkGrey', 850)};
 `;

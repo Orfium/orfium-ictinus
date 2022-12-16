@@ -28,7 +28,7 @@ const Search: FC<SearchProps> = ({
       <div css={iconWrapperStyle({ iconPosition: 'left' })}>
         <Icon
           name={'search'}
-          color={isDark ? theme.palette.white : theme.utils.getColor('lightGrey', 650)}
+          color={isDark ? theme.globals.colors.white : theme.utils.getColor('lightGrey', 650)}
           size={20}
         />{' '}
       </div>

@@ -27,9 +27,9 @@ const PaletteShowcase = () => {
   type Palette = [typeof flatColors[number], string[]];
   type PalePalette = [typeof paleColors[number], string[]];
   // @ts-ignore
-  const palette = toPairs(mapValues(theme.palette.flat, values)) as Palette[];
+  const palette = toPairs(mapValues(theme.globals.colors.flat, values)) as Palette[];
   // @ts-ignore
-  const palePalette = toPairs(theme.palette.pale) as PalePalette;
+  const palePalette = toPairs(theme.globals.colors.pale) as PalePalette;
 
   const onClick = () => {
     if (window) {
@@ -73,7 +73,7 @@ const PaletteShowcase = () => {
                   `}
                 >
                   <div>
-                    {neutralColors.find(neutralColor => neutralColor === colorName) &&
+                    {neutralColors.find((neutralColor) => neutralColor === colorName) &&
                       'system color'}
                   </div>
                   Base ({BASE_SHADE})

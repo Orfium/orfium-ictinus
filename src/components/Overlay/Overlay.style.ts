@@ -54,7 +54,7 @@ export const backdropStyle =
       bottom: 0;
       top: 0;
       left: 0;
-      background-color: ${transparentize(0.25, theme.palette.black)};
+      background-color: ${transparentize(0.25, theme.globals.colors.black)};
       visibility: ${isOpen ? 'visible' : 'hidden'};
       opacity: ${isOpen ? 1 : 0};
       ${transition(0.2)}
@@ -68,7 +68,7 @@ export const overlayStyle =
       ${flex};
       flex-direction: column;
       overflow-y: auto;
-      background-color: ${theme.palette.white};
+      background-color: ${theme.globals.colors.white};
       width: 100%;
       height: auto;
       transform: ${transformBasedOnProps(isOpen, anchor)};
@@ -81,12 +81,12 @@ export const closeIconContainer =
     css`
       ${flex};
       justify-content: flex-end;
-      padding: ${theme.spacing.get('4')} ${theme.spacing.get('4')} 0 0;
+      padding: ${theme.globals.spacing.get('4')} ${theme.globals.spacing.get('4')} 0 0;
     `;
 
 export const contentStyle =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      padding: ${theme.spacing.get('9')};
+      padding: ${theme.globals.spacing.get('9')};
     `;

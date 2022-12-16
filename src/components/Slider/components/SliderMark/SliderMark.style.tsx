@@ -24,10 +24,10 @@ export const Mark = styled.div<{
       color: white;
       display: ${({ isDisabled }) => (isDisabled ? 'none' : 'flex')};
       justify-content: center;
-      font-size: ${({ theme }) => theme.typography.fontSizes[11]};
+      font-size: ${({ theme }) => theme.globals.typography.fontSizes[11]};
       background: black;
       position: absolute;
-      padding: ${({ theme }) => theme.spacing.get('4')};
+      padding: ${({ theme }) => theme.globals.spacing.get('4')};
       box-sizing: border-box;
       top: ${rem(-35)};
       left: ${rem(-14.5)};

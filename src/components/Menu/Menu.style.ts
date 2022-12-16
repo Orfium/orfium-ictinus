@@ -15,10 +15,10 @@ const getButtonMargin =
   (theme: Theme) => {
     if (iconLeft || iconRight) {
       if (size === 'sm') {
-        return theme.spacing.get('4');
+        return theme.globals.spacing.get('4');
       }
 
-      return theme.spacing.get('6');
+      return theme.globals.spacing.get('6');
     }
 
     return 0;
@@ -37,6 +37,6 @@ export const buttonSpanStyle =
     alignItems: iconLeft || iconRight ? ('center' as const) : ('flex-start' as const),
     '> :first-of-type': {
       marginLeft: getButtonMargin({ iconLeft, iconRight, size })(theme),
-      marginRight: hasChildren ? theme.spacing.get('4') : 0,
+      marginRight: hasChildren ? theme.globals.spacing.get('4') : 0,
     },
   });

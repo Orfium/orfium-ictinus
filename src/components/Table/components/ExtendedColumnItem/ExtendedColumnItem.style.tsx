@@ -4,13 +4,17 @@ import { rem } from 'theme/utils';
 
 import { Theme } from '../../../../theme';
 
-export const containerStyles = (gap: string) => (): SerializedStyles => css`
-  ${flexCenterVertical};
-  display: inline-flex;
-  gap: ${rem(`${gap}px`)};
-`;
+export const containerStyles = (gap: string) => (): SerializedStyles =>
+  css`
+    ${flexCenterVertical};
+    display: inline-flex;
+    gap: ${rem(`${gap}px`)};
+  `;
 
-export const contentStyles = () => (theme: Theme): SerializedStyles => css`
-  font-weight: ${theme.typography.weights.get('medium')};
-  color: ${theme.utils.getColor('lightGrey', 750)};
-`;
+export const contentStyles =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      font-weight: ${theme.globals.typography.weights.get('medium')};
+      color: ${theme.utils.getColor('lightGrey', 750)};
+    `;
