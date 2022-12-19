@@ -1,5 +1,5 @@
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import sizingFigma from './constants/sizing';
-import { FigmaTokenValueType, getFigmaTokensValue } from './utils';
 
 export type SizingKey = keyof typeof sizingFigma;
 
