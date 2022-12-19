@@ -55,12 +55,6 @@ const ThemeProviderContents: React.FC<ThemeProviderProps> = ({ theme = {}, child
   const themeSwitchState = useThemeSwitch();
   const colorScheme = themeSwitchState.isDark ? 'dark' : ('light' as ColorScheme);
   const newTheme = {
-    globals: {
-      elevation: theme?.elevation,
-      typography: theme?.typography,
-      spacing: theme?.spacing,
-      colors: theme?.palette ? enhancePaletteWithShades(theme.palette) : {},
-    },
     colorScheme,
     overrides: theme?.overrides,
   };

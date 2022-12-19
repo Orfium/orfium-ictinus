@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Elevation } from '../../../theme/elevation';
-import { SpacingKey } from '../../../theme/spacing';
+import { Elevation } from '../../../theme/globals/elevation';
+import { SpacingKey } from '../../../theme/globals/spacing';
 import Card from '../../Card';
 import { showcaseContainerStyle } from './CardShowcase.style';
 
