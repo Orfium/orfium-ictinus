@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { FontSizeKey } from 'theme/typography';
+import { FontSizeKey } from 'theme/globals/typography';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';

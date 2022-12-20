@@ -1,5 +1,5 @@
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import spacingFigma from './constants/spacing';
-import { FigmaTokenValueType, getFigmaTokensValue } from './utils';
 
 export type SpacingKey = keyof typeof spacingFigma;
 

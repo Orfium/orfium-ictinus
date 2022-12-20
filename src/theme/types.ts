@@ -1,14 +1,14 @@
-import { BorderRadius } from './borderRadius';
-import { BorderWidth } from './borderWidth';
-import { BoxShadow } from './boxShadow';
-import { Elevation } from './elevation';
-import { Opacity } from './opacity';
+import { BorderRadius } from './globals/borderRadius';
+import { BorderWidth } from './globals/borderWidth';
+import { BoxShadow } from './globals/boxShadow';
+import { Elevation } from './globals/elevation';
+import { Opacity } from './globals/opacity';
+import { Sizing } from './globals/sizing';
+import { Spacing } from './globals/spacing';
+import { Typography } from './globals/typography';
 import { Overrides } from './overrides';
 import { GetAAColor, GetAAColorFromSwatches, GetColor, Palette } from './palette';
 import { PaletteConfig } from './palette.config';
-import { Sizing } from './sizing';
-import { Spacing } from './spacing';
-import { Typography } from './typography';
 
 export type TextColorTypes = 'primary' | 'secondary' | 'light';
 export type ColorScheme = 'light' | 'dark';

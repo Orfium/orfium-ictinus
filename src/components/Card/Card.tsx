@@ -1,6 +1,6 @@
 import { Elevation } from 'index';
 import React from 'react';
-import { SpacingKey } from 'theme/spacing';
+import { SpacingKey } from 'theme/globals/spacing';
 
 import { cardStyle } from './Card.style';
 

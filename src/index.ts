@@ -1,17 +1,17 @@
 import { queriesSizes } from './hooks/useBreakpoints';
-import * as elevation from './theme/elevation';
 import * as themeFunctions from './theme/functions';
+import * as elevation from './theme/globals/elevation';
 // Types
+import * as spacing from './theme/globals/spacing';
+import * as typography from './theme/globals/typography';
 import * as overrides from './theme/overrides';
 import * as palette from './theme/palette';
-import * as spacing from './theme/spacing';
-import * as typography from './theme/typography';
 
-export type { Elevation } from './theme/elevation';
+export type { Elevation } from './theme/globals/elevation';
 export type { Overrides } from './theme/overrides';
 export type { Palette } from './theme/palette';
-export type { Spacing } from './theme/spacing';
-export type { Typography } from './theme/typography';
+export type { Spacing } from './theme/globals/spacing';
+export type { Typography } from './theme/globals/typography';
 export type { AcceptedColorComponentTypes } from './utils/themeFunctions';
 export type { Theme } from './theme';
 

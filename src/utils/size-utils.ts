@@ -1,5 +1,5 @@
 import { rem } from 'polished';
-import { SpacingKey } from 'theme/spacing';
+import { SpacingKey } from 'theme/globals/spacing';
 
 import { Theme } from '../theme';
 import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
