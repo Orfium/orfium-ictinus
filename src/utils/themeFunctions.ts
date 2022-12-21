@@ -46,10 +46,10 @@ export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (th
   }
 };
 
-export const fillPickerBasedOnType = (
-  type: AcceptedColorComponentTypes | string,
-  variant: typeof colorShades[number] = 50
-) => (theme: Theme) => getColorFromType(type, theme, variant);
+export const fillPickerBasedOnType =
+  (type: AcceptedColorComponentTypes | string, variant: typeof colorShades[number] = 50) =>
+  (theme: Theme) =>
+    getColorFromType(type, theme, variant);
 
 /**
  * The type of the calculateActualColorFromComponentProp that will be used for the components

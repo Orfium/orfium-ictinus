@@ -84,7 +84,7 @@ const ThemeSwitcher = () => {
           borderRadius: 4,
         }}
       >
-        turn {themeSwitchState.isDark ? 'light' : 'dark'} on
+        turn {themeSwitchState.isDark ? 'semantic' : 'dark'} on
       </button>
     </div>
   );

@@ -6,10 +6,10 @@ import { getDisabled, getFocus, getHover, getPressed } from '../index';
 import { statesConfig } from '../statesConfig';
 import { getShadeWithStep } from '../utils';
 
-const themeMode = 'light';
+const themeMode = 'semantic';
 
 describe('Global states - getHover ', () => {
-  const testTheme = theme('light');
+  const testTheme = theme('semantic');
 
   test('with only theme as prop', () => {
     const hoverResponse = getHover({ theme: testTheme });
@@ -73,7 +73,7 @@ describe('Global states - getFocus ', () => {
 });
 
 describe('Global states - getPressed ', () => {
-  const testTheme = theme('light');
+  const testTheme = theme('semantic');
 
   test('with only theme as prop', () => {
     const pressedResponse = getPressed({ theme: testTheme });
