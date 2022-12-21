@@ -9,9 +9,15 @@ import { Typography } from './globals/typography';
 import { Overrides } from './overrides';
 import { GetAAColor, GetAAColorFromSwatches, GetColor, Palette } from './palette';
 import { PaletteConfig } from './palette.config';
+import { SemanticBackDrop } from './tokens/semantic/backdrop';
+import { SemanticBackgroundColor } from './tokens/semantic/backgroundColor';
+import { SemanticBorderColor } from './tokens/semantic/borderColor';
+import { SemanticDisabledState } from './tokens/semantic/disabledState';
+import { SemanticPalette } from './tokens/semantic/palette';
+import { SemanticTextColor } from './tokens/semantic/textColor';
 
 export type TextColorTypes = 'primary' | 'secondary' | 'light';
-export type ColorScheme = 'light' | 'dark';
+export type ColorScheme = 'semantic' | 'dark';
 
 export type ThemeConfig = {
   palette: PaletteConfig;
@@ -20,6 +26,18 @@ export type ThemeConfig = {
   elevation: Elevation;
   overrides: Overrides;
 };
+
+export type SemanticTheme = {
+  backdrop: SemanticBackDrop;
+  backgroundColor: SemanticBackgroundColor;
+  borderColor: SemanticBorderColor;
+  disabledState: SemanticDisabledState;
+  palette: SemanticPalette;
+  textColor: SemanticTextColor;
+};
+
+/** Will add more themes in the future (e.g.: DarkTheme) */
+export type Tokens = SemanticTheme;
 
 export type Theme = {
   globals: {
@@ -33,6 +51,7 @@ export type Theme = {
     opacity: Opacity;
     sizing: Sizing;
   };
+  tokens: Tokens;
   colorScheme: ColorScheme;
   overrides: Overrides;
   utils: {
