@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import { get, isEmpty } from 'lodash';
 import globals from 'theme/globals';
 
 export type Token = {
@@ -71,5 +71,5 @@ export const getTokensValue = (object: TokensObject | Token) => (path: string) =
   const pathKeys = path.split('.');
   const tokensObject = get(object, pathKeys, {});
 
-  return parseToken(tokensObject);
+  return !isEmpty(tokensObject) ? parseToken(tokensObject) : '';
 };
