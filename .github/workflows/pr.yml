@@ -20,6 +20,7 @@ jobs:
         run: yarn test
 
   deploy-review-app:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Deploy Review App
     runs-on: ubuntu-latest
     env:
