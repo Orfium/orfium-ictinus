@@ -32,7 +32,7 @@ type StateConfig = {
   };
 };
 
-export const lightStatesConfig: StateConfig = {
+export const semanticStatesConfig: StateConfig = {
   hover: {
     backgroundColor: {
       step: 50,
@@ -97,6 +97,6 @@ export const darkStatesConfig: StateConfig = {
 };
 
 export const statesConfig: Record<typeof colorSchemes[number], StateConfig> = {
-  light: lightStatesConfig,
+  semantic: semanticStatesConfig,
   dark: darkStatesConfig,
 };

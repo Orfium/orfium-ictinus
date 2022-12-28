@@ -11,7 +11,7 @@ import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
 const wrapperStyleSwitch = ({
   theme,
-  colorScheme = 'light',
+  colorScheme = 'semantic',
   isLean,
   hasError,
   isDisabled,

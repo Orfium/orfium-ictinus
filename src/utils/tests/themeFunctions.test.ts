@@ -38,25 +38,25 @@ describe('The usability of calculateActualColorFromComponentProp to be correct',
 describe('The usability of getColorFromType to be correct', () => {
   test('getColorFromType to get a string and return it', () => {
     const testColor = '#fefefe';
-    const color = getColorFromType(testColor, theme('light'));
+    const color = getColorFromType(testColor, theme('semantic'));
 
     expect(color).toBe(testColor);
   });
   test('getColorFromType to get a type and return the correct color', () => {
     const testColor = 'secondary';
-    const color = getColorFromType(testColor, theme('light'));
+    const color = getColorFromType(testColor, theme('semantic'));
 
     expect(color).toBe(paletteConfig.secondary);
   });
   test('getColorFromType to get specific the primary to get the special case of 100 shade', () => {
     const testColor = 'primary';
-    const color = getColorFromType(testColor, theme('light'));
+    const color = getColorFromType(testColor, theme('semantic'));
 
     expect(color).toBe('#e7eefe');
   });
   test('getColorFromType to get a color from the palette and return the correct color', () => {
     const testColor = 'lightBlue';
-    const color = getColorFromType(testColor, theme('light'));
+    const color = getColorFromType(testColor, theme('semantic'));
 
     expect(color).toBe(paletteConfig?.flat?.lightBlue);
   });

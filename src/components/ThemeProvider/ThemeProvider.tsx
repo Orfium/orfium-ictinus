@@ -9,7 +9,6 @@ import theme, { Theme, ThemeConfig } from 'theme';
 
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 import { ColorScheme } from '../../theme/types';
-import { enhancePaletteWithShades } from '../../theme/utils';
 import { DeepPartial } from '../../utils/types';
 import 'utils/initLocaleFormat';
 
@@ -18,7 +17,7 @@ export type ThemeProviderProps = {
   theme?: DeepPartial<ThemeConfig>;
 };
 
-const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'light'): Theme =>
+const deepMergeTheme = (newTheme: DeepPartial<Theme>, theming: 'dark' | 'semantic'): Theme =>
   merge(theme(theming), pick(newTheme, keys(theme(theming))));
 
 export const globalStyles = (theme: Theme) => css`
@@ -53,7 +52,7 @@ const ThemeProvider: React.FC<ThemeProviderProps> = ({ theme = {}, children }) =
 
 const ThemeProviderContents: React.FC<ThemeProviderProps> = ({ theme = {}, children }) => {
   const themeSwitchState = useThemeSwitch();
-  const colorScheme = themeSwitchState.isDark ? 'dark' : ('light' as ColorScheme);
+  const colorScheme = themeSwitchState.isDark ? 'dark' : ('semantic' as ColorScheme);
   const newTheme = {
     colorScheme,
     overrides: theme?.overrides,

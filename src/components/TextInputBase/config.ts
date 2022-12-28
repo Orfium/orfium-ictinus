@@ -23,18 +23,18 @@ type TextInputType = {
       };
     };
   };
-}
+};
+
 type TextInputConfig = {
   types: {
-    light: TextInputType;
+    semantic: TextInputType;
     dark: TextInputType;
-  }
-
+  };
 };
 
 export const textInputConfig: TextInputConfig = {
   types: {
-    light: {
+    semantic: {
       outlined: {
         border: {
           width: 1,
@@ -75,6 +75,6 @@ export const textInputConfig: TextInputConfig = {
           },
         },
       },
-    }
+    },
   },
 };

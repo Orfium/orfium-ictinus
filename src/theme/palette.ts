@@ -6,7 +6,7 @@ import { getColorErrors } from './utils';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
-export const colorSchemes = ['light', 'dark'] as const;
+export const colorSchemes = ['semantic', 'dark'] as const;
 
 /**
  * Here are listed all the colors available for our project

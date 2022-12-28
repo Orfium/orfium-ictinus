@@ -6,7 +6,7 @@ import { getKeyNames, colorPicker } from './utils';
 
 describe('LineChart test funcionallity', () => {
   test('Test colorPicker function with pre-seleted colors', () => {
-    const testTheme = theme('light');
+    const testTheme = theme('semantic');
     const uniqueKeyNames = getKeyNames(initData);
     const colorsPicked = colorPicker({ theme: testTheme, uniqueKeyNames, color });
 
@@ -19,7 +19,7 @@ describe('LineChart test funcionallity', () => {
   });
 
   test('Test colorPicker function with random colors', () => {
-    const testTheme = theme('light');
+    const testTheme = theme('semantic');
     const uniqueKeyNames = getKeyNames(initData);
     const colorsPicked = colorPicker({ theme: testTheme, uniqueKeyNames });
 
