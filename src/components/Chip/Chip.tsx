@@ -1,4 +1,5 @@
 import React, { ForwardedRef, Fragment } from 'react';
+import { rem } from 'theme/utils';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
 
 import { BASE_SHADE } from '../../theme/palette';
@@ -26,7 +27,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
 
     const contents = (
       <Fragment>
-        {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
+        {isChecked && <Icon size={rem(14)} name={'checkmark'} color={'darkGrey'} variant={850} />}
         {thumbnail && (
           <div>
             <Avatar size={'xs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
@@ -46,7 +47,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
         {onClear && (
           <div css={closeIconWrapperStyle(isDisabled)}>
             <Icon
-              size={14}
+              size={rem(14)}
               name={'close'}
               color={'darkGrey'}
               variant={850}

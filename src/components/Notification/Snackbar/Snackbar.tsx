@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { rem } from 'theme/utils';
 
 import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
@@ -57,7 +58,7 @@ const Snackbar: React.FC<SnackbarProps> = ({
       <div css={topContainer()}>
         <div css={infoContainer()}>
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} size={20} />
+            <Icon name={typeToIconName(type)} color={type} size={rem(20)} />
           </div>
           <div css={boldMessageContainer()}>{message}</div>
         </div>
@@ -66,7 +67,7 @@ const Snackbar: React.FC<SnackbarProps> = ({
           onClick={closeCTA}
           data-testid={generateTestDataId('snackbar-close', dataTestId)}
         >
-          <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
+          <Icon name="close" color={utils.getColor('lightGrey', 650)} size={rem(20)} />
         </span>
       </div>
       <div css={descriptionContainer()}>{description}</div>

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { rem } from 'theme/utils';
 
 import useTheme from '../../../../hooks/useTheme';
 import { generateTestDataId } from '../../../../utils/helpers';
@@ -76,7 +77,7 @@ const CompactNotification: React.FC<CompactNotificationProps> = ({
       <div css={infoContainer()}>
         {hasIcon && (
           <div css={iconContainer()}>
-            <Icon name={typeToIconName(type)} color={type} size={20} />
+            <Icon name={typeToIconName(type)} color={type} size={rem(20)} />
           </div>
         )}
         {variant === 'banner' && (
@@ -112,7 +113,7 @@ const CompactNotification: React.FC<CompactNotificationProps> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('notification-close', dataTestId)}
           >
-            <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
+            <Icon name="close" color={utils.getColor('lightGrey', 650)} size={rem(20)} />
           </span>
         )}
       </div>

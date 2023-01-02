@@ -1,5 +1,6 @@
 import { debounce } from 'lodash';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import { rem } from 'theme/utils';
 import { generateTestDataId } from 'utils/helpers';
 
 import useCombinedRefs from '../../hooks/useCombinedRefs';
@@ -196,7 +197,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       <div css={rightIconContainer(isOpen, isSearchable)}>
         {isLoading && <Loader />}
         <Icon
-          size={isSearchable ? 20 : 12}
+          size={rem(isSearchable ? 20 : 12)}
           name={rightIconNameSelector}
           color={theme.utils.getColor('lightGrey', 650)}
           onClick={handleIconClick}

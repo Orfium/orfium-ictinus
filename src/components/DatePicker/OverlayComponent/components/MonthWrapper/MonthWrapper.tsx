@@ -2,6 +2,7 @@ import { Dayjs } from 'dayjs';
 import useTheme from 'hooks/useTheme';
 import range from 'lodash/range';
 import React, { useMemo, useState } from 'react';
+import { rem } from 'theme/utils';
 
 import { DisabledDates } from '../../../DatePicker';
 import Month from '../../../Month/Month';
@@ -69,7 +70,7 @@ const MonthWrapper = ({
               <Icon
                 name={'chevronSmallLeft'}
                 color={theme.utils.getColor('darkGrey', 850)}
-                size={25}
+                size={rem(25)}
               />
             </div>
           )}
@@ -88,7 +89,7 @@ const MonthWrapper = ({
                     iconRight={
                       <Icon
                         name={'triangleDown'}
-                        size={10}
+                        size={rem(10)}
                         color={theme.utils.getColor('darkGrey', 850)}
                       />
                     }
@@ -120,7 +121,7 @@ const MonthWrapper = ({
                 <Icon
                   name={'chevronSmallRight'}
                   color={theme.utils.getColor('darkGrey', 850)}
-                  size={25}
+                  size={rem(25)}
                 />
               </div>
             )}

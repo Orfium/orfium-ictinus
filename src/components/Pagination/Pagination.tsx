@@ -1,4 +1,5 @@
 import React from 'react';
+import { rem } from 'theme/utils';
 
 import usePagination from '../../hooks/usePagination';
 import useTheme from '../../hooks/useTheme';
@@ -54,7 +55,7 @@ const Pagination = ({
           color="darkGrey-850"
           name="arrowToLeft"
           onClick={navigateToFirstPage}
-          iconSize={20}
+          iconSize={rem(20)}
           size="sm"
           isTransparent
           isFilled={false}
@@ -64,7 +65,7 @@ const Pagination = ({
       <IconButton
         color="darkGrey-850"
         name="arrowLeft"
-        iconSize={20}
+        iconSize={rem(20)}
         size="sm"
         isTransparent
         isFilled={false}
@@ -79,7 +80,7 @@ const Pagination = ({
       <IconButton
         color="darkGrey-850"
         name="arrowRight"
-        iconSize={20}
+        iconSize={rem(20)}
         size="sm"
         isTransparent
         isFilled={false}
@@ -90,7 +91,7 @@ const Pagination = ({
         <IconButton
           color="darkGrey-850"
           name="arrowToRight"
-          iconSize={20}
+          iconSize={rem(20)}
           size="sm"
           isTransparent
           isFilled={false}

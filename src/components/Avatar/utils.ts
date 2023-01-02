@@ -1,14 +1,16 @@
+import { rem } from 'theme/utils';
+
 import { AvatarSizes } from './Avatar.types';
 
 export const iconSizeBasedOnAvatar = (size: AvatarSizes) => {
   switch (size) {
     case 'md':
-      return 16;
+      return rem(16);
     case 'sm':
-      return 12;
+      return rem(12);
     case 'xs':
-      return 10;
+      return rem(10);
     default:
-      return 28;
+      return rem(28);
   }
 };

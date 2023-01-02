@@ -1,6 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
 import React, { InputHTMLAttributes } from 'react';
+import { rem } from 'theme/utils';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { TestProps } from '../../utils/types';
@@ -69,7 +70,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
       typeof icon === 'string' ? (
         <Icon
           name={icon as AcceptedIconNames}
-          size={24}
+          size={rem(24)}
           color={theme.utils.getColor('lightGrey', 650)}
         />
       ) : (
@@ -110,7 +111,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           <IconWrapper iconPosition={'right'}>
             <Icon
               name="lock"
-              size={size === 'md' ? 20 : 16}
+              size={rem(size === 'md' ? 20 : 16)}
               color={theme.utils.getColor('lightGrey', 650)}
             />
           </IconWrapper>

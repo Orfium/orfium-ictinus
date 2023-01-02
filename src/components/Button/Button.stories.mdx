@@ -5,37 +5,41 @@ import Stack from '../storyUtils/Stack';
 import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
 import Icon from '../Icon';
 import { FIGMA_URL } from '../../utils/common';
+import { rem } from '../../theme/utils';
 
 <Meta
-    title="Design System/Button"
-    component={Button}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Button',
-            url: `${FIGMA_URL}?node-id=574%3A7239`,
-        },
-        {
-            type: 'figma',
-            name: 'Anatomy',
-            url: `${FIGMA_URL}?node-id=10324%3A104411`,
-        },
-        {
-            type: 'figma',
-            name: 'Filled',
-            url: `${FIGMA_URL}?node-id=8145%3A145377`,
-        },
-        {
-            type: 'figma',
-            name: 'Outlined',
-            url: `${FIGMA_URL}?node-id=8149%3A145615`,
-        },
-        {
-            type: 'figma',
-            name: 'Transparent',
-            url: `${FIGMA_URL}?node-id=8166%3A146566`,
-        }],
-    }} />
+  title="Design System/Button"
+  component={Button}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Button',
+        url: `${FIGMA_URL}?node-id=574%3A7239`,
+      },
+      {
+        type: 'figma',
+        name: 'Anatomy',
+        url: `${FIGMA_URL}?node-id=10324%3A104411`,
+      },
+      {
+        type: 'figma',
+        name: 'Filled',
+        url: `${FIGMA_URL}?node-id=8145%3A145377`,
+      },
+      {
+        type: 'figma',
+        name: 'Outlined',
+        url: `${FIGMA_URL}?node-id=8149%3A145615`,
+      },
+      {
+        type: 'figma',
+        name: 'Transparent',
+        url: `${FIGMA_URL}?node-id=8166%3A146566`,
+      },
+    ],
+  }}
+/>
 
 # Button
 
@@ -46,9 +50,7 @@ A universal Button component that is a clickable element that can hold many form
 ```js
 import { Button } from '@orfium/ictinus';
 
-<Button onClick={() => {}}>
-  Click Me
-</Button>
+<Button onClick={() => {}}>Click Me</Button>;
 ```
 
 ### Async handling case
@@ -57,140 +59,231 @@ import { Button } from '@orfium/ictinus';
 import { Button } from '@orfium/ictinus';
 
 <Button
-      onClick={setLoading => {
-        setLoading?.(true);
+  onClick={(setLoading) => {
+    setLoading?.(true);
 
-        serviceMock()
-          .then(res => {
-            console.log(res);
-          })
-          .finally(() => setLoading?.(false));
-      }}
-    >
-      Async Action
-</Button>
+    serviceMock()
+      .then((res) => {
+        console.log(res);
+      })
+      .finally(() => setLoading?.(false));
+  }}
+>
+  Async Action
+</Button>;
 ```
 
 # Props
 
 <Props of={Button} />
 
-
 # Icon Button Sizes
+
 Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
 
 <Preview>
   <Story name="Icon Button Sizes">
     <Stack>
-        <Button size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-lg'}>Hello world</Button>
-        <Button size={'md'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-md'}>Hello world</Button>
-        <Button size={'sm'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-sm'}>Hello world</Button>
+      <Button
+        size={'lg'}
+        iconLeft={<Icon name={'dashboard'} color={'primary'} size={rem(14)} />}
+        dataTestId={'size-lg'}
+      >
+        Hello world
+      </Button>
+      <Button
+        size={'md'}
+        iconLeft={<Icon name={'dashboard'} color={'primary'} size={rem(14)} />}
+        dataTestId={'size-md'}
+      >
+        Hello world
+      </Button>
+      <Button
+        size={'sm'}
+        iconLeft={<Icon name={'dashboard'} color={'primary'} size={rem(14)} />}
+        dataTestId={'size-sm'}
+      >
+        Hello world
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
 # Icon Button Sizes
+
 Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
 
 <Preview>
   <Story name="Button Sizes">
     <Stack>
-        <Button size={'lg'}>Hello world</Button>
-        <Button size={'md'}>Hello world</Button>
-        <Button size={'sm'}>Hello world</Button>
+      <Button size={'lg'}>Hello world</Button>
+      <Button size={'md'}>Hello world</Button>
+      <Button size={'sm'}>Hello world</Button>
     </Stack>
   </Story>
 </Preview>
 
 # Button Types
+
 Button types based on the system approved literals for `success, error, info, warning, link`
 
 <Preview>
   <Story name="Button Types">
     <Stack>
-        <Button size={'sm'} isDisabled type='success'>Success</Button>
-        <Button size={'sm'} type='success'>Success</Button>
-        <Button size={'sm'} type='error'>Error</Button>
-        <Button size={'sm'} type='info'>Info</Button>
-        <Button size={'sm'} type='warning'>Warning</Button>
-        <Button size={'sm'} type='link'>Link</Button>
+      <Button size={'sm'} isDisabled type="success">
+        Success
+      </Button>
+      <Button size={'sm'} type="success">
+        Success
+      </Button>
+      <Button size={'sm'} type="error">
+        Error
+      </Button>
+      <Button size={'sm'} type="info">
+        Info
+      </Button>
+      <Button size={'sm'} type="warning">
+        Warning
+      </Button>
+      <Button size={'sm'} type="link">
+        Link
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
 # Button Colors
+
 Button colors based on the system palette. Check <a href="/?path=/story/guide-colors--page">our colors</a> for more.
 
 <Preview>
   <Story name="Button Colors">
     <Stack>
-        <Button size={'sm'} isDisabled color={'red-500'}>Disabled</Button>
-        <Button size={'sm'} color={'red-600'}>Red 600</Button>
-        <Button size={'sm'} color={'magenta-200'}>Magenta 200</Button>
+      <Button size={'sm'} isDisabled color={'red-500'}>
+        Disabled
+      </Button>
+      <Button size={'sm'} color={'red-600'}>
+        Red 600
+      </Button>
+      <Button size={'sm'} color={'magenta-200'}>
+        Magenta 200
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
 # Regular Button
+
 <Preview>
   <Story name="Regular Button">
-    <Button isFilled={true} size={'lg'}>Hello world</Button>
+    <Button isFilled={true} size={'lg'}>
+      Hello world
+    </Button>
   </Story>
 </Preview>
 
 # Button with icon
+
 <Preview>
   <Story name="Button with icon">
     <Stack>
-      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button isFilled={true} size={'lg'} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dotsVertical'} color={'primary'} size={18} />}>Hello world</Button>
+      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} />}>
+        Hello world
+      </Button>
+      <Button isFilled={true} size={'lg'} iconRight={<Icon name={'dashboard'} color={'primary'} />}>
+        Hello world
+      </Button>
+      <Button
+        isFilled={true}
+        size={'lg'}
+        iconLeft={<Icon name={'dashboard'} color={'primary'} />}
+        iconRight={<Icon name={'dotsVertical'} color={'primary'} size={rem(18)} />}
+      >
+        Hello world
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
 # Non Filled Button
+
 <Preview>
   <Story name="Non Filled Button">
-    <Button isFilled={false} size={'lg'}>Hello world</Button>
+    <Button isFilled={false} size={'lg'}>
+      Hello world
+    </Button>
   </Story>
 </Preview>
 
 # Transparent Button
+
 <Preview>
   <Story name="Transparent Button">
-    <Button type='primary' size={'lg'} isTransparent>Hello world</Button>
+    <Button type="primary" size={'lg'} isTransparent>
+      Hello world
+    </Button>
   </Story>
 </Preview>
 
 # Block Button
+
 <Preview>
   <Story name="Block Button">
     <Stack isVertical>
-      <Button isFilled={true} size={'lg'} isBlock iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button isFilled={false} size={'lg'} isBlock>Hello world</Button>
-      <Button type='success' size={'lg'} isTransparent isBlock>Hello world</Button>
+      <Button
+        isFilled={true}
+        size={'lg'}
+        isBlock
+        iconLeft={<Icon name={'dashboard'} color={'primary'} />}
+        iconRight={<Icon name={'dashboard'} color={'primary'} />}
+      >
+        Hello world
+      </Button>
+      <Button isFilled={false} size={'lg'} isBlock>
+        Hello world
+      </Button>
+      <Button type="success" size={'lg'} isTransparent isBlock>
+        Hello world
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
 # Dynamic Button Props - Knobs
+
 <Preview>
   <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
-    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'], 'secondary')} isFilled={boolean('isFilled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')} isBlock={boolean('isBlock', false)}>{text('text', 'change me!')}</Button>
+    <Button
+      type={select(
+        'type',
+        ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'],
+        'secondary'
+      )}
+      isFilled={boolean('isFilled', true)}
+      size={select('size', ['sm', 'md', 'lg'], 'lg')}
+      isBlock={boolean('isBlock', false)}
+    >
+      {text('text', 'change me!')}
+    </Button>
   </Story>
 </Preview>
-
 
 # Async Button with loading state
 
 <Preview>
   <Story name="Async Button">
     <Stack>
-      <Button size={'sm'} onClick={() => { console.log('clicked!')}}>Sync Action</Button>
-      <AsyncButtonShowcase text={'Async sm'} btnSize={'sm'}/>
-      <AsyncButtonShowcase type={'secondary'} text={'Async md'} btnSize={'md'}/>
-      <AsyncButtonShowcase text={'Async lg'} btnSize={'lg'}/>
+      <Button
+        size={'sm'}
+        onClick={() => {
+          console.log('clicked!');
+        }}
+      >
+        Sync Action
+      </Button>
+      <AsyncButtonShowcase text={'Async sm'} btnSize={'sm'} />
+      <AsyncButtonShowcase type={'secondary'} text={'Async md'} btnSize={'md'} />
+      <AsyncButtonShowcase text={'Async lg'} btnSize={'lg'} />
     </Stack>
   </Story>
 </Preview>

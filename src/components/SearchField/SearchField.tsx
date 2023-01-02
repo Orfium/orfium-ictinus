@@ -44,7 +44,7 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
         sx={{ wrapper: { borderRadius: rem(100) } }}
       >
         <IconWrapper iconPosition={'left'}>
-          <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
+          <Icon name={'search'} size={rem(20)} color={theme.utils.getColor('lightGrey', 650)} />
         </IconWrapper>
 
         <div css={{ width: '100%' }}>
@@ -67,7 +67,7 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
           >
             <Icon
               name={'close'}
-              size={20}
+              size={rem(20)}
               color={theme.utils.getColor('lightGrey', 650)}
               dataTestId={'search-clear'}
             />

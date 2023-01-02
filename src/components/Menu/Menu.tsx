@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import isEmpty from 'lodash/isEmpty';
 import * as React from 'react';
+import { rem } from 'theme/utils';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
@@ -42,7 +43,7 @@ export type MenuProps = {
   /** The name of the icon on the left area of menu button */
   leftIconName?: AcceptedIconNames;
   /** The size of the icon on the menu button */
-  iconSize?: number;
+  iconSize?: string | number;
   /** You can define the avatar properties here for src or letter if none then the user icon will be displayed if the object is not empty */
   avatar?: {
     src: string;
@@ -65,7 +66,7 @@ const Menu: React.FC<MenuProps> = (props) => {
     isFilled = true,
     isDisabled = false,
     leftIconName,
-    iconSize = 16,
+    iconSize = rem(16),
     avatar,
     dataTestId,
   } = props;

@@ -1,6 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 import { useMemo } from 'react';
+import { rem } from 'theme/utils';
 import { generateTestDataId } from 'utils/helpers';
 
 import Icon from '../../../Icon';
@@ -22,7 +23,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProp
     () => (
       <div css={iconWrapper()}>
         {isLoading && <Loader />}
-        <Icon size={20} name="search" color={theme.utils.getColor('lightGrey', 650)} />
+        <Icon size={rem(20)} name="search" color={theme.utils.getColor('lightGrey', 650)} />
       </div>
     ),
     [theme.utils, isLoading]

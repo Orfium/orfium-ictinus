@@ -1,6 +1,7 @@
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
+import { rem } from 'theme/utils';
 
 import { useTheme } from '../../index';
 import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
@@ -97,7 +98,7 @@ const CheckBox = React.forwardRef<HTMLSpanElement, CheckboxProps>((props, ref) =
         <label htmlFor={`styled-checkbox-${id}`} css={markerStyle({ isChecked: isCheckedState })}>
           <Icon
             name={isIntermediate ? 'minus' : 'checkmark'}
-            size={24}
+            size={rem(24)}
             color={theme.utils.getAAColorFromSwatches(color, shade)}
           />
         </label>

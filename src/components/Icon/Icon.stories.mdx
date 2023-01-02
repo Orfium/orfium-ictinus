@@ -4,17 +4,21 @@ import Stack from '../storyUtils/Stack';
 import PresentComponent from '../storyUtils/PresentComponent';
 import iconSelector from './assets/iconSelector';
 import { FIGMA_URL } from '../../utils/common';
+import { rem } from '../../theme/utils';
 
 <Meta
-    title="Design System/Icon"
-    component={Icon}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Icons',
-            url: `${FIGMA_URL}?node-id=99%3A3192`,
-        }],
-    }} />
+  title="Design System/Icon"
+  component={Icon}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Icons',
+        url: `${FIGMA_URL}?node-id=99%3A3192`,
+      },
+    ],
+  }}
+/>
 
 # Icon
 
@@ -25,7 +29,7 @@ A universal Icon component to select and style the icons encapsulated in the des
 ```js
 import { Icon } from '@orfium/ictinus';
 
-<Icon name={'add'} color={'primary'} size={14} />;
+<Icon name={'add'} color={'primary'} size={rem(14)} />;
 ```
 
 # Props
@@ -39,11 +43,13 @@ All the icons available for use.
 <Preview>
   <Story name="Icons Gallery">
     <Stack>
-      {Object.keys(iconSelector).sort((a, b) => a.localeCompare(b)).map((iconName) => (
-        <PresentComponent key={iconName} name={iconName} width={150}>
-          <Icon name={iconName} color={'darkGrey'} />
-        </PresentComponent>
-      ))}
+      {Object.keys(iconSelector)
+        .sort((a, b) => a.localeCompare(b))
+        .map((iconName) => (
+          <PresentComponent key={iconName} name={iconName} width={150}>
+            <Icon name={iconName} color={'darkGrey'} />
+          </PresentComponent>
+        ))}
     </Stack>
   </Story>
 </Preview>
@@ -86,7 +92,6 @@ Icon with color.
   </Story>
 </Preview>
 
-
 # Icon with size
 
 Icon with size.
@@ -94,15 +99,15 @@ Icon with size.
 <Preview>
   <Story name="Icon with size">
     <Stack>
-    <PresentComponent name={'default'}>
-      <Icon name={'add'} />
-    </PresentComponent>
-    <PresentComponent name={'20'}>
-      <Icon name={'add'} size={20} />
-    </PresentComponent>
-    <PresentComponent name={'46'}>
-      <Icon name={'add'} size={46} />
-    </PresentComponent>
+      <PresentComponent name={'default'}>
+        <Icon name={'add'} />
+      </PresentComponent>
+      <PresentComponent name={'20'}>
+        <Icon name={'add'} size={rem(20)} />
+      </PresentComponent>
+      <PresentComponent name={'46'}>
+        <Icon name={'add'} size={rem(46)} />
+      </PresentComponent>
     </Stack>
   </Story>
 </Preview>

@@ -1,4 +1,5 @@
 import React, { ReactNode, useCallback } from 'react';
+import { rem } from 'theme/utils';
 
 import useTheme from '../../../../hooks/useTheme';
 import { useTypeColorToColorMatch } from '../../../../hooks/useTypeColorToColorMatch';
@@ -110,7 +111,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
               </span>
             </div>
 
-            <Icon name={iconName} size={isDatePicker ? 14 : 7} color={pickIconColor()} />
+            <Icon name={iconName} size={rem(isDatePicker ? 14 : 7)} color={pickIconColor()} />
           </div>
         </div>
 
@@ -119,7 +120,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
             <span css={divider(buttonStyleProps)} />
             <div css={dividedButtonStyle(buttonStyleProps)}>
               <Icon
-                size={19}
+                size={rem(19)}
                 name={'closeTag'}
                 color={pickIconColor(true)}
                 onClick={(e) => {

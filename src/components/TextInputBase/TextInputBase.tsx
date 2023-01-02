@@ -2,6 +2,7 @@ import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
 import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
+import { rem } from 'theme/utils';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { generateTestDataId } from '../../utils/helpers';
@@ -75,7 +76,7 @@ const TextInputBase: FC<TextInputBaseProps> = ({
       <Icon
         color={status === 'error' ? 'error' : theme.utils.getColor('lightGrey', 650)}
         name={status === 'error' ? 'issues' : 'info'}
-        size={12}
+        size={rem(12)}
       />
       {hintMsg}
     </div>

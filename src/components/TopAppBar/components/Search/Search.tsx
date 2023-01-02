@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { rem } from 'theme/utils';
 
 import { useTheme } from '../../../../index';
 import Icon from '../../../Icon';
@@ -29,7 +30,7 @@ const Search: FC<SearchProps> = ({
         <Icon
           name={'search'}
           color={isDark ? theme.globals.colors.white : theme.utils.getColor('lightGrey', 650)}
-          size={20}
+          size={rem(20)}
         />{' '}
       </div>
       <input

@@ -2,6 +2,7 @@ import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React, { memo, useMemo } from 'react';
 import { NavLink } from 'react-router-dom';
 import { BASE_SHADE } from 'theme/palette';
+import { rem } from 'theme/utils';
 
 import useTheme from '../../../../hooks/useTheme';
 import {
@@ -37,7 +38,11 @@ const MenuItem: React.FC<MenuItemProps> = memo(
     const MenuItemContent = (
       <React.Fragment>
         <div css={arrowContainerStyle(isExpanded, hasSubMenus)}>
-          <Icon name="triangleRight" color={theme.utils.getColor('lightGrey', 650)} size={10} />
+          <Icon
+            name="triangleRight"
+            color={theme.utils.getColor('lightGrey', 650)}
+            size={rem(10)}
+          />
         </div>
         <div css={menuIconStyle(isCurrent)}>
           <Icon
@@ -47,7 +52,7 @@ const MenuItem: React.FC<MenuItemProps> = memo(
                 ? theme.utils.getAAColorFromSwatches(color, shade)
                 : theme.utils.getColor('lightGrey', 850)
             }
-            size={20}
+            size={rem(20)}
             variant={isCurrent ? shade : BASE_SHADE}
           />
         </div>
@@ -99,7 +104,7 @@ const MenuItem: React.FC<MenuItemProps> = memo(
                             <Icon
                               name={subMenuItem.iconName}
                               color={theme.utils.getColor('lightGrey', 650)}
-                              size={20}
+                              size={rem(20)}
                             />
                           </div>
                           <span className={'submenu-item-text'}>{subMenuItem.name}</span>

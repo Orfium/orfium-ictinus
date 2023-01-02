@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
+import { rem } from 'theme/utils';
 
 import { generateTestDataId } from '../../utils/helpers';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
@@ -57,7 +58,7 @@ const Toast: React.FC<ToastProps> = ({
         <div css={infoContainer()}>
           {isNotificationTypes(type) && (
             <div css={infoIconContainer()}>
-              <Icon name={typeToIconName(type)} color="#fff" size={20} />
+              <Icon name={typeToIconName(type)} color="#fff" size={rem(20)} />
             </div>
           )}
           <div>{message}</div>
@@ -68,7 +69,7 @@ const Toast: React.FC<ToastProps> = ({
             onClick={() => setIsExpandedState(!isExpandedState)}
             data-testid={generateTestDataId('toast-expand', dataTestId)}
           >
-            <Icon name="chevronLargeDown" color="#fff" size={20} />
+            <Icon name="chevronLargeDown" color="#fff" size={rem(20)} />
           </span>
 
           <span
@@ -76,7 +77,7 @@ const Toast: React.FC<ToastProps> = ({
             onClick={closeCTA}
             data-testid={generateTestDataId('toast-close', dataTestId)}
           >
-            <Icon name="close" color="#fff" size={20} />
+            <Icon name="close" color="#fff" size={rem(20)} />
           </span>
         </div>
       </div>

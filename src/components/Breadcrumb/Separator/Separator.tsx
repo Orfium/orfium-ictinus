@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { rem } from 'theme/utils';
 
 import Icon from '../../Icon';
 import { separatorStyles } from './Separator.style';
@@ -14,7 +15,7 @@ const Separator: React.FC<SeparatorProps> = (props) => {
 
   return (
     <span css={separatorStyles()}>
-      <Icon name={'triangleRight'} color={'lightGrey'} variant={650} size={12} />
+      <Icon name={'triangleRight'} color={'lightGrey'} variant={650} size={rem(12)} />
     </span>
   );
 };

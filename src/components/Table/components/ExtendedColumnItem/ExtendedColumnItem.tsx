@@ -1,5 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
+import { rem } from 'theme/utils';
 
 import { ExtendedColumn, Sort } from '../../types';
 import { isItemString } from '../../utils';
@@ -36,7 +37,7 @@ const ExtendedColumnItem: React.FC<ExtendedColumnItemProps> = ({ item, sorting, 
       >
         <Icon
           name="triangleDown"
-          size={8}
+          size={rem(8)}
           dataTestId={`table_icon_sort_${itemContentLowerCase}_${
             sorting.order === 'desc' ? 'desc' : 'asc'
           }`}
@@ -52,7 +53,7 @@ const ExtendedColumnItem: React.FC<ExtendedColumnItemProps> = ({ item, sorting, 
       >
         <Icon
           name="genericOrdering"
-          size={8}
+          size={rem(8)}
           dataTestId={`table_icon_sort_${itemContentLowerCase}`}
           color={theme.utils.getColor('lightGrey', 750)}
         />
