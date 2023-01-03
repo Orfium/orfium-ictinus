@@ -2,6 +2,7 @@ import { getContrast } from 'polished';
 
 import { errorHandler } from '../utils/helpers';
 import { TextColorTypes } from './index';
+import { GradientPaletteConfig, NeutralPaletteConfig } from './palette.config';
 import { getColorErrors } from './utils';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
@@ -18,6 +19,7 @@ export const flatColors = [
   'lightGrey',
   'red',
   'magenta',
+  'lightPurple',
   'purple',
   'darkBlue',
   'blue',
@@ -34,12 +36,14 @@ export const flatColors = [
  * Here are listed all the colors available for our project
  * Pale colors are just colors without shades
  **/
+/** @TODO remove all these when all components are revisited for v5 */
 export const paleColors = [
   'greyScale',
   'darkGrey',
   'lightGrey',
   'red',
   'magenta',
+  'lightPurple',
   'purple',
   'darkBlue',
   'blue',
@@ -80,27 +84,30 @@ export const mainTypes = [
   'link',
 ] as const;
 
-export type flatPalette = Record<typeof flatColors[number], generatedColorShades>;
+export type FlatPalette = Record<typeof flatColors[number], GeneratedColorShades>;
 
-export type palePalette = Record<typeof paleColors[number], string>;
+export type PalePalette = Record<typeof paleColors[number], string>;
 
-export type generatedColorShades = Record<typeof colorShades[number], string>;
+export type GeneratedColorShades = Record<typeof colorShades[number], string>;
 
 /**
  * Palette is end output of what is produced and exported to the client projects
  **/
 export type Palette = {
-  text: {
-    primary: generatedColorShades;
-    secondary: generatedColorShades;
-    light: generatedColorShades;
-  };
-  flat: flatPalette;
-  pale: palePalette;
+  flat: FlatPalette;
+  neutral: NeutralPaletteConfig;
+  gradient: GradientPaletteConfig;
 
+  /** @TODO remove all these when all components are revisited for v5 */
+  text: {
+    primary: GeneratedColorShades;
+    secondary: GeneratedColorShades;
+    light: GeneratedColorShades;
+  };
+  pale: PalePalette;
   white: string;
   black: string;
-} & Record<typeof mainTypes[number], generatedColorShades>;
+} & Record<typeof mainTypes[number], GeneratedColorShades>;
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
 
