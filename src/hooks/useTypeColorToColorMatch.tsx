@@ -3,7 +3,7 @@ import keys from 'lodash/keys';
 import pick from 'lodash/pick';
 import * as React from 'react';
 
-import { BASE_SHADE, flatPalette, generatedColorShades, mainTypes } from '../theme/palette';
+import { BASE_SHADE, FlatPalette, GeneratedColorShades, mainTypes } from '../theme/palette';
 import {
   calculateActualColorFromComponentProp,
   ColorShapeFromComponent,
@@ -44,8 +44,8 @@ export type TypesShadeAndColors = Record<typeof mainTypes[number], ColorShapeFro
  * return e.g { primary: { shade: 500, color: 'orange'}, info: { shade: 500, color: 'darkBlue'}}
  */
 const calculateTypesShadeAndColors = (
-  types: Record<typeof mainTypes[number], generatedColorShades>,
-  palette: flatPalette
+  types: Record<typeof mainTypes[number], GeneratedColorShades>,
+  palette: FlatPalette
 ) => {
   // for each mainType
   return mainTypes.reduce((mainTypeAcc, mainType) => {
