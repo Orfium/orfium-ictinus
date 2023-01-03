@@ -2,13 +2,13 @@ import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
 import { PropsValidationError } from '../utils/errors';
-import { generatedColorShades, Palette } from './palette';
-import { flatPaletteConfigType, PaletteConfig, TextPaletteConfigType } from './palette.config';
+import { GeneratedColorShades, Palette } from './palette';
+import { FlatPaletteConfig, PaletteConfig, TextPaletteConfig } from './palette.config';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;
 
-const EXCLUDED = ['white', 'black', 'pale'];
+const EXCLUDED = ['white', 'black', 'pale', 'neutral', 'gradient'];
 
 export const convertPointsToPixels = (pt: number): number => (96 / 72) * pt;
 
@@ -16,7 +16,7 @@ export const colorShadesCreator = (
   base: string,
   per: number = BASE_PERCENTAGE,
   shadesCount: number = SHADES / 2
-): generatedColorShades => {
+): GeneratedColorShades => {
   const newArray = (fn: (item: undefined, i: number) => string, length: number) =>
     Array.from({ length }, fn);
 
@@ -31,7 +31,7 @@ export const colorShadesCreator = (
     acc[`${(index + 1) * 50}`] = _;
 
     return acc;
-  }, {} as generatedColorShades);
+  }, {} as GeneratedColorShades);
 };
 
 /**
@@ -46,9 +46,9 @@ export const colorShadesCreator = (
  * @returns {Record<string, unknown>>} Each level will have generatedColorShades and in whole it will return
  * a complete palette.
  */
-export const iterateObject = <T>(
+export const iterateObject = <T extends object>(
   obj: T,
-  func: (value: string, name: string) => generatedColorShades | string
+  func: (value: string, name: string) => GeneratedColorShades | string
 ): Record<string, unknown> =>
   Object.keys(obj).reduce((acc, value) => {
     if (typeof obj[value] !== 'object') {
@@ -56,7 +56,7 @@ export const iterateObject = <T>(
     } else if (EXCLUDED.includes(value)) {
       acc[value] = obj[value];
     } else {
-      acc[value] = iterateObject<TextPaletteConfigType | flatPaletteConfigType>(obj[value], func);
+      acc[value] = iterateObject<TextPaletteConfig | FlatPaletteConfig>(obj[value], func);
     }
 
     return acc;
