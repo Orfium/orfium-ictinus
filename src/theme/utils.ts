@@ -133,10 +133,13 @@ export const getFigmaTokensValue: {
   ): (val: T) => string;
 } =
   <T extends string | symbol>(figmaTokensObject: FigmaTokensObject<T>, type: FigmaTokenValueType) =>
-  (val: T): any => {
+  (val: T, fn?: (val: string) => unknown): any => {
+    if (fn) {
+      return fn(get(figmaTokensObject, [val, 'value'], '0') as string);
+    }
     switch (type) {
       case FigmaTokenValueType.Pixels:
-        return rem(Number(get(figmaTokensObject, [val, 'value'], '0')));
+        return rem(parseFloat(get(figmaTokensObject, [val, 'value'], '0') as string));
       case FigmaTokenValueType.String:
         return get(figmaTokensObject, [val, 'value'], '0') as string;
       case FigmaTokenValueType.Number:

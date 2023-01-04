@@ -4,7 +4,7 @@ import spacingFigma from './constants/spacing';
 export type SpacingKey = keyof typeof spacingFigma;
 
 export type Spacing = {
-  get: (val: SpacingKey) => string;
+  get: (val: SpacingKey, fn?: (val: string) => unknown) => string;
 };
 
 const spacing: Spacing = {

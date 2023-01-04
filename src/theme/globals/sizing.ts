@@ -4,7 +4,7 @@ import sizingFigma from './constants/sizing';
 export type SizingKey = keyof typeof sizingFigma;
 
 export type Sizing = {
-  get: (val: SizingKey) => string;
+  get: (val: SizingKey, fn?: (val: string) => unknown) => string;
 };
 
 const sizing: Sizing = {
