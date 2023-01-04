@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
-import { useTheme } from '../../index';
-import { calculateActualColorFromComponentProp } from '../../utils/themeFunctions';
 import Icon from '../Icon';
 import { avatarStyle } from './Avatar.style';
-import { AvatarProps, AvatarSizes } from './Avatar.types';
-import { iconSizeBasedOnAvatar } from './utils';
+import tokens from './Avatar.tokens';
+import { AvatarProps } from './Avatar.types';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
-  (
-    { src = '', iconName = 'user', size = 'md', color = 'lightGrey-600', children, className },
-    ref
-  ) => {
-    const theme = useTheme();
-    const calculatedColor = calculateActualColorFromComponentProp(color);
+  ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {
+    const avatarContent = useMemo(() => {
+      if (src) {
+        return <img src={src} />;
+      }
+
+      if (!src && children) {
+        return children;
+      }
+
+      return (
+        <Icon
+          color={tokens.color.getForegroundColor(color)}
+          name={'userAvatar'}
+          size={parseFloat(tokens.iconSize[size])}
+        />
+      );
+    }, [children, color, size, src]);
 
     return (
       <div
@@ -21,19 +31,11 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
         className={className}
         css={avatarStyle({
           size,
-          fill: calculatedColor.color,
-          fillShade: calculatedColor.shade,
+          color,
         })}
+        data-testid={`${dataTestPrefixId}_avatar`}
       >
-        {src && <img src={src} />}
-        {!src && !children && iconName && (
-          <Icon
-            color={theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)}
-            name={iconName}
-            size={iconSizeBasedOnAvatar(size)}
-          />
-        )}
-        {!src && children}
+        {avatarContent}
       </div>
     );
   }
