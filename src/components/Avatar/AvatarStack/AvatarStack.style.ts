@@ -1,11 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { flex } from 'theme/functions';
-import { rem } from 'theme/utils';
 
-import { sizeBasedOnProp } from '../Avatar.style';
+import tokens from '../Avatar.tokens';
 import { AvatarSizes } from '../Avatar.types';
-
-const OVERLAP_FACTOR = 0.8;
 
 export const avatarStackStyle =
   ({ size }: { size: AvatarSizes }) =>
@@ -14,7 +11,7 @@ export const avatarStackStyle =
       ${flex};
 
       div:last-child {
-        width: ${rem(sizeBasedOnProp(size))};
+        width: ${tokens.size[size]};
       }
     `;
 
@@ -23,5 +20,5 @@ export const avatarWrapperStyle =
   (): SerializedStyles =>
     css`
       z-index: ${zIndex};
-      width: ${rem(sizeBasedOnProp(size) * OVERLAP_FACTOR)};
+      width: ${tokens.avatarStackSize[size]};
     `;
