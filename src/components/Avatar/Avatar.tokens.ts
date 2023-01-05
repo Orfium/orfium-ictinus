@@ -7,7 +7,7 @@ import { AvatarColors, AvatarSizes } from './Avatar.types';
 const AVATAR_ICON_SIZE_FACTOR = 0.8;
 const AVATAR_STACK_OVERLAP_FACTOR = 0.8;
 
-type AvatarTokens = {
+export type AvatarTokens = {
   size: Record<AvatarSizes, string>;
   iconSize: Record<AvatarSizes, string>;
   avatarStackSize: Record<AvatarSizes, string>;
