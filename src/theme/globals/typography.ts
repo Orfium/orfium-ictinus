@@ -18,7 +18,7 @@ export type TextCaseKey = keyof typeof textCaseFigma;
 export type TextDecorationKey = keyof typeof textDecorationFigma;
 
 export type FontSize = {
-  get: (val: FontSizeKey) => string;
+  get: (val: FontSizeKey, fn?: (val: string) => unknown) => string;
   /** @TODO remove this custom font-sizes*/
   '8': string;
   '11': string;
@@ -27,27 +27,27 @@ export type FontSize = {
 };
 
 export type FontWeight = {
-  get: (val: FontWeightKey) => number;
+  get: (val: FontWeightKey, fn?: (val: string) => unknown) => number;
 };
 
 export type FontFamily = {
-  get: (val: FontFamilyKey) => string;
+  get: (val: FontFamilyKey, fn?: (val: string) => unknown) => string;
 };
 
 export type LineHeight = {
-  get: (val: LineHeightKey) => string;
+  get: (val: LineHeightKey, fn?: (val: string) => unknown) => string;
 };
 
 export type LetterSpacing = {
-  get: (val: LetterSpacingKey) => string;
+  get: (val: LetterSpacingKey, fn?: (val: string) => unknown) => string;
 };
 
 export type TextCase = {
-  get: (val: TextCaseKey) => string;
+  get: (val: TextCaseKey, fn?: (val: string) => unknown) => string;
 };
 
 export type TextDecoration = {
-  get: (val: TextDecorationKey) => string;
+  get: (val: TextDecorationKey, fn?: (val: string) => unknown) => string;
 };
 
 export type Typography = {

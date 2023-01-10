@@ -2,7 +2,7 @@ import React, { ForwardedRef, Fragment } from 'react';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
 
 import { BASE_SHADE } from '../../theme/palette';
-import { chipStyle, closeIconWrapperStyle } from './Chip.style';
+import { avatarStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
 import { ChipProps } from './Chip.types';
 import Badge from './components/Badge';
 import { defaultProps, errors } from './utils';
@@ -28,8 +28,8 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
       <Fragment>
         {isChecked && <Icon size={14} name={'checkmark'} color={'darkGrey'} variant={850} />}
         {thumbnail && (
-          <div>
-            <Avatar size={'xs'} color={`${fill}-${BASE_SHADE}`} src={thumbnail.src}>
+          <div css={avatarStyle()}>
+            <Avatar color={'blue'} src={thumbnail.src} dataTestPrefixId="chip">
               {thumbnail.name}
             </Avatar>
           </div>
