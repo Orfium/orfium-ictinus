@@ -16,7 +16,7 @@ const OverlayShowcase: React.FC<{ anchor: AnchorType; size: string; playground?:
     <div>
       <Button onClick={() => setOpen(!open)}>{buttonLabel}</Button>
       <Overlay
-        open={open}
+        isOpen={open}
         onClose={() => {
           setOpen(false);
         }}

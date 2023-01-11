@@ -137,6 +137,7 @@ const PaletteShowcase = () => {
                   //@ts-ignore
                   theme,
                   color,
+                  //@ts-ignore
                   colorName,
                   isSelectedColor: false,
                   isHoverable: false,

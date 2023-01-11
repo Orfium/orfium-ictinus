@@ -52,7 +52,6 @@ export const AsyncFilterShowcase: React.FC<AsyncFilterShowcaseProps> = ({
       onSelect={handleSelectItem}
       styleType={'filled'}
       label={'Async Label'}
-      color={'lightGrey-650'}
     />
   );
 };

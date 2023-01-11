@@ -45,7 +45,6 @@ export default [
       svgr(),
       typescript({
         tsconfig: './tsconfig.json',
-        declarationDir: 'dist/types',
       }),
       css(),
       terser(),
