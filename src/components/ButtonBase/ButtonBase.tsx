@@ -65,7 +65,6 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         iconLeft,
         iconRight,
         sx,
-        childrenCount: React.Children.count(children),
       })}
       onClick={(event) => {
         if (onClick) {
