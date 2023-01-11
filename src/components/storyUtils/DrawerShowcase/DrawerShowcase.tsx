@@ -22,7 +22,7 @@ const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
 
   return (
     <Router>
-      <Button type="primary" size="sm" onClick={() => setExpanded((prev) => !prev)}>
+      <Button onClick={() => setExpanded((prev) => !prev)}>
         {expanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>

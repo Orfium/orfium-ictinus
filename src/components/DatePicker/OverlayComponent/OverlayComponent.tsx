@@ -97,15 +97,8 @@ const OverlayComponent: React.FC<OverlayComponentProps> = ({
 
         {!isRangePicker && (
           <div css={buttonsWrapperStyle()}>
-            <Button isFilled={false} size={'sm'} onClick={onCancel} type={'primary'}>
-              Cancel
-            </Button>
-            <Button
-              size={'sm'}
-              onClick={onApply}
-              type={'primary'}
-              isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}
-            >
+            <Button onClick={onCancel}>Cancel</Button>
+            <Button onClick={onApply} isDisabled={Boolean(!selectedDays.from || !selectedDays.to)}>
               Apply
             </Button>
           </div>
