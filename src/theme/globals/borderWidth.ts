@@ -4,7 +4,7 @@ import borderWidthFigma from './constants/borderWidth';
 export type BorderWidthKey = keyof typeof borderWidthFigma;
 
 export type BorderWidth = {
-  get: (val: BorderWidthKey) => string;
+  get: (val: BorderWidthKey, fn?: (val: string) => unknown) => string;
 };
 
 const borderWidth: BorderWidth = {

@@ -9,16 +9,7 @@ import { AvatarStackProps } from './AvatarStack.types';
 import { errors } from './utils';
 
 const AvatarStack = React.forwardRef<HTMLDivElement, AvatarStackProps & TestProps & DivProps>(
-  (
-    {
-      maxAvatars = 4,
-      size = 'md',
-      color = 'lightGrey-600',
-      dataTestId = '',
-      children: childrenProp,
-    },
-    ref
-  ) => {
+  ({ maxAvatars = 4, size = 1, color = 'blue', dataTestId = '', children: childrenProp }, ref) => {
     errorHandler<AvatarStackProps>(errors, { maxAvatars });
 
     const children = React.Children.toArray(childrenProp);

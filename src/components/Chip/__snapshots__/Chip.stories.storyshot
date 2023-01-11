@@ -375,7 +375,12 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   margin-right: 0.25rem;
 }
 
-.emotion-4 {
+.emotion-4>div {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -383,15 +388,17 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 100%;
-  border: 0.0625rem solid #e7ebf2;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #b9c0ff;
   box-sizing: border-box;
-  background: #FF176B;
+  background-color: #b9cdfc;
+  color: #1451dc;
   overflow: hidden;
   position: relative;
-  font-size: 0.5rem;
+  font-size: 0.625rem;
   font-weight: 500;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -400,7 +407,6 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  line-height: 1;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -409,11 +415,10 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-  color: black;
 }
 
-.emotion-4 img {
-  border-radius: 100%;
+.emotion-5 img {
+  border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
@@ -487,11 +492,13 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           className="emotion-2"
           data-testid="chip"
         >
-          <div>
+          <div
+            className="emotion-4"
+          >
             <div
-              className="emotion-4"
+              className="emotion-5"
+              data-testid="chip_avatar"
             >
-              
               KN
             </div>
           </div>
@@ -512,9 +519,12 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           className="emotion-2"
           data-testid="chip"
         >
-          <div>
+          <div
+            className="emotion-4"
+          >
             <div
-              className="emotion-4"
+              className="emotion-5"
+              data-testid="chip_avatar"
             >
               <img
                 src="https://mui.com/static/images/avatar/1.jpg"

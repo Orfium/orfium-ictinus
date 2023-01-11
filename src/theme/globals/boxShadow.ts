@@ -4,7 +4,7 @@ import boxShadowFigma from './constants/boxShadow';
 export type BoxShadowKey = keyof typeof boxShadowFigma;
 
 export type BoxShadow = {
-  get: (val: BoxShadowKey) => string;
+  get: (val: BoxShadowKey, fn?: (val: string) => unknown) => string;
 };
 
 const boxShadow: BoxShadow = {

@@ -76,3 +76,10 @@ export const closeIconWrapperStyle = (isDisabled?: boolean) => (): SerializedSty
   css`
     cursor: ${isDisabled ? getDisabled().cursor : 'pointer'};
   `;
+
+export const avatarStyle = (): SerializedStyles => css`
+  & > div {
+    width: ${rem(16)};
+    height: ${rem(16)};
+  }
+`;

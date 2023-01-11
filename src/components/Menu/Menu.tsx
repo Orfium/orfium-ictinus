@@ -6,7 +6,6 @@ import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 import { TestProps } from '../../utils/types';
-import Avatar from '../Avatar';
 import Button from '../Button';
 import { defineBackgroundColor } from '../Button/utils';
 import Icon from '../Icon';
@@ -14,6 +13,7 @@ import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
 import { wrapperStyle } from './Menu.style';
+import Avatar, { AvatarColors } from 'components/Avatar';
 import List from 'components/List';
 
 export type MenuProps = {
@@ -47,7 +47,7 @@ export type MenuProps = {
   avatar?: {
     src: string;
     letter: string;
-    color?: string;
+    color?: AvatarColors;
   };
 } & TestProps &
   EventProps;
@@ -92,7 +92,7 @@ const Menu: React.FC<MenuProps> = (props) => {
           }
           iconLeft={
             !isEmpty(avatar) ? (
-              <Avatar size={'sm'} src={avatar?.src} color={avatar?.color} iconName={'user'}>
+              <Avatar size={1} src={avatar?.src} color={avatar?.color}>
                 {avatar?.letter}
               </Avatar>
             ) : leftIconName ? (

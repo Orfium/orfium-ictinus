@@ -4,7 +4,7 @@ import borderRadiusFigma from './constants/borderRadius';
 export type BorderRadiusKey = keyof typeof borderRadiusFigma;
 
 export type BorderRadius = {
-  get: (val: BorderRadiusKey) => string;
+  get: (val: BorderRadiusKey, fn?: (val: string) => unknown) => string;
 };
 
 const borderRadius: BorderRadius = {
