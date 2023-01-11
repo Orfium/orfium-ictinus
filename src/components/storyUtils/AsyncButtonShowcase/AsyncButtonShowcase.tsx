@@ -25,8 +25,6 @@ const AsyncButtonShowcase: FC<{
   return (
     <>
       <Button
-        type={type}
-        size={btnSize}
         onClick={(setLoading, event) => {
           setLoading?.(true);
           setState((event?.target as HTMLElement).innerText);

@@ -14,18 +14,7 @@ export type ButtonProps = Omit<ButtonBaseProps, 'onClick'> &
   CommonButtonProps;
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
-  const {
-    size = 'md',
-    type = 'primary',
-    color = '',
-    isFilled = true,
-    isTransparent = false,
-    iconLeft = null,
-    iconRight = null,
-    isDisabled = false,
-    children,
-    onClick,
-  } = props;
+  const { iconLeft = null, iconRight = null, isDisabled = false, children, onClick } = props;
   const { isLoading, handleAsyncOperation } = useLoading(onClick);
   const childrenWrapperRef = useRef<HTMLSpanElement>(null);
   const innerButtonWidth = childrenWrapperRef?.current?.clientWidth;
@@ -37,23 +26,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
         <span
           ref={childrenWrapperRef}
           css={childrenWrapperStyle({
-            type,
             isLoading,
-            isFilled,
-            size,
-            color,
-            isTransparent,
             iconLeft,
             iconRight,
             isDisabled,
             hasChildren: Boolean(React.Children.count(children)),
           })}
         >
-          {isLoading ? (
-            <ButtonLoader innerButtonWidth={innerButtonWidth} color={color} type={type} />
-          ) : (
-            children
-          )}
+          {isLoading ? <ButtonLoader innerButtonWidth={innerButtonWidth} /> : children}
         </span>
 
         {iconRight && <span css={iconStyle()}>{iconRight}</span>}
