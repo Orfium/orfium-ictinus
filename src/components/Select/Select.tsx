@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 

@@ -1,4 +1,4 @@
-import { get } from 'lodash';
+import get from 'lodash/get';
 
 import globals from './globals';
 import overrides from './overrides';

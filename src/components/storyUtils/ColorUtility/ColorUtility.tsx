@@ -1,4 +1,4 @@
-import { toPairs } from 'lodash';
+import toPairs from 'lodash/toPairs';
 import React from 'react';
 
 import { TextField, useTheme } from '../../../index';
@@ -13,9 +13,8 @@ const DEFAULT_COLOR = 'white';
 const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
   const theme = useTheme();
 
-  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors(
-    defaultColor
-  );
+  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } =
+    useColors(defaultColor);
 
   const palette = colorShadesCreator(color.normal);
   const colors = toPairs(palette);

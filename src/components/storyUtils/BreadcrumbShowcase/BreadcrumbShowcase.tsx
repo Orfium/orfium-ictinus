@@ -1,5 +1,5 @@
 import { createBrowserHistory } from 'history';
-import { uniqueId } from 'lodash';
+import uniqueId from 'lodash/uniqueId';
 import React, { useState, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 
@@ -22,12 +22,12 @@ const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
   const clickHandler = () => {
     const newDataConfig: BreadcrumbItemData = createNewDataConfig(data.length + 1);
 
-    setData(prevState => [...prevState, newDataConfig]);
+    setData((prevState) => [...prevState, newDataConfig]);
   };
 
   useEffect(() => {
-    const unregister = browserHistory.listen(match => {
-      const currentIndex = data.findIndex(item => item.to === match.pathname);
+    const unregister = browserHistory.listen((match) => {
+      const currentIndex = data.findIndex((item) => item.to === match.pathname);
       const updatedBreadcrumbData = data.slice(0, currentIndex + 1);
       setData(updatedBreadcrumbData);
     });
@@ -35,7 +35,7 @@ const BreadcrumbShowcase: React.FC<Props> = ({ initData = [] }) => {
     return () => unregister();
   });
 
-  const routes = data.map(item => {
+  const routes = data.map((item) => {
     return (
       <Route key={uniqueId('route_')} path={item.to}>
         {() => <div style={{ marginTop: '8px' }}>Current: {item.label}</div>}
