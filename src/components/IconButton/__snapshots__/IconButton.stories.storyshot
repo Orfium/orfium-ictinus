@@ -23,42 +23,29 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
 }
 
 .emotion-2 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: #175bf5;
-  width: 2.875rem;
-  background-color: transparent;
-  padding: 0;
-  height: 2.875rem;
-  border-radius: 100%;
-  border: solid 0.0625rem #175bf5;
+  color: white;
+  background-color: #123456;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: solid 0rem #123456;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
+  outline: #F814E1 auto 0.0625rem;
 }
 
 .emotion-2:hover:not(:disabled) {
-  background-color: #e7eefe;
+  background-color: #1451dc;
 }
 
 .emotion-2:active:not(:disabled) {
-  background-color: #d0defd;
+  background-color: #1248c4;
 }
 
 .emotion-2:disabled {
@@ -88,13 +75,13 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
 }
 
 .emotion-4 {
-  fill: #175bf5;
+  fill: white;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-4 path {
-  fill: #175bf5;
+  fill: white;
 }
 
 <div
@@ -189,30 +176,17 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
 }
 
 .emotion-2 {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: white;
-  width: 2.25rem;
-  background-color: #175bf5;
-  padding: 0;
+  background-color: #123456;
+  padding: 0 1rem;
   height: 2.25rem;
-  border-radius: 100%;
-  border: none;
+  border-radius: 0.25rem;
+  border: solid 0rem #123456;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2:focus-visible:not(:disabled) {
@@ -261,104 +235,6 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
 
 .emotion-4 path {
   fill: white;
-}
-
-.emotion-5 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  width: 2.875rem;
-  background-color: #175bf5;
-  padding: 0;
-  height: 2.875rem;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-5:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-5:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-5:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-5:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  width: 3.5rem;
-  background-color: #175bf5;
-  padding: 0;
-  height: 3.5rem;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 <div
@@ -433,7 +309,7 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
         }
       >
         <button
-          className="emotion-5"
+          className="emotion-2"
           data-testid="icon-button"
           disabled={false}
           onClick={[Function]}
@@ -457,7 +333,7 @@ exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
         }
       >
         <button
-          className="emotion-8"
+          className="emotion-2"
           data-testid="icon-button"
           disabled={false}
           onClick={[Function]}
@@ -501,30 +377,17 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
 }
 
 .emotion-2 {
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: white;
-  width: 2.25rem;
-  background-color: #175bf5;
-  padding: 0;
+  background-color: #123456;
+  padding: 0 1rem;
   height: 2.25rem;
-  border-radius: 100%;
-  border: none;
+  border-radius: 0.25rem;
+  border: solid 0rem #123456;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .emotion-2:focus-visible:not(:disabled) {
@@ -573,114 +436,6 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
 
 .emotion-4 path {
   fill: white;
-}
-
-.emotion-5 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  width: 2.25rem;
-  background-color: #36C152;
-  padding: 0;
-  height: 2.25rem;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-5:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-5:hover:not(:disabled) {
-  background-color: #30ad49;
-}
-
-.emotion-5:active:not(:disabled) {
-  background-color: #2b9a41;
-}
-
-.emotion-5:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-5:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-7 {
-  fill: black;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-7 path {
-  fill: black;
-}
-
-.emotion-8 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  width: 2.25rem;
-  background-color: #FF176B;
-  padding: 0;
-  height: 2.25rem;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #e51460;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #cc1255;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 <div
@@ -755,7 +510,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
         }
       >
         <button
-          className="emotion-5"
+          className="emotion-2"
           data-testid="icon-button-size-lg"
           disabled={false}
           onClick={[Function]}
@@ -766,7 +521,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
             onClick={[Function]}
           >
             <span
-              className="emotion-7"
+              className="emotion-4"
             />
           </span>
         </button>
@@ -779,7 +534,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
         }
       >
         <button
-          className="emotion-8"
+          className="emotion-2"
           data-testid="icon-button-size-lg"
           disabled={false}
           onClick={[Function]}
@@ -790,7 +545,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
             onClick={[Function]}
           >
             <span
-              className="emotion-7"
+              className="emotion-4"
             />
           </span>
         </button>
