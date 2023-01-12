@@ -8,7 +8,7 @@ import 'dayjs/locale/en';
  * by having a separate file webpack knows how to load it just once
  */
 const dayjs = dayjsLib;
-export type DayJS = DayjsType;
+export type Dayjs = DayjsType;
 
 (function InitLocaleFormat(usLocale: string, euLocale: string) {
   [localizedFormat, localeData].forEach(dayjs.extend);
