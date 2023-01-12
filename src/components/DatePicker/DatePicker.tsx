@@ -1,5 +1,5 @@
-import { Dayjs } from 'dayjs';
 import React, { useCallback, useEffect, useState } from 'react';
+import { Dayjs } from 'utils/date';
 
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';

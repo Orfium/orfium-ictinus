@@ -1,9 +1,9 @@
-import dayjs, { Dayjs } from 'dayjs';
 import isBetween from 'dayjs/plugin/isBetween';
 import chunk from 'lodash/chunk';
 import inRange from 'lodash/inRange';
 import { useCallback } from 'react';
 import * as React from 'react';
+import dayjs, { Dayjs } from 'utils/date';
 
 import { DisabledDates } from '../DatePicker';
 import Day from '../Day/Day';
