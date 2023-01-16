@@ -4,6 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import svgr from '@svgr/rollup';
+import { optimizeLodashImports } from '@optimize-lodash/rollup-plugin';
 import del from 'rollup-plugin-delete';
 import dts from 'rollup-plugin-dts';
 import css from 'rollup-plugin-import-css';
@@ -43,6 +44,7 @@ export default [
       nodeResolve({}),
       commonjs(),
       svgr(),
+      optimizeLodashImports(),
       typescript({
         tsconfig: './tsconfig.json',
       }),
