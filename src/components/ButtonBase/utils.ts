@@ -1,4 +1,4 @@
-import isEmpty from 'lodash/isEmpty';
+import { isEmpty } from 'lodash';
 import { Theme } from 'theme';
 import { mainTypes } from 'theme/palette';
 

@@ -1,4 +1,4 @@
-import get from 'lodash/get';
+import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
 import { PropsValidationError } from '../utils/errors';

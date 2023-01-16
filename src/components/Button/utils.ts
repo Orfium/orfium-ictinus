@@ -1,4 +1,4 @@
-import isEmpty from 'lodash/isEmpty';
+import { isEmpty } from 'lodash';
 import { darken, lighten, transparentize } from 'polished';
 import { Theme } from 'theme';
 import { BASE_SHADE, mainTypes } from 'theme/palette';

@@ -1,8 +1,4 @@
-import flatten from 'lodash/flatten';
-import keys from 'lodash/keys';
-import omit from 'lodash/omit';
-import sampleSize from 'lodash/sampleSize';
-import uniq from 'lodash/uniq';
+import { flatten, keys, omit, sampleSize, uniq } from 'lodash';
 import { Theme } from 'theme';
 
 export type Data = {

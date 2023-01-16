@@ -1,4 +1,4 @@
-import toPairs from 'lodash/toPairs';
+import { toPairs } from 'lodash';
 import React from 'react';
 
 import { TextField, useTheme } from '../../../index';

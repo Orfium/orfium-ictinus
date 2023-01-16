@@ -1,4 +1,4 @@
-import debounce from 'lodash/debounce';
+import { debounce } from 'lodash';
 import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { errorHandler, generateTestDataId } from 'utils/helpers';

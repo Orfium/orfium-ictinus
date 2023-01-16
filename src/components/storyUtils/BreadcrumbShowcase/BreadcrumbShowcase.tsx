@@ -1,5 +1,5 @@
 import { createBrowserHistory } from 'history';
-import uniqueId from 'lodash/uniqueId';
+import { uniqueId } from 'lodash';
 import React, { useState, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 

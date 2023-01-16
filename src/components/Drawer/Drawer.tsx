@@ -1,5 +1,5 @@
 import useBreakpoints from 'hooks/useBreakpoints';
-import omit from 'lodash/omit';
+import { omit } from 'lodash';
 import React from 'react';
 
 import { drawerContainerStyle } from './Drawer.style';

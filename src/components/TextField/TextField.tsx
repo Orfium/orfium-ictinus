@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import omit from 'lodash/omit';
+import { omit } from 'lodash';
 import React, { InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
