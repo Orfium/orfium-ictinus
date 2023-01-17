@@ -1,5 +1,5 @@
-import dayjs, { Dayjs } from 'dayjs';
 import React, { InputHTMLAttributes } from 'react';
+import dayjs, { Dayjs } from 'utils/date';
 
 import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
 import { TestProps } from '../../../utils/types';

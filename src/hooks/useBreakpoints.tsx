@@ -1,4 +1,4 @@
-import toPairs from 'lodash/toPairs';
+import { toPairs } from 'lodash';
 import { useMedia } from 'react-media';
 
 export const queriesKeys = [

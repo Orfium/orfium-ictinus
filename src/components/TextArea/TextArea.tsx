@@ -1,4 +1,4 @@
-import omit from 'lodash/omit';
+import { omit } from 'lodash';
 import * as React from 'react';
 
 import { useTheme } from '../../index';

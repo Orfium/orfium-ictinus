@@ -13,9 +13,8 @@ const DEFAULT_COLOR = 'white';
 const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
   const theme = useTheme();
 
-  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } = useColors(
-    defaultColor
-  );
+  const { color, updateColor, setDarkenValue, setLightenValue, utilityValues } =
+    useColors(defaultColor);
 
   const palette = colorShadesCreator(color.normal);
   const colors = toPairs(palette);

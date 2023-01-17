@@ -10,7 +10,6 @@ import theme, { Theme, ThemeConfig } from 'theme';
 import { TypeColorToColorMatchProvider } from '../../hooks/useTypeColorToColorMatch';
 import { ColorScheme } from '../../theme/types';
 import { DeepPartial } from '../../utils/types';
-import 'utils/initLocaleFormat';
 
 export type ThemeProviderProps = {
   /** Theme properties to override or pass theming down to library */
