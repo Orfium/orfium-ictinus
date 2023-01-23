@@ -19,6 +19,7 @@
     /* React rules */
     "react/no-direct-mutation-state": "error",
     "react/no-unused-prop-types": "warn",
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
     "react/self-closing-comp": [
       "warn",
       {

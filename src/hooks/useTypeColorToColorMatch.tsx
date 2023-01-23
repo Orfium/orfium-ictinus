@@ -1,6 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import keys from 'lodash/keys';
-import pick from 'lodash/pick';
+import { keys, pick } from 'lodash';
 import * as React from 'react';
 
 import { BASE_SHADE, FlatPalette, GeneratedColorShades, mainTypes } from '../theme/palette';

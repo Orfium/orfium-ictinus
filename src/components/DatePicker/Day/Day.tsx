@@ -1,6 +1,6 @@
-import { Dayjs } from 'dayjs';
 import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React from 'react';
+import { Dayjs } from 'utils/date';
 
 import { currentDay } from '../utils';
 import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';

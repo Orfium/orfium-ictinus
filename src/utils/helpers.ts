@@ -1,5 +1,5 @@
-import dayjs from 'dayjs';
 import * as React from 'react';
+import dayjs from 'utils/date';
 import { TestId } from 'utils/types';
 
 /** A function that generates a unique id by making a value randomly based on time also */
@@ -22,9 +22,7 @@ export function isComponentFunctionType(
 
 /**  A function that retrieves the correct date format based on system's locale */
 export const getLocaleFormat = (dateFormat: string | undefined) => {
-  const localeFormat = dayjs()
-    ?.localeData()
-    ?.longDateFormat('L');
+  const localeFormat = dayjs()?.localeData()?.longDateFormat('L');
 
   return dateFormat ? dateFormat : localeFormat;
 };

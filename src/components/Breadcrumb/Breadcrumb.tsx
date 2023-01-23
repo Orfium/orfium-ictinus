@@ -1,5 +1,4 @@
-import isEmpty from 'lodash/isEmpty';
-import uniqueId from 'lodash/uniqueId';
+import { isEmpty, uniqueId } from 'lodash';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 

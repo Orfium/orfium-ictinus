@@ -1,4 +1,4 @@
-import { omit, keys, flatten, uniq, sampleSize } from 'lodash';
+import { flatten, keys, omit, sampleSize, uniq } from 'lodash';
 import { Theme } from 'theme';
 
 export type Data = {

@@ -1,5 +1,5 @@
 import useBreakpoints from 'hooks/useBreakpoints';
-import head from 'lodash/head';
+import { head } from 'lodash';
 import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
 import isEqual from 'react-fast-compare';
