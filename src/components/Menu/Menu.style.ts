@@ -11,9 +11,9 @@ export const wrapperStyle = () => () =>
   `;
 
 const getButtonMargin =
-  ({ iconLeft, iconRight }: Pick<ButtonProps, 'iconLeft' | 'iconRight'>) =>
+  ({ iconLeftName, iconRightName }: Pick<ButtonProps, 'iconLeftName' | 'iconRightName'>) =>
   (theme: Theme) => {
-    if (iconLeft || iconRight) {
+    if (iconLeftName || iconRightName) {
       return theme.globals.spacing.get('6');
     }
 
@@ -22,16 +22,16 @@ const getButtonMargin =
 
 export const buttonSpanStyle =
   ({
-    iconLeft,
-    iconRight,
+    iconLeftName,
+    iconRightName,
     hasChildren,
   }: RequiredProperties<ButtonProps & { hasChildren: boolean }>) =>
   (theme: Theme) => ({
-    display: iconLeft || iconRight ? 'flex' : 'block',
-    flexDirection: iconLeft || iconRight ? 'row' : 'column',
-    alignItems: iconLeft || iconRight ? ('center' as const) : ('flex-start' as const),
+    display: iconLeftName || iconRightName ? 'flex' : 'block',
+    flexDirection: iconLeftName || iconRightName ? 'row' : 'column',
+    alignItems: iconLeftName || iconRightName ? ('center' as const) : ('flex-start' as const),
     '> :first-of-type': {
-      marginLeft: getButtonMargin({ iconLeft, iconRight })(theme),
+      marginLeft: getButtonMargin({ iconLeftName, iconRightName })(theme),
       marginRight: hasChildren ? theme.globals.spacing.get('4') : 0,
     },
   });

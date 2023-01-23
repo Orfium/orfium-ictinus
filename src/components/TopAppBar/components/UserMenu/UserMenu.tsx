@@ -16,7 +16,7 @@ const UserMenu: FC<UserMenuProps> = ({ items, userAvatar, userName, onSelect, is
     items={items}
     color={isDark ? 'neutralBlack-500' : 'neutralWhite-100'}
     buttonText={<span css={Styles.buttonTextStyle}>{userName}</span>}
-    buttonType={'warning'}
+    buttonType={'tertiary'}
     rightIconName={'chevronLargeDown'}
     avatar={userAvatar}
     onSelect={onSelect}

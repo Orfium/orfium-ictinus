@@ -97,6 +97,7 @@ const CompactNotification: React.FC<CompactNotificationProps> = ({
       <div css={actionsContainer()}>
         {primaryCTA && primaryCTALabel && (
           <Button
+            type="tertiary"
             css={primaryActionContainer()}
             onClick={primaryCTA}
             data-testid={generateTestDataId('notification-primary', dataTestId)}

@@ -14,6 +14,7 @@ import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
 import { wrapperStyle } from './Menu.style';
 import Avatar, { AvatarColors } from 'components/Avatar';
+import { ButtonTypes } from 'components/Button/Button.types';
 import List from 'components/List';
 
 export type MenuProps = {
@@ -21,8 +22,6 @@ export type MenuProps = {
   color?: string;
   /** Items that are being declared as menu options */
   items?: string[];
-  /** Property indicating if the component is filled with a color based on the type */
-  isFilled?: boolean;
   /** Returns the items selected on the menu */
   selectedItem?: string | null;
   /** A callback that is being triggered when an items has been clicked */
@@ -34,13 +33,11 @@ export type MenuProps = {
   /** Menu position when open */
   menuPosition?: MenuPositionAllowed;
   /** The type of the button - defaults to "primary" */
-  buttonType?: AcceptedColorComponentTypes;
+  buttonType?: ButtonTypes;
   /** The name of the icon on the right area of menu button */
   rightIconName?: AcceptedIconNames;
   /** The name of the icon on the left area of menu button */
   leftIconName?: AcceptedIconNames;
-  /** The size of the icon on the menu button */
-  iconSize?: number;
   /** You can define the avatar properties here for src or letter if none then the user icon will be displayed if the object is not empty */
   avatar?: {
     src: string;
@@ -54,44 +51,28 @@ const Menu: React.FC<MenuProps> = (props) => {
   const {
     items,
     onSelect,
-    color = '',
     buttonText = 'More',
     menuPosition = 'left',
     buttonType = 'primary',
     rightIconName,
-    isFilled = true,
     isDisabled = false,
     leftIconName,
-    iconSize = 16,
     avatar,
     dataTestId,
   } = props;
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType(color, buttonType);
-  const iconColor = isFilled
-    ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-    : defineBackgroundColor(theme, calculatedColor, buttonType, true, true);
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
       <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
+          type={buttonType}
           onClick={() => setIsOpen(!open)}
           isDisabled={isDisabled}
-          iconRight={
-            rightIconName ? <Icon name={rightIconName} color={iconColor} size={iconSize} /> : null
-          }
-          iconLeft={
-            !isEmpty(avatar) ? (
-              <Avatar size={1} src={avatar?.src} color={avatar?.color}>
-                {avatar?.letter}
-              </Avatar>
-            ) : leftIconName ? (
-              <Icon name={leftIconName} color={iconColor} size={iconSize} />
-            ) : null
-          }
+          iconRightName={rightIconName}
+          iconLeftName={leftIconName}
+          avatar={!isEmpty(avatar) ? { src: avatar?.src, label: avatar?.letter } : undefined}
         >
           <span>{buttonText}</span>
         </Button>

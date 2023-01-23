@@ -7,7 +7,7 @@ import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
-export type IconButtonProps = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRight'> & {
+export type IconButtonProps = Omit<ButtonBaseProps, 'iconLeftName' | 'iconRightName'> & {
   /** Property indicating the size of the icon. Defaults to 16 */
   iconSize?: number;
   /** This property defines witch icon to use */
