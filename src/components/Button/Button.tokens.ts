@@ -17,9 +17,7 @@ export type ButtonTokens = {
   };
   borderRadius: { text: string; wrapper: string; icon: string };
   borderWidth: Record<string, string>;
-  color: {
-    focusedBorderColor: string;
-  } & Record<ButtonTypes, ButtonTokensColors>;
+  color: Record<ButtonTypes, ButtonTokensColors>;
 };
 
 const tokens: ButtonTokens = {
@@ -44,7 +42,6 @@ const tokens: ButtonTokens = {
     2: globals.borderWidth.get('2'),
   },
   color: {
-    focusedBorderColor: semantic.borderColor.get('interactive.focused'),
     primary: {
       borderColor: semantic.borderColor.get('decorative.transparent'),
       textColor: semantic.textColor.get('inverted.primary'),
