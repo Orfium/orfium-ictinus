@@ -1,7 +1,7 @@
-import { Dayjs } from 'dayjs';
 import useTheme from 'hooks/useTheme';
-import range from 'lodash/range';
+import { range } from 'lodash';
 import React, { useMemo, useState } from 'react';
+import { Dayjs } from 'utils/date';
 
 import { DisabledDates } from '../../../DatePicker';
 import Month from '../../../Month/Month';

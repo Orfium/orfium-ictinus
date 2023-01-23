@@ -23,21 +23,21 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
 }
 
 .emotion-2 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: white;
-  background-color: #175BF5;
+  background-color: #123456;
   padding: 0 1rem;
-  height: 2.875rem;
+  height: 2.25rem;
   border-radius: 0.25rem;
-  border: none;
+  border: solid 0rem #123456;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  outline: #C813D5 auto 0.0625rem;
+  outline: #F814E1 auto 0.0625rem;
 }
 
 .emotion-2:hover:not(:disabled) {
@@ -147,55 +147,6 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   padding: 0.5rem 0.5rem 0 0;
 }
 
-.emotion-8 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #5f6c85;
-  width: 2.25rem;
-  background-color: transparent;
-  padding: 0;
-  height: 2.25rem;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #C813D5 auto 0.0625rem;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #f3f5f8;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #e7ebf2;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .emotion-9 {
   padding: 0.125rem;
   display: -webkit-box;
@@ -213,13 +164,13 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
 }
 
 .emotion-10 {
-  fill: #5f6c85;
+  fill: white;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-10 path {
-  fill: #5f6c85;
+  fill: white;
 }
 
 .emotion-11 {
@@ -488,7 +439,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
                   className="emotion-7"
                 >
                   <button
-                    className="emotion-8"
+                    className="emotion-2"
                     data-testid="icon-button-overlay-close"
                     disabled={false}
                     onClick={[Function]}
@@ -569,7 +520,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
                   className="emotion-7"
                 >
                   <button
-                    className="emotion-8"
+                    className="emotion-2"
                     data-testid="icon-button-overlay-close"
                     disabled={false}
                     onClick={[Function]}
@@ -650,7 +601,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
                   className="emotion-7"
                 >
                   <button
-                    className="emotion-8"
+                    className="emotion-2"
                     data-testid="icon-button-overlay-close"
                     disabled={false}
                     onClick={[Function]}
@@ -731,7 +682,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
                   className="emotion-7"
                 >
                   <button
-                    className="emotion-8"
+                    className="emotion-2"
                     data-testid="icon-button-overlay-close"
                     disabled={false}
                     onClick={[Function]}
@@ -780,21 +731,21 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
 }
 
 .emotion-1 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: white;
-  background-color: #175BF5;
+  background-color: #123456;
   padding: 0 1rem;
-  height: 2.875rem;
+  height: 2.25rem;
   border-radius: 0.25rem;
-  border: none;
+  border: solid 0rem #123456;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #C813D5 auto 0.0625rem;
+  outline: #F814E1 auto 0.0625rem;
 }
 
 .emotion-1:hover:not(:disabled) {
@@ -904,55 +855,6 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   padding: 0.5rem 0.5rem 0 0;
 }
 
-.emotion-7 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #5f6c85;
-  width: 2.25rem;
-  background-color: transparent;
-  padding: 0;
-  height: 2.25rem;
-  border-radius: 100%;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #C813D5 auto 0.0625rem;
-}
-
-.emotion-7:hover:not(:disabled) {
-  background-color: #f3f5f8;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #e7ebf2;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
@@ -970,13 +872,13 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
 }
 
 .emotion-9 {
-  fill: #5f6c85;
+  fill: white;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-9 path {
-  fill: #5f6c85;
+  fill: white;
 }
 
 .emotion-10 {
@@ -1059,7 +961,7 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
               className="emotion-6"
             >
               <button
-                className="emotion-7"
+                className="emotion-1"
                 data-testid="icon-button-overlay-close"
                 disabled={false}
                 onClick={[Function]}

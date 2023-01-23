@@ -1,3 +1,5 @@
+import { rem } from 'polished';
+
 import { queriesSizes } from './hooks/useBreakpoints';
 import * as themeFunctions from './theme/functions';
 import * as elevation from './theme/globals/elevation';
@@ -114,4 +116,4 @@ export { default as useEscape } from './hooks/useEscape';
 export * from './hooks/useEscape';
 
 export { default as themeConfig } from './theme';
-export { themeFunctions, palette, spacing, typography, elevation, overrides, queriesSizes };
+export { themeFunctions, palette, spacing, typography, elevation, overrides, queriesSizes, rem };

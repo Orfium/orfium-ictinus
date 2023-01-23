@@ -1,4 +1,4 @@
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { Dayjs } from 'utils/date';
 
 import { DisabledDates } from '../DatePicker';
 import { currentDay } from '../utils';
@@ -11,10 +11,7 @@ export const calculateDisabledDays = (
 ) => {
   if (!day) return false;
 
-  const date = currentDay
-    .month(month)
-    .year(year)
-    .date(day);
+  const date = currentDay.month(month).year(year).date(day);
 
   if (disabledDates?.after && disabledDates?.before) {
     return !date.isBetween(dayjs(disabledDates?.after), dayjs(disabledDates?.before));
@@ -29,7 +26,7 @@ export const calculateDisabledDays = (
     return disabledDates?.daysOfWeek.includes(date.day());
   }
   if (disabledDates?.days) {
-    return Boolean(disabledDates?.days.find(cur => dayjs(cur).isSame(dayjs(date), 'day')));
+    return Boolean(disabledDates?.days.find((cur) => dayjs(cur).isSame(dayjs(date), 'day')));
   }
 
   return false;
@@ -44,10 +41,7 @@ export const calculatedDayIsBetween = (
 ) => {
   if (!day) return false;
 
-  const date = currentDay
-    .month(month)
-    .year(year)
-    .date(day);
+  const date = currentDay.month(month).year(year).date(day);
 
   return from && to && dayjs(date).isBetween(from, to);
 };
@@ -65,28 +59,10 @@ export const calculateSelectedDayPosition = (
     const endDate = from.isAfter(to) ? from : to;
     const pickedDate = position === 'last' ? endDate : startDate;
 
-    return (
-      pickedDate &&
-      pickedDate.isSame(
-        currentDay
-          .month(month)
-          .year(year)
-          .date(day),
-        'day'
-      )
-    );
+    return pickedDate && pickedDate.isSame(currentDay.month(month).year(year).date(day), 'day');
   }
 
-  return (
-    day &&
-    from?.isSame(
-      currentDay
-        .month(month)
-        .year(year)
-        .date(day),
-      'day'
-    )
-  );
+  return day && from?.isSame(currentDay.month(month).year(year).date(day), 'day');
 };
 
 export const calculateSelectedDay = (
@@ -98,10 +74,7 @@ export const calculateSelectedDay = (
 ) => {
   if (!day) return false;
 
-  const date = currentDay
-    .month(month)
-    .year(year)
-    .date(day);
+  const date = currentDay.month(month).year(year).date(day);
 
   return [from?.format('D,M,YYYY'), to?.format('D,M,YYYY')].includes(date.format('D,M,YYYY'));
 };

@@ -53,13 +53,13 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: '12.18.3'
+          node-version: '18'
       - name: Install dependencies
         run: yarn install
 
       - name: Generate docs
         run: yarn documentation:generate
-        
+
       - name: Clone docs repo
         uses: actions/checkout@v2
         with:
