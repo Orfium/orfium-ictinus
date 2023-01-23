@@ -9,42 +9,49 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 }
 
 .emotion-1 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  background-color: #123456;
-  padding: 0 1rem;
-  height: 2.25rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-2 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  border: solid 0rem #123456;
+  border: solid 0.0625rem rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-2:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-1:hover:not(:disabled) {
-  background-color: #1451dc;
+.emotion-2:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-2:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-2:active:not(:disabled) {
   background-color: #1248c4;
 }
 
-.emotion-1:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-3 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
 }
 
-.emotion-1:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -57,11 +64,7 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-3 {
-  margin-left: 0;
-  margin-right: 0;
+  gap: 0.5rem;
 }
 
 <div
@@ -101,23 +104,29 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
          on
       </button>
     </div>
-    <button
+    <div
       className="emotion-1"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
     >
-      <span
+      <button
         className="emotion-2"
+        data-testid="button"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
       >
         <span
           className="emotion-3"
         >
-          Hello world
+          <span
+            className="emotion-4"
+          >
+            <span>
+              Hello world
+            </span>
+          </span>
         </span>
-      </span>
-    </button>
+      </button>
+    </div>
   </div>
 </div>
 `;

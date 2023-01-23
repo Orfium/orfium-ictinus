@@ -171,42 +171,49 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-7 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  background-color: #123456;
-  padding: 0 1rem;
-  height: 2.25rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  border: solid 0rem #123456;
+  border: solid 0.0625rem rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-7:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
+.emotion-8:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-8:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
 }
 
-.emotion-8 {
+.emotion-8:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,16 +226,10 @@ exports[`TopAppBar should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -265,22 +266,17 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-10 img {
+.emotion-11 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
-}
-
-.emotion-11 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .emotion-12 {
   font-weight: 500;
 }
 
-.emotion-14 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -296,14 +292,14 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-15 {
-  fill: black;
+.emotion-14 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
-  fill: black;
+.emotion-14 path {
+  fill: #1451dc;
 }
 
 .emotion-0 {
@@ -476,42 +472,49 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-7 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  background-color: #123456;
-  padding: 0 1rem;
-  height: 2.25rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  border: solid 0rem #123456;
+  border: solid 0.0625rem rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-7:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
+.emotion-8:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-8:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
 }
 
-.emotion-8 {
+.emotion-8:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -524,16 +527,10 @@ exports[`TopAppBar should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -570,22 +567,17 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-10 img {
+.emotion-11 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
-}
-
-.emotion-11 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .emotion-12 {
   font-weight: 500;
 }
 
-.emotion-14 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -601,14 +593,14 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-15 {
-  fill: black;
+.emotion-14 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
-  fill: black;
+.emotion-14 path {
+  fill: #1451dc;
 }
 
 <div>
@@ -646,50 +638,48 @@ exports[`TopAppBar should render correctly 1`] = `
           class="emotion-6"
           data-testid="userMenu"
         >
-          <button
+          <div
             class="emotion-7"
-            data-testid="button"
-            type="button"
           >
-            <span
+            <button
               class="emotion-8"
+              data-testid="button"
+              type="button"
             >
               <span
                 class="emotion-9"
               >
-                <div
+                <span
                   class="emotion-10"
-                  data-testid="_avatar"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-              </span>
-              <span
-                class="emotion-11"
-              >
-                <span>
-                  <span
-                    class="emotion-12"
+                  <div
+                    class="emotion-11"
+                    data-testid="_avatar"
                   >
-                    Tom Cruise
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
+                  <span>
+                    <span>
+                      <span
+                        class="emotion-12"
+                      >
+                        Tom Cruise
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    class="emotion-13"
+                  >
+                    <span
+                      class="emotion-14"
+                    />
                   </span>
                 </span>
               </span>
-              <span
-                class="emotion-9"
-              >
-                <span
-                  class="emotion-14"
-                >
-                  <span
-                    class="emotion-15"
-                  />
-                </span>
-              </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -868,42 +858,49 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-7 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  background-color: #123456;
-  padding: 0 1rem;
-  height: 2.25rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  border: solid 0rem #123456;
+  border: solid 0.0625rem rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-7:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
+.emotion-8:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-8:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
 }
 
-.emotion-8 {
+.emotion-8:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -916,16 +913,10 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -962,22 +953,17 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-10 img {
+.emotion-11 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
-}
-
-.emotion-11 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .emotion-12 {
   font-weight: 500;
 }
 
-.emotion-14 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -993,14 +979,14 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-15 {
-  fill: white;
+.emotion-14 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
-  fill: white;
+.emotion-14 path {
+  fill: #1451dc;
 }
 
 .emotion-0 {
@@ -1173,42 +1159,49 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-7 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  background-color: #123456;
-  padding: 0 1rem;
-  height: 2.25rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  border: solid 0rem #123456;
+  border: solid 0.0625rem rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-7:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
+.emotion-8:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-8:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
 }
 
-.emotion-8 {
+.emotion-8:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1221,16 +1214,10 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-.emotion-9 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-10 {
+.emotion-11 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1267,22 +1254,17 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-10 img {
+.emotion-11 img {
   border-radius: 6.25rem;
   width: 100%;
   height: 100%;
-}
-
-.emotion-11 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 
 .emotion-12 {
   font-weight: 500;
 }
 
-.emotion-14 {
+.emotion-13 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1298,14 +1280,14 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-15 {
-  fill: white;
+.emotion-14 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-15 path {
-  fill: white;
+.emotion-14 path {
+  fill: #1451dc;
 }
 
 <div>
@@ -1343,50 +1325,48 @@ exports[`TopAppBar should render correctly on dark 1`] = `
           class="emotion-6"
           data-testid="userMenu"
         >
-          <button
+          <div
             class="emotion-7"
-            data-testid="button"
-            type="button"
           >
-            <span
+            <button
               class="emotion-8"
+              data-testid="button"
+              type="button"
             >
               <span
                 class="emotion-9"
               >
-                <div
+                <span
                   class="emotion-10"
-                  data-testid="_avatar"
                 >
-                  <img
-                    src="https://mui.com/static/images/avatar/1.jpg"
-                  />
-                </div>
-              </span>
-              <span
-                class="emotion-11"
-              >
-                <span>
-                  <span
-                    class="emotion-12"
+                  <div
+                    class="emotion-11"
+                    data-testid="_avatar"
                   >
-                    Tom Cruise
+                    <img
+                      src="https://mui.com/static/images/avatar/1.jpg"
+                    />
+                  </div>
+                  <span>
+                    <span>
+                      <span
+                        class="emotion-12"
+                      >
+                        Tom Cruise
+                      </span>
+                    </span>
+                  </span>
+                  <span
+                    class="emotion-13"
+                  >
+                    <span
+                      class="emotion-14"
+                    />
                   </span>
                 </span>
               </span>
-              <span
-                class="emotion-9"
-              >
-                <span
-                  class="emotion-14"
-                >
-                  <span
-                    class="emotion-15"
-                  />
-                </span>
-              </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
