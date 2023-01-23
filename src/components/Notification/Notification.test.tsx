@@ -209,20 +209,20 @@ describe('Toast Notification (Toast with NotificationVisual)', () => {
     const secondaryCTA = jest.fn();
     const closeCTA = jest.fn();
 
-    const { findByTestId } = render(
+    const { findByText } = render(
       <Toast {...toastData} isExpanded closeCTA={closeCTA}>
         <NotificationVisual {...visualData} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} />
       </Toast>
     );
 
-    const primaryCTALabel = await findByTestId('visual-primary');
-    expect(primaryCTALabel.firstElementChild).not.toBeNull();
-    fireEvent.click(primaryCTALabel.firstElementChild as Element);
+    const primaryCTALabel = await findByText(visualData.primaryCTALabel);
+    expect(primaryCTALabel).toBeTruthy();
+    fireEvent.click(primaryCTALabel);
     expect(primaryCTA).toHaveBeenCalledTimes(1);
 
-    const secondaryCTALabel = await findByTestId('visual-secondary');
-    expect(secondaryCTALabel.firstElementChild).not.toBeNull();
-    fireEvent.click(secondaryCTALabel.firstElementChild as Element);
+    const secondaryCTALabel = await findByText(visualData.secondaryCTALabel);
+    expect(secondaryCTALabel).toBeTruthy();
+    fireEvent.click(secondaryCTALabel);
     expect(secondaryCTA).toHaveBeenCalledTimes(1);
   });
 });
@@ -277,18 +277,18 @@ describe('Snackbar Notification', () => {
     const secondaryCTA = jest.fn();
     const closeCTA = jest.fn();
 
-    const { findByTestId } = render(
+    const { findByText } = render(
       <Snackbar {...data} primaryCTA={primaryCTA} secondaryCTA={secondaryCTA} closeCTA={closeCTA} />
     );
 
-    const primaryCTALabel = await findByTestId('snackbar-primary');
-    expect(primaryCTALabel.firstElementChild).not.toBeNull();
-    fireEvent.click(primaryCTALabel.firstElementChild as Element);
+    const primaryCTALabel = await findByText(data.primaryCTALabel);
+    expect(primaryCTALabel).toBeTruthy();
+    fireEvent.click(primaryCTALabel);
     expect(primaryCTA).toHaveBeenCalledTimes(1);
 
-    const secondaryCTALabel = await findByTestId('snackbar-secondary');
-    expect(secondaryCTALabel.firstElementChild).not.toBeNull();
-    fireEvent.click(secondaryCTALabel.firstElementChild as Element);
+    const secondaryCTALabel = await findByText(data.secondaryCTALabel);
+    expect(secondaryCTALabel).toBeTruthy();
+    fireEvent.click(secondaryCTALabel);
     expect(secondaryCTA).toHaveBeenCalledTimes(1);
   });
 });
