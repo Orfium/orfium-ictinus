@@ -25,6 +25,10 @@ const parseColorToken = (token: Token) => {
     const color = valueArray[1];
     const shade = Number(valueArray[2]);
 
+    if (color === 'neutral' || color === 'gradient') {
+      return get(globals.colors, [color, valueArray[2]], '') as string;
+    }
+
     return get(globals.colors.flat, [color, shade], '') as string;
   }
 
