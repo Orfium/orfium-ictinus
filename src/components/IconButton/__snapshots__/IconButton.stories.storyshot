@@ -168,238 +168,6 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/IconButton IconButton Sizes 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-3 {
-  color: #ffffff;
-  background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0);
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-3:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
-}
-
-.emotion-3:disabled {
-  opacity: 50%;
-  cursor: not-allowed;
-}
-
-.emotion-3:hover:not(:disabled) {
-  background-color: #457bf7;
-}
-
-.emotion-3:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-4 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: .25;
-}
-
-.emotion-5 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-6 {
-  fill: white;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-6 path {
-  fill: white;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <button
-            className="emotion-3"
-            data-testid="icon-button-size-lg"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-          </button>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <button
-            className="emotion-3"
-            data-testid="icon-button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-          </button>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <button
-            className="emotion-3"
-            data-testid="icon-button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
 .emotion-0 {
   background-color: transparent;
@@ -543,7 +311,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
         >
           <button
             className="emotion-3"
-            data-testid="icon-button-size-lg"
+            data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
@@ -575,7 +343,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
         >
           <button
             className="emotion-3"
-            data-testid="icon-button-size-lg"
+            data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
@@ -607,7 +375,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
         >
           <button
             className="emotion-3"
-            data-testid="icon-button-size-lg"
+            data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
