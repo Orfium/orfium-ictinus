@@ -82,7 +82,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
           size={size}
-          onClick={() => setIsOpen(!open)}
+          onClick={() => setIsOpen(!isOpen)}
           type={buttonType}
           color={color}
           isDisabled={isDisabled}
