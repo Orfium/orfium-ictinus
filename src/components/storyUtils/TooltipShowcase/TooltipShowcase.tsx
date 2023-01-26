@@ -50,8 +50,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
                 'The C language combines all the power of assembly language with all the ease-of-use of assembly language.'
               )
             }
-            type="primary"
-            isTransparent
           >
             Left
           </Button>
@@ -68,8 +66,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
                 'A SQL query goes into a bar, walks up to two tables and asks, “Can I join you?'
               )
             }
-            type="primary"
-            isTransparent
           >
             Right
           </Button>
@@ -89,8 +85,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
                 'How do you tell HTML from HTML5? Try it out in Internet Explorer. Did it work? No? It’s HTML5.'
               )
             }
-            type="primary"
-            isTransparent
           >
             Top
           </Button>
@@ -105,8 +99,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
             onClick={() =>
               console.log('Knock knock.\n' + '\n' + 'Race condition.\n' + '\n' + 'Who’s there?')
             }
-            type="primary"
-            isTransparent
           >
             Bottom
           </Button>
@@ -122,8 +114,6 @@ const TooltipShowcase = ({ content }: { content: string }) => {
       >
         <Button
           onClick={() => console.log('Hardware (noun): the part of a computer that you can kick.')}
-          type="primary"
-          isTransparent
         >
           Right
         </Button>

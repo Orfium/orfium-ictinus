@@ -7,20 +7,23 @@ import { colorShades, flatColors, mainTypes } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/IconButton"
-    component={IconButton}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Buttons',
-            url: `${FIGMA_URL}?node-id=574%3A7239`,
-        },
-        {
-            type: 'figma',
-            name: 'Documentation',
-            url: `${FIGMA_URL}?node-id=8167%3A146863`,
-        }],
-    }} />
+  title="Design System/IconButton"
+  component={IconButton}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Buttons',
+        url: `${FIGMA_URL}?node-id=574%3A7239`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation',
+        url: `${FIGMA_URL}?node-id=8167%3A146863`,
+      },
+    ],
+  }}
+/>
 
 # IconButton
 
@@ -31,7 +34,7 @@ A universal IconButton component that with the help of Button hold the icon insi
 ```js
 import { IconButton } from '@orfium/ictinus';
 
-<IconButton onClick={() => {}} name={'add'} />
+<IconButton onClick={() => {}} name={'add'} />;
 ```
 
 # Props
@@ -45,23 +48,9 @@ IconButton with different types
 <Preview>
   <Story name="IconButton Types">
     <Stack>
-      <IconButton size={'sm'} name="add" dataTestId={'size-lg'} />
-      <IconButton size={'sm'} type="success" name="add" dataTestId={'size-lg'} />
-      <IconButton size={'sm'} type="error" name="add" dataTestId={'size-lg'} />
-    </Stack>
-  </Story>
-</Preview>
-
-# IconButton Sizes
-
-IconButton with different acceptable sizes
-
-<Preview>
-  <Story name="IconButton Sizes">
-    <Stack>
-      <IconButton size={'sm'} name="add" dataTestId={'size-lg'} />
-      <IconButton size={'md'} name="fatArrowDown" />
-      <IconButton size={'lg'} name="check" />
+      <IconButton name="add" />
+      <IconButton name="add" />
+      <IconButton name="add" />
     </Stack>
   </Story>
 </Preview>
@@ -72,21 +61,12 @@ IconButton with different acceptable sizes
   <Story name="IconButton Playground">
     <Stack>
       <IconButton
-        type={select('type', mainTypes, 'primary')}
-        size={select('size', ['sm', 'md', 'lg'], 'md')}
-        isFilled={boolean('isFilled', false)}
-        isTransparent={boolean('isTransparent', false)}
         name={select(
           'name',
           Object.keys(iconSelector)
             .sort((a, b) => a.localeCompare(b))
-            .map(iconName => iconName),
+            .map((iconName) => iconName),
           'check'
-        )}
-        color={select(
-          'color',
-          flatColors.map(color => colorShades.map(shade => `${color}-${shade}`)).flat(),
-          ''
         )}
       />
     </Stack>

@@ -84,7 +84,6 @@ const MonthWrapper = ({
                 {!isRangePicker ? (
                   <Button
                     onClick={() => setIsOpen(!isOpen)}
-                    color={'neutralWhite-100'}
                     iconRight={
                       <Icon
                         name={'triangleDown'}
