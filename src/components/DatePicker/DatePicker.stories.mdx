@@ -133,6 +133,10 @@ Implementation of the regular Range DatePicker on different sizes
       <DatePicker
         inputProps={{ size: 'sm', styleType: 'outlined' }}
         isRangePicker
+        value={{
+          from: mockDate.add(1, 'day'),
+          to: mockDate.add(1, 'day'),
+        }}
         disableDates={select('disableDates', options, options[0])}
         dateFormatOverride={select('dateFormat', dateFormatOptions, dateFormatOptions[1])}
       />
