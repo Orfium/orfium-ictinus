@@ -1,10 +1,10 @@
-import { rem } from 'theme/utils';
+import { Theme } from 'theme';
 
-export const buttonSpanStyle = () => () => {
+export const buttonSpanStyle = () => (theme: Theme) => {
   return {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: rem(8),
+    gap: theme.globals.spacing.get('4'),
   };
 };

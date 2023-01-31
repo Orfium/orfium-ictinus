@@ -1,12 +1,16 @@
+import { useTheme } from '@emotion/react';
 import React, { useMemo } from 'react';
 
 import Icon from '../Icon';
 import { avatarStyle } from './Avatar.style';
-import tokens from './Avatar.tokens';
+import getTokens from './Avatar.tokens';
 import { AvatarProps } from './Avatar.types';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {
+    const theme = useTheme();
+    const tokens = getTokens(theme);
+
     const avatarContent = useMemo(() => {
       if (src) {
         return <img src={src} />;
@@ -23,7 +27,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
           size={parseFloat(tokens.iconSize[size])}
         />
       );
-    }, [children, color, size, src]);
+    }, [children, color, size, src, tokens.color, tokens.iconSize]);
 
     return (
       <div

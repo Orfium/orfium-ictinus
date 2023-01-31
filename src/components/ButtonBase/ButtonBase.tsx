@@ -25,7 +25,7 @@ export type ButtonBaseProps = {
   /** Define if the button is in disabled state */
   isDisabled?: boolean;
   /** Defines the button type */
-  buttonType?: 'submit' | 'reset' | 'button';
+  htmlType?: 'submit' | 'reset' | 'button';
   /** Sx prop to override specific properties */
   sx?: {
     container?: CSSObject;
@@ -44,7 +44,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     children,
     dataTestId = '',
     dataTestPrefixId = '',
-    buttonType = 'button',
+    htmlType = 'button',
     onClick,
     onBlur,
     sx,
@@ -56,7 +56,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
       {isLoading && !isDisabled && <ButtonLoader type={type} dataTestId={testIdName} />}
       <button
         ref={ref}
-        type={buttonType}
+        type={htmlType}
         data-testid={generateTestDataId(testIdName, dataTestId)}
         css={buttonBaseStyle({
           type,

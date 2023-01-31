@@ -1,7 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 
-import stateTokens from '../../theme/states/states.tokens';
-import buttonTokens from '../Button/Button.tokens';
+import { Theme } from '../../theme';
+import getStatesTokens from '../../theme/states/states.tokens';
+import getButtonTokens from '../Button/Button.tokens';
 import { ButtonBaseProps } from './ButtonBase';
 
 export const buttonWrapperStyle = ({
@@ -16,8 +17,11 @@ export const buttonBaseStyle =
     isLoading,
     isDisabled,
     sx,
-  }: Omit<ButtonBaseProps, 'buttonType' | 'ref'>) =>
-  (): SerializedStyles => {
+  }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
+  (theme: Theme): SerializedStyles => {
+    const buttonTokens = getButtonTokens(theme);
+    const stateTokens = getStatesTokens(theme);
+
     const baseButtonStyles = {
       color: buttonTokens.color[type].textColor,
       width: isBlock ? '100%' : undefined,

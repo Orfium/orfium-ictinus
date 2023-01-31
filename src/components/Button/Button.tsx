@@ -1,8 +1,9 @@
+import { useTheme } from '@emotion/react';
 import React from 'react';
 import { CommonButtonProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
-import buttonTokens from '../Button/Button.tokens';
+import getButtonTokens from '../Button/Button.tokens';
 import ButtonBase, { ButtonBaseProps } from '../ButtonBase/ButtonBase';
 import { buttonSpanStyle } from './Button.style';
 import Avatar, { AvatarProps } from 'components/Avatar';
@@ -31,6 +32,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
   } = props;
 
   const hasAvatar = ['primary', 'secondary', 'tertiary'].includes(type) && avatar;
+
+  const theme = useTheme();
+  const buttonTokens = getButtonTokens(theme);
 
   return (
     <ButtonBase {...props} ref={ref} isLoading={isLoading} onClick={onClick}>

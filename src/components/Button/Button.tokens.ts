@@ -1,6 +1,4 @@
-import globals from 'theme/globals';
-import semantic from 'theme/tokens/semantic';
-
+import { Theme } from '../../theme';
 import { ButtonTypes } from './Button.types';
 
 export type ButtonTokensColors = {
@@ -20,54 +18,56 @@ export type ButtonTokens = {
   color: Record<ButtonTypes, ButtonTokensColors>;
 };
 
-const tokens: ButtonTokens = {
-  size: globals.sizing.get('5'),
-  spacing: {
-    textButton: {
-      padding: globals.spacing.get('4'),
-      paddingVertical: globals.spacing.get('4'),
-      paddingHorizontal: globals.spacing.get('6'),
+const getTokens = (theme: Theme): ButtonTokens => {
+  return {
+    size: theme.globals.sizing.get('5'),
+    spacing: {
+      textButton: {
+        padding: theme.globals.spacing.get('4'),
+        paddingVertical: theme.globals.spacing.get('4'),
+        paddingHorizontal: theme.globals.spacing.get('6'),
+      },
+      iconButton: {
+        padding: theme.globals.spacing.get('4'),
+      },
     },
-    iconButton: {
-      padding: globals.spacing.get('4'),
+    borderRadius: {
+      text: theme.globals.borderRadius.get('2'),
+      wrapper: theme.globals.borderRadius.get('0'),
+      icon: theme.globals.borderRadius.get('5'),
     },
-  },
-  borderRadius: {
-    text: globals.borderRadius.get('2'),
-    wrapper: globals.borderRadius.get('0'),
-    icon: globals.borderRadius.get('5'),
-  },
-  borderWidth: {
-    1: globals.borderWidth.get('1'),
-    2: globals.borderWidth.get('2'),
-  },
-  color: {
-    primary: {
-      borderColor: semantic.borderColor.get('decorative.transparent'),
-      textColor: semantic.textColor.get('inverted.primary'),
+    borderWidth: {
+      1: theme.globals.borderWidth.get('1'),
+      2: theme.globals.borderWidth.get('2'),
     },
-    secondary: {
-      borderColor: semantic.borderColor.get('decorative.transparent'),
-      textColor: semantic.textColor.get('light.active'),
+    color: {
+      primary: {
+        borderColor: theme.tokens.borderColor.get('decorative.transparent'),
+        textColor: theme.tokens.textColor.get('inverted.primary'),
+      },
+      secondary: {
+        borderColor: theme.tokens.borderColor.get('decorative.transparent'),
+        textColor: theme.tokens.textColor.get('light.active'),
+      },
+      tertiary: {
+        borderColor: theme.tokens.borderColor.get('decorative.transparent'),
+        borderColorSegmented: theme.tokens.borderColor.get('decorative.lightMuted'),
+        textColor: theme.tokens.textColor.get('light.active'),
+      },
+      invertedAlt: {
+        borderColor: theme.tokens.borderColor.get('decorative.transparent'),
+        textColor: theme.tokens.textColor.get('inverted.active'),
+      },
+      danger: {
+        borderColor: theme.tokens.borderColor.get('decorative.transparent'),
+        textColor: theme.tokens.textColor.get('light.error'),
+      },
+      inverted: {
+        borderColor: theme.tokens.borderColor.get('decorative.transparent'),
+        textColor: theme.tokens.textColor.get('light.primary'),
+      },
     },
-    tertiary: {
-      borderColor: semantic.borderColor.get('decorative.transparent'),
-      borderColorSegmented: semantic.borderColor.get('decorative.lightMuted'),
-      textColor: semantic.textColor.get('light.active'),
-    },
-    invertedAlt: {
-      borderColor: semantic.borderColor.get('decorative.transparent'),
-      textColor: semantic.textColor.get('inverted.active'),
-    },
-    danger: {
-      borderColor: semantic.borderColor.get('decorative.transparent'),
-      textColor: semantic.textColor.get('light.error'),
-    },
-    inverted: {
-      borderColor: semantic.borderColor.get('decorative.transparent'),
-      textColor: semantic.textColor.get('light.primary'),
-    },
-  },
+  };
 };
 
-export default tokens;
+export default getTokens;
