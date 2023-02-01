@@ -68,7 +68,7 @@ const Menu: React.FC<MenuProps> = (props) => {
       <div css={wrapperStyle()} data-testid={dataTestId}>
         <Button
           type={buttonType}
-          onClick={() => setIsOpen(!open)}
+          onClick={() => setIsOpen(!isOpen)}
           isDisabled={isDisabled}
           iconRightName={rightIconName}
           iconLeftName={leftIconName}
