@@ -1,4 +1,4 @@
-import { useTheme } from '@emotion/react';
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 import { CommonButtonProps } from 'utils/common';
 import { TestProps } from 'utils/types';
