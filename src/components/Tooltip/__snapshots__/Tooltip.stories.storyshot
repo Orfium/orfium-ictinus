@@ -65,42 +65,49 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 }
 
 .emotion-4 {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: white;
-  background-color: #123456;
-  padding: 0 1rem;
-  height: 2.25rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-5 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  border: solid 0rem #123456;
+  border: solid 0.0625rem rgba(0,0,0,0);
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
 }
 
-.emotion-4:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-5:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-4:hover:not(:disabled) {
-  background-color: #1451dc;
+.emotion-5:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
-.emotion-4:active:not(:disabled) {
+.emotion-5:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-5:active:not(:disabled) {
   background-color: #1248c4;
 }
 
-.emotion-4:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-6 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
 }
 
-.emotion-4:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,18 +120,14 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 
-.emotion-6 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-20 {
+.emotion-24 {
   background: transparent;
 }
 
-.emotion-20 .tippy-content {
+.emotion-24 .tippy-content {
   color: white;
   background-color: transparent;
   max-width: 16rem;
@@ -138,17 +141,17 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   word-break: break-word;
 }
 
-.emotion-20 .tippy-arrow {
+.emotion-24 .tippy-arrow {
   color: transparent;
 }
 
-.emotion-24 {
+.emotion-29 {
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
   background: white;
   border-radius: 0.25rem;
 }
 
-.emotion-25 {
+.emotion-30 {
   padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -168,12 +171,12 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   height: 200px;
 }
 
-.emotion-26 {
+.emotion-31 {
   margin-bottom: 0.5rem;
   color: black;
 }
 
-.emotion-27 {
+.emotion-32 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -206,15 +209,15 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-27:hover:not(:disabled) {
+.emotion-32:hover:not(:disabled) {
   background: #d1faf0;
 }
 
-.emotion-27:focus-visible:not(:disabled) {
+.emotion-32:focus-visible:not(:disabled) {
   outline: none;
 }
 
-.emotion-27>:not(:last-child) {
+.emotion-32>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
@@ -270,23 +273,29 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
           interactiveDebounce={100}
           placement="left"
         >
-          <button
+          <div
             className="emotion-4"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
           >
-            <span
+            <button
               className="emotion-5"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-6"
               >
-                Left
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Left
+                  </span>
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
         <div>
           By hovering here you can see very long and useful info that totally breaks into two lines
@@ -297,23 +306,29 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
           interactiveDebounce={100}
           placement="right"
         >
-          <button
+          <div
             className="emotion-4"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
           >
-            <span
+            <button
               className="emotion-5"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-6"
               >
-                Right
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Right
+                  </span>
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
         <div>
           By hovering here you can see very long and useful info that totally breaks into two lines
@@ -328,23 +343,29 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
           interactiveDebounce={100}
           placement="top"
         >
-          <button
+          <div
             className="emotion-4"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
           >
-            <span
+            <button
               className="emotion-5"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-6"
               >
-                Top
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Top
+                  </span>
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
         <div>
           By hovering here you can see very long and useful info that totally breaks into two lines
@@ -355,23 +376,29 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
           interactiveDebounce={100}
           placement="bottom"
         >
-          <button
+          <div
             className="emotion-4"
-            data-testid="button"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
           >
-            <span
+            <button
               className="emotion-5"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
             >
               <span
                 className="emotion-6"
               >
-                Bottom
+                <span
+                  className="emotion-7"
+                >
+                  <span>
+                    Bottom
+                  </span>
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
         <div>
           By hovering here you can see very long and useful info that totally breaks into two lines
@@ -381,44 +408,50 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
         Tooltip with component content
       </h2>
       <div
-        className="emotion-20"
+        className="emotion-24"
         interactive={false}
         interactiveDebounce={100}
         placement="right"
       >
-        <button
+        <div
           className="emotion-4"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
         >
-          <span
+          <button
             className="emotion-5"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
           >
             <span
               className="emotion-6"
             >
-              Right
+              <span
+                className="emotion-7"
+              >
+                <span>
+                  Right
+                </span>
+              </span>
             </span>
-          </span>
-        </button>
+          </button>
+        </div>
       </div>
       <div>
         <div
-          className="emotion-24"
+          className="emotion-29"
         >
           <div
-            className="emotion-25"
+            className="emotion-30"
           >
             <div
-              className="emotion-26"
+              className="emotion-31"
             >
               By hover here you can see:
             </div>
             <div
               aria-readonly="true"
-              className="emotion-27"
+              className="emotion-32"
               data-testid="chip"
             >
               <div>

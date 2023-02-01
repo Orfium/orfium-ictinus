@@ -1,51 +1,55 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
+import getStatesTokens from '../../theme/states/states.tokens';
+import getButtonTokens from '../Button/Button.tokens';
 import { ButtonBaseProps } from './ButtonBase';
 
-export const buttonBaseStyle =
-  ({ isBlock, sx }: Omit<ButtonBaseProps, 'buttonType' | 'ref'>) =>
-  (theme: Theme): SerializedStyles => {
-    /** @TODO replace all temporary css values with the new ones */
+export const buttonWrapperStyle = ({
+  isBlock,
+}: Pick<ButtonBaseProps, 'isBlock'>): SerializedStyles =>
+  css({ position: 'relative', width: isBlock ? '100%' : 'fit-content' });
 
-    const backGroundColor = '#123456';
-    const borderWidth = 0;
+export const buttonBaseStyle =
+  ({
+    type = 'primary',
+    isBlock,
+    isLoading,
+    isDisabled,
+    sx,
+  }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
+  (theme: Theme): SerializedStyles => {
+    const buttonTokens = getButtonTokens(theme);
+    const stateTokens = getStatesTokens(theme);
 
     const baseButtonStyles = {
-      fontSize: rem(14),
-      fontWeight: theme.globals.typography.weights.get('medium'),
-      color: 'white',
+      color: buttonTokens.color[type].textColor,
       width: isBlock ? '100%' : undefined,
-      backgroundColor: backGroundColor,
-      padding: `0 ${theme.globals.spacing.get('6')}`,
-      height: rem(36),
-      borderRadius: theme.globals.spacing.get('3'),
-      border: `solid ${rem(borderWidth)} ${backGroundColor}`,
+      backgroundColor: stateTokens[isLoading ? 'active' : 'inactive'].backgroundColor[type],
+      padding: `${buttonTokens.spacing.textButton.paddingVertical} ${buttonTokens.spacing.textButton.paddingHorizontal}`,
+      borderRadius: buttonTokens.borderRadius.text,
+      border: `solid ${buttonTokens.borderWidth[1]} ${buttonTokens.color[type].borderColor}`,
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
-      ':focus-visible:not(:disabled)': {
-        outline: getFocus({ theme, borderWidth: borderWidth }).styleOutline,
-      },
+
+      ':focus-visible:not(:disabled)': stateTokens.focus,
+      ':disabled': stateTokens.disabled,
       ':hover:not(:disabled)': {
-        backgroundColor: getHover({
-          theme,
-          color: 'blue',
-          shade: 500,
-        }).backgroundColor,
+        backgroundColor: stateTokens.hover.backgroundColor[type],
       },
       ':active:not(:disabled)': {
-        backgroundColor: getPressed({
-          theme,
-          color: 'blue',
-          shade: 500,
-        }).backgroundColor,
+        backgroundColor: stateTokens.active.backgroundColor[type],
       },
-      ':disabled': getDisabled(),
     };
 
-    return css({ ...baseButtonStyles, ...sx?.container });
+    const loadingStyles =
+      isLoading && !isDisabled
+        ? {
+            pointerEvents: 'none' as const,
+          }
+        : {};
+
+    return css({ ...baseButtonStyles, ...loadingStyles, ...sx?.container });
   };
 
 export const buttonSpanStyle = () => () => {

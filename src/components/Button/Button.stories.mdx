@@ -2,9 +2,9 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
-import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
 import Icon from '../Icon';
 import { FIGMA_URL } from '../../utils/common';
+import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
 
 <Meta
   title="Design System/Button"
@@ -52,143 +52,222 @@ import { Button } from '@orfium/ictinus';
 <Button onClick={() => {}}>Click Me</Button>;
 ```
 
-### Async handling case
-
-```js
-import { Button } from '@orfium/ictinus';
-
-<Button
-  onClick={(setLoading) => {
-    setLoading?.(true);
-
-    serviceMock()
-      .then((res) => {
-        console.log(res);
-      })
-      .finally(() => setLoading?.(false));
-  }}
->
-  Async Action
-</Button>;
-```
-
 # Props
 
 <Props of={Button} />
 
 # Button Types
 
-Button types based on the system approved literals for `success, error, info, warning, link`
+Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
 
 <Preview>
   <Story name="Button Types">
     <Stack>
-      <Button isDisabled>Success</Button>
-      <Button>Success</Button>
-      <Button>Error</Button>
-      <Button>Info</Button>
-      <Button>Warning</Button>
-      <Button>Link</Button>
+      <Button type="primary">Primary</Button>
+      <Button type="secondary">Secondary</Button>
+      <Button type="tertiary">Tertiary</Button>
+      <Button type="danger">Danger</Button>
+      <Button type="inverted">Inverted</Button>
+      <Button type="invertedAlt">InvertedAlt</Button>
     </Stack>
-  </Story>
-</Preview>
-
-# Button Colors
-
-Button colors based on the system palette. Check <a href="/?path=/story/guide-colors--page">our colors</a> for more.
-
-<Preview>
-  <Story name="Button Colors">
     <Stack>
-      <Button isDisabled>Disabled</Button>
-      <Button>Red 600</Button>
-      <Button>Magenta 200</Button>
-    </Stack>
-  </Story>
-</Preview>
-
-# Regular Button
-
-<Preview>
-  <Story name="Regular Button">
-    <Button>Hello world</Button>
-  </Story>
-</Preview>
-
-# Button with icon
-
-<Preview>
-  <Story name="Button with icon">
-    <Stack>
-      <Button iconLeft={<Icon name={'dashboard'} />}>Hello world</Button>
-      <Button iconRight={<Icon name={'dashboard'} />}>Hello world</Button>
-      <Button
-        iconLeft={<Icon name={'dashboard'} />}
-        iconRight={<Icon name={'dotsVertical'} color={'primary'} size={18} />}
-      >
-        Hello world
+      <Button type="primary" isDisabled>
+        Primary
+      </Button>
+      <Button type="secondary" isDisabled>
+        Secondary
+      </Button>
+      <Button type="tertiary" isDisabled>
+        Tertiary
+      </Button>
+      <Button type="danger" isDisabled>
+        Danger
+      </Button>
+      <Button type="inverted" isDisabled>
+        Inverted
+      </Button>
+      <Button type="invertedAlt" isDisabled>
+        InvertedAlt
       </Button>
     </Stack>
   </Story>
 </Preview>
 
-# Non Filled Button
+# Loading Button
+
+Button Loading variations based on the `isLoading` boolean prop.
 
 <Preview>
-  <Story name="Non Filled Button">
-    <Button>Hello world</Button>
+  <Story name="Loading Button">
+    <LoadingButtonShowcase />
   </Story>
 </Preview>
 
-# Transparent Button
+# Buttons with Icons
+
+Buttons with icons. 3 different variations based on the icon's placement.
 
 <Preview>
-  <Story name="Transparent Button">
-    <Button>Hello world</Button>
+  <Story name="Buttons with Icons" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Button
+        iconLeftName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Only left Icon
+      </Button>
+      <Button
+        iconLeftName={'dashboard'}
+        iconRightName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Both Icons
+      </Button>
+      <Button
+        iconRightName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Only Right Icon
+      </Button>
+    </Stack>
+  </Story>
+</Preview>
+
+# Buttons with Avatars
+
+An avatar can be placed instead of a left icon. Only for `primary, secondary, tertiary` buttons.
+Can be only combined with a right icon, not with a left icon at the same time.
+
+<Preview>
+  <Story name="Buttons with Avatars" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Button
+        avatar={{ label: 'PR' }}
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Text Avatar
+      </Button>
+      <Button
+        avatar={{ src: 'https://mui.com/static/images/avatar/1.jpg' }}
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Img Avatar
+      </Button>
+      <Button avatar={{}} type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}>
+        Empty Avatar
+      </Button>
+    </Stack>
+    <Stack>
+      <Button
+        avatar={{ label: 'PR' }}
+        iconRightName="arrowRight"
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Text Avatar
+      </Button>
+      <Button
+        avatar={{ src: 'https://mui.com/static/images/avatar/1.jpg' }}
+        iconRightName="arrowRight"
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Img Avatar
+      </Button>
+      <Button
+        avatar={{}}
+        iconRightName="arrowRight"
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Empty Avatar
+      </Button>
+    </Stack>
   </Story>
 </Preview>
 
 # Block Button
 
 <Preview>
-  <Story name="Block Button">
+  <Story name="Block Button" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
       <Button
         isBlock
-        iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />}
-        iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
       >
         Hello world
       </Button>
-      <Button isBlock>Hello world</Button>
-      <Button isBlock>Hello world</Button>
+      <Button
+        isBlock
+        iconLeftName={'dashboard'}
+        iconRightName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
+        isLoading
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
+        isDisabled
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
-# Dynamic Button Props - Knobs
+# Button Playground
 
 <Preview>
-  <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
-    <Button isBlock={boolean('isBlock', false)}>{text('text', 'change me!')}</Button>
-  </Story>
-</Preview>
-
-# Async Button with loading state
-
-<Preview>
-  <Story name="Async Button">
-    <Stack>
+  <Story name="Button Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack isVertical>
       <Button
-        onClick={() => {
-          console.log('clicked!');
-        }}
+        isBlock
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+        iconLeftName={select('iconLeftName', [, 'dashboard'], 'dashboard')}
+        iconRightName={select('iconRightName', [, 'dashboard'], 'dashboard')}
+        isLoading={boolean('isLoading', false)}
+        isDisabled={boolean('isDisabled', false)}
+        isBlock={boolean('isBlock', false)}
       >
-        Sync Action
+        Hello world
       </Button>
-      <AsyncButtonShowcase text={'Async sm'} />
-      <AsyncButtonShowcase type={'secondary'} text={'Async md'} />
-      <AsyncButtonShowcase text={'Async lg'} />
     </Stack>
   </Story>
 </Preview>
