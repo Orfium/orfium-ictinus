@@ -16,6 +16,8 @@ export const buttonBaseStyle =
     isBlock,
     isLoading,
     isDisabled,
+    isIconButton,
+    radius,
     sx,
   }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
@@ -26,9 +28,16 @@ export const buttonBaseStyle =
       color: buttonTokens.color[type].textColor,
       width: isBlock ? '100%' : undefined,
       backgroundColor: stateTokens[isLoading ? 'active' : 'inactive'].backgroundColor[type],
-      padding: `${buttonTokens.spacing.textButton.paddingVertical} ${buttonTokens.spacing.textButton.paddingHorizontal}`,
-      borderRadius: buttonTokens.borderRadius.text,
-      border: `solid ${buttonTokens.borderWidth[1]} ${buttonTokens.color[type].borderColor}`,
+      padding: isIconButton
+        ? buttonTokens.spacing.iconButton.padding
+        : `${buttonTokens.spacing.textButton.paddingVertical} ${buttonTokens.spacing.textButton.paddingHorizontal}`,
+      borderRadius:
+        isIconButton && radius === 'rounded'
+          ? buttonTokens.borderRadius.icon
+          : buttonTokens.borderRadius.text,
+      border: !isIconButton
+        ? `solid ${buttonTokens.borderWidth[1]} ${buttonTokens.color[type].borderColor}`
+        : 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
 
