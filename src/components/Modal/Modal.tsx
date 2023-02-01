@@ -52,7 +52,12 @@ const Modal: React.FC<ModalProps> = ({
         <div css={cardSizing}>
           <Card elevated={'02'} radius={'3'}>
             <div css={closeContainer}>
-              <IconButton name={'close'} onClick={onClose} dataTestId={'modal-close'} />
+              <IconButton
+                type="tertiary"
+                name={'close'}
+                onClick={onClose}
+                dataTestId={'modal-close'}
+              />
             </div>
             <div css={modalContainer({ isContentPadded })}>
               {contentProps ? <ModalContent {...contentProps} /> : children}
