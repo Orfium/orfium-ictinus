@@ -4814,11 +4814,11 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
 }
 
 .emotion-48 {
-  color: #ffffff;
-  background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0);
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
@@ -4834,32 +4834,24 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
 }
 
 .emotion-48:hover:not(:disabled) {
-  background-color: #457bf7;
+  background-color: rgba(23,91,245,0.07);
 }
 
 .emotion-48:active:not(:disabled) {
-  background-color: #1248c4;
+  background-color: rgba(23,91,245,0.14);
 }
 
-.emotion-49 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: .25;
-}
-
-.emotion-51 {
-  fill: white;
+.emotion-50 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-51 path {
-  fill: white;
+.emotion-50 path {
+  fill: #1451dc;
 }
 
-.emotion-56 {
+.emotion-55 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -5190,16 +5182,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -5237,7 +5225,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_2"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -5380,16 +5368,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -5427,7 +5411,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_3"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -5570,16 +5554,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -5617,7 +5597,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_4"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -5760,16 +5740,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -5807,7 +5783,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_5"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -5950,16 +5926,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -5997,7 +5969,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_6"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -6140,16 +6112,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -6187,7 +6155,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_7"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -6330,16 +6298,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -6377,7 +6341,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_8"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -6520,16 +6484,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -6567,7 +6527,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_9"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -6710,16 +6670,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -6757,7 +6713,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_10"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -6900,16 +6856,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -6947,7 +6899,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_11"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -7090,16 +7042,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -7137,7 +7085,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_12"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -7280,16 +7228,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -7327,7 +7271,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_13"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -7470,16 +7414,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -7517,7 +7457,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_14"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -7660,16 +7600,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -7707,7 +7643,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_15"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -7850,16 +7786,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -7897,7 +7829,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_16"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -8040,16 +7972,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -8087,7 +8015,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_17"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -8230,16 +8158,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -8277,7 +8201,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_18"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -8420,16 +8344,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -8467,7 +8387,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_19"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -8610,16 +8530,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -8657,7 +8573,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_20"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -8800,16 +8716,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -8847,7 +8759,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_21"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -8990,16 +8902,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -9037,7 +8945,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_22"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -9180,16 +9088,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -9227,7 +9131,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_23"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -9370,16 +9274,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -9417,7 +9317,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_24"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -9560,16 +9460,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -9607,7 +9503,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_25"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -9750,16 +9646,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -9797,7 +9689,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_26"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -9940,16 +9832,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -9987,7 +9875,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_27"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -10130,16 +10018,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -10177,7 +10061,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_28"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -10320,16 +10204,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -10367,7 +10247,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_29"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -10510,16 +10390,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -10557,7 +10433,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_30"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -10700,16 +10576,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -10747,7 +10619,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_31"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -10890,16 +10762,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -10937,7 +10805,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_32"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -11080,16 +10948,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -11127,7 +10991,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_33"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -11270,16 +11134,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -11317,7 +11177,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_34"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -11460,16 +11320,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -11507,7 +11363,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_35"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -11650,16 +11506,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -11697,7 +11549,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_36"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -11840,16 +11692,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -11887,7 +11735,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_37"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -12030,16 +11878,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -12077,7 +11921,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_38"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -12220,16 +12064,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -12267,7 +12107,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_39"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -12410,16 +12250,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -12457,7 +12293,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_40"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -12600,16 +12436,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -12647,7 +12479,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_41"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -12790,16 +12622,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -12837,7 +12665,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_42"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -12980,16 +12808,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -13027,7 +12851,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_43"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -13170,16 +12994,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -13217,7 +13037,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_44"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -13360,16 +13180,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -13407,7 +13223,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_45"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -13550,16 +13366,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -13597,7 +13409,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_46"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -13740,16 +13552,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -13787,7 +13595,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_47"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -13930,16 +13738,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -13977,7 +13781,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_48"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -14120,16 +13924,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -14167,7 +13967,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_49"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -14310,16 +14110,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -14357,7 +14153,7 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
             data-testid="table_row_50"
           >
             <div
-              className="emotion-56"
+              className="emotion-55"
             >
               <table
                 className="emotion-27"
@@ -14500,16 +14296,12 @@ exports[`Storyshots Design System/Table Table with Expandable Rows - Expanded on
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -14918,11 +14710,11 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 }
 
 .emotion-48 {
-  color: #ffffff;
-  background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0);
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
@@ -14938,29 +14730,21 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
 }
 
 .emotion-48:hover:not(:disabled) {
-  background-color: #457bf7;
+  background-color: rgba(23,91,245,0.07);
 }
 
 .emotion-48:active:not(:disabled) {
-  background-color: #1248c4;
+  background-color: rgba(23,91,245,0.14);
 }
 
-.emotion-49 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: .25;
-}
-
-.emotion-51 {
-  fill: white;
+.emotion-50 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-51 path {
-  fill: white;
+.emotion-50 path {
+  fill: #1451dc;
 }
 
 <div
@@ -15279,16 +15063,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -15455,16 +15235,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -15631,16 +15407,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -15807,16 +15579,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -15983,16 +15751,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -16159,16 +15923,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -16335,16 +16095,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -16511,16 +16267,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -16687,16 +16439,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -16863,16 +16611,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -17039,16 +16783,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -17215,16 +16955,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -17391,16 +17127,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -17567,16 +17299,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -17743,16 +17471,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -17919,16 +17643,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -18095,16 +17815,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -18271,16 +17987,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -18447,16 +18159,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -18623,16 +18331,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -18799,16 +18503,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -18975,16 +18675,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -19151,16 +18847,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -19327,16 +19019,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -19503,16 +19191,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -19679,16 +19363,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -19855,16 +19535,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -20031,16 +19707,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -20207,16 +19879,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -20383,16 +20051,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -20559,16 +20223,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -20735,16 +20395,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -20911,16 +20567,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -21087,16 +20739,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -21263,16 +20911,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -21439,16 +21083,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -21615,16 +21255,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -21791,16 +21427,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -21967,16 +21599,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -22143,16 +21771,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -22319,16 +21943,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -22495,16 +22115,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -22671,16 +22287,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -22847,16 +22459,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -23023,16 +22631,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -23199,16 +22803,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -23375,16 +22975,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -23551,16 +23147,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -23727,16 +23319,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -23903,16 +23491,12 @@ exports[`Storyshots Design System/Table Table with expandable rows 1`] = `
                                 type="button"
                               >
                                 <span
-                                  className="emotion-49"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-51"
-                                    />
-                                  </span>
+                                    className="emotion-50"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -24441,11 +24025,11 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
 }
 
 .emotion-72 {
-  color: #ffffff;
-  background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0);
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
@@ -24461,29 +24045,21 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
 }
 
 .emotion-72:hover:not(:disabled) {
-  background-color: #457bf7;
+  background-color: rgba(23,91,245,0.07);
 }
 
 .emotion-72:active:not(:disabled) {
-  background-color: #1248c4;
+  background-color: rgba(23,91,245,0.14);
 }
 
-.emotion-73 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: .25;
-}
-
-.emotion-75 {
-  fill: white;
+.emotion-74 {
+  fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-75 path {
-  fill: white;
+.emotion-74 path {
+  fill: #1451dc;
 }
 
 <div
@@ -24958,16 +24534,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -25168,16 +24740,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -25378,16 +24946,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -25588,16 +25152,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -25798,16 +25358,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -26008,16 +25564,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -26218,16 +25770,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -26428,16 +25976,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -26638,16 +26182,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -26848,16 +26388,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -27058,16 +26594,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -27268,16 +26800,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -27478,16 +27006,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -27688,16 +27212,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -27898,16 +27418,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -28108,16 +27624,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -28318,16 +27830,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -28528,16 +28036,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -28738,16 +28242,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -28948,16 +28448,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -29158,16 +28654,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -29368,16 +28860,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -29578,16 +29066,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -29788,16 +29272,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -29998,16 +29478,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -30208,16 +29684,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -30418,16 +29890,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -30628,16 +30096,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -30838,16 +30302,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -31048,16 +30508,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -31258,16 +30714,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -31468,16 +30920,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -31678,16 +31126,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -31888,16 +31332,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -32098,16 +31538,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -32308,16 +31744,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -32518,16 +31950,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -32728,16 +32156,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -32938,16 +32362,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -33148,16 +32568,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -33358,16 +32774,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -33568,16 +32980,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -33778,16 +33186,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -33988,16 +33392,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -34198,16 +33598,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -34408,16 +33804,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -34618,16 +34010,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -34828,16 +34216,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -35038,16 +34422,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
@@ -35248,16 +34628,12 @@ exports[`Storyshots Design System/Table Table with expandable rows and sortDir 1
                                 type="button"
                               >
                                 <span
-                                  className="emotion-73"
+                                  className="emotion-8"
+                                  onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-8"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-75"
-                                    />
-                                  </span>
+                                    className="emotion-74"
+                                  />
                                 </span>
                               </button>
                             </div>
