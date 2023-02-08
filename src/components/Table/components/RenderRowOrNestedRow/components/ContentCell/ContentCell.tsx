@@ -11,7 +11,7 @@ type Props = {
   padded: boolean;
   tooltipContent?: string;
   columnWidth?: number;
-  content: number | string | ContentComponent<any>;
+  content: number | string | ContentComponent<unknown>;
   colSpan?: number;
   cellType?: 'financial' | 'normal';
   align?: 'left' | 'right';
@@ -57,10 +57,7 @@ const ContentCell: React.FC<Props> = ({
         </div>
       )}
 
-      <TruncatedContent
-        placement={'bottom'}
-        tooltipContent={tooltipContent}
-      >
+      <TruncatedContent placement={'bottom'} tooltipContent={tooltipContent}>
         {isComponentFunctionType(content) ? (
           content({ content, colSpan })
         ) : (

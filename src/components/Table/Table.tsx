@@ -13,9 +13,9 @@ import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
 
-export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
+export type ContentComponent<T> = (data: T) => React.Component | JSX.Element;
 export type Cell<T> = {
-  content: number | string | ContentComponent<T>;
+  content: number | string | ContentComponent<T> | JSX.Element;
   tooltipContent?: string;
   hasTruncatedTooltip?: boolean;
   colSpan?: number;
@@ -115,7 +115,7 @@ function Table<T>({
 
   const [sorting, setSorting] = useState<Sort>(initialSort);
 
-  const hasExpandableRows = data.some(row => Boolean(row.expanded));
+  const hasExpandableRows = data.some((row) => Boolean(row.expanded));
 
   const columnCount = getColumnCount(columns, onCheck, hasExpandableRows);
 
@@ -142,7 +142,7 @@ function Table<T>({
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
         ? [...selectedIds, rowId]
-        : selectedIds.filter(item => item !== rowId)
+        : selectedIds.filter((item) => item !== rowId)
     );
   }, []);
 
@@ -171,7 +171,7 @@ function Table<T>({
   );
 
   const handleSorting = (column: string) => {
-    setSorting(prevState => {
+    setSorting((prevState) => {
       if (sortDir) {
         return {
           column,
@@ -295,14 +295,8 @@ function Table<T>({
                       }}
                       dataTestIdPrefix={`${dataTestIdPrefix}_${
                         !isItemString(item)
-                          ? item.content.sortingKey
-                              .trim()
-                              .toLowerCase()
-                              .replace(/ /g, '_')
-                          : item
-                              .trim()
-                              .toLowerCase()
-                              .replace(/ /g, '_')
+                          ? item.content.sortingKey.trim().toLowerCase().replace(/ /g, '_')
+                          : item.trim().toLowerCase().replace(/ /g, '_')
                       }`}
                     >
                       {isItemString(item) ? (
