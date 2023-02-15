@@ -7,7 +7,7 @@ import { AcceptedIconNames } from '../Icon/types';
 import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
-export type IconButtonRadius = 'rounded' | 'squared';
+export type IconButtonShape = 'circle' | 'square';
 
 export type IconButtonProps = Omit<
   ButtonBaseProps,
@@ -17,19 +17,25 @@ export type IconButtonProps = Omit<
   type?: Exclude<ButtonTypes, 'danger' | 'inverted' | 'invertedAlt'>;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
-  /** This property defines the radius of the IconButton */
-  radius?: IconButtonRadius;
+  /** This property defines the shape of the IconButton */
+  shape?: IconButtonShape;
 };
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const { name, type = 'primary', radius = 'rounded' } = props;
+  const { name, type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
   const buttonTokens = getButtonTokens(theme);
 
   const iconColor = buttonTokens.color[type].textColor;
 
   return (
-    <ButtonBase {...props} ref={ref} isIconButton radius={radius} dataTestPrefixId={'icon-'}>
+    <ButtonBase
+      {...props}
+      ref={ref}
+      isIconButton
+      shape={shape}
+      dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
+    >
       <Icon name={name} color={iconColor} />
     </ButtonBase>
   );

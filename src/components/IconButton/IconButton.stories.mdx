@@ -43,7 +43,7 @@ import { IconButton } from '@orfium/ictinus';
 
 # IconButton Types
 
-IconButton with different types `primary, secondary, tertiary` and different radius types `rounded, squared`
+IconButton with different types `primary, secondary, tertiary` and different shape types `circle, square`
 
 <Preview>
   <Story name="IconButton Types">
@@ -53,9 +53,9 @@ IconButton with different types `primary, secondary, tertiary` and different rad
       <IconButton name="dotsVertical" type="tertiary" />
     </Stack>
     <Stack>
-      <IconButton name="dotsVertical" radius="squared" />
-      <IconButton name="dotsVertical" type="secondary" radius="squared" />
-      <IconButton name="dotsVertical" type="tertiary" radius="squared" />
+      <IconButton name="dotsVertical" shape="square" />
+      <IconButton name="dotsVertical" type="secondary" shape="square" />
+      <IconButton name="dotsVertical" type="tertiary" shape="square" />
     </Stack>
   </Story>
 </Preview>
@@ -74,7 +74,7 @@ IconButton with different types `primary, secondary, tertiary` and different rad
           'check'
         )}
         type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
-        radius={select('radius', ['rounded', 'squared'], 'rounded')}
+        shape={select('shape', ['circle', 'square'], 'circle')}
       />
     </Stack>
   </Story>

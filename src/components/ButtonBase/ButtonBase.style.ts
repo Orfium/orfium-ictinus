@@ -17,7 +17,7 @@ export const buttonBaseStyle =
     isLoading,
     isDisabled,
     isIconButton,
-    radius,
+    shape,
     sx,
   }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
@@ -32,7 +32,7 @@ export const buttonBaseStyle =
         ? buttonTokens.spacing.iconButton.padding
         : `${buttonTokens.spacing.textButton.paddingVertical} ${buttonTokens.spacing.textButton.paddingHorizontal}`,
       borderRadius:
-        isIconButton && radius === 'rounded'
+        isIconButton && shape === 'circle'
           ? buttonTokens.borderRadius.icon
           : buttonTokens.borderRadius.text,
       border: !isIconButton

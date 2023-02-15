@@ -8,7 +8,7 @@ import { TestProps } from '../../utils/types';
 import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
 import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
-import { IconButtonRadius } from 'components/IconButton';
+import { IconButtonShape } from 'components/IconButton';
 import Typography from 'components/Typography';
 
 export type EventButtonProps = {
@@ -28,7 +28,7 @@ export type ButtonBaseProps = {
   /** Define if the button is an icon button */
   isIconButton?: boolean;
   /** Define the radius type of the icon button */
-  radius?: IconButtonRadius;
+  shape?: IconButtonShape;
   /** Defines the button type */
   htmlType?: 'submit' | 'reset' | 'button';
   /** Sx prop to override specific properties */
@@ -47,7 +47,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     isDisabled = false,
     isLoading = false,
     isIconButton = false,
-    radius = 'rounded',
+    shape = 'circle',
     children,
     dataTestId = '',
     dataTestPrefixId = '',
@@ -71,7 +71,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
           isBlock,
           isDisabled,
           isIconButton,
-          radius,
+          shape,
           sx,
         })}
         onClick={(event) => {
