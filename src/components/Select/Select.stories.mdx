@@ -12,6 +12,13 @@ const options = [
   { value: 'citrus', label: 'Citrus' },
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
 ];
+const optionsWithHelperInDisabled = [
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'citrus', label: 'Citrus' },
+  { value: 'why_Disabled', label: 'Why Disabled?', helperText: 'this is why!', isDisabled: true },
+];
 const groupOptions = [
   {
     value: 'group1',
@@ -381,6 +388,38 @@ Not Searchable Select
         isSearchable={false}
         label={'Flavour'}
         options={options}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'elevated'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+# Disabled option with helper text
+
+Disabled option with helper text
+
+<Preview>
+  <Story name="Disabled option with helper text">
+    <Stack>
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={optionsWithHelperInDisabled}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+      />
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={optionsWithHelperInDisabled}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+      />
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={optionsWithHelperInDisabled}
         handleSelectedOption={handleSelectedOption}
         styleType={'elevated'}
       />
