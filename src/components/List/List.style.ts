@@ -11,6 +11,16 @@ export const wrapperStyle =
       width: ${`${width}px` || '100%'};
     `;
 
+export const listLabelWithHelper: SerializedStyles = css`
+  display: flex;
+  flex-direction: column;
+  cursor: inherit;
+`;
+
+export const listLabel: SerializedStyles = css`
+  cursor: inherit;
+`;
+
 export const listStyle =
   ({ width, height, isSearchable }: { width?: number; height?: number; isSearchable?: boolean }) =>
   (theme: Theme): SerializedStyles =>
@@ -25,13 +35,9 @@ export const listStyle =
       overflow-x: hidden;
     `;
 
-export const listLabelWithHelper: SerializedStyles = css`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const listLabelHelperText = (theme: Theme): SerializedStyles => css`
   font-size: ${theme.typography.fontSizes['12']};
   font-weight: ${theme.typography.weights.regular};
   color: ${theme.utils.getColor('lightGrey', 650)};
+  cursor: inherit;
 `;

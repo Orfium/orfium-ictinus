@@ -5,7 +5,7 @@ import { ListItemType } from './types';
 import Icon from '../Icon';
 import { SelectOption } from '../Select/Select';
 import { FilterOption } from '../Filter/types';
-import { listLabelHelperText, listLabelWithHelper } from './List.style';
+import { listLabel, listLabelHelperText, listLabelWithHelper } from './List.style';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
 export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;
@@ -67,7 +67,7 @@ const renderLabelWithHelperText = (content: SelectOption | FilterOption) => {
   ) {
     return (
       <div css={listLabelWithHelper}>
-        <div>{content.label}</div>
+        <div css={listLabel}>{content.label}</div>
         <div css={listLabelHelperText}>{content.helperText}</div>
       </div>
     );
@@ -107,7 +107,7 @@ export const renderContent = (content: ListItemType, searchTerm?: string) => {
   ) {
     return (
       <>
-        <div>{renderLabelWithHelperText(content)}</div>
+        <div css={listLabel}>{renderLabelWithHelperText(content)}</div>
         {content?.iconProps && <Icon {...content.iconProps} />}
       </>
     );
