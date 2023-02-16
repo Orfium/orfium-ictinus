@@ -53,13 +53,13 @@ const Pagination = ({
         <IconButton
           name="arrowToLeft"
           onClick={navigateToFirstPage}
-          iconSize={20}
+          type="tertiary"
           isDisabled={isPrevPageDisabled || !hasPrevPage}
         />
       )}
       <IconButton
         name="arrowLeft"
-        iconSize={20}
+        type="tertiary"
         onClick={navigateToPrevPage}
         isDisabled={isPrevPageDisabled || !hasPrevPage}
       />
@@ -70,14 +70,14 @@ const Pagination = ({
 
       <IconButton
         name="arrowRight"
-        iconSize={20}
+        type="tertiary"
         onClick={navigateToNextPage}
         isDisabled={isNextPageDisabled || !hasNextPage}
       />
       {isEnhancedPaginationVisible && (
         <IconButton
           name="arrowToRight"
-          iconSize={20}
+          type="tertiary"
           onClick={navigateToLastPage}
           isDisabled={isNextPageDisabled || !hasNextPage}
         />

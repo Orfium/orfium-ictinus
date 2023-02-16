@@ -1,4 +1,4 @@
-import { useTheme } from '@emotion/react';
+import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
 import Icon from '../Icon';

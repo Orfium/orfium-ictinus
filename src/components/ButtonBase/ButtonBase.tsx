@@ -8,6 +8,7 @@ import { TestProps } from '../../utils/types';
 import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
 import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
+import { IconButtonShape } from 'components/IconButton';
 import Typography from 'components/Typography';
 
 export type EventButtonProps = {
@@ -24,6 +25,10 @@ export type ButtonBaseProps = {
   isLoading?: boolean;
   /** Define if the button is in disabled state */
   isDisabled?: boolean;
+  /** Define if the button is an icon button */
+  isIconButton?: boolean;
+  /** Define the radius type of the icon button */
+  shape?: IconButtonShape;
   /** Defines the button type */
   htmlType?: 'submit' | 'reset' | 'button';
   /** Sx prop to override specific properties */
@@ -41,6 +46,8 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     isBlock = false,
     isDisabled = false,
     isLoading = false,
+    isIconButton = false,
+    shape = 'circle',
     children,
     dataTestId = '',
     dataTestPrefixId = '',
@@ -63,6 +70,8 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
           isLoading,
           isBlock,
           isDisabled,
+          isIconButton,
+          shape,
           sx,
         })}
         onClick={(event) => {
@@ -73,7 +82,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         onBlur={onBlur}
         disabled={isDisabled}
       >
-        <Typography type="label02">{children}</Typography>
+        {isIconButton ? children : <Typography type="label02">{children}</Typography>}
       </button>
     </div>
   );

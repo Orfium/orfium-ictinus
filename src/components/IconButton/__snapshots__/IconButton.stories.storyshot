@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
+exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -32,9 +32,9 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
 .emotion-3 {
   color: #ffffff;
   background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
@@ -58,14 +58,6 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
 }
 
 .emotion-4 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: .25;
-}
-
-.emotion-5 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -81,14 +73,14 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
   justify-content: center;
 }
 
-.emotion-6 {
-  fill: white;
+.emotion-5 {
+  fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-6 path {
-  fill: white;
+.emotion-5 path {
+  fill: #ffffff;
 }
 
 <div
@@ -150,15 +142,11 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
           >
             <span
               className="emotion-4"
+              onClick={[Function]}
             >
               <span
                 className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
+              />
             </span>
           </button>
         </div>
@@ -168,7 +156,7 @@ exports[`Storyshots Design System/IconButton IconButton Playground 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
+exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -200,9 +188,9 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
 .emotion-3 {
   color: #ffffff;
   background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem rgba(0,0,0,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
   cursor: pointer;
   -webkit-transition: background-color,border 150ms linear;
   transition: background-color,border 150ms linear;
@@ -226,14 +214,6 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
 }
 
 .emotion-4 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: .25;
-}
-
-.emotion-5 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -249,14 +229,164 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
   justify-content: center;
 }
 
-.emotion-6 {
-  fill: white;
+.emotion-5 {
+  fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-6 path {
-  fill: white;
+.emotion-5 path {
+  fill: #ffffff;
+}
+
+.emotion-7 {
+  color: #1451dc;
+  background-color: #dcdfff;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-7:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-7:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-9 {
+  fill: #1451dc;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-9 path {
+  fill: #1451dc;
+}
+
+.emotion-11 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-11:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-11:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-16 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-16:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-16:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-16:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-16:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-20 {
+  color: #1451dc;
+  background-color: #dcdfff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-20:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-20:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-20:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-20:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-24 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-24:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-24:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-24:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
+}
+
+.emotion-24:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
 }
 
 <div
@@ -318,15 +448,11 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
           >
             <span
               className="emotion-4"
+              onClick={[Function]}
             >
               <span
                 className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
+              />
             </span>
           </button>
         </div>
@@ -342,7 +468,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
           className="emotion-2"
         >
           <button
-            className="emotion-3"
+            className="emotion-7"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
@@ -350,15 +476,11 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
           >
             <span
               className="emotion-4"
+              onClick={[Function]}
             >
               <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
+                className="emotion-9"
+              />
             </span>
           </button>
         </div>
@@ -374,7 +496,7 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
           className="emotion-2"
         >
           <button
-            className="emotion-3"
+            className="emotion-11"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
@@ -382,15 +504,99 @@ exports[`Storyshots Design System/IconButton IconButton Types 1`] = `
           >
             <span
               className="emotion-4"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-9"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-16"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+              onClick={[Function]}
             >
               <span
                 className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-20"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-9"
+              />
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-24"
+            data-testid="icon-button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-9"
+              />
             </span>
           </button>
         </div>

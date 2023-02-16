@@ -7,7 +7,7 @@ import { colorShades, flatColors, mainTypes } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-  title="Design System/IconButton"
+  title="Design System/Button/IconButton"
   component={IconButton}
   parameters={{
     design: [
@@ -41,16 +41,21 @@ import { IconButton } from '@orfium/ictinus';
 
 <Props of={IconButton} />
 
-# IconButton Colors
+# IconButton Types
 
-IconButton with different types
+IconButton with different types `primary, secondary, tertiary` and different shape types `circle, square`
 
 <Preview>
   <Story name="IconButton Types">
     <Stack>
-      <IconButton name="add" />
-      <IconButton name="add" />
-      <IconButton name="add" />
+      <IconButton name="dotsVertical" />
+      <IconButton name="dotsVertical" type="secondary" />
+      <IconButton name="dotsVertical" type="tertiary" />
+    </Stack>
+    <Stack>
+      <IconButton name="dotsVertical" shape="square" />
+      <IconButton name="dotsVertical" type="secondary" shape="square" />
+      <IconButton name="dotsVertical" type="tertiary" shape="square" />
     </Stack>
   </Story>
 </Preview>
@@ -68,6 +73,8 @@ IconButton with different types
             .map((iconName) => iconName),
           'check'
         )}
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+        shape={select('shape', ['circle', 'square'], 'circle')}
       />
     </Stack>
   </Story>

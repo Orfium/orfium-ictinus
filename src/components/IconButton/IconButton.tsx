@@ -1,28 +1,42 @@
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import { useTheme } from '../../index';
-import { EventProps } from '../../utils/common';
-import { TestProps } from '../../utils/types';
+import getButtonTokens from '../Button/Button.tokens';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
-export type IconButtonProps = Omit<ButtonBaseProps, 'iconLeftName' | 'iconRightName'> & {
-  /** Property indicating the size of the icon. Defaults to 16 */
-  iconSize?: number;
+export type IconButtonShape = 'circle' | 'square';
+
+export type IconButtonProps = Omit<
+  ButtonBaseProps,
+  'type' | 'isBlock' | 'isLoading' | 'isIconButton'
+> & {
+  /** This property defines the type of the IconButton */
+  type?: Exclude<ButtonTypes, 'danger' | 'inverted' | 'invertedAlt'>;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
-} & TestProps &
-  EventProps;
+  /** This property defines the shape of the IconButton */
+  shape?: IconButtonShape;
+};
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const { iconSize, name } = props;
+  const { name, type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
-  const iconColor = theme.utils.getAAColorFromSwatches('blue', 500);
+  const buttonTokens = getButtonTokens(theme);
+
+  const iconColor = buttonTokens.color[type].textColor;
 
   return (
-    <ButtonBase {...props} ref={ref} dataTestPrefixId={'icon-'}>
-      <Icon name={name} color={iconColor} size={iconSize} />
+    <ButtonBase
+      {...props}
+      ref={ref}
+      isIconButton
+      shape={shape}
+      dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
+    >
+      <Icon name={name} color={iconColor} />
     </ButtonBase>
   );
 });

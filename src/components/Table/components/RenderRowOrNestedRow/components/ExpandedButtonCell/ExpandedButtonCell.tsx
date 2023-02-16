@@ -54,6 +54,7 @@ const ExpandedButtonCell: React.FC<ExpandedButtonCellProps> = ({
             onClick={(e) => e.stopPropagation()}
           >
             <IconButton
+              type="tertiary"
               name={'chevronSmallDown'}
               onClick={toggleIsChecked}
               dataTestId={'expanded-button'}
