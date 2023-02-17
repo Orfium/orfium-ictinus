@@ -9,6 +9,11 @@ const dropdownList = [
   { label: 'Zimbabwe', value: 'ZW' },
 ];
 
+const dropdownListWithHelperText = [
+  { label: 'Greece', helperText: 'Europe', value: 'GR' },
+  { label: 'Zimbabwe', helperText: 'Africa', value: 'ZW' },
+];
+
 describe('Generic Select', () => {
   describe('Sync Select', () => {
     const handleSubmit = jest.fn();
@@ -56,10 +61,10 @@ describe('Generic Select', () => {
       userEvent.type(selectInput, 'Greece');
 
       expect(selectInput.value).toBe('Greece');
-      
+
       clearIcon = screen.getByTestId('select-right-icon');
       userEvent.click(clearIcon);
-      
+
       expect(selectInput.value).not.toBe('Greece');
     });
   });
@@ -118,6 +123,39 @@ describe('Generic Select', () => {
       await userEvent.type(selectInput, 'Gre', { delay: 500 });
 
       await waitFor(() => expect(asyncSearch).toHaveBeenCalledTimes(1));
+    });
+  });
+  describe('Select helper text option', () => {
+    const handleSubmit = jest.fn();
+
+    let selectInput: HTMLInputElement;
+
+    const renderSelect = () => {
+      return render(
+        <div>
+          <Select
+            isSearchable={false}
+            label={'Countries'}
+            options={dropdownListWithHelperText}
+            handleSelectedOption={handleSubmit}
+          />
+        </div>
+      );
+    };
+
+    afterEach(() => {
+      jest.clearAllMocks();
+    });
+
+    it('should display helper text when passed as prop', async () => {
+      renderSelect();
+
+      selectInput = screen.getByPlaceholderText('Countries') as HTMLInputElement;
+
+      userEvent.click(selectInput);
+
+      await waitFor(() => expect(screen.getByText('Greece')).toBeVisible());
+      await waitFor(() => expect(screen.getByText('Europe')).toBeVisible());
     });
   });
 });

@@ -3,6 +3,9 @@ import Highlighter from 'react-highlight-words';
 
 import { ListItemType } from './types';
 import Icon from '../Icon';
+import { SelectOption } from '../Select/Select';
+import { FilterOption } from '../Filter/types';
+import { listLabel, listLabelHelperText, listLabelWithHelper } from './List.style';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
 export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;
@@ -51,6 +54,28 @@ export const isSelected = ({
   return itemValue === selectedItemValue;
 };
 
+const renderLabelWithHelperText = (content: SelectOption | FilterOption) => {
+  if (
+    content &&
+    !React.isValidElement(content) &&
+    typeof content === 'object' &&
+    !Array.isArray(content) &&
+    'label' in content &&
+    content?.label &&
+    'helperText' in content &&
+    content?.helperText
+  ) {
+    return (
+      <div css={listLabelWithHelper}>
+        <div css={listLabel}>{content.label}</div>
+        <div css={listLabelHelperText}>{content.helperText}</div>
+      </div>
+    );
+  }
+
+  return content.label;
+};
+
 export const renderContent = (content: ListItemType, searchTerm?: string) => {
   if (
     searchTerm &&
@@ -80,7 +105,12 @@ export const renderContent = (content: ListItemType, searchTerm?: string) => {
     'label' in content &&
     content?.label
   ) {
-    return <><div>{content.label}</div> {content?.iconProps && <Icon {...content.iconProps}/>}</>;
+    return (
+      <>
+        <div css={listLabel}>{renderLabelWithHelperText(content)}</div>
+        {content?.iconProps && <Icon {...content.iconProps} />}
+      </>
+    );
   }
 
   return content;

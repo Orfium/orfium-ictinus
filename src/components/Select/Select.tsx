@@ -7,7 +7,6 @@ import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 import Icon, { OwnProps as IconProps } from '../Icon';
-import { AcceptedIconNames } from '../Icon/types'
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -16,14 +15,15 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 
-export type SelectOptionValues =  {
+export type SelectOptionValues = {
   value: string | number;
   label: string;
-  iconProps?: IconProps
-}
+  iconProps?: IconProps;
+};
 
 export type SelectOption = {
   isDisabled?: boolean;
+  helperText?: string;
   tooltipInfo?: string;
   options?: SelectOption[];
 } & SelectOptionValues;
@@ -123,7 +123,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     };
 
     const debouncedOnChange = React.useCallback(
-      debounce(term => {
+      debounce((term) => {
         asyncSearch(term);
       }, 400),
       []
@@ -150,19 +150,19 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
       return options
         .filter(
-          option =>
+          (option) =>
             !searchValue ||
             option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
-            !!option.options?.find(option =>
+            !!option.options?.find((option) =>
               option.label.toLowerCase().includes(searchValue.toLowerCase())
             )
         )
-        .map(option => {
+        .map((option) => {
           return option.label.toLowerCase().includes(searchValue.toLowerCase())
             ? option
             : {
                 ...option,
-                options: option.options?.filter(option =>
+                options: option.options?.filter((option) =>
                   option.label.toLowerCase().includes(searchValue.toLowerCase())
                 ),
               };
