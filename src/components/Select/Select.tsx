@@ -7,7 +7,6 @@ import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
 import { TestProps } from '../../utils/types';
 import Icon, { OwnProps as IconProps } from '../Icon';
-import { AcceptedIconNames } from '../Icon/types';
 import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
