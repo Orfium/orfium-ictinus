@@ -43,7 +43,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '12' # Replace with your node version
+          node-version: '18.13' # Replace with your node version
 
       - name: Install dependencies and build app
         run: |
