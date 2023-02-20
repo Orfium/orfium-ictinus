@@ -73,7 +73,7 @@ jobs:
           name: "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}"
           role-arn: "arn:aws:iam::102867326982:role/OrfiumCloudFormationExecRole"
           template: >-
-            https://orfium-cf-templates.s3.amazonaws.com/aws-cloudfront-s3-frontend.yml
+            https://orfium-cf-templates-repository.s3.amazonaws.com/frontend-v1.0.yml
           parameter-overrides: >-
             CSPHeaderValue=${{ env.CSP_HEADER }},
             FeDomainName=${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}.dev.orfium.xyz,
