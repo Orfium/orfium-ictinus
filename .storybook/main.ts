@@ -75,4 +75,8 @@ module.exports = {
 
     return config;
   },
+  env: (config: any) => ({
+    ...config,
+    STORYBOOK_ENV: 'true',
+  }),
 };
