@@ -26,7 +26,7 @@ jobs:
     env:
       PRODUCT: ictinus
       CI: false
-      # CSP_HEADER: "default-src 'self'; connect-src ${{ secrets.REACT_APP_API_BASE_URL }} https://*.s3.amazonaws.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
+      CSP_HEADER: "default-src 'self'; connect-src 'self' https://*.s3.amazonaws.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
       # Add all the env vars needed for yarn build to work. For secret values, add them first to your repo and then here
       # Example of secret:
       # SECRET_ENV: ${{ secrets.mysecret }}
