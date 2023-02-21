@@ -101,7 +101,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
   const [selectedRange, setSelectedRange] = useState<Range>(initDates(value, isDefaultNow));
 
   const handleSelectedOptions = useCallback((option: string) => {
-    const foundOption = extraOptions.find(optionItem => optionItem.value === option);
+    const foundOption = extraOptions.find((optionItem) => optionItem.value === option);
 
     if (foundOption) {
       setRange(
@@ -146,7 +146,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
       const endOfDay = day.endOf('day');
       // in case is a day picker
       if (!isRangePicker) {
-        return setRange(oldState => {
+        return setRange((oldState) => {
           if (oldState.from && oldState.to && day.isBetween(oldState.from, oldState.to)) {
             return { from: undefined, to: undefined };
           }
@@ -156,7 +156,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
       }
 
       // in case is range picker
-      return setRange(oldState => {
+      return setRange((oldState) => {
         if (oldState.from && oldState.to) {
           return { from: startOfDay, to: undefined };
         }
@@ -198,7 +198,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
 
       if (e.keyCode === 8) {
         //backspace
-        return setSelectedRange(oldState => {
+        return setSelectedRange((oldState) => {
           if (oldState.from && oldState.to) {
             return { ...oldState, to: undefined };
           }
@@ -218,7 +218,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
     <ClickAwayListener onClick={onCancel}>
       <PositionInScreen
         visible={isOpen}
-        parent={() => (
+        parent={
           <DatePickInput
             filterConfig={filterConfig}
             isRangePicker={isRangePicker}
@@ -230,7 +230,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
             isOpen={isOpen}
             dataTestId={dataTestId}
           />
-        )}
+        }
       >
         <div css={datePickerStyles()}>
           <OverlayComponent
