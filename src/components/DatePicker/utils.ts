@@ -1,10 +1,15 @@
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
+
 import { Range } from './OverlayComponent/OverlayComponent';
 
-export const currentDay = dayjs('11-03-2020 12:00:00');
+const fakeDate = dayjs('11-03-2020 12:00:00');
+const getDefaultDate = (date?: undefined | Dayjs) =>
+  process.env.NODE_ENV !== 'test' ? date : fakeDate;
 
-export const datepickerPropValue =
-  process.env.NODE_ENV !== 'test' ? undefined : dayjs('11-03-2020 12:00:00');
+export const currentDay =
+  process.env.STORYBOOK_ENV === 'true' ? fakeDate : (getDefaultDate(dayjs()) as Dayjs);
+
+export const datepickerPropValue = getDefaultDate();
 
 export const initDates = (
   value: {
@@ -13,7 +18,7 @@ export const initDates = (
   },
   isDefaultNow: boolean
 ): Range => {
-  const hasDefaultDate = isDefaultNow || Object.values(value).some(v => v);
+  const hasDefaultDate = isDefaultNow || Object.values(value).some((v) => v);
 
   return {
     from: hasDefaultDate ? dayjs(value.from) : undefined,
