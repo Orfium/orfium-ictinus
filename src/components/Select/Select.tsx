@@ -14,6 +14,7 @@ import handleSearch from '../utils/handleSearch';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
+import PositionInScreen from 'components/utils/PositionInScreen';
 
 export type SelectOptionValues = {
   value: string | number;
@@ -229,23 +230,29 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
           {...(!(disabled || locked) && { onClick: handleClick })}
           css={selectWrapper({ isSearchable })}
         >
-          <TextField
-            styleType={styleType}
-            rightIcon={rightIconRender}
-            onKeyDown={handleOnKeyDown}
-            onInput={handleOnInput}
-            onChange={ON_CHANGE_MOCK}
-            readOnly={!isSearchable}
-            disabled={disabled}
-            locked={locked}
-            dataTestId={generateTestDataId('select-input', dataTestId)}
-            {...restInputProps}
-            status={status}
-            value={searchValue || inputValue.label}
-            ref={combinedRefs}
-            autoComplete="off"
-          />
-          {open && (
+          <PositionInScreen
+            visible={open}
+            hasWrapperWidth
+            offsetY={8}
+            parent={
+              <TextField
+                styleType={styleType}
+                rightIcon={rightIconRender}
+                onKeyDown={handleOnKeyDown}
+                onInput={handleOnInput}
+                onChange={ON_CHANGE_MOCK}
+                readOnly={!isSearchable}
+                disabled={disabled}
+                locked={locked}
+                dataTestId={generateTestDataId('select-input', dataTestId)}
+                {...restInputProps}
+                status={status}
+                value={searchValue || inputValue.label}
+                ref={combinedRefs}
+                autoComplete="off"
+              />
+            }
+          >
             <SelectMenu
               filteredOptions={filteredOptions}
               handleOptionClick={handleOptionClick}
@@ -256,7 +263,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
               isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
             />
-          )}
+          </PositionInScreen>
         </div>
       </ClickAwayListener>
     );
