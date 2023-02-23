@@ -9,7 +9,6 @@ import Icon from '../../Icon';
 import TextField, { Props as TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
 import { Range } from '../OverlayComponent/OverlayComponent';
-import { rangeInputsWrapper } from './DatePickInput.style';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};
@@ -128,7 +127,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
       );
     };
 
-    return <div css={rangeInputsWrapper()}>{renderBase()}</div>;
+    return <div>{renderBase()}</div>;
   }
 );
 

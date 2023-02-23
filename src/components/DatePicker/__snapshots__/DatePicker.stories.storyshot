@@ -4153,10 +4153,6 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 }
 
 .emotion-3 {
-  max-width: 17.5rem;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4181,16 +4177,16 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   background-color: white;
 }
 
-.emotion-4:hover {
+.emotion-3:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-4:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4210,15 +4206,15 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-5>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-5 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -4231,36 +4227,36 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   min-width: 100%;
 }
 
-.emotion-7+label {
+.emotion-6+label {
   font-size: 0.9375rem;
 }
 
-.emotion-7:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7::placeholder {
+.emotion-6::placeholder {
   color: #5f6c85;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-6:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -4268,11 +4264,11 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   font-weight: 700;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-7 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -4288,7 +4284,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   margin-right: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4304,17 +4300,17 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #676767;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #676767;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4339,16 +4335,16 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   background-color: white;
 }
 
-.emotion-13:hover {
+.emotion-11:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-13:focus-within {
+.emotion-11:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-16 {
+.emotion-14 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -4361,36 +4357,36 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   min-width: 100%;
 }
 
-.emotion-16+label {
+.emotion-14+label {
   font-size: 0.8125rem;
 }
 
-.emotion-16:focus {
+.emotion-14:focus {
   outline: none;
 }
 
-.emotion-16::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-16::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-16:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-16::placeholder {
+.emotion-14::placeholder {
   color: #5f6c85;
 }
 
-.emotion-16:not(:focus):placeholder-shown+label {
+.emotion-14:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-16:focus+label,
-.emotion-16:not(:placeholder-shown)+label {
+.emotion-14:focus+label,
+.emotion-14:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -4398,7 +4394,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   font-weight: 700;
 }
 
-.emotion-16:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
@@ -4455,20 +4451,18 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <input
-                      className="emotion-7"
+                      className="emotion-6"
                       disabled={false}
                       onChange={[Function]}
                       onFocus={[Function]}
@@ -4479,14 +4473,14 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
                     />
                   </div>
                   <div
-                    className="emotion-8"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-10"
+                        className="emotion-9"
                       />
                     </span>
                   </div>
@@ -4509,20 +4503,18 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-13"
+                className="emotion-11"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <input
-                      className="emotion-16"
+                      className="emotion-14"
                       disabled={false}
                       onChange={[Function]}
                       onFocus={[Function]}
@@ -4533,14 +4525,14 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
                     />
                   </div>
                   <div
-                    className="emotion-8"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-10"
+                        className="emotion-9"
                       />
                     </span>
                   </div>
@@ -4590,16 +4582,12 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
 }
 
 .emotion-3 {
-  max-width: 17.5rem;
-}
-
-.emotion-4 {
   position: relative;
   display: inline-block;
   height: 2.25rem;
 }
 
-.emotion-5 {
+.emotion-4 {
   background: none;
   border: none;
   display: -webkit-box;
@@ -4615,24 +4603,24 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   min-width: 6.875rem;
 }
 
-.emotion-5:hover>div {
+.emotion-4:hover>div {
   background-color: #d0defd;
 }
 
-.emotion-5:active>div {
+.emotion-4:active>div {
   background-color: #b9cdfc;
 }
 
-.emotion-5:focus-visible>div {
+.emotion-4:focus-visible>div {
   border: 0.1875rem solid #C813D5;
 }
 
-.emotion-5:focus-visible>span {
+.emotion-4:focus-visible>span {
   border-top: 0.1875rem solid #C813D5;
   border-bottom: 0.1875rem solid #C813D5;
 }
 
-.emotion-6 {
+.emotion-5 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
@@ -4655,11 +4643,11 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-6:hover {
+.emotion-5:hover {
   border: solid 0.0625rem #1451dc;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4672,12 +4660,12 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   height: 100%;
 }
 
-.emotion-8 {
+.emotion-7 {
   line-height: 0.9375rem;
   margin-left: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-weight: 700;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4689,24 +4677,24 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   align-items: center;
 }
 
-.emotion-9 div {
+.emotion-8 div {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
 }
 
-.emotion-9 span {
+.emotion-8 span {
   font-weight: 700;
 }
 
-.emotion-10 {
+.emotion-9 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
 }
 
-.emotion-11 {
+.emotion-10 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -4722,13 +4710,13 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
   justify-content: center;
 }
 
-.emotion-12 {
+.emotion-11 {
   fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
-.emotion-12 path {
+.emotion-11 path {
   fill: #0f0f17;
 }
 
@@ -4785,45 +4773,43 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-4"
+                className="emotion-3"
                 data-testid="filter"
               >
                 <button
-                  className="emotion-5"
+                  className="emotion-4"
                   data-testid="filter-filter"
                   disabled={false}
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
                         <span
-                          className="emotion-9"
+                          className="emotion-8"
                         >
                           
                           <span
-                            className="emotion-10"
+                            className="emotion-9"
                           >
                             Select Dates : 11/03/2020 - 11/03/2020
                           </span>
                         </span>
                       </div>
                       <span
-                        className="emotion-11"
+                        className="emotion-10"
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-12"
+                          className="emotion-11"
                         />
                       </span>
                     </div>
@@ -4847,45 +4833,43 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-4"
+                className="emotion-3"
                 data-testid="filter"
               >
                 <button
-                  className="emotion-5"
+                  className="emotion-4"
                   data-testid="filter-filter"
                   disabled={false}
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
                         <span
-                          className="emotion-9"
+                          className="emotion-8"
                         >
                           
                           <span
-                            className="emotion-10"
+                            className="emotion-9"
                           >
                             Select Dates : 11/03/2020 - 11/03/2020
                           </span>
                         </span>
                       </div>
                       <span
-                        className="emotion-11"
+                        className="emotion-10"
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-12"
+                          className="emotion-11"
                         />
                       </span>
                     </div>
@@ -4936,10 +4920,6 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-4 {
-  max-width: 17.5rem;
-}
-
-.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4964,16 +4944,16 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   background-color: white;
 }
 
-.emotion-5:hover {
+.emotion-4:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-5:focus-within {
+.emotion-4:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-6 {
+.emotion-5 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -4993,15 +4973,15 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-6>div {
+.emotion-5>div {
   position: relative;
 }
 
-.emotion-7 {
+.emotion-6 {
   width: 100%;
 }
 
-.emotion-8 {
+.emotion-7 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -5014,36 +4994,36 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   min-width: 100%;
 }
 
-.emotion-8+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-8::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-8::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-8:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-8::placeholder {
+.emotion-7::placeholder {
   color: #5f6c85;
 }
 
-.emotion-8:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-8:focus+label,
-.emotion-8:not(:placeholder-shown)+label {
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -5051,11 +5031,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   font-weight: 700;
 }
 
-.emotion-8:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-9 {
+.emotion-8 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -5071,7 +5051,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   margin-right: 0;
 }
 
-.emotion-10 {
+.emotion-9 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5087,17 +5067,17 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   justify-content: center;
 }
 
-.emotion-11 {
+.emotion-10 {
   fill: #676767;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-11 path {
+.emotion-10 path {
   fill: #676767;
 }
 
-.emotion-33 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5122,16 +5102,16 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   background-color: white;
 }
 
-.emotion-33:hover {
+.emotion-29:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-33:focus-within {
+.emotion-29:focus-within {
   box-shadow: 0 0 0 0.125rem #e5143d;
   background-color: #e7ebf2;
 }
 
-.emotion-40 {
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5142,11 +5122,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-40 svg {
+.emotion-36 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-40 span {
+.emotion-36 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -5154,17 +5134,17 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-42 {
+.emotion-38 {
   fill: #FF1744;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-42 path {
+.emotion-38 path {
   fill: #FF1744;
 }
 
-.emotion-52 {
+.emotion-47 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5175,11 +5155,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-52 svg {
+.emotion-47 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-52 span {
+.emotion-47 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -5187,13 +5167,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-54 {
+.emotion-49 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-54 path {
+.emotion-49 path {
   fill: #5f6c85;
 }
 
@@ -5260,20 +5240,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               <div
                 className="emotion-3"
               >
-                <div
-                  className="emotion-4"
-                >
+                <div>
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-7"
+                        className="emotion-6"
                       >
                         <input
-                          className="emotion-8"
+                          className="emotion-7"
                           disabled={false}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -5284,14 +5262,14 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         />
                       </div>
                       <div
-                        className="emotion-9"
+                        className="emotion-8"
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-9"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-11"
+                            className="emotion-10"
                           />
                         </span>
                       </div>
@@ -5314,20 +5292,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               <div
                 className="emotion-3"
               >
-                <div
-                  className="emotion-4"
-                >
+                <div>
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-7"
+                        className="emotion-6"
                       >
                         <input
-                          className="emotion-8"
+                          className="emotion-7"
                           disabled={false}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -5338,14 +5314,14 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         />
                       </div>
                       <div
-                        className="emotion-9"
+                        className="emotion-8"
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-9"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-11"
+                            className="emotion-10"
                           />
                         </span>
                       </div>
@@ -5368,20 +5344,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               <div
                 className="emotion-3"
               >
-                <div
-                  className="emotion-4"
-                >
+                <div>
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-7"
+                        className="emotion-6"
                       >
                         <input
-                          className="emotion-8"
+                          className="emotion-7"
                           disabled={false}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -5392,14 +5366,14 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         />
                       </div>
                       <div
-                        className="emotion-9"
+                        className="emotion-8"
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-9"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-11"
+                            className="emotion-10"
                           />
                         </span>
                       </div>
@@ -5434,20 +5408,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               <div
                 className="emotion-3"
               >
-                <div
-                  className="emotion-4"
-                >
+                <div>
                   <div
-                    className="emotion-33"
+                    className="emotion-29"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-7"
+                        className="emotion-6"
                       >
                         <input
-                          className="emotion-8"
+                          className="emotion-7"
                           disabled={false}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -5458,29 +5430,29 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         />
                       </div>
                       <div
-                        className="emotion-9"
+                        className="emotion-8"
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-9"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-11"
+                            className="emotion-10"
                           />
                         </span>
                       </div>
                     </div>
                   </div>
                   <div
-                    className="emotion-40"
+                    className="emotion-36"
                     data-testid="error"
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-9"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-42"
+                        className="emotion-38"
                       />
                     </span>
                     Wrong Date
@@ -5502,20 +5474,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               <div
                 className="emotion-3"
               >
-                <div
-                  className="emotion-4"
-                >
+                <div>
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <div
-                      className="emotion-6"
+                      className="emotion-5"
                     >
                       <div
-                        className="emotion-7"
+                        className="emotion-6"
                       >
                         <input
-                          className="emotion-8"
+                          className="emotion-7"
                           disabled={false}
                           onChange={[Function]}
                           onFocus={[Function]}
@@ -5526,29 +5496,29 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         />
                       </div>
                       <div
-                        className="emotion-9"
+                        className="emotion-8"
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-9"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-11"
+                            className="emotion-10"
                           />
                         </span>
                       </div>
                     </div>
                   </div>
                   <div
-                    className="emotion-52"
+                    className="emotion-47"
                     data-testid="error"
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-9"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-54"
+                        className="emotion-49"
                       />
                     </span>
                     Dates are important
@@ -5599,10 +5569,6 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 }
 
 .emotion-3 {
-  max-width: 17.5rem;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5627,16 +5593,16 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   background-color: white;
 }
 
-.emotion-4:hover {
+.emotion-3:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-4:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -5656,15 +5622,15 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-5>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-5 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -5677,36 +5643,36 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   min-width: 100%;
 }
 
-.emotion-7+label {
+.emotion-6+label {
   font-size: 0.9375rem;
 }
 
-.emotion-7:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7::placeholder {
+.emotion-6::placeholder {
   color: #5f6c85;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-6:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -5714,11 +5680,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   font-weight: 700;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-7 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -5734,7 +5700,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   margin-right: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5750,17 +5716,17 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #676767;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #676767;
 }
 
-.emotion-13 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5785,16 +5751,16 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   background-color: white;
 }
 
-.emotion-13:hover {
+.emotion-11:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-13:focus-within {
+.emotion-11:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-16 {
+.emotion-14 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -5807,36 +5773,36 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   min-width: 100%;
 }
 
-.emotion-16+label {
+.emotion-14+label {
   font-size: 0.8125rem;
 }
 
-.emotion-16:focus {
+.emotion-14:focus {
   outline: none;
 }
 
-.emotion-16::-webkit-input-placeholder {
+.emotion-14::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-16::-moz-placeholder {
+.emotion-14::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-16:-ms-input-placeholder {
+.emotion-14:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-16::placeholder {
+.emotion-14::placeholder {
   color: #5f6c85;
 }
 
-.emotion-16:not(:focus):placeholder-shown+label {
+.emotion-14:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-16:focus+label,
-.emotion-16:not(:placeholder-shown)+label {
+.emotion-14:focus+label,
+.emotion-14:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -5844,7 +5810,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   font-weight: 700;
 }
 
-.emotion-16:disabled {
+.emotion-14:disabled {
   cursor: not-allowed;
 }
 
@@ -5901,20 +5867,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <input
-                      className="emotion-7"
+                      className="emotion-6"
                       disabled={false}
                       onChange={[Function]}
                       onFocus={[Function]}
@@ -5925,14 +5889,14 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
                     />
                   </div>
                   <div
-                    className="emotion-8"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-10"
+                        className="emotion-9"
                       />
                     </span>
                   </div>
@@ -5955,20 +5919,18 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-13"
+                className="emotion-11"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <input
-                      className="emotion-16"
+                      className="emotion-14"
                       disabled={false}
                       onChange={[Function]}
                       onFocus={[Function]}
@@ -5979,14 +5941,14 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
                     />
                   </div>
                   <div
-                    className="emotion-8"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-10"
+                        className="emotion-9"
                       />
                     </span>
                   </div>
@@ -6036,10 +5998,6 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
 }
 
 .emotion-3 {
-  max-width: 17.5rem;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6064,16 +6022,16 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   background-color: white;
 }
 
-.emotion-4:hover {
+.emotion-3:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-4:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6093,15 +6051,15 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   padding: 0 1rem;
 }
 
-.emotion-5>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-5 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-6 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -6114,36 +6072,36 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   min-width: 100%;
 }
 
-.emotion-7+label {
+.emotion-6+label {
   font-size: 0.9375rem;
 }
 
-.emotion-7:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-6::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-6::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-6:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-7::placeholder {
+.emotion-6::placeholder {
   color: #5f6c85;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-6:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-6:focus+label,
+.emotion-6:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -6151,11 +6109,11 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   font-weight: 700;
 }
 
-.emotion-7:disabled {
+.emotion-6:disabled {
   cursor: not-allowed;
 }
 
-.emotion-8 {
+.emotion-7 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -6171,7 +6129,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   margin-right: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6187,13 +6145,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #676767;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #676767;
 }
 
@@ -6250,20 +6208,18 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
           <div
             className="emotion-2"
           >
-            <div
-              className="emotion-3"
-            >
+            <div>
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-5"
                   >
                     <input
-                      className="emotion-7"
+                      className="emotion-6"
                       disabled={false}
                       onChange={[Function]}
                       onFocus={[Function]}
@@ -6274,14 +6230,14 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
                     />
                   </div>
                   <div
-                    className="emotion-8"
+                    className="emotion-7"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-8"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-10"
+                        className="emotion-9"
                       />
                     </span>
                   </div>
@@ -6317,10 +6273,6 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
 }
 
 .emotion-2 {
-  max-width: 17.5rem;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6345,16 +6297,16 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   background-color: white;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6374,15 +6326,15 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   padding: 0 1rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -6395,36 +6347,36 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-5+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: #5f6c85;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -6432,11 +6384,11 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-6 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -6452,7 +6404,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   margin-right: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6468,13 +6420,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-8 {
   fill: #676767;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-9 path {
+.emotion-8 path {
   fill: #676767;
 }
 
@@ -6521,20 +6473,18 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
       <div
         className="emotion-1"
       >
-        <div
-          className="emotion-2"
-        >
+        <div>
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <input
-                  className="emotion-6"
+                  className="emotion-5"
                   disabled={false}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -6545,14 +6495,14 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
                 />
               </div>
               <div
-                className="emotion-7"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-8"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                   />
                 </span>
               </div>
@@ -6586,10 +6536,6 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
 }
 
 .emotion-2 {
-  max-width: 17.5rem;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6614,16 +6560,16 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   background-color: white;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -6643,15 +6589,15 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   padding: 0 1rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -6664,36 +6610,36 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-5+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: #5f6c85;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -6701,11 +6647,11 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-6 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -6721,7 +6667,7 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   margin-right: 0;
 }
 
-.emotion-8 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6737,13 +6683,13 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-8 {
   fill: #676767;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-9 path {
+.emotion-8 path {
   fill: #676767;
 }
 
@@ -6790,20 +6736,18 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
       <div
         className="emotion-1"
       >
-        <div
-          className="emotion-2"
-        >
+        <div>
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <input
-                  className="emotion-6"
+                  className="emotion-5"
                   disabled={false}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -6814,14 +6758,14 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
                 />
               </div>
               <div
-                className="emotion-7"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-8"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                   />
                 </span>
               </div>
