@@ -40,7 +40,7 @@ export const buttonSpanStyle =
         : {};
 
     return css({
-      'button:first-child': {
+      'button:first-of-type': {
         borderTopRightRadius: 'unset',
         borderBottomRightRadius: 'unset',
       },
