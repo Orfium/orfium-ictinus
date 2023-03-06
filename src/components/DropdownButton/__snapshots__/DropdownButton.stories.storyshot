@@ -38,7 +38,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   border-right: 0.0625rem solid transparent;
 }
 
-.emotion-4 button:first-child {
+.emotion-4 button:first-of-type {
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
 }
@@ -234,7 +234,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   border-radius: 0.25rem;
 }
 
-.emotion-28 button:first-child {
+.emotion-28 button:first-of-type {
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
 }
@@ -359,7 +359,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 >
                   <button
                     className="emotion-6"
-                    data-testid="button"
+                    data-testid="dropdownbutton"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
@@ -386,7 +386,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 >
                   <button
                     className="emotion-11"
-                    data-testid="icon-button"
+                    data-testid="dropdown-toggle-icon-button"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
@@ -430,7 +430,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 >
                   <button
                     className="emotion-18"
-                    data-testid="button"
+                    data-testid="dropdownbutton"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
@@ -457,7 +457,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 >
                   <button
                     className="emotion-23"
-                    data-testid="icon-button"
+                    data-testid="dropdown-toggle-icon-button"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
@@ -501,7 +501,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 >
                   <button
                     className="emotion-30"
-                    data-testid="button"
+                    data-testid="dropdownbutton"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
@@ -528,7 +528,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 >
                   <button
                     className="emotion-35"
-                    data-testid="icon-button"
+                    data-testid="dropdown-toggle-icon-button"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
@@ -768,7 +768,7 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
               >
                 <button
                   className="emotion-5"
-                  data-testid="icon-button"
+                  data-testid="icon-dropdown-icon-button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
@@ -808,7 +808,7 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
               >
                 <button
                   className="emotion-11"
-                  data-testid="icon-button"
+                  data-testid="icon-dropdown-icon-button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
@@ -848,7 +848,7 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
               >
                 <button
                   className="emotion-17"
-                  data-testid="icon-button"
+                  data-testid="icon-dropdown-icon-button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
