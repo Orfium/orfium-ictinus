@@ -1,7 +1,9 @@
 import { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
 import React, { useCallback } from 'react';
+import { TestProps } from 'utils/types';
 
+import { generateTestDataId } from '../../utils/helpers';
 import {
   buttonSpanStyle,
   iconButtonSpanStyle,
@@ -15,7 +17,7 @@ import List from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
 
-export type DropdownButtonProps = {
+export type DropdownButtonProps = TestProps & {
   /** The Dropdown Items' CTA */
   onOptionSelect: (option: string) => void;
   /** The type of the Dropdown Button */
@@ -35,6 +37,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
     menuPosition = 'left',
     items,
     type = 'primary',
+    dataTestPrefixId = '',
     children,
   } = props;
 
@@ -69,12 +72,22 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
       <div css={wrapperStyle({ type, isIconButton })}>
         {isIconButton ? (
           <div css={iconButtonWrapper({ type, isOpen })}>
-            <IconButton type={type} name="dotsVertical" onClick={handleIconButtonClick} />
+            <IconButton
+              type={type}
+              name="dotsVertical"
+              onClick={handleIconButtonClick}
+              dataTestPrefixId={generateTestDataId('icon-dropdown', dataTestPrefixId)}
+            />
           </div>
         ) : (
           <div css={{ display: 'flex' }}>
             <div css={buttonSpanStyle({ type })}>
-              <Button type={type} ref={ref} onClick={handleButtonClick}>
+              <Button
+                type={type}
+                ref={ref}
+                onClick={handleButtonClick}
+                dataTestPrefixId={generateTestDataId('dropdown', dataTestPrefixId)}
+              >
                 {children}
               </Button>
             </div>
@@ -84,13 +97,21 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
                 name="triangleDown"
                 shape="square"
                 onClick={handleIconButtonClick}
+                dataTestPrefixId={generateTestDataId('dropdown-toggle', dataTestPrefixId)}
               />
             </div>
           </div>
         )}
         {isOpen && (
           <div css={optionsStyle({ menuPosition })(theme)}>
-            {items && <List data={items} rowSize={'small'} handleOptionClick={handleOptionClick} />}
+            {items && (
+              <List
+                data={items}
+                rowSize={'small'}
+                handleOptionClick={handleOptionClick}
+                dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}
+              />
+            )}
           </div>
         )}
       </div>
