@@ -60,7 +60,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
 
   return (
     <div css={buttonWrapperStyle({ isBlock })}>
-      {isLoading && !isDisabled && <ButtonLoader type={type} dataTestId={testIdName} />}
+      {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
       <button
         ref={ref}
         type={htmlType}
