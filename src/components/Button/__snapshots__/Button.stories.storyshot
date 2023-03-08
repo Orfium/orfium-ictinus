@@ -11,56 +11,6 @@ exports[`Storyshots Design System/Button/Default (Text) Block Button 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -168,29 +118,30 @@ exports[`Storyshots Design System/Button/Default (Text) Block Button 1`] = `
 
 .emotion-15 {
   width: 100%;
-  height: 0.25rem;
   position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1248c4;
 }
 
 .emotion-16 {
   width: 100%;
   height: 0.25rem;
   overflow: hidden;
-  background-color: #fcb8f6;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1248c4;
   position: relative;
+}
+
+.emotion-16:before {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background: #fcb8f6;
+  display: block;
 }
 
 .emotion-17 {
   width: 50%;
   background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1248c4;
+  height: 0.125rem;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -2027,56 +1978,6 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
   }
 }
 
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes animation-0 {
-  from {
-    left: -50%;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -2138,29 +2039,30 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
 
 .emotion-6 {
   width: 100%;
-  height: 0.25rem;
   position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1248c4;
 }
 
 .emotion-7 {
   width: 100%;
   height: 0.25rem;
   overflow: hidden;
-  background-color: #fcb8f6;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1248c4;
   position: relative;
+}
+
+.emotion-7:before {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background: #fcb8f6;
+  display: block;
 }
 
 .emotion-8 {
   width: 50%;
   background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1248c4;
+  height: 0.125rem;
   position: absolute;
   bottom: 0;
   top: 0;
@@ -2221,38 +2123,6 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-13 {
-  width: 100%;
-  height: 0.25rem;
-  position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #cad0ff;
-}
-
-.emotion-14 {
-  width: 100%;
-  height: 0.25rem;
-  overflow: hidden;
-  background-color: #fcb8f6;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #cad0ff;
-  position: relative;
-}
-
-.emotion-15 {
-  width: 50%;
-  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #cad0ff;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  -webkit-animation: animation-0 1.5s infinite;
-  animation: animation-0 1.5s infinite;
-}
-
 .emotion-16 {
   color: #1451dc;
   background-color: #cad0ff;
@@ -2280,38 +2150,6 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
 
 .emotion-16:active:not(:disabled) {
   background-color: #cad0ff;
-}
-
-.emotion-20 {
-  width: 100%;
-  height: 0.125rem;
-  position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset rgba(23,91,245,0.14);
-}
-
-.emotion-21 {
-  width: 100%;
-  height: 0.125rem;
-  overflow: hidden;
-  background-color: #fcb8f6;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset rgba(23,91,245,0.14);
-  position: relative;
-}
-
-.emotion-22 {
-  width: 50%;
-  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.125rem;
-  box-shadow: 0 -2px 0px 0px inset rgba(23,91,245,0.14);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  -webkit-animation: animation-0 1.5s infinite;
-  animation: animation-0 1.5s infinite;
 }
 
 .emotion-23 {
@@ -2343,38 +2181,6 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
   background-color: rgba(23,91,245,0.14);
 }
 
-.emotion-27 {
-  width: 100%;
-  height: 0.25rem;
-  position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #ffd0e1;
-}
-
-.emotion-28 {
-  width: 100%;
-  height: 0.25rem;
-  overflow: hidden;
-  background-color: #fcb8f6;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #ffd0e1;
-  position: relative;
-}
-
-.emotion-29 {
-  width: 50%;
-  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #ffd0e1;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  -webkit-animation: animation-0 1.5s infinite;
-  animation: animation-0 1.5s infinite;
-}
-
 .emotion-30 {
   color: #b2104a;
   background-color: #ffd0e1;
@@ -2404,38 +2210,6 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
   background-color: #ffd0e1;
 }
 
-.emotion-34 {
-  width: 100%;
-  height: 0.25rem;
-  position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1de9b6;
-}
-
-.emotion-35 {
-  width: 100%;
-  height: 0.25rem;
-  overflow: hidden;
-  background-color: #fcb8f6;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1de9b6;
-  position: relative;
-}
-
-.emotion-36 {
-  width: 50%;
-  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset #1de9b6;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  -webkit-animation: animation-0 1.5s infinite;
-  animation: animation-0 1.5s infinite;
-}
-
 .emotion-37 {
   color: #212332;
   background-color: #1de9b6;
@@ -2463,38 +2237,6 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
 
 .emotion-37:active:not(:disabled) {
   background-color: #1de9b6;
-}
-
-.emotion-41 {
-  width: 100%;
-  height: 0.125rem;
-  position: absolute;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset rgba(168,177,255,0.14);
-}
-
-.emotion-42 {
-  width: 100%;
-  height: 0.125rem;
-  overflow: hidden;
-  background-color: #fcb8f6;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  box-shadow: 0 -2px 0px 0px inset rgba(168,177,255,0.14);
-  position: relative;
-}
-
-.emotion-43 {
-  width: 50%;
-  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
-  height: 0.125rem;
-  box-shadow: 0 -2px 0px 0px inset rgba(168,177,255,0.14);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  -webkit-animation: animation-0 1.5s infinite;
-  animation: animation-0 1.5s infinite;
 }
 
 .emotion-44 {
@@ -2642,14 +2384,14 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
               className="emotion-5"
             >
               <div
-                className="emotion-13"
+                className="emotion-6"
                 data-testid="button"
               >
                 <div
-                  className="emotion-14"
+                  className="emotion-7"
                 >
                   <div
-                    className="emotion-15"
+                    className="emotion-8"
                   />
                 </div>
               </div>
@@ -2677,14 +2419,14 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
               className="emotion-5"
             >
               <div
-                className="emotion-20"
+                className="emotion-6"
                 data-testid="button"
               >
                 <div
-                  className="emotion-21"
+                  className="emotion-7"
                 >
                   <div
-                    className="emotion-22"
+                    className="emotion-8"
                   />
                 </div>
               </div>
@@ -2712,14 +2454,14 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
               className="emotion-5"
             >
               <div
-                className="emotion-27"
+                className="emotion-6"
                 data-testid="button"
               >
                 <div
-                  className="emotion-28"
+                  className="emotion-7"
                 >
                   <div
-                    className="emotion-29"
+                    className="emotion-8"
                   />
                 </div>
               </div>
@@ -2747,14 +2489,14 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
               className="emotion-5"
             >
               <div
-                className="emotion-34"
+                className="emotion-6"
                 data-testid="button"
               >
                 <div
-                  className="emotion-35"
+                  className="emotion-7"
                 >
                   <div
-                    className="emotion-36"
+                    className="emotion-8"
                   />
                 </div>
               </div>
@@ -2782,14 +2524,14 @@ exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
               className="emotion-5"
             >
               <div
-                className="emotion-41"
+                className="emotion-6"
                 data-testid="button"
               >
                 <div
-                  className="emotion-42"
+                  className="emotion-7"
                 >
                   <div
-                    className="emotion-43"
+                    className="emotion-8"
                   />
                 </div>
               </div>
