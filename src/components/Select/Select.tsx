@@ -11,7 +11,9 @@ import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
+import MultiselectTextField from './components/MultiselectTextField';
 import SelectMenu from './components/SelectMenu/SelectMenu';
+import useMultiselectUtils from './hooks/useMultiselectUtils';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
 import PositionInScreen from 'components/utils/PositionInScreen';
@@ -37,8 +39,6 @@ export type Props = {
   defaultValue?: SelectOption;
   /** the value of the select if select is controlled */
   selectedOption?: SelectOption;
-  /** if the select has tags */
-  multi?: boolean;
   /** Options for the select dropdown */
   options: SelectOption[];
   /** if the component is used asynchronously */
@@ -57,8 +57,14 @@ export type Props = {
   isLoading?: boolean;
   /** if options list is virtualized */
   isVirtualized?: boolean;
-  /** A callback that's called when the user clicks the 'clear' icon */
+  /** A callback that's called when the user clicks the 'clear' icon of the (Single) Select, or the 'clear all' button of the MultiSelect */
   onClear?: () => void;
+  /** A callback that's called when the user clicks the 'clear' icon of a specific Chip in MultiSelect */
+  onOptionDelete?: (option: SelectOption) => void;
+  /** If true the user can select multiple options */
+  multi?: boolean;
+  /** The selected options in case of multiSelect */
+  selectedOptions?: SelectOption[];
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -89,6 +95,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       locked,
       dataTestId,
       onClear,
+      onOptionDelete,
+      selectedOptions = [],
       ...restInputProps
     },
     ref
@@ -100,12 +108,38 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
     const [searchValue, setSearchValue] = React.useState('');
 
+    const {
+      multiSelectedOptions,
+      setMultiSelectedOpts,
+      availableMultiSelectOptions,
+      setAvailableMultiSelectOptions,
+      handleOptionDelete,
+      handleClearAllOptions,
+    } = useMultiselectUtils({
+      selectedOptions,
+      options,
+      setOpen,
+      setSearchValue,
+      isSearchable,
+      onClear,
+      onOptionDelete,
+      multi,
+    });
+
     useEffect(() => {
       setInputValue(defaultValue || selectedOption);
     }, [defaultValue, selectedOption]);
 
     const handleOptionClick = (option: SelectOption) => {
-      setInputValue(option);
+      if (multi) {
+        setMultiSelectedOpts([...multiSelectedOptions, option]);
+        setAvailableMultiSelectOptions(
+          availableMultiSelectOptions.filter((opt) => opt.value !== option.value)
+        );
+      } else {
+        setInputValue(option);
+      }
+
       setOpen(false);
 
       if (isSearchable) {
@@ -146,10 +180,10 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     const filteredOptions = useMemo(() => {
       if (isAsync) {
-        return options;
+        return multi ? availableMultiSelectOptions : options;
       }
 
-      return options
+      return (multi ? availableMultiSelectOptions : options)
         .filter(
           (option) =>
             !searchValue ||
@@ -168,7 +202,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
                 ),
               };
         });
-    }, [searchValue, options, isAsync]);
+    }, [isAsync, multi, availableMultiSelectOptions, options, searchValue]);
 
     const rightIconNameSelector = useMemo(() => {
       if (isSearchable) {
@@ -235,22 +269,40 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
             hasWrapperWidth
             offsetY={8}
             parent={
-              <TextField
-                styleType={styleType}
-                rightIcon={rightIconRender}
-                onKeyDown={handleOnKeyDown}
-                onInput={handleOnInput}
-                onChange={ON_CHANGE_MOCK}
-                readOnly={!isSearchable}
-                disabled={disabled}
-                locked={locked}
-                dataTestId={generateTestDataId('select-input', dataTestId)}
-                {...restInputProps}
-                status={status}
-                value={searchValue || inputValue.label}
-                ref={combinedRefs}
-                autoComplete="off"
-              />
+              multi ? (
+                <MultiselectTextField
+                  selectedOptions={multiSelectedOptions}
+                  onInput={handleOnInput}
+                  onOptionDelete={handleOptionDelete}
+                  onClearAllOptions={handleClearAllOptions}
+                  isLoading={isLoading}
+                  disabled={disabled}
+                  locked={locked}
+                  readOnly={!isSearchable}
+                  dataTestId={generateTestDataId('select-input', dataTestId)}
+                  {...restInputProps}
+                  status={status}
+                  value={searchValue || inputValue.label}
+                  autoComplete="off"
+                />
+              ) : (
+                <TextField
+                  styleType={styleType}
+                  rightIcon={rightIconRender}
+                  onKeyDown={handleOnKeyDown}
+                  onInput={handleOnInput}
+                  onChange={ON_CHANGE_MOCK}
+                  readOnly={!isSearchable}
+                  disabled={disabled}
+                  locked={locked}
+                  dataTestId={generateTestDataId('select-input', dataTestId)}
+                  {...restInputProps}
+                  status={status}
+                  value={searchValue || inputValue.label}
+                  ref={combinedRefs}
+                  autoComplete="off"
+                />
+              )
             }
           >
             <SelectMenu
