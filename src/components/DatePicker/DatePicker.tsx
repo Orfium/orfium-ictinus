@@ -97,8 +97,13 @@ const DatePicker: React.FC<Props & TestProps> = ({
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
 
-  const [range, setRange] = useState<Range>(initDates(value, isDefaultNow));
-  const [selectedRange, setSelectedRange] = useState<Range>(initDates(value, isDefaultNow));
+  const [range, setRange] = useState<Range>(() => initDates(value, isDefaultNow));
+  const [selectedRange, setSelectedRange] = useState<Range>(() => initDates(value, isDefaultNow));
+
+  useEffect(() => {
+    setRange(initDates(value, isDefaultNow));
+    setSelectedRange(initDates(value, isDefaultNow));
+  }, [value, isDefaultNow]);
 
   const handleSelectedOptions = useCallback((option: string) => {
     const foundOption = extraOptions.find((optionItem) => optionItem.value === option);
