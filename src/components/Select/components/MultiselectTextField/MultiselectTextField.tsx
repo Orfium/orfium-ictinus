@@ -15,7 +15,6 @@ import {
 } from './MultiselectTextField.style';
 import Chip from 'components/Chip';
 import Icon from 'components/Icon';
-import { AcceptedIconNames } from 'components/Icon/types';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
 import { SelectOption } from 'components/Select/Select';

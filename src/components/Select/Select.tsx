@@ -105,8 +105,13 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     const [open, setOpen] = React.useState(false);
     const inputRef = React.useRef<HTMLInputElement>(null);
     const combinedRefs = useCombinedRefs(inputRef, ref);
-    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
+
+    const initialValue = defaultValue || selectedOption;
+
+    const [inputValue, setInputValue] = React.useState(initialValue);
     const [searchValue, setSearchValue] = React.useState('');
+
+    const textFieldValue = searchValue || inputValue.label;
 
     const {
       multiSelectedOptions,
@@ -127,8 +132,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     });
 
     useEffect(() => {
-      setInputValue(defaultValue || selectedOption);
-    }, [defaultValue, selectedOption]);
+      setInputValue(initialValue);
+    }, [initialValue]);
 
     const handleOptionClick = (option: SelectOption) => {
       if (multi) {
@@ -179,11 +184,13 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     );
 
     const filteredOptions = useMemo(() => {
+      const optionsToBeFiltered = multi ? availableMultiSelectOptions : options;
+
       if (isAsync) {
-        return multi ? availableMultiSelectOptions : options;
+        return optionsToBeFiltered;
       }
 
-      return (multi ? availableMultiSelectOptions : options)
+      return optionsToBeFiltered
         .filter(
           (option) =>
             !searchValue ||
@@ -282,7 +289,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
                   dataTestId={generateTestDataId('select-input', dataTestId)}
                   {...restInputProps}
                   status={status}
-                  value={searchValue || inputValue.label}
+                  value={textFieldValue}
                   autoComplete="off"
                 />
               ) : (
@@ -298,7 +305,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
                   dataTestId={generateTestDataId('select-input', dataTestId)}
                   {...restInputProps}
                   status={status}
-                  value={searchValue || inputValue.label}
+                  value={textFieldValue}
                   ref={combinedRefs}
                   autoComplete="off"
                 />
