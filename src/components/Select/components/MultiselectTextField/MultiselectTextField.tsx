@@ -67,6 +67,30 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
 
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
 
+    const inputPlaceholder = useMemo(() => {
+      if (!label && placeholder) {
+        if (required) {
+          return `${placeholder} *`;
+        }
+
+        return placeholder;
+      }
+
+      return label;
+    }, [label, placeholder, required]);
+
+    const iconName = useMemo(() => {
+      if (locked) {
+        return 'lock';
+      }
+
+      if (hasValue) {
+        return 'close';
+      }
+
+      return 'search';
+    }, [hasValue, locked]);
+
     const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
       if (value === '' && event.key === 'Backspace') {
         onOptionDelete();
@@ -99,29 +123,25 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       [disabled, locked, onOptionDelete, selectedOptions]
     );
 
-    const icon = useMemo(
-      () =>
-        rightIcon ? (
-          typeof rightIcon === 'string' ? (
-            <Icon
-              name={rightIcon as AcceptedIconNames}
-              size={20}
-              color={theme.utils.getColor('lightGrey', 650)}
-            />
-          ) : (
-            rightIcon
-          )
-        ) : (
-          <Icon
-            size={20}
-            name={locked ? 'lock' : hasValue ? 'close' : 'search'}
-            color={theme.utils.getColor('lightGrey', 650)}
-            onClick={hasValue && !locked ? onClearAllOptions : undefined}
-            dataTestId="select-right-icon"
-          />
-        ),
-      [hasValue, locked, onClearAllOptions, rightIcon, theme.utils]
-    );
+    const icon = useMemo(() => {
+      if (rightIcon) {
+        if (typeof rightIcon === 'string') {
+          return <Icon name={rightIcon} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
+        }
+
+        return rightIcon;
+      }
+
+      return (
+        <Icon
+          size={20}
+          name={iconName}
+          color={theme.utils.getColor('lightGrey', 650)}
+          onClick={hasValue && !locked ? onClearAllOptions : undefined}
+          dataTestId="select-right-icon"
+        />
+      );
+    }, [hasValue, iconName, locked, onClearAllOptions, rightIcon, theme.utils]);
 
     return (
       <div ref={TextfieldRef}>
@@ -148,7 +168,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
                 lean,
                 sx: inputOverrides(),
               })}
-              placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
+              placeholder={inputPlaceholder}
               required={required}
               id={id}
               disabled={disabled || locked}
