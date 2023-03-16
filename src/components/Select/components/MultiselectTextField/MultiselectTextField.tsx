@@ -68,11 +68,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
 
     const inputPlaceholder = useMemo(() => {
       if (!label && placeholder) {
-        if (required) {
-          return `${placeholder} *`;
-        }
-
-        return placeholder;
+        return required ? `${placeholder} *` : placeholder;
       }
 
       return label;

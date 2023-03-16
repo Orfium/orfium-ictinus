@@ -26,6 +26,8 @@ const selectedOptions = [
   { value: 'banana', label: 'Banana' },
   { value: 'citrus', label: 'Citrus' },
   { value: 'sorbet', label: 'Sorbet' },
+  { value: 'cookie_dough', label: 'Cookie Dough' },
+  { value: 'buttered_pecan', label: 'Buttered Pecan' },
 ];
 
 export const dummyUnrefinedData = new Array(15).fill(undefined).map((__, index) => ({
@@ -120,7 +122,6 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             asyncSearch={mockedApiCall}
             isLoading={isLoading}
             onKeyPress={() => setIsLoading(true)}
-            minCharactersToSearch={5}
           />
         </div>
       </div>

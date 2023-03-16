@@ -106,7 +106,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     const inputRef = React.useRef<HTMLInputElement>(null);
     const combinedRefs = useCombinedRefs(inputRef, ref);
 
-    const initialValue = defaultValue || selectedOption;
+    const initialValue = defaultValue ?? selectedOption;
 
     const [inputValue, setInputValue] = React.useState(initialValue);
     const [searchValue, setSearchValue] = React.useState('');
@@ -171,6 +171,14 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     const handleOnInput = React.useCallback(
       (event: ChangeEvent) => {
+        /** 
+         * For Multiselect: [for now] when we select an option the SelectMenu closes but the user
+         * can still type on the input field (so they must be able to see the SelectMenu)
+         */
+        if (!open) {
+          setOpen(true);
+        }
+
         handleSearch({
           event,
           isSearchable,
@@ -180,7 +188,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
           minCharactersToSearch,
         });
       },
-      [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
+      [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch, open]
     );
 
     const filteredOptions = useMemo(() => {

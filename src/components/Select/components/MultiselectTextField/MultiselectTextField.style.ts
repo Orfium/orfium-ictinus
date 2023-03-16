@@ -46,9 +46,10 @@ export const chipStyle =
   (theme: Theme): SerializedStyles =>
     css`
       position: relative;
-      margin-right: ${theme.spacing.sm};
+      margin-right: ${theme.spacing.xsm};
       & > div {
         height: ${rem(20)};
+        border-radius: ${rem(4)};
       }
     `;
 
@@ -60,7 +61,7 @@ export const inputContainer =
       width: 100%;
       display: flex;
       flex-wrap: wrap;
-      row-gap: ${theme.spacing.sm};
+      row-gap: ${theme.spacing.xsm};
       z-index: 2;
     `;
 

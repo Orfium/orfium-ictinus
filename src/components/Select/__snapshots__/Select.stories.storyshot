@@ -2028,17 +2028,18 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  row-gap: 0.5rem;
+  row-gap: 0.25rem;
   z-index: 2;
 }
 
 .emotion-8 {
   position: relative;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-8>div {
   height: 1.25rem;
+  border-radius: 0.25rem;
 }
 
 .emotion-9 {
@@ -2123,7 +2124,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   fill: #0f0f17;
 }
 
-.emotion-32 {
+.emotion-44 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -2140,47 +2141,47 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   flex: 1 1 0%;
 }
 
-.emotion-32+label {
+.emotion-44+label {
   font-size: 0.9375rem;
 }
 
-.emotion-32:focus {
+.emotion-44:focus {
   outline: none;
 }
 
-.emotion-32::-webkit-input-placeholder {
+.emotion-44::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-32::-moz-placeholder {
+.emotion-44::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-32:-ms-input-placeholder {
+.emotion-44:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-32::placeholder {
+.emotion-44::placeholder {
   color: transparent;
 }
 
-.emotion-32:not(:focus):placeholder-shown+label {
+.emotion-44:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-32:focus+label,
-.emotion-32:not(:placeholder-shown)+label {
+.emotion-44:focus+label,
+.emotion-44:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8);
   -moz-transform: translate(0.1875rem, -82%) scale(0.8);
   -ms-transform: translate(0.1875rem, -82%) scale(0.8);
   transform: translate(0.1875rem, -82%) scale(0.8);
 }
 
-.emotion-32:disabled {
+.emotion-44:disabled {
   cursor: not-allowed;
 }
 
-.emotion-33 {
+.emotion-45 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2211,7 +2212,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   white-space: nowrap;
 }
 
-.emotion-34 {
+.emotion-46 {
   position: absolute!important;
   bottom: 0;
   right: 1rem;
@@ -2226,21 +2227,21 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   align-items: center;
 }
 
-.emotion-35 {
+.emotion-47 {
   cursor: pointer;
 }
 
-.emotion-37 {
+.emotion-49 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-37 path {
+.emotion-49 path {
   fill: #5f6c85;
 }
 
-.emotion-41 {
+.emotion-53 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2266,11 +2267,11 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-41:focus-within {
+.emotion-53:focus-within {
   box-shadow: 0 0 0 0.0625rem transparent;
 }
 
-.emotion-41 label {
+.emotion-53 label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2279,11 +2280,11 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-59 {
+.emotion-77 {
   cursor: auto;
 }
 
-.emotion-65 {
+.emotion-83 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2309,11 +2310,11 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-65:focus-within {
+.emotion-83:focus-within {
   box-shadow: 0 0 0 0.0625rem transparent;
 }
 
-.emotion-65 label {
+.emotion-83 label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2322,7 +2323,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-118 {
+.emotion-154 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2333,11 +2334,11 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-118 svg {
+.emotion-154 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-118 span {
+.emotion-154 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2345,17 +2346,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-120 {
+.emotion-156 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-120 path {
+.emotion-156 path {
   fill: #5f6c85;
 }
 
-.emotion-124 {
+.emotion-160 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2381,16 +2382,16 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-124:hover {
+.emotion-160:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-124:focus-within {
+.emotion-160:focus-within {
   box-shadow: 0 0 0 0.125rem #e5143d;
   background-color: #e7ebf2;
 }
 
-.emotion-124 label {
+.emotion-160 label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2399,7 +2400,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-152 {
+.emotion-200 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2430,7 +2431,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   white-space: nowrap;
 }
 
-.emotion-157 {
+.emotion-205 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2441,11 +2442,11 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-157 svg {
+.emotion-205 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-157 span {
+.emotion-205 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2453,17 +2454,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-159 {
+.emotion-207 {
   fill: #FF1744;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-159 path {
+.emotion-207 path {
   fill: #FF1744;
 }
 
-.emotion-200 {
+.emotion-260 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2489,16 +2490,16 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-200:hover {
+.emotion-260:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-200:focus-within {
+.emotion-260:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-200 input:focus label {
+.emotion-260 input:focus label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2507,14 +2508,14 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-200 label {
+.emotion-260 label {
   -webkit-transform: translate(0.1875rem, -8px);
   -moz-transform: translate(0.1875rem, -8px);
   -ms-transform: translate(0.1875rem, -8px);
   transform: translate(0.1875rem, -8px);
 }
 
-.emotion-204 {
+.emotion-264 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2737,9 +2738,71 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             </div>
                           </div>
                         </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_4"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Cookie Dough"
+                              >
+                                Cookie Dough
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_4"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_5"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Buttered Pecan"
+                              >
+                                Buttered Pecan
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_5"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           onInput={[Function]}
                           onKeyDown={[Function]}
                           placeholder="Multi Select"
@@ -2748,17 +2811,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-33"
+                          className="emotion-45"
                         >
                           Multi Select
                            
                         </label>
                       </div>
                       <div
-                        className="emotion-34"
+                        className="emotion-46"
                       >
                         <div
-                          className="emotion-35"
+                          className="emotion-47"
                         >
                           <span
                             className="emotion-12"
@@ -2766,7 +2829,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-37"
+                              className="emotion-49"
                             />
                           </span>
                         </div>
@@ -2792,7 +2855,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
               >
                 <div>
                   <div
-                    className="emotion-41"
+                    className="emotion-53"
                     data-testid="select-input"
                   >
                     <div
@@ -2873,9 +2936,45 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             </div>
                           </div>
                         </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_4"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Cookie Dough"
+                              >
+                                Cookie Dough
+                              </div>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_5"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Buttered Pecan"
+                              >
+                                Buttered Pecan
+                              </div>
+                            </div>
+                          </div>
+                        </span>
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           disabled={true}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -2885,17 +2984,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-33"
+                          className="emotion-45"
                         >
                           Multi Select - Locked
                            
                         </label>
                       </div>
                       <div
-                        className="emotion-34"
+                        className="emotion-46"
                       >
                         <div
-                          className="emotion-59"
+                          className="emotion-77"
                         >
                           <span
                             className="emotion-12"
@@ -2903,7 +3002,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-37"
+                              className="emotion-49"
                             />
                           </span>
                         </div>
@@ -2929,7 +3028,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
               >
                 <div>
                   <div
-                    className="emotion-65"
+                    className="emotion-83"
                     data-testid="select-input"
                   >
                     <div
@@ -3010,9 +3109,45 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             </div>
                           </div>
                         </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_4"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Cookie Dough"
+                              >
+                                Cookie Dough
+                              </div>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_5"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Buttered Pecan"
+                              >
+                                Buttered Pecan
+                              </div>
+                            </div>
+                          </div>
+                        </span>
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           disabled={true}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -3022,7 +3157,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-33"
+                          className="emotion-45"
                         >
                           Multi Select - Disabled
                            
@@ -3183,9 +3318,71 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             </div>
                           </div>
                         </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_4"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Cookie Dough"
+                              >
+                                Cookie Dough
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_4"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_5"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Buttered Pecan"
+                              >
+                                Buttered Pecan
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_5"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           hintMsg="This is a hint message"
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -3195,17 +3392,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-33"
+                          className="emotion-45"
                         >
                           Multi Select - with Hint
                            
                         </label>
                       </div>
                       <div
-                        className="emotion-34"
+                        className="emotion-46"
                       >
                         <div
-                          className="emotion-35"
+                          className="emotion-47"
                         >
                           <span
                             className="emotion-12"
@@ -3213,7 +3410,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-37"
+                              className="emotion-49"
                             />
                           </span>
                         </div>
@@ -3221,7 +3418,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                     </div>
                   </div>
                   <div
-                    className="emotion-118"
+                    className="emotion-154"
                     data-testid="error-select-input"
                   >
                     <span
@@ -3229,7 +3426,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-120"
+                        className="emotion-156"
                       />
                     </span>
                     This is a hint message
@@ -3254,7 +3451,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
               >
                 <div>
                   <div
-                    className="emotion-124"
+                    className="emotion-160"
                     data-testid="select-input"
                   >
                     <div
@@ -3387,9 +3584,71 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             </div>
                           </div>
                         </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_4"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Cookie Dough"
+                              >
+                                Cookie Dough
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_4"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_5"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Buttered Pecan"
+                              >
+                                Buttered Pecan
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_5"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           hintMsg="This is an error message"
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -3399,17 +3658,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-152"
+                          className="emotion-200"
                         >
                           Multi Select - with Error
                            
                         </label>
                       </div>
                       <div
-                        className="emotion-34"
+                        className="emotion-46"
                       >
                         <div
-                          className="emotion-35"
+                          className="emotion-47"
                         >
                           <span
                             className="emotion-12"
@@ -3417,7 +3676,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-37"
+                              className="emotion-49"
                             />
                           </span>
                         </div>
@@ -3425,7 +3684,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                     </div>
                   </div>
                   <div
-                    className="emotion-157"
+                    className="emotion-205"
                     data-testid="error-select-input"
                   >
                     <span
@@ -3433,7 +3692,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-159"
+                        className="emotion-207"
                       />
                     </span>
                     This is an error message
@@ -3591,9 +3850,71 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             </div>
                           </div>
                         </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_4"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Cookie Dough"
+                              >
+                                Cookie Dough
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_4"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
+                        <span
+                          className="emotion-8"
+                        >
+                          <div
+                            aria-readonly="true"
+                            className="emotion-9"
+                            data-testid="chip-chip_5"
+                          >
+                            <div>
+                              <div
+                                className="emotion-10"
+                                title="Buttered Pecan"
+                              >
+                                Buttered Pecan
+                              </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_5"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
+                          </div>
+                        </span>
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           onInput={[Function]}
                           onKeyDown={[Function]}
                           placeholder="Multi Select - with Right Icon"
@@ -3602,24 +3923,24 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-33"
+                          className="emotion-45"
                         >
                           Multi Select - with Right Icon
                            
                         </label>
                       </div>
                       <div
-                        className="emotion-34"
+                        className="emotion-46"
                       >
                         <div
-                          className="emotion-35"
+                          className="emotion-47"
                         >
                           <span
                             className="emotion-12"
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-37"
+                              className="emotion-49"
                             />
                           </span>
                         </div>
@@ -3653,7 +3974,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
               >
                 <div>
                   <div
-                    className="emotion-200"
+                    className="emotion-260"
                     data-testid="select-input"
                   >
                     <div
@@ -3664,7 +3985,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                       >
                         <input
                           autoComplete="off"
-                          className="emotion-32"
+                          className="emotion-44"
                           onInput={[Function]}
                           onKeyDown={[Function]}
                           onKeyPress={[Function]}
@@ -3674,17 +3995,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-204"
+                          className="emotion-264"
                         >
                           Multi Select - Async Search
                            
                         </label>
                       </div>
                       <div
-                        className="emotion-34"
+                        className="emotion-46"
                       >
                         <div
-                          className="emotion-59"
+                          className="emotion-77"
                         >
                           <span
                             className="emotion-12"
@@ -3692,7 +4013,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-37"
+                              className="emotion-49"
                             />
                           </span>
                         </div>
