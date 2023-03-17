@@ -64,6 +64,7 @@ export type Props = {
   /** If true the user can select multiple options */
   multi?: boolean;
   /** The selected options in case of multiSelect */
+  /** @TODO merge selectedOption with selectedOptions in v5 */
   selectedOptions?: SelectOption[];
 } & TextFieldProps;
 
