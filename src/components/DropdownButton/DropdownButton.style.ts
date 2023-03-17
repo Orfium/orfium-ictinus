@@ -5,6 +5,15 @@ import getStateTokens from 'theme/states/states.tokens';
 import getTokens from '../Button/Button.tokens';
 import { PrimitiveButtonTypes } from '../Button/Button.types';
 
+const rotateSVG = (deg: number) => {
+  return {
+    svg: {
+      transform: `rotate(${deg}deg)`,
+      transition: '0.2s',
+    },
+  };
+};
+
 export const wrapperStyle =
   ({ type, isIconButton }: { type: PrimitiveButtonTypes; isIconButton: boolean }) =>
   (theme: Theme): SerializedStyles => {
@@ -77,12 +86,11 @@ export const iconButtonSpanStyle =
     const openDropdownStyles = isOpen
       ? {
           button: getIconButtonActiveState(theme, type),
-          svg: {
-            transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-            transition: '0.2s',
-          },
+          ...rotateSVG(180),
         }
-      : {};
+      : {
+          ...rotateSVG(0),
+        };
 
     return css({
       'button:last-child': {
