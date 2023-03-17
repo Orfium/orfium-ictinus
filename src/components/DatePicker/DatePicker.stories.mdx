@@ -256,6 +256,16 @@ This datepicker has a predefined initial value that can be used both for initial
   </Story>
 </Preview>
 
+# Reset DatePicker
+
+<Preview>
+  <Story name="Reset DatePicker">
+    <Stack vertical>
+      <DatePickerShowcase />
+    </Stack>
+  </Story>
+</Preview>
+
 # Dynamic disableDates with all options available and custom label - Knobs
 
 <Preview>
@@ -269,15 +279,5 @@ This datepicker has a predefined initial value that can be used both for initial
       inputLabel={text('inputLabel', 'Custom Date')}
       isRangePicker={boolean('isRangePicker', false)}
     />
-  </Story>
-</Preview>
-
-# Reset DatePicker (from parect component)
-
-<Preview>
-  <Story name="Reset DatePicker" parameters={{ decorators: [withKnobs] }}>
-    <Stack vertical>
-      <DatePickerShowcase />
-    </Stack>
   </Story>
 </Preview>
