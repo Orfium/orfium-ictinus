@@ -19,16 +19,8 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
     },
     ref
   ) => {
-    const {
-      onClick,
-      isChecked,
-      thumbnail,
-      fill,
-      isSelected,
-      onClear,
-      children,
-      badgeNumber,
-    } = rest;
+    const { onClick, isChecked, thumbnail, fill, isSelected, onClear, children, badgeNumber } =
+      rest;
 
     errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, disabled });
 
@@ -58,12 +50,13 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
               name={'close'}
               color={'darkGrey'}
               variant={850}
-              onClick={e => {
+              onClick={(e) => {
                 e.stopPropagation();
                 if (!disabled) {
                   onClear();
                 }
               }}
+              dataTestId={generateTestDataId('chip-delete', dataTestId)}
             />
           </div>
         )}
