@@ -6,11 +6,11 @@ export type NotificationStyleType = 'elevated' | 'outlined';
 
 export type NotificationActions = {
   /** The primary call-to-action label of the Notification */
-  primaryCTALabel?: string | undefined;
+  primaryCTALabel?: string;
   /** The primary call-to-action of the Notification */
-  primaryCTA?: (() => void) | undefined;
+  primaryCTA?: () => void;
   /** The secondary call-to-action label of the Notification */
-  secondaryCTALabel?: string | undefined;
+  secondaryCTALabel?: string;
   /** The secondary call-to-action of the Notification */
-  secondaryCTA?: (() => void) | undefined;
+  secondaryCTA?: () => void;
 };
