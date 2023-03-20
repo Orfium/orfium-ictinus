@@ -51,7 +51,7 @@ const EdgeCasesSelectShowcase: React.FC = () => {
           styleType={'filled'}
         />
       </div>
-      <div style={{ width: 400, position: 'fixed', bottom: '5%' }}>
+      <div style={{ width: 400, position: 'absolute', bottom: '5%' }}>
         <Select
           label={'Bottom positioned case'}
           options={options}

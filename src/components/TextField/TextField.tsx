@@ -29,7 +29,7 @@ export type Props = {
   hasMinWidthCompat?: boolean;
 } & TextInputWrapperProps;
 
-type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
+export type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
 
 console.warn(
   'Deprecation warning! min-width will be removed from the component in v5 of ictinus. ' +

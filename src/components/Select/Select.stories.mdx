@@ -2,7 +2,7 @@ import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
 import Select from './Select';
 import Stack from '../storyUtils/Stack';
-import SelectShowcase from '../storyUtils/SelectShowcase';
+import { SelectShowcase, MultiSelectShowcase } from '../storyUtils/SelectShowcase';
 import EdgeCasesSelectShowcase from '../storyUtils/EdgeCasesSelectShowcase';
 import { FIGMA_URL } from '../../utils/common';
 const options = [
@@ -31,53 +31,52 @@ const groupOptions = [
   {
     value: 'group2',
     label: 'Group 2',
-    options: [
-      { value: '3', label: 'Option 3' },
-    ],
+    options: [{ value: '3', label: 'Option 3' }],
   },
   { value: '4', label: 'Option 4' },
   {
-      value: 'group5',
-      label: 'Group 5',
-      options: [
-        { value: '5', label: 'Option 7' },
-        { value: '6', label: 'Option 8' },
-      ],
-    },
-    {
-      value: 'group6',
-      label: 'Group 6',
-      options: [
-        { value: '7', label: 'Option 9' },
-      ],
-    },
+    value: 'group5',
+    label: 'Group 5',
+    options: [
+      { value: '5', label: 'Option 7' },
+      { value: '6', label: 'Option 8' },
+    ],
+  },
+  {
+    value: 'group6',
+    label: 'Group 6',
+    options: [{ value: '7', label: 'Option 9' }],
+  },
 ];
 const defaultValue = options[0];
 const defaultGroupValue = { value: '1', label: 'Option 1' };
-const handleSelectedOption = selectedOption => {
+const handleSelectedOption = (selectedOption) => {
   console.log('On option change', selectedOption);
-}
+};
 
 <Meta
-    title="Design System/Select"
-    component={Select}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Select',
-            url: `${FIGMA_URL}?node-id=10019%3A116506`,
-        },
-        {
-            type: 'figma',
-            name: 'Active',
-            url: `${FIGMA_URL}?node-id=10019%3A116507`,
-        },
-        {
-            type: 'figma',
-            name: 'Edge cases',
-            url: `${FIGMA_URL}?node-id=1879%3A101`,
-        }],
-    }} />
+  title="Design System/Select"
+  component={Select}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Select',
+        url: `${FIGMA_URL}?node-id=10019%3A116506`,
+      },
+      {
+        type: 'figma',
+        name: 'Active',
+        url: `${FIGMA_URL}?node-id=10019%3A116507`,
+      },
+      {
+        type: 'figma',
+        name: 'Edge cases',
+        url: `${FIGMA_URL}?node-id=1879%3A101`,
+      },
+    ],
+  }}
+/>
 
 # Select
 
@@ -88,7 +87,12 @@ A universal Select component that is a clickable element that can hold many form
 ```js
 import { Select } from '@orfium/ictinus';
 
-<Select options={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'strawberry', label: 'Strawberry' }]} />
+<Select
+  options={[
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+  ]}
+/>;
 ```
 
 # Props
@@ -226,42 +230,14 @@ Select disabled with label
 <Preview>
   <Story name="Disabled/Locked Select">
     <Stack>
-      <Select
-        disabled
-        label={'Flavour'}
-        options={options}
-      />
-      <Select
-        disabled
-        label={'Flavour'}
-        options={options}
-        styleType={'outlined'}
-      />
-      <Select
-        disabled
-        label={'Flavour'}
-        options={options}
-        styleType={'elevated'}
-      />
+      <Select disabled label={'Flavour'} options={options} />
+      <Select disabled label={'Flavour'} options={options} styleType={'outlined'} />
+      <Select disabled label={'Flavour'} options={options} styleType={'elevated'} />
     </Stack>
     <Stack>
-      <Select
-        locked
-        label={'Flavour'}
-        options={options}
-      />
-      <Select
-        locked
-        label={'Flavour'}
-        options={options}
-        styleType={'outlined'}
-      />
-      <Select
-        locked
-        label={'Flavour'}
-        options={options}
-        styleType={'elevated'}
-      />
+      <Select locked label={'Flavour'} options={options} />
+      <Select locked label={'Flavour'} options={options} styleType={'outlined'} />
+      <Select locked label={'Flavour'} options={options} styleType={'elevated'} />
     </Stack>
   </Story>
 </Preview>
@@ -344,7 +320,7 @@ Simple select component where searched term is highlighted in options
   </Story>
 </Preview>
 
-# Simple Group Select 
+# Simple Group Select
 
 Simple select component with grouped data and searchable input
 
@@ -443,18 +419,17 @@ Select that support asynchronous fetching, with loading status
 
 <Preview>
   <Story name="Async Select with min characters">
-    <SelectShowcase
-      minCharactersToSearch={3}
-    />
+    <SelectShowcase minCharactersToSearch={3} />
   </Story>
 </Preview>
 
 # Select with edge case
 
 Select cases where it gets to minimum and maximum width based on options <br />
-1) max width of floating menu to 620 and then ellipsis <br />
-2) max width with smaller floating menu content that set to max
-2) min size (150px) for both
+
+1. max width of floating menu to 620 and then ellipsis <br />
+2. max width with smaller floating menu content that set to max
+3. min size (150px) for both
 
 <Preview>
   <Story name="Select with edge case">
@@ -462,3 +437,17 @@ Select cases where it gets to minimum and maximum width based on options <br />
   </Story>
 </Preview>
 
+# Multiselect
+
+A Select component with multiple selected options represented as Chips. <br/>
+
+1. To initiate a MultiSelect, the `multi` prop must be set to `true`
+2. In this variation the props: `leftIcon` and `size` are deprecated (`size` is always set to `md` by default). <br/>
+3. Instead of the `selectedOption` prop we now use the `selectedOptions` prop (with type: `SelectOption[]`) .
+4. When in MultiSelect, `onClear` prop refers to the all selected options deletion and `onOptionDelete` prop refers to single option deletion
+
+<Preview>
+  <Story name="Multiselect">
+    <MultiSelectShowcase />
+  </Story>
+</Preview>
