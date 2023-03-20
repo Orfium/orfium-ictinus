@@ -3,15 +3,10 @@ import * as React from 'react';
 import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
-import Button from '../../Button';
 import { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
-import {
-  actionContainer,
-  iconContainer,
-  actionsContainer,
-  boldMessageContainer,
-} from '../Notification.style';
+import { actionContainer, iconContainer, boldMessageContainer } from '../Notification.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
+import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
 import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import Icon from 'components/Icon';
 
@@ -63,30 +58,21 @@ const Snackbar: React.FC<Props> = ({
           <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
         </span>
       </div>
-      <div css={descriptionContainer()}>{description}</div>
+      <div
+        css={descriptionContainer()}
+        data-testid={generateTestDataId('snackbar-description', dataTestId)}
+      >
+        {description}
+      </div>
       {hasActions && (
-        <div css={actionsContainer()}>
-          {secondaryCTA && secondaryCTALabel && (
-            <div
-              css={actionContainer()}
-              data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
-            >
-              <Button type={'link'} transparent size="sm" onClick={secondaryCTA}>
-                {secondaryCTALabel}
-              </Button>
-            </div>
-          )}
-          {primaryCTA && primaryCTALabel && (
-            <div
-              css={actionContainer()}
-              data-testid={generateTestDataId('snackbar-primary', dataTestId)}
-            >
-              <Button type={'link'} transparent size="sm" onClick={primaryCTA}>
-                {primaryCTALabel}
-              </Button>
-            </div>
-          )}
-        </div>
+        <NotificationActionsArea
+          primaryCTA={primaryCTA}
+          primaryCTALabel={primaryCTALabel}
+          secondaryCTA={secondaryCTA}
+          secondaryCTALabel={secondaryCTALabel}
+          dataTestPrefixId="snackbar"
+          dataTestId={dataTestId}
+        />
       )}
     </div>
   );
