@@ -19,37 +19,43 @@ const snackbarContainerPerType = (
     box-shadow: ${theme.elevation['02']};
 `;
 
-export const cardContainer = (type: NotificationTypes, styleType: NotificationStyleType) => (
-  theme: Theme
-): SerializedStyles => css`
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  padding: ${theme.spacing.md};
-  box-sizing: border-box;
-  min-height: ${rem(164)};
-  max-height: ${rem(294)};
-  border-radius: ${rem(8)};
-  background: ${theme.palette.white};
-  ${snackbarContainerPerType(type, styleType, theme)};
-`;
+export const cardContainer =
+  (type: NotificationTypes, styleType: NotificationStyleType) =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: ${theme.spacing.md};
+      box-sizing: border-box;
+      max-height: ${rem(294)};
+      border-radius: ${rem(8)};
+      background: ${theme.palette.white};
+      ${snackbarContainerPerType(type, styleType, theme)};
+    `;
 
-export const topContainer = () => (theme: Theme): SerializedStyles => css`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: ${theme.spacing.md};
-`;
+export const topContainer =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: ${theme.spacing.md};
+    `;
 
-export const infoContainer = () => (): SerializedStyles => css`
-  display: flex;
-  align-items: center;
-`;
+export const infoContainer = () => (): SerializedStyles =>
+  css`
+    display: flex;
+    align-items: center;
+  `;
 
-export const descriptionContainer = () => (theme: Theme): SerializedStyles => css`
-  padding-bottom: ${theme.spacing.md};
-  font-size: ${theme.typography.fontSizes['14']};
-  max-height: ${rem(194)};
-  overflow: auto;
-  max-width: fit-content;
-`;
+export const descriptionContainer =
+  () =>
+  (theme: Theme): SerializedStyles =>
+    css`
+      font-size: ${theme.typography.fontSizes['14']};
+      max-height: ${rem(194)};
+      overflow: auto;
+      width: ${rem(547)};
+    `;

@@ -35,7 +35,7 @@ export const actionsContainer = () => (theme: Theme): SerializedStyles => css`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-top: ${theme.spacing.md};
+  padding-top: ${theme.spacing.xl};
   position: sticky;
   bottom: ${theme.spacing.md};
   top: 100%;
