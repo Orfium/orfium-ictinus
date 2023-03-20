@@ -4,7 +4,7 @@ import React from 'react';
 import getButtonTokens from '../Button/Button.tokens';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
-import { ButtonTypes } from 'components/Button/Button.types';
+import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
 export type IconButtonShape = 'circle' | 'square';
@@ -14,7 +14,7 @@ export type IconButtonProps = Omit<
   'type' | 'isBlock' | 'isLoading' | 'isIconButton'
 > & {
   /** This property defines the type of the IconButton */
-  type?: Exclude<ButtonTypes, 'danger' | 'inverted' | 'invertedAlt'>;
+  type?: PrimitiveButtonTypes;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
   /** This property defines the shape of the IconButton */

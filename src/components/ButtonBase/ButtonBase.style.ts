@@ -35,9 +35,7 @@ export const buttonBaseStyle =
         isIconButton && shape === 'circle'
           ? buttonTokens.borderRadius.icon
           : buttonTokens.borderRadius.text,
-      border: !isIconButton
-        ? `solid ${buttonTokens.borderWidth[1]} ${buttonTokens.color[type].borderColor}`
-        : 'none',
+      border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
 

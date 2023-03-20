@@ -1,0 +1,103 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { boolean, select } from '@storybook/addon-knobs';
+import DropdownButton from './DropdownButton';
+import Stack from '../storyUtils/Stack';
+import iconSelector from '../Icon/assets/iconSelector';
+import { colorShades, flatColors, mainTypes } from '../../theme/palette';
+import { FIGMA_URL } from '../../utils/common';
+
+<Meta
+  title="Design System/Button/DropdownButton"
+  component={DropdownButton}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Buttons',
+        url: `${FIGMA_URL}?node-id=574%3A7239`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation',
+        url: `${FIGMA_URL}?node-id=8167%3A146863`,
+      },
+    ],
+  }}
+/>
+
+# DropdownButton
+
+A Button with a CTA and a dropdown with actions
+
+# Usage
+
+```js
+import { DropdownButton } from '@orfium/ictinus';
+
+<DropdownButton
+  items={['Item 1', 'Item 2']}
+  onButtonClick={() => console.log('click')}
+  onOptionSelect={(option) => console.log(option)}
+>
+  Click Here
+</DropdownButton>;
+```
+
+# Props
+
+<Props of={DropdownButton} />
+
+# Button with DropdownButton
+
+<Preview>
+  <Story name="Button with Dropdown">
+    <Stack>
+      <DropdownButton
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        type="secondary"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+      <DropdownButton
+        type="tertiary"
+        items={['Item 1', 'Item 2']}
+        onButtonClick={() => console.log('click')}
+        onOptionSelect={(option) => console.log(option)}
+      >
+        Click Here
+      </DropdownButton>
+    </Stack>
+  </Story>
+</Preview>
+
+# IconButton with Dropdown
+
+<Preview>
+  <Story name="IconButton with Dropdown">
+    <Stack>
+      <DropdownButton
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        type="secondary"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+      <DropdownButton
+        type="tertiary"
+        items={['Item 1', 'Item 2']}
+        onOptionSelect={(option) => console.log(option)}
+      />
+    </Stack>
+  </Story>
+</Preview>

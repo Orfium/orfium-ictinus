@@ -51,7 +51,7 @@ const getTokens = (theme: Theme): ButtonTokens => {
       },
       tertiary: {
         borderColor: theme.tokens.borderColor.get('decorative.transparent'),
-        borderColorSegmented: theme.tokens.borderColor.get('decorative.lightMuted'),
+        borderColorSegmented: theme.tokens.borderColor.get('decorative.light.muted'),
         textColor: theme.tokens.textColor.get('light.active'),
       },
       invertedAlt: {
