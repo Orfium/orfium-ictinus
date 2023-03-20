@@ -4,7 +4,7 @@ import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
 import Button from '../../Button';
-import { NotificationStyleType, NotificationTypes } from '../Notification';
+import { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
 import {
   actionContainer,
   iconContainer,
@@ -22,21 +22,13 @@ export type Props = {
   type: NotificationTypes;
   /** The style type of the Notification. Defaults to elevated */
   styleType?: NotificationStyleType;
-  /** The primary call-to-action label of the Notification */
-  primaryCTALabel: string | undefined;
-  /** The primary call-to-action of the Notification */
-  primaryCTA: (() => void) | undefined;
-  /** The secondary call-to-action label of the Notification */
-  secondaryCTALabel: string | undefined;
-  /** The secondary call-to-action of the Notification */
-  secondaryCTA: (() => void) | undefined;
   /** The description of the Notification (only for toast) */
   description: string | undefined;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
   /** The data test id if needed */
   dataTestId?: TestId;
-};
+} & NotificationActions;
 
 const Snackbar: React.FC<Props> = ({
   message,
@@ -51,6 +43,8 @@ const Snackbar: React.FC<Props> = ({
   dataTestId,
 }) => {
   const { utils } = useTheme();
+
+  const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
 
   return (
     <div css={cardContainer(type, styleType)} notification-type="snackbar">
@@ -70,24 +64,30 @@ const Snackbar: React.FC<Props> = ({
         </span>
       </div>
       <div css={descriptionContainer()}>{description}</div>
-      <div css={actionsContainer()}>
-        <div
-          css={actionContainer()}
-          data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
-        >
-          <Button type={'link'} transparent size="sm" onClick={secondaryCTA}>
-            {secondaryCTALabel}
-          </Button>
+      {hasActions && (
+        <div css={actionsContainer()}>
+          {secondaryCTA && secondaryCTALabel && (
+            <div
+              css={actionContainer()}
+              data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
+            >
+              <Button type={'link'} transparent size="sm" onClick={secondaryCTA}>
+                {secondaryCTALabel}
+              </Button>
+            </div>
+          )}
+          {primaryCTA && primaryCTALabel && (
+            <div
+              css={actionContainer()}
+              data-testid={generateTestDataId('snackbar-primary', dataTestId)}
+            >
+              <Button type={'link'} transparent size="sm" onClick={primaryCTA}>
+                {primaryCTALabel}
+              </Button>
+            </div>
+          )}
         </div>
-        <div
-          css={actionContainer()}
-          data-testid={generateTestDataId('snackbar-primary', dataTestId)}
-        >
-          <Button type={'link'} transparent size="sm" onClick={primaryCTA}>
-            {primaryCTALabel}
-          </Button>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { generateTestDataId } from '../../../../utils/helpers';
 import { TestId } from '../../../../utils/types';
 import Button from '../../../Button';
 import Icon from '../../../Icon';
-import { NotificationStyleType, NotificationTypes } from '../../Notification';
+import { NotificationActions, NotificationStyleType, NotificationTypes } from '../../Notification';
 import { iconContainer, actionContainer } from '../../Notification.style';
 import {
   actionsContainer,
@@ -30,25 +30,15 @@ export type Props = {
   type: NotificationTypes;
   /** The style type of the Notification. Defaults to elevated */
   styleType: NotificationStyleType;
-  /** The primary call-to-action label of the Notification */
-  primaryCTALabel?: string;
-  /** The primary call-to-action of the Notification */
-  primaryCTA?: () => void;
+  /** The description of the Notification (only for toast) */
+  description?: string;
   /** The closing call-to-action of the Notification */
   closeCTA?: () => void;
   /** The title (message heading) of the Notification */
   title?: string;
   /** The data test id if needed */
   dataTestId?: TestId;
-
-  /** The secondary call-to-action label of the Notification */
-  secondaryCTALabel?: string;
-  /** The secondary call-to-action of the Notification */
-  secondaryCTA?: () => void;
-  /** The description of the Notification (only for toast) */
-  description?: string;
-  /** The closing call-to-action of the Toast */
-};
+} & NotificationActions;
 
 export const typeToIconName = (type: NotificationTypes): AcceptedIconNames =>
   type === 'warning' ? 'alert' : type;
