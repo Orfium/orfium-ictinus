@@ -21,9 +21,9 @@ export const usePositionInScreen = (
 
   /**
    * We use this ResizeObserver in order to track any changes on the parent's height:
-   * This is necessary of the case of the MultiSelect, where the height of the TextField is dynamic
-   * and will increase as more Chips (Selected Options) are added. Therefore the parentHeight is stored
-   * on the useState above.
+   * This is necessary for the case of the MultiSelect, where the height of the TextField is dynamic
+   * and will increase/decrease as more Chips (Selected Options) are added/deleted. 
+   * Therefore the parentHeight is stored on the useState above.
    */
   useEffect(() => {
     if (!parentRef.current) return;
