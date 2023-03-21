@@ -8,7 +8,9 @@ import Banner from '../Notification/Banner';
 import NotificationsContainer from '../Notification/NotificationsContainer';
 import PresentComponent from '../storyUtils/PresentComponent';
 import Stack from '../storyUtils/Stack';
-import NotificationShowcase, { NotificationContainerWithinDOMElement } from '../storyUtils/NotificationShowcase';
+import NotificationShowcase, {
+  NotificationContainerWithinDOMElement,
+} from '../storyUtils/NotificationShowcase';
 
 <Meta title="Design System/Notification" component={InlineNotification} />
 
@@ -143,7 +145,12 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
           />
           <Banner
             withIcon={boolean('icon', true)}
-            message={<div style={{ maxWidth: '404px'}}>This is a very long text in order to check how the component wraps the text.This is a very long text in order to check how the component wraps the text </div>}
+            message={
+              <div style={{ maxWidth: '404px' }}>
+                This is a very long text in order to check how the component wraps the text.This is
+                a very long text in order to check how the component wraps the text{' '}
+              </div>
+            }
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
@@ -170,7 +177,7 @@ import { NotificationsContainer, Banner } from '@orfium/ictinus';
 import { Toast, NotificationVisual } from '@orfium/ictinus';
 
 <NotificationsContainer position="bottom-right">
-  <Toast message="message" type="info" expanded closeCTA={closeCTA}>
+  <Toast message="message" type="info" expanded hasMinimumHeight={false} closeCTA={closeCTA}>
     <NotificationVisual
       title="title"
       primaryCTALabel="Primary CTA Label"
@@ -198,6 +205,23 @@ import { Toast, NotificationVisual } from '@orfium/ictinus';
             message={text('message', 'Informative Message')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
             expanded
+            hasMinimumHeight={false}
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
+            closeCTA={() => console.log('close action clicked')}
+          >
+            <NotificationVisual
+              title={text('title', 'Message heading')}
+              description={text(
+                'description',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+              )}
+            />
+          </Toast>
+          <Toast
+            message={text('message', 'Informative Message')}
+            type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+            expanded
+            hasMinimumHeight={false}
             styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
             closeCTA={() => console.log('close action clicked')}
           >
@@ -255,6 +279,16 @@ import { Snackbar } from '@orfium/ictinus';
             'bottom-right'
           )}
         >
+          <Snackbar
+            message={text('message', 'This is the info')}
+            type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
+            styleType={select('styleType', ['outlined', 'elevated'], 'elevated')}
+            description={text(
+              'description',
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra neque nec est porttitor'
+            )}
+            closeCTA={() => console.log('close action clicked')}
+          />
           <Snackbar
             message={text('message', 'This is the info')}
             type={select('type', ['success', 'error', 'info', 'warning'], 'success')}
@@ -429,7 +463,6 @@ import { Snackbar } from '@orfium/ictinus';
     </PresentComponent>
   </Story>
 </Preview>
-
 
 ## Playground 3
 

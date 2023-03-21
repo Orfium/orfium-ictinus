@@ -3,15 +3,10 @@ import * as React from 'react';
 import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
-import Button from '../../Button';
-import { NotificationStyleType, NotificationTypes } from '../Notification';
-import {
-  actionContainer,
-  iconContainer,
-  actionsContainer,
-  boldMessageContainer,
-} from '../Notification.style';
+import { NotificationActions, NotificationStyleType, NotificationTypes } from '../Notification';
+import { actionContainer, iconContainer, boldMessageContainer } from '../Notification.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
+import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
 import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import Icon from 'components/Icon';
 
@@ -22,21 +17,13 @@ export type Props = {
   type: NotificationTypes;
   /** The style type of the Notification. Defaults to elevated */
   styleType?: NotificationStyleType;
-  /** The primary call-to-action label of the Notification */
-  primaryCTALabel: string | undefined;
-  /** The primary call-to-action of the Notification */
-  primaryCTA: (() => void) | undefined;
-  /** The secondary call-to-action label of the Notification */
-  secondaryCTALabel: string | undefined;
-  /** The secondary call-to-action of the Notification */
-  secondaryCTA: (() => void) | undefined;
   /** The description of the Notification (only for toast) */
   description: string | undefined;
   /** The closing call-to-action of the Toast */
   closeCTA: (() => void) | undefined;
   /** The data test id if needed */
   dataTestId?: TestId;
-};
+} & NotificationActions;
 
 const Snackbar: React.FC<Props> = ({
   message,
@@ -51,6 +38,8 @@ const Snackbar: React.FC<Props> = ({
   dataTestId,
 }) => {
   const { utils } = useTheme();
+
+  const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
 
   return (
     <div css={cardContainer(type, styleType)} notification-type="snackbar">
@@ -69,25 +58,22 @@ const Snackbar: React.FC<Props> = ({
           <Icon name="close" color={utils.getColor('lightGrey', 650)} size={20} />
         </span>
       </div>
-      <div css={descriptionContainer()}>{description}</div>
-      <div css={actionsContainer()}>
-        <div
-          css={actionContainer()}
-          data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
-        >
-          <Button type={'link'} transparent size="sm" onClick={secondaryCTA}>
-            {secondaryCTALabel}
-          </Button>
-        </div>
-        <div
-          css={actionContainer()}
-          data-testid={generateTestDataId('snackbar-primary', dataTestId)}
-        >
-          <Button type={'link'} transparent size="sm" onClick={primaryCTA}>
-            {primaryCTALabel}
-          </Button>
-        </div>
+      <div
+        css={descriptionContainer()}
+        data-testid={generateTestDataId('snackbar-description', dataTestId)}
+      >
+        {description}
       </div>
+      {hasActions && (
+        <NotificationActionsArea
+          primaryCTA={primaryCTA}
+          primaryCTALabel={primaryCTALabel}
+          secondaryCTA={secondaryCTA}
+          secondaryCTALabel={secondaryCTALabel}
+          dataTestPrefixId="snackbar"
+          dataTestId={dataTestId}
+        />
+      )}
     </div>
   );
 };
