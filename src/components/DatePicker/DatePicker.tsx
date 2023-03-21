@@ -1,5 +1,5 @@
 import { Dayjs } from 'dayjs';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
@@ -83,10 +83,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
   isRangePicker = false,
   onChange,
   disableDates,
-  value = {
-    from: datepickerPropValue?.toDate(),
-    to: datepickerPropValue?.toDate(),
-  },
+  value: initialValue,
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
@@ -94,15 +91,16 @@ const DatePicker: React.FC<Props & TestProps> = ({
   isDefaultNow = true,
   dataTestId,
 }) => {
+  const value = useMemo(() => initDates(initialValue || {}, isDefaultNow), [initialValue]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
 
-  const [range, setRange] = useState<Range>(() => initDates(value, isDefaultNow));
-  const [selectedRange, setSelectedRange] = useState<Range>(() => initDates(value, isDefaultNow));
+  const [range, setRange] = useState<Range>(() => value);
+  const [selectedRange, setSelectedRange] = useState<Range>(() => value);
 
   useEffect(() => {
-    setRange(initDates(value, isDefaultNow));
-    setSelectedRange(initDates(value, isDefaultNow));
+    setRange(value);
+    setSelectedRange(value);
   }, [value, isDefaultNow]);
 
   const handleSelectedOptions = useCallback((option: string) => {

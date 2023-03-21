@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 
 import Button from '../../Button';
 import DatePicker from '../../DatePicker';
+import { currentDay } from '../../DatePicker/utils';
 
 const DatePickerShowcase: React.FC = () => {
   const [date, setDate] = useState<{ from?: Date; to?: Date }>({
-    from: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
-    to: new Date(),
+    from: currentDay.subtract(7, 'days').toDate(),
+    to: currentDay.toDate(),
   });
 
   const [dateRange, setDateRange] = useState<{ from?: Date; to?: Date }>({
-    from: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
-    to: new Date(),
+    from: currentDay.subtract(7, 'days').toDate(),
+    to: currentDay.toDate(),
   });
 
   return (
