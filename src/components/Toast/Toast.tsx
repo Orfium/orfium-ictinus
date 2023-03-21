@@ -29,6 +29,8 @@ export type Props = {
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
   expanded?: boolean;
+  /** If true, the Toast has a minimum-height */
+  hasMinimumHeight?: boolean;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
@@ -43,6 +45,7 @@ const Toast: React.FC<Props> = ({
   styleType = 'elevated',
   closeCTA,
   expanded = false,
+  hasMinimumHeight = true,
   children,
   dataTestId,
 }) => {
@@ -81,7 +84,7 @@ const Toast: React.FC<Props> = ({
         </div>
       </div>
       <div
-        css={expandedContainer(type, isExpanded)}
+        css={expandedContainer(type, isExpanded, hasMinimumHeight)}
         data-testid={generateTestDataId('expanded-container', dataTestId)}
       >
         {children}
