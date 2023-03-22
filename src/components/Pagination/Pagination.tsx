@@ -51,23 +51,15 @@ const Pagination = ({
     >
       {isEnhancedPaginationVisible && (
         <IconButton
-          color="darkGrey-850"
           name="arrowToLeft"
           onClick={navigateToFirstPage}
-          iconSize={20}
-          size="sm"
-          isTransparent
-          isFilled={false}
+          type="tertiary"
           isDisabled={isPrevPageDisabled || !hasPrevPage}
         />
       )}
       <IconButton
-        color="darkGrey-850"
         name="arrowLeft"
-        iconSize={20}
-        size="sm"
-        isTransparent
-        isFilled={false}
+        type="tertiary"
         onClick={navigateToPrevPage}
         isDisabled={isPrevPageDisabled || !hasPrevPage}
       />
@@ -77,23 +69,15 @@ const Pagination = ({
       </div>
 
       <IconButton
-        color="darkGrey-850"
         name="arrowRight"
-        iconSize={20}
-        size="sm"
-        isTransparent
-        isFilled={false}
+        type="tertiary"
         onClick={navigateToNextPage}
         isDisabled={isNextPageDisabled || !hasNextPage}
       />
       {isEnhancedPaginationVisible && (
         <IconButton
-          color="darkGrey-850"
           name="arrowToRight"
-          iconSize={20}
-          size="sm"
-          isTransparent
-          isFilled={false}
+          type="tertiary"
           onClick={navigateToLastPage}
           isDisabled={isNextPageDisabled || !hasNextPage}
         />

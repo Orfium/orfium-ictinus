@@ -1,347 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Storyshots Design System/Button Async Button 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-2:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-.emotion-9 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #1de9b6;
-  padding: 0 1rem;
-  height: 2.875rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-9:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-9:hover:not(:disabled) {
-  background-color: #1ad1a3;
-}
-
-.emotion-9:active:not(:disabled) {
-  background-color: #17ba91;
-}
-
-.emotion-9:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-9:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-13 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-13:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-13:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-13:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-13:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-13:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
+exports[`Storyshots Design System/Button/Default (Text) Block Button 1`] = `
+@keyframes animation-0 {
+  from {
+    left: -50%;
   }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Sync Action
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Async sm
-            </span>
-          </span>
-        </button>
-        <div
-          className="emotion-8"
-        >
-          <div>
-            Button inner text from event: 
-            
-          </div>
-          <div>
-            Fake response: 
-            
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-9"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Async md
-            </span>
-          </span>
-        </button>
-        <div
-          className="emotion-8"
-        >
-          <div>
-            Button inner text from event: 
-            
-          </div>
-          <div>
-            Fake response: 
-            
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-13"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Async lg
-            </span>
-          </span>
-        </button>
-        <div
-          className="emotion-8"
-        >
-          <div>
-            Button inner text from event: 
-            
-          </div>
-          <div>
-            Fake response: 
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
 
-exports[`Storyshots Design System/Button Block Button 1`] = `
+  to {
+    left: 100%;
+  }
+}
+
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -364,13 +33,15 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
 }
 
 .emotion-2 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
+  position: relative;
+  width: 100%;
+}
+
+.emotion-3 {
+  color: #ffffff;
   width: 100%;
   background-color: #175bf5;
-  padding: 1rem;
-  height: 3.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -378,52 +49,32 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-3:active:not(:disabled) {
   background-color: #1248c4;
 }
 
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
 .emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
 }
 
 .emotion-5 {
-  padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -436,1547 +87,11 @@ exports[`Storyshots Design System/Button Block Button 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-6 {
-  fill: #e7eefe;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-6 path {
-  fill: #e7eefe;
-}
-
-.emotion-7 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.emotion-11 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #175bf5;
-  width: 100%;
-  background-color: transparent;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem #175bf5;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-11:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-11:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-11:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-11:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-11:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-13 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-14 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #36C152;
-  width: 100%;
-  background-color: transparent;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-14:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-14:hover:not(:disabled) {
-  background-color: #eaf8ed;
-}
-
-.emotion-14:active:not(:disabled) {
-  background-color: #d6f2dc;
-}
-
-.emotion-14:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-14:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-7"
-            >
-              Hello world
-            </span>
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-11"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-13"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-14"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-13"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Button Colors 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  background-color: #FF176B;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-2:hover:not(:disabled) {
-  background-color: #e51460;
-}
-
-.emotion-2:active:not(:disabled) {
-  background-color: #cc1255;
-}
-
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-5 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #cc1255;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-5:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-5:hover:not(:disabled) {
-  background-color: #b2104a;
-}
-
-.emotion-5:active:not(:disabled) {
-  background-color: #990d40;
-}
-
-.emotion-5:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-5:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  background-color: #fca1f3;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #fb89f0;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #fa72ed;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={true}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Disabled
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-5"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Red 600
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-8"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Magenta 200
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Button Sizes 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-2:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-5 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.875rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-5:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-5:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-5:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-5:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-5:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-5"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-8"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Button Types 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  background-color: #36C152;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-2:hover:not(:disabled) {
-  background-color: #30ad49;
-}
-
-.emotion-2:active:not(:disabled) {
-  background-color: #2b9a41;
-}
-
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-8 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  background-color: #FF176B;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-8:hover:not(:disabled) {
-  background-color: #e51460;
-}
-
-.emotion-8:active:not(:disabled) {
-  background-color: #cc1255;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-11 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #4945ee;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-11:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-11:hover:not(:disabled) {
-  background-color: #413ed6;
-}
-
-.emotion-11:active:not(:disabled) {
-  background-color: #3a37be;
-}
-
-.emotion-11:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-11:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-14 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: black;
-  background-color: #FF9F0F;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-14:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-14:hover:not(:disabled) {
-  background-color: #e58f0d;
-}
-
-.emotion-14:active:not(:disabled) {
-  background-color: #cc7f0c;
-}
-
-.emotion-14:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-14:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-17 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #1451dc;
-  background-color: transparent;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-17:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-17:hover:not(:disabled) {
-  background-color: #f3f5f8;
-}
-
-.emotion-17:active:not(:disabled) {
-  background-color: #e7ebf2;
-}
-
-.emotion-17:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-17:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={true}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Success
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Success
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-8"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Error
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-11"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Info
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-14"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Warning
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-17"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              Link
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Button with icon 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-2:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.emotion-5 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-6 {
-  fill: #e7eefe;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-6 path {
-  fill: #e7eefe;
-}
-
-.emotion-7 {
-  margin-left: 0.5rem;
-  margin-right: 0;
+  gap: 0.5rem;
 }
 
 .emotion-10 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-19 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.emotion-22 {
-  fill: #e7eefe;
-  width: 1.125rem;
-  height: 1.125rem;
-}
-
-.emotion-22 path {
-  fill: #e7eefe;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-7"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-10"
-            >
-              Hello world
-            </span>
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-19"
-            >
-              Hello world
-            </span>
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-22"
-                />
-              </span>
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #1de9b6;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: #1ad1a3;
-}
-
-.emotion-1:active:not(:disabled) {
-  background-color: #17ba91;
-}
-
-.emotion-1:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-1:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
+  padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1991,9 +106,77 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
-  margin-left: 0;
-  margin-right: 0;
+.emotion-11 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-11 path {
+  fill: #ffffff;
+}
+
+.emotion-15 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-16 {
+  width: 100%;
+  height: 0.25rem;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  position: relative;
+}
+
+.emotion-16:before {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background: #fcb8f6;
+  display: block;
+}
+
+.emotion-17 {
+  width: 50%;
+  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
+  height: 0.125rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  -webkit-animation: animation-0 1.5s infinite;
+  animation: animation-0 1.5s infinite;
+}
+
+.emotion-18 {
+  color: #ffffff;
+  width: 100%;
+  background-color: #1248c4;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-18:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-18:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-18:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-18:active:not(:disabled) {
+  background-color: #1248c4;
 }
 
 <div
@@ -2033,28 +216,366 @@ exports[`Storyshots Design System/Button Dynamic Button Props 1`] = `
          on
       </button>
     </div>
-    <button
+    <div
       className="emotion-1"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
     >
-      <span
-        className="emotion-2"
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
       >
-        <span
-          className="emotion-3"
+        <div
+          className="emotion-2"
         >
-          change me!
-        </span>
-      </span>
-    </button>
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Hello world
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span
+                  className="emotion-10"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-11"
+                  />
+                </span>
+                <span>
+                  Hello world
+                </span>
+                <span
+                  className="emotion-10"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-11"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <div
+            className="emotion-15"
+            data-testid="button"
+          >
+            <div
+              className="emotion-16"
+            >
+              <div
+                className="emotion-17"
+              />
+            </div>
+          </div>
+          <button
+            className="emotion-18"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Hello world
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Hello world
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
 
-exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
+exports[`Storyshots Design System/Button/Default (Text) Button Playground 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-7 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-7 path {
+  fill: #ffffff;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+                <span>
+                  Hello world
+                </span>
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button/Default (Text) Button Types 1`] = `
 .emotion-0 {
   background-color: transparent;
   color: #000;
@@ -2077,12 +598,16 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
 }
 
 .emotion-2 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  color: #ffffff;
   background-color: #175bf5;
-  padding: 1rem;
-  height: 3.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -2090,29 +615,32 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-2:hover:not(:disabled) {
-  background-color: #1451dc;
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-3:active:not(:disabled) {
   background-color: #1248c4;
 }
 
-.emotion-2:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-4 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
 }
 
-.emotion-2:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2125,16 +653,695 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-7 {
+  color: #1451dc;
+  background-color: #dcdfff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-7:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-7:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-7:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-7:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-11 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-11:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-11:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
+}
+
+.emotion-11:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-15 {
+  color: #b2104a;
+  background-color: #ffd0e1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-15:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-15:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-15:hover:not(:disabled) {
+  background-color: #ffe7f0;
+}
+
+.emotion-15:active:not(:disabled) {
+  background-color: #ffd0e1;
+}
+
+.emotion-19 {
+  color: #212332;
+  background-color: #77f1d3;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-19:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-19:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-19:hover:not(:disabled) {
+  background-color: #4aedc4;
+}
+
+.emotion-19:active:not(:disabled) {
+  background-color: #1de9b6;
+}
+
+.emotion-23 {
+  color: #1de9b6;
+  background-color: rgba(23,91,245,0);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-23:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-23:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-23:hover:not(:disabled) {
+  background-color: rgba(168,177,255,0.07);
+}
+
+.emotion-23:active:not(:disabled) {
+  background-color: rgba(168,177,255,0.14);
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Primary
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-7"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Secondary
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-11"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Tertiary
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-15"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Danger
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-19"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Inverted
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-23"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  InvertedAlt
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Primary
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-7"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Secondary
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-11"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Tertiary
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-15"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Danger
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-19"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Inverted
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-23"
+            data-testid="button"
+            disabled={true}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  InvertedAlt
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button/Default (Text) Buttons with Avatars 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1248c4;
 }
 
 .emotion-4 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
 }
 
 .emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #b9c0ff;
+  box-sizing: border-box;
+  background-color: #b9cdfc;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  font-size: 0.625rem;
+  font-weight: 500;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 img {
+  border-radius: 6.25rem;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-17 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2150,28 +1357,921 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   justify-content: center;
 }
 
-.emotion-6 {
-  fill: #e7eefe;
-  width: 0.875rem;
-  height: 0.875rem;
+.emotion-18 {
+  fill: #1451dc;
+  width: 1rem;
+  height: 1rem;
 }
 
-.emotion-6 path {
-  fill: #e7eefe;
+.emotion-18 path {
+  fill: #1451dc;
+}
+
+.emotion-26 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-26 path {
+  fill: #ffffff;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="_avatar"
+                >
+                  PR
+                </div>
+                <span>
+                  Text Avatar
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="_avatar"
+                >
+                  <img
+                    src="https://mui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+                <span>
+                  Img Avatar
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="_avatar"
+                >
+                  <span
+                    className="emotion-17"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-18"
+                    />
+                  </span>
+                </div>
+                <span>
+                  Empty Avatar
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="_avatar"
+                >
+                  PR
+                </div>
+                <span>
+                  Text Avatar
+                </span>
+                <span
+                  className="emotion-17"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-26"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="_avatar"
+                >
+                  <img
+                    src="https://mui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+                <span>
+                  Img Avatar
+                </span>
+                <span
+                  className="emotion-17"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-26"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <div
+                  className="emotion-6"
+                  data-testid="_avatar"
+                >
+                  <span
+                    className="emotion-17"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-18"
+                    />
+                  </span>
+                </div>
+                <span>
+                  Empty Avatar
+                </span>
+                <span
+                  className="emotion-17"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-26"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button/Default (Text) Buttons with Icons 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-3 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-3:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-3:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-3:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-3:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
 
 .emotion-7 {
-  margin-left: 0.5rem;
-  margin-right: 0;
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-7 path {
+  fill: #ffffff;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+                <span>
+                  Only left Icon
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+                <span>
+                  Both Icons
+                </span>
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-2"
+        >
+          <button
+            className="emotion-3"
+            data-testid="button"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            <span
+              className="emotion-4"
+            >
+              <span
+                className="emotion-5"
+              >
+                <span>
+                  Only Right Icon
+                </span>
+                <span
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Button/Default (Text) Loading Button 1`] = `
+@keyframes animation-0 {
+  from {
+    left: -50%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  width: 1000px;
+  height: 400px;
+  background: #f3f5f8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 48px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+}
+
+.emotion-5 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-6 {
+  width: 100%;
+  position: absolute;
+}
+
+.emotion-7 {
+  width: 100%;
+  height: 0.25rem;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  position: relative;
+}
+
+.emotion-7:before {
+  content: "";
+  width: 100%;
+  height: 0.125rem;
+  background: #fcb8f6;
+  display: block;
 }
 
 .emotion-8 {
-  font-size: 1rem;
+  width: 50%;
+  background: linear-gradient(270deg, #F814E1 0.02%, #4945EE 100%);
+  height: 0.125rem;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  -webkit-animation: animation-0 1.5s infinite;
+  animation: animation-0 1.5s infinite;
+}
+
+.emotion-9 {
+  color: #ffffff;
+  background-color: #1248c4;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-9:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-9:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-9:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-9:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-10 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  color: white;
+  letter-spacing: .25;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-16 {
+  color: #1451dc;
+  background-color: #cad0ff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-16:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-16:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-16:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-16:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-23 {
+  color: #1451dc;
+  background-color: rgba(23,91,245,0.14);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-23:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-23:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-23:hover:not(:disabled) {
+  background-color: rgba(23,91,245,0.07);
+}
+
+.emotion-23:active:not(:disabled) {
+  background-color: rgba(23,91,245,0.14);
+}
+
+.emotion-30 {
+  color: #b2104a;
+  background-color: #ffd0e1;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-30:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-30:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-30:hover:not(:disabled) {
+  background-color: #ffe7f0;
+}
+
+.emotion-30:active:not(:disabled) {
+  background-color: #ffd0e1;
+}
+
+.emotion-37 {
+  color: #212332;
+  background-color: #1de9b6;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-37:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-37:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-37:hover:not(:disabled) {
+  background-color: #4aedc4;
+}
+
+.emotion-37:active:not(:disabled) {
+  background-color: #1de9b6;
+}
+
+.emotion-44 {
+  color: #1de9b6;
+  background-color: rgba(168,177,255,0.14);
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+  pointer-events: none;
+}
+
+.emotion-44:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
+}
+
+.emotion-44:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.emotion-44:hover:not(:disabled) {
+  background-color: rgba(168,177,255,0.07);
+}
+
+.emotion-44:active:not(:disabled) {
+  background-color: rgba(168,177,255,0.14);
+}
+
+.emotion-48 {
+  color: #ffffff;
   background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.875rem;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -2179,62 +2279,21 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-8:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-48:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-8:hover:not(:disabled) {
-  background-color: #1451dc;
+.emotion-48:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-48:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-48:active:not(:disabled) {
   background-color: #1248c4;
-}
-
-.emotion-8:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-8:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-14 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-14:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-14:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-14:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-14:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-14:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 <div
@@ -2278,483 +2337,254 @@ exports[`Storyshots Design System/Button Icon Button Sizes 1`] = `
       className="emotion-1"
     >
       <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-2"
-          data-testid="button-size-lg"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-7"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-8"
-          data-testid="button-size-md"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-7"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <button
-          className="emotion-14"
-          data-testid="button-size-sm"
-          disabled={false}
-          onClick={[Function]}
-          type="button"
-        >
-          <span
-            className="emotion-3"
-          >
-            <span
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </span>
-            <span
-              className="emotion-7"
-            >
-              Hello world
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Non Filled Button 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #175bf5;
-  background-color: transparent;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem #175bf5;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-1:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-1:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-1:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-3 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <button
-      className="emotion-1"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
         className="emotion-2"
       >
-        <span
+        <div
           className="emotion-3"
         >
-          Hello world
-        </span>
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Regular Button 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-1:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-1:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-1:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-3 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
+          <div
+            className="emotion-4"
+          >
+            <div
+              className="emotion-5"
+            >
+              <div
+                className="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                className="emotion-9"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-10"
+                >
+                  <span
+                    className="emotion-11"
+                  >
+                    <span>
+                      Primary
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div
+              className="emotion-5"
+            >
+              <div
+                className="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                className="emotion-16"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-10"
+                >
+                  <span
+                    className="emotion-11"
+                  >
+                    <span>
+                      Secondary
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div
+              className="emotion-5"
+            >
+              <div
+                className="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                className="emotion-23"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-10"
+                >
+                  <span
+                    className="emotion-11"
+                  >
+                    <span>
+                      Tertiary
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div
+              className="emotion-5"
+            >
+              <div
+                className="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                className="emotion-30"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-10"
+                >
+                  <span
+                    className="emotion-11"
+                  >
+                    <span>
+                      Danger
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div
+              className="emotion-5"
+            >
+              <div
+                className="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                className="emotion-37"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-10"
+                >
+                  <span
+                    className="emotion-11"
+                  >
+                    <span>
+                      Inverted
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+            <div
+              className="emotion-5"
+            >
+              <div
+                className="emotion-6"
+                data-testid="button"
+              >
+                <div
+                  className="emotion-7"
+                >
+                  <div
+                    className="emotion-8"
+                  />
+                </div>
+              </div>
+              <button
+                className="emotion-44"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-10"
+                >
+                  <span
+                    className="emotion-11"
+                  >
+                    <span>
+                      InvertedAlt
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div>
+            Press the Button below to trigger loading for 4s
+          </div>
+          <div
+            className="emotion-5"
+          >
+            <button
+              className="emotion-48"
+              data-testid="button"
+              disabled={false}
+              onClick={[Function]}
+              type="button"
+            >
+              <span
+                className="emotion-10"
+              >
+                <span
+                  className="emotion-11"
+                >
+                  <span>
+                    Click here
+                  </span>
+                </span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button
-      className="emotion-1"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="emotion-2"
-      >
-        <span
-          className="emotion-3"
-        >
-          Hello world
-        </span>
-      </span>
-    </button>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Button Transparent Button 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: #175bf5;
-  background-color: transparent;
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-1:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-1:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-1:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-1:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-1:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-3 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <button
-      className="emotion-1"
-      data-testid="button"
-      disabled={false}
-      onClick={[Function]}
-      type="button"
-    >
-      <span
-        className="emotion-2"
-      >
-        <span
-          className="emotion-3"
-        >
-          Hello world
-        </span>
-      </span>
-    </button>
   </div>
 </div>
 `;

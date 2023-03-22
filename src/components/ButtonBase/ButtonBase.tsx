@@ -2,13 +2,14 @@ import { CSSObject } from '@emotion/serialize';
 import React from 'react';
 
 import { ClickEvent } from '../../hooks/useLoading';
-import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
 import { CommonButtonProps } from '../../utils/common';
 import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { TestProps } from '../../utils/types';
-import { buttonBaseStyle } from './ButtonBase.style';
-import { buttonSizes } from './config';
+import { buttonBaseStyle, buttonWrapperStyle } from './ButtonBase.style';
+import { ButtonTypes } from 'components/Button/Button.types';
+import ButtonLoader from 'components/Button/ButtonLoader';
+import { IconButtonShape } from 'components/IconButton';
+import Typography from 'components/Typography';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;
@@ -16,30 +17,20 @@ export type EventButtonProps = {
 };
 
 export type ButtonBaseProps = {
-  /** Type indicating the type of the button */
-  type?: AcceptedColorComponentTypes;
-  /** the color of the button based on our colors eg. red-500 */
-  color?: string;
-  /** This property define the size of the button. Defaults to 'md' */
-  size?: typeof buttonSizes[number];
+  /** The type of the button */
+  type?: ButtonTypes;
   /** This property will make the button fit to its parent width. Defaults to false */
   isBlock?: boolean;
-  /** Property indicating if the component is filled with a color based on the type */
-  isFilled?: boolean;
-  /** Property indicating if the component is async and loading */
+  /** Property indicating if the component is loading */
   isLoading?: boolean;
-  /** Property indicating if the component is transparent with a color based on the type */
-  isTransparent?: boolean;
-  /** An optional boolean to show if the button is icon */
-  isIconButton?: boolean;
-  /** An optional icon to put on the right of the button */
-  iconRight?: React.Component | JSX.Element | null;
-  /** An optional icon to put on the left of the button */
-  iconLeft?: React.Component | JSX.Element | null;
   /** Define if the button is in disabled state */
   isDisabled?: boolean;
+  /** Define if the button is an icon button */
+  isIconButton?: boolean;
+  /** Define the radius type of the icon button */
+  shape?: IconButtonShape;
   /** Defines the button type */
-  buttonType?: 'submit' | 'reset' | 'button';
+  htmlType?: 'submit' | 'reset' | 'button';
   /** Sx prop to override specific properties */
   sx?: {
     container?: CSSObject;
@@ -51,58 +42,49 @@ export type ButtonBaseProps = {
 //@TODO fix props to not overwrite button props
 const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, ref) => {
   const {
-    size = 'md',
     type = 'primary',
-    color = '',
     isBlock = false,
-    isFilled = true,
-    isTransparent = false,
-    iconLeft = null,
-    iconRight = null,
     isDisabled = false,
     isLoading = false,
+    isIconButton = false,
+    shape = 'circle',
     children,
     dataTestId = '',
     dataTestPrefixId = '',
-    buttonType = 'button',
+    htmlType = 'button',
     onClick,
     onBlur,
     sx,
   } = props;
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType(color, type);
   const testIdName = `${dataTestPrefixId}button`;
 
   return (
-    <button
-      ref={ref}
-      type={buttonType}
-      data-testid={generateTestDataId(testIdName, dataTestId)}
-      css={buttonBaseStyle({
-        type,
-        isLoading,
-        isFilled,
-        size,
-        isBlock,
-        color,
-        isTransparent,
-        calculatedColor,
-        isDisabled,
-        iconLeft,
-        iconRight,
-        sx,
-        childrenCount: React.Children.count(children),
-      })}
-      onClick={(event) => {
-        if (onClick) {
-          onClick(event);
-        }
-      }}
-      onBlur={onBlur}
-      disabled={isDisabled || isLoading}
-    >
-      {children}
-    </button>
+    <div css={buttonWrapperStyle({ isBlock })}>
+      {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
+      <button
+        ref={ref}
+        type={htmlType}
+        data-testid={generateTestDataId(testIdName, dataTestId)}
+        css={buttonBaseStyle({
+          type,
+          isLoading,
+          isBlock,
+          isDisabled,
+          isIconButton,
+          shape,
+          sx,
+        })}
+        onClick={(event) => {
+          if (onClick) {
+            onClick(event);
+          }
+        }}
+        onBlur={onBlur}
+        disabled={isDisabled}
+      >
+        {isIconButton ? children : <Typography type="label02">{children}</Typography>}
+      </button>
+    </div>
   );
 });
 

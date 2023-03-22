@@ -75,7 +75,7 @@ const Snackbar: React.FC<SnackbarProps> = ({
           css={actionContainer()}
           data-testid={generateTestDataId('snackbar-secondary', dataTestId)}
         >
-          <Button type={'link'} isTransparent size="sm" onClick={secondaryCTA}>
+          <Button type="tertiary" onClick={secondaryCTA}>
             {secondaryCTALabel}
           </Button>
         </div>
@@ -83,7 +83,7 @@ const Snackbar: React.FC<SnackbarProps> = ({
           css={actionContainer()}
           data-testid={generateTestDataId('snackbar-primary', dataTestId)}
         >
-          <Button type={'link'} isTransparent size="sm" onClick={primaryCTA}>
+          <Button type="tertiary" onClick={primaryCTA}>
             {primaryCTALabel}
           </Button>
         </div>

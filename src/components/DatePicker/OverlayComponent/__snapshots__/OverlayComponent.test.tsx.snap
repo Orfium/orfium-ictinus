@@ -149,12 +149,16 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-10 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #fefefe;
-  padding: 0 1rem;
-  height: 2.875rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-11 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -162,29 +166,32 @@ exports[`OverlayComponent should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-10:hover:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-10:active:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-10:disabled {
-  opacity: 0.5;
+.emotion-11:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-10:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-11:hover:not(:disabled) {
+  background-color: #457bf7;
 }
 
-.emotion-11 {
+.emotion-11:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-12 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,28 +204,17 @@ exports[`OverlayComponent should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-12 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  gap: 0.5rem;
 }
 
 .emotion-15 {
-  fill: #0f0f17;
-  width: 0.625rem;
-  height: 0.625rem;
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-15 path {
-  fill: #0f0f17;
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -448,83 +444,6 @@ exports[`OverlayComponent should render correctly 1`] = `
 
 .emotion-92>button {
   margin: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-93 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #175bf5;
-  background-color: transparent;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem #175bf5;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-93:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-93:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-93:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-93:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-93:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-95 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-96 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-96:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-96:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-96:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-96:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-96:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 .emotion-0 {
@@ -675,12 +594,16 @@ exports[`OverlayComponent should render correctly 1`] = `
 }
 
 .emotion-10 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #fefefe;
-  padding: 0 1rem;
-  height: 2.875rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-11 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -688,29 +611,32 @@ exports[`OverlayComponent should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-11:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-10:hover:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-10:active:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-10:disabled {
-  opacity: 0.5;
+.emotion-11:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-10:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-11:hover:not(:disabled) {
+  background-color: #457bf7;
 }
 
-.emotion-11 {
+.emotion-11:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-12 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -723,28 +649,17 @@ exports[`OverlayComponent should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-12 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-13 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  gap: 0.5rem;
 }
 
 .emotion-15 {
-  fill: #0f0f17;
-  width: 0.625rem;
-  height: 0.625rem;
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-15 path {
-  fill: #0f0f17;
+  fill: #ffffff;
 }
 
 .emotion-16 {
@@ -976,83 +891,6 @@ exports[`OverlayComponent should render correctly 1`] = `
   margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
-.emotion-93 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #175bf5;
-  background-color: transparent;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem #175bf5;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-93:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-93:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-93:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-93:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-93:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-95 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-96 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-96:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-96:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-96:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-96:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-96:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 <div>
   <div
     class="emotion-0"
@@ -1089,34 +927,36 @@ exports[`OverlayComponent should render correctly 1`] = `
                 <div
                   class="emotion-9"
                 >
-                  <button
+                  <div
                     class="emotion-10"
-                    data-testid="button"
-                    type="button"
                   >
-                    <span
+                    <button
                       class="emotion-11"
+                      data-testid="button"
+                      type="button"
                     >
                       <span
                         class="emotion-12"
                       >
-                        November
-                         
-                        2020
-                      </span>
-                      <span
-                        class="emotion-13"
-                      >
                         <span
-                          class="emotion-6"
+                          class="emotion-13"
                         >
+                          <span>
+                            November
+                             
+                            2020
+                          </span>
                           <span
-                            class="emotion-15"
-                          />
+                            class="emotion-6"
+                          >
+                            <span
+                              class="emotion-15"
+                            />
+                          </span>
                         </span>
                       </span>
-                    </span>
-                  </button>
+                    </button>
+                  </div>
                 </div>
               </div>
               <div
@@ -1587,36 +1427,48 @@ exports[`OverlayComponent should render correctly 1`] = `
       <div
         class="emotion-92"
       >
-        <button
-          class="emotion-93"
-          data-testid="button"
-          type="button"
+        <div
+          class="emotion-10"
         >
-          <span
+          <button
             class="emotion-11"
+            data-testid="button"
+            type="button"
           >
             <span
-              class="emotion-95"
+              class="emotion-12"
             >
-              Cancel
+              <span
+                class="emotion-13"
+              >
+                <span>
+                  Cancel
+                </span>
+              </span>
             </span>
-          </span>
-        </button>
-        <button
-          class="emotion-96"
-          data-testid="button"
-          type="button"
+          </button>
+        </div>
+        <div
+          class="emotion-10"
         >
-          <span
+          <button
             class="emotion-11"
+            data-testid="button"
+            type="button"
           >
             <span
-              class="emotion-95"
+              class="emotion-12"
             >
-              Apply
+              <span
+                class="emotion-13"
+              >
+                <span>
+                  Apply
+                </span>
+              </span>
             </span>
-          </span>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>

@@ -499,12 +499,16 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-346 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #fefefe;
-  padding: 0 1rem;
-  height: 2.875rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-347 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -512,29 +516,32 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-346:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-347:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-346:hover:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-346:active:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-346:disabled {
-  opacity: 0.5;
+.emotion-347:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-346:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-347:hover:not(:disabled) {
+  background-color: #457bf7;
 }
 
-.emotion-347 {
+.emotion-347:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-348 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-349 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -547,28 +554,17 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-348 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-349 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  gap: 0.5rem;
 }
 
 .emotion-351 {
-  fill: #0f0f17;
-  width: 0.625rem;
-  height: 0.625rem;
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-351 path {
-  fill: #0f0f17;
+  fill: #ffffff;
 }
 
 .emotion-368 {
@@ -618,83 +614,6 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 
 .emotion-428>button {
   margin: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-429 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #175bf5;
-  background-color: transparent;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem #175bf5;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-429:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-429:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-429:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-429:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-429:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-431 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-432 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175bf5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-432:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
-}
-
-.emotion-432:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-432:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-432:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-432:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 <div
@@ -3426,37 +3345,39 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                         <div
                           className="emotion-345"
                         >
-                          <button
+                          <div
                             className="emotion-346"
-                            data-testid="button"
-                            disabled={false}
-                            onClick={[Function]}
-                            type="button"
                           >
-                            <span
+                            <button
                               className="emotion-347"
+                              data-testid="button"
+                              disabled={false}
+                              onClick={[Function]}
+                              type="button"
                             >
                               <span
                                 className="emotion-348"
                               >
-                                November
-                                 
-                                2020
-                              </span>
-                              <span
-                                className="emotion-349"
-                              >
                                 <span
-                                  className="emotion-12"
-                                  onClick={[Function]}
+                                  className="emotion-349"
                                 >
+                                  <span>
+                                    November
+                                     
+                                    2020
+                                  </span>
                                   <span
-                                    className="emotion-351"
-                                  />
+                                    className="emotion-12"
+                                    onClick={[Function]}
+                                  >
+                                    <span
+                                      className="emotion-351"
+                                    />
+                                  </span>
                                 </span>
                               </span>
-                            </span>
-                          </button>
+                            </button>
+                          </div>
                         </div>
                       </div>
                       <div
@@ -4074,40 +3995,52 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
               <div
                 className="emotion-428"
               >
-                <button
-                  className="emotion-429"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
+                <div
+                  className="emotion-346"
                 >
-                  <span
+                  <button
                     className="emotion-347"
+                    data-testid="button"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
                   >
                     <span
-                      className="emotion-431"
+                      className="emotion-348"
                     >
-                      Cancel
+                      <span
+                        className="emotion-349"
+                      >
+                        <span>
+                          Cancel
+                        </span>
+                      </span>
                     </span>
-                  </span>
-                </button>
-                <button
-                  className="emotion-432"
-                  data-testid="button"
-                  disabled={false}
-                  onClick={[Function]}
-                  type="button"
+                  </button>
+                </div>
+                <div
+                  className="emotion-346"
                 >
-                  <span
+                  <button
                     className="emotion-347"
+                    data-testid="button"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
                   >
                     <span
-                      className="emotion-431"
+                      className="emotion-348"
                     >
-                      Apply
+                      <span
+                        className="emotion-349"
+                      >
+                        <span>
+                          Apply
+                        </span>
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

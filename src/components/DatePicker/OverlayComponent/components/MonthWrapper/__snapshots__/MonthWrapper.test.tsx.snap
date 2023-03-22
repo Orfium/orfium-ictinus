@@ -106,12 +106,16 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-7 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #fefefe;
-  padding: 0 1rem;
-  height: 2.875rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -119,29 +123,32 @@ exports[`MonthWrapper should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-7:hover:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
+.emotion-8:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-8:hover:not(:disabled) {
+  background-color: #457bf7;
 }
 
-.emotion-8 {
+.emotion-8:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -154,28 +161,17 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-9 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  gap: 0.5rem;
 }
 
 .emotion-12 {
-  fill: #0f0f17;
-  width: 0.625rem;
-  height: 0.625rem;
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-12 path {
-  fill: #0f0f17;
+  fill: #ffffff;
 }
 
 .emotion-13 {
@@ -495,12 +491,16 @@ exports[`MonthWrapper should render correctly 1`] = `
 }
 
 .emotion-7 {
-  font-size: 1rem;
-  font-weight: 500;
-  color: black;
-  background-color: #fefefe;
-  padding: 0 1rem;
-  height: 2.875rem;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-8 {
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
   cursor: pointer;
@@ -508,29 +508,32 @@ exports[`MonthWrapper should render correctly 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.0625rem;
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #8833ff auto 0.125rem;
 }
 
-.emotion-7:hover:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-7:active:not(:disabled) {
-  background-color: #fdfdfd;
-}
-
-.emotion-7:disabled {
-  opacity: 0.5;
+.emotion-8:disabled {
+  opacity: 50%;
   cursor: not-allowed;
 }
 
-.emotion-7:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
+.emotion-8:hover:not(:disabled) {
+  background-color: #457bf7;
 }
 
-.emotion-8 {
+.emotion-8:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-9 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: .25;
+}
+
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -543,28 +546,17 @@ exports[`MonthWrapper should render correctly 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-9 {
-  margin-left: 0;
-  margin-right: 0.5rem;
-}
-
-.emotion-10 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  gap: 0.5rem;
 }
 
 .emotion-12 {
-  fill: #0f0f17;
-  width: 0.625rem;
-  height: 0.625rem;
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
 }
 
 .emotion-12 path {
-  fill: #0f0f17;
+  fill: #ffffff;
 }
 
 .emotion-13 {
@@ -806,34 +798,36 @@ exports[`MonthWrapper should render correctly 1`] = `
           <div
             class="emotion-6"
           >
-            <button
+            <div
               class="emotion-7"
-              data-testid="button"
-              type="button"
             >
-              <span
+              <button
                 class="emotion-8"
+                data-testid="button"
+                type="button"
               >
                 <span
                   class="emotion-9"
                 >
-                  November
-                   
-                  2020
-                </span>
-                <span
-                  class="emotion-10"
-                >
                   <span
-                    class="emotion-3"
+                    class="emotion-10"
                   >
+                    <span>
+                      November
+                       
+                      2020
+                    </span>
                     <span
-                      class="emotion-12"
-                    />
+                      class="emotion-3"
+                    >
+                      <span
+                        class="emotion-12"
+                      />
+                    </span>
                   </span>
                 </span>
-              </span>
-            </button>
+              </button>
+            </div>
           </div>
         </div>
         <div

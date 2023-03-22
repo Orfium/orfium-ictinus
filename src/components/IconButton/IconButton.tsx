@@ -1,38 +1,42 @@
+import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import { useTypeColorToColorMatch } from '../../hooks/useTypeColorToColorMatch';
-import { useTheme } from '../../index';
-import { EventProps } from '../../utils/common';
-import { TestProps } from '../../utils/types';
-import { defineBackgroundColor } from '../Button/utils';
+import getButtonTokens from '../Button/Button.tokens';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
-import { sxProp } from './IconButton.style';
+import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
-export type IconButtonProps = Omit<ButtonBaseProps, 'isIconButton' | 'iconLeft' | 'iconRight'> & {
-  /** Property indicating the size of the icon. Defaults to 16 */
-  iconSize?: number;
+export type IconButtonShape = 'circle' | 'square';
+
+export type IconButtonProps = Omit<
+  ButtonBaseProps,
+  'type' | 'isBlock' | 'isLoading' | 'isIconButton'
+> & {
+  /** This property defines the type of the IconButton */
+  type?: PrimitiveButtonTypes;
   /** This property defines witch icon to use */
   name: AcceptedIconNames;
-} & TestProps &
-  EventProps;
+  /** This property defines the shape of the IconButton */
+  shape?: IconButtonShape;
+};
 
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
-  const { iconSize, color = '', type = 'primary', isFilled = true, name, isTransparent } = props;
+  const { name, type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
-  const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
-  const calculatedColor = calculateColorBetweenColorAndType(color, type);
-  const iconColor =
-    isFilled && !isTransparent
-      ? theme.utils.getAAColorFromSwatches(calculatedColor.color, calculatedColor.shade)
-      : defineBackgroundColor(theme, calculatedColor, type, true, true);
+  const buttonTokens = getButtonTokens(theme);
 
-  const sx = sxProp({ size: props.size });
+  const iconColor = buttonTokens.color[type].textColor;
 
   return (
-    <ButtonBase {...props} ref={ref} sx={sx} dataTestPrefixId={'icon-'}>
-      <Icon name={name} color={iconColor} size={iconSize} />
+    <ButtonBase
+      {...props}
+      ref={ref}
+      isIconButton
+      shape={shape}
+      dataTestPrefixId={dataTestPrefixId ? `${dataTestPrefixId}-icon-` : 'icon-'}
+    >
+      <Icon name={name} color={iconColor} />
     </ButtonBase>
   );
 });

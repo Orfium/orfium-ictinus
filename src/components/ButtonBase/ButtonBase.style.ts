@@ -1,87 +1,62 @@
 import { css, SerializedStyles } from '@emotion/react';
-import { FontSizeKey } from 'theme/globals/typography';
-import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
-import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
-import { ColorShapeFromComponent } from '../../utils/themeFunctions';
+import getStatesTokens from '../../theme/states/states.tokens';
+import getButtonTokens from '../Button/Button.tokens';
 import { ButtonBaseProps } from './ButtonBase';
-import { buttonConfig, buttonSizes } from './config';
-import { calculateButtonColor, defineBackgroundColor } from './utils';
 
-/** Calculates the button specific height based on the size passed to it **/
-export const heightBasedOnSize = (size: typeof buttonSizes[number] | 'default') =>
-  rem(buttonConfig.sizes[size] ?? buttonConfig.sizes.default);
-
-/** Calculates the button specific font size based on the size passed to it **/
-const fontSizeBasedOnSize = (theme: Theme, size: typeof buttonSizes[number] | 'default') =>
-  /** @TODO revisit this when all custom fontSizes are gone and we can use only
-   * the fontSizes.get() function. Refactor buttonConfig logic */
-  buttonConfig.fontSize[size]
-    ? theme.globals.typography.fontSizes[buttonConfig.fontSize[size]]
-    : theme.globals.typography.fontSizes.get(buttonConfig.fontSize.default as FontSizeKey);
+export const buttonWrapperStyle = ({
+  isBlock,
+}: Pick<ButtonBaseProps, 'isBlock'>): SerializedStyles =>
+  css({ position: 'relative', width: isBlock ? '100%' : 'fit-content' });
 
 export const buttonBaseStyle =
   ({
-    type,
-    isFilled,
-    calculatedColor,
-    size,
+    type = 'primary',
     isBlock,
-    isTransparent,
-    childrenCount,
+    isLoading,
+    isDisabled,
+    isIconButton,
+    shape,
     sx,
-  }: Omit<ButtonBaseProps, 'buttonType' | 'ref'> & {
-    calculatedColor: ColorShapeFromComponent;
-    childrenCount: number;
-  }) =>
+  }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
-    const backGroundColor = defineBackgroundColor(theme, calculatedColor, type, childrenCount > 0);
-    const isOutlined = !isFilled && !isTransparent;
-    const isBackgroundTransparent = isOutlined || isTransparent;
-
-    const borderWidth = isOutlined ? buttonConfig.types.outlined.border.width : 0;
+    const buttonTokens = getButtonTokens(theme);
+    const stateTokens = getStatesTokens(theme);
 
     const baseButtonStyles = {
-      fontSize: fontSizeBasedOnSize(theme, size || 'default'),
-      fontWeight: theme.globals.typography.weights.get('medium'),
-      color: calculateButtonColor({
-        type,
-        isBackgroundTransparent: Boolean(isBackgroundTransparent),
-        backGroundColor,
-        calculatedColor,
-        theme,
-      }),
+      color: buttonTokens.color[type].textColor,
       width: isBlock ? '100%' : undefined,
-      backgroundColor: isBackgroundTransparent ? 'transparent' : backGroundColor,
-      padding:
-        size === 'lg' ? theme.globals.spacing.get('6') : `0 ${theme.globals.spacing.get('6')}`,
-      height: heightBasedOnSize(size || 'default'),
-      borderRadius: theme.globals.spacing.get('3'),
-      border: isOutlined ? `solid ${rem(borderWidth)} ${backGroundColor}` : 'none',
+      backgroundColor: stateTokens[isLoading ? 'active' : 'inactive'].backgroundColor[type],
+      padding: isIconButton
+        ? buttonTokens.spacing.iconButton.padding
+        : `${buttonTokens.spacing.textButton.paddingVertical} ${buttonTokens.spacing.textButton.paddingHorizontal}`,
+      borderRadius:
+        isIconButton && shape === 'circle'
+          ? buttonTokens.borderRadius.icon
+          : buttonTokens.borderRadius.text,
+      border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
-      ':focus-visible:not(:disabled)': {
-        outline: getFocus({ theme, borderWidth: borderWidth }).styleOutline,
-      },
+
+      ':focus-visible:not(:disabled)': stateTokens.focus,
+      ':disabled': stateTokens.disabled,
       ':hover:not(:disabled)': {
-        backgroundColor: getHover({
-          theme,
-          color: calculatedColor.color,
-          shade: isBackgroundTransparent ? 0 : calculatedColor.shade,
-        }).backgroundColor,
+        backgroundColor: stateTokens.hover.backgroundColor[type],
       },
       ':active:not(:disabled)': {
-        backgroundColor: getPressed({
-          theme,
-          color: calculatedColor.color,
-          shade: isBackgroundTransparent ? 0 : calculatedColor.shade,
-        }).backgroundColor,
+        backgroundColor: stateTokens.active.backgroundColor[type],
       },
-      ':disabled': getDisabled(),
     };
 
-    return css({ ...baseButtonStyles, ...sx?.container });
+    const loadingStyles =
+      isLoading && !isDisabled
+        ? {
+            pointerEvents: 'none' as const,
+          }
+        : {};
+
+    return css({ ...baseButtonStyles, ...loadingStyles, ...sx?.container });
   };
 
 export const buttonSpanStyle = () => () => {

@@ -82,17 +82,7 @@ const MonthWrapper = ({
             <div css={monthHeaderTitleWrapperStyle({ isRangePicker })}>
               <div css={monthHeaderTitleStyle({ isRangePicker })}>
                 {!isRangePicker ? (
-                  <Button
-                    onClick={() => setIsOpen(!isOpen)}
-                    color={'neutralWhite-100'}
-                    iconRight={
-                      <Icon
-                        name={'triangleDown'}
-                        size={10}
-                        color={theme.utils.getColor('darkGrey', 850)}
-                      />
-                    }
-                  >
+                  <Button onClick={() => setIsOpen(!isOpen)} iconRightName={'triangleDown'}>
                     {date.format('MMMM')} {date.format('YYYY')}
                   </Button>
                 ) : (

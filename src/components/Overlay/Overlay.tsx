@@ -44,11 +44,8 @@ const Overlay = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Overlay
           <div ref={ref} css={overlayStyle({ isOpen, anchor })}>
             <div css={closeIconContainer()}>
               <IconButton
+                type="tertiary"
                 name={'close'}
-                isFilled={false}
-                isTransparent
-                color={'lightGrey-650'}
-                size={'sm'}
                 onClick={onClose}
                 dataTestId={'overlay-close'}
               />

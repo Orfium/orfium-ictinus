@@ -53,11 +53,8 @@ const Modal: React.FC<ModalProps> = ({
           <Card elevated={'02'} radius={'3'}>
             <div css={closeContainer}>
               <IconButton
+                type="tertiary"
                 name={'close'}
-                isFilled={false}
-                isTransparent
-                color={'lightGrey-650'}
-                size={'sm'}
                 onClick={onClose}
                 dataTestId={'modal-close'}
               />

@@ -54,11 +54,9 @@ const ExpandedButtonCell: React.FC<ExpandedButtonCellProps> = ({
             onClick={(e) => e.stopPropagation()}
           >
             <IconButton
-              isTransparent
+              type="tertiary"
               name={'chevronSmallDown'}
-              size={'sm'}
               onClick={toggleIsChecked}
-              color={'lightGrey-700'}
               dataTestId={'expanded-button'}
             />
           </div>

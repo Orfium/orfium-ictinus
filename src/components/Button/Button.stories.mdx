@@ -2,40 +2,43 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
-import AsyncButtonShowcase from '../storyUtils/AsyncButtonShowcase/AsyncButtonShowcase';
 import Icon from '../Icon';
 import { FIGMA_URL } from '../../utils/common';
+import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
 
 <Meta
-    title="Design System/Button"
-    component={Button}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Button',
-            url: `${FIGMA_URL}?node-id=574%3A7239`,
-        },
-        {
-            type: 'figma',
-            name: 'Anatomy',
-            url: `${FIGMA_URL}?node-id=10324%3A104411`,
-        },
-        {
-            type: 'figma',
-            name: 'Filled',
-            url: `${FIGMA_URL}?node-id=8145%3A145377`,
-        },
-        {
-            type: 'figma',
-            name: 'Outlined',
-            url: `${FIGMA_URL}?node-id=8149%3A145615`,
-        },
-        {
-            type: 'figma',
-            name: 'Transparent',
-            url: `${FIGMA_URL}?node-id=8166%3A146566`,
-        }],
-    }} />
+  title="Design System/Button/Default (Text)"
+  component={Button}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Button',
+        url: `${FIGMA_URL}?node-id=574%3A7239`,
+      },
+      {
+        type: 'figma',
+        name: 'Anatomy',
+        url: `${FIGMA_URL}?node-id=10324%3A104411`,
+      },
+      {
+        type: 'figma',
+        name: 'Filled',
+        url: `${FIGMA_URL}?node-id=8145%3A145377`,
+      },
+      {
+        type: 'figma',
+        name: 'Outlined',
+        url: `${FIGMA_URL}?node-id=8149%3A145615`,
+      },
+      {
+        type: 'figma',
+        name: 'Transparent',
+        url: `${FIGMA_URL}?node-id=8166%3A146566`,
+      },
+    ],
+  }}
+/>
 
 # Button
 
@@ -46,151 +49,225 @@ A universal Button component that is a clickable element that can hold many form
 ```js
 import { Button } from '@orfium/ictinus';
 
-<Button onClick={() => {}}>
-  Click Me
-</Button>
-```
-
-### Async handling case
-
-```js
-import { Button } from '@orfium/ictinus';
-
-<Button
-      onClick={setLoading => {
-        setLoading?.(true);
-
-        serviceMock()
-          .then(res => {
-            console.log(res);
-          })
-          .finally(() => setLoading?.(false));
-      }}
-    >
-      Async Action
-</Button>
+<Button onClick={() => {}}>Click Me</Button>;
 ```
 
 # Props
 
 <Props of={Button} />
 
-
-# Icon Button Sizes
-Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
-
-<Preview>
-  <Story name="Icon Button Sizes">
-    <Stack>
-        <Button size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-lg'}>Hello world</Button>
-        <Button size={'md'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-md'}>Hello world</Button>
-        <Button size={'sm'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={14} />} dataTestId={'size-sm'}>Hello world</Button>
-    </Stack>
-  </Story>
-</Preview>
-
-# Icon Button Sizes
-Button sizes are 3 `sm, md, lg` and indicates the acronym of the size. Default is medium size
-
-<Preview>
-  <Story name="Button Sizes">
-    <Stack>
-        <Button size={'lg'}>Hello world</Button>
-        <Button size={'md'}>Hello world</Button>
-        <Button size={'sm'}>Hello world</Button>
-    </Stack>
-  </Story>
-</Preview>
-
 # Button Types
-Button types based on the system approved literals for `success, error, info, warning, link`
+
+Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
 
 <Preview>
   <Story name="Button Types">
     <Stack>
-        <Button size={'sm'} isDisabled type='success'>Success</Button>
-        <Button size={'sm'} type='success'>Success</Button>
-        <Button size={'sm'} type='error'>Error</Button>
-        <Button size={'sm'} type='info'>Info</Button>
-        <Button size={'sm'} type='warning'>Warning</Button>
-        <Button size={'sm'} type='link'>Link</Button>
+      <Button type="primary">Primary</Button>
+      <Button type="secondary">Secondary</Button>
+      <Button type="tertiary">Tertiary</Button>
+      <Button type="danger">Danger</Button>
+      <Button type="inverted">Inverted</Button>
+      <Button type="invertedAlt">InvertedAlt</Button>
     </Stack>
-  </Story>
-</Preview>
-
-# Button Colors
-Button colors based on the system palette. Check <a href="/?path=/story/guide-colors--page">our colors</a> for more.
-
-<Preview>
-  <Story name="Button Colors">
     <Stack>
-        <Button size={'sm'} isDisabled color={'red-500'}>Disabled</Button>
-        <Button size={'sm'} color={'red-600'}>Red 600</Button>
-        <Button size={'sm'} color={'magenta-200'}>Magenta 200</Button>
+      <Button type="primary" isDisabled>
+        Primary
+      </Button>
+      <Button type="secondary" isDisabled>
+        Secondary
+      </Button>
+      <Button type="tertiary" isDisabled>
+        Tertiary
+      </Button>
+      <Button type="danger" isDisabled>
+        Danger
+      </Button>
+      <Button type="inverted" isDisabled>
+        Inverted
+      </Button>
+      <Button type="invertedAlt" isDisabled>
+        InvertedAlt
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
-# Regular Button
+# Loading Button
+
+Button Loading variations based on the `isLoading` boolean prop.
+
 <Preview>
-  <Story name="Regular Button">
-    <Button isFilled={true} size={'lg'}>Hello world</Button>
+  <Story name="Loading Button">
+    <LoadingButtonShowcase />
   </Story>
 </Preview>
 
-# Button with icon
+# Buttons with Icons
+
+Buttons with icons. 3 different variations based on the icon's placement.
+
 <Preview>
-  <Story name="Button with icon">
+  <Story name="Buttons with Icons" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button isFilled={true} size={'lg'} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button isFilled={true} size={'lg'} iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dotsVertical'} color={'primary'} size={18} />}>Hello world</Button>
+      <Button
+        iconLeftName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Only left Icon
+      </Button>
+      <Button
+        iconLeftName={'dashboard'}
+        iconRightName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Both Icons
+      </Button>
+      <Button
+        iconRightName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Only Right Icon
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
-# Non Filled Button
-<Preview>
-  <Story name="Non Filled Button">
-    <Button isFilled={false} size={'lg'}>Hello world</Button>
-  </Story>
-</Preview>
+# Buttons with Avatars
 
-# Transparent Button
+An avatar can be placed instead of a left icon. Only for `primary, secondary, tertiary` buttons.
+Can be only combined with a right icon, not with a left icon at the same time.
+
 <Preview>
-  <Story name="Transparent Button">
-    <Button type='primary' size={'lg'} isTransparent>Hello world</Button>
+  <Story name="Buttons with Avatars" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <Button
+        avatar={{ label: 'PR' }}
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Text Avatar
+      </Button>
+      <Button
+        avatar={{ src: 'https://mui.com/static/images/avatar/1.jpg' }}
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Img Avatar
+      </Button>
+      <Button avatar={{}} type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}>
+        Empty Avatar
+      </Button>
+    </Stack>
+    <Stack>
+      <Button
+        avatar={{ label: 'PR' }}
+        iconRightName="arrowRight"
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Text Avatar
+      </Button>
+      <Button
+        avatar={{ src: 'https://mui.com/static/images/avatar/1.jpg' }}
+        iconRightName="arrowRight"
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Img Avatar
+      </Button>
+      <Button
+        avatar={{}}
+        iconRightName="arrowRight"
+        type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
+      >
+        Empty Avatar
+      </Button>
+    </Stack>
   </Story>
 </Preview>
 
 # Block Button
+
 <Preview>
-  <Story name="Block Button">
+  <Story name="Block Button" parameters={{ decorators: [withKnobs] }}>
     <Stack isVertical>
-      <Button isFilled={true} size={'lg'} isBlock iconLeft={<Icon name={'dashboard'} color={'primary'} size={16} />} iconRight={<Icon name={'dashboard'} color={'primary'} size={16} />}>Hello world</Button>
-      <Button isFilled={false} size={'lg'} isBlock>Hello world</Button>
-      <Button type='success' size={'lg'} isTransparent isBlock>Hello world</Button>
+      <Button
+        isBlock
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
+        iconLeftName={'dashboard'}
+        iconRightName={'dashboard'}
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
+        isLoading
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
+      <Button
+        isBlock
+        isDisabled
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+      >
+        Hello world
+      </Button>
     </Stack>
   </Story>
 </Preview>
 
-# Dynamic Button Props - Knobs
-<Preview>
-  <Story name="Dynamic Button Props" parameters={{ decorators: [withKnobs] }}>
-    <Button type={select('type', ['primary', 'secondary', 'success', 'error', 'info', 'warning', 'primary', 'secondary'], 'secondary')} isFilled={boolean('isFilled', true)} size={select('size', ['sm', 'md', 'lg'], 'lg')} isBlock={boolean('isBlock', false)}>{text('text', 'change me!')}</Button>
-  </Story>
-</Preview>
-
-
-# Async Button with loading state
+# Button Playground
 
 <Preview>
-  <Story name="Async Button">
-    <Stack>
-      <Button size={'sm'} onClick={() => { console.log('clicked!')}}>Sync Action</Button>
-      <AsyncButtonShowcase text={'Async sm'} btnSize={'sm'}/>
-      <AsyncButtonShowcase type={'secondary'} text={'Async md'} btnSize={'md'}/>
-      <AsyncButtonShowcase text={'Async lg'} btnSize={'lg'}/>
+  <Story name="Button Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack isVertical>
+      <Button
+        isBlock
+        type={select(
+          'type',
+          ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
+          'primary'
+        )}
+        iconLeftName={select('iconLeftName', [, 'dashboard'], 'dashboard')}
+        iconRightName={select('iconRightName', [, 'dashboard'], 'dashboard')}
+        isLoading={boolean('isLoading', false)}
+        isDisabled={boolean('isDisabled', false)}
+        isBlock={boolean('isBlock', false)}
+      >
+        Hello world
+      </Button>
     </Stack>
   </Story>
 </Preview>
