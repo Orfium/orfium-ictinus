@@ -4,6 +4,7 @@ import { SelectOption } from '../../Select';
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
+import { SELECT_ALL_OPTION } from 'components/Select/constants';
 
 export type Props = {
   /** Sets the size of the menu */
@@ -16,18 +17,18 @@ export type Props = {
   isLoading?: boolean;
   isVirtualized?: boolean;
   searchTerm?: string;
+  hasSelectAllOption?: boolean;
 };
 
-const SelectMenu: React.FC<Props> = props => {
+const SelectMenu: React.FC<Props> = (props) => {
   const {
-    size = 'sm',
-    status = 'normal',
     filteredOptions,
     handleOptionClick,
     selectedOption,
     isLoading,
     isVirtualized,
     searchTerm,
+    hasSelectAllOption = false,
   } = props;
   const myRef = useRef<HTMLDivElement>(null);
 
@@ -47,6 +48,7 @@ const SelectMenu: React.FC<Props> = props => {
         handleOptionClick={handleOptionClick}
         searchTerm={searchTerm}
         selectedItem={selectedOption}
+        defaultOption={hasSelectAllOption ? SELECT_ALL_OPTION : undefined}
       />
     ) : (
       <div css={optionStyle({ selected: false, noResultsExist: true })}>No options</div>
