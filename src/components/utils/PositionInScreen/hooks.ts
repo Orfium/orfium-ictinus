@@ -1,3 +1,4 @@
+import head from 'lodash/head';
 import { useEffect, useState } from 'react';
 
 export const usePositionInScreen = (
@@ -22,14 +23,18 @@ export const usePositionInScreen = (
   /**
    * We use this ResizeObserver in order to track any changes on the parent's height:
    * This is necessary for the case of the MultiSelect, where the height of the TextField is dynamic
-   * and will increase/decrease as more Chips (Selected Options) are added/deleted. 
+   * and will increase/decrease as more Chips (Selected Options) are added/deleted.
    * Therefore the parentHeight is stored on the useState above.
    */
   useEffect(() => {
     if (!parentRef.current) return;
 
     const resizeObserver = new ResizeObserver((entries) => {
-      setParentHeight(entries[0].contentRect.height);
+      const parent = head(entries);
+
+      if (parent) {
+        setParentHeight(parent.contentRect.height);
+      }
     });
 
     resizeObserver.observe(parentRef.current);
