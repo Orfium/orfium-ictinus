@@ -1,71 +1,45 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
+import { useWrapperWidth, usePositionInScreen } from './hooks';
 import { container, itemContainer } from './PositionInScreen.style';
 
-type PositionInScreenProps = {
+export type PositionInScreenProps = {
+  /** Whether the item to be positioned is visible */
   isVisible: boolean;
+  /** Configures the container's overflow */
   isOverflowAllowed?: boolean;
+  /** Whether the item to be positioned uses the parent's wrapper width */
+  hasWrapperWidth?: boolean;
+  /** Additional offset-x */
   offsetX?: number;
+  /** Additional offset-y */
   offsetY?: number;
-  parent: any;
-};
-
-const usePositionInScreen = (
-  parentRef: React.MutableRefObject<any>,
-  itemRef: React.MutableRefObject<any>,
-  isVisible?: boolean
-) => {
-  const [position, setPosition] = useState({ x: -1, y: -1 });
-  useEffect(() => {
-    let { x: itemX, y: itemY } = parentRef?.current
-      ? parentRef?.current?.getBoundingClientRect()
-      : { x: 0, y: 0 };
-    const parrentOffsetHeight = parentRef?.current?.offsetHeight || 0;
-    const { width, height } = itemRef?.current
-      ? itemRef?.current?.children[0]?.getBoundingClientRect()
-      : { width: 0, height: 0 };
-
-    const isItemYOutOfScreenHeight = itemY + parrentOffsetHeight + height > window.innerHeight;
-
-    if (isItemYOutOfScreenHeight) {
-      itemY -= height;
-      if (itemY < 0) {
-        itemY = 0;
-      }
-    } else {
-      itemY += parrentOffsetHeight;
-    }
-
-    const isItemXOutOfScreenWidth = itemX + width > window.innerWidth;
-    if (isItemXOutOfScreenWidth) {
-      itemX = window.innerWidth - width;
-    }
-
-    setPosition({ x: itemX, y: itemY });
-  }, [parentRef, itemRef, isVisible]);
-
-  return position;
+  /** The parent element */
+  parent: JSX.Element;
 };
 
 const PositionInScreen: React.FC<PositionInScreenProps> = ({
   isVisible,
   parent,
   isOverflowAllowed,
+  hasWrapperWidth = false,
   offsetX = 0,
   offsetY = 0,
   children,
 }) => {
   const wrapperRef = useRef(null);
   const itemRef = useRef(null);
-  const { x, y } = usePositionInScreen(wrapperRef, itemRef, isVisible);
-  const isTooltipVisible = isVisible && x !== -1 && y !== -1;
-  const ParentComp = parent;
+
+  const [wrapperWidth] = useWrapperWidth(hasWrapperWidth, wrapperRef);
+  const { x, y } = usePositionInScreen(wrapperRef, itemRef, offsetX, offsetY, isVisible);
+
+  const hasTooltip = isVisible && x !== -1 && y !== -1;
 
   return (
-    <div css={container(isOverflowAllowed, isTooltipVisible)} ref={wrapperRef}>
-      <ParentComp />
-      {isTooltipVisible && (
-        <div css={itemContainer(x + offsetX, y + offsetY)} id={'unique-tooltip-id'} ref={itemRef}>
+    <div css={container(isOverflowAllowed, hasTooltip)} ref={wrapperRef}>
+      {parent}
+      {hasTooltip && (
+        <div css={itemContainer(x, y, wrapperWidth)} id={'unique-tooltip-id'} ref={itemRef}>
           {children}
         </div>
       )}

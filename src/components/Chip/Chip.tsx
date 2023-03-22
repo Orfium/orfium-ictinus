@@ -56,6 +56,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
                   onClear();
                 }
               }}
+              dataTestId={generateTestDataId('chip-delete', dataTestId)}
             />
           </div>
         )}

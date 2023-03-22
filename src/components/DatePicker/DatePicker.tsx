@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Dayjs } from 'utils/date';
 
 import { TestProps } from '../../utils/types';
@@ -83,10 +83,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   isRangePicker = false,
   onChange,
   disableDates,
-  value = {
-    from: datepickerPropValue?.toDate(),
-    to: datepickerPropValue?.toDate(),
-  },
+  value: initialValue,
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
@@ -94,11 +91,17 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   isDefaultNow = true,
   dataTestId,
 }) => {
+  const value = useMemo(() => initDates(initialValue || {}, isDefaultNow), [initialValue]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
 
-  const [range, setRange] = useState<Range>(initDates(value, isDefaultNow));
-  const [selectedRange, setSelectedRange] = useState<Range>(initDates(value, isDefaultNow));
+  const [range, setRange] = useState<Range>(() => value);
+  const [selectedRange, setSelectedRange] = useState<Range>(() => value);
+
+  useEffect(() => {
+    setRange(value);
+    setSelectedRange(value);
+  }, [value, isDefaultNow]);
 
   const handleSelectedOptions = useCallback((option: string) => {
     const foundOption = extraOptions.find((optionItem) => optionItem.value === option);
@@ -218,7 +221,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
     <ClickAwayListener onClick={onCancel}>
       <PositionInScreen
         isVisible={isOpen}
-        parent={() => (
+        parent={
           <DatePickInput
             filterConfig={filterConfig}
             isRangePicker={isRangePicker}
@@ -230,7 +233,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
             isOpen={isOpen}
             dataTestId={dataTestId}
           />
-        )}
+        }
       >
         <div css={datePickerStyles()}>
           <OverlayComponent

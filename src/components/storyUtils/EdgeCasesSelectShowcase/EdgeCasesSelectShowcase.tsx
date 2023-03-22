@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { showcaseContainer } from './EdgeCasesSelectShowcase.style';
 import Select from 'components/Select';
 
 const options = [
@@ -16,7 +17,7 @@ const handleSelectedOption = (selectedOption: any) => {
 
 const EdgeCasesSelectShowcase: React.FC = () => {
   return (
-    <React.Fragment>
+    <div css={showcaseContainer()}>
       <div style={{ width: 250 }}>
         <Select
           label={'Flavour'}
@@ -50,7 +51,16 @@ const EdgeCasesSelectShowcase: React.FC = () => {
           styleType={'filled'}
         />
       </div>
-    </React.Fragment>
+      <div style={{ width: 400, position: 'absolute', bottom: '5%' }}>
+        <Select
+          label={'Bottom positioned case'}
+          options={options}
+          selectedOption={defaultValue}
+          handleSelectedOption={handleSelectedOption}
+          styleType={'filled'}
+        />
+      </div>
+    </div>
   );
 };
 

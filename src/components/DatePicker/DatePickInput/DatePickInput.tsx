@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes } from 'react';
+import React, { useCallback, InputHTMLAttributes } from 'react';
 import dayjs, { Dayjs } from 'utils/date';
 
 import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
@@ -64,9 +64,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
     },
     ref
   ) => {
-    const getDateFormatted = React.useCallback(formatDate(dateFormatOverride), [
-      dateFormatOverride,
-    ]);
+    const getDateFormatted = useCallback(formatDate(dateFormatOverride), [dateFormatOverride]);
 
     const formattedFrom = getDateFormatted(selectedDay.from);
     const formattedTo = getDateFormatted(selectedDay.to);
@@ -108,7 +106,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
             dataTestId={dataTestId}
             onChange={ON_CHANGE_MOCK}
             placeholder="Date (start) - Date (end)"
-            value={selectedDay.from && `${formattedFrom} - ${formattedTo}`}
+            value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
             rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
           />
         );
@@ -123,7 +121,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           dataTestId={dataTestId}
           onChange={ON_CHANGE_MOCK}
           placeholder="Select date"
-          value={selectedDay.to && formattedFrom}
+          value={selectedDay.to ? formattedFrom : ''}
           rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
         />
       );

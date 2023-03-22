@@ -20,12 +20,13 @@ jobs:
         run: yarn test
 
   deploy-review-app:
+    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Deploy Review App
     runs-on: ubuntu-latest
     env:
       PRODUCT: ictinus
       CI: false
-      # CSP_HEADER: "default-src 'self'; connect-src ${{ secrets.REACT_APP_API_BASE_URL }} https://*.s3.amazonaws.com; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'none'"
+      CSP_HEADER: "default-src 'self'; connect-src 'self' https://*.s3.amazonaws.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; frame-ancestors 'self'"
       # Add all the env vars needed for yarn build to work. For secret values, add them first to your repo and then here
       # Example of secret:
       # SECRET_ENV: ${{ secrets.mysecret }}
@@ -42,7 +43,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: '18' # Replace with your node version
+          node-version: '18.13' # Replace with your node version
 
       - name: Install dependencies and build app
         run: |
@@ -72,7 +73,7 @@ jobs:
           name: "${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}"
           role-arn: "arn:aws:iam::102867326982:role/OrfiumCloudFormationExecRole"
           template: >-
-            https://orfium-cf-templates.s3.amazonaws.com/aws-cloudfront-s3-frontend.yml
+            https://orfium-cf-templates-repository.s3.amazonaws.com/frontend-v1.0.yml
           parameter-overrides: >-
             CSPHeaderValue=${{ env.CSP_HEADER }},
             FeDomainName=${{ env.PRODUCT }}-pr-${{ github.event.pull_request.number }}.dev.orfium.xyz,
