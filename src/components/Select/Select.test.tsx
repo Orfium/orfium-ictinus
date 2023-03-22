@@ -4,6 +4,12 @@ import React from 'react';
 import { render, screen, selectDropdownOption, waitFor } from '../../test';
 import Select from './Select';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
 const dropdownList = [
   { label: 'Greece', value: 'GR' },
   { label: 'Zimbabwe', value: 'ZW' },

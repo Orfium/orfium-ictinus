@@ -1,3 +1,4 @@
+import head from 'lodash/head';
 import { useEffect, useState } from 'react';
 
 export const usePositionInScreen = (
@@ -17,6 +18,30 @@ export const usePositionInScreen = (
 } => {
   const [position, setPosition] = useState({ x: -1, y: -1 });
 
+  const [parentHeight, setParentHeight] = useState(0);
+
+  /**
+   * We use this ResizeObserver in order to track any changes on the parent's height:
+   * This is necessary for the case of the MultiSelect, where the height of the TextField is dynamic
+   * and will increase/decrease as more Chips (Selected Options) are added/deleted.
+   * Therefore the parentHeight is stored on the useState above.
+   */
+  useEffect(() => {
+    if (!parentRef.current) return;
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      const parent = head(entries);
+
+      if (parent) {
+        setParentHeight(parent.contentRect.height);
+      }
+    });
+
+    resizeObserver.observe(parentRef.current);
+
+    return () => resizeObserver.disconnect();
+  }, [parentRef]);
+
   useEffect(() => {
     // x,y are cordinates in screen
     // width, height are wrapper elements dimensions
@@ -24,10 +49,12 @@ export const usePositionInScreen = (
       x: parentX,
       y: parentY,
       width: parentWidth,
-      height: parentHeight,
+      height: parentTempHeight,
     } = parentRef?.current
       ? parentRef?.current?.getBoundingClientRect()
       : { x: 0, y: 0, width: 0, height: 0 };
+
+    setParentHeight(parentTempHeight);
 
     // width, height are the element's that's going to be positioned dimensions
     const { width, height } = itemRef?.current
@@ -68,7 +95,7 @@ export const usePositionInScreen = (
     }
 
     setPosition({ x, y });
-  }, [parentRef, itemRef, visible, offsetY, offsetX]);
+  }, [parentRef, itemRef, visible, offsetY, offsetX, parentHeight]);
 
   return position;
 };

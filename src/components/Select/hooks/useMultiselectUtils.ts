@@ -5,7 +5,6 @@ import { SelectOption } from '../Select';
 type Props = {
   selectedOptions: SelectOption[];
   options: SelectOption[];
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setSearchValue: React.Dispatch<React.SetStateAction<string>>;
   isSearchable: boolean;
   onClear?: () => void;
@@ -16,7 +15,6 @@ type Props = {
 const useMultiselectUtils = ({
   selectedOptions,
   options,
-  setOpen,
   setSearchValue,
   isSearchable,
   onClear,
@@ -59,14 +57,11 @@ const useMultiselectUtils = ({
         setAvailableMultiSelectOptions([...availableMultiSelectOptions, lastItem]);
       }
     }
-
-    setOpen(false);
   };
 
   const handleClearAllOptions = () => {
     setAvailableMultiSelectOptions([...availableMultiSelectOptions, ...multiSelectedOptions]);
     setMultiSelectedOpts([]);
-    setOpen(false);
 
     if (onClear) {
       onClear();

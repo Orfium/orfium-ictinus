@@ -124,7 +124,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     } = useMultiselectUtils({
       selectedOptions,
       options,
-      setOpen,
       setSearchValue,
       isSearchable,
       onClear,
@@ -144,9 +143,8 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
         );
       } else {
         setInputValue(option);
+        setOpen(false);
       }
-
-      setOpen(false);
 
       if (isSearchable) {
         setSearchValue('');
@@ -172,7 +170,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     const handleOnInput = React.useCallback(
       (event: ChangeEvent) => {
-        /** 
+        /**
          * For Multiselect: [for now] when we select an option the SelectMenu closes but the user
          * can still type on the input field (so they must be able to see the SelectMenu)
          */
