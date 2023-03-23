@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
@@ -116,14 +116,14 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     const {
       multiSelectedOptions,
-      setMultiSelectedOpts,
       availableMultiSelectOptions,
-      setAvailableMultiSelectOptions,
       handleOptionDelete,
       handleClearAllOptions,
+      handleMultiSelectOptionClick,
     } = useMultiselectUtils({
       selectedOptions,
       options,
+      setOpen,
       setSearchValue,
       isSearchable,
       onClear,
@@ -137,10 +137,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     const handleOptionClick = (option: SelectOption) => {
       if (multi) {
-        setMultiSelectedOpts([...multiSelectedOptions, option]);
-        setAvailableMultiSelectOptions(
-          availableMultiSelectOptions.filter((opt) => opt.value !== option.value)
-        );
+        handleMultiSelectOptionClick(option);
       } else {
         setInputValue(option);
         setOpen(false);
@@ -328,6 +325,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
               isLoading={isLoading}
               isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
+              hasSelectAllOption={multi}
             />
           </PositionInScreen>
         </div>

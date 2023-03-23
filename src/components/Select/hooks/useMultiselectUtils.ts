@@ -1,10 +1,13 @@
+import isEqual from 'lodash/isEqual';
 import React, { useEffect } from 'react';
 
+import { SELECT_ALL_OPTION } from '../constants';
 import { SelectOption } from '../Select';
 
 type Props = {
   selectedOptions: SelectOption[];
   options: SelectOption[];
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setSearchValue: React.Dispatch<React.SetStateAction<string>>;
   isSearchable: boolean;
   onClear?: () => void;
@@ -15,6 +18,7 @@ type Props = {
 const useMultiselectUtils = ({
   selectedOptions,
   options,
+  setOpen,
   setSearchValue,
   isSearchable,
   onClear,
@@ -72,13 +76,35 @@ const useMultiselectUtils = ({
     }
   };
 
+  const handleMultiSelectOptionClick = (option: SelectOption) => {
+    /** The user clicks the Select All option */
+    if (isEqual(option, SELECT_ALL_OPTION)) {
+      const [remaining, selected] = availableMultiSelectOptions.reduce(
+        (result, element) => {
+          result[element.isDisabled ? 0 : 1].push(element);
+
+          return result;
+        },
+        [[], []] as SelectOption[][]
+      );
+
+      setMultiSelectedOpts([...multiSelectedOptions, ...selected]);
+      setAvailableMultiSelectOptions(remaining);
+      setOpen(false);
+    } else {
+      setMultiSelectedOpts([...multiSelectedOptions, option]);
+      setAvailableMultiSelectOptions(
+        availableMultiSelectOptions.filter((opt) => opt.value !== option.value)
+      );
+    }
+  };
+
   return {
     multiSelectedOptions,
-    setMultiSelectedOpts,
     availableMultiSelectOptions,
-    setAvailableMultiSelectOptions,
     handleOptionDelete,
     handleClearAllOptions,
+    handleMultiSelectOptionClick,
   };
 };
 
