@@ -1,6 +1,7 @@
 import React, { useCallback, InputHTMLAttributes } from 'react';
 import dayjs, { Dayjs } from 'utils/date';
 
+import { rangeInputsWrapper } from './DatePickInput.style';
 import { generateTestDataId, getLocaleFormat } from '../../../utils/helpers';
 import { TestProps } from '../../../utils/types';
 import FilterBase from '../../Filter/components/FilterBase';
@@ -9,7 +10,6 @@ import Icon from '../../Icon';
 import TextField, { TextFieldProps } from '../../TextField/TextField';
 import { DateFormatType } from '../DatePicker';
 import { Range } from '../OverlayComponent/OverlayComponent';
-import { rangeInputsWrapper } from './DatePickInput.style';
 
 // TODO: Need to fix this (TextField onChange prop)
 const ON_CHANGE_MOCK = () => {};

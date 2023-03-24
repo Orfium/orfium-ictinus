@@ -1,10 +1,10 @@
+import { INTERACTIVE, ChipProps, READ_ONLY, styleType } from './Chip.types';
 import { PropsValidationError } from '../../utils/errors';
 import { TestProps } from '../../utils/types';
-import { INTERACTIVE, ChipProps, READ_ONLY, styleType } from './Chip.types';
 
 export const defaultProps = {
   isDisabled: false,
-  styleType: READ_ONLY as typeof styleType[number],
+  styleType: READ_ONLY as (typeof styleType)[number],
   dataTestId: '',
 } as Pick<ChipProps & TestProps, 'isDisabled' | 'styleType' | 'dataTestId'>;
 

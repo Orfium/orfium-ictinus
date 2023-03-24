@@ -1,11 +1,11 @@
 import * as React from 'react';
 
+import { visualContainer, descriptionContainer } from './NotificationVisual.style';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
 import { NotificationActions } from '../Notification';
 import { boldMessageContainer } from '../Notification.style';
 import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
-import { visualContainer, descriptionContainer } from './NotificationVisual.style';
 
 export type NotificationVisualProps = {
   /** The message heading of the Notification */

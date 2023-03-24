@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
+import { container, wrapper } from './MultiSelectShowcase.style';
 import Select from '../../Select';
 import { SelectOption } from '../../Select/Select';
-import { container, wrapper } from './MultiSelectShowcase.style';
 
 type Props = {
   minCharactersToSearch?: number;
@@ -57,7 +57,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
       <div css={container()}>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             label={'Multi Select'}
             options={options}
             selectedOptions={selectedOptions}
@@ -65,16 +65,16 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
         </div>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             label={'Multi Select - Locked'}
             options={options}
             selectedOptions={selectedOptions}
-            locked
+            isLocked
           />
         </div>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             label={'Multi Select - Disabled'}
             options={options}
             selectedOptions={selectedOptions}
@@ -83,7 +83,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
         </div>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             label={'Multi Select - with Hint'}
             options={options}
             selectedOptions={selectedOptions}
@@ -93,7 +93,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
         </div>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             label={'Multi Select - with Error'}
             options={options}
             selectedOptions={selectedOptions}
@@ -103,7 +103,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
         </div>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             label={'Multi Select - with Right Icon'}
             options={options}
             selectedOptions={selectedOptions}
@@ -115,7 +115,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
       <div css={container()}>
         <div css={wrapper()}>
           <Select
-            multi
+            isMulti
             isAsync
             label={'Multi Select - Async Search'}
             options={asyncOptions}

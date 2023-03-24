@@ -4,14 +4,14 @@ import Chip from '../../Chip';
 import { ChipProps } from '../../Chip/Chip.types';
 
 const ChipShowcase: React.FC<ChipProps> = ({ children, isChecked, ...props }) => {
-  const [selected, setSelected] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
 
   return (
     <Chip
       {...props}
-      isSelected={selected}
-      isChecked={isChecked ? selected : false}
-      onClick={() => setSelected(state => !state)}
+      isSelected={isSelected}
+      isChecked={isChecked ? isSelected : false}
+      onClick={() => setIsSelected((hasState) => !hasState)}
     >
       {children}
     </Chip>

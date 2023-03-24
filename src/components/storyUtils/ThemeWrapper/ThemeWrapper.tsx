@@ -1,7 +1,7 @@
 import React from 'react';
 
-import ThemeProvider from '../../ThemeProvider';
 import { flatPaletteConfig } from '../../../theme/palette.config';
+import ThemeProvider from '../../ThemeProvider';
 
 const ThemeWrapper: React.FC = ({ children }) => {
   return (

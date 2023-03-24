@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { Dayjs } from 'utils/date';
 
+import { datePickerStyles } from './DatePicker.style';
+import DatePickInput from './DatePickInput';
+import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
+import { currentDay, datepickerPropValue, initDates } from './utils';
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
 import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
-import { datePickerStyles } from './DatePicker.style';
-import DatePickInput from './DatePickInput';
-import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { currentDay, datepickerPropValue, initDates } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];

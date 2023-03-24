@@ -1,9 +1,9 @@
-import { Theme } from '../theme';
-import { BASE_SHADE, colorShades, flatColors, mainTypes } from '../theme/palette';
 import { PropsValidationError } from './errors';
 import { errorHandler } from './helpers';
+import { Theme } from '../theme';
+import { BASE_SHADE, colorShades, flatColors, mainTypes } from '../theme/palette';
 
-export type AcceptedColorComponentTypes = typeof mainTypes[number];
+export type AcceptedColorComponentTypes = (typeof mainTypes)[number];
 
 /**
  ** This util provide an easy way to return the hex color from a type based on our main types 'primary', 'light', 'secondary' etc
@@ -11,7 +11,7 @@ export type AcceptedColorComponentTypes = typeof mainTypes[number];
 export const getColorFromType = (
   type: AcceptedColorComponentTypes | string,
   theme: Theme,
-  variant: typeof colorShades[number] = 50
+  variant: (typeof colorShades)[number] = 50
 ) => {
   const secondaryVariant = variant && variant !== 50 ? variant : BASE_SHADE;
 
@@ -23,8 +23,8 @@ export const getColorFromType = (
 
     return theme.utils.getColor(colorTypeValue, secondaryVariant, 'normal');
   }
-  if (Object.values(flatColors).includes(type as typeof flatColors[number])) {
-    const colorValue = type as typeof flatColors[number];
+  if (Object.values(flatColors).includes(type as (typeof flatColors)[number])) {
+    const colorValue = type as (typeof flatColors)[number];
 
     return theme.utils.getColor(colorValue, secondaryVariant);
   }
@@ -47,7 +47,7 @@ export const colorPickerBasedOnType = (type: AcceptedColorComponentTypes) => (th
 };
 
 export const fillPickerBasedOnType =
-  (type: AcceptedColorComponentTypes | string, variant: typeof colorShades[number] = 50) =>
+  (type: AcceptedColorComponentTypes | string, variant: (typeof colorShades)[number] = 50) =>
   (theme: Theme) =>
     getColorFromType(type, theme, variant);
 
@@ -56,8 +56,8 @@ export const fillPickerBasedOnType =
  * translation from string
  * */
 export type ColorShapeFromComponent = {
-  color: typeof flatColors[number];
-  shade: typeof colorShades[number];
+  color: (typeof flatColors)[number];
+  shade: (typeof colorShades)[number];
 };
 
 type ErrorProp = { color: string; colorAfterSplit: string[] };
@@ -70,7 +70,7 @@ export const errors = [
   },
   {
     condition: ({ colorAfterSplit }: ErrorProp): boolean =>
-      Boolean(!flatColors.includes(colorAfterSplit[0] as typeof flatColors[number])),
+      Boolean(!flatColors.includes(colorAfterSplit[0] as (typeof flatColors)[number])),
     error: ({ color }: ErrorProp): PropsValidationError =>
       new PropsValidationError(
         `You passed a wrong color for the first argument: ${color} - try something like red-500`
@@ -78,7 +78,7 @@ export const errors = [
   },
   {
     condition: ({ colorAfterSplit }: ErrorProp): boolean =>
-      Boolean(!colorShades.includes(Number(colorAfterSplit[1]) as typeof colorShades[number])),
+      Boolean(!colorShades.includes(Number(colorAfterSplit[1]) as (typeof colorShades)[number])),
     error: ({ color }: ErrorProp): PropsValidationError =>
       new PropsValidationError(
         `You passed a wrong shade for the second argument: ${color} - try something like red-500`
@@ -100,7 +100,7 @@ export const calculateActualColorFromComponentProp = (color: string): ColorShape
   const calculatedShade = Number(colorAfterSplit[1]);
 
   return {
-    color: calculatedColor as typeof flatColors[number],
-    shade: calculatedShade as typeof colorShades[number],
+    color: calculatedColor as (typeof flatColors)[number],
+    shade: calculatedShade as (typeof colorShades)[number],
   };
 };

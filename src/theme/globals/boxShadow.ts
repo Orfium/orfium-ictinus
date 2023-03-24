@@ -1,5 +1,5 @@
-import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import boxShadowFigma from './constants/boxShadow';
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 
 export type BoxShadowKey = keyof typeof boxShadowFigma;
 

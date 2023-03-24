@@ -1,4 +1,3 @@
-import { AcceptedIconNames } from '../types';
 import AccountIcon from './account.svg';
 import ActionsIcon from './actions.svg';
 import AddIcon from './add.svg';
@@ -173,6 +172,7 @@ import WarningIcon from './warning.svg';
 import WorksIcon from './works.svg';
 import WriterIcon from './writer.svg';
 import YoutubeIcon from './youtube.svg';
+import { AcceptedIconNames } from '../types';
 
 const iconSelector: { [key in AcceptedIconNames]: string } = {
   account: AccountIcon,

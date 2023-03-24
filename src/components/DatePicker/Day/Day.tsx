@@ -2,8 +2,8 @@ import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import React from 'react';
 import { Dayjs } from 'utils/date';
 
-import { currentDay } from '../utils';
 import { dayStyle, dayWrapperStyle, emptyDayStyle } from './Day.style';
+import { currentDay } from '../utils';
 
 export type DayProps = {
   day?: number;

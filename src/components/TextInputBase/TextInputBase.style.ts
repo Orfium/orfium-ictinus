@@ -3,10 +3,10 @@ import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
-import { getDisabled, getHover, getPressed } from '../../theme/states';
-import { ColorScheme } from '../../theme/types';
 import { textInputConfig } from './config';
 import { TextInputBaseProps } from './TextInputBase';
+import { getDisabled, getHover, getPressed } from '../../theme/states';
+import { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
 const wrapperStyleSwitch = ({

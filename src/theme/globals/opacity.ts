@@ -1,5 +1,5 @@
-import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import opacityFigma from './constants/opacity';
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 
 export type OpacityKey = keyof typeof opacityFigma;
 

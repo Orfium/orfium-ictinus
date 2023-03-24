@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import Icon from '../../Icon';
 import { separatorStyles } from './Separator.style';
+import Icon from '../../Icon';
 
 export type SeparatorProps = {
   /** Defines if the current item of the breadcrumb is the last one */

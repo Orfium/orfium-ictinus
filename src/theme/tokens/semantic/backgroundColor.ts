@@ -1,5 +1,5 @@
-import { getTokensValue } from '../utils';
 import backgroundColorFigma from './variables/backgroundColor';
+import { getTokensValue } from '../utils';
 
 export type SemanticBackgroundColor = {
   get: (val: string) => string;

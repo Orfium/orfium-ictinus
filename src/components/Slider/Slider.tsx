@@ -2,13 +2,13 @@ import React, { useRef } from 'react';
 import { Range } from 'react-range';
 import { IMarkProps, IThumbProps, ITrackProps } from 'react-range/lib/types';
 
-import useTheme from '../../hooks/useTheme';
-import { TestProps } from '../../utils/types';
-import TextField from '../TextField';
 import SliderMark from './components/SliderMark';
 import SliderThumb from './components/SliderThumb';
 import SliderTrack from './components/SliderTrack';
 import { Container, InputContainer, InputsContainer } from './Slider.style';
+import useTheme from '../../hooks/useTheme';
+import { TestProps } from '../../utils/types';
+import TextField from '../TextField';
 
 export type SliderProps = {
   /** Determines if the Slider is disabled or not */

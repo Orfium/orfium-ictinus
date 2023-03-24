@@ -2,9 +2,9 @@ import { rgba } from 'polished';
 import React from 'react';
 import ReactSwitch from 'react-switch';
 
+import { Label, SwitchWrapper, Container } from './Switch.style';
 import { useTheme } from '../../index';
 import { TestProps } from '../../utils/types';
-import { Label, SwitchWrapper, Container } from './Switch.style';
 
 export type SwitchProps = {
   label?: string;

@@ -1,11 +1,11 @@
 import React, { ForwardedRef, Fragment } from 'react';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
 
-import { BASE_SHADE } from '../../theme/palette';
 import { avatarStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
 import { ChipProps } from './Chip.types';
 import Badge from './components/Badge';
 import { defaultProps, errors } from './utils';
+import { BASE_SHADE } from '../../theme/palette';
 import Avatar from 'components/Avatar';
 import Icon from 'components/Icon';
 

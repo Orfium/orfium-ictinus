@@ -1,9 +1,9 @@
 import React, { useCallback } from 'react';
 import { TestProps } from 'utils/types';
 
+import { listItemStyle, contentStyle } from './ListItem.style';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { renderContent } from '../utils';
-import { listItemStyle, contentStyle } from './ListItem.style';
 
 export type ListItemProps = {
   /** Size of the ListItem (translates to height) */

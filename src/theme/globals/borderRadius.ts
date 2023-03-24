@@ -1,5 +1,5 @@
-import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import borderRadiusFigma from './constants/borderRadius';
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 
 export type BorderRadiusKey = keyof typeof borderRadiusFigma;
 

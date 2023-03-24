@@ -3,13 +3,13 @@ import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
 
-import ClickAwayListener from '../utils/ClickAwayListener';
 import FilterBase from './components/FilterBase';
 import Options from './components/Options/Options';
 import SearchInput from './components/SearchInput/SearchInput';
 import { menuStyle } from './Filter.style';
 import { FilterOption, FilterProps } from './types';
 import { errors } from './utils';
+import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from 'components/utils/handleSearch';
 
 const Filter = React.forwardRef<HTMLButtonElement, FilterProps>((props, ref) => {

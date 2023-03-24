@@ -301,7 +301,6 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                   <input
                     autoComplete="off"
                     className="emotion-7"
-                    disabled={false}
                     onChange={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
@@ -646,7 +645,6 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                   <input
                     autoComplete="off"
                     className="emotion-7"
-                    disabled={false}
                     onChange={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
@@ -1011,7 +1009,6 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -1080,7 +1077,6 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -1149,7 +1145,6 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -1250,15 +1245,20 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  opacity: 0.5;
-  cursor: not-allowed;
+  opacity: 1;
+  cursor: auto;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
 
+.emotion-4:hover {
+  background-color: #f3f5f8;
+}
+
 .emotion-4:focus-within {
-  box-shadow: 0 0 0 0.0625rem transparent;
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
 }
 
 .emotion-5 {
@@ -1741,7 +1741,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={true}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -1804,7 +1803,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={true}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -1867,7 +1865,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={true}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -2010,7 +2007,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 1.3125rem 2.5rem 0.3125rem 1rem;
+  padding: 1.3125rem 2.5rem 0.3125rem 0.75rem;
 }
 
 .emotion-6>div {
@@ -2028,13 +2025,13 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  row-gap: 0.25rem;
+  row-gap: 0.125rem;
   z-index: 2;
 }
 
 .emotion-8 {
   position: relative;
-  margin-right: 0.25rem;
+  margin-right: 0.125rem;
 }
 
 .emotion-8>div {
@@ -2215,7 +2212,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
 .emotion-46 {
   position: absolute!important;
   bottom: 0;
-  right: 1rem;
+  right: 0.75rem;
   top: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2284,46 +2281,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   cursor: auto;
 }
 
-.emotion-83 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 0.5;
-  cursor: not-allowed;
-  min-width: 9.375rem;
-  height: unset;
-  background-color: white;
-  min-height: 2.875rem!important;
-}
-
-.emotion-83:focus-within {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-83 label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  bottom: auto;
-}
-
-.emotion-154 {
+.emotion-176 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2334,11 +2292,11 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-154 svg {
+.emotion-176 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-154 span {
+.emotion-176 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2346,17 +2304,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-156 {
+.emotion-178 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-156 path {
+.emotion-178 path {
   fill: #5f6c85;
 }
 
-.emotion-160 {
+.emotion-182 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2368,7 +2326,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #e5143d;
+  box-shadow: 0 0 0 0.0625rem #e51460;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2382,16 +2340,16 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-160:hover {
+.emotion-182:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-160:focus-within {
-  box-shadow: 0 0 0 0.125rem #e5143d;
+.emotion-182:focus-within {
+  box-shadow: 0 0 0 0.125rem #e51460;
   background-color: #e7ebf2;
 }
 
-.emotion-160 label {
+.emotion-182 label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2400,7 +2358,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-200 {
+.emotion-222 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2416,7 +2374,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
-  color: #FF1744;
+  color: #FF176B;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2431,22 +2389,22 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   white-space: nowrap;
 }
 
-.emotion-205 {
+.emotion-227 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #e5143d;
+  color: #e51460;
   font-size: 0.75rem;
   line-height: 1;
   padding: 0.5rem 0 0;
 }
 
-.emotion-205 svg {
+.emotion-227 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-205 span {
+.emotion-227 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2454,17 +2412,17 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-207 {
-  fill: #FF1744;
+.emotion-229 {
+  fill: #FF176B;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-207 path {
-  fill: #FF1744;
+.emotion-229 path {
+  fill: #FF176B;
 }
 
-.emotion-260 {
+.emotion-282 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2490,16 +2448,16 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-260:hover {
+.emotion-282:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-260:focus-within {
+.emotion-282:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-260 input:focus label {
+.emotion-282 input:focus label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2508,14 +2466,14 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-260 label {
+.emotion-282 label {
   -webkit-transform: translate(0.1875rem, -8px);
   -moz-transform: translate(0.1875rem, -8px);
   -ms-transform: translate(0.1875rem, -8px);
   transform: translate(0.1875rem, -8px);
 }
 
-.emotion-264 {
+.emotion-286 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -3022,13 +2980,14 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
           >
             <div
               className="emotion-3"
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
               >
                 <div>
                   <div
-                    className="emotion-83"
+                    className="emotion-5"
                     data-testid="select-input"
                   >
                     <div
@@ -3053,6 +3012,19 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                                 Strawberry
                               </div>
                             </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_0"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
                           </div>
                         </span>
                         <span
@@ -3070,6 +3042,19 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                               >
                                 Banana
                               </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_1"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
                             </div>
                           </div>
                         </span>
@@ -3089,6 +3074,19 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                                 Citrus
                               </div>
                             </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_2"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
                           </div>
                         </span>
                         <span
@@ -3106,6 +3104,19 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                               >
                                 Sorbet
                               </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_3"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
                             </div>
                           </div>
                         </span>
@@ -3125,6 +3136,19 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                                 Cookie Dough
                               </div>
                             </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_4"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
+                            </div>
                           </div>
                         </span>
                         <span
@@ -3142,6 +3166,19 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                               >
                                 Buttered Pecan
                               </div>
+                            </div>
+                            <div
+                              className="emotion-11"
+                            >
+                              <span
+                                className="emotion-12"
+                                data-testid="chip-delete-chip_5"
+                                onClick={[Function]}
+                              >
+                                <span
+                                  className="emotion-13"
+                                />
+                              </span>
                             </div>
                           </div>
                         </span>
@@ -3162,6 +3199,23 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           Multi Select - Disabled
                            
                         </label>
+                      </div>
+                      <div
+                        className="emotion-46"
+                      >
+                        <div
+                          className="emotion-47"
+                        >
+                          <span
+                            className="emotion-12"
+                            data-testid="select-right-icon"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-49"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -3418,7 +3472,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                     </div>
                   </div>
                   <div
-                    className="emotion-154"
+                    className="emotion-176"
                     data-testid="error-select-input"
                   >
                     <span
@@ -3426,7 +3480,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-156"
+                        className="emotion-178"
                       />
                     </span>
                     This is a hint message
@@ -3451,7 +3505,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
               >
                 <div>
                   <div
-                    className="emotion-160"
+                    className="emotion-182"
                     data-testid="select-input"
                   >
                     <div
@@ -3658,7 +3712,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-200"
+                          className="emotion-222"
                         >
                           Multi Select - with Error
                            
@@ -3684,7 +3738,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                     </div>
                   </div>
                   <div
-                    className="emotion-205"
+                    className="emotion-227"
                     data-testid="error-select-input"
                   >
                     <span
@@ -3692,7 +3746,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-207"
+                        className="emotion-229"
                       />
                     </span>
                     This is an error message
@@ -3974,7 +4028,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
               >
                 <div>
                   <div
-                    className="emotion-260"
+                    className="emotion-282"
                     data-testid="select-input"
                   >
                     <div
@@ -3995,7 +4049,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
                           value=""
                         />
                         <label
-                          className="emotion-264"
+                          className="emotion-286"
                         >
                           Multi Select - Async Search
                            
@@ -4352,7 +4406,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -4421,7 +4474,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -4490,7 +4542,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -4940,7 +4991,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -5009,7 +5059,6 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-18"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -5370,7 +5419,6 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -5728,7 +5776,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -5790,7 +5837,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                   <input
                     autoComplete="off"
                     className="emotion-7"
-                    disabled={false}
                     onChange={[Function]}
                     onInput={[Function]}
                     onKeyDown={[Function]}
@@ -5858,7 +5904,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -5929,7 +5974,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -6320,7 +6364,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-8"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -6389,7 +6432,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-8"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -6469,7 +6511,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-8"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -6561,7 +6602,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #e5143d;
+  box-shadow: 0 0 0 0.0625rem #e51460;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -6579,7 +6620,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 }
 
 .emotion-5:focus-within {
-  box-shadow: 0 0 0 0.125rem #e5143d;
+  box-shadow: 0 0 0 0.125rem #e51460;
   background-color: #e7ebf2;
 }
 
@@ -6682,7 +6723,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 1rem;
   font-weight: 400;
-  color: #FF1744;
+  color: #FF176B;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -6762,7 +6803,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #e5143d;
+  color: #e51460;
   font-size: 0.75rem;
   line-height: 1;
   padding: 0.5rem 0 0;
@@ -6781,13 +6822,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 }
 
 .emotion-16 {
-  fill: #FF1744;
+  fill: #FF176B;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-16 path {
-  fill: #FF1744;
+  fill: #FF176B;
 }
 
 .emotion-48 {
@@ -6968,7 +7009,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         <input
                           autoComplete="off"
                           className="emotion-8"
-                          disabled={false}
                           onChange={[Function]}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -7051,7 +7091,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         <input
                           autoComplete="off"
                           className="emotion-8"
-                          disabled={false}
                           onChange={[Function]}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -7134,7 +7173,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         <input
                           autoComplete="off"
                           className="emotion-8"
-                          disabled={false}
                           onChange={[Function]}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -7229,7 +7267,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         <input
                           autoComplete="off"
                           className="emotion-8"
-                          disabled={false}
                           onChange={[Function]}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -7312,7 +7349,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         <input
                           autoComplete="off"
                           className="emotion-8"
-                          disabled={false}
                           onChange={[Function]}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -7395,7 +7431,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         <input
                           autoComplete="off"
                           className="emotion-8"
-                          disabled={false}
                           onChange={[Function]}
                           onInput={[Function]}
                           onKeyDown={[Function]}
@@ -7772,7 +7807,6 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -8133,7 +8167,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -8202,7 +8235,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -8271,7 +8303,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-7"
-                      disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}

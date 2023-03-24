@@ -1,5 +1,5 @@
-import { getTokensValue } from '../utils';
 import backDropFigma from './variables/backdrop';
+import { getTokensValue } from '../utils';
 
 export type SemanticBackDrop = {
   get: (val: string) => string;

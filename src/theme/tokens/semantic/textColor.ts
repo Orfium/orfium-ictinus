@@ -1,5 +1,5 @@
-import { getTokensValue } from '../utils';
 import textColorFigma from './variables/textColor';
+import { getTokensValue } from '../utils';
 
 export type SemanticTextColor = {
   get: (val: string) => string;

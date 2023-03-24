@@ -9,12 +9,12 @@ type ModalShowcaseProps = {
 };
 
 const ModalShowcase: React.FC<ModalShowcaseProps> = ({ children, contentProps }) => {
-  const [open, setOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <div style={{ width: '100%', height: '100%' }}>
-      <Button onClick={() => setOpen(!open)}>Open Modal</Button>
-      <Modal isOpen={open} onClose={() => setOpen(false)} contentProps={contentProps}>
+      <Button onClick={() => setIsOpen(!isOpen)}>Open Modal</Button>
+      <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} contentProps={contentProps}>
         {contentProps ? null : children}
       </Modal>
       {/** empty div with height to test the body's overflow functionality when toggling the modal */}

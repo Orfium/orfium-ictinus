@@ -5,6 +5,7 @@ import * as React from 'react';
 import { EventProps } from 'utils/common';
 import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
+import { wrapperStyle } from './Menu.style';
 import { TestProps } from '../../utils/types';
 import Button from '../Button';
 import { defineBackgroundColor } from '../Button/utils';
@@ -12,7 +13,6 @@ import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
-import { wrapperStyle } from './Menu.style';
 import Avatar, { AvatarColors } from 'components/Avatar';
 import { ButtonTypes } from 'components/Button/Button.types';
 import List from 'components/List';

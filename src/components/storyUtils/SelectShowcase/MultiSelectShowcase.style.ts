@@ -8,7 +8,7 @@ export const container =
   (theme: Theme): SerializedStyles =>
     css`
       display: flex;
-      gap: ${theme.spacing.xl};
+      gap: ${theme.globals.spacing.get('9')};
       flex-wrap: wrap;
       row-gap: ${rem(48)};
       margin-bottom: ${rem(48)};

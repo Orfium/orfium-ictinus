@@ -1,5 +1,5 @@
-import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import borderWidthFigma from './constants/borderWidth';
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 
 export type BorderWidthKey = keyof typeof borderWidthFigma;
 

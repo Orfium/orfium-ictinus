@@ -1,9 +1,9 @@
 import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
-import { PropsValidationError } from '../utils/errors';
 import { GeneratedColorShades, Palette } from './palette';
 import { FlatPaletteConfig, PaletteConfig, TextPaletteConfig } from './palette.config';
+import { PropsValidationError } from '../utils/errors';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;

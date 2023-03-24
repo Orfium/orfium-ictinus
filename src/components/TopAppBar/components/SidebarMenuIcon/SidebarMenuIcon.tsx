@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Icon from '../../../Icon';
 import Styles from './SidebarMenuIcon.style';
+import Icon from '../../../Icon';
 
 export interface SidebarMenuIconProps {
   onMenuIconClick: () => void;

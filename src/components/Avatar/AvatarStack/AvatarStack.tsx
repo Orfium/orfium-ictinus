@@ -3,10 +3,10 @@ import { DivProps } from 'utils/common';
 import { errorHandler, generateTestDataId } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
-import Avatar from '../Avatar';
 import { avatarStackStyle, avatarWrapperStyle } from './AvatarStack.style';
 import { AvatarStackProps } from './AvatarStack.types';
 import { errors } from './utils';
+import Avatar from '../Avatar';
 
 const AvatarStack = React.forwardRef<HTMLDivElement, AvatarStackProps & TestProps & DivProps>(
   ({ maxAvatars = 4, size = 1, color = 'blue', dataTestId = '', children: childrenProp }, ref) => {

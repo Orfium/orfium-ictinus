@@ -3,10 +3,10 @@ import { FC, useMemo } from 'react';
 import { getTrackBackground } from 'react-range';
 import { ITrackProps } from 'react-range/lib/types';
 
+import { Track } from './SliderTrack.style';
 import useTheme from '../../../../hooks/useTheme';
 import { TestProps } from '../../../../utils/types';
 import { MAX, MIN } from '../../Slider';
-import { Track } from './SliderTrack.style';
 
 export type SliderTrackProps = {
   values: number[];

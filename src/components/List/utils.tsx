@@ -1,11 +1,11 @@
 import React from 'react';
 import Highlighter from 'react-highlight-words';
 
+import { listLabel, listLabelHelperText, listLabelWithHelper } from './List.style';
+import { ListItemType } from './types';
 import { FilterOption } from '../Filter/types';
 import Icon from '../Icon';
 import { SelectOption } from '../Select/Select';
-import { listLabel, listLabelHelperText, listLabelWithHelper } from './List.style';
-import { ListItemType } from './types';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
 export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;

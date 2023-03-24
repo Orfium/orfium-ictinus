@@ -4,10 +4,6 @@ import { useCallback } from 'react';
 import * as React from 'react';
 import dayjs, { Dayjs } from 'utils/date';
 
-import { DisabledDates } from '../DatePicker';
-import Day from '../Day/Day';
-import { Range } from '../OverlayComponent/OverlayComponent';
-import { currentDay } from '../utils';
 import { datesWrapperStyle, weekDayStyle, weekDaysWrapperStyle } from './Month.style';
 import {
   calculatedDayIsBetween,
@@ -15,6 +11,10 @@ import {
   calculateSelectedDay,
   calculateSelectedDayPosition,
 } from './Month.utils';
+import { DisabledDates } from '../DatePicker';
+import Day from '../Day/Day';
+import { Range } from '../OverlayComponent/OverlayComponent';
+import { currentDay } from '../utils';
 
 dayjs.extend(isBetween);
 

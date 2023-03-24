@@ -1,6 +1,5 @@
 import { rem } from 'polished';
 
-import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 import fontFamilyFigma from './constants/fontFamily';
 import fontSizeFigma from './constants/fontSize';
 import fontWeightFigma from './constants/fontWeight';
@@ -8,6 +7,7 @@ import letterSpacingFigma from './constants/letterSpacing';
 import lineHeightFigma from './constants/lineHeight';
 import textCaseFigma from './constants/textCase';
 import textDecorationFigma from './constants/textDecoration';
+import { FigmaTokenValueType, getFigmaTokensValue } from '../utils';
 
 export type FontSizeKey = keyof typeof fontSizeFigma;
 export type FontWeightKey = keyof typeof fontWeightFigma;

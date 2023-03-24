@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import useTheme from '../../../hooks/useTheme';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
@@ -7,7 +8,6 @@ import { NotificationActions, NotificationStyleType, NotificationTypes } from '.
 import { actionContainer, iconContainer, boldMessageContainer } from '../Notification.style';
 import { typeToIconName } from '../subcomponents/CompactNotification/CompactNotification';
 import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
-import { cardContainer, topContainer, infoContainer, descriptionContainer } from './Snackbar.style';
 import Icon from 'components/Icon';
 
 export type SnackbarProps = {
@@ -42,6 +42,8 @@ const Snackbar: React.FC<SnackbarProps> = ({
   const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
 
   return (
+    // @TODO remove the below or change to data-
+    // eslint-disable-next-line react/no-unknown-property
     <div css={cardContainer(type, styleType)} notification-type="snackbar">
       <div css={topContainer()}>
         <div css={infoContainer()}>

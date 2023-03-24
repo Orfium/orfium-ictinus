@@ -1,5 +1,5 @@
-import { getTokensValue } from '../utils';
 import borderColorFigma from './variables/borderColor';
+import { getTokensValue } from '../utils';
 
 export type SemanticBorderColor = {
   get: (val: string) => string;

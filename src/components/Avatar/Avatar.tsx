@@ -1,10 +1,10 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
-import Icon from '../Icon';
 import { avatarStyle } from './Avatar.style';
 import getTokens from './Avatar.tokens';
 import { AvatarProps } from './Avatar.types';
+import Icon from '../Icon';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {

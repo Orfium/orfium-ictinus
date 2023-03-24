@@ -12,11 +12,11 @@ import {
   LabelList,
 } from 'recharts';
 
-import Wrapper from '../Wrapper';
 import CustomLabel from './components/CustomLabel';
 import CustomTooltip from './components/CustomTooltip';
 import CustomTooltipContent from './components/CustomTooltipContent';
 import { getValues, customTickFormatter, getBarColors, getColoringOptions } from './utils';
+import Wrapper from '../Wrapper';
 
 const multiplyFactor = 9.5;
 const yAxisWidthDefault = 160;
