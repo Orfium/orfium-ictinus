@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import Menu from '../../../Menu';
 import Styles from './UserMenu.style';
+import Menu from '../../../Menu';
 import { AvatarColors } from 'components/Avatar';
 
 export type UserMenuProps = {

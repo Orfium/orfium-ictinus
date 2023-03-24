@@ -1,12 +1,12 @@
 import { toPairs } from 'lodash';
 import React from 'react';
 
-import { TextField, useTheme } from '../../../index';
-import { colorShadesCreator } from '../../../theme/utils';
-import { colorBox, colorBoxWrapper } from '../PaletteShowcase/PaletteShowcase.style';
 import ColorBox from './ColorBox';
 import { colorWrapper, container, contentWrapper, inputWrapper } from './ColorUtility.style';
 import { useColors } from './useColors';
+import { TextField, useTheme } from '../../../index';
+import { colorShadesCreator } from '../../../theme/utils';
+import { colorBox, colorBoxWrapper } from '../PaletteShowcase/PaletteShowcase.style';
 
 const DEFAULT_COLOR = 'white';
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 
-import { SelectOption } from '../../Select';
 import { menuStyle, optionStyle } from './SelectMenu.style';
+import { SelectOption } from '../../Select';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 

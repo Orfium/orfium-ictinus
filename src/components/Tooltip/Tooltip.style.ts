@@ -1,8 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../theme';
 import { TooltipSize } from './Tooltip';
+import { Theme } from '../../theme';
 import 'tippy.js/dist/tippy.css';
 
 export const tooltipStyle =

@@ -18,18 +18,18 @@ interface Props {
 }
 const DrawerShowcase: React.FC<Props> = ({ renderHeader }) => {
   const theme = useTheme();
-  const [expanded, setExpanded] = useState<boolean>(true);
+  const [hasExpanded, setHasExpanded] = useState<boolean>(true);
 
   return (
     <Router>
-      <Button onClick={() => setExpanded((prev) => !prev)}>
-        {expanded ? 'Hide' : 'Show'} Drawer
+      <Button onClick={() => setHasExpanded((hasExpanded) => !hasExpanded)}>
+        {hasExpanded ? 'Hide' : 'Show'} Drawer
       </Button>
       <div css={[flex, 'height: 100vh']}>
         <Drawer
-          isExpanded={expanded}
+          isExpanded={hasExpanded}
           menuItems={menuItems}
-          setExpanded={setExpanded}
+          setExpanded={setHasExpanded}
           renderHeader={renderHeader}
         />
         <div

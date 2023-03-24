@@ -2,11 +2,11 @@ import React from 'react';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
+import ListGroupTitle from './ListGroupTitle';
 import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
-import ListGroupTitle from './ListGroupTitle';
 import { SelectOption } from 'components/Select/Select';
 
 export type ListItemGroupProps = {

@@ -1,8 +1,8 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../theme';
 import { getBorderColor } from './utils';
+import { Theme } from '../../theme';
 
 export const tableStyle = () => (): SerializedStyles =>
   css({ width: '100%', borderCollapse: 'collapse', tableLayout: 'fixed' });

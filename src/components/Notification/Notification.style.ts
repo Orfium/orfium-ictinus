@@ -38,7 +38,7 @@ export const actionsContainer =
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      margin-top: ${theme.globals.spacing.get('6')};
+      padding-top: ${theme.globals.spacing.get('6')};
       position: sticky;
       bottom: ${theme.globals.spacing.get('6')};
       top: 100%;

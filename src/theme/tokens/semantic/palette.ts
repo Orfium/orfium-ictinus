@@ -1,5 +1,5 @@
-import { getTokensValue } from '../utils';
 import paletteFigma from './variables/palette';
+import { getTokensValue } from '../utils';
 
 export type SemanticPalette = {
   get: (val: string) => string;

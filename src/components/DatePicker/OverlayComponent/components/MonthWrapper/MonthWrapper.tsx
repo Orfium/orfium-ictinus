@@ -3,9 +3,6 @@ import { range } from 'lodash';
 import React, { useMemo, useState } from 'react';
 import { Dayjs } from 'utils/date';
 
-import { DisabledDates } from '../../../DatePicker';
-import Month from '../../../Month/Month';
-import { Range } from '../../OverlayComponent';
 import {
   monthHeaderNavigationIconWrapperStyle,
   monthHeaderTitleStyle,
@@ -13,6 +10,9 @@ import {
   monthHeaderWrapperStyle,
   monthWrapperStyle,
 } from './MonthWrapper.style';
+import { DisabledDates } from '../../../DatePicker';
+import Month from '../../../Month/Month';
+import { Range } from '../../OverlayComponent';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
 import SelectMenu from 'components/Select/components/SelectMenu';

@@ -3,9 +3,9 @@ import React from 'react';
 import { CommonButtonProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
+import { buttonSpanStyle } from './Button.style';
 import getButtonTokens from '../Button/Button.tokens';
 import ButtonBase, { ButtonBaseProps } from '../ButtonBase/ButtonBase';
-import { buttonSpanStyle } from './Button.style';
 import Avatar, { AvatarProps } from 'components/Avatar';
 import Icon, { AcceptedIconNames } from 'components/Icon';
 

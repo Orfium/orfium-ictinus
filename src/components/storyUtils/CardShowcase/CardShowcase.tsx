@@ -1,9 +1,9 @@
 import React from 'react';
 
+import { showcaseContainerStyle } from './CardShowcase.style';
 import { Elevation } from '../../../theme/globals/elevation';
 import { SpacingKey } from '../../../theme/globals/spacing';
 import Card from '../../Card';
-import { showcaseContainerStyle } from './CardShowcase.style';
 
 type CardShowcaseProps = {
   elevated?: keyof Elevation;

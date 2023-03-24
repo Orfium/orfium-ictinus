@@ -2,10 +2,10 @@ import * as React from 'react';
 import { FC, useMemo } from 'react';
 import { IMarkProps } from 'react-range/lib/types';
 
+import { Mark, MarkHoverCircle } from './SliderMark.style';
 import useTheme from '../../../../hooks/useTheme';
 import { TestProps } from '../../../../utils/types';
 import { STEP_WITH_INCREMENTS } from '../../Slider';
-import { Mark, MarkHoverCircle } from './SliderMark.style';
 
 export type SliderMarkProps = {
   values: number[];

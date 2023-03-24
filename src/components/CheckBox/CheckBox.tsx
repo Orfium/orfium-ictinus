@@ -2,9 +2,6 @@ import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
 import * as React from 'react';
 import { ChangeEvent, useEffect } from 'react';
 
-import { useTheme } from '../../index';
-import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
-import { TestId } from '../../utils/types';
 import {
   checkboxStyle,
   checkboxWrapperStyle,
@@ -12,6 +9,9 @@ import {
   wrapperStyle,
   markerStyle,
 } from './CheckBox.style';
+import { useTheme } from '../../index';
+import { generateTestDataId, generateUniqueID } from '../../utils/helpers';
+import { TestId } from '../../utils/types';
 import Icon from 'components/Icon';
 
 export type CheckboxProps = {

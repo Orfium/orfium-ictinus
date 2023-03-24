@@ -1,8 +1,8 @@
 import React from 'react';
 import { TooltipProps } from 'recharts';
 
-import { HoverInfo } from '../../BarChart';
 import { tooltipLiStyle, tooltipStyle, tooltipUlStyle } from './CustomTooltipContent.style';
+import { HoverInfo } from '../../BarChart';
 
 const CustomTooltip: React.FC<TooltipProps> = ({ payload }) => {
   const options = payload && (payload[0]?.payload?.options?.hoverInfo as HoverInfo[]);

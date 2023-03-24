@@ -18,7 +18,7 @@ const SwitchShowcase: React.FC<Props> = ({
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleSwitch = () => {
-    setIsChecked((prevState) => !prevState);
+    setIsChecked((isChecked) => !isChecked);
   };
 
   return (

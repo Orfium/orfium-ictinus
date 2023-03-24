@@ -1,10 +1,10 @@
 import React from 'react';
 import { isComponentFunctionType } from 'utils/helpers';
 
+import { nestedHeaderStyle } from './ContentCell.style';
 import TruncatedContent from '../../../../../TruncatedContent';
 import { ContentComponent, TableType } from '../../../../Table';
 import TableCell from '../../../TableCell';
-import { nestedHeaderStyle } from './ContentCell.style';
 
 type ContentCellProps = {
   columns: string[];

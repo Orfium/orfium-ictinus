@@ -1,12 +1,12 @@
-import { Theme } from '../index';
-import { colorShades, flatColors } from '../palette';
 import { statesConfig } from './statesConfig';
 import { getShadeWithStep } from './utils';
+import { Theme } from '../index';
+import { colorShades, flatColors } from '../palette';
 
 export type HoverProps = {
   theme: Theme;
-  color?: typeof flatColors[number];
-  shade?: typeof colorShades[number] | 0;
+  color?: (typeof flatColors)[number];
+  shade?: (typeof colorShades)[number] | 0;
 };
 
 export type GetHover = {

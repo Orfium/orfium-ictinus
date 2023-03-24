@@ -4,7 +4,6 @@ import pluralize from 'pluralize';
 import React, { useEffect, useState } from 'react';
 import isEqual from 'react-fast-compare';
 
-import CheckBox from '../CheckBox';
 import ExtendedColumnItem from './components/ExtendedColumnItem';
 import TableCell from './components/TableCell';
 import TableRow from './components/TableRow';
@@ -12,6 +11,7 @@ import TableRowWrapper from './components/TableRowWrapper';
 import { tableCTAStyle, tableRowHeadersStyle, tableStyle } from './Table.style';
 import { ExtendedColumn, Sort, SortingOrder } from './types';
 import { isItemString } from './utils';
+import CheckBox from '../CheckBox';
 
 export type ContentComponent<T> = (data: Cell<T>) => React.Component | JSX.Element;
 export type Cell<T> = {

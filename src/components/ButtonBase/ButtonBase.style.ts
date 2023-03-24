@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 
+import { ButtonBaseProps } from './ButtonBase';
 import { Theme } from '../../theme';
 import getStatesTokens from '../../theme/states/states.tokens';
 import getButtonTokens from '../Button/Button.tokens';
-import { ButtonBaseProps } from './ButtonBase';
 
 export const buttonWrapperStyle = ({
   isBlock,

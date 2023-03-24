@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
+import { CheckboxProps } from './CheckBox';
 import { Theme } from '../../theme';
 import { BASE_SHADE } from '../../theme/palette';
-import { CheckboxProps } from './CheckBox';
 
 export const wrapperStyle =
   ({ isDisabled }: CheckboxProps) =>

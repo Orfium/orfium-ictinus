@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 
+import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
+import ModalContent, { ModalContentProps } from './ModalContent/ModalContent';
 import useEscape from '../../hooks/useEscape';
 import { generateTestDataId } from '../../utils/helpers';
 import { TestId } from '../../utils/types';
 import Card from '../Card';
 import IconButton from '../IconButton';
 import ClickAwayListener from '../utils/ClickAwayListener';
-import { backgroundContainer, cardSizing, closeContainer, modalContainer } from './Modal.style';
-import ModalContent, { ModalContentProps } from './ModalContent/ModalContent';
 
 export type ModalProps = {
   /**  If true, the modal is open. Defaults to false. */

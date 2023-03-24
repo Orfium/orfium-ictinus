@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { FilterOption } from '../../types';
 import { emptyStyle } from './Options.style';
+import { FilterOption } from '../../types';
 import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/utils';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';

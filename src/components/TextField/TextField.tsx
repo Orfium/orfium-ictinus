@@ -3,15 +3,15 @@ import { omit } from 'lodash';
 import React, { InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
+import { IconWrapper } from './components/commons';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import Label from '../Label';
-import { IconWrapper } from './components/commons';
 import { AcceptedIconNames } from 'components/Icon/types';
 import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
-type InputProps = Partial<
+export type InputProps = Partial<
   Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly' | 'disabled'>
 >;
 

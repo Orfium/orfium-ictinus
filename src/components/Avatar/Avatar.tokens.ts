@@ -1,7 +1,7 @@
 import { rem } from 'theme/utils';
 
-import { Theme } from '../../theme';
 import { AvatarColors, AvatarSizes } from './Avatar.types';
+import { Theme } from '../../theme';
 
 const AVATAR_ICON_SIZE_FACTOR = 0.8;
 const AVATAR_STACK_OVERLAP_FACTOR = 0.8;

@@ -1,9 +1,9 @@
 import { getContrast } from 'polished';
 
-import { errorHandler } from '../utils/helpers';
 import { TextColorTypes } from './index';
 import { GradientPaletteConfig, NeutralPaletteConfig } from './palette.config';
 import { getColorErrors } from './utils';
+import { errorHandler } from '../utils/helpers';
 
 export const neutralColors = ['neutralWhite', 'neutralBlack'] as const;
 
@@ -84,11 +84,11 @@ export const mainTypes = [
   'link',
 ] as const;
 
-export type FlatPalette = Record<typeof flatColors[number], GeneratedColorShades>;
+export type FlatPalette = Record<(typeof flatColors)[number], GeneratedColorShades>;
 
-export type PalePalette = Record<typeof paleColors[number], string>;
+export type PalePalette = Record<(typeof paleColors)[number], string>;
 
-export type GeneratedColorShades = Record<typeof colorShades[number], string>;
+export type GeneratedColorShades = Record<(typeof colorShades)[number], string>;
 
 /**
  * Palette is end output of what is produced and exported to the client projects
@@ -107,27 +107,35 @@ export type Palette = {
   pale: PalePalette;
   white: string;
   black: string;
-} & Record<typeof mainTypes[number], GeneratedColorShades>;
+} & Record<(typeof mainTypes)[number], GeneratedColorShades>;
 
 export type formFieldStyles = 'filled' | 'outlined' | 'elevated';
 
 export type GetColor = {
-  (color: typeof flatColors[number], variant: typeof colorShades[number]): string;
-  (color: typeof flatColors[number], variant: typeof colorShades[number], scope: 'flat'): string;
-  (color: TextColorTypes, variant: typeof colorShades[number], scope: 'text'): string;
-  (color: typeof mainTypes[number], variant: typeof colorShades[number], scope: 'normal'): string;
-  (color: typeof paleColors[number], variant: null, scope: 'pale'): string;
+  (color: (typeof flatColors)[number], variant: (typeof colorShades)[number]): string;
+  (
+    color: (typeof flatColors)[number],
+    variant: (typeof colorShades)[number],
+    scope: 'flat'
+  ): string;
+  (color: TextColorTypes, variant: (typeof colorShades)[number], scope: 'text'): string;
+  (
+    color: (typeof mainTypes)[number],
+    variant: (typeof colorShades)[number],
+    scope: 'normal'
+  ): string;
+  (color: (typeof paleColors)[number], variant: null, scope: 'pale'): string;
 };
 
 export const getColor =
   (palette: Palette): GetColor =>
   (
     color:
-      | typeof flatColors[number]
+      | (typeof flatColors)[number]
       | TextColorTypes
-      | typeof mainTypes[number]
-      | typeof paleColors[number],
-    variant: typeof colorShades[number] | null,
+      | (typeof mainTypes)[number]
+      | (typeof paleColors)[number],
+    variant: (typeof colorShades)[number] | null,
     scope: 'flat' | 'text' | 'normal' | 'pale' = 'flat'
   ) => {
     let endColor;
@@ -150,12 +158,12 @@ export const getColor =
  * swatches are calculated based on accessibility by getAAColor function and splited to those two colors
  **/
 export type GetAAColorFromSwatches = {
-  (color: typeof flatColors[number], variant: typeof colorShades[number]): string;
+  (color: (typeof flatColors)[number], variant: (typeof colorShades)[number]): string;
 };
 
 export const getAAColorFromSwatches =
   (palette: Palette): GetAAColorFromSwatches =>
-  (color: typeof flatColors[number], shade: typeof colorShades[number]): string => {
+  (color: (typeof flatColors)[number], shade: (typeof colorShades)[number]): string => {
     const hexColorCode = getColor(palette)(color, shade);
 
     return getAAColor(palette)(hexColorCode);

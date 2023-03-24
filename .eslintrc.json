@@ -16,6 +16,7 @@
     "es6": true
   },
   "rules": {
+    "react/no-unknown-property": ["error", { "ignore": ["css"] }],
     /* React rules */
     "react/no-direct-mutation-state": "error",
     "react/no-unused-prop-types": "warn",

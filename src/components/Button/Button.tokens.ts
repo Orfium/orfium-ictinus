@@ -1,5 +1,5 @@
-import { Theme } from '../../theme';
 import { ButtonTypes } from './Button.types';
+import { Theme } from '../../theme';
 
 export type ButtonTokensColors = {
   borderColor: string;

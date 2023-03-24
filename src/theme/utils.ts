@@ -1,9 +1,9 @@
 import { get } from 'lodash';
 import { shade, tint, rem as polishedRem } from 'polished';
 
-import { PropsValidationError } from '../utils/errors';
 import { GeneratedColorShades, Palette } from './palette';
 import { FlatPaletteConfig, PaletteConfig, TextPaletteConfig } from './palette.config';
+import { PropsValidationError } from '../utils/errors';
 
 const BASE_PERCENTAGE = 10;
 const SHADES = 18;
@@ -46,6 +46,8 @@ export const colorShadesCreator = (
  * @returns {Record<string, unknown>>} Each level will have generatedColorShades and in whole it will return
  * a complete palette.
  */
+// @TODO fix this type in the future when v5 settle
+// eslint-disable-next-line @typescript-eslint/ban-types
 export const iterateObject = <T extends object>(
   obj: T,
   func: (value: string, name: string) => GeneratedColorShades | string

@@ -3,13 +3,13 @@ import useTheme from 'hooks/useTheme';
 import React, { useCallback } from 'react';
 import { TestProps } from 'utils/types';
 
-import { generateTestDataId } from '../../utils/helpers';
 import {
   buttonSpanStyle,
   iconButtonSpanStyle,
   iconButtonWrapper,
   wrapperStyle,
 } from './DropdownButton.style';
+import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';

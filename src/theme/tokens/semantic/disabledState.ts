@@ -1,5 +1,5 @@
-import { getTokensValue } from '../utils';
 import disabledStateFigma from './variables/disabledState';
+import { getTokensValue } from '../utils';
 
 export type SemanticDisabledState = {
   get: (val: string) => string;

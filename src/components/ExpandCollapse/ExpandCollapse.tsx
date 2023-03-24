@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-import { errorHandler, generateTestDataId } from '../../utils/helpers';
 import { contentStyles } from './ExpandCollapse.style';
 import { ExpandCollapseProps } from './ExpandCollapse.types';
 import { useManageContentRef } from './useManageContentRef';
 import { errors } from './utils';
+import { errorHandler, generateTestDataId } from '../../utils/helpers';
 
 const ExpandCollapse = (props: ExpandCollapseProps) => {
   const {

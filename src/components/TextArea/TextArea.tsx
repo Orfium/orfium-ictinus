@@ -1,11 +1,11 @@
 import { omit } from 'lodash';
 import * as React from 'react';
 
+import { sxProp } from './TextArea.style';
 import { useTheme } from '../../index';
 import { formFieldStyles } from '../../theme/palette';
 import { TestProps } from '../../utils/types';
 import TextInputBase from '../TextInputBase/TextInputBase';
-import { sxProp } from './TextArea.style';
 import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type TextAreaProps = {

@@ -1,8 +1,8 @@
 import React from 'react';
 
+import db from './db.json';
 import Table from '../../Table';
 // @ts-ignore
-import db from './db.json';
 
 type User = {
   id: string;
@@ -19,13 +19,14 @@ const TableFilterShowcase: React.FC = () => {
     (async () => {
       const data = db.users; // call simulator
 
+      // @ts-ignore
       setUsers(data);
     })();
   }, []);
 
   const newUsers = React.useMemo(() => {
     const manipulateTableData = (arr: User[]) =>
-      arr.map(user => {
+      arr.map((user) => {
         return {
           id: user.id,
           cells: [
@@ -38,7 +39,7 @@ const TableFilterShowcase: React.FC = () => {
 
     return manipulateTableData(
       users.filter(
-        user =>
+        (user) =>
           user.name.includes(search) ||
           user.username.includes(search) ||
           user.address.street.includes(search) ||
@@ -52,7 +53,7 @@ const TableFilterShowcase: React.FC = () => {
   return (
     <div style={{ margin: 20 }}>
       <p>search more than 3 characters </p>
-      <input placeholder={'search'} value={search} onChange={e => setSearch(e.target.value)} />
+      <input placeholder={'search'} value={search} onChange={(e) => setSearch(e.target.value)} />
       <Table data={newUsers} columns={columns} />
     </div>
   );

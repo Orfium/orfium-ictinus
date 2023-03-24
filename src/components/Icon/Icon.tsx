@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { colorShades } from '../../theme/palette';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestProps } from '../../utils/types';
 import iconSelector from './assets/iconSelector';
 import { iconContainerStyle, iconStyle } from './Icon.style';
 import { AcceptedIconNames } from './types';
+import { colorShades } from '../../theme/palette';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { TestProps } from '../../utils/types';
 
 export type OwnProps = {
   /** This property defines witch icon to use */
@@ -18,7 +18,7 @@ export type OwnProps = {
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
 
   /** Property indicating the color's variant of the icon. */
-  variant?: typeof colorShades[number];
+  variant?: (typeof colorShades)[number];
 };
 
 export type IconProps = OwnProps & TestProps;

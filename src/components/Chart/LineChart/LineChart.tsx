@@ -2,11 +2,11 @@ import React, { useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { rem } from 'theme/utils';
 
-import useTheme from '../../../hooks/useTheme';
-import Wrapper from '../Wrapper';
 import CustomTooltip from './components/CustomTooltip';
 import GradientLine from './components/GradientLine';
 import { Data, getKeyNames, colorPicker } from './utils';
+import useTheme from '../../../hooks/useTheme';
+import Wrapper from '../Wrapper';
 
 export type LineChartProps = {
   /** This property defines the data to be shown in the Line Chart */

@@ -1,9 +1,9 @@
 import { rem } from 'theme/utils';
 
+import { BackgroundColorProps, BaseColorProps, BorderProps, FilterProps } from './types';
 import { colorShades, MAX_SHADE } from '../../theme/palette';
 import { PropsValidationError } from '../../utils/errors';
 import { defineBackgroundColor } from '../Button/utils';
-import { BackgroundColorProps, BaseColorProps, BorderProps, FilterProps } from './types';
 
 export const FILTER_OPTIONS_MAX_HEIGHT = 253;
 export const HAS_SELECTED_VALUE_COLOR_SHADE = 50;
@@ -56,10 +56,10 @@ export const getBorder = ({
   isDivider,
   state = 'normal',
 }: BorderProps) => {
-  const addOrSubtract = (shade: typeof colorShades[number]) => {
+  const addOrSubtract = (shade: (typeof colorShades)[number]) => {
     const calculatedShade = shade < MAX_SHADE ? 50 : -50;
 
-    return (shade + calculatedShade) as typeof colorShades[number];
+    return (shade + calculatedShade) as (typeof colorShades)[number];
   };
 
   if (state === 'normal' && styleType === 'transparent' && !isOpen && !hasSelectedValue) {

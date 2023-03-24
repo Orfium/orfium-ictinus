@@ -2,16 +2,16 @@ import { css } from '@emotion/react';
 import { boolean, number } from '@storybook/addon-knobs';
 import React from 'react';
 
-import { rem } from '../../../theme/utils';
-import Button from '../../Button';
-import Card from '../../Card';
-import Chip from '../../Chip';
-import Tooltip from '../../Tooltip';
 import {
   customContentStyle,
   tooltipContainerStyle,
   tooltipRowStyle,
 } from './TooltipShowcase.style';
+import { rem } from '../../../theme/utils';
+import Button from '../../Button';
+import Card from '../../Card';
+import Chip from '../../Chip';
+import Tooltip from '../../Tooltip';
 
 const CustomContent = () => {
   return (

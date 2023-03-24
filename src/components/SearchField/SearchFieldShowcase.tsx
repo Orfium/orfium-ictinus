@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
+import SearchField, { SearchFieldProps } from './SearchField';
 import Stack from '../storyUtils/Stack';
 import { TextFieldProps } from '../TextField/TextField';
-import SearchField, { SearchFieldProps } from './SearchField';
 
 const SearchFieldShowcase = ({
   isDisabled,

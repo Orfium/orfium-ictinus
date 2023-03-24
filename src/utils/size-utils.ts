@@ -7,7 +7,7 @@ import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config
 type Size = 'md' | 'sm';
 export const DEFAULT_SIZE: Size = 'md';
 
-const getTextFieldHeight = (size?: Size): string => {
+export const getTextFieldHeight = (size?: Size): string => {
   switch (size) {
     case 'md':
       return rem(MD_HEIGHT);

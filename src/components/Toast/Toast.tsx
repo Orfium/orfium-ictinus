@@ -1,13 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
 
-import { generateTestDataId } from '../../utils/helpers';
-import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
-import { TestId } from '../../utils/types';
-import Icon from '../Icon';
-import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
-import { actionContainer } from '../Notification/Notification.style';
-import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 import {
   toastContainer,
   topContainer,
@@ -17,6 +10,13 @@ import {
   chevronIconContainer,
   expandedContainer,
 } from './Toast.style';
+import { generateTestDataId } from '../../utils/helpers';
+import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
+import { TestId } from '../../utils/types';
+import Icon from '../Icon';
+import { NotificationStyleType, NotificationTypes } from '../Notification/Notification';
+import { actionContainer } from '../Notification/Notification.style';
+import { typeToIconName } from '../Notification/subcomponents/CompactNotification/CompactNotification';
 
 export type ToastProps = {
   /** The informative message of the Toast */
@@ -29,6 +29,8 @@ export type ToastProps = {
   closeCTA: (() => void) | undefined;
   /** Initialize toast as expanded */
   isExpanded?: boolean;
+  /** If true, the Toast has a minimum-height */
+  hasMinimumHeight?: boolean;
   /** The data test id if needed */
   dataTestId?: TestId;
 };
@@ -43,6 +45,7 @@ const Toast: React.FC<ToastProps> = ({
   styleType = 'elevated',
   closeCTA,
   isExpanded = false,
+  hasMinimumHeight = true,
   children,
   dataTestId,
 }) => {
@@ -81,7 +84,7 @@ const Toast: React.FC<ToastProps> = ({
         </div>
       </div>
       <div
-        css={expandedContainer(type, isExpandedState)}
+        css={expandedContainer(type, isExpandedState, hasMinimumHeight)}
         data-testid={generateTestDataId('expanded-container', dataTestId)}
       >
         {children}

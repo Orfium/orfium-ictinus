@@ -3,10 +3,10 @@ import React from 'react';
 import { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
+import { textFieldWrapper, iconWrapper } from './SearchInput.style';
 import Icon from '../../../Icon';
 import Loader from '../../../Loader';
 import TextField from '../../../TextField';
-import { textFieldWrapper, iconWrapper } from './SearchInput.style';
 
 export type SearchInputProps = {
   value: string;

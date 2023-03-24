@@ -1,27 +1,20 @@
 import * as React from 'react';
 
+import { visualContainer, descriptionContainer } from './NotificationVisual.style';
 import { generateTestDataId } from '../../../utils/helpers';
 import { TestId } from '../../../utils/types';
-import Button from '../../Button';
-import { actionContainer, actionsContainer, boldMessageContainer } from '../Notification.style';
-import { visualContainer, descriptionContainer } from './NotificationVisual.style';
+import { NotificationActions } from '../Notification';
+import { boldMessageContainer } from '../Notification.style';
+import NotificationActionsArea from '../subcomponents/NotificationActionsArea';
 
 export type NotificationVisualProps = {
   /** The message heading of the Notification */
   title: string | undefined;
-  /** The primary call-to-action label of the Notification */
-  primaryCTALabel: string | undefined;
-  /** The primary call-to-action of the Notification */
-  primaryCTA: (() => void) | undefined;
-  /** The secondary call-to-action label of the Notification */
-  secondaryCTALabel: string | undefined;
-  /** The secondary call-to-action of the Notification */
-  secondaryCTA: (() => void) | undefined;
   /** The description of the Notification (only for toast) */
   description: string | undefined;
   /** The data test id if needed */
   dataTestId?: TestId;
-};
+} & NotificationActions;
 
 const NotificationVisual: React.FC<NotificationVisualProps> = ({
   title,
@@ -32,25 +25,32 @@ const NotificationVisual: React.FC<NotificationVisualProps> = ({
   description,
   dataTestId,
 }) => {
+  const hasActions = (primaryCTA && primaryCTALabel) || (secondaryCTA && secondaryCTALabel);
+
   return (
     <div css={visualContainer()}>
-      <div css={boldMessageContainer()}>{title}</div>
-      <div css={descriptionContainer()}>{description}</div>
-      <div css={actionsContainer()}>
-        <div
-          css={actionContainer()}
-          data-testid={generateTestDataId('visual-secondary', dataTestId)}
-        >
-          <Button type="tertiary" onClick={secondaryCTA}>
-            {secondaryCTALabel}
-          </Button>
-        </div>
-        <div css={actionContainer()} data-testid={generateTestDataId('visual-primary', dataTestId)}>
-          <Button type="tertiary" onClick={primaryCTA}>
-            {primaryCTALabel}
-          </Button>
-        </div>
+      <div
+        css={boldMessageContainer()}
+        data-testid={generateTestDataId('visual-title', dataTestId)}
+      >
+        {title}
       </div>
+      <div
+        css={descriptionContainer()}
+        data-testid={generateTestDataId('visual-description', dataTestId)}
+      >
+        {description}
+      </div>
+      {hasActions && (
+        <NotificationActionsArea
+          primaryCTA={primaryCTA}
+          primaryCTALabel={primaryCTALabel}
+          secondaryCTA={secondaryCTA}
+          secondaryCTALabel={secondaryCTALabel}
+          dataTestPrefixId="visual"
+          dataTestId={dataTestId}
+        />
+      )}
     </div>
   );
 };

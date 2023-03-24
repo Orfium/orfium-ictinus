@@ -14,7 +14,7 @@ const snackbarContainerPerType = (
     ? `
         border: ${rem(2)} solid ${typeToThemePalette(theme, type)};
       `
-    : ` 
+    : `
     border-left: ${typeToThemePalette(theme, type)} ${rem(4)} solid;
     box-shadow: ${theme.globals.elevation['02']};
 `;
@@ -28,7 +28,6 @@ export const cardContainer =
       overflow: hidden;
       padding: ${theme.globals.spacing.get('6')};
       box-sizing: border-box;
-      min-height: ${rem(164)};
       max-height: ${rem(294)};
       border-radius: ${rem(8)};
       background: ${theme.globals.colors.white};
@@ -55,9 +54,8 @@ export const descriptionContainer =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      padding-bottom: ${theme.globals.spacing.get('6')};
       font-size: ${theme.globals.typography.fontSizes.get('3')};
       max-height: ${rem(194)};
       overflow: auto;
-      max-width: fit-content;
+      width: ${rem(547)};
     `;

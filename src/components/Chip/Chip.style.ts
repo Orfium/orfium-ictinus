@@ -2,9 +2,9 @@ import { css, SerializedStyles } from '@emotion/react';
 import { flexCenterVertical } from 'theme/functions';
 import { rem } from 'theme/utils';
 
+import { ChipProps } from './Chip.types';
 import { Theme } from '../../theme';
 import { getDisabled, getFocus, getHover, getPressed } from '../../theme/states';
-import { ChipProps } from './Chip.types';
 
 export const chipStyle =
   ({

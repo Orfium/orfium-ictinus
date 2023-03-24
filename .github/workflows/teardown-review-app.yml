@@ -2,16 +2,9 @@ name: Teardown review env
 on:
   pull_request:
     types: [closed]
-  workflow_dispatch:
-    inputs:
-      pr-number:
-        description: 'The PR number of the env you want to teardown'
-        required: true
+
 jobs:
   delete-review-app:
-    uses: Orfium/orfium-github-actions/.github/workflows/teardown-review-app.yml@master
-    with:
-      product: ictinus
-      pr-number: ${{ github.event.pull_request.number }}${{ inputs.pr-number }}
+    uses: Orfium/orfium-github-actions/.github/workflows/teardown-frontend.yml@master
     secrets:
-      token: ${{ secrets.REVIEW_TEARDOWN_TOKEN }}
+      REVIEW_TEARDOWN_TOKEN: ${{ secrets.REVIEW_TEARDOWN_TOKEN }}

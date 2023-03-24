@@ -4,10 +4,10 @@ import React, { FC } from 'react';
 import { formFieldStyles } from 'theme/palette';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
-import { generateTestDataId } from '../../utils/helpers';
-import { TestProps } from '../../utils/types';
 import { textInputSizes } from './config';
 import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import { generateTestDataId } from '../../utils/helpers';
+import { TestProps } from '../../utils/types';
 import Icon from 'components/Icon';
 import { AcceptedIconNames } from 'components/Icon/types';
 
@@ -39,7 +39,7 @@ export type TextInputBaseProps = {
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Sets the size of the textField */
-  size?: typeof textInputSizes[number];
+  size?: (typeof textInputSizes)[number];
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
   /** Sx prop to override specific properties */

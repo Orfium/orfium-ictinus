@@ -5,12 +5,12 @@ import Button from '../../Button';
 import NotificationsContainer from '../../Notification/NotificationsContainer';
 
 const NotificationShowcase: React.FC<{ id?: string }> = ({ children, id }) => {
-  const [show, setShow] = useState<boolean>(false);
+  const [hasShow, setHasShow] = useState<boolean>(false);
 
   return (
     <div id={id} style={{ width: '100%', height: '100%' }}>
-      <Button onClick={() => setShow(!show)}>Show Notifications</Button>
-      {show && children}
+      <Button onClick={() => setHasShow(!hasShow)}>Show Notifications</Button>
+      {hasShow && children}
     </div>
   );
 };
@@ -24,7 +24,7 @@ export const NotificationContainerWithinDOMElement = (props: {
 
   return (
     <div
-      ref={el => {
+      ref={(el) => {
         setDivEl(el);
       }}
       id={id}

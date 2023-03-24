@@ -1,9 +1,9 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
+import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 import { ExtendedColumn, Sort } from '../../types';
 import { isItemString } from '../../utils';
-import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
 

@@ -1,11 +1,11 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'theme/utils';
 
+import { isNotificationTypes } from './Toast';
 import { Theme } from '../../theme';
 import { transition, flexCenter } from '../../theme/functions';
 import { AcceptedColorComponentTypes } from '../../utils/themeFunctions';
 import { NotificationStyleType } from '../Notification/Notification';
-import { isNotificationTypes } from './Toast';
 
 const maxHeightOptions = {
   notification: `max-height: ${rem(294)};`,
@@ -77,11 +77,11 @@ export const chevronIconContainer = (isExpanded: boolean) => (): SerializedStyle
   `;
 
 export const expandedContainer =
-  (type: AcceptedColorComponentTypes, isExpanded: boolean) =>
+  (type: AcceptedColorComponentTypes, isExpanded: boolean, hasMinimumHeight: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.1)};
-      min-height: ${isExpanded ? rem(146) : rem(0)};
+      min-height: ${hasMinimumHeight && isExpanded ? rem(146) : rem(0)};
       ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
       height: ${!isExpanded ? rem(0) : 'inherit'};
       font-size: ${theme.globals.typography.fontSizes.get('3')};

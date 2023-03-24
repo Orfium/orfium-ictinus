@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 
-import { Theme } from '../../theme';
-import { flex } from '../../theme/functions';
 import getAvatarTokens from './Avatar.tokens';
 import { AvatarColors, AvatarSizes } from './Avatar.types';
+import { Theme } from '../../theme';
+import { flex } from '../../theme/functions';
 
 export const avatarStyle =
   ({ size, color }: { size: AvatarSizes; color: AvatarColors }) =>
