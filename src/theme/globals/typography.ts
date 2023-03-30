@@ -52,17 +52,17 @@ export type TextDecoration = {
 
 export type Typography = {
   globalFontSize: number;
-  fontSizes: FontSize;
-  weights: FontWeight;
-  fontFamilies: FontFamily;
-  fontFamily: string;
-  lineHeights: LineHeight;
-  letterSpacings: LetterSpacing;
-  textCases: TextCase;
-  textDecorations: TextDecoration;
+  fontSize: FontSize;
+  fontWeight: FontWeight;
+  fontFamily: FontFamily;
+  defaultFontFamily: string;
+  lineHeight: LineHeight;
+  letterSpacing: LetterSpacing;
+  textCase: TextCase;
+  textDecoration: TextDecoration;
 };
 
-const fontSizes: FontSize = {
+const fontSize: FontSize = {
   get: getFigmaTokensValue<FontSizeKey>(fontSizeFigma, FigmaTokenValueType.Pixels),
   /** @TODO remove this custom font-sizes */
   '8': rem('8px'),
@@ -71,42 +71,41 @@ const fontSizes: FontSize = {
   '15': rem('15px'),
 };
 
-const weights: FontWeight = {
+const fontWeight: FontWeight = {
   get: getFigmaTokensValue<FontWeightKey>(fontWeightFigma, FigmaTokenValueType.Number),
 };
 
-const fontFamilies: FontFamily = {
+const fontFamily: FontFamily = {
   get: getFigmaTokensValue<FontFamilyKey>(fontFamilyFigma, FigmaTokenValueType.String),
 };
 
-const lineHeights: LineHeight = {
+const lineHeight: LineHeight = {
   get: getFigmaTokensValue<LineHeightKey>(lineHeightFigma, FigmaTokenValueType.Pixels),
 };
 
-const letterSpacings: LetterSpacing = {
+const letterSpacing: LetterSpacing = {
   get: getFigmaTokensValue<LetterSpacingKey>(letterSpacingFigma, FigmaTokenValueType.String),
 };
 
-const textCases: TextCase = {
+const textCase: TextCase = {
   get: getFigmaTokensValue<TextCaseKey>(textCaseFigma, FigmaTokenValueType.String),
 };
 
-const textDecorations: TextDecoration = {
+const textDecoration: TextDecoration = {
   get: getFigmaTokensValue<TextDecorationKey>(textDecorationFigma, FigmaTokenValueType.String),
 };
 
-const defaultFontFamily = fontFamilies.get('roboto');
-
+const defaultFontFamily = fontFamily.get('roboto');
 const typography: Typography = {
   globalFontSize: 16, // @deprecated Use fontSize.get instead
-  fontSizes,
-  weights,
-  fontFamilies,
-  fontFamily: defaultFontFamily,
-  lineHeights,
-  letterSpacings,
-  textCases,
-  textDecorations,
+  fontSize,
+  fontWeight,
+  fontFamily,
+  defaultFontFamily,
+  lineHeight,
+  letterSpacing,
+  textCase,
+  textDecoration,
 };
 
 export default typography;

@@ -24,7 +24,7 @@ export const Mark = styled.div<{
       color: white;
       display: ${({ isDisabled }) => (isDisabled ? 'none' : 'flex')};
       justify-content: center;
-      font-size: ${({ theme }) => theme.globals.typography.fontSizes[11]};
+      font-size: ${({ theme }) => theme.globals.typography.fontSize[11]};
       background: black;
       position: absolute;
       padding: ${({ theme }) => theme.globals.spacing.get('4')};

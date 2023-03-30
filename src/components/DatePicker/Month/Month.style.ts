@@ -20,9 +20,9 @@ export const weekDayStyle =
       color: ${theme.utils.getColor('lightGrey', 650)};
       padding: ${theme.globals.spacing.get('6')} 0;
       width: ${rem(39)};
-      font-size: ${theme.globals.typography.fontSizes.get('3')};
+      font-size: ${theme.globals.typography.fontSize.get('3')};
       text-align: center;
-      font-weight: ${theme.globals.typography.weights.get('medium')};
+      font-weight: ${theme.globals.typography.fontWeight.get('medium')};
     `;
 
 export const datesWrapperStyle =

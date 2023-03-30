@@ -18,7 +18,7 @@ export const optionStyle =
   (theme: Theme): SerializedStyles => {
     return css`
       padding: ${theme.globals.spacing.get('6')};
-      font-size: ${theme.globals.typography.fontSizes.get(size === 'md' ? '4' : '3')};
+      font-size: ${theme.globals.typography.fontSize.get(size === 'md' ? '4' : '3')};
       background-color: ${isSelected
         ? darken(0.07, theme.globals.colors.white)
         : theme.globals.colors.white};

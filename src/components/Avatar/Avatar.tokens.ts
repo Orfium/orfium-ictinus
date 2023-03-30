@@ -53,12 +53,12 @@ const getTokens = (theme: Theme): AvatarTokens => {
         theme.tokens.palette.get(`accents.${color}.contrast`),
     },
     fontSize: {
-      1: theme.globals.typography.fontSizes.get('1'),
-      2: theme.globals.typography.fontSizes.get('2'),
-      3: theme.globals.typography.fontSizes.get('3'),
-      4: theme.globals.typography.fontSizes.get('4'),
-      5: theme.globals.typography.fontSizes.get('8'),
-      6: theme.globals.typography.fontSizes.get('10'),
+      1: theme.globals.typography.fontSize.get('1'),
+      2: theme.globals.typography.fontSize.get('2'),
+      3: theme.globals.typography.fontSize.get('3'),
+      4: theme.globals.typography.fontSize.get('4'),
+      5: theme.globals.typography.fontSize.get('8'),
+      6: theme.globals.typography.fontSize.get('10'),
     },
   };
 };

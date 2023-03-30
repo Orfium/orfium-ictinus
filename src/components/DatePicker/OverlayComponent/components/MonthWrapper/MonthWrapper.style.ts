@@ -54,6 +54,6 @@ export const monthHeaderTitleStyle =
       display: flex;
       justify-content: center;
       cursor: ${!isRangePicker && 'pointer'};
-      font-weight: ${theme.globals.typography.weights.get('medium')};
+      font-weight: ${theme.globals.typography.fontWeight.get('medium')};
       color: ${theme.utils.getColor('darkGrey', 850)};
     `;

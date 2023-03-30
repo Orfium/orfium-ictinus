@@ -40,7 +40,7 @@ export const menuItemStyle =
       ${itemStyle(theme)};
       width: 100%;
       font-size: ${rem(16)};
-      font-weight: ${theme.globals.typography.weights.get('regular')};
+      font-weight: ${theme.globals.typography.fontWeight.get('regular')};
       padding: 0 ${theme.globals.spacing.get('6')};
       background: transparent;
       border: 0 solid transparent;
@@ -70,7 +70,7 @@ export const menuItemTextStyle =
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
-      font-weight: ${isCurrent ? theme.globals.typography.weights.get('bold') : 'initial'};
+      font-weight: ${isCurrent ? theme.globals.typography.fontWeight.get('bold') : 'initial'};
     `;
 
 export const subMenuLinkStyle =
@@ -80,7 +80,7 @@ export const subMenuLinkStyle =
   ${itemStyle(theme)};
   ${transition(0.2)};
   box-sizing: border-box;
-  font-size: ${theme.globals.typography.fontSizes.get('3')};
+  font-size: ${theme.globals.typography.fontSize.get('3')};
   color: ${theme.utils.getColor('darkGrey', 850)};
   margin: ${theme.globals.spacing.get('3')} 0 ${theme.globals.spacing.get('3')} 0;
   padding-left: ${rem(ICON_PADDING)};
@@ -92,7 +92,7 @@ export const subMenuLinkStyle =
     background-color: ${getPressed({ theme, color: 'blue', shade: 50 }).backgroundColor} !important;
   }
   &.active  {
-    font-weight: ${theme.globals.typography.weights.get('bold')};
+    font-weight: ${theme.globals.typography.fontWeight.get('bold')};
     background-color: ${getPressed({ theme, color: 'blue' }).backgroundColor} !important;
     color: ${theme.utils.getAAColor(getPressed({ theme, color: 'blue' }).backgroundColor)};
 

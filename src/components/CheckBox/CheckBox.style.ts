@@ -121,8 +121,8 @@ export const labelStyle =
   (theme: Theme): SerializedStyles =>
     css`
       padding-left: ${rem(4)};
-      font-size: ${theme.globals.typography.fontSizes['15']};
-      font-weight: ${theme.globals.typography.weights.get('regular')};
+      font-size: ${theme.globals.typography.fontSize['15']};
+      font-weight: ${theme.globals.typography.fontWeight.get('regular')};
       color: ${theme.utils.getColor('darkGrey', 750)};
       white-space: nowrap;
     `;

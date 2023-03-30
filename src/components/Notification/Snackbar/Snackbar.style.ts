@@ -54,7 +54,7 @@ export const descriptionContainer =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      font-size: ${theme.globals.typography.fontSizes.get('3')};
+      font-size: ${theme.globals.typography.fontSize.get('3')};
       max-height: ${rem(194)};
       overflow: auto;
       width: ${rem(547)};

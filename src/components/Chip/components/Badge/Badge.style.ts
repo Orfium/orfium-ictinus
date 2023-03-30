@@ -15,8 +15,8 @@ export const badgeStyle =
       background: ${isSelected
         ? theme.utils.getColor(fill, 550)
         : theme.utils.getColor('lightGrey', 200)};
-      font-size: ${theme.globals.typography.fontSizes.get('1')};
-      font-weight: ${theme.globals.typography.weights.get('medium')};
+      font-size: ${theme.globals.typography.fontSize.get('1')};
+      font-weight: ${theme.globals.typography.fontWeight.get('medium')};
       align-items: center;
       flex-shrink: 0;
       line-height: normal;

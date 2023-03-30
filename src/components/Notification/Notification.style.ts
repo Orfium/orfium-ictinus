@@ -63,5 +63,5 @@ export const boldMessageContainer =
   () =>
   (theme: Theme): SerializedStyles =>
     css`
-      font-weight: ${theme.globals.typography.weights.get('bold')};
+      font-weight: ${theme.globals.typography.fontWeight.get('bold')};
     `;

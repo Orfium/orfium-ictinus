@@ -23,7 +23,7 @@ export const avatarStyle =
       overflow: hidden;
       position: relative;
       font-size: ${tokens.fontSize[size]};
-      font-weight: ${theme.globals.typography.weights.get('medium')};
+      font-weight: ${theme.globals.typography.fontWeight.get('medium')};
       align-items: center;
       flex-shrink: 0;
       user-select: none;

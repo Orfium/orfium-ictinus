@@ -97,7 +97,7 @@ export const buttonBaseStyle =
   }: ButtonStyleProps) =>
   (theme: Theme) => {
     return {
-      fontSize: theme.globals.typography.fontSizes['13'],
+      fontSize: theme.globals.typography.fontSize['13'],
       cursor: isDisabled ? 'not-allowed' : 'pointer',
       height: '100%',
       opacity: isDisabled ? 0.5 : 1,
@@ -219,15 +219,15 @@ export const labelSpanStyle = (isOpen: boolean, hasSelectedValue: boolean) => (t
   return {
     fontWeight:
       isOpen || hasSelectedValue
-        ? theme.globals.typography.weights.get('bold')
-        : theme.globals.typography.weights.get('regular'),
+        ? theme.globals.typography.fontWeight.get('bold')
+        : theme.globals.typography.fontWeight.get('regular'),
     display: 'flex',
     alignItems: 'center',
     div: {
       flex: 'none',
     },
     span: {
-      fontWeight: theme.globals.typography.weights.get('bold'),
+      fontWeight: theme.globals.typography.fontWeight.get('bold'),
     },
   };
 };

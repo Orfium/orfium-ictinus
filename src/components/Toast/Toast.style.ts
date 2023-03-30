@@ -84,7 +84,7 @@ export const expandedContainer =
       min-height: ${hasMinimumHeight && isExpanded ? rem(146) : rem(0)};
       ${isNotificationTypes(type) ? maxHeightOptions['notification'] : maxHeightOptions['generic']}
       height: ${!isExpanded ? rem(0) : 'inherit'};
-      font-size: ${theme.globals.typography.fontSizes.get('3')};
+      font-size: ${theme.globals.typography.fontSize.get('3')};
       position: relative;
       background: ${theme.globals.colors.white};
     `;

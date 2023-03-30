@@ -71,7 +71,7 @@ export const textInputBaseOverrides =
   ({ hasValue, isLoading }: { hasValue: boolean; isLoading?: boolean }) =>
   (theme: Theme) => {
     const labelStyles = {
-      fontWeight: `${theme.globals.typography.weights.get('bold')} !important` as any,
+      fontWeight: `${theme.globals.typography.fontWeight.get('bold')} !important` as any,
       transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -82%) scale(0.8) !important`,
       bottom: 'auto',
     };
