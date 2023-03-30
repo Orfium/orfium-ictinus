@@ -144,13 +144,13 @@ export const inputStyle =
       position: 'relative',
       top: label ? rem(7) : undefined,
       zIndex: 1,
-      fontSize: theme.globals.typography.fontSizes[size === 'md' ? '15' : '13'],
+      fontSize: theme.globals.typography.fontSize[size === 'md' ? '15' : '13'],
       textOverflow: 'ellipsis',
       width: 0,
       minWidth: '100%',
 
       '& + label': {
-        fontSize: theme.globals.typography.fontSizes[size === 'md' ? '15' : '13'],
+        fontSize: theme.globals.typography.fontSize[size === 'md' ? '15' : '13'],
       },
 
       '&:focus': {
@@ -170,7 +170,7 @@ export const inputStyle =
       '&:focus, &:not(:placeholder-shown)': {
         '& + label': {
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
-          fontWeight: theme.globals.typography.weights.get('bold'),
+          fontWeight: theme.globals.typography.fontWeight.get('bold'),
         },
       },
 
@@ -189,7 +189,7 @@ export const errorMsgStyle =
         status === 'error'
           ? theme.utils.getColor('error', 550, 'normal')
           : theme.utils.getColor('lightGrey', 650),
-      fontSize: theme.globals.typography.fontSizes.get('2'),
+      fontSize: theme.globals.typography.fontSize.get('2'),
       lineHeight: 1,
       padding: `${rem(8)} 0 0`,
       svg: {

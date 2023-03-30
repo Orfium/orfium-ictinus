@@ -27,12 +27,12 @@ export const optionStyle =
       white-space: nowrap;
       padding: ${theme.globals.spacing.get('6')};
       font-weight: ${isSelected
-        ? theme.globals.typography.weights.get('medium')
-        : theme.globals.typography.weights.get('regular')};
+        ? theme.globals.typography.fontWeight.get('medium')
+        : theme.globals.typography.fontWeight.get('regular')};
       cursor: pointer;
       background-color: ${isSelected ? theme.utils.getColor('blue', 50) : 'transparent'};
       position: relative;
-      font-size: ${theme.globals.typography.fontSizes['13']};
+      font-size: ${theme.globals.typography.fontSize['13']};
 
       &:hover {
         background-color: ${theme.utils.getColor('lightGrey', 50)};

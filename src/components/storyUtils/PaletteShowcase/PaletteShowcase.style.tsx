@@ -20,8 +20,8 @@ export const paletteColorWrapper = css`
 export const colorNameBox = (
   theme: Theme,
   color: string,
-  colorName?: typeof flatColors[number],
-  shade?: typeof colorShades[number]
+  colorName?: (typeof flatColors)[number],
+  shade?: (typeof colorShades)[number]
 ): SerializedStyles => css`
   height: 100px;
   background: ${color};
@@ -46,8 +46,8 @@ export const colorBoxWrapper = css`
 type ColorBoxProps = {
   theme: Theme;
   color: string;
-  colorName?: typeof flatColors[number];
-  shade?: typeof colorShades[number];
+  colorName?: (typeof flatColors)[number];
+  shade?: (typeof colorShades)[number];
   isSelectedColor: boolean;
   isHoverable?: boolean;
 };
@@ -86,6 +86,6 @@ export const colorBox = ({
 
   div:last-child {
     font-size: 14px;
-    text-transform: ${theme.globals.typography.textCases.get('uppercase')};
+    text-transform: ${theme.globals.typography.textCase.get('uppercase')};
   }
 `;

@@ -21,7 +21,7 @@ export const listItemStyle =
   (theme: Theme): SerializedStyles =>
     css`
       height: ${size === 'normal' ? rem(56) : rem(46)};
-      font-size: ${theme.globals.typography.fontSizes.get(size === 'normal' ? '4' : '3')};
+      font-size: ${theme.globals.typography.fontSize.get(size === 'normal' ? '4' : '3')};
       background-color: ${isSelected
         ? theme.utils.getColor('blue', 50)
         : theme.globals.colors.white};
@@ -29,7 +29,7 @@ export const listItemStyle =
       align-items: center;
       padding: 0px ${theme.globals.spacing.get('6')} 0px
         ${isGroupItem ? theme.globals.spacing.get('9') : theme.globals.spacing.get('6')};
-      font-weight: ${isSelected && theme.globals.typography.weights.get('medium')};
+      font-weight: ${isSelected && theme.globals.typography.fontWeight.get('medium')};
       cursor: pointer;
 
       ${isHighlighted && 'font-weight: 500;'}

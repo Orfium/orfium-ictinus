@@ -14,12 +14,12 @@ export const tooltipStyle =
 
     const defineFontSizeBasedOnTooltipSize = (size: TooltipSize) => {
       if (size === 'large') {
-        return theme.globals.typography.fontSizes.get('4');
+        return theme.globals.typography.fontSize.get('4');
       } else if (size === 'small') {
-        return theme.globals.typography.fontSizes.get('2');
+        return theme.globals.typography.fontSize.get('2');
       }
 
-      return theme.globals.typography.fontSizes.get('3');
+      return theme.globals.typography.fontSize.get('3');
     };
 
     return css`
@@ -31,7 +31,7 @@ export const tooltipStyle =
         max-width: ${rem(256)};
         padding: ${theme.globals.spacing.get('4')};
         font-size: ${defineFontSizeBasedOnTooltipSize(size)};
-        font-weight: ${theme.globals.typography.weights.get('regular')};
+        font-weight: ${theme.globals.typography.fontWeight.get('regular')};
         line-height: 110%;
         border-radius: ${theme.globals.spacing.get('4')};
         text-align: start;

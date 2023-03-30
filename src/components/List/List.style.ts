@@ -36,8 +36,8 @@ export const listStyle =
     `;
 
 export const listLabelHelperText = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.globals.typography.fontSizes.get('1')};
-  font-weight: ${theme.globals.typography.weights.get('regular')};
+  font-size: ${theme.globals.typography.fontSize.get('1')};
+  font-weight: ${theme.globals.typography.fontWeight.get('regular')};
   color: ${theme.utils.getColor('lightGrey', 650)};
   cursor: inherit;
 `;

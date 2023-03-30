@@ -60,8 +60,8 @@ const TableCell: React.FC<TableCellProps> = React.memo(
           component === 'th' && {
             paddingTop: theme.globals.spacing.get('4'),
             paddingBottom: theme.globals.spacing.get('4'),
-            fontWeight: theme.globals.typography.weights.get('bold'),
-            fontSize: theme.globals.typography.fontSizes.get('3'),
+            fontWeight: theme.globals.typography.fontWeight.get('bold'),
+            fontSize: theme.globals.typography.fontSize.get('3'),
           },
           component === 'th' && isSortable && { ...parentStyles({ isActive })(theme) },
           isSticky && {
