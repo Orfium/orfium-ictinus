@@ -25,6 +25,8 @@ const MyComponent: FC = () => {
 
 # useSearchQueryParams demo
 
+This demo represents how the url will be taken into an object. You can play with **knobs** as well for different types of url
+
 <Preview>
   <Story
     name="useSearchQueryParams"
@@ -34,13 +36,15 @@ const MyComponent: FC = () => {
       },
     }}
     decorators={[
-      (Story) => (
-        <MemoryRouter initialEntries={['/test?page=1&size=12&library=react&testing=yolo']}>
-          <Story />
-        </MemoryRouter>
-      ),
+      withKnobs,
+      () => {
+        const value = text('given url', '/test?page=1&size=12&library=react&testing=yolo');
+        return (
+          <MemoryRouter initialEntries={[value]}>
+            <DemoUseSearchQueryParams initialEntries={value} />
+          </MemoryRouter>
+        );
+      },
     ]}
-  >
-    <DemoUseSearchQueryParams />
-  </Story>
+  />
 </Preview>
