@@ -4,7 +4,7 @@ export const MD = 'md';
 export const SM = 'sm';
 
 export const MD_HEIGHT = 46;
-export const SM_HEIGHT = 36;
+export const SM_HEIGHT = 28;
 
 export const MIN_WIDTH = 150;
 
@@ -16,20 +16,19 @@ type TextInputType = {
     border: {
       width: number;
       color: {
-        [key in typeof textInputStates[number]]: {
-          name: typeof flatColors[number];
-          shade: typeof colorShades[number];
+        [key in (typeof textInputStates)[number]]: {
+          name: (typeof flatColors)[number];
+          shade: (typeof colorShades)[number];
         };
       };
     };
   };
-}
+};
 type TextInputConfig = {
   types: {
     light: TextInputType;
     dark: TextInputType;
-  }
-
+  };
 };
 
 export const textInputConfig: TextInputConfig = {
@@ -75,6 +74,6 @@ export const textInputConfig: TextInputConfig = {
           },
         },
       },
-    }
+    },
   },
 };
