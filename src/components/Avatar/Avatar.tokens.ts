@@ -1,7 +1,6 @@
 import avatar from 'theme/tokens/components/variables/avatar';
 import avatarText from 'theme/tokens/components/variables/avatarText';
-import { DotKeys } from 'theme/tokens/utils';
-import { getComponentTokens, parseCompositionToken } from 'theme/tokens/utils';
+import { getComponentTokens, parseCompositionToken, DotKeys } from 'theme/tokens/utils';
 import { rem } from 'theme/utils';
 
 import { Theme } from '../../theme';
