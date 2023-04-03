@@ -2,30 +2,24 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { flex } from 'theme/functions';
 
-import getTokens from '../Avatar.tokens';
+import { AvatarTokens, getAvatarTokens, parseAvatarStackSize } from '../Avatar.tokens';
 import { AvatarSizes } from '../Avatar.types';
 
 export const avatarStackStyle =
   ({ size }: { size: AvatarSizes }) =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getTokens(theme);
-
-    return css`
+  (theme: Theme): SerializedStyles =>
+    css`
       ${flex};
 
       div:last-child {
-        width: ${tokens.size[size]};
+        width: ${getAvatarTokens(theme)(`size.${size}` as AvatarTokens)};
       }
     `;
-  };
 
 export const avatarWrapperStyle =
   ({ zIndex, size }: { zIndex: number; size: AvatarSizes }) =>
-  (theme: Theme): SerializedStyles => {
-    const tokens = getTokens(theme);
-
-    return css`
+  (theme: Theme): SerializedStyles =>
+    css`
       z-index: ${zIndex};
-      width: ${tokens.avatarStackSize[size]};
+      width: ${getAvatarTokens(theme)(`size.${size}` as AvatarTokens, parseAvatarStackSize)};
     `;
-  };
