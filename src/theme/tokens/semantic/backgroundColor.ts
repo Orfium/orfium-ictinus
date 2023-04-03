@@ -1,8 +1,8 @@
 import backgroundColorFigma from './variables/backgroundColor';
-import { getTokensValue } from '../utils';
+import { DotKeys, getTokensValue } from '../utils';
 
 export type SemanticBackgroundColor = {
-  get: (val: string) => string;
+  get: (val: DotKeys<typeof backgroundColor>) => string;
 };
 
 const backgroundColor: SemanticBackgroundColor = {
