@@ -81,7 +81,7 @@ export const parseCompositionToken = (object: TokensObject | Token) => (path: st
 };
 
 /**
- * This function parses comp-token values, who point to GLOBAL or SEMANTIC tokens.
+ * Parses component/token values, who point to GLOBAL or SEMANTIC(theme) tokens.
  *
  * @param path value of the comp-tier token, e.g.: {sem.palette.accents.red.main} of avatar comp
  * @param fn callback to normalize values

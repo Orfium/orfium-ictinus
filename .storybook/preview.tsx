@@ -1,8 +1,11 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
+import { DocsContainer } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import styled from '@emotion/styled';
+import Typography from '../src/components/Typography';
 
 const viewPorts = {
   desktop1920: {
@@ -126,9 +129,61 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
+const divEmpty = styled.div(({ theme }) => ({}));
+const pEmpty = styled.p(({ theme }) => ({
+  margin: '1em 0',
+}));
+const spanEmpty = styled.span(({ theme }) => ({}));
+const inputEmpty = styled.input(({ theme }) => ({}));
 export const parameters = {
   viewport: {
     viewports: viewPorts,
   },
   options: { showPanel: true },
+  docs: {
+    container: ({ children, context }: any) => (
+      <DocsContainer context={context}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </DocsContainer>
+    ),
+    components: {
+      h1: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'headline01'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      h2: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'headline02'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      h3: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'headline03'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      h4: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'headline04'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      p: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'body01'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      span: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'body01'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      div: ({ children }) => (
+        <ThemeProvider>
+          <Typography type={'body01'}>{children}</Typography>
+        </ThemeProvider>
+      ),
+      input: inputEmpty,
+    },
+  },
 };

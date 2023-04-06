@@ -13,6 +13,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('9')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -20,6 +22,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('8')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline03 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -27,6 +31,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('7')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline04 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -34,6 +40,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('6')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline05 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -41,6 +49,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('5')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     // titles
     const title01 = css`
