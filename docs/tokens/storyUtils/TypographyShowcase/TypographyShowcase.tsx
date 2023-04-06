@@ -1,9 +1,24 @@
+import { map } from 'lodash';
 import React from 'react';
+import { useTheme } from 'styled-components';
+import typographyCollection from 'theme/tokens/semantic/variables/typography';
 
 import { TableWrapperStyle } from './TypographyShowcase.style';
+import {
+  getComponentTokens,
+  getTokensValue,
+  parseCompositionToken,
+} from '../../../../src/theme/tokens/utils';
 import Typography from 'components/Typography';
 
 const TypographyShowcase = () => {
+  const theme = useTheme();
+  const typographyArray = map(typographyCollection, (value, key) => ({ key, ...value }));
+
+  const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection);
+
+  debugger;
+
   return (
     <table css={TableWrapperStyle} width={'100%'}>
       <thead>
@@ -14,356 +29,33 @@ const TypographyShowcase = () => {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <Typography type={'headline01'}>Headline 01</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'headline02'}>Headline 02</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'headline03'}>Headline 03</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'headline04'}>Headline 04</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'headline05'}>Headline 05</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'title01'}>Title 01</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'title02'}>Title 02</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'title03'}>Title 03</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'label01'}>Label 01</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'label02'}>Label 02</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'label03'}>Label 03</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'body01'}>Body 01</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'body02'}>Body 02</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <Typography type={'body03'}>Body 03</Typography>
-          </td>
-          <td colSpan={2}>
-            <table>
-              <tr>
-                <td>$lineHeight.10</td>
-                <td>40px</td>
-              </tr>
-              <tr>
-                <td>$fontSize.9</td>
-                <td>32px</td>
-              </tr>
-              <tr>
-                <td>$fontWeight.bold</td>
-                <td>700</td>
-              </tr>
-              <tr>
-                <td>$letterSpacing.0</td>
-                <td>0</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
+        {typographyArray.map(({ key, value }) => (
+          <tr key={key}>
+            <td>
+              <Typography type={key}>{key}</Typography>
+            </td>
+            <td colSpan={2}>
+              <table>
+                <tr>
+                  <td>${value.lineHeight.slice(1, -1)}</td>
+                  <td>{parsedTypographyCompositionToken(`${key}`).lineHeight}</td>
+                </tr>
+                <tr>
+                  <td>${value.fontSize.slice(1, -1)}</td>
+                  <td>{parsedTypographyCompositionToken(`${key}`).fontSize}</td>
+                </tr>
+                <tr>
+                  <td>${value.fontWeight.slice(1, -1)}</td>
+                  <td>{parsedTypographyCompositionToken(`${key}`).fontWeight}</td>
+                </tr>
+                <tr>
+                  <td>${value.letterSpacing.slice(1, -1)}</td>
+                  <td>{parsedTypographyCompositionToken(`${key}`).letterSpacing}</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
