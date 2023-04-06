@@ -1,19 +1,22 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
-import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 import CheckBox from './CheckBox';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/CheckBox"
-    component={CheckBox}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'CheckBox',
-            url: `${FIGMA_URL}?node-id=228%3A143`,
-        }],
-    }} />
+  title="Design System/CheckBox"
+  component={CheckBox}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'CheckBox',
+        url: `${FIGMA_URL}?node-id=228%3A143`,
+      },
+    ],
+  }}
+/>
 
 # CheckBox
 
@@ -49,7 +52,7 @@ Regular CheckBox
     <Stack>
       <CheckBox checked={false} filled={false} />
       <CheckBox checked={true} filled={false} />
-      <CheckBox checked={true} filled={false} disabled/>
+      <CheckBox checked={true} filled={false} disabled />
       <CheckBox checked={true} filled={false} intermediate />
       <CheckBox checked={true} filled={false} intermediate disabled />
       <CheckBox checked={false} filled={false} intermediate />
@@ -72,16 +75,33 @@ Regular CheckBox with label
         <CheckBox checked={true} intermediate label={'Checked intermediate'} />
         <CheckBox checked={true} intermediate label={'Disabled checked intermediate'} disabled />
         <CheckBox checked={false} intermediate label={'Not checked intermediate'} />
-        <CheckBox checked={false} intermediate label={'Disabled not checked intermediate'} disabled />
+        <CheckBox
+          checked={false}
+          intermediate
+          label={'Disabled not checked intermediate'}
+          disabled
+        />
       </Stack>
       <Stack>
         <CheckBox checked={false} filled={false} label={'Not checked single'} />
         <CheckBox checked filled={false} label={'Checked Single'} />
         <CheckBox checked={true} filled={false} label={'Disabled single'} disabled />
         <CheckBox checked={true} filled={false} intermediate label={'Checked intermediate'} />
-        <CheckBox checked={true} filled={false} intermediate label={'Disabled checked intermediate'} disabled />
+        <CheckBox
+          checked={true}
+          filled={false}
+          intermediate
+          label={'Disabled checked intermediate'}
+          disabled
+        />
         <CheckBox checked={false} filled={false} intermediate label={'Not checked intermediate'} />
-        <CheckBox checked={false} filled={false} intermediate label={'Disabled not checked intermediate'} disabled />
+        <CheckBox
+          checked={false}
+          filled={false}
+          intermediate
+          label={'Disabled not checked intermediate'}
+          disabled
+        />
       </Stack>
     </div>
   </Story>
