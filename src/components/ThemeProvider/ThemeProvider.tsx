@@ -57,8 +57,6 @@ const ThemeProviderContents: React.FC<ThemeProviderProps> = ({ theme = {}, child
     overrides: theme?.overrides,
   };
 
-  debugger;
-
   return (
     <EmotionThemeProvider theme={deepMergeTheme(newTheme, colorScheme)}>
       <TypeColorToColorMatchProvider>

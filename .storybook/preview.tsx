@@ -6,6 +6,7 @@ import ThemeProvider from '../src/components/ThemeProvider';
 import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
 import styled from '@emotion/styled';
 import Typography from '../src/components/Typography';
+import { css } from '@emotion/react';
 
 const viewPorts = {
   desktop1920: {
@@ -131,9 +132,15 @@ export const decorators = [
 ];
 
 const divEmpty = styled.div(({ theme }) => ({}));
-const pEmpty = styled.p(({ theme }) => ({
-  margin: '1em 0',
-}));
+const customTypography = css`
+  &:after {
+    content: '';
+    margin-top: 8px;
+    background: #323338;
+    height: 2px;
+  }
+  display: grid;
+`;
 const spanEmpty = styled.span(({ theme }) => ({}));
 const inputEmpty = styled.input(({ theme }) => ({}));
 export const parameters = {
@@ -149,40 +156,28 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'headline01'}>{children}</Typography>
-        </ThemeProvider>
+        <Typography css={customTypography} type={'headline01'}>
+          {children}
+        </Typography>
       ),
       h2: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'headline02'}>{children}</Typography>
-        </ThemeProvider>
+        <Typography css={customTypography} type={'headline02'}>
+          {children}
+        </Typography>
       ),
       h3: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'headline03'}>{children}</Typography>
-        </ThemeProvider>
+        <Typography css={customTypography} type={'headline03'}>
+          {children}
+        </Typography>
       ),
       h4: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'headline04'}>{children}</Typography>
-        </ThemeProvider>
+        <Typography css={customTypography} type={'headline04'}>
+          {children}
+        </Typography>
       ),
-      p: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'body01'}>{children}</Typography>
-        </ThemeProvider>
-      ),
-      span: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'body01'}>{children}</Typography>
-        </ThemeProvider>
-      ),
-      div: ({ children }) => (
-        <ThemeProvider>
-          <Typography type={'body01'}>{children}</Typography>
-        </ThemeProvider>
-      ),
+      p: ({ children }) => <Typography type={'body01'}>{children}</Typography>,
+      span: ({ children }) => <Typography type={'body01'}>{children}</Typography>,
+      div: ({ children }) => <Typography type={'body01'}>{children}</Typography>,
       input: inputEmpty,
     },
   },

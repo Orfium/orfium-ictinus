@@ -38,10 +38,14 @@ export const detectComponentBasedOnType = (type: TypographyType): TypographyComp
   return 'p';
 };
 
-const Typography: FC<TypographyProps> = ({ type = 'body01', component, children }) => {
+const Typography: FC<TypographyProps> = ({ type = 'body01', component, children, ...rest }) => {
   const Component = component || detectComponentBasedOnType(type);
 
-  return <Component css={typographyWrapper({ type })}>{children}</Component>;
+  return (
+    <Component css={typographyWrapper({ type })} {...rest}>
+      {children}
+    </Component>
+  );
 };
 
 export default Typography;
