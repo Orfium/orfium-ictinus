@@ -2,14 +2,15 @@ import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
 import { avatarStyle } from './Avatar.style';
-import getTokens from './Avatar.tokens';
+import { AvatarTokens, getAvatarTokens, parseAvatarIconSize } from './Avatar.tokens';
 import { AvatarProps } from './Avatar.types';
 import Icon from '../Icon';
 
 const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
   ({ src = '', size = 1, color = 'blue', className, dataTestPrefixId = '', children }, ref) => {
     const theme = useTheme();
-    const tokens = getTokens(theme);
+
+    const tokens = getAvatarTokens(theme);
 
     const avatarContent = useMemo(() => {
       if (src) {
@@ -22,12 +23,12 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
 
       return (
         <Icon
-          color={tokens.color.getForegroundColor(color)}
+          color={tokens(`color.${color}.foregroundColor` as AvatarTokens)}
           name={'userAvatar'}
-          size={parseFloat(tokens.iconSize[size])}
+          size={parseFloat(tokens(`size.${size}` as AvatarTokens, parseAvatarIconSize))}
         />
       );
-    }, [children, color, size, src, tokens.color, tokens.iconSize]);
+    }, [children, color, size, src, tokens]);
 
     return (
       <div

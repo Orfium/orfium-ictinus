@@ -1,8 +1,8 @@
 import borderColorFigma from './variables/borderColor';
-import { getTokensValue } from '../utils';
+import { DotKeys, getTokensValue } from '../utils';
 
 export type SemanticBorderColor = {
-  get: (val: string) => string;
+  get: (val: DotKeys<typeof borderColorFigma>) => string;
 };
 
 const borderColor: SemanticBorderColor = {

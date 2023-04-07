@@ -1,8 +1,8 @@
 import textColorFigma from './variables/textColor';
-import { getTokensValue } from '../utils';
+import { DotKeys, getTokensValue } from '../utils';
 
 export type SemanticTextColor = {
-  get: (val: string) => string;
+  get: (val: DotKeys<typeof textColorFigma>) => string;
 };
 
 const textColor: SemanticTextColor = {

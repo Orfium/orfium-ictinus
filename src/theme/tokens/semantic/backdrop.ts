@@ -1,8 +1,8 @@
 import backDropFigma from './variables/backdrop';
-import { getTokensValue } from '../utils';
+import { DotKeys, getTokensValue } from '../utils';
 
 export type SemanticBackDrop = {
-  get: (val: string) => string;
+  get: (val: DotKeys<typeof backDropFigma>) => string;
 };
 
 const backDrop: SemanticBackDrop = {

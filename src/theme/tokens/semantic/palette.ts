@@ -1,8 +1,8 @@
 import paletteFigma from './variables/palette';
-import { getTokensValue } from '../utils';
+import { DotKeys, getTokensValue } from '../utils';
 
 export type SemanticPalette = {
-  get: (val: string) => string;
+  get: (val: DotKeys<typeof paletteFigma>) => string;
 };
 
 const palette: SemanticPalette = {
