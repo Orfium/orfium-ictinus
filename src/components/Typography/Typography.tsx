@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 
 import { typographyWrapper } from './Typography.style';
 
@@ -38,13 +38,16 @@ export const detectComponentBasedOnType = (type: TypographyType): TypographyComp
   return 'p';
 };
 
-const Typography = forwardRef<HTMLSpanElement, React.HTMLProps<HTMLSpanElement> & TypographyProps>(
+// display name breaks storybook props
+// https://github.com/storybookjs/storybook/issues/13304
+// eslint-disable-next-line react/display-name
+const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
   ({ type = 'body01', component, children, ...rest }, ref) => {
     const Component = component || detectComponentBasedOnType(type);
 
     return (
-      // @ts-ignore
       <Component
+        ref={ref}
         css={typographyWrapper({
           type,
         })}
@@ -55,7 +58,5 @@ const Typography = forwardRef<HTMLSpanElement, React.HTMLProps<HTMLSpanElement> 
     );
   }
 );
-
-Typography.displayName = 'Typography';
 
 export default Typography;
