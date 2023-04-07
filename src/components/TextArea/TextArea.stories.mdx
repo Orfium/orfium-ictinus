@@ -5,26 +5,29 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/TextArea"
-    component={TextArea}
-    parameters={{
-            design: [{
-                name: 'Base Input',
-                type: 'figma',
-                url: `${FIGMA_URL}?node-id=10019%3A116505`,
-            },
-            {
-                name: 'TextArea',
-                type: 'figma',
-                url: `${FIGMA_URL}?node-id=10019%3A116508`,
-            }],
-        }} />
+  title="Design System/TextArea"
+  component={TextArea}
+  parameters={{
+    design: [
+      {
+        name: 'Base Input',
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=10019%3A116505`,
+      },
+      {
+        name: 'TextArea',
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=10019%3A116508`,
+      },
+    ],
+  }}
+/>
 
 # TextArea
 
 A universal TextArea component that the input component for any forms.
 
-# Usage
+##
 
 ```js
 import { TextArea } from '@orfium/ictinus';
@@ -32,7 +35,7 @@ import { TextArea } from '@orfium/ictinus';
 <TextArea placeholder={'label'} />;
 ```
 
-# Props
+##
 
 <Props of={TextArea} />
 
@@ -43,18 +46,9 @@ Regular TextArea and the 3 available types - filled, outlined, elevated
 <Preview>
   <Story name="Text Area Types">
     <Stack>
-      <TextArea
-        styleType={'filled'}
-        placeholder={'placeholder here'}
-      />
-      <TextArea
-        styleType={'outlined'}
-        placeholder={'placeholder here'}
-      />
-      <TextArea
-        styleType={'elevated'}
-        placeholder={'placeholder here'}
-      />
+      <TextArea styleType={'filled'} placeholder={'placeholder here'} />
+      <TextArea styleType={'outlined'} placeholder={'placeholder here'} />
+      <TextArea styleType={'elevated'} placeholder={'placeholder here'} />
     </Stack>
   </Story>
 </Preview>
@@ -66,43 +60,22 @@ Regular TextArea and how to change size with cols and rows
 <Preview>
   <Story name="Text Area Sizes">
     <Stack>
-      <TextArea
-        placeholder={'Label'}
-        styleType={'outlined'}
-        cols={10}
-        rows={10}
-      />
-      <TextArea
-        placeholder={'Label'}
-        styleType={'outlined'}
-        cols={35}
-        rows={20}
-      />
+      <TextArea placeholder={'Label'} styleType={'outlined'} cols={10} rows={10} />
+      <TextArea placeholder={'Label'} styleType={'outlined'} cols={35} rows={20} />
     </Stack>
   </Story>
 </Preview>
 
 # TextArea disabled with label
+
 Regular TextArea disabled with label
 
 <Preview>
   <Story name="TextArea disabled with label">
     <Stack>
-      <TextArea
-        isDisabled
-        placeholder={'Label'}
-        styleType={'filled'}
-      />
-      <TextArea
-        isDisabled
-        placeholder={'Label'}
-        styleType={'outlined'}
-      />
-      <TextArea
-        isDisabled
-        placeholder={'Label'}
-        styleType={'elevated'}
-      />
+      <TextArea isDisabled placeholder={'Label'} styleType={'filled'} />
+      <TextArea isDisabled placeholder={'Label'} styleType={'outlined'} />
+      <TextArea isDisabled placeholder={'Label'} styleType={'elevated'} />
     </Stack>
   </Story>
 </Preview>

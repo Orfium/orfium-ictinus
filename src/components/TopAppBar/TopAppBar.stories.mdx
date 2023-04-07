@@ -8,40 +8,43 @@ import UserMenu from './components/UserMenu/UserMenu';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/TopNavBar"
-    component={TopAppBar}
-    parameters={{
-            design: [{
-                type: 'figma',
-                url: `${FIGMA_URL}?node-id=1213%3A74735`,
-            }],
-        }} />
+  title="Design System/TopNavBar"
+  component={TopAppBar}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=1213%3A74735`,
+      },
+    ],
+  }}
+/>
 
 # TopAppBar
 
 A universal TopAppBar component.
 
-# Usage
+##
 
 ```js
 import { TopNavBar } from '@orfium/ictinus';
 
 <TopNavBar
-    isDark={false}
-    logoIcon={<Icon />}
-    onMenuIconClick={() => {}}
-    userMenu={{
-      items: ['item1', 'item2'],
-      userAvatar: { letter: 'JD', src: 'http://lorem.com/john-doe-profile.jpg' },
-      userName: 'John Doe',
-      onSelect: () => {},
-    }}
-    additionalTools={<div>Extra Information</div>}
-    onSearchHandler={() => {}}
-  />
+  isDark={false}
+  logoIcon={<Icon />}
+  onMenuIconClick={() => {}}
+  userMenu={{
+    items: ['item1', 'item2'],
+    userAvatar: { letter: 'JD', src: 'http://lorem.com/john-doe-profile.jpg' },
+    userName: 'John Doe',
+    onSelect: () => {},
+  }}
+  additionalTools={<div>Extra Information</div>}
+  onSearchHandler={() => {}}
+/>;
 ```
 
-# Props
+##
 
 <Props of={TopAppBar} />
 

@@ -1,23 +1,15 @@
 import { map } from 'lodash';
 import React from 'react';
-import { useTheme } from 'styled-components';
-import typographyCollection from 'theme/tokens/semantic/variables/typography';
+import typographyCollection from 'theme/globals/constants/typography';
+import { parseCompositionToken } from 'theme/tokens/utils';
 
 import { TableWrapperStyle } from './TypographyShowcase.style';
-import {
-  getComponentTokens,
-  getTokensValue,
-  parseCompositionToken,
-} from '../../../../src/theme/tokens/utils';
-import Typography from 'components/Typography';
+import Typography, { TypographyType } from 'components/Typography';
 
 const TypographyShowcase = () => {
-  const theme = useTheme();
   const typographyArray = map(typographyCollection, (value, key) => ({ key, ...value }));
 
   const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection);
-
-  debugger;
 
   return (
     <table css={TableWrapperStyle} width={'100%'}>
@@ -32,7 +24,7 @@ const TypographyShowcase = () => {
         {typographyArray.map(({ key, value }) => (
           <tr key={key}>
             <td>
-              <Typography type={key}>{key}</Typography>
+              <Typography type={key as TypographyType}>{key}</Typography>
             </td>
             <td colSpan={2}>
               <table>

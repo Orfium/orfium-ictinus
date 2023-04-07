@@ -10,35 +10,39 @@ import Stack from '../storyUtils/Stack';
 
 A universal Overlay component.
 
-# Usage
+##
 
 ```js
 import { Overlay } from '@orfium/ictinus';
 
-<Overlay open={true} size={'33%'} onClose={() => {}}/>;
+<Overlay open={true} size={'33%'} onClose={() => {}} />;
 ```
 
-# Props
+##
 
 <Props of={Overlay} />
 
-# Overlay
+### Overlay
 
 <Preview>
   <Story name="Overlay">
     <Stack>
-      <OverlayShowcase anchor={'left'} size={'33%'}/>
-      <OverlayShowcase anchor={'top'} size={'33%'}/>
-      <OverlayShowcase anchor={'right'} size={'33%'}/>
-      <OverlayShowcase anchor={'bottom'} size={'33%'}/>
+      <OverlayShowcase anchor={'left'} size={'33%'} />
+      <OverlayShowcase anchor={'top'} size={'33%'} />
+      <OverlayShowcase anchor={'right'} size={'33%'} />
+      <OverlayShowcase anchor={'bottom'} size={'33%'} />
     </Stack>
   </Story>
 </Preview>
 
-# Overlay Playground
+### Overlay Playground
 
 <Preview>
   <Story name="Overlay Playground" parameters={{ decorators: [withKnobs] }}>
-    <OverlayShowcase anchor={select( 'anchor', ['left', 'top', 'right', 'bottom'],'left')} size={text('size', '33%')} playground/>
+    <OverlayShowcase
+      anchor={select('anchor', ['left', 'top', 'right', 'bottom'], 'left')}
+      size={text('size', '33%')}
+      playground
+    />
   </Story>
 </Preview>

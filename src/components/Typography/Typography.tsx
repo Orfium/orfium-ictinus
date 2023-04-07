@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { forwardRef } from 'react';
 
 import { typographyWrapper } from './Typography.style';
 
@@ -38,14 +38,24 @@ export const detectComponentBasedOnType = (type: TypographyType): TypographyComp
   return 'p';
 };
 
-const Typography: FC<TypographyProps> = ({ type = 'body01', component, children, ...rest }) => {
-  const Component = component || detectComponentBasedOnType(type);
+const Typography = forwardRef<HTMLSpanElement, React.HTMLProps<HTMLSpanElement> & TypographyProps>(
+  ({ type = 'body01', component, children, ...rest }, ref) => {
+    const Component = component || detectComponentBasedOnType(type);
 
-  return (
-    <Component css={typographyWrapper({ type })} {...rest}>
-      {children}
-    </Component>
-  );
-};
+    return (
+      // @ts-ignore
+      <Component
+        css={typographyWrapper({
+          type,
+        })}
+        {...rest}
+      >
+        {children}
+      </Component>
+    );
+  }
+);
+
+Typography.displayName = 'Typography';
 
 export default Typography;

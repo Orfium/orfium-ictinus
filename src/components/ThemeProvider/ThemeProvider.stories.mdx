@@ -8,18 +8,15 @@ import Button from '../Button';
 
 A component that will hold all components as childs. These component is the first one you will use and is responsible to setup the theme.
 
-
-# Usage
+##
 
 ```js
 import { ThemeProvider } from '@orfium/ictinus';
 
-<ThemeProvider theme={{ palette: { primary: '#2D2D46' } }}>
-  ...
-</ThemeProvider>
+<ThemeProvider theme={{ palette: { primary: '#2D2D46' } }}>...</ThemeProvider>;
 ```
 
-# Props
+##
 
 <Props of={ThemeProvider} />
 
@@ -31,7 +28,7 @@ some things like dark mode switcher will not work as intended.
 <Preview>
   <Story name="Setting up a button example">
     <ThemeProvider theme={{ palette: { primary: '#2D2D46' } }}>
-        <Button>Hello world</Button>
-      </ThemeProvider>
+      <Button>Hello world</Button>
+    </ThemeProvider>
   </Story>
 </Preview>

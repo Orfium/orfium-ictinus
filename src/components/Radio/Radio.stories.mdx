@@ -6,22 +6,25 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Radio"
-    component={Radio}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Radio',
-            url: `${FIGMA_URL}?node-id=10283%3A104364`,
-        }],
-    }} />
+  title="Design System/Radio"
+  component={Radio}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Radio',
+        url: `${FIGMA_URL}?node-id=10283%3A104364`,
+      },
+    ],
+  }}
+/>
 
 # Radio
 
 A custom made radio input based on the Orfium design system. Passing a `ref` will return the actual input element.
 If the `checked` prop is not defined it means the `Radio` is not controlled.
 
-# Usage
+##
 
 ```jsx
 import { Radio } from '@orfium/ictinus';
@@ -29,11 +32,11 @@ import { Radio } from '@orfium/ictinus';
 <Radio isChecked={value === 'a'} value={'a'} onChange={() => {}} />;
 ```
 
-# Props
+##
 
 <Props of={Radio} />
 
-# Not selected Radio (`checked === undefined`)
+### Not selected Radio (`checked === undefined`)
 
 <Preview>
   <Story name="Not selected Radio  (`checked === undefined`)">
@@ -44,7 +47,7 @@ import { Radio } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Not selected Radio (`checked === false`)
+### Not selected Radio (`checked === false`)
 
 <Preview>
   <Story name="Not selected Radio (`checked === false`)">
@@ -55,7 +58,7 @@ import { Radio } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Selected Radio
+### Selected Radio
 
 <Preview>
   <Story name="Selected Radio">
@@ -63,7 +66,7 @@ import { Radio } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Disabled not selected Radio
+### Disabled not selected Radio
 
 <Preview>
   <Story name="Disabled not selected Radio">
@@ -74,7 +77,7 @@ import { Radio } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Disabled selected Radio
+### Disabled selected Radio
 
 <Preview>
   <Story name="Disabled selected Radio">
@@ -82,7 +85,7 @@ import { Radio } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-# Radio group
+### Radio group
 
 <Preview>
   <Story name="Radio showcase">
@@ -90,11 +93,14 @@ import { Radio } from '@orfium/ictinus';
   </Story>
 </Preview>
 
-
-# Radio Playground
+### Radio Playground
 
 <Preview>
-  <Story name="Radio Playground"  parameters={{ decorators: [withKnobs] }}>
-    <Radio isChecked={boolean("isChecked", true)} isDisabled={boolean("isDisabled", false)}  isFilled={boolean("isFilled", false)} />
+  <Story name="Radio Playground" parameters={{ decorators: [withKnobs] }}>
+    <Radio
+      isChecked={boolean('isChecked', true)}
+      isDisabled={boolean('isDisabled', false)}
+      isFilled={boolean('isFilled', false)}
+    />
   </Story>
 </Preview>

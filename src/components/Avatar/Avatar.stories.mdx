@@ -7,7 +7,7 @@ import { BASE_SHADE } from '../../theme/palette';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-  title="Design System/Avatar"
+  title="Design System/Avatar/Avatar"
   component={Avatar}
   parameters={{
     design: [
@@ -22,21 +22,36 @@ import { FIGMA_URL } from '../../utils/common';
 
 # Avatar
 
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
 A universal Avatar component cam be found around ictinus on menus or can be a standalone component as well. It renders either images, letter or icon from our library
 
-# Usage
-
-```js
-import { Avatar } from '@orfium/ictinus';
-
-<Avatar src={'https://mui.com/static/images/avatar/1.jpg'}>PV</Avatar>;
-```
-
-# Props
+## Props
 
 <Props of={Avatar} />
 
-# Avatar with icon
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Buttons may contain icon, on the left or the right side',
+    'Use 8 px spacing between buttons',
+    'Replace text with a loader if action is submitted, but still processing',
+    'Button width is set by it’s content, avoid changing it width',
+    'Use only one primary button, and any remaining calls to action should be represented as lower emphasis buttons',
+  ]}
+/>
+
+<Tip>If you need to use icon as button with no text, check out component</Tip>
+
+## Variants
+
+### Avatar with icon
 
 Avatar with icon
 
@@ -53,7 +68,7 @@ Avatar with icon
   </Story>
 </Preview>
 
-# Avatar with letter
+### Avatar with letter
 
 Avatar with letter
 
@@ -82,7 +97,7 @@ Avatar with letter
   </Story>
 </Preview>
 
-# Avatar with src
+### Avatar with src
 
 Avatar with src
 
@@ -111,7 +126,7 @@ Avatar with src
   </Story>
 </Preview>
 
-# Avatar Playground
+### Avatar Playground
 
 Avatar Playground
 
@@ -145,151 +160,6 @@ Avatar Playground
           'red'
         )}
       />
-    </Stack>
-  </Story>
-</Preview>
-
-# Avatar Stack
-
-A universal AvatarStack component that renders its children as a stack.
-
-# Usage
-
-```js
-import { Avatar, AvatarStack } from '@orfium/ictinus';
-
-<AvatarStack>
-  <Avatar />
-  <Avatar />
-  <Avatar />
-</AvatarStack>;
-```
-
-# Props
-
-<Props of={AvatarStack} />
-
-# Avatar Stack
-
-Avatar Stack
-
-<Preview>
-  <Story name="Avatar Stack">
-    <Stack isVertical>
-      <AvatarStack size={1} color={'blue'}>
-        <Avatar size={1} src={'https://mui.com/static/images/avatar/6.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={1} src={'https://mui.com/static/images/avatar/5.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={1} color={'blue'}>
-          JN
-        </Avatar>
-        <Avatar size={1} src={'https://mui.com/static/images/avatar/3.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={1} src={'https://mui.com/static/images/avatar/2.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={1} src={'https://mui.com/static/images/avatar/1.jpg'}>
-          JN
-        </Avatar>
-      </AvatarStack>
-      <AvatarStack size={2} color={'blue'}>
-        <Avatar size={2} src={'https://mui.com/static/images/avatar/6.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={2} src={'https://mui.com/static/images/avatar/5.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={2} color={'blue'}>
-          JN
-        </Avatar>
-        <Avatar size={2} src={'https://mui.com/static/images/avatar/3.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={2} src={'https://mui.com/static/images/avatar/2.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={2} src={'https://mui.com/static/images/avatar/1.jpg'}>
-          JN
-        </Avatar>
-      </AvatarStack>
-      <AvatarStack size={3} maxAvatars={3} color={'blue'}>
-        <Avatar size={3} src={'https://mui.com/static/images/avatar/6.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={3} color={'blue'} iconName={'user'} />
-        <Avatar size={3} src={'https://mui.com/static/images/avatar/4.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={3} src={'https://mui.com/static/images/avatar/3.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={3} src={'https://mui.com/static/images/avatar/2.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={3} src={'https://mui.com/static/images/avatar/1.jpg'}>
-          JN
-        </Avatar>
-      </AvatarStack>
-      <AvatarStack size={4} color={'blue'}>
-        <Avatar size={4} src={'https://mui.com/static/images/avatar/6.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={4} src={'https://mui.com/static/images/avatar/5.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={4} src={'https://mui.com/static/images/avatar/4.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={4} src={'https://mui.com/static/images/avatar/3.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={4} src={'https://mui.com/static/images/avatar/2.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={4} src={'https://mui.com/static/images/avatar/1.jpg'}>
-          JN
-        </Avatar>
-      </AvatarStack>
-      <AvatarStack size={5} maxAvatars={3} color={'blue'}>
-        <Avatar size={5} src={'https://mui.com/static/images/avatar/6.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={5} color={'blue'} iconName={'user'} />
-        <Avatar size={5} src={'https://mui.com/static/images/avatar/4.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={5} src={'https://mui.com/static/images/avatar/3.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={5} src={'https://mui.com/static/images/avatar/2.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={5} src={'https://mui.com/static/images/avatar/1.jpg'}>
-          JN
-        </Avatar>
-      </AvatarStack>
-      <AvatarStack size={6} maxAvatars={3} color={'blue'}>
-        <Avatar size={6} src={'https://mui.com/static/images/avatar/6.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={6} color={'blue'} iconName={'user'} />
-        <Avatar size={6} src={'https://mui.com/static/images/avatar/4.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={6} src={'https://mui.com/static/images/avatar/3.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={6} src={'https://mui.com/static/images/avatar/2.jpg'}>
-          JN
-        </Avatar>
-        <Avatar size={6} src={'https://mui.com/static/images/avatar/1.jpg'}>
-          JN
-        </Avatar>
-      </AvatarStack>
     </Stack>
   </Story>
 </Preview>

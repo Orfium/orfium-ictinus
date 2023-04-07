@@ -5,21 +5,24 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/CheckBox"
-    component={CheckBox}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'CheckBox',
-            url: `${FIGMA_URL}?node-id=228%3A143`,
-        }],
-    }} />
+  title="Design System/CheckBox"
+  component={CheckBox}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'CheckBox',
+        url: `${FIGMA_URL}?node-id=228%3A143`,
+      },
+    ],
+  }}
+/>
 
 # CheckBox
 
 A universal CheckBox component that the input component for any forms.
 
-# Usage
+##
 
 ```js
 import { CheckBox } from '@orfium/ictinus';
@@ -27,7 +30,7 @@ import { CheckBox } from '@orfium/ictinus';
 <CheckBox />;
 ```
 
-# Props
+##
 
 <Props of={CheckBox} />
 
@@ -49,7 +52,7 @@ Regular CheckBox
     <Stack>
       <CheckBox isChecked={false} isFilled={false} />
       <CheckBox isChecked={true} isFilled={false} />
-      <CheckBox isChecked={true} isFilled={false} isDisabled/>
+      <CheckBox isChecked={true} isFilled={false} isDisabled />
       <CheckBox isChecked={true} isFilled={false} isIntermediate />
       <CheckBox isChecked={true} isFilled={false} isIntermediate isDisabled />
       <CheckBox isChecked={false} isFilled={false} isIntermediate />
@@ -58,7 +61,7 @@ Regular CheckBox
   </Story>
 </Preview>
 
-# CheckBox with Label
+### CheckBox with Label
 
 Regular CheckBox with label
 
@@ -70,18 +73,45 @@ Regular CheckBox with label
         <CheckBox isChecked label={'Checked Single'} />
         <CheckBox isChecked={true} label={'Disabled single'} isDisabled />
         <CheckBox isChecked={true} isIntermediate label={'Checked intermediate'} />
-        <CheckBox isChecked={true} isIntermediate label={'Disabled checked intermediate'} isDisabled />
+        <CheckBox
+          isChecked={true}
+          isIntermediate
+          label={'Disabled checked intermediate'}
+          isDisabled
+        />
         <CheckBox isChecked={false} isIntermediate label={'Not checked intermediate'} />
-        <CheckBox isChecked={false} isIntermediate label={'Disabled not checked intermediate'} isDisabled />
+        <CheckBox
+          isChecked={false}
+          isIntermediate
+          label={'Disabled not checked intermediate'}
+          isDisabled
+        />
       </Stack>
       <Stack>
         <CheckBox isChecked={false} isFilled={false} label={'Not checked single'} />
         <CheckBox isChecked isFilled={false} label={'Checked Single'} />
         <CheckBox isChecked={true} isFilled={false} label={'Disabled single'} isDisabled />
         <CheckBox isChecked={true} isFilled={false} isIntermediate label={'Checked intermediate'} />
-        <CheckBox isChecked={true} isFilled={false} isIntermediate label={'Disabled checked intermediate'} isDisabled />
-        <CheckBox isChecked={false} isFilled={false} isIntermediate label={'Not checked intermediate'} />
-        <CheckBox isChecked={false} isFilled={false} isIntermediate label={'Disabled not checked intermediate'} isDisabled />
+        <CheckBox
+          isChecked={true}
+          isFilled={false}
+          isIntermediate
+          label={'Disabled checked intermediate'}
+          isDisabled
+        />
+        <CheckBox
+          isChecked={false}
+          isFilled={false}
+          isIntermediate
+          label={'Not checked intermediate'}
+        />
+        <CheckBox
+          isChecked={false}
+          isFilled={false}
+          isIntermediate
+          label={'Disabled not checked intermediate'}
+          isDisabled
+        />
       </Stack>
     </div>
   </Story>

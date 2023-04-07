@@ -1,12 +1,14 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
+import { addParameters } from '@storybook/react';
 import { DocsContainer } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
 import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
 import styled from '@emotion/styled';
-import Typography from '../src/components/Typography';
+import Typography from '../src/storybook/Typography';
 import { css } from '@emotion/react';
+import { UsageGuidelines, Tip } from '../src/storybook';
 
 const viewPorts = {
   desktop1920: {
@@ -131,7 +133,6 @@ export const decorators = [
   ),
 ];
 
-const divEmpty = styled.div(({ theme }) => ({}));
 const customTypography = css`
   &:after {
     content: '';
@@ -141,13 +142,19 @@ const customTypography = css`
   }
   display: grid;
 `;
-const spanEmpty = styled.span(({ theme }) => ({}));
 const inputEmpty = styled.input(({ theme }) => ({}));
 export const parameters = {
   viewport: {
     viewports: viewPorts,
   },
   options: { showPanel: true },
+  viewMode: 'docs',
+  previewTabs: {
+    'storybook/docs/panel': {
+      index: 1,
+    },
+    canvas: { title: 'Sandbox' },
+  },
   docs: {
     container: ({ children, context }: any) => (
       <DocsContainer context={context}>
@@ -155,30 +162,26 @@ export const parameters = {
       </DocsContainer>
     ),
     components: {
-      h1: ({ children }) => (
+      h1: ({ children }: any) => (
         <Typography css={customTypography} type={'headline01'}>
           {children}
         </Typography>
       ),
-      h2: ({ children }) => (
+      h2: ({ children }: any) => (
         <Typography css={customTypography} type={'headline02'}>
           {children}
         </Typography>
       ),
-      h3: ({ children }) => (
-        <Typography css={customTypography} type={'headline03'}>
-          {children}
-        </Typography>
-      ),
-      h4: ({ children }) => (
-        <Typography css={customTypography} type={'headline04'}>
-          {children}
-        </Typography>
-      ),
-      p: ({ children }) => <Typography type={'body01'}>{children}</Typography>,
-      span: ({ children }) => <Typography type={'body01'}>{children}</Typography>,
-      div: ({ children }) => <Typography type={'body01'}>{children}</Typography>,
+      h3: ({ children }: any) => <Typography type={'headline03'}>{children}</Typography>,
+      h4: ({ children }: any) => <Typography type={'headline04'}>{children}</Typography>,
+      p: ({ children }: any) => <Typography type={'body01'}>{children}</Typography>,
+      span: ({ children }: any) => <Typography type={'body01'}>{children}</Typography>,
+      div: ({ children }: any) => <Typography type={'body01'}>{children}</Typography>,
       input: inputEmpty,
+      UsageGuidelines,
+      Tip,
     },
   },
 };
+
+export default parameters;

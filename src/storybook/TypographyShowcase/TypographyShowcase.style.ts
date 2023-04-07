@@ -1,7 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
 
-import { rem } from '../../../theme/utils';
-
 export const TableWrapperStyle = (): SerializedStyles => css`
   width: 100%;
   th {

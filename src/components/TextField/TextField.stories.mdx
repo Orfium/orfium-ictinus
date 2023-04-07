@@ -8,20 +8,23 @@ import Loader from '../Loader';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-     title="Design System/TextField"
-     component={TextField}
-     parameters={{
-            design: [{
-                type: 'figma',
-                url: `${FIGMA_URL}?node-id=10019%3A116505`,
-            }],
-        }} />
+  title="Design System/TextField"
+  component={TextField}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=10019%3A116505`,
+      },
+    ],
+  }}
+/>
 
 # TextField
 
 A universal TextField component that can be used as the <input/> in any form.
 
-# Usage
+##
 
 ```js
 import { TextField } from '@orfium/ictinus';
@@ -29,7 +32,7 @@ import { TextField } from '@orfium/ictinus';
 <TextField label={'label'} />;
 ```
 
-# Props
+##
 
 <Props of={TextField} />
 
@@ -131,9 +134,7 @@ TextField with icon options right and left of the text
       <TextField
         size={select('size', ['md', 'sm'], 'md')}
         label={'Label'}
-        rightIcon={
-          <Loader type={'dots'} />
-        }
+        rightIcon={<Loader type={'dots'} />}
         styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
       />
     </Stack>
@@ -145,43 +146,35 @@ TextField with icon options right and left of the text
 Regular TextField with a prefix or a suffix
 
 <Preview>
-    <Story name="TextField with prefix/suffix">
-        <Stack>
-            <div style={{width: '80px'}}>
-            <TextField
-                size={select('size', ['md', 'sm'], 'md')}
-                hasMinWidthCompat={false}
-                leftIcon={
-                    <div style={{color: 'gray'}}>$</div>
-                }
-                styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-            />
-            </div>
-            <div style={{width: '80px'}}>
-            <TextField
-                size={select('size', ['md', 'sm'], 'md')}
-                hasMinWidthCompat={false}
-                rightIcon={
-                    <div style={{color: 'gray'}}>%</div>
-                }
-                styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-            />
-            </div>
-            <div style={{width: '120px'}}>
-            <TextField
-                size={select('size', ['md', 'sm'], 'md')}
-                hasMinWidthCompat={false}
-                leftIcon={
-                    <div style={{color: 'gray'}}>$</div>
-                }
-                rightIcon={
-                    <div style={{color: 'gray'}}>%</div>
-                }
-                styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-            />
-            </div>
-        </Stack>
-    </Story>
+  <Story name="TextField with prefix/suffix">
+    <Stack>
+      <div style={{ width: '80px' }}>
+        <TextField
+          size={select('size', ['md', 'sm'], 'md')}
+          hasMinWidthCompat={false}
+          leftIcon={<div style={{ color: 'gray' }}>$</div>}
+          styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+        />
+      </div>
+      <div style={{ width: '80px' }}>
+        <TextField
+          size={select('size', ['md', 'sm'], 'md')}
+          hasMinWidthCompat={false}
+          rightIcon={<div style={{ color: 'gray' }}>%</div>}
+          styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+        />
+      </div>
+      <div style={{ width: '120px' }}>
+        <TextField
+          size={select('size', ['md', 'sm'], 'md')}
+          hasMinWidthCompat={false}
+          leftIcon={<div style={{ color: 'gray' }}>$</div>}
+          rightIcon={<div style={{ color: 'gray' }}>%</div>}
+          styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
+        />
+      </div>
+    </Stack>
+  </Story>
 </Preview>
 
 # TextField disabled with label
