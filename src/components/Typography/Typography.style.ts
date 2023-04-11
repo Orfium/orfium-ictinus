@@ -1,10 +1,26 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
-import { TypographyType } from './Typography';
+import { TypographyRole, TextColorTypes } from './Typography';
+import textColorFigma from '../../theme/tokens/semantic/variables/textColor';
+import { DotKeys } from '../../theme/tokens/utils';
 
 export const typographyWrapper =
-  ({ type }: { type: TypographyType }) =>
+  ({
+    role,
+    isInverted,
+    isItalic,
+    isBold,
+    isUnderline,
+    type,
+  }: {
+    role: TypographyRole;
+    isInverted?: boolean;
+    isItalic?: boolean;
+    isBold?: boolean;
+    isUnderline?: boolean;
+    type: TextColorTypes;
+  }) =>
   (theme: Theme): SerializedStyles => {
     // headlines
     const headline01 = css`
@@ -136,5 +152,14 @@ export const typographyWrapper =
       body03,
     };
 
-    return allStyles[type];
+    const textColorCategory = isInverted ? 'inverted' : 'light';
+    const textColor = `${textColorCategory}.${type}` as DotKeys<typeof textColorFigma>;
+
+    return css`
+      ${allStyles[role]};
+      font-style: ${isItalic ? 'italic' : undefined};
+      font-weight: ${isBold ? 'bold' : undefined};
+      text-decoration: ${isUnderline ? 'underline' : undefined};
+      color: ${theme.tokens.textColor.get(textColor)};
+    `;
   };

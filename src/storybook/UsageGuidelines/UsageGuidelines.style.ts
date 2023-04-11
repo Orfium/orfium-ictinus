@@ -10,10 +10,7 @@ export const WrapperStyle = (): SerializedStyles => css`
   color: #323338;
 `;
 export const iconStyle = (): SerializedStyles => css`
-  font-size: 16px;
-  line-height: 21px;
   margin-right: 10px;
   display: flex;
   align-self: flex-start;
-  margin-top: 2px;
 `;

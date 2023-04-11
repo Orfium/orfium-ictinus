@@ -101,13 +101,13 @@ const Wrapper: React.FC = ({ children }) => {
   return (
     <div
       style={{
-        backgroundColor: themeSwitchState.isDark ? '#0E0E17' : '#F2F2F2',
+        backgroundColor: themeSwitchState.isDark ? '#0E0E17' : '#ffffff',
         width: '100%',
-        height: '100vh',
         position: 'relative',
         flex: 1,
         flexDirection: 'column',
         padding: 5,
+        borderRadius: 10,
       }}
     >
       {children}
@@ -163,20 +163,20 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }: any) => (
-        <Typography css={customTypography} type={'headline01'}>
+        <Typography css={customTypography} role={'headline01'}>
           {children}
         </Typography>
       ),
       h2: ({ children }: any) => (
-        <Typography css={customTypography} type={'headline02'}>
+        <Typography css={customTypography} role={'headline02'}>
           {children}
         </Typography>
       ),
-      h3: ({ children }: any) => <Typography type={'headline03'}>{children}</Typography>,
-      h4: ({ children }: any) => <Typography type={'headline04'}>{children}</Typography>,
-      p: ({ children }: any) => <Typography type={'body01'}>{children}</Typography>,
-      span: ({ children }: any) => <Typography type={'body01'}>{children}</Typography>,
-      div: ({ children }: any) => <Typography type={'body01'}>{children}</Typography>,
+      h3: ({ children }: any) => <Typography role={'headline03'}>{children}</Typography>,
+      h4: ({ children }: any) => <Typography role={'headline04'}>{children}</Typography>,
+      p: ({ children }: any) => <Typography role={'body01'}>{children}</Typography>,
+      span: ({ children }: any) => <Typography role={'body01'}>{children}</Typography>,
+      div: ({ children }: any) => <Typography role={'body01'}>{children}</Typography>,
       input: inputEmpty,
       UsageGuidelines,
       Tip,

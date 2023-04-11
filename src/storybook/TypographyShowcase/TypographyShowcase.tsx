@@ -21,10 +21,11 @@ const TypographyShowcase = () => {
         </tr>
       </thead>
       <tbody>
-        {typographyArray.map(({ key, value }) => (
+        {typographyArray.map(({ key, description, value }) => (
           <tr key={key}>
             <td>
-              <Typography type={key as TypographyType}>{key}</Typography>
+              <Typography role={key as TypographyType}>{key}</Typography>
+              <Typography role={'body02'}>{description}</Typography>
             </td>
             <td colSpan={2}>
               <table>
