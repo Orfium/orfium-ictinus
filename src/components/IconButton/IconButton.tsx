@@ -1,9 +1,9 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 
-import getButtonTokens from '../Button/Button.tokens';
 import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { ButtonTokens, getButtonTokens } from 'components/Button/Button.tokens';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import ButtonBase, { ButtonBaseProps } from 'components/ButtonBase/ButtonBase';
 
@@ -24,9 +24,9 @@ export type IconButtonProps = Omit<
 const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, ref) => {
   const { name, type = 'primary', shape = 'circle', dataTestPrefixId } = props;
   const theme = useTheme();
-  const buttonTokens = getButtonTokens(theme);
+  const tokens = getButtonTokens(theme);
 
-  const iconColor = buttonTokens.color[type].textColor;
+  const iconColor = tokens(`color.${type}.textColor` as ButtonTokens);
 
   return (
     <ButtonBase

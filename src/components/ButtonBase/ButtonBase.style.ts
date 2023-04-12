@@ -2,8 +2,12 @@ import { css, SerializedStyles } from '@emotion/react';
 
 import { ButtonBaseProps } from './ButtonBase';
 import { Theme } from '../../theme';
-import getStatesTokens from '../../theme/states/states.tokens';
-import getButtonTokens from '../Button/Button.tokens';
+import {
+  ButtonTokens,
+  getButtonTokens,
+  getIconButtonTokens,
+  getTextButtonTokens,
+} from '../Button/Button.tokens';
 
 export const buttonWrapperStyle = ({
   isBlock,
@@ -21,31 +25,40 @@ export const buttonBaseStyle =
     sx,
   }: Omit<ButtonBaseProps, 'htmlType' | 'ref'>) =>
   (theme: Theme): SerializedStyles => {
-    const buttonTokens = getButtonTokens(theme);
-    const stateTokens = getStatesTokens(theme);
+    const tokens = getButtonTokens(theme);
+    const iconButtonTokens = getIconButtonTokens(theme);
+    const textButtonTokens = getTextButtonTokens(theme);
 
     const baseButtonStyles = {
-      color: buttonTokens.color[type].textColor,
+      color: tokens(`color.${type}.textColor` as ButtonTokens),
       width: isBlock ? '100%' : undefined,
-      backgroundColor: stateTokens[isLoading ? 'active' : 'inactive'].backgroundColor[type],
+      backgroundColor: tokens(
+        `color.${type}.backgroundColor.${isLoading ? 'active' : 'inactive'}` as ButtonTokens
+      ),
       padding: isIconButton
-        ? buttonTokens.spacing.iconButton.padding
-        : `${buttonTokens.spacing.textButton.paddingVertical} ${buttonTokens.spacing.textButton.paddingHorizontal}`,
+        ? iconButtonTokens('padding')
+        : `${textButtonTokens('paddingVertical')} ${textButtonTokens('paddingHorizontal')}`,
+
       borderRadius:
         isIconButton && shape === 'circle'
-          ? buttonTokens.borderRadius.icon
-          : buttonTokens.borderRadius.text,
+          ? tokens('iconBorderRadius')
+          : tokens('textBorderRadius'),
       border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
 
-      ':focus-visible:not(:disabled)': stateTokens.focus,
-      ':disabled': stateTokens.disabled,
+      ':focus-visible:not(:disabled)': {
+        outline: `${tokens('color.focusedBorderColor')} auto ${tokens('borderWidth.2')}`,
+      },
+      ':disabled': {
+        opacity: tokens('opacity'),
+        cursor: 'not-allowed',
+      },
       ':hover:not(:disabled)': {
-        backgroundColor: stateTokens.hover.backgroundColor[type],
+        backgroundColor: tokens(`color.${type}.backgroundColor.hover` as ButtonTokens),
       },
       ':active:not(:disabled)': {
-        backgroundColor: stateTokens.active.backgroundColor[type],
+        backgroundColor: tokens(`color.${type}.backgroundColor.active` as ButtonTokens),
       },
     };
 

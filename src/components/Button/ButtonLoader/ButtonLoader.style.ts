@@ -2,7 +2,7 @@ import { css, SerializedStyles, keyframes } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-import getButtonTokens from '../../Button/Button.tokens';
+import { getButtonTokens } from '../../Button/Button.tokens';
 
 export const loaderWrapperStyle = (): SerializedStyles => {
   return css({
@@ -14,21 +14,20 @@ export const loaderWrapperStyle = (): SerializedStyles => {
 export const barWrapperStyle =
   () =>
   (theme: Theme): SerializedStyles => {
-    const buttonTokens = getButtonTokens(theme);
+    const tokens = getButtonTokens(theme);
 
     return css({
       width: '100%',
       height: rem(4),
       overflow: 'hidden',
-      borderTopLeftRadius: buttonTokens.borderRadius.text,
-      borderTopRightRadius: buttonTokens.borderRadius.text,
+      borderTopLeftRadius: tokens('textBorderRadius'),
+      borderTopRightRadius: tokens('textBorderRadius'),
       position: 'relative',
 
       ':before': {
         content: '""',
         width: '100%',
         height: rem(2),
-        background: theme.utils.getColor('magenta', 150),
         display: 'block',
       },
     });
