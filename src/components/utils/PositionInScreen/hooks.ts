@@ -1,6 +1,8 @@
 import head from 'lodash/head';
 import { useEffect, useState } from 'react';
 
+import { resizeObserverHandler } from './utils';
+
 const useHeights = (
   /** Ref of the parent element */
   parentRef: React.MutableRefObject<any>,
@@ -19,20 +21,7 @@ const useHeights = (
   useEffect(() => {
     if (!parentRef.current) return;
 
-    const parentResizeObserver = new ResizeObserver((entries) => {
-      const parent = head(entries);
-
-      /** If the event is triggered by the element itself then return
-       * to avoid an infinite loop
-       */
-      if (parent?.target === parent?.contentRect) {
-        return;
-      }
-
-      if (parent) {
-        setParentHeight(parent.contentRect.height);
-      }
-    });
+    const parentResizeObserver = resizeObserverHandler(setParentHeight);
 
     parentResizeObserver.observe(parentRef.current);
 
@@ -49,17 +38,7 @@ const useHeights = (
 
     if (!dropdownElement) return;
 
-    const childResizeObserver = new ResizeObserver((entries) => {
-      const dropdown = head(entries);
-
-      if (dropdown?.target === dropdown?.contentRect) {
-        return;
-      }
-
-      if (dropdown) {
-        setChildHeight(dropdown.contentRect.height);
-      }
-    });
+    const childResizeObserver = resizeObserverHandler(setChildHeight);
 
     childResizeObserver.observe(dropdownElement as Element);
 
