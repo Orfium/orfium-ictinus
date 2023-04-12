@@ -4,6 +4,7 @@ import Button from './Button';
 import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import { FIGMA_URL } from '../../utils/common';
+import iconSelector from '../Icon/assets/iconSelector';
 import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
 
 <Meta
@@ -111,7 +112,13 @@ Buttons with icons. 3 different variations based on the icon's placement.
   <Story name="Buttons with Icons" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Button
-        iconLeftName={'dashboard'}
+        iconLeftName={select(
+          'iconLeftName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -121,8 +128,20 @@ Buttons with icons. 3 different variations based on the icon's placement.
         Only left Icon
       </Button>
       <Button
-        iconLeftName={'dashboard'}
-        iconRightName={'dashboard'}
+        iconLeftName={select(
+          'iconLeftName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -132,7 +151,13 @@ Buttons with icons. 3 different variations based on the icon's placement.
         Both Icons
       </Button>
       <Button
-        iconRightName={'dashboard'}
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -172,21 +197,39 @@ Can be only combined with a right icon, not with a left icon at the same time.
     <Stack>
       <Button
         avatar={{ label: 'PR' }}
-        iconRightName="arrowRight"
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
       >
         Text Avatar
       </Button>
       <Button
         avatar={{ src: 'https://mui.com/static/images/avatar/1.jpg' }}
-        iconRightName="arrowRight"
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
       >
         Img Avatar
       </Button>
       <Button
         avatar={{}}
-        iconRightName="arrowRight"
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select('type', ['primary', 'secondary', 'tertiary'], 'primary')}
       >
         Empty Avatar
@@ -212,8 +255,20 @@ Can be only combined with a right icon, not with a left icon at the same time.
       </Button>
       <Button
         isBlock
-        iconLeftName={'dashboard'}
-        iconRightName={'dashboard'}
+        iconLeftName={select(
+          'iconLeftName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         type={select(
           'type',
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
@@ -260,8 +315,20 @@ Can be only combined with a right icon, not with a left icon at the same time.
           ['primary', 'secondary', 'tertiary', 'danger', 'inverted', 'invertedAlt'],
           'primary'
         )}
-        iconLeftName={select('iconLeftName', [, 'dashboard'], 'dashboard')}
-        iconRightName={select('iconRightName', [, 'dashboard'], 'dashboard')}
+        iconLeftName={select(
+          'iconLeftName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
+        iconRightName={select(
+          'iconRightName',
+          Object.keys(iconSelector)
+            .sort((a, b) => a.localeCompare(b))
+            .map((iconName) => iconName),
+          'check'
+        )}
         isLoading={boolean('isLoading', false)}
         isDisabled={boolean('isDisabled', false)}
         isBlock={boolean('isBlock', false)}
