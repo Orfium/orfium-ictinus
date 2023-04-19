@@ -26,7 +26,7 @@ const Tip: FC<TipProps> = ({ title = 'Tip', children }) => {
         }
       `}
     >
-      <Typography role={'headline04'}>
+      <Typography variant={'headline04'}>
         <span style={{ marginRight: 4 }}>🤓</span> {title}
       </Typography>
       <div>{children}</div>

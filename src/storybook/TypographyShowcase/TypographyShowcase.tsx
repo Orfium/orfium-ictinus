@@ -4,7 +4,7 @@ import typographyCollection from 'theme/globals/constants/typography';
 import { parseCompositionToken } from 'theme/tokens/utils';
 
 import { TableWrapperStyle } from './TypographyShowcase.style';
-import Typography, { TypographyRole } from 'components/Typography';
+import Typography, { TypographyVariant } from 'components/Typography';
 
 const TypographyShowcase = () => {
   const typographyArray = map(typographyCollection, (value, key) => ({ key, ...value }));
@@ -24,8 +24,8 @@ const TypographyShowcase = () => {
         {typographyArray.map(({ key, description, value }) => (
           <tr key={key}>
             <td>
-              <Typography role={key as TypographyRole}>{key}</Typography>
-              <Typography role={'body02'}>{description}</Typography>
+              <Typography variant={key as TypographyVariant}>{key}</Typography>
+              <Typography variant={'body02'}>{description}</Typography>
             </td>
             <td colSpan={2}>
               <table>

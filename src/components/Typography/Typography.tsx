@@ -2,7 +2,7 @@ import React from 'react';
 
 import { typographyWrapper } from './Typography.style';
 
-export type TypographyRole =
+export type TypographyVariant =
   | 'headline01'
   | 'headline02'
   | 'headline03'
@@ -24,7 +24,7 @@ export type TextColorTypes = 'primary' | 'secondary' | 'error' | 'success' | 'wa
 
 export type TypographyProps = {
   type?: TextColorTypes;
-  role?: TypographyRole;
+  variant?: TypographyVariant;
   component?: TypographyComponent;
   isInverted?: boolean;
   isItalic?: boolean;
@@ -33,15 +33,15 @@ export type TypographyProps = {
   children?: React.ReactNode;
 };
 
-export const detectComponentBasedOnType = (role: TypographyRole): TypographyComponent => {
-  if (role === 'headline01') return 'h1';
-  if (role === 'headline02') return 'h2';
-  if (role === 'headline03') return 'h3';
-  if (role === 'headline04') return 'h4';
-  if (role === 'headline05') return 'h5';
-  if (role.includes('title')) return 'h6';
-  if (role.includes('label')) return 'span';
-  if (role.includes('body')) return 'p';
+export const detectComponentBasedOnType = (variant: TypographyVariant): TypographyComponent => {
+  if (variant === 'headline01') return 'h1';
+  if (variant === 'headline02') return 'h2';
+  if (variant === 'headline03') return 'h3';
+  if (variant === 'headline04') return 'h4';
+  if (variant === 'headline05') return 'h5';
+  if (variant.includes('title')) return 'h6';
+  if (variant.includes('label')) return 'span';
+  if (variant.includes('body')) return 'p';
 
   return 'p';
 };
@@ -53,7 +53,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
   (
     {
       type = 'primary',
-      role = 'body01',
+      variant = 'body01',
       component,
       isInverted,
       isUnderline,
@@ -64,7 +64,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
     },
     ref
   ) => {
-    const Component = component || detectComponentBasedOnType(role);
+    const Component = component || detectComponentBasedOnType(variant);
 
     return (
       <Component
@@ -72,7 +72,7 @@ const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
         css={typographyWrapper({
           isInverted,
           type,
-          role,
+          variant,
           isUnderline,
           isItalic,
           isBold,

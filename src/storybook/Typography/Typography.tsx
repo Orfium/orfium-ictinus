@@ -2,22 +2,22 @@ import { css } from '@emotion/react';
 import { SerializedStyles } from '@emotion/react/dist/emotion-react.cjs';
 import React, { FC, useMemo } from 'react';
 
-import TypographyComponent, { TypographyRole } from '../../components/Typography';
+import TypographyComponent, { TypographyVariant } from '../../components/Typography';
 
 export type TypographyProps = {
   children: string;
-  role: TypographyRole;
+  variant: TypographyVariant;
   css?: SerializedStyles;
 };
 
-const Typography: FC<TypographyProps> = ({ children, role, ...rest }) => {
+const Typography: FC<TypographyProps> = ({ children, variant, ...rest }) => {
   const id = useMemo(
     () => children?.toLowerCase && children?.toLowerCase().split(' ').join('-'),
     [children]
   );
 
   return (
-    <TypographyComponent id={id} role={role} {...rest}>
+    <TypographyComponent id={id} variant={variant} {...rest}>
       {children}
     </TypographyComponent>
   );

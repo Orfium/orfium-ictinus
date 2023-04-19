@@ -163,20 +163,20 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }: any) => (
-        <Typography css={customTypography} role={'headline01'}>
+        <Typography css={customTypography} variant={'headline01'}>
           {children}
         </Typography>
       ),
       h2: ({ children }: any) => (
-        <Typography css={customTypography} role={'headline02'}>
+        <Typography css={customTypography} variant={'headline02'}>
           {children}
         </Typography>
       ),
-      h3: ({ children }: any) => <Typography role={'headline03'}>{children}</Typography>,
-      h4: ({ children }: any) => <Typography role={'headline04'}>{children}</Typography>,
-      p: ({ children }: any) => <Typography role={'body01'}>{children}</Typography>,
-      span: ({ children }: any) => <Typography role={'body01'}>{children}</Typography>,
-      div: ({ children }: any) => <Typography role={'body01'}>{children}</Typography>,
+      h3: ({ children }: any) => <Typography variant={'headline03'}>{children}</Typography>,
+      h4: ({ children }: any) => <Typography variant={'headline04'}>{children}</Typography>,
+      p: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+      span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+      div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
       input: inputEmpty,
       UsageGuidelines,
       Tip,

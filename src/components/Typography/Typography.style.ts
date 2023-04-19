@@ -1,20 +1,20 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
-import { TypographyRole, TextColorTypes } from './Typography';
+import { TypographyVariant, TextColorTypes } from './Typography';
 import textColorFigma from '../../theme/tokens/semantic/variables/textColor';
 import { DotKeys } from '../../theme/tokens/utils';
 
 export const typographyWrapper =
   ({
-    role,
+    variant,
     isInverted,
     isItalic,
     isBold,
     isUnderline,
     type,
   }: {
-    role: TypographyRole;
+    variant: TypographyVariant;
     isInverted?: boolean;
     isItalic?: boolean;
     isBold?: boolean;
@@ -156,7 +156,7 @@ export const typographyWrapper =
     const textColor = `${textColorCategory}.${type}` as DotKeys<typeof textColorFigma>;
 
     return css`
-      ${allStyles[role]};
+      ${allStyles[variant]};
       font-style: ${isItalic ? 'italic' : undefined};
       font-weight: ${isBold ? 'bold' : undefined};
       text-decoration: ${isUnderline ? 'underline' : undefined};

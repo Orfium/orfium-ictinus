@@ -25,7 +25,7 @@ const TokenColorsShowcase: FC = () => {
                 padding: 15px;
               `}
             >
-              <Typography role={'headline03'}>{typeLight}</Typography>
+              <Typography variant={'headline03'}>{typeLight}</Typography>
               <div css={stateWrapperStyle}>
                 {states.map((state) => (
                   <div
@@ -43,10 +43,10 @@ const TokenColorsShowcase: FC = () => {
                         )};
                       `}
                     />
-                    <Typography role={'body02'} isItalic>
+                    <Typography variant={'body02'} isItalic>
                       ${`systemic.light.${typeLight}.${state}`}
                     </Typography>
-                    <Typography role={'body02'} isItalic>
+                    <Typography variant={'body02'} isItalic>
                       {paletteFigma.systemic.light[typeLight][state].value}
                     </Typography>
                   </div>
@@ -65,7 +65,7 @@ const TokenColorsShowcase: FC = () => {
                 padding: 15px;
               `}
             >
-              <Typography role={'headline03'}>{type}</Typography>
+              <Typography variant={'headline03'}>{type}</Typography>
               <div css={stateWrapperStyle}>
                 {states.map((state) => (
                   <div
@@ -83,10 +83,10 @@ const TokenColorsShowcase: FC = () => {
                         )};
                       `}
                     />
-                    <Typography role={'body02'} isItalic>
+                    <Typography variant={'body02'} isItalic>
                       ${`systemic.${type}.${state}`}
                     </Typography>
-                    <Typography role={'body02'} isItalic>
+                    <Typography variant={'body02'} isItalic>
                       {get(paletteFigma.systemic, [type, state, 'value'])}
                     </Typography>
                   </div>

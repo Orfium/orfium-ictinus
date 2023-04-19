@@ -33,14 +33,14 @@ const TokenBackgroundColorsShowcase: FC = () => {
               />
               <div>
                 <Typography isBold>{type.key}</Typography>
-                <Typography role={'body02'}>
+                <Typography variant={'body02'}>
                   {get(backgroundColorFigma, [type.key, 'description'])}
                 </Typography>
-                <Typography role={'body02'} isItalic component={'span'}>
+                <Typography variant={'body02'} isItalic component={'span'}>
                   ${`semantic.backgroundColor.${type.key}`}
                 </Typography>
                 {' - '}
-                <Typography role={'body02'} isItalic component={'span'}>
+                <Typography variant={'body02'} isItalic component={'span'}>
                   {get(backgroundColorFigma, [type.key, 'value'])}
                 </Typography>
               </div>
