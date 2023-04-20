@@ -84,6 +84,9 @@ export const textInputBaseOverrides =
       bottom: 'auto',
     };
 
+    const paddingTop = hasLabel ? 21 : 13;
+    const paddingBottom = hasLabel ? 5 : 13;
+
     return {
       wrapper: {
         height: 'unset',
@@ -105,8 +108,8 @@ export const textInputBaseOverrides =
         // so we can override the existing TextFieldInputBase paddings to
         // perfectly position and align the content inside.
         padding: isLoading
-          ? `${rem(hasLabel ? 21 : 13)} ${rem(80)} ${rem(hasLabel ? 5 : 13)} ${theme.spacing.md}`
-          : `${rem(hasLabel ? 21 : 13)} ${rem(40)} ${rem(hasLabel ? 5 : 13)} ${theme.spacing.md}`,
+          ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${theme.spacing.md}`
+          : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${theme.spacing.md}`,
       },
     };
   };
