@@ -13,9 +13,7 @@ const Tip: FC<TipProps> = ({ title = 'Tip', children }) => {
       css={css`
         position: relative;
         padding: 16px;
-        width: -moz-fit-content;
         width: fit-content;
-        height: -moz-fit-content;
         height: fit-content;
         background: #e7eefe;
 
