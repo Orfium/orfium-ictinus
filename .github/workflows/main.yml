@@ -8,7 +8,13 @@ on:
     branches:
       - "*"
 env:
-  NODE_VERSION: '18'
+  NODE_VERSION: '18.13'
+  PROJECT: designlab
+  # ^ Is important to note that the above is used as:
+  #   * SENTRY project to deploy so naming must match
+  #   * Repo badges creation and SENTRY
+  MAIN_BRANCH: 'master'
+  STAGING_BRANCH: 'next'
 
 permissions:
   packages: write
@@ -40,7 +46,57 @@ jobs:
 
       - run: |
           yarn install
-          yarn test --passWithNoTests
+          yarn test --clearCache
+          - name: Running tests and creating coverage report
+          run: yarn test --passWithNoTests --watchAll=false --coverage --coverageReporters=json-summary
+
+      - name: Update Lines Coverage badge
+        uses: Orfium/coverage-badge-creator@master
+        with:
+        coverage_file: "coverage/coverage-summary.json"
+        badge_name: code-cov/${{ env.PROJECT }}-lines-coverage.svg
+        upload_coverage_file: "true"
+        bucket_name: "orfium-badges-bucket"
+        aws_access_key: ${{ secrets.BADGES_AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.BADGES_AWS_SECRET_ACCESS_KEY }}
+        coverage_percentage_json_path: "total.lines.pct"
+        if: github.ref == 'refs/heads/${{ env.STAGING_BRANCH }}'
+
+      - name: Update Statements Coverage badge
+        uses: Orfium/coverage-badge-creator@master
+        with:
+        coverage_file: "coverage/coverage-summary.json"
+        badge_name: code-cov/${{ env.PROJECT }}-stmts-coverage.svg
+        upload_coverage_file: "true"
+        bucket_name: "orfium-badges-bucket"
+        aws_access_key: ${{ secrets.BADGES_AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.BADGES_AWS_SECRET_ACCESS_KEY }}
+        coverage_percentage_json_path: "total.statements.pct"
+        if: github.ref == 'refs/heads/${{ env.STAGING_BRANCH }}'
+
+      - name: Update Branches Coverage badge
+        uses: Orfium/coverage-badge-creator@master
+        with:
+        coverage_file: "coverage/coverage-summary.json"
+        badge_name: code-cov/${{ env.PROJECT }}-branches-coverage.svg
+        upload_coverage_file: "true"
+        bucket_name: "orfium-badges-bucket"
+        aws_access_key: ${{ secrets.BADGES_AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.BADGES_AWS_SECRET_ACCESS_KEY }}
+        coverage_percentage_json_path: "total.branches.pct"
+        if: github.ref == 'refs/heads/${{ env.STAGING_BRANCH }}'
+
+      - name: Update Functions Coverage badge
+        uses: Orfium/coverage-badge-creator@master
+        with:
+        coverage_file: "coverage/coverage-summary.json"
+        badge_name: code-cov/${{ env.PROJECT }}-funcs-coverage.svg
+        upload_coverage_file: "true"
+        bucket_name: "orfium-badges-bucket"
+        aws_access_key: ${{ secrets.BADGES_AWS_ACCESS_KEY_ID }}
+        aws_secret_key: ${{ secrets.BADGES_AWS_SECRET_ACCESS_KEY }}
+        coverage_percentage_json_path: "total.functions.pct"
+        if: github.ref == 'refs/heads/${{ env.STAGING_BRANCH }}'
 
   select-deployment-target:
     runs-on: ubuntu-latest
