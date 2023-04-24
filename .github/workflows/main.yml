@@ -47,8 +47,9 @@ jobs:
       - run: |
           yarn install
           yarn test --clearCache
-          - name: Running tests and creating coverage report
-          run: yarn test --passWithNoTests --watchAll=false --coverage --coverageReporters=json-summary
+
+      - name: Running tests and creating coverage report
+        run: yarn test --passWithNoTests --watchAll=false --coverage --coverageReporters=json-summary
 
       - name: Update Lines Coverage badge
         uses: Orfium/coverage-badge-creator@master
