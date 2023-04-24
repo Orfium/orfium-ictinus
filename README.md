@@ -9,11 +9,6 @@ An internal UI kit library that is opinionated. Primary focus is to solve UI dup
 ![min size](https://img.shields.io/bundlephobia/min/@orfium/ictinus)
 ![minzip size](https://img.shields.io/bundlephobia/minzip/@orfium/ictinus)
 
-| Statements                                                                                                    | Branches                                                                                                       | Functions                                                                                                    | Lines                                                                                                 |
-|---------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
-| ![Statements](https://orfium-badges-bucket.s3.amazonaws.com/code-cov/designlab-stmts-coverage.svg)       | ![Branches](https://orfium-badges-bucket.s3.amazonaws.com/code-cov/designlab-branches-coverage.svg)       | ![Functions](https://orfium-badges-bucket.s3.amazonaws.com/code-cov/designlab-funcs-coverage.svg)       | ![Lines](https://orfium-badges-bucket.s3.amazonaws.com/code-cov/designlab-lines-coverage.svg)    |
-
-
 ## 📦 Installation
 
 ```text
