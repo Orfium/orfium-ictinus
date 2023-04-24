@@ -14,7 +14,8 @@ const wrapperStyleSwitch = (
   colorScheme: ColorScheme = 'light',
   lean?: boolean,
   error?: boolean,
-  disabled?: boolean
+  disabled?: boolean,
+  isInteractive?: boolean
 ) => {
   if (lean) {
     return {
@@ -51,7 +52,7 @@ const wrapperStyleSwitch = (
 
   return {
     backgroundColor: backgroundColor,
-    ...events,
+    ...(isInteractive ? events : {}),
   };
 };
 
@@ -60,7 +61,7 @@ const wrapperStyleSwitch = (
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ disabled, locked, status, lean, dark, size, sx, hasMinWidthCompat }: Props) =>
+  ({ disabled, locked, status, lean, dark, size, sx, isInteractive, hasMinWidthCompat }: Props) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = dark ? 'dark' : theme.colorScheme;
     const error = status === 'error';
@@ -84,7 +85,14 @@ export const wrapperStyle =
       opacity: disabled ? getDisabled().opacity : 1,
       cursor: disabled || locked ? getDisabled().cursor : 'auto',
       ...textFieldSize,
-      ...wrapperStyleSwitch(theme, colorScheme, lean, error, Boolean(disabled || locked)),
+      ...wrapperStyleSwitch(
+        theme,
+        colorScheme,
+        lean,
+        error,
+        Boolean(disabled || locked),
+        isInteractive
+      ),
       ...sx?.wrapper,
     });
   };

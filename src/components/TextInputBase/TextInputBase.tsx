@@ -51,6 +51,8 @@ export type Props = {
   /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
    * of the TextField. It will be replaced by a fullWidth prop. */
   hasMinWidthCompat?: boolean;
+  /** Whether the Textfield should change its styles when hovered/focused etc */
+  isInteractive?: boolean;
 };
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
@@ -65,6 +67,7 @@ const TextInputBase: FC<Props & TestProps> = ({
   locked = false,
   size = DEFAULT_SIZE,
   dark = false,
+  isInteractive = true,
   children,
   sx,
   hasMinWidthCompat = true,
@@ -95,6 +98,7 @@ const TextInputBase: FC<Props & TestProps> = ({
           size,
           sx,
           hasMinWidthCompat,
+          isInteractive,
         })}
       >
         <div css={textFieldStyle({ lean, sx })}>{children}</div>

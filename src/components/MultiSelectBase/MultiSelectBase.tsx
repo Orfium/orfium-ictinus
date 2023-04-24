@@ -4,6 +4,7 @@ import React, { useMemo } from 'react';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
+import useMultiSelectBaseUtils from './hooks';
 import {
   chipContent,
   chipStyle,
@@ -12,9 +13,8 @@ import {
   rightIconsContainer,
   rightIconStyles,
   textInputBaseOverrides,
-} from './MultiselectTextField.style';
+} from './MultiSelectBase.style';
 import Chip from 'components/Chip';
-import Icon from 'components/Icon';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
 import { SelectOption } from 'components/Select/Select';
@@ -35,9 +35,11 @@ type Props = {
   onClearAllOptions: () => void;
   /** If the component is loading */
   isLoading?: boolean;
+  /** Whether the Textfield should change its styles when hovered/focused etc */
+  isInteractive?: boolean;
 } & Omit<TextFieldProps, 'size'>;
 
-const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
+const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
   (props, ref) => {
     const {
       selectedOptions,
@@ -57,40 +59,25 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       onClearAllOptions,
       isLoading,
       rightIcon,
+      isInteractive = true,
       ...rest
     } = props;
 
-    const TextfieldRef = React.useRef<HTMLDivElement>(null);
-
     const theme = useTheme();
-
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
 
-    const inputPlaceholder = useMemo(() => {
-      if (!label && placeholder) {
-        return required ? `${placeholder} *` : placeholder;
-      }
-
-      return label;
-    }, [label, placeholder, required]);
-
-    const iconName = useMemo(() => {
-      if (locked) {
-        return 'lock';
-      }
-
-      if (hasValue) {
-        return 'close';
-      }
-
-      return 'search';
-    }, [hasValue, locked]);
-
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-      if (value === '' && event.key === 'Backspace') {
-        onOptionDelete();
-      }
-    };
+    const { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef } =
+      useMultiSelectBaseUtils({
+        label,
+        placeholder,
+        required,
+        locked,
+        hasValue,
+        value,
+        rightIcon,
+        onOptionDelete,
+        onClearAllOptions,
+      });
 
     const chips = useMemo(
       () => (
@@ -118,37 +105,18 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       [disabled, locked, onOptionDelete, selectedOptions]
     );
 
-    const icon = useMemo(() => {
-      if (rightIcon) {
-        if (typeof rightIcon === 'string') {
-          return <Icon name={rightIcon} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
-        }
-
-        return rightIcon;
-      }
-
-      return (
-        <Icon
-          size={20}
-          name={iconName}
-          color={theme.utils.getColor('lightGrey', 650)}
-          onClick={hasValue && !locked ? onClearAllOptions : undefined}
-          dataTestId="select-right-icon"
-        />
-      );
-    }, [hasValue, iconName, locked, onClearAllOptions, rightIcon, theme.utils]);
-
     return (
       <div ref={TextfieldRef}>
         <TextInputBase
-          disabled={disabled}
-          locked={locked}
-          status={status}
+          disabled={isInteractive && disabled}
+          locked={isInteractive && locked}
+          status={isInteractive ? status : 'normal'}
           lean={lean}
           size={'md'}
           styleType={styleType}
           {...rest}
-          sx={textInputBaseOverrides({ hasValue, isLoading })(theme)}
+          isInteractive={isInteractive}
+          sx={textInputBaseOverrides({ hasValue, isLoading, hasLabel })(theme)}
         >
           <div css={inputContainer()}>
             {chips}
@@ -195,6 +163,6 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
   }
 );
 
-MultiselectTextField.displayName = 'MultiselectTextField';
+MultiSelectBase.displayName = 'MultiSelectBase';
 
-export default MultiselectTextField;
+export default MultiSelectBase;
