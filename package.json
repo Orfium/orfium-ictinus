@@ -120,14 +120,14 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "prepare": "yarn build && husky install",
+    "prepare": "yarn build:lib && husky install",
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
     "build:partial:style": "cross-env NODE_ENV=production BABEL_ENV=production babel src --config-file ./babelrc.build.json --extensions '.ts' --out-dir ./dist --plugins=babel-plugin-inline-import-data-uri",
     "build:partial:nostyle": "cross-env NODE_ENV=production BABEL_ENV=production babel src --config-file ./babelrc.build.json --extensions '.ts,.tsx' --out-dir ./dist --plugins=babel-plugin-inline-react-svg --ignore '**/*.style.ts'",
     "build:partial:types": "tsc --emitDeclarationOnly",
-    "build": "yarn build:partial:style && yarn build:partial:nostyle && yarn build:partial:types",
-    "build:storybook": "build-storybook",
+    "build:lib": "yarn build:partial:style && yarn build:partial:nostyle && yarn build:partial:types",
+    "build": "build-storybook -o build/",
     "lint": "eslint './src/**/*.{ts,tsx}'",
     "test": "jest",
     "test:watch": "jest --watch",
