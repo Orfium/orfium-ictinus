@@ -69,7 +69,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
-      <div css={wrapperStyle({ type, isIconButton })}>
+      <div css={wrapperStyle()}>
         {isIconButton ? (
           <div css={iconButtonWrapper({ type, isOpen })}>
             <IconButton

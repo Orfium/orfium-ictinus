@@ -4,7 +4,7 @@ import { CommonButtonProps } from 'utils/common';
 import { TestProps } from 'utils/types';
 
 import { buttonSpanStyle } from './Button.style';
-import getButtonTokens from '../Button/Button.tokens';
+import { ButtonTokens, getButtonTokens } from '../Button/Button.tokens';
 import ButtonBase, { ButtonBaseProps } from '../ButtonBase/ButtonBase';
 import Avatar, { AvatarProps } from 'components/Avatar';
 import Icon, { AcceptedIconNames } from 'components/Icon';
@@ -34,17 +34,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
   const hasAvatar = ['primary', 'secondary', 'tertiary'].includes(type) && avatar;
 
   const theme = useTheme();
-  const buttonTokens = getButtonTokens(theme);
+  const tokens = getButtonTokens(theme);
 
   return (
     <ButtonBase {...props} ref={ref} isLoading={isLoading} onClick={onClick}>
       <span css={buttonSpanStyle()}>
         {hasAvatar && <Avatar src={avatar?.src}>{avatar?.label}</Avatar>}
         {iconLeftName && !hasAvatar && (
-          <Icon name={iconLeftName} color={buttonTokens.color[type].textColor} />
+          <Icon name={iconLeftName} color={tokens(`color.${type}.textColor` as ButtonTokens)} />
         )}
         <span>{children}</span>
-        {iconRightName && <Icon name={iconRightName} color={buttonTokens.color[type].textColor} />}
+        {iconRightName && (
+          <Icon name={iconRightName} color={tokens(`color.${type}.textColor` as ButtonTokens)} />
+        )}
       </span>
     </ButtonBase>
   );
