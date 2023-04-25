@@ -134,6 +134,12 @@ jobs:
       - deploy-app
     runs-on: ubuntu-latest
     if: (github.ref == 'refs/heads/master' || github.ref == 'refs/heads/next') && github.event_name == 'push'
+
+    permissions:
+      packages: write
+      contents: write
+      id-token: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
