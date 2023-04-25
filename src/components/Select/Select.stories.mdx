@@ -230,42 +230,14 @@ Select disabled with label
 <Preview>
   <Story name="Disabled/Locked Select">
     <Stack>
-      <Select
-        isDisabled
-        label={'Flavour'}
-        options={options}
-      />
-      <Select
-        isDisabled
-        label={'Flavour'}
-        options={options}
-        styleType={'outlined'}
-      />
-      <Select
-        isDisabled
-        label={'Flavour'}
-        options={options}
-        styleType={'elevated'}
-      />
+      <Select isDisabled label={'Flavour'} options={options} />
+      <Select isDisabled label={'Flavour'} options={options} styleType={'outlined'} />
+      <Select isDisabled label={'Flavour'} options={options} styleType={'elevated'} />
     </Stack>
     <Stack>
-      <Select
-        isLocked
-        label={'Flavour'}
-        options={options}
-      />
-      <Select
-        isLocked
-        label={'Flavour'}
-        options={options}
-        styleType={'outlined'}
-      />
-      <Select
-        isLocked
-        label={'Flavour'}
-        options={options}
-        styleType={'elevated'}
-      />
+      <Select isLocked label={'Flavour'} options={options} />
+      <Select isLocked label={'Flavour'} options={options} styleType={'outlined'} />
+      <Select isLocked label={'Flavour'} options={options} styleType={'elevated'} />
     </Stack>
   </Story>
 </Preview>
@@ -392,38 +364,6 @@ Not Searchable Select
         isSearchable={false}
         label={'Flavour'}
         options={options}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'elevated'}
-      />
-    </Stack>
-  </Story>
-</Preview>
-
-# Disabled option with helper text
-
-Disabled option with helper text
-
-<Preview>
-  <Story name="Disabled option with helper text">
-    <Stack>
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={optionsWithHelperInDisabled}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
-      />
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={optionsWithHelperInDisabled}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'outlined'}
-      />
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={optionsWithHelperInDisabled}
         handleSelectedOption={handleSelectedOption}
         styleType={'elevated'}
       />
