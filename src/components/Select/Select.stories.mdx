@@ -431,6 +431,38 @@ Disabled option with helper text
   </Story>
 </Preview>
 
+# Disabled option with helper text
+
+Disabled option with helper text
+
+<Preview>
+  <Story name="Disabled option with helper text">
+    <Stack>
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={optionsWithHelperInDisabled}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'filled'}
+      />
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={optionsWithHelperInDisabled}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'outlined'}
+      />
+      <Select
+        isSearchable={false}
+        label={'Flavour'}
+        options={optionsWithHelperInDisabled}
+        handleSelectedOption={handleSelectedOption}
+        styleType={'elevated'}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
 # Select with Async and Loading
 
 Select that support asynchronous fetching, with loading status
