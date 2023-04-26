@@ -48,6 +48,9 @@ jobs:
           yarn install
           yarn test --clearCache
 
+      - name: Running tests
+        run: yarn test --passWithNoTests --watchAll=false
+
   select-deployment-target:
     runs-on: ubuntu-latest
     outputs:
