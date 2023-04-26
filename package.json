@@ -143,7 +143,7 @@
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
     "build:lib": "rollup -c --bundleConfigAsCjs",
-    "build": "build-storybook",
+    "build": "build-storybook -o build/",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "test:watch": "jest --watch",
