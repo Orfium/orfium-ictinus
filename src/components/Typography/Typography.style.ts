@@ -1,10 +1,26 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 
-import { TypographyType } from './Typography';
+import { TypographyVariant, TextColorTypes } from './Typography';
+import textColorFigma from '../../theme/tokens/semantic/variables/textColor';
+import { DotKeys } from '../../theme/tokens/utils';
 
 export const typographyWrapper =
-  ({ type }: { type: TypographyType }) =>
+  ({
+    variant,
+    isInverted,
+    isItalic,
+    isBold,
+    isUnderline,
+    type,
+  }: {
+    variant: TypographyVariant;
+    isInverted?: boolean;
+    isItalic?: boolean;
+    isBold?: boolean;
+    isUnderline?: boolean;
+    type: TextColorTypes;
+  }) =>
   (theme: Theme): SerializedStyles => {
     // headlines
     const headline01 = css`
@@ -13,6 +29,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('9')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -20,6 +38,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('8')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline03 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -27,6 +47,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('7')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline04 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -34,6 +56,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('6')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     const headline05 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
@@ -41,6 +65,8 @@ export const typographyWrapper =
       font-size: ${theme.globals.typography.fontSize.get('5')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
+      margin-block-start: 1rem;
+      margin-block-end: 1rem;
     `;
     // titles
     const title01 = css`
@@ -126,5 +152,14 @@ export const typographyWrapper =
       body03,
     };
 
-    return allStyles[type];
+    const textColorCategory = isInverted ? 'inverted' : 'light';
+    const textColor = `${textColorCategory}.${type}` as DotKeys<typeof textColorFigma>;
+
+    return css`
+      ${allStyles[variant]};
+      font-style: ${isItalic ? 'italic' : undefined};
+      font-weight: ${isBold ? 'bold' : undefined};
+      text-decoration: ${isUnderline ? 'underline' : undefined};
+      color: ${theme.tokens.textColor.get(textColor)};
+    `;
   };

@@ -82,7 +82,7 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         onBlur={onBlur}
         disabled={isDisabled}
       >
-        {isIconButton ? children : <Typography type="label02">{children}</Typography>}
+        {isIconButton ? children : <Typography variant="label02">{children}</Typography>}
       </button>
     </div>
   );
