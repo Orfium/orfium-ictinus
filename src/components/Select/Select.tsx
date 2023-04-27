@@ -304,7 +304,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 onInput={handleOnInput}
                 onChange={ON_CHANGE_MOCK}
                 readOnly={!isSearchable}
-                disabled={isDisabled}
+                isDisabled={isDisabled}
                 isLocked={isLocked}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
