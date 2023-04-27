@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 import { Theme } from 'theme';
-import { getTextFieldHeight } from 'utils/size-utils';
+import { getTextFieldHeight, getTextFieldSize } from 'utils/size-utils';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
@@ -72,10 +72,12 @@ export const textInputBaseOverrides =
     hasValue,
     isLoading,
     hasLabel,
+    isResponsive,
   }: {
     hasValue: boolean;
     isLoading?: boolean;
     hasLabel?: boolean;
+    isResponsive?: boolean;
   }) =>
   (theme: Theme) => {
     const labelStyles = {
@@ -110,6 +112,9 @@ export const textInputBaseOverrides =
         padding: isLoading
           ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${theme.spacing.md}`
           : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${theme.spacing.md}`,
+        ...(isResponsive
+          ? { width: 'max-content', minWidth: getTextFieldSize(true, 'md').minWidth }
+          : {}),
       },
     };
   };

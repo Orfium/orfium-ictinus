@@ -37,6 +37,8 @@ type Props = {
   isLoading?: boolean;
   /** Whether the Textfield should change its styles when hovered/focused etc */
   isInteractive?: boolean;
+  /** If true, the TextField has a dynamic width, bounded by max and min width values  */
+  isResponsive?: boolean;
 } & Omit<TextFieldProps, 'size'>;
 
 const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
@@ -60,6 +62,7 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
       isLoading,
       rightIcon,
       isInteractive = true,
+      isResponsive = false,
       ...rest
     } = props;
 
@@ -116,7 +119,7 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
           styleType={styleType}
           {...rest}
           isInteractive={isInteractive}
-          sx={textInputBaseOverrides({ hasValue, isLoading, hasLabel })(theme)}
+          sx={textInputBaseOverrides({ hasValue, isLoading, hasLabel, isResponsive })(theme)}
         >
           <div css={inputContainer()}>
             {chips}
