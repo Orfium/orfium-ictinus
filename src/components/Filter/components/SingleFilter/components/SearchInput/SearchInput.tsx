@@ -3,10 +3,10 @@ import React from 'react';
 import { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
-import Icon from '../../../Icon';
-import Loader from '../../../Loader';
-import TextField from '../../../TextField';
 import { textFieldWrapper, iconWrapper } from './SearchInput.style';
+import Icon from 'components/Icon';
+import Loader from 'components/Loader';
+import TextField from 'components/TextField';
 
 interface Props {
   value: string;
@@ -15,7 +15,7 @@ interface Props {
   isLoading?: boolean;
 }
 
-const SearchInput = ({ onChange, value, dataTestId, isLoading }: Props) => {
+const SearchInput: React.FC<Props> = ({ onChange, value, dataTestId, isLoading }) => {
   const theme = useTheme();
 
   const rightIcon = useMemo(
