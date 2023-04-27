@@ -158,8 +158,10 @@ export const typographyWrapper =
     return css`
       ${allStyles[variant]};
       font-style: ${isItalic ? 'italic' : undefined};
-      font-weight: ${isBold ? 'bold' : undefined};
-      text-decoration: ${isUnderline ? 'underline' : undefined};
+      font-weight: ${isBold ? theme.globals.typography.fontWeight.get('bold') : undefined};
+      text-decoration: ${isUnderline
+        ? theme.globals.typography.textDecoration.get('link')
+        : undefined};
       color: ${theme.tokens.textColor.get(textColor)};
     `;
   };
