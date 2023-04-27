@@ -9,7 +9,7 @@ import { TestProps } from '../../utils/types';
 import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import { IconButtonShape } from 'components/IconButton';
-import Typography from 'components/Typography';
+import Typography, { TextColorTypes } from 'components/Typography';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;
@@ -58,6 +58,17 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
   } = props;
   const testIdName = `${dataTestPrefixId}button`;
 
+  const getTextType = (type: ButtonTypes): TextColorTypes => {
+    if (type === 'tertiary') {
+      return 'secondary';
+    }
+    if (type === 'danger') {
+      return 'error';
+    }
+
+    return type as TextColorTypes;
+  };
+
   return (
     <div css={buttonWrapperStyle({ isBlock })}>
       {isLoading && !isDisabled && <ButtonLoader dataTestId={testIdName} />}
@@ -82,7 +93,13 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
         onBlur={onBlur}
         disabled={isDisabled}
       >
-        {isIconButton ? children : <Typography variant="label02">{children}</Typography>}
+        {isIconButton ? (
+          children
+        ) : (
+          <Typography type={getTextType(type)} isInverted={type === 'primary'} variant="label02">
+            {children}
+          </Typography>
+        )}
       </button>
     </div>
   );
