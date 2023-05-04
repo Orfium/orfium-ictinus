@@ -76,6 +76,7 @@ const MultiFilterShowcase: React.FC<Props> = ({
             items={asyncItems}
             onSelect={() => {}}
             label={label}
+            isLoading={isLoading}
             buttonType={buttonType}
           />
         </div>

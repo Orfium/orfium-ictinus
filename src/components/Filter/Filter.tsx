@@ -128,6 +128,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         onClearAllOptions={handleClearAllOptions}
         onOptionClick={handleSelect}
         searchValue={searchValue}
+        isLoading={isLoading}
       />
     ) : (
       <SingleFilter
