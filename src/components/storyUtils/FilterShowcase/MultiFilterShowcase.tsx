@@ -44,10 +44,6 @@ const MultiFilterShowcase: React.FC<Props> = ({
     });
   };
 
-  // const handleAsyncSelectItem = (item: FilterOption) => {
-  //   setAsyncItems(dummyUnrefinedData);
-  // };
-
   return (
     <div>
       <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '72px' }}>

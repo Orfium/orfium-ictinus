@@ -107,11 +107,15 @@ export const FilterBase = forwardRef<
             <div css={childrenWrapperStyle()}>
               <span css={labelSpanStyle(open, hasSelectedValue)}>
                 {label && (
-                  <div>
+                  <div data-testid="filter-label">
                     {label} {!isDatePicker ? <>:&nbsp;</> : ''}
                   </div>
                 )}
-                {selectedItemLabel && <span css={valueSpanStyle()}>{selectedItemLabel}</span>}
+                {selectedItemLabel && (
+                  <span css={valueSpanStyle()} data-testid="filter-selected-item-label">
+                    {selectedItemLabel}
+                  </span>
+                )}
               </span>
             </div>
 
