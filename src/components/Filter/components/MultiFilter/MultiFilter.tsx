@@ -2,7 +2,8 @@ import React from 'react';
 
 import { FilterOption, Props as FilterProps } from '../../types';
 import Options from '../Options/Options';
-import { menuStyle, optionsWrapper, textFieldWrapper } from './MultiFilter.style';
+import { optionsWrapper, textFieldWrapper } from './MultiFilter.style';
+import { menuStyle } from 'components/Filter/Filter.style';
 import MultiSelectBase from 'components/MultiSelectBase/MultiSelectBase';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 

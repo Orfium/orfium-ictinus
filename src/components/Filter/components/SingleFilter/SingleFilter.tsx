@@ -4,7 +4,7 @@ import { generateTestDataId } from 'utils/helpers';
 import { Props as FilterProps } from '../../types';
 import Options from '../Options/Options';
 import SearchInput from './components/SearchInput';
-import { menuStyle } from './SingleFilter.style';
+import { menuStyle } from 'components/Filter/Filter.style';
 import { FilterOption } from 'components/Filter/types';
 
 type Props = Pick<

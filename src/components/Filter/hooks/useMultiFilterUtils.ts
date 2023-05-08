@@ -1,5 +1,5 @@
 import { isEqual } from 'lodash';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { FilterOption } from '../types';
 import { Props as FilterProps } from '../types';
@@ -39,37 +39,41 @@ const useMultiFilterUtils = ({
     }
   }, [items, multiFilters, multi]);
 
-  const updateMultiFilterLabel = (items: FilterOption[]) => {
-    if (items.length > 0) {
-      if (items.length === 1) {
-        setFilterLabel(items[0].label);
+  const updateMultiFilterLabel = useCallback(
+    (items: FilterOption[]) => {
+      if (items.length > 0) {
+        if (items.length === 1) {
+          setFilterLabel(items[0].label);
+        } else {
+          setFilterLabel(`${items[0].label} + ${items.length - 1} more`);
+        }
       } else {
-        setFilterLabel(`${items[0].label} + ${items.length - 1} more`);
+        setFilterLabel(defaultValue.label);
       }
-    } else {
-      setFilterLabel(defaultValue.label);
-    }
-  };
+    },
+    [defaultValue.label, setFilterLabel]
+  );
 
-  const handleOptionDelete = (option?: FilterOption) => {
-    let newItems: FilterOption[] = [];
-
-    if (option) {
-      newItems = multiFilters.filter((opt) => opt.value !== option?.value);
-      setMultiFilters(newItems);
-      setAvailableMultiFilters([...availableMultiFilters, option]);
-      onFilterDelete(option);
-    } else {
-      if (multiFilters.length > 0) {
-        const lastItem = multiFilters[multiFilters.length - 1];
-        newItems = multiFilters.filter((opt) => opt.value !== lastItem.value);
+  const handleOptionDelete = useCallback(
+    (option?: FilterOption) => {
+      if (option) {
+        const newItems = multiFilters.filter((opt) => opt.value !== option?.value);
         setMultiFilters(newItems);
-        setAvailableMultiFilters([...availableMultiFilters, lastItem]);
+        setAvailableMultiFilters([...availableMultiFilters, option]);
+        onFilterDelete(option);
+        updateMultiFilterLabel(newItems);
+      } else {
+        if (multiFilters.length > 0) {
+          const lastItem = multiFilters[multiFilters.length - 1];
+          const newItems = multiFilters.filter((opt) => opt.value !== lastItem.value);
+          setMultiFilters(newItems);
+          setAvailableMultiFilters([...availableMultiFilters, lastItem]);
+          updateMultiFilterLabel(newItems);
+        }
       }
-    }
-
-    updateMultiFilterLabel(newItems);
-  };
+    },
+    [availableMultiFilters, multiFilters, onFilterDelete, updateMultiFilterLabel]
+  );
 
   const handleMultiSelectOptionClick = (option: FilterOption) => {
     let newItems: FilterOption[] = [];

@@ -47,7 +47,7 @@ export type Props = {
   isLoading?: boolean;
   /** Whether the Options List is Virtualized or not */
   isVirtualized?: boolean;
- /** If true the user can select multiple filter */
+ /** If true the user can select multiple filters */
   multi?: boolean;
   /** The selected filters in case of MultiFilter */
   /** @TODO merge selectedItem with selectedItems in v5 */

@@ -13,6 +13,7 @@ import {
   HAS_SELECTED_VALUE_COLOR_SHADE,
   transparentFocusBorderWidth,
 } from './utils';
+import { textInputConfig } from 'components/TextInputBase/config';
 
 export const wrapperStyle = () => () => {
   return {
@@ -234,3 +235,23 @@ export const valueSpanStyle = () => css`
   white-space: nowrap;
   display: inline-block;
 `;
+
+export const menuStyle = () => (theme: Theme) => {
+  const borderConfig = textInputConfig.types[theme.colorScheme].outlined.border;
+
+  return css`
+    position: absolute;
+    top: ${rem(48)};
+    left: 0;
+    height: auto;
+    border: ${rem(borderConfig.width)} solid
+      ${theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)};
+    border-radius: ${theme.spacing.xsm};
+    background-color: ${theme.palette.white};
+    box-shadow: ${theme.elevation['02']};
+    z-index: 500;
+    overflow: hidden;
+    min-width: 100%;
+    max-width: ${rem(440)};
+  `;
+};
