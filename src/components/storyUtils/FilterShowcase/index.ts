@@ -1,3 +1,5 @@
-export { default } from './FilterShowcase';
+export { default as FilterShowcase } from './FilterShowcase';
 
-export { AsyncFilterShowcase } from './AsyncFilterShowcase';
+export { default as AsyncFilterShowcase } from './AsyncFilterShowcase';
+
+export { default as MultiFilterShowcase } from './MultiFilterShowcase';
