@@ -110,6 +110,15 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             rightIcon={'edit'}
           />
         </div>
+        <div css={wrapper()}>
+          <Select
+            multi
+            label={'Multi Select - with Select All option'}
+            options={options}
+            selectedOptions={selectedOptions}
+            hasSelectAllOption
+          />
+        </div>
       </div>
       <h4>Async Multiselect</h4>
       <div css={container()}>
