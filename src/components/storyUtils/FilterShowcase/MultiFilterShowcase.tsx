@@ -14,8 +14,8 @@ interface Props {
   items?: Array<FilterOption>;
   label?: string;
   defaultValue?: FilterOption;
-  isSearchable?: boolean;
   buttonType?: 'primary' | 'secondary';
+  hasSelectAllOption: boolean;
 }
 const MultiFilterShowcase: React.FC<Props> = ({
   styleType,
@@ -23,7 +23,7 @@ const MultiFilterShowcase: React.FC<Props> = ({
   items = dummyUnrefinedData,
   label = 'Label',
   defaultValue = { value: 18, label: 'Default value' },
-  isSearchable = false,
+  hasSelectAllOption,
   buttonType = 'primary',
 }: Props) => {
   const [asyncItems, setAsyncItems] = useState<FilterOption[]>(dummyUnrefinedData);
@@ -59,6 +59,7 @@ const MultiFilterShowcase: React.FC<Props> = ({
             onSelect={() => {}}
             label={label}
             buttonType={buttonType}
+            hasSelectAllOption={hasSelectAllOption}
           />
         </div>
         <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px' }}>
@@ -74,6 +75,7 @@ const MultiFilterShowcase: React.FC<Props> = ({
             label={label}
             isLoading={isLoading}
             buttonType={buttonType}
+            hasSelectAllOption={hasSelectAllOption}
           />
         </div>
       </div>

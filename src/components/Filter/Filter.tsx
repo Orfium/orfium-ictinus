@@ -33,6 +33,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     selectedItems = [],
     onClear = () => {},
     onFilterDelete = () => {},
+    hasSelectAllOption = false,
   } = props;
 
   errorHandler<Props>(errors, props);
@@ -129,6 +130,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
         onOptionClick={handleSelect}
         searchValue={searchValue}
         isLoading={isLoading}
+        hasSelectAllOption={hasSelectAllOption}
       />
     ) : (
       <SingleFilter

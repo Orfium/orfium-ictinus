@@ -139,6 +139,7 @@ describe('Multi Filter', () => {
           defaultValue={defaultFilter}
           onSelect={jest.fn()}
           styleType={'filled'}
+          hasSelectAllOption
         />
       </div>
     );
