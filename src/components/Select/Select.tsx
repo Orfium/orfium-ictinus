@@ -29,6 +29,7 @@ export type SelectOption = {
   helperText?: string;
   tooltipInfo?: string;
   options?: SelectOption[];
+  isCreated?: boolean;
 } & SelectOptionValues;
 
 export type Props = {
@@ -66,6 +67,11 @@ export type Props = {
   /** The selected options in case of multiSelect */
   /** @TODO merge selectedOption with selectedOptions in v5 */
   selectedOptions?: SelectOption[];
+  /**
+   * If true, then in the case of a searched option that is not found in the Options list of MultiSelect,
+   * the user can create this option.
+   * */
+  creatable?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -98,6 +104,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       onClear,
       onOptionDelete,
       selectedOptions = [],
+      creatable = false,
       ...restInputProps
     },
     ref
@@ -139,7 +146,12 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       if (multi) {
         handleMultiSelectOptionClick(option);
       } else {
-        setInputValue(option);
+        if (option.isCreated) {
+          setInputValue({ ...option, label: option.value.toString() });
+        } else {
+          setInputValue(option);
+        }
+
         setOpen(false);
       }
 
@@ -189,31 +201,51 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
 
     const filteredOptions = useMemo(() => {
       const optionsToBeFiltered = multi ? availableMultiSelectOptions : options;
+      const finalOptions: SelectOption[] = [];
 
       if (isAsync) {
-        return optionsToBeFiltered;
+        finalOptions.push(...optionsToBeFiltered);
+      } else {
+        finalOptions.push(
+          ...optionsToBeFiltered
+            .filter(
+              (option) =>
+                !searchValue ||
+                option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+                !!option.options?.find((option) =>
+                  option.label.toLowerCase().includes(searchValue.toLowerCase())
+                )
+            )
+            .map((option) => {
+              return option.label.toLowerCase().includes(searchValue.toLowerCase())
+                ? option
+                : {
+                    ...option,
+                    options: option.options?.filter((option) =>
+                      option.label.toLowerCase().includes(searchValue.toLowerCase())
+                    ),
+                  };
+            })
+        );
       }
 
-      return optionsToBeFiltered
-        .filter(
-          (option) =>
-            !searchValue ||
-            option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
-            !!option.options?.find((option) =>
-              option.label.toLowerCase().includes(searchValue.toLowerCase())
-            )
-        )
-        .map((option) => {
-          return option.label.toLowerCase().includes(searchValue.toLowerCase())
-            ? option
-            : {
-                ...option,
-                options: option.options?.filter((option) =>
-                  option.label.toLowerCase().includes(searchValue.toLowerCase())
-                ),
-              };
-        });
-    }, [isAsync, multi, availableMultiSelectOptions, options, searchValue]);
+      if (creatable) {
+        /** Check if the searchValue has an exact result (so no need for "Create..." option) */
+        const hasDistinctResult = finalOptions
+          .map((item) => item.label.toLowerCase())
+          .includes(searchValue.toLowerCase());
+
+        if (!hasDistinctResult && searchValue.length > 0) {
+          finalOptions.push({
+            value: searchValue,
+            label: `Create "${searchValue}"`,
+            isCreated: true,
+          });
+        }
+      }
+
+      return finalOptions;
+    }, [multi, availableMultiSelectOptions, options, isAsync, creatable, searchValue]);
 
     const rightIconNameSelector = useMemo(() => {
       if (isSearchable) {
@@ -263,6 +295,13 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
         combinedRefs?.current?.blur();
       }
     };
+
+    /**
+     * Boolean flag for the case where we have no options but create functionality - so
+     * we can hide the Select All option in that case
+     */
+    const hasNoOptionsAndIsCreatable =
+      creatable && filteredOptions.length === 1 && filteredOptions[0].isCreated;
 
     return (
       <ClickAwayListener
@@ -325,7 +364,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
               isLoading={isLoading}
               isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
-              hasSelectAllOption={multi}
+              hasSelectAllOption={multi && !hasNoOptionsAndIsCreatable}
             />
           </PositionInScreen>
         </div>
