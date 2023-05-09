@@ -119,6 +119,16 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     onSelect(option);
   };
 
+  const handleClear = () => {
+    if (filterType === 'added' && !multi) {
+      setFilterLabel(defaultValue.label);
+    }
+
+    if (onClear) {
+      onClear();
+    }
+  };
+
   const getFilter = () =>
     multi ? (
       <MultiFilter
@@ -160,7 +170,7 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
             dataTestId={dataTestId}
             handleOpen={handleOpen}
             disabled={disabled}
-            onClear={onClear}
+            onClear={handleClear}
             selectedItemLabel={filterLabel}
             open={isOpen}
             hasSelectedValue={hasSelectedValue}
