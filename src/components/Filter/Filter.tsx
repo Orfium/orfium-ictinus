@@ -11,6 +11,7 @@ import useMultiFilterUtils from './hooks/useMultiFilterUtils';
 import { FilterOption, Props } from './types';
 import { errors } from './utils';
 import handleSearch from 'components/utils/handleSearch';
+import PositionInScreen from 'components/utils/PositionInScreen/PositionInScreen';
 
 const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
@@ -148,24 +149,32 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
-      <FilterBase
-        ref={ref}
-        dataTestId={dataTestId}
-        handleOpen={handleOpen}
-        disabled={disabled}
-        onClear={onClear}
-        selectedItemLabel={filterLabel}
-        open={isOpen}
-        hasSelectedValue={hasSelectedValue}
-        label={label as string}
-        iconName={iconName}
-        filterType={filterType}
-        buttonType={buttonType}
-        styleType={styleType}
-        multi={multi}
+      <PositionInScreen
+        visible={isOpen}
+        hasWrapperWidth
+        offsetY={8}
+        sx={{ container: { width: 'max-content' } }}
+        parent={
+          <FilterBase
+            ref={ref}
+            dataTestId={dataTestId}
+            handleOpen={handleOpen}
+            disabled={disabled}
+            onClear={onClear}
+            selectedItemLabel={filterLabel}
+            open={isOpen}
+            hasSelectedValue={hasSelectedValue}
+            label={label as string}
+            iconName={iconName}
+            filterType={filterType}
+            buttonType={buttonType}
+            styleType={styleType}
+            multi={multi}
+          />
+        }
       >
         {isOpen && getFilter()}
-      </FilterBase>
+      </PositionInScreen>
     </ClickAwayListener>
   );
 });

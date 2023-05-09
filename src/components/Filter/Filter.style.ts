@@ -241,7 +241,6 @@ export const menuStyle = () => (theme: Theme) => {
 
   return css`
     position: absolute;
-    top: ${rem(48)};
     left: 0;
     height: auto;
     border: ${rem(borderConfig.width)} solid
