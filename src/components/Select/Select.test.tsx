@@ -173,11 +173,13 @@ describe('Generic Select', () => {
 describe('Multi Select', () => {
   let selectInput: HTMLInputElement;
   let chips: HTMLElement[];
+  let newOption: HTMLElement;
+  let newChip: HTMLElement;
 
   beforeEach(() => {
     render(
       <div>
-        <Select multi label={'Country'} options={dropdownList} />
+        <Select multi creatable label={'Country'} options={dropdownList} />
       </div>
     );
   });
@@ -242,5 +244,24 @@ describe('Multi Select', () => {
     userEvent.click(selectInput);
 
     expect(screen.getByText('No options')).toBeInTheDocument();
+  });
+
+  it('creates a new item if not found on the results', async () => {
+    userEvent.click(selectInput);
+    userEvent.type(selectInput, 'New item');
+
+    expect(screen.getByTestId('ictinus_list').innerHTML).toContain('Create "New item"');
+
+    /** Create new Item */
+    newOption = screen.getByText('Create "New item"');
+    userEvent.click(newOption);
+    newChip = screen.getByTestId('chip-chip_0');
+
+    expect(newChip).toBeVisible();
+    expect(newChip.innerHTML).toContain('New item');
+
+    /** Delete created Item */
+    userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    expect(screen.queryByTestId('New item')).not.toBeInTheDocument();
   });
 });
