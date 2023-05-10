@@ -1,16 +1,17 @@
 import { debounce } from 'lodash';
 import React, { useMemo } from 'react';
 import { ChangeEvent } from 'utils/common';
-import { errorHandler, generateTestDataId } from 'utils/helpers';
+import { errorHandler } from 'utils/helpers';
 
 import ClickAwayListener from '../utils/ClickAwayListener';
 import FilterBase from './components/FilterBase';
-import Options from './components/Options/Options';
-import SearchInput from './components/SearchInput/SearchInput';
-import { menuStyle } from './Filter.style';
+import MultiFilter from './components/MultiFilter/MultiFilter';
+import SingleFilter from './components/SingleFilter/SingleFilter';
+import useMultiFilterUtils from './hooks/useMultiFilterUtils';
 import { FilterOption, Props } from './types';
 import { errors } from './utils';
 import handleSearch from 'components/utils/handleSearch';
+import PositionInScreen from 'components/utils/PositionInScreen/PositionInScreen';
 
 const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   const {
@@ -29,30 +30,47 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     onAsyncSearch,
     isLoading = false,
     isVirtualized = false,
+    multi = false,
+    selectedItems = [],
     onClear = () => {},
+    onFilterDelete = () => {},
   } = props;
 
   errorHandler<Props>(errors, props);
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [searchValue, setSearchValue] = React.useState('');
+  const [filterLabel, setFilterLabel] = React.useState(defaultValue.label);
 
   const hasSelectedValue =
     Boolean(selectedItem?.value) && selectedItem?.value !== defaultValue.value;
 
   const iconName = isOpen ? 'triangleUp' : 'triangleDown';
 
-  const handleSelect = (option: FilterOption) => {
-    setIsOpen(false);
-    onSelect(option);
-  };
+  const {
+    availableMultiFilters,
+    multiFilters,
+    handleOptionDelete,
+    handleClearAllOptions,
+    handleMultiSelectOptionClick,
+  } = useMultiFilterUtils({
+    multi,
+    selectedItems,
+    items,
+    defaultValue,
+    setFilterLabel,
+    setIsOpen,
+    onClear,
+    setSearchValue,
+    onFilterDelete,
+  });
 
   const handleChange = (event: ChangeEvent) => {
     const isAsync = typeof onAsyncSearch === 'function';
 
     handleSearch({
       event,
-      isSearchable,
+      isSearchable: isSearchable || multi,
       isAsync,
       setSearchValue,
       onChange: debouncedOnChange,
@@ -61,14 +79,16 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
   };
 
   const filteredOptions = useMemo(() => {
+    const optionsToBeFiltered = multi ? availableMultiFilters : items;
+
     if (onAsyncSearch) {
-      return items;
+      return optionsToBeFiltered;
     }
 
-    return items.filter(
-      item => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
+    return optionsToBeFiltered.filter(
+      (item) => !searchValue || item.label.toLowerCase().includes(searchValue.toLowerCase())
     );
-  }, [searchValue, items, onAsyncSearch]);
+  }, [multi, availableMultiFilters, items, onAsyncSearch, searchValue]);
 
   const shouldDisplayDefaultOption = searchValue === '' && !!items.length;
 
@@ -84,46 +104,87 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     []
   );
 
+  const handleSelect = (option: FilterOption) => {
+    if (multi) {
+      handleMultiSelectOptionClick(option);
+    } else {
+      setIsOpen(false);
+      setFilterLabel(option.label);
+    }
+
+    if (isSearchable || multi) {
+      setSearchValue('');
+    }
+
+    onSelect(option);
+  };
+
+  const handleClear = () => {
+    if (filterType === 'added' && !multi) {
+      setFilterLabel(defaultValue.label);
+    }
+
+    if (onClear) {
+      onClear();
+    }
+  };
+
+  const getFilter = () =>
+    multi ? (
+      <MultiFilter
+        selectedItems={multiFilters}
+        items={filteredOptions}
+        onInput={handleChange}
+        onOptionDelete={handleOptionDelete}
+        onClearAllOptions={handleClearAllOptions}
+        onOptionClick={handleSelect}
+        searchValue={searchValue}
+        isLoading={isLoading}
+      />
+    ) : (
+      <SingleFilter
+        isSearchable={isSearchable}
+        dataTestId={dataTestId}
+        searchValue={searchValue}
+        handleChange={handleChange}
+        isLoading={isLoading}
+        filteredOptions={filteredOptions}
+        isVirtualized={isVirtualized}
+        defaultValue={defaultValue}
+        selectedItem={selectedItem}
+        handleSelect={handleSelect}
+        shouldDisplayDefaultOption={shouldDisplayDefaultOption}
+      />
+    );
+
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
-      <FilterBase
-        ref={ref}
-        dataTestId={dataTestId}
-        handleOpen={handleOpen}
-        disabled={disabled}
-        onClear={onClear}
-        selectedItemLabel={selectedItem?.label ?? defaultValue.label}
-        open={isOpen}
-        hasSelectedValue={hasSelectedValue}
-        label={label as string}
-        iconName={iconName}
-        filterType={filterType}
-        buttonType={buttonType}
-        styleType={styleType}
+      <PositionInScreen
+        visible={isOpen}
+        hasWrapperWidth
+        offsetY={8}
+        sx={{ container: { width: 'max-content' } }}
+        parent={
+          <FilterBase
+            ref={ref}
+            dataTestId={dataTestId}
+            handleOpen={handleOpen}
+            disabled={disabled}
+            onClear={handleClear}
+            selectedItemLabel={filterLabel}
+            open={isOpen}
+            hasSelectedValue={hasSelectedValue}
+            label={label as string}
+            iconName={iconName}
+            filterType={filterType}
+            buttonType={buttonType}
+            styleType={styleType}
+            multi={multi}
+          />
+        }
       >
-        {isOpen && (
-          <div css={menuStyle()} data-testid={generateTestDataId('filter-menu', dataTestId)}>
-            {isSearchable && (
-              <SearchInput
-                value={searchValue}
-                onChange={handleChange}
-                dataTestId={dataTestId}
-                isLoading={isLoading}
-              />
-            )}
-            <Options
-              dataTestId={dataTestId}
-              items={filteredOptions}
-              isVirtualized={isVirtualized}
-              defaultValue={defaultValue}
-              isSearchable={isSearchable}
-              selectedItem={selectedItem}
-              onSelect={handleSelect}
-              shouldDisplayDefaultOption={shouldDisplayDefaultOption}
-            />
-          </div>
-        )}
-      </FilterBase>
+        {isOpen && getFilter()}
+      </PositionInScreen>
     </ClickAwayListener>
   );
 });

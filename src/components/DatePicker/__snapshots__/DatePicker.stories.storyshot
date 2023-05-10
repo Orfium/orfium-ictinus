@@ -4892,7 +4892,9 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                         <span
                           className="emotion-9"
                         >
-                          <div>
+                          <div
+                            data-testid="filter-label"
+                          >
                             Select Dates
                              
                             
@@ -4956,6 +4958,7 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                           
                           <span
                             className="emotion-20"
+                            data-testid="filter-selected-item-label"
                           >
                             Select Dates : 11/03/2020 - 11/03/2020
                           </span>
