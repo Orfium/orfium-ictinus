@@ -33,8 +33,8 @@ export const itemContainer =
     css({
       position: 'absolute',
       opacity: '1 !important',
-      top: clientY + 'px',
-      left: clientX + 'px',
+      top: rem(clientY),
+      left: rem(clientX),
       zIndex: 999999999,
       width: width ? rem(width) : `fit-content`,
       height: 'fit-content',
