@@ -5,6 +5,12 @@ import { render, screen, waitFor } from 'test';
 import { selectDropdownOption } from '../../test';
 import Filter from './Filter';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
 const items = [
   { label: 'option 1', value: 1 },
   { label: 'option 2', value: 2 },

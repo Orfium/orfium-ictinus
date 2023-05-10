@@ -49,7 +49,6 @@ const MultiFilterShowcase: React.FC<Props> = ({
       <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '72px' }}>
         <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px' }}>
           <h4>MultiFilter with simple Search</h4>
-
           <Filter
             styleType={styleType}
             multi
@@ -73,6 +72,19 @@ const MultiFilterShowcase: React.FC<Props> = ({
             onSelect={() => {}}
             label={label}
             isLoading={isLoading}
+            buttonType={buttonType}
+          />
+        </div>
+        <div css={{ position: 'absolute', bottom: '15%' }}>
+          <h4>MultiFilter - Bottom Positioning</h4>
+          <Filter
+            styleType={styleType}
+            multi
+            filterType={filterType}
+            defaultValue={defaultValue}
+            items={items}
+            onSelect={() => {}}
+            label={label}
             buttonType={buttonType}
           />
         </div>
