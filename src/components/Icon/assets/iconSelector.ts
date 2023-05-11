@@ -18,6 +18,7 @@ import CalendarFilledIcon from './calendar-filled.svg';
 import CatalogFilesIcon from './catalog-files.svg';
 import CatalogOverviewIcon from './catalog-overview.svg';
 import CatalogIcon from './catalog.svg';
+import ChannelIcon from './channel.svg';
 import ChatBubble from './chat-bubble.svg';
 import CheckIcon from './check.svg';
 import CheckedListIcon from './checked-list.svg';
@@ -92,6 +93,8 @@ import InfoIcon from './info.svg';
 import IssuesIcon from './issues.svg';
 import KeywordIcon from './keyword.svg';
 import LegalFilesIcon from './legal-files.svg';
+import LicenceIcon from './licence.svg';
+import LicencedVideoIcon from './licensedVideo.svg';
 import LinkedIcon from './linked.svg';
 import LockIcon from './lock.svg';
 import MailIcon from './mail.svg';
@@ -195,6 +198,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   calendarEmpty: CalendarEmptyIcon,
   calendarFilled: CalendarFilledIcon,
   catalog: CatalogIcon,
+  channel: ChannelIcon,
   catalogOverview: CatalogOverviewIcon,
   catalogFiles: CatalogFilesIcon,
   chatBubble: ChatBubble,
@@ -261,6 +265,8 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   issues: IssuesIcon,
   keyword: KeywordIcon,
   legalFiles: LegalFilesIcon,
+  licence: LicenceIcon,
+  licencedVideo: LicencedVideoIcon,
   linked: LinkedIcon,
   lock: LockIcon,
   mail: MailIcon,
