@@ -177,7 +177,7 @@ describe('Multi Select', () => {
   beforeEach(() => {
     render(
       <div>
-        <Select multi label={'Country'} options={dropdownList} />
+        <Select multi label={'Country'} options={dropdownList} hasSelectAllOption />
       </div>
     );
   });

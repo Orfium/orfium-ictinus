@@ -66,6 +66,8 @@ export type Props = {
   /** The selected options in case of multiSelect */
   /** @TODO merge selectedOption with selectedOptions in v5 */
   selectedOptions?: SelectOption[];
+  /** Whether the MultiSelect should have a Select All option */
+  hasSelectAllOption?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -98,6 +100,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       onClear,
       onOptionDelete,
       selectedOptions = [],
+      hasSelectAllOption = false,
       ...restInputProps
     },
     ref
@@ -325,7 +328,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
               isLoading={isLoading}
               isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
-              hasSelectAllOption={multi}
+              hasSelectAllOption={multi && hasSelectAllOption}
             />
           </PositionInScreen>
         </div>
