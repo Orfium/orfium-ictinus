@@ -24,7 +24,7 @@ const MultiFilter: React.FC<Props> = ({
   onOptionClick,
   searchValue,
   isLoading,
-  hasSelectAllOption = false
+  hasSelectAllOption
 }) => {
   return (
     <div css={menuStyle()}>
@@ -46,7 +46,7 @@ const MultiFilter: React.FC<Props> = ({
           items={items}
           onSelect={onOptionClick}
           defaultValue={SELECT_ALL_OPTION}
-          shouldDisplayDefaultOption={hasSelectAllOption}
+          shouldDisplayDefaultOption={hasSelectAllOption ?? false}
         />
       </div>
     </div>
