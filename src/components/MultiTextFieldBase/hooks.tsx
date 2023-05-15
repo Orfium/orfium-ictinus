@@ -49,6 +49,8 @@ const useMultiTextFieldBaseUtils = ({
     if (!isTextfield) {
       return 'search';
     }
+
+    return undefined;
   }, [hasValue, isTextfield, locked]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -78,7 +80,7 @@ const useMultiTextFieldBaseUtils = ({
       );
     }
 
-    return null;
+    return undefined;
   }, [hasValue, iconName, locked, onClearAllOptions, rightIcon, theme.utils]);
 
   return { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef };
