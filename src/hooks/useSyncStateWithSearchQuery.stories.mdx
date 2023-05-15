@@ -1,0 +1,45 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { MemoryRouter } from 'react-router-dom';
+import DemoUseSyncStateWithSearchQuery from './storyUtils/DemoUseSyncStateWithSearchQuery.tsx';
+
+<Meta title="Hooks/useSyncStateWithSearchQuery" component={() => true} />
+
+# useSyncStateWithSearchQuery
+
+The useSyncStateWithSearchQuery hook, syncs the URL search query parameters with a component state.
+
+Currently we support (as state) any key - value plain object that is a **Record<string, string | number>**. Also, please keep in mind that this hook can only be used into a react-router-dom context.
+
+# Usage
+
+```js
+import { useSyncStateWithSearchQuery } from '@orfium/ictinus/dist/hooks';
+
+const MyComponent: FC = () => {
+  // URL => https://orfium-product.com/mypath?page=1&size=12&library=react&testing=yolo
+  const searchQueryParams = useSearchQueryParams();
+
+  // console.log(searchQueryParams)
+  // { "page": "1", "size": "12", "library": "react", "testing": "yolo" }
+};
+```
+
+# useSearchQueryParams demo
+
+This demo represents how the url will be taken into an object. You can play with **knobs** as well for different types of url
+
+<Preview>
+  <Story
+    name="useSyncStateWithSearchQuery"
+    parameters={{
+      query: {
+        q: 'search',
+      },
+    }}
+  >
+    <MemoryRouter initialEntries={['/test?page=1&size=12&library=react&testing=yolo']}>
+      <DemoUseSyncStateWithSearchQuery />
+    </MemoryRouter>
+  </Story>
+</Preview>
