@@ -1,7 +1,7 @@
 import { rem } from 'polished';
 
 import { Theme } from '../theme';
-import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
+import { MD_HEIGHT, MIN_WIDTH, MULTI_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
 
 type Size = 'md' | 'sm';
 export const DEFAULT_SIZE: Size = 'md';
@@ -30,16 +30,22 @@ const getTextFieldWidth = (size?: Size): string => {
 
 export const getTextFieldSize = (
   hasMinWidthCompat = true,
-  size?: Size
+  size?: Size,
+  multi = false
 ): {
   minWidth?: string;
   height: string;
+  width?: string;
 } => {
   if (!hasMinWidthCompat) {
     return { height: getTextFieldHeight(size) };
   }
 
-  return { minWidth: getTextFieldWidth(size), height: getTextFieldHeight(size) };
+  return {
+    minWidth: getTextFieldWidth(size),
+    height: getTextFieldHeight(size),
+    ...(multi ? { width: rem(MULTI_WIDTH) } : {}),
+  };
 };
 
 export const getSpacingBySize: (size: Size, theme: Theme) => string = (size, theme) => {
