@@ -73,11 +73,13 @@ export const textInputBaseOverrides =
     isLoading,
     hasLabel,
     isResponsive,
+    isTextfield,
   }: {
     hasValue: boolean;
     isLoading?: boolean;
     hasLabel?: boolean;
     isResponsive?: boolean;
+    isTextfield?: boolean;
   }) =>
   (theme: Theme) => {
     const labelStyles = {
@@ -115,6 +117,7 @@ export const textInputBaseOverrides =
         ...(isResponsive
           ? { width: 'max-content', minWidth: getTextFieldSize(true, 'md').minWidth }
           : {}),
+        ...(isTextfield ? { width: getTextFieldSize(true, 'md', true).width } : {}),
       },
     };
   };

@@ -1,13 +1,16 @@
 import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
-import React, { InputHTMLAttributes, useEffect } from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import Label from '../Label';
 import { IconWrapper } from './components/commons';
+import useMultiTextFieldUtils from './hooks/useMultiTextFieldUtils';
 import { AcceptedIconNames } from 'components/Icon/types';
+import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
+import { SelectOption } from 'components/Select/Select';
 import TextInputBase, { Props as TextInputWrapperProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
@@ -27,6 +30,18 @@ export type Props = {
   /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
    * of the TextField. It will be replaced by a fullWidth prop. */
   hasMinWidthCompat?: boolean;
+  /** If true the user can enter multiple values by pressing 'Enter' */
+  multi?: boolean;
+  /** The initial multi values */
+  multiValues?: string[];
+  /** Maximum multi values */
+  maxMultiValues?: number;
+  /** A callback for when a Chip value is created */
+  onMultiValueCreate?: (value?: string) => void;
+  /** A callback for when a Chip value is deleted */
+  onMultiValueDelete?: (value?: string) => void;
+  /** A callback for when all values are deleted (the Clear All icon is clicked) */
+  onClearAllValues?: () => void;
 } & TextInputWrapperProps;
 
 export type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -55,6 +70,13 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
       readOnly,
       status,
       hasMinWidthCompat = true,
+      onInput,
+      multi = false,
+      multiValues = [],
+      maxMultiValues,
+      onMultiValueCreate,
+      onMultiValueDelete,
+      onClearAllValues,
       ...rest
     } = props;
     const theme = useTheme();
@@ -72,7 +94,35 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
         )
       ) : null;
 
-    return (
+    const {
+      inputValue,
+      values,
+      handleValueDelete,
+      handleClearAllValues,
+      handleKeyDown,
+      handleTyping,
+    } = useMultiTextFieldUtils({
+      multiValues,
+      maxMultiValues,
+      onMultiValueCreate,
+      onMultiValueDelete,
+      onClearAllValues,
+      onInput,
+    });
+
+    return multi ? (
+      <MultiTextFieldBase
+        {...props}
+        isTextfield
+        onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
+        onClearAllOptions={handleClearAllValues}
+        label={label}
+        onInput={handleTyping}
+        onKeyDown={handleKeyDown}
+        selectedOptions={values}
+        value={inputValue}
+      />
+    ) : (
       <React.Fragment>
         <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
           {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
@@ -84,6 +134,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
               required={required}
               id={id}
               disabled={disabled || locked}
+              onInput={onInput}
               {...omit(rest, 'dataTestId')}
               ref={ref}
             />

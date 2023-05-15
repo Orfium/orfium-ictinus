@@ -1,5 +1,535 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/TextField Multi TextField 1`] = `
+.emotion-0 {
+  background-color: transparent;
+  color: #000;
+  outline: none;
+  border-radius: 4px;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: auto;
+  min-width: 9.375rem;
+  height: unset;
+  background-color: white;
+  min-height: 2.875rem!important;
+}
+
+.emotion-2:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-2:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
+}
+
+.emotion-2 label {
+  font-weight: 700!important;
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  bottom: auto;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: 13.75rem;
+  padding: 1.3125rem 2.5rem 0.3125rem 1rem;
+}
+
+.emotion-3>div {
+  position: relative;
+}
+
+.emotion-4 {
+  position: static;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  z-index: 2;
+}
+
+.emotion-5 {
+  position: relative;
+  margin-right: 0.25rem;
+}
+
+.emotion-5>div {
+  height: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: #f3f5f8;
+  color: black;
+  border: 0.0625rem solid #7a8bab;
+  cursor: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background: #e7ebf2;
+}
+
+.emotion-6:focus-visible:not(:disabled) {
+  outline: none;
+}
+
+.emotion-6>:not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+.emotion-7 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: unset;
+}
+
+.emotion-8 {
+  cursor: pointer;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #0f0f17;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-10 path {
+  fill: #0f0f17;
+}
+
+.emotion-17 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  top: unset;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 20%;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+
+.emotion-17+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-17:focus {
+  outline: none;
+}
+
+.emotion-17::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-17:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17::placeholder {
+  color: transparent;
+}
+
+.emotion-17:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-17:focus+label,
+.emotion-17:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8);
+  transform: translate(0.1875rem, -82%) scale(0.8);
+}
+
+.emotion-17:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-18 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-19 {
+  position: absolute!important;
+  bottom: 0;
+  right: 1rem;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 {
+  cursor: pointer;
+}
+
+.emotion-22 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-22 path {
+  fill: #5f6c85;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #5f6c85;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-23 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-23 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-25 {
+  fill: #5f6c85;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-25 path {
+  fill: #5f6c85;
+}
+
+<div
+  style={
+    Object {
+      "backgroundColor": "#F2F2F2",
+      "flex": 1,
+      "flexDirection": "column",
+      "height": "100vh",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "flex-end",
+        }
+      }
+    >
+      <button
+        className="emotion-0"
+        onClick={[Function]}
+      >
+        turn 
+        dark
+         on
+      </button>
+    </div>
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-6"
+                    data-testid="chip-chip_0"
+                  >
+                    <div>
+                      <div
+                        className="emotion-7"
+                        title="Orange"
+                      >
+                        Orange
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                        data-testid="chip-delete-chip_0"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-10"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-6"
+                    data-testid="chip-chip_1"
+                  >
+                    <div>
+                      <div
+                        className="emotion-7"
+                        title="Citrus"
+                      >
+                        Citrus
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                        data-testid="chip-delete-chip_1"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-10"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <input
+                  className="emotion-17"
+                  disabled={false}
+                  hintMsg="Press Enter to create multiple values"
+                  maxMultiValues={10}
+                  multi={true}
+                  multiValues={
+                    Array [
+                      "Orange",
+                      "Citrus",
+                    ]
+                  }
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Label"
+                  required={false}
+                  value=""
+                />
+                <label
+                  className="emotion-18"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-19"
+              >
+                <div
+                  className="emotion-20"
+                >
+                  <span
+                    className="emotion-9"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-22"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="emotion-23"
+            data-testid="error"
+          >
+            <span
+              className="emotion-9"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-25"
+              />
+            </span>
+            Press Enter to create multiple values
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
 .emotion-0 {
   background-color: transparent;

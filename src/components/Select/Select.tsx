@@ -15,7 +15,7 @@ import SelectMenu from './components/SelectMenu/SelectMenu';
 import useMultiselectUtils from './hooks/useMultiselectUtils';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
-import MultiSelectBase from 'components/MultiSelectBase/MultiSelectBase';
+import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export type SelectOptionValues = {
@@ -323,10 +323,10 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
             offsetY={8}
             parent={
               multi ? (
-                <MultiSelectBase
+                <MultiTextFieldBase
                   selectedOptions={multiSelectedOptions}
                   onInput={handleOnInput}
-                  onOptionDelete={handleOptionDelete}
+                  onOptionDelete={handleOptionDelete as (option?: string | SelectOption) => void}
                   onClearAllOptions={handleClearAllOptions}
                   isLoading={isLoading}
                   disabled={disabled}

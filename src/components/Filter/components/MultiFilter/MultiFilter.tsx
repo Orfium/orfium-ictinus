@@ -4,8 +4,9 @@ import { FilterOption, Props as FilterProps } from '../../types';
 import Options from '../Options/Options';
 import { optionsWrapper, textFieldWrapper } from './MultiFilter.style';
 import { menuStyle } from 'components/Filter/Filter.style';
-import MultiSelectBase from 'components/MultiSelectBase/MultiSelectBase';
+import MultiTextFieldBase from 'components/MultiTextFieldBase';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
+import { SelectOption } from 'components/Select/Select';
 
 type Props = Pick<FilterProps, 'selectedItems' | 'items' | 'isLoading' | 'hasSelectAllOption'> & {
   onInput?: React.EventHandler<any>;
@@ -24,15 +25,15 @@ const MultiFilter: React.FC<Props> = ({
   onOptionClick,
   searchValue,
   isLoading,
-  hasSelectAllOption
+  hasSelectAllOption,
 }) => {
   return (
     <div css={menuStyle()}>
       <div css={textFieldWrapper()}>
-        <MultiSelectBase
+        <MultiTextFieldBase
           selectedOptions={selectedItems}
           onInput={onInput}
-          onOptionDelete={onOptionDelete}
+          onOptionDelete={onOptionDelete as (option?: string | SelectOption) => void}
           onClearAllOptions={onClearAllOptions}
           isInteractive={false}
           value={searchValue}
