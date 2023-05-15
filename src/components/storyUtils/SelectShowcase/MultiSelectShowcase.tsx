@@ -110,6 +110,15 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             rightIcon={'edit'}
           />
         </div>
+        <div css={wrapper()}>
+          <Select
+            multi
+            label={'Multi Select - with Select All option'}
+            options={options}
+            selectedOptions={selectedOptions}
+            hasSelectAllOption
+          />
+        </div>
       </div>
       <h4>Async Multiselect</h4>
       <div css={container()}>
@@ -122,6 +131,24 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             asyncSearch={mockedApiCall}
             isLoading={isLoading}
             onKeyPress={() => setIsLoading(true)}
+          />
+        </div>
+      </div>
+      <h4>Creatable Multiselect</h4>
+      <div css={container()}>
+        <div css={wrapper()}>
+          <Select multi creatable label={'Multi Select - creatable'} options={options} />
+        </div>
+        <div css={wrapper()}>
+          <Select
+            multi
+            isAsync
+            label={'Multi Select - creatable (Async)'}
+            options={asyncOptions}
+            asyncSearch={mockedApiCall}
+            isLoading={isLoading}
+            onKeyPress={() => setIsLoading(true)}
+            creatable
           />
         </div>
       </div>

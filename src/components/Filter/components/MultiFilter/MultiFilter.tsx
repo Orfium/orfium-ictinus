@@ -8,7 +8,7 @@ import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 import { SelectOption } from 'components/Select/Select';
 
-type Props = Pick<FilterProps, 'selectedItems' | 'items' | 'isLoading'> & {
+type Props = Pick<FilterProps, 'selectedItems' | 'items' | 'isLoading' | 'hasSelectAllOption'> & {
   onInput?: React.EventHandler<any>;
   onOptionDelete: (option?: FilterOption | undefined) => void;
   onClearAllOptions: () => void;
@@ -25,6 +25,7 @@ const MultiFilter: React.FC<Props> = ({
   onOptionClick,
   searchValue,
   isLoading,
+  hasSelectAllOption
 }) => {
   return (
     <div css={menuStyle()}>
@@ -46,7 +47,7 @@ const MultiFilter: React.FC<Props> = ({
           items={items}
           onSelect={onOptionClick}
           defaultValue={SELECT_ALL_OPTION}
-          shouldDisplayDefaultOption={true}
+          shouldDisplayDefaultOption={hasSelectAllOption ?? false}
         />
       </div>
     </div>
