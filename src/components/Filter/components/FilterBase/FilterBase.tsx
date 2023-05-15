@@ -33,7 +33,10 @@ type FilterBaseProps = {
 export const FilterBase = forwardRef<
   HTMLButtonElement,
   FilterBaseProps &
-    Pick<Props, 'dataTestId' | 'disabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'>
+    Pick<
+      Props,
+      'dataTestId' | 'disabled' | 'label' | 'buttonType' | 'filterType' | 'styleType' | 'multi'
+    >
 >((props, ref) => {
   const {
     dataTestId,
@@ -50,6 +53,7 @@ export const FilterBase = forwardRef<
     filterType = 'preset',
     styleType,
     children,
+    multi,
   } = props;
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
@@ -103,11 +107,15 @@ export const FilterBase = forwardRef<
             <div css={childrenWrapperStyle()}>
               <span css={labelSpanStyle(open, hasSelectedValue)}>
                 {label && (
-                  <div>
+                  <div data-testid="filter-label">
                     {label} {!isDatePicker ? <>:&nbsp;</> : ''}
                   </div>
                 )}
-                {selectedItemLabel && <span css={valueSpanStyle()}>{selectedItemLabel}</span>}
+                {selectedItemLabel && (
+                  <span css={valueSpanStyle()} data-testid="filter-selected-item-label">
+                    {selectedItemLabel}
+                  </span>
+                )}
               </span>
             </div>
 
@@ -115,7 +123,7 @@ export const FilterBase = forwardRef<
           </div>
         </div>
 
-        {filterType === 'added' && (
+        {filterType === 'added' && !multi && (
           <>
             <span css={divider(buttonStyleProps)} />
             <div css={dividedButtonStyle(buttonStyleProps)}>
@@ -123,7 +131,7 @@ export const FilterBase = forwardRef<
                 size={19}
                 name={'closeTag'}
                 color={pickIconColor(true)}
-                onClick={e => {
+                onClick={(e) => {
                   e.stopPropagation();
                   onClear();
                 }}

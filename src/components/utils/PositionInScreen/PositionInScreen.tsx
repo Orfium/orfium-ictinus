@@ -1,3 +1,4 @@
+import { CSSObject } from '@emotion/serialize';
 import React, { useRef } from 'react';
 
 import { useWrapperWidth, usePositionInScreen } from './hooks';
@@ -16,6 +17,11 @@ type Props = {
   offsetY?: number;
   /** The parent element */
   parent: JSX.Element;
+  /** Sx prop to override specific properties */
+  sx?: {
+    container?: CSSObject;
+    itemContainer?: CSSObject;
+  };
 };
 
 const PositionInScreen: React.FC<Props> = ({
@@ -25,6 +31,7 @@ const PositionInScreen: React.FC<Props> = ({
   hasWrapperWidth = false,
   offsetX = 0,
   offsetY = 0,
+  sx,
   children,
 }) => {
   const wrapperRef = useRef(null);
@@ -36,10 +43,10 @@ const PositionInScreen: React.FC<Props> = ({
   const showTooltip = visible && x !== -1 && y !== -1;
 
   return (
-    <div css={container(withOverflow, showTooltip)} ref={wrapperRef}>
+    <div css={container(withOverflow, showTooltip, sx)} ref={wrapperRef}>
       {parent}
       {showTooltip && (
-        <div css={itemContainer(x, y, wrapperWidth)} id={'unique-tooltip-id'} ref={itemRef}>
+        <div css={itemContainer(x, y, wrapperWidth, sx)} id={'unique-tooltip-id'} ref={itemRef}>
           {children}
         </div>
       )}

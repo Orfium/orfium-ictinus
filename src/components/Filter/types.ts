@@ -20,8 +20,13 @@ export type Props = {
   defaultValue: FilterOption;
   /** A callback that is being triggered when an items has been clicked */
   onSelect: (option: FilterOption) => void;
-  /** A callback that is being triggered when type is added and you press the X icon */
+  /**
+   * For SingleFilter: callback for the X button of the 'added' type filter
+   * For MultiFilter: callback for the Clear All button
+   */
   onClear?: () => void;
+  /** A callback that's called when the user clicks the 'clear' icon of a specific Chip in MultiFilter */
+  onFilterDelete?: (option: FilterOption) => void;
   /** The text of the button to show */
   label: React.ReactNode;
   /** Defines the style type of the button */
@@ -42,6 +47,13 @@ export type Props = {
   isLoading?: boolean;
   /** Whether the Options List is Virtualized or not */
   isVirtualized?: boolean;
+ /** If true the user can select multiple filters */
+  multi?: boolean;
+  /** The selected filters in case of MultiFilter */
+  /** @TODO merge selectedItem with selectedItems in v5 */
+  selectedItems?: FilterOption[];
+  /** Whether the MultiFilter should have a Select All option*/
+  hasSelectAllOption?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
 };

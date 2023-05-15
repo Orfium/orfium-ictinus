@@ -2,20 +2,31 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import { render, screen, waitFor } from 'test';
 
+import { selectDropdownOption } from '../../test';
 import Filter from './Filter';
+
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
 
 const items = [
   { label: 'option 1', value: 1 },
   { label: 'option 2', value: 2 },
+  { label: 'option 3', value: 3 },
 ];
+
+const defaultFilter = {
+  label: 'option 4',
+  value: 4,
+};
+
 type Props = React.ComponentProps<typeof Filter>;
 
 const renderFilter = (props: Partial<Props> = {}) => {
   const defaultProps = {
-    defaultValue: {
-      label: 'option 3',
-      value: 3,
-    },
+    defaultValue: defaultFilter,
     label: 'Label',
     items,
     isSearchable: false,
@@ -115,5 +126,107 @@ describe('Generic Filter', () => {
     await userEvent.type(selectInput, 'tes', { delay: 500 });
 
     await waitFor(() => expect(onAsyncSearch).toHaveBeenCalledTimes(1));
+  });
+});
+
+describe('Multi Filter', () => {
+  let selectInput: HTMLInputElement;
+  let filterLabel: HTMLElement;
+  let chips: HTMLElement[];
+  let button: HTMLElement;
+
+  beforeEach(() => {
+    render(
+      <div>
+        <Filter
+          multi
+          label={'Country'}
+          items={items}
+          defaultValue={defaultFilter}
+          onSelect={jest.fn()}
+          styleType={'filled'}
+          hasSelectAllOption
+        />
+      </div>
+    );
+  });
+
+  beforeEach(async () => {
+    button = screen.getByTestId('filter');
+
+    userEvent.click(button);
+
+    selectInput = (await screen.findByPlaceholderText('Search')) as HTMLInputElement;
+  });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('renders the Chips and changes label when options are clicked', async () => {
+    await selectDropdownOption(selectInput, items[0].label);
+    await selectDropdownOption(selectInput, items[1].label);
+
+    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
+    expect(screen.getByTestId('chip-chip_1')).toBeVisible();
+
+    filterLabel = screen.getByTestId('filter-selected-item-label');
+    expect(filterLabel).toHaveTextContent(`${items[0].label} + 1 more`);
+  });
+
+  it('removes the options from the list when selected', async () => {
+    await selectDropdownOption(selectInput, items[0].label);
+    await selectDropdownOption(selectInput, items[1].label);
+
+    userEvent.click(selectInput);
+
+    expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(items[0].label);
+    expect(screen.getByTestId('ictinus_list').innerHTML).not.toContain(items[1].label);
+  });
+
+  it('adds the options to the list and clears label when deleted', async () => {
+    await selectDropdownOption(selectInput, items[0].label);
+    await selectDropdownOption(selectInput, items[1].label);
+
+    userEvent.click(screen.getByTestId('chip-delete-chip_1'));
+    userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+
+    userEvent.click(selectInput);
+
+    expect(screen.getByTestId('ictinus_list').innerHTML).toContain(items[0].label);
+    expect(screen.getByTestId('ictinus_list').innerHTML).toContain(items[1].label);
+
+    filterLabel = screen.getByTestId('filter-selected-item-label');
+    expect(filterLabel).toHaveTextContent(defaultFilter.label);
+  });
+
+  it('deletes all selected options and clears label when clear all button is clicked', async () => {
+    await selectDropdownOption(selectInput, items[0].label);
+    await selectDropdownOption(selectInput, items[1].label);
+    await selectDropdownOption(selectInput, items[2].label);
+
+    userEvent.click(screen.getByTestId('select-right-icon'));
+
+    expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
+
+    filterLabel = screen.getByTestId('filter-selected-item-label');
+    expect(filterLabel).toHaveTextContent(defaultFilter.label);
+  });
+
+  it('selects all options and changes label when Select All is clicked', async () => {
+    userEvent.click(screen.getByTestId('ictinus_list_default_option'));
+
+    userEvent.click(button);
+
+    chips = await screen.findAllByTestId(/chip-chip_/);
+
+    expect(chips.length).toEqual(items.length);
+
+    userEvent.click(selectInput);
+
+    expect(screen.getByText('No options')).toBeInTheDocument();
+
+    filterLabel = screen.getByTestId('filter-selected-item-label');
+    expect(filterLabel).toHaveTextContent(`${items[0].label} + ${items.length - 1} more`);
   });
 });

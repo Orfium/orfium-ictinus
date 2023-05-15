@@ -11,11 +11,11 @@ import TextField from '../TextField';
 import { Props as TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
-import MultiselectTextField from './components/MultiselectTextField';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import useMultiselectUtils from './hooks/useMultiselectUtils';
 import { rightIconContainer, selectWrapper } from './Select.style';
 import Loader from 'components/Loader';
+import MultiSelectBase from 'components/MultiSelectBase/MultiSelectBase';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export type SelectOptionValues = {
@@ -72,6 +72,8 @@ export type Props = {
    * the user can create this option.
    * */
   creatable?: boolean;
+  /** Whether the MultiSelect should have a Select All option */
+  hasSelectAllOption?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -105,6 +107,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       onOptionDelete,
       selectedOptions = [],
       creatable = false,
+      hasSelectAllOption = false,
       ...restInputProps
     },
     ref
@@ -320,7 +323,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
             offsetY={8}
             parent={
               multi ? (
-                <MultiselectTextField
+                <MultiSelectBase
                   selectedOptions={multiSelectedOptions}
                   onInput={handleOnInput}
                   onOptionDelete={handleOptionDelete}
@@ -364,7 +367,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
               isLoading={isLoading}
               isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
-              hasSelectAllOption={multi && !hasNoOptionsAndIsCreatable}
+              hasSelectAllOption={multi && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
             />
           </PositionInScreen>
         </div>
