@@ -52,6 +52,8 @@ export type Props = {
   /** The selected filters in case of MultiFilter */
   /** @TODO merge selectedItem with selectedItems in v5 */
   selectedItems?: FilterOption[];
+  /** Whether the MultiFilter should have a Select All option*/
+  hasSelectAllOption?: boolean;
   /** data-testid suffix */
   dataTestId?: string;
 };

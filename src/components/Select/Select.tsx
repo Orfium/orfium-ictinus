@@ -72,6 +72,8 @@ export type Props = {
    * the user can create this option.
    * */
   creatable?: boolean;
+  /** Whether the MultiSelect should have a Select All option */
+  hasSelectAllOption?: boolean;
 } & TextFieldProps;
 
 const emptyValue = { label: '', value: '' };
@@ -105,6 +107,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       onOptionDelete,
       selectedOptions = [],
       creatable = false,
+      hasSelectAllOption = false,
       ...restInputProps
     },
     ref
@@ -364,7 +367,7 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
               isLoading={isLoading}
               isVirtualized={isVirtualized}
               searchTerm={highlightSearch ? searchValue : undefined}
-              hasSelectAllOption={multi && !hasNoOptionsAndIsCreatable}
+              hasSelectAllOption={multi && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
             />
           </PositionInScreen>
         </div>
