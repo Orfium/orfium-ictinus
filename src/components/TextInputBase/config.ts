@@ -4,7 +4,7 @@ export const MD = 'md';
 export const SM = 'sm';
 
 export const MD_HEIGHT = 46;
-export const SM_HEIGHT = 36;
+export const SM_HEIGHT = 28;
 
 export const MIN_WIDTH = 150;
 

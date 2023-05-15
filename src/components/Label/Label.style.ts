@@ -13,6 +13,7 @@ export const labelStyle =
     css`
       transition: transform 0.25s, opacity 0.25s ease-in-out;
       transform-origin: 0 0;
+      line-height: normal;
       width: 100%;
       position: absolute;
       user-select: none;

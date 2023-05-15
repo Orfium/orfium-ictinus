@@ -78,7 +78,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             label={'Multi Select - Disabled'}
             options={options}
             selectedOptions={selectedOptions}
-            disabled
+            isDisabled
           />
         </div>
         <div css={wrapper()}>

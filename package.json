@@ -139,11 +139,11 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "prepare": "yarn build && husky install",
+    "prepare": "yarn build:lib && husky install",
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
-    "build": "rollup -c --bundleConfigAsCjs",
-    "build:storybook": "build-storybook",
+    "build:lib": "rollup -c --bundleConfigAsCjs",
+    "build": "build-storybook -o build/",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "test": "jest",
     "test:watch": "jest --watch",

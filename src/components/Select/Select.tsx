@@ -1,4 +1,4 @@
-import { debounce } from 'lodash';
+import debounce from 'lodash/debounce';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
@@ -116,11 +116,10 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const {
     multiSelectedOptions,
-    setMultiSelectedOpts,
     availableMultiSelectOptions,
-    setAvailableMultiSelectOptions,
     handleOptionDelete,
     handleClearAllOptions,
+    handleMultiSelectOptionClick,
   } = useMultiselectUtils({
     selectedOptions,
     options,
@@ -138,15 +137,11 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const handleOptionClick = (option: SelectOption) => {
     if (isMulti) {
-      setMultiSelectedOpts([...multiSelectedOptions, option]);
-      setAvailableMultiSelectOptions(
-        availableMultiSelectOptions.filter((opt) => opt.value !== option.value)
-      );
+      handleMultiSelectOptionClick(option);
     } else {
       setInputValue(option);
+      setIsOpen(false);
     }
-
-    setIsOpen(false);
 
     if (isSearchable) {
       setSearchValue('');
@@ -309,7 +304,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 onInput={handleOnInput}
                 onChange={ON_CHANGE_MOCK}
                 readOnly={!isSearchable}
-                disabled={isDisabled}
+                isDisabled={isDisabled}
                 isLocked={isLocked}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
@@ -330,6 +325,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             isLoading={isLoading}
             isVirtualized={isVirtualized}
             searchTerm={hasHighlightSearch ? searchValue : undefined}
+            hasSelectAllOption={isMulti}
           />
         </PositionInScreen>
       </div>
