@@ -1,18 +1,18 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
+import { Props as MultiTextFieldBase } from './MultiTextFieldBase';
 import Icon from 'components/Icon';
-import { SelectOption } from 'components/Select/Select';
 import { Props as TextFieldProps } from 'components/TextField/TextField';
 
 type Props = {
   hasValue: boolean;
-  value?: string | number;
-  onOptionDelete: (option?: SelectOption) => void;
-  onClearAllOptions: () => void;
-} & Omit<TextFieldProps, 'size'>;
+  isTextfield?: boolean;
+} & Pick<MultiTextFieldBase, 'value' | 'onOptionDelete' | 'onClearAllOptions'> &
+  Omit<TextFieldProps, 'size'>;
 
-const useMultiSelectBaseUtils = ({
+const useMultiTextFieldBaseUtils = ({
+  isTextfield,
   label,
   placeholder,
   required,
@@ -46,8 +46,10 @@ const useMultiSelectBaseUtils = ({
       return 'close';
     }
 
-    return 'search';
-  }, [hasValue, locked]);
+    if (!isTextfield) {
+      return 'search';
+    }
+  }, [hasValue, isTextfield, locked]);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (value === '' && event.key === 'Backspace') {
@@ -64,18 +66,22 @@ const useMultiSelectBaseUtils = ({
       return rightIcon;
     }
 
-    return (
-      <Icon
-        size={20}
-        name={iconName}
-        color={theme.utils.getColor('lightGrey', 650)}
-        onClick={hasValue && !locked ? onClearAllOptions : undefined}
-        dataTestId="select-right-icon"
-      />
-    );
+    if (iconName) {
+      return (
+        <Icon
+          size={20}
+          name={iconName}
+          color={theme.utils.getColor('lightGrey', 650)}
+          onClick={hasValue && !locked ? onClearAllOptions : undefined}
+          dataTestId="select-right-icon"
+        />
+      );
+    }
+
+    return null;
   }, [hasValue, iconName, locked, onClearAllOptions, rightIcon, theme.utils]);
 
   return { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef };
 };
 
-export default useMultiSelectBaseUtils;
+export default useMultiTextFieldBaseUtils;

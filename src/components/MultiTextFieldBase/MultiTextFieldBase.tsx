@@ -4,7 +4,7 @@ import React, { useMemo } from 'react';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
-import useMultiSelectBaseUtils from './hooks';
+import useMultiTextFieldBaseUtils from './hooks';
 import {
   chipContent,
   chipStyle,
@@ -13,7 +13,7 @@ import {
   rightIconsContainer,
   rightIconStyles,
   textInputBaseOverrides,
-} from './MultiSelectBase.style';
+} from './MultiTextFieldBase.style';
 import Chip from 'components/Chip';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
@@ -22,15 +22,15 @@ import { InputProps, Props as TextFieldProps } from 'components/TextField/TextFi
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
-type Props = {
-  /** the values of the MultiSelect if MultiSelect is controlled */
-  selectedOptions?: SelectOption[];
+export type Props = {
+  /** the values of the MultiTextField if MultiTextField is controlled */
+  selectedOptions?: SelectOption[] | string[];
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
   /** Value of the `input` element */
   value?: string | number;
   /** Callback fired when the Delete button of each Chip is clicked */
-  onOptionDelete: (option?: SelectOption) => void;
+  onOptionDelete: (option?: SelectOption | string) => void;
   /** Callback fired when the Delete button of the whole MultiSelect is clicked */
   onClearAllOptions: () => void;
   /** If the component is loading */
@@ -39,9 +39,10 @@ type Props = {
   isInteractive?: boolean;
   /** If true, the TextField has a dynamic width, bounded by max and min width values  */
   isResponsive?: boolean;
+  isTextfield?: boolean;
 } & Omit<TextFieldProps, 'size'>;
 
-const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
+const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps>(
   (props, ref) => {
     const {
       selectedOptions,
@@ -63,6 +64,7 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
       rightIcon,
       isInteractive = true,
       isResponsive = false,
+      isTextfield = false,
       ...rest
     } = props;
 
@@ -70,7 +72,8 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
 
     const { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef } =
-      useMultiSelectBaseUtils({
+      useMultiTextFieldBaseUtils({
+        isTextfield,
         label,
         placeholder,
         required,
@@ -93,19 +96,19 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
                 dataTestId={`chip_${index}`}
               >
                 <div
-                  title={option.label}
+                  title={typeof option === 'string' ? option : option.label}
                   css={chipContent({
                     maxWidth: TextfieldRef.current?.getBoundingClientRect().width,
                   })}
                 >
-                  {option.label}
+                  {typeof option === 'string' ? option : option.label}
                 </div>
               </Chip>
             </span>
           ))}
         </>
       ),
-      [disabled, locked, onOptionDelete, selectedOptions]
+      [TextfieldRef, disabled, locked, onOptionDelete, selectedOptions]
     );
 
     return (
@@ -119,7 +122,9 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
           styleType={styleType}
           {...rest}
           isInteractive={isInteractive}
-          sx={textInputBaseOverrides({ hasValue, isLoading, hasLabel, isResponsive })(theme)}
+          sx={textInputBaseOverrides({ hasValue, isLoading, hasLabel, isResponsive, isTextfield })(
+            theme
+          )}
         >
           <div css={inputContainer()}>
             {chips}
@@ -166,6 +171,6 @@ const MultiSelectBase = React.forwardRef<HTMLInputElement, Props & InputProps & 
   }
 );
 
-MultiSelectBase.displayName = 'MultiSelectBase';
+MultiTextFieldBase.displayName = 'MultiTextFieldBase';
 
-export default MultiSelectBase;
+export default MultiTextFieldBase;
