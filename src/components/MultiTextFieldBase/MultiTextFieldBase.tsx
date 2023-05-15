@@ -108,7 +108,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           ))}
         </>
       ),
-      [TextfieldRef, disabled, locked, onOptionDelete, selectedOptions]
+      [disabled, locked, onOptionDelete, selectedOptions]
     );
 
     return (

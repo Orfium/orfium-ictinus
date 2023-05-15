@@ -68,13 +68,21 @@ const useMultiTextFieldBaseUtils = ({
       return rightIcon;
     }
 
+    const handleClick = () => {
+      if (!hasValue || locked) {
+        return undefined;
+      }
+
+      return onClearAllOptions();
+    };
+
     if (iconName) {
       return (
         <Icon
           size={20}
           name={iconName}
           color={theme.utils.getColor('lightGrey', 650)}
-          onClick={hasValue && !locked ? onClearAllOptions : undefined}
+          onClick={handleClick}
           dataTestId="select-right-icon"
         />
       );
