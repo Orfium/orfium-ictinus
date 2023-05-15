@@ -88,7 +88,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
     const chips = useMemo(
       () => (
         <>
-          {selectedOptions?.map((option, index) => (
+          {selectedOptions?.map((option: any, index) => (
             <span key={generateUniqueID('chip' + index)} css={chipStyle()}>
               <Chip
                 onClear={!(locked || disabled) ? () => onOptionDelete(option) : undefined}
