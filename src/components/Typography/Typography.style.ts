@@ -26,47 +26,37 @@ export const typographyWrapper =
     const headline01 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('10')};
-      font-size: ${theme.globals.typography.fontSize.get('9')};
+      font-size: ${theme.globals.typography.fontSize.get('10')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
-      margin-block-start: 1rem;
-      margin-block-end: 1rem;
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')}px;
     `;
     const headline02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('9')};
-      font-size: ${theme.globals.typography.fontSize.get('8')};
+      font-size: ${theme.globals.typography.fontSize.get('9')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
-      margin-block-start: 1rem;
-      margin-block-end: 1rem;
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')}px;
     `;
     const headline03 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('8')};
       font-size: ${theme.globals.typography.fontSize.get('7')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
-      margin-block-start: 1rem;
-      margin-block-end: 1rem;
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')}px;
     `;
     const headline04 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('7')};
       font-size: ${theme.globals.typography.fontSize.get('6')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
-      margin-block-start: 1rem;
-      margin-block-end: 1rem;
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')}px;
     `;
     const headline05 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('6')};
       font-size: ${theme.globals.typography.fontSize.get('5')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
-      margin-block-start: 1rem;
-      margin-block-end: 1rem;
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('0')}px;
     `;
     // titles
     const title01 = css`
@@ -74,21 +64,21 @@ export const typographyWrapper =
       line-height: ${theme.globals.typography.lineHeight.get('5')};
       font-size: ${theme.globals.typography.fontSize.get('4')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('1')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('1')}px;
     `;
     const title02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('4')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('1')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('1')}px;
     `;
     const title03 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('3')};
       font-size: ${theme.globals.typography.fontSize.get('1')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')}px;
     `;
     // labels
     const label01 = css`
@@ -96,21 +86,21 @@ export const typographyWrapper =
       line-height: ${theme.globals.typography.lineHeight.get('5')};
       font-size: ${theme.globals.typography.fontSize.get('4')};
       font-weight: ${theme.globals.typography.fontWeight.get('medium')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('1')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('1')}px;
     `;
     const label02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('4')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
       font-weight: ${theme.globals.typography.fontWeight.get('medium')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')}px;
     `;
     const label03 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('3')};
       font-size: ${theme.globals.typography.fontSize.get('1')};
       font-weight: ${theme.globals.typography.fontWeight.get('medium')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')}px;
     `;
     // body
     const body01 = css`
@@ -118,21 +108,21 @@ export const typographyWrapper =
       line-height: ${theme.globals.typography.lineHeight.get('5')};
       font-size: ${theme.globals.typography.fontSize.get('4')};
       font-weight: ${theme.globals.typography.fontWeight.get('regular')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')}px;
     `;
     const body02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('4')};
       font-size: ${theme.globals.typography.fontSize.get('3')};
       font-weight: ${theme.globals.typography.fontWeight.get('regular')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')}px;
     `;
     const body03 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('3')};
       font-size: ${theme.globals.typography.fontSize.get('1')};
       font-weight: ${theme.globals.typography.fontWeight.get('regular')};
-      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')};
+      letter-spacing: ${theme.globals.typography.letterSpacing.get('2')}px;
     `;
 
     const allStyles = {
