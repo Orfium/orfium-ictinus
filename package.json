@@ -84,6 +84,7 @@
     "styled-components": "^5.2.0",
     "ts-jest": "^26.5.6",
     "ts-loader": "^9.1.2",
+    "tsc-watch": "^5.0.3",
     "typedoc": "^0.22.12",
     "typescript": "4.2.4",
     "url-loader": "^4.1.0"
@@ -129,6 +130,8 @@
     "build:lib": "yarn build:partial:style && yarn build:partial:nostyle && yarn build:partial:types",
     "build": "build-storybook -o build/",
     "lint": "eslint './src/**/*.{ts,tsx}'",
+    "yalc:watch": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"yarn yalc:push\"",
+    "yalc:push": "yalc publish --push",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:update": "jest -u",
