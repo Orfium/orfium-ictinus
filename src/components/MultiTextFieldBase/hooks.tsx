@@ -19,9 +19,9 @@ const useMultiTextFieldBaseUtils = ({
   locked,
   hasValue,
   value,
-  rightIcon,
   onOptionDelete,
   onClearAllOptions,
+  onKeyDown,
 }: Props) => {
   const TextfieldRef = React.useRef<HTMLDivElement>(null);
 
@@ -57,17 +57,13 @@ const useMultiTextFieldBaseUtils = ({
     if (value === '' && event.key === 'Backspace') {
       onOptionDelete();
     }
+
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
   };
 
   const icon = useMemo(() => {
-    if (rightIcon) {
-      if (typeof rightIcon === 'string') {
-        return <Icon name={rightIcon} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
-      }
-
-      return rightIcon;
-    }
-
     const handleClick = () => {
       if (!hasValue || locked) {
         return undefined;
@@ -89,7 +85,7 @@ const useMultiTextFieldBaseUtils = ({
     }
 
     return undefined;
-  }, [hasValue, iconName, locked, onClearAllOptions, rightIcon, theme.utils]);
+  }, [hasValue, iconName, locked, onClearAllOptions, theme.utils]);
 
   return { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef };
 };

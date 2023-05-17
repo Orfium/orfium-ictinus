@@ -164,15 +164,6 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       handleSelectedOption(option);
     };
 
-    const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-      const isBackspaceKey = e.keyCode === 8;
-
-      if (isBackspaceKey) {
-        setInputValue(emptyValue);
-        debouncedOnChange('');
-      }
-    };
-
     const debouncedOnChange = React.useCallback(
       debounce((term) => {
         asyncSearch(term);
@@ -306,6 +297,18 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     const hasNoOptionsAndIsCreatable =
       creatable && filteredOptions.length === 1 && filteredOptions[0].isCreated;
 
+    const handleOnKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+      if (!multi && event.key === 'Backspace') {
+        setInputValue(emptyValue);
+        debouncedOnChange('');
+      }
+
+      if (multi && event.key === 'Enter' && hasNoOptionsAndIsCreatable) {
+        handleMultiSelectOptionClick(filteredOptions[0]);
+        setSearchValue('');
+      }
+    };
+
     return (
       <ClickAwayListener
         onClick={() => {
@@ -336,7 +339,9 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
                   {...restInputProps}
                   status={status}
                   value={textFieldValue}
+                  ref={combinedRefs}
                   autoComplete="off"
+                  onKeyDown={handleOnKeyDown}
                 />
               ) : (
                 <TextField
