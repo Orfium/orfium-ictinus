@@ -1,77 +1,5 @@
 const palette = {
   systemic: {
-    light: {
-      neutral: {
-        light: {
-          type: 'color',
-          value: '{colors.neutral.light}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.blue.50}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.blue.100}',
-        },
-      },
-      tertiary: {
-        light: {
-          value: 'rgba(23,91,245,0)',
-          type: 'color',
-        },
-        main: {
-          type: 'color',
-          value: 'rgba(23,91,245,0.07)',
-        },
-        dark: {
-          type: 'color',
-          value: 'rgba(23,91,245,0.14)',
-        },
-      },
-      primary: {
-        light: {
-          type: 'color',
-          value: '{colors.blue.400}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.blue.500}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.blue.600}',
-        },
-      },
-      secondary: {
-        light: {
-          type: 'color',
-          value: '{colors.lightPurple.100}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.lightPurple.200}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.lightPurple.300}',
-        },
-      },
-      upsell: {
-        light: {
-          type: 'color',
-          value: '{colors.magenta.300}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.magenta.500}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.magenta.650}',
-        },
-      },
-    },
     error: {
       light: {
         type: 'color',
@@ -93,7 +21,7 @@ const palette = {
       },
       main: {
         type: 'color',
-        value: '{colors.teal.500}',
+        value: '{colors.teal.100}',
       },
       dark: {
         type: 'color',
@@ -107,69 +35,81 @@ const palette = {
       },
       main: {
         type: 'color',
-        value: '{colors.orange.500}',
+        value: '{colors.orange.100}',
       },
       dark: {
         type: 'color',
         value: '{colors.orange.650}',
       },
     },
+    tertiary: {
+      light: {
+        value: 'rgba(23,91,245,0)',
+        type: 'color',
+      },
+      main: {
+        type: 'color',
+        value: 'rgba(168,177,255,0.07)',
+      },
+      dark: {
+        type: 'color',
+        value: 'rgba(168,177,255,0.14)',
+      },
+    },
+    primary: {
+      light: {
+        type: 'color',
+        value: '{colors.blue.400}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.blue.500}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.blue.550}',
+      },
+    },
+    secondary: {
+      light: {
+        type: 'color',
+        value: '{colors.lightPurple.100}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.lightPurple.200}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.lightPurple.300}',
+      },
+    },
     inverted: {
-      neutral: {
-        light: {
-          type: 'color',
-          value: '{colors.lightPurple.850}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.lightPurple.800}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.lightPurple.750}',
-        },
+      light: {
+        type: 'color',
+        value: '{colors.teal.400}',
       },
-      tertiary: {
-        light: {
-          value: 'rgba(23,91,245,0)',
-          type: 'color',
-        },
-        main: {
-          type: 'color',
-          value: 'rgba(168,177,255,0.07)',
-        },
-        dark: {
-          type: 'color',
-          value: 'rgba(168,177,255,0.14)',
-        },
+      main: {
+        type: 'color',
+        value: '{colors.teal.300}',
       },
-      primary: {
-        light: {
-          type: 'color',
-          value: '{colors.teal.400}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.teal.300}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.teal.500}',
-        },
+      dark: {
+        type: 'color',
+        value: '{colors.teal.500}',
       },
-      secondary: {
-        light: {
-          type: 'color',
-          value: '{colors.lightPurple.800}',
-        },
-        main: {
-          type: 'color',
-          value: '{colors.lightPurple.750}',
-        },
-        dark: {
-          type: 'color',
-          value: '{colors.lightPurple.900}',
-        },
+    },
+    tertiaryAlt: {
+      light: {
+        value: '{colors.neutral.light}',
+        type: 'color',
+      },
+      main: {
+        type: 'color',
+        value: 'rgba(168,177,255,0.07)',
+      },
+      dark: {
+        type: 'color',
+        value: 'rgba(168,177,255,0.14)',
       },
     },
   },

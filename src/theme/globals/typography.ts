@@ -84,7 +84,7 @@ const lineHeight: LineHeight = {
 };
 
 const letterSpacing: LetterSpacing = {
-  get: getFigmaTokensValue<LetterSpacingKey>(letterSpacingFigma, FigmaTokenValueType.String),
+  get: getFigmaTokensValue<LetterSpacingKey>(letterSpacingFigma, FigmaTokenValueType.Pixels),
 };
 
 const textCase: TextCase = {

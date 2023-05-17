@@ -1,8 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
-import getStateTokens from 'theme/states/states.tokens';
 
-import getTokens from '../Button/Button.tokens';
+import { ButtonTokens, getButtonTokens } from '../Button/Button.tokens';
 import { PrimitiveButtonTypes } from '../Button/Button.types';
 
 const rotateSVG = (deg: number) => {
@@ -14,37 +13,23 @@ const rotateSVG = (deg: number) => {
   };
 };
 
-export const wrapperStyle =
-  ({ type, isIconButton }: { type: PrimitiveButtonTypes; isIconButton: boolean }) =>
-  (theme: Theme): SerializedStyles => {
-    const buttonTokens = getTokens(theme);
-
-    /** For the case of a Text Dropdown Button with type = 'tertiary' */
-    const borderStyles =
-      type === 'tertiary' && !isIconButton
-        ? {
-            outline: `${buttonTokens.borderWidth[1]} solid ${buttonTokens.color[type].borderColorSegmented}`,
-            borderRadius: theme.globals.borderRadius.get('2'),
-          }
-        : {};
-
-    return css({
-      position: 'relative',
-      display: 'inline-block',
-      ...borderStyles,
-    });
-  };
+export const wrapperStyle = (): SerializedStyles => {
+  return css({
+    position: 'relative',
+    display: 'inline-block',
+  });
+};
 
 export const buttonSpanStyle =
   ({ type }: { type: PrimitiveButtonTypes }) =>
   (theme: Theme): SerializedStyles => {
-    const buttonTokens = getTokens(theme);
+    const tokens = getButtonTokens(theme);
 
     /** Style for the divider in Text Dropdown Buttons with type = 'primary' | 'secondary' */
     const borderStyles =
       type !== 'tertiary'
         ? {
-            borderRight: `${buttonTokens.borderWidth[1]} solid transparent`,
+            borderRight: `${tokens('borderWidth.1')} solid transparent`,
           }
         : {};
 
@@ -58,12 +43,12 @@ export const buttonSpanStyle =
   };
 
 const getIconButtonActiveState = (theme: Theme, type: PrimitiveButtonTypes) => {
-  const stateTokens = getStateTokens(theme);
+  const tokens = getButtonTokens(theme);
 
   return {
-    backgroundColor: `${stateTokens.active.backgroundColor[type]}`,
+    backgroundColor: tokens(`color.${type}.backgroundColor.active` as ButtonTokens),
     ':hover:not(:disabled)': {
-      backgroundColor: `${stateTokens.active.backgroundColor[type]}`,
+      backgroundColor: tokens(`color.${type}.backgroundColor.active` as ButtonTokens),
     },
   };
 };

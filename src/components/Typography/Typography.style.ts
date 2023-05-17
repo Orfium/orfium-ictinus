@@ -26,7 +26,7 @@ export const typographyWrapper =
     const headline01 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('10')};
-      font-size: ${theme.globals.typography.fontSize.get('9')};
+      font-size: ${theme.globals.typography.fontSize.get('10')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
       margin-block-start: 1rem;
@@ -35,7 +35,7 @@ export const typographyWrapper =
     const headline02 = css`
       font-family: ${theme.globals.typography.fontFamily.get('roboto')};
       line-height: ${theme.globals.typography.lineHeight.get('9')};
-      font-size: ${theme.globals.typography.fontSize.get('8')};
+      font-size: ${theme.globals.typography.fontSize.get('9')};
       font-weight: ${theme.globals.typography.fontWeight.get('bold')};
       letter-spacing: ${theme.globals.typography.letterSpacing.get('0')};
       margin-block-start: 1rem;
@@ -158,8 +158,10 @@ export const typographyWrapper =
     return css`
       ${allStyles[variant]};
       font-style: ${isItalic ? 'italic' : undefined};
-      font-weight: ${isBold ? 'bold' : undefined};
-      text-decoration: ${isUnderline ? 'underline' : undefined};
+      font-weight: ${isBold ? theme.globals.typography.fontWeight.get('bold') : undefined};
+      text-decoration: ${isUnderline
+        ? theme.globals.typography.textDecoration.get('link')
+        : undefined};
       color: ${theme.tokens.textColor.get(textColor)};
     `;
   };

@@ -21,7 +21,7 @@ export const initDates = (
   const hasDefaultDate = isDefaultNow || Object.values(value).some((v) => v);
 
   return {
-    from: hasDefaultDate ? dayjs(value.from) : undefined,
-    to: hasDefaultDate ? dayjs(value.to) : undefined,
+    from: hasDefaultDate ? dayjs(value.from || currentDay) : undefined,
+    to: hasDefaultDate ? dayjs(value.to || currentDay) : undefined,
   };
 };

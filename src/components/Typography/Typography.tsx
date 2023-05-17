@@ -23,12 +23,19 @@ export type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' 
 export type TextColorTypes = 'primary' | 'secondary' | 'error' | 'success' | 'warning' | 'active';
 
 export type TypographyProps = {
+  /** Type of the Typography that will affect the color of the text */
   type?: TextColorTypes;
+  /** The variant of the Typography is the style of the text (font size, weight, line height, etc) */
   variant?: TypographyVariant;
+  /** How you want to represent it, eg div, span or other */
   component?: TypographyComponent;
+  /** A boolean definition of the inverted case */
   isInverted?: boolean;
+  /** A boolean definition to apply italic text */
   isItalic?: boolean;
+  /** A boolean definition to apply bold text */
   isBold?: boolean;
+  /** A boolean definition to apply underlined text */
   isUnderline?: boolean;
   children?: React.ReactNode;
 };

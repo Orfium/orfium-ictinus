@@ -10,75 +10,82 @@ import { Meta } from '@storybook/addon-docs';
 
 # Global States<br/><br/>
 
-In order to provide a consistent feel among apps that use Ictinus, we have common styling rules on the interactions of the user with some components
+The state styles for each component are declared inside their tokens. For every component we get the following tokens:
+
+- ***inactive*** (used for the ***default state*** of the component)
+- ***hover*** (used for the ***Hover*** state)
+- ***focused*** (used for ***Focus*** state)
+- ***active*** (used for the ***Pressed*** state)
+- ***disabled*** (used for ***Disabled*** state)
+
+The component tokens for these states point to the semantic tokens, so basically the states are centralised based on the chosen theme.
 
 ## Hover
 
-When hovering, the background color is darkened by one step in shade ( +50 ).
-
-
-- If no background color exists, transparent or white, then on hover we use lightGrey-50
-- If it goes out of bounds, it's lightened by one step ( -50 )
-
+When hovering, the component's corresponding token returns the ***light variant of the chosen systemic color*** for the background.
 
 ## Focused
 
-When focused, the border is set to Magenta-500 with width the current width of the component + 1.
-
-All Text components are excluded from this rule, as the focused and active rules result in the same state.
+When focused, the component's corresponding token returns a ***border declared in the semantic tokens***.
 
 ## Pressed
 
-When pressed, the background color is darkened by two steps in shade ( +100 ).
-
-
-- If no background color exists, transparent or white, then on pressed we use lightGrey-100
-- If it goes out of bounds, it's lightened by two steps ( -100 )
+When pressed, the component's corresponding token returns the ***dark variant of the chosen systemic color*** for the background.
 
 ## Populated
 
-No Global rule is defined for this yet.
+No rule is defined for this yet.
 
 ## Disabled
 
-Apply opacity 50% to whatever style each component has.
+When disabled, the component's corresponding token returns the ***disabled-state semantic token***.
 
-
-
-
-<br/><br/><br/><br/>
+<br />
+<br />
 
 Play around to see the styles in action
 
-Default
+***Default***
 
 <ThemeWrapper>
-    <Stack>
-        <Button dataTestId={'size-lg'}>Hello world</Button>
-        <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'}>Label</Chip>
-        <TextField label={'Label'} size={'md'} styleType={'elevated'} />
-        <Filter
-          styleType="filled"
-          defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
-          items={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'banana', label: 'Banana' }]}
-          label={'Label'}
-        />
-    </Stack>
+  <Stack>
+    <Button dataTestId={'size-lg'}>Hello world</Button>
+    <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'}>
+      Label
+    </Chip>
+    <TextField label={'Label'} size={'md'} styleType={'elevated'} />
+    <Filter
+      styleType="filled"
+      defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
+      items={[
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'banana', label: 'Banana' },
+      ]}
+      label={'Label'}
+    />
+  </Stack>
 </ThemeWrapper>
 
-Disabled
+***Disabled***
 
 <ThemeWrapper>
-    <Stack>
-        <Button dataTestId={'size-lg'} disabled>Hello world</Button>
-        <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'} disabled>Label</Chip>
-        <TextField label={'Label'} size={'md'} styleType={'elevated'} disabled />
-        <Filter
-          styleType="filled"
-          disabled
-          defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
-          items={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'banana', label: 'Banana' }]}
-          label={'Label'}
-        />
-    </Stack>
+  <Stack>
+    <Button dataTestId={'size-lg'} isDisabled>
+      Hello world
+    </Button>
+    <Chip styleType={'interactive'} onClear={() => {}} fill={'blue'} isDisabled>
+      Label
+    </Chip>
+    <TextField label={'Label'} size={'md'} styleType={'elevated'} isDisabled />
+    <Filter
+      styleType="filled"
+      isDisabled
+      defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
+      items={[
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'banana', label: 'Banana' },
+      ]}
+      label={'Label'}
+    />
+  </Stack>
 </ThemeWrapper>
