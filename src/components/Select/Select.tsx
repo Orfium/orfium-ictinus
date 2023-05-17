@@ -297,13 +297,19 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
     const hasNoOptionsAndIsCreatable =
       creatable && filteredOptions.length === 1 && filteredOptions[0].isCreated;
 
-    const handleOnKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-      if (!multi && event.key === 'Backspace') {
+    const handleSingleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+      const isBackspace = event.key === 'Backspace';
+
+      if (isBackspace) {
         setInputValue(emptyValue);
         debouncedOnChange('');
       }
+    };
 
-      if (multi && event.key === 'Enter' && hasNoOptionsAndIsCreatable) {
+    const handleMultiKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+      const isEnter = event.key === 'Enter';
+
+      if (hasNoOptionsAndIsCreatable && isEnter) {
         handleMultiSelectOptionClick(filteredOptions[0]);
         setSearchValue('');
       }
@@ -341,13 +347,13 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
                   value={textFieldValue}
                   ref={combinedRefs}
                   autoComplete="off"
-                  onKeyDown={handleOnKeyDown}
+                  onKeyDown={handleMultiKeyDown}
                 />
               ) : (
                 <TextField
                   styleType={styleType}
                   rightIcon={rightIconRender}
-                  onKeyDown={handleOnKeyDown}
+                  onKeyDown={handleSingleKeyDown}
                   onInput={handleOnInput}
                   onChange={ON_CHANGE_MOCK}
                   readOnly={!isSearchable}
