@@ -1,0 +1,50 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { withKnobs, boolean, array, select, text } from '@storybook/addon-knobs';
+import { MemoryRouter } from 'react-router-dom';
+import DemoUseSearchQueryParams from './storyUtils/DemoUseSearchQueryParams.tsx';
+
+<Meta title="Hooks/useSearchQueryParams" component={() => true} />
+
+# useSearchQueryParams
+
+The useSearchQueryParams hook, returns the URL search query parameters as a key - value plain object (**Record<string, string>**). Keep in mind that this hook can only be used into a react-router-dom context.
+
+# Usage
+
+```js
+import { useSearchQueryParams } from '@orfium/ictinus/dist/hooks';
+
+const MyComponent: FC = () => {
+  // URL => https://orfium-product.com/mypath?page=1&size=12&library=react&testing=yolo
+  const searchQueryParams = useSearchQueryParams();
+
+  // console.log(searchQueryParams)
+  // { "page": "1", "size": "12", "library": "react", "testing": "yolo" }
+};
+```
+
+# useSearchQueryParams demo
+
+This demo represents how the url will be taken into an object. You can play with **knobs** as well for different types of url
+
+<Preview>
+  <Story
+    name="useSearchQueryParams"
+    parameters={{
+      query: {
+        q: 'search',
+      },
+    }}
+    decorators={[
+      withKnobs,
+      () => {
+        const value = text('given url', '/test?page=1&size=12&library=react&testing=yolo');
+        return (
+          <MemoryRouter initialEntries={[value]}>
+            <DemoUseSearchQueryParams initialEntries={value} />
+          </MemoryRouter>
+        );
+      },
+    ]}
+  />
+</Preview>

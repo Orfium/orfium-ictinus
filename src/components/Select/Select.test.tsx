@@ -4,6 +4,12 @@ import React from 'react';
 import { render, screen, selectDropdownOption, waitFor } from '../../test';
 import Select from './Select';
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
 const dropdownList = [
   { label: 'Greece', value: 'GR' },
   { label: 'Zimbabwe', value: 'ZW' },
@@ -166,6 +172,7 @@ describe('Generic Select', () => {
 
 describe('Multi Select', () => {
   let selectInput: HTMLInputElement;
+  let chips: HTMLElement[];
 
   beforeEach(() => {
     render(
@@ -222,5 +229,18 @@ describe('Multi Select', () => {
     userEvent.click(screen.getByTestId('select-right-icon'));
 
     expect(screen.queryByTestId('chip-chip_0')).not.toBeInTheDocument();
+  });
+
+  it('selects all options when Select All is clicked', async () => {
+    userEvent.click(selectInput);
+    userEvent.click(screen.getByTestId('ictinus_list_default_option'));
+
+    chips = await screen.findAllByTestId(/chip-chip_/);
+
+    expect(chips.length).toEqual(dropdownList.length);
+
+    userEvent.click(selectInput);
+
+    expect(screen.getByText('No options')).toBeInTheDocument();
   });
 });

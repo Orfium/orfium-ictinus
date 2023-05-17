@@ -1,5 +1,7 @@
+import isEqual from 'lodash/isEqual';
 import React, { useEffect } from 'react';
 
+import { SELECT_ALL_OPTION } from '../constants';
 import { SelectOption } from '../Select';
 
 type Props = {
@@ -59,14 +61,11 @@ const useMultiselectUtils = ({
         setAvailableMultiSelectOptions([...availableMultiSelectOptions, lastItem]);
       }
     }
-
-    setOpen(false);
   };
 
   const handleClearAllOptions = () => {
     setAvailableMultiSelectOptions([...availableMultiSelectOptions, ...multiSelectedOptions]);
     setMultiSelectedOpts([]);
-    setOpen(false);
 
     if (onClear) {
       onClear();
@@ -77,13 +76,35 @@ const useMultiselectUtils = ({
     }
   };
 
+  const handleMultiSelectOptionClick = (option: SelectOption) => {
+    /** The user clicks the Select All option */
+    if (isEqual(option, SELECT_ALL_OPTION)) {
+      const [remaining, selected] = availableMultiSelectOptions.reduce(
+        (result, element) => {
+          result[element.isDisabled ? 0 : 1].push(element);
+
+          return result;
+        },
+        [[], []] as SelectOption[][]
+      );
+
+      setMultiSelectedOpts([...multiSelectedOptions, ...selected]);
+      setAvailableMultiSelectOptions(remaining);
+      setOpen(false);
+    } else {
+      setMultiSelectedOpts([...multiSelectedOptions, option]);
+      setAvailableMultiSelectOptions(
+        availableMultiSelectOptions.filter((opt) => opt.value !== option.value)
+      );
+    }
+  };
+
   return {
     multiSelectedOptions,
-    setMultiSelectedOpts,
     availableMultiSelectOptions,
-    setAvailableMultiSelectOptions,
     handleOptionDelete,
     handleClearAllOptions,
+    handleMultiSelectOptionClick,
   };
 };
 
