@@ -1,7 +1,7 @@
 import useBreakpoints from 'hooks/useBreakpoints';
 import head from 'lodash/head';
 import pluralize from 'pluralize';
-import React, { useEffect, useState } from 'react';
+import React, {memo, useEffect, useState} from 'react';
 import isEqual from 'react-fast-compare';
 
 import CheckBox from '../CheckBox';
@@ -119,25 +119,18 @@ function Table<T>({
 
   const columnCount = getColumnCount(columns, onCheck, hasExpandableRows);
 
-  useEffect(() => {
-    if (onSort) {
-      onSort(sorting.column, sorting.order);
-    }
-  }, [onSort, sorting]);
-
   /** when the selection of ids change then inform the user if onCheck callback provided **/
-  React.useEffect(() => {
+  useEffect(() => {
     if (onCheck && selectedIds) {
-      onCheck(selectedIds as Selection[]);
+      onCheck(selectedIds);
     }
   }, [onCheck, selectedIds]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     // when data are fresh initialize the selectedIds state
     setSelectedIds(undefined);
   }, [data]);
 
-  // @ts-ignore
   const onSelectionAdd = React.useCallback((rowId: Selection) => {
     setSelectedIds((selectedIds: Selection[] = []) =>
       selectedIds.indexOf(rowId) === -1
@@ -173,6 +166,8 @@ function Table<T>({
   const handleSorting = (column: string) => {
     setSorting(prevState => {
       if (sortDir) {
+        onSort?.(column, sortDir);
+
         return {
           column,
           order: sortDir,
@@ -180,11 +175,15 @@ function Table<T>({
       }
 
       if (prevState.column !== column) {
+        onSort?.(column, 'asc');
+
         return {
           column,
           order: 'asc',
         };
       }
+
+      onSort?.(column, prevState.order === 'asc' ? 'desc' : 'asc');
 
       return {
         column,
@@ -267,9 +266,6 @@ function Table<T>({
                     dataTestIdPrefix={dataTestIdPrefix}
                   />
                 )}
-                {/* TODO: Remove this when the open TS issue, regarding arrays with multiple types, is fixed */}
-                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                {/* @ts-ignore */}
                 {columns.map((item: string | ExtendedColumn, index: number) => {
                   return (
                     <TableCell
@@ -360,4 +356,4 @@ function Table<T>({
   );
 }
 
-export default React.memo(Table, isEqual);
+export default memo(Table, isEqual);
