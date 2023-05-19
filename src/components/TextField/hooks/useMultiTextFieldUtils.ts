@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Props as TextFieldProps } from '../TextField';
 
@@ -77,6 +77,10 @@ const useMultiTextFieldUtils = ({
       }
     }
   };
+
+  // useEffect(() => {
+  //   setValues(multiValues);
+  // }, [multiValues]);
 
   return {
     values,

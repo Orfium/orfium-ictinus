@@ -5,6 +5,7 @@ import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
+import TextFieldShowcase from '../../components/storyUtils/TextFieldShowcase/TextFieldShowcase.tsx';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
@@ -263,7 +264,7 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
 
 <Preview>
   <Story name="Multi TextField">
-    <Stack>
+    <div>
       <TextField
         multi
         multiValues={['Orange', 'Citrus']}
@@ -274,7 +275,8 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
         status={select('Status', ['hint', 'error', 'normal'], 'hint')}
         maxMultiValues={text('maxMultiValues', 10)}
       />
-    </Stack>
+    </div>
+    <TextFieldShowcase />
   </Story>
 </Preview>
 
