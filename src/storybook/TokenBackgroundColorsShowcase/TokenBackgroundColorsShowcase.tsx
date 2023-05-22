@@ -16,7 +16,6 @@ import Typography from 'components/Typography';
 
 const TokenBackgroundColorsShowcase: FC = () => {
   const types = map(backgroundColorFigma, (value, key) => ({ key, ...value }));
-  const theme = useTheme();
 
   return (
     <div css={{}}>

@@ -1,101 +1,84 @@
 import { css } from '@emotion/react';
-import useTheme from 'hooks/useTheme';
-import { get } from 'lodash';
+import { map } from 'lodash';
 import React, { FC } from 'react';
 import paletteFigma from 'theme/tokens/semantic/variables/palette';
 import { DotKeys } from 'theme/tokens/utils';
 
-import { colorStyle, stateWrapperStyle, typeWrapperStyle } from './TokenColorsShowcase.style';
+import {
+  colorStyle,
+  descriptionStyle,
+  stateWrapperStyle,
+  typeWrapperStyle,
+} from './TokenColorsShowcase.style';
 import Card from 'components/Card';
 import Typography from 'components/Typography';
 
-const TokenColorsShowcase: FC = () => {
+const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'systemic' }) => {
   const states = ['light', 'main', 'dark'];
-  const typesLight = ['primary', 'secondary', 'tertiary'];
-  const types = ['error', 'success', 'warning'];
-  const theme = useTheme();
+  const systemics = map(paletteFigma.systemic, (value, key) => ({
+    key,
+    category: 'systemic',
+    ...value,
+  }));
+  const accents = map(paletteFigma.accents, (value, key) => ({
+    key,
+    category: 'accents',
+    ...value,
+  }));
 
   return (
     <div css={{}}>
-      {typesLight.map((typeLight) => (
-        <div key={typeLight} css={typeWrapperStyle}>
-          <Card elevated={'03'}>
+      <Card elevated={'03'} radius={'4'}>
+        {(type === 'systemic' ? systemics : accents).map((type: any) => (
+          <div key={type.key} css={typeWrapperStyle}>
             <div
               css={css`
                 padding: 15px;
               `}
             >
-              <Typography variant={'headline03'}>{typeLight}</Typography>
+              <Typography variant={'headline03'} type={'secondary'}>
+                {type.key}
+              </Typography>
               <div css={stateWrapperStyle}>
-                {states.map((state) => (
+                {/* //TODO discuss contrast use */}
+                {(type.category === 'systemic' ? states : [...states, 'contrast']).map((state) => (
                   <div
-                    key={`systemic.light.${typeLight}.${state}`}
+                    key={`${type.category}.${type.key}.${state}`}
                     css={css`
-                      width: 30%;
+                      display: flex;
+                      margin: 15px 0;
                     `}
                   >
-                    <Typography>{state}</Typography>
                     <div
-                      css={css`
-                        ${colorStyle()};
+                      css={(theme) => css`
+                        ${colorStyle(theme)};
                         background-color: ${theme.tokens.palette.get(
-                          `systemic.light.${typeLight}.${state}` as DotKeys<typeof paletteFigma>
+                          `${type.category}.${type.key}.${state}` as DotKeys<typeof paletteFigma>
                         )};
                       `}
                     />
-                    <Typography variant={'body02'} isItalic>
-                      ${`systemic.light.${typeLight}.${state}`}
-                    </Typography>
-                    {/*<Typography variant={'body02'} isItalic>*/}
-                    {/*  {paletteFigma.systemic.light[typeLight][state].value}*/}
-                    {/*</Typography>*/}
+                    <div>
+                      <Typography isBold>{state}</Typography>
+                      <div css={descriptionStyle}>
+                        <Typography variant={'body02'} type={'secondary'}>
+                          {paletteFigma[type.category][type.key][state].description}
+                        </Typography>
+                        <Typography variant={'body02'} component={'span'}>
+                          ${`${type.category}.${type.key}.${state}`}
+                        </Typography>
+                        {' = '}
+                        <Typography variant={'body02'} component={'span'}>
+                          {paletteFigma[type.category][type.key][state].value}
+                        </Typography>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
-          </Card>
-        </div>
-      ))}
-
-      {types.map((type) => (
-        <div key={type} css={typeWrapperStyle}>
-          <Card elevated={'03'}>
-            <div
-              css={css`
-                padding: 15px;
-              `}
-            >
-              <Typography variant={'headline03'}>{type}</Typography>
-              <div css={stateWrapperStyle}>
-                {states.map((state) => (
-                  <div
-                    key={`systemic.${type}.${state}`}
-                    css={css`
-                      width: 30%;
-                    `}
-                  >
-                    <Typography>{state}</Typography>
-                    <div
-                      css={css`
-                        ${colorStyle()};
-                        background-color: ${theme.tokens.palette.get(
-                          `systemic.${type}.${state}` as DotKeys<typeof paletteFigma>
-                        )};
-                      `}
-                    />
-                    <Typography variant={'body02'} isItalic>
-                      ${`systemic.${type}.${state}`}
-                    </Typography>
-                    <Typography variant={'body02'} isItalic>
-                      {get(paletteFigma.systemic, [type, state, 'value'])}
-                    </Typography>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Card>
-        </div>
-      ))}
+          </div>
+        ))}
+      </Card>
     </div>
   );
 };
