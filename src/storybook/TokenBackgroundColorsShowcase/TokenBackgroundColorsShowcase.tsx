@@ -7,6 +7,7 @@ import { DotKeys } from 'theme/tokens/utils';
 
 import {
   colorStyle,
+  descriptionStyle,
   stateWrapperStyle,
   typeWrapperStyle,
 } from './TokenBackgroundColorsShowcase.style';
@@ -24,8 +25,8 @@ const TokenBackgroundColorsShowcase: FC = () => {
           <div key={type.key} css={typeWrapperStyle}>
             <div css={stateWrapperStyle}>
               <div
-                css={css`
-                  ${colorStyle()};
+                css={(theme) => css`
+                  ${colorStyle(theme)};
                   background-color: ${theme.tokens.backgroundColor.get(
                     type.key as DotKeys<typeof backgroundColorFigma>
                   )};
@@ -33,16 +34,18 @@ const TokenBackgroundColorsShowcase: FC = () => {
               />
               <div>
                 <Typography isBold>{type.key}</Typography>
-                <Typography variant={'body02'}>
-                  {get(backgroundColorFigma, [type.key, 'description'])}
-                </Typography>
-                <Typography variant={'body02'} isItalic component={'span'}>
-                  ${`semantic.backgroundColor.${type.key}`}
-                </Typography>
-                {' - '}
-                <Typography variant={'body02'} isItalic component={'span'}>
-                  {get(backgroundColorFigma, [type.key, 'value'])}
-                </Typography>
+                <div css={descriptionStyle}>
+                  <Typography variant={'body02'} type={'secondary'}>
+                    {get(backgroundColorFigma, [type.key, 'description'])}
+                  </Typography>
+                  <Typography variant={'body02'} component={'span'}>
+                    ${`semantic.backgroundColor.${type.key}`}
+                  </Typography>
+                  {' = '}
+                  <Typography variant={'body02'} component={'span'}>
+                    {get(backgroundColorFigma, [type.key, 'value'])}
+                  </Typography>
+                </div>
               </div>
             </div>
           </div>
