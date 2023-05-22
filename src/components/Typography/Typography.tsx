@@ -38,6 +38,7 @@ export type TypographyProps = {
   /** A boolean definition to apply underlined text */
   isUnderline?: boolean;
   children?: React.ReactNode;
+  id?: string;
 };
 
 export const detectComponentBasedOnType = (variant: TypographyVariant): TypographyComponent => {

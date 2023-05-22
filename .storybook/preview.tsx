@@ -1,14 +1,12 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
-import { addParameters } from '@storybook/react';
-import { DocsContainer } from '@storybook/addon-docs';
+import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
-import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
 import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
-import { css } from '@emotion/react';
-import { UsageGuidelines, Tip } from '../src/storybook';
+import { UsageGuidelines, Tip, Preview } from '../src/storybook';
+import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
 
 const viewPorts = {
   desktop1920: {
@@ -77,31 +75,10 @@ const viewPorts = {
   },
 };
 
-const ThemeSwitcher = () => {
-  const themeSwitchState = useThemeSwitch();
-  return (
-    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-      <button
-        onClick={themeSwitchState.toggle}
-        css={{
-          backgroundColor: themeSwitchState.isDark ? '#fff' : 'transparent',
-          color: '#000',
-          outline: 'none',
-          borderRadius: 4,
-        }}
-      >
-        turn {themeSwitchState.isDark ? 'semantic' : 'dark'} on
-      </button>
-    </div>
-  );
-};
-
 const Wrapper: React.FC = ({ children }) => {
-  const themeSwitchState = useThemeSwitch();
   return (
     <div
       style={{
-        backgroundColor: themeSwitchState.isDark ? '#0E0E17' : '#ffffff',
         width: '100%',
         position: 'relative',
         flex: 1,
@@ -120,7 +97,6 @@ export const decorators = [
     return (
       <Wrapper>
         <div style={{ margin: 15 }}>
-          <ThemeSwitcher />
           <Story />
         </div>
       </Wrapper>
@@ -133,15 +109,6 @@ export const decorators = [
   ),
 ];
 
-const customTypography = css`
-  &:after {
-    content: '';
-    margin-top: 8px;
-    background: #323338;
-    height: 2px;
-  }
-  display: grid;
-`;
 const inputEmpty = styled.input(({ theme }) => ({}));
 export const parameters = {
   viewport: {
@@ -151,11 +118,13 @@ export const parameters = {
   viewMode: 'docs',
   previewTabs: {
     'storybook/docs/panel': {
-      index: 1,
+      index: -1,
     },
     canvas: { title: 'Sandbox' },
   },
   docs: {
+    page: DocsPage,
+    inlineStories: true,
     container: ({ children, context }: any) => (
       <DocsContainer context={context}>
         <ThemeProvider>{children}</ThemeProvider>
@@ -163,12 +132,14 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }: any) => (
-        <Typography css={customTypography} variant={'headline01'}>
+        // @ts-ignore
+        <Typography css={SBTypographyWrapper} variant={'headline01'}>
           {children}
         </Typography>
       ),
       h2: ({ children }: any) => (
-        <Typography css={customTypography} variant={'headline02'}>
+        // @ts-ignore
+        <Typography css={SBTypographyWrapper} variant={'headline02'}>
           {children}
         </Typography>
       ),
@@ -180,6 +151,7 @@ export const parameters = {
       input: inputEmpty,
       UsageGuidelines,
       Tip,
+      Preview,
     },
   },
 };

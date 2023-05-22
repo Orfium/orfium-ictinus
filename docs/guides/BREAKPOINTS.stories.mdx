@@ -2,7 +2,15 @@ import { Meta, Story, Preview } from '@storybook/addon-docs';
 import Breakpoints from '../../src/components/storyUtils/Breakpoints/Breakpoints';
 import ThemeWrapper from '../../src/components/storyUtils/ThemeWrapper';
 
-<Meta title="Guide/Breakpoints" />
+<Meta
+  title="Guide/Breakpoints"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
 
 # Breakpoints
 

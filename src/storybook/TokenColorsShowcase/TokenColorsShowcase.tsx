@@ -46,9 +46,9 @@ const TokenColorsShowcase: FC = () => {
                     <Typography variant={'body02'} isItalic>
                       ${`systemic.light.${typeLight}.${state}`}
                     </Typography>
-                    <Typography variant={'body02'} isItalic>
-                      {paletteFigma.systemic.light[typeLight][state].value}
-                    </Typography>
+                    {/*<Typography variant={'body02'} isItalic>*/}
+                    {/*  {paletteFigma.systemic.light[typeLight][state].value}*/}
+                    {/*</Typography>*/}
                   </div>
                 ))}
               </div>

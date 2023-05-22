@@ -1,5 +1,3 @@
-import { css } from '@emotion/react';
-import { SerializedStyles } from '@emotion/react/dist/emotion-react.cjs';
 import React, { FC, useMemo } from 'react';
 
 import TypographyComponent, { TypographyVariant } from '../../components/Typography';
@@ -7,7 +5,6 @@ import TypographyComponent, { TypographyVariant } from '../../components/Typogra
 export type TypographyProps = {
   children: string;
   variant: TypographyVariant;
-  css?: SerializedStyles;
 };
 
 const Typography: FC<TypographyProps> = ({ children, variant, ...rest }) => {

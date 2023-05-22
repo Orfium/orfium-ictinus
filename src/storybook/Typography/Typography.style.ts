@@ -1,12 +1,15 @@
-import { css, SerializedStyles } from '@emotion/react';
+import { css } from '@emotion/react';
 
-export const TypographyWrapper = () => (): SerializedStyles =>
+import { Theme } from '../../theme';
+
+export const TypographyWrapper = (theme: Theme) =>
   css`
+    margin-top: 35px;
+    display: grid;
     &:after {
       content: '';
       margin-top: 8px;
-      background: #323338;
-      height: 2px;
+      background: ${theme.tokens.borderColor.get('decorative.light.muted')};
+      height: 1px;
     }
-    display: grid;
   `;

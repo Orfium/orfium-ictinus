@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +15,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,16 +41,16 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   width: auto;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -77,15 +70,15 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -99,36 +92,36 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   resize: both;
 }
 
-.emotion-5+label {
+.emotion-4+label {
   font-size: 0.9375rem;
 }
 
-.emotion-5:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: #5f6c85;
 }
 
-.emotion-5:not(:focus):placeholder-shown+label {
+.emotion-4:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-5:focus+label,
-.emotion-5:not(:placeholder-shown)+label {
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -136,17 +129,16 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
   font-weight: 700;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -161,24 +153,7 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -188,16 +163,16 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <textarea
-                className="emotion-5"
+                className="emotion-4"
                 cols={10}
                 placeholder="Label"
                 required={false}
@@ -215,16 +190,16 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <textarea
-                className="emotion-5"
+                className="emotion-4"
                 cols={35}
                 placeholder="Label"
                 required={false}
@@ -241,13 +216,6 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
 
 exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -261,7 +229,7 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -287,16 +255,16 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   width: auto;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -316,15 +284,15 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -338,36 +306,36 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   resize: both;
 }
 
-.emotion-5+label {
+.emotion-4+label {
   font-size: 0.9375rem;
 }
 
-.emotion-5:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: #5f6c85;
 }
 
-.emotion-5:not(:focus):placeholder-shown+label {
+.emotion-4:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-5:focus+label,
-.emotion-5:not(:placeholder-shown)+label {
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -375,17 +343,16 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
   font-weight: 700;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -400,24 +367,7 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -427,16 +377,16 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <textarea
-                className="emotion-5"
+                className="emotion-4"
                 placeholder="placeholder here"
                 required={false}
               />
@@ -452,16 +402,16 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <textarea
-                className="emotion-5"
+                className="emotion-4"
                 placeholder="placeholder here"
                 required={false}
               />
@@ -477,16 +427,16 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <textarea
-                className="emotion-5"
+                className="emotion-4"
                 placeholder="placeholder here"
                 required={false}
               />
@@ -501,13 +451,6 @@ exports[`Storyshots Design System/TextArea Text Area Types 1`] = `
 
 exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -521,7 +464,7 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -547,16 +490,16 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   width: auto;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -576,15 +519,15 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   padding: 0.5rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -598,36 +541,36 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   resize: both;
 }
 
-.emotion-5+label {
+.emotion-4+label {
   font-size: 0.9375rem;
 }
 
-.emotion-5:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: #5f6c85;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: #5f6c85;
 }
 
-.emotion-5:not(:focus):placeholder-shown+label {
+.emotion-4:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-5:focus+label,
-.emotion-5:not(:placeholder-shown)+label {
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -635,17 +578,16 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
   font-weight: 700;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -660,24 +602,7 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -687,16 +612,16 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <textarea
-                className="emotion-5"
+                className="emotion-4"
                 disabled={false}
                 placeholder="Label"
                 required={false}
@@ -713,13 +638,6 @@ exports[`Storyshots Design System/TextArea Text Area with KNOBS 1`] = `
 
 exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -733,7 +651,7 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -759,8 +677,246 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   width: auto;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.0625rem transparent;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0.5rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-4 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 9.375rem;
+  min-width: 9.375rem;
+  resize: none;
+}
+
+.emotion-4+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: #5f6c85;
+}
+
+.emotion-4::-moz-placeholder {
+  color: #5f6c85;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: #5f6c85;
+}
+
+.emotion-4::placeholder {
+  color: #5f6c85;
+}
+
+.emotion-4:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <textarea
+                className="emotion-4"
+                disabled={true}
+                placeholder="Label"
+                required={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <textarea
+                className="emotion-4"
+                disabled={true}
+                placeholder="Label"
+                required={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <textarea
+                className="emotion-4"
+                disabled={true}
+                placeholder="Label"
+                required={false}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #e51460;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: auto;
+  min-width: 9.375rem;
+  height: auto;
+  background-color: white;
+  width: auto;
+}
+
+.emotion-2:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-2:focus-within {
+  box-shadow: 0 0 0 0.125rem #e51460;
+  background-color: #e7ebf2;
 }
 
 .emotion-3 {
@@ -802,7 +958,7 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   text-overflow: ellipsis;
   width: 9.375rem;
   min-width: 9.375rem;
-  resize: none;
+  resize: both;
 }
 
 .emotion-5+label {
@@ -846,270 +1002,7 @@ exports[`Storyshots Design System/TextArea TextArea disabled with label 1`] = `
   cursor: not-allowed;
 }
 
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <textarea
-                className="emotion-5"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <textarea
-                className="emotion-5"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <textarea
-                className="emotion-5"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #e51460;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: auto;
-  min-width: 9.375rem;
-  height: auto;
-  background-color: white;
-  width: auto;
-}
-
-.emotion-3:hover {
-  background-color: #f3f5f8;
-}
-
-.emotion-3:focus-within {
-  box-shadow: 0 0 0 0.125rem #e51460;
-  background-color: #e7ebf2;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0.5rem;
-}
-
-.emotion-4>div {
-  position: relative;
-}
-
-.emotion-5 {
-  width: 100%;
-}
-
 .emotion-6 {
-  background: transparent;
-  border: none;
-  color: #0f0f17;
-  display: block;
-  position: relative;
-  z-index: 1;
-  font-size: 0.9375rem;
-  text-overflow: ellipsis;
-  width: 9.375rem;
-  min-width: 9.375rem;
-  resize: both;
-}
-
-.emotion-6+label {
-  font-size: 0.9375rem;
-}
-
-.emotion-6:focus {
-  outline: none;
-}
-
-.emotion-6::-webkit-input-placeholder {
-  color: #5f6c85;
-}
-
-.emotion-6::-moz-placeholder {
-  color: #5f6c85;
-}
-
-.emotion-6:-ms-input-placeholder {
-  color: #5f6c85;
-}
-
-.emotion-6::placeholder {
-  color: #5f6c85;
-}
-
-.emotion-6:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-6:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1120,11 +1013,11 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0.5rem 0 0;
 }
 
-.emotion-7 svg {
+.emotion-6 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-7 span {
+.emotion-6 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1132,7 +1025,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0 0.125rem;
 }
 
-.emotion-8 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1148,17 +1041,17 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-8 {
   fill: #FF176B;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-9 path {
+.emotion-8 path {
   fill: #FF176B;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1184,16 +1077,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   width: auto;
 }
 
-.emotion-25:hover {
+.emotion-24:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-25:focus-within {
+.emotion-24:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-29 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1204,11 +1097,11 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0.5rem 0 0;
 }
 
-.emotion-29 svg {
+.emotion-28 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-29 span {
+.emotion-28 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -1216,23 +1109,22 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
   padding: 0 0.125rem;
 }
 
-.emotion-31 {
+.emotion-30 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-31 path {
+.emotion-30 path {
   fill: #5f6c85;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -1247,24 +1139,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -1274,7 +1149,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div
             style={
@@ -1284,16 +1159,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <textarea
-                    className="emotion-6"
+                    className="emotion-5"
                     placeholder="Label"
                     required={false}
                     status="error"
@@ -1302,15 +1177,15 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-6"
               data-testid="error"
             >
               <span
-                className="emotion-8"
+                className="emotion-7"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                 />
               </span>
               Error in Text Area
@@ -1324,16 +1199,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <textarea
-                    className="emotion-6"
+                    className="emotion-5"
                     placeholder="Label"
                     required={false}
                     status="error"
@@ -1342,15 +1217,15 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-6"
               data-testid="error"
             >
               <span
-                className="emotion-8"
+                className="emotion-7"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                 />
               </span>
               Error in Text Area
@@ -1364,16 +1239,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <textarea
-                    className="emotion-6"
+                    className="emotion-5"
                     placeholder="Label"
                     required={false}
                     status="error"
@@ -1382,15 +1257,15 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-6"
               data-testid="error"
             >
               <span
-                className="emotion-8"
+                className="emotion-7"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                 />
               </span>
               Error in Text Area
@@ -1406,7 +1281,7 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div
             style={
@@ -1416,16 +1291,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             }
           >
             <div
-              className="emotion-25"
+              className="emotion-24"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <textarea
-                    className="emotion-6"
+                    className="emotion-5"
                     placeholder="Label"
                     required={false}
                     status="hint"
@@ -1434,15 +1309,15 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               </div>
             </div>
             <div
-              className="emotion-29"
+              className="emotion-28"
               data-testid="error"
             >
               <span
-                className="emotion-8"
+                className="emotion-7"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-31"
+                  className="emotion-30"
                 />
               </span>
               Error in Text Area
@@ -1456,16 +1331,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             }
           >
             <div
-              className="emotion-25"
+              className="emotion-24"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <textarea
-                    className="emotion-6"
+                    className="emotion-5"
                     placeholder="Label"
                     required={false}
                     status="hint"
@@ -1474,15 +1349,15 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               </div>
             </div>
             <div
-              className="emotion-29"
+              className="emotion-28"
               data-testid="error"
             >
               <span
-                className="emotion-8"
+                className="emotion-7"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-31"
+                  className="emotion-30"
                 />
               </span>
               Error in Text Area
@@ -1496,16 +1371,16 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
             }
           >
             <div
-              className="emotion-25"
+              className="emotion-24"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <textarea
-                    className="emotion-6"
+                    className="emotion-5"
                     placeholder="Label"
                     required={false}
                     status="hint"
@@ -1514,15 +1389,15 @@ exports[`Storyshots Design System/TextArea TextArea with label and statuses 1`] 
               </div>
             </div>
             <div
-              className="emotion-29"
+              className="emotion-28"
               data-testid="error"
             >
               <span
-                className="emotion-8"
+                className="emotion-7"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-31"
+                  className="emotion-30"
                 />
               </span>
               Error in Text Area

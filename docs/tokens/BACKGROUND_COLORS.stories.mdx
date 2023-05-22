@@ -1,7 +1,15 @@
 import { Meta, Preview, Story } from '@storybook/addon-docs';
 import TokenBackgroundColorsShowcase from '../../src/storybook/TokenBackgroundColorsShowcase';
 
-<Meta title="Design Tokens/Semantic/Background Colors" />
+<Meta
+  title="Design Tokens/Semantic/Background Colors"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
 
 # BACKGROUND COLORS
 

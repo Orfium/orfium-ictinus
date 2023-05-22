@@ -9,9 +9,7 @@ export const UsageGuidelines: React.FC<{ guidelines: string[] }> = ({ guidelines
       guidelines.map((guideline, index) => (
         // eslint-disable-next-line react/no-array-index-key
         <span css={WrapperStyle} key={index}>
-          <span css={iconStyle}>
-            <Icon name={'fatArrowRight'} color={'black'} size={30} />
-          </span>
+          <span css={iconStyle}>➡️</span>
           <span>{guideline}</span>
         </span>
       )),

@@ -2,25 +2,18 @@
 
 exports[`Storyshots Design System/Loader Loader Types 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-2 {
+.emotion-1 {
   width: 1.625rem;
   position: relative;
   height: 0.375rem;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: absolute;
   left: 0.625rem;
   left: 0;
@@ -35,15 +28,15 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0.5s;
 }
 
-.emotion-3::after,
-.emotion-3::before {
+.emotion-2::after,
+.emotion-2::before {
   content: '';
   display: inline-block;
   position: absolute;
   top: 0;
 }
 
-.emotion-3::before {
+.emotion-2::before {
   left: -0.625rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -56,7 +49,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0s;
 }
 
-.emotion-3::after {
+.emotion-2::after {
   left: 0.625rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -69,7 +62,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0.7s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   width: 100%;
   height: 0.5rem;
@@ -77,7 +70,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   border-radius: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   position: absolute;
   opacity: 0.4;
   background: #e7ebf2;
@@ -85,7 +78,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   height: 0.5rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: absolute;
   background: #175bf5;
   height: 0.5rem;
@@ -93,7 +86,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation: decrease 2.3s 0.8s infinite;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   background: #175bf5;
   height: 0.5rem;
@@ -101,7 +94,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation: increase 2.3s infinite;
 }
 
-.emotion-10 {
+.emotion-9 {
   width: 1.5rem;
   height: 1.5rem;
   margin: auto;
@@ -118,10 +111,9 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -138,23 +130,6 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
     <div
       style={
         Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      style={
-        Object {
           "margin": 10,
         }
       }
@@ -164,14 +139,14 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-1"
+        className="emotion-0"
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
           data-testid="dots-loading"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           />
         </div>
       </div>
@@ -188,20 +163,20 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-1"
+        className="emotion-0"
       >
         <div
-          className="emotion-5"
+          className="emotion-4"
           data-testid="dots-loading"
         >
+          <div
+            className="emotion-5"
+          />
           <div
             className="emotion-6"
           />
           <div
             className="emotion-7"
-          />
-          <div
-            className="emotion-8"
           />
         </div>
       </div>
@@ -218,10 +193,10 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-1"
+        className="emotion-0"
       >
         <div
-          className="emotion-10"
+          className="emotion-9"
           data-testid="spinner"
         />
       </div>

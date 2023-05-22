@@ -1,10 +1,12 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
-import Icon from '../Icon';
+import LinkTo from '@storybook/addon-links/react';
+
 import { FIGMA_URL } from '../../utils/common';
 import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
+import SectionHeader from '../../storybook/SectionHeader';
 import { getIconSelectorKnob } from '../../utils/stories';
 
 <Meta
@@ -41,7 +43,7 @@ import { getIconSelectorKnob } from '../../utils/stories';
   }}
 />
 
-# Button
+<SectionHeader title={'Button'} />
 
 - [Overview](#overview)
 - [Props](#props)
@@ -65,8 +67,7 @@ A universal Button component that is a clickable element that can hold many form
 
 <Tip>
   If you need to use icon as button with no text, check out{' '}
-  <a href="?path=/docs/design-system-button-iconbutton--icon-button-types--overview">Icon button</a>{' '}
-  component
+  <LinkTo kind="/Design System/Button/IconButton">Icon button</LinkTo> component
 </Tip>
 
 ## Props
@@ -86,8 +87,6 @@ Button types based on the system approved literals for `primary, secondary, tert
       <Button type="secondary">Secondary</Button>
       <Button type="tertiary">Tertiary</Button>
       <Button type="danger">Danger</Button>
-      <Button type="inverted">Inverted</Button>
-      <Button type="invertedAlt">InvertedAlt</Button>
     </Stack>
     <Stack>
       <Button type="primary" isDisabled>
@@ -102,6 +101,21 @@ Button types based on the system approved literals for `primary, secondary, tert
       <Button type="danger" isDisabled>
         Danger
       </Button>
+    </Stack>
+  </Story>
+</Preview>
+
+### Inverted Button Types
+
+Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
+
+<Preview isInverted>
+  <Story name="Inverted Button Types">
+    <Stack>
+      <Button type="inverted">Inverted</Button>
+      <Button type="invertedAlt">InvertedAlt</Button>
+    </Stack>
+    <Stack>
       <Button type="inverted" isDisabled>
         Inverted
       </Button>

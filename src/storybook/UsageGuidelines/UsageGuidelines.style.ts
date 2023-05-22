@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 
 export const WrapperStyle = (): SerializedStyles => css`
-  margin: 5px 0;
+  margin: 15px 0;
   display: flex;
   align-items: center;
   font-size: 16px;
@@ -10,6 +10,7 @@ export const WrapperStyle = (): SerializedStyles => css`
   color: #323338;
 `;
 export const iconStyle = (): SerializedStyles => css`
+  font-size: 15px;
   margin-right: 10px;
   display: flex;
   align-self: flex-start;

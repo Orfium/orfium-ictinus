@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/Card Card with elevation 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,10 +15,7 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
-  width: 1000px;
-  height: 400px;
-  background: #f3f5f8;
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,27 +34,26 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-2 {
   width: 749px;
 }
 
-.emotion-4 {
+.emotion-3 {
   box-shadow: 0px 2px 5px rgba(16, 48, 102, 0.07);
   background: white;
   border-radius: 0;
 }
 
-.emotion-5 {
+.emotion-4 {
   padding: 16px;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -79,24 +68,7 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -106,19 +78,19 @@ exports[`Storyshots Design System/Card Card with elevation 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <p>
             (Card inside a lightGrey container to test the transparency/radius/elevation props)
           </p>
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div>
                   Card with 01 elevation

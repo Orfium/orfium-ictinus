@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
   transition: opacity 0ms ease,transform 0ms ease;
   opacity: 0;
@@ -21,10 +14,9 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -38,23 +30,6 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
     <div>
       <div
         data-testid="expand-collapse"
@@ -69,7 +44,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
           expand
         </button>
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div>
             <div>
@@ -96,7 +71,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
           expand/collapse
         </button>
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div>
             <div>
@@ -120,7 +95,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
                 expand/collapse
               </button>
               <div
-                className="emotion-1"
+                className="emotion-0"
               >
                 <div>
                   <div>
@@ -150,7 +125,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
           expand/collapse
         </button>
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div>
             <div>
