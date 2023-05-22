@@ -111,6 +111,10 @@ export const decorators = [
 
 const inputEmpty = styled.input(({ theme }) => ({}));
 export const parameters = {
+  controls: {
+    expanded: true,
+    sort: 'requiredFirst',
+  },
   viewport: {
     viewports: viewPorts,
   },
