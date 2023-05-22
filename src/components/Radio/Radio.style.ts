@@ -50,7 +50,6 @@ export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) =>
   width: ${rem('24px')};
   height: ${rem('24px')};
   transition: box-shadow 0.3s ease;
-  ${focused && !disabled && boxShadow({ colorScheme: theme.colorScheme })};
 `;
 
 const determineColorBasedOnState = ({
