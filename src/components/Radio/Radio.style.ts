@@ -6,12 +6,12 @@ import { rem } from 'theme/utils';
 
 import { Props } from './Radio';
 
-const lightHoverColor = 'rgba(14, 14, 23, 0.07)';
+const lightHoverColor = 'rgba(23, 91, 245, 0.07)';
 const darkHoverColor = 'rgba(255, 255, 255, 0.1)';
 
 const boxShadow = ({ colorScheme }: { colorScheme: ColorScheme }) => css`
   box-shadow: 0 0 0 ${rem('6px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor},
-    inset 0 0 0 ${rem('6px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor};
+    inset 0 0 0 ${rem('12px')} ${colorScheme === 'dark' ? darkHoverColor : lightHoverColor};
 `;
 
 export const inputStyles: SerializedStyles = css`
@@ -50,7 +50,6 @@ export const customRadioWrapperStyles = (focused: boolean, disabled: boolean) =>
   width: ${rem('24px')};
   height: ${rem('24px')};
   transition: box-shadow 0.3s ease;
-  ${focused && !disabled && boxShadow({ colorScheme: theme.colorScheme })};
 `;
 
 const determineColorBasedOnState = ({
