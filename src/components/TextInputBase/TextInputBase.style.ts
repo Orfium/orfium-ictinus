@@ -106,14 +106,14 @@ export const textFieldStyle =
       flexDirection: 'row',
       alignItems: 'center',
       verticalAlign: 'top',
+      width: 'fill-available',
       padding: !lean ? `0 ${theme.spacing.md}` : '',
 
       '> div': {
         position: 'relative',
       },
 
-      ...sx?.textField, // Todo: it doesn't work
-      width: '100%',
+      ...sx?.textField,
     });
   };
 

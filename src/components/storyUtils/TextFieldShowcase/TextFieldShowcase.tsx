@@ -5,12 +5,11 @@ import TextField from '../../TextField';
 const TextFieldShowcase: FC = () => {
   const [tags, setTags] = useState<string[]>(['existing-tag-1', 'existing-tag-2']);
 
-  const addTags = (tagStr: string) => {
-    const tagsArr = tagStr.replace(/ /g, '').split(',');
-    setTags((tags) => [...tags, ...tagsArr]);
+  const addTags = (tagStr: string | undefined) => {
+    setTags((tags) => (tagStr === undefined ? tags : [...tags, tagStr]));
   };
 
-  const removeTag = (value: string) => {
+  const removeTag = (value: string | undefined) => {
     const newTags = tags.filter((id) => id !== value);
     setTags([...newTags]);
   };
@@ -22,6 +21,7 @@ const TextFieldShowcase: FC = () => {
         <TextField
           multi
           multiValues={tags}
+          multiValuesHandler={(tags) => tags?.replace(/ /g, '').split(',')}
           name="tags"
           label="Tags"
           hintMsg="Copy / paste comma seperated tags to add them, ex. tag1, tag2, tag3"
@@ -29,6 +29,9 @@ const TextFieldShowcase: FC = () => {
           onMultiValueCreate={addTags}
           onMultiValueDelete={removeTag}
           onClearAllValues={() => setTags([])}
+          sx={{
+            textField: { width: '100%' },
+          }}
         />
       </div>
     </>

@@ -274,6 +274,9 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
         hintMsg={text('Custom message', 'Press Enter to create multiple values')}
         status={select('Status', ['hint', 'error', 'normal'], 'hint')}
         maxMultiValues={text('maxMultiValues', 10)}
+        sx={{
+          textField: { width: '100%' },
+        }}
       />
     </div>
     <TextFieldShowcase />

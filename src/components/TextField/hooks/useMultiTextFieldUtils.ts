@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { Props as TextFieldProps } from '../TextField';
 
@@ -10,6 +10,7 @@ type Props = Pick<
   | 'onMultiValueDelete'
   | 'onClearAllValues'
   | 'onInput'
+  | 'multiValuesHandler'
 >;
 
 const useMultiTextFieldUtils = ({
@@ -19,6 +20,7 @@ const useMultiTextFieldUtils = ({
   onMultiValueDelete,
   onClearAllValues,
   onInput,
+  multiValuesHandler = (value) => value,
 }: Props) => {
   const [values, setValues] = useState(multiValues);
   const [inputValue, setInputValue] = useState('');
@@ -64,7 +66,12 @@ const useMultiTextFieldUtils = ({
         event.preventDefault();
       }
 
-      setValues([...values, inputValue]);
+      const handledInputValue = multiValuesHandler(inputValue);
+
+      setValues([
+        ...values,
+        ...(Array.isArray(handledInputValue) ? handledInputValue : [handledInputValue]),
+      ]);
 
       if (onMultiValueCreate) {
         onMultiValueCreate(inputValue);
@@ -77,10 +84,6 @@ const useMultiTextFieldUtils = ({
       }
     }
   };
-
-  // useEffect(() => {
-  //   setValues(multiValues);
-  // }, [multiValues]);
 
   return {
     values,
