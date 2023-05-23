@@ -27,9 +27,15 @@ const MultiFilter: React.FC<Props> = ({
   isLoading,
   hasSelectAllOption,
 }) => {
+  const filterInputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleClick = () => {
+    filterInputRef?.current?.focus();
+  };
+
   return (
     <div css={menuStyle()}>
-      <div css={textFieldWrapper()}>
+      <div css={textFieldWrapper()} onClick={handleClick}>
         <MultiTextFieldBase
           selectedOptions={selectedItems}
           onInput={onInput}
@@ -40,6 +46,7 @@ const MultiFilter: React.FC<Props> = ({
           placeholder="Search"
           isResponsive
           isLoading={isLoading}
+          ref={filterInputRef}
         />
       </div>
       <div css={optionsWrapper()}>
