@@ -83,7 +83,7 @@ export const wrapperStyle =
       borderRadius: theme.spacing.xsm,
       userSelect: 'none',
       opacity: disabled ? getDisabled().opacity : 1,
-      cursor: disabled || locked ? getDisabled().cursor : 'auto',
+      cursor: disabled || locked ? getDisabled().cursor : 'text',
       ...textFieldSize,
       ...wrapperStyleSwitch(
         theme,
@@ -98,7 +98,7 @@ export const wrapperStyle =
   };
 
 export const textFieldStyle =
-  ({ lean, sx }: Props) =>
+  ({ lean, sx, disabled, locked }: Props) =>
   (theme: Theme): SerializedStyles => {
     return css({
       position: 'relative',
@@ -108,6 +108,7 @@ export const textFieldStyle =
       verticalAlign: 'top',
       width: 'fill-available',
       padding: !lean ? `0 ${theme.spacing.md}` : '',
+      cursor: disabled || locked ? getDisabled().cursor : 'text',
 
       '> div': {
         position: 'relative',
@@ -118,7 +119,7 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, size = DEFAULT_SIZE, dark, sx }: Props) =>
+  ({ label, placeholder, size = DEFAULT_SIZE, dark, sx, disabled, locked }: Props) =>
   (theme: Theme): SerializedStyles =>
     css({
       background: 'transparent',
@@ -138,6 +139,8 @@ export const inputStyle =
 
       '& + label': {
         fontSize: theme.typography.fontSizes[size === 'md' ? '15' : '12'],
+
+        cursor: disabled || locked ? getDisabled().cursor : 'text',
       },
 
       '&:focus': {

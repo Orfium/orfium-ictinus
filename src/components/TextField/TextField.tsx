@@ -1,3 +1,4 @@
+import useCombinedRefs from 'hooks/useCombinedRefs';
 import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
 import React, { InputHTMLAttributes } from 'react';
@@ -84,6 +85,9 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
     } = props;
     const theme = useTheme();
 
+    const inputRef = React.useRef<HTMLInputElement>(null);
+    const combinedRefs = useCombinedRefs(inputRef, ref);
+
     const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
       icon ? (
         typeof icon === 'string' ? (
@@ -96,6 +100,12 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
           icon
         )
       ) : null;
+
+    const handleClick = () => {
+      if (!locked && !disabled) {
+        combinedRefs.current?.focus();
+      }
+    };
 
     const {
       inputValue,
@@ -114,59 +124,64 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
       multiValuesHandler,
     });
 
-    return multi ? (
-      <MultiTextFieldBase
-        {...props}
-        isTextfield
-        onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
-        onClearAllOptions={handleClearAllValues}
-        label={label}
-        onInput={handleTyping}
-        onKeyDown={handleKeyDown}
-        selectedOptions={values}
-        value={inputValue}
-      />
-    ) : (
-      <React.Fragment>
-        <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
-          {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
-          <div css={{ width: '100% ' }}>
-            <input
-              readOnly={readOnly}
-              css={inputStyle({ label, placeholder, size, dark, lean })}
-              placeholder={!label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label}
-              required={required}
-              id={id}
-              disabled={disabled || locked}
-              onInput={onInput}
-              {...omit(rest, 'dataTestId')}
-              ref={ref}
-            />
-            {label && (
-              <Label
-                size={size}
-                htmlFor={id}
-                label={label}
+    return (
+      <div onClick={handleClick}>
+        {multi ? (
+          <MultiTextFieldBase
+            {...props}
+            isTextfield
+            onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
+            onClearAllOptions={handleClearAllValues}
+            label={label}
+            onInput={handleTyping}
+            onKeyDown={handleKeyDown}
+            selectedOptions={values}
+            value={inputValue}
+            ref={combinedRefs}
+          />
+        ) : (
+          <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
+            {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
+            <div css={{ width: '100% ' }}>
+              <input
+                readOnly={readOnly}
+                css={inputStyle({ label, placeholder, size, dark, lean, disabled, locked })}
+                placeholder={
+                  !label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label
+                }
                 required={required}
-                animateToTop={Boolean(rest.value)}
-                error={status === 'error'}
+                id={id}
+                disabled={disabled || locked}
+                onInput={onInput}
+                {...omit(rest, 'dataTestId')}
+                ref={combinedRefs}
               />
+              {label && (
+                <Label
+                  size={size}
+                  htmlFor={id}
+                  label={label}
+                  required={required}
+                  animateToTop={Boolean(rest.value)}
+                  error={status === 'error'}
+                />
+              )}
+            </div>
+            {rightIcon && !locked && (
+              <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
             )}
-          </div>
-          {rightIcon && !locked && (
-            <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
-          )}
-          {locked && (
-            <IconWrapper iconPosition={'right'}>
-              <Icon
-                name="lock"
-                size={size === 'md' ? 20 : 16}
-                color={theme.utils.getColor('lightGrey', 650)}
-              />
-            </IconWrapper>
-          )}
-        </TextInputBase>
-      </React.Fragment>
+            {locked && (
+              <IconWrapper iconPosition={'right'}>
+                <Icon
+                  name="lock"
+                  size={size === 'md' ? 20 : 16}
+                  color={theme.utils.getColor('lightGrey', 650)}
+                />
+              </IconWrapper>
+            )}
+          </TextInputBase>
+        )}
+      </div>
     );
   }
 );

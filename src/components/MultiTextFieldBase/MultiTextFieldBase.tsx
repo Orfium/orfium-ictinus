@@ -62,10 +62,10 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       onOptionDelete,
       onClearAllOptions,
       isLoading,
-      rightIcon,
       isInteractive = true,
       isResponsive = false,
       isTextfield = false,
+      onKeyDown,
       sx,
       ...rest
     } = props;
@@ -82,9 +82,9 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
         locked,
         hasValue,
         value,
-        rightIcon,
         onOptionDelete,
         onClearAllOptions,
+        onKeyDown,
       });
 
     const chips = useMemo(

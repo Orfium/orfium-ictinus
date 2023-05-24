@@ -101,7 +101,7 @@ const TextInputBase: FC<Props & TestProps> = ({
           isInteractive,
         })}
       >
-        <div css={textFieldStyle({ lean, sx })}>{children}</div>
+        <div css={textFieldStyle({ lean, sx, disabled, locked })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>

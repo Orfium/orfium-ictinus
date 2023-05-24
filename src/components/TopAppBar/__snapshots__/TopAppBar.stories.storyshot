@@ -672,7 +672,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -705,6 +705,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-10>div {
@@ -730,6 +731,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 
 .emotion-12+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-12:focus {
@@ -1002,53 +1004,65 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
           className="emotion-8"
         >
           <div
-            className="emotion-9"
+            onClick={[Function]}
           >
             <div
-              className="emotion-10"
+              className="emotion-9"
             >
               <div
-                className="emotion-11"
+                className="emotion-10"
               >
-                <input
-                  className="emotion-12"
-                  disabled={false}
-                  required={false}
-                />
+                <div
+                  className="emotion-11"
+                >
+                  <input
+                    className="emotion-12"
+                    disabled={false}
+                    required={false}
+                  />
+                </div>
               </div>
             </div>
           </div>
           <div
-            className="emotion-9"
+            onClick={[Function]}
           >
             <div
-              className="emotion-10"
+              className="emotion-9"
             >
               <div
-                className="emotion-11"
+                className="emotion-10"
               >
-                <input
-                  className="emotion-12"
-                  disabled={false}
-                  required={false}
-                />
+                <div
+                  className="emotion-11"
+                >
+                  <input
+                    className="emotion-12"
+                    disabled={false}
+                    required={false}
+                  />
+                </div>
               </div>
             </div>
           </div>
           <div
-            className="emotion-9"
+            onClick={[Function]}
           >
             <div
-              className="emotion-10"
+              className="emotion-9"
             >
               <div
-                className="emotion-11"
+                className="emotion-10"
               >
-                <input
-                  className="emotion-12"
-                  disabled={false}
-                  required={false}
-                />
+                <div
+                  className="emotion-11"
+                >
+                  <input
+                    className="emotion-12"
+                    disabled={false}
+                    required={false}
+                  />
+                </div>
               </div>
             </div>
           </div>
