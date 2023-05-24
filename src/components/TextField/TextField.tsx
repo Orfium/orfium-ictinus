@@ -141,7 +141,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
             <div css={{ width: '100% ' }}>
               <input
                 readOnly={readOnly}
-                css={inputStyle({ label, placeholder, size, dark, lean })}
+                css={inputStyle({ label, placeholder, size, dark, lean, disabled, locked })}
                 placeholder={
                   !label && placeholder ? `${placeholder} ${required ? '*' : ''}` : label
                 }
