@@ -1,4 +1,5 @@
 import useTheme from 'hooks/useTheme';
+import { merge } from 'lodash';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import { generateUniqueID } from 'utils/helpers';
@@ -61,10 +62,11 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       onOptionDelete,
       onClearAllOptions,
       isLoading,
-      rightIcon,
       isInteractive = true,
       isResponsive = false,
       isTextfield = false,
+      onKeyDown,
+      sx,
       ...rest
     } = props;
 
@@ -80,9 +82,9 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
         locked,
         hasValue,
         value,
-        rightIcon,
         onOptionDelete,
         onClearAllOptions,
+        onKeyDown,
       });
 
     const chips = useMemo(
@@ -122,8 +124,11 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           styleType={styleType}
           {...rest}
           isInteractive={isInteractive}
-          sx={textInputBaseOverrides({ hasValue, isLoading, hasLabel, isResponsive, isTextfield })(
-            theme
+          sx={merge(
+            textInputBaseOverrides({ hasValue, isLoading, hasLabel, isResponsive, isTextfield })(
+              theme
+            ),
+            sx
           )}
         >
           <div css={inputContainer()}>

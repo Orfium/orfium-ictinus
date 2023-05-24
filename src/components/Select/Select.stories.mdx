@@ -112,6 +112,7 @@ Simple select component with clearable data and searchable input
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'filled'}
+        creatable={boolean('creatable', false)}
       />
       <Select
         label={'Flavour'}
@@ -119,6 +120,7 @@ Simple select component with clearable data and searchable input
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}
+        creatable={boolean('creatable', false)}
       />
       <Select
         label={'Flavour'}
@@ -126,6 +128,7 @@ Simple select component with clearable data and searchable input
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'elevated'}
+        creatable={boolean('creatable', false)}
       />
     </Stack>
   </Story>
@@ -448,6 +451,13 @@ A Select component with multiple selected options represented as Chips. <br/>
 
 <Preview>
   <Story name="MultiSelect">
-    <MultiSelectShowcase />
+    <MultiSelectShowcase
+      disabled={boolean('disabled', false)}
+      locked={boolean('locked', false)}
+      status={select('status', ['normal', 'hint', 'error'], 'normal')}
+      hintMessage={text('hintMessage', '')}
+      hasSelectAllOption={boolean('hasSelectAllOption', false)}
+      creatable={boolean('creatable', false)}
+    />
   </Story>
 </Preview>
