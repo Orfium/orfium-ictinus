@@ -8,11 +8,11 @@ const letterSpacing = {
     type: 'letterSpacing',
   },
   '2': {
-    value: '.25',
+    value: '0.25',
     type: 'letterSpacing',
   },
   '3': {
-    value: '.5',
+    value: '0.5',
     type: 'letterSpacing',
   },
 } as const;
