@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
-import TypographyShowcase from '../../src/storybook/TypographyShowcase';
+import TypographyTokensShowcase from '../../src/storybook/TypographyTokensShowcase';
+import TypographyOverviewShowcase from "../../src/storybook/TypographyOverviewShowcase";
 
 <Meta
   title="Design Tokens/Semantic/Typography"
@@ -23,25 +24,17 @@ import TypographyShowcase from '../../src/storybook/TypographyShowcase';
 
 ## Overview
 
-Typography tokens are used to present content. We define the content that we have in 5 categories.
-
-| Category            | Description                                                                                                   |
-| ------------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Display** _(WIP)_ | Used for short, text or numerals, mainly on large screens                                                     |
-| **Headline**        | Used for short, high-emphasis text and to establish content hierarchy within the page                         |
-| **Title**           | Used for short, medium-emphasis text that is smaller than a headline and for text within components           |
-| **Label**           | Used for medium emphasis text and potentially longer text strings than a title and for text within components |
-| **Body**            | Used for long passages of copy (regular emphasis) and for text within components                              |
-
-You can see more about variants and text colors in the actual React component [here](?path=/docs/design-system-typography--variants)
+Typography tokens are used to represent all text needs. There are four major style groups:
 
 <br />
 
-## Tokens
+<TypographyOverviewShowcase />
 
-Based on these types describe above we are defining each typography token as follows
+<br />
 
-<TypographyShowcase />
+## Text style tokens
+
+<TypographyTokensShowcase />
 
 <br />
 

@@ -3,10 +3,10 @@ import React from 'react';
 import typographyCollection from 'theme/globals/constants/typography';
 import { parseCompositionToken } from 'theme/tokens/utils';
 
-import { TableWrapperStyle } from './TypographyShowcase.style';
+import { TableWrapperStyle } from './TypographyTokensShowcase.style';
 import Typography, { TypographyVariant } from 'components/Typography';
 
-const TypographyShowcase = () => {
+const TypographyTokensShowcase = () => {
   const typographyArray = map(typographyCollection, (value, key) => ({ key, ...value }));
 
   const parsedTypographyCompositionToken = parseCompositionToken(typographyCollection);
@@ -54,4 +54,4 @@ const TypographyShowcase = () => {
   );
 };
 
-export default TypographyShowcase;
+export default TypographyTokensShowcase;
