@@ -43,6 +43,8 @@ export type Props = {
   onMultiValueDelete?: (value?: string) => void;
   /** A callback for when all values are deleted (the Clear All icon is clicked) */
   onClearAllValues?: () => void;
+  /** The handler of multi values. If you pass a different handler function here it will change the way multi values are being calculated */
+  multiValuesHandler?: (tags: string) => string | string[];
 } & TextInputWrapperProps;
 
 export type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -78,6 +80,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
       onMultiValueCreate,
       onMultiValueDelete,
       onClearAllValues,
+      multiValuesHandler = (value) => value,
       ...rest
     } = props;
     const theme = useTheme();
@@ -118,6 +121,7 @@ const TextField = React.forwardRef<HTMLInputElement, Props & InputProps & TestPr
       onMultiValueDelete,
       onClearAllValues,
       onInput,
+      multiValuesHandler,
     });
 
     return (

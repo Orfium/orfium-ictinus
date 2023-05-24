@@ -13,20 +13,6 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -48,16 +34,16 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   min-height: 2.875rem!important;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-2 label {
+.emotion-1 label {
   font-weight: 700!important;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -66,7 +52,7 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   bottom: auto;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -80,16 +66,16 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   -ms-flex-align: center;
   align-items: center;
   vertical-align: top;
-  width: 13.75rem;
+  width: 100%;
   padding: 1.3125rem 2.5rem 0.3125rem 1rem;
   cursor: text;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: static;
   width: 100%;
   display: -webkit-box;
@@ -104,17 +90,17 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   z-index: 2;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: relative;
   margin-right: 0.25rem;
 }
 
-.emotion-5>div {
+.emotion-4>div {
   height: 1.25rem;
   border-radius: 0.25rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -147,30 +133,30 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-6:hover:not(:disabled) {
+.emotion-5:hover:not(:disabled) {
   background: #e7ebf2;
 }
 
-.emotion-6:focus-visible:not(:disabled) {
+.emotion-5:focus-visible:not(:disabled) {
   outline: none;
 }
 
-.emotion-6>:not(:last-child) {
+.emotion-5>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
-.emotion-7 {
+.emotion-6 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: unset;
 }
 
-.emotion-8 {
+.emotion-7 {
   cursor: pointer;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -186,17 +172,17 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #0f0f17;
 }
 
-.emotion-17 {
+.emotion-16 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -213,48 +199,48 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   flex: 1 1 0%;
 }
 
-.emotion-17+label {
+.emotion-16+label {
   font-size: 0.9375rem;
   cursor: text;
 }
 
-.emotion-17:focus {
+.emotion-16:focus {
   outline: none;
 }
 
-.emotion-17::-webkit-input-placeholder {
+.emotion-16::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-17::-moz-placeholder {
+.emotion-16::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-17:-ms-input-placeholder {
+.emotion-16:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-17::placeholder {
+.emotion-16::placeholder {
   color: transparent;
 }
 
-.emotion-17:not(:focus):placeholder-shown+label {
+.emotion-16:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-17:focus+label,
-.emotion-17:not(:placeholder-shown)+label {
+.emotion-16:focus+label,
+.emotion-16:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8);
   -moz-transform: translate(0.1875rem, -82%) scale(0.8);
   -ms-transform: translate(0.1875rem, -82%) scale(0.8);
   transform: translate(0.1875rem, -82%) scale(0.8);
 }
 
-.emotion-17:disabled {
+.emotion-16:disabled {
   cursor: not-allowed;
 }
 
-.emotion-18 {
+.emotion-17 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -286,7 +272,7 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   white-space: nowrap;
 }
 
-.emotion-19 {
+.emotion-18 {
   position: absolute!important;
   bottom: 0;
   right: 1rem;
@@ -301,21 +287,21 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   align-items: center;
 }
 
-.emotion-20 {
+.emotion-19 {
   cursor: pointer;
 }
 
-.emotion-22 {
+.emotion-21 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-22 path {
+.emotion-21 path {
   fill: #5f6c85;
 }
 
-.emotion-23 {
+.emotion-22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -326,11 +312,11 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-23 svg {
+.emotion-22 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-23 span {
+.emotion-22 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -338,13 +324,13 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-25 {
+.emotion-24 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-25 path {
+.emotion-24 path {
   fill: #5f6c85;
 }
 
@@ -385,149 +371,288 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
          on
       </button>
     </div>
-    <div
-      className="emotion-1"
-    >
+    <div>
       <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
+        onClick={[Function]}
       >
-        <div
-          onClick={[Function]}
-        >
-          <div>
+        <div>
+          <div
+            className="emotion-1"
+          >
             <div
               className="emotion-2"
             >
               <div
                 className="emotion-3"
               >
-                <div
+                <span
                   className="emotion-4"
                 >
-                  <span
+                  <div
+                    aria-readonly="true"
                     className="emotion-5"
+                    data-testid="chip-chip_0"
                   >
-                    <div
-                      aria-readonly="true"
-                      className="emotion-6"
-                      data-testid="chip-chip_0"
-                    >
-                      <div>
-                        <div
-                          className="emotion-7"
-                          title="Orange"
-                        >
-                          Orange
-                        </div>
-                      </div>
+                    <div>
                       <div
+                        className="emotion-6"
+                        title="Orange"
+                      >
+                        Orange
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-7"
+                    >
+                      <span
                         className="emotion-8"
+                        data-testid="chip-delete-chip_0"
+                        onClick={[Function]}
                       >
                         <span
                           className="emotion-9"
-                          data-testid="chip-delete-chip_0"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-10"
-                          />
-                        </span>
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="emotion-4"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-5"
+                    data-testid="chip-chip_1"
+                  >
+                    <div>
+                      <div
+                        className="emotion-6"
+                        title="Citrus"
+                      >
+                        Citrus
                       </div>
                     </div>
-                  </span>
-                  <span
-                    className="emotion-5"
-                  >
                     <div
-                      aria-readonly="true"
-                      className="emotion-6"
-                      data-testid="chip-chip_1"
+                      className="emotion-7"
                     >
-                      <div>
-                        <div
-                          className="emotion-7"
-                          title="Citrus"
-                        >
-                          Citrus
-                        </div>
-                      </div>
-                      <div
+                      <span
                         className="emotion-8"
+                        data-testid="chip-delete-chip_1"
+                        onClick={[Function]}
                       >
                         <span
                           className="emotion-9"
-                          data-testid="chip-delete-chip_1"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-10"
-                          />
-                        </span>
-                      </div>
+                        />
+                      </span>
                     </div>
-                  </span>
-                  <input
-                    className="emotion-17"
-                    disabled={false}
-                    hintMsg="Press Enter to create multiple values"
-                    maxMultiValues={10}
-                    multi={true}
-                    multiValues={
-                      Array [
-                        "Orange",
-                        "Citrus",
-                      ]
-                    }
-                    onInput={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Label"
-                    required={false}
-                    value=""
-                  />
-                  <label
-                    className="emotion-18"
-                  >
-                    Label
-                     
-                  </label>
-                </div>
+                  </div>
+                </span>
+                <input
+                  className="emotion-16"
+                  disabled={false}
+                  hintMsg="Press Enter to create multiple values"
+                  maxMultiValues={10}
+                  multi={true}
+                  multiValues={
+                    Array [
+                      "Orange",
+                      "Citrus",
+                    ]
+                  }
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Label"
+                  required={false}
+                  value=""
+                />
+                <label
+                  className="emotion-17"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-18"
+              >
                 <div
                   className="emotion-19"
                 >
-                  <div
-                    className="emotion-20"
+                  <span
+                    className="emotion-8"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
                   >
                     <span
-                      className="emotion-9"
-                      data-testid="select-right-icon"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-22"
-                      />
-                    </span>
-                  </div>
+                      className="emotion-21"
+                    />
+                  </span>
                 </div>
               </div>
             </div>
-            <div
-              className="emotion-23"
-              data-testid="error"
+          </div>
+          <div
+            className="emotion-22"
+            data-testid="error"
+          >
+            <span
+              className="emotion-8"
+              onClick={[Function]}
             >
               <span
-                className="emotion-9"
-                onClick={[Function]}
+                className="emotion-24"
+              />
+            </span>
+            Press Enter to create multiple values
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>
+      Controlled multi TextField
+    </h2>
+    <div
+      style={
+        Object {
+          "width": "500px",
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="emotion-1"
+          >
+            <div
+              className="emotion-2"
+            >
+              <div
+                className="emotion-3"
               >
                 <span
-                  className="emotion-25"
+                  className="emotion-4"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-5"
+                    data-testid="chip-chip_0"
+                  >
+                    <div>
+                      <div
+                        className="emotion-6"
+                        title="existing-tag-1"
+                      >
+                        existing-tag-1
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-7"
+                    >
+                      <span
+                        className="emotion-8"
+                        data-testid="chip-delete-chip_0"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-9"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="emotion-4"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-5"
+                    data-testid="chip-chip_1"
+                  >
+                    <div>
+                      <div
+                        className="emotion-6"
+                        title="existing-tag-2"
+                      >
+                        existing-tag-2
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-7"
+                    >
+                      <span
+                        className="emotion-8"
+                        data-testid="chip-delete-chip_1"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-9"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <input
+                  className="emotion-16"
+                  hintMsg="Copy / paste comma seperated tags to add them, ex. tag1, tag2, tag3"
+                  multi={true}
+                  multiValues={
+                    Array [
+                      "existing-tag-1",
+                      "existing-tag-2",
+                    ]
+                  }
+                  multiValuesHandler={[Function]}
+                  name="tags"
+                  onClearAllValues={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  onMultiValueCreate={[Function]}
+                  onMultiValueDelete={[Function]}
+                  placeholder="Tags"
+                  required={false}
+                  value=""
                 />
-              </span>
-              Press Enter to create multiple values
+                <label
+                  className="emotion-17"
+                >
+                  Tags
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-18"
+              >
+                <div
+                  className="emotion-19"
+                >
+                  <span
+                    className="emotion-8"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-21"
+                    />
+                  </span>
+                </div>
+              </div>
             </div>
+          </div>
+          <div
+            className="emotion-22"
+            data-testid="error"
+          >
+            <span
+              className="emotion-8"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-24"
+              />
+            </span>
+            Copy / paste comma seperated tags to add them, ex. tag1, tag2, tag3
           </div>
         </div>
       </div>
