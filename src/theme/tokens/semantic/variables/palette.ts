@@ -139,16 +139,8 @@ const palette = {
   },
   accents: {
     blue: {
-      light: {
-        value: '{colors.blue.100}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.blue.150}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.blue.500}',
+        value: '{colors.blue.100}',
         type: 'color',
       },
       contrast: {
@@ -158,16 +150,8 @@ const palette = {
       },
     },
     darkBlue: {
-      light: {
-        value: '{colors.darkBlue.100}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.darkBlue.150}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.darkBlue.450}',
+        value: '{colors.darkBlue.100}',
         type: 'color',
       },
       contrast: {
@@ -177,16 +161,8 @@ const palette = {
       },
     },
     purple: {
-      light: {
-        value: '{colors.purple.100}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.purple.150}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.purple.500}',
+        value: '{colors.purple.100}',
         type: 'color',
       },
       contrast: {
@@ -196,16 +172,8 @@ const palette = {
       },
     },
     magenta: {
-      light: {
-        value: '{colors.magenta.100}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.magenta.200}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.magenta.550}',
+        value: '{colors.magenta.100}',
         type: 'color',
       },
       contrast: {
@@ -215,16 +183,8 @@ const palette = {
       },
     },
     orange: {
-      light: {
-        value: '{colors.orange.100}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.orange.200}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.orange.550}',
+        value: '{colors.orange.100}',
         type: 'color',
       },
       contrast: {
@@ -234,16 +194,8 @@ const palette = {
       },
     },
     teal: {
-      light: {
-        value: '{colors.teal.150}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.teal.250}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.teal.550}',
+        value: '{colors.teal.150}',
         type: 'color',
       },
       contrast: {
@@ -253,16 +205,8 @@ const palette = {
       },
     },
     red: {
-      light: {
-        value: '{colors.red.100}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.red.200}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.red.550}',
+        value: '{colors.red.100}',
         type: 'color',
       },
       contrast: {
@@ -272,16 +216,8 @@ const palette = {
       },
     },
     lightPurple: {
-      light: {
-        value: '{colors.lightPurple.200}',
-        type: 'color',
-      },
       main: {
-        value: '{colors.lightPurple.400}',
-        type: 'color',
-      },
-      dark: {
-        value: '{colors.lightPurple.650}',
+        value: '{colors.lightPurple.200}',
         type: 'color',
       },
       contrast: {

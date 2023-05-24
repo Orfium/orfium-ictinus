@@ -1,0 +1,34 @@
+import { Meta, Preview, Story } from '@storybook/addon-docs';
+import TokenBackgroundColorsShowcase from '../../src/storybook/TokenBackgroundColorsShowcase';
+import SectionHeader from '../../src/storybook/SectionHeader';
+
+<Meta
+  title="Design Tokens/Semantic/Colors/Border Colors"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Border Colors'} />
+
+<br />
+
+- [Overview](#overview)
+- [Tokens](#tokens)
+
+<br />
+
+## Overview
+
+Border colors are tokens we use for defining only the border of our components. Those tokens are divided into ‘decorative’ for decorative elements (non-interactive components) and ‘interactive’.
+
+<br />
+
+## Tokens
+
+Specific tokens that can be used to shows those borders.
+
+<TokenBackgroundColorsShowcase tokenType={'borderColor'} />

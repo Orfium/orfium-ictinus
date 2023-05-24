@@ -16,7 +16,8 @@ const Tip: FC<TipProps> = ({ title = 'Tip', children }) => {
         width: auto;
         height: fit-content;
         background: #e7eefe;
-
+        display: flex;
+        line-height: 135%;
         margin: 32px 0;
 
         h4 {
@@ -24,10 +25,16 @@ const Tip: FC<TipProps> = ({ title = 'Tip', children }) => {
         }
       `}
     >
-      <span style={{ marginRight: 4 }}>⚡</span>
-      <Typography isBold component={'span'}>
-        {title}:
-      </Typography>{' '}
+      <div
+        css={css`
+          margin-right: 6px;
+        `}
+      >
+        <span style={{ marginRight: 4 }}>⚡</span>
+        <Typography isBold component={'span'}>
+          {title}:
+        </Typography>
+      </div>
       <span>{children}</span>
     </div>
   );

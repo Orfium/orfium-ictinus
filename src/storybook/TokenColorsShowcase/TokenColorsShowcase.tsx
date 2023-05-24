@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { map } from 'lodash';
+import { get, map } from 'lodash';
 import React, { FC } from 'react';
 import paletteFigma from 'theme/tokens/semantic/variables/palette';
 import { DotKeys } from 'theme/tokens/utils';
@@ -13,8 +13,11 @@ import {
 import Card from 'components/Card';
 import Typography from 'components/Typography';
 
+/**
+ * Showcase component used on the `Systemic & Accent Colors` document
+ */
 const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'systemic' }) => {
-  const states = ['light', 'main', 'dark'];
+  const states = ['light', 'main', 'dark', 'contrast'];
   const systemics = map(paletteFigma.systemic, (value, key) => ({
     key,
     category: 'systemic',
@@ -40,40 +43,41 @@ const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'sys
                 {type.key}
               </Typography>
               <div css={stateWrapperStyle}>
-                {/* //TODO discuss contrast use */}
-                {(type.category === 'systemic' ? states : [...states, 'contrast']).map((state) => (
-                  <div
-                    key={`${type.category}.${type.key}.${state}`}
-                    css={css`
-                      display: flex;
-                      margin: 15px 0;
-                    `}
-                  >
+                {states
+                  .filter((state) => get(paletteFigma, [type.category, type.key, state]))
+                  .map((state) => (
                     <div
-                      css={(theme) => css`
-                        ${colorStyle(theme)};
-                        background-color: ${theme.tokens.palette.get(
-                          `${type.category}.${type.key}.${state}` as DotKeys<typeof paletteFigma>
-                        )};
+                      key={`${type.category}.${type.key}.${state}`}
+                      css={css`
+                        display: flex;
+                        margin: 15px 0;
                       `}
-                    />
-                    <div>
-                      <Typography isBold>{state}</Typography>
-                      <div css={descriptionStyle}>
-                        <Typography variant={'body02'} type={'secondary'}>
-                          {paletteFigma[type.category][type.key][state].description}
-                        </Typography>
-                        <Typography variant={'body02'} component={'span'}>
-                          ${`${type.category}.${type.key}.${state}`}
-                        </Typography>
-                        {' = '}
-                        <Typography variant={'body02'} component={'span'}>
-                          {paletteFigma[type.category][type.key][state].value}
-                        </Typography>
+                    >
+                      <div
+                        css={(theme) => css`
+                          ${colorStyle(theme)};
+                          background-color: ${theme.tokens.palette.get(
+                            `${type.category}.${type.key}.${state}` as DotKeys<typeof paletteFigma>
+                          )};
+                        `}
+                      />
+                      <div>
+                        <Typography isBold>{state}</Typography>
+                        <div css={descriptionStyle}>
+                          <Typography variant={'body02'} type={'secondary'}>
+                            {paletteFigma[type.category][type.key][state].description}
+                          </Typography>
+                          <Typography variant={'body02'} component={'span'}>
+                            ${`${type.category}.${type.key}.${state}`}
+                          </Typography>
+                          {' = '}
+                          <Typography variant={'body02'} component={'span'}>
+                            {paletteFigma[type.category][type.key][state].value}
+                          </Typography>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </div>

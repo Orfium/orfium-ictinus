@@ -7,7 +7,7 @@ export const WrapperStyle = (theme: Theme): SerializedStyles => css`
   flex-direction: row;
   border: 1px solid #dedede;
   border-radius: 10px;
-  padding: 40px 15px;
+  padding: 20px 15px;
   row-gap: 20px;
   column-gap: 64px;
   flex-wrap: wrap;
