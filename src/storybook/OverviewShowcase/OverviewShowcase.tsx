@@ -16,7 +16,7 @@ const OverviewShowcase: FC<Props> = ({ data }) => {
     >
       {data.map((line, index) => (
         <div
-          key={`typography_overview_${index}`}
+          key={`overview_${index}_${line.title}`}
           css={{
             display: 'flex',
             alignItems: 'center',

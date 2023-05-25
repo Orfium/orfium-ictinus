@@ -13,19 +13,21 @@ const TypographyTokensShowcase = () => {
 
   return (
     <table css={TableWrapperStyle} width={'100%'}>
-      <thead>
+      <thead css={{ background: '#FFFFFF' }}>
         <tr>
-          <th>Type</th>
-          <th>Token</th>
-          <th>Value</th>
+          <th>Title & description</th>
+          <th>token</th>
+          <th>value</th>
         </tr>
       </thead>
       <tbody>
-        {typographyArray.map(({ key, description, value }) => (
-          <tr key={key}>
+        {typographyArray.map(({ key, description, value }, index) => (
+          <tr key={key} css={{ background: index % 2 !== 0 ? '#E7EEFE' : '#FFFFFF' }}>
             <td>
               <Typography variant={key as TypographyVariant}>{key}</Typography>
-              <Typography variant={'body02'}>{description}</Typography>
+              <Typography variant={'body01'} type={'secondary'}>
+                {description}
+              </Typography>
             </td>
             <td colSpan={2}>
               <table>

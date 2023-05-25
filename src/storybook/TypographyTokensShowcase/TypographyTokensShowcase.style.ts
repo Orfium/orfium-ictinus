@@ -2,18 +2,29 @@ import { css, SerializedStyles } from '@emotion/react';
 
 export const TableWrapperStyle = (): SerializedStyles => css`
   width: 100%;
+
+  thead {
+    border: 1px solid #e4e7ff;
+  }
+
   th {
     text-align: left;
     font-weight: bold;
     padding: 10px;
-    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #e4e7ff;
+    border-bottom: 0;
   }
+
+  td {
+    vertical-align: top;
+  }
+
   tbody > tr {
-    border: 1px solid #dedede;
+    border: 1px solid #e4e7ff;
+
     td:first-of-type {
       padding: 10px;
-      width: 50%;
-      vertical-align: middle;
+      width: 60%;
     }
   }
   table {
@@ -21,12 +32,21 @@ export const TableWrapperStyle = (): SerializedStyles => css`
     border-spacing: 0;
     border-collapse: collapse;
     table-layout: fixed;
-    border tr {
-      &:not(:last-of-type) {
-        border-bottom: 1px solid #dedede;
-      }
+
+    tr {
       td {
-        padding: 10px 0;
+        width: 60%;
+        padding: 21px 10px;
+        color: #54587f;
+        border-left: 1px solid #e4e7ff;
+        border-bottom: 1px solid #e4e7ff;
+        vertical-align: middle;
+      }
+
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
       }
     }
   }
