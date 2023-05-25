@@ -103,7 +103,7 @@ const avatar = {
       },
     },
     borderColor: {
-      value: '{sem.borderColor.decorative.light.muted}',
+      value: '{sem.borderColor.decorative.muted}',
       type: 'color',
       description: 'common border color used by all avatar versions',
     },

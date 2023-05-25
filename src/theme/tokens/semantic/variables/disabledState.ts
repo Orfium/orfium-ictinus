@@ -1,6 +1,9 @@
 const disabledState = {
-  value: '{opacity.4}',
-  type: 'opacity',
+  default: {
+    value: '{opacity.4}',
+    type: 'opacity',
+    description: '',
+  },
 } as const;
 
 export default disabledState;

@@ -1,46 +1,39 @@
 const backgroundColor = {
   light: {
-    value: '#ffffff',
+    value: '{colors.neutral.light}',
     type: 'color',
-    description: 'for use as background color in pages',
+    description: 'light backgroundColor variant',
   },
-  neutralLight: {
-    value: '#f9fafc',
+  transparent: {
+    value: '{colors.neutral.transparent}',
     type: 'color',
-    description: 'for use as background color in pages',
-  },
-  neutralDark: {
-    value: '#f3f5f8',
-    type: 'color',
-    description: 'for use as background color in pages',
+    description: 'transparent backgroundColor variant',
   },
   tintedLight: {
     value: '#f4f8ff',
     type: 'color',
-    description: 'for use as background color in pages',
+    description: 'tinted backgroundColor, lighter variant. Use as backgroundColor in pages',
   },
   tintedDark: {
     value: '#e7eefe',
     type: 'color',
-    description: 'for use as background color in pages',
+    description: 'tinted backgroundColor, darker variant',
   },
   inverted: {
-    value: '#32354c',
+    value: '{colors.lightPurple.850}',
     type: 'color',
-    description: 'for use as background color in dark sections on pages',
+    description:
+      'inverted BackgroundColor variant, for use in dark sections of a light-themed page',
   },
   invertedDark: {
-    value: '#212332',
+    value: '{colors.lightPurple.900}',
     type: 'color',
-    description: 'for use as a background color in dark sections on pages',
-  },
-  transparent: {
-    value: 'rgba(0,0,0,0)',
-    type: 'color',
+    description: 'invertedBackgroundColor dark variant',
   },
   invertedAlt: {
-    value: '#1d1b5f',
+    value: '{colors.darkBlue.800}',
     type: 'color',
+    description: 'invertedBackgroundColor alt variant',
   },
 } as const;
 

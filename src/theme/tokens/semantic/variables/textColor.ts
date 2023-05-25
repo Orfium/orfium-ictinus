@@ -9,7 +9,7 @@ const textColor = {
       type: 'color',
     },
     error: {
-      value: '{colors.red.650}',
+      value: '{colors.red.600}',
       type: 'color',
       description: 'AA compliant against white and pale red (error)',
     },

@@ -51,7 +51,8 @@ export const buttonBaseStyle =
         outline: `${tokens('color.focusedBorderColor')} auto ${tokens('borderWidth.2')}`,
       },
       ':disabled': {
-        opacity: tokens('opacity'),
+        opacity: theme.tokens.disabledState.get('default'),
+        backgroundColor: tokens(`color.${type}.backgroundColor.inactive` as ButtonTokens),
         cursor: 'not-allowed',
       },
       ':hover:not(:disabled)': {

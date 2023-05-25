@@ -62,16 +62,16 @@ const button = {
       backgroundColor: {
         inactive: {
           type: 'color',
-          value: '{sem.palette.systemic.tertiary.light}',
+          value: '{sem.palette.systemic.transparent.light}',
           description: 'Sets backgroundColor for tertiary inactive button',
         },
         hover: {
-          value: '{sem.palette.systemic.tertiary.main}',
+          value: '{sem.palette.systemic.transparent.main}',
           type: 'color',
           description: 'Sets backgroundColor for tertiary hovered button',
         },
         active: {
-          value: '{sem.palette.systemic.tertiary.dark}',
+          value: '{sem.palette.systemic.transparent.dark}',
           type: 'color',
           description: 'Sets backgroundColor for tertiary active button',
         },
@@ -83,7 +83,7 @@ const button = {
       },
       borderColorSegmented: {
         type: 'color',
-        value: '{sem.borderColor.decorative.light.muted}',
+        value: '{sem.borderColor.decorative.muted}',
         description:
           'Used on the wrapper of a segmented tertiary button group and the dividers separate the buttons',
       },
@@ -102,16 +102,16 @@ const button = {
       backgroundColor: {
         inactive: {
           type: 'color',
-          value: '{sem.palette.systemic.tertiary.light}',
+          value: '{sem.palette.systemic.transparent.light}',
           description: 'Sets backgroundColor for invertedAlt inactive button',
         },
         hover: {
-          value: '{sem.palette.systemic.tertiary.main}',
+          value: '{sem.palette.systemic.transparent.main}',
           type: 'color',
           description: 'Sets backgroundColor for invertedAlt hovered button',
         },
         active: {
-          value: '{sem.palette.systemic.tertiary.dark}',
+          value: '{sem.palette.systemic.transparent.dark}',
           type: 'color',
           description: 'Sets backgroundColor for invertedAlt active button',
         },
@@ -220,11 +220,6 @@ const button = {
     value: '{borderRadius.5}',
     type: 'borderRadius',
     description: 'Sets border Radius for icon buttons',
-  },
-  opacity: {
-    value: '{sem.disabledState}',
-    type: 'opacity',
-    description: 'Sets button opacity for disabled state',
   },
 } as const;
 
