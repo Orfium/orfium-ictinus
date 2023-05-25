@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { DEFAULT_SIZE } from 'utils/size-utils';
+import { DEFAULT_SIZE, getTextFieldHeight } from 'utils/size-utils';
 
 import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
@@ -41,7 +41,13 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & 
           styleType={'outlined'}
           leftIcon={'search'}
           rightIcon={'close'}
-          sx={{ wrapper: { borderRadius: rem(100) } }}
+          sx={{
+            wrapper: {
+              borderRadius: rem(100),
+              // @TODO this is a unique case for the SearchField where we dont need to use the sm height of the TextField, will change in v5
+              height: size === 'sm' ? rem(36) : getTextFieldHeight(size),
+            },
+          }}
         >
           <IconWrapper iconPosition={'left'}>
             <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
