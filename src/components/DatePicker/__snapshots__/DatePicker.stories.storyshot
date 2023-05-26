@@ -506,6 +506,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-347 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -517,11 +522,12 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-347:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-347:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -534,15 +540,6 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
 }
 
 .emotion-348 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-349 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -558,17 +555,17 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-351 {
+.emotion-350 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-351 path {
+.emotion-350 path {
   fill: #ffffff;
 }
 
-.emotion-368 {
+.emotion-367 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -584,7 +581,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-368:after {
+.emotion-367:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -600,7 +597,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-428 {
+.emotion-427 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -613,7 +610,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   margin-right: 1.5rem;
 }
 
-.emotion-428>button {
+.emotion-427>button {
   margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
@@ -3359,22 +3356,18 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                               <span
                                 className="emotion-348"
                               >
+                                <span>
+                                  November
+                                   
+                                  2020
+                                </span>
                                 <span
-                                  className="emotion-349"
+                                  className="emotion-12"
+                                  onClick={[Function]}
                                 >
-                                  <span>
-                                    November
-                                     
-                                    2020
-                                  </span>
                                   <span
-                                    className="emotion-12"
-                                    onClick={[Function]}
-                                  >
-                                    <span
-                                      className="emotion-351"
-                                    />
-                                  </span>
+                                    className="emotion-350"
+                                  />
                                 </span>
                               </span>
                             </button>
@@ -3485,7 +3478,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-368"
+                            className="emotion-367"
                           >
                             <div
                               className="emotion-30"
@@ -3994,7 +3987,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-428"
+                className="emotion-427"
               >
                 <div
                   className="emotion-346"
@@ -4009,12 +4002,8 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <span
                       className="emotion-348"
                     >
-                      <span
-                        className="emotion-349"
-                      >
-                        <span>
-                          Cancel
-                        </span>
+                      <span>
+                        Cancel
                       </span>
                     </span>
                   </button>
@@ -4032,12 +4021,8 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                     <span
                       className="emotion-348"
                     >
-                      <span
-                        className="emotion-349"
-                      >
-                        <span>
-                          Apply
-                        </span>
+                      <span>
+                        Apply
                       </span>
                     </span>
                   </button>
@@ -7039,6 +7024,11 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
 }
 
 .emotion-11 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -7050,11 +7040,12 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
 }
 
 .emotion-11:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-11:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -7067,15 +7058,6 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
 }
 
 .emotion-12 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -7195,12 +7177,8 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
           <span
             className="emotion-12"
           >
-            <span
-              className="emotion-13"
-            >
-              <span>
-                Reset DatePicker value
-              </span>
+            <span>
+              Reset DatePicker value
             </span>
           </span>
         </button>
@@ -7265,12 +7243,8 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
           <span
             className="emotion-12"
           >
-            <span
-              className="emotion-13"
-            >
-              <span>
-                Reset RangePicker value
-              </span>
+            <span>
+              Reset RangePicker value
             </span>
           </span>
         </button>

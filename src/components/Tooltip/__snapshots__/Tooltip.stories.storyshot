@@ -72,6 +72,11 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 }
 
 .emotion-5 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -83,11 +88,12 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 }
 
 .emotion-5:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-5:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -100,15 +106,6 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 }
 
 .emotion-6 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -124,11 +121,11 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-24 {
+.emotion-20 {
   background: transparent;
 }
 
-.emotion-24 .tippy-content {
+.emotion-20 .tippy-content {
   color: white;
   background-color: transparent;
   max-width: 16rem;
@@ -142,17 +139,17 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   word-break: break-word;
 }
 
-.emotion-24 .tippy-arrow {
+.emotion-20 .tippy-arrow {
   color: transparent;
 }
 
-.emotion-29 {
+.emotion-24 {
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
   background: white;
   border-radius: 0.25rem;
 }
 
-.emotion-30 {
+.emotion-25 {
   padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -172,12 +169,12 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   height: 200px;
 }
 
-.emotion-31 {
+.emotion-26 {
   margin-bottom: 0.5rem;
   color: black;
 }
 
-.emotion-32 {
+.emotion-27 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -210,15 +207,15 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-32:hover:not(:disabled) {
+.emotion-27:hover:not(:disabled) {
   background: #d1faf0;
 }
 
-.emotion-32:focus-visible:not(:disabled) {
+.emotion-27:focus-visible:not(:disabled) {
   outline: none;
 }
 
-.emotion-32>:not(:last-child) {
+.emotion-27>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
@@ -287,12 +284,8 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
               <span
                 className="emotion-6"
               >
-                <span
-                  className="emotion-7"
-                >
-                  <span>
-                    Left
-                  </span>
+                <span>
+                  Left
                 </span>
               </span>
             </button>
@@ -320,12 +313,8 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
               <span
                 className="emotion-6"
               >
-                <span
-                  className="emotion-7"
-                >
-                  <span>
-                    Right
-                  </span>
+                <span>
+                  Right
                 </span>
               </span>
             </button>
@@ -357,12 +346,8 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
               <span
                 className="emotion-6"
               >
-                <span
-                  className="emotion-7"
-                >
-                  <span>
-                    Top
-                  </span>
+                <span>
+                  Top
                 </span>
               </span>
             </button>
@@ -390,12 +375,8 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
               <span
                 className="emotion-6"
               >
-                <span
-                  className="emotion-7"
-                >
-                  <span>
-                    Bottom
-                  </span>
+                <span>
+                  Bottom
                 </span>
               </span>
             </button>
@@ -409,7 +390,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
         Tooltip with component content
       </h2>
       <div
-        className="emotion-24"
+        className="emotion-20"
         interactive={false}
         interactiveDebounce={100}
         placement="right"
@@ -427,12 +408,8 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
             <span
               className="emotion-6"
             >
-              <span
-                className="emotion-7"
-              >
-                <span>
-                  Right
-                </span>
+              <span>
+                Right
               </span>
             </span>
           </button>
@@ -440,19 +417,19 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       </div>
       <div>
         <div
-          className="emotion-29"
+          className="emotion-24"
         >
           <div
-            className="emotion-30"
+            className="emotion-25"
           >
             <div
-              className="emotion-31"
+              className="emotion-26"
             >
               By hover here you can see:
             </div>
             <div
               aria-readonly="true"
-              className="emotion-32"
+              className="emotion-27"
               data-testid="chip"
             >
               <div>
