@@ -1,7 +1,9 @@
 import { Meta } from '@storybook/addon-docs';
 import TypographyTokensShowcase from '../../src/storybook/TypographyTokensShowcase';
+import TextColorShowcase from '../../src/storybook/TextColorShowcase';
 import OverviewShowcase from "../../src/storybook/OverviewShowcase";
 import { overviewTableText } from '../../src/storybook/Typography/constants';
+import SectionHeader from '../../src/storybook/SectionHeader';
 
 <Meta
   title="Design Tokens/Semantic/Typography"
@@ -13,7 +15,7 @@ import { overviewTableText } from '../../src/storybook/Typography/constants';
   }}
 />
 
-# TYPOGRAPHY
+<SectionHeader title={'Typography'} />
 
 <br />
 
@@ -39,6 +41,11 @@ Typography tokens are used to represent all text needs. There are four major sty
 
 <br />
 
-## Fonts
+## textColor
 
-Our main fonts used in the system is `Roboto` and is automatically imported and used when using `<ThemeProvider>` component
+Sets AA compliant colors for copy (tested against respective light/inverted backgroundColor tokens)
+
+<br />
+
+<TextColorShowcase />
+
