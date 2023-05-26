@@ -3,7 +3,7 @@ import { flatColors, paleColors } from './palette';
 export const flatPaletteConfig: Record<typeof flatColors[number], string> = {
   greyScale: '#808080',
   darkGrey: '#32324E',
-  lightGrey: '#889BBF',
+  lightGrey: '#A8B1FF',
   red: '#FF1744',
   magenta: '#C813D5',
   purple: '#8833FF',
