@@ -178,6 +178,11 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-8 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -199,7 +204,7 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-8:active:not(:disabled) {
@@ -207,15 +212,6 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-9 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -231,7 +227,7 @@ exports[`TopAppBar should render correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -243,7 +239,7 @@ exports[`TopAppBar should render correctly 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -270,17 +266,17 @@ exports[`TopAppBar should render correctly 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-11 img {
-  border-radius: #e4e7ff;
+.emotion-10 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-11 {
   font-weight: 500;
 }
 
-.emotion-13 {
+.emotion-12 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -296,13 +292,13 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-14 {
+.emotion-13 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-14 path {
+.emotion-13 path {
   fill: #1451dc;
 }
 
@@ -483,6 +479,11 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-8 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -504,7 +505,7 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-8:active:not(:disabled) {
@@ -512,15 +513,6 @@ exports[`TopAppBar should render correctly 1`] = `
 }
 
 .emotion-9 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -536,7 +528,7 @@ exports[`TopAppBar should render correctly 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -548,7 +540,7 @@ exports[`TopAppBar should render correctly 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -575,17 +567,17 @@ exports[`TopAppBar should render correctly 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-11 img {
-  border-radius: #e4e7ff;
+.emotion-10 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-11 {
   font-weight: 500;
 }
 
-.emotion-13 {
+.emotion-12 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -601,13 +593,13 @@ exports[`TopAppBar should render correctly 1`] = `
   justify-content: center;
 }
 
-.emotion-14 {
+.emotion-13 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-14 path {
+.emotion-13 path {
   fill: #1451dc;
 }
 
@@ -657,33 +649,29 @@ exports[`TopAppBar should render correctly 1`] = `
               <span
                 class="emotion-9"
               >
-                <span
+                <div
                   class="emotion-10"
+                  data-testid="_avatar"
                 >
-                  <div
-                    class="emotion-11"
-                    data-testid="_avatar"
-                  >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
+                  <img
+                    src="https://mui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+                <span>
                   <span>
-                    <span>
-                      <span
-                        class="emotion-12"
-                      >
-                        Tom Cruise
-                      </span>
+                    <span
+                      class="emotion-11"
+                    >
+                      Tom Cruise
                     </span>
                   </span>
+                </span>
+                <span
+                  class="emotion-12"
+                >
                   <span
                     class="emotion-13"
-                  >
-                    <span
-                      class="emotion-14"
-                    />
-                  </span>
+                  />
                 </span>
               </span>
             </button>
@@ -873,6 +861,11 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-8 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -894,7 +887,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-8:active:not(:disabled) {
@@ -902,15 +895,6 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-9 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -926,7 +910,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -938,7 +922,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -965,17 +949,17 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-11 img {
-  border-radius: #e4e7ff;
+.emotion-10 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-11 {
   font-weight: 500;
 }
 
-.emotion-13 {
+.emotion-12 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -991,13 +975,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-14 {
+.emotion-13 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-14 path {
+.emotion-13 path {
   fill: #1451dc;
 }
 
@@ -1178,6 +1162,11 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-8 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -1199,7 +1188,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-8:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-8:active:not(:disabled) {
@@ -1207,15 +1196,6 @@ exports[`TopAppBar should render correctly on dark 1`] = `
 }
 
 .emotion-9 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1231,7 +1211,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-11 {
+.emotion-10 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1243,7 +1223,7 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -1270,17 +1250,17 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-11 img {
-  border-radius: #e4e7ff;
+.emotion-10 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-12 {
+.emotion-11 {
   font-weight: 500;
 }
 
-.emotion-13 {
+.emotion-12 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1296,13 +1276,13 @@ exports[`TopAppBar should render correctly on dark 1`] = `
   justify-content: center;
 }
 
-.emotion-14 {
+.emotion-13 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-14 path {
+.emotion-13 path {
   fill: #1451dc;
 }
 
@@ -1352,33 +1332,29 @@ exports[`TopAppBar should render correctly on dark 1`] = `
               <span
                 class="emotion-9"
               >
-                <span
+                <div
                   class="emotion-10"
+                  data-testid="_avatar"
                 >
-                  <div
-                    class="emotion-11"
-                    data-testid="_avatar"
-                  >
-                    <img
-                      src="https://mui.com/static/images/avatar/1.jpg"
-                    />
-                  </div>
+                  <img
+                    src="https://mui.com/static/images/avatar/1.jpg"
+                  />
+                </div>
+                <span>
                   <span>
-                    <span>
-                      <span
-                        class="emotion-12"
-                      >
-                        Tom Cruise
-                      </span>
+                    <span
+                      class="emotion-11"
+                    >
+                      Tom Cruise
                     </span>
                   </span>
+                </span>
+                <span
+                  class="emotion-12"
+                >
                   <span
                     class="emotion-13"
-                  >
-                    <span
-                      class="emotion-14"
-                    />
-                  </span>
+                  />
                 </span>
               </span>
             </button>

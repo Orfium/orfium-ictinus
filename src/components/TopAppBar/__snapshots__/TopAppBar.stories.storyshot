@@ -216,6 +216,11 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
 }
 
 .emotion-12 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -237,7 +242,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
 }
 
 .emotion-12:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-12:active:not(:disabled) {
@@ -245,15 +250,6 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
 }
 
 .emotion-13 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -269,7 +265,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -281,7 +277,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -308,23 +304,23 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-15 img {
-  border-radius: #e4e7ff;
+.emotion-14 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-18 {
+.emotion-17 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #1451dc;
 }
 
@@ -433,34 +429,30 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
                   <span
                     className="emotion-13"
                   >
-                    <span
+                    <div
                       className="emotion-14"
+                      data-testid="_avatar"
                     >
-                      <div
-                        className="emotion-15"
-                        data-testid="_avatar"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                    <span>
                       <span>
-                        <span>
-                          <span
-                            className="emotion-16"
-                          >
-                            Tom Cruise
-                          </span>
+                        <span
+                          className="emotion-15"
+                        >
+                          Tom Cruise
                         </span>
                       </span>
+                    </span>
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-18"
-                        />
-                      </span>
+                        className="emotion-17"
+                      />
                     </span>
                   </span>
                 </button>
@@ -806,6 +798,11 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-24 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -827,7 +824,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-24:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-24:active:not(:disabled) {
@@ -835,15 +832,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-25 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,7 +847,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-27 {
+.emotion-26 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -871,7 +859,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -898,23 +886,23 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-27 img {
-  border-radius: #e4e7ff;
+.emotion-26 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-28 {
+.emotion-27 {
   font-weight: 500;
 }
 
-.emotion-30 {
+.emotion-29 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-30 path {
+.emotion-29 path {
   fill: #1451dc;
 }
 
@@ -1075,34 +1063,30 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   <span
                     className="emotion-25"
                   >
-                    <span
+                    <div
                       className="emotion-26"
+                      data-testid="_avatar"
                     >
-                      <div
-                        className="emotion-27"
-                        data-testid="_avatar"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                    <span>
                       <span>
-                        <span>
-                          <span
-                            className="emotion-28"
-                          >
-                            Tom Cruise
-                          </span>
+                        <span
+                          className="emotion-27"
+                        >
+                          Tom Cruise
                         </span>
                       </span>
+                    </span>
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-30"
-                        />
-                      </span>
+                        className="emotion-29"
+                      />
                     </span>
                   </span>
                 </button>
@@ -1332,6 +1316,11 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 }
 
 .emotion-12 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -1353,7 +1342,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 }
 
 .emotion-12:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-12:active:not(:disabled) {
@@ -1361,15 +1350,6 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 }
 
 .emotion-13 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1385,7 +1365,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1397,7 +1377,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -1424,23 +1404,23 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-15 img {
-  border-radius: #e4e7ff;
+.emotion-14 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-18 {
+.emotion-17 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #1451dc;
 }
 
@@ -1549,34 +1529,30 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
                   <span
                     className="emotion-13"
                   >
-                    <span
+                    <div
                       className="emotion-14"
+                      data-testid="_avatar"
                     >
-                      <div
-                        className="emotion-15"
-                        data-testid="_avatar"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                    <span>
                       <span>
-                        <span>
-                          <span
-                            className="emotion-16"
-                          >
-                            Tom Cruise
-                          </span>
+                        <span
+                          className="emotion-15"
+                        >
+                          Tom Cruise
                         </span>
                       </span>
+                    </span>
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-18"
-                        />
-                      </span>
+                        className="emotion-17"
+                      />
                     </span>
                   </span>
                 </button>
@@ -1806,6 +1782,11 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
 }
 
 .emotion-12 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
@@ -1827,7 +1808,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
 }
 
 .emotion-12:hover:not(:disabled) {
-  background-color: rgba(23, 91, 245, 0.09);
+  background-color: #175bf517;
 }
 
 .emotion-12:active:not(:disabled) {
@@ -1835,15 +1816,6 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
 }
 
 .emotion-13 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1859,7 +1831,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-15 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1871,7 +1843,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #e4e7ff;
+  border-color: #c2c8ff;
   box-sizing: border-box;
   background-color: #d0defd;
   color: #1451dc;
@@ -1898,23 +1870,23 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-15 img {
-  border-radius: #e4e7ff;
+.emotion-14 img {
+  border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-16 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-18 {
+.emotion-17 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-18 path {
+.emotion-17 path {
   fill: #1451dc;
 }
 
@@ -2023,34 +1995,30 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
                   <span
                     className="emotion-13"
                   >
-                    <span
+                    <div
                       className="emotion-14"
+                      data-testid="_avatar"
                     >
-                      <div
-                        className="emotion-15"
-                        data-testid="_avatar"
-                      >
-                        <img
-                          src="https://mui.com/static/images/avatar/1.jpg"
-                        />
-                      </div>
+                      <img
+                        src="https://mui.com/static/images/avatar/1.jpg"
+                      />
+                    </div>
+                    <span>
                       <span>
-                        <span>
-                          <span
-                            className="emotion-16"
-                          >
-                            Tom Cruise
-                          </span>
+                        <span
+                          className="emotion-15"
+                        >
+                          Tom Cruise
                         </span>
                       </span>
+                    </span>
+                    <span
+                      className="emotion-4"
+                      onClick={[Function]}
+                    >
                       <span
-                        className="emotion-4"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-18"
-                        />
-                      </span>
+                        className="emotion-17"
+                      />
                     </span>
                   </span>
                 </button>
