@@ -31,6 +31,17 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & 
     } = props;
 
     const shouldShowClear = (value as string).length > 0;
+    const sx = {
+      wrapper: {
+        borderRadius: rem(100),
+        // @TODO this is a unique case for the SearchField where we dont need to use the sm height of the TextField, will change in v5
+        height: size === 'sm' ? rem(36) : getTextFieldHeight(size),
+      },
+      input: {
+        // @TODO this is a unique case for the SearchField where we dont need to use the sm fontSize of the TextField, will change in v5
+        fontSize: size === 'sm' ? theme.typography.fontSizes['13'] : undefined,
+      },
+    };
 
     return (
       <React.Fragment>
@@ -41,13 +52,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & 
           styleType={'outlined'}
           leftIcon={'search'}
           rightIcon={'close'}
-          sx={{
-            wrapper: {
-              borderRadius: rem(100),
-              // @TODO this is a unique case for the SearchField where we dont need to use the sm height of the TextField, will change in v5
-              height: size === 'sm' ? rem(36) : getTextFieldHeight(size),
-            },
-          }}
+          sx={sx}
         >
           <IconWrapper iconPosition={'left'}>
             <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
@@ -55,7 +60,7 @@ const SearchField = React.forwardRef<HTMLInputElement, Props & TextFieldProps & 
 
           <div css={{ width: '100%' }}>
             <input
-              css={inputStyle({ size, dark, placeholder })}
+              css={inputStyle({ size, dark, placeholder, sx })}
               placeholder={placeholder}
               disabled={disabled}
               value={value}
