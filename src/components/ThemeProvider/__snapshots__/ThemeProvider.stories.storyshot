@@ -9,6 +9,11 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -20,11 +25,12 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -37,15 +43,6 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,12 +90,8 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
         <span
           className="emotion-2"
         >
-          <span
-            className="emotion-3"
-          >
-            <span>
-              Hello world
-            </span>
+          <span>
+            Hello world
           </span>
         </span>
       </button>

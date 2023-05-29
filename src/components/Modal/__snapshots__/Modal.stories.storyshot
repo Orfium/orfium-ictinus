@@ -23,6 +23,11 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 }
 
 .emotion-2 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -34,11 +39,12 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-2:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -51,15 +57,6 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 }
 
 .emotion-3 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -137,12 +134,8 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
                 <span
                   className="emotion-3"
                 >
-                  <span
-                    className="emotion-4"
-                  >
-                    <span>
-                      Open Modal
-                    </span>
+                  <span>
+                    Open Modal
                   </span>
                 </span>
               </button>
@@ -194,6 +187,11 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 }
 
 .emotion-2 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -205,11 +203,12 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-2:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -222,15 +221,6 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 }
 
 .emotion-3 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -308,12 +298,8 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
                 <span
                   className="emotion-3"
                 >
-                  <span
-                    className="emotion-4"
-                  >
-                    <span>
-                      Open Modal
-                    </span>
+                  <span>
+                    Open Modal
                   </span>
                 </span>
               </button>

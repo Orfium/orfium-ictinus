@@ -23,6 +23,11 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
 }
 
 .emotion-2 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem;
@@ -34,11 +39,12 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-2:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -154,6 +160,11 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-2 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem;
@@ -165,11 +176,12 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-2:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-2:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -208,6 +220,11 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-6 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: #dcdfff;
   padding: 0.5rem;
@@ -219,11 +236,12 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-6:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-6:disabled {
   opacity: 50%;
+  background-color: #dcdfff;
   cursor: not-allowed;
 }
 
@@ -246,8 +264,13 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-10 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
-  background-color: #ffffff;
+  background-color: rgba(23,91,245,0);
   padding: 0.5rem;
   border-radius: 2.25rem;
   border: none;
@@ -257,23 +280,29 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-10:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-10:disabled {
   opacity: 50%;
+  background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
 .emotion-10:hover:not(:disabled) {
-  background-color: #e7eefe;
+  background-color: #175bf517;
 }
 
 .emotion-10:active:not(:disabled) {
-  background-color: #d0defd;
+  background-color: rgba(23, 91, 245, 0.18);
 }
 
 .emotion-15 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem;
@@ -285,11 +314,12 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-15:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-15:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -302,6 +332,11 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-19 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
   background-color: #dcdfff;
   padding: 0.5rem;
@@ -313,11 +348,12 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-19:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-19:disabled {
   opacity: 50%;
+  background-color: #dcdfff;
   cursor: not-allowed;
 }
 
@@ -330,8 +366,13 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-23 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
-  background-color: #ffffff;
+  background-color: rgba(23,91,245,0);
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: none;
@@ -341,20 +382,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 }
 
 .emotion-23:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-23:disabled {
   opacity: 50%;
+  background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
 .emotion-23:hover:not(:disabled) {
-  background-color: #e7eefe;
+  background-color: #175bf517;
 }
 
 .emotion-23:active:not(:disabled) {
-  background-color: #d0defd;
+  background-color: rgba(23, 91, 245, 0.18);
 }
 
 <div

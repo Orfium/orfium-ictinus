@@ -8,6 +8,7 @@ import {
   getIconButtonTokens,
   getTextButtonTokens,
 } from '../Button/Button.tokens';
+import { label02 } from '../Typography/Typography.config.styles';
 
 export const buttonWrapperStyle = ({
   isBlock,
@@ -51,7 +52,8 @@ export const buttonBaseStyle =
         outline: `${tokens('color.focusedBorderColor')} auto ${tokens('borderWidth.2')}`,
       },
       ':disabled': {
-        opacity: tokens('opacity'),
+        opacity: theme.tokens.disabledState.get('default'),
+        backgroundColor: tokens(`color.${type}.backgroundColor.inactive` as ButtonTokens),
         cursor: 'not-allowed',
       },
       ':hover:not(:disabled)': {
@@ -69,7 +71,12 @@ export const buttonBaseStyle =
           }
         : {};
 
-    return css({ ...baseButtonStyles, ...loadingStyles, ...sx?.container });
+    return css`
+      ${label02(theme)};
+      ${baseButtonStyles};
+      ${loadingStyles};
+      ${sx?.container};
+    `;
   };
 
 export const buttonSpanStyle = () => () => {

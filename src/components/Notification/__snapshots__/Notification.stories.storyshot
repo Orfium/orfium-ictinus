@@ -9,6 +9,11 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -20,11 +25,12 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -37,15 +43,6 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -113,12 +110,8 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
             <span
               className="emotion-2"
             >
-              <span
-                className="emotion-3"
-              >
-                <span>
-                  Show Notifications
-                </span>
+              <span>
+                Show Notifications
               </span>
             </span>
           </button>
@@ -243,8 +236,13 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 }
 
 .emotion-16 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #1451dc;
-  background-color: #ffffff;
+  background-color: rgba(23,91,245,0);
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -254,32 +252,24 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 }
 
 .emotion-16:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-16:disabled {
   opacity: 50%;
+  background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
 .emotion-16:hover:not(:disabled) {
-  background-color: #e7eefe;
+  background-color: #175bf517;
 }
 
 .emotion-16:active:not(:disabled) {
-  background-color: #d0defd;
+  background-color: rgba(23, 91, 245, 0.18);
 }
 
 .emotion-17 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #54587f;
-}
-
-.emotion-18 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -295,18 +285,18 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-19 {
+.emotion-18 {
   cursor: pointer;
   margin-left: 1rem;
 }
 
-.emotion-21 {
+.emotion-20 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-21 path {
+.emotion-20 path {
   fill: #5f6c85;
 }
 
@@ -453,18 +443,14 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                   <span
                     className="emotion-17"
                   >
-                    <span
-                      className="emotion-18"
-                    >
-                      <span>
-                        Action
-                      </span>
+                    <span>
+                      Action
                     </span>
                   </span>
                 </button>
               </div>
               <span
-                className="emotion-19"
+                className="emotion-18"
                 data-testid="notification-close"
                 onClick={[Function]}
               >
@@ -473,7 +459,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-21"
+                    className="emotion-20"
                   />
                 </span>
               </span>
@@ -551,12 +537,8 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                   <span
                     className="emotion-17"
                   >
-                    <span
-                      className="emotion-18"
-                    >
-                      <span>
-                        Action
-                      </span>
+                    <span>
+                      Action
                     </span>
                   </span>
                 </button>
@@ -623,7 +605,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
               className="emotion-7"
             >
               <span
-                className="emotion-19"
+                className="emotion-18"
                 data-testid="notification-close"
                 onClick={[Function]}
               >
@@ -632,7 +614,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-21"
+                    className="emotion-20"
                   />
                 </span>
               </span>
@@ -663,6 +645,11 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -674,11 +661,12 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -691,15 +679,6 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -767,12 +746,8 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
             <span
               className="emotion-2"
             >
-              <span
-                className="emotion-3"
-              >
-                <span>
-                  Show Notifications
-                </span>
+              <span>
+                Show Notifications
               </span>
             </span>
           </button>
@@ -801,6 +776,11 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -812,11 +792,12 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -829,15 +810,6 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -905,12 +877,8 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
             <span
               className="emotion-2"
             >
-              <span
-                className="emotion-3"
-              >
-                <span>
-                  Show Notifications
-                </span>
+              <span>
+                Show Notifications
               </span>
             </span>
           </button>
@@ -939,6 +907,11 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -950,11 +923,12 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -967,15 +941,6 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1043,12 +1008,8 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
             <span
               className="emotion-2"
             >
-              <span
-                className="emotion-3"
-              >
-                <span>
-                  Show Notifications
-                </span>
+              <span>
+                Show Notifications
               </span>
             </span>
           </button>
@@ -1077,6 +1038,11 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -1088,11 +1054,12 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -1105,15 +1072,6 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1181,12 +1139,8 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
             <span
               className="emotion-2"
             >
-              <span
-                className="emotion-3"
-              >
-                <span>
-                  Show Notifications
-                </span>
+              <span>
+                Show Notifications
               </span>
             </span>
           </button>
@@ -1215,6 +1169,11 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
 }
 
 .emotion-1 {
+  font-family: Roboto;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.015625rem;
   color: #ffffff;
   background-color: #175bf5;
   padding: 0.5rem 1rem;
@@ -1226,11 +1185,12 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
 }
 
 .emotion-1:focus-visible:not(:disabled) {
-  outline: #8833ff auto 0.125rem;
+  outline: #F814E1 auto 0.125rem;
 }
 
 .emotion-1:disabled {
   opacity: 50%;
+  background-color: #175bf5;
   cursor: not-allowed;
 }
 
@@ -1243,15 +1203,6 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
 }
 
 .emotion-2 {
-  font-family: Roboto;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-}
-
-.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1319,12 +1270,8 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
             <span
               className="emotion-2"
             >
-              <span
-                className="emotion-3"
-              >
-                <span>
-                  Show Notifications
-                </span>
+              <span>
+                Show Notifications
               </span>
             </span>
           </button>

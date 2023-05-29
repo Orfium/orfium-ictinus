@@ -59,7 +59,7 @@ const palette = {
       },
       main: {
         type: 'color',
-        value: 'rgba(23, 91, 245, 0.09)',
+        value: '#175bf517',
         description: 'Used to indicate hover state',
       },
       dark: {
