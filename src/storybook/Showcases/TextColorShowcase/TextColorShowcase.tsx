@@ -1,9 +1,8 @@
+import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 import backgroundColorFigma from 'theme/tokens/semantic/variables/backgroundColor';
 import textColor from 'theme/tokens/semantic/variables/textColor';
-
-import useTheme from '../../hooks/useTheme';
-import { DotKeys } from '../../theme/tokens/utils';
+import { DotKeys } from 'theme/tokens/utils';
 
 const TextColorShowcase = () => {
   const theme = useTheme();

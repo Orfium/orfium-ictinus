@@ -25,12 +25,12 @@ export const colorStyle = (theme: Theme): SerializedStyles =>
 export const descriptionStyle = (theme: Theme): SerializedStyles =>
   css`
     margin-top: 6px;
+    font-size: rem(12);
     p {
       margin-bottom: 4px;
     }
     span {
       background: ${theme.utils.getColor('blue', 50)};
       padding: 4px;
-      color: ${theme.tokens.palette.get('accents.darkBlue.contrast')};
     }
   `;

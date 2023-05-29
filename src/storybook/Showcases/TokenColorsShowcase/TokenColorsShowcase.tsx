@@ -67,11 +67,11 @@ const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'sys
                           <Typography variant={'body02'} type={'secondary'}>
                             {paletteFigma[type.category][type.key][state].description}
                           </Typography>
-                          <Typography variant={'body02'} component={'span'}>
+                          <Typography variant={'label03'} component={'span'} type={'active'}>
                             ${`${type.category}.${type.key}.${state}`}
                           </Typography>
                           {' = '}
-                          <Typography variant={'body02'} component={'span'}>
+                          <Typography variant={'label03'} component={'span'} type={'active'}>
                             {paletteFigma[type.category][type.key][state].value}
                           </Typography>
                         </div>

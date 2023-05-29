@@ -104,11 +104,11 @@ const TokenBackgroundColorsShowcase: FC<Props> = ({ tokenType = 'backgroundColor
                       <Typography variant={'body02'} type={'secondary'}>
                         {get(typePicker(), `${inType.key}.description`)}
                       </Typography>
-                      <Typography variant={'body02'} component={'span'}>
+                      <Typography variant={'label03'} component={'span'} type={'active'}>
                         ${`semantic.${tokenType}.${inType.key}`}
                       </Typography>
                       {' = '}
-                      <Typography variant={'body02'} component={'span'}>
+                      <Typography variant={'label03'} component={'span'} type={'active'}>
                         {get(typePicker(), `${inType.key}.value`)}
                       </Typography>
                     </div>
