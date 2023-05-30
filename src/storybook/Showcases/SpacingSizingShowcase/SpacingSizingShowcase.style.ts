@@ -1,6 +1,5 @@
 import { css, SerializedStyles } from '@emotion/react';
-
-import { Theme } from '../../theme';
+import { Theme } from 'theme';
 
 export const WrapperStyle = (theme: Theme): SerializedStyles => css`
   display: flex;

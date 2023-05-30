@@ -1,9 +1,9 @@
+import useTheme from 'hooks/useTheme';
 import { map } from 'lodash';
 import React from 'react';
 import spacing from 'theme/globals/constants/spacing';
 
 import { WrapperStyle } from './SpacingSizingShowcase.style';
-import { useTheme } from '../../index';
 
 const SpacingSizingShowcase = () => {
   const spaces = map(spacing);
