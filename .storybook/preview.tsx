@@ -136,20 +136,36 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }: any) => (
-        // @ts-ignore
-        <Typography css={SBTypographyWrapper} variant={'headline01'}>
-          {children}
-        </Typography>
+        <div css={{ margin: '16px 0' }}>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline01'}>
+            {children}
+          </Typography>
+        </div>
       ),
       h2: ({ children }: any) => (
-        // @ts-ignore
-        <Typography css={SBTypographyWrapper} variant={'headline02'}>
-          {children}
-        </Typography>
+        <div css={{ margin: '16px 0' }}>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline02'}>
+            {children}
+          </Typography>
+        </div>
       ),
-      h3: ({ children }: any) => <Typography variant={'headline03'}>{children}</Typography>,
-      h4: ({ children }: any) => <Typography variant={'headline04'}>{children}</Typography>,
-      p: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+      h3: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          <Typography variant={'headline03'}>{children}</Typography>
+        </div>
+      ),
+      h4: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          <Typography variant={'headline04'}>{children}</Typography>
+        </div>
+      ),
+      p: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          <Typography variant={'body01'}>{children}</Typography>
+        </div>
+      ),
       span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
       div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
       input: inputEmpty,

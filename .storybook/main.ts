@@ -27,6 +27,7 @@ module.exports = {
     '../docs/system/COLOR-UTILITY.stories.@(md|mdx)',
     '../docs/guides/*.stories.@(md|mdx)',
     '../docs/tokens/TOKENS.stories.@(md|mdx)',
+    '../docs/tokens/globals/*.stories.@(md|mdx)',
     '../docs/tokens/*.stories.@(md|mdx)',
     '../docs/system/*.stories.@(md|mdx)',
     '../src/**/*.stories.@(ts|tsx|mdx)',

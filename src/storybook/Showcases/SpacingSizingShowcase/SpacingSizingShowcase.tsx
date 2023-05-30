@@ -1,9 +1,8 @@
 import useTheme from 'hooks/useTheme';
 import { map } from 'lodash';
 import React from 'react';
+import { WrapperStyle } from 'storybook/styles/OverviewCard.style';
 import spacing from 'theme/globals/constants/spacing';
-
-import { WrapperStyle } from './SpacingSizingShowcase.style';
 
 const SpacingSizingShowcase = () => {
   const spaces = map(spacing);
