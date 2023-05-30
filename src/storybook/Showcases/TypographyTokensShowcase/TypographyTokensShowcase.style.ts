@@ -27,6 +27,12 @@ export const TableWrapperStyle = (): SerializedStyles => css`
       width: 60%;
     }
   }
+  tr {
+    &:nth-child(even) table td {
+      border-left: 1px solid #c2c8ff;
+      border-bottom: 1px solid #c2c8ff;
+    }
+  }
   table {
     width: 100%;
     border-spacing: 0;

@@ -4,6 +4,9 @@ import backgroundColorFigma from 'theme/tokens/semantic/variables/backgroundColo
 import textColor from 'theme/tokens/semantic/variables/textColor';
 import { DotKeys } from 'theme/tokens/utils';
 
+import { descriptionStyle, dividerStyle } from './TextColorShowcase.style';
+import Typography, { TextColorTypes } from 'components/Typography';
+
 const TextColorShowcase = () => {
   const theme = useTheme();
 
@@ -41,77 +44,52 @@ const TextColorShowcase = () => {
             marginBottom: '16px',
           }}
         >
-          <div
-            css={{
-              color: theme.tokens.textColor.get(
-                `${colorCategory}.secondary` as DotKeys<typeof textColor>
-              ),
-              fontSize: '20px',
-              fontWeight: 700,
-              textTransform: 'capitalize',
-            }}
+          <Typography
+            variant={'headline04'}
+            type={'secondary'}
+            isInverted={colorCategory === 'inverted'}
           >
             {colorCategory}
-          </div>
-          <div
-            css={{
-              background: '#E4E7FF',
-              height: '1px',
-              width: '100%',
-              marginTop: '8px',
-              marginBottom: '24px',
-            }}
-          />
+          </Typography>
+          <div css={dividerStyle} />
           {colorArrays[colorCategory].map((color) => (
             <div key={`textColor_${colorCategory}_${color.type}`}>
-              <div
-                css={{ color: color.hex, fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}
-              >
-                {color.type}
+              <div css={{ marginBottom: '8px' }}>
+                <Typography
+                  type={color.type as TextColorTypes}
+                  variant={'title01'}
+                  isInverted={colorCategory === 'inverted'}
+                >
+                  {color.type}
+                </Typography>
               </div>
-              <div
-                css={{
-                  display: 'flex',
-                  flexWrap: 'nowrap',
-                  alignItems: 'center',
-                  gap: '8px',
-                  color: theme.tokens.textColor.get(
-                    `${colorCategory}.active` as DotKeys<typeof textColor>
-                  ),
-                  fontSize: '12px',
-                  fontWeight: 500,
-                  marginBottom: '36px',
-                }}
-              >
-                <div
-                  css={{
-                    background: colorCategory === 'inverted' ? '#212332' : '#E7EEFE',
-                    padding: '4px',
-                    borderRadius: '2px',
-                  }}
+              <div css={descriptionStyle(colorCategory as DotKeys<typeof backgroundColorFigma>)}>
+                <Typography
+                  variant={'label03'}
+                  component={'span'}
+                  type={'active'}
+                  isInverted={colorCategory === 'inverted'}
                 >
                   {color.label}
-                </div>
+                </Typography>
                 {' = '}
-                <div
-                  css={{
-                    background: colorCategory === 'inverted' ? '#212332' : '#E7EEFE',
-                    padding: '4px',
-                    borderRadius: '2px',
-                  }}
+                <Typography
+                  variant={'label03'}
+                  component={'span'}
+                  type={'active'}
+                  isInverted={colorCategory === 'inverted'}
                 >
                   {color.value}
-                </div>
+                </Typography>
                 {' = '}
-                <div
-                  css={{
-                    background: colorCategory === 'inverted' ? '#212332' : '#E7EEFE',
-                    padding: '4px',
-                    borderRadius: '2px',
-                  }}
+                <Typography
+                  variant={'label03'}
+                  component={'span'}
+                  type={'active'}
+                  isInverted={colorCategory === 'inverted'}
                 >
                   {color.hex}
-                </div>
+                </Typography>
               </div>
             </div>
           ))}
