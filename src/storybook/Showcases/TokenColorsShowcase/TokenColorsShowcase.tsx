@@ -39,7 +39,7 @@ const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'sys
                 padding: 15px;
               `}
             >
-              <Typography variant={'headline03'} type={'secondary'}>
+              <Typography variant={'headline04'} type={'secondary'}>
                 {type.key}
               </Typography>
               <div css={stateWrapperStyle}>

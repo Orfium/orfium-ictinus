@@ -9,7 +9,7 @@ export const typeWrapperStyle =
       margin: 0;
       flex-direction: column;
 
-      h3 {
+      h4 {
         padding-bottom: 10px;
         text-transform: capitalize;
         border-bottom: 1px solid ${theme.tokens.borderColor.get('decorative.muted')};

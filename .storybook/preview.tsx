@@ -153,12 +153,18 @@ export const parameters = {
       ),
       h3: ({ children }: any) => (
         <div css={{ margin: '16px 0' }}>
-          <Typography variant={'headline03'}>{children}</Typography>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline03'}>
+            {children}
+          </Typography>
         </div>
       ),
       h4: ({ children }: any) => (
         <div css={{ margin: '16px 0' }}>
-          <Typography variant={'headline04'}>{children}</Typography>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline04'}>
+            {children}
+          </Typography>
         </div>
       ),
       p: ({ children }: any) => (
