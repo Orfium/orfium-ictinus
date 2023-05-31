@@ -37,7 +37,7 @@ const SpacingSizingShowcase = () => {
             />
             <div
               css={{
-                width: `${space.value}px`,
+                width: `${space.value}`,
                 height: '32px',
                 backgroundColor: theme.utils.getColor('lightPurple', 550),
               }}
@@ -73,7 +73,7 @@ const SpacingSizingShowcase = () => {
                 fontWeight: theme.globals.typography.fontWeight.get('regular'),
               }}
             >
-              {space.value}px
+              {space.value}
             </span>
           </div>
         </div>
