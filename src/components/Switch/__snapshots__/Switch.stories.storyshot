@@ -2,6 +2,11 @@
 
 exports[`Storyshots Design System/Switch Simple Switch 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +20,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -39,12 +44,12 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-size: 0.9375rem;
   color: #0f0f17;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -54,7 +59,7 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   display: flex;
 }
 
-.emotion-3 .react-switch-handle {
+.emotion-4 .react-switch-handle {
   cursor: unset!important;
   border: 2px solid #b7c3d8!important;
   box-sizing: border-box!important;
@@ -64,18 +69,18 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   transform: translateX(0)!important;
 }
 
-.emotion-3 .react-switch-handle:hover {
+.emotion-4 .react-switch-handle:hover {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
 
-.emotion-3 .react-switch-bg {
+.emotion-4 .react-switch-bg {
   cursor: unset!important;
   margin-right: 0!important;
   margin-left: 0!important;
 }
 
-.emotion-3 .react-switch-bg:hover~.react-switch-handle {
+.emotion-4 .react-switch-bg:hover~.react-switch-handle {
   box-shadow: rgba(14,14,23,0.1) 0 0 0 5px;
   background: #dbe1eb!important;
 }
@@ -93,14 +98,10 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
-      className="emotion-0"
+      className="emotion-1"
     >
       <div
         style={
@@ -111,16 +112,16 @@ exports[`Storyshots Design System/Switch Simple Switch 1`] = `
       >
         <label>
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <span
-              className="emotion-2"
+              className="emotion-3"
               data-testid="switch_label"
             >
               Label showcase text
             </span>
             <div
-              className="emotion-3"
+              className="emotion-4"
             >
               <div
                 style={

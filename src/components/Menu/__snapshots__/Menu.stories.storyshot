@@ -2,6 +2,11 @@
 
 exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,19 +20,19 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -43,25 +48,25 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-3:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-3:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,7 +82,7 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -116,13 +121,13 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-5 img {
+.emotion-6 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -138,13 +143,13 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-7 path {
+.emotion-8 path {
   fill: #ffffff;
 }
 
@@ -161,14 +166,10 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
-      className="emotion-0"
+      className="emotion-1"
     >
       <div
         style={
@@ -181,23 +182,23 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={true}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-6"
                     data-testid="_avatar"
                   >
                     TC
@@ -208,11 +209,11 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
                     </span>
                   </span>
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -228,6 +229,11 @@ exports[`Storyshots Design System/Menu Disabled Menu 1`] = `
 
 exports[`Storyshots Design System/Menu Menu with avatar and different button colour 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,19 +247,19 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -269,25 +275,25 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-3:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-3:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -303,7 +309,7 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   gap: 0.5rem;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -342,13 +348,13 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   letter-spacing: 0rem;
 }
 
-.emotion-5 img {
+.emotion-6 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -364,23 +370,23 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   justify-content: center;
 }
 
-.emotion-7 {
+.emotion-8 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-7 path {
+.emotion-8 path {
   fill: #ffffff;
 }
 
-.emotion-21 {
+.emotion-22 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-21 path {
+.emotion-22 path {
   fill: #1451dc;
 }
 
@@ -397,14 +403,10 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
-      className="emotion-0"
+      className="emotion-1"
     >
       <div
         style={
@@ -417,23 +419,23 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-6"
                     data-testid="_avatar"
                   >
                     TC
@@ -444,11 +446,11 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
                     </span>
                   </span>
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -468,23 +470,23 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-6"
                     data-testid="_avatar"
                   >
                     <img
@@ -497,11 +499,11 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
                     </span>
                   </span>
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -521,31 +523,31 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-6"
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-7"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-21"
+                        className="emotion-22"
                       />
                     </span>
                   </div>
@@ -555,11 +557,11 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
                     </span>
                   </span>
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -579,31 +581,31 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-6"
                     data-testid="_avatar"
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-7"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-21"
+                        className="emotion-22"
                       />
                     </span>
                   </div>
@@ -613,11 +615,11 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
                     </span>
                   </span>
                   <span
-                    className="emotion-6"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-7"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -633,6 +635,11 @@ exports[`Storyshots Design System/Menu Menu with avatar and different button col
 
 exports[`Storyshots Design System/Menu Menu with option icon and different colour 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -644,6 +651,352 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.emotion-2 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-3 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-4 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-4:focus-visible:not(:disabled) {
+  outline: #F814E1 auto 0.125rem;
+}
+
+.emotion-4:disabled {
+  opacity: 50%;
+  background-color: #175bf5;
+  cursor: not-allowed;
+}
+
+.emotion-4:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-4:active:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+}
+
+.emotion-6 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-7 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-8 {
+  fill: #1451dc;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-8 path {
+  fill: #1451dc;
+}
+
+.emotion-10 {
+  fill: #ffffff;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-10 path {
+  fill: #ffffff;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <button
+                className="emotion-4"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="_avatar"
+                  >
+                    <span
+                      className="emotion-7"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-8"
+                      />
+                    </span>
+                  </div>
+                  <span>
+                    <span>
+                      More
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-7"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <button
+                className="emotion-4"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="_avatar"
+                  >
+                    <span
+                      className="emotion-7"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-8"
+                      />
+                    </span>
+                  </div>
+                  <span>
+                    <span>
+                      More
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-7"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          role="button"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <button
+                className="emotion-4"
+                data-testid="button"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    className="emotion-6"
+                    data-testid="_avatar"
+                  >
+                    <span
+                      className="emotion-7"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-8"
+                      />
+                    </span>
+                  </div>
+                  <span>
+                    <span>
+                      More
+                    </span>
+                  </span>
+                  <span
+                    className="emotion-7"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
+.emotion-0 {
+  m: 6;
+  margin: 1rem;
 }
 
 .emotion-1 {
@@ -708,87 +1061,6 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   gap: 0.5rem;
 }
 
-.emotion-5 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 0.625rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  letter-spacing: 0rem;
-}
-
-.emotion-5 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-6 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-7 {
-  fill: #1451dc;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-7 path {
-  fill: #1451dc;
-}
-
-.emotion-9 {
-  fill: #ffffff;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-9 path {
-  fill: #ffffff;
-}
-
 <div
   style={
     Object {
@@ -802,275 +1074,7 @@ exports[`Storyshots Design System/Menu Menu with option icon and different colou
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      className="emotion-0"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-1"
-          >
-            <div
-              className="emotion-2"
-            >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-4"
-                >
-                  <div
-                    className="emotion-5"
-                    data-testid="_avatar"
-                  >
-                    <span
-                      className="emotion-6"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-7"
-                      />
-                    </span>
-                  </div>
-                  <span>
-                    <span>
-                      More
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-6"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-1"
-          >
-            <div
-              className="emotion-2"
-            >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-4"
-                >
-                  <div
-                    className="emotion-5"
-                    data-testid="_avatar"
-                  >
-                    <span
-                      className="emotion-6"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-7"
-                      />
-                    </span>
-                  </div>
-                  <span>
-                    <span>
-                      More
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-6"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-1"
-          >
-            <div
-              className="emotion-2"
-            >
-              <button
-                className="emotion-3"
-                data-testid="button"
-                disabled={false}
-                onClick={[Function]}
-                type="button"
-              >
-                <span
-                  className="emotion-4"
-                >
-                  <div
-                    className="emotion-5"
-                    data-testid="_avatar"
-                  >
-                    <span
-                      className="emotion-6"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-7"
-                      />
-                    </span>
-                  </div>
-                  <span>
-                    <span>
-                      More
-                    </span>
-                  </span>
-                  <span
-                    className="emotion-6"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-9"
-                    />
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
-.emotion-0 {
-  position: relative;
-  display: inline-block;
-}
-
-.emotion-1 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-2 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-  background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-2:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-2:disabled {
-  opacity: 50%;
-  background-color: #175bf5;
-  cursor: not-allowed;
-}
-
-.emotion-2:hover:not(:disabled) {
-  background-color: #457bf7;
-}
-
-.emotion-2:active:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-<div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div>
       <div>
@@ -1083,20 +1087,20 @@ exports[`Storyshots Design System/Menu Menu with selection handler 1`] = `
         role="button"
       >
         <div
-          className="emotion-0"
+          className="emotion-1"
         >
           <div
-            className="emotion-1"
+            className="emotion-2"
           >
             <button
-              className="emotion-2"
+              className="emotion-3"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-3"
+                className="emotion-4"
               >
                 <span>
                   <span>

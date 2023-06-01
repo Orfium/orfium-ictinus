@@ -2,6 +2,11 @@
 
 exports[`Storyshots Design System/TopNavBar playground 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -30,11 +35,11 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
-.emotion-0>*:not(:last-of-type) {
+.emotion-1>*:not(:last-of-type) {
   color: #0f0f17;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -67,12 +72,12 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-2 {
+.emotion-3 {
   cursor: pointer;
   margin: 1.5rem 0px 1.5rem 0.25rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -88,17 +93,17 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #e7eefe;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -123,7 +128,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   max-width: 25rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -141,7 +146,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   cursor: default;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -171,7 +176,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   flex-grow: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -196,19 +201,19 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-11 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -224,25 +229,25 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-12:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -258,7 +263,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -297,23 +302,23 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-13 img {
+.emotion-14 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-14 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-16 {
+.emotion-17 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-16 path {
+.emotion-17 path {
   fill: #1451dc;
 }
 
@@ -330,11 +335,7 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -345,31 +346,31 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
     >
       <div
         aria-label="Top Application Banner"
-        className="emotion-0"
+        className="emotion-1"
         role="banner"
       >
         <div
-          className="emotion-1"
+          className="emotion-2"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
             data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-3"
+              className="emotion-4"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-5"
               />
             </span>
           </div>
           <div
-            className="emotion-5"
+            className="emotion-6"
           >
             <div
-              className="emotion-6"
+              className="emotion-7"
             >
               <strong>
                 LOGO
@@ -379,33 +380,33 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
           </div>
         </div>
         <div
-          className="emotion-7"
+          className="emotion-8"
         />
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <div
             role="button"
           >
             <div
-              className="emotion-9"
+              className="emotion-10"
               data-testid="userMenu"
             >
               <div
-                className="emotion-10"
+                className="emotion-11"
               >
                 <button
-                  className="emotion-11"
+                  className="emotion-12"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-12"
+                    className="emotion-13"
                   >
                     <div
-                      className="emotion-13"
+                      className="emotion-14"
                       data-testid="_avatar"
                     >
                       <img
@@ -415,18 +416,18 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-14"
+                          className="emotion-15"
                         >
                           Tom Cruise
                         </span>
                       </span>
                     </span>
                     <span
-                      className="emotion-3"
+                      className="emotion-4"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-16"
+                        className="emotion-17"
                       />
                     </span>
                   </span>
@@ -443,6 +444,11 @@ exports[`Storyshots Design System/TopNavBar playground 1`] = `
 
 exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -471,11 +477,11 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
-.emotion-0>*:not(:last-of-type) {
+.emotion-1>*:not(:last-of-type) {
   color: #0f0f17;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -508,12 +514,12 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-2 {
+.emotion-3 {
   cursor: pointer;
   margin: 1.5rem 0px 1.5rem 0.25rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -529,17 +535,17 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #e7eefe;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -564,7 +570,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   max-width: 25rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -582,7 +588,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   cursor: default;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -612,7 +618,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   flex-grow: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -637,16 +643,16 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   background-color: white;
 }
 
-.emotion-8:hover {
+.emotion-9:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-8:focus-within {
+.emotion-9:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -666,15 +672,15 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-9>div {
+.emotion-10>div {
   position: relative;
 }
 
-.emotion-10 {
+.emotion-11 {
   width: 100%;
 }
 
-.emotion-11 {
+.emotion-12 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -687,36 +693,36 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   min-width: 100%;
 }
 
-.emotion-11+label {
+.emotion-12+label {
   font-size: 0.9375rem;
 }
 
-.emotion-11:focus {
+.emotion-12:focus {
   outline: none;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-12::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-12::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-12:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-11::placeholder {
+.emotion-12::placeholder {
   color: transparent;
 }
 
-.emotion-11:not(:focus):placeholder-shown+label {
+.emotion-12:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-11:focus+label,
-.emotion-11:not(:placeholder-shown)+label {
+.emotion-12:focus+label,
+.emotion-12:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -724,11 +730,11 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   font-weight: 700;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   cursor: not-allowed;
 }
 
-.emotion-20 {
+.emotion-21 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -753,19 +759,19 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-21 {
+.emotion-22 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-22 {
+.emotion-23 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-23 {
+.emotion-24 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -781,25 +787,25 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-23:focus-visible:not(:disabled) {
+.emotion-24:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-23:disabled {
+.emotion-24:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-23:hover:not(:disabled) {
+.emotion-24:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-23:active:not(:disabled) {
+.emotion-24:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-24 {
+.emotion-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -815,7 +821,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-25 {
+.emotion-26 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -854,23 +860,23 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-25 img {
+.emotion-26 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-26 {
+.emotion-27 {
   font-weight: 500;
 }
 
-.emotion-28 {
+.emotion-29 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-28 path {
+.emotion-29 path {
   fill: #1451dc;
 }
 
@@ -887,11 +893,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -902,31 +904,31 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
     >
       <div
         aria-label="Top Application Banner"
-        className="emotion-0"
+        className="emotion-1"
         role="banner"
       >
         <div
-          className="emotion-1"
+          className="emotion-2"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
             data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-3"
+              className="emotion-4"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-5"
               />
             </span>
           </div>
           <div
-            className="emotion-5"
+            className="emotion-6"
           >
             <div
-              className="emotion-6"
+              className="emotion-7"
             >
               <strong>
                 LOGO
@@ -936,19 +938,19 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
           </div>
         </div>
         <div
-          className="emotion-7"
+          className="emotion-8"
         >
           <div
-            className="emotion-8"
+            className="emotion-9"
           >
             <div
-              className="emotion-9"
+              className="emotion-10"
             >
               <div
-                className="emotion-10"
+                className="emotion-11"
               >
                 <input
-                  className="emotion-11"
+                  className="emotion-12"
                   disabled={false}
                   required={false}
                 />
@@ -956,16 +958,16 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
             </div>
           </div>
           <div
-            className="emotion-8"
+            className="emotion-9"
           >
             <div
-              className="emotion-9"
+              className="emotion-10"
             >
               <div
-                className="emotion-10"
+                className="emotion-11"
               >
                 <input
-                  className="emotion-11"
+                  className="emotion-12"
                   disabled={false}
                   required={false}
                 />
@@ -973,16 +975,16 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
             </div>
           </div>
           <div
-            className="emotion-8"
+            className="emotion-9"
           >
             <div
-              className="emotion-9"
+              className="emotion-10"
             >
               <div
-                className="emotion-10"
+                className="emotion-11"
               >
                 <input
-                  className="emotion-11"
+                  className="emotion-12"
                   disabled={false}
                   required={false}
                 />
@@ -991,30 +993,30 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
           </div>
         </div>
         <div
-          className="emotion-20"
+          className="emotion-21"
         >
           <div
             role="button"
           >
             <div
-              className="emotion-21"
+              className="emotion-22"
               data-testid="userMenu"
             >
               <div
-                className="emotion-22"
+                className="emotion-23"
               >
                 <button
-                  className="emotion-23"
+                  className="emotion-24"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-24"
+                    className="emotion-25"
                   >
                     <div
-                      className="emotion-25"
+                      className="emotion-26"
                       data-testid="_avatar"
                     >
                       <img
@@ -1024,18 +1026,18 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-26"
+                          className="emotion-27"
                         >
                           Tom Cruise
                         </span>
                       </span>
                     </span>
                     <span
-                      className="emotion-3"
+                      className="emotion-4"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-28"
+                        className="emotion-29"
                       />
                     </span>
                   </span>
@@ -1052,6 +1054,11 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 
 exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1080,11 +1087,11 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
-.emotion-0>*:not(:last-of-type) {
+.emotion-1>*:not(:last-of-type) {
   color: white;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1117,12 +1124,12 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-2 {
+.emotion-3 {
   cursor: pointer;
   margin: 1.5rem 0px 1.5rem 0.25rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1138,17 +1145,17 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #e7eefe;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1173,7 +1180,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   max-width: 25rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -1191,7 +1198,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   cursor: default;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1221,7 +1228,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   flex-grow: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1246,19 +1253,19 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-11 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1274,25 +1281,25 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-12:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1308,7 +1315,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1347,23 +1354,23 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-13 img {
+.emotion-14 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-14 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-16 {
+.emotion-17 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-16 path {
+.emotion-17 path {
   fill: #1451dc;
 }
 
@@ -1380,11 +1387,7 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -1395,31 +1398,31 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
     >
       <div
         aria-label="Top Application Banner"
-        className="emotion-0"
+        className="emotion-1"
         role="banner"
       >
         <div
-          className="emotion-1"
+          className="emotion-2"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
             data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-3"
+              className="emotion-4"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-5"
               />
             </span>
           </div>
           <div
-            className="emotion-5"
+            className="emotion-6"
           >
             <div
-              className="emotion-6"
+              className="emotion-7"
             >
               <strong>
                 LOGO
@@ -1429,33 +1432,33 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
           </div>
         </div>
         <div
-          className="emotion-7"
+          className="emotion-8"
         />
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <div
             role="button"
           >
             <div
-              className="emotion-9"
+              className="emotion-10"
               data-testid="userMenu"
             >
               <div
-                className="emotion-10"
+                className="emotion-11"
               >
                 <button
-                  className="emotion-11"
+                  className="emotion-12"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-12"
+                    className="emotion-13"
                   >
                     <div
-                      className="emotion-13"
+                      className="emotion-14"
                       data-testid="_avatar"
                     >
                       <img
@@ -1465,18 +1468,18 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-14"
+                          className="emotion-15"
                         >
                           Tom Cruise
                         </span>
                       </span>
                     </span>
                     <span
-                      className="emotion-3"
+                      className="emotion-4"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-16"
+                        className="emotion-17"
                       />
                     </span>
                   </span>
@@ -1493,6 +1496,11 @@ exports[`Storyshots Design System/TopNavBar with Dark theme enabled 1`] = `
 
 exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1521,11 +1529,11 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
-.emotion-0>*:not(:last-of-type) {
+.emotion-1>*:not(:last-of-type) {
   color: #0f0f17;
 }
 
-.emotion-1 {
+.emotion-2 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1558,12 +1566,12 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   justify-content: flex-start;
 }
 
-.emotion-2 {
+.emotion-3 {
   cursor: pointer;
   margin: 1.5rem 0px 1.5rem 0.25rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1579,17 +1587,17 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #e7eefe;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #e7eefe;
 }
 
-.emotion-5 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1614,7 +1622,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   max-width: 25rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   margin: auto;
   height: 100%;
   display: -webkit-box;
@@ -1632,7 +1640,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   cursor: default;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1662,7 +1670,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   flex-grow: 1;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1687,19 +1695,19 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-9 {
+.emotion-10 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-10 {
+.emotion-11 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-11 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1715,25 +1723,25 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-11:focus-visible:not(:disabled) {
+.emotion-12:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-11:disabled {
+.emotion-12:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-11:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-11:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-12 {
+.emotion-13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1749,7 +1757,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1788,23 +1796,23 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-13 img {
+.emotion-14 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-14 {
+.emotion-15 {
   font-weight: 500;
 }
 
-.emotion-16 {
+.emotion-17 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-16 path {
+.emotion-17 path {
   fill: #1451dc;
 }
 
@@ -1821,11 +1829,7 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -1836,31 +1840,31 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
     >
       <div
         aria-label="Top Application Banner"
-        className="emotion-0"
+        className="emotion-1"
         role="banner"
       >
         <div
-          className="emotion-1"
+          className="emotion-2"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
             data-testid="menu-handler"
             onClick={[Function]}
           >
             <span
-              className="emotion-3"
+              className="emotion-4"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-5"
               />
             </span>
           </div>
           <div
-            className="emotion-5"
+            className="emotion-6"
           >
             <div
-              className="emotion-6"
+              className="emotion-7"
             >
               <strong>
                 LOGO
@@ -1870,33 +1874,33 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
           </div>
         </div>
         <div
-          className="emotion-7"
+          className="emotion-8"
         />
         <div
-          className="emotion-8"
+          className="emotion-9"
         >
           <div
             role="button"
           >
             <div
-              className="emotion-9"
+              className="emotion-10"
               data-testid="userMenu"
             >
               <div
-                className="emotion-10"
+                className="emotion-11"
               >
                 <button
-                  className="emotion-11"
+                  className="emotion-12"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-12"
+                    className="emotion-13"
                   >
                     <div
-                      className="emotion-13"
+                      className="emotion-14"
                       data-testid="_avatar"
                     >
                       <img
@@ -1906,18 +1910,18 @@ exports[`Storyshots Design System/TopNavBar with Logo Placeholder 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-14"
+                          className="emotion-15"
                         >
                           Tom Cruise
                         </span>
                       </span>
                     </span>
                     <span
-                      className="emotion-3"
+                      className="emotion-4"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-16"
+                        className="emotion-17"
                       />
                     </span>
                   </span>

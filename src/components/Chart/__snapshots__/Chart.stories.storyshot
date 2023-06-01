@@ -2,6 +2,11 @@
 
 exports[`Storyshots Design System/Chart BarChart 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   width: inherit;
   height: inherit;
   color: black;
@@ -10,7 +15,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
   text-overflow: ellipsis;
 }
 
-.emotion-9 {
+.emotion-10 {
   width: inherit;
   height: inherit;
   color: #9b9b9b;
@@ -32,11 +37,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -492,7 +493,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={17.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -516,7 +517,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={62.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -540,7 +541,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={107.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -564,7 +565,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={152.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -588,7 +589,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={197.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -612,7 +613,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={242.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -636,7 +637,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={287.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -660,7 +661,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={332.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -684,7 +685,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={377.5}
                   >
                     <div
-                      className="emotion-0"
+                      className="emotion-1"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -708,7 +709,7 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
                     y={422.5}
                   >
                     <div
-                      className="emotion-9"
+                      className="emotion-10"
                       onMouseEnter={[Function]}
                       onMouseLeave={[Function]}
                     >
@@ -744,6 +745,11 @@ exports[`Storyshots Design System/Chart BarChart 1`] = `
 
 exports[`Storyshots Design System/Chart DonutChart 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -755,7 +761,7 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
   justify-content: center;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 80%;
   font-size: 0.75rem;
   color: #5f6c85;
@@ -775,11 +781,7 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -860,10 +862,10 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
                 y="52%"
               >
                 <div
-                  className="emotion-0"
+                  className="emotion-1"
                 >
                   <div
-                    className="emotion-1"
+                    className="emotion-2"
                   >
                     units
                   </div>
@@ -880,6 +882,11 @@ exports[`Storyshots Design System/Chart DonutChart 1`] = `
 
 exports[`Storyshots Design System/Chart LineChart 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   font-size: 0.875rem;
   padding: 0.5rem;
   color: white;
@@ -890,7 +897,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
   white-space: nowrap;
 }
 
-.emotion-1 {
+.emotion-2 {
   padding: 0;
   margin: 0;
 }
@@ -908,11 +915,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       className="recharts-wrapper"
@@ -1665,7 +1668,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
         }
       >
         <div
-          className="custom-tooltip emotion-0"
+          className="custom-tooltip emotion-1"
         >
           <p
             className="label"
@@ -1679,7 +1682,7 @@ exports[`Storyshots Design System/Chart LineChart 1`] = `
              
           </p>
           <ul
-            className="emotion-1"
+            className="emotion-2"
           />
         </div>
       </div>

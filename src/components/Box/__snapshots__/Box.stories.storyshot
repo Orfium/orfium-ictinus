@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/Box Box Background 1`] = `
+.emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
+  background-color: #32354c;
+  color: #ffffff;
+  mb: 5;
+  margin-bottom: 0.75rem;
+}
+
+.emotion-2 {
+  background-color: #ffffff;
+  mb: 5;
+  margin-bottom: 0.75rem;
+}
+
+.emotion-3 {
+  background-color: rgba(0,0,0,0);
+  mb: 5;
+  margin-bottom: 0.75rem;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      Background Inverted
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Background Light
+    </div>
+    <div
+      className="emotion-3"
+    >
+      Background Transparent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Box Box Horizontal Padding 1`] = `
+.emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
+  background-color: #ffffff;
+  px: 7;
+  padding: 1.25rem 0;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      Padding Horizontal 7
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Box Box Padding (All sides) 1`] = `
+.emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
+  background-color: #ffffff;
+  p: 3;
+  mb: 5;
+  padding: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.emotion-2 {
+  background-color: #ffffff;
+  p: 7;
+  mb: 5;
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.emotion-3 {
+  background-color: #ffffff;
+  p: 12;
+  mb: 5;
+  padding: 2.75rem;
+  margin-bottom: 0.75rem;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      Padding 3
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Padding 7
+    </div>
+    <div
+      className="emotion-3"
+    >
+      Padding 12
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Box Box Vertical Padding 1`] = `
+.emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
+  background-color: #ffffff;
+  py: 7;
+  padding: 0 1.25rem;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    className="emotion-0"
+  >
+    <div
+      className="emotion-1"
+    >
+      Padding Horizontal 7
+    </div>
+  </div>
+</div>
+`;

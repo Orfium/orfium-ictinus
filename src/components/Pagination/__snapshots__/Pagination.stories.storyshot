@@ -2,6 +2,11 @@
 
 exports[`Storyshots Design System/Pagination Pagination 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -19,18 +24,18 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
   color: #0f0f17;
 }
 
-.emotion-0>* {
+.emotion-1>* {
   padding: 0.5rem;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -46,25 +51,25 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-3 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -80,13 +85,13 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #1451dc;
 }
 
@@ -103,51 +108,47 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
-      className="emotion-0"
+      className="emotion-1"
     >
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="icon-button"
           disabled={true}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             />
           </span>
         </button>
       </div>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="icon-button"
           disabled={true}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             />
           </span>
         </button>
@@ -159,41 +160,41 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
         3
       </div>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="icon-button"
           disabled={false}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             />
           </span>
         </button>
       </div>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="icon-button"
           disabled={false}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             />
           </span>
         </button>
@@ -205,6 +206,11 @@ exports[`Storyshots Design System/Pagination Pagination 1`] = `
 
 exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -222,18 +228,18 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
   color: #0f0f17;
 }
 
-.emotion-0>* {
+.emotion-1>* {
   padding: 0.5rem;
 }
 
-.emotion-1 {
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -249,25 +255,25 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-3 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -283,13 +289,13 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-5 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-4 path {
+.emotion-5 path {
   fill: #1451dc;
 }
 
@@ -306,31 +312,27 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
-      className="emotion-0"
+      className="emotion-1"
     >
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="icon-button"
           disabled={true}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             />
           </span>
         </button>
@@ -342,21 +344,21 @@ exports[`Storyshots Design System/Pagination Pagination without all buttons 1`] 
         3
       </div>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="icon-button"
           disabled={false}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-5"
             />
           </span>
         </button>

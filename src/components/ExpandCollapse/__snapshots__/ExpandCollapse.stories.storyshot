@@ -2,6 +2,11 @@
 
 exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
   transition: opacity 0ms ease,transform 0ms ease;
   opacity: 0;
@@ -24,11 +29,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div>
       <div
@@ -44,7 +45,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
           expand
         </button>
         <div
-          className="emotion-0"
+          className="emotion-1"
         >
           <div>
             <div>
@@ -71,7 +72,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
           expand/collapse
         </button>
         <div
-          className="emotion-0"
+          className="emotion-1"
         >
           <div>
             <div>
@@ -95,7 +96,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
                 expand/collapse
               </button>
               <div
-                className="emotion-0"
+                className="emotion-1"
               >
                 <div>
                   <div>
@@ -125,7 +126,7 @@ exports[`Storyshots Design System/ExpandCollapse ExpandCollapse 1`] = `
           expand/collapse
         </button>
         <div
-          className="emotion-0"
+          className="emotion-1"
         >
           <div>
             <div>

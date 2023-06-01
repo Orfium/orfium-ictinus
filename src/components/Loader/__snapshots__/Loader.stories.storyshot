@@ -2,18 +2,23 @@
 
 exports[`Storyshots Design System/Loader Loader Types 1`] = `
 .emotion-0 {
+  m: 6;
+  margin: 1rem;
+}
+
+.emotion-1 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-1 {
+.emotion-2 {
   width: 1.625rem;
   position: relative;
   height: 0.375rem;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: absolute;
   left: 0.625rem;
   left: 0;
@@ -28,15 +33,15 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0.5s;
 }
 
-.emotion-2::after,
-.emotion-2::before {
+.emotion-3::after,
+.emotion-3::before {
   content: '';
   display: inline-block;
   position: absolute;
   top: 0;
 }
 
-.emotion-2::before {
+.emotion-3::before {
   left: -0.625rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -49,7 +54,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0s;
 }
 
-.emotion-2::after {
+.emotion-3::after {
   left: 0.625rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -62,7 +67,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0.7s;
 }
 
-.emotion-4 {
+.emotion-5 {
   position: relative;
   width: 100%;
   height: 0.5rem;
@@ -70,7 +75,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   border-radius: 0.5rem;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: absolute;
   opacity: 0.4;
   background: #e7ebf2;
@@ -78,7 +83,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   height: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: absolute;
   background: #175bf5;
   height: 0.5rem;
@@ -86,7 +91,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation: decrease 2.3s 0.8s infinite;
 }
 
-.emotion-7 {
+.emotion-8 {
   position: absolute;
   background: #175bf5;
   height: 0.5rem;
@@ -94,7 +99,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation: increase 2.3s infinite;
 }
 
-.emotion-9 {
+.emotion-10 {
   width: 1.5rem;
   height: 1.5rem;
   margin: auto;
@@ -121,11 +126,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   }
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-0"
   >
     <div
       style={
@@ -139,14 +140,14 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-0"
+        className="emotion-1"
       >
         <div
-          className="emotion-1"
+          className="emotion-2"
           data-testid="dots-loading"
         >
           <div
-            className="emotion-2"
+            className="emotion-3"
           />
         </div>
       </div>
@@ -163,20 +164,20 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-0"
+        className="emotion-1"
       >
         <div
-          className="emotion-4"
+          className="emotion-5"
           data-testid="dots-loading"
         >
-          <div
-            className="emotion-5"
-          />
           <div
             className="emotion-6"
           />
           <div
             className="emotion-7"
+          />
+          <div
+            className="emotion-8"
           />
         </div>
       </div>
@@ -193,10 +194,10 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-0"
+        className="emotion-1"
       >
         <div
-          className="emotion-9"
+          className="emotion-10"
           data-testid="spinner"
         />
       </div>
