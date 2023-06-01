@@ -1,9 +1,9 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import Slider from './Slider';
-import Stack from '../storyUtils/Stack'; import SwitchShowcase from "../storyUtils/SwitchShowcase"; import {
-    boolean,
-    select, withKnobs, text
-} from "@storybook/addon-knobs"; import SliderShowcase from "../storyUtils/SliderShowcase/SliderShowcase";
+import Stack from '../storyUtils/Stack';
+import SwitchShowcase from '../storyUtils/SwitchShowcase';
+import { boolean, select, withKnobs, text } from '@storybook/addon-knobs';
+import SliderShowcase from '../storyUtils/SliderShowcase/SliderShowcase';
 
 <Meta title="Design System/Slider" component={Slider} />
 
@@ -11,47 +11,54 @@ import Stack from '../storyUtils/Stack'; import SwitchShowcase from "../storyUti
 
 An interactive Slider component meant to serve as an alternative way of toggling between states.
 
-# Usage
+## Usage
 
 ```js
 import { Slider } from '@orfium/ictinus';
 
-<Slider />
+<Slider />;
 ```
 
-# Props
+## Props
 
 <Props of={Slider} />
 
-# Range Slider
+### Range Slider
 
 <Preview>
   <Story name="Range Slider (DontTest)" parameters={{ decorators: [withKnobs] }}>
-      <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)}/>
+    <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)} />
   </Story>
 </Preview>
 
-# Range Slider with Increments
+### Range Slider with Increments
 
 <Preview>
   <Story name="Range Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
-        <SliderShowcase isSelector={false} isDisabled={boolean('isDisabled', false)} hasIncrements={true} />
+    <SliderShowcase
+      isSelector={false}
+      isDisabled={boolean('isDisabled', false)}
+      hasIncrements={true}
+    />
   </Story>
 </Preview>
 
-# Selector Slider
+### Selector Slider
 
 <Preview>
   <Story name="Selector Slider (DontTest)" parameters={{ decorators: [withKnobs] }}>
-        <SliderShowcase isSelector={true} isDisabled={boolean('isDisabled', false)}/>
+    <SliderShowcase isSelector={true} isDisabled={boolean('isDisabled', false)} />
   </Story>
 </Preview>
 
-# Selector Slider with Increments
+### Selector Slider with Increments
 
 <Preview>
-    <Story name="Selector Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
-        <SliderShowcase isDisabled={boolean('isDisabled', false)} isSelector={true} hasIncrements={true} />
-    </Story>
+  <Story name="Selector Slider with Increments (DontTest)" parameters={{ decorators: [withKnobs] }}>
+    <SliderShowcase
+      isDisabled={boolean('isDisabled', false)}
+      isSelector={true}
+      hasIncrements={true}
+    />
+  </Story>
 </Preview>
-

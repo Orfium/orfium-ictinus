@@ -4,22 +4,24 @@ import Loader from './Loader';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Loader"
-    component={Loader}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Loader',
-            url: `${FIGMA_URL}?node-id=10283%3A104361`,
-        }],
-    }} />
-
+  title="Design System/Loader"
+  component={Loader}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Loader',
+        url: `${FIGMA_URL}?node-id=10283%3A104361`,
+      },
+    ],
+  }}
+/>
 
 # Loader
 
 A universal Loader component with different types.
 
-# Usage
+## Usage
 
 ```js
 import { Loader } from '@orfium/ictinus';
@@ -27,17 +29,17 @@ import { Loader } from '@orfium/ictinus';
 <Loader type="dots" />;
 ```
 
-# Props
+## Props
 
 <Props of={Loader} />
 
-# Loader Types
+### Loader Types
 
 Available Loader components.
 
 <Preview>
   <Story name="Loader Types">
-    {['dots', 'indeterminate', 'spinner'].map(type => (
+    {['dots', 'indeterminate', 'spinner'].map((type) => (
       <div style={{ margin: 10 }}>
         <strong>{type}: </strong>
         <Loader type={type} />

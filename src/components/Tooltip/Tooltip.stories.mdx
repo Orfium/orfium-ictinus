@@ -1,28 +1,30 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
 import { text, withKnobs } from '@storybook/addon-knobs';
 import Tooltip from './Tooltip';
-import TooltipShowcase from '../storyUtils/TooltipShowcase'; 
+import TooltipShowcase from '../storyUtils/TooltipShowcase';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Tooltip"
-    component={Tooltip}
-    parameters={{
-            design: [{
-                type: 'figma',
-                url: `${FIGMA_URL}?node-id=10283%3A104370`,
-            }],
-        }} />
+  title="Design System/Tooltip"
+  component={Tooltip}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=10283%3A104370`,
+      },
+    ],
+  }}
+/>
 
 # Tooltip
 
 Generic tooltip that can show content as string
-The background defined is set as property to ThemeProvider with ```overrides``` property because color for this is global and cannot be changed per case.
-e.g ```overrides: { tooltip: { background: { color: 'darkGray', shade: '500' } } }```
+The background defined is set as property to ThemeProvider with `overrides` property because color for this is global and cannot be changed per case.
+e.g `overrides: { tooltip: { background: { color: 'darkGray', shade: '500' } } }`
 
-
-# Usage
+## Usage
 
 ```js
 import { Tooltip } from '@orfium/ictinus';
@@ -32,34 +34,54 @@ import { Tooltip } from '@orfium/ictinus';
 </Tooltip>;
 ```
 
-# Props
+## Props
 
 <Props of={Tooltip} />
 
-# Generic Tooltip
+### Generic Tooltip
 
 Tooltip use to show info in any direction defined. If there is no space in the screen then it moves to the available space.
 
 <Preview>
   <Story name="Generic Tooltip" parameters={{ decorators: [withKnobs] }}>
-    <TooltipShowcase content={text('content', 'By hovering here you can see very long and useful info that totally breaks into two lines')}/>
+    <TooltipShowcase
+      content={text(
+        'content',
+        'By hovering here you can see very long and useful info that totally breaks into two lines'
+      )}
+    />
   </Story>
 </Preview>
 
-# Tooltip sizes
+### Tooltip sizes
 
 Tooltip sizes are 3 `large, medium, small` and you can see them in action below.
 
 <Preview>
   <Story name="Tooltip sizes">
     <Stack>
-      <Tooltip id={'right1'} size={'large'} content="By hover here you can see useful info" placement={'right'}>
+      <Tooltip
+        id={'right1'}
+        size={'large'}
+        content="By hover here you can see useful info"
+        placement={'right'}
+      >
         <button>Large</button>
       </Tooltip>
-      <Tooltip id={'right2'} size={'medium'} content="By hover here you can see useful info" placement={'right'}>
+      <Tooltip
+        id={'right2'}
+        size={'medium'}
+        content="By hover here you can see useful info"
+        placement={'right'}
+      >
         <button>Medium</button>
       </Tooltip>
-      <Tooltip id={'right3'} size={'small'} content="By hover here you can see useful info" placement={'right'}>
+      <Tooltip
+        id={'right3'}
+        size={'small'}
+        content="By hover here you can see useful info"
+        placement={'right'}
+      >
         <button>Small</button>
       </Tooltip>
     </Stack>

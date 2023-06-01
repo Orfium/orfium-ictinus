@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs';
+import BoxShadowShowcase from '../../../src/storybook/Showcases/BoxShadowShowcase';
+import SectionHeader from '../../../src/storybook/SectionHeader';
+
+<Meta
+  title="Design Tokens/Global/Box Shadow"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Box Shadow'} />
+
+<br />
+
+- [Overview](#overview)
+- [Tokens](#tokens)
+
+<br />
+
+## Overview
+
+Virtual light in our system always comes from the top and creates a shadows from layout and UI elements like in real world. Shadows used to create the scenes of hierarchy and elevation withing the UI and layout.
+
+## Tokens
+
+BoxShadow is part of [globals](?path=/docs/design-tokens-about--page#globals) tier of tokens.
+
+<BoxShadowShowcase />

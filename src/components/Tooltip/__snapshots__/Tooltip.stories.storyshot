@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -30,7 +23,7 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   height: 15.625rem;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -42,11 +35,11 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   margin-bottom: 3rem;
 }
 
-.emotion-3 {
+.emotion-2 {
   background: transparent;
 }
 
-.emotion-3 .tippy-content {
+.emotion-2 .tippy-content {
   color: white;
   background-color: #0f0f17;
   max-width: 16rem;
@@ -60,18 +53,18 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   word-break: break-word;
 }
 
-.emotion-3 .tippy-arrow {
+.emotion-2 .tippy-arrow {
   color: #0f0f17;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-5 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -87,25 +80,25 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-5:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-5:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-6 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -121,11 +114,11 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-20 {
+.emotion-19 {
   background: transparent;
 }
 
-.emotion-20 .tippy-content {
+.emotion-19 .tippy-content {
   color: white;
   background-color: transparent;
   max-width: 16rem;
@@ -139,17 +132,17 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   word-break: break-word;
 }
 
-.emotion-20 .tippy-arrow {
+.emotion-19 .tippy-arrow {
   color: transparent;
 }
 
-.emotion-24 {
+.emotion-23 {
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
   background: white;
   border-radius: 0.25rem;
 }
 
-.emotion-25 {
+.emotion-24 {
   padding: 1rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -169,12 +162,12 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   height: 200px;
 }
 
-.emotion-26 {
+.emotion-25 {
   margin-bottom: 0.5rem;
   color: black;
 }
 
-.emotion-27 {
+.emotion-26 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -207,25 +200,24 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-27:hover:not(:disabled) {
+.emotion-26:hover:not(:disabled) {
   background: #d1faf0;
 }
 
-.emotion-27:focus-visible:not(:disabled) {
+.emotion-26:focus-visible:not(:disabled) {
   outline: none;
 }
 
-.emotion-27>:not(:last-child) {
+.emotion-26>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -240,49 +232,32 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <h2>
         Tooltip with text-only content
       </h2>
       <div
-        className="emotion-2"
+        className="emotion-1"
       >
         <div
-          className="emotion-3"
+          className="emotion-2"
           interactive={false}
           interactiveDebounce={100}
           placement="left"
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <button
-              className="emotion-5"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-6"
+                className="emotion-5"
               >
                 <span>
                   Left
@@ -295,23 +270,23 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
           By hovering here you can see very long and useful info that totally breaks into two lines
         </div>
         <div
-          className="emotion-3"
+          className="emotion-2"
           interactive={false}
           interactiveDebounce={100}
           placement="right"
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <button
-              className="emotion-5"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-6"
+                className="emotion-5"
               >
                 <span>
                   Right
@@ -325,26 +300,26 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
         </div>
       </div>
       <div
-        className="emotion-2"
+        className="emotion-1"
       >
         <div
-          className="emotion-3"
+          className="emotion-2"
           interactive={false}
           interactiveDebounce={100}
           placement="top"
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <button
-              className="emotion-5"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-6"
+                className="emotion-5"
               >
                 <span>
                   Top
@@ -357,23 +332,23 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
           By hovering here you can see very long and useful info that totally breaks into two lines
         </div>
         <div
-          className="emotion-3"
+          className="emotion-2"
           interactive={false}
           interactiveDebounce={100}
           placement="bottom"
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <button
-              className="emotion-5"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-6"
+                className="emotion-5"
               >
                 <span>
                   Bottom
@@ -390,23 +365,23 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
         Tooltip with component content
       </h2>
       <div
-        className="emotion-20"
+        className="emotion-19"
         interactive={false}
         interactiveDebounce={100}
         placement="right"
       >
         <div
-          className="emotion-4"
+          className="emotion-3"
         >
           <button
-            className="emotion-5"
+            className="emotion-4"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-6"
+              className="emotion-5"
             >
               <span>
                 Right
@@ -417,19 +392,19 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
       </div>
       <div>
         <div
-          className="emotion-24"
+          className="emotion-23"
         >
           <div
-            className="emotion-25"
+            className="emotion-24"
           >
             <div
-              className="emotion-26"
+              className="emotion-25"
             >
               By hover here you can see:
             </div>
             <div
               aria-readonly="true"
-              className="emotion-27"
+              className="emotion-26"
               data-testid="chip"
             >
               <div>
@@ -450,13 +425,6 @@ exports[`Storyshots Design System/Tooltip Generic Tooltip 1`] = `
 
 exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -470,6 +438,28 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   flex-wrap: wrap;
 }
 
+.emotion-1 {
+  background: transparent;
+}
+
+.emotion-1 .tippy-content {
+  color: white;
+  background-color: #0f0f17;
+  max-width: 16rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 110%;
+  border-radius: 0.5rem;
+  text-align: start;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.emotion-1 .tippy-arrow {
+  color: #0f0f17;
+}
+
 .emotion-2 {
   background: transparent;
 }
@@ -479,7 +469,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   background-color: #0f0f17;
   max-width: 16rem;
   padding: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
@@ -501,7 +491,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   background-color: #0f0f17;
   max-width: 16rem;
   padding: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 110%;
   border-radius: 0.5rem;
@@ -514,35 +504,12 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
   color: #0f0f17;
 }
 
-.emotion-4 {
-  background: transparent;
-}
-
-.emotion-4 .tippy-content {
-  color: white;
-  background-color: #0f0f17;
-  max-width: 16rem;
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 400;
-  line-height: 110%;
-  border-radius: 0.5rem;
-  text-align: start;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-
-.emotion-4 .tippy-arrow {
-  color: #0f0f17;
-}
-
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -557,24 +524,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -584,7 +534,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
           interactive={false}
           interactiveDebounce={100}
           placement="right"
@@ -605,7 +555,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          className="emotion-2"
           interactive={false}
           interactiveDebounce={100}
           placement="right"
@@ -626,7 +576,7 @@ exports[`Storyshots Design System/Tooltip Tooltip sizes 1`] = `
         }
       >
         <div
-          className="emotion-4"
+          className="emotion-3"
           interactive={false}
           interactiveDebounce={100}
           placement="right"

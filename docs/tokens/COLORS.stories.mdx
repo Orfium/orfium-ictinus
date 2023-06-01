@@ -1,0 +1,52 @@
+import { Meta } from '@storybook/addon-docs';
+import TokenBackgroundColorsShowcase from '../../src/storybook/Showcases/TokenColorsShowcase';
+import SectionHeader from '../../src/storybook/SectionHeader';
+import LinkTo from '@storybook/addon-links/react';
+
+<Meta
+  title="Design Tokens/Semantic/Colors/Systemic Colors"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
+
+<SectionHeader title={'Systemic Colors'} />
+
+<br />
+
+- [Overview](#overview)
+- [Tokens](#tokens)
+
+## Overview
+
+Systemic colors are the heart ❤️of the design system. Systemic colors are a set of predefined colors using colors from the main [palette colors](?path=/docs/guide-colors--page), used consistently across **interactive components** in a design system.
+
+<br />
+Each token have specific structure of `light`, `main`, and `dark` color. Each type usually is used to
+define a specific state
+
+| Type      | Description                                             |
+| --------- | ------------------------------------------------------- |
+| **light** | Used on the hover state of the component                |
+| **main**  | Main state of component, default color.                 |
+| **dark**  | Used when the components is under focus or press state. |
+
+<br />
+<Tip>
+  Most of the times you will need colors from these but if you need to use colors for a
+  non-interactive component, check out{' '}
+  <LinkTo kind="/Design Tokens/Semantic/Colors/Accent Colors">Accent Colors</LinkTo>
+</Tip>
+
+<br />
+
+## Tokens
+
+Based on these types describe above we are defining each typography token below. Each token is shown with reference on tokens and value used from [palette colors](?path=/docs/guide-colors--page).
+
+<br />
+
+<TokenBackgroundColorsShowcase type={'systemic'} />

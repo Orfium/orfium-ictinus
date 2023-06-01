@@ -7,51 +7,54 @@ import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Filter"
-    component={Filter}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Anatomy',
-            url: `${FIGMA_URL}?node-id=10081%3A104078`,
-        },
-        {
-            type: 'figma',
-            name: 'Filters',
-            url: `${FIGMA_URL}?node-id=10283%3A104359`,
-        },
-         {
-             type: 'figma',
-             name: 'Filters Pressed',
-             url: `${FIGMA_URL}?node-id=10283%3A104360`,
-         },
-         {
-             type: 'figma',
-             name: 'Documentation: Outlined',
-             url: `${FIGMA_URL}?node-id=10073%3A105241`,
-         },
-         {
-             type: 'figma',
-             name: 'Documentation: Transparent',
-             url: `${FIGMA_URL}?node-id=10073%3A105431`,
-         },
-         {
-             type: 'figma',
-             name: 'Functionality: Adding new',
-             url: `${FIGMA_URL}?node-id=6283%3A99221`,
-         },
-         {
-            type: 'figma',
-            name: 'Functionality: Multiselect',
-            url: `${FIGMA_URL}?node-id=5156%3A73802`,
-        }],
-    }} />
+  title="Design System/Filter"
+  component={Filter}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Anatomy',
+        url: `${FIGMA_URL}?node-id=10081%3A104078`,
+      },
+      {
+        type: 'figma',
+        name: 'Filters',
+        url: `${FIGMA_URL}?node-id=10283%3A104359`,
+      },
+      {
+        type: 'figma',
+        name: 'Filters Pressed',
+        url: `${FIGMA_URL}?node-id=10283%3A104360`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation: Outlined',
+        url: `${FIGMA_URL}?node-id=10073%3A105241`,
+      },
+      {
+        type: 'figma',
+        name: 'Documentation: Transparent',
+        url: `${FIGMA_URL}?node-id=10073%3A105431`,
+      },
+      {
+        type: 'figma',
+        name: 'Functionality: Adding new',
+        url: `${FIGMA_URL}?node-id=6283%3A99221`,
+      },
+      {
+        type: 'figma',
+        name: 'Functionality: Multiselect',
+        url: `${FIGMA_URL}?node-id=5156%3A73802`,
+      },
+    ],
+  }}
+/>
 
 # Filter
 
 A universal Filter component that is a clickable element that can hold many forms.
 
-# Usage
+## Usage
 
 ```js
 import { Filter } from '@orfium/ictinus';
@@ -59,28 +62,33 @@ import { Filter } from '@orfium/ictinus';
 <Filter
   styleType="filled"
   defaultValue={{ value: 'ice cream', label: 'Ice cream' }}
-  items={[{ value: 'chocolate', label: 'Chocolate' }, { value: 'banana', label: 'Banana' }]}
+  items={[
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'banana', label: 'Banana' },
+  ]}
   selectedItem={{ value: 'chocolate', label: 'Chocolate' }}
-  onSelect={option => {/* do something with the selected option */}}
+  onSelect={(option) => {
+    /* do something with the selected option */
+  }}
   label={'Label'}
 />;
 ```
 
-# Props
+## Props
 
 <Props of={Filter} />
 
-
-# Filters
+### Filters
 
 A filter with different style types and a selection handler to return selection on change and to pass selection callback.
 Here you can see our two different filter types as well.
+
 <Preview>
   <Story name="Preset Filter">
-     <h2>Preset</h2>
+    <h2>Preset</h2>
     <Stack isVertical>
-       <FilterShowcase styleType="filled" />
-       <FilterShowcase styleType="filled" buttonType={'secondary'} />
+      <FilterShowcase styleType="filled" />
+      <FilterShowcase styleType="filled" buttonType={'secondary'} />
     </Stack>
     <h2>Transparent</h2>
     <Stack isVertical>
@@ -91,7 +99,7 @@ Here you can see our two different filter types as well.
   <Story name="Added Filter">
     <h2>Added</h2>
     <Stack isVertical>
-      <FilterShowcase styleType="filled" filterType={'added'}/>
+      <FilterShowcase styleType="filled" filterType={'added'} />
       <FilterShowcase styleType="filled" filterType={'added'} buttonType={'secondary'} />
     </Stack>
     <h2>Transparent</h2>
@@ -99,21 +107,19 @@ Here you can see our two different filter types as well.
   </Story>
 </Preview>
 
-
-# Searchable Filter
+### Searchable Filter
 
 A filter that supports searching options
 
 <Preview>
   <Story name="Searchable Filter">
     <Stack>
-       <FilterShowcase styleType="filled" isSearchable  />
+      <FilterShowcase styleType="filled" isSearchable />
     </Stack>
   </Story>
 </Preview>
 
-
-# Filter with Async and Loading
+### Filter with Async and Loading
 
 Filter that support asynchronous fetching, with loading status
 
@@ -123,7 +129,7 @@ Filter that support asynchronous fetching, with loading status
   </Story>
 </Preview>
 
-# Filter with Async, Loading and Minimum Characters to Search for
+### Filter with Async, Loading and Minimum Characters to Search for
 
 Filter that support asynchronous fetching, with loading status
 
@@ -133,18 +139,33 @@ Filter that support asynchronous fetching, with loading status
   </Story>
 </Preview>
 
-# Playground - Knobs
+### Playground - Knobs
+
 <Preview>
   <Story name="Dynamic Filter Props" parameters={{ decorators: [withKnobs] }}>
     <FilterShowcase
-        items={[{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }]}
-        label={text('text', 'you can change me')}
-        selectedItem={select('selectedItem', [{ value: 'apple', label: 'Apple' }, { value: 'orange', label: 'Orange' }, { value: 'banana', label: 'Banana' }])}
-        defaultValue={select('defaultValue', [{ value: 'peach', label: 'Peach' }, { value: 'watermelon', label: 'Watermelon' }]), { value: 'peach', label: 'Peach' }}
-        styleType={select('styleType', ['filled', 'transparent'], 'filled')}
-        filterType={select('filterType', ['preset', 'added'], 'preset')}
-        isSearchable={boolean('isSearchable', false)}
-        buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
+      items={[
+        { value: 'apple', label: 'Apple' },
+        { value: 'orange', label: 'Orange' },
+        { value: 'banana', label: 'Banana' },
+      ]}
+      label={text('text', 'you can change me')}
+      selectedItem={select('selectedItem', [
+        { value: 'apple', label: 'Apple' },
+        { value: 'orange', label: 'Orange' },
+        { value: 'banana', label: 'Banana' },
+      ])}
+      defaultValue={
+        (select('defaultValue', [
+          { value: 'peach', label: 'Peach' },
+          { value: 'watermelon', label: 'Watermelon' },
+        ]),
+        { value: 'peach', label: 'Peach' })
+      }
+      styleType={select('styleType', ['filled', 'transparent'], 'filled')}
+      filterType={select('filterType', ['preset', 'added'], 'preset')}
+      isSearchable={boolean('isSearchable', false)}
+      buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
     />
   </Story>
 </Preview>

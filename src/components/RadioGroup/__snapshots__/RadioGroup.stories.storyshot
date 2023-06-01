@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -43,7 +36,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 {
+.emotion-1 {
   top: 0;
   left: 0;
   width: 100%;
@@ -56,11 +49,11 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   opacity: 0;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -69,7 +62,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -79,7 +72,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   position: absolute;
 }
 
-.emotion-4:before {
+.emotion-3:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -93,7 +86,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-4:after {
+.emotion-3:after {
   content: '';
   display: block;
   position: absolute;
@@ -111,7 +104,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -120,7 +113,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   transition: all 0.2s ease;
 }
 
-.emotion-9 {
+.emotion-8 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -130,7 +123,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   position: absolute;
 }
 
-.emotion-9:before {
+.emotion-8:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -144,7 +137,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-9:after {
+.emotion-8:after {
   content: '';
   display: block;
   position: absolute;
@@ -165,10 +158,9 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -185,34 +177,17 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
     <div
       style={
         Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      style={
-        Object {
           "color": "#82e616",
         }
       }
     >
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           name="group"
           onBlur={[Function]}
@@ -225,23 +200,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
           value="a"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-4"
+            className="emotion-3"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={true}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           name="group"
           onBlur={[Function]}
@@ -254,23 +229,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
           value="b"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-9"
+            className="emotion-8"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           name="group"
           onBlur={[Function]}
@@ -283,13 +258,13 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
           value="c"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-4"
+            className="emotion-3"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
@@ -300,13 +275,6 @@ exports[`Storyshots Design System/RadioGroup Radio with options 1`] = `
 
 exports[`Storyshots Design System/RadioGroup Radio with options with onChange handler 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -341,7 +309,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 {
+.emotion-1 {
   top: 0;
   left: 0;
   width: 100%;
@@ -354,11 +322,11 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   opacity: 0;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -367,7 +335,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -377,7 +345,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   position: absolute;
 }
 
-.emotion-4:before {
+.emotion-3:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -391,7 +359,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   transition: border-color 0.2s;
 }
 
-.emotion-4:after {
+.emotion-3:after {
   content: '';
   display: block;
   position: absolute;
@@ -409,7 +377,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   transition: transform 0.2s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -418,7 +386,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   transition: all 0.2s ease;
 }
 
-.emotion-9 {
+.emotion-8 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -428,7 +396,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   position: absolute;
 }
 
-.emotion-9:before {
+.emotion-8:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -442,7 +410,7 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
   transition: border-color 0.2s;
 }
 
-.emotion-9:after {
+.emotion-8:after {
   content: '';
   display: block;
   position: absolute;
@@ -463,10 +431,9 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -483,34 +450,17 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
     <div
       style={
         Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      style={
-        Object {
           "color": "#82e616",
         }
       }
     >
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           name="group"
           onBlur={[Function]}
@@ -523,23 +473,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
           value="a"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-4"
+            className="emotion-3"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={true}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           name="group"
           onBlur={[Function]}
@@ -552,23 +502,23 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
           value="b"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-9"
+            className="emotion-8"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           name="group"
           onBlur={[Function]}
@@ -581,13 +531,13 @@ exports[`Storyshots Design System/RadioGroup Radio with options with onChange ha
           value="c"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-4"
+            className="emotion-3"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>

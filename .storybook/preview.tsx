@@ -1,8 +1,12 @@
 // THIS DECORATOR MUST GO FIRST, OR THE STORY SOURCE GENERATES INCORRECTLY
 // Add prop tables to components (based on component type interfaces)
 import React from 'react';
+import { DocsContainer, DocsPage } from '@storybook/addon-docs';
 import ThemeProvider from '../src/components/ThemeProvider';
-import { useThemeSwitch } from '../src/hooks/useThemeSwitch';
+import styled from '@emotion/styled';
+import Typography from '../src/storybook/Typography';
+import { UsageGuidelines, Tip, Preview } from '../src/storybook';
+import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
 
 const viewPorts = {
   desktop1920: {
@@ -71,37 +75,16 @@ const viewPorts = {
   },
 };
 
-const ThemeSwitcher = () => {
-  const themeSwitchState = useThemeSwitch();
-  return (
-    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-      <button
-        onClick={themeSwitchState.toggle}
-        css={{
-          backgroundColor: themeSwitchState.isDark ? '#fff' : 'transparent',
-          color: '#000',
-          outline: 'none',
-          borderRadius: 4,
-        }}
-      >
-        turn {themeSwitchState.isDark ? 'semantic' : 'dark'} on
-      </button>
-    </div>
-  );
-};
-
 const Wrapper: React.FC = ({ children }) => {
-  const themeSwitchState = useThemeSwitch();
   return (
     <div
       style={{
-        backgroundColor: themeSwitchState.isDark ? '#0E0E17' : '#F2F2F2',
         width: '100%',
-        height: '100vh',
         position: 'relative',
         flex: 1,
         flexDirection: 'column',
         padding: 5,
+        borderRadius: 10,
       }}
     >
       {children}
@@ -114,7 +97,6 @@ export const decorators = [
     return (
       <Wrapper>
         <div style={{ margin: 15 }}>
-          <ThemeSwitcher />
           <Story />
         </div>
       </Wrapper>
@@ -126,9 +108,78 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
+const inputEmpty = styled.input(({ theme }) => ({}));
 export const parameters = {
+  controls: {
+    expanded: true,
+    sort: 'requiredFirst',
+  },
   viewport: {
     viewports: viewPorts,
   },
   options: { showPanel: true },
+  viewMode: 'docs',
+  previewTabs: {
+    'storybook/docs/panel': {
+      index: -1,
+    },
+    canvas: { title: 'Sandbox' },
+  },
+  docs: {
+    page: DocsPage,
+    inlineStories: true,
+    container: ({ children, context }: any) => (
+      <DocsContainer context={context}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </DocsContainer>
+    ),
+    components: {
+      h1: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline01'}>
+            {children}
+          </Typography>
+        </div>
+      ),
+      h2: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline02'}>
+            {children}
+          </Typography>
+        </div>
+      ),
+      h3: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline03'}>
+            {children}
+          </Typography>
+        </div>
+      ),
+      h4: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          {/*// @ts-ignore*/}
+          <Typography css={SBTypographyWrapper} variant={'headline04'}>
+            {children}
+          </Typography>
+        </div>
+      ),
+      p: ({ children }: any) => (
+        <div css={{ margin: '16px 0' }}>
+          <Typography variant={'body01'}>{children}</Typography>
+        </div>
+      ),
+      span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+      div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
+      input: inputEmpty,
+      UsageGuidelines,
+      Tip,
+      Preview,
+    },
+  },
 };
+
+export default parameters;

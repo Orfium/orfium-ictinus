@@ -1,34 +1,38 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import Stack from '../storyUtils/Stack';
-import SearchField from './SearchField'; import SearchFieldShowcase from './SearchFieldShowcase';
+import SearchField from './SearchField';
+import SearchFieldShowcase from './SearchFieldShowcase';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/SearchField"
-    component={SearchField}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Anatomy',
-            url: `${FIGMA_URL}?node-id=10231%3A104301`,
-        },
-        {
-            type: 'figma',
-            name: 'Rules',
-            url: `${FIGMA_URL}?node-id=10241%3A104324`,
-        },
-        {
-            type: 'figma',
-            name: 'Search field',
-            url: `${FIGMA_URL}?node-id=10283%3A104365`,
-        }],
-    }} />
+  title="Design System/SearchField"
+  component={SearchField}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Anatomy',
+        url: `${FIGMA_URL}?node-id=10231%3A104301`,
+      },
+      {
+        type: 'figma',
+        name: 'Rules',
+        url: `${FIGMA_URL}?node-id=10241%3A104324`,
+      },
+      {
+        type: 'figma',
+        name: 'Search field',
+        url: `${FIGMA_URL}?node-id=10283%3A104365`,
+      },
+    ],
+  }}
+/>
 
 # SearchField
 
 A Search field component based on the TextInputBase's styles.
 
-# Usage
+## Usage
 
 ```js
 import { SearchField } from '@orfium/ictinus';
@@ -36,7 +40,7 @@ import { SearchField } from '@orfium/ictinus';
 <SearchField onInput={console.log} />;
 ```
 
-# Props
+## Props
 
 <Props of={SearchField} />
 

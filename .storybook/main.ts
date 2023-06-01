@@ -21,11 +21,14 @@ function getPackageDir(filepath: string) {
 
 module.exports = {
   stories: [
-    '../docs/guides/INTRODUCTION.stories.@(md|mdx)',
-    '../docs/guides/GETTING_STARTED.stories.@(md|mdx)',
+    '../docs/WELCOME.stories.@(md|mdx)',
+    '../docs/GETTING_STARTED.stories.@(md|mdx)',
     '../docs/system/THEME.stories.@(md|mdx)',
     '../docs/system/COLOR-UTILITY.stories.@(md|mdx)',
     '../docs/guides/*.stories.@(md|mdx)',
+    '../docs/tokens/TOKENS.stories.@(md|mdx)',
+    '../docs/tokens/globals/*.stories.@(md|mdx)',
+    '../docs/tokens/*.stories.@(md|mdx)',
     '../docs/system/*.stories.@(md|mdx)',
     '../src/**/*.stories.@(ts|tsx|mdx)',
   ],
@@ -40,9 +43,7 @@ module.exports = {
     'storybook-addon-pseudo-states',
     'storybook-addon-designs',
   ],
-  features: {
-    storyStoreV7: true,
-  },
+  staticDirs: ['../public'],
   core: {
     builder: 'webpack5',
   },
@@ -61,6 +62,14 @@ module.exports = {
       require.resolve('@emotion/babel-preset-css-prop'),
     ];
 
+    rules.push({
+      test: /\.(png|jpe?g|gif)$/i,
+      use: [
+        {
+          loader: 'file-loader',
+        },
+      ],
+    });
     rules.push({
       test: /\.svg$/,
       issuer: /\.tsx?$/,

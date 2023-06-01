@@ -1,6 +1,14 @@
 import { Meta } from '@storybook/addon-docs';
 
-<Meta title="System/Utils" />
+<Meta
+  title="System/Utilities"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
 
 # System Utilities
 
@@ -30,7 +38,6 @@ import { getColor } from 'theme';
 ...
 getColor(palette)('lightBlue', 650)
 ```
-
 
 ##### 2) Hook
 
@@ -105,8 +112,9 @@ It gets 2 params:
 2. shade
 
 And returns the AA color for that.
-   <br />
-   <br />
+
+<br />
+<br />
 
 #### Usages <br/><br/>
 
@@ -117,7 +125,6 @@ import { getAAColorFromSwatches } from 'theme';
 ...
 getAAColorFromSwatches(palette)('lightBlue', 650)
 ```
-
 
 ##### 2) Hook
 
@@ -132,7 +139,6 @@ theme.utils.getAAColorFromSwatches('primary', BASE_SHADE);
 
 ---
 
-
 ### getAAColor
 
 This util is provided from core `theme` or you can use it as a standalone function.
@@ -143,8 +149,9 @@ It gets 1 param:
 1. color in HEX
 
 And returns the AA color for that.
-   <br />
-   <br />
+
+<br />
+<br />
 
 #### Usages <br/><br/>
 
@@ -156,7 +163,6 @@ import { getAAColor } from 'theme';
 getAAColor(palette)('#745673')
 ```
 
-
 ##### 2) Hook
 
 ```
@@ -166,10 +172,7 @@ theme.utils.getAAColor(palette)('#745673');
 ...
 ```
 
-
-
 ---
-
 
 ### getHover
 
@@ -182,6 +185,7 @@ It gets 3 params:
 3. shade ( default 0)
 
 Returns:
+
 ```
 {
     backgroundColor: string
@@ -198,7 +202,6 @@ background: getHover({theme}).backgroundColor;
 
 ---
 
-
 ### getFocus
 
 A util that returns the global state for focused components.
@@ -208,8 +211,8 @@ It gets 2 params:
 1. theme,
 2. borderWidth ( default 0 ),
 
-
 Returns:
+
 ```
 {
   borderWidth: string;
@@ -229,7 +232,6 @@ outline: getFocus({theme}).styleOutline;
 
 ---
 
-
 ### getPressed
 
 A util that returns the global state for pressed components.
@@ -241,6 +243,7 @@ It gets 3 params:
 3. shade ( default 0)
 
 Returns:
+
 ```
 {
   backgroundColor: string
@@ -256,7 +259,6 @@ background: getPressed({theme}).backgroundColor;
 ```
 
 ---
-
 
 ### getDisabled
 

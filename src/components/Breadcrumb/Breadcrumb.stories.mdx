@@ -6,22 +6,25 @@ import Breadcrumb from './Breadcrumb';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Breadcrumb"
-    component={() => true}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Breadcrumb',
-            url: `${FIGMA_URL}?node-id=11721%3A92484`,
-        }],
-    }} />
+  title="Design System/Breadcrumb"
+  component={() => true}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Breadcrumb',
+        url: `${FIGMA_URL}?node-id=11721%3A92484`,
+      },
+    ],
+  }}
+/>
 
 # Breadcrumb
 
 A Breadcrumb component that can be configured either by adding children components (Usage 1) or bypassing the data property (Usage 2).
 It contains a collapsed view. In case components overcome the maximum value of Breadcrumb items which is hardcoded to 4.
 
-# Usage 1
+## 1
 
 ```js
 import { Breadcrumb } from '@orfium/ictinus';
@@ -33,7 +36,7 @@ import { Breadcrumb } from '@orfium/ictinus';
 </Breadcrumb>;
 ```
 
-# Usage 2
+## 2
 
 ```js
 import { Breadcrumb } from '@orfium/ictinus';
@@ -41,7 +44,7 @@ import { Breadcrumb } from '@orfium/ictinus';
 <Breadcrumb data={[{ to: '/path', label: 'label' }]} />;
 ```
 
-# Props
+## Props
 
 <Props of={Breadcrumb} />
 
@@ -79,11 +82,21 @@ Active Breadcrumbs
           ]}
         />
         <Switch>
-          <Route path="/first-level">{() => <div style={{marginTop: '8px'}}>Current: Level 1</div>}</Route>
-          <Route path="/second-level">{() => <div style={{marginTop: '8px'}}>Current: Level 2</div>}</Route>
-          <Route path="/third-level">{() => <div style={{marginTop: '8px'}}>Current: Level 3</div>}</Route>
-          <Route path="/forth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 4</div>}</Route>
-          <Route path="/fifth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 5</div>}</Route>
+          <Route path="/first-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 1</div>}
+          </Route>
+          <Route path="/second-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 2</div>}
+          </Route>
+          <Route path="/third-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 3</div>}
+          </Route>
+          <Route path="/forth-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 4</div>}
+          </Route>
+          <Route path="/fifth-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 5</div>}
+          </Route>
         </Switch>
       </Router>
     </Stack>
@@ -108,10 +121,18 @@ Active Breadcrumbs with inactive last breadcrumb
           ]}
         />
         <Switch>
-          <Route path="/first-level">{() => <div style={{marginTop: '8px'}}>Current: Level 1</div>}</Route>
-          <Route path="/second-level">{() => <div style={{marginTop: '8px'}}>Current: Level 2</div>}</Route>
-          <Route path="/third-level">{() => <div style={{marginTop: '8px'}}>Current: Level 3</div>}</Route>
-          <Route path="/forth-level">{() => <div style={{marginTop: '8px'}}>Current: Level 4</div>}</Route>
+          <Route path="/first-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 1</div>}
+          </Route>
+          <Route path="/second-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 2</div>}
+          </Route>
+          <Route path="/third-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 3</div>}
+          </Route>
+          <Route path="/forth-level">
+            {() => <div style={{ marginTop: '8px' }}>Current: Level 4</div>}
+          </Route>
         </Switch>
       </Router>
     </Stack>

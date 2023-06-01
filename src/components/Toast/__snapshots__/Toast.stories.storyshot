@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/Toast Generic Toast 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +15,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -35,7 +28,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
-.emotion-3 {
+.emotion-2 {
   color: white;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,7 +42,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   background: #1de9b6;
 }
 
-.emotion-4 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -71,7 +64,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-5 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -83,7 +76,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   padding-right: 1rem;
 }
 
-.emotion-6 {
+.emotion-5 {
   cursor: pointer;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -97,7 +90,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-7 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -113,22 +106,22 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   justify-content: center;
 }
 
-.emotion-8 {
+.emotion-7 {
   fill: #fff;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-8 path {
+.emotion-7 path {
   fill: #fff;
 }
 
-.emotion-9 {
+.emotion-8 {
   cursor: pointer;
   margin-left: 1rem;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
@@ -143,7 +136,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
   background: white;
 }
 
-.emotion-14 {
+.emotion-13 {
   color: white;
   display: -webkit-box;
   display: -webkit-flex;
@@ -160,10 +153,9 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -180,23 +172,6 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
     <div
       style={
         Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      style={
-        Object {
           "alignItems": "center",
           "display": "flex",
           "flexDirection": "column",
@@ -207,7 +182,7 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
       }
     >
       <div
-        className="emotion-1"
+        className="emotion-0"
       >
         <div
           style={
@@ -217,53 +192,53 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
           }
         >
           <div
-            className="emotion-2"
+            className="emotion-1"
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div>
                   Secondary colored Toast
                 </div>
               </div>
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <span
-                  className="emotion-6"
+                  className="emotion-5"
                   data-testid="toast-expand"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-7"
+                    className="emotion-6"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-8"
+                      className="emotion-7"
                     />
                   </span>
                 </span>
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                   data-testid="toast-close"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-7"
+                    className="emotion-6"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-8"
+                      className="emotion-7"
                     />
                   </span>
                 </span>
               </div>
             </div>
             <div
-              className="emotion-12"
+              className="emotion-11"
               data-testid="expanded-container"
             />
           </div>
@@ -276,53 +251,53 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
           }
         >
           <div
-            className="emotion-2"
+            className="emotion-1"
           >
             <div
-              className="emotion-14"
+              className="emotion-13"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div>
                   Primary colored Toast
                 </div>
               </div>
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <span
-                  className="emotion-6"
+                  className="emotion-5"
                   data-testid="toast-expand"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-7"
+                    className="emotion-6"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-8"
+                      className="emotion-7"
                     />
                   </span>
                 </span>
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                   data-testid="toast-close"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-7"
+                    className="emotion-6"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-8"
+                      className="emotion-7"
                     />
                   </span>
                 </span>
               </div>
             </div>
             <div
-              className="emotion-12"
+              className="emotion-11"
               data-testid="expanded-container"
             />
           </div>
@@ -335,53 +310,53 @@ exports[`Storyshots Design System/Toast Generic Toast 1`] = `
           }
         >
           <div
-            className="emotion-2"
+            className="emotion-1"
           >
             <div
-              className="emotion-14"
+              className="emotion-13"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div>
                   Default colored Toast
                 </div>
               </div>
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <span
-                  className="emotion-6"
+                  className="emotion-5"
                   data-testid="toast-expand"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-7"
+                    className="emotion-6"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-8"
+                      className="emotion-7"
                     />
                   </span>
                 </span>
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                   data-testid="toast-close"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-7"
+                    className="emotion-6"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-8"
+                      className="emotion-7"
                     />
                   </span>
                 </span>
               </div>
             </div>
             <div
-              className="emotion-12"
+              className="emotion-11"
               data-testid="expanded-container"
             >
               <div>

@@ -2,19 +2,12 @@
 
 exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell tooltips 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-.emotion-2 {
+.emotion-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-top: 1rem;
@@ -24,15 +17,15 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
   border-bottom-color: #cfd7e5;
 }
 
-.emotion-2 th:first-of-type {
+.emotion-1 th:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-2 th:last-child {
+.emotion-1 th:last-child {
   padding-right: 1rem;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
@@ -43,33 +36,33 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
   font-size: 0.875rem;
 }
 
-.emotion-4 {
+.emotion-3 {
   font-weight: 500;
   color: #444d5f;
 }
 
-.emotion-11 {
+.emotion-10 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   border-bottom: 0.0625rem solid #cfd7e5;
 }
 
-.emotion-11 td:first-of-type {
+.emotion-10 td:first-of-type {
   padding-left: 1rem;
 }
 
-.emotion-11 td:last-child {
+.emotion-10 td:last-child {
   padding-right: inherit;
 }
 
-.emotion-12 {
+.emotion-11 {
   position: relative;
   text-align: left;
   padding: 0.25rem 0.5rem;
   width: initial;
 }
 
-.emotion-13 {
+.emotion-12 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -78,10 +71,9 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -95,71 +87,54 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
       }
     }
   >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
     <table
-      className="emotion-1"
+      className="emotion-0"
     >
       <thead>
         <tr
-          className="emotion-2"
+          className="emotion-1"
           onClick={[Function]}
         >
           <th
-            className="emotion-3"
+            className="emotion-2"
             data-testid="ictinus_column_1"
             onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               Column 1
             </div>
           </th>
           <th
-            className="emotion-3"
+            className="emotion-2"
             data-testid="ictinus_column_2"
             onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               Column 2
             </div>
           </th>
           <th
-            className="emotion-3"
+            className="emotion-2"
             data-testid="ictinus_column_3"
             onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               Column 3
             </div>
           </th>
           <th
-            className="emotion-3"
+            className="emotion-2"
             data-testid="ictinus_column_4"
             onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               Column 4
             </div>
@@ -168,15 +143,15 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
       </thead>
       <tbody>
         <tr
-          className="emotion-11"
+          className="emotion-10"
           onClick={[Function]}
         >
           <td
-            className="emotion-12"
+            className="emotion-11"
             data-testid="ictinus_table_row_1_cell_1"
           >
             <div
-              className="emotion-13"
+              className="emotion-12"
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
@@ -188,11 +163,11 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
             </div>
           </td>
           <td
-            className="emotion-12"
+            className="emotion-11"
             data-testid="ictinus_table_row_1_cell_2"
           >
             <div
-              className="emotion-13"
+              className="emotion-12"
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
@@ -204,11 +179,11 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
             </div>
           </td>
           <td
-            className="emotion-12"
+            className="emotion-11"
             data-testid="ictinus_table_row_1_cell_3"
           >
             <div
-              className="emotion-13"
+              className="emotion-12"
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
@@ -218,11 +193,11 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
             </div>
           </td>
           <td
-            className="emotion-12"
+            className="emotion-11"
             data-testid="ictinus_table_row_1_cell_4"
           >
             <div
-              className="emotion-13"
+              className="emotion-12"
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
             >
@@ -240,13 +215,6 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Table with cell t
 
 exports[`Storyshots System/Truncated Text with Tooltip Regular Text with truncation and tooltip 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -255,10 +223,9 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Text with truncat
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -275,29 +242,12 @@ exports[`Storyshots System/Truncated Text with Tooltip Regular Text with truncat
     <div
       style={
         Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      style={
-        Object {
           "width": 150,
         }
       }
     >
       <div
-        className="emotion-1"
+        className="emotion-0"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
       >

@@ -8,103 +8,99 @@ import Chip from './Chip';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/Chip"
-    component={Chip}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'Anatomy',
-            url: `${FIGMA_URL}?node-id=10038%3A104524`,
-        },
-        {
-            type: 'figma',
-            name: 'Rules',
-            url: `${FIGMA_URL}?node-id=10037%3A121257`,
-        },
-        {
-            type: 'figma',
-            name: 'Chip',
-            url: `${FIGMA_URL}?node-id=10062%3A105272`,
-        }],
-    }} />
+  title="Design System/Chip"
+  component={Chip}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'Anatomy',
+        url: `${FIGMA_URL}?node-id=10038%3A104524`,
+      },
+      {
+        type: 'figma',
+        name: 'Rules',
+        url: `${FIGMA_URL}?node-id=10037%3A121257`,
+      },
+      {
+        type: 'figma',
+        name: 'Chip',
+        url: `${FIGMA_URL}?node-id=10062%3A105272`,
+      },
+    ],
+  }}
+/>
 
-# Card
+# Chip
 
 A compact component that will be used in inner DS component but outside DS as well
 
-# Usage
+## Usage
 
 ```js
 import { Chip } from '@orfium/ictinus';
-<Chip>
-  Label
-</Chip>;
+<Chip>Label</Chip>;
 ```
 
-# Props
+## Props
 
 <Props of={Chip} />
 
-# Read-Only Chips
+### Read-Only Chips
 
 Read-Only Chips
 
 <Preview>
   <Story name="Read-Only Chips">
     <Stack>
-        <Chip
-          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
-        >
-          Label
-        </Chip>
-        <Chip 
-          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
-          thumbnail={{src: '', name: 'KN'}}
-        >
-          Label
-        </Chip>
-        <Chip 
-          thumbnail={{src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J'}}
-          fill={select('fill', flatColors.concat(undefined), flatColors[3])}
-        >
-         Label
-        </Chip>
+      <Chip fill={select('fill', flatColors.concat(undefined), flatColors[3])}>Label</Chip>
+      <Chip
+        fill={select('fill', flatColors.concat(undefined), flatColors[3])}
+        thumbnail={{ src: '', name: 'KN' }}
+      >
+        Label
+      </Chip>
+      <Chip
+        thumbnail={{ src: 'https://mui.com/static/images/avatar/1.jpg', name: 'J' }}
+        fill={select('fill', flatColors.concat(undefined), flatColors[3])}
+      >
+        Label
+      </Chip>
     </Stack>
   </Story>
 </Preview>
 
-# Interactive Chips
+### Interactive Chips
 
 Interactive Chips
 
 <Preview>
   <Story name="Interactive Chips">
     <Stack>
-        <Chip
-          styleType={'interactive'}
-          onClear={() => alert('You clicked the remove icon!')}
-          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
-        >
-          Label
-        </Chip>
-        <ChipShowcase
-          styleType={'interactive'}
-          isChecked
-          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
-        >
-          Label
-        </ChipShowcase>
-        <ChipShowcase
-          styleType={'interactive'}
-          badgeNumber={5}
-          fill={select('fill', flatColors.concat(undefined), flatColors[6])}
-        >
-          Label
-        </ChipShowcase>
+      <Chip
+        styleType={'interactive'}
+        onClear={() => alert('You clicked the remove icon!')}
+        fill={select('fill', flatColors.concat(undefined), flatColors[6])}
+      >
+        Label
+      </Chip>
+      <ChipShowcase
+        styleType={'interactive'}
+        isChecked
+        fill={select('fill', flatColors.concat(undefined), flatColors[6])}
+      >
+        Label
+      </ChipShowcase>
+      <ChipShowcase
+        styleType={'interactive'}
+        badgeNumber={5}
+        fill={select('fill', flatColors.concat(undefined), flatColors[6])}
+      >
+        Label
+      </ChipShowcase>
     </Stack>
   </Story>
 </Preview>
-
 
 <!-- # Chip with Icons
 

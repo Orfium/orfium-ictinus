@@ -1,10 +1,12 @@
-import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { Meta, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 import Button from './Button';
 import Stack from '../storyUtils/Stack';
-import Icon from '../Icon';
+import LinkTo from '@storybook/addon-links/react';
+
 import { FIGMA_URL } from '../../utils/common';
 import LoadingButtonShowcase from '../storyUtils/LoadingButtonShowcase';
+import SectionHeader from '../../storybook/SectionHeader';
 import { getIconSelectorKnob } from '../../utils/stories';
 
 <Meta
@@ -41,23 +43,40 @@ import { getIconSelectorKnob } from '../../utils/stories';
   }}
 />
 
-# Button
+<SectionHeader title={'Button'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
 
 A universal Button component that is a clickable element that can hold many forms.
 
-# Usage
+## Usage
 
-```js
-import { Button } from '@orfium/ictinus';
+<UsageGuidelines
+  guidelines={[
+    'Buttons may contain icon, on the left or the right side',
+    'Replace text with a loader if action is submitted, but still processing',
+    'Button width is set by it’s content, avoid changing it width',
+    'Use only one primary button, and any remaining calls to action should be represented as lower emphasis buttons',
+  ]}
+/>
 
-<Button onClick={() => {}}>Click Me</Button>;
-```
+<Tip>
+  If you need to use icon as button with no text, check out{' '}
+  <LinkTo kind="/Design System/Button/IconButton">Icon button</LinkTo> component
+</Tip>
 
-# Props
+## Props
 
 <Props of={Button} />
 
-# Button Types
+## Variants
+
+### Button Types
 
 Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
 
@@ -68,8 +87,6 @@ Button types based on the system approved literals for `primary, secondary, tert
       <Button type="secondary">Secondary</Button>
       <Button type="tertiary">Tertiary</Button>
       <Button type="danger">Danger</Button>
-      <Button type="inverted">Inverted</Button>
-      <Button type="invertedAlt">InvertedAlt</Button>
     </Stack>
     <Stack>
       <Button type="primary" isDisabled>
@@ -84,6 +101,21 @@ Button types based on the system approved literals for `primary, secondary, tert
       <Button type="danger" isDisabled>
         Danger
       </Button>
+    </Stack>
+  </Story>
+</Preview>
+
+### Inverted Button Types
+
+Button types based on the system approved literals for `primary, secondary, tertiary, danger, inverted, invertedAlt`
+
+<Preview isInverted>
+  <Story name="Inverted Button Types">
+    <Stack>
+      <Button type="inverted">Inverted</Button>
+      <Button type="invertedAlt">InvertedAlt</Button>
+    </Stack>
+    <Stack>
       <Button type="inverted" isDisabled>
         Inverted
       </Button>
@@ -94,7 +126,7 @@ Button types based on the system approved literals for `primary, secondary, tert
   </Story>
 </Preview>
 
-# Loading Button
+### Loading Button
 
 Button Loading variations based on the `isLoading` boolean prop.
 
@@ -104,7 +136,7 @@ Button Loading variations based on the `isLoading` boolean prop.
   </Story>
 </Preview>
 
-# Buttons with Icons
+### Buttons with Icons
 
 Buttons with icons. 3 different variations based on the icon's placement.
 
@@ -146,7 +178,7 @@ Buttons with icons. 3 different variations based on the icon's placement.
   </Story>
 </Preview>
 
-# Buttons with Avatars
+### Buttons with Avatars
 
 An avatar can be placed instead of a left icon. Only for `primary, secondary, tertiary` buttons.
 Can be only combined with a right icon, not with a left icon at the same time.
@@ -196,7 +228,7 @@ Can be only combined with a right icon, not with a left icon at the same time.
   </Story>
 </Preview>
 
-# Block Button
+### Block Button
 
 <Preview>
   <Story name="Block Button" parameters={{ decorators: [withKnobs] }}>
@@ -249,7 +281,7 @@ Can be only combined with a right icon, not with a left icon at the same time.
   </Story>
 </Preview>
 
-# Button Playground
+### Button Playground
 
 <Preview>
   <Story name="Button Playground" parameters={{ decorators: [withKnobs] }}>

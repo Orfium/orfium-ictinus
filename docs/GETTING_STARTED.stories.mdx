@@ -1,6 +1,14 @@
 import { Meta } from '@storybook/addon-docs';
 
-<Meta title="Guide/Getting Started" />
+<Meta
+  title="Getting Started"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: { hidden: true },
+    },
+  }}
+/>
 
 ## 📦 Installation
 
@@ -51,22 +59,10 @@ import { useTheme } from '@orfium/ictinus';
 const theme = useTheme();
 ```
 
-### Theme config
+### Theme config and overrides
 
-You can apply your own branded colours for each product at the definition of the ThemeProvider. This way you can have access everywhere.
-
-```
-<ThemeProvider
-    theme={{
-        palette: {
-            primary: theme.colors.orange,
-            secondary: theme.colors.ciel,
-        },
-    }}
->
-    ...
-</ThemeProvider>
-```
+Ictinus is a set of reusable React components that implements Ictinus design language. This tool is used for building applications
+that fully adopts the Ictinus design language and use the components out of the box.
 
 ### Emotion Project - Merge theme configs from different providers
 
@@ -84,14 +80,7 @@ export const defaultTheme = (ancestorTheme: IctinusTheme) => ({
 The final outcome will look like this.
 
 ```
-<IctinusThemeProvider
-  theme={{
-    palette: {
-      primary: theme.colors.orange,
-      secondary: theme.colors.ciel,
-    },
-  }}
->
+<IctinusThemeProvider>
   <ThemeProvider theme={defaultTheme}>
     ....
   </ThemeProvider>

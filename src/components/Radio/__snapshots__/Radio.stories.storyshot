@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +15,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -57,7 +50,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-3 {
+.emotion-2 {
   top: 0;
   left: 0;
   width: 100%;
@@ -70,11 +63,11 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   opacity: 0;
 }
 
-.emotion-3:disabled {
+.emotion-2:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -83,7 +76,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-5 {
+.emotion-4 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -93,7 +86,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   position: absolute;
 }
 
-.emotion-5:before {
+.emotion-4:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -107,7 +100,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-5:after {
+.emotion-4:after {
   content: '';
   display: block;
   position: absolute;
@@ -125,7 +118,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-6 {
+.emotion-5 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -137,10 +130,9 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -155,24 +147,7 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -182,12 +157,12 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
         }
       >
         <span
-          className="emotion-2"
+          className="emotion-1"
           data-testid="radio-input"
         >
           <input
             checked={false}
-            className="emotion-3"
+            className="emotion-2"
             disabled={true}
             onBlur={[Function]}
             onChange={[Function]}
@@ -199,13 +174,13 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
             value="on"
           />
           <span
-            className="emotion-4"
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
+              className="emotion-4"
             />
             <span
-              className="emotion-6"
+              className="emotion-5"
             />
           </span>
         </span>
@@ -218,12 +193,12 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
         }
       >
         <span
-          className="emotion-2"
+          className="emotion-1"
           data-testid="radio-input"
         >
           <input
             checked={false}
-            className="emotion-3"
+            className="emotion-2"
             disabled={true}
             onBlur={[Function]}
             onChange={[Function]}
@@ -235,13 +210,13 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
             value="on"
           />
           <span
-            className="emotion-4"
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
+              className="emotion-4"
             />
             <span
-              className="emotion-6"
+              className="emotion-5"
             />
           </span>
         </span>
@@ -253,13 +228,6 @@ exports[`Storyshots Design System/Radio Disabled not selected Radio 1`] = `
 
 exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -294,7 +262,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 {
+.emotion-1 {
   top: 0;
   left: 0;
   width: 100%;
@@ -307,11 +275,11 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   opacity: 0;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -320,7 +288,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -330,7 +298,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   position: absolute;
 }
 
-.emotion-4:before {
+.emotion-3:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -344,7 +312,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-4:after {
+.emotion-3:after {
   content: '';
   display: block;
   position: absolute;
@@ -362,7 +330,7 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -374,10 +342,9 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -391,30 +358,13 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
     <span
-      className="emotion-1"
+      className="emotion-0"
       data-testid="radio-input"
     >
       <input
         checked={true}
-        className="emotion-2"
+        className="emotion-1"
         disabled={true}
         onBlur={[Function]}
         onChange={[Function]}
@@ -426,13 +376,13 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
         value="on"
       />
       <span
-        className="emotion-3"
+        className="emotion-2"
       >
         <span
-          className="emotion-4"
+          className="emotion-3"
         />
         <span
-          className="emotion-5"
+          className="emotion-4"
         />
       </span>
     </span>
@@ -442,13 +392,6 @@ exports[`Storyshots Design System/Radio Disabled selected Radio 1`] = `
 
 exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undefined\`) 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,7 +405,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -497,7 +440,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-3 {
+.emotion-2 {
   top: 0;
   left: 0;
   width: 100%;
@@ -510,11 +453,11 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   opacity: 0;
 }
 
-.emotion-3:disabled {
+.emotion-2:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -523,7 +466,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-5 {
+.emotion-4 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -533,7 +476,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   position: absolute;
 }
 
-.emotion-5:before {
+.emotion-4:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -547,7 +490,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   transition: border-color 0.2s;
 }
 
-.emotion-5:after {
+.emotion-4:after {
   content: '';
   display: block;
   position: absolute;
@@ -565,7 +508,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
   transition: transform 0.2s;
 }
 
-.emotion-6 {
+.emotion-5 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -577,10 +520,9 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -595,24 +537,7 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -622,12 +547,12 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
         }
       >
         <span
-          className="emotion-2"
+          className="emotion-1"
           data-testid="radio-input"
         >
           <input
             checked={false}
-            className="emotion-3"
+            className="emotion-2"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
@@ -639,13 +564,13 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
             value="on"
           />
           <span
-            className="emotion-4"
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
+              className="emotion-4"
             />
             <span
-              className="emotion-6"
+              className="emotion-5"
             />
           </span>
         </span>
@@ -658,12 +583,12 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
         }
       >
         <span
-          className="emotion-2"
+          className="emotion-1"
           data-testid="radio-input"
         >
           <input
             checked={false}
-            className="emotion-3"
+            className="emotion-2"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
@@ -675,13 +600,13 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
             value="on"
           />
           <span
-            className="emotion-4"
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
+              className="emotion-4"
             />
             <span
-              className="emotion-6"
+              className="emotion-5"
             />
           </span>
         </span>
@@ -693,13 +618,6 @@ exports[`Storyshots Design System/Radio Not selected Radio  (\`checked === undef
 
 exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\`) 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -713,7 +631,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -748,7 +666,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-3 {
+.emotion-2 {
   top: 0;
   left: 0;
   width: 100%;
@@ -761,11 +679,11 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   opacity: 0;
 }
 
-.emotion-3:disabled {
+.emotion-2:disabled {
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -774,7 +692,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-5 {
+.emotion-4 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -784,7 +702,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   position: absolute;
 }
 
-.emotion-5:before {
+.emotion-4:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -798,7 +716,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   transition: border-color 0.2s;
 }
 
-.emotion-5:after {
+.emotion-4:after {
   content: '';
   display: block;
   position: absolute;
@@ -816,7 +734,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
   transition: transform 0.2s;
 }
 
-.emotion-6 {
+.emotion-5 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -828,10 +746,9 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -846,24 +763,7 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -873,12 +773,12 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
         }
       >
         <span
-          className="emotion-2"
+          className="emotion-1"
           data-testid="radio-input"
         >
           <input
             checked={false}
-            className="emotion-3"
+            className="emotion-2"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
@@ -890,13 +790,13 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
             value="on"
           />
           <span
-            className="emotion-4"
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
+              className="emotion-4"
             />
             <span
-              className="emotion-6"
+              className="emotion-5"
             />
           </span>
         </span>
@@ -909,12 +809,12 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
         }
       >
         <span
-          className="emotion-2"
+          className="emotion-1"
           data-testid="radio-input"
         >
           <input
             checked={false}
-            className="emotion-3"
+            className="emotion-2"
             disabled={false}
             onBlur={[Function]}
             onChange={[Function]}
@@ -926,13 +826,13 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
             value="on"
           />
           <span
-            className="emotion-4"
+            className="emotion-3"
           >
             <span
-              className="emotion-5"
+              className="emotion-4"
             />
             <span
-              className="emotion-6"
+              className="emotion-5"
             />
           </span>
         </span>
@@ -944,13 +844,6 @@ exports[`Storyshots Design System/Radio Not selected Radio (\`checked === false\
 
 exports[`Storyshots Design System/Radio Radio Playground 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -985,7 +878,7 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 {
+.emotion-1 {
   top: 0;
   left: 0;
   width: 100%;
@@ -998,11 +891,11 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   opacity: 0;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -1011,7 +904,7 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -1021,7 +914,7 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   position: absolute;
 }
 
-.emotion-4:before {
+.emotion-3:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -1035,7 +928,7 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-4:after {
+.emotion-3:after {
   content: '';
   display: block;
   position: absolute;
@@ -1053,7 +946,7 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -1065,10 +958,9 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -1082,30 +974,13 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
     <span
-      className="emotion-1"
+      className="emotion-0"
       data-testid="radio-input"
     >
       <input
         checked={true}
-        className="emotion-2"
+        className="emotion-1"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -1117,13 +992,13 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
         value="on"
       />
       <span
-        className="emotion-3"
+        className="emotion-2"
       >
         <span
-          className="emotion-4"
+          className="emotion-3"
         />
         <span
-          className="emotion-5"
+          className="emotion-4"
         />
       </span>
     </span>
@@ -1133,13 +1008,6 @@ exports[`Storyshots Design System/Radio Radio Playground 1`] = `
 
 exports[`Storyshots Design System/Radio Radio showcase 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -1174,7 +1042,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 {
+.emotion-1 {
   top: 0;
   left: 0;
   width: 100%;
@@ -1187,11 +1055,11 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   opacity: 0;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -1200,7 +1068,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -1210,7 +1078,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   position: absolute;
 }
 
-.emotion-4:before {
+.emotion-3:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -1224,7 +1092,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-4:after {
+.emotion-3:after {
   content: '';
   display: block;
   position: absolute;
@@ -1242,7 +1110,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -1251,7 +1119,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: all 0.2s ease;
 }
 
-.emotion-14 {
+.emotion-13 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -1261,7 +1129,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   position: absolute;
 }
 
-.emotion-14:before {
+.emotion-13:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -1275,7 +1143,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-14:after {
+.emotion-13:after {
   content: '';
   display: block;
   position: absolute;
@@ -1293,7 +1161,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-16 {
+.emotion-15 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -1328,7 +1196,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-19 {
+.emotion-18 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -1338,7 +1206,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   position: absolute;
 }
 
-.emotion-19:before {
+.emotion-18:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -1352,7 +1220,7 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-19:after {
+.emotion-18:after {
   content: '';
   display: block;
   position: absolute;
@@ -1373,10 +1241,9 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -1390,31 +1257,14 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
     <div>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1426,23 +1276,23 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           value="a"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-4"
+            className="emotion-3"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1454,23 +1304,23 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           value="b"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-4"
+            className="emotion-3"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-1"
+        className="emotion-0"
         data-testid="radio-input"
       >
         <input
           checked={true}
-          className="emotion-2"
+          className="emotion-1"
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1482,23 +1332,23 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           value="c"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-14"
+            className="emotion-13"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-16"
+        className="emotion-15"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={true}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1510,23 +1360,23 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           value="d"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-19"
+            className="emotion-18"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-16"
+        className="emotion-15"
         data-testid="radio-input"
       >
         <input
           checked={false}
-          className="emotion-2"
+          className="emotion-1"
           disabled={true}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1538,23 +1388,23 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           value="e"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-19"
+            className="emotion-18"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
       <span
-        className="emotion-16"
+        className="emotion-15"
         data-testid="radio-input"
       >
         <input
           checked={true}
-          className="emotion-2"
+          className="emotion-1"
           disabled={true}
           onBlur={[Function]}
           onChange={[Function]}
@@ -1566,13 +1416,13 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
           value="g"
         />
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span
-            className="emotion-14"
+            className="emotion-13"
           />
           <span
-            className="emotion-5"
+            className="emotion-4"
           />
         </span>
       </span>
@@ -1583,13 +1433,6 @@ exports[`Storyshots Design System/Radio Radio showcase 1`] = `
 
 exports[`Storyshots Design System/Radio Selected Radio 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   border-radius: 50%;
   width: 2.25rem;
@@ -1624,7 +1467,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   -webkit-tap-highlight-color: transparent;
 }
 
-.emotion-2 {
+.emotion-1 {
   top: 0;
   left: 0;
   width: 100%;
@@ -1637,11 +1480,11 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   opacity: 0;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   cursor: default;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   border-radius: 50%;
   width: 1.5rem;
@@ -1650,7 +1493,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   transition: box-shadow 0.3s ease;
 }
 
-.emotion-4 {
+.emotion-3 {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border-radius: 50%;
@@ -1660,7 +1503,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   position: absolute;
 }
 
-.emotion-4:before {
+.emotion-3:before {
   content: '';
   display: inline-block;
   box-sizing: border-box;
@@ -1674,7 +1517,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   transition: border-color 0.2s;
 }
 
-.emotion-4:after {
+.emotion-3:after {
   content: '';
   display: block;
   position: absolute;
@@ -1692,7 +1535,7 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
   transition: transform 0.2s;
 }
 
-.emotion-5 {
+.emotion-4 {
   position: absolute;
   border-radius: 50%;
   width: 1.5rem;
@@ -1704,10 +1547,9 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -1721,30 +1563,13 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
       }
     }
   >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
     <span
-      className="emotion-1"
+      className="emotion-0"
       data-testid="radio-input"
     >
       <input
         checked={true}
-        className="emotion-2"
+        className="emotion-1"
         disabled={false}
         onBlur={[Function]}
         onChange={[Function]}
@@ -1756,13 +1581,13 @@ exports[`Storyshots Design System/Radio Selected Radio 1`] = `
         value="on"
       />
       <span
-        className="emotion-3"
+        className="emotion-2"
       >
         <span
-          className="emotion-4"
+          className="emotion-3"
         />
         <span
-          className="emotion-5"
+          className="emotion-4"
         />
       </span>
     </span>

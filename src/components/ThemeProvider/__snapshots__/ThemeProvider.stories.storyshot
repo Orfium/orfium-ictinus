@@ -2,20 +2,13 @@
 
 exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-1 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -31,25 +24,25 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-1:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-1:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-1:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-1:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,10 +61,9 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -86,34 +78,17 @@ exports[`Storyshots Design System/ThemeProvider Setting up a button example 1`] 
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
+      className="emotion-0"
     >
       <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <button
-        className="emotion-2"
+        className="emotion-1"
         data-testid="button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <span
-          className="emotion-3"
+          className="emotion-2"
         >
           <span>
             Hello world

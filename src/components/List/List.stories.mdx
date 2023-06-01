@@ -5,21 +5,24 @@ import List from './List';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
-    title="Design System/List"
-    component={List}
-    parameters={{
-        design: [{
-            type: 'figma',
-            name: 'List',
-            url: `${FIGMA_URL}?node-id=10019%3A116509`,
-        }],
-    }} />
+  title="Design System/List"
+  component={List}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'List',
+        url: `${FIGMA_URL}?node-id=10019%3A116509`,
+      },
+    ],
+  }}
+/>
 
 # List
 
 A universal List component with different types.
 
-# Usage
+## Usage
 
 ```js
 import { List } from '@orfium/ictinus';
@@ -27,11 +30,11 @@ import { List } from '@orfium/ictinus';
 <List />;
 ```
 
-# Props
+## Props
 
 <Props of={List} />
 
-# List
+### List
 
 List component.
 
@@ -48,7 +51,7 @@ List component.
   </Story>
 </Preview>
 
-# Virtualized List with knobs
+### Virtualized List with knobs
 
 Virtualized List component for large amounts of items.
 
@@ -64,7 +67,7 @@ Virtualized List component for large amounts of items.
   </Story>
 </Preview>
 
-# List with icons
+### List with icons
 
 Virtualized List component for large amounts of items.
 
@@ -72,11 +75,31 @@ Virtualized List component for large amounts of items.
   <Story name="List with icons">
     <List
       data={[
-        { value: 'Option 1', label: 'Option 1', iconProps: { name: 'settings', color: 'lightGrey', variant: 650 }},
-        { value: 'Option 2', label: 'Option 2', iconProps: { name: 'search', color: 'lightGrey', variant: 650 }},
-        { value: 'Option 3', label: 'Option 3', iconProps: { name: 'star', color: 'lightGrey', variant: 650 }},
-        { value: 'Option 4', label: 'Option 4', iconProps: { name: 'add', color: 'lightGrey', variant: 650 }},
-        { value: 'Option 5', label: 'Option 5', iconProps: { name: 'file', color: 'lightGrey', variant: 650 }}
+        {
+          value: 'Option 1',
+          label: 'Option 1',
+          iconProps: { name: 'settings', color: 'lightGrey', variant: 650 },
+        },
+        {
+          value: 'Option 2',
+          label: 'Option 2',
+          iconProps: { name: 'search', color: 'lightGrey', variant: 650 },
+        },
+        {
+          value: 'Option 3',
+          label: 'Option 3',
+          iconProps: { name: 'star', color: 'lightGrey', variant: 650 },
+        },
+        {
+          value: 'Option 4',
+          label: 'Option 4',
+          iconProps: { name: 'add', color: 'lightGrey', variant: 650 },
+        },
+        {
+          value: 'Option 5',
+          label: 'Option 5',
+          iconProps: { name: 'file', color: 'lightGrey', variant: 650 },
+        },
       ]}
       defaultOption={{ value: '', label: 'All' }}
       rowSize={select('rowSize', ['small', 'normal'], 'normal')}

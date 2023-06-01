@@ -5,6 +5,7 @@ import { parseComponentToken } from './parsers';
 import { Token, TokensObject } from './types';
 
 /**
+ * Must be used on react components in order to fetch their component tokens
  *
  * @param object a variable from the tokens/components/variables directory
  * @param theme

@@ -2,13 +2,6 @@
 
 exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -22,7 +15,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -47,16 +40,16 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   background-color: white;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -76,15 +69,15 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -98,36 +91,36 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   min-width: 100%;
 }
 
-.emotion-5+label {
+.emotion-4+label {
   font-size: 0.9375rem;
 }
 
-.emotion-5:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: transparent;
 }
 
-.emotion-5:not(:focus):placeholder-shown+label {
+.emotion-4:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-5:focus+label,
-.emotion-5:not(:placeholder-shown)+label {
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -135,11 +128,11 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   font-weight: 700;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-5 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -171,7 +164,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   white-space: nowrap;
 }
 
-.emotion-7 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -196,16 +189,16 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   background-color: white;
 }
 
-.emotion-7:hover {
+.emotion-6:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-7:focus-within {
+.emotion-6:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-10 {
+.emotion-9 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -219,36 +212,36 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   min-width: 100%;
 }
 
-.emotion-10+label {
+.emotion-9+label {
   font-size: 0.8125rem;
 }
 
-.emotion-10:focus {
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-10::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-10::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-10:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-10::placeholder {
+.emotion-9::placeholder {
   color: transparent;
 }
 
-.emotion-10:not(:focus):placeholder-shown+label {
+.emotion-9:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-10:focus+label,
-.emotion-10:not(:placeholder-shown)+label {
+.emotion-9:focus+label,
+.emotion-9:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -256,17 +249,16 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   font-weight: 700;
 }
 
-.emotion-10:disabled {
+.emotion-9:disabled {
   cursor: not-allowed;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -281,24 +273,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -308,22 +283,22 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <input
-                className="emotion-5"
+                className="emotion-4"
                 disabled={false}
                 placeholder="Label"
                 required={false}
               />
               <label
-                className="emotion-6"
+                className="emotion-5"
               >
                 Label
                  
@@ -340,22 +315,22 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
         }
       >
         <div
-          className="emotion-7"
+          className="emotion-6"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <input
-                className="emotion-10"
+                className="emotion-9"
                 disabled={false}
                 placeholder="Label"
                 required={false}
               />
               <label
-                className="emotion-6"
+                className="emotion-5"
               >
                 Label
                  
@@ -371,13 +346,6 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
 
 exports[`Storyshots Design System/TextField Text Field Types 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -391,7 +359,7 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -416,16 +384,16 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   background-color: white;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -445,15 +413,15 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   width: 100%;
 }
 
-.emotion-5 {
+.emotion-4 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -467,36 +435,36 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   min-width: 100%;
 }
 
-.emotion-5+label {
+.emotion-4+label {
   font-size: 0.9375rem;
 }
 
-.emotion-5:focus {
+.emotion-4:focus {
   outline: none;
 }
 
-.emotion-5::-webkit-input-placeholder {
+.emotion-4::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::-moz-placeholder {
+.emotion-4::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-5:-ms-input-placeholder {
+.emotion-4:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-5::placeholder {
+.emotion-4::placeholder {
   color: transparent;
 }
 
-.emotion-5:not(:focus):placeholder-shown+label {
+.emotion-4:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-5:focus+label,
-.emotion-5:not(:placeholder-shown)+label {
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -504,11 +472,11 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   font-weight: 700;
 }
 
-.emotion-5:disabled {
+.emotion-4:disabled {
   cursor: not-allowed;
 }
 
-.emotion-6 {
+.emotion-5 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -543,10 +511,9 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -561,24 +528,7 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -588,22 +538,22 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <input
-                className="emotion-5"
+                className="emotion-4"
                 disabled={false}
                 placeholder="Label"
                 required={false}
               />
               <label
-                className="emotion-6"
+                className="emotion-5"
               >
                 Label
                  
@@ -620,22 +570,22 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <input
-                className="emotion-5"
+                className="emotion-4"
                 disabled={false}
                 placeholder="Label"
                 required={false}
               />
               <label
-                className="emotion-6"
+                className="emotion-5"
               >
                 Label
                  
@@ -652,22 +602,22 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <input
-                className="emotion-5"
+                className="emotion-4"
                 disabled={false}
                 placeholder="Label"
                 required={false}
               />
               <label
-                className="emotion-6"
+                className="emotion-5"
               >
                 Label
                  
@@ -683,13 +633,6 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
 
 exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -703,7 +646,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -728,16 +671,16 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   background-color: white;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -757,11 +700,11 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -775,895 +718,6 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   cursor: unset;
   margin-left: inherit;
   margin-right: 0.5rem;
-}
-
-.emotion-5 {
-  width: 100%;
-}
-
-.emotion-6 {
-  background: transparent;
-  border: none;
-  color: #0f0f17;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  font-size: 0.9375rem;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-6+label {
-  font-size: 0.9375rem;
-}
-
-.emotion-6:focus {
-  outline: none;
-}
-
-.emotion-6::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-6:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::placeholder {
-  color: transparent;
-}
-
-.emotion-6:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-6:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-7 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  line-height: normal;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #5f6c85;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  white-space: nowrap;
-}
-
-.emotion-13 {
-  line-height: 0.8;
-  height: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
-}
-
-.emotion-27 {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-}
-
-.emotion-28 {
-  width: 1.625rem;
-  position: relative;
-  height: 0.375rem;
-}
-
-.emotion-29 {
-  position: absolute;
-  left: 0.625rem;
-  left: 0;
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 0.3125rem;
-  background-color: #bac6d9;
-  color: #bac6d9;
-  -webkit-animation: dotFlashing 0.7s infinite linear alternate;
-  animation: dotFlashing 0.7s infinite linear alternate;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-
-.emotion-29::after,
-.emotion-29::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-}
-
-.emotion-29::before {
-  left: -0.625rem;
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 0.3125rem;
-  background-color: #bac6d9;
-  color: #bac6d9;
-  -webkit-animation: dotFlashing 0.7s infinite alternate;
-  animation: dotFlashing 0.7s infinite alternate;
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
-}
-
-.emotion-29::after {
-  left: 0.625rem;
-  width: 0.375rem;
-  height: 0.375rem;
-  border-radius: 0.3125rem;
-  background-color: #bac6d9;
-  color: #bac6d9;
-  -webkit-animation: dotFlashing 0.7s infinite alternate;
-  animation: dotFlashing 0.7s infinite alternate;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-            <div
-              className="emotion-5"
-            >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
-              >
-                Label
-                 
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-5"
-            >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-13"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-            <div
-              className="emotion-5"
-            >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-13"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-5"
-            >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-13"
-            >
-              <div
-                className="emotion-27"
-              >
-                <div
-                  className="emotion-28"
-                  data-testid="dots-loading"
-                >
-                  <div
-                    className="emotion-29"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: auto;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
-}
-
-.emotion-2:hover {
-  background-color: #f3f5f8;
-}
-
-.emotion-2:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
-  background-color: #e7ebf2;
-}
-
-.emotion-3 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 1rem;
-}
-
-.emotion-3>div {
-  position: relative;
-}
-
-.emotion-4 {
-  line-height: 0.8;
-  height: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: unset;
-  margin-left: inherit;
-  margin-right: 0.5rem;
-}
-
-.emotion-5 {
-  padding: 0.125rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-6 {
-  fill: #5f6c85;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.emotion-6 path {
-  fill: #5f6c85;
-}
-
-.emotion-7 {
-  width: 100%;
-}
-
-.emotion-8 {
-  background: transparent;
-  border: none;
-  color: #0f0f17;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  font-size: 0.9375rem;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-8+label {
-  font-size: 0.9375rem;
-}
-
-.emotion-8:focus {
-  outline: none;
-}
-
-.emotion-8::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-8:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-8::placeholder {
-  color: transparent;
-}
-
-.emotion-8:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-8:focus+label,
-.emotion-8:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-8:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-9 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  line-height: normal;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #5f6c85;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  white-space: nowrap;
-}
-
-.emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
-}
-
-.emotion-17 {
-  fill: #f5781b;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
-.emotion-17 path {
-  fill: #f5781b;
-}
-
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </div>
-            <div
-              className="emotion-7"
-            >
-              <input
-                className="emotion-8"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-9"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-10"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-6"
-                />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-17"
-                />
-              </span>
-            </div>
-            <div
-              className="emotion-7"
-            >
-              <input
-                className="emotion-8"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-9"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-10"
-            >
-              <span
-                className="emotion-5"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-17"
-                />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/TextField Text Field with and without Label 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: auto;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
-}
-
-.emotion-2:hover {
-  background-color: #f3f5f8;
-}
-
-.emotion-2:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
-  background-color: #e7ebf2;
-}
-
-.emotion-3 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 1rem;
-}
-
-.emotion-3>div {
-  position: relative;
 }
 
 .emotion-4 {
@@ -1757,121 +811,89 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   white-space: nowrap;
 }
 
-.emotion-10 {
-  background: transparent;
-  border: none;
-  color: #0f0f17;
-  display: block;
+.emotion-12 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-26 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.emotion-27 {
+  width: 1.625rem;
   position: relative;
-  z-index: 1;
-  font-size: 0.9375rem;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
+  height: 0.375rem;
 }
 
-.emotion-10+label {
-  font-size: 0.9375rem;
+.emotion-28 {
+  position: absolute;
+  left: 0.625rem;
+  left: 0;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.3125rem;
+  background-color: #bac6d9;
+  color: #bac6d9;
+  -webkit-animation: dotFlashing 0.7s infinite linear alternate;
+  animation: dotFlashing 0.7s infinite linear alternate;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
-.emotion-10:focus {
-  outline: none;
+.emotion-28::after,
+.emotion-28::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
 }
 
-.emotion-10::-webkit-input-placeholder {
-  color: #5f6c85;
+.emotion-28::before {
+  left: -0.625rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.3125rem;
+  background-color: #bac6d9;
+  color: #bac6d9;
+  -webkit-animation: dotFlashing 0.7s infinite alternate;
+  animation: dotFlashing 0.7s infinite alternate;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
 }
 
-.emotion-10::-moz-placeholder {
-  color: #5f6c85;
-}
-
-.emotion-10:-ms-input-placeholder {
-  color: #5f6c85;
-}
-
-.emotion-10::placeholder {
-  color: #5f6c85;
-}
-
-.emotion-10:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-10:focus+label,
-.emotion-10:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-10:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-14 {
-  background: transparent;
-  border: none;
-  color: #0f0f17;
-  display: block;
-  position: relative;
-  z-index: 1;
-  font-size: 0.9375rem;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-14+label {
-  font-size: 0.9375rem;
-}
-
-.emotion-14:focus {
-  outline: none;
-}
-
-.emotion-14::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-14::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-14:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-14::placeholder {
-  color: transparent;
-}
-
-.emotion-14:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-14:focus+label,
-.emotion-14:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-14:disabled {
-  cursor: not-allowed;
+.emotion-28::after {
+  left: 0.625rem;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 0.3125rem;
+  background-color: #bac6d9;
+  color: #bac6d9;
+  -webkit-animation: dotFlashing 0.7s infinite alternate;
+  animation: dotFlashing 0.7s infinite alternate;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -1886,24 +908,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -1913,11 +918,25 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
+            <div
+              className="emotion-3"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+                width="16"
+              />
+            </div>
             <div
               className="emotion-4"
             >
@@ -1945,16 +964,872 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
               className="emotion-4"
             >
               <input
-                className="emotion-10"
+                className="emotion-5"
+                disabled={false}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-6"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              className="emotion-12"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+                width="16"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+                width="16"
+              />
+            </div>
+            <div
+              className="emotion-4"
+            >
+              <input
+                className="emotion-5"
+                disabled={false}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-6"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              className="emotion-12"
+            >
+              <img
+                height="16"
+                src="https://brandmark.io/logo-rank/random/pepsi.png"
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+                width="16"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-4"
+            >
+              <input
+                className="emotion-5"
+                disabled={false}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-6"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              className="emotion-12"
+            >
+              <div
+                className="emotion-26"
+              >
+                <div
+                  className="emotion-27"
+                  data-testid="dots-loading"
+                >
+                  <div
+                    className="emotion-28"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: auto;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-1:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: inherit;
+  margin-right: 0.5rem;
+}
+
+.emotion-4 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 {
+  fill: #5f6c85;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-5 path {
+  fill: #5f6c85;
+}
+
+.emotion-6 {
+  width: 100%;
+}
+
+.emotion-7 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-7+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-7:focus {
+  outline: none;
+}
+
+.emotion-7::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-7:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-7::placeholder {
+  color: transparent;
+}
+
+.emotion-7:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-7:focus+label,
+.emotion-7:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-7:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-8 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  line-height: 0.8;
+  height: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: unset;
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+.emotion-16 {
+  fill: #f5781b;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.emotion-16 path {
+  fill: #f5781b;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <span
+                className="emotion-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-5"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-6"
+            >
+              <input
+                className="emotion-7"
+                disabled={false}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-8"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              className="emotion-9"
+            >
+              <span
+                className="emotion-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-5"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <span
+                className="emotion-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-16"
+                />
+              </span>
+            </div>
+            <div
+              className="emotion-6"
+            >
+              <input
+                className="emotion-7"
+                disabled={false}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-8"
+              >
+                Label
+                 
+              </label>
+            </div>
+            <div
+              className="emotion-9"
+            >
+              <span
+                className="emotion-4"
+                onClick={[Function]}
+              >
+                <span
+                  className="emotion-16"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/TextField Text Field with and without Label 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: auto;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
+.emotion-1:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-4 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-4+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::placeholder {
+  color: transparent;
+}
+
+.emotion-4:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-5 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-9 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-9+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9::-webkit-input-placeholder {
+  color: #5f6c85;
+}
+
+.emotion-9::-moz-placeholder {
+  color: #5f6c85;
+}
+
+.emotion-9:-ms-input-placeholder {
+  color: #5f6c85;
+}
+
+.emotion-9::placeholder {
+  color: #5f6c85;
+}
+
+.emotion-9:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-9:focus+label,
+.emotion-9:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-9:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-13 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-13+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-13:focus {
+  outline: none;
+}
+
+.emotion-13::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-13:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13::placeholder {
+  color: transparent;
+}
+
+.emotion-13:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-13:focus+label,
+.emotion-13:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-13:disabled {
+  cursor: not-allowed;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <input
+                className="emotion-4"
+                disabled={false}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-5"
+              >
+                Label
+                 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <input
+                className="emotion-9"
                 disabled={false}
                 placeholder="Placeholder "
                 required={false}
@@ -1971,16 +1846,16 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
-            className="emotion-3"
+            className="emotion-2"
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <input
-                className="emotion-14"
+                className="emotion-13"
                 disabled={false}
                 required={false}
               />
@@ -1995,13 +1870,6 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
 
 exports[`Storyshots Design System/TextField TextField disabled with label 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2015,7 +1883,7 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2040,6 +1908,288 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   background-color: white;
 }
 
+.emotion-1:focus-within {
+  box-shadow: 0 0 0 0.0625rem transparent;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 1rem;
+}
+
+.emotion-2>div {
+  position: relative;
+}
+
+.emotion-3 {
+  width: 100%;
+}
+
+.emotion-4 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-4+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-4:focus {
+  outline: none;
+}
+
+.emotion-4::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-4:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-4::placeholder {
+  color: transparent;
+}
+
+.emotion-4:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-4:focus+label,
+.emotion-4:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-4:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-5 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+<div
+  style={
+    Object {
+      "borderRadius": 10,
+      "flex": 1,
+      "flexDirection": "column",
+      "padding": 5,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": 15,
+      }
+    }
+  >
+    <div
+      className="emotion-0"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <input
+                className="emotion-4"
+                disabled={true}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-5"
+              >
+                Label
+                 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <input
+                className="emotion-4"
+                disabled={true}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-5"
+              >
+                Label
+                 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-1"
+        >
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <input
+                className="emotion-4"
+                disabled={true}
+                placeholder="Label"
+                required={false}
+              />
+              <label
+                className="emotion-5"
+              >
+                Label
+                 
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: not-allowed;
+  min-width: 9.375rem;
+  height: 2.875rem;
+  background-color: white;
+}
+
 .emotion-2:focus-within {
   box-shadow: 0 0 0 0.0625rem transparent;
 }
@@ -2159,314 +2309,7 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   white-space: nowrap;
 }
 
-<div
-  style={
-    Object {
-      "backgroundColor": "#F2F2F2",
-      "flex": 1,
-      "flexDirection": "column",
-      "height": "100vh",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <input
-                className="emotion-5"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-6"
-              >
-                Label
-                 
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <input
-                className="emotion-5"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-6"
-              >
-                Label
-                 
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <input
-                className="emotion-5"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-6"
-              >
-                Label
-                 
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
-.emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: not-allowed;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
-}
-
-.emotion-3:focus-within {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-4 {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  vertical-align: top;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: fill-available;
-  padding: 0 1rem;
-}
-
-.emotion-4>div {
-  position: relative;
-}
-
-.emotion-5 {
-  width: 100%;
-}
-
-.emotion-6 {
-  background: transparent;
-  border: none;
-  color: #0f0f17;
-  display: block;
-  position: relative;
-  top: 0.4375rem;
-  z-index: 1;
-  font-size: 0.9375rem;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-6+label {
-  font-size: 0.9375rem;
-}
-
-.emotion-6:focus {
-  outline: none;
-}
-
-.emotion-6::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-6:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-6::placeholder {
-  color: transparent;
-}
-
-.emotion-6:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-6:disabled {
-  cursor: not-allowed;
-}
-
 .emotion-7 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  line-height: normal;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #5f6c85;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  white-space: nowrap;
-}
-
-.emotion-8 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -2482,7 +2325,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   margin-right: 0;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2498,17 +2341,17 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #5f6c85;
 }
 
-.emotion-28 {
+.emotion-27 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2533,11 +2376,11 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   background-color: white;
 }
 
-.emotion-28:focus-within {
+.emotion-27:focus-within {
   box-shadow: 0 0 0 0.0625rem transparent;
 }
 
-.emotion-31 {
+.emotion-30 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -2551,36 +2394,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   min-width: 100%;
 }
 
-.emotion-31+label {
+.emotion-30+label {
   font-size: 0.8125rem;
 }
 
-.emotion-31:focus {
+.emotion-30:focus {
   outline: none;
 }
 
-.emotion-31::-webkit-input-placeholder {
+.emotion-30::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-31::-moz-placeholder {
+.emotion-30::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-31:-ms-input-placeholder {
+.emotion-30:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-31::placeholder {
+.emotion-30::placeholder {
   color: transparent;
 }
 
-.emotion-31:not(:focus):placeholder-shown+label {
+.emotion-30:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-31:focus+label,
-.emotion-31:not(:placeholder-shown)+label {
+.emotion-30:focus+label,
+.emotion-30:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -2588,27 +2431,26 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   font-weight: 700;
 }
 
-.emotion-31:disabled {
+.emotion-30:disabled {
   cursor: not-allowed;
 }
 
-.emotion-35 {
+.emotion-34 {
   fill: #5f6c85;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-35 path {
+.emotion-34 path {
   fill: #5f6c85;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -2623,24 +2465,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -2650,7 +2475,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div
             style={
@@ -2660,36 +2485,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-6"
+                    className="emotion-5"
                     disabled={true}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
                   </label>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-7"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-9"
                     />
                   </span>
                 </div>
@@ -2704,36 +2529,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-6"
+                    className="emotion-5"
                     disabled={true}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
                   </label>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-7"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-9"
                     />
                   </span>
                 </div>
@@ -2748,36 +2573,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-6"
+                    className="emotion-5"
                     disabled={true}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
                   </label>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-7"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-9"
                     />
                   </span>
                 </div>
@@ -2794,7 +2619,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-0"
         >
           <div
             style={
@@ -2804,36 +2629,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-28"
+              className="emotion-27"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-31"
+                    className="emotion-30"
                     disabled={true}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
                   </label>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-7"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-35"
+                      className="emotion-34"
                     />
                   </span>
                 </div>
@@ -2848,36 +2673,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-28"
+              className="emotion-27"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-31"
+                    className="emotion-30"
                     disabled={true}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
                   </label>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-7"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-35"
+                      className="emotion-34"
                     />
                   </span>
                 </div>
@@ -2892,36 +2717,36 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-28"
+              className="emotion-27"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-31"
+                    className="emotion-30"
                     disabled={true}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
                   </label>
                 </div>
                 <div
-                  className="emotion-8"
+                  className="emotion-7"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-8"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-35"
+                      className="emotion-34"
                     />
                   </span>
                 </div>
@@ -2937,13 +2762,6 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
 
 exports[`Storyshots Design System/TextField TextField with label and statuses 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2957,7 +2775,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2971,7 +2789,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   flex-wrap: wrap;
 }
 
-.emotion-3 {
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2996,16 +2814,16 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   background-color: white;
 }
 
-.emotion-3:hover {
+.emotion-2:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-3:focus-within {
+.emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #e51460;
   background-color: #e7ebf2;
 }
 
-.emotion-4 {
+.emotion-3 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3025,15 +2843,15 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   padding: 0 1rem;
 }
 
-.emotion-4>div {
+.emotion-3>div {
   position: relative;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -3047,36 +2865,36 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-5+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -3084,11 +2902,11 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-6 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -3120,7 +2938,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3131,11 +2949,11 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   padding: 0.5rem 0 0;
 }
 
-.emotion-8 svg {
+.emotion-7 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-8 span {
+.emotion-7 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -3143,7 +2961,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   padding: 0 0.125rem;
 }
 
-.emotion-9 {
+.emotion-8 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3159,17 +2977,17 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-9 {
   fill: #FF176B;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-10 path {
+.emotion-9 path {
   fill: #FF176B;
 }
 
-.emotion-20 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3194,16 +3012,16 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   background-color: white;
 }
 
-.emotion-20:hover {
+.emotion-19:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-20:focus-within {
+.emotion-19:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-24 {
+.emotion-23 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -3235,7 +3053,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   white-space: nowrap;
 }
 
-.emotion-25 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3246,11 +3064,11 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   padding: 0.5rem 0 0;
 }
 
-.emotion-25 svg {
+.emotion-24 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-25 span {
+.emotion-24 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -3258,23 +3076,22 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   padding: 0 0.125rem;
 }
 
-.emotion-27 {
+.emotion-26 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-27 path {
+.emotion-26 path {
   fill: #5f6c85;
 }
 
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -3289,24 +3106,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -3316,7 +3116,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
             style={
@@ -3326,22 +3126,22 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
             }
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-6"
+                    className="emotion-5"
                     disabled={false}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-7"
+                    className="emotion-6"
                   >
                     Label
                      
@@ -3350,15 +3150,15 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               </div>
             </div>
             <div
-              className="emotion-8"
+              className="emotion-7"
               data-testid="error"
             >
               <span
-                className="emotion-9"
+                className="emotion-8"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-10"
+                  className="emotion-9"
                 />
               </span>
               Error in Text Field
@@ -3379,22 +3179,22 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               }
             >
               <div
-                className="emotion-3"
+                className="emotion-2"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-3"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <input
-                      className="emotion-6"
+                      className="emotion-5"
                       disabled={false}
                       placeholder="Label"
                       required={false}
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       Label
                        
@@ -3403,15 +3203,15 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
                 </div>
               </div>
               <div
-                className="emotion-8"
+                className="emotion-7"
                 data-testid="error"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-10"
+                    className="emotion-9"
                   />
                 </span>
                 Big Error Message for fixed width TextField to see icon alignment: Error Error Error Error Error Error Error Error Error Error Error
@@ -3428,7 +3228,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-1"
         >
           <div
             style={
@@ -3438,22 +3238,22 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
             }
           >
             <div
-              className="emotion-20"
+              className="emotion-19"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-4"
                 >
                   <input
-                    className="emotion-6"
+                    className="emotion-5"
                     disabled={false}
                     placeholder="Label"
                     required={false}
                   />
                   <label
-                    className="emotion-24"
+                    className="emotion-23"
                   >
                     Label
                      
@@ -3462,15 +3262,15 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               </div>
             </div>
             <div
-              className="emotion-25"
+              className="emotion-24"
               data-testid="error"
             >
               <span
-                className="emotion-9"
+                className="emotion-8"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-27"
+                  className="emotion-26"
                 />
               </span>
               Error in Text Field
@@ -3491,22 +3291,22 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               }
             >
               <div
-                className="emotion-20"
+                className="emotion-19"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-3"
                 >
                   <div
-                    className="emotion-5"
+                    className="emotion-4"
                   >
                     <input
-                      className="emotion-6"
+                      className="emotion-5"
                       disabled={false}
                       placeholder="Label"
                       required={false}
                     />
                     <label
-                      className="emotion-24"
+                      className="emotion-23"
                     >
                       Label
                        
@@ -3515,15 +3315,15 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
                 </div>
               </div>
               <div
-                className="emotion-25"
+                className="emotion-24"
                 data-testid="error"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-8"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-27"
+                    className="emotion-26"
                   />
                 </span>
                 Big Hint Message for fixed width TextField to see icon alignment: Hint Hint Hint Hint Hint Hint Hint Hint Hint Hint
@@ -3539,13 +3339,6 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
 
 exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
 .emotion-0 {
-  background-color: transparent;
-  color: #000;
-  outline: none;
-  border-radius: 4px;
-}
-
-.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3559,7 +3352,7 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3583,16 +3376,16 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   background-color: white;
 }
 
-.emotion-2:hover {
+.emotion-1:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-2:focus-within {
+.emotion-1:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-3 {
+.emotion-2 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -3612,11 +3405,11 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-3>div {
+.emotion-2>div {
   position: relative;
 }
 
-.emotion-4 {
+.emotion-3 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -3632,11 +3425,11 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-5 {
+.emotion-4 {
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-5 {
   background: transparent;
   border: none;
   color: #0f0f17;
@@ -3649,36 +3442,36 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-5+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
+.emotion-5:focus {
   outline: none;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-5::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-5::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-5:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-5::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-5:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-5:focus+label,
+.emotion-5:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -3686,11 +3479,11 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   font-weight: 700;
 }
 
-.emotion-6:disabled {
+.emotion-5:disabled {
   cursor: not-allowed;
 }
 
-.emotion-11 {
+.emotion-10 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -3709,10 +3502,9 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
 <div
   style={
     Object {
-      "backgroundColor": "#F2F2F2",
+      "borderRadius": 10,
       "flex": 1,
       "flexDirection": "column",
-      "height": "100vh",
       "padding": 5,
       "position": "relative",
       "width": "100%",
@@ -3727,24 +3519,7 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
     }
   >
     <div
-      style={
-        Object {
-          "display": "flex",
-          "justifyContent": "flex-end",
-        }
-      }
-    >
-      <button
-        className="emotion-0"
-        onClick={[Function]}
-      >
-        turn 
-        dark
-         on
-      </button>
-    </div>
-    <div
-      className="emotion-1"
+      className="emotion-0"
     >
       <div
         style={
@@ -3761,13 +3536,13 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
           }
         >
           <div
-            className="emotion-2"
+            className="emotion-1"
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
                   style={
@@ -3780,10 +3555,10 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <input
-                  className="emotion-6"
+                  className="emotion-5"
                   disabled={false}
                   required={false}
                 />
@@ -3807,22 +3582,22 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
           }
         >
           <div
-            className="emotion-2"
+            className="emotion-1"
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <input
-                  className="emotion-6"
+                  className="emotion-5"
                   disabled={false}
                   required={false}
                 />
               </div>
               <div
-                className="emotion-11"
+                className="emotion-10"
               >
                 <div
                   style={
@@ -3853,13 +3628,13 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
           }
         >
           <div
-            className="emotion-2"
+            className="emotion-1"
           >
             <div
-              className="emotion-3"
+              className="emotion-2"
             >
               <div
-                className="emotion-4"
+                className="emotion-3"
               >
                 <div
                   style={
@@ -3872,16 +3647,16 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <input
-                  className="emotion-6"
+                  className="emotion-5"
                   disabled={false}
                   required={false}
                 />
               </div>
               <div
-                className="emotion-11"
+                className="emotion-10"
               >
                 <div
                   style={

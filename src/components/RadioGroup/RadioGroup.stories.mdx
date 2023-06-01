@@ -13,43 +13,57 @@ If the `value` prop is defined it means the `RadioGroup` is controlled.
 If the `defaultValue` prop is defined it means the `RadioGroup` is not controlled.
 `RadioGroup` does **not** wrap the children in any DOM element, that's left as a user implementation
 
-# Usage
+## Usage
 
 ```jsx
 import { RadioGroup } from '@orfium/ictinus';
 
-<RadioGroup value={value} name="group" onChange={(e) => {console.log(e.target.value)}}>
-    <Radio value="a"/>
-    <Radio value="b"/>
-    <Radio value="c"/>
-</RadioGroup>
+<RadioGroup
+  value={value}
+  name="group"
+  onChange={(e) => {
+    console.log(e.target.value);
+  }}
+>
+  <Radio value="a" />
+  <Radio value="b" />
+  <Radio value="c" />
+</RadioGroup>;
 ```
 
-# Props
+## Props
 
 <Props of={RadioGroup} />
 
 # Self controlled radio group
+
 <Preview>
   <Story name="Radio with options">
     <div style={{ color: '#82e616' }}>
       <RadioGroup defaultValue="b" name="group">
-          <Radio value="a" />
-          <Radio value="b" />
-          <Radio value="c" />
+        <Radio value="a" />
+        <Radio value="b" />
+        <Radio value="c" />
       </RadioGroup>
     </div>
   </Story>
 </Preview>
 
 # Self controlled radio group with onChange handler
+
 <Preview>
   <Story name="Radio with options with onChange handler">
     <div style={{ color: '#82e616' }}>
-      <RadioGroup defaultValue="b" name="group" onChange={(e) => {console.log(e.target.value)}}>
-          <Radio value="a" />
-          <Radio value="b" />
-          <Radio value="c" />
+      <RadioGroup
+        defaultValue="b"
+        name="group"
+        onChange={(e) => {
+          console.log(e.target.value);
+        }}
+      >
+        <Radio value="a" />
+        <Radio value="b" />
+        <Radio value="c" />
       </RadioGroup>
     </div>
   </Story>
