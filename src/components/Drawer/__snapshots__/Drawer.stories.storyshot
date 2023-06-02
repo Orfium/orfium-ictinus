@@ -2,17 +2,28 @@
 
 exports[`Storyshots Design System/Drawer Drawer 1`] = `
 .emotion-0 {
-  margin: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
 }
 
 .emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -28,25 +39,25 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -62,7 +73,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -73,7 +84,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   height: 100vh;
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -97,7 +108,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   border-right: 0.0625rem solid #cfd7e5;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-transition: all 10.2s ease-in-out;
   -moz-transition: all 10.2s ease-in-out;
   -ms-transition: all 10.2s ease-in-out;
@@ -111,14 +122,14 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-6 .menu-item-text,
-.emotion-6 .submenu-item-text {
+.emotion-7 .menu-item-text,
+.emotion-7 .submenu-item-text {
   opacity: 1;
   width: 12.75rem;
   white-space: nowrap;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -151,15 +162,15 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   text-decoration: none;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-7:focus-visible {
+.emotion-8:focus-visible {
   outline: #F814E1 auto 0.0625rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -193,11 +204,11 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-8 path {
+.emotion-9 path {
   background-color: #444d5f;
 }
 
-.emotion-9 {
+.emotion-10 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -213,17 +224,17 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-11 {
   fill: #5f6c85;
   width: 0.625rem;
   height: 0.625rem;
 }
 
-.emotion-10 path {
+.emotion-11 path {
   fill: #5f6c85;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -257,17 +268,17 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   flex-shrink: 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #282e39;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-13 path {
+.emotion-14 path {
   fill: #282e39;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -277,7 +288,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   font-weight: initial;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
   transition: opacity 0ms ease,transform 0ms ease;
   opacity: 0;
@@ -287,7 +298,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   transform: translateY(-0.625rem);
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -320,29 +331,29 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   text-decoration: none;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-16.active:hover {
+.emotion-17.active:hover {
   background-color: #b9cdfc!important;
 }
 
-.emotion-16.active {
+.emotion-17.active {
   font-weight: 700;
   background-color: #d0defd!important;
   color: black;
 }
 
-.emotion-16.active path {
+.emotion-17.active path {
   fill: #175bf5!important;
 }
 
-.emotion-16:focus-visible {
+.emotion-17:focus-visible {
   outline: #F814E1 auto 0.0625rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -369,17 +380,17 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   flex-shrink: 0;
 }
 
-.emotion-19 {
+.emotion-20 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-19 path {
+.emotion-20 path {
   fill: #5f6c85;
 }
 
-.emotion-70 {
+.emotion-71 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -414,15 +425,15 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   text-decoration: none;
 }
 
-.emotion-70:hover {
+.emotion-71:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-70:focus-visible {
+.emotion-71:focus-visible {
   outline: #F814E1 auto 0.0625rem;
 }
 
-.emotion-71 {
+.emotion-72 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -456,11 +467,11 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-71 path {
+.emotion-72 path {
   background-color: #444d5f;
 }
 
-.emotion-78 {
+.emotion-79 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -480,7 +491,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   width: 100%;
 }
 
-.emotion-79 {
+.emotion-80 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -493,12 +504,12 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
   flex-direction: column;
 }
 
-.emotion-80 {
+.emotion-81 {
   font-weight: bold;
   margin: 5px;
 }
 
-.emotion-81 {
+.emotion-82 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
@@ -506,33 +517,24 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="button"
           disabled={false}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
           >
             <span>
               Hide
@@ -542,76 +544,76 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
         </button>
       </div>
       <div
-        className="emotion-4"
+        className="emotion-5"
       >
         <div
-          className="emotion-5"
+          className="emotion-6"
           data-testid="sidebar"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
           <div
-            className="emotion-6"
+            className="emotion-7"
           >
             <div
               data-testid="expand-collapse"
             >
               <button
-                className="emotion-7"
+                className="emotion-8"
                 data-testid="/menu1"
                 onClick={[Function]}
                 type="button"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-13"
+                      className="emotion-14"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text emotion-14"
+                  className="menu-item-text emotion-15"
                 >
                   Long Menu Item Name
                 </span>
               </button>
               <div
-                className="emotion-15"
+                className="emotion-16"
               >
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu1"
                   href="/submenu1"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -623,21 +625,21 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu2"
                   href="/submenu2"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -649,21 +651,21 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu3"
                   href="/submenu3"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -675,21 +677,21 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu4"
                   href="/submenu4"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -705,61 +707,61 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
               data-testid="expand-collapse"
             >
               <button
-                className="emotion-7"
+                className="emotion-8"
                 data-testid="/menu2"
                 onClick={[Function]}
                 type="button"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-13"
+                      className="emotion-14"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text emotion-14"
+                  className="menu-item-text emotion-15"
                 >
                   Menu2
                 </span>
               </button>
               <div
-                className="emotion-15"
+                className="emotion-16"
               >
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu5"
                   href="/submenu5"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -771,21 +773,21 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu6"
                   href="/submenu6"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -801,61 +803,61 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
               data-testid="expand-collapse"
             >
               <button
-                className="emotion-7"
+                className="emotion-8"
                 data-testid="/menu3"
                 onClick={[Function]}
                 type="button"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-13"
+                      className="emotion-14"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text emotion-14"
+                  className="menu-item-text emotion-15"
                 >
                   Menu3
                 </span>
               </button>
               <div
-                className="emotion-15"
+                className="emotion-16"
               >
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu7"
                   href="/submenu7"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -867,21 +869,21 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu8"
                   href="/submenu8"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -893,21 +895,21 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu9"
                   href="/submenu9"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -921,37 +923,37 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </div>
             <a
               aria-current={null}
-              className="emotion-70"
+              className="emotion-71"
               data-testid="/menu4"
               href="/menu4"
               onClick={[Function]}
             >
               <div
-                className="emotion-71"
+                className="emotion-72"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-10"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-10"
+                    className="emotion-11"
                   />
                 </span>
               </div>
               <div
-                className="emotion-11"
+                className="emotion-12"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-10"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-13"
+                    className="emotion-14"
                   />
                 </span>
               </div>
               <span
-                className="menu-item-text emotion-14"
+                className="menu-item-text emotion-15"
               >
                 Menu4
               </span>
@@ -959,19 +961,19 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
           </div>
         </div>
         <div
-          className="emotion-78"
+          className="emotion-79"
         >
           <div
-            className="emotion-79"
+            className="emotion-80"
           >
             <span
-              className="emotion-80"
+              className="emotion-81"
             >
               Click an option to navigate directly to Route
             </span>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu1"
               onClick={[Function]}
             >
@@ -979,7 +981,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu2"
               onClick={[Function]}
             >
@@ -987,7 +989,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu3"
               onClick={[Function]}
             >
@@ -995,7 +997,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu4"
               onClick={[Function]}
             >
@@ -1003,7 +1005,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu5"
               onClick={[Function]}
             >
@@ -1011,7 +1013,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu6"
               onClick={[Function]}
             >
@@ -1019,7 +1021,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu7"
               onClick={[Function]}
             >
@@ -1027,7 +1029,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu8"
               onClick={[Function]}
             >
@@ -1035,7 +1037,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu9"
               onClick={[Function]}
             >
@@ -1043,7 +1045,7 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/menu4"
               onClick={[Function]}
             >
@@ -1063,17 +1065,28 @@ exports[`Storyshots Design System/Drawer Drawer 1`] = `
 
 exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
 .emotion-0 {
-  margin: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
 }
 
 .emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1089,25 +1102,25 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-3 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1123,7 +1136,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1134,7 +1147,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   height: 100vh;
 }
 
-.emotion-5 {
+.emotion-6 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1158,7 +1171,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   border-right: 0.0625rem solid #cfd7e5;
 }
 
-.emotion-6 {
+.emotion-7 {
   -webkit-transition: all 10.2s ease-in-out;
   -moz-transition: all 10.2s ease-in-out;
   -ms-transition: all 10.2s ease-in-out;
@@ -1172,14 +1185,14 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   box-sizing: border-box;
 }
 
-.emotion-6 .menu-item-text,
-.emotion-6 .submenu-item-text {
+.emotion-7 .menu-item-text,
+.emotion-7 .submenu-item-text {
   opacity: 1;
   width: 12.75rem;
   white-space: nowrap;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1212,15 +1225,15 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   text-decoration: none;
 }
 
-.emotion-7:hover {
+.emotion-8:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-7:focus-visible {
+.emotion-8:focus-visible {
   outline: #F814E1 auto 0.0625rem;
 }
 
-.emotion-8 {
+.emotion-9 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1254,11 +1267,11 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-8 path {
+.emotion-9 path {
   background-color: #444d5f;
 }
 
-.emotion-9 {
+.emotion-10 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1274,17 +1287,17 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-11 {
   fill: #5f6c85;
   width: 0.625rem;
   height: 0.625rem;
 }
 
-.emotion-10 path {
+.emotion-11 path {
   fill: #5f6c85;
 }
 
-.emotion-11 {
+.emotion-12 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1318,17 +1331,17 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   flex-shrink: 0;
 }
 
-.emotion-13 {
+.emotion-14 {
   fill: #282e39;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-13 path {
+.emotion-14 path {
   fill: #282e39;
 }
 
-.emotion-14 {
+.emotion-15 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1338,7 +1351,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   font-weight: initial;
 }
 
-.emotion-15 {
+.emotion-16 {
   -webkit-transition: opacity 0ms ease,-webkit-transform 0ms ease;
   transition: opacity 0ms ease,transform 0ms ease;
   opacity: 0;
@@ -1348,7 +1361,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   transform: translateY(-0.625rem);
 }
 
-.emotion-16 {
+.emotion-17 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1381,29 +1394,29 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   text-decoration: none;
 }
 
-.emotion-16:hover {
+.emotion-17:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-16.active:hover {
+.emotion-17.active:hover {
   background-color: #b9cdfc!important;
 }
 
-.emotion-16.active {
+.emotion-17.active {
   font-weight: 700;
   background-color: #d0defd!important;
   color: black;
 }
 
-.emotion-16.active path {
+.emotion-17.active path {
   fill: #175bf5!important;
 }
 
-.emotion-16:focus-visible {
+.emotion-17:focus-visible {
   outline: #F814E1 auto 0.0625rem;
 }
 
-.emotion-17 {
+.emotion-18 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1430,17 +1443,17 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   flex-shrink: 0;
 }
 
-.emotion-19 {
+.emotion-20 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-19 path {
+.emotion-20 path {
   fill: #5f6c85;
 }
 
-.emotion-70 {
+.emotion-71 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1475,15 +1488,15 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   text-decoration: none;
 }
 
-.emotion-70:hover {
+.emotion-71:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-70:focus-visible {
+.emotion-71:focus-visible {
   outline: #F814E1 auto 0.0625rem;
 }
 
-.emotion-71 {
+.emotion-72 {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1517,11 +1530,11 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-71 path {
+.emotion-72 path {
   background-color: #444d5f;
 }
 
-.emotion-78 {
+.emotion-79 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1541,7 +1554,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   width: 100%;
 }
 
-.emotion-79 {
+.emotion-80 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1554,12 +1567,12 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
   flex-direction: column;
 }
 
-.emotion-80 {
+.emotion-81 {
   font-weight: bold;
   margin: 5px;
 }
 
-.emotion-81 {
+.emotion-82 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
@@ -1567,33 +1580,24 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <button
-          className="emotion-2"
+          className="emotion-3"
           data-testid="button"
           disabled={false}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-3"
+            className="emotion-4"
           >
             <span>
               Hide
@@ -1603,10 +1607,10 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
         </button>
       </div>
       <div
-        className="emotion-4"
+        className="emotion-5"
       >
         <div
-          className="emotion-5"
+          className="emotion-6"
           data-testid="sidebar"
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
@@ -1622,67 +1626,67 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             here is a title
           </div>
           <div
-            className="emotion-6"
+            className="emotion-7"
           >
             <div
               data-testid="expand-collapse"
             >
               <button
-                className="emotion-7"
+                className="emotion-8"
                 data-testid="/menu1"
                 onClick={[Function]}
                 type="button"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-13"
+                      className="emotion-14"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text emotion-14"
+                  className="menu-item-text emotion-15"
                 >
                   Long Menu Item Name
                 </span>
               </button>
               <div
-                className="emotion-15"
+                className="emotion-16"
               >
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu1"
                   href="/submenu1"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1694,21 +1698,21 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu2"
                   href="/submenu2"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1720,21 +1724,21 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu3"
                   href="/submenu3"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1746,21 +1750,21 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu4"
                   href="/submenu4"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1776,61 +1780,61 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
               data-testid="expand-collapse"
             >
               <button
-                className="emotion-7"
+                className="emotion-8"
                 data-testid="/menu2"
                 onClick={[Function]}
                 type="button"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-13"
+                      className="emotion-14"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text emotion-14"
+                  className="menu-item-text emotion-15"
                 >
                   Menu2
                 </span>
               </button>
               <div
-                className="emotion-15"
+                className="emotion-16"
               >
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu5"
                   href="/submenu5"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1842,21 +1846,21 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu6"
                   href="/submenu6"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1872,61 +1876,61 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
               data-testid="expand-collapse"
             >
               <button
-                className="emotion-7"
+                className="emotion-8"
                 data-testid="/menu3"
                 onClick={[Function]}
                 type="button"
               >
                 <div
-                  className="emotion-8"
+                  className="emotion-9"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-11"
                     />
                   </span>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-12"
                 >
                   <span
-                    className="emotion-9"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-13"
+                      className="emotion-14"
                     />
                   </span>
                 </div>
                 <span
-                  className="menu-item-text emotion-14"
+                  className="menu-item-text emotion-15"
                 >
                   Menu3
                 </span>
               </button>
               <div
-                className="emotion-15"
+                className="emotion-16"
               >
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu7"
                   href="/submenu7"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1938,21 +1942,21 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu8"
                   href="/submenu8"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1964,21 +1968,21 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
                 </a>
                 <a
                   aria-current={null}
-                  className="emotion-16"
+                  className="emotion-17"
                   data-testid="/submenu9"
                   href="/submenu9"
                   id="submenu-item-link"
                   onClick={[Function]}
                 >
                   <div
-                    className="emotion-17"
+                    className="emotion-18"
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-10"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-19"
+                        className="emotion-20"
                       />
                     </span>
                   </div>
@@ -1992,37 +1996,37 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </div>
             <a
               aria-current={null}
-              className="emotion-70"
+              className="emotion-71"
               data-testid="/menu4"
               href="/menu4"
               onClick={[Function]}
             >
               <div
-                className="emotion-71"
+                className="emotion-72"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-10"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-10"
+                    className="emotion-11"
                   />
                 </span>
               </div>
               <div
-                className="emotion-11"
+                className="emotion-12"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-10"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-13"
+                    className="emotion-14"
                   />
                 </span>
               </div>
               <span
-                className="menu-item-text emotion-14"
+                className="menu-item-text emotion-15"
               >
                 Menu4
               </span>
@@ -2030,19 +2034,19 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
           </div>
         </div>
         <div
-          className="emotion-78"
+          className="emotion-79"
         >
           <div
-            className="emotion-79"
+            className="emotion-80"
           >
             <span
-              className="emotion-80"
+              className="emotion-81"
             >
               Click an option to navigate directly to Route
             </span>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu1"
               onClick={[Function]}
             >
@@ -2050,7 +2054,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu2"
               onClick={[Function]}
             >
@@ -2058,7 +2062,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu3"
               onClick={[Function]}
             >
@@ -2066,7 +2070,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu4"
               onClick={[Function]}
             >
@@ -2074,7 +2078,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu5"
               onClick={[Function]}
             >
@@ -2082,7 +2086,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu6"
               onClick={[Function]}
             >
@@ -2090,7 +2094,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu7"
               onClick={[Function]}
             >
@@ -2098,7 +2102,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu8"
               onClick={[Function]}
             >
@@ -2106,7 +2110,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/submenu9"
               onClick={[Function]}
             >
@@ -2114,7 +2118,7 @@ exports[`Storyshots Design System/Drawer Drawer with custom component 1`] = `
             </a>
             <a
               aria-current={null}
-              className="emotion-81"
+              className="emotion-82"
               href="/menu4"
               onClick={[Function]}
             >

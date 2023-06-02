@@ -2,10 +2,21 @@
 
 exports[`Storyshots Design System/Modal Modal 1`] = `
 .emotion-0 {
-  margin: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
 }
 
 .emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,14 +30,14 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -42,25 +53,25 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-3:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-3:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -77,22 +88,13 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div
-      className="emotion-1"
+      className="emotion-2"
     >
       <div
         style={
@@ -122,17 +124,17 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
             }
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <span>
                     Open Modal
@@ -166,10 +168,21 @@ exports[`Storyshots Design System/Modal Modal 1`] = `
 
 exports[`Storyshots Design System/Modal Modal Content 1`] = `
 .emotion-0 {
-  margin: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
 }
 
 .emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -183,14 +196,14 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -206,25 +219,25 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-3:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-3:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-3:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-3:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -241,22 +254,13 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div
-      className="emotion-1"
+      className="emotion-2"
     >
       <div
         style={
@@ -286,17 +290,17 @@ exports[`Storyshots Design System/Modal Modal Content 1`] = `
             }
           >
             <div
-              className="emotion-2"
+              className="emotion-3"
             >
               <button
-                className="emotion-3"
+                className="emotion-4"
                 data-testid="button"
                 disabled={false}
                 onClick={[Function]}
                 type="button"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-5"
                 >
                   <span>
                     Open Modal

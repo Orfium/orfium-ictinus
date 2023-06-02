@@ -2,22 +2,33 @@
 
 exports[`Storyshots Design System/Loader Loader Types 1`] = `
 .emotion-0 {
-  margin: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
 }
 
 .emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.emotion-2 {
+.emotion-3 {
   width: 1.625rem;
   position: relative;
   height: 0.375rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   position: absolute;
   left: 0.625rem;
   left: 0;
@@ -32,15 +43,15 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0.5s;
 }
 
-.emotion-3::after,
-.emotion-3::before {
+.emotion-4::after,
+.emotion-4::before {
   content: '';
   display: inline-block;
   position: absolute;
   top: 0;
 }
 
-.emotion-3::before {
+.emotion-4::before {
   left: -0.625rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -53,7 +64,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0s;
 }
 
-.emotion-3::after {
+.emotion-4::after {
   left: 0.625rem;
   width: 0.375rem;
   height: 0.375rem;
@@ -66,7 +77,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation-delay: 0.7s;
 }
 
-.emotion-5 {
+.emotion-6 {
   position: relative;
   width: 100%;
   height: 0.5rem;
@@ -74,7 +85,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   border-radius: 0.5rem;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: absolute;
   opacity: 0.4;
   background: #e7ebf2;
@@ -82,7 +93,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   height: 0.5rem;
 }
 
-.emotion-7 {
+.emotion-8 {
   position: absolute;
   background: #175bf5;
   height: 0.5rem;
@@ -90,7 +101,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation: decrease 2.3s 0.8s infinite;
 }
 
-.emotion-8 {
+.emotion-9 {
   position: absolute;
   background: #175bf5;
   height: 0.5rem;
@@ -98,7 +109,7 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
   animation: increase 2.3s infinite;
 }
 
-.emotion-10 {
+.emotion-11 {
   width: 1.5rem;
   height: 1.5rem;
   margin: auto;
@@ -113,19 +124,10 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div
       style={
@@ -139,14 +141,14 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <div
-          className="emotion-2"
+          className="emotion-3"
           data-testid="dots-loading"
         >
           <div
-            className="emotion-3"
+            className="emotion-4"
           />
         </div>
       </div>
@@ -163,20 +165,20 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <div
-          className="emotion-5"
+          className="emotion-6"
           data-testid="dots-loading"
         >
-          <div
-            className="emotion-6"
-          />
           <div
             className="emotion-7"
           />
           <div
             className="emotion-8"
+          />
+          <div
+            className="emotion-9"
           />
         </div>
       </div>
@@ -193,10 +195,10 @@ exports[`Storyshots Design System/Loader Loader Types 1`] = `
         : 
       </strong>
       <div
-        className="emotion-1"
+        className="emotion-2"
       >
         <div
-          className="emotion-10"
+          className="emotion-11"
           data-testid="spinner"
         />
       </div>

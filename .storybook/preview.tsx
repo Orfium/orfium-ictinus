@@ -78,18 +78,9 @@ const viewPorts = {
 
 const Wrapper: React.FC = ({ children }) => {
   return (
-    <div
-      style={{
-        width: '100%',
-        position: 'relative',
-        flex: 1,
-        flexDirection: 'column',
-        padding: 5,
-        borderRadius: 10,
-      }}
-    >
+    <Box flex={1} flexDirection={'column'} p={'3'} position={'relative'}>
       {children}
-    </div>
+    </Box>
   );
 };
 

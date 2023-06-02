@@ -2,10 +2,21 @@
 
 exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
 .emotion-0 {
-  margin: 1rem;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
 }
 
 .emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,7 +30,7 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -29,16 +40,16 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   display: flex;
 }
 
-.emotion-2 div:last-child {
+.emotion-3 div:last-child {
   width: 1.25rem;
 }
 
-.emotion-3 {
+.emotion-4 {
   z-index: 6;
   width: 1rem;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -77,33 +88,33 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-4 img {
+.emotion-5 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-6 {
   z-index: 5;
   width: 1rem;
 }
 
-.emotion-7 {
+.emotion-8 {
   z-index: 4;
   width: 1rem;
 }
 
-.emotion-9 {
+.emotion-10 {
   z-index: 3;
   width: 1rem;
 }
 
-.emotion-11 {
+.emotion-12 {
   z-index: 0;
   width: 1rem;
 }
 
-.emotion-13 {
+.emotion-14 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -113,16 +124,16 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   display: flex;
 }
 
-.emotion-13 div:last-child {
+.emotion-14 div:last-child {
   width: 1.5rem;
 }
 
-.emotion-14 {
+.emotion-15 {
   z-index: 6;
   width: 1.2000000000000002rem;
 }
 
-.emotion-15 {
+.emotion-16 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -161,33 +172,33 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-15 img {
+.emotion-16 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-16 {
+.emotion-17 {
   z-index: 5;
   width: 1.2000000000000002rem;
 }
 
-.emotion-18 {
+.emotion-19 {
   z-index: 4;
   width: 1.2000000000000002rem;
 }
 
-.emotion-20 {
+.emotion-21 {
   z-index: 3;
   width: 1.2000000000000002rem;
 }
 
-.emotion-22 {
+.emotion-23 {
   z-index: 0;
   width: 1.2000000000000002rem;
 }
 
-.emotion-24 {
+.emotion-25 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -197,16 +208,16 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   display: flex;
 }
 
-.emotion-24 div:last-child {
+.emotion-25 div:last-child {
   width: 2.25rem;
 }
 
-.emotion-25 {
+.emotion-26 {
   z-index: 6;
   width: 1.8rem;
 }
 
-.emotion-26 {
+.emotion-27 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -245,18 +256,18 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-26 img {
+.emotion-27 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-27 {
+.emotion-28 {
   z-index: 5;
   width: 1.8rem;
 }
 
-.emotion-29 {
+.emotion-30 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -272,27 +283,27 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   justify-content: center;
 }
 
-.emotion-30 {
+.emotion-31 {
   fill: #1451dc;
   width: 1.8rem;
   height: 1.8rem;
 }
 
-.emotion-30 path {
+.emotion-31 path {
   fill: #1451dc;
 }
 
-.emotion-31 {
+.emotion-32 {
   z-index: 4;
   width: 1.8rem;
 }
 
-.emotion-33 {
+.emotion-34 {
   z-index: 0;
   width: 1.8rem;
 }
 
-.emotion-35 {
+.emotion-36 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -302,16 +313,16 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   display: flex;
 }
 
-.emotion-35 div:last-child {
+.emotion-36 div:last-child {
   width: 3rem;
 }
 
-.emotion-36 {
+.emotion-37 {
   z-index: 6;
   width: 2.4000000000000004rem;
 }
 
-.emotion-37 {
+.emotion-38 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -350,33 +361,33 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   letter-spacing: 0.00625rem;
 }
 
-.emotion-37 img {
+.emotion-38 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-38 {
+.emotion-39 {
   z-index: 5;
   width: 2.4000000000000004rem;
 }
 
-.emotion-40 {
+.emotion-41 {
   z-index: 4;
   width: 2.4000000000000004rem;
 }
 
-.emotion-42 {
+.emotion-43 {
   z-index: 3;
   width: 2.4000000000000004rem;
 }
 
-.emotion-44 {
+.emotion-45 {
   z-index: 0;
   width: 2.4000000000000004rem;
 }
 
-.emotion-46 {
+.emotion-47 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -386,16 +397,16 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   display: flex;
 }
 
-.emotion-46 div:last-child {
+.emotion-47 div:last-child {
   width: 4rem;
 }
 
-.emotion-47 {
+.emotion-48 {
   z-index: 6;
   width: 3.2rem;
 }
 
-.emotion-48 {
+.emotion-49 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -434,38 +445,38 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-48 img {
+.emotion-49 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-49 {
+.emotion-50 {
   z-index: 5;
   width: 3.2rem;
 }
 
-.emotion-52 {
+.emotion-53 {
   fill: #1451dc;
   width: 3.2rem;
   height: 3.2rem;
 }
 
-.emotion-52 path {
+.emotion-53 path {
   fill: #1451dc;
 }
 
-.emotion-53 {
+.emotion-54 {
   z-index: 4;
   width: 3.2rem;
 }
 
-.emotion-55 {
+.emotion-56 {
   z-index: 0;
   width: 3.2rem;
 }
 
-.emotion-57 {
+.emotion-58 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -475,16 +486,16 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   display: flex;
 }
 
-.emotion-57 div:last-child {
+.emotion-58 div:last-child {
   width: 5.5rem;
 }
 
-.emotion-58 {
+.emotion-59 {
   z-index: 6;
   width: 4.4rem;
 }
 
-.emotion-59 {
+.emotion-60 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -523,54 +534,45 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-59 img {
+.emotion-60 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-60 {
+.emotion-61 {
   z-index: 5;
   width: 4.4rem;
 }
 
-.emotion-63 {
+.emotion-64 {
   fill: #1451dc;
   width: 4.4rem;
   height: 4.4rem;
 }
 
-.emotion-63 path {
+.emotion-64 path {
   fill: #1451dc;
 }
 
-.emotion-64 {
+.emotion-65 {
   z-index: 4;
   width: 4.4rem;
 }
 
-.emotion-66 {
+.emotion-67 {
   z-index: 0;
   width: 4.4rem;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div
-      className="emotion-1"
+      className="emotion-2"
     >
       <div
         style={
@@ -580,14 +582,14 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
         }
       >
         <div
-          className="emotion-2"
+          className="emotion-3"
           data-testid="avatarstack"
         >
           <div
-            className="emotion-3"
+            className="emotion-4"
           >
             <div
-              className="emotion-4"
+              className="emotion-5"
               data-testid="_avatar"
             >
               <img
@@ -596,10 +598,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-5"
+            className="emotion-6"
           >
             <div
-              className="emotion-4"
+              className="emotion-5"
               data-testid="_avatar"
             >
               <img
@@ -608,20 +610,20 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-7"
+            className="emotion-8"
           >
             <div
-              className="emotion-4"
+              className="emotion-5"
               data-testid="_avatar"
             >
               JN
             </div>
           </div>
           <div
-            className="emotion-9"
+            className="emotion-10"
           >
             <div
-              className="emotion-4"
+              className="emotion-5"
               data-testid="_avatar"
             >
               <img
@@ -630,10 +632,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-11"
+            className="emotion-12"
           >
             <div
-              className="emotion-4"
+              className="emotion-5"
               data-testid="_avatar"
             >
               +
@@ -650,14 +652,14 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
         }
       >
         <div
-          className="emotion-13"
+          className="emotion-14"
           data-testid="avatarstack"
         >
           <div
-            className="emotion-14"
+            className="emotion-15"
           >
             <div
-              className="emotion-15"
+              className="emotion-16"
               data-testid="_avatar"
             >
               <img
@@ -666,10 +668,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-16"
+            className="emotion-17"
           >
             <div
-              className="emotion-15"
+              className="emotion-16"
               data-testid="_avatar"
             >
               <img
@@ -678,20 +680,20 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-18"
+            className="emotion-19"
           >
             <div
-              className="emotion-15"
+              className="emotion-16"
               data-testid="_avatar"
             >
               JN
             </div>
           </div>
           <div
-            className="emotion-20"
+            className="emotion-21"
           >
             <div
-              className="emotion-15"
+              className="emotion-16"
               data-testid="_avatar"
             >
               <img
@@ -700,10 +702,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-22"
+            className="emotion-23"
           >
             <div
-              className="emotion-15"
+              className="emotion-16"
               data-testid="_avatar"
             >
               +
@@ -720,14 +722,14 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
         }
       >
         <div
-          className="emotion-24"
+          className="emotion-25"
           data-testid="avatarstack"
         >
           <div
-            className="emotion-25"
+            className="emotion-26"
           >
             <div
-              className="emotion-26"
+              className="emotion-27"
               data-testid="_avatar"
             >
               <img
@@ -736,27 +738,27 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-27"
+            className="emotion-28"
           >
             <div
-              className="emotion-26"
+              className="emotion-27"
               data-testid="_avatar"
             >
               <span
-                className="emotion-29"
+                className="emotion-30"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-30"
+                  className="emotion-31"
                 />
               </span>
             </div>
           </div>
           <div
-            className="emotion-31"
+            className="emotion-32"
           >
             <div
-              className="emotion-26"
+              className="emotion-27"
               data-testid="_avatar"
             >
               <img
@@ -765,10 +767,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-33"
+            className="emotion-34"
           >
             <div
-              className="emotion-26"
+              className="emotion-27"
               data-testid="_avatar"
             >
               +
@@ -785,14 +787,14 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
         }
       >
         <div
-          className="emotion-35"
+          className="emotion-36"
           data-testid="avatarstack"
         >
           <div
-            className="emotion-36"
+            className="emotion-37"
           >
             <div
-              className="emotion-37"
+              className="emotion-38"
               data-testid="_avatar"
             >
               <img
@@ -801,10 +803,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-38"
+            className="emotion-39"
           >
             <div
-              className="emotion-37"
+              className="emotion-38"
               data-testid="_avatar"
             >
               <img
@@ -813,10 +815,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-40"
+            className="emotion-41"
           >
             <div
-              className="emotion-37"
+              className="emotion-38"
               data-testid="_avatar"
             >
               <img
@@ -825,10 +827,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-42"
+            className="emotion-43"
           >
             <div
-              className="emotion-37"
+              className="emotion-38"
               data-testid="_avatar"
             >
               <img
@@ -837,10 +839,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-44"
+            className="emotion-45"
           >
             <div
-              className="emotion-37"
+              className="emotion-38"
               data-testid="_avatar"
             >
               +
@@ -857,14 +859,14 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
         }
       >
         <div
-          className="emotion-46"
+          className="emotion-47"
           data-testid="avatarstack"
         >
           <div
-            className="emotion-47"
+            className="emotion-48"
           >
             <div
-              className="emotion-48"
+              className="emotion-49"
               data-testid="_avatar"
             >
               <img
@@ -873,27 +875,27 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-49"
+            className="emotion-50"
           >
             <div
-              className="emotion-48"
+              className="emotion-49"
               data-testid="_avatar"
             >
               <span
-                className="emotion-29"
+                className="emotion-30"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-52"
+                  className="emotion-53"
                 />
               </span>
             </div>
           </div>
           <div
-            className="emotion-53"
+            className="emotion-54"
           >
             <div
-              className="emotion-48"
+              className="emotion-49"
               data-testid="_avatar"
             >
               <img
@@ -902,10 +904,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-55"
+            className="emotion-56"
           >
             <div
-              className="emotion-48"
+              className="emotion-49"
               data-testid="_avatar"
             >
               +
@@ -922,14 +924,14 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
         }
       >
         <div
-          className="emotion-57"
+          className="emotion-58"
           data-testid="avatarstack"
         >
           <div
-            className="emotion-58"
+            className="emotion-59"
           >
             <div
-              className="emotion-59"
+              className="emotion-60"
               data-testid="_avatar"
             >
               <img
@@ -938,27 +940,27 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-60"
+            className="emotion-61"
           >
             <div
-              className="emotion-59"
+              className="emotion-60"
               data-testid="_avatar"
             >
               <span
-                className="emotion-29"
+                className="emotion-30"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-63"
+                  className="emotion-64"
                 />
               </span>
             </div>
           </div>
           <div
-            className="emotion-64"
+            className="emotion-65"
           >
             <div
-              className="emotion-59"
+              className="emotion-60"
               data-testid="_avatar"
             >
               <img
@@ -967,10 +969,10 @@ exports[`Storyshots Design System/Avatar/AvatarStack Avatar Stack 1`] = `
             </div>
           </div>
           <div
-            className="emotion-66"
+            className="emotion-67"
           >
             <div
-              className="emotion-59"
+              className="emotion-60"
               data-testid="_avatar"
             >
               +
