@@ -1,22 +1,21 @@
 import { css, CSSObject } from '@emotion/react';
 import useTheme from 'hooks/useTheme';
+import { omit } from 'lodash';
 import React, { forwardRef, ReactNode } from 'react';
 
 import type { StyledBoxProps } from './Box.types';
-import { cssResolver } from './Box.utilities';
+import { cssResolver, omitedCSSprops, pickCSSProperties, pickNonCSSProps } from './Box.utilities';
 
-export type BoxProps = StyledBoxProps & {
-  css?: CSSObject;
-  children?: ReactNode;
-};
+export type BoxProps = StyledBoxProps & React.HTMLAttributes<HTMLDivElement>;
 
 const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) => {
-  const { css: cssProps, ...otherProps } = rest;
   const theme = useTheme();
-  const resolver = cssResolver(theme, otherProps);
+  const cssPropsOnly = pickCSSProperties(rest);
+  const props = pickNonCSSProps(rest);
+  const resolver = cssResolver(theme, cssPropsOnly);
 
   const propsToCss: CSSObject = {
-    ...otherProps,
+    ...omit(cssPropsOnly, omitedCSSprops),
     ...resolver('padding', 'p', 'spacing'),
     ...resolver('paddingTop', 'pt', 'spacing'),
     ...resolver('paddingRight', 'pr', 'spacing'),
@@ -40,7 +39,7 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(({ children, ...rest }, ref) =>
   };
 
   return (
-    <div ref={ref} css={[css(propsToCss), cssProps]}>
+    <div ref={ref} css={[css(propsToCss)]} {...props}>
       {children}
     </div>
   );

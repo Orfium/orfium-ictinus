@@ -1,7 +1,110 @@
-import { curry } from 'lodash';
+import { curry, omit, pick, pickBy } from 'lodash';
 import { Theme } from 'theme';
 
 import { StyledBoxProps } from './Box.types';
+
+export const omitedCSSprops = [
+  'p',
+  'pt',
+  'pr',
+  'pb',
+  'pl',
+  'px',
+  'py',
+  'm',
+  'mt',
+  'mr',
+  'mb',
+  'ml',
+  'mx',
+  'my',
+];
+
+// all CSS properties in an array
+export const styledBoxPropsKeys: Array<keyof StyledBoxProps> = [
+  'color',
+  'backgroundAttachment',
+  'backgroundClip',
+  'backgroundColor',
+  'backgroundImage',
+  'backgroundOrigin',
+  'backgroundPosition',
+  'backgroundRepeat',
+  'backgroundSize',
+  'alignContent',
+  'alignItems',
+  'alignSelf',
+  'flexDirection',
+  'display',
+  'flex',
+  'grid',
+  'gridArea',
+  'gridAutoColumns',
+  'gridAutoFlow',
+  'gridAutoRows',
+  'gridColumn',
+  'gridColumnEnd',
+  'gridColumnGap',
+  'gridColumnStart',
+  'gridGap',
+  'gridRow',
+  'gridRowEnd',
+  'gridRowGap',
+  'gridRowStart',
+  'gridTemplate',
+  'gridTemplateAreas',
+  'gridTemplateColumns',
+  'gridTemplateRows',
+  'justifyContent',
+  'justifyItems',
+  'justifySelf',
+  'position',
+  'width',
+  'minWidth',
+  'maxWidth',
+  'height',
+  'minHeight',
+  'maxHeight',
+  'overflow',
+  'm',
+  'mt',
+  'mr',
+  'mb',
+  'ml',
+  'mx',
+  'my',
+  'p',
+  'pt',
+  'pr',
+  'pb',
+  'pl',
+  'px',
+  'py',
+  'placeContent',
+  'placeItems',
+  'placeSelf',
+  'flexWrap',
+  'left',
+  'top',
+  'right',
+  'bottom',
+  'textOverflow',
+  'whiteSpace',
+];
+
+/**
+ * Picks from any given object only css properties defined styledBoxPropsKeys
+ **/
+export const pickCSSProperties = (obj: Record<string, any>): StyledBoxProps => {
+  return pick(obj, styledBoxPropsKeys);
+};
+
+/**
+ * Omit from any given object only css properties defined styledBoxPropsKeys
+ **/
+export const pickNonCSSProps = (obj: Record<string, any>) => {
+  return omit(obj, styledBoxPropsKeys);
+};
 
 /**
  * Resolves any value from the given theme based on type if css property exists on the object given.
