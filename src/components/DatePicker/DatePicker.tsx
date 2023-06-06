@@ -47,6 +47,7 @@ export type Props = {
     /** This property defines the Filter's type */
     filterType?: FilterType;
   };
+  onBackSpace?: (range: Range) => void;
 };
 
 export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
@@ -90,11 +91,11 @@ const DatePicker: React.FC<Props & TestProps> = ({
   filterConfig,
   isDefaultNow = true,
   dataTestId,
+  onBackSpace,
 }) => {
   const value = useMemo(() => initDates(initialValue || {}, isDefaultNow), [initialValue]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-
   const [range, setRange] = useState<Range>(() => value);
   const [selectedRange, setSelectedRange] = useState<Range>(() => value);
 
@@ -201,9 +202,13 @@ const DatePicker: React.FC<Props & TestProps> = ({
 
       if (e.keyCode === 8) {
         //backspace
-        // Todo: run callback here. Do we really want to "clear" the range value by hitting the "backspace" key twice?
-        console.log('run callback');
 
+        if (onBackSpace) {
+          onBackSpace(value);
+        }
+
+        // Do we really want to "clear" the range value by hitting the "backspace" key twice?
+        // Id clear all the below code, but I kept it for breaking changes
         return setSelectedRange((oldState) => {
           if (oldState.from && oldState.to) {
             return { ...oldState, to: undefined };

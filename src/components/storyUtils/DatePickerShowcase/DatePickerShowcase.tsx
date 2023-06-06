@@ -21,14 +21,12 @@ const DatePickerShowcase: React.FC = () => {
     to: currentDay.toDate(),
   });
 
-  const [clearableRange, __setClearableRange] = useState<{ from?: Date; to?: Date }>({
+  const [clearableRange, setClearableRange] = useState<{ from?: Date; to?: Date }>({
     from: currentDay.subtract(7, 'days').toDate(),
     to: currentDay.toDate(),
   });
 
-  const updateClearableDate = (range: Range) => {
-    setClearableDate(range as { from?: Date; to?: Date });
-  };
+  console.log(clearableDate, clearableRange);
 
   return (
     <div style={{ width: '100%', height: '100%' }}>
@@ -61,13 +59,15 @@ const DatePickerShowcase: React.FC = () => {
       <h3>Clearable DatePicker (with isClearable prop)</h3>
       <DatePicker
         value={clearableDate}
-        onChange={updateClearableDate}
         inputProps={{ size: 'md', styleType: 'outlined' }}
         isDefaultNow={false}
         isClearable
+        onBackSpace={() => setClearableDate({ from: undefined, to: undefined })}
       />
 
-      <p>{`${clearableDate.from} - ${clearableDate.to}`}</p>
+      <p>
+        <strong>Date value</strong>: {`${clearableDate.from} - ${clearableDate.to}`}
+      </p>
 
       <hr />
 
@@ -79,9 +79,12 @@ const DatePickerShowcase: React.FC = () => {
         isDefaultNow={false}
         isClearable
         dateFormatOverride="MMM D, YYYY"
+        onBackSpace={() => setClearableRange({ from: undefined, to: undefined })}
       />
 
-      <p>{`${clearableRange.from} - ${clearableRange.to}`}</p>
+      <p>
+        <strong>Date value</strong>:{`${clearableRange.from} - ${clearableRange.to}`}
+      </p>
     </div>
   );
 };
