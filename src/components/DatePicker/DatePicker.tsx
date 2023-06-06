@@ -9,7 +9,7 @@ import PositionInScreen from '../utils/PositionInScreen';
 import { datePickerStyles } from './DatePicker.style';
 import DatePickInput from './DatePickInput';
 import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { currentDay, datepickerPropValue, initDates } from './utils';
+import { currentDay, initDates } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -201,6 +201,9 @@ const DatePicker: React.FC<Props & TestProps> = ({
 
       if (e.keyCode === 8) {
         //backspace
+        // Todo: run callback here. Do we really want to "clear" the range value by hitting the "backspace" key twice?
+        console.log('run callback');
+
         return setSelectedRange((oldState) => {
           if (oldState.from && oldState.to) {
             return { ...oldState, to: undefined };
