@@ -430,7 +430,116 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: false;
 }
 
-.emotion-337 {
+.emotion-171 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+.emotion-171>button {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.emotion-172 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #175BF5;
+  background-color: transparent;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem #175BF5;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-172:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
+}
+
+.emotion-172:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-172:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-172:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-172:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-173 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-174 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-175 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-175:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-175:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-175:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-175:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-175:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-351 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -441,7 +550,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   position: relative;
 }
 
-.emotion-338 {
+.emotion-352 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -454,11 +563,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   z-index: 10;
 }
 
-.emotion-338>div:first-of-type {
+.emotion-352>div:first-of-type {
   margin-right: 0;
 }
 
-.emotion-344 {
+.emotion-358 {
   padding: 0;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -482,7 +591,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   position: relative;
 }
 
-.emotion-345 {
+.emotion-359 {
   margin: 0 0.5rem;
   padding: 0.5rem;
   display: -webkit-box;
@@ -498,7 +607,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   color: #0f0f17;
 }
 
-.emotion-346 {
+.emotion-360 {
   font-size: 1rem;
   font-weight: 500;
   color: black;
@@ -512,66 +621,51 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-346:focus-visible:not(:disabled) {
+.emotion-360:focus-visible:not(:disabled) {
   outline: #C813D5 auto 0.0625rem;
 }
 
-.emotion-346:hover:not(:disabled) {
+.emotion-360:hover:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-346:active:not(:disabled) {
+.emotion-360:active:not(:disabled) {
   background-color: #fdfdfd;
 }
 
-.emotion-346:disabled {
+.emotion-360:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-346:disabled style {
+.emotion-360:disabled style {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-347 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-}
-
-.emotion-348 {
+.emotion-362 {
   margin-left: 0;
   margin-right: 0.5rem;
 }
 
-.emotion-349 {
+.emotion-363 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.emotion-351 {
+.emotion-365 {
   fill: #0f0f17;
   width: 0.625rem;
   height: 0.625rem;
 }
 
-.emotion-351 path {
+.emotion-365 path {
   fill: #0f0f17;
 }
 
-.emotion-368 {
+.emotion-382 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -587,7 +681,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-368:after {
+.emotion-382:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -601,100 +695,6 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
-}
-
-.emotion-428 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
-  margin-right: 1.5rem;
-}
-
-.emotion-428>button {
-  margin: 0.5rem 0 0.5rem 0.5rem;
-}
-
-.emotion-429 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: #175BF5;
-  background-color: transparent;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: solid 0.0625rem #175BF5;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-429:focus-visible:not(:disabled) {
-  outline: #C813D5 auto 0.125rem;
-}
-
-.emotion-429:hover:not(:disabled) {
-  background-color: #e7eefe;
-}
-
-.emotion-429:active:not(:disabled) {
-  background-color: #d0defd;
-}
-
-.emotion-429:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-429:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-431 {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.emotion-432 {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: white;
-  background-color: #175BF5;
-  padding: 0 1rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-432:focus-visible:not(:disabled) {
-  outline: #C813D5 auto 0.0625rem;
-}
-
-.emotion-432:hover:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-432:active:not(:disabled) {
-  background-color: #1248c4;
-}
-
-.emotion-432:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.emotion-432:disabled style {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 <div
@@ -2079,6 +2079,44 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                   </table>
                 </div>
               </div>
+              <div
+                className="emotion-171"
+              >
+                <button
+                  className="emotion-172"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-173"
+                  >
+                    <span
+                      className="emotion-174"
+                    >
+                      Cancel
+                    </span>
+                  </span>
+                </button>
+                <button
+                  className="emotion-175"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-173"
+                  >
+                    <span
+                      className="emotion-174"
+                    >
+                      Apply
+                    </span>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -3387,16 +3425,54 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                   </table>
                 </div>
               </div>
+              <div
+                className="emotion-171"
+              >
+                <button
+                  className="emotion-172"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-173"
+                  >
+                    <span
+                      className="emotion-174"
+                    >
+                      Cancel
+                    </span>
+                  </span>
+                </button>
+                <button
+                  className="emotion-175"
+                  data-testid="button"
+                  disabled={false}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <span
+                    className="emotion-173"
+                  >
+                    <span
+                      className="emotion-174"
+                    >
+                      Apply
+                    </span>
+                  </span>
+                </button>
+              </div>
             </div>
           </div>
           <div
             className="emotion-2"
           >
             <div
-              className="emotion-337"
+              className="emotion-351"
             >
               <div
-                className="emotion-338"
+                className="emotion-352"
               >
                 <div
                   className="emotion-9"
@@ -3421,37 +3497,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                       role="button"
                     >
                       <div
-                        className="emotion-344"
+                        className="emotion-358"
                       >
                         <div
-                          className="emotion-345"
+                          className="emotion-359"
                         >
                           <button
-                            className="emotion-346"
+                            className="emotion-360"
                             data-testid="button"
                             disabled={false}
                             onClick={[Function]}
                             type="button"
                           >
                             <span
-                              className="emotion-347"
+                              className="emotion-173"
                             >
                               <span
-                                className="emotion-348"
+                                className="emotion-362"
                               >
                                 November
                                  
                                 2020
                               </span>
                               <span
-                                className="emotion-349"
+                                className="emotion-363"
                               >
                                 <span
                                   className="emotion-12"
                                   onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-351"
+                                    className="emotion-365"
                                   />
                                 </span>
                               </span>
@@ -3563,7 +3639,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-368"
+                            className="emotion-382"
                           >
                             <div
                               className="emotion-30"
@@ -4072,37 +4148,37 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-428"
+                className="emotion-171"
               >
                 <button
-                  className="emotion-429"
+                  className="emotion-172"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-347"
+                    className="emotion-173"
                   >
                     <span
-                      className="emotion-431"
+                      className="emotion-174"
                     >
                       Cancel
                     </span>
                   </span>
                 </button>
                 <button
-                  className="emotion-432"
+                  className="emotion-175"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-347"
+                    className="emotion-173"
                   >
                     <span
-                      className="emotion-431"
+                      className="emotion-174"
                     >
                       Apply
                     </span>
@@ -5194,7 +5270,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   fill: #676767;
 }
 
-.emotion-33 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5219,16 +5295,16 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   background-color: white;
 }
 
-.emotion-33:hover {
+.emotion-32:hover {
   background-color: #f6f7ff;
 }
 
-.emotion-33:focus-within {
+.emotion-32:focus-within {
   box-shadow: 0 0 0 0.125rem #e5143d;
   background-color: #edefff;
 }
 
-.emotion-40 {
+.emotion-39 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5239,11 +5315,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-40 svg {
+.emotion-39 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-40 span {
+.emotion-39 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -5251,17 +5327,17 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-42 {
+.emotion-41 {
   fill: #FF1744;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-42 path {
+.emotion-41 path {
   fill: #FF1744;
 }
 
-.emotion-52 {
+.emotion-51 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5272,11 +5348,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-52 svg {
+.emotion-51 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-52 span {
+.emotion-51 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -5284,13 +5360,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-54 {
+.emotion-53 {
   fill: #757bb2;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-54 path {
+.emotion-53 path {
   fill: #757bb2;
 }
 
@@ -5518,18 +5594,6 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-1"
-        >
           <div
             style={
               Object {
@@ -5550,7 +5614,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                     onClick={[Function]}
                   >
                     <div
-                      className="emotion-33"
+                      className="emotion-32"
                     >
                       <div
                         className="emotion-6"
@@ -5584,7 +5648,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                       </div>
                     </div>
                     <div
-                      className="emotion-40"
+                      className="emotion-39"
                       data-testid="error"
                     >
                       <span
@@ -5592,7 +5656,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-42"
+                          className="emotion-41"
                         />
                       </span>
                       Wrong Date
@@ -5656,7 +5720,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                       </div>
                     </div>
                     <div
-                      className="emotion-52"
+                      className="emotion-51"
                       data-testid="error"
                     >
                       <span
@@ -5664,7 +5728,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-54"
+                          className="emotion-53"
                         />
                       </span>
                       Dates are important
@@ -7265,6 +7329,9 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
         }
       }
     >
+      <h3>
+        Reset DatePicker value (with external component)
+      </h3>
       <div
         role="button"
       >
@@ -7294,7 +7361,7 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
                       onKeyDown={[Function]}
                       placeholder="Select date "
                       required={false}
-                      value="10/27/2020"
+                      value="11/03/2020"
                     />
                   </div>
                   <div
@@ -7333,6 +7400,9 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
         </span>
       </button>
       <hr />
+      <h3>
+        Reset RangePicker value (with external component)
+      </h3>
       <div
         role="button"
       >

@@ -9,19 +9,9 @@ const getDefaultDate = (date?: undefined | Dayjs) =>
 export const currentDay =
   process.env.STORYBOOK_ENV === 'true' ? fakeDate : (getDefaultDate(dayjs()) as Dayjs);
 
-export const datepickerPropValue = getDefaultDate();
-
-export const initDates = (
-  value: {
-    from?: Date;
-    to?: Date;
-  },
-  isDefaultNow: boolean
-): Range => {
-  const hasDefaultDate = isDefaultNow || Object.values(value).some((v) => v);
-
+export const initDates = (value: { from?: Date; to?: Date }): Range => {
   return {
-    from: hasDefaultDate ? dayjs(value.from || currentDay) : undefined,
-    to: hasDefaultDate ? dayjs(value.to || currentDay) : undefined,
+    from: value.from ? dayjs(value.from) : undefined,
+    to: value.to ? dayjs(value.to) : undefined,
   };
 };

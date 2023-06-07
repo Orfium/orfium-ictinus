@@ -16,25 +16,14 @@ const DatePickerShowcase: React.FC = () => {
     to: currentDay.toDate(),
   });
 
-  const [clearableDate, setClearableDate] = useState<{ from?: Date; to?: Date }>({
-    from: currentDay.toDate(),
-    to: currentDay.toDate(),
-  });
-
-  const [clearableRange, setClearableRange] = useState<{ from?: Date; to?: Date }>({
-    from: currentDay.subtract(7, 'days').toDate(),
-    to: currentDay.toDate(),
-  });
-
-  console.log(clearableDate, clearableRange);
-
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <h3>Reset DatePicker value (with external component)</h3>
       <DatePicker
         value={date}
         inputProps={{ size: 'md', styleType: 'outlined' }}
-        isDefaultNow={false}
+        isClearable
+        onChange={setDate}
       />
       <Button onClick={() => setDate({ from: undefined, to: undefined })}>
         Reset DatePicker value
@@ -47,44 +36,13 @@ const DatePickerShowcase: React.FC = () => {
         value={dateRange}
         inputProps={{ size: 'md', styleType: 'outlined' }}
         isRangePicker
-        isDefaultNow={false}
+        isClearable
         dateFormatOverride="MMM D, YYYY"
+        onChange={setDateRange}
       />
       <Button onClick={() => setDateRange({ from: undefined, to: undefined })}>
         Reset RangePicker value
       </Button>
-
-      <hr />
-
-      <h3>Clearable DatePicker (with isClearable prop)</h3>
-      <DatePicker
-        value={clearableDate}
-        inputProps={{ size: 'md', styleType: 'outlined' }}
-        isDefaultNow={false}
-        isClearable
-        onBackSpace={() => setClearableDate({ from: undefined, to: undefined })}
-      />
-
-      <p>
-        <strong>Date value</strong>: {`${clearableDate.from} - ${clearableDate.to}`}
-      </p>
-
-      <hr />
-
-      <h3>Reset RangePicker value (with isClearable prop)</h3>
-      <DatePicker
-        value={clearableRange}
-        inputProps={{ size: 'md', styleType: 'outlined' }}
-        isRangePicker
-        isDefaultNow={false}
-        isClearable
-        dateFormatOverride="MMM D, YYYY"
-        onBackSpace={() => setClearableRange({ from: undefined, to: undefined })}
-      />
-
-      <p>
-        <strong>Date value</strong>:{`${clearableRange.from} - ${clearableRange.to}`}
-      </p>
     </div>
   );
 };
