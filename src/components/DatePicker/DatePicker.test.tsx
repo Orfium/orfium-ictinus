@@ -63,7 +63,7 @@ describe('DatePicker', () => {
 
   it('should handle selecting a range in range picker mode', () => {
     const onChange = jest.fn();
-    const { getByText, getByTestId, getAllByText } = render(
+    const { getByTestId, getAllByText } = render(
       <DatePicker
         dataTestId={'input'}
         isRangePicker
@@ -99,9 +99,34 @@ describe('DatePicker', () => {
     });
   });
 
+  it('should handle escape', async () => {
+    const onChange = jest.fn();
+    const { getByTestId, getByPlaceholderText } = render(
+      <DatePicker
+        dataTestId={'input'}
+        isClearable
+        value={{
+          from: currentDay.toDate(),
+          to: currentDay.add(1, 'day').toDate(),
+        }}
+        onChange={onChange}
+      />
+    );
+    const input = getByPlaceholderText('Select date') as HTMLInputElement;
+    // trigger overlay
+    fireEvent.click(input);
+
+    const applyButton = getByTestId('button-apply');
+    expect(applyButton).toBeInTheDocument();
+
+    fireEvent.keyDown(input, { key: 'Escape', keyCode: 27 });
+
+    await waitFor(() => expect(applyButton).not.toBeInTheDocument());
+  });
+
   it('should handle clearing the selected date', async () => {
     const onChange = jest.fn();
-    const { debug, getByText, getByTestId, getByPlaceholderText } = render(
+    const { getByPlaceholderText } = render(
       <DatePicker
         dataTestId={'input'}
         isClearable
@@ -118,6 +143,35 @@ describe('DatePicker', () => {
     expect(onChange).toBeCalledTimes(1);
     expect(onChange).toBeCalledWith({
       from: undefined,
+      to: undefined,
+    });
+  });
+
+  it('should handle clearing the selected date in range pickger', async () => {
+    const onChange = jest.fn();
+    const { getByPlaceholderText } = render(
+      <DatePicker
+        dataTestId={'input'}
+        isClearable
+        isRangePicker
+        value={{
+          from: currentDay.toDate(),
+          to: currentDay.add(1, 'day').toDate(),
+        }}
+        onChange={onChange}
+      />
+    );
+    const input = getByPlaceholderText('Date (start) - Date (end)') as HTMLInputElement;
+    fireEvent.keyDown(input, { key: 'Backspace', keyCode: 8 });
+
+    expect(onChange).toBeCalledTimes(1);
+    const onChangeResult: { from: Date; to: Date } = onChange.mock.calls[0][0];
+
+    expect({
+      from: dayjs(onChangeResult.from).format(format),
+      to: onChangeResult.to,
+    }).toEqual({
+      from: currentDay.format(format),
       to: undefined,
     });
   });
