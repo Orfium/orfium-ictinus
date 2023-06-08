@@ -1589,7 +1589,7 @@ exports[`OverlayComponent should render correctly 1`] = `
       >
         <button
           class="emotion-93"
-          data-testid="button"
+          data-testid="button-cancel"
           type="button"
         >
           <span
@@ -1604,7 +1604,7 @@ exports[`OverlayComponent should render correctly 1`] = `
         </button>
         <button
           class="emotion-96"
-          data-testid="button"
+          data-testid="button-apply"
           type="button"
         >
           <span
@@ -2014,6 +2014,115 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-left-radius: false;
 }
 
+.emotion-165 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+.emotion-165>button {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.emotion-166 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #175BF5;
+  background-color: transparent;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem #175BF5;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-166:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
+}
+
+.emotion-166:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-166:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-166:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-166:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-167 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-168 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-169 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-169:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-169:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-169:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-169:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-169:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .emotion-0 {
   display: -webkit-box;
   display: -moz-box;
@@ -2402,6 +2511,115 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
   border-top-right-radius: 100%;
   border-bottom-left-radius: false;
   border-top-left-radius: false;
+}
+
+.emotion-165 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+.emotion-165>button {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.emotion-166 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #175BF5;
+  background-color: transparent;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: solid 0.0625rem #175BF5;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-166:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.125rem;
+}
+
+.emotion-166:hover:not(:disabled) {
+  background-color: #e7eefe;
+}
+
+.emotion-166:active:not(:disabled) {
+  background-color: #d0defd;
+}
+
+.emotion-166:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-166:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-167 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-168 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.emotion-169 {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: white;
+  background-color: #175BF5;
+  padding: 0 1rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-169:focus-visible:not(:disabled) {
+  outline: #C813D5 auto 0.0625rem;
+}
+
+.emotion-169:hover:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-169:active:not(:disabled) {
+  background-color: #1248c4;
+}
+
+.emotion-169:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emotion-169:disabled style {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 <div>
@@ -3406,6 +3624,40 @@ exports[`OverlayComponent should render datepicker correctly 1`] = `
             </tbody>
           </table>
         </div>
+      </div>
+      <div
+        class="emotion-165"
+      >
+        <button
+          class="emotion-166"
+          data-testid="button-cancel"
+          type="button"
+        >
+          <span
+            class="emotion-167"
+          >
+            <span
+              class="emotion-168"
+            >
+              Cancel
+            </span>
+          </span>
+        </button>
+        <button
+          class="emotion-169"
+          data-testid="button-apply"
+          type="button"
+        >
+          <span
+            class="emotion-167"
+          >
+            <span
+              class="emotion-168"
+            >
+              Apply
+            </span>
+          </span>
+        </button>
       </div>
     </div>
   </div>

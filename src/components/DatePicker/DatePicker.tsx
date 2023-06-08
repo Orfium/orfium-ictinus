@@ -1,5 +1,6 @@
 import { Dayjs } from 'dayjs';
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, memo, useMemo, useState } from 'react';
+import isEqual from 'react-fast-compare';
 
 import { TestProps } from '../../utils/types';
 import { FilterType, StyleType } from '../Filter/types';
@@ -9,7 +10,7 @@ import PositionInScreen from '../utils/PositionInScreen';
 import { datePickerStyles } from './DatePicker.style';
 import DatePickInput from './DatePickInput';
 import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { currentDay, datepickerPropValue, initDates } from './utils';
+import { currentDay, initDates } from './utils';
 
 export type DisabledDates = {
   daysOfWeek?: number[];
@@ -18,18 +19,17 @@ export type DisabledDates = {
   before?: Date;
 };
 
+export type DateRange = { from: Date | undefined; to: Date | undefined };
+
 export type Props = {
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
-  onChange?: (range: Range) => void;
+  onChange?: (range: DateRange) => void;
   /** Option to disable some dates */
   disableDates?: DisabledDates;
   /** Value to define if needed an initial state or to handle it externally */
-  value?: {
-    from?: Date;
-    to?: Date;
-  };
+  value: DateRange;
   /** Props of the TextField input */
   inputProps?: TextFieldProps;
   /** The format of the date displayed in the input field */
@@ -37,6 +37,7 @@ export type Props = {
   /** if the datepicker can be clear with backspace */
   isClearable?: boolean;
   /** if the datepicker's default date is today instead of placeholder text */
+  /** @deprecated This prop is being deprecated and is not used as you can manipulate date from value, will be removed in the future **/
   isDefaultNow?: boolean;
   /** Style properties for the DatePicker with a filter base */
   filterConfig?: {
@@ -81,27 +82,19 @@ export const extraOptions: ExtraOption[] = [
 
 const DatePicker: React.FC<Props & TestProps> = ({
   isRangePicker = false,
-  onChange,
+  onChange = () => {},
   disableDates,
   value: initialValue,
   inputProps,
   dateFormatOverride = undefined,
   isClearable = false,
   filterConfig,
-  isDefaultNow = true,
   dataTestId,
 }) => {
-  const value = useMemo(() => initDates(initialValue || {}, isDefaultNow), [initialValue]);
+  const value = useMemo(() => initDates(initialValue || {}), [initialValue]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>('');
-
-  const [range, setRange] = useState<Range>(() => value);
-  const [selectedRange, setSelectedRange] = useState<Range>(() => value);
-
-  useEffect(() => {
-    setRange(value);
-    setSelectedRange(value);
-  }, [value, isDefaultNow]);
+  const [range, setRange] = useState<Range>(value);
 
   const handleSelectedOptions = useCallback((option: string) => {
     const foundOption = extraOptions.find((optionItem) => optionItem.value === option);
@@ -129,19 +122,10 @@ const DatePicker: React.FC<Props & TestProps> = ({
         setIsOpen(false);
       }
 
-      setSelectedRange(newRange);
-      if (onChange) {
-        onChange(newRange);
-      }
+      onChange({ from: newRange.from?.toDate(), to: newRange.to?.toDate() });
     },
     [onChange]
   );
-
-  useEffect(() => {
-    if (isRangePicker) {
-      applyRangeAndClose(range);
-    }
-  }, [applyRangeAndClose, isRangePicker, range]);
 
   const setRangePick = useCallback(
     (day: Dayjs) => {
@@ -191,7 +175,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
       if (filterConfig?.filterType) {
         setIsOpen(false);
 
-        return setSelectedRange({ to: undefined, from: undefined });
+        return onChange({ to: undefined, from: undefined });
       }
 
       if (e.keyCode === 27) {
@@ -201,16 +185,19 @@ const DatePicker: React.FC<Props & TestProps> = ({
 
       if (e.keyCode === 8) {
         //backspace
-        return setSelectedRange((oldState) => {
-          if (oldState.from && oldState.to) {
-            return { ...oldState, to: undefined };
-          }
+        if (isRangePicker) {
+          if (value.from && value.to) {
+            setRange({ from: value.from, to: undefined });
 
-          return { to: undefined, from: undefined };
-        });
+            return onChange({ from: value.from.toDate(), to: undefined });
+          }
+        }
+
+        setRange({ from: undefined, to: undefined });
+        onChange({ to: undefined, from: undefined });
       }
     },
-    [isClearable, filterConfig?.filterType]
+    [isClearable, filterConfig?.filterType, onChange, value, isRangePicker]
   );
 
   const onApply = useCallback(() => {
@@ -225,7 +212,7 @@ const DatePicker: React.FC<Props & TestProps> = ({
           <DatePickInput
             filterConfig={filterConfig}
             isRangePicker={isRangePicker}
-            selectedDay={selectedRange}
+            selectedDay={value}
             inputProps={inputProps}
             dateFormatOverride={dateFormatOverride}
             handleFocus={handleFocus}
@@ -253,4 +240,4 @@ const DatePicker: React.FC<Props & TestProps> = ({
   );
 };
 
-export default DatePicker;
+export default memo(DatePicker, isEqual);
