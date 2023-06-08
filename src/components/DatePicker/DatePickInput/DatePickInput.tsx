@@ -106,7 +106,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
             onChange={ON_CHANGE_MOCK}
             placeholder="Date (start) - Date (end)"
             value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
-            rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+            rightIcon={<Icon name={'calendarEmpty'} color={'#757BB2'} />}
           />
         );
       }
@@ -121,7 +121,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, Props & InputProps & Te
           onChange={ON_CHANGE_MOCK}
           placeholder="Select date"
           value={selectedDay.to ? formattedFrom : ''}
-          rightIcon={<Icon name={'calendarEmpty'} color={'#676767'} />}
+          rightIcon={<Icon name={'calendarEmpty'} color={'#757BB2'} />}
         />
       );
     };

@@ -153,7 +153,7 @@ Regular TextField with a prefix or a suffix
         <TextField
           size={select('size', ['md', 'sm'], 'md')}
           hasMinWidthCompat={false}
-          leftIcon={<div style={{ color: 'gray' }}>$</div>}
+          leftIcon={<div style={{ color: '#757BB2' }}>$</div>}
           styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
         />
       </div>
@@ -161,7 +161,7 @@ Regular TextField with a prefix or a suffix
         <TextField
           size={select('size', ['md', 'sm'], 'md')}
           hasMinWidthCompat={false}
-          rightIcon={<div style={{ color: 'gray' }}>%</div>}
+          rightIcon={<div style={{ color: '#757BB2' }}>%</div>}
           styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
         />
       </div>
@@ -169,8 +169,8 @@ Regular TextField with a prefix or a suffix
         <TextField
           size={select('size', ['md', 'sm'], 'md')}
           hasMinWidthCompat={false}
-          leftIcon={<div style={{ color: 'gray' }}>$</div>}
-          rightIcon={<div style={{ color: 'gray' }}>%</div>}
+          leftIcon={<div style={{ color: '#757BB2' }}>$</div>}
+          rightIcon={<div style={{ color: '#757BB2' }}>%</div>}
           styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
         />
       </div>
@@ -298,30 +298,6 @@ Regular Text Field with KNOBS
         disabled={boolean('Disabled', false)}
         leftIcon={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
         rightIcon={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
-        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
-        hintMsg={text('custom error message', 'Error in Text Field')}
-        status={select('status', ['hint', 'error', 'normal'], 'normal')}
-      />
-      <TextField
-        label={text('Label', 'Label')}
-        size={select('Size', ['md', 'sm'], 'md')}
-        lean={boolean('Lean version', false)}
-        locked={boolean('Locked', false)}
-        disabled={boolean('Disabled', false)}
-        leftIcon={
-          <Icon
-            name={select('LeftIcon', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
-            size={24}
-            color={'#f5781b'}
-          />
-        }
-        rightIcon={
-          <Icon
-            name={select('RightIcon', ['', ...Object.keys(iconSelector)], 'info')}
-            size={24}
-            color={'#f5781b'}
-          />
-        }
         styleType={select('Style', ['filled', 'outlined', 'elevated'], 'outlined')}
         hintMsg={text('custom error message', 'Error in Text Field')}
         status={select('status', ['hint', 'error', 'normal'], 'normal')}
