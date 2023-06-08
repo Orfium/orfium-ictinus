@@ -19,18 +19,17 @@ export type DisabledDates = {
   before?: Date;
 };
 
+export type DateRange = { from: Date | undefined; to: Date | undefined };
+
 export type Props = {
   /** This property is to define if this is a day picker or a day range picker */
   isRangePicker?: boolean;
   /** A callback to return user selection */
-  onChange?: (range: { from?: Date; to?: Date }) => void;
+  onChange?: (range: DateRange) => void;
   /** Option to disable some dates */
   disableDates?: DisabledDates;
   /** Value to define if needed an initial state or to handle it externally */
-  value?: {
-    from?: Date;
-    to?: Date;
-  };
+  value: DateRange;
   /** Props of the TextField input */
   inputProps?: TextFieldProps;
   /** The format of the date displayed in the input field */

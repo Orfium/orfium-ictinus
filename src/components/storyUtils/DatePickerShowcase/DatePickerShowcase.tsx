@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
 import Button from '../../Button';
-import DatePicker from '../../DatePicker';
-import { Range } from '../../DatePicker/OverlayComponent/OverlayComponent';
+import DatePicker, { DateRange } from '../../DatePicker';
 import { currentDay } from '../../DatePicker/utils';
 
 const DatePickerShowcase: React.FC = () => {
-  const [date, setDate] = useState<{ from?: Date; to?: Date }>({
+  const [date, setDate] = useState<DateRange>({
     from: currentDay.toDate(),
     to: currentDay.toDate(),
   });
 
-  const [dateRange, setDateRange] = useState<{ from?: Date; to?: Date }>({
+  const [dateRange, setDateRange] = useState<DateRange>({
     from: currentDay.subtract(7, 'days').toDate(),
     to: currentDay.toDate(),
   });

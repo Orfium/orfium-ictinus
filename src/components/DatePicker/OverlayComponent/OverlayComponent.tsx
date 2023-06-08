@@ -96,13 +96,20 @@ const OverlayComponent: React.FC<Props> = ({
         </div>
 
         <div css={buttonsWrapperStyle()}>
-          <Button filled={false} size={'sm'} onClick={onCancel} type={'primary'}>
+          <Button
+            filled={false}
+            size={'sm'}
+            onClick={onCancel}
+            type={'primary'}
+            dataTestId={'cancel'}
+          >
             Cancel
           </Button>
           <Button
             size={'sm'}
             onClick={onApply}
             type={'primary'}
+            dataTestId={'apply'}
             disabled={Boolean(!selectedDays.from || !selectedDays.to)}
           >
             Apply
