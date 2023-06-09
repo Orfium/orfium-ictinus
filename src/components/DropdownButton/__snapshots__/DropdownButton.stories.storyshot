@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,35 +30,35 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-3 {
+.emotion-5 {
   border-right: 0.0625rem solid transparent;
 }
 
-.emotion-3 button:first-of-type {
+.emotion-5 button:first-of-type {
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
 }
 
-.emotion-4 {
+.emotion-6 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-5 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -59,25 +74,25 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   transition: background-color,border 150ms linear;
 }
 
-.emotion-5:focus-visible:not(:disabled) {
+.emotion-7:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-5:disabled {
+.emotion-7:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-7:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-5:active:not(:disabled) {
+.emotion-7:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -93,12 +108,12 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   gap: 0.5rem;
 }
 
-.emotion-7 button:last-child {
+.emotion-9 button:last-child {
   border-top-left-radius: unset;
   border-bottom-left-radius: unset;
 }
 
-.emotion-7 svg {
+.emotion-9 svg {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -107,7 +122,7 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   transition: 0.2s;
 }
 
-.emotion-9 {
+.emotion-11 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -123,25 +138,25 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   transition: background-color,border 150ms linear;
 }
 
-.emotion-9:focus-visible:not(:disabled) {
+.emotion-11:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-9:disabled {
+.emotion-11:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-9:hover:not(:disabled) {
+.emotion-11:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-9:active:not(:disabled) {
+.emotion-11:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-10 {
+.emotion-12 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,17 +172,17 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   justify-content: center;
 }
 
-.emotion-11 {
+.emotion-13 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-11 path {
+.emotion-13 path {
   fill: #ffffff;
 }
 
-.emotion-16 {
+.emotion-18 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -183,74 +198,74 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   transition: background-color,border 150ms linear;
 }
 
-.emotion-16:focus-visible:not(:disabled) {
+.emotion-18:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-16:disabled {
+.emotion-18:disabled {
   opacity: 50%;
   background-color: #dcdfff;
   cursor: not-allowed;
 }
 
-.emotion-16:hover:not(:disabled) {
+.emotion-18:hover:not(:disabled) {
   background-color: #edefff;
 }
 
-.emotion-16:active:not(:disabled) {
-  background-color: #cad0ff;
-}
-
-.emotion-20 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #1451dc;
-  background-color: #dcdfff;
-  padding: 0.5rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-20:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-20:disabled {
-  opacity: 50%;
-  background-color: #dcdfff;
-  cursor: not-allowed;
-}
-
-.emotion-20:hover:not(:disabled) {
-  background-color: #edefff;
-}
-
-.emotion-20:active:not(:disabled) {
+.emotion-18:active:not(:disabled) {
   background-color: #cad0ff;
 }
 
 .emotion-22 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1451dc;
+  background-color: #dcdfff;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-22:focus-visible:not(:disabled) {
+  outline: #F814E1 auto 0.125rem;
+}
+
+.emotion-22:disabled {
+  opacity: 50%;
+  background-color: #dcdfff;
+  cursor: not-allowed;
+}
+
+.emotion-22:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-22:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-24 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-22 path {
+.emotion-24 path {
   fill: #1451dc;
 }
 
-.emotion-25 button:first-of-type {
+.emotion-27 button:first-of-type {
   border-top-right-radius: unset;
   border-bottom-right-radius: unset;
 }
 
-.emotion-27 {
+.emotion-29 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -266,25 +281,25 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   transition: background-color,border 150ms linear;
 }
 
-.emotion-27:focus-visible:not(:disabled) {
+.emotion-29:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-27:disabled {
+.emotion-29:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-27:hover:not(:disabled) {
+.emotion-29:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-27:active:not(:disabled) {
+.emotion-29:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-31 {
+.emotion-33 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -300,45 +315,32 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
   transition: background-color,border 150ms linear;
 }
 
-.emotion-31:focus-visible:not(:disabled) {
+.emotion-33:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-31:disabled {
+.emotion-33:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-31:hover:not(:disabled) {
+.emotion-33:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-31:active:not(:disabled) {
+.emotion-33:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -351,26 +353,26 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <button
-                    className="emotion-5"
+                    className="emotion-7"
                     data-testid="dropdownbutton"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     >
                       <span>
                         Click Here
@@ -380,24 +382,24 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 </div>
               </div>
               <div
-                className="emotion-7"
+                className="emotion-9"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <button
-                    className="emotion-9"
+                    className="emotion-11"
                     data-testid="dropdown-toggle-icon-button"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-12"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-11"
+                        className="emotion-13"
                       />
                     </span>
                   </button>
@@ -418,26 +420,26 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <button
-                    className="emotion-16"
+                    className="emotion-18"
                     data-testid="dropdownbutton"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     >
                       <span>
                         Click Here
@@ -447,24 +449,24 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 </div>
               </div>
               <div
-                className="emotion-7"
+                className="emotion-9"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <button
-                    className="emotion-20"
+                    className="emotion-22"
                     data-testid="dropdown-toggle-icon-button"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-12"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-22"
+                        className="emotion-24"
                       />
                     </span>
                   </button>
@@ -485,26 +487,26 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-25"
+                className="emotion-27"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <button
-                    className="emotion-27"
+                    className="emotion-29"
                     data-testid="dropdownbutton"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     >
                       <span>
                         Click Here
@@ -514,24 +516,24 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
                 </div>
               </div>
               <div
-                className="emotion-7"
+                className="emotion-9"
               >
                 <div
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <button
-                    className="emotion-31"
+                    className="emotion-33"
                     data-testid="dropdown-toggle-icon-button"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-10"
+                      className="emotion-12"
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-22"
+                        className="emotion-24"
                       />
                     </span>
                   </button>
@@ -548,6 +550,21 @@ exports[`Storyshots Design System/Button/DropdownButton Button with Dropdown 1`]
 
 exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -561,19 +578,19 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-3 {
+.emotion-5 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-4 {
+.emotion-6 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -589,25 +606,25 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
   transition: background-color,border 150ms linear;
 }
 
-.emotion-4:focus-visible:not(:disabled) {
+.emotion-6:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-4:disabled {
+.emotion-6:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-4:hover:not(:disabled) {
+.emotion-6:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-4:active:not(:disabled) {
+.emotion-6:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-5 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -623,61 +640,61 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
   justify-content: center;
 }
 
-.emotion-6 {
+.emotion-8 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-6 path {
+.emotion-8 path {
   fill: #ffffff;
-}
-
-.emotion-10 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #1451dc;
-  background-color: #dcdfff;
-  padding: 0.5rem;
-  border-radius: 2.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-10:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-10:disabled {
-  opacity: 50%;
-  background-color: #dcdfff;
-  cursor: not-allowed;
-}
-
-.emotion-10:hover:not(:disabled) {
-  background-color: #edefff;
-}
-
-.emotion-10:active:not(:disabled) {
-  background-color: #cad0ff;
 }
 
 .emotion-12 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1451dc;
+  background-color: #dcdfff;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-12:focus-visible:not(:disabled) {
+  outline: #F814E1 auto 0.125rem;
+}
+
+.emotion-12:disabled {
+  opacity: 50%;
+  background-color: #dcdfff;
+  cursor: not-allowed;
+}
+
+.emotion-12:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-12:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-14 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-12 path {
+.emotion-14 path {
   fill: #1451dc;
 }
 
-.emotion-16 {
+.emotion-18 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -693,45 +710,32 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
   transition: background-color,border 150ms linear;
 }
 
-.emotion-16:focus-visible:not(:disabled) {
+.emotion-18:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-16:disabled {
+.emotion-18:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-16:hover:not(:disabled) {
+.emotion-18:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-16:active:not(:disabled) {
+.emotion-18:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -744,27 +748,27 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <button
-                  className="emotion-4"
+                  className="emotion-6"
                   data-testid="icon-dropdown-icon-button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     />
                   </span>
                 </button>
@@ -784,27 +788,27 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <button
-                  className="emotion-10"
+                  className="emotion-12"
                   data-testid="icon-dropdown-icon-button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-12"
+                      className="emotion-14"
                     />
                   </span>
                 </button>
@@ -824,27 +828,27 @@ exports[`Storyshots Design System/Button/DropdownButton IconButton with Dropdown
           role="button"
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <button
-                  className="emotion-16"
+                  className="emotion-18"
                   data-testid="icon-dropdown-icon-button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-12"
+                      className="emotion-14"
                     />
                   </span>
                 </button>

@@ -1,8 +1,10 @@
 import textColorFigma from './variables/textColor';
 import { DotKeys, getTokensValue } from '../utils';
 
+export type TextColorKey = DotKeys<typeof textColorFigma>;
+
 export type SemanticTextColor = {
-  get: (val: DotKeys<typeof textColorFigma>) => string;
+  get: (val: TextColorKey) => string;
 };
 
 const textColor: SemanticTextColor = {

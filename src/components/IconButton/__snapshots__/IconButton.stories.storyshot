@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,14 +30,14 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -38,25 +53,25 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-3 {
+.emotion-5 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -72,37 +87,24 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-6 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-4 path {
+.emotion-6 path {
   fill: #ffffff;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -112,21 +114,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-2"
+            className="emotion-4"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
               />
             </span>
           </button>
@@ -139,6 +141,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Playground 1`] = 
 
 exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -152,14 +169,14 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -175,25 +192,25 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-3 {
+.emotion-5 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -209,61 +226,61 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-6 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-4 path {
+.emotion-6 path {
   fill: #ffffff;
-}
-
-.emotion-6 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #1451dc;
-  background-color: #dcdfff;
-  padding: 0.5rem;
-  border-radius: 2.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-6:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-6:disabled {
-  opacity: 50%;
-  background-color: #dcdfff;
-  cursor: not-allowed;
-}
-
-.emotion-6:hover:not(:disabled) {
-  background-color: #edefff;
-}
-
-.emotion-6:active:not(:disabled) {
-  background-color: #cad0ff;
 }
 
 .emotion-8 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #1451dc;
+  background-color: #dcdfff;
+  padding: 0.5rem;
+  border-radius: 2.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-8:focus-visible:not(:disabled) {
+  outline: #F814E1 auto 0.125rem;
+}
+
+.emotion-8:disabled {
+  opacity: 50%;
+  background-color: #dcdfff;
+  cursor: not-allowed;
+}
+
+.emotion-8:hover:not(:disabled) {
+  background-color: #edefff;
+}
+
+.emotion-8:active:not(:disabled) {
+  background-color: #cad0ff;
+}
+
+.emotion-10 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-8 path {
+.emotion-10 path {
   fill: #1451dc;
 }
 
-.emotion-10 {
+.emotion-12 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -279,25 +296,25 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-10:focus-visible:not(:disabled) {
+.emotion-12:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-10:disabled {
+.emotion-12:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-10:hover:not(:disabled) {
+.emotion-12:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-10:active:not(:disabled) {
+.emotion-12:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-15 {
+.emotion-17 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -313,25 +330,25 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-15:focus-visible:not(:disabled) {
+.emotion-17:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-15:disabled {
+.emotion-17:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-15:hover:not(:disabled) {
+.emotion-17:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-15:active:not(:disabled) {
+.emotion-17:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-19 {
+.emotion-21 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -347,25 +364,25 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-19:focus-visible:not(:disabled) {
+.emotion-21:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-19:disabled {
+.emotion-21:disabled {
   opacity: 50%;
   background-color: #dcdfff;
   cursor: not-allowed;
 }
 
-.emotion-19:hover:not(:disabled) {
+.emotion-21:hover:not(:disabled) {
   background-color: #edefff;
 }
 
-.emotion-19:active:not(:disabled) {
+.emotion-21:active:not(:disabled) {
   background-color: #cad0ff;
 }
 
-.emotion-23 {
+.emotion-25 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -381,45 +398,32 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-23:focus-visible:not(:disabled) {
+.emotion-25:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-23:disabled {
+.emotion-25:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-23:hover:not(:disabled) {
+.emotion-25:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-23:active:not(:disabled) {
+.emotion-25:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -429,21 +433,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-2"
+            className="emotion-4"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
               />
             </span>
           </button>
@@ -457,21 +461,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-6"
+            className="emotion-8"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-8"
+                className="emotion-10"
               />
             </span>
           </button>
@@ -485,21 +489,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-10"
+            className="emotion-12"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-8"
+                className="emotion-10"
               />
             </span>
           </button>
@@ -507,7 +511,7 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
       </div>
     </div>
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -517,21 +521,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-15"
+            className="emotion-17"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
               />
             </span>
           </button>
@@ -545,21 +549,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-19"
+            className="emotion-21"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-8"
+                className="emotion-10"
               />
             </span>
           </button>
@@ -573,21 +577,21 @@ exports[`Storyshots Design System/Button/IconButton IconButton Types 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <button
-            className="emotion-23"
+            className="emotion-25"
             data-testid="icon-button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               onClick={[Function]}
             >
               <span
-                className="emotion-8"
+                className="emotion-10"
               />
             </span>
           </button>

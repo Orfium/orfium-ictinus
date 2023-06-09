@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +30,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -48,32 +63,32 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background: #e7d6ff;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background: #dbc1ff;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-1>:not(:last-child) {
+.emotion-3>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
-.emotion-2 {
+.emotion-4 {
   cursor: pointer;
 }
 
-.emotion-3 {
+.emotion-5 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,17 +104,17 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   justify-content: center;
 }
 
-.emotion-4 {
+.emotion-6 {
   fill: #0f0f17;
   width: 0.875rem;
   height: 0.875rem;
 }
 
-.emotion-4 path {
+.emotion-6 path {
   fill: #0f0f17;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -132,28 +147,28 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-5:hover:not(:disabled) {
+.emotion-7:hover:not(:disabled) {
   background: #f3f5f8;
 }
 
-.emotion-5:focus-visible:not(:disabled) {
+.emotion-7:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-5:active:not(:disabled) {
+.emotion-7:active:not(:disabled) {
   background: #dbc1ff;
 }
 
-.emotion-5:disabled {
+.emotion-7:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.emotion-5>:not(:last-child) {
+.emotion-7>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -183,26 +198,13 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -212,7 +214,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         }
       >
         <button
-          className="emotion-1"
+          className="emotion-3"
           data-testid="chip"
           disabled={false}
           role="button"
@@ -221,15 +223,15 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
             Label
           </div>
           <div
-            className="emotion-2"
+            className="emotion-4"
           >
             <span
-              className="emotion-3"
+              className="emotion-5"
               data-testid="chip-delete"
               onClick={[Function]}
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
               />
             </span>
           </div>
@@ -243,7 +245,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         }
       >
         <button
-          className="emotion-5"
+          className="emotion-7"
           data-testid="chip"
           disabled={false}
           onClick={[Function]}
@@ -262,7 +264,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
         }
       >
         <button
-          className="emotion-5"
+          className="emotion-7"
           data-testid="chip"
           disabled={false}
           onClick={[Function]}
@@ -272,7 +274,7 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
             Label
           </div>
           <div
-            className="emotion-7"
+            className="emotion-9"
             data-testid="badge"
           >
             5
@@ -286,6 +288,21 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
 
 exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -299,7 +316,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -332,24 +349,24 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   transition: background-color 150ms linear;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background: #ffd0e1;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: none;
 }
 
-.emotion-1>:not(:last-child) {
+.emotion-3>:not(:last-child) {
   margin-right: 0.25rem;
 }
 
-.emotion-3>div {
+.emotion-5>div {
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -388,33 +405,20 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-4 img {
+.emotion-6 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -425,7 +429,7 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
       >
         <div
           aria-readonly="true"
-          className="emotion-1"
+          className="emotion-3"
           data-testid="chip"
         >
           <div>
@@ -442,14 +446,14 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
       >
         <div
           aria-readonly="true"
-          className="emotion-1"
+          className="emotion-3"
           data-testid="chip"
         >
           <div
-            className="emotion-3"
+            className="emotion-5"
           >
             <div
-              className="emotion-4"
+              className="emotion-6"
               data-testid="chip_avatar"
             >
               KN
@@ -469,14 +473,14 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
       >
         <div
           aria-readonly="true"
-          className="emotion-1"
+          className="emotion-3"
           data-testid="chip"
         >
           <div
-            className="emotion-3"
+            className="emotion-5"
           >
             <div
-              className="emotion-4"
+              className="emotion-6"
               data-testid="chip_avatar"
             >
               <img

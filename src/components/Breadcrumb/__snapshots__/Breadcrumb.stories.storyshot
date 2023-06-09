@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +30,7 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -32,7 +47,7 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -43,22 +58,22 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
   color: #5f6c85;
 }
 
-.emotion-3 {
+.emotion-5 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.emotion-3:hover {
+.emotion-5:hover {
   color: #232336;
 }
 
-.emotion-4 {
+.emotion-6 {
   margin: auto 1rem;
   cursor: default;
 }
 
-.emotion-5 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -74,17 +89,17 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
   justify-content: center;
 }
 
-.emotion-6 {
+.emotion-8 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-6 path {
+.emotion-8 path {
   fill: #5f6c85;
 }
 
-.emotion-22 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -95,37 +110,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
   color: #175bf5;
 }
 
-.emotion-23 {
+.emotion-25 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.emotion-23:hover {
+.emotion-25:hover {
   color: #103fab;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -136,28 +138,28 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
       >
         <ol
           aria-label="Breadcrumb"
-          className="emotion-1"
+          className="emotion-3"
         >
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/first-level"
                 onClick={[Function]}
               >
                 Level 1
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -165,24 +167,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/second-level"
                 onClick={[Function]}
               >
                 Level 2
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -190,24 +192,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/third-level"
                 onClick={[Function]}
               >
                 Level 3
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -215,24 +217,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/forth-level"
                 onClick={[Function]}
               >
                 Level 4
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -240,10 +242,10 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
           </li>
           <li>
             <div
-              className="emotion-22"
+              className="emotion-24"
             >
               <a
-                className="emotion-23"
+                className="emotion-25"
                 href="/fifth-level"
                 onClick={[Function]}
               >
@@ -260,6 +262,21 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs 1`] = `
 
 exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive last breadcrumb 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -273,7 +290,7 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -290,7 +307,7 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
   margin: 0;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -301,22 +318,22 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
   color: #5f6c85;
 }
 
-.emotion-3 {
+.emotion-5 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.emotion-3:hover {
+.emotion-5:hover {
   color: #232336;
 }
 
-.emotion-4 {
+.emotion-6 {
   margin: auto 1rem;
   cursor: default;
 }
 
-.emotion-5 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -332,17 +349,17 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
   justify-content: center;
 }
 
-.emotion-6 {
+.emotion-8 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-6 path {
+.emotion-8 path {
   fill: #5f6c85;
 }
 
-.emotion-22 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -354,26 +371,13 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -384,28 +388,28 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
       >
         <ol
           aria-label="Breadcrumb"
-          className="emotion-1"
+          className="emotion-3"
         >
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/first-level"
                 onClick={[Function]}
               >
                 Level 1
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -413,24 +417,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/second-level"
                 onClick={[Function]}
               >
                 Level 2
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -438,24 +442,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/third-level"
                 onClick={[Function]}
               >
                 Level 3
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -463,24 +467,24 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <a
-                className="emotion-3"
+                className="emotion-5"
                 href="/forth-level"
                 onClick={[Function]}
               >
                 Level 4
               </a>
               <span
-                className="emotion-4"
+                className="emotion-6"
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-6"
+                    className="emotion-8"
                   />
                 </span>
               </span>
@@ -488,7 +492,7 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
           </li>
           <li>
             <div
-              className="emotion-22"
+              className="emotion-24"
             >
               <div>
                 Level 5
@@ -504,6 +508,21 @@ exports[`Storyshots Design System/Breadcrumb Active Breadcrumbs with inactive la
 
 exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -517,7 +536,7 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -534,7 +553,7 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -545,22 +564,22 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   color: #5f6c85;
 }
 
-.emotion-3 {
+.emotion-5 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.emotion-3:hover {
+.emotion-5:hover {
   color: #232336;
 }
 
-.emotion-4 {
+.emotion-6 {
   margin: auto 1rem;
   cursor: default;
 }
 
-.emotion-5 {
+.emotion-7 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -576,17 +595,17 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   justify-content: center;
 }
 
-.emotion-6 {
+.emotion-8 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-6 path {
+.emotion-8 path {
   fill: #5f6c85;
 }
 
-.emotion-22 {
+.emotion-24 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -597,37 +616,24 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
   color: #175bf5;
 }
 
-.emotion-23 {
+.emotion-25 {
   -webkit-text-decoration: none;
   text-decoration: none;
   color: inherit;
 }
 
-.emotion-23:hover {
+.emotion-25:hover {
   color: #103fab;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -650,28 +656,28 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
           </button>
           <ol
             aria-label="Breadcrumb"
-            className="emotion-1"
+            className="emotion-3"
           >
             <li>
               <div
-                className="emotion-2"
+                className="emotion-4"
               >
                 <a
-                  className="emotion-3"
+                  className="emotion-5"
                   href="/first-level"
                   onClick={[Function]}
                 >
                   Level 1
                 </a>
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -679,24 +685,24 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
             </li>
             <li>
               <div
-                className="emotion-2"
+                className="emotion-4"
               >
                 <a
-                  className="emotion-3"
+                  className="emotion-5"
                   href="/second-level"
                   onClick={[Function]}
                 >
                   Level 2
                 </a>
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -704,24 +710,24 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
             </li>
             <li>
               <div
-                className="emotion-2"
+                className="emotion-4"
               >
                 <a
-                  className="emotion-3"
+                  className="emotion-5"
                   href="/third-level"
                   onClick={[Function]}
                 >
                   Level 3
                 </a>
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -729,24 +735,24 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
             </li>
             <li>
               <div
-                className="emotion-2"
+                className="emotion-4"
               >
                 <a
-                  className="emotion-3"
+                  className="emotion-5"
                   href="/forth-level"
                   onClick={[Function]}
                 >
                   Level 4
                 </a>
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-6"
+                      className="emotion-8"
                     />
                   </span>
                 </span>
@@ -754,10 +760,10 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
             </li>
             <li>
               <div
-                className="emotion-22"
+                className="emotion-24"
               >
                 <a
-                  className="emotion-23"
+                  className="emotion-25"
                   href="/fifth-level"
                   onClick={[Function]}
                 >
@@ -775,6 +781,21 @@ exports[`Storyshots Design System/Breadcrumb Breadcrumb showcase 1`] = `
 
 exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -788,7 +809,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -805,7 +826,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
   margin: 0;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -816,12 +837,12 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
   color: #5f6c85;
 }
 
-.emotion-3 {
+.emotion-5 {
   margin: auto 1rem;
   cursor: default;
 }
 
-.emotion-4 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -837,17 +858,17 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-5 path {
+.emotion-7 path {
   fill: #5f6c85;
 }
 
-.emotion-10 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,26 +880,13 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -889,24 +897,24 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
       >
         <ol
           aria-label="Breadcrumb"
-          className="emotion-1"
+          className="emotion-3"
         >
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div>
                 Level 1
               </div>
               <span
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                   />
                 </span>
               </span>
@@ -914,20 +922,20 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
           </li>
           <li>
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div>
                 Level 2
               </div>
               <span
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                   />
                 </span>
               </span>
@@ -935,7 +943,7 @@ exports[`Storyshots Design System/Breadcrumb Simple Breadcrumbs 1`] = `
           </li>
           <li>
             <div
-              className="emotion-10"
+              className="emotion-12"
             >
               <div>
                 Level 3
