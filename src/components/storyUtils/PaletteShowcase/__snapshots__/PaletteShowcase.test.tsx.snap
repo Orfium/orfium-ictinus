@@ -14190,7 +14190,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  box-shadow: 0 0 0 0.0625rem #a2bdfb;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -14198,18 +14198,18 @@ exports[`PaletteShowcase should render correctly 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
 }
 
 .emotion-773:hover {
-  background-color: #f3f5f8;
+  background-color: #e7eefe;
 }
 
 .emotion-773:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
-  background-color: #e7ebf2;
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #e7eefe;
 }
 
 .emotion-774 {
@@ -14229,7 +14229,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 1rem;
+  padding: 0 0 0 0.75rem;
 }
 
 .emotion-774>div {
@@ -14241,20 +14241,20 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-776 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #0f0f17;
+  color: #212332;
   display: block;
   position: relative;
   z-index: 1;
-  font-size: 0.9375rem;
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
-}
-
-.emotion-776+label {
-  font-size: 0.9375rem;
 }
 
 .emotion-776:focus {
@@ -14262,32 +14262,52 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-776::-webkit-input-placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776::-moz-placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776:-ms-input-placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776::placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-776:focus+label,
+.emotion-776:focus-within+label,
 .emotion-776:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
   font-weight: 700;
+}
+
+.emotion-776:focus-within+label {
+  color: #1451dc;
 }
 
 .emotion-776:disabled {
@@ -28991,7 +29011,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  box-shadow: 0 0 0 0.0625rem #a2bdfb;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -28999,18 +29019,18 @@ exports[`PaletteShowcase should render correctly 1`] = `
   user-select: none;
   opacity: 1;
   cursor: auto;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
 }
 
 .emotion-773:hover {
-  background-color: #f3f5f8;
+  background-color: #e7eefe;
 }
 
 .emotion-773:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
-  background-color: #e7ebf2;
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #e7eefe;
 }
 
 .emotion-774 {
@@ -29030,7 +29050,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 1rem;
+  padding: 0 0 0 0.75rem;
 }
 
 .emotion-774>div {
@@ -29042,20 +29062,20 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-776 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #0f0f17;
+  color: #212332;
   display: block;
   position: relative;
   z-index: 1;
-  font-size: 0.9375rem;
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
-}
-
-.emotion-776+label {
-  font-size: 0.9375rem;
 }
 
 .emotion-776:focus {
@@ -29063,32 +29083,52 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-776::-webkit-input-placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776::-moz-placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776:-ms-input-placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776::placeholder {
-  color: #5f6c85;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
 }
 
 .emotion-776:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-776:focus+label,
+.emotion-776:focus-within+label,
 .emotion-776:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
   font-weight: 700;
+}
+
+.emotion-776:focus-within+label {
+  color: #1451dc;
 }
 
 .emotion-776:disabled {
