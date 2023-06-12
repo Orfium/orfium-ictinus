@@ -69,7 +69,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             label={'Multi Select - Locked'}
             options={options}
             selectedOptions={selectedOptions}
-            isLocked
+            status={{ type: 'read-only' }}
           />
         </div>
         <div css={wrapper()}>
@@ -87,8 +87,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             label={'Multi Select - with Hint'}
             options={options}
             selectedOptions={selectedOptions}
-            status={'hint'}
-            hintMsg={'This is a hint message'}
+            status={{ type: 'normal', hintMessage: 'This is a hint message' }}
           />
         </div>
         <div css={wrapper()}>
@@ -97,8 +96,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             label={'Multi Select - with Error'}
             options={options}
             selectedOptions={selectedOptions}
-            status={'error'}
-            hintMsg={'This is an error message'}
+            status={{ type: 'error', hintMessage: 'This is an error message' }}
           />
         </div>
         <div css={wrapper()}>
@@ -107,7 +105,7 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
             label={'Multi Select - with Right Icon'}
             options={options}
             selectedOptions={selectedOptions}
-            rightIcon={'edit'}
+            suffix={'edit'}
           />
         </div>
       </div>

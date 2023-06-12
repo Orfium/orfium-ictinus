@@ -5,7 +5,7 @@ import { generateTestDataId } from 'utils/helpers';
 import MultiselectTextField from './components/MultiselectTextField';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import useMultiselectUtils from './hooks/useMultiselectUtils';
-import { rightIconContainer, selectWrapper } from './Select.style';
+import { suffixContainer, selectWrapper } from './Select.style';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
@@ -87,21 +87,19 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     isAsync = false,
     isLoading = false,
     asyncSearch = () => {},
-    status = 'normal',
+    status = { type: 'normal' },
     minCharactersToSearch = 0,
     hasHighlightSearch = false,
     isSearchable = true,
     isVirtualized = false,
-    styleType,
     isDisabled,
-    isLocked,
     dataTestId,
     onClear,
     onOptionDelete,
     selectedOptions = [],
     ...restInputProps
   } = props;
-
+  
   const theme = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -215,7 +213,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       });
   }, [isAsync, isMulti, availableMultiSelectOptions, options, searchValue]);
 
-  const rightIconNameSelector = useMemo(() => {
+  const suffixNameSelector = useMemo(() => {
     if (isSearchable) {
       return searchValue || inputValue.value ? 'close' : 'search';
     }
@@ -238,20 +236,20 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     }
   }, [asyncSearch, inputValue.value, isSearchable, onClear, isOpen, searchValue]);
 
-  const rightIconRender = useMemo(
+  const suffixRender = useMemo(
     () => (
-      <div css={rightIconContainer(isOpen, isSearchable)}>
+      <div css={suffixContainer(isOpen, isSearchable)}>
         {isLoading && <Loader />}
         <Icon
           size={isSearchable ? 20 : 12}
-          name={rightIconNameSelector}
+          name={suffixNameSelector}
           color={theme.utils.getColor('lightGrey', 650)}
           onClick={handleIconClick}
           dataTestId="select-right-icon"
         />
       </div>
     ),
-    [isOpen, isLoading, isSearchable, rightIconNameSelector, theme.utils, handleIconClick]
+    [isOpen, isLoading, isSearchable, suffixNameSelector, theme.utils, handleIconClick]
   );
 
   const handleClick = () => {
@@ -272,7 +270,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       }}
     >
       <div
-        {...(!(isDisabled || isLocked) && { onClick: handleClick })}
+        {...(!(isDisabled || status.type === 'read-only') && { onClick: handleClick })}
         css={selectWrapper({ isSearchable })}
       >
         <PositionInScreen
@@ -288,7 +286,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 onClearAllOptions={handleClearAllOptions}
                 isLoading={isLoading}
                 isDisabled={isDisabled}
-                isLocked={isLocked}
                 readOnly={!isSearchable}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
@@ -298,14 +295,12 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
               />
             ) : (
               <TextField
-                styleType={styleType}
-                rightIcon={rightIconRender}
+                suffix={suffixRender}
                 onKeyDown={handleOnKeyDown}
                 onInput={handleOnInput}
                 onChange={ON_CHANGE_MOCK}
                 readOnly={!isSearchable}
                 isDisabled={isDisabled}
-                isLocked={isLocked}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
                 status={status}
@@ -320,7 +315,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             filteredOptions={filteredOptions}
             handleOptionClick={handleOptionClick}
             selectedOption={inputValue.value}
-            size={restInputProps.size}
             status={status}
             isLoading={isLoading}
             isVirtualized={isVirtualized}

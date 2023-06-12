@@ -5,12 +5,9 @@ import { SelectOption } from '../../Select';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
+import { TextInputBaseProps } from 'components/TextInputBase';
 
 export type SelectMenuProps = {
-  /** Sets the size of the menu */
-  size?: 'md' | 'sm';
-  /** The status of the button regarding the status which is in - default normal */
-  status?: 'success' | 'normal' | 'hint' | 'error';
   filteredOptions: SelectOption[];
   handleOptionClick: (option: SelectOption) => void;
   selectedOption: string | number;
@@ -18,7 +15,7 @@ export type SelectMenuProps = {
   isVirtualized?: boolean;
   searchTerm?: string;
   hasSelectAllOption?: boolean;
-};
+} & Pick<TextInputBaseProps, 'status'>;
 
 const SelectMenu: React.FC<SelectMenuProps> = (props) => {
   const {

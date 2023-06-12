@@ -1,7 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
 import React, { InputHTMLAttributes } from 'react';
-import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { IconWrapper } from './components/commons';
 import { TestProps } from '../../utils/types';
@@ -28,41 +27,25 @@ export type TextFieldProps = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-  /** Boolean to make the input readonly. Default to false. */
-  isReadOnly?: boolean;
-  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
-   * of the TextField. It will be replaced by a fullWidth prop. */
-  hasMinWidthCompat?: boolean;
 } & TextInputBaseProps &
   InputProps &
   TestProps;
 
-console.warn(
-  'Deprecation warning! min-width will be removed from the component in v5 of ictinus. ' +
-    'hasMinWidthCompat prop has been added to temporarily disable min-width when necessary'
-);
-
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
     id = undefined,
-    rightIcon = null,
-    leftIcon = null,
+    suffix = null,
+    prefix = null,
     label,
     placeholder = '',
     isRequired = false,
     isDisabled,
-    isLocked = false,
-    size = DEFAULT_SIZE,
-    isDark = false,
-    isLean,
-    hintMsg: __hintMsg,
-    styleType: __styleType,
-    isReadOnly,
     status,
-    hasMinWidthCompat = true,
     ...rest
   } = props;
   const theme = useTheme();
+
+  const isLocked = status?.type === 'read-only';
 
   const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
     icon ? (
@@ -79,12 +62,12 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
 
   return (
     <React.Fragment>
-      <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
-        {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
+      <TextInputBase {...props}>
+        {prefix && <IconWrapper iconPosition={'left'}>{getIcon(prefix)}</IconWrapper>}
         <div css={{ width: '100% ' }}>
           <input
-            readOnly={isReadOnly}
-            css={inputStyle({ label, placeholder, size, isDark, isLean })}
+            readOnly={isLocked}
+            css={inputStyle({ label, placeholder })}
             placeholder={!label && placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
             required={isRequired}
             id={id}
@@ -94,25 +77,18 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           />
           {label && (
             <Label
-              size={size}
               htmlFor={id}
               label={label}
               isRequired={isRequired}
               isAnimated={Boolean(rest.value)}
-              hasError={status === 'error'}
+              hasError={status?.type === 'error'}
             />
           )}
         </div>
-        {rightIcon && !isLocked && (
-          <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
-        )}
+        {suffix && !isLocked && <IconWrapper iconPosition={'right'}>{getIcon(suffix)}</IconWrapper>}
         {isLocked && (
           <IconWrapper iconPosition={'right'}>
-            <Icon
-              name="lock"
-              size={size === 'md' ? 20 : 16}
-              color={theme.utils.getColor('lightGrey', 650)}
-            />
+            <Icon name="lock" size={20} color={theme.utils.getColor('lightGrey', 650)} />
           </IconWrapper>
         )}
       </TextInputBase>

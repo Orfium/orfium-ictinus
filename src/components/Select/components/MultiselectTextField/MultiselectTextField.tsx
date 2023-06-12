@@ -43,22 +43,19 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       selectedOptions,
       value,
       isDisabled,
-      isLocked,
-      status,
-      isLean,
-      isDark,
-      isReadOnly,
+      status = { type: 'normal' },
       label,
       id,
       placeholder,
       isRequired = false,
-      styleType,
       onOptionDelete,
       onClearAllOptions,
       isLoading,
-      rightIcon,
+      suffix,
       ...rest
     } = props;
+
+    const isLocked = status.type === 'read-only';
 
     const TextfieldRef = React.useRef<HTMLDivElement>(null);
 
@@ -119,12 +116,12 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
     );
 
     const icon = useMemo(() => {
-      if (rightIcon) {
-        if (typeof rightIcon === 'string') {
-          return <Icon name={rightIcon} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
+      if (suffix) {
+        if (typeof suffix === 'string') {
+          return <Icon name={suffix} size={20} color={theme.utils.getColor('lightGrey', 650)} />;
         }
 
-        return rightIcon;
+        return suffix;
       }
 
       return (
@@ -136,31 +133,24 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
           dataTestId="select-right-icon"
         />
       );
-    }, [hasValue, iconName, isLocked, onClearAllOptions, rightIcon, theme.utils]);
+    }, [hasValue, iconName, isLocked, onClearAllOptions, suffix, theme.utils]);
 
     return (
       <div ref={TextfieldRef}>
         <TextInputBase
           isDisabled={isDisabled}
-          isLocked={isLocked}
           status={status}
-          isLean={isLean}
-          size={'md'}
-          styleType={styleType}
           {...rest}
           sx={textInputBaseOverrides({ hasValue, isLoading })(theme)}
         >
           <div css={inputContainer()}>
             {chips}
             <input
-              readOnly={isReadOnly}
+              readOnly={isLocked}
               onKeyDown={handleKeyDown}
               css={inputStyle({
-                size: 'md',
                 placeholder,
                 label,
-                isDark,
-                isLean,
                 sx: inputOverrides(),
               })}
               placeholder={inputPlaceholder}
@@ -178,7 +168,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
                 label={label}
                 isRequired={isRequired}
                 isAnimated={hasValue}
-                hasError={status === 'error'}
+                hasError={status.type === 'error'}
               />
             )}
           </div>

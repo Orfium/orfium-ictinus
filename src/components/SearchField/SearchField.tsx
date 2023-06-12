@@ -1,6 +1,5 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { DEFAULT_SIZE } from 'utils/size-utils';
 
 import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
@@ -17,16 +16,7 @@ export type SearchFieldProps = {
   TestProps;
 
 const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props, ref) => {
-  const {
-    placeholder = 'Search',
-    isDisabled,
-    size = DEFAULT_SIZE,
-    isDark = false,
-    onClear,
-    dataTestId,
-    value = '',
-    ...rest
-  } = props;
+  const { placeholder = 'Search', isDisabled, onClear, dataTestId, value = '', ...rest } = props;
 
   const theme = useTheme();
 
@@ -37,10 +27,8 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
       <TextInputBase
         dataTestId={dataTestId}
         isDisabled={isDisabled}
-        size={size}
-        styleType={'outlined'}
-        leftIcon={'search'}
-        rightIcon={'close'}
+        prefix={'search'}
+        suffix={'close'}
         sx={{ wrapper: { borderRadius: rem(100) } }}
       >
         <IconWrapper iconPosition={'left'}>
@@ -49,7 +37,7 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
 
         <div css={{ width: '100%' }}>
           <input
-            css={inputStyle({ size, isDark, placeholder })}
+            css={inputStyle({ placeholder })}
             placeholder={placeholder}
             disabled={isDisabled}
             value={value}
