@@ -20,7 +20,7 @@ export const labelStyle =
       transform: ${!isAnimated
         ? `translate(${LABEL_TRANSFORM_LEFT_SPACING}, 0)`
         : `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -95%) scale(0.8);`};
-      font-size: ${theme.globals.typography.fontSize.get('4')};
+      font-size: ${theme.globals.typography.fontSize.get('3')};
       font-weight: ${theme.globals.typography.fontWeight.get('regular')};
       color: ${hasError
         ? theme.utils.getColor('error', BASE_SHADE, 'normal')
