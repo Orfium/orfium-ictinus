@@ -111,56 +111,14 @@ Simple select component with clearable data and searchable input
         options={options}
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
-      />
-      <Select
-        label={'Flavour'}
-        options={options}
-        defaultValue={defaultValue}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'outlined'}
-      />
-      <Select
-        label={'Flavour'}
-        options={options}
-        defaultValue={defaultValue}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'elevated'}
       />
     </Stack>
   </Story>
 </Preview>
 
-### Select Sizes
+### Select with prefix/suffix
 
-Select available sizes - sizes are based on the select
-
-<Preview>
-  <Story name="Select Sizes">
-    <Stack>
-      <Select
-        label={'Flavour'}
-        options={options}
-        defaultValue={defaultValue}
-        handleSelectedOption={handleSelectedOption}
-        size={'md'}
-        styleType={'outlined'}
-      />
-      <Select
-        label={'Flavour'}
-        options={options}
-        defaultValue={defaultValue}
-        handleSelectedOption={handleSelectedOption}
-        size={'sm'}
-        styleType={'outlined'}
-      />
-    </Stack>
-  </Story>
-</Preview>
-
-### Select Icons
-
-Select with icon options right and left of the text
+Select with prefix and suffix options
 
 <Preview>
   <Story name="Select with icon and size">
@@ -171,8 +129,7 @@ Select with icon options right and left of the text
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         size={'md'}
-        styleType={'outlined'}
-        leftIcon={
+        prefix={
           <img
             style={{ background: 'red' }}
             src="https://brandmark.io/logo-rank/random/pepsi.png"
@@ -186,8 +143,7 @@ Select with icon options right and left of the text
         options={options}
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
-        styleType={'outlined'}
-        rightIcon={
+        suffix={
           <img
             style={{ background: 'red' }}
             src="https://brandmark.io/logo-rank/random/pepsi.png"
@@ -201,8 +157,7 @@ Select with icon options right and left of the text
         options={options}
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
-        styleType={'outlined'}
-        rightIcon={
+        suffix={
           <img
             style={{ background: 'red' }}
             src="https://brandmark.io/logo-rank/random/pepsi.png"
@@ -210,7 +165,7 @@ Select with icon options right and left of the text
             height="16"
           />
         }
-        leftIcon={
+        prefix={
           <img
             style={{ background: 'red' }}
             src="https://brandmark.io/logo-rank/random/pepsi.png"
@@ -231,73 +186,41 @@ Select disabled with label
   <Story name="Disabled/Locked Select">
     <Stack>
       <Select isDisabled label={'Flavour'} options={options} />
-      <Select isDisabled label={'Flavour'} options={options} styleType={'outlined'} />
-      <Select isDisabled label={'Flavour'} options={options} styleType={'elevated'} />
+      <Select isDisabled label={'Flavour'} options={options} />
+      <Select isDisabled label={'Flavour'} options={options} />
     </Stack>
     <Stack>
-      <Select isLocked label={'Flavour'} options={options} />
-      <Select isLocked label={'Flavour'} options={options} styleType={'outlined'} />
-      <Select isLocked label={'Flavour'} options={options} styleType={'elevated'} />
+      <Select label={'Flavour'} options={options} status={{ type: 'read-only' }} />
+      <Select label={'Flavour'} options={options} status={{ type: 'read-only' }} />
+      <Select label={'Flavour'} options={options} status={{ type: 'read-only' }} />
     </Stack>
   </Story>
 </Preview>
 
 ### Select with Label and Statuses
 
-Select with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
+Select with Label and Statuses
 
 <Preview>
   <Story name="Select with label and statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
-      <Stack>
-        <Select
-          hintMsg={text('custom error message', 'Error in Select')}
-          label={'Label'}
-          status={'error'}
-          styleType={'filled'}
-          options={options}
-          defaultValue={defaultValue}
-        />
-        <Select
-          hintMsg={text('custom error message', 'Error in Select')}
-          label={'Label'}
-          status={'error'}
-          styleType={'outlined'}
-          options={options}
-          defaultValue={defaultValue}
-        />
-        <Select
-          hintMsg={text('custom error message', 'Error in Select')}
-          label={'Label'}
-          status={'error'}
-          styleType={'elevated'}
-          options={options}
-          defaultValue={defaultValue}
-        />
-      </Stack>
-      <Stack>
-        <Select
-          hintMsg={text('custom error message', 'Error in Select')}
-          label={'Label'}
-          status={'hint'}
-          options={options}
-          styleType={'filled'}
-        />
-        <Select
-          hintMsg={text('custom error message', 'Error in Select')}
-          label={'Label'}
-          status={'hint'}
-          options={options}
-          styleType={'outlined'}
-        />
-        <Select
-          hintMsg={text('custom error message', 'Error in Select')}
-          label={'Label'}
-          status={'hint'}
-          options={options}
-          styleType={'elevated'}
-        />
-      </Stack>
+      <Select
+        label={'Label'}
+        status={{
+          type: 'normal',
+          hintMessage: text('Custom Hint Message', 'Hint Message'),
+        }}
+        options={options}
+        defaultValue={defaultValue}
+      />
+      <Select
+        label={'Label'}
+        status={{
+          type: 'error',
+          hintMessage: text('Custom Error Message', 'Error Message'),
+        }}
+        options={options}
+      />
     </Stack>
   </Story>
 </Preview>
@@ -314,7 +237,6 @@ Simple select component where searched term is highlighted in options
         label={'Flavour'}
         options={options}
         handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
       />
     </Stack>
   </Story>
@@ -332,7 +254,6 @@ Simple select component with grouped data and searchable input
         options={groupOptions}
         defaultValue={defaultGroupValue}
         handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
         hasHighlightSearch
       />
     </Stack>
@@ -351,21 +272,6 @@ Not Searchable Select
         label={'Flavour'}
         options={options}
         handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
-      />
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={options}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'outlined'}
-      />
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={options}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'elevated'}
       />
     </Stack>
   </Story>
@@ -383,21 +289,6 @@ Disabled option with helper text
         label={'Flavour'}
         options={optionsWithHelperInDisabled}
         handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
-      />
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={optionsWithHelperInDisabled}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'outlined'}
-      />
-      <Select
-        isSearchable={false}
-        label={'Flavour'}
-        options={optionsWithHelperInDisabled}
-        handleSelectedOption={handleSelectedOption}
-        styleType={'elevated'}
       />
     </Stack>
   </Story>
