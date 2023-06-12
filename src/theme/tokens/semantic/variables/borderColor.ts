@@ -27,15 +27,15 @@ const borderColor = {
     },
   },
   interactive: {
-    inactive: {
+    default: {
       value: '{colors.blue.200}',
       type: 'color',
-      description: 'Used in inactive components',
+      description: 'Used in default components',
     },
-    inactiveAlt: {
+    defaultAlt: {
       value: '{colors.lightPurple.150}',
       type: 'color',
-      description: 'inactive borderColor alt variant',
+      description: 'default borderColor alt variant',
     },
     active: {
       value: '{colors.blue.500}',
