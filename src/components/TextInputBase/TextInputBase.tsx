@@ -1,5 +1,6 @@
 import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
+import { isEqual } from 'lodash';
 import React, { FC } from 'react';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
@@ -82,4 +83,4 @@ const TextInputBase: FC<TextInputBaseProps> = ({
   );
 };
 
-export default TextInputBase;
+export default React.memo(TextInputBase, isEqual);
