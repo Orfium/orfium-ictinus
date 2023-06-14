@@ -1,5 +1,6 @@
 import debounce from 'lodash/debounce';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import isEqual from 'react-fast-compare';
 import { generateTestDataId } from 'utils/helpers';
 
 import MultiselectTextField from './components/MultiselectTextField';
@@ -99,7 +100,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     selectedOptions = [],
     ...restInputProps
   } = props;
-  
+
   const theme = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -329,4 +330,4 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
 Select.displayName = 'Select';
 
-export default Select;
+export default React.memo(Select, isEqual);

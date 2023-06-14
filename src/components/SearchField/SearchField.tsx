@@ -1,5 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
+import isEqual from 'react-fast-compare';
 
 import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
@@ -68,4 +69,4 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
 
 SearchField.displayName = 'SearchField';
 
-export default SearchField;
+export default React.memo(SearchField, isEqual);

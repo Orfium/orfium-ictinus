@@ -1,4 +1,5 @@
 import * as React from 'react';
+import isEqual from 'react-fast-compare';
 
 import { sxProp } from './TextArea.style';
 import { useTheme } from '../../index';
@@ -67,4 +68,4 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
 
 TextArea.displayName = 'TextArea';
 
-export default TextArea;
+export default React.memo(TextArea, isEqual);

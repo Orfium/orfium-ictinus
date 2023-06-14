@@ -1,6 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
 import React, { InputHTMLAttributes } from 'react';
+import isEqual from 'react-fast-compare';
 
 import { IconWrapper } from './components/commons';
 import { TestProps } from '../../utils/types';
@@ -98,4 +99,4 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
 
 TextField.displayName = 'TextField';
 
-export default TextField;
+export default React.memo(TextField, isEqual);

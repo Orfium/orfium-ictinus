@@ -1,6 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
+import isEqual from 'react-fast-compare';
 import { generateUniqueID } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
@@ -187,4 +188,4 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
 
 MultiselectTextField.displayName = 'MultiselectTextField';
 
-export default MultiselectTextField;
+export default React.memo(MultiselectTextField, isEqual);
