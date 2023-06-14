@@ -1,7 +1,7 @@
 import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
-import { isEqual } from 'lodash';
 import React, { FC } from 'react';
+import isEqual from 'react-fast-compare';
 
 import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
 import { getTextInputBaseTokens } from './TextInputBase.tokens';
@@ -36,6 +36,7 @@ export type TextInputBaseProps = {
     textField?: CSSObject;
     input?: CSSObject;
   };
+  children?: React.ReactNode;
 } & TestProps;
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
