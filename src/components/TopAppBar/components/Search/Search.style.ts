@@ -42,8 +42,6 @@ export const searchWrapper =
 export const customInputStyle = (searchPlaceholder: string, isDark: boolean) => (theme: Theme) => {
   const baseInputStyles = inputStyle({
     placeholder: searchPlaceholder,
-    size: 'sm',
-    isDark,
   })(theme);
 
   const rest = `

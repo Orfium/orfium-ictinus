@@ -43,7 +43,6 @@ const SelectShowcase: React.FC<SelectShowcaseProps> = ({ minCharactersToSearch =
         asyncSearch={mockedApiCall}
         isLoading={isLoading}
         onKeyPress={() => setIsLoading(true)}
-        styleType={'filled'}
         minCharactersToSearch={minCharactersToSearch}
       />
     </div>
