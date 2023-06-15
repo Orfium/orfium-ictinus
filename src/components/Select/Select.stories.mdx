@@ -112,6 +112,7 @@ Simple select component with clearable data and searchable input
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'filled'}
+        creatable={boolean('creatable', false)}
       />
       <Select
         label={'Flavour'}
@@ -119,6 +120,7 @@ Simple select component with clearable data and searchable input
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'outlined'}
+        creatable={boolean('creatable', false)}
       />
       <Select
         label={'Flavour'}
@@ -126,6 +128,7 @@ Simple select component with clearable data and searchable input
         defaultValue={defaultValue}
         handleSelectedOption={handleSelectedOption}
         styleType={'elevated'}
+        creatable={boolean('creatable', false)}
       />
     </Stack>
   </Story>
@@ -437,7 +440,7 @@ Select cases where it gets to minimum and maximum width based on options <br />
   </Story>
 </Preview>
 
-# Multiselect
+# MultiSelect
 
 A Select component with multiple selected options represented as Chips. <br/>
 
@@ -447,7 +450,14 @@ A Select component with multiple selected options represented as Chips. <br/>
 4. When in MultiSelect, `onClear` prop refers to the all selected options deletion and `onOptionDelete` prop refers to single option deletion
 
 <Preview>
-  <Story name="Multiselect">
-    <MultiSelectShowcase />
+  <Story name="MultiSelect">
+    <MultiSelectShowcase
+      isDisabled={boolean('isDisabled', false)}
+      isLocked={boolean('isLocked', false)}
+      status={select('status', ['normal', 'hint', 'error'], 'normal')}
+      hintMessage={text('hintMessage', '')}
+      hasSelectAllOption={boolean('hasSelectAllOption', false)}
+      isCreatable={boolean('isCreatable', false)}
+    />
   </Story>
 </Preview>

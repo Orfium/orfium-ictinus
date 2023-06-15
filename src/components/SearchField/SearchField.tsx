@@ -1,6 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
-import { DEFAULT_SIZE } from 'utils/size-utils';
+import { DEFAULT_SIZE, getTextFieldHeight } from 'utils/size-utils';
 
 import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
@@ -31,6 +31,17 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
   const theme = useTheme();
 
   const isClearVisible = (value as string).length > 0;
+  const sx = {
+    wrapper: {
+      borderRadius: rem(100),
+      // @TODO this is a unique case for the SearchField where we dont need to use the sm height of the TextField, will change in v5
+      height: size === 'sm' ? rem(36) : getTextFieldHeight(size),
+    },
+    input: {
+      // @TODO this is a unique case for the SearchField where we dont need to use the sm fontSize of the TextField, will change in v5
+      fontSize: size === 'sm' ? theme.globals.typography.fontSize['13'] : undefined,
+    },
+  };
 
   return (
     <React.Fragment>
@@ -41,7 +52,7 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
         styleType={'outlined'}
         leftIcon={'search'}
         rightIcon={'close'}
-        sx={{ wrapper: { borderRadius: rem(100) } }}
+        sx={sx}
       >
         <IconWrapper iconPosition={'left'}>
           <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />

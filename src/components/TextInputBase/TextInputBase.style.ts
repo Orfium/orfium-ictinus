@@ -9,16 +9,19 @@ import { getDisabled, getHover, getPressed } from '../../theme/states';
 import { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
+// TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
   theme,
   colorScheme = 'semantic',
   isLean,
   hasError,
   isDisabled,
+  isInteractive,
 }: {
   theme: Theme;
   colorScheme: ColorScheme;
   hasError?: boolean;
+  isInteractive?: boolean;
 } & Pick<TextInputBaseProps, 'isLean' | 'isDisabled'>) => {
   if (isLean) {
     return {
@@ -57,7 +60,7 @@ const wrapperStyleSwitch = ({
 
   return {
     backgroundColor: backgroundColor,
-    ...events,
+    ...(isInteractive ? events : {}),
   };
 };
 
@@ -74,6 +77,7 @@ export const wrapperStyle =
     isDark,
     size,
     sx,
+    isInteractive,
     hasMinWidthCompat,
   }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
@@ -97,7 +101,7 @@ export const wrapperStyle =
       borderRadius: theme.globals.spacing.get('3'),
       userSelect: 'none',
       opacity: isDisabled ? getDisabled().opacity : 1,
-      cursor: isDisabled || isLocked ? getDisabled().cursor : 'auto',
+      cursor: isDisabled || isLocked ? getDisabled().cursor : 'text',
       ...textFieldSize,
       ...wrapperStyleSwitch({
         theme,
@@ -105,13 +109,14 @@ export const wrapperStyle =
         isLean,
         hasError,
         isDisabled: Boolean(isDisabled || isLocked),
+        isInteractive,
       }),
       ...sx?.wrapper,
     });
   };
 
 export const textFieldStyle =
-  ({ isLean, sx }: TextInputBaseProps) =>
+  ({ isLean, sx, isDisabled, isLocked }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
     return css({
       position: 'relative',
@@ -121,6 +126,7 @@ export const textFieldStyle =
       verticalAlign: 'top',
       width: 'fill-available',
       padding: !isLean ? `0 ${theme.globals.spacing.get('6')}` : '',
+      cursor: isDisabled || isLocked ? getDisabled().cursor : 'text',
 
       '> div': {
         position: 'relative',
@@ -131,7 +137,15 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, size = DEFAULT_SIZE, isDark, sx }: TextInputBaseProps) =>
+  ({
+    label,
+    placeholder,
+    size = DEFAULT_SIZE,
+    isDark,
+    sx,
+    isDisabled,
+    isLocked,
+  }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles =>
     css({
       background: 'transparent',
@@ -151,6 +165,7 @@ export const inputStyle =
 
       '& + label': {
         fontSize: theme.globals.typography.fontSize[size === 'md' ? '15' : '13'],
+        cursor: isDisabled || isLocked ? getDisabled().cursor : 'text',
       },
 
       '&:focus': {

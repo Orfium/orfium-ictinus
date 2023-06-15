@@ -39,7 +39,7 @@ export type TextInputBaseProps = {
   /** Style of input field */
   styleType?: formFieldStyles;
   /** Sets the size of the textField */
-  size?: (typeof textInputSizes)[number];
+  size?: typeof textInputSizes[number];
   /** The status of the button regarding the status which is in - default normal */
   status?: 'success' | 'normal' | 'hint' | 'error';
   /** Sx prop to override specific properties */
@@ -51,6 +51,8 @@ export type TextInputBaseProps = {
   /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
    * of the TextField. It will be replaced by a fullWidth prop. */
   hasMinWidthCompat?: boolean;
+  /** Whether the Textfield should change its styles when hovered/focused etc */
+  isInteractive?: boolean;
 } & TestProps;
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
@@ -65,6 +67,7 @@ const TextInputBase: FC<TextInputBaseProps> = ({
   isLocked = false,
   size = DEFAULT_SIZE,
   isDark = false,
+  isInteractive = true,
   children,
   sx,
   hasMinWidthCompat = true,
@@ -95,9 +98,10 @@ const TextInputBase: FC<TextInputBaseProps> = ({
           size,
           sx,
           hasMinWidthCompat,
+          isInteractive,
         })}
       >
-        <div css={textFieldStyle({ isLean, sx })}>{children}</div>
+        <div css={textFieldStyle({ isLean, sx, isLocked, isDisabled })}>{children}</div>
       </div>
       {hintMsg && status !== 'normal' && hintMessageToShow}
     </React.Fragment>
