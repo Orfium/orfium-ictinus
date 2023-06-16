@@ -342,6 +342,19 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   fill: #5f6c85;
 }
 
+.emotion-26 {
+  padding: 0.5rem 0;
+}
+
+.emotion-27 {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 2.25rem;
+  font-size: 1.75rem;
+  letter-spacing: 0rem;
+  color: #212332;
+}
+
 <div
   className="emotion-0"
 >
@@ -486,9 +499,15 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
         </div>
       </div>
     </div>
-    <h2>
-      Controlled multi TextField
-    </h2>
+    <div
+      className="emotion-26"
+    >
+      <h2
+        className="emotion-27"
+      >
+        Controlled multi TextField
+      </h2>
+    </div>
     <div
       style={
         Object {

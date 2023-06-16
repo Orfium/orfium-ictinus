@@ -1,6 +1,8 @@
 import React, { FC, useState } from 'react';
 
+import Box from '../../Box';
 import TextField from '../../TextField';
+import Typography from '../../Typography';
 
 const TextFieldShowcase: FC = () => {
   const [tags, setTags] = useState<string[]>(['existing-tag-1', 'existing-tag-2']);
@@ -16,7 +18,9 @@ const TextFieldShowcase: FC = () => {
 
   return (
     <>
-      <h2>Controlled multi TextField</h2>
+      <Box px={'4'}>
+        <Typography variant={'headline02'}>Controlled multi TextField</Typography>
+      </Box>
       <div style={{ width: '500px' }}>
         <TextField
           multi
