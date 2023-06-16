@@ -8,6 +8,8 @@ export const SM_HEIGHT = 28;
 
 export const MIN_WIDTH = 150;
 
+export const MULTI_WIDTH = 220;
+
 export const textInputSizes = [MD, SM] as const;
 export const textInputStates = ['default', 'pressed', 'error'] as const;
 

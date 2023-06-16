@@ -50,7 +50,9 @@ const useMultiselectUtils = ({
   const handleOptionDelete = (option?: SelectOption) => {
     if (option) {
       setMultiSelectedOpts(multiSelectedOptions.filter((opt) => opt.value !== option?.value));
-      setAvailableMultiSelectOptions([...availableMultiSelectOptions, option]);
+      if (!option.isCreated) {
+        setAvailableMultiSelectOptions([...availableMultiSelectOptions, option]);
+      }
       if (onOptionDelete) {
         onOptionDelete(option);
       }
@@ -58,13 +60,18 @@ const useMultiselectUtils = ({
       if (multiSelectedOptions.length > 0) {
         const lastItem = multiSelectedOptions[multiSelectedOptions.length - 1];
         setMultiSelectedOpts(multiSelectedOptions.filter((opt) => opt.value !== lastItem.value));
-        setAvailableMultiSelectOptions([...availableMultiSelectOptions, lastItem]);
+        if (!lastItem.isCreated) {
+          setAvailableMultiSelectOptions([...availableMultiSelectOptions, lastItem]);
+        }
       }
     }
   };
 
   const handleClearAllOptions = () => {
-    setAvailableMultiSelectOptions([...availableMultiSelectOptions, ...multiSelectedOptions]);
+    setAvailableMultiSelectOptions([
+      ...availableMultiSelectOptions,
+      ...multiSelectedOptions.filter((item) => !item.isCreated),
+    ]);
     setMultiSelectedOpts([]);
 
     if (onClear) {
@@ -91,6 +98,15 @@ const useMultiselectUtils = ({
       setMultiSelectedOpts([...multiSelectedOptions, ...selected]);
       setAvailableMultiSelectOptions(remaining);
       setOpen(false);
+    } else if (option.isCreated) {
+      /** If the option is created internally */
+      const newOption: SelectOption = {
+        value: option.value,
+        label: option.value.toString(),
+        isCreated: true,
+      };
+
+      setMultiSelectedOpts([...multiSelectedOptions, newOption]);
     } else {
       setMultiSelectedOpts([...multiSelectedOptions, option]);
       setAvailableMultiSelectOptions(

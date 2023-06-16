@@ -57,7 +57,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -90,6 +90,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -116,6 +117,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -267,50 +269,54 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
             className="emotion-4"
           >
             <div
-              className="emotion-5"
-              data-testid="select-input"
+              onClick={[Function]}
             >
               <div
-                className="emotion-6"
+                className="emotion-5"
+                data-testid="select-input"
               >
                 <div
-                  className="emotion-7"
-                >
-                  <input
-                    autoComplete="off"
-                    className="emotion-8"
-                    disabled={false}
-                    onChange={[Function]}
-                    onInput={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Flavour"
-                    readOnly={false}
-                    required={false}
-                    value=""
-                  />
-                  <label
-                    className="emotion-9"
-                  >
-                    Flavour
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-10"
+                  className="emotion-6"
                 >
                   <div
-                    className="emotion-11"
+                    className="emotion-7"
                   >
-                    <span
-                      className="emotion-12"
-                      data-testid="select-right-icon"
-                      onClick={[Function]}
+                    <input
+                      autoComplete="off"
+                      className="emotion-8"
+                      disabled={false}
+                      onChange={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Flavour"
+                      readOnly={false}
+                      required={false}
+                      value=""
+                    />
+                    <label
+                      className="emotion-9"
+                    >
+                      Flavour
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-10"
+                  >
+                    <div
+                      className="emotion-11"
                     >
                       <span
-                        className="emotion-13"
-                      />
-                    </span>
+                        className="emotion-12"
+                        data-testid="select-right-icon"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-13"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -380,7 +386,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -413,6 +419,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -439,6 +446,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -590,50 +598,54 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
             className="emotion-4"
           >
             <div
-              className="emotion-5"
-              data-testid="select-input"
+              onClick={[Function]}
             >
               <div
-                className="emotion-6"
+                className="emotion-5"
+                data-testid="select-input"
               >
                 <div
-                  className="emotion-7"
-                >
-                  <input
-                    autoComplete="off"
-                    className="emotion-8"
-                    disabled={false}
-                    onChange={[Function]}
-                    onInput={[Function]}
-                    onKeyDown={[Function]}
-                    onKeyPress={[Function]}
-                    placeholder="Flavour"
-                    readOnly={false}
-                    required={false}
-                    value=""
-                  />
-                  <label
-                    className="emotion-9"
-                  >
-                    Flavour
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-10"
+                  className="emotion-6"
                 >
                   <div
-                    className="emotion-11"
+                    className="emotion-7"
                   >
-                    <span
-                      className="emotion-12"
-                      data-testid="select-right-icon"
-                      onClick={[Function]}
+                    <input
+                      autoComplete="off"
+                      className="emotion-8"
+                      disabled={false}
+                      onChange={[Function]}
+                      onInput={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyPress={[Function]}
+                      placeholder="Flavour"
+                      readOnly={false}
+                      required={false}
+                      value=""
+                    />
+                    <label
+                      className="emotion-9"
+                    >
+                      Flavour
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-10"
+                  >
+                    <div
+                      className="emotion-11"
                     >
                       <span
-                        className="emotion-13"
-                      />
-                    </span>
+                        className="emotion-12"
+                        data-testid="select-right-icon"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-13"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -716,7 +728,7 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -749,6 +761,7 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -775,6 +788,7 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -933,49 +947,53 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={true}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={true}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1002,49 +1020,53 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={true}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={true}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1071,49 +1093,53 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={true}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={true}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1221,6 +1247,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: not-allowed;
 }
 
 .emotion-6>div {
@@ -1247,6 +1274,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: not-allowed;
 }
 
 .emotion-8:focus {
@@ -1433,49 +1461,53 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={true}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={true}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1501,49 +1533,53 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={true}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={true}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1569,49 +1605,53 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={true}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={true}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1641,45 +1681,49 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-39"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-39"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={true}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
+                    <div
+                      className="emotion-7"
                     >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
-                  >
-                    <span
-                      className="emotion-12"
-                      onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={true}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
                     >
                       <span
-                        className="emotion-13"
-                      />
-                    </span>
+                        className="emotion-12"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-13"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1704,45 +1748,49 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-39"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-39"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={true}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
+                    <div
+                      className="emotion-7"
                     >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
-                  >
-                    <span
-                      className="emotion-12"
-                      onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={true}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
                     >
                       <span
-                        className="emotion-13"
-                      />
-                    </span>
+                        className="emotion-12"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-13"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1767,45 +1815,49 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-39"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-39"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={true}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
+                    <div
+                      className="emotion-7"
                     >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
-                  >
-                    <span
-                      className="emotion-12"
-                      onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={true}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
                     >
                       <span
-                        className="emotion-13"
-                      />
-                    </span>
+                        className="emotion-12"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-13"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1818,7 +1870,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/Select Multiselect 1`] = `
+exports[`Storyshots Design System/Select MultiSelect 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1888,7 +1940,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: unset;
   background-color: white;
@@ -1905,7 +1957,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
 }
 
 .emotion-6 label {
-  font-weight: 700!important;
+  font-weight: 700;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -1930,7 +1982,8 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 1.3125rem 2.5rem 0.3125rem 0.75rem;
+  padding: 1.3125rem 2.5rem 0.3125rem 1rem;
+  cursor: text;
 }
 
 .emotion-7>div {
@@ -1948,13 +2001,13 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  row-gap: 0.125rem;
+  row-gap: 0.25rem;
   z-index: 2;
 }
 
 .emotion-9 {
   position: relative;
-  margin-right: 0.125rem;
+  margin-right: 0.25rem;
 }
 
 .emotion-9>div {
@@ -2063,6 +2116,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
 
 .emotion-45+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-45:focus {
@@ -2136,7 +2190,7 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
 .emotion-47 {
   position: absolute!important;
   bottom: 0;
-  right: 0.75rem;
+  right: 1rem;
   top: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2181,248 +2235,24 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: not-allowed;
+  cursor: text;
   min-width: 9.375rem;
   height: unset;
   background-color: white;
   min-height: 2.875rem!important;
+}
+
+.emotion-54:hover {
+  background-color: #f3f5f8;
 }
 
 .emotion-54:focus-within {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-54 label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  bottom: auto;
-}
-
-.emotion-78 {
-  cursor: auto;
-}
-
-.emotion-84 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 0.5;
-  cursor: not-allowed;
-  min-width: 9.375rem;
-  height: unset;
-  background-color: white;
-  min-height: 2.875rem!important;
-}
-
-.emotion-84:focus-within {
-  box-shadow: 0 0 0 0.0625rem transparent;
-}
-
-.emotion-84 label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  bottom: auto;
-}
-
-.emotion-155 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #5f6c85;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 0.5rem 0 0;
-}
-
-.emotion-155 svg {
-  padding: 0 0.125rem;
-}
-
-.emotion-155 span {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  padding: 0 0.125rem;
-}
-
-.emotion-157 {
-  fill: #5f6c85;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-157 path {
-  fill: #5f6c85;
-}
-
-.emotion-161 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #e51460;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: auto;
-  min-width: 9.375rem;
-  height: unset;
-  background-color: white;
-  min-height: 2.875rem!important;
-}
-
-.emotion-161:hover {
-  background-color: #f3f5f8;
-}
-
-.emotion-161:focus-within {
-  box-shadow: 0 0 0 0.125rem #e51460;
-  background-color: #e7ebf2;
-}
-
-.emotion-161 label {
-  font-weight: 700!important;
-  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  transform: translate(0.1875rem, -82%) scale(0.8)!important;
-  bottom: auto;
-}
-
-.emotion-201 {
-  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
-  transition: transform 0.25s,opacity 0.25s ease-in-out;
-  transform-origin: 0 0;
-  line-height: normal;
-  width: 100%;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
-  transform: translate(0.1875rem, -95%) scale(0.8);
-  font-size: 1rem;
-  font-weight: 400;
-  color: #FF176B;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  white-space: nowrap;
-}
-
-.emotion-206 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #e51460;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 0.5rem 0 0;
-}
-
-.emotion-206 svg {
-  padding: 0 0.125rem;
-}
-
-.emotion-206 span {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  padding: 0 0.125rem;
-}
-
-.emotion-208 {
-  fill: #FF176B;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-208 path {
-  fill: #FF176B;
-}
-
-.emotion-261 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
-  border-radius: 0.25rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  opacity: 1;
-  cursor: auto;
-  min-width: 9.375rem;
-  height: unset;
-  background-color: white;
-  min-height: 2.875rem!important;
-}
-
-.emotion-261:hover {
-  background-color: #f3f5f8;
-}
-
-.emotion-261:focus-within {
   box-shadow: 0 0 0 0.125rem #1451dc;
   background-color: #e7ebf2;
 }
 
-.emotion-261 input:focus label {
-  font-weight: 700!important;
+.emotion-54 input:focus label {
+  font-weight: 700;
   -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
   -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
@@ -2430,14 +2260,14 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   bottom: auto;
 }
 
-.emotion-261 label {
+.emotion-54 label {
   -webkit-transform: translate(0.1875rem, -8px);
   -moz-transform: translate(0.1875rem, -8px);
   -ms-transform: translate(0.1875rem, -8px);
   transform: translate(0.1875rem, -8px);
 }
 
-.emotion-265 {
+.emotion-58 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2469,1450 +2299,337 @@ exports[`Storyshots Design System/Select Multiselect 1`] = `
   white-space: nowrap;
 }
 
+.emotion-60 {
+  cursor: auto;
+}
+
 <div
   className="emotion-0"
 >
   <div
     className="emotion-1"
   >
-    <div>
-      <h4>
-        Multiselect with simple Search
-      </h4>
+    <div
+      className="emotion-2"
+    >
       <div
-        className="emotion-2"
+        className="emotion-3"
       >
         <div
-          className="emotion-3"
+          role="button"
         >
           <div
-            role="button"
+            className="emotion-4"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
-              onClick={[Function]}
+              className="emotion-5"
             >
-              <div
-                className="emotion-5"
-              >
-                <div>
+              <div>
+                <div
+                  className="emotion-6"
+                  data-testid="select-input"
+                >
                   <div
-                    className="emotion-6"
-                    data-testid="select-input"
+                    className="emotion-7"
                   >
                     <div
-                      className="emotion-7"
-                    >
-                      <div
-                        className="emotion-8"
-                      >
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_0"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Strawberry"
-                              >
-                                Strawberry
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_0"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_1"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Banana"
-                              >
-                                Banana
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_1"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_2"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Citrus"
-                              >
-                                Citrus
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_2"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_3"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Sorbet"
-                              >
-                                Sorbet
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_3"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_4"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Cookie Dough"
-                              >
-                                Cookie Dough
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_4"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_5"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Buttered Pecan"
-                              >
-                                Buttered Pecan
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_5"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Multi Select"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-46"
-                        >
-                          Multi Select
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-47"
-                      >
-                        <div
-                          className="emotion-48"
-                        >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-50"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <div
-            role="button"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <div>
-                  <div
-                    className="emotion-54"
-                    data-testid="select-input"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <div
-                        className="emotion-8"
-                      >
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_0"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Strawberry"
-                              >
-                                Strawberry
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_1"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Banana"
-                              >
-                                Banana
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_2"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Citrus"
-                              >
-                                Citrus
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_3"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Sorbet"
-                              >
-                                Sorbet
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_4"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Cookie Dough"
-                              >
-                                Cookie Dough
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_5"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Buttered Pecan"
-                              >
-                                Buttered Pecan
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          disabled={true}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Multi Select - Locked"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-46"
-                        >
-                          Multi Select - Locked
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-47"
-                      >
-                        <div
-                          className="emotion-78"
-                        >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-50"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <div
-            role="button"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <div>
-                  <div
-                    className="emotion-84"
-                    data-testid="select-input"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <div
-                        className="emotion-8"
-                      >
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_0"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Strawberry"
-                              >
-                                Strawberry
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_1"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Banana"
-                              >
-                                Banana
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_2"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Citrus"
-                              >
-                                Citrus
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_3"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Sorbet"
-                              >
-                                Sorbet
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_4"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Cookie Dough"
-                              >
-                                Cookie Dough
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_5"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Buttered Pecan"
-                              >
-                                Buttered Pecan
-                              </div>
-                            </div>
-                          </div>
-                        </span>
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          disabled={true}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Multi Select - Disabled"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-46"
-                        >
-                          Multi Select - Disabled
-                           
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <div
-            role="button"
-          >
-            <div
-              className="emotion-4"
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-5"
-              >
-                <div>
-                  <div
-                    className="emotion-6"
-                    data-testid="select-input"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <div
-                        className="emotion-8"
-                      >
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_0"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Strawberry"
-                              >
-                                Strawberry
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_0"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_1"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Banana"
-                              >
-                                Banana
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_1"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_2"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Citrus"
-                              >
-                                Citrus
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_2"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_3"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Sorbet"
-                              >
-                                Sorbet
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_3"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_4"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Cookie Dough"
-                              >
-                                Cookie Dough
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_4"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_5"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Buttered Pecan"
-                              >
-                                Buttered Pecan
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_5"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          hintMsg="This is a hint message"
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Multi Select - with Hint"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-46"
-                        >
-                          Multi Select - with Hint
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-47"
-                      >
-                        <div
-                          className="emotion-48"
-                        >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-50"
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="emotion-155"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                      className="emotion-8"
                     >
                       <span
-                        className="emotion-157"
-                      />
-                    </span>
-                    This is a hint message
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <div
-            role="button"
-          >
-            <div
-              className="emotion-4"
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-5"
-              >
-                <div>
-                  <div
-                    className="emotion-161"
-                    data-testid="select-input"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <div
-                        className="emotion-8"
-                      >
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_0"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Strawberry"
-                              >
-                                Strawberry
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_0"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_1"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Banana"
-                              >
-                                Banana
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_1"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_2"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Citrus"
-                              >
-                                Citrus
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_2"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_3"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Sorbet"
-                              >
-                                Sorbet
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_3"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_4"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Cookie Dough"
-                              >
-                                Cookie Dough
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_4"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_5"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Buttered Pecan"
-                              >
-                                Buttered Pecan
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_5"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          hintMsg="This is an error message"
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Multi Select - with Error"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-201"
-                        >
-                          Multi Select - with Error
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-47"
+                        className="emotion-9"
                       >
                         <div
-                          className="emotion-48"
+                          aria-readonly="true"
+                          className="emotion-10"
+                          data-testid="chip-chip_0"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <div>
+                            <div
+                              className="emotion-11"
+                              title="Strawberry"
+                            >
+                              Strawberry
+                            </div>
+                          </div>
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-50"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="chip-delete-chip_0"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className="emotion-206"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
-                    >
+                      </span>
                       <span
-                        className="emotion-208"
-                      />
-                    </span>
-                    This is an error message
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className="emotion-3"
-        >
-          <div
-            role="button"
-          >
-            <div
-              className="emotion-4"
-              onClick={[Function]}
-            >
-              <div
-                className="emotion-5"
-              >
-                <div>
-                  <div
-                    className="emotion-6"
-                    data-testid="select-input"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <div
-                        className="emotion-8"
-                      >
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_0"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Strawberry"
-                              >
-                                Strawberry
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_0"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_1"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Banana"
-                              >
-                                Banana
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_1"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_2"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Citrus"
-                              >
-                                Citrus
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_2"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_3"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Sorbet"
-                              >
-                                Sorbet
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_3"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_4"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Cookie Dough"
-                              >
-                                Cookie Dough
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_4"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <span
-                          className="emotion-9"
-                        >
-                          <div
-                            aria-readonly="true"
-                            className="emotion-10"
-                            data-testid="chip-chip_5"
-                          >
-                            <div>
-                              <div
-                                className="emotion-11"
-                                title="Buttered Pecan"
-                              >
-                                Buttered Pecan
-                              </div>
-                            </div>
-                            <div
-                              className="emotion-12"
-                            >
-                              <span
-                                className="emotion-13"
-                                data-testid="chip-delete-chip_5"
-                                onClick={[Function]}
-                              >
-                                <span
-                                  className="emotion-14"
-                                />
-                              </span>
-                            </div>
-                          </div>
-                        </span>
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Multi Select - with Right Icon"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-46"
-                        >
-                          Multi Select - with Right Icon
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-47"
+                        className="emotion-9"
                       >
                         <div
-                          className="emotion-48"
+                          aria-readonly="true"
+                          className="emotion-10"
+                          data-testid="chip-chip_1"
                         >
-                          <span
-                            className="emotion-13"
-                            onClick={[Function]}
+                          <div>
+                            <div
+                              className="emotion-11"
+                              title="Banana"
+                            >
+                              Banana
+                            </div>
+                          </div>
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-50"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="chip-delete-chip_1"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
+                      </span>
+                      <span
+                        className="emotion-9"
+                      >
+                        <div
+                          aria-readonly="true"
+                          className="emotion-10"
+                          data-testid="chip-chip_2"
+                        >
+                          <div>
+                            <div
+                              className="emotion-11"
+                              title="Citrus"
+                            >
+                              Citrus
+                            </div>
+                          </div>
+                          <div
+                            className="emotion-12"
+                          >
+                            <span
+                              className="emotion-13"
+                              data-testid="chip-delete-chip_2"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                      <span
+                        className="emotion-9"
+                      >
+                        <div
+                          aria-readonly="true"
+                          className="emotion-10"
+                          data-testid="chip-chip_3"
+                        >
+                          <div>
+                            <div
+                              className="emotion-11"
+                              title="Sorbet"
+                            >
+                              Sorbet
+                            </div>
+                          </div>
+                          <div
+                            className="emotion-12"
+                          >
+                            <span
+                              className="emotion-13"
+                              data-testid="chip-delete-chip_3"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                      <span
+                        className="emotion-9"
+                      >
+                        <div
+                          aria-readonly="true"
+                          className="emotion-10"
+                          data-testid="chip-chip_4"
+                        >
+                          <div>
+                            <div
+                              className="emotion-11"
+                              title="Cookie Dough"
+                            >
+                              Cookie Dough
+                            </div>
+                          </div>
+                          <div
+                            className="emotion-12"
+                          >
+                            <span
+                              className="emotion-13"
+                              data-testid="chip-delete-chip_4"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                      <span
+                        className="emotion-9"
+                      >
+                        <div
+                          aria-readonly="true"
+                          className="emotion-10"
+                          data-testid="chip-chip_5"
+                        >
+                          <div>
+                            <div
+                              className="emotion-11"
+                              title="Buttered Pecan"
+                            >
+                              Buttered Pecan
+                            </div>
+                          </div>
+                          <div
+                            className="emotion-12"
+                          >
+                            <span
+                              className="emotion-13"
+                              data-testid="chip-delete-chip_5"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                      <input
+                        autoComplete="off"
+                        className="emotion-45"
+                        disabled={false}
+                        hintMsg=""
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Multi Select"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-46"
+                      >
+                        Multi Select
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-47"
+                    >
+                      <div
+                        className="emotion-48"
+                      >
+                        <span
+                          className="emotion-13"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-50"
+                          />
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h4>
-        Async Multiselect
-      </h4>
       <div
-        className="emotion-2"
+        className="emotion-3"
       >
         <div
-          className="emotion-3"
+          role="button"
         >
           <div
-            role="button"
+            className="emotion-4"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
-              onClick={[Function]}
+              className="emotion-5"
             >
-              <div
-                className="emotion-5"
-              >
-                <div>
+              <div>
+                <div
+                  className="emotion-54"
+                  data-testid="select-input"
+                >
                   <div
-                    className="emotion-261"
-                    data-testid="select-input"
+                    className="emotion-7"
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-8"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="emotion-45"
+                        disabled={false}
+                        hintMsg=""
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        onKeyPress={[Function]}
+                        placeholder="Multi Select - Async"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-58"
+                      >
+                        Multi Select - Async
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-47"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-60"
                       >
-                        <input
-                          autoComplete="off"
-                          className="emotion-45"
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          onKeyPress={[Function]}
-                          placeholder="Multi Select - Async Search"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-265"
-                        >
-                          Multi Select - Async Search
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-47"
-                      >
-                        <div
-                          className="emotion-78"
+                        <span
+                          className="emotion-13"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
                         >
                           <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
-                          >
-                            <span
-                              className="emotion-50"
-                            />
-                          </span>
-                        </div>
+                            className="emotion-50"
+                          />
+                        </span>
                       </div>
                     </div>
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -3993,7 +2710,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -4026,6 +2743,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -4052,6 +2770,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -4210,49 +2929,53 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={true}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={true}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4279,49 +3002,53 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={true}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={true}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4348,49 +3075,53 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={true}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={true}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4470,7 +3201,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -4503,6 +3234,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -4529,6 +3261,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -4679,7 +3412,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 1.75rem;
   background-color: white;
@@ -4710,6 +3443,7 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
 
 .emotion-19+label {
   font-size: 0.8125rem;
+  cursor: text;
 }
 
 .emotion-19:focus {
@@ -4776,49 +3510,53 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4845,49 +3583,53 @@ exports[`Storyshots Design System/Select Select Sizes 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-16"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-16"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-19"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-19"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -4967,7 +3709,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -5000,6 +3742,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -5026,6 +3769,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -5184,49 +3928,53 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value=""
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value=""
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5303,7 +4051,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -5336,6 +4084,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -5362,6 +4111,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -5520,6 +4270,75 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
               className="emotion-4"
             >
               <div
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-5"
+                  data-testid="select-input"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
+                      >
+                        <span
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        role="button"
+      >
+        <div
+          className="emotion-3"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-4"
+          >
+            <div
+              onClick={[Function]}
+            >
+              <div
                 className="emotion-5"
                 data-testid="select-input"
               >
@@ -5572,67 +4391,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
         </div>
       </div>
       <div
-        role="button"
-      >
-        <div
-          className="emotion-3"
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-5"
-              data-testid="select-input"
-            >
-              <div
-                className="emotion-6"
-              >
-                <div
-                  className="emotion-7"
-                >
-                  <input
-                    autoComplete="off"
-                    className="emotion-8"
-                    disabled={false}
-                    onChange={[Function]}
-                    onInput={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Flavour"
-                    readOnly={false}
-                    required={false}
-                    value="Chocolate"
-                  />
-                  <label
-                    className="emotion-9"
-                  >
-                    Flavour
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-10"
-                >
-                  <div
-                    className="emotion-11"
-                  >
-                    <span
-                      className="emotion-12"
-                      data-testid="select-right-icon"
-                      onClick={[Function]}
-                    >
-                      <span
-                        className="emotion-13"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
         style={
           Object {
             "width": 100,
@@ -5650,49 +4408,53 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5721,49 +4483,53 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Bottom positioned case"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Bottom positioned case
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Bottom positioned case"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Bottom positioned case
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -5843,7 +4609,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -5876,6 +4642,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -5918,6 +4685,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 
 .emotion-9+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-9:focus {
@@ -6076,63 +4844,67 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <img
-                      height="16"
-                      src="https://brandmark.io/logo-rank/random/pepsi.png"
-                      style={
-                        Object {
-                          "background": "red",
-                        }
-                      }
-                      width="16"
-                    />
-                  </div>
-                  <div
-                    className="emotion-8"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-9"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-10"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-11"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-12"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-13"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <img
+                        height="16"
+                        src="https://brandmark.io/logo-rank/random/pepsi.png"
+                        style={
+                          Object {
+                            "background": "red",
+                          }
+                        }
+                        width="16"
+                      />
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="emotion-9"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-10"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-11"
+                    >
+                      <div
+                        className="emotion-12"
                       >
                         <span
-                          className="emotion-14"
-                        />
-                      </span>
+                          className="emotion-13"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-14"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -6159,47 +4931,51 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-8"
+                    className="emotion-6"
                   >
-                    <input
-                      autoComplete="off"
-                      className="emotion-9"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-10"
+                    <div
+                      className="emotion-8"
                     >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-11"
-                  >
-                    <img
-                      height="16"
-                      src="https://brandmark.io/logo-rank/random/pepsi.png"
-                      style={
-                        Object {
-                          "background": "red",
+                      <input
+                        autoComplete="off"
+                        className="emotion-9"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-10"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-11"
+                    >
+                      <img
+                        height="16"
+                        src="https://brandmark.io/logo-rank/random/pepsi.png"
+                        style={
+                          Object {
+                            "background": "red",
+                          }
                         }
-                      }
-                      width="16"
-                    />
+                        width="16"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6225,61 +5001,65 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <img
-                      height="16"
-                      src="https://brandmark.io/logo-rank/random/pepsi.png"
-                      style={
-                        Object {
-                          "background": "red",
-                        }
-                      }
-                      width="16"
-                    />
-                  </div>
-                  <div
-                    className="emotion-8"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-9"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-10"
+                    <div
+                      className="emotion-7"
                     >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-11"
-                  >
-                    <img
-                      height="16"
-                      src="https://brandmark.io/logo-rank/random/pepsi.png"
-                      style={
-                        Object {
-                          "background": "red",
+                      <img
+                        height="16"
+                        src="https://brandmark.io/logo-rank/random/pepsi.png"
+                        style={
+                          Object {
+                            "background": "red",
+                          }
                         }
-                      }
-                      width="16"
-                    />
+                        width="16"
+                      />
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <input
+                        autoComplete="off"
+                        className="emotion-9"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-10"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-11"
+                    >
+                      <img
+                        height="16"
+                        src="https://brandmark.io/logo-rank/random/pepsi.png"
+                        style={
+                          Object {
+                            "background": "red",
+                          }
+                        }
+                        width="16"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6358,7 +5138,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -6391,6 +5171,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-7>div {
@@ -6417,6 +5198,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 
 .emotion-9+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-9:focus {
@@ -6600,7 +5382,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -6717,66 +5499,70 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
-                    data-testid="select-input"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
+                      data-testid="select-input"
                     >
                       <div
-                        className="emotion-8"
-                      >
-                        <input
-                          autoComplete="off"
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Label"
-                          readOnly={false}
-                          required={false}
-                          value="Chocolate"
-                        />
-                        <label
-                          className="emotion-10"
-                        >
-                          Label
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-11"
+                        className="emotion-7"
                       >
                         <div
-                          className="emotion-12"
+                          className="emotion-8"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <input
+                            autoComplete="off"
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onInput={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Label"
+                            readOnly={false}
+                            required={false}
+                            value="Chocolate"
+                          />
+                          <label
+                            className="emotion-10"
+                          >
+                            Label
+                             
+                          </label>
+                        </div>
+                        <div
+                          className="emotion-11"
+                        >
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-14"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="select-right-icon"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-15"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-15"
+                      data-testid="error-select-input"
                     >
                       <span
-                        className="emotion-17"
-                      />
-                    </span>
-                    Error in Select
+                        className="emotion-13"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-17"
+                        />
+                      </span>
+                      Error in Select
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6800,66 +5586,70 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
-                    data-testid="select-input"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
+                      data-testid="select-input"
                     >
                       <div
-                        className="emotion-8"
-                      >
-                        <input
-                          autoComplete="off"
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Label"
-                          readOnly={false}
-                          required={false}
-                          value="Chocolate"
-                        />
-                        <label
-                          className="emotion-10"
-                        >
-                          Label
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-11"
+                        className="emotion-7"
                       >
                         <div
-                          className="emotion-12"
+                          className="emotion-8"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <input
+                            autoComplete="off"
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onInput={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Label"
+                            readOnly={false}
+                            required={false}
+                            value="Chocolate"
+                          />
+                          <label
+                            className="emotion-10"
+                          >
+                            Label
+                             
+                          </label>
+                        </div>
+                        <div
+                          className="emotion-11"
+                        >
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-14"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="select-right-icon"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-15"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-15"
+                      data-testid="error-select-input"
                     >
                       <span
-                        className="emotion-17"
-                      />
-                    </span>
-                    Error in Select
+                        className="emotion-13"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-17"
+                        />
+                      </span>
+                      Error in Select
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6883,66 +5673,70 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
-                    data-testid="select-input"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
+                      data-testid="select-input"
                     >
                       <div
-                        className="emotion-8"
-                      >
-                        <input
-                          autoComplete="off"
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Label"
-                          readOnly={false}
-                          required={false}
-                          value="Chocolate"
-                        />
-                        <label
-                          className="emotion-10"
-                        >
-                          Label
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-11"
+                        className="emotion-7"
                       >
                         <div
-                          className="emotion-12"
+                          className="emotion-8"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <input
+                            autoComplete="off"
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onInput={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Label"
+                            readOnly={false}
+                            required={false}
+                            value="Chocolate"
+                          />
+                          <label
+                            className="emotion-10"
+                          >
+                            Label
+                             
+                          </label>
+                        </div>
+                        <div
+                          className="emotion-11"
+                        >
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-14"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="select-right-icon"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-15"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-15"
+                      data-testid="error-select-input"
                     >
                       <span
-                        className="emotion-17"
-                      />
-                    </span>
-                    Error in Select
+                        className="emotion-13"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-17"
+                        />
+                      </span>
+                      Error in Select
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6978,66 +5772,70 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-49"
-                    data-testid="select-input"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-49"
+                      data-testid="select-input"
                     >
                       <div
-                        className="emotion-8"
-                      >
-                        <input
-                          autoComplete="off"
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Label"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-53"
-                        >
-                          Label
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-11"
+                        className="emotion-7"
                       >
                         <div
-                          className="emotion-12"
+                          className="emotion-8"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <input
+                            autoComplete="off"
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onInput={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Label"
+                            readOnly={false}
+                            required={false}
+                            value=""
+                          />
+                          <label
+                            className="emotion-53"
+                          >
+                            Label
+                             
+                          </label>
+                        </div>
+                        <div
+                          className="emotion-11"
+                        >
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-14"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="select-right-icon"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-58"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-58"
+                      data-testid="error-select-input"
                     >
                       <span
-                        className="emotion-60"
-                      />
-                    </span>
-                    Error in Select
+                        className="emotion-13"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-60"
+                        />
+                      </span>
+                      Error in Select
+                    </div>
                   </div>
                 </div>
               </div>
@@ -7061,66 +5859,70 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-49"
-                    data-testid="select-input"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-49"
+                      data-testid="select-input"
                     >
                       <div
-                        className="emotion-8"
-                      >
-                        <input
-                          autoComplete="off"
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Label"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-53"
-                        >
-                          Label
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-11"
+                        className="emotion-7"
                       >
                         <div
-                          className="emotion-12"
+                          className="emotion-8"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <input
+                            autoComplete="off"
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onInput={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Label"
+                            readOnly={false}
+                            required={false}
+                            value=""
+                          />
+                          <label
+                            className="emotion-53"
+                          >
+                            Label
+                             
+                          </label>
+                        </div>
+                        <div
+                          className="emotion-11"
+                        >
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-14"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="select-right-icon"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-58"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-58"
+                      data-testid="error-select-input"
                     >
                       <span
-                        className="emotion-60"
-                      />
-                    </span>
-                    Error in Select
+                        className="emotion-13"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-60"
+                        />
+                      </span>
+                      Error in Select
+                    </div>
                   </div>
                 </div>
               </div>
@@ -7144,66 +5946,70 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-49"
-                    data-testid="select-input"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-49"
+                      data-testid="select-input"
                     >
                       <div
-                        className="emotion-8"
-                      >
-                        <input
-                          autoComplete="off"
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onInput={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Label"
-                          readOnly={false}
-                          required={false}
-                          value=""
-                        />
-                        <label
-                          className="emotion-53"
-                        >
-                          Label
-                           
-                        </label>
-                      </div>
-                      <div
-                        className="emotion-11"
+                        className="emotion-7"
                       >
                         <div
-                          className="emotion-12"
+                          className="emotion-8"
                         >
-                          <span
-                            className="emotion-13"
-                            data-testid="select-right-icon"
-                            onClick={[Function]}
+                          <input
+                            autoComplete="off"
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onInput={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Label"
+                            readOnly={false}
+                            required={false}
+                            value=""
+                          />
+                          <label
+                            className="emotion-53"
+                          >
+                            Label
+                             
+                          </label>
+                        </div>
+                        <div
+                          className="emotion-11"
+                        >
+                          <div
+                            className="emotion-12"
                           >
                             <span
-                              className="emotion-14"
-                            />
-                          </span>
+                              className="emotion-13"
+                              data-testid="select-right-icon"
+                              onClick={[Function]}
+                            >
+                              <span
+                                className="emotion-14"
+                              />
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-58"
-                    data-testid="error-select-input"
-                  >
-                    <span
-                      className="emotion-13"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-58"
+                      data-testid="error-select-input"
                     >
                       <span
-                        className="emotion-60"
-                      />
-                    </span>
-                    Error in Select
+                        className="emotion-13"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-60"
+                        />
+                      </span>
+                      Error in Select
+                    </div>
                   </div>
                 </div>
               </div>
@@ -7282,7 +6088,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -7315,6 +6121,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -7341,6 +6148,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -7499,49 +6307,53 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Group Select"
-                      readOnly={false}
-                      required={false}
-                      value="Option 1"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Group Select
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Group Select"
+                        readOnly={false}
+                        required={false}
+                        value="Option 1"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Group Select
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7621,7 +6433,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -7654,6 +6466,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -7680,6 +6493,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -7838,49 +6652,54 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        creatable={false}
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7907,49 +6726,54 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        creatable={false}
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -7976,49 +6800,54 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
-                data-testid="select-input"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
+                  data-testid="select-input"
                 >
                   <div
-                    className="emotion-7"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onInput={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Flavour"
-                      readOnly={false}
-                      required={false}
-                      value="Chocolate"
-                    />
-                    <label
-                      className="emotion-9"
-                    >
-                      Flavour
-                       
-                    </label>
-                  </div>
-                  <div
-                    className="emotion-10"
+                    className="emotion-6"
                   >
                     <div
-                      className="emotion-11"
+                      className="emotion-7"
                     >
-                      <span
-                        className="emotion-12"
-                        data-testid="select-right-icon"
-                        onClick={[Function]}
+                      <input
+                        autoComplete="off"
+                        className="emotion-8"
+                        creatable={false}
+                        disabled={false}
+                        onChange={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Flavour"
+                        readOnly={false}
+                        required={false}
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                      >
+                        Flavour
+                         
+                      </label>
+                    </div>
+                    <div
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
                       >
                         <span
-                          className="emotion-13"
-                        />
-                      </span>
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

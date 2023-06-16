@@ -438,7 +438,81 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: false;
 }
 
-.emotion-338 {
+.emotion-172 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+  margin-right: 1.5rem;
+}
+
+.emotion-172 button {
+  margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.emotion-173 {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.emotion-174 {
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  color: #ffffff;
+  background-color: #175bf5;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color,border 150ms linear;
+  transition: background-color,border 150ms linear;
+}
+
+.emotion-174:focus-visible:not(:disabled) {
+  outline: #F814E1 auto 0.125rem;
+}
+
+.emotion-174:disabled {
+  opacity: 50%;
+  background-color: #175bf5;
+  cursor: not-allowed;
+}
+
+.emotion-174:hover:not(:disabled) {
+  background-color: #457bf7;
+}
+
+.emotion-174:active:not(:disabled) {
+  background-color: #1451dc;
+}
+
+.emotion-175 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.emotion-352 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -449,7 +523,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   position: relative;
 }
 
-.emotion-339 {
+.emotion-353 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,11 +536,11 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   z-index: 10;
 }
 
-.emotion-339>div:first-of-type {
+.emotion-353>div:first-of-type {
   margin-right: 0;
 }
 
-.emotion-345 {
+.emotion-359 {
   padding: 0;
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
@@ -490,7 +564,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   position: relative;
 }
 
-.emotion-346 {
+.emotion-360 {
   margin: 0 0.5rem;
   padding: 0.5rem;
   display: -webkit-box;
@@ -506,74 +580,17 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   color: #0f0f17;
 }
 
-.emotion-347 {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.emotion-348 {
-  font-family: Roboto;
-  font-weight: 500;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  color: #ffffff;
-  background-color: #175bf5;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color,border 150ms linear;
-  transition: background-color,border 150ms linear;
-}
-
-.emotion-348:focus-visible:not(:disabled) {
-  outline: #F814E1 auto 0.125rem;
-}
-
-.emotion-348:disabled {
-  opacity: 50%;
-  background-color: #175bf5;
-  cursor: not-allowed;
-}
-
-.emotion-348:hover:not(:disabled) {
-  background-color: #457bf7;
-}
-
-.emotion-348:active:not(:disabled) {
-  background-color: #1451dc;
-}
-
-.emotion-349 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.emotion-351 {
+.emotion-365 {
   fill: #ffffff;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-351 path {
+.emotion-365 path {
   fill: #ffffff;
 }
 
-.emotion-368 {
+.emotion-382 {
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -589,7 +606,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-left-radius: 100%;
 }
 
-.emotion-368:after {
+.emotion-382:after {
   z-index: -1;
   content: ' ';
   height: 100%;
@@ -603,23 +620,6 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
   border-top-right-radius: 100%;
   border-bottom-left-radius: 100%;
   border-top-left-radius: 100%;
-}
-
-.emotion-428 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  margin-bottom: 1rem;
-  margin-right: 1.5rem;
-}
-
-.emotion-428>button {
-  margin: 0.5rem 0 0.5rem 0.5rem;
 }
 
 <div
@@ -1973,6 +1973,48 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                   </table>
                 </div>
               </div>
+              <div
+                className="emotion-172"
+              >
+                <div
+                  className="emotion-173"
+                >
+                  <button
+                    className="emotion-174"
+                    data-testid="button-cancel"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="emotion-175"
+                    >
+                      <span>
+                        Cancel
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="emotion-173"
+                >
+                  <button
+                    className="emotion-174"
+                    data-testid="button-apply"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="emotion-175"
+                    >
+                      <span>
+                        Apply
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div
@@ -3281,16 +3323,58 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                   </table>
                 </div>
               </div>
+              <div
+                className="emotion-172"
+              >
+                <div
+                  className="emotion-173"
+                >
+                  <button
+                    className="emotion-174"
+                    data-testid="button-cancel"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="emotion-175"
+                    >
+                      <span>
+                        Cancel
+                      </span>
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="emotion-173"
+                >
+                  <button
+                    className="emotion-174"
+                    data-testid="button-apply"
+                    disabled={false}
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="emotion-175"
+                    >
+                      <span>
+                        Apply
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div
             className="emotion-3"
           >
             <div
-              className="emotion-338"
+              className="emotion-352"
             >
               <div
-                className="emotion-339"
+                className="emotion-353"
               >
                 <div
                   className="emotion-10"
@@ -3315,23 +3399,23 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                       role="button"
                     >
                       <div
-                        className="emotion-345"
+                        className="emotion-359"
                       >
                         <div
-                          className="emotion-346"
+                          className="emotion-360"
                         >
                           <div
-                            className="emotion-347"
+                            className="emotion-173"
                           >
                             <button
-                              className="emotion-348"
+                              className="emotion-174"
                               data-testid="button"
                               disabled={false}
                               onClick={[Function]}
                               type="button"
                             >
                               <span
-                                className="emotion-349"
+                                className="emotion-175"
                               >
                                 <span>
                                   November
@@ -3343,7 +3427,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                                   onClick={[Function]}
                                 >
                                   <span
-                                    className="emotion-351"
+                                    className="emotion-365"
                                   />
                                 </span>
                               </span>
@@ -3455,7 +3539,7 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                           }
                         >
                           <div
-                            className="emotion-368"
+                            className="emotion-382"
                           >
                             <div
                               className="emotion-31"
@@ -3964,20 +4048,20 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                 </div>
               </div>
               <div
-                className="emotion-428"
+                className="emotion-172"
               >
                 <div
-                  className="emotion-347"
+                  className="emotion-173"
                 >
                   <button
-                    className="emotion-348"
-                    data-testid="button"
+                    className="emotion-174"
+                    data-testid="button-cancel"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-349"
+                      className="emotion-175"
                     >
                       <span>
                         Cancel
@@ -3986,17 +4070,17 @@ exports[`Storyshots Design System/DatePicker Calendar 1`] = `
                   </button>
                 </div>
                 <div
-                  className="emotion-347"
+                  className="emotion-173"
                 >
                   <button
-                    className="emotion-348"
-                    data-testid="button"
+                    className="emotion-174"
+                    data-testid="button-apply"
                     disabled={false}
                     onClick={[Function]}
                     type="button"
                   >
                     <span
-                      className="emotion-349"
+                      className="emotion-175"
                     >
                       <span>
                         Apply
@@ -4079,7 +4163,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -4112,6 +4196,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -4137,6 +4222,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -4209,13 +4295,13 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 }
 
 .emotion-11 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-11 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
 .emotion-14 {
@@ -4237,7 +4323,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 1.75rem;
   background-color: white;
@@ -4267,6 +4353,7 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
 
 .emotion-17+label {
   font-size: 0.8125rem;
+  cursor: text;
 }
 
 .emotion-17:focus {
@@ -4332,36 +4419,40 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Date (start) - Date (end) "
-                      required={false}
-                      value=""
-                    />
-                  </div>
-                  <div
-                    className="emotion-9"
-                  >
-                    <span
-                      className="emotion-10"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Date (start) - Date (end) "
+                        required={false}
+                        value=""
+                      />
+                    </div>
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
-                      />
-                    </span>
+                        className="emotion-10"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-11"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4386,36 +4477,40 @@ exports[`Storyshots Design System/DatePicker DatePicker Range 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-14"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-14"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      className="emotion-17"
-                      disabled={false}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Date (start) - Date (end) "
-                      required={false}
-                      value="11/04/2020 - 11/04/2020"
-                    />
-                  </div>
-                  <div
-                    className="emotion-9"
-                  >
-                    <span
-                      className="emotion-10"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        className="emotion-17"
+                        disabled={false}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Date (start) - Date (end) "
+                        required={false}
+                        value="11/03/2020 - 11/03/2020"
+                      />
+                    </div>
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
-                      />
-                    </span>
+                        className="emotion-10"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-11"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4742,7 +4837,9 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                         <span
                           className="emotion-10"
                         >
-                          <div>
+                          <div
+                            data-testid="filter-label"
+                          >
                             Select Dates
                              
                             
@@ -4806,6 +4903,7 @@ exports[`Storyshots Design System/DatePicker DatePicker with Filter 1`] = `
                           
                           <span
                             className="emotion-21"
+                            data-testid="filter-selected-item-label"
                           >
                             Select Dates : 11/03/2020 - 11/03/2020
                           </span>
@@ -4897,7 +4995,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -4930,6 +5028,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-7>div {
@@ -4955,6 +5054,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 
 .emotion-9+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-9:focus {
@@ -5027,16 +5127,16 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
 }
 
 .emotion-12 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-12 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
-.emotion-34 {
+.emotion-33 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5055,22 +5155,22 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
 }
 
-.emotion-34:hover {
+.emotion-33:hover {
   background-color: #f3f5f8;
 }
 
-.emotion-34:focus-within {
+.emotion-33:focus-within {
   box-shadow: 0 0 0 0.125rem #e51460;
   background-color: #e7ebf2;
 }
 
-.emotion-41 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5081,11 +5181,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-41 svg {
+.emotion-40 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-41 span {
+.emotion-40 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -5093,17 +5193,17 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-43 {
+.emotion-42 {
   fill: #FF176B;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-43 path {
+.emotion-42 path {
   fill: #FF176B;
 }
 
-.emotion-53 {
+.emotion-52 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5114,11 +5214,11 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0.5rem 0 0;
 }
 
-.emotion-53 svg {
+.emotion-52 svg {
   padding: 0 0.125rem;
 }
 
-.emotion-53 span {
+.emotion-52 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -5126,13 +5226,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
   padding: 0 0.125rem;
 }
 
-.emotion-55 {
+.emotion-54 {
   fill: #5f6c85;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-55 path {
+.emotion-54 path {
   fill: #5f6c85;
 }
 
@@ -5172,36 +5272,40 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <input
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Select date "
-                          required={false}
-                          value="11/03/2020"
-                        />
-                      </div>
-                      <div
-                        className="emotion-10"
-                      >
-                        <span
-                          className="emotion-11"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-8"
+                        >
+                          <input
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Select date "
+                            required={false}
+                            value="11/03/2020"
+                          />
+                        </div>
+                        <div
+                          className="emotion-10"
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5226,36 +5330,40 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <input
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Select date "
-                          required={false}
-                          value="11/03/2020"
-                        />
-                      </div>
-                      <div
-                        className="emotion-10"
-                      >
-                        <span
-                          className="emotion-11"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-8"
+                        >
+                          <input
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Select date "
+                            required={false}
+                            value="11/03/2020"
+                          />
+                        </div>
+                        <div
+                          className="emotion-10"
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5280,36 +5388,40 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <input
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Select date "
-                          required={false}
-                          value="11/03/2020"
-                        />
-                      </div>
-                      <div
-                        className="emotion-10"
-                      >
-                        <span
-                          className="emotion-11"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-8"
+                        >
+                          <input
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Select date "
+                            required={false}
+                            value="11/03/2020"
+                          />
+                        </div>
+                        <div
+                          className="emotion-10"
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -5317,18 +5429,6 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-        >
           <div
             style={
               Object {
@@ -5346,52 +5446,56 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-34"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-33"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <input
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Select date "
-                          required={false}
-                          value="11/03/2020"
-                        />
-                      </div>
-                      <div
-                        className="emotion-10"
-                      >
-                        <span
-                          className="emotion-11"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-8"
+                        >
+                          <input
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Select date "
+                            required={false}
+                            value="11/03/2020"
+                          />
+                        </div>
+                        <div
+                          className="emotion-10"
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-41"
-                    data-testid="error"
-                  >
-                    <span
-                      className="emotion-11"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-40"
+                      data-testid="error"
                     >
                       <span
-                        className="emotion-43"
-                      />
-                    </span>
-                    Wrong Date
+                        className="emotion-11"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-42"
+                        />
+                      </span>
+                      Wrong Date
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5414,52 +5518,56 @@ exports[`Storyshots Design System/DatePicker DayPicker Input props 1`] = `
                   className="emotion-5"
                 >
                   <div
-                    className="emotion-6"
+                    onClick={[Function]}
                   >
                     <div
-                      className="emotion-7"
+                      className="emotion-6"
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-7"
                       >
-                        <input
-                          className="emotion-9"
-                          disabled={false}
-                          onChange={[Function]}
-                          onFocus={[Function]}
-                          onKeyDown={[Function]}
-                          placeholder="Select date "
-                          required={false}
-                          value="11/03/2020"
-                        />
-                      </div>
-                      <div
-                        className="emotion-10"
-                      >
-                        <span
-                          className="emotion-11"
-                          onClick={[Function]}
+                        <div
+                          className="emotion-8"
+                        >
+                          <input
+                            className="emotion-9"
+                            disabled={false}
+                            onChange={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            placeholder="Select date "
+                            required={false}
+                            value="11/03/2020"
+                          />
+                        </div>
+                        <div
+                          className="emotion-10"
                         >
                           <span
-                            className="emotion-12"
-                          />
-                        </span>
+                            className="emotion-11"
+                            onClick={[Function]}
+                          >
+                            <span
+                              className="emotion-12"
+                            />
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    className="emotion-53"
-                    data-testid="error"
-                  >
-                    <span
-                      className="emotion-11"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-52"
+                      data-testid="error"
                     >
                       <span
-                        className="emotion-55"
-                      />
-                    </span>
-                    Dates are important
+                        className="emotion-11"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-54"
+                        />
+                      </span>
+                      Dates are important
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5537,7 +5645,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -5570,6 +5678,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -5595,6 +5704,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -5667,13 +5777,13 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 }
 
 .emotion-11 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-11 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
 .emotion-14 {
@@ -5695,7 +5805,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 1.75rem;
   background-color: white;
@@ -5725,6 +5835,7 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
 
 .emotion-17+label {
   font-size: 0.8125rem;
+  cursor: text;
 }
 
 .emotion-17:focus {
@@ -5790,36 +5901,40 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-5"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Select date "
-                      required={false}
-                      value=""
-                    />
-                  </div>
-                  <div
-                    className="emotion-9"
-                  >
-                    <span
-                      className="emotion-10"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Select date "
+                        required={false}
+                        value=""
+                      />
+                    </div>
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
-                      />
-                    </span>
+                        className="emotion-10"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-11"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5844,36 +5959,40 @@ exports[`Storyshots Design System/DatePicker DayPicker Sizes 1`] = `
               className="emotion-4"
             >
               <div
-                className="emotion-14"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-14"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      className="emotion-17"
-                      disabled={false}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Select date "
-                      required={false}
-                      value="11/03/2020"
-                    />
-                  </div>
-                  <div
-                    className="emotion-9"
-                  >
-                    <span
-                      className="emotion-10"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        className="emotion-17"
+                        disabled={false}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Select date "
+                        required={false}
+                        value="11/03/2020"
+                      />
+                    </div>
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
-                      />
-                    </span>
+                        className="emotion-10"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-11"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -5951,7 +6070,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -5984,6 +6103,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-6>div {
@@ -6009,6 +6129,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
 
 .emotion-8+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-8:focus {
@@ -6081,13 +6202,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
 }
 
 .emotion-11 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-11 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
 <div
@@ -6116,36 +6237,40 @@ exports[`Storyshots Design System/DatePicker DayPicker with disabled dates 1`] =
               className="emotion-4"
             >
               <div
-                className="emotion-5"
+                onClick={[Function]}
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
                   <div
-                    className="emotion-7"
+                    className="emotion-6"
                   >
-                    <input
-                      className="emotion-8"
-                      disabled={false}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      onKeyDown={[Function]}
-                      placeholder="Select date "
-                      required={false}
-                      value="11/03/2020"
-                    />
-                  </div>
-                  <div
-                    className="emotion-9"
-                  >
-                    <span
-                      className="emotion-10"
-                      onClick={[Function]}
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        className="emotion-8"
+                        disabled={false}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Select date "
+                        required={false}
+                        value="11/03/2020"
+                      />
+                    </div>
+                    <div
+                      className="emotion-9"
                     >
                       <span
-                        className="emotion-11"
-                      />
-                    </span>
+                        className="emotion-10"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-11"
+                        />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -6209,7 +6334,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -6242,6 +6367,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-5>div {
@@ -6267,6 +6393,7 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-7:focus {
@@ -6339,13 +6466,13 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
 }
 
 .emotion-10 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-10 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
 <div
@@ -6364,36 +6491,40 @@ exports[`Storyshots Design System/DatePicker DayPicker with predefined values 1`
           className="emotion-3"
         >
           <div
-            className="emotion-4"
+            onClick={[Function]}
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
               <div
-                className="emotion-6"
+                className="emotion-5"
               >
-                <input
-                  className="emotion-7"
-                  disabled={false}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Date (start) - Date (end) "
-                  required={false}
-                  value="11/04/2020 - 11/14/2020"
-                />
-              </div>
-              <div
-                className="emotion-8"
-              >
-                <span
-                  className="emotion-9"
-                  onClick={[Function]}
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    disabled={false}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Date (start) - Date (end) "
+                    required={false}
+                    value="11/04/2020 - 11/14/2020"
+                  />
+                </div>
+                <div
+                  className="emotion-8"
                 >
                   <span
-                    className="emotion-10"
-                  />
-                </span>
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -6455,7 +6586,7 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -6488,6 +6619,7 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-5>div {
@@ -6513,6 +6645,7 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-7:focus {
@@ -6585,13 +6718,13 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
 }
 
 .emotion-10 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-10 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
 <div
@@ -6610,36 +6743,40 @@ exports[`Storyshots Design System/DatePicker Dynamic disableDates with all optio
           className="emotion-3"
         >
           <div
-            className="emotion-4"
+            onClick={[Function]}
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
               <div
-                className="emotion-6"
+                className="emotion-5"
               >
-                <input
-                  className="emotion-7"
-                  disabled={false}
-                  onChange={[Function]}
-                  onFocus={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Select date "
-                  required={false}
-                  value="11/03/2020"
-                />
-              </div>
-              <div
-                className="emotion-8"
-              >
-                <span
-                  className="emotion-9"
-                  onClick={[Function]}
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    disabled={false}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    placeholder="Select date "
+                    required={false}
+                    value="11/03/2020"
+                  />
+                </div>
+                <div
+                  className="emotion-8"
                 >
                   <span
-                    className="emotion-10"
-                  />
-                </span>
+                    className="emotion-9"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-10"
+                    />
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -6701,7 +6838,7 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -6734,6 +6871,7 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-5>div {
@@ -6759,6 +6897,7 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-7:focus {
@@ -6831,13 +6970,13 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
 }
 
 .emotion-10 {
-  fill: #676767;
+  fill: #757BB2;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-10 path {
-  fill: #676767;
+  fill: #757BB2;
 }
 
 .emotion-11 {
@@ -6911,6 +7050,9 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
         }
       }
     >
+      <h3>
+        Reset DatePicker value (with external component)
+      </h3>
       <div
         role="button"
       >
@@ -6921,36 +7063,40 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-4"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-7"
-                    disabled={false}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Select date "
-                    required={false}
-                    value="10/27/2020"
-                  />
-                </div>
-                <div
-                  className="emotion-8"
-                >
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-7"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Select date "
+                      required={false}
+                      value="11/03/2020"
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
                   >
                     <span
-                      className="emotion-10"
-                    />
-                  </span>
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -6977,6 +7123,9 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
         </button>
       </div>
       <hr />
+      <h3>
+        Reset RangePicker value (with external component)
+      </h3>
       <div
         role="button"
       >
@@ -6987,36 +7136,40 @@ exports[`Storyshots Design System/DatePicker Reset DatePicker 1`] = `
             className="emotion-3"
           >
             <div
-              className="emotion-4"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-7"
-                    disabled={false}
-                    onChange={[Function]}
-                    onFocus={[Function]}
-                    onKeyDown={[Function]}
-                    placeholder="Date (start) - Date (end) "
-                    required={false}
-                    value="Oct 27, 2020 - Nov 3, 2020"
-                  />
-                </div>
-                <div
-                  className="emotion-8"
-                >
-                  <span
-                    className="emotion-9"
-                    onClick={[Function]}
+                  <div
+                    className="emotion-6"
+                  >
+                    <input
+                      className="emotion-7"
+                      disabled={false}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      placeholder="Date (start) - Date (end) "
+                      required={false}
+                      value="Oct 27, 2020 - Nov 3, 2020"
+                    />
+                  </div>
+                  <div
+                    className="emotion-8"
                   >
                     <span
-                      className="emotion-10"
-                    />
-                  </span>
+                      className="emotion-9"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-10"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

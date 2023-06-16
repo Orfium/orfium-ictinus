@@ -2,7 +2,6 @@ import debounce from 'lodash/debounce';
 import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
-import MultiselectTextField from './components/MultiselectTextField';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import useMultiselectUtils from './hooks/useMultiselectUtils';
 import { rightIconContainer, selectWrapper } from './Select.style';
@@ -16,6 +15,7 @@ import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
 import Loader from 'components/Loader';
+import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export type SelectOptionValues = {
@@ -29,6 +29,7 @@ export type SelectOption = {
   helperText?: string;
   tooltipInfo?: string;
   options?: SelectOption[];
+  isCreated?: boolean;
 } & SelectOptionValues;
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -68,6 +69,13 @@ export type SelectProps = {
   /** The selected options in case of multiSelect */
   /** @TODO merge selectedOption with selectedOptions in v5 */
   selectedOptions?: SelectOption[];
+  /**
+   * If true, then in the case of a searched option that is not found in the Options list of MultiSelect,
+   * the user can create this option.
+   * */
+  isCreatable?: boolean;
+  /** Whether the MultiSelect should have a Select All option */
+  hasSelectAllOption?: boolean;
 } & TextFieldProps &
   InputProps &
   TestProps;
@@ -77,40 +85,45 @@ const emptyValue = { label: '', value: '' };
 
 const ON_CHANGE_MOCK = () => {};
 
-const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
-  const {
-    handleSelectedOption = () => {},
-    defaultValue = undefined,
-    selectedOption = emptyValue,
-    isMulti = false,
-    options,
-    isAsync = false,
-    isLoading = false,
-    asyncSearch = () => {},
-    status = 'normal',
-    minCharactersToSearch = 0,
-    hasHighlightSearch = false,
-    isSearchable = true,
-    isVirtualized = false,
-    styleType,
-    isDisabled,
-    isLocked,
-    dataTestId,
-    onClear,
-    onOptionDelete,
-    selectedOptions = [],
-    ...restInputProps
-  } = props;
+const Select = React.forwardRef<HTMLInputElement, SelectProps>(
+  (
+    props,
+    ref
+  ) => {
+    const {
+      handleSelectedOption = () => {},
+      defaultValue = undefined,
+      selectedOption = emptyValue,
+      isMulti = false,
+      options,
+      isAsync = false,
+      isLoading = false,
+      asyncSearch = () => {},
+      status = 'normal',
+      minCharactersToSearch = 0,
+      hasHighlightSearch = false,
+      isSearchable = true,
+      isVirtualized = false,
+      styleType,
+      isDisabled,
+      isLocked,
+      dataTestId,
+      onClear,
+      onOptionDelete,
+      selectedOptions = [],
+      isCreatable = false,
+      hasSelectAllOption = false,
+      ...restInputProps
+    } = props;
+    const theme = useTheme();
+    const [isOpen, setIsOpen] = React.useState(false);
+    const inputRef = React.useRef<HTMLInputElement>(null);
+    const combinedRefs = useCombinedRefs(inputRef, ref);
 
-  const theme = useTheme();
-  const [isOpen, setIsOpen] = React.useState(false);
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const combinedRefs = useCombinedRefs(inputRef, ref);
+    const initialValue = defaultValue ?? selectedOption;
 
-  const initialValue = defaultValue ?? selectedOption;
-
-  const [inputValue, setInputValue] = React.useState(initialValue);
-  const [searchValue, setSearchValue] = React.useState('');
+    const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
+    const [searchValue, setSearchValue] = React.useState('');
 
   const textFieldValue = searchValue || inputValue.label;
 
@@ -139,7 +152,12 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     if (isMulti) {
       handleMultiSelectOptionClick(option);
     } else {
-      setInputValue(option);
+      if (option.isCreated) {
+        setInputValue({ ...option, label: option.value.toString() });
+      } else {
+        setInputValue(option);
+      }
+
       setIsOpen(false);
     }
 
@@ -147,15 +165,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       setSearchValue('');
     }
     handleSelectedOption(option);
-  };
-
-  const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    const isBackspaceKey = e.keyCode === 8;
-
-    if (isBackspaceKey) {
-      setInputValue(emptyValue);
-      debouncedOnChange('');
-    }
   };
 
   const debouncedOnChange = React.useCallback(
@@ -189,31 +198,51 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const filteredOptions = useMemo(() => {
     const optionsToBeFiltered = isMulti ? availableMultiSelectOptions : options;
+    const finalOptions: SelectOption[] = [];
 
     if (isAsync) {
-      return optionsToBeFiltered;
+      finalOptions.push(...optionsToBeFiltered);
+    } else {
+      finalOptions.push(
+        ...optionsToBeFiltered
+          .filter(
+            (option) =>
+              !searchValue ||
+              option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+              !!option.options?.find((option) =>
+                option.label.toLowerCase().includes(searchValue.toLowerCase())
+              )
+          )
+          .map((option) => {
+            return option.label.toLowerCase().includes(searchValue.toLowerCase())
+              ? option
+              : {
+                ...option,
+                options: option.options?.filter((option) =>
+                  option.label.toLowerCase().includes(searchValue.toLowerCase())
+                ),
+              };
+          })
+      );
     }
 
-    return optionsToBeFiltered
-      .filter(
-        (option) =>
-          !searchValue ||
-          option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
-          !!option.options?.find((option) =>
-            option.label.toLowerCase().includes(searchValue.toLowerCase())
-          )
-      )
-      .map((option) => {
-        return option.label.toLowerCase().includes(searchValue.toLowerCase())
-          ? option
-          : {
-              ...option,
-              options: option.options?.filter((option) =>
-                option.label.toLowerCase().includes(searchValue.toLowerCase())
-              ),
-            };
-      });
-  }, [isAsync, isMulti, availableMultiSelectOptions, options, searchValue]);
+    if (isCreatable) {
+      /** Check if the searchValue has an exact result (so no need for "Create..." option) */
+      const hasDistinctResult = finalOptions
+        .map((item) => item.label.toLowerCase())
+        .includes(searchValue.toLowerCase());
+
+      if (!hasDistinctResult && searchValue.length > 0) {
+        finalOptions.push({
+          value: searchValue,
+          label: `Create "${searchValue}"`,
+          isCreated: true,
+        });
+      }
+    }
+
+    return finalOptions;
+  }, [isAsync, isMulti, availableMultiSelectOptions, options, isCreatable, searchValue]);
 
   const rightIconNameSelector = useMemo(() => {
     if (isSearchable) {
@@ -264,74 +293,102 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     }
   };
 
-  return (
-    <ClickAwayListener
-      onClick={() => {
-        setIsOpen(false);
+    /**
+     * Boolean flag for the case where we have no options but create functionality - so
+     * we can hide the Select All option in that case
+     */
+    const hasNoOptionsAndIsCreatable =
+      isCreatable && filteredOptions.length === 1 && filteredOptions[0].isCreated;
+
+    const handleSingleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+      const isBackspace = event.key === 'Backspace';
+
+      if (isBackspace) {
+        setInputValue(emptyValue);
+        debouncedOnChange('');
+      }
+    };
+
+    const handleMultiKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+      const isEnter = event.key === 'Enter';
+
+      if (hasNoOptionsAndIsCreatable && isEnter) {
+        handleMultiSelectOptionClick(filteredOptions[0]);
         setSearchValue('');
-      }}
-    >
-      <div
-        {...(!(isDisabled || isLocked) && { onClick: handleClick })}
-        css={selectWrapper({ isSearchable })}
+      }
+    };
+
+    return (
+      <ClickAwayListener
+        onClick={() => {
+          setIsOpen(false);
+          setSearchValue('');
+        }}
       >
-        <PositionInScreen
-          isVisible={isOpen}
-          hasWrapperWidth
-          offsetY={8}
-          parent={
-            isMulti ? (
-              <MultiselectTextField
-                selectedOptions={multiSelectedOptions}
-                onInput={handleOnInput}
-                onOptionDelete={handleOptionDelete}
-                onClearAllOptions={handleClearAllOptions}
-                isLoading={isLoading}
-                isDisabled={isDisabled}
-                isLocked={isLocked}
-                readOnly={!isSearchable}
-                dataTestId={generateTestDataId('select-input', dataTestId)}
-                {...restInputProps}
-                status={status}
-                value={textFieldValue}
-                autoComplete="off"
-              />
-            ) : (
-              <TextField
-                styleType={styleType}
-                rightIcon={rightIconRender}
-                onKeyDown={handleOnKeyDown}
-                onInput={handleOnInput}
-                onChange={ON_CHANGE_MOCK}
-                readOnly={!isSearchable}
-                isDisabled={isDisabled}
-                isLocked={isLocked}
-                dataTestId={generateTestDataId('select-input', dataTestId)}
-                {...restInputProps}
-                status={status}
-                value={textFieldValue}
-                ref={combinedRefs}
-                autoComplete="off"
-              />
-            )
-          }
+        <div
+          {...(!(isDisabled || isLocked) && { onClick: handleClick })}
+          css={selectWrapper({ isSearchable })}
         >
-          <SelectMenu
-            filteredOptions={filteredOptions}
-            handleOptionClick={handleOptionClick}
-            selectedOption={inputValue.value}
-            size={restInputProps.size}
-            status={status}
-            isLoading={isLoading}
-            isVirtualized={isVirtualized}
-            searchTerm={hasHighlightSearch ? searchValue : undefined}
-            hasSelectAllOption={isMulti}
-          />
-        </PositionInScreen>
-      </div>
-    </ClickAwayListener>
-  );
-});
+          <PositionInScreen
+            isVisible={isOpen}
+            hasWrapperWidth
+            offsetY={8}
+            parent={
+              isMulti ? (
+                <MultiTextFieldBase
+                  selectedOptions={multiSelectedOptions}
+                  onInput={handleOnInput}
+                  onOptionDelete={handleOptionDelete as (option?: string | SelectOption) => void}
+                  onClearAllOptions={handleClearAllOptions}
+                  isLoading={isLoading}
+                  isDisabled={isDisabled}
+                  isLocked={isLocked}
+                  readOnly={!isSearchable}
+                  dataTestId={generateTestDataId('select-input', dataTestId)}
+                  {...restInputProps}
+                  status={status}
+                  value={textFieldValue}
+                  ref={combinedRefs}
+                  autoComplete="off"
+                  onKeyDown={handleMultiKeyDown}
+                />
+              ) : (
+                <TextField
+                  styleType={styleType}
+                  rightIcon={rightIconRender}
+                  onKeyDown={handleSingleKeyDown}
+                  onInput={handleOnInput}
+                  onChange={ON_CHANGE_MOCK}
+                  readOnly={!isSearchable}
+                  isDisabled={isDisabled}
+                  isLocked={isLocked}
+                  dataTestId={generateTestDataId('select-input', dataTestId)}
+                  {...restInputProps}
+                  status={status}
+                  value={textFieldValue}
+                  ref={combinedRefs}
+                  autoComplete="off"
+                />
+              )
+            }
+          >
+            <SelectMenu
+              filteredOptions={filteredOptions}
+              handleOptionClick={handleOptionClick}
+              selectedOption={inputValue.value}
+              size={restInputProps.size}
+              status={status}
+              isLoading={isLoading}
+              isVirtualized={isVirtualized}
+              searchTerm={hasHighlightSearch ? searchValue : undefined}
+              hasSelectAllOption={isMulti && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
+            />
+          </PositionInScreen>
+        </div>
+      </ClickAwayListener>
+    );
+  }
+);
 
 Select.displayName = 'Select';
 

@@ -17,6 +17,7 @@ import CalendarFilledIcon from './calendar-filled.svg';
 import CatalogFilesIcon from './catalog-files.svg';
 import CatalogOverviewIcon from './catalog-overview.svg';
 import CatalogIcon from './catalog.svg';
+import ChannelIcon from './channel.svg';
 import ChatBubble from './chat-bubble.svg';
 import CheckIcon from './check.svg';
 import CheckedListIcon from './checked-list.svg';
@@ -44,6 +45,7 @@ import CompositionIcon from './composition.svg';
 import ConcertIcon from './concert.svg';
 import ConfirmedMatchesIcon from './confirmed-matches.svg';
 import ConflictsIcon from './conflicts.svg';
+import CopyIcon from './copy.svg';
 import DashboardIcon from './dashboard.svg';
 import DatasetIcon from './dataset.svg';
 import ArrowDownIcon from './dd-arrow.svg';
@@ -91,6 +93,8 @@ import InfoIcon from './info.svg';
 import IssuesIcon from './issues.svg';
 import KeywordIcon from './keyword.svg';
 import LegalFilesIcon from './legal-files.svg';
+import LicenceIcon from './licence.svg';
+import LicencedVideoIcon from './licensedVideo.svg';
 import LinkedIcon from './linked.svg';
 import LockIcon from './lock.svg';
 import MailIcon from './mail.svg';
@@ -115,6 +119,7 @@ import ArrowToLeftIcon from './pagination-start.svg';
 import PauseIcon from './pause.svg';
 import PercentageIcon from './percentage.svg';
 import PlayCount from './play-count.svg';
+import PlayIcon from './play.svg';
 import PlusIcon from './plus.svg';
 import PoliciesIcon from './policies.svg';
 import ProcessManagementIcon from './process-management.svg';
@@ -195,6 +200,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   calendarEmpty: CalendarEmptyIcon,
   calendarFilled: CalendarFilledIcon,
   catalog: CatalogIcon,
+  channel: ChannelIcon,
   catalogOverview: CatalogOverviewIcon,
   catalogFiles: CatalogFilesIcon,
   chatBubble: ChatBubble,
@@ -223,6 +229,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   concert: ConcertIcon,
   confirmedMatches: ConfirmedMatchesIcon,
   conflicts: ConflictsIcon,
+  copy: CopyIcon,
   dashboard: DashboardIcon,
   dataset: DatasetIcon,
   delete: DeleteIcon,
@@ -261,6 +268,8 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   issues: IssuesIcon,
   keyword: KeywordIcon,
   legalFiles: LegalFilesIcon,
+  licence: LicenceIcon,
+  licencedVideo: LicencedVideoIcon,
   linked: LinkedIcon,
   lock: LockIcon,
   mail: MailIcon,
@@ -280,6 +289,7 @@ const iconSelector: { [key in AcceptedIconNames]: string } = {
   pageFirst: PageFirstIcon, // "arrowToLeft" copy
   pageLast: PageLastIcon, // "arrowToRight" copy
   percentage: PercentageIcon,
+  play: PlayIcon,
   plus: PlusIcon,
   policies: PoliciesIcon,
   process: ProcessIcon,

@@ -2,7 +2,7 @@ import { rem } from 'polished';
 import { SpacingKey } from 'theme/globals/spacing';
 
 import { Theme } from '../theme';
-import { MD_HEIGHT, MIN_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
+import { MD_HEIGHT, MIN_WIDTH, MULTI_WIDTH, SM_HEIGHT } from 'components/TextInputBase/config';
 
 type Size = 'md' | 'sm';
 export const DEFAULT_SIZE: Size = 'md';
@@ -31,16 +31,22 @@ const getTextFieldWidth = (size?: Size): string => {
 
 export const getTextFieldSize = (
   hasMinWidthCompat = true,
-  size?: Size
+  size?: Size,
+  isMulti = false
 ): {
   minWidth?: string;
   height: string;
+  width?: string;
 } => {
   if (!hasMinWidthCompat) {
     return { height: getTextFieldHeight(size) };
   }
 
-  return { minWidth: getTextFieldWidth(size), height: getTextFieldHeight(size) };
+  return {
+    minWidth: getTextFieldWidth(size),
+    height: getTextFieldHeight(size),
+    ...(isMulti ? { width: rem(MULTI_WIDTH) } : {}),
+  };
 };
 
 export const getSpacingBySize: (size: SpacingKey, theme: Theme) => string = (size, theme) => {

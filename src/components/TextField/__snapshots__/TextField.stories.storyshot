@@ -1,5 +1,663 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Design System/TextField Multi TextField 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  min-width: 9.375rem;
+  height: unset;
+  background-color: white;
+  min-height: 2.875rem!important;
+}
+
+.emotion-2:hover {
+  background-color: #f3f5f8;
+}
+
+.emotion-2:focus-within {
+  box-shadow: 0 0 0 0.125rem #1451dc;
+  background-color: #e7ebf2;
+}
+
+.emotion-2 label {
+  font-weight: 700;
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  transform: translate(0.1875rem, -82%) scale(0.8)!important;
+  bottom: auto;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: 100%;
+  padding: 1.3125rem 2.5rem 0.3125rem 1rem;
+  cursor: text;
+}
+
+.emotion-3>div {
+  position: relative;
+}
+
+.emotion-4 {
+  position: static;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  z-index: 2;
+}
+
+.emotion-5 {
+  position: relative;
+  margin-right: 0.25rem;
+}
+
+.emotion-5>div {
+  height: 1.25rem;
+  border-radius: 0.25rem;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 0.25rem 0.5rem;
+  background-color: #f3f5f8;
+  color: black;
+  border: 0.0625rem solid #7a8bab;
+  cursor: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: background-color 150ms linear;
+  transition: background-color 150ms linear;
+}
+
+.emotion-6:hover:not(:disabled) {
+  background: #e7ebf2;
+}
+
+.emotion-6:focus-visible:not(:disabled) {
+  outline: none;
+}
+
+.emotion-6>:not(:last-child) {
+  margin-right: 0.25rem;
+}
+
+.emotion-7 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: unset;
+}
+
+.emotion-8 {
+  cursor: pointer;
+}
+
+.emotion-9 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-10 {
+  fill: #0f0f17;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.emotion-10 path {
+  fill: #0f0f17;
+}
+
+.emotion-17 {
+  background: transparent;
+  border: none;
+  color: #0f0f17;
+  display: block;
+  position: relative;
+  top: unset;
+  z-index: 1;
+  font-size: 0.9375rem;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 20%;
+  -webkit-flex: 1 1 0%;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+
+.emotion-17+label {
+  font-size: 0.9375rem;
+  cursor: text;
+}
+
+.emotion-17:focus {
+  outline: none;
+}
+
+.emotion-17::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-17:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-17::placeholder {
+  color: transparent;
+}
+
+.emotion-17:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-17:focus+label,
+.emotion-17:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -82%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -82%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -82%) scale(0.8);
+  transform: translate(0.1875rem, -82%) scale(0.8);
+}
+
+.emotion-17:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-18 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-19 {
+  position: absolute!important;
+  bottom: 0;
+  right: 1rem;
+  top: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-20 {
+  cursor: pointer;
+}
+
+.emotion-22 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-22 path {
+  fill: #5f6c85;
+}
+
+.emotion-23 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #5f6c85;
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 0.5rem 0 0;
+}
+
+.emotion-23 svg {
+  padding: 0 0.125rem;
+}
+
+.emotion-23 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0 0.125rem;
+}
+
+.emotion-25 {
+  fill: #5f6c85;
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.emotion-25 path {
+  fill: #5f6c85;
+}
+
+.emotion-26 {
+  padding: 0.5rem 0;
+}
+
+.emotion-27 {
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 2.25rem;
+  font-size: 1.75rem;
+  letter-spacing: 0rem;
+  color: #212332;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div>
+      <div
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-6"
+                    data-testid="chip-chip_0"
+                  >
+                    <div>
+                      <div
+                        className="emotion-7"
+                        title="Orange"
+                      >
+                        Orange
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                        data-testid="chip-delete-chip_0"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-10"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-6"
+                    data-testid="chip-chip_1"
+                  >
+                    <div>
+                      <div
+                        className="emotion-7"
+                        title="Citrus"
+                      >
+                        Citrus
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                        data-testid="chip-delete-chip_1"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-10"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <input
+                  className="emotion-17"
+                  disabled={false}
+                  hintMsg="Press Enter to create multiple values"
+                  locked={false}
+                  maxMultiValues={10}
+                  multi={true}
+                  multiValues={
+                    Array [
+                      "Orange",
+                      "Citrus",
+                    ]
+                  }
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  placeholder="Label"
+                  required={false}
+                  value=""
+                />
+                <label
+                  className="emotion-18"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-19"
+              >
+                <div
+                  className="emotion-20"
+                >
+                  <span
+                    className="emotion-9"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-22"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="emotion-23"
+            data-testid="error"
+          >
+            <span
+              className="emotion-9"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-25"
+              />
+            </span>
+            Press Enter to create multiple values
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-26"
+    >
+      <h2
+        className="emotion-27"
+      >
+        Controlled multi TextField
+      </h2>
+    </div>
+    <div
+      style={
+        Object {
+          "width": "500px",
+        }
+      }
+    >
+      <div
+        onClick={[Function]}
+      >
+        <div>
+          <div
+            className="emotion-2"
+          >
+            <div
+              className="emotion-3"
+            >
+              <div
+                className="emotion-4"
+              >
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-6"
+                    data-testid="chip-chip_0"
+                  >
+                    <div>
+                      <div
+                        className="emotion-7"
+                        title="existing-tag-1"
+                      >
+                        existing-tag-1
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                        data-testid="chip-delete-chip_0"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-10"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <span
+                  className="emotion-5"
+                >
+                  <div
+                    aria-readonly="true"
+                    className="emotion-6"
+                    data-testid="chip-chip_1"
+                  >
+                    <div>
+                      <div
+                        className="emotion-7"
+                        title="existing-tag-2"
+                      >
+                        existing-tag-2
+                      </div>
+                    </div>
+                    <div
+                      className="emotion-8"
+                    >
+                      <span
+                        className="emotion-9"
+                        data-testid="chip-delete-chip_1"
+                        onClick={[Function]}
+                      >
+                        <span
+                          className="emotion-10"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </span>
+                <input
+                  className="emotion-17"
+                  hintMsg="Copy / paste comma seperated tags to add them, ex. tag1, tag2, tag3"
+                  multi={true}
+                  multiValues={
+                    Array [
+                      "existing-tag-1",
+                      "existing-tag-2",
+                    ]
+                  }
+                  multiValuesHandler={[Function]}
+                  name="tags"
+                  onClearAllValues={[Function]}
+                  onInput={[Function]}
+                  onKeyDown={[Function]}
+                  onMultiValueCreate={[Function]}
+                  onMultiValueDelete={[Function]}
+                  placeholder="Tags"
+                  required={false}
+                  value=""
+                />
+                <label
+                  className="emotion-18"
+                >
+                  Tags
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-19"
+              >
+                <div
+                  className="emotion-20"
+                >
+                  <span
+                    className="emotion-9"
+                    data-testid="select-right-icon"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-22"
+                    />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="emotion-23"
+            data-testid="error"
+          >
+            <span
+              className="emotion-9"
+              onClick={[Function]}
+            >
+              <span
+                className="emotion-25"
+              />
+            </span>
+            Copy / paste comma seperated tags to add them, ex. tag1, tag2, tag3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
@@ -49,7 +707,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -82,6 +740,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-4>div {
@@ -108,6 +767,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
 
 .emotion-6+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-6:focus {
@@ -198,7 +858,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 1.75rem;
   background-color: white;
@@ -229,6 +889,7 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
 
 .emotion-11+label {
   font-size: 0.8125rem;
+  cursor: text;
 }
 
 .emotion-11:focus {
@@ -285,26 +946,30 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -317,26 +982,30 @@ exports[`Storyshots Design System/TextField Text Field Sizes 1`] = `
         }
       >
         <div
-          className="emotion-8"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-8"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-11"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-11"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -395,7 +1064,7 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -428,6 +1097,7 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-4>div {
@@ -454,6 +1124,7 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
 
 .emotion-6+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-6:focus {
@@ -542,26 +1213,30 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -574,26 +1249,30 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -606,26 +1285,30 @@ exports[`Storyshots Design System/TextField Text Field Types 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -684,7 +1367,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -717,6 +1400,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-4>div {
@@ -759,6 +1443,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-7:focus {
@@ -924,192 +1609,208 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-            <div
-              className="emotion-6"
-            >
-              <input
-                className="emotion-7"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-8"
-              >
-                Label
-                 
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-3"
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-6"
-            >
-              <input
-                className="emotion-7"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-8"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-14"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-3"
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-5"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-            <div
-              className="emotion-6"
-            >
-              <input
-                className="emotion-7"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-8"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-14"
-            >
-              <img
-                height="16"
-                src="https://brandmark.io/logo-rank/random/pepsi.png"
-                style={
-                  Object {
-                    "background": "red",
-                  }
-                }
-                width="16"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-3"
-        >
-          <div
-            className="emotion-4"
-          >
-            <div
-              className="emotion-6"
-            >
-              <input
-                className="emotion-7"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-8"
-              >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-14"
+              className="emotion-4"
             >
               <div
-                className="emotion-28"
+                className="emotion-5"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+              <div
+                className="emotion-6"
+              >
+                <input
+                  className="emotion-7"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-8"
+                >
+                  Label
+                   
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-6"
+              >
+                <input
+                  className="emotion-7"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-8"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-14"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-5"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+              <div
+                className="emotion-6"
+              >
+                <input
+                  className="emotion-7"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-8"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-14"
+              >
+                <img
+                  height="16"
+                  src="https://brandmark.io/logo-rank/random/pepsi.png"
+                  style={
+                    Object {
+                      "background": "red",
+                    }
+                  }
+                  width="16"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-3"
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                className="emotion-6"
+              >
+                <input
+                  className="emotion-7"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-8"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-14"
               >
                 <div
-                  className="emotion-29"
-                  data-testid="dots-loading"
+                  className="emotion-28"
                 >
                   <div
-                    className="emotion-30"
-                  />
+                    className="emotion-29"
+                    data-testid="dots-loading"
+                  >
+                    <div
+                      className="emotion-30"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -1170,7 +1871,7 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -1203,6 +1904,7 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-4>div {
@@ -1271,6 +1973,7 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
 
 .emotion-9+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-9:focus {
@@ -1385,50 +2088,54 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
+              <div
+                className="emotion-5"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
-            </div>
-            <div
-              className="emotion-8"
-            >
-              <input
-                className="emotion-9"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-10"
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </div>
+              <div
+                className="emotion-8"
               >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-11"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
+                <input
+                  className="emotion-9"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-10"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-11"
               >
                 <span
-                  className="emotion-7"
-                />
-              </span>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-7"
+                  />
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -1441,50 +2148,54 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
+              <div
+                className="emotion-5"
               >
                 <span
-                  className="emotion-18"
-                />
-              </span>
-            </div>
-            <div
-              className="emotion-8"
-            >
-              <input
-                className="emotion-9"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-10"
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-18"
+                  />
+                </span>
+              </div>
+              <div
+                className="emotion-8"
               >
-                Label
-                 
-              </label>
-            </div>
-            <div
-              className="emotion-11"
-            >
-              <span
-                className="emotion-6"
-                onClick={[Function]}
+                <input
+                  className="emotion-9"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-10"
+                >
+                  Label
+                   
+                </label>
+              </div>
+              <div
+                className="emotion-11"
               >
                 <span
-                  className="emotion-18"
-                />
-              </span>
+                  className="emotion-6"
+                  onClick={[Function]}
+                >
+                  <span
+                    className="emotion-18"
+                  />
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -1543,7 +2254,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -1576,6 +2287,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-4>div {
@@ -1602,6 +2314,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
 
 .emotion-6+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-6:focus {
@@ -1688,6 +2401,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
 
 .emotion-11+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-11:focus {
@@ -1742,6 +2456,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
 
 .emotion-15+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-15:focus {
@@ -1798,26 +2513,30 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={false}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={false}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -1830,20 +2549,24 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-11"
-                disabled={false}
-                placeholder="Placeholder "
-                required={false}
-              />
+              <div
+                className="emotion-5"
+              >
+                <input
+                  className="emotion-11"
+                  disabled={false}
+                  placeholder="Placeholder "
+                  required={false}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1856,19 +2579,23 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-15"
-                disabled={false}
-                required={false}
-              />
+              <div
+                className="emotion-5"
+              >
+                <input
+                  className="emotion-15"
+                  disabled={false}
+                  required={false}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -1955,6 +2682,7 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: not-allowed;
 }
 
 .emotion-4>div {
@@ -1981,6 +2709,7 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
 
 .emotion-6+label {
   font-size: 0.9375rem;
+  cursor: not-allowed;
 }
 
 .emotion-6:focus {
@@ -2069,26 +2798,30 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={true}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -2101,26 +2834,30 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={true}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -2133,26 +2870,30 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
         }
       >
         <div
-          className="emotion-3"
+          onClick={[Function]}
         >
           <div
-            className="emotion-4"
+            className="emotion-3"
           >
             <div
-              className="emotion-5"
+              className="emotion-4"
             >
-              <input
-                className="emotion-6"
-                disabled={true}
-                placeholder="Label"
-                required={false}
-              />
-              <label
-                className="emotion-7"
+              <div
+                className="emotion-5"
               >
-                Label
-                 
-              </label>
+                <input
+                  className="emotion-6"
+                  disabled={true}
+                  placeholder="Label"
+                  required={false}
+                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -2239,6 +2980,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: not-allowed;
 }
 
 .emotion-5>div {
@@ -2265,6 +3007,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: not-allowed;
 }
 
 .emotion-7:focus {
@@ -2423,6 +3166,7 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
 
 .emotion-32+label {
   font-size: 0.8125rem;
+  cursor: not-allowed;
 }
 
 .emotion-32:focus {
@@ -2499,38 +3243,42 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-4"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-7"
-                    disabled={true}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
+                  <div
+                    className="emotion-6"
                   >
-                    Label
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-9"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
+                    <input
+                      className="emotion-7"
+                      disabled={true}
+                      placeholder="Label"
+                      required={false}
+                    />
+                    <label
+                      className="emotion-8"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2543,38 +3291,42 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-4"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-7"
-                    disabled={true}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
+                  <div
+                    className="emotion-6"
                   >
-                    Label
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-9"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
+                    <input
+                      className="emotion-7"
+                      disabled={true}
+                      placeholder="Label"
+                      required={false}
+                    />
+                    <label
+                      className="emotion-8"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2587,38 +3339,42 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-4"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-7"
-                    disabled={true}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
+                  <div
+                    className="emotion-6"
                   >
-                    Label
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-9"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
+                    <input
+                      className="emotion-7"
+                      disabled={true}
+                      placeholder="Label"
+                      required={false}
+                    />
+                    <label
+                      className="emotion-8"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-11"
-                    />
-                  </span>
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-11"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2643,38 +3399,42 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-29"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-29"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-32"
-                    disabled={true}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
+                  <div
+                    className="emotion-6"
                   >
-                    Label
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-9"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
+                    <input
+                      className="emotion-32"
+                      disabled={true}
+                      placeholder="Label"
+                      required={false}
+                    />
+                    <label
+                      className="emotion-8"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-36"
-                    />
-                  </span>
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-36"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2687,38 +3447,42 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-29"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-29"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-32"
-                    disabled={true}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
+                  <div
+                    className="emotion-6"
                   >
-                    Label
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-9"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
+                    <input
+                      className="emotion-32"
+                      disabled={true}
+                      placeholder="Label"
+                      required={false}
+                    />
+                    <label
+                      className="emotion-8"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-36"
-                    />
-                  </span>
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-36"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2731,38 +3495,42 @@ exports[`Storyshots Design System/TextField TextField locked with label 1`] = `
             }
           >
             <div
-              className="emotion-29"
+              onClick={[Function]}
             >
               <div
-                className="emotion-5"
+                className="emotion-29"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-5"
                 >
-                  <input
-                    className="emotion-32"
-                    disabled={true}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
+                  <div
+                    className="emotion-6"
                   >
-                    Label
-                     
-                  </label>
-                </div>
-                <div
-                  className="emotion-9"
-                >
-                  <span
-                    className="emotion-10"
-                    onClick={[Function]}
+                    <input
+                      className="emotion-32"
+                      disabled={true}
+                      placeholder="Label"
+                      required={false}
+                    />
+                    <label
+                      className="emotion-8"
+                    >
+                      Label
+                       
+                    </label>
+                  </div>
+                  <div
+                    className="emotion-9"
                   >
                     <span
-                      className="emotion-36"
-                    />
-                  </span>
+                      className="emotion-10"
+                      onClick={[Function]}
+                    >
+                      <span
+                        className="emotion-36"
+                      />
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2837,7 +3605,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -2870,6 +3638,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-5>div {
@@ -2896,6 +3665,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-7:focus {
@@ -3035,7 +3805,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   min-width: 9.375rem;
   height: 2.875rem;
   background-color: white;
@@ -3142,57 +3912,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
             }
           >
             <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <div
-                  className="emotion-6"
-                >
-                  <input
-                    className="emotion-7"
-                    disabled={false}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-8"
-                  >
-                    Label
-                     
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div
-              className="emotion-9"
-              data-testid="error"
-            >
-              <span
-                className="emotion-10"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-11"
-                />
-              </span>
-              Error in Text Field
-            </div>
-          </div>
-          <div
-            style={
-              Object {
-                "margin": 5,
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "width": "200px",
-                }
-              }
+              onClick={[Function]}
             >
               <div
                 className="emotion-4"
@@ -3230,7 +3950,65 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
                     className="emotion-11"
                   />
                 </span>
-                Big Error Message for fixed width TextField to see icon alignment: Error Error Error Error Error Error Error Error Error Error Error
+                Error in Text Field
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "200px",
+                }
+              }
+            >
+              <div
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-4"
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <input
+                        className="emotion-7"
+                        disabled={false}
+                        placeholder="Label"
+                        required={false}
+                      />
+                      <label
+                        className="emotion-8"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="emotion-9"
+                  data-testid="error"
+                >
+                  <span
+                    className="emotion-10"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-11"
+                    />
+                  </span>
+                  Big Error Message for fixed width TextField to see icon alignment: Error Error Error Error Error Error Error Error Error Error Error
+                </div>
               </div>
             </div>
           </div>
@@ -3254,57 +4032,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
             }
           >
             <div
-              className="emotion-21"
-            >
-              <div
-                className="emotion-5"
-              >
-                <div
-                  className="emotion-6"
-                >
-                  <input
-                    className="emotion-7"
-                    disabled={false}
-                    placeholder="Label"
-                    required={false}
-                  />
-                  <label
-                    className="emotion-25"
-                  >
-                    Label
-                     
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div
-              className="emotion-26"
-              data-testid="error"
-            >
-              <span
-                className="emotion-10"
-                onClick={[Function]}
-              >
-                <span
-                  className="emotion-28"
-                />
-              </span>
-              Error in Text Field
-            </div>
-          </div>
-          <div
-            style={
-              Object {
-                "margin": 5,
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "width": "200px",
-                }
-              }
+              onClick={[Function]}
             >
               <div
                 className="emotion-21"
@@ -3342,7 +4070,65 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
                     className="emotion-28"
                   />
                 </span>
-                Big Hint Message for fixed width TextField to see icon alignment: Hint Hint Hint Hint Hint Hint Hint Hint Hint Hint
+                Error in Text Field
+              </div>
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "margin": 5,
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "width": "200px",
+                }
+              }
+            >
+              <div
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-21"
+                >
+                  <div
+                    className="emotion-5"
+                  >
+                    <div
+                      className="emotion-6"
+                    >
+                      <input
+                        className="emotion-7"
+                        disabled={false}
+                        placeholder="Label"
+                        required={false}
+                      />
+                      <label
+                        className="emotion-25"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="emotion-26"
+                  data-testid="error"
+                >
+                  <span
+                    className="emotion-10"
+                    onClick={[Function]}
+                  >
+                    <span
+                      className="emotion-28"
+                    />
+                  </span>
+                  Big Hint Message for fixed width TextField to see icon alignment: Hint Hint Hint Hint Hint Hint Hint Hint Hint Hint
+                </div>
               </div>
             </div>
           </div>
@@ -3402,7 +4188,7 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   height: 2.875rem;
   background-color: white;
 }
@@ -3434,6 +4220,7 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 1rem;
+  cursor: text;
 }
 
 .emotion-4>div {
@@ -3475,6 +4262,7 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
 
 .emotion-7+label {
   font-size: 0.9375rem;
+  cursor: text;
 }
 
 .emotion-7:focus {
@@ -3554,32 +4342,36 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
           }
         >
           <div
-            className="emotion-3"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  style={
-                    Object {
-                      "color": "gray",
-                    }
-                  }
+                  className="emotion-5"
                 >
-                  $
+                  <div
+                    style={
+                      Object {
+                        "color": "#757BB2",
+                      }
+                    }
+                  >
+                    $
+                  </div>
                 </div>
-              </div>
-              <div
-                className="emotion-6"
-              >
-                <input
-                  className="emotion-7"
-                  disabled={false}
-                  required={false}
-                />
+                <div
+                  className="emotion-6"
+                >
+                  <input
+                    className="emotion-7"
+                    disabled={false}
+                    required={false}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -3600,31 +4392,35 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
           }
         >
           <div
-            className="emotion-3"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-6"
-              >
-                <input
-                  className="emotion-7"
-                  disabled={false}
-                  required={false}
-                />
-              </div>
-              <div
-                className="emotion-12"
+                className="emotion-4"
               >
                 <div
-                  style={
-                    Object {
-                      "color": "gray",
-                    }
-                  }
+                  className="emotion-6"
                 >
-                  %
+                  <input
+                    className="emotion-7"
+                    disabled={false}
+                    required={false}
+                  />
+                </div>
+                <div
+                  className="emotion-12"
+                >
+                  <div
+                    style={
+                      Object {
+                        "color": "#757BB2",
+                      }
+                    }
+                  >
+                    %
+                  </div>
                 </div>
               </div>
             </div>
@@ -3646,44 +4442,48 @@ exports[`Storyshots Design System/TextField TextField with prefix/suffix 1`] = `
           }
         >
           <div
-            className="emotion-3"
+            onClick={[Function]}
           >
             <div
-              className="emotion-4"
+              className="emotion-3"
             >
               <div
-                className="emotion-5"
+                className="emotion-4"
               >
                 <div
-                  style={
-                    Object {
-                      "color": "gray",
-                    }
-                  }
+                  className="emotion-5"
                 >
-                  $
+                  <div
+                    style={
+                      Object {
+                        "color": "#757BB2",
+                      }
+                    }
+                  >
+                    $
+                  </div>
                 </div>
-              </div>
-              <div
-                className="emotion-6"
-              >
-                <input
-                  className="emotion-7"
-                  disabled={false}
-                  required={false}
-                />
-              </div>
-              <div
-                className="emotion-12"
-              >
                 <div
-                  style={
-                    Object {
-                      "color": "gray",
-                    }
-                  }
+                  className="emotion-6"
                 >
-                  %
+                  <input
+                    className="emotion-7"
+                    disabled={false}
+                    required={false}
+                  />
+                </div>
+                <div
+                  className="emotion-12"
+                >
+                  <div
+                    style={
+                      Object {
+                        "color": "#757BB2",
+                      }
+                    }
+                  >
+                    %
+                  </div>
                 </div>
               </div>
             </div>

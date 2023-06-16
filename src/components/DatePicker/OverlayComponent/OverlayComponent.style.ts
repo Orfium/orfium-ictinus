@@ -89,7 +89,7 @@ export const buttonsWrapperStyle =
       margin-bottom: ${theme.globals.spacing.get('6')};
       margin-right: ${theme.globals.spacing.get('8')};
 
-      > button {
+      button {
         margin: ${theme.globals.spacing.get('4')} 0 ${theme.globals.spacing.get('4')}
           ${theme.globals.spacing.get('4')};
       }

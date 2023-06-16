@@ -5,7 +5,12 @@ import Select from '../../Select';
 import { SelectOption } from '../../Select/Select';
 
 type Props = {
-  minCharactersToSearch?: number;
+  isLocked?: boolean;
+  isDisabled?: boolean;
+  status?: 'hint' | 'success' | 'normal' | 'error' | undefined;
+  hintMessage?: string;
+  hasSelectAllOption?: boolean;
+  isCreatable?: boolean;
 };
 
 const options = [
@@ -35,7 +40,14 @@ export const dummyUnrefinedData = new Array(15).fill(undefined).map((__, index) 
   label: `Test option ${index}`,
 }));
 
-const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
+const SelectShowcase: React.FC<Props> = ({
+  isLocked = false,
+  isDisabled = false,
+  status = 'hint',
+  hintMessage = '',
+  hasSelectAllOption = false,
+  isCreatable = false,
+}) => {
   const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUnrefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
 
@@ -52,78 +64,37 @@ const SelectShowcase: React.FC<Props> = ({ minCharactersToSearch = 0 }) => {
   };
 
   return (
-    <div>
-      <h4>Multiselect with simple Search</h4>
-      <div css={container()}>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            label={'Multi Select'}
-            options={options}
-            selectedOptions={selectedOptions}
-          />
-        </div>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            label={'Multi Select - Locked'}
-            options={options}
-            selectedOptions={selectedOptions}
-            isLocked
-          />
-        </div>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            label={'Multi Select - Disabled'}
-            options={options}
-            selectedOptions={selectedOptions}
-            isDisabled
-          />
-        </div>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            label={'Multi Select - with Hint'}
-            options={options}
-            selectedOptions={selectedOptions}
-            status={'hint'}
-            hintMsg={'This is a hint message'}
-          />
-        </div>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            label={'Multi Select - with Error'}
-            options={options}
-            selectedOptions={selectedOptions}
-            status={'error'}
-            hintMsg={'This is an error message'}
-          />
-        </div>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            label={'Multi Select - with Right Icon'}
-            options={options}
-            selectedOptions={selectedOptions}
-            rightIcon={'edit'}
-          />
-        </div>
+    <div css={container()}>
+      <div css={wrapper()}>
+        <Select
+          isMulti
+          label={'Multi Select'}
+          options={options}
+          selectedOptions={selectedOptions}
+          isLocked={isLocked}
+          isDisabled={isDisabled}
+          status={status}
+          hintMsg={hintMessage}
+          hasSelectAllOption={hasSelectAllOption}
+          isCreatable={isCreatable}
+        />
       </div>
-      <h4>Async Multiselect</h4>
-      <div css={container()}>
-        <div css={wrapper()}>
-          <Select
-            isMulti
-            isAsync
-            label={'Multi Select - Async Search'}
-            options={asyncOptions}
-            asyncSearch={mockedApiCall}
-            isLoading={isLoading}
-            onKeyPress={() => setIsLoading(true)}
-          />
-        </div>
+      <div css={wrapper()}>
+        <Select
+          isMulti
+          isAsync
+          label={'Multi Select - Async'}
+          options={asyncOptions}
+          asyncSearch={mockedApiCall}
+          isLoading={isLoading}
+          onKeyPress={() => setIsLoading(true)}
+          isLocked={isLocked}
+          isDisabled={isDisabled}
+          status={status}
+          hintMsg={hintMessage}
+          hasSelectAllOption={hasSelectAllOption}
+          isCreatable={isCreatable}
+        />
       </div>
     </div>
   );

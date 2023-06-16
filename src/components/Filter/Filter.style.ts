@@ -13,6 +13,7 @@ import {
 } from './utils';
 import { Theme } from '../../theme';
 import { getFocus, getHover, getPressed } from '../../theme/states';
+import { textInputConfig } from 'components/TextInputBase/config';
 
 export const wrapperStyle = () => () => {
   return {
@@ -239,18 +240,21 @@ export const valueSpanStyle = () => css`
   display: inline-block;
 `;
 
-export const menuStyle = () => (theme: Theme) =>
-  css`
+export const menuStyle = () => (theme: Theme) => {
+  const borderConfig = textInputConfig.types[theme.colorScheme].outlined.border;
+
+  return css`
     position: absolute;
-    top: ${rem(48)};
-    min-width: ${rem(280)};
     left: 0;
     height: auto;
+    border: ${rem(borderConfig.width)} solid
+      ${theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)};
     border-radius: ${theme.globals.spacing.get('3')};
     background-color: ${theme.globals.colors.white};
     box-shadow: ${theme.globals.elevation['02']};
     z-index: 500;
     overflow: hidden;
     min-width: 100%;
-    max-width: ${rem(620)};
+    max-width: ${rem(440)};
   `;
+};

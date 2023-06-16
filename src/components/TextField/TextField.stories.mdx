@@ -5,6 +5,7 @@ import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
+import TextFieldShowcase from '../../components/storyUtils/TextFieldShowcase/TextFieldShowcase.tsx';
 import { FIGMA_URL } from '../../utils/common';
 
 <Meta
@@ -152,7 +153,7 @@ Regular TextField with a prefix or a suffix
         <TextField
           size={select('size', ['md', 'sm'], 'md')}
           hasMinWidthCompat={false}
-          leftIcon={<div style={{ color: 'gray' }}>$</div>}
+          leftIcon={<div style={{ color: '#757BB2' }}>$</div>}
           styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
         />
       </div>
@@ -160,7 +161,7 @@ Regular TextField with a prefix or a suffix
         <TextField
           size={select('size', ['md', 'sm'], 'md')}
           hasMinWidthCompat={false}
-          rightIcon={<div style={{ color: 'gray' }}>%</div>}
+          rightIcon={<div style={{ color: '#757BB2' }}>%</div>}
           styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
         />
       </div>
@@ -168,8 +169,8 @@ Regular TextField with a prefix or a suffix
         <TextField
           size={select('size', ['md', 'sm'], 'md')}
           hasMinWidthCompat={false}
-          leftIcon={<div style={{ color: 'gray' }}>$</div>}
-          rightIcon={<div style={{ color: 'gray' }}>%</div>}
+          leftIcon={<div style={{ color: '#757BB2' }}>$</div>}
+          rightIcon={<div style={{ color: '#757BB2' }}>%</div>}
           styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
         />
       </div>
@@ -256,6 +257,29 @@ Regular TextField with Label and Statuses. Error and Hint are shown below for al
         </div>
       </Stack>
     </Stack>
+  </Story>
+</Preview>
+
+# Multi TextField
+
+<Preview>
+  <Story name="Multi TextField">
+    <div>
+      <TextField
+        multi
+        multiValues={['Orange', 'Citrus']}
+        label={text('Label', 'Label')}
+        locked={boolean('Locked', false)}
+        disabled={boolean('Disabled', false)}
+        hintMsg={text('Custom message', 'Press Enter to create multiple values')}
+        status={select('Status', ['hint', 'error', 'normal'], 'hint')}
+        maxMultiValues={text('maxMultiValues', 10)}
+        sx={{
+          textField: { width: '100%' },
+        }}
+      />
+    </div>
+    <TextFieldShowcase />
   </Story>
 </Preview>
 

@@ -2,7 +2,11 @@ import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
 
 import Filter from '../Filter';
-import FilterShowcase, { AsyncFilterShowcase } from '../storyUtils/FilterShowcase';
+import {
+  AsyncFilterShowcase,
+  FilterShowcase,
+  MultiFilterShowcase,
+} from '../storyUtils/FilterShowcase';
 import Stack from '../storyUtils/Stack';
 import { FIGMA_URL } from '../../utils/common';
 
@@ -139,10 +143,27 @@ Filter that support asynchronous fetching, with loading status
   </Story>
 </Preview>
 
+# MultiFilter
+
+A filter that supports searching options
+
+<Preview>
+  <Story name="MultiFilter">
+    <Stack>
+      <MultiFilterShowcase
+        styleType={select('styleType', ['filled', 'transparent'], 'filled')}
+        buttonType={select('buttonType', ['primary', 'secondary'], 'primary')}
+        hasSelectAllOption={boolean('Select All', false)}
+        isSearchable
+      />
+    </Stack>
+  </Story>
+</Preview>
+
 ### Playground - Knobs
 
 <Preview>
-  <Story name="Dynamic Filter Props" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <FilterShowcase
       items={[
         { value: 'apple', label: 'Apple' },
