@@ -45,7 +45,7 @@ const MultiFilterShowcase: React.FC<Props> = ({
   };
 
   return (
-    <div>
+    <div css={{ height: 200 }}>
       <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '72px' }}>
         <div css={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '16px' }}>
           <h4>MultiFilter with simple Search</h4>

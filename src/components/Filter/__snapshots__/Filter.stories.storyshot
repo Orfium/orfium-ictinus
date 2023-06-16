@@ -958,18 +958,7 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
 }
 
 .emotion-3 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 72px;
+  height: 200px;
 }
 
 .emotion-4 {
@@ -984,10 +973,25 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 16px;
+  gap: 72px;
 }
 
 .emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.emotion-6 {
   overflow: inherit;
   text-overflow: inherit;
   width: -webkit-max-content;
@@ -997,17 +1001,17 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   position: relative;
 }
 
-.emotion-5 #unique-tooltip-id {
+.emotion-6 #unique-tooltip-id {
   display: none!important;
 }
 
-.emotion-6 {
+.emotion-7 {
   position: relative;
   display: inline-block;
   height: 2.25rem;
 }
 
-.emotion-7 {
+.emotion-8 {
   background: none;
   border: none;
   display: -webkit-box;
@@ -1023,24 +1027,24 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   min-width: 6.875rem;
 }
 
-.emotion-7:hover>div {
+.emotion-8:hover>div {
   background-color: #f3f5f8;
 }
 
-.emotion-7:active>div {
+.emotion-8:active>div {
   background-color: #e7ebf2;
 }
 
-.emotion-7:focus-visible>div {
+.emotion-8:focus-visible>div {
   border: 0.1875rem solid #F814E1;
 }
 
-.emotion-7:focus-visible>span {
+.emotion-8:focus-visible>span {
   border-top: 0.1875rem solid #F814E1;
   border-bottom: 0.1875rem solid #F814E1;
 }
 
-.emotion-8 {
+.emotion-9 {
   font-size: 0.8125rem;
   cursor: pointer;
   height: 100%;
@@ -1063,11 +1067,11 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   border-radius: 1.5rem;
 }
 
-.emotion-8:hover {
+.emotion-9:hover {
   border: solid 0.0625rem #cfd7e5;
 }
 
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1080,12 +1084,12 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   height: 100%;
 }
 
-.emotion-10 {
+.emotion-11 {
   line-height: 0.9375rem;
   margin-left: 0;
 }
 
-.emotion-11 {
+.emotion-12 {
   font-weight: 400;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1097,24 +1101,24 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   align-items: center;
 }
 
-.emotion-11 div {
+.emotion-12 div {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none;
 }
 
-.emotion-11 span {
+.emotion-12 span {
   font-weight: 700;
 }
 
-.emotion-12 {
+.emotion-13 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
   display: inline-block;
 }
 
-.emotion-13 {
+.emotion-14 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1130,17 +1134,17 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
   justify-content: center;
 }
 
-.emotion-14 {
+.emotion-15 {
   fill: #0f0f17;
   width: 0.4375rem;
   height: 0.4375rem;
 }
 
-.emotion-14 path {
+.emotion-15 path {
   fill: #0f0f17;
 }
 
-.emotion-26 {
+.emotion-27 {
   position: absolute;
   bottom: 15%;
 }
@@ -1161,12 +1165,14 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
           }
         }
       >
-        <div>
+        <div
+          className="emotion-3"
+        >
           <div
-            className="emotion-3"
+            className="emotion-4"
           >
             <div
-              className="emotion-4"
+              className="emotion-5"
             >
               <h4>
                 MultiFilter with simple Search
@@ -1175,28 +1181,28 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                 role="button"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <button
-                      className="emotion-7"
+                      className="emotion-8"
                       data-testid="filter"
                       disabled={false}
                       onClick={[Function]}
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         <div
-                          className="emotion-9"
+                          className="emotion-10"
                         >
                           <div
-                            className="emotion-10"
+                            className="emotion-11"
                           >
                             <span
-                              className="emotion-11"
+                              className="emotion-12"
                             >
                               <div
                                 data-testid="filter-label"
@@ -1206,7 +1212,7 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                                 : 
                               </div>
                               <span
-                                className="emotion-12"
+                                className="emotion-13"
                                 data-testid="filter-selected-item-label"
                               >
                                 Default value
@@ -1214,11 +1220,11 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                             </span>
                           </div>
                           <span
-                            className="emotion-13"
+                            className="emotion-14"
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-14"
+                              className="emotion-15"
                             />
                           </span>
                         </div>
@@ -1229,7 +1235,7 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
               </div>
             </div>
             <div
-              className="emotion-4"
+              className="emotion-5"
             >
               <h4>
                 MultiFilter with async Search
@@ -1238,28 +1244,28 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                 role="button"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <button
-                      className="emotion-7"
+                      className="emotion-8"
                       data-testid="filter"
                       disabled={false}
                       onClick={[Function]}
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         <div
-                          className="emotion-9"
+                          className="emotion-10"
                         >
                           <div
-                            className="emotion-10"
+                            className="emotion-11"
                           >
                             <span
-                              className="emotion-11"
+                              className="emotion-12"
                             >
                               <div
                                 data-testid="filter-label"
@@ -1269,7 +1275,7 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                                 : 
                               </div>
                               <span
-                                className="emotion-12"
+                                className="emotion-13"
                                 data-testid="filter-selected-item-label"
                               >
                                 Default value
@@ -1277,11 +1283,11 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                             </span>
                           </div>
                           <span
-                            className="emotion-13"
+                            className="emotion-14"
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-14"
+                              className="emotion-15"
                             />
                           </span>
                         </div>
@@ -1292,7 +1298,7 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
               </div>
             </div>
             <div
-              className="emotion-26"
+              className="emotion-27"
             >
               <h4>
                 MultiFilter - Bottom Positioning
@@ -1301,28 +1307,28 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                 role="button"
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-6"
                 >
                   <div
-                    className="emotion-6"
+                    className="emotion-7"
                   >
                     <button
-                      className="emotion-7"
+                      className="emotion-8"
                       data-testid="filter"
                       disabled={false}
                       onClick={[Function]}
                     >
                       <div
-                        className="emotion-8"
+                        className="emotion-9"
                       >
                         <div
-                          className="emotion-9"
+                          className="emotion-10"
                         >
                           <div
-                            className="emotion-10"
+                            className="emotion-11"
                           >
                             <span
-                              className="emotion-11"
+                              className="emotion-12"
                             >
                               <div
                                 data-testid="filter-label"
@@ -1332,7 +1338,7 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                                 : 
                               </div>
                               <span
-                                className="emotion-12"
+                                className="emotion-13"
                                 data-testid="filter-selected-item-label"
                               >
                                 Default value
@@ -1340,11 +1346,11 @@ exports[`Storyshots Design System/Filter MultiFilter 1`] = `
                             </span>
                           </div>
                           <span
-                            className="emotion-13"
+                            className="emotion-14"
                             onClick={[Function]}
                           >
                             <span
-                              className="emotion-14"
+                              className="emotion-15"
                             />
                           </span>
                         </div>
