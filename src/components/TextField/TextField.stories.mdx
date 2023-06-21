@@ -59,17 +59,6 @@ TextField with icon options right and left of the text
     <Stack>
       <TextField
         label={'Label'}
-        prefix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-      />
-      <TextField
-        label={'Label'}
         suffix={
           <img
             style={{ background: 'red' }}
@@ -79,45 +68,19 @@ TextField with icon options right and left of the text
           />
         }
       />
-      <TextField
-        size={select('size', ['md', 'sm'], 'md')}
-        label={'Label'}
-        prefix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        suffix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        styleType={select('style', ['filled', 'outlined', 'elevated'], 'outlined')}
-      />
-      <TextField label={'Label'} suffix={<Loader type={'dots'} />} />
+      <TextField label={'Label'} suffix={'keyword'} />
     </Stack>
   </Story>
 </Preview>
 
-# TextField with prefix/suffix
+# TextField with suffix
 
-Regular TextField with a prefix or a suffix
+Regular TextField with a suffix
 
 <Preview>
-  <Story name="TextField with prefix/suffix">
+  <Story name="TextField with suffix">
     <Stack>
-      <TextField prefix={<div style={{ color: 'gray' }}>$</div>} />
       <TextField suffix={<div style={{ color: 'gray' }}>%</div>} />
-      <TextField
-        prefix={<div style={{ color: 'gray' }}>$</div>}
-        suffix={<div style={{ color: 'gray' }}>%</div>}
-      />
     </Stack>
   </Story>
 </Preview>
@@ -173,7 +136,6 @@ Regular TextField with Label and Statuses.
       <TextField
         label={text('Label', 'Label')}
         isDisabled={boolean('isDisabled', false)}
-        prefix={select('Prefix icon name', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
         suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),

@@ -1,9 +1,9 @@
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
-import { IconWrapper } from './components/commons';
+import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import Label from '../Label';
@@ -36,7 +36,6 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
   const {
     id = undefined,
     suffix = null,
-    prefix = null,
     label,
     placeholder = '',
     isRequired = false,
@@ -48,23 +47,25 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
 
   const isLocked = status?.type === 'read-only';
 
-  const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
-    icon ? (
-      typeof icon === 'string' ? (
+  const suffixContent = useMemo(() => {
+    if (isLocked || typeof suffix === 'string') {
+      const iconName = isLocked ? 'lock' : suffix;
+
+      return (
         <Icon
-          name={icon as AcceptedIconNames}
-          size={24}
+          name={iconName as AcceptedIconNames}
+          size={16}
           color={theme.utils.getColor('lightGrey', 650)}
         />
-      ) : (
-        icon
-      )
-    ) : null;
+      );
+    }
+
+    return suffix;
+  }, [isLocked, suffix, theme.utils]);
 
   return (
     <React.Fragment>
       <TextInputBase {...props}>
-        {prefix && <IconWrapper iconPosition={'left'}>{getIcon(prefix)}</IconWrapper>}
         <div css={{ width: '100% ' }}>
           <input
             readOnly={isLocked}
@@ -86,12 +87,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
             />
           )}
         </div>
-        {suffix && !isLocked && <IconWrapper iconPosition={'right'}>{getIcon(suffix)}</IconWrapper>}
-        {isLocked && (
-          <IconWrapper iconPosition={'right'}>
-            <Icon name="lock" size={20} color={theme.utils.getColor('lightGrey', 650)} />
-          </IconWrapper>
-        )}
+        <div css={suffixContainerStyle()}>{suffixContent}</div>
       </TextInputBase>
     </React.Fragment>
   );

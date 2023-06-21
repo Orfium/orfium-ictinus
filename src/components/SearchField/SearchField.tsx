@@ -28,7 +28,6 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
       <TextInputBase
         dataTestId={dataTestId}
         isDisabled={isDisabled}
-        prefix={'search'}
         suffix={'close'}
         sx={{ wrapper: { borderRadius: rem(100) } }}
       >

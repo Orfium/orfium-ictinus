@@ -15,8 +15,6 @@ export type TextInputBaseProps = {
   label?: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
-  /** An optional prefix (element or icon-name) to show to the left */
-  prefix?: AcceptedIconNames | JSX.Element | null;
   /** An optional suffix (element or icon-name) to show to the left */
   suffix?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
@@ -54,15 +52,9 @@ const TextInputBase: FC<TextInputBaseProps> = ({
 
   const hintMessageToShow = status.hintMessage && (
     <div data-testid={generateTestDataId('error', dataTestId)} css={hintMessageStyle({ status })}>
-      <Icon
-        color={
-          status.type === 'error'
-            ? tokens('textColor.errorHintColor')
-            : tokens('textColor.inputColorAlt')
-        }
-        name={status.type === 'error' ? 'warning' : 'info'}
-        size={12}
-      />
+      {status.type === 'error' && (
+        <Icon color={tokens('textColor.errorHintColor')} name={'warning'} size={12} />
+      )}
       <span>{status.hintMessage}</span>
     </div>
   );

@@ -192,7 +192,7 @@ export const hintMessageStyle =
       {
         display: 'flex',
         alignItems: 'center',
-        gap: rem(4),
+        gap: tokens('hintGap'),
         color:
           status?.type === 'error'
             ? tokens('textColor.errorHintColor')
