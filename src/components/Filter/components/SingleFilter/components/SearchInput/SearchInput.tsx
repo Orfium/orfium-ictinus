@@ -18,7 +18,7 @@ export type SearchInputProps = {
 const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProps) => {
   const theme = useTheme();
 
-  const rightIcon = useMemo(
+  const suffix = useMemo(
     () => (
       <div css={iconWrapper()}>
         {isLoading && <Loader />}
@@ -32,13 +32,12 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProp
     <div css={textFieldWrapper()(theme)}>
       <TextField
         autoFocus
-        styleType={'filled'}
         onChange={onChange}
         data-testid={generateTestDataId('filter-input', dataTestId)}
-        status="normal"
+        status={{ type: 'normal' }}
         placeholder="Search"
         value={value}
-        rightIcon={rightIcon}
+        suffix={suffix}
       />
     </div>
   );

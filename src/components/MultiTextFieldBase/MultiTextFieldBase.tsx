@@ -49,16 +49,12 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       selectedOptions,
       value,
       isDisabled,
-      isLocked,
       status,
-      isLean,
-      isDark,
       isReadOnly,
       label,
       id,
       placeholder,
       isRequired = false,
-      styleType,
       onOptionDelete,
       onClearAllOptions,
       isLoading,
@@ -73,14 +69,16 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
     const theme = useTheme();
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
 
+    const isLocked = status?.type === 'read-only';
+
     const { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef } =
       useMultiTextFieldBaseUtils({
         isTextfield,
         label,
         placeholder,
         isRequired,
-        isLocked,
         hasValue,
+        isLocked,
         value,
         onOptionDelete,
         onClearAllOptions,
@@ -93,7 +91,11 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           {selectedOptions?.map((option: any, index: number) => (
             <span key={generateUniqueID('chip' + index)} css={chipStyle()}>
               <Chip
-                onClear={!(isLocked || isDisabled) ? () => onOptionDelete(option) : undefined}
+                onClear={
+                  !(status?.type === 'read-only' || isDisabled)
+                    ? () => onOptionDelete(option)
+                    : undefined
+                }
                 fill="lightGrey"
                 dataTestId={`chip_${index}`}
               >
@@ -110,18 +112,14 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           ))}
         </>
       ),
-      [isDisabled, isLocked, onOptionDelete, selectedOptions]
+      [isDisabled, onOptionDelete, selectedOptions, status?.type]
     );
 
     return (
       <div ref={TextfieldRef}>
         <TextInputBase
           isDisabled={isInteractive && isDisabled}
-          isLocked={isInteractive && isLocked}
-          status={isInteractive ? status : 'normal'}
-          isLean={isLean}
-          size={'md'}
-          styleType={styleType}
+          status={isInteractive ? status : { type: 'normal' }}
           {...rest}
           isInteractive={isInteractive}
           sx={merge(
@@ -137,11 +135,8 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
               readOnly={isReadOnly}
               onKeyDown={handleKeyDown}
               css={inputStyle({
-                size: 'md',
                 placeholder,
                 label,
-                isDark,
-                isLean,
                 sx: inputOverrides(),
               })}
               placeholder={inputPlaceholder}
@@ -159,7 +154,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
                 label={label}
                 isRequired={isRequired}
                 isAnimated={hasValue}
-                hasError={status === 'error'}
+                hasError={status?.type === 'error'}
               />
             )}
           </div>

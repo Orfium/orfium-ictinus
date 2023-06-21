@@ -1,7 +1,7 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 import { Theme } from 'theme';
-import { getTextFieldHeight, getTextFieldSize } from 'utils/size-utils';
+import { getTextFieldSize } from 'utils/size-utils';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 
@@ -87,7 +87,8 @@ export const textInputBaseOverrides =
     return {
       wrapper: {
         height: 'unset',
-        minHeight: `${getTextFieldHeight('md')} !important`,
+        // TODO - fix this
+        minHeight: `${rem(52)} !important`,
         ...(hasValue
           ? { label: labelStyles }
           : {

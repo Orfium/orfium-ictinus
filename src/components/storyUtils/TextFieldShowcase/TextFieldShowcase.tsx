@@ -23,13 +23,12 @@ const TextFieldShowcase: FC = () => {
       </Box>
       <div style={{ width: '500px' }}>
         <TextField
-          multi
+          isMulti
           multiValues={tags}
           multiValuesHandler={(tags) => tags?.replace(/ /g, '').split(',')}
           name="tags"
           label="Tags"
-          hintMsg="Copy / paste comma seperated tags to add them, ex. tag1, tag2, tag3"
-          status="hint"
+          status={{ type: 'normal' }}
           onMultiValueCreate={addTags}
           onMultiValueDelete={removeTag}
           onClearAllValues={() => setTags([])}

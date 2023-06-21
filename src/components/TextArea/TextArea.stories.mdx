@@ -39,20 +39,6 @@ import { TextArea } from '@orfium/ictinus';
 
 <Props of={TextArea} />
 
-# Text Area Types
-
-Regular TextArea and the 3 available types - filled, outlined, elevated
-
-<Preview>
-  <Story name="Text Area Types">
-    <Stack>
-      <TextArea styleType={'filled'} placeholder={'placeholder here'} />
-      <TextArea styleType={'outlined'} placeholder={'placeholder here'} />
-      <TextArea styleType={'elevated'} placeholder={'placeholder here'} />
-    </Stack>
-  </Story>
-</Preview>
-
 # Text Area Sizing
 
 Regular TextArea and how to change size with cols and rows
@@ -60,8 +46,8 @@ Regular TextArea and how to change size with cols and rows
 <Preview>
   <Story name="Text Area Sizes">
     <Stack>
-      <TextArea placeholder={'Label'} styleType={'outlined'} cols={10} rows={10} />
-      <TextArea placeholder={'Label'} styleType={'outlined'} cols={35} rows={20} />
+      <TextArea placeholder={'Label'} cols={10} rows={10} />
+      <TextArea placeholder={'Label'} cols={35} rows={20} />
     </Stack>
   </Story>
 </Preview>
@@ -73,9 +59,7 @@ Regular TextArea disabled with label
 <Preview>
   <Story name="TextArea disabled with label">
     <Stack>
-      <TextArea isDisabled placeholder={'Label'} styleType={'filled'} />
-      <TextArea isDisabled placeholder={'Label'} styleType={'outlined'} />
-      <TextArea isDisabled placeholder={'Label'} styleType={'elevated'} />
+      <TextArea isDisabled placeholder={'Label'} />
     </Stack>
   </Story>
 </Preview>
@@ -89,42 +73,24 @@ Regular TextArea with Label and Statuses. Error and Hint are shown below for all
     <Stack>
       <Stack>
         <TextArea
-          hintMsg={text('custom error message', 'Error in Text Area')}
           placeholder={'Label'}
-          status={'error'}
-          styleType={'filled'}
+          status={{
+            type: 'normal',
+            hintMessage: text('Custom Hint Message', 'Hint in Text Area'),
+          }}
         />
         <TextArea
-          hintMsg={text('custom error message', 'Error in Text Area')}
           placeholder={'Label'}
-          status={'error'}
-          styleType={'outlined'}
+          status={{
+            type: 'error',
+            hintMessage: text('Custom Error Message', 'Error in Text Area'),
+          }}
         />
         <TextArea
-          hintMsg={text('custom error message', 'Error in Text Area')}
           placeholder={'Label'}
-          status={'error'}
-          styleType={'elevated'}
-        />
-      </Stack>
-      <Stack>
-        <TextArea
-          hintMsg={text('custom error message', 'Error in Text Area')}
-          placeholder={'Label'}
-          status={'hint'}
-          styleType={'filled'}
-        />
-        <TextArea
-          hintMsg={text('custom error message', 'Error in Text Area')}
-          placeholder={'Label'}
-          status={'hint'}
-          styleType={'outlined'}
-        />
-        <TextArea
-          hintMsg={text('custom error message', 'Error in Text Area')}
-          placeholder={'Label'}
-          status={'hint'}
-          styleType={'elevated'}
+          status={{
+            type: 'read-only',
+          }}
         />
       </Stack>
     </Stack>
@@ -141,9 +107,10 @@ Regular Text Area with KNOBS
       <TextArea
         placeholder={text('Label', 'Label')}
         isDisabled={boolean('isDisabled', false)}
-        styleType={select('Style', ['filled', 'outlined', 'elevated'], 'filled')}
-        hintMsg={text('custom hint message', 'Hint in Text Area')}
-        status={select('status', ['hint', 'error', 'normal'], 'normal')}
+        status={{
+          type: select('status', ['error', 'normal'], 'normal'),
+          hintMessage: text('custom hint message', 'Hint in Text Area'),
+        }}
       />
     </Stack>
   </Story>

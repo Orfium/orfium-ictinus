@@ -1,11 +1,10 @@
 import { CSSObject } from '@emotion/serialize';
 import useTheme from 'hooks/useTheme';
 import React, { FC } from 'react';
-import { formFieldStyles } from 'theme/palette';
-import { DEFAULT_SIZE } from 'utils/size-utils';
+import isEqual from 'react-fast-compare';
 
-import { textInputSizes } from './config';
-import { errorMsgStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import { hintMessageStyle, textFieldStyle, wrapperStyle } from './TextInputBase.style';
+import { getTextInputBaseTokens } from './TextInputBase.tokens';
 import { generateTestDataId } from '../../utils/helpers';
 import { TestProps } from '../../utils/types';
 import Icon from 'components/Icon';
@@ -16,71 +15,58 @@ export type TextInputBaseProps = {
   label?: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
-  /** An optional icon to show to the left
-   * TODO This prop will be renamed to 'prefix', like: https://ant.design/components/input/#components-input-demo-presuffix */
-  leftIcon?: AcceptedIconNames | JSX.Element | null;
-  /** An optional icon to show to the right
-   * TODO This prop will be renamed to 'suffix', like: https://ant.design/components/input/#components-input-demo-presuffix */
-  rightIcon?: AcceptedIconNames | JSX.Element | null;
+  /** An optional prefix (element or icon-name) to show to the left */
+  prefix?: AcceptedIconNames | JSX.Element | null;
+  /** An optional suffix (element or icon-name) to show to the left */
+  suffix?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
   isRequired?: boolean;
   /** If the text field is disabled */
   isDisabled?: boolean;
-  /** If the text field is locked. Locked state is unique to this and the system */
-  isLocked?: boolean;
-  /** dark mode of the text field */
-  isDark?: boolean;
-  /** Error message */
-  hintMsg?: React.ReactNode | string;
+  /** The status of the TextInput with an optional hint message */
+  status?: {
+    type: 'normal' | 'error' | 'read-only';
+    hintMessage?: string;
+  };
   /** value of the input */
   value?: string | number;
-  /** if the input will be without default style for use inside the library */
-  isLean?: boolean;
-  /** Style of input field */
-  styleType?: formFieldStyles;
-  /** Sets the size of the textField */
-  size?: typeof textInputSizes[number];
-  /** The status of the button regarding the status which is in - default normal */
-  status?: 'success' | 'normal' | 'hint' | 'error';
   /** Sx prop to override specific properties */
   sx?: {
     wrapper?: CSSObject;
     textField?: CSSObject;
     input?: CSSObject;
   };
-  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
-   * of the TextField. It will be replaced by a fullWidth prop. */
-  hasMinWidthCompat?: boolean;
   /** Whether the Textfield should change its styles when hovered/focused etc */
   isInteractive?: boolean;
+  children?: React.ReactNode;
 } & TestProps;
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
 const TextInputBase: FC<TextInputBaseProps> = ({
-  isLean = false,
   isDisabled,
-  hintMsg,
-  styleType = 'filled',
   dataTestId,
-  status = 'normal',
-  isLocked = false,
-  size = DEFAULT_SIZE,
-  isDark = false,
+  status = { type: 'normal' },
   isInteractive = true,
   children,
   sx,
-  hasMinWidthCompat = true,
 }) => {
   const theme = useTheme();
-  const hintMessageToShow = hintMsg && (
-    <div data-testid={generateTestDataId('error', dataTestId)} css={errorMsgStyle({ status })}>
+
+  const tokens = getTextInputBaseTokens(theme);
+
+  const hintMessageToShow = status.hintMessage && (
+    <div data-testid={generateTestDataId('error', dataTestId)} css={hintMessageStyle({ status })}>
       <Icon
-        color={status === 'error' ? 'error' : theme.utils.getColor('lightGrey', 650)}
-        name={status === 'error' ? 'issues' : 'info'}
+        color={
+          status.type === 'error'
+            ? tokens('textColor.errorHintColor')
+            : tokens('textColor.inputColorAlt')
+        }
+        name={status.type === 'error' ? 'warning' : 'info'}
         size={12}
       />
-      {hintMsg}
+      <span>{status.hintMessage}</span>
     </div>
   );
 
@@ -89,23 +75,17 @@ const TextInputBase: FC<TextInputBaseProps> = ({
       <div
         data-testid={dataTestId}
         css={wrapperStyle({
-          isDark,
-          isLocked,
           isDisabled,
           status,
-          isLean,
-          styleType,
-          size,
           sx,
-          hasMinWidthCompat,
           isInteractive,
         })}
       >
-        <div css={textFieldStyle({ isLean, sx, isLocked, isDisabled })}>{children}</div>
+        <div css={textFieldStyle({ sx })}>{children}</div>
       </div>
-      {hintMsg && status !== 'normal' && hintMessageToShow}
+      {status.hintMessage && status.type !== 'read-only' && hintMessageToShow}
     </React.Fragment>
   );
 };
 
-export default TextInputBase;
+export default React.memo(TextInputBase, isEqual);

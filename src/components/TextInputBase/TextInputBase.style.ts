@@ -1,60 +1,55 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
-import { DEFAULT_SIZE, getTextFieldSize } from 'utils/size-utils';
 
-import { textInputConfig } from './config';
+import { MIN_WIDTH } from './config';
 import { TextInputBaseProps } from './TextInputBase';
-import { getDisabled, getHover, getPressed } from '../../theme/states';
+import { getTextInputBaseTokens, TextInputBaseTokens } from './TextInputBase.tokens';
 import { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+import { body02, body03 } from 'components/Typography/Typography.config.styles';
 
 // TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
   theme,
-  colorScheme = 'semantic',
-  isLean,
   hasError,
+  isLocked,
   isDisabled,
   isInteractive,
 }: {
   theme: Theme;
   colorScheme: ColorScheme;
+  isLocked?: boolean;
   hasError?: boolean;
   isInteractive?: boolean;
-} & Pick<TextInputBaseProps, 'isLean' | 'isDisabled'>) => {
-  if (isLean) {
-    return {
-      backgroundColor: 'transparent',
-    };
-  }
-  const borderConfig = textInputConfig.types[colorScheme].outlined.border;
+} & Pick<TextInputBaseProps, 'isDisabled'>) => {
+  const tokens = getTextInputBaseTokens(theme);
 
-  const backgroundColor =
-    colorScheme === 'dark' ? theme.utils.getColor('darkGrey', 700) : theme.globals.colors.white;
-  const borderColorName = !hasError
-    ? borderConfig.color.pressed.name
-    : borderConfig.color.error.name;
-  const borderColorShade = !hasError
-    ? borderConfig.color.pressed.shade
-    : borderConfig.color.error.shade;
+  const borderColor = isLocked ? tokens('borderColor.readOnly') : tokens('borderColor.focused');
+
+  const backgroundColor = hasError
+    ? tokens('backgroundColor.error')
+    : isLocked
+    ? tokens('backgroundColor.readOnly')
+    : tokens('backgroundColor.default');
+
+  const backgroundHoveredColor = hasError
+    ? tokens('backgroundColor.errorHover')
+    : tokens('backgroundColor.hover');
 
   const events = isDisabled
     ? {
         '&:focus-within': {
-          boxShadow: `0 0 0 ${rem(1)} transparent`,
+          boxShadow: `0 0 0 ${tokens('borderWidth.2')} transparent`,
         },
       }
     : {
         '&:hover': {
-          backgroundColor: getHover({ theme }).backgroundColor,
+          backgroundColor: backgroundHoveredColor,
         },
         '&:focus-within': {
-          boxShadow: `0 0 0 ${rem(borderConfig.width + 1)} ${theme.utils.getColor(
-            borderColorName,
-            borderColorShade
-          )}`,
-          backgroundColor: getPressed({ theme }).backgroundColor,
+          boxShadow: `0 0 0 ${tokens('borderWidth.2')} ${borderColor}`,
+          backgroundColor: tokens('backgroundColor.focused'),
         },
       };
 
@@ -69,46 +64,45 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({
-    isDisabled,
-    isLocked,
-    status,
-    isLean,
-    isDark,
-    size,
-    sx,
-    isInteractive,
-    hasMinWidthCompat,
-  }: TextInputBaseProps) =>
+  ({ isDisabled, status, isInteractive, sx }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
-    const colorScheme = isDark ? 'dark' : theme.colorScheme;
-    const hasError = status === 'error';
-    const textFieldSize = !isLean
-      ? getTextFieldSize(hasMinWidthCompat, size)
-      : getTextFieldSize(hasMinWidthCompat);
-    const borderConfig = textInputConfig.types[colorScheme].outlined.border;
+    const colorScheme = theme.colorScheme;
+    const isLocked = status?.type === 'read-only';
+    const hasError = status?.type === 'error';
+
+    const tokens = getTextInputBaseTokens(theme);
+
+    const borderColor = hasError
+      ? tokens('borderColor.error')
+      : isLocked
+      ? tokens('borderColor.readOnly')
+      : tokens('borderColor.default');
 
     return css({
       display: 'flex',
       alignItems: 'center',
       position: 'relative',
       transition: `background-color 0.25s, box-shadow 0.25s, border-color 0.25s`,
-      boxShadow: `0 0 0 ${rem(borderConfig.width)} ${
-        hasError
-          ? theme.utils.getColor(borderConfig.color.error.name, borderConfig.color.error.shade)
-          : theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)
-      }`,
-      borderRadius: theme.globals.spacing.get('3'),
+
+      boxShadow: `0 0 0 ${tokens(
+        `borderWidth.${hasError ? 2 : 1}` as TextInputBaseTokens
+      )} ${borderColor}`,
+      borderRadius: tokens('borderRadius'),
       userSelect: 'none',
-      opacity: isDisabled ? getDisabled().opacity : 1,
-      cursor: isDisabled || isLocked ? getDisabled().cursor : 'text',
-      ...textFieldSize,
+      opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
+      cursor: isDisabled || isLocked ? 'not-allowed' : 'text',
+      height: tokens('container'),
+      /**
+       * TODO: every Field component will have its own min-width, will need configuration once
+       * Field components start to get implemented
+       */
+      minWidth: rem(MIN_WIDTH),
       ...wrapperStyleSwitch({
         theme,
         colorScheme,
-        isLean,
         hasError,
-        isDisabled: Boolean(isDisabled || isLocked),
+        isLocked,
+        isDisabled,
         isInteractive,
       }),
       ...sx?.wrapper,
@@ -116,8 +110,10 @@ export const wrapperStyle =
   };
 
 export const textFieldStyle =
-  ({ isLean, sx, isDisabled, isLocked }: TextInputBaseProps) =>
+  ({ sx }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
+
     return css({
       position: 'relative',
       display: 'inline-flex',
@@ -125,8 +121,8 @@ export const textFieldStyle =
       alignItems: 'center',
       verticalAlign: 'top',
       width: 'fill-available',
-      padding: !isLean ? `0 ${theme.globals.spacing.get('6')}` : '',
-      cursor: isDisabled || isLocked ? getDisabled().cursor : 'text',
+      /** TODO: revisit this when TextField's add-on is implemented */
+      padding: `0 0 0 ${tokens('paddingContentLeft')}`,
 
       '> div': {
         position: 'relative',
@@ -137,35 +133,27 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({
-    label,
-    placeholder,
-    size = DEFAULT_SIZE,
-    isDark,
-    sx,
-    isDisabled,
-    isLocked,
-  }: TextInputBaseProps) =>
-  (theme: Theme): SerializedStyles =>
-    css({
+  ({ label, placeholder, sx }: TextInputBaseProps) =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
+
+    return css(body02(theme), {
       background: 'transparent',
       border: 'none',
-      color:
-        theme.colorScheme === 'dark' || isDark
-          ? theme.globals.colors.white
-          : theme.utils.getColor('darkGrey', 850),
+      color: tokens('textColor.inputColor'),
       display: 'block',
       position: 'relative',
+      /**
+       * TODO revisit this when field components are implemented, Label is part of (Multi)TextField component
+       */
       top: label ? rem(7) : undefined,
       zIndex: 1,
-      fontSize: theme.globals.typography.fontSize[size === 'md' ? '15' : '13'],
       textOverflow: 'ellipsis',
       width: 0,
       minWidth: '100%',
 
       '& + label': {
-        fontSize: theme.globals.typography.fontSize[size === 'md' ? '15' : '13'],
-        cursor: isDisabled || isLocked ? getDisabled().cursor : 'text',
+        fontSize: theme.globals.typography.fontSize[15],
       },
 
       '&:focus': {
@@ -173,7 +161,8 @@ export const inputStyle =
       },
 
       '&::placeholder': {
-        color: !label && placeholder ? theme.utils.getColor('lightGrey', 650) : 'transparent',
+        color: !label && placeholder ? tokens('textColor.inputColorAlt') : 'transparent',
+        ...(!label && placeholder ? body02(theme) : {}),
       },
 
       '&:not(:focus):placeholder-shown': {
@@ -182,10 +171,16 @@ export const inputStyle =
         },
       },
 
-      '&:focus, &:not(:placeholder-shown)': {
+      '&:focus-within, &:not(:placeholder-shown)': {
         '& + label': {
           transform: `translate(${LABEL_TRANSFORM_LEFT_SPACING}, -35%) scale(0.8)`,
           fontWeight: theme.globals.typography.fontWeight.get('bold'),
+        },
+      },
+
+      '&:focus-within': {
+        '& + label': {
+          color: tokens('textColor.labelActive'),
         },
       },
 
@@ -194,25 +189,28 @@ export const inputStyle =
       },
       ...sx?.input,
     });
+  };
 
-export const errorMsgStyle =
+export const hintMessageStyle =
   ({ status }: TextInputBaseProps) =>
-  (theme: Theme): SerializedStyles =>
-    css({
-      display: 'flex',
-      color:
-        status === 'error'
-          ? theme.utils.getColor('error', 550, 'normal')
-          : theme.utils.getColor('lightGrey', 650),
-      fontSize: theme.globals.typography.fontSize.get('2'),
-      lineHeight: 1,
-      padding: `${rem(8)} 0 0`,
-      svg: {
-        padding: `0 ${rem(2)}`,
-      },
+  (theme: Theme): SerializedStyles => {
+    const tokens = getTextInputBaseTokens(theme);
 
-      span: {
-        alignItems: 'stretch',
-        padding: `0 ${rem(2)}`,
+    return css(
+      {
+        display: 'flex',
+        alignItems: 'center',
+        gap: rem(4),
+        color:
+          status?.type === 'error'
+            ? tokens('textColor.errorHintColor')
+            : tokens('textColor.inputColorAlt'),
+        padding: `${tokens('hintPadding')} 0 0`,
+        span: {
+          alignItems: 'stretch',
+          padding: 0,
+        },
       },
-    });
+      body03(theme)
+    );
+  };

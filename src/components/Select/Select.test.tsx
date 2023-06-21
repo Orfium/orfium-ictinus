@@ -36,7 +36,6 @@ describe('Generic Select', () => {
           <Select
             label={'Country'}
             options={dropdownList}
-            styleType={'filled'}
             handleSelectedOption={handleSubmit}
           />
         </div>
@@ -103,7 +102,6 @@ describe('Generic Select', () => {
             isLoading={isLoading}
             label={'Country'}
             options={dropdownList}
-            styleType={'filled'}
             handleSelectedOption={handleSubmit}
             asyncSearch={asyncSearch}
             minCharactersToSearch={minCharacters}

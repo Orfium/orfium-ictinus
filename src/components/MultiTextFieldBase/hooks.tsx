@@ -22,7 +22,7 @@ const useMultiTextFieldBaseUtils = ({
   onOptionDelete,
   onClearAllOptions,
   onKeyDown,
-}: Props) => {
+}: Props & { isLocked: boolean }) => {
   const TextfieldRef = React.useRef<HTMLDivElement>(null);
 
   const theme = useTheme();

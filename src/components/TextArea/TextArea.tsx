@@ -1,11 +1,10 @@
-import { omit } from 'lodash';
 import * as React from 'react';
+import isEqual from 'react-fast-compare';
 
 import { sxProp } from './TextArea.style';
 import { useTheme } from '../../index';
-import { formFieldStyles } from '../../theme/palette';
 import { TestProps } from '../../utils/types';
-import TextInputBase from '../TextInputBase/TextInputBase';
+import TextInputBase, { TextInputBaseProps } from '../TextInputBase/TextInputBase';
 import { inputStyle as baseInputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type TextAreaProps = {
@@ -19,12 +18,6 @@ export type TextAreaProps = {
   isDisabled?: boolean;
   /** If the text area can be resized */
   isResizeEnabled?: boolean;
-  /** Style of input field */
-  styleType?: formFieldStyles;
-  /** Error message */
-  hintMsg?: React.ReactNode | string;
-  /** The status of the button regarding the status which is in - default normal */
-  status?: 'success' | 'normal' | 'hint' | 'error';
   /** Callback fired when the `input` is blurred. */
   onBlur?: React.FocusEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   /** Callback fired when the `input` is changed. */
@@ -35,7 +28,8 @@ export type TextAreaProps = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-} & TestProps;
+} & Pick<TextInputBaseProps, 'status'> &
+  TestProps;
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, ref) => {
   const {
@@ -63,7 +57,7 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
             required={isRequired}
             id={id}
             disabled={isDisabled}
-            {...omit(rest, ['styleType', 'hintMsg'])}
+            {...rest}
             ref={ref}
           />
         </div>
@@ -74,4 +68,4 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
 
 TextArea.displayName = 'TextArea';
 
-export default TextArea;
+export default React.memo(TextArea, isEqual);

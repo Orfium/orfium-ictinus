@@ -641,7 +641,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #cfd7e5;
+  box-shadow: 0 0 0 0.0625rem #a2bdfb;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -649,18 +649,18 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   user-select: none;
   opacity: 1;
   cursor: text;
-  min-width: 9.375rem;
-  height: 2.875rem;
-  background-color: white;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
 }
 
 .emotion-10:hover {
-  background-color: #f3f5f8;
+  background-color: #e7eefe;
 }
 
 .emotion-10:focus-within {
-  box-shadow: 0 0 0 0.125rem #1451dc;
-  background-color: #e7ebf2;
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #e7eefe;
 }
 
 .emotion-11 {
@@ -680,8 +680,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   width: -webkit-fill-available;
   width: -moz-available;
   width: fill-available;
-  padding: 0 1rem;
-  cursor: text;
+  padding: 0 0 0 0.75rem;
 }
 
 .emotion-11>div {
@@ -693,13 +692,17 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-13 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
   background: transparent;
   border: none;
-  color: #0f0f17;
+  color: #212332;
   display: block;
   position: relative;
   z-index: 1;
-  font-size: 0.9375rem;
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
@@ -707,7 +710,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 
 .emotion-13+label {
   font-size: 0.9375rem;
-  cursor: text;
 }
 
 .emotion-13:focus {
@@ -734,13 +736,17 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   font-weight: normal;
 }
 
-.emotion-13:focus+label,
+.emotion-13:focus-within+label,
 .emotion-13:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
   transform: translate(0.1875rem, -35%) scale(0.8);
   font-weight: 700;
+}
+
+.emotion-13:focus-within+label {
+  color: #1451dc;
 }
 
 .emotion-13:disabled {
@@ -959,6 +965,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   <input
                     className="emotion-13"
                     disabled={false}
+                    readOnly={false}
                     required={false}
                   />
                 </div>
@@ -980,6 +987,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   <input
                     className="emotion-13"
                     disabled={false}
+                    readOnly={false}
                     required={false}
                   />
                 </div>
@@ -1001,6 +1009,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                   <input
                     className="emotion-13"
                     disabled={false}
+                    readOnly={false}
                     required={false}
                   />
                 </div>

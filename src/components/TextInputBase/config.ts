@@ -6,7 +6,7 @@ export const SM = 'sm';
 export const MD_HEIGHT = 46;
 export const SM_HEIGHT = 28;
 
-export const MIN_WIDTH = 150;
+export const MIN_WIDTH = 140;
 
 export const MULTI_WIDTH = 220;
 

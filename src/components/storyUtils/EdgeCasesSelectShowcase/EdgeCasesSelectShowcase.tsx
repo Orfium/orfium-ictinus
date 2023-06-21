@@ -31,7 +31,6 @@ const EdgeCasesSelectShowcase: React.FC = () => {
           ]}
           selectedOption={defaultValue}
           handleSelectedOption={handleSelectedOption}
-          styleType={'filled'}
         />
       </div>
       <Select
@@ -39,7 +38,6 @@ const EdgeCasesSelectShowcase: React.FC = () => {
         options={options}
         selectedOption={defaultValue}
         handleSelectedOption={handleSelectedOption}
-        styleType={'filled'}
       />
 
       <div style={{ width: 100 }}>
@@ -48,7 +46,6 @@ const EdgeCasesSelectShowcase: React.FC = () => {
           options={options}
           selectedOption={defaultValue}
           handleSelectedOption={handleSelectedOption}
-          styleType={'filled'}
         />
       </div>
       <div style={{ width: 400, position: 'absolute', bottom: '15%' }}>
@@ -57,7 +54,6 @@ const EdgeCasesSelectShowcase: React.FC = () => {
           options={options}
           selectedOption={defaultValue}
           handleSelectedOption={handleSelectedOption}
-          styleType={'filled'}
         />
       </div>
     </div>

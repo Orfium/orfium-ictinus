@@ -26,12 +26,7 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
       <div css={container}>
         <div css={{ flexDirection: 'column', marginRight: '8px' }}>
           <div css={inputWrapper}>
-            <TextField
-              placeholder={color.normal || DEFAULT_COLOR}
-              size={'md'}
-              styleType={'outlined'}
-              onChange={updateColor}
-            />
+            <TextField placeholder={color.normal || DEFAULT_COLOR} onChange={updateColor} />
           </div>
           <div css={colorWrapper(color.normal)}>
             <div css={contentWrapper}>normal : {color.normal}</div>

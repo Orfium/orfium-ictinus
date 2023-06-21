@@ -2,7 +2,7 @@ import useCombinedRefs from 'hooks/useCombinedRefs';
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
 import React, { InputHTMLAttributes } from 'react';
-import { DEFAULT_SIZE } from 'utils/size-utils';
+import isEqual from 'react-fast-compare';
 
 import { IconWrapper } from './components/commons';
 import useMultiTextFieldUtils from './hooks/useMultiTextFieldUtils';
@@ -38,7 +38,7 @@ export type TextFieldProps = {
    * of the TextField. It will be replaced by a fullWidth prop. */
   hasMinWidthCompat?: boolean;
   /** If true the user can enter multiple values by pressing 'Enter' */
-  multi?: boolean;
+  isMulti?: boolean;
   /** The initial multi values */
   multiValues?: string[];
   /** Maximum multi values */
@@ -55,144 +55,127 @@ export type TextFieldProps = {
   InputProps &
   TestProps;
 
-console.warn(
-  'Deprecation warning! min-width will be removed from the component in v5 of ictinus. ' +
-    'hasMinWidthCompat prop has been added to temporarily disable min-width when necessary'
-);
+const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
+  const {
+    id = undefined,
+    suffix = null,
+    prefix = null,
+    label,
+    placeholder = '',
+    isRequired = false,
+    isDisabled,
+    isReadOnly,
+    status,
+    onInput,
+    // TODO change to isMulti
+    isMulti = false,
+    multiValues = [],
+    maxMultiValues,
+    onMultiValueCreate,
+    onMultiValueDelete,
+    onClearAllValues,
+    multiValuesHandler = (value) => value,
+    ...rest
+  } = props;
+  const theme = useTheme();
 
-const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>(
-  (props, ref) => {
-    const {
-      id = undefined,
-      rightIcon = null,
-      leftIcon = null,
-      label,
-      placeholder = '',
-      isRequired = false,
-      isDisabled,
-      isLocked = false,
-      size = DEFAULT_SIZE,
-      isDark = false,
-      isLean,
-      hintMsg: __hintMsg,
-      styleType: __styleType,
-      isReadOnly,
-      status,
-      hasMinWidthCompat = true,
-      onInput,
-      // TODO change to isMulti
-      multi = false,
-      multiValues = [],
-      maxMultiValues,
-      onMultiValueCreate,
-      onMultiValueDelete,
-      onClearAllValues,
-      multiValuesHandler = (value) => value,
-      ...rest
-    } = props;
-    const theme = useTheme();
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  const combinedRefs = useCombinedRefs(inputRef, ref);
 
-    const inputRef = React.useRef<HTMLInputElement>(null);
-    const combinedRefs = useCombinedRefs(inputRef, ref);
+  const isLocked = status?.type === 'read-only';
 
-    const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
-      icon ? (
-        typeof icon === 'string' ? (
-          <Icon
-            name={icon as AcceptedIconNames}
-            size={24}
-            color={theme.utils.getColor('lightGrey', 650)}
-          />
-        ) : (
-          icon
-        )
-      ) : null;
+  const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
+    icon ? (
+      typeof icon === 'string' ? (
+        <Icon
+          name={icon as AcceptedIconNames}
+          size={24}
+          color={theme.utils.getColor('lightGrey', 650)}
+        />
+      ) : (
+        icon
+      )
+    ) : null;
 
-    const handleClick = () => {
-      if (!isLocked && !isDisabled) {
-        combinedRefs.current?.focus();
-      }
-    };
+  const handleClick = () => {
+    if (!isLocked && !isDisabled) {
+      combinedRefs.current?.focus();
+    }
+  };
 
-    const {
-      inputValue,
-      values,
-      handleValueDelete,
-      handleClearAllValues,
-      handleKeyDown,
-      handleTyping,
-    } = useMultiTextFieldUtils({
-      multiValues,
-      maxMultiValues,
-      onMultiValueCreate,
-      onMultiValueDelete,
-      onClearAllValues,
-      onInput,
-      multiValuesHandler,
-    });
+  const {
+    inputValue,
+    values,
+    handleValueDelete,
+    handleClearAllValues,
+    handleKeyDown,
+    handleTyping,
+  } = useMultiTextFieldUtils({
+    multiValues,
+    maxMultiValues,
+    onMultiValueCreate,
+    onMultiValueDelete,
+    onClearAllValues,
+    onInput,
+    multiValuesHandler,
+  });
 
-    return (
-      <div onClick={handleClick}>
-        {multi ? (
-          <MultiTextFieldBase
-            {...props}
-            isTextfield
-            onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
-            onClearAllOptions={handleClearAllValues}
-            label={label}
-            onInput={handleTyping}
-            onKeyDown={handleKeyDown}
-            selectedOptions={values}
-            value={inputValue}
-            ref={combinedRefs}
-          />
-        ) : (
-          <TextInputBase {...props} hasMinWidthCompat={hasMinWidthCompat}>
-            {leftIcon && <IconWrapper iconPosition={'left'}>{getIcon(leftIcon)}</IconWrapper>}
-            <div css={{ width: '100% ' }}>
-              <input
-                readOnly={isReadOnly}
-                css={inputStyle({ label, placeholder, size, isDark, isLean, isDisabled, isLocked })}
-                placeholder={
-                  !label && placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label
-                }
-                required={isRequired}
-                id={id}
-                disabled={isDisabled || isLocked}
-                onInput={onInput}
-                {...omit(rest, 'dataTestId')}
-                ref={combinedRefs}
+  return (
+    <div onClick={handleClick}>
+      {isMulti ? (
+        <MultiTextFieldBase
+          {...props}
+          isTextfield
+          onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
+          onClearAllOptions={handleClearAllValues}
+          label={label}
+          onInput={handleTyping}
+          onKeyDown={handleKeyDown}
+          selectedOptions={values}
+          value={inputValue}
+          ref={combinedRefs}
+        />
+      ) : (
+        <TextInputBase {...props}>
+          {prefix && <IconWrapper iconPosition={'left'}>{getIcon(prefix)}</IconWrapper>}
+          <div css={{ width: '100% ' }}>
+            <input
+              readOnly={isLocked}
+              css={inputStyle({ label, placeholder })}
+              placeholder={
+                !label && placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label
+              }
+              required={isRequired}
+              id={id}
+              disabled={isDisabled || isLocked}
+              onInput={onInput}
+              {...omit(rest, 'dataTestId')}
+              ref={combinedRefs}
+            />
+            {label && (
+              <Label
+                htmlFor={id}
+                label={label}
+                isRequired={isRequired}
+                isAnimated={Boolean(rest.value)}
+                hasError={status?.type === 'error'}
               />
-              {label && (
-                <Label
-                  size={size}
-                  htmlFor={id}
-                  label={label}
-                  isRequired={isRequired}
-                  isAnimated={Boolean(rest.value)}
-                  hasError={status === 'error'}
-                />
-              )}
-            </div>
-            {rightIcon && !isLocked && (
-              <IconWrapper iconPosition={'right'}>{getIcon(rightIcon)}</IconWrapper>
             )}
-            {isLocked && (
-              <IconWrapper iconPosition={'right'}>
-                <Icon
-                  name="lock"
-                  size={size === 'md' ? 20 : 16}
-                  color={theme.utils.getColor('lightGrey', 650)}
-                />
-              </IconWrapper>
-            )}
-          </TextInputBase>
-        )}
-      </div>
-    );
-  }
-);
+          </div>
+          {suffix && !isLocked && (
+            <IconWrapper iconPosition={'right'}>{getIcon(suffix)}</IconWrapper>
+          )}
+          {isLocked && (
+            <IconWrapper iconPosition={'right'}>
+              <Icon name="lock" size={20} color={theme.utils.getColor('lightGrey', 650)} />
+            </IconWrapper>
+          )}
+        </TextInputBase>
+      )}
+    </div>
+  );
+});
 
 TextField.displayName = 'TextField';
 
-export default TextField;
+export default React.memo(TextField, isEqual);

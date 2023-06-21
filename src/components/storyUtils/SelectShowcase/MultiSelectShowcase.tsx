@@ -5,10 +5,7 @@ import Select from '../../Select';
 import { SelectOption } from '../../Select/Select';
 
 type Props = {
-  isLocked?: boolean;
   isDisabled?: boolean;
-  status?: 'hint' | 'success' | 'normal' | 'error' | undefined;
-  hintMessage?: string;
   hasSelectAllOption?: boolean;
   isCreatable?: boolean;
 };
@@ -41,10 +38,7 @@ export const dummyUnrefinedData = new Array(15).fill(undefined).map((__, index) 
 }));
 
 const SelectShowcase: React.FC<Props> = ({
-  isLocked = false,
   isDisabled = false,
-  status = 'hint',
-  hintMessage = '',
   hasSelectAllOption = false,
   isCreatable = false,
 }) => {
@@ -71,10 +65,7 @@ const SelectShowcase: React.FC<Props> = ({
           label={'Multi Select'}
           options={options}
           selectedOptions={selectedOptions}
-          isLocked={isLocked}
           isDisabled={isDisabled}
-          status={status}
-          hintMsg={hintMessage}
           hasSelectAllOption={hasSelectAllOption}
           isCreatable={isCreatable}
         />
@@ -88,10 +79,7 @@ const SelectShowcase: React.FC<Props> = ({
           asyncSearch={mockedApiCall}
           isLoading={isLoading}
           onKeyPress={() => setIsLoading(true)}
-          isLocked={isLocked}
           isDisabled={isDisabled}
-          status={status}
-          hintMsg={hintMessage}
           hasSelectAllOption={hasSelectAllOption}
           isCreatable={isCreatable}
         />

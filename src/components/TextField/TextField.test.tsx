@@ -14,7 +14,7 @@ describe('Multi TextField', () => {
   beforeEach(() => {
     render(
       <div>
-        <TextField multi label={'Country'} multiValues={values} />
+        <TextField isMulti label={'Country'} multiValues={values} />
       </div>
     );
   });
