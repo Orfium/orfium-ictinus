@@ -2,13 +2,28 @@
 
 exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -24,25 +39,25 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -59,23 +74,10 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -98,17 +100,17 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
         }
       >
         <div
-          className="emotion-0"
+          className="emotion-2"
         >
           <button
-            className="emotion-1"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             >
               <span>
                 Show Notifications
@@ -133,6 +135,21 @@ exports[`Storyshots Design System/Notification Banner Notification 1`] = `
 
 exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -146,7 +163,7 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
@@ -165,11 +182,11 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   background: #f4faf5;
 }
 
-.emotion-1[notification-type='banner'] {
+.emotion-3[notification-type='banner'] {
   box-shadow: 0px 4px 8px rgba(16, 48, 102, 0.07);
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,11 +198,11 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   padding: 0 1rem;
 }
 
-.emotion-3 {
+.emotion-5 {
   padding-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -201,21 +218,21 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   fill: #36C152;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-5 path {
+.emotion-7 path {
   fill: #36C152;
 }
 
-.emotion-6 {
+.emotion-8 {
   padding: 1rem 0;
 }
 
-.emotion-7 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -228,14 +245,14 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   font-weight: 500;
 }
 
-.emotion-15 {
+.emotion-17 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-16 {
+.emotion-18 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -251,25 +268,25 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-16:focus-visible:not(:disabled) {
+.emotion-18:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-16:disabled {
+.emotion-18:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-16:hover:not(:disabled) {
+.emotion-18:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-16:active:not(:disabled) {
+.emotion-18:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -285,42 +302,29 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-18 {
+.emotion-20 {
   cursor: pointer;
   margin-left: 1rem;
 }
 
-.emotion-20 {
+.emotion-22 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-20 path {
+.emotion-22 path {
   fill: #5f6c85;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -342,33 +346,33 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
             data-testid="inline"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                   />
                 </span>
               </div>
               <div
-                className="emotion-6"
+                className="emotion-8"
                 data-testid="inline-message"
               >
                 Informative Message
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-9"
             />
           </div>
           <p
@@ -402,46 +406,46 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
             data-testid="inline"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                   />
                 </span>
               </div>
               <div
-                className="emotion-6"
+                className="emotion-8"
                 data-testid="inline-message"
               >
                 Informative Message
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-9"
             >
               <div
-                className="emotion-15"
+                className="emotion-17"
               >
                 <button
-                  className="emotion-16"
+                  className="emotion-18"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-17"
+                    className="emotion-19"
                   >
                     <span>
                       Action
@@ -450,16 +454,16 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
                 </button>
               </div>
               <span
-                className="emotion-18"
+                className="emotion-20"
                 data-testid="notification-close"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-20"
+                    className="emotion-22"
                   />
                 </span>
               </span>
@@ -496,46 +500,46 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
             data-testid="inline"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                   />
                 </span>
               </div>
               <div
-                className="emotion-6"
+                className="emotion-8"
                 data-testid="inline-message"
               >
                 Informative Message
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-9"
             >
               <div
-                className="emotion-15"
+                className="emotion-17"
               >
                 <button
-                  className="emotion-16"
+                  className="emotion-18"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-17"
+                    className="emotion-19"
                   >
                     <span>
                       Action
@@ -576,45 +580,45 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
           }
         >
           <div
-            className="emotion-1"
+            className="emotion-3"
             data-testid="inline"
           >
             <div
-              className="emotion-2"
+              className="emotion-4"
             >
               <div
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-5"
+                    className="emotion-7"
                   />
                 </span>
               </div>
               <div
-                className="emotion-6"
+                className="emotion-8"
                 data-testid="inline-message"
               >
                 Informative Message
               </div>
             </div>
             <div
-              className="emotion-7"
+              className="emotion-9"
             >
               <span
-                className="emotion-18"
+                className="emotion-20"
                 data-testid="notification-close"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-4"
+                  className="emotion-6"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-20"
+                    className="emotion-22"
                   />
                 </span>
               </span>
@@ -638,13 +642,28 @@ exports[`Storyshots Design System/Notification Inline Notification 1`] = `
 
 exports[`Storyshots Design System/Notification Playground 1 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -660,25 +679,25 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -695,23 +714,10 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -734,17 +740,17 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
         }
       >
         <div
-          className="emotion-0"
+          className="emotion-2"
         >
           <button
-            className="emotion-1"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             >
               <span>
                 Show Notifications
@@ -769,13 +775,28 @@ exports[`Storyshots Design System/Notification Playground 1 1`] = `
 
 exports[`Storyshots Design System/Notification Playground 2 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -791,25 +812,25 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -826,23 +847,10 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -865,17 +873,17 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
         }
       >
         <div
-          className="emotion-0"
+          className="emotion-2"
         >
           <button
-            className="emotion-1"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             >
               <span>
                 Show Notifications
@@ -900,13 +908,28 @@ exports[`Storyshots Design System/Notification Playground 2 1`] = `
 
 exports[`Storyshots Design System/Notification Playground 3 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -922,25 +945,25 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -957,23 +980,10 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -996,17 +1006,17 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
         }
       >
         <div
-          className="emotion-0"
+          className="emotion-2"
         >
           <button
-            className="emotion-1"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             >
               <span>
                 Show Notifications
@@ -1031,13 +1041,28 @@ exports[`Storyshots Design System/Notification Playground 3 1`] = `
 
 exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1053,25 +1078,25 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1088,23 +1113,10 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -1127,17 +1139,17 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
         }
       >
         <div
-          className="emotion-0"
+          className="emotion-2"
         >
           <button
-            className="emotion-1"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             >
               <span>
                 Show Notifications
@@ -1162,13 +1174,28 @@ exports[`Storyshots Design System/Notification Snackbar Notification 1`] = `
 
 exports[`Storyshots Design System/Notification Toast Notification 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -1184,25 +1211,25 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1219,23 +1246,10 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
       style={
@@ -1258,17 +1272,17 @@ exports[`Storyshots Design System/Notification Toast Notification 1`] = `
         }
       >
         <div
-          className="emotion-0"
+          className="emotion-2"
         >
           <button
-            className="emotion-1"
+            className="emotion-3"
             data-testid="button"
             disabled={false}
             onClick={[Function]}
             type="button"
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             >
               <span>
                 Show Notifications

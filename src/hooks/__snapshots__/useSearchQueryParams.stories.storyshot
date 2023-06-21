@@ -1,24 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Hooks/useSearchQueryParams useSearchQueryParams 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div>
       <h1>

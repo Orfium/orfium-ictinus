@@ -34,6 +34,8 @@ export type TextInputBaseProps = {
     textField?: CSSObject;
     input?: CSSObject;
   };
+  /** Whether the Textfield should change its styles when hovered/focused etc */
+  isInteractive?: boolean;
   children?: React.ReactNode;
 } & TestProps;
 
@@ -43,6 +45,7 @@ const TextInputBase: FC<TextInputBaseProps> = ({
   isDisabled,
   dataTestId,
   status = { type: 'normal' },
+  isInteractive = true,
   children,
   sx,
 }) => {
@@ -67,6 +70,7 @@ const TextInputBase: FC<TextInputBaseProps> = ({
           isDisabled,
           status,
           sx,
+          isInteractive,
         })}
       >
         <div css={textFieldStyle({ sx })}>{children}</div>

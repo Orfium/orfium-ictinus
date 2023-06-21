@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/SearchField Search Field 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +30,7 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,22 +49,22 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
-  height: 3.25rem;
+  cursor: text;
+  height: 2.875rem;
   min-width: 8.75rem;
   background-color: #ffffff;
 }
 
-.emotion-1:hover {
+.emotion-3:hover {
   background-color: #e7eefe;
 }
 
-.emotion-1:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #e7eefe;
 }
 
-.emotion-2 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -69,11 +84,11 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   padding: 0 0 0 0.75rem;
 }
 
-.emotion-2>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-3 {
+.emotion-5 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -89,7 +104,7 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -105,21 +120,21 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-5 path {
+.emotion-7 path {
   fill: #5f6c85;
 }
 
-.emotion-6 {
+.emotion-8 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -136,11 +151,15 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   min-width: 100%;
 }
 
-.emotion-7:focus {
+.emotion-9+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -148,7 +167,7 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -156,7 +175,7 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -164,7 +183,7 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7::placeholder {
+.emotion-9::placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -172,12 +191,12 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-9:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus-within+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-9:focus-within+label,
+.emotion-9:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -185,35 +204,22 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   font-weight: 700;
 }
 
-.emotion-7:focus-within+label {
+.emotion-9:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-7:disabled {
+.emotion-9:disabled {
   cursor: not-allowed;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -223,28 +229,28 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <div
-            className="emotion-2"
+            className="emotion-4"
           >
             <div
-              className="emotion-3"
+              className="emotion-5"
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                 />
               </span>
             </div>
             <div
-              className="emotion-6"
+              className="emotion-8"
             >
               <input
-                className="emotion-7"
+                className="emotion-9"
                 onChange={[Function]}
                 placeholder="Search"
                 value=""
@@ -260,6 +266,21 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
 
 exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -273,7 +294,7 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -293,16 +314,16 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   user-select: none;
   opacity: 50%;
   cursor: not-allowed;
-  height: 3.25rem;
+  height: 2.875rem;
   min-width: 8.75rem;
   background-color: #ffffff;
 }
 
-.emotion-1:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem transparent;
 }
 
-.emotion-2 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -322,11 +343,11 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   padding: 0 0 0 0.75rem;
 }
 
-.emotion-2>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-3 {
+.emotion-5 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -342,7 +363,7 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   margin-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -358,21 +379,21 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-5 path {
+.emotion-7 path {
   fill: #5f6c85;
 }
 
-.emotion-6 {
+.emotion-8 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -389,11 +410,15 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   min-width: 100%;
 }
 
-.emotion-7:focus {
+.emotion-9+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -401,7 +426,7 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -409,7 +434,7 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -417,7 +442,7 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7::placeholder {
+.emotion-9::placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -425,12 +450,12 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-9:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus-within+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-9:focus-within+label,
+.emotion-9:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -438,35 +463,22 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   font-weight: 700;
 }
 
-.emotion-7:focus-within+label {
+.emotion-9:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-7:disabled {
+.emotion-9:disabled {
   cursor: not-allowed;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -476,28 +488,28 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <div
-            className="emotion-2"
+            className="emotion-4"
           >
             <div
-              className="emotion-3"
+              className="emotion-5"
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                 />
               </span>
             </div>
             <div
-              className="emotion-6"
+              className="emotion-8"
             >
               <input
-                className="emotion-7"
+                className="emotion-9"
                 disabled={true}
                 onChange={[Function]}
                 placeholder="Search"
@@ -514,6 +526,21 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
 
 exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -527,7 +554,7 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -546,22 +573,22 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
-  height: 3.25rem;
+  cursor: text;
+  height: 2.875rem;
   min-width: 8.75rem;
   background-color: #ffffff;
 }
 
-.emotion-1:hover {
+.emotion-3:hover {
   background-color: #e7eefe;
 }
 
-.emotion-1:focus-within {
+.emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #e7eefe;
 }
 
-.emotion-2 {
+.emotion-4 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -581,11 +608,11 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   padding: 0 0 0 0.75rem;
 }
 
-.emotion-2>div {
+.emotion-4>div {
   position: relative;
 }
 
-.emotion-3 {
+.emotion-5 {
   line-height: 0.8;
   height: 1rem;
   display: -webkit-box;
@@ -601,7 +628,7 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   margin-right: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -617,21 +644,21 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   fill: #5f6c85;
   width: 1.25rem;
   height: 1.25rem;
 }
 
-.emotion-5 path {
+.emotion-7 path {
   fill: #5f6c85;
 }
 
-.emotion-6 {
+.emotion-8 {
   width: 100%;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -648,11 +675,15 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   min-width: 100%;
 }
 
-.emotion-7:focus {
+.emotion-9+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-9:focus {
   outline: none;
 }
 
-.emotion-7::-webkit-input-placeholder {
+.emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -660,7 +691,7 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7::-moz-placeholder {
+.emotion-9::-moz-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -668,7 +699,7 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:-ms-input-placeholder {
+.emotion-9:-ms-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -676,7 +707,7 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7::placeholder {
+.emotion-9::placeholder {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -684,12 +715,12 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7:not(:focus):placeholder-shown+label {
+.emotion-9:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-7:focus-within+label,
-.emotion-7:not(:placeholder-shown)+label {
+.emotion-9:focus-within+label,
+.emotion-9:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -697,35 +728,22 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   font-weight: 700;
 }
 
-.emotion-7:focus-within+label {
+.emotion-9:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-7:disabled {
+.emotion-9:disabled {
   cursor: not-allowed;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -735,28 +753,28 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
         >
           <div
-            className="emotion-2"
+            className="emotion-4"
           >
             <div
-              className="emotion-3"
+              className="emotion-5"
             >
               <span
-                className="emotion-4"
+                className="emotion-6"
                 onClick={[Function]}
               >
                 <span
-                  className="emotion-5"
+                  className="emotion-7"
                 />
               </span>
             </div>
             <div
-              className="emotion-6"
+              className="emotion-8"
             >
               <input
-                className="emotion-7"
+                className="emotion-9"
                 onChange={[Function]}
                 placeholder="Placeholder"
                 value=""

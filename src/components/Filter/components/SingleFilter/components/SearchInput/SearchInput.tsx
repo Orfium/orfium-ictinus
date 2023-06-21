@@ -4,9 +4,9 @@ import { useMemo } from 'react';
 import { generateTestDataId } from 'utils/helpers';
 
 import { textFieldWrapper, iconWrapper } from './SearchInput.style';
-import Icon from '../../../Icon';
-import Loader from '../../../Loader';
-import TextField from '../../../TextField';
+import Icon from 'components/Icon';
+import Loader from 'components/Loader';
+import TextField from 'components/TextField';
 
 export type SearchInputProps = {
   value: string;

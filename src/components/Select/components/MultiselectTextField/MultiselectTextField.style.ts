@@ -15,13 +15,6 @@ export const chipContent =
       max-width: ${maxWidth ? rem(maxWidth - 120) : 'unset'};
     `;
 
-export const textFieldContainer =
-  () =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      margin: ${theme.globals.spacing.get('2')} ${theme.globals.spacing.get('3')} 0 0;
-    `;
-
 export const rightIconsContainer =
   () =>
   (theme: Theme): SerializedStyles =>

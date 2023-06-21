@@ -9,16 +9,19 @@ import { ColorScheme } from '../../theme/types';
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
 import { body02, body03 } from 'components/Typography/Typography.config.styles';
 
+// TODO:MERGE: remove theme as prop and do it as (theme) => ({}) because emotion should pass
 const wrapperStyleSwitch = ({
   theme,
   hasError,
   isLocked,
   isDisabled,
+  isInteractive,
 }: {
   theme: Theme;
   colorScheme: ColorScheme;
   isLocked?: boolean;
   hasError?: boolean;
+  isInteractive?: boolean;
 } & Pick<TextInputBaseProps, 'isDisabled'>) => {
   const tokens = getTextInputBaseTokens(theme);
 
@@ -52,7 +55,7 @@ const wrapperStyleSwitch = ({
 
   return {
     backgroundColor: backgroundColor,
-    ...events,
+    ...(isInteractive ? events : {}),
   };
 };
 
@@ -61,7 +64,7 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ isDisabled, status, sx }: TextInputBaseProps) =>
+  ({ isDisabled, status, isInteractive, sx }: TextInputBaseProps) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = theme.colorScheme;
     const isLocked = status?.type === 'read-only';
@@ -87,7 +90,7 @@ export const wrapperStyle =
       borderRadius: tokens('borderRadius'),
       userSelect: 'none',
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
-      cursor: isDisabled || isLocked ? 'not-allowed' : 'auto',
+      cursor: isDisabled || isLocked ? 'not-allowed' : 'text',
       height: tokens('container'),
       /**
        * TODO: every Field component will have its own min-width, will need configuration once
@@ -100,6 +103,7 @@ export const wrapperStyle =
         hasError,
         isLocked,
         isDisabled,
+        isInteractive,
       }),
       ...sx?.wrapper,
     });
@@ -147,6 +151,10 @@ export const inputStyle =
       textOverflow: 'ellipsis',
       width: 0,
       minWidth: '100%',
+
+      '& + label': {
+        fontSize: theme.globals.typography.fontSize[15],
+      },
 
       '&:focus': {
         outline: 'none',

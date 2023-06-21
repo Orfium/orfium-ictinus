@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +30,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -54,13 +69,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-1 img {
+.emotion-3 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-6 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -76,37 +91,24 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
   justify-content: center;
 }
 
-.emotion-5 {
+.emotion-7 {
   fill: #b2104a;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-5 path {
+.emotion-7 path {
   fill: #b2104a;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -116,7 +118,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
           data-testid="_avatar"
         >
           JN
@@ -130,7 +132,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
           data-testid="_avatar"
         >
           <img
@@ -146,15 +148,15 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
           data-testid="_avatar"
         >
           <span
-            className="emotion-4"
+            className="emotion-6"
             onClick={[Function]}
           >
             <span
-              className="emotion-5"
+              className="emotion-7"
             />
           </span>
         </div>
@@ -166,6 +168,21 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar Playground 1`] = `
 
 exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -179,7 +196,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -218,13 +235,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-1 img {
+.emotion-3 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -240,14 +257,504 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   justify-content: center;
 }
 
-.emotion-3 {
+.emotion-5 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-3 path {
+.emotion-5 path {
   fill: #1451dc;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.125rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-6 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-8 {
+  fill: #1451dc;
+  width: 1.2000000000000002rem;
+  height: 1.2000000000000002rem;
+}
+
+.emotion-8 path {
+  fill: #1451dc;
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-9 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-11 {
+  fill: #1451dc;
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.emotion-11 path {
+  fill: #1451dc;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+  letter-spacing: 0.00625rem;
+}
+
+.emotion-12 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-14 {
+  fill: #1451dc;
+  width: 2.4000000000000004rem;
+  height: 2.4000000000000004rem;
+}
+
+.emotion-14 path {
+  fill: #1451dc;
+}
+
+.emotion-15 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  letter-spacing: 0rem;
+}
+
+.emotion-15 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-17 {
+  fill: #1451dc;
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.emotion-17 path {
+  fill: #1451dc;
+}
+
+.emotion-18 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+  letter-spacing: 0rem;
+}
+
+.emotion-18 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-20 {
+  fill: #1451dc;
+  width: 4.4rem;
+  height: 4.4rem;
+}
+
+.emotion-20 path {
+  fill: #1451dc;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-3"
+          data-testid="_avatar"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-5"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-6"
+          data-testid="_avatar"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-8"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-9"
+          data-testid="_avatar"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-11"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-12"
+          data-testid="_avatar"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-14"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-15"
+          data-testid="_avatar"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-17"
+            />
+          </span>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-18"
+          data-testid="_avatar"
+        >
+          <span
+            className="emotion-4"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-20"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Avatar/Avatar Avatar with letter 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 6.25rem;
+  border: 0.0625rem solid;
+  border-color: #c2c8ff;
+  box-sizing: border-box;
+  background-color: #d0defd;
+  color: #1451dc;
+  overflow: hidden;
+  position: relative;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0rem;
+}
+
+.emotion-3 img {
+  border-radius: #c2c8ff;
+  width: 100%;
+  height: 100%;
 }
 
 .emotion-4 {
@@ -295,17 +802,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   height: 100%;
 }
 
-.emotion-6 {
-  fill: #1451dc;
-  width: 1.2000000000000002rem;
-  height: 1.2000000000000002rem;
-}
-
-.emotion-6 path {
-  fill: #1451dc;
-}
-
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -344,23 +841,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-7 img {
+.emotion-5 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-9 {
-  fill: #1451dc;
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-.emotion-9 path {
-  fill: #1451dc;
-}
-
-.emotion-10 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -399,23 +886,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   letter-spacing: 0.00625rem;
 }
 
-.emotion-10 img {
+.emotion-6 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-12 {
-  fill: #1451dc;
-  width: 2.4000000000000004rem;
-  height: 2.4000000000000004rem;
-}
-
-.emotion-12 path {
-  fill: #1451dc;
-}
-
-.emotion-13 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -454,23 +931,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-13 img {
+.emotion-7 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-15 {
-  fill: #1451dc;
-  width: 3.2rem;
-  height: 3.2rem;
-}
-
-.emotion-15 path {
-  fill: #1451dc;
-}
-
-.emotion-16 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -509,43 +976,20 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-16 img {
+.emotion-8 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-18 {
-  fill: #1451dc;
-  width: 4.4rem;
-  height: 4.4rem;
-}
-
-.emotion-18 path {
-  fill: #1451dc;
-}
-
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -555,17 +999,10 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
         }
       >
         <div
-          className="emotion-1"
+          className="emotion-3"
           data-testid="_avatar"
         >
-          <span
-            className="emotion-2"
-            onClick={[Function]}
-          >
-            <span
-              className="emotion-3"
-            />
-          </span>
+          JN
         </div>
       </div>
       <div
@@ -579,14 +1016,35 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
           className="emotion-4"
           data-testid="_avatar"
         >
-          <span
-            className="emotion-2"
-            onClick={[Function]}
-          >
-            <span
-              className="emotion-6"
-            />
-          </span>
+          JN
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-5"
+          data-testid="_avatar"
+        >
+          JN
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-6"
+          data-testid="_avatar"
+        >
+          JN
         </div>
       </div>
       <div
@@ -600,402 +1058,6 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with icon 1`] = `
           className="emotion-7"
           data-testid="_avatar"
         >
-          <span
-            className="emotion-2"
-            onClick={[Function]}
-          >
-            <span
-              className="emotion-9"
-            />
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-10"
-          data-testid="_avatar"
-        >
-          <span
-            className="emotion-2"
-            onClick={[Function]}
-          >
-            <span
-              className="emotion-12"
-            />
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-13"
-          data-testid="_avatar"
-        >
-          <span
-            className="emotion-2"
-            onClick={[Function]}
-          >
-            <span
-              className="emotion-15"
-            />
-          </span>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-16"
-          data-testid="_avatar"
-        >
-          <span
-            className="emotion-2"
-            onClick={[Function]}
-          >
-            <span
-              className="emotion-18"
-            />
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Design System/Avatar/Avatar Avatar with letter 1`] = `
-.emotion-0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 0.625rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  letter-spacing: 0rem;
-}
-
-.emotion-1 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-2 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 0.75rem;
-  font-weight: 500;
-  line-height: 1.125rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-2 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-3 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 0.875rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  letter-spacing: 0.015625rem;
-}
-
-.emotion-3 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-4 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.375rem;
-  letter-spacing: 0.00625rem;
-}
-
-.emotion-4 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-5 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 2rem;
-  letter-spacing: 0rem;
-}
-
-.emotion-5 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-.emotion-6 {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 6.25rem;
-  border: 0.0625rem solid;
-  border-color: #c2c8ff;
-  box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
-  overflow: hidden;
-  position: relative;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 2.5rem;
-  letter-spacing: 0rem;
-}
-
-.emotion-6 img {
-  border-radius: #c2c8ff;
-  width: 100%;
-  height: 100%;
-}
-
-<div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
-  >
-    <div
-      className="emotion-0"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-1"
-          data-testid="_avatar"
-        >
           JN
         </div>
       </div>
@@ -1007,63 +1069,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with letter 1`] = `
         }
       >
         <div
-          className="emotion-2"
-          data-testid="_avatar"
-        >
-          JN
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-3"
-          data-testid="_avatar"
-        >
-          JN
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-4"
-          data-testid="_avatar"
-        >
-          JN
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-5"
-          data-testid="_avatar"
-        >
-          JN
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-6"
+          className="emotion-8"
           data-testid="_avatar"
         >
           JN
@@ -1076,6 +1082,21 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with letter 1`] = `
 
 exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1089,7 +1110,7 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1128,13 +1149,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-1 img {
+.emotion-3 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1173,13 +1194,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-2 img {
+.emotion-4 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1218,13 +1239,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-3 img {
+.emotion-5 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1263,13 +1284,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   letter-spacing: 0.00625rem;
 }
 
-.emotion-4 img {
+.emotion-6 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1308,13 +1329,13 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-5 img {
+.emotion-7 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1353,66 +1374,21 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-6 img {
+.emotion-8 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-1"
-          data-testid="_avatar"
-        >
-          <img
-            src="https://mui.com/static/images/avatar/1.jpg"
-          />
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          className="emotion-2"
-          data-testid="_avatar"
-        >
-          <img
-            src="https://mui.com/static/images/avatar/1.jpg"
-          />
-        </div>
-      </div>
       <div
         style={
           Object {
@@ -1470,6 +1446,38 @@ exports[`Storyshots Design System/Avatar/Avatar Avatar with src 1`] = `
       >
         <div
           className="emotion-6"
+          data-testid="_avatar"
+        >
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-7"
+          data-testid="_avatar"
+        >
+          <img
+            src="https://mui.com/static/images/avatar/1.jpg"
+          />
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          className="emotion-8"
           data-testid="_avatar"
         >
           <img

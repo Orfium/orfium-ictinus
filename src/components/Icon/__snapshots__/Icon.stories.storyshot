@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Icon Icon with color 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +30,7 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -31,97 +46,84 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
-  fill: #e7eefe;
-  width: 1rem;
-  height: 1rem;
-}
-
-.emotion-2 path {
-  fill: #e7eefe;
-}
-
 .emotion-4 {
-  fill: #1de9b6;
+  fill: #e7eefe;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-4 path {
-  fill: #1de9b6;
+  fill: #e7eefe;
 }
 
 .emotion-6 {
-  fill: #36C152;
+  fill: #1de9b6;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-6 path {
-  fill: #36C152;
+  fill: #1de9b6;
 }
 
 .emotion-8 {
-  fill: #FF176B;
+  fill: #36C152;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-8 path {
-  fill: #FF176B;
+  fill: #36C152;
 }
 
 .emotion-10 {
-  fill: #4945ee;
+  fill: #FF176B;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-10 path {
-  fill: #4945ee;
+  fill: #FF176B;
 }
 
 .emotion-12 {
-  fill: #FF9F0F;
+  fill: #4945ee;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-12 path {
+  fill: #4945ee;
+}
+
+.emotion-14 {
+  fill: #FF9F0F;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-14 path {
   fill: #FF9F0F;
 }
 
-.emotion-18 {
+.emotion-20 {
   fill: #de5798;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-18 path {
+.emotion-20 path {
   fill: #de5798;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -143,11 +145,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -181,11 +183,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-6"
             />
           </span>
           <p
@@ -219,11 +221,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-6"
+              className="emotion-8"
             />
           </span>
           <p
@@ -257,11 +259,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-8"
+              className="emotion-10"
             />
           </span>
           <p
@@ -295,11 +297,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-10"
+              className="emotion-12"
             />
           </span>
           <p
@@ -333,11 +335,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-12"
+              className="emotion-14"
             />
           </span>
           <p
@@ -371,11 +373,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -409,11 +411,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-6"
             />
           </span>
           <p
@@ -447,11 +449,11 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-18"
+              className="emotion-20"
             />
           </span>
           <p
@@ -472,6 +474,21 @@ exports[`Storyshots Design System/Icon Icon with color 1`] = `
 
 exports[`Storyshots Design System/Icon Icon with size 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -485,7 +502,7 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -501,20 +518,10 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-4 {
   fill: #e7eefe;
   width: 1rem;
   height: 1rem;
-}
-
-.emotion-2 path {
-  fill: #e7eefe;
-}
-
-.emotion-4 {
-  fill: #e7eefe;
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 .emotion-4 path {
@@ -523,35 +530,32 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
 
 .emotion-6 {
   fill: #e7eefe;
-  width: 2.875rem;
-  height: 2.875rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .emotion-6 path {
   fill: #e7eefe;
 }
 
+.emotion-8 {
+  fill: #e7eefe;
+  width: 2.875rem;
+  height: 2.875rem;
+}
+
+.emotion-8 path {
+  fill: #e7eefe;
+}
+
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -573,11 +577,11 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -611,11 +615,11 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-4"
+              className="emotion-6"
             />
           </span>
           <p
@@ -649,11 +653,11 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-6"
+              className="emotion-8"
             />
           </span>
           <p
@@ -674,6 +678,21 @@ exports[`Storyshots Design System/Icon Icon with size 1`] = `
 
 exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -687,7 +706,7 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -703,37 +722,24 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
   justify-content: center;
 }
 
-.emotion-2 {
+.emotion-4 {
   fill: #32324E;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-2 path {
+.emotion-4 path {
   fill: #32324E;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -755,11 +761,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -793,11 +799,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -831,11 +837,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -869,11 +875,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -907,11 +913,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -945,11 +951,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -983,11 +989,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1021,11 +1027,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1059,11 +1065,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1097,11 +1103,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1135,11 +1141,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1173,11 +1179,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1211,11 +1217,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1249,11 +1255,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1287,11 +1293,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1325,11 +1331,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1363,11 +1369,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1401,11 +1407,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1439,11 +1445,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1477,11 +1483,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1515,11 +1521,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1553,11 +1559,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1591,11 +1597,49 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
+            />
+          </span>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
+            }
+          >
+            channel
+          </p>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 150,
+            }
+          }
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-4"
             />
           </span>
           <p
@@ -1629,11 +1673,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1667,11 +1711,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1705,11 +1749,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1743,11 +1787,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1781,11 +1825,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1819,11 +1863,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1857,11 +1901,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1895,11 +1939,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1933,11 +1977,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -1971,11 +2015,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2009,11 +2053,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2047,11 +2091,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2085,11 +2129,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2123,11 +2167,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2161,11 +2205,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2199,11 +2243,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2237,11 +2281,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2275,11 +2319,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2313,11 +2357,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2351,11 +2395,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2389,11 +2433,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2427,11 +2471,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2465,11 +2509,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2503,11 +2547,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2541,11 +2585,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2579,11 +2623,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2617,11 +2661,49 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
+            />
+          </span>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
+            }
+          >
+            copy
+          </p>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 150,
+            }
+          }
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-4"
             />
           </span>
           <p
@@ -2655,11 +2737,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2693,11 +2775,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2731,11 +2813,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2769,11 +2851,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2807,11 +2889,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2845,11 +2927,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2883,11 +2965,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2921,11 +3003,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2959,11 +3041,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -2997,11 +3079,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3035,11 +3117,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3073,11 +3155,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3111,11 +3193,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3149,11 +3231,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3187,11 +3269,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3225,11 +3307,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3263,11 +3345,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3301,11 +3383,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3339,11 +3421,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3377,11 +3459,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3415,11 +3497,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3453,11 +3535,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3491,11 +3573,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3529,11 +3611,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3567,11 +3649,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3605,11 +3687,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3643,11 +3725,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3681,11 +3763,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3719,11 +3801,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3757,11 +3839,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3795,11 +3877,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3833,11 +3915,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3871,11 +3953,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3909,11 +3991,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3947,11 +4029,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -3985,11 +4067,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4023,11 +4105,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4061,11 +4143,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4099,11 +4181,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4137,11 +4219,87 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
+            />
+          </span>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
+            }
+          >
+            licence
+          </p>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 150,
+            }
+          }
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-4"
+            />
+          </span>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
+            }
+          >
+            licencedVideo
+          </p>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 150,
+            }
+          }
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-4"
             />
           </span>
           <p
@@ -4175,11 +4333,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4213,11 +4371,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4251,11 +4409,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4289,11 +4447,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4327,11 +4485,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4365,11 +4523,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4403,11 +4561,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4441,11 +4599,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4479,11 +4637,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4517,11 +4675,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4555,11 +4713,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4593,11 +4751,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4631,11 +4789,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4669,11 +4827,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4707,11 +4865,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4745,11 +4903,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4783,11 +4941,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4821,11 +4979,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4859,11 +5017,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4897,11 +5055,49 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
+            />
+          </span>
+          <p
+            style={
+              Object {
+                "paddingTop": "8px",
+              }
+            }
+          >
+            play
+          </p>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "column",
+              "justifyContent": "center",
+              "padding": "1rem",
+              "width": 150,
+            }
+          }
+        >
+          <span
+            className="emotion-3"
+            onClick={[Function]}
+          >
+            <span
+              className="emotion-4"
             />
           </span>
           <p
@@ -4935,11 +5131,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -4973,11 +5169,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5011,11 +5207,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5049,11 +5245,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5087,11 +5283,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5125,11 +5321,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5163,11 +5359,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5201,11 +5397,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5239,11 +5435,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5277,11 +5473,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5315,11 +5511,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5353,11 +5549,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5391,11 +5587,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5429,11 +5625,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5467,11 +5663,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5505,11 +5701,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5543,11 +5739,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5581,11 +5777,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5619,11 +5815,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5657,11 +5853,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5695,11 +5891,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5733,11 +5929,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5771,11 +5967,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5809,11 +6005,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5847,11 +6043,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5885,11 +6081,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5923,11 +6119,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5961,11 +6157,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -5999,11 +6195,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6037,11 +6233,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6075,11 +6271,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6113,11 +6309,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6151,11 +6347,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6189,11 +6385,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6227,11 +6423,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6265,11 +6461,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6303,11 +6499,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6341,11 +6537,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6379,11 +6575,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6417,11 +6613,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6455,11 +6651,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6493,11 +6689,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6531,11 +6727,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6569,11 +6765,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6607,11 +6803,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6645,11 +6841,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6683,11 +6879,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6721,11 +6917,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6759,11 +6955,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6797,11 +6993,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6835,11 +7031,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6873,11 +7069,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6911,11 +7107,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6949,11 +7145,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -6987,11 +7183,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -7025,11 +7221,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p
@@ -7063,11 +7259,11 @@ exports[`Storyshots Design System/Icon Icons Gallery 1`] = `
           }
         >
           <span
-            className="emotion-1"
+            className="emotion-3"
             onClick={[Function]}
           >
             <span
-              className="emotion-2"
+              className="emotion-4"
             />
           </span>
           <p

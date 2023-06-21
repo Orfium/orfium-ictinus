@@ -13628,6 +13628,22 @@ exports[`PaletteShowcase should render correctly 1`] = `
   text-transform: uppercase;
 }
 
+.emotion-736 {
+  width: calc(100% - 20px);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 10px;
+}
+
 .emotion-737 {
   height: 100px;
   background: white;
@@ -13651,6 +13667,21 @@ exports[`PaletteShowcase should render correctly 1`] = `
 
 .emotion-739 {
   font-size: 14px;
+}
+
+.emotion-740 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 .emotion-741 {
@@ -14197,7 +14228,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
   background-color: #ffffff;
@@ -14255,6 +14286,10 @@ exports[`PaletteShowcase should render correctly 1`] = `
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
+}
+
+.emotion-776+label {
+  font-size: 0.9375rem;
 }
 
 .emotion-776:focus {
@@ -14315,6 +14350,25 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-777 {
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-778 {
   background: white;
   width: 400px;
   height: 50px;
@@ -14344,14 +14398,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-778 {
+.emotion-779 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-779 {
+.emotion-780 {
   background: #fff;
   width: 400px;
   height: 50px;
@@ -14381,14 +14435,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-780 {
+.emotion-781 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-781 {
+.emotion-782 {
   background: #e5e5e5;
   width: 400px;
   height: 50px;
@@ -14418,7 +14472,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-783 {
+.emotion-784 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -14433,7 +14487,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-784 {
+.emotion-785 {
   height: 50px;
   width: calc(100% - 20px);
   background: #fff;
@@ -14463,16 +14517,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-784 div:last-child {
+.emotion-785 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-785 {
-  text-transform: capitalize;
-}
-
-.emotion-802 {
+.emotion-803 {
   height: 50px;
   width: calc(100% - 20px);
   background: white;
@@ -14502,12 +14552,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-802 div:last-child {
+.emotion-803 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-804 {
+.emotion-805 {
   height: 50px;
   width: calc(100% - 20px);
   background: #e5e5e5;
@@ -14537,12 +14587,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-804 div:last-child {
+.emotion-805 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-806 {
+.emotion-807 {
   height: 50px;
   width: calc(100% - 20px);
   background: #ccc;
@@ -14572,12 +14622,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-806 div:last-child {
+.emotion-807 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-808 {
+.emotion-809 {
   height: 50px;
   width: calc(100% - 20px);
   background: #b2b2b2;
@@ -14607,12 +14657,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-808 div:last-child {
+.emotion-809 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-810 {
+.emotion-811 {
   height: 50px;
   width: calc(100% - 20px);
   background: #999;
@@ -14642,12 +14692,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-810 div:last-child {
+.emotion-811 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-812 {
+.emotion-813 {
   height: 50px;
   width: calc(100% - 20px);
   background: #7f7f7f;
@@ -14677,12 +14727,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-812 div:last-child {
+.emotion-813 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-814 {
+.emotion-815 {
   height: 50px;
   width: calc(100% - 20px);
   background: #666;
@@ -14712,12 +14762,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-814 div:last-child {
+.emotion-815 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-816 {
+.emotion-817 {
   height: 50px;
   width: calc(100% - 20px);
   background: #4c4c4c;
@@ -14747,12 +14797,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-816 div:last-child {
+.emotion-817 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-818 {
+.emotion-819 {
   height: 50px;
   width: calc(100% - 20px);
   background: #323232;
@@ -14782,12 +14832,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-818 div:last-child {
+.emotion-819 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-820 {
+.emotion-821 {
   height: 50px;
   width: calc(100% - 20px);
   background: #191919;
@@ -14817,7 +14867,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-820 div:last-child {
+.emotion-821 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -28449,6 +28499,22 @@ exports[`PaletteShowcase should render correctly 1`] = `
   text-transform: uppercase;
 }
 
+.emotion-736 {
+  width: calc(100% - 20px);
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 10px;
+}
+
 .emotion-737 {
   height: 100px;
   background: white;
@@ -28472,6 +28538,21 @@ exports[`PaletteShowcase should render correctly 1`] = `
 
 .emotion-739 {
   font-size: 14px;
+}
+
+.emotion-740 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
 .emotion-741 {
@@ -29018,7 +29099,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   -ms-user-select: none;
   user-select: none;
   opacity: 1;
-  cursor: auto;
+  cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
   background-color: #ffffff;
@@ -29076,6 +29157,10 @@ exports[`PaletteShowcase should render correctly 1`] = `
   text-overflow: ellipsis;
   width: 0;
   min-width: 100%;
+}
+
+.emotion-776+label {
+  font-size: 0.9375rem;
 }
 
 .emotion-776:focus {
@@ -29136,6 +29221,25 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-777 {
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-778 {
   background: white;
   width: 400px;
   height: 50px;
@@ -29165,14 +29269,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-778 {
+.emotion-779 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-779 {
+.emotion-780 {
   background: #fff;
   width: 400px;
   height: 50px;
@@ -29202,14 +29306,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-780 {
+.emotion-781 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-781 {
+.emotion-782 {
   background: #e5e5e5;
   width: 400px;
   height: 50px;
@@ -29239,7 +29343,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-783 {
+.emotion-784 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -29254,7 +29358,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-784 {
+.emotion-785 {
   height: 50px;
   width: calc(100% - 20px);
   background: #fff;
@@ -29284,16 +29388,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-784 div:last-child {
+.emotion-785 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-785 {
-  text-transform: capitalize;
-}
-
-.emotion-802 {
+.emotion-803 {
   height: 50px;
   width: calc(100% - 20px);
   background: white;
@@ -29323,12 +29423,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-802 div:last-child {
+.emotion-803 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-804 {
+.emotion-805 {
   height: 50px;
   width: calc(100% - 20px);
   background: #e5e5e5;
@@ -29358,12 +29458,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-804 div:last-child {
+.emotion-805 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-806 {
+.emotion-807 {
   height: 50px;
   width: calc(100% - 20px);
   background: #ccc;
@@ -29393,12 +29493,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-806 div:last-child {
+.emotion-807 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-808 {
+.emotion-809 {
   height: 50px;
   width: calc(100% - 20px);
   background: #b2b2b2;
@@ -29428,12 +29528,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-808 div:last-child {
+.emotion-809 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-810 {
+.emotion-811 {
   height: 50px;
   width: calc(100% - 20px);
   background: #999;
@@ -29463,12 +29563,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-810 div:last-child {
+.emotion-811 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-812 {
+.emotion-813 {
   height: 50px;
   width: calc(100% - 20px);
   background: #7f7f7f;
@@ -29498,12 +29598,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-812 div:last-child {
+.emotion-813 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-814 {
+.emotion-815 {
   height: 50px;
   width: calc(100% - 20px);
   background: #666;
@@ -29533,12 +29633,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-814 div:last-child {
+.emotion-815 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-816 {
+.emotion-817 {
   height: 50px;
   width: calc(100% - 20px);
   background: #4c4c4c;
@@ -29568,12 +29668,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-816 div:last-child {
+.emotion-817 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-818 {
+.emotion-819 {
   height: 50px;
   width: calc(100% - 20px);
   background: #323232;
@@ -29603,12 +29703,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-818 div:last-child {
+.emotion-819 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-820 {
+.emotion-821 {
   height: 50px;
   width: calc(100% - 20px);
   background: #191919;
@@ -29638,7 +29738,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-820 div:last-child {
+.emotion-821 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -33982,7 +34082,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
       Another palette is the pale where is not having shades.
     </p>
     <div
-      class="emotion-5"
+      class="emotion-736"
     >
       <div
         class="emotion-737"
@@ -33997,7 +34097,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
         />
       </div>
       <div
-        class="emotion-9"
+        class="emotion-740"
       >
         <div
           class="emotion-741"
@@ -34188,35 +34288,40 @@ exports[`PaletteShowcase should render correctly 1`] = `
           <div
             class="emotion-772"
           >
-            <div
-              class="emotion-773"
-            >
+            <div>
               <div
-                class="emotion-774"
+                class="emotion-773"
               >
                 <div
-                  class="emotion-775"
+                  class="emotion-774"
                 >
-                  <input
-                    class="emotion-776"
-                    placeholder="white "
+                  <div
+                    class="emotion-775"
+                  >
+                    <input
+                      class="emotion-776"
+                      placeholder="white "
+                    />
+                  </div>
+                  <div
+                    class="emotion-777"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="emotion-777"
+            class="emotion-778"
           >
             <div
-              class="emotion-778"
+              class="emotion-779"
             >
               normal : 
               white
             </div>
           </div>
           <div
-            class="emotion-779"
+            class="emotion-780"
           >
             <input
               id="lighten-range"
@@ -34227,7 +34332,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
               value="0.1"
             />
             <div
-              class="emotion-780"
+              class="emotion-781"
             >
               lighten
                
@@ -34237,7 +34342,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-781"
+            class="emotion-782"
           >
             <input
               id="lighten-range"
@@ -34248,7 +34353,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
               value="0.1"
             />
             <div
-              class="emotion-780"
+              class="emotion-781"
             >
               darken
                
@@ -34259,232 +34364,232 @@ exports[`PaletteShowcase should render correctly 1`] = `
           </div>
         </div>
         <div
-          class="emotion-783"
+          class="emotion-784"
         >
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               50
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               100
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               150
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               200
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               250
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               300
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               350
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               400
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-784"
+            class="emotion-785"
           >
             <div>
               450
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #fff
             </div>
           </div>
           <div
-            class="emotion-802"
+            class="emotion-803"
           >
             <div>
               500
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               white
             </div>
           </div>
           <div
-            class="emotion-804"
+            class="emotion-805"
           >
             <div>
               550
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #e5e5e5
             </div>
           </div>
           <div
-            class="emotion-806"
+            class="emotion-807"
           >
             <div>
               600
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #ccc
             </div>
           </div>
           <div
-            class="emotion-808"
+            class="emotion-809"
           >
             <div>
               650
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #b2b2b2
             </div>
           </div>
           <div
-            class="emotion-810"
+            class="emotion-811"
           >
             <div>
               700
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #999
             </div>
           </div>
           <div
-            class="emotion-812"
+            class="emotion-813"
           >
             <div>
               750
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #7f7f7f
             </div>
           </div>
           <div
-            class="emotion-814"
+            class="emotion-815"
           >
             <div>
               800
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #666
             </div>
           </div>
           <div
-            class="emotion-816"
+            class="emotion-817"
           >
             <div>
               850
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #4c4c4c
             </div>
           </div>
           <div
-            class="emotion-818"
+            class="emotion-819"
           >
             <div>
               900
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #323232
             </div>
           </div>
           <div
-            class="emotion-820"
+            class="emotion-821"
           >
             <div>
               950
             </div>
             <div
-              class="emotion-785"
+              class="emotion-11"
             >
               #191919
             </div>

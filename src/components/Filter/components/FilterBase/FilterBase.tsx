@@ -30,7 +30,7 @@ export type FilterBaseProps = {
   hasSelectedValue: boolean;
 } & Pick<
   FilterProps,
-  'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType'
+  'dataTestId' | 'isDisabled' | 'label' | 'buttonType' | 'filterType' | 'styleType' | 'isMulti'
 >;
 
 export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((props, ref) => {
@@ -49,6 +49,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
     filterType = 'preset',
     styleType,
     children,
+    isMulti,
   } = props;
 
   const { calculateColorBetweenColorAndType } = useTypeColorToColorMatch();
@@ -102,11 +103,15 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
             <div css={childrenWrapperStyle()}>
               <span css={labelSpanStyle(isOpen, hasSelectedValue)}>
                 {label && (
-                  <div>
+                  <div data-testid="filter-label">
                     {label} {!isDatePicker ? <>:&nbsp;</> : ''}
                   </div>
                 )}
-                {selectedItemLabel && <span css={valueSpanStyle()}>{selectedItemLabel}</span>}
+                {selectedItemLabel && (
+                  <span css={valueSpanStyle()} data-testid="filter-selected-item-label">
+                    {selectedItemLabel}
+                  </span>
+                )}
               </span>
             </div>
 
@@ -114,7 +119,7 @@ export const FilterBase = React.forwardRef<HTMLButtonElement, FilterBaseProps>((
           </div>
         </div>
 
-        {filterType === 'added' && (
+        {filterType === 'added' && !isMulti && (
           <>
             <span css={divider(buttonStyleProps)} />
             <div css={dividedButtonStyle(buttonStyleProps)}>

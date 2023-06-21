@@ -2,6 +2,21 @@
 
 exports[`Storyshots Design System/Overlay Overlay 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,14 +30,14 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   flex-wrap: wrap;
 }
 
-.emotion-1 {
+.emotion-3 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-2 {
+.emotion-4 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -38,25 +53,25 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-2:focus-visible:not(:disabled) {
+.emotion-4:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-2:disabled {
+.emotion-4:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-2:hover:not(:disabled) {
+.emotion-4:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-2:active:not(:disabled) {
+.emotion-4:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,7 +87,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -99,7 +114,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -126,7 +141,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-6 {
+.emotion-8 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -141,7 +156,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   padding: 0.5rem 0.5rem 0 0;
 }
 
-.emotion-8 {
+.emotion-10 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -157,25 +172,25 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-8:focus-visible:not(:disabled) {
+.emotion-10:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-8:disabled {
+.emotion-10:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-8:hover:not(:disabled) {
+.emotion-10:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-8:active:not(:disabled) {
+.emotion-10:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-9 {
+.emotion-11 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -191,21 +206,21 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-12 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-12 path {
   fill: #1451dc;
 }
 
-.emotion-11 {
+.emotion-13 {
   padding: 2rem;
 }
 
-.emotion-15 {
+.emotion-17 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -235,7 +250,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   flex-direction: column;
 }
 
-.emotion-16 {
+.emotion-18 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -262,7 +277,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-26 {
+.emotion-28 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -293,7 +308,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   justify-content: flex-end;
 }
 
-.emotion-27 {
+.emotion-29 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -320,7 +335,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-37 {
+.emotion-39 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -354,7 +369,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
   flex-direction: column;
 }
 
-.emotion-38 {
+.emotion-40 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -382,26 +397,13 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div
-      className="emotion-0"
+      className="emotion-2"
     >
       <div
         style={
@@ -412,17 +414,17 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
       >
         <div>
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <button
-              className="emotion-2"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span>
                   left
@@ -431,7 +433,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
             </button>
           </div>
           <div
-            className="emotion-4"
+            className="emotion-6"
             data-testid="overlay-container"
           >
             <div
@@ -445,34 +447,34 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
               }
             >
               <div
-                className="emotion-5"
+                className="emotion-7"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-8"
                 >
                   <div
-                    className="emotion-1"
+                    className="emotion-3"
                   >
                     <button
-                      className="emotion-8"
+                      className="emotion-10"
                       data-testid="icon-button-overlay-close"
                       disabled={false}
                       onClick={[Function]}
                       type="button"
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-12"
                         />
                       </span>
                     </button>
                   </div>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-13"
                 >
                   <div
                     style={
@@ -499,17 +501,17 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
       >
         <div>
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <button
-              className="emotion-2"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span>
                   top
@@ -518,7 +520,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
             </button>
           </div>
           <div
-            className="emotion-15"
+            className="emotion-17"
             data-testid="overlay-container"
           >
             <div
@@ -532,34 +534,34 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
               }
             >
               <div
-                className="emotion-16"
+                className="emotion-18"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-8"
                 >
                   <div
-                    className="emotion-1"
+                    className="emotion-3"
                   >
                     <button
-                      className="emotion-8"
+                      className="emotion-10"
                       data-testid="icon-button-overlay-close"
                       disabled={false}
                       onClick={[Function]}
                       type="button"
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-12"
                         />
                       </span>
                     </button>
                   </div>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-13"
                 >
                   <div
                     style={
@@ -586,17 +588,17 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
       >
         <div>
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <button
-              className="emotion-2"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span>
                   right
@@ -605,7 +607,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
             </button>
           </div>
           <div
-            className="emotion-26"
+            className="emotion-28"
             data-testid="overlay-container"
           >
             <div
@@ -619,34 +621,34 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
               }
             >
               <div
-                className="emotion-27"
+                className="emotion-29"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-8"
                 >
                   <div
-                    className="emotion-1"
+                    className="emotion-3"
                   >
                     <button
-                      className="emotion-8"
+                      className="emotion-10"
                       data-testid="icon-button-overlay-close"
                       disabled={false}
                       onClick={[Function]}
                       type="button"
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-12"
                         />
                       </span>
                     </button>
                   </div>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-13"
                 >
                   <div
                     style={
@@ -673,17 +675,17 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
       >
         <div>
           <div
-            className="emotion-1"
+            className="emotion-3"
           >
             <button
-              className="emotion-2"
+              className="emotion-4"
               data-testid="button"
               disabled={false}
               onClick={[Function]}
               type="button"
             >
               <span
-                className="emotion-3"
+                className="emotion-5"
               >
                 <span>
                   bottom
@@ -692,7 +694,7 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
             </button>
           </div>
           <div
-            className="emotion-37"
+            className="emotion-39"
             data-testid="overlay-container"
           >
             <div
@@ -706,34 +708,34 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
               }
             >
               <div
-                className="emotion-38"
+                className="emotion-40"
               >
                 <div
-                  className="emotion-6"
+                  className="emotion-8"
                 >
                   <div
-                    className="emotion-1"
+                    className="emotion-3"
                   >
                     <button
-                      className="emotion-8"
+                      className="emotion-10"
                       data-testid="icon-button-overlay-close"
                       disabled={false}
                       onClick={[Function]}
                       type="button"
                     >
                       <span
-                        className="emotion-9"
+                        className="emotion-11"
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-10"
+                          className="emotion-12"
                         />
                       </span>
                     </button>
                   </div>
                 </div>
                 <div
-                  className="emotion-11"
+                  className="emotion-13"
                 >
                   <div
                     style={
@@ -758,13 +760,28 @@ exports[`Storyshots Design System/Overlay Overlay 1`] = `
 
 exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
 .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-1 {
+.emotion-3 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -780,25 +797,25 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-1:focus-visible:not(:disabled) {
+.emotion-3:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-1:disabled {
+.emotion-3:disabled {
   opacity: 50%;
   background-color: #175bf5;
   cursor: not-allowed;
 }
 
-.emotion-1:hover:not(:disabled) {
+.emotion-3:hover:not(:disabled) {
   background-color: #457bf7;
 }
 
-.emotion-1:active:not(:disabled) {
+.emotion-3:active:not(:disabled) {
   background-color: #1451dc;
 }
 
-.emotion-2 {
+.emotion-4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -814,7 +831,7 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-3 {
+.emotion-5 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -841,7 +858,7 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   transition: all 0.2s ease-in-out;
 }
 
-.emotion-4 {
+.emotion-6 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -868,7 +885,7 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   transition: all 0.3s ease-in-out;
 }
 
-.emotion-5 {
+.emotion-7 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -883,7 +900,7 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   padding: 0.5rem 0.5rem 0 0;
 }
 
-.emotion-7 {
+.emotion-9 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -899,25 +916,25 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-7:focus-visible:not(:disabled) {
+.emotion-9:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-7:disabled {
+.emotion-9:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-7:hover:not(:disabled) {
+.emotion-9:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-7:active:not(:disabled) {
+.emotion-9:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-8 {
+.emotion-10 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -933,52 +950,39 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
   justify-content: center;
 }
 
-.emotion-9 {
+.emotion-11 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-9 path {
+.emotion-11 path {
   fill: #1451dc;
 }
 
-.emotion-10 {
+.emotion-12 {
   padding: 2rem;
 }
 
 <div
-  style={
-    Object {
-      "borderRadius": 10,
-      "flex": 1,
-      "flexDirection": "column",
-      "padding": 5,
-      "position": "relative",
-      "width": "100%",
-    }
-  }
+  className="emotion-0"
 >
   <div
-    style={
-      Object {
-        "margin": 15,
-      }
-    }
+    className="emotion-1"
   >
     <div>
       <div
-        className="emotion-0"
+        className="emotion-2"
       >
         <button
-          className="emotion-1"
+          className="emotion-3"
           data-testid="button"
           disabled={false}
           onClick={[Function]}
           type="button"
         >
           <span
-            className="emotion-2"
+            className="emotion-4"
           >
             <span>
               left
@@ -987,7 +991,7 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
         </button>
       </div>
       <div
-        className="emotion-3"
+        className="emotion-5"
         data-testid="overlay-container"
       >
         <div
@@ -1001,34 +1005,34 @@ exports[`Storyshots Design System/Overlay Overlay Playground 1`] = `
           }
         >
           <div
-            className="emotion-4"
+            className="emotion-6"
           >
             <div
-              className="emotion-5"
+              className="emotion-7"
             >
               <div
-                className="emotion-0"
+                className="emotion-2"
               >
                 <button
-                  className="emotion-7"
+                  className="emotion-9"
                   data-testid="icon-button-overlay-close"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-8"
+                    className="emotion-10"
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-9"
+                      className="emotion-11"
                     />
                   </span>
                 </button>
               </div>
             </div>
             <div
-              className="emotion-10"
+              className="emotion-12"
             >
               <div
                 style={

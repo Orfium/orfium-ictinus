@@ -17,6 +17,8 @@
     "@babel/preset-typescript": "^7.13.0",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "@emotion/babel-plugin": "^11.10.5",
     "@emotion/babel-preset-css-prop": "^11.10.0",
     "@emotion/eslint-plugin": "^11.10.0",
@@ -108,8 +110,6 @@
     "url-loader": "^4.1.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@tippyjs/react": "^4.2.5",
     "@types/react-window": "^1.8.4",
     "dayjs": "^1.8.34",
@@ -132,6 +132,8 @@
     "@types/react-dom": "17.0.0"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
@@ -139,7 +141,7 @@
     "react-router-dom": "^5.2.0"
   },
   "scripts": {
-    "prepare": "yarn build:lib && husky install",
+    "prepare": "yarn build && husky install",
     "start": "start-storybook -p 6006",
     "prebuild": "rimraf dist",
     "build:lib": "rollup -c --bundleConfigAsCjs",

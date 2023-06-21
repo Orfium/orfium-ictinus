@@ -1,6 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 import isEqual from 'react-fast-compare';
+import { getTextFieldHeight } from 'utils/size-utils';
 
 import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
@@ -22,6 +23,13 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
   const theme = useTheme();
 
   const isClearVisible = (value as string).length > 0;
+  const sx = {
+    wrapper: {
+      borderRadius: rem(100),
+      // @TODO this is a unique case for the SearchField where we dont need to use the sm height of the TextField, will change in v5
+      height: getTextFieldHeight('md'),
+    },
+  };
 
   return (
     <React.Fragment>
@@ -29,7 +37,7 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
         dataTestId={dataTestId}
         isDisabled={isDisabled}
         suffix={'close'}
-        sx={{ wrapper: { borderRadius: rem(100) } }}
+        sx={sx}
       >
         <IconWrapper iconPosition={'left'}>
           <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />

@@ -75,6 +75,17 @@ describe('Generic Select', () => {
 
       expect(selectInput.value).not.toBe('Greece');
     });
+
+    it('should revert input value back to “default”, when Backspace is clicked', async () => {
+      selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
+      userEvent.type(selectInput, 'Greece');
+
+      expect(selectInput.value).toBe('Greece');
+
+      userEvent.type(selectInput, '{Backspace}');
+
+      expect(selectInput.value).not.toBe('Greece');
+    });
   });
 
   describe('Async Select', () => {
@@ -171,11 +182,13 @@ describe('Generic Select', () => {
 describe('Multi Select', () => {
   let selectInput: HTMLInputElement;
   let chips: HTMLElement[];
+  let newOption: HTMLElement;
+  let newChip: HTMLElement;
 
   beforeEach(() => {
     render(
       <div>
-        <Select isMulti label={'Country'} options={dropdownList} />
+        <Select isMulti isCreatable label={'Country'} options={dropdownList} hasSelectAllOption />
       </div>
     );
   });
@@ -240,5 +253,37 @@ describe('Multi Select', () => {
     userEvent.click(selectInput);
 
     expect(screen.getByText('No options')).toBeInTheDocument();
+  });
+
+  it('creates a new item if not found on the results', async () => {
+    userEvent.click(selectInput);
+    userEvent.type(selectInput, 'New item');
+
+    expect(screen.getByTestId('ictinus_list').innerHTML).toContain('Create "New item"');
+
+    /** Create new Item */
+    newOption = screen.getByText('Create "New item"');
+    userEvent.click(newOption);
+    newChip = screen.getByTestId('chip-chip_0');
+
+    expect(newChip).toBeVisible();
+    expect(newChip.innerHTML).toContain('New item');
+
+    /** Delete created Item */
+    userEvent.click(screen.getByTestId('chip-delete-chip_0'));
+    expect(screen.queryByTestId('New item')).not.toBeInTheDocument();
+  });
+
+  it('should delete the last chip when Backspace is clicked', async () => {
+    await selectDropdownOption(selectInput, dropdownList[0].label);
+    await selectDropdownOption(selectInput, dropdownList[1].label);
+
+    expect(screen.getByTestId('chip-chip_0')).toBeVisible();
+    expect(screen.getByTestId('chip-chip_1')).toBeVisible();
+
+    userEvent.click(selectInput);
+    userEvent.type(selectInput, '{Backspace}');
+
+    expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
   });
 });

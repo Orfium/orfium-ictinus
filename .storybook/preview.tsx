@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 import Typography from '../src/storybook/Typography';
 import { UsageGuidelines, Tip, Preview } from '../src/storybook';
 import { TypographyWrapper as SBTypographyWrapper } from '../src/storybook/Typography/Typography.style';
+import Box from '../src/components/Box';
 
 const viewPorts = {
   desktop1920: {
@@ -77,18 +78,9 @@ const viewPorts = {
 
 const Wrapper: React.FC = ({ children }) => {
   return (
-    <div
-      style={{
-        width: '100%',
-        position: 'relative',
-        flex: 1,
-        flexDirection: 'column',
-        padding: 5,
-        borderRadius: 10,
-      }}
-    >
+    <Box flex={1} flexDirection={'column'} p={'3'} position={'relative'}>
       {children}
-    </div>
+    </Box>
   );
 };
 
@@ -96,9 +88,9 @@ export const decorators = [
   (Story: any) => {
     return (
       <Wrapper>
-        <div style={{ margin: 15 }}>
+        <Box m={'6'}>
           <Story />
-        </div>
+        </Box>
       </Wrapper>
     );
   },
@@ -136,41 +128,41 @@ export const parameters = {
     ),
     components: {
       h1: ({ children }: any) => (
-        <div css={{ margin: '16px 0' }}>
+        <Box mx={'6'}>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline01'}>
             {children}
           </Typography>
-        </div>
+        </Box>
       ),
       h2: ({ children }: any) => (
-        <div css={{ margin: '16px 0' }}>
+        <Box mx={'6'}>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline02'}>
             {children}
           </Typography>
-        </div>
+        </Box>
       ),
       h3: ({ children }: any) => (
-        <div css={{ margin: '16px 0' }}>
+        <Box mx={'6'}>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline03'}>
             {children}
           </Typography>
-        </div>
+        </Box>
       ),
       h4: ({ children }: any) => (
-        <div css={{ margin: '16px 0' }}>
+        <Box mx={'6'}>
           {/*// @ts-ignore*/}
           <Typography css={SBTypographyWrapper} variant={'headline04'}>
             {children}
           </Typography>
-        </div>
+        </Box>
       ),
       p: ({ children }: any) => (
-        <div css={{ margin: '16px 0' }}>
+        <Box mx={'6'}>
           <Typography variant={'body01'}>{children}</Typography>
-        </div>
+        </Box>
       ),
       span: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,
       div: ({ children }: any) => <Typography variant={'body01'}>{children}</Typography>,

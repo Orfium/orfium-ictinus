@@ -3,7 +3,6 @@ import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'r
 import isEqual from 'react-fast-compare';
 import { generateTestDataId } from 'utils/helpers';
 
-import MultiselectTextField from './components/MultiselectTextField';
 import SelectMenu from './components/SelectMenu/SelectMenu';
 import useMultiselectUtils from './hooks/useMultiselectUtils';
 import { suffixContainer, selectWrapper } from './Select.style';
@@ -17,6 +16,7 @@ import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
 import Loader from 'components/Loader';
+import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
 export type SelectOptionValues = {
@@ -30,6 +30,7 @@ export type SelectOption = {
   helperText?: string;
   tooltipInfo?: string;
   options?: SelectOption[];
+  isCreated?: boolean;
 } & SelectOptionValues;
 
 type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
@@ -69,6 +70,13 @@ export type SelectProps = {
   /** The selected options in case of multiSelect */
   /** @TODO merge selectedOption with selectedOptions in v5 */
   selectedOptions?: SelectOption[];
+  /**
+   * If true, then in the case of a searched option that is not found in the Options list of MultiSelect,
+   * the user can create this option.
+   * */
+  isCreatable?: boolean;
+  /** Whether the MultiSelect should have a Select All option */
+  hasSelectAllOption?: boolean;
 } & TextFieldProps &
   InputProps &
   TestProps;
@@ -98,9 +106,10 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     onClear,
     onOptionDelete,
     selectedOptions = [],
+    isCreatable = false,
+    hasSelectAllOption = false,
     ...restInputProps
   } = props;
-
   const theme = useTheme();
   const [isOpen, setIsOpen] = React.useState(false);
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -108,7 +117,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const initialValue = defaultValue ?? selectedOption;
 
-  const [inputValue, setInputValue] = React.useState(initialValue);
+  const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
   const [searchValue, setSearchValue] = React.useState('');
 
   const textFieldValue = searchValue || inputValue.label;
@@ -138,7 +147,12 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     if (isMulti) {
       handleMultiSelectOptionClick(option);
     } else {
-      setInputValue(option);
+      if (option.isCreated) {
+        setInputValue({ ...option, label: option.value.toString() });
+      } else {
+        setInputValue(option);
+      }
+
       setIsOpen(false);
     }
 
@@ -146,15 +160,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       setSearchValue('');
     }
     handleSelectedOption(option);
-  };
-
-  const handleOnKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    const isBackspaceKey = e.keyCode === 8;
-
-    if (isBackspaceKey) {
-      setInputValue(emptyValue);
-      debouncedOnChange('');
-    }
   };
 
   const debouncedOnChange = React.useCallback(
@@ -188,31 +193,51 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const filteredOptions = useMemo(() => {
     const optionsToBeFiltered = isMulti ? availableMultiSelectOptions : options;
+    const finalOptions: SelectOption[] = [];
 
     if (isAsync) {
-      return optionsToBeFiltered;
+      finalOptions.push(...optionsToBeFiltered);
+    } else {
+      finalOptions.push(
+        ...optionsToBeFiltered
+          .filter(
+            (option) =>
+              !searchValue ||
+              option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
+              !!option.options?.find((option) =>
+                option.label.toLowerCase().includes(searchValue.toLowerCase())
+              )
+          )
+          .map((option) => {
+            return option.label.toLowerCase().includes(searchValue.toLowerCase())
+              ? option
+              : {
+                  ...option,
+                  options: option.options?.filter((option) =>
+                    option.label.toLowerCase().includes(searchValue.toLowerCase())
+                  ),
+                };
+          })
+      );
     }
 
-    return optionsToBeFiltered
-      .filter(
-        (option) =>
-          !searchValue ||
-          option.label.toLowerCase().includes(searchValue.toLowerCase()) ||
-          !!option.options?.find((option) =>
-            option.label.toLowerCase().includes(searchValue.toLowerCase())
-          )
-      )
-      .map((option) => {
-        return option.label.toLowerCase().includes(searchValue.toLowerCase())
-          ? option
-          : {
-              ...option,
-              options: option.options?.filter((option) =>
-                option.label.toLowerCase().includes(searchValue.toLowerCase())
-              ),
-            };
-      });
-  }, [isAsync, isMulti, availableMultiSelectOptions, options, searchValue]);
+    if (isCreatable) {
+      /** Check if the searchValue has an exact result (so no need for "Create..." option) */
+      const hasDistinctResult = finalOptions
+        .map((item) => item.label.toLowerCase())
+        .includes(searchValue.toLowerCase());
+
+      if (!hasDistinctResult && searchValue.length > 0) {
+        finalOptions.push({
+          value: searchValue,
+          label: `Create "${searchValue}"`,
+          isCreated: true,
+        });
+      }
+    }
+
+    return finalOptions;
+  }, [isAsync, isMulti, availableMultiSelectOptions, options, isCreatable, searchValue]);
 
   const suffixNameSelector = useMemo(() => {
     if (isSearchable) {
@@ -263,6 +288,31 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     }
   };
 
+  /**
+   * Boolean flag for the case where we have no options but create functionality - so
+   * we can hide the Select All option in that case
+   */
+  const hasNoOptionsAndIsCreatable =
+    isCreatable && filteredOptions.length === 1 && filteredOptions[0].isCreated;
+
+  const handleSingleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    const isBackspace = event.key === 'Backspace';
+
+    if (isBackspace) {
+      setInputValue(emptyValue);
+      debouncedOnChange('');
+    }
+  };
+
+  const handleMultiKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    const isEnter = event.key === 'Enter';
+
+    if (hasNoOptionsAndIsCreatable && isEnter) {
+      handleMultiSelectOptionClick(filteredOptions[0]);
+      setSearchValue('');
+    }
+  };
+
   return (
     <ClickAwayListener
       onClick={() => {
@@ -280,10 +330,10 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
           offsetY={8}
           parent={
             isMulti ? (
-              <MultiselectTextField
+              <MultiTextFieldBase
                 selectedOptions={multiSelectedOptions}
                 onInput={handleOnInput}
-                onOptionDelete={handleOptionDelete}
+                onOptionDelete={handleOptionDelete as (option?: string | SelectOption) => void}
                 onClearAllOptions={handleClearAllOptions}
                 isLoading={isLoading}
                 isDisabled={isDisabled}
@@ -292,12 +342,14 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 {...restInputProps}
                 status={status}
                 value={textFieldValue}
+                ref={combinedRefs}
                 autoComplete="off"
+                onKeyDown={handleMultiKeyDown}
               />
             ) : (
               <TextField
                 suffix={suffixRender}
-                onKeyDown={handleOnKeyDown}
+                onKeyDown={handleSingleKeyDown}
                 onInput={handleOnInput}
                 onChange={ON_CHANGE_MOCK}
                 readOnly={!isSearchable}
@@ -320,7 +372,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
             isLoading={isLoading}
             isVirtualized={isVirtualized}
             searchTerm={hasHighlightSearch ? searchValue : undefined}
-            hasSelectAllOption={isMulti}
+            hasSelectAllOption={isMulti && hasSelectAllOption && !hasNoOptionsAndIsCreatable}
           />
         </PositionInScreen>
       </div>
