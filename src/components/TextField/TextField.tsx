@@ -4,7 +4,6 @@ import { omit } from 'lodash';
 import React, { InputHTMLAttributes, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
-import useMultiTextFieldUtils from './hooks/useMultiTextFieldUtils';
 import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
@@ -34,23 +33,14 @@ export type TextFieldProps = {
   onInput?: React.EventHandler<any>;
   /** Boolean to make the input readonly. Default to false. */
   isReadOnly?: boolean;
-  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
-   * of the TextField. It will be replaced by a fullWidth prop. */
-  hasMinWidthCompat?: boolean;
-  /** If true the user can enter multiple values by pressing 'Enter' */
+  /** [For MultiTextField] If true, the user can add multiple tags as an input */
   isMulti?: boolean;
-  /** The initial multi values */
-  multiValues?: string[];
-  /** Maximum multi values */
-  maxMultiValues?: number;
-  /** A callback for when a Chip value is created */
-  onMultiValueCreate?: (value?: string) => void;
-  /** A callback for when a Chip value is deleted */
-  onMultiValueDelete?: (value?: string) => void;
-  /** A callback for when all values are deleted (the Clear All icon is clicked) */
-  onClearAllValues?: () => void;
-  /** The handler of multi values. If you pass a different handler function here it will change the way multi values are being calculated */
-  multiValuesHandler?: (tags: string) => string | string[];
+  /** [For MultiTextField] The values of the tags (chips) */
+  tags?: string[];
+  /** [For MultiTextField] A callback for when a Chip value is deleted */
+  onMultiValueDelete?: (value: string) => void;
+  /** [For MultiTextField] A callback for when all values are deleted  */
+  onMultiValueClearAll?: () => void;
 } & TextInputBaseProps &
   InputProps &
   TestProps;
@@ -66,14 +56,10 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     isReadOnly,
     status,
     onInput,
-    // TODO change to isMulti
     isMulti = false,
-    multiValues = [],
-    maxMultiValues,
-    onMultiValueCreate,
+    tags = [],
     onMultiValueDelete,
-    onClearAllValues,
-    multiValuesHandler = (value) => value,
+    onMultiValueClearAll = () => null,
     ...rest
   } = props;
   const theme = useTheme();
@@ -105,36 +91,19 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     }
   };
 
-  const {
-    inputValue,
-    values,
-    handleValueDelete,
-    handleClearAllValues,
-    handleKeyDown,
-    handleTyping,
-  } = useMultiTextFieldUtils({
-    multiValues,
-    maxMultiValues,
-    onMultiValueCreate,
-    onMultiValueDelete,
-    onClearAllValues,
-    onInput,
-    multiValuesHandler,
-  });
-
   return (
     <div onClick={handleClick}>
       {isMulti ? (
         <MultiTextFieldBase
           {...props}
           isTextfield
-          onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
-          onClearAllOptions={handleClearAllValues}
+          onOptionDelete={onMultiValueDelete as (option?: string | SelectOption) => void}
+          onClearAllOptions={onMultiValueClearAll}
           label={label}
-          onInput={handleTyping}
-          onKeyDown={handleKeyDown}
-          selectedOptions={values}
-          value={inputValue}
+          onInput={onInput}
+          onKeyDown={rest.onKeyDown}
+          selectedOptions={tags}
+          value={rest.value}
           ref={combinedRefs}
         />
       ) : (

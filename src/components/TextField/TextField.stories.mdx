@@ -133,21 +133,6 @@ Regular TextField with Label and Statuses.
 
 <Preview>
   <Story name="Multi TextField">
-    <div>
-      <TextField
-        isMulti
-        multiValues={['Orange', 'Citrus']}
-        label={text('Label', 'Label')}
-        locked={boolean('Locked', false)}
-        disabled={boolean('Disabled', false)}
-        hintMsg={text('Custom message', 'Press Enter to create multiple values')}
-        status={select('Status', ['hint', 'error', 'normal'], 'hint')}
-        maxMultiValues={text('maxMultiValues', 10)}
-        sx={{
-          textField: { width: '100%' },
-        }}
-      />
-    </div>
     <TextFieldShowcase />
   </Story>
 </Preview>

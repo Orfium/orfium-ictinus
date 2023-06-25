@@ -41,7 +41,9 @@ export type TextInputBaseProps = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<TextInputBaseProps> = ({
+const TextInputBase: FC<
+  Omit<TextInputBaseProps, 'value' | 'label' | 'placeholder' | 'suffix' | 'isRequired'>
+> = ({
   isDisabled,
   dataTestId,
   status = { type: 'normal' },

@@ -5,36 +5,53 @@ import TextField from '../../TextField';
 import Typography from '../../Typography';
 
 const TextFieldShowcase: FC = () => {
-  const [tags, setTags] = useState<string[]>(['existing-tag-1', 'existing-tag-2']);
+  const [value, setValue] = useState('');
+  const [tags, setTags] = useState<string[]>(['hello', 'its me']);
 
-  const addTags = (tagStr: string | undefined) => {
-    setTags((tags) => (tagStr === undefined ? tags : [...tags, tagStr]));
+  const addTag = (tag: string) => {
+    setTags([...tags, tag]);
+  };
+  const removeTag = (tag: string) => {
+    setTags(tags.filter((t) => t !== tag));
   };
 
-  const removeTag = (value: string | undefined) => {
-    const newTags = tags.filter((id) => id !== value);
-    setTags([...newTags]);
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    switch (event.key) {
+      case 'Enter': {
+        if (!value) return;
+        addTag(value);
+        setValue('');
+
+        return;
+      }
+      case 'Backspace': {
+        if (value || !tags.length) return;
+        removeTag(tags[tags.length - 1]);
+
+        return;
+      }
+    }
+  };
+
+  const handleClearAll = () => {
+    setTags([]);
+    setValue('');
   };
 
   return (
     <>
       <Box px={'4'}>
-        <Typography variant={'headline02'}>Controlled multi TextField</Typography>
+        <Typography variant={'headline02'}>Controlled MultiTextField</Typography>
       </Box>
       <div style={{ width: '500px' }}>
         <TextField
           isMulti
-          multiValues={tags}
-          multiValuesHandler={(tags) => tags?.replace(/ /g, '').split(',')}
-          name="tags"
-          label="Tags"
-          status={{ type: 'normal' }}
-          onMultiValueCreate={addTags}
+          tags={tags}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           onMultiValueDelete={removeTag}
-          onClearAllValues={() => setTags([])}
-          sx={{
-            textField: { width: '100%' },
-          }}
+          onMultiValueClearAll={handleClearAll}
+          onKeyDown={handleKeyDown}
         />
       </div>
     </>

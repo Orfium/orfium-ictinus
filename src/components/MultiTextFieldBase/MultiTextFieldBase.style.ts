@@ -111,7 +111,7 @@ export const textInputBaseOverrides =
         ...(isResponsive
           ? { width: 'max-content', minWidth: getTextFieldSize(true, 'md').minWidth }
           : {}),
-        ...(isTextfield ? { width: getTextFieldSize(true, 'md', true).width } : {}),
+        ...(isTextfield ? { minWidth: '240px', width: '100%' } : {}),
       },
     };
   };

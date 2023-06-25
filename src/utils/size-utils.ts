@@ -45,7 +45,7 @@ export const getTextFieldSize = (
   return {
     minWidth: getTextFieldWidth(size),
     height: getTextFieldHeight(size),
-    ...(isMulti ? { width: rem(MULTI_WIDTH) } : {}),
+    ...(isMulti ? { width: '100%' } : {}),
   };
 };
 
