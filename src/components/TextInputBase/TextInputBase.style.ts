@@ -92,10 +92,6 @@ export const wrapperStyle =
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       cursor: isDisabled || isLocked ? 'not-allowed' : 'text',
       height: tokens('container'),
-      /**
-       * TODO: every Field component will have its own min-width, will need configuration once
-       * Field components start to get implemented
-       */
       minWidth: rem(MIN_WIDTH),
       ...wrapperStyleSwitch({
         theme,

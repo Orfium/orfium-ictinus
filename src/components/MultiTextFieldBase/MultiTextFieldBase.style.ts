@@ -1,9 +1,9 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 import { Theme } from 'theme';
-import { getTextFieldSize } from 'utils/size-utils';
 
 import { LABEL_TRANSFORM_LEFT_SPACING } from 'components/Label/Label.style';
+import { MULTI_MIN_WIDTH } from 'components/TextInputBase/config';
 
 export const chipContent =
   ({ maxWidth }: { maxWidth?: number }) =>
@@ -108,10 +108,8 @@ export const textInputBaseOverrides =
         padding: isLoading
           ? `${rem(paddingTop)} ${rem(80)} ${rem(paddingBottom)} ${theme.globals.spacing.get('6')}`
           : `${rem(paddingTop)} ${rem(40)} ${rem(paddingBottom)} ${theme.globals.spacing.get('6')}`,
-        ...(isResponsive
-          ? { width: 'max-content', minWidth: getTextFieldSize(true, 'md').minWidth }
-          : {}),
-        ...(isTextfield ? { minWidth: '240px', width: '100%' } : {}),
+        ...(isResponsive ? { width: 'max-content', minWidth: rem(MULTI_MIN_WIDTH) } : {}),
+        ...(isTextfield ? { minWidth: rem(MULTI_MIN_WIDTH), width: '100%' } : {}),
       },
     };
   };
