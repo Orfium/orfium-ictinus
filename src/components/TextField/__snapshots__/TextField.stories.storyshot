@@ -76,6 +76,7 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   vertical-align: top;
   width: 100%;
   padding: 1.3125rem 2.5rem 0.3125rem 1rem;
+  min-width: 15rem;
 }
 
 .emotion-3>div {
@@ -324,158 +325,12 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   fill: #5f6c85;
 }
 
-.emotion-23 {
-  padding: 0.5rem 0;
-}
-
-.emotion-24 {
-  font-family: Roboto;
-  font-weight: 700;
-  line-height: 2.25rem;
-  font-size: 1.75rem;
-  letter-spacing: 0rem;
-  color: #212332;
-}
-
 <div
   className="emotion-0"
 >
   <div
     className="emotion-1"
   >
-    <div>
-      <div
-        onClick={[Function]}
-      >
-        <div>
-          <div
-            className="emotion-2"
-          >
-            <div
-              className="emotion-3"
-            >
-              <div
-                className="emotion-4"
-              >
-                <span
-                  className="emotion-5"
-                >
-                  <div
-                    aria-readonly="true"
-                    className="emotion-6"
-                    data-testid="chip-chip_0"
-                  >
-                    <div>
-                      <div
-                        className="emotion-7"
-                        title="Orange"
-                      >
-                        Orange
-                      </div>
-                    </div>
-                    <div
-                      className="emotion-8"
-                    >
-                      <span
-                        className="emotion-9"
-                        data-testid="chip-delete-chip_0"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-10"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                </span>
-                <span
-                  className="emotion-5"
-                >
-                  <div
-                    aria-readonly="true"
-                    className="emotion-6"
-                    data-testid="chip-chip_1"
-                  >
-                    <div>
-                      <div
-                        className="emotion-7"
-                        title="Citrus"
-                      >
-                        Citrus
-                      </div>
-                    </div>
-                    <div
-                      className="emotion-8"
-                    >
-                      <span
-                        className="emotion-9"
-                        data-testid="chip-delete-chip_1"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-10"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                </span>
-                <input
-                  className="emotion-17"
-                  disabled={false}
-                  hintMsg="Press Enter to create multiple values"
-                  isMulti={true}
-                  locked={false}
-                  maxMultiValues={10}
-                  multiValues={
-                    Array [
-                      "Orange",
-                      "Citrus",
-                    ]
-                  }
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  placeholder="Label"
-                  required={false}
-                  value=""
-                />
-                <label
-                  className="emotion-18"
-                >
-                  Label
-                   
-                </label>
-              </div>
-              <div
-                className="emotion-19"
-              >
-                <div
-                  className="emotion-20"
-                >
-                  <span
-                    className="emotion-9"
-                    data-testid="select-right-icon"
-                    onClick={[Function]}
-                  >
-                    <span
-                      className="emotion-22"
-                    />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="emotion-23"
-    >
-      <h2
-        className="emotion-24"
-      >
-        Controlled multi TextField
-      </h2>
-    </div>
     <div
       style={
         Object {
@@ -507,9 +362,9 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
                     <div>
                       <div
                         className="emotion-7"
-                        title="existing-tag-1"
+                        title="Value 1"
                       >
-                        existing-tag-1
+                        Value 1
                       </div>
                     </div>
                     <div
@@ -538,9 +393,9 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
                     <div>
                       <div
                         className="emotion-7"
-                        title="existing-tag-2"
+                        title="Value 2"
                       >
-                        existing-tag-2
+                        Value 2
                       </div>
                     </div>
                     <div
@@ -562,27 +417,24 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
                   className="emotion-17"
                   disabled={false}
                   isMulti={true}
-                  multiValues={
+                  onChange={[Function]}
+                  onKeyDown={[Function]}
+                  onMultiValueClearAll={[Function]}
+                  onMultiValueDelete={[Function]}
+                  placeholder="Controlled MultiTextField"
+                  required={false}
+                  tags={
                     Array [
-                      "existing-tag-1",
-                      "existing-tag-2",
+                      "Value 1",
+                      "Value 2",
                     ]
                   }
-                  multiValuesHandler={[Function]}
-                  name="tags"
-                  onClearAllValues={[Function]}
-                  onInput={[Function]}
-                  onKeyDown={[Function]}
-                  onMultiValueCreate={[Function]}
-                  onMultiValueDelete={[Function]}
-                  placeholder="Tags"
-                  required={false}
                   value=""
                 />
                 <label
                   className="emotion-18"
                 >
-                  Tags
+                  Controlled MultiTextField
                    
                 </label>
               </div>

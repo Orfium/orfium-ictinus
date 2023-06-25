@@ -1,12 +1,12 @@
 import React, { FC, useState } from 'react';
 
-import Box from '../../Box';
 import TextField from '../../TextField';
-import Typography from '../../Typography';
+
+export const values = ['Value 1', 'Value 2'];
 
 const TextFieldShowcase: FC = () => {
   const [value, setValue] = useState('');
-  const [tags, setTags] = useState<string[]>(['hello', 'its me']);
+  const [tags, setTags] = useState<string[]>(values);
 
   const addTag = (tag: string) => {
     setTags([...tags, tag]);
@@ -14,6 +14,9 @@ const TextFieldShowcase: FC = () => {
   const removeTag = (tag: string) => {
     setTags(tags.filter((t) => t !== tag));
   };
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setValue((event.target as HTMLInputElement).value);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     switch (event.key) {
@@ -39,22 +42,18 @@ const TextFieldShowcase: FC = () => {
   };
 
   return (
-    <>
-      <Box px={'4'}>
-        <Typography variant={'headline02'}>Controlled MultiTextField</Typography>
-      </Box>
-      <div style={{ width: '500px' }}>
-        <TextField
-          isMulti
-          tags={tags}
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          onMultiValueDelete={removeTag}
-          onMultiValueClearAll={handleClearAll}
-          onKeyDown={handleKeyDown}
-        />
-      </div>
-    </>
+    <div style={{ width: '500px' }}>
+      <TextField
+        isMulti
+        label="Controlled MultiTextField"
+        tags={tags}
+        value={value}
+        onChange={handleChange}
+        onMultiValueDelete={removeTag}
+        onMultiValueClearAll={handleClearAll}
+        onKeyDown={handleKeyDown}
+      />
+    </div>
   );
 };
 
