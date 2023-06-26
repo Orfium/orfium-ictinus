@@ -1,3 +1,5 @@
+import rgba from 'polished/lib/color/rgba';
+
 import { Theme } from '../index';
 import { colorShades, flatColors } from '../palette';
 import { statesConfig } from './statesConfig';
@@ -21,6 +23,10 @@ export const getPressed = ({ theme, color, shade }: Props): GetPressed => {
   const backgroundColorStep = statesConfig[theme.colorScheme].pressed.backgroundColor.step;
   const endColor = color || (theme.colorScheme === 'dark' ? 'darkGrey' : 'lightGrey');
   const endShade = shade || (theme.colorScheme === 'dark' ? 700 : 0);
+
+  if (shade === 0 && color) {
+    return { backgroundColor: rgba(theme.utils.getColor(color, 500), 0.14) };
+  }
 
   const calculatedShade = getShadeWithStep({
     shade: endShade,
