@@ -37,16 +37,15 @@ import { TextField } from '@orfium/ictinus';
 
 <Props of={TextField} />
 
-# Text Field with and without Label
+# Text Field with Label and Placeholder
 
-Regular TextField with label options. Label that will float, placeholder and no placeholder
+Regular TextField with label options. Label that will float, with or without Placeholder
 
 <Preview>
-  <Story name="Text Field with and without Label">
+  <Story name="Text Field with Label and Placeholder">
     <Stack>
       <TextField label={'Label'} />
-      <TextField placeholder={'Placeholder'} />
-      <TextField />
+      <TextField label={'Label'} placeholder={'Placeholder'} />
     </Stack>
   </Story>
 </Preview>
@@ -81,7 +80,7 @@ Regular TextField with a suffix
 <Preview>
   <Story name="TextField with suffix">
     <Stack>
-      <TextField suffix={<div style={{ color: 'gray' }}>%</div>} />
+      <TextField label={'Label'} suffix={<div style={{ color: 'gray' }}>%</div>} />
     </Stack>
   </Story>
 </Preview>

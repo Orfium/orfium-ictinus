@@ -149,6 +149,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
         <InputsContainer>
           <InputContainer>
             <TextField
+              label="Start"
               isDisabled={isDisabled}
               value={values[0]}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
@@ -171,6 +172,7 @@ const Slider: React.FC<SliderProps & TestProps> = ({
           </InputContainer>
           <InputContainer>
             <TextField
+              label="End"
               isDisabled={isDisabled}
               value={values[1]}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {

@@ -215,10 +215,6 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-17:focus {
-  outline: none;
-}
-
 .emotion-17::-webkit-input-placeholder {
   color: transparent;
 }
@@ -233,6 +229,26 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
 
 .emotion-17::placeholder {
   color: transparent;
+}
+
+.emotion-17:focus {
+  outline: none;
+}
+
+.emotion-17:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-17:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-17:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-17:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-17:not(:focus):placeholder-shown+label {
@@ -344,6 +360,7 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
         <div>
           <div
             className="emotion-2"
+            data-testid="showcase"
           >
             <div
               className="emotion-3"
@@ -415,13 +432,13 @@ exports[`Storyshots Design System/TextField Multi TextField 1`] = `
                 </span>
                 <input
                   className="emotion-17"
+                  data-testid="input_showcase"
                   disabled={false}
                   isMulti={true}
                   onChange={[Function]}
                   onKeyDown={[Function]}
                   onMultiValueClearAll={[Function]}
                   onMultiValueDelete={[Function]}
-                  placeholder="Controlled MultiTextField"
                   required={false}
                   tags={
                     Array [
@@ -578,10 +595,6 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
-  outline: none;
-}
-
 .emotion-6::-webkit-input-placeholder {
   color: transparent;
 }
@@ -595,6 +608,26 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
 }
 
 .emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
   color: transparent;
 }
 
@@ -726,6 +759,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Label"
                   readOnly={false}
@@ -777,6 +811,7 @@ exports[`Storyshots Design System/TextField Text Field with Icons 1`] = `
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Label"
                   readOnly={false}
@@ -924,10 +959,6 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
-  outline: none;
-}
-
 .emotion-6::-webkit-input-placeholder {
   color: transparent;
 }
@@ -941,6 +972,26 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
 }
 
 .emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
   color: transparent;
 }
 
@@ -1099,6 +1150,7 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Label"
                   readOnly={false}
@@ -1140,7 +1192,7 @@ exports[`Storyshots Design System/TextField Text Field with KNOBS 1`] = `
 </div>
 `;
 
-exports[`Storyshots Design System/TextField Text Field with and without Label 1`] = `
+exports[`Storyshots Design System/TextField Text Field with Label and Placeholder 1`] = `
 .emotion-0 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
@@ -1254,10 +1306,6 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
-  outline: none;
-}
-
 .emotion-6::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1271,6 +1319,26 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
 }
 
 .emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
   color: transparent;
 }
 
@@ -1357,6 +1425,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   color: #212332;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
   width: 0;
@@ -1367,40 +1436,40 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
   font-size: 0.9375rem;
 }
 
+.emotion-12::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-12:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-12::placeholder {
+  color: transparent;
+}
+
 .emotion-12:focus {
   outline: none;
 }
 
-.emotion-12::-webkit-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-12:focus::-webkit-input-placeholder {
+  color: #54587f;
 }
 
-.emotion-12::-moz-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-12:focus::-moz-placeholder {
+  color: #54587f;
 }
 
-.emotion-12:-ms-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-12:focus:-ms-input-placeholder {
+  color: #54587f;
 }
 
-.emotion-12::placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-12:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-12:not(:focus):placeholder-shown+label {
@@ -1421,68 +1490,6 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
 }
 
 .emotion-12:disabled {
-  cursor: not-allowed;
-}
-
-.emotion-17 {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
-  background: transparent;
-  border: none;
-  color: #212332;
-  display: block;
-  position: relative;
-  z-index: 1;
-  text-overflow: ellipsis;
-  width: 0;
-  min-width: 100%;
-}
-
-.emotion-17+label {
-  font-size: 0.9375rem;
-}
-
-.emotion-17:focus {
-  outline: none;
-}
-
-.emotion-17::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.emotion-17::-moz-placeholder {
-  color: transparent;
-}
-
-.emotion-17:-ms-input-placeholder {
-  color: transparent;
-}
-
-.emotion-17::placeholder {
-  color: transparent;
-}
-
-.emotion-17:not(:focus):placeholder-shown+label {
-  font-weight: normal;
-}
-
-.emotion-17:focus-within+label,
-.emotion-17:not(:placeholder-shown)+label {
-  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
-  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
-  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
-  transform: translate(0.1875rem, -35%) scale(0.8);
-  font-weight: 700;
-}
-
-.emotion-17:focus-within+label {
-  color: #1451dc;
-}
-
-.emotion-17:disabled {
   cursor: not-allowed;
 }
 
@@ -1516,6 +1523,7 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Label"
                   readOnly={false}
@@ -1556,44 +1564,18 @@ exports[`Storyshots Design System/TextField Text Field with and without Label 1`
               >
                 <input
                   className="emotion-12"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Placeholder "
                   readOnly={false}
                   required={false}
                 />
-              </div>
-              <div
-                className="emotion-8"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          onClick={[Function]}
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                className="emotion-5"
-              >
-                <input
-                  className="emotion-17"
-                  disabled={false}
-                  readOnly={false}
-                  required={false}
-                />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
               </div>
               <div
                 className="emotion-8"
@@ -1716,10 +1698,6 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
-  outline: none;
-}
-
 .emotion-6::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1733,6 +1711,26 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
 }
 
 .emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
   color: transparent;
 }
 
@@ -1838,6 +1836,7 @@ exports[`Storyshots Design System/TextField TextField disabled with label 1`] = 
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={true}
                   placeholder="Label"
                   readOnly={false}
@@ -1976,10 +1975,6 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
   font-size: 0.9375rem;
 }
 
-.emotion-6:focus {
-  outline: none;
-}
-
 .emotion-6::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1993,6 +1988,26 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
 }
 
 .emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
   color: transparent;
 }
 
@@ -2288,6 +2303,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Label"
                   readOnly={false}
@@ -2336,6 +2352,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
                   placeholder="Label"
                   readOnly={false}
@@ -2392,6 +2409,7 @@ exports[`Storyshots Design System/TextField TextField with label and statuses 1`
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={true}
                   placeholder="Label"
                   readOnly={true}
@@ -2528,6 +2546,7 @@ exports[`Storyshots Design System/TextField TextField with suffix 1`] = `
   color: #212332;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
   width: 0;
@@ -2536,10 +2555,6 @@ exports[`Storyshots Design System/TextField TextField with suffix 1`] = `
 
 .emotion-6+label {
   font-size: 0.9375rem;
-}
-
-.emotion-6:focus {
-  outline: none;
 }
 
 .emotion-6::-webkit-input-placeholder {
@@ -2555,6 +2570,26 @@ exports[`Storyshots Design System/TextField TextField with suffix 1`] = `
 }
 
 .emotion-6::placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus {
+  outline: none;
+}
+
+.emotion-6:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-6:focus::placeholder {
   color: transparent;
 }
 
@@ -2580,6 +2615,38 @@ exports[`Storyshots Design System/TextField TextField with suffix 1`] = `
 }
 
 .emotion-7 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-8 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -2628,13 +2695,21 @@ exports[`Storyshots Design System/TextField TextField with suffix 1`] = `
               >
                 <input
                   className="emotion-6"
+                  data-testid="input"
                   disabled={false}
+                  placeholder="Label"
                   readOnly={false}
                   required={false}
                 />
+                <label
+                  className="emotion-7"
+                >
+                  Label
+                   
+                </label>
               </div>
               <div
-                className="emotion-7"
+                className="emotion-8"
               >
                 <div
                   style={

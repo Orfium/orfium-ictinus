@@ -14282,6 +14282,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   color: #212332;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
   width: 0;
@@ -14292,40 +14293,40 @@ exports[`PaletteShowcase should render correctly 1`] = `
   font-size: 0.9375rem;
 }
 
+.emotion-776::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-776::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-776:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-776::placeholder {
+  color: transparent;
+}
+
 .emotion-776:focus {
   outline: none;
 }
 
-.emotion-776::-webkit-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus::-webkit-input-placeholder {
+  color: #54587f;
 }
 
-.emotion-776::-moz-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus::-moz-placeholder {
+  color: #54587f;
 }
 
-.emotion-776:-ms-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus:-ms-input-placeholder {
+  color: #54587f;
 }
 
-.emotion-776::placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-776:not(:focus):placeholder-shown+label {
@@ -14350,6 +14351,38 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-777 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-778 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -14368,7 +14401,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   cursor: unset;
 }
 
-.emotion-778 {
+.emotion-779 {
   background: white;
   width: 400px;
   height: 50px;
@@ -14398,14 +14431,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-779 {
+.emotion-780 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-780 {
+.emotion-781 {
   background: #fff;
   width: 400px;
   height: 50px;
@@ -14435,14 +14468,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-781 {
+.emotion-782 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-782 {
+.emotion-783 {
   background: #e5e5e5;
   width: 400px;
   height: 50px;
@@ -14472,7 +14505,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-784 {
+.emotion-785 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -14487,7 +14520,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-785 {
+.emotion-786 {
   height: 50px;
   width: calc(100% - 20px);
   background: #fff;
@@ -14517,12 +14550,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-785 div:last-child {
+.emotion-786 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-803 {
+.emotion-804 {
   height: 50px;
   width: calc(100% - 20px);
   background: white;
@@ -14552,12 +14585,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-803 div:last-child {
+.emotion-804 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-805 {
+.emotion-806 {
   height: 50px;
   width: calc(100% - 20px);
   background: #e5e5e5;
@@ -14587,12 +14620,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-805 div:last-child {
+.emotion-806 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-807 {
+.emotion-808 {
   height: 50px;
   width: calc(100% - 20px);
   background: #ccc;
@@ -14622,12 +14655,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-807 div:last-child {
+.emotion-808 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-809 {
+.emotion-810 {
   height: 50px;
   width: calc(100% - 20px);
   background: #b2b2b2;
@@ -14657,12 +14690,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-809 div:last-child {
+.emotion-810 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-811 {
+.emotion-812 {
   height: 50px;
   width: calc(100% - 20px);
   background: #999;
@@ -14692,12 +14725,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-811 div:last-child {
+.emotion-812 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-813 {
+.emotion-814 {
   height: 50px;
   width: calc(100% - 20px);
   background: #7f7f7f;
@@ -14727,12 +14760,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-813 div:last-child {
+.emotion-814 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-815 {
+.emotion-816 {
   height: 50px;
   width: calc(100% - 20px);
   background: #666;
@@ -14762,12 +14795,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-815 div:last-child {
+.emotion-816 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-817 {
+.emotion-818 {
   height: 50px;
   width: calc(100% - 20px);
   background: #4c4c4c;
@@ -14797,12 +14830,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-817 div:last-child {
+.emotion-818 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-819 {
+.emotion-820 {
   height: 50px;
   width: calc(100% - 20px);
   background: #323232;
@@ -14832,12 +14865,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-819 div:last-child {
+.emotion-820 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-821 {
+.emotion-822 {
   height: 50px;
   width: calc(100% - 20px);
   background: #191919;
@@ -14867,7 +14900,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-821 div:last-child {
+.emotion-822 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -29153,6 +29186,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   color: #212332;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
   width: 0;
@@ -29163,40 +29197,40 @@ exports[`PaletteShowcase should render correctly 1`] = `
   font-size: 0.9375rem;
 }
 
+.emotion-776::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-776::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-776:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-776::placeholder {
+  color: transparent;
+}
+
 .emotion-776:focus {
   outline: none;
 }
 
-.emotion-776::-webkit-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus::-webkit-input-placeholder {
+  color: #54587f;
 }
 
-.emotion-776::-moz-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus::-moz-placeholder {
+  color: #54587f;
 }
 
-.emotion-776:-ms-input-placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus:-ms-input-placeholder {
+  color: #54587f;
 }
 
-.emotion-776::placeholder {
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 1.25rem;
-  font-size: 0.875rem;
-  letter-spacing: 0.015625rem;
+.emotion-776:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-776:not(:focus):placeholder-shown+label {
@@ -29221,6 +29255,38 @@ exports[`PaletteShowcase should render correctly 1`] = `
 }
 
 .emotion-777 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-778 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -29239,7 +29305,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   cursor: unset;
 }
 
-.emotion-778 {
+.emotion-779 {
   background: white;
   width: 400px;
   height: 50px;
@@ -29269,14 +29335,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-779 {
+.emotion-780 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-780 {
+.emotion-781 {
   background: #fff;
   width: 400px;
   height: 50px;
@@ -29306,14 +29372,14 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-781 {
+.emotion-782 {
   background: white;
   opacity: 0.6;
   border-radius: 4px;
   padding: 4px;
 }
 
-.emotion-782 {
+.emotion-783 {
   background: #e5e5e5;
   width: 400px;
   height: 50px;
@@ -29343,7 +29409,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   flex-direction: column;
 }
 
-.emotion-784 {
+.emotion-785 {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -29358,7 +29424,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   width: 100%;
 }
 
-.emotion-785 {
+.emotion-786 {
   height: 50px;
   width: calc(100% - 20px);
   background: #fff;
@@ -29388,12 +29454,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-785 div:last-child {
+.emotion-786 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-803 {
+.emotion-804 {
   height: 50px;
   width: calc(100% - 20px);
   background: white;
@@ -29423,12 +29489,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-803 div:last-child {
+.emotion-804 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-805 {
+.emotion-806 {
   height: 50px;
   width: calc(100% - 20px);
   background: #e5e5e5;
@@ -29458,12 +29524,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-805 div:last-child {
+.emotion-806 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-807 {
+.emotion-808 {
   height: 50px;
   width: calc(100% - 20px);
   background: #ccc;
@@ -29493,12 +29559,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-807 div:last-child {
+.emotion-808 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-809 {
+.emotion-810 {
   height: 50px;
   width: calc(100% - 20px);
   background: #b2b2b2;
@@ -29528,12 +29594,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-809 div:last-child {
+.emotion-810 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-811 {
+.emotion-812 {
   height: 50px;
   width: calc(100% - 20px);
   background: #999;
@@ -29563,12 +29629,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-811 div:last-child {
+.emotion-812 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-813 {
+.emotion-814 {
   height: 50px;
   width: calc(100% - 20px);
   background: #7f7f7f;
@@ -29598,12 +29664,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-813 div:last-child {
+.emotion-814 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-815 {
+.emotion-816 {
   height: 50px;
   width: calc(100% - 20px);
   background: #666;
@@ -29633,12 +29699,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-815 div:last-child {
+.emotion-816 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-817 {
+.emotion-818 {
   height: 50px;
   width: calc(100% - 20px);
   background: #4c4c4c;
@@ -29668,12 +29734,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-817 div:last-child {
+.emotion-818 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-819 {
+.emotion-820 {
   height: 50px;
   width: calc(100% - 20px);
   background: #323232;
@@ -29703,12 +29769,12 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-819 div:last-child {
+.emotion-820 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
 
-.emotion-821 {
+.emotion-822 {
   height: 50px;
   width: calc(100% - 20px);
   background: #191919;
@@ -29738,7 +29804,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
   transform: scale(1);
 }
 
-.emotion-821 div:last-child {
+.emotion-822 div:last-child {
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -34300,29 +34366,36 @@ exports[`PaletteShowcase should render correctly 1`] = `
                   >
                     <input
                       class="emotion-776"
+                      data-testid="input"
                       placeholder="white "
                       value="white"
                     />
+                    <label
+                      class="emotion-777"
+                    >
+                      Color
+                       
+                    </label>
                   </div>
                   <div
-                    class="emotion-777"
+                    class="emotion-778"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="emotion-778"
+            class="emotion-779"
           >
             <div
-              class="emotion-779"
+              class="emotion-780"
             >
               normal : 
               white
             </div>
           </div>
           <div
-            class="emotion-780"
+            class="emotion-781"
           >
             <input
               id="lighten-range"
@@ -34333,7 +34406,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
               value="0.1"
             />
             <div
-              class="emotion-781"
+              class="emotion-782"
             >
               lighten
                
@@ -34343,7 +34416,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-782"
+            class="emotion-783"
           >
             <input
               id="lighten-range"
@@ -34354,7 +34427,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
               value="0.1"
             />
             <div
-              class="emotion-781"
+              class="emotion-782"
             >
               darken
                
@@ -34365,10 +34438,10 @@ exports[`PaletteShowcase should render correctly 1`] = `
           </div>
         </div>
         <div
-          class="emotion-784"
+          class="emotion-785"
         >
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               50
@@ -34380,7 +34453,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               100
@@ -34392,7 +34465,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               150
@@ -34404,7 +34477,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               200
@@ -34416,7 +34489,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               250
@@ -34428,7 +34501,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               300
@@ -34440,7 +34513,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               350
@@ -34452,7 +34525,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               400
@@ -34464,7 +34537,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-785"
+            class="emotion-786"
           >
             <div>
               450
@@ -34476,7 +34549,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-803"
+            class="emotion-804"
           >
             <div>
               500
@@ -34488,7 +34561,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-805"
+            class="emotion-806"
           >
             <div>
               550
@@ -34500,7 +34573,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-807"
+            class="emotion-808"
           >
             <div>
               600
@@ -34512,7 +34585,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-809"
+            class="emotion-810"
           >
             <div>
               650
@@ -34524,7 +34597,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-811"
+            class="emotion-812"
           >
             <div>
               700
@@ -34536,7 +34609,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-813"
+            class="emotion-814"
           >
             <div>
               750
@@ -34548,7 +34621,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-815"
+            class="emotion-816"
           >
             <div>
               800
@@ -34560,7 +34633,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-817"
+            class="emotion-818"
           >
             <div>
               850
@@ -34572,7 +34645,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-819"
+            class="emotion-820"
           >
             <div>
               900
@@ -34584,7 +34657,7 @@ exports[`PaletteShowcase should render correctly 1`] = `
             </div>
           </div>
           <div
-            class="emotion-821"
+            class="emotion-822"
           >
             <div>
               950

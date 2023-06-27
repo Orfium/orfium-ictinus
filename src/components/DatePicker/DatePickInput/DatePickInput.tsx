@@ -105,7 +105,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
             onKeyDown={handleClear}
             dataTestId={dataTestId}
             onChange={ON_CHANGE_MOCK}
-            placeholder="Date (start) - Date (end)"
+            label="Date (start) - Date (end)"
             value={selectedDay.from ? `${formattedFrom} - ${formattedTo}` : ''}
             suffix={'calendarEmpty'}
           />
@@ -120,7 +120,7 @@ const DatePickInput = React.forwardRef<HTMLInputElement, DatePickInputProps>(
           onKeyDown={handleClear}
           dataTestId={dataTestId}
           onChange={ON_CHANGE_MOCK}
-          placeholder="Select date"
+          label="Select date"
           value={selectedDay.to ? formattedFrom : ''}
           suffix={'calendarEmpty'}
         />

@@ -155,10 +155,6 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
-  outline: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
@@ -189,6 +185,26 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -414,10 +430,6 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
-  outline: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
@@ -448,6 +460,26 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -679,10 +711,6 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
-  outline: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
@@ -713,6 +741,26 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {

@@ -143,6 +143,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
               required={isRequired}
               id={id}
               disabled={isDisabled || isLocked}
+              data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
               {...omit(rest, 'dataTestId')}
               value={value}
               ref={ref}

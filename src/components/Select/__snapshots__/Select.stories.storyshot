@@ -122,10 +122,6 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -139,6 +135,26 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -293,6 +309,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-8"
+                      data-testid="input_select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -460,10 +477,6 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -477,6 +490,26 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -631,6 +664,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                     <input
                       autoComplete="off"
                       className="emotion-8"
+                      data-testid="input_select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -811,10 +845,6 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -828,6 +858,26 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -989,6 +1039,7 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -1160,10 +1211,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1177,6 +1224,26 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -1381,6 +1448,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -1453,6 +1521,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -1525,6 +1594,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -1601,6 +1671,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -1668,6 +1739,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -1735,6 +1807,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -2026,10 +2099,6 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-45:focus {
-  outline: none;
-}
-
 .emotion-45::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2043,6 +2112,26 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
 }
 
 .emotion-45::placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus {
+  outline: none;
+}
+
+.emotion-45:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus::placeholder {
   color: transparent;
 }
 
@@ -2445,10 +2534,10 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-45"
+                        data-testid="input_select-input"
                         disabled={false}
                         onInput={[Function]}
                         onKeyDown={[Function]}
-                        placeholder="Multi Select"
                         readOnly={false}
                         required={false}
                         value=""
@@ -2511,6 +2600,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-45"
+                        data-testid="input_select-input"
                         disabled={false}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -2691,10 +2781,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2708,6 +2794,26 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -2869,6 +2975,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -3045,10 +3152,6 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -3062,6 +3165,26 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -3223,6 +3346,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -3396,10 +3520,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -3413,6 +3533,26 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -3574,6 +3714,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -3640,6 +3781,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     <input
                       autoComplete="off"
                       className="emotion-8"
+                      data-testid="input_select-input"
                       disabled={false}
                       onChange={[Function]}
                       onInput={[Function]}
@@ -3712,6 +3854,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -3787,6 +3930,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -3963,10 +4107,6 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -3980,6 +4120,26 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -4097,6 +4257,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -4270,10 +4431,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -4287,6 +4444,26 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -4578,6 +4755,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -4659,6 +4837,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -4851,10 +5030,6 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -4868,6 +5043,26 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -5029,6 +5224,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                       <input
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -5205,10 +5401,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -5222,6 +5414,26 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -5384,6 +5596,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -5458,6 +5671,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}
@@ -5532,6 +5746,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
+                        data-testid="input_select-input"
                         disabled={false}
                         onChange={[Function]}
                         onInput={[Function]}

@@ -702,6 +702,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   color: #212332;
   display: block;
   position: relative;
+  top: 0.4375rem;
   z-index: 1;
   text-overflow: ellipsis;
   width: 0;
@@ -710,10 +711,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 
 .emotion-13+label {
   font-size: 0.9375rem;
-}
-
-.emotion-13:focus {
-  outline: none;
 }
 
 .emotion-13::-webkit-input-placeholder {
@@ -729,6 +726,26 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-13::placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus {
+  outline: none;
+}
+
+.emotion-13:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-13:focus::placeholder {
   color: transparent;
 }
 
@@ -754,6 +771,38 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
 }
 
 .emotion-14 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, 0);
+  -moz-transform: translate(0.1875rem, 0);
+  -ms-transform: translate(0.1875rem, 0);
+  transform: translate(0.1875rem, 0);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-15 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -772,7 +821,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   cursor: unset;
 }
 
-.emotion-25 {
+.emotion-28 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -797,19 +846,19 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-26 {
+.emotion-29 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-27 {
+.emotion-30 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-28 {
+.emotion-31 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -825,25 +874,25 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-28:focus-visible:not(:disabled) {
+.emotion-31:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-28:disabled {
+.emotion-31:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-28:hover:not(:disabled) {
+.emotion-31:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-28:active:not(:disabled) {
+.emotion-31:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-29 {
+.emotion-32 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -859,7 +908,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-30 {
+.emotion-33 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -898,23 +947,23 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-30 img {
+.emotion-33 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-31 {
+.emotion-34 {
   font-weight: 500;
 }
 
-.emotion-33 {
+.emotion-36 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-33 path {
+.emotion-36 path {
   fill: #1451dc;
 }
 
@@ -983,13 +1032,21 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                 >
                   <input
                     className="emotion-13"
+                    data-testid="input"
                     disabled={false}
+                    placeholder="Label"
                     readOnly={false}
                     required={false}
                   />
+                  <label
+                    className="emotion-14"
+                  >
+                    Label
+                     
+                  </label>
                 </div>
                 <div
-                  className="emotion-14"
+                  className="emotion-15"
                 />
               </div>
             </div>
@@ -1008,13 +1065,21 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                 >
                   <input
                     className="emotion-13"
+                    data-testid="input"
                     disabled={false}
+                    placeholder="Label"
                     readOnly={false}
                     required={false}
                   />
+                  <label
+                    className="emotion-14"
+                  >
+                    Label
+                     
+                  </label>
                 </div>
                 <div
-                  className="emotion-14"
+                  className="emotion-15"
                 />
               </div>
             </div>
@@ -1033,43 +1098,51 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                 >
                   <input
                     className="emotion-13"
+                    data-testid="input"
                     disabled={false}
+                    placeholder="Label"
                     readOnly={false}
                     required={false}
                   />
+                  <label
+                    className="emotion-14"
+                  >
+                    Label
+                     
+                  </label>
                 </div>
                 <div
-                  className="emotion-14"
+                  className="emotion-15"
                 />
               </div>
             </div>
           </div>
         </div>
         <div
-          className="emotion-25"
+          className="emotion-28"
         >
           <div
             role="button"
           >
             <div
-              className="emotion-26"
+              className="emotion-29"
               data-testid="userMenu"
             >
               <div
-                className="emotion-27"
+                className="emotion-30"
               >
                 <button
-                  className="emotion-28"
+                  className="emotion-31"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-29"
+                    className="emotion-32"
                   >
                     <div
-                      className="emotion-30"
+                      className="emotion-33"
                       data-testid="_avatar"
                     >
                       <img
@@ -1079,7 +1152,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-31"
+                          className="emotion-34"
                         >
                           Tom Cruise
                         </span>
@@ -1090,7 +1163,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-33"
+                        className="emotion-36"
                       />
                     </span>
                   </span>

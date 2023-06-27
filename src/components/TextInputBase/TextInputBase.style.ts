@@ -64,7 +64,7 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ isDisabled, status, isInteractive, sx }: TextInputBaseProps) =>
+  ({ isDisabled, status, isInteractive, sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = theme.colorScheme;
     const isLocked = status?.type === 'read-only';
@@ -106,7 +106,7 @@ export const wrapperStyle =
   };
 
 export const textFieldStyle =
-  ({ sx }: TextInputBaseProps) =>
+  ({ sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -129,7 +129,7 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, sx }: TextInputBaseProps) =>
+  ({ label, placeholder, sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -152,13 +152,16 @@ export const inputStyle =
         fontSize: theme.globals.typography.fontSize[15],
       },
 
-      '&:focus': {
-        outline: 'none',
+      '&::placeholder': {
+        color: 'transparent',
+        ...(!label && placeholder ? body02(theme) : {}),
       },
 
-      '&::placeholder': {
-        color: !label && placeholder ? tokens('textColor.inputColorAlt') : 'transparent',
-        ...(!label && placeholder ? body02(theme) : {}),
+      '&:focus': {
+        outline: 'none',
+        '&::placeholder': {
+          color: placeholder ? tokens('textColor.inputColorAlt') : 'transparent',
+        },
       },
 
       '&:not(:focus):placeholder-shown': {
@@ -188,7 +191,7 @@ export const inputStyle =
   };
 
 export const hintMessageStyle =
-  ({ status }: TextInputBaseProps) =>
+  ({ status }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 

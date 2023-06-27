@@ -14,7 +14,7 @@ describe('Multi TextField', () => {
   });
 
   beforeEach(() => {
-    input = screen.getByPlaceholderText('Controlled MultiTextField') as HTMLInputElement;
+    input = screen.getByTestId('input_showcase') as HTMLInputElement;
   });
 
   it('renders the initial values', async () => {

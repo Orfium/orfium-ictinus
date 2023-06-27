@@ -46,12 +46,14 @@ const TextFieldShowcase: FC = () => {
       <TextField
         isMulti
         label="Controlled MultiTextField"
+        placeholder="Type and then press Enter"
         tags={tags}
         value={value}
         onChange={handleChange}
         onMultiValueDelete={removeTag}
         onMultiValueClearAll={handleClearAll}
         onKeyDown={handleKeyDown}
+        dataTestId="showcase"
       />
     </div>
   );

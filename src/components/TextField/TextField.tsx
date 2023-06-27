@@ -112,25 +112,22 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
             <input
               readOnly={isLocked}
               css={inputStyle({ label, placeholder })}
-              placeholder={
-                !label && placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label
-              }
+              placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
               required={isRequired}
               id={id}
               disabled={isDisabled || isLocked}
               onInput={onInput}
+              data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
               {...omit(rest, 'dataTestId')}
               ref={combinedRefs}
             />
-            {label && (
-              <Label
-                htmlFor={id}
-                label={label}
-                isRequired={isRequired}
-                isAnimated={Boolean(rest.value)}
-                hasError={status?.type === 'error'}
-              />
-            )}
+            <Label
+              htmlFor={id}
+              label={label}
+              isRequired={isRequired}
+              isAnimated={Boolean(rest.value)}
+              hasError={status?.type === 'error'}
+            />
           </div>
           <div css={suffixContainerStyle()}>{suffixContent}</div>
         </TextInputBase>

@@ -12,7 +12,7 @@ import { AcceptedIconNames } from 'components/Icon/types';
 
 export type TextInputBaseProps = {
   /** The label of the text field that will be used as a placeholder and a label */
-  label?: string;
+  label: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
   /** An optional suffix (element or icon-name) to show to the left */

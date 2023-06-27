@@ -27,6 +27,7 @@ const ColorUtility = ({ defaultColor }: { defaultColor?: string }) => {
         <div css={{ flexDirection: 'column', marginRight: '8px' }}>
           <div css={inputWrapper}>
             <TextField
+              label={'Color'}
               value={colorInput}
               placeholder={color.normal || DEFAULT_COLOR}
               onChange={updateColor}
