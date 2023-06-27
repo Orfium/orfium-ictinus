@@ -6,7 +6,7 @@ on:
       - 'next'
   pull_request:
     branches:
-      - "*"
+      - "**"
 env:
   NODE_VERSION: '18.13'
   PROJECT: designlab
