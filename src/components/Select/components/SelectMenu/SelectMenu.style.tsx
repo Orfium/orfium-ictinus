@@ -13,7 +13,10 @@ export const optionStyle =
   ({
     isSelected,
     hasNoResultsExist,
-  }: { isSelected: boolean; hasNoResultsExist?: boolean } & Omit<TextFieldProps, 'ref'>) =>
+  }: { isSelected: boolean; hasNoResultsExist?: boolean } & Omit<
+    TextFieldProps,
+    'ref' | 'label'
+  >) =>
   (theme: Theme): SerializedStyles => {
     return css`
       padding: ${theme.globals.spacing.get('6')};
@@ -35,7 +38,7 @@ export const optionStyle =
   };
 
 export const menuStyle =
-  ({ status, isVirtualized }: SelectMenuProps & Omit<TextFieldProps, 'ref'>) =>
+  ({ status, isVirtualized }: SelectMenuProps & Omit<TextFieldProps, 'ref' | 'label'>) =>
   (theme: Theme): SerializedStyles =>
     css`
       background-color: ${theme.globals.colors.white};
