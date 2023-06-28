@@ -2,9 +2,11 @@ import React, { FC, useState } from 'react';
 
 import TextField from '../../TextField';
 
-export const values = ['Value 1', 'Value 2'];
+type Props = {
+  values?: string[];
+};
 
-const TextFieldShowcase: FC = () => {
+const TextFieldShowcase: FC<Props> = ({ values = [] }) => {
   const [value, setValue] = useState('');
   const [tags, setTags] = useState<string[]>(values);
 
@@ -45,7 +47,7 @@ const TextFieldShowcase: FC = () => {
     <div style={{ width: '500px' }}>
       <TextField
         isMulti
-        label="Controlled MultiTextField"
+        label="MultiTextField"
         placeholder="Type and then press Enter"
         tags={tags}
         value={value}

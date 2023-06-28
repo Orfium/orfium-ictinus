@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { merge } from 'lodash';
+import { merge, uniqueId } from 'lodash';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import { generateUniqueID } from 'utils/helpers';
@@ -49,10 +49,10 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       selectedOptions,
       value,
       isDisabled,
-      status,
+      status = { type: 'normal' },
       isReadOnly,
       label,
-      id,
+      id = uniqueId('multiTextfield_'),
       placeholder,
       isRequired = false,
       onOptionDelete,
@@ -70,6 +70,8 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
 
     const isLocked = status?.type === 'read-only';
+
+    const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
 
     const { inputPlaceholder, handleKeyDown, icon, hasLabel, TextfieldRef } =
       useMultiTextFieldBaseUtils({
@@ -119,7 +121,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       <div ref={TextfieldRef}>
         <TextInputBase
           isDisabled={isInteractive && isDisabled}
-          status={isInteractive ? status : { type: 'normal' }}
+          status={isInteractive ? { ...status, id: hintMessageId } : { type: 'normal' }}
           {...rest}
           isInteractive={isInteractive}
           sx={merge(
@@ -132,7 +134,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
           <div css={inputContainer()}>
             {chips}
             <input
-              readOnly={isReadOnly}
+              readOnly={isLocked || isReadOnly}
               onKeyDown={handleKeyDown}
               css={inputStyle({
                 placeholder,
@@ -144,6 +146,8 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
               id={id}
               disabled={isDisabled || isLocked}
               data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
+              aria-invalid={status?.type === 'error'}
+              aria-describedby={hintMessageId}
               {...omit(rest, 'dataTestId')}
               value={value}
               ref={ref}

@@ -307,10 +307,12 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                     className="emotion-7"
                   >
                     <input
+                      aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
                       data-testid="input_select-input"
                       disabled={false}
+                      id="textfield"
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -322,6 +324,7 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                     />
                     <label
                       className="emotion-9"
+                      htmlFor="textfield"
                     >
                       Flavour
                        
@@ -662,10 +665,12 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                     className="emotion-7"
                   >
                     <input
+                      aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
                       data-testid="input_select-input"
                       disabled={false}
+                      id="textfield"
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -677,6 +682,7 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                     />
                     <label
                       className="emotion-9"
+                      htmlFor="textfield"
                     >
                       Flavour
                        
@@ -1037,10 +1043,12 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1051,6 +1059,7 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -1446,10 +1455,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1460,6 +1471,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -1519,10 +1531,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1533,6 +1547,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -1592,10 +1607,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1606,6 +1623,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -1669,10 +1687,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1683,6 +1703,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -1737,10 +1758,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1751,6 +1774,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -1805,10 +1829,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1819,6 +1845,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -2353,7 +2380,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_0"
                         >
-                          <div>
+                          <div
+                            aria-label="chip_61"
+                          >
                             <div
                               className="emotion-11"
                               title="Strawberry"
@@ -2362,6 +2391,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2384,7 +2414,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_1"
                         >
-                          <div>
+                          <div
+                            aria-label="chip_62"
+                          >
                             <div
                               className="emotion-11"
                               title="Banana"
@@ -2393,6 +2425,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2415,7 +2448,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_2"
                         >
-                          <div>
+                          <div
+                            aria-label="chip_63"
+                          >
                             <div
                               className="emotion-11"
                               title="Citrus"
@@ -2424,6 +2459,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2446,7 +2482,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_3"
                         >
-                          <div>
+                          <div
+                            aria-label="chip_64"
+                          >
                             <div
                               className="emotion-11"
                               title="Sorbet"
@@ -2455,6 +2493,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2477,7 +2516,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_4"
                         >
-                          <div>
+                          <div
+                            aria-label="chip_65"
+                          >
                             <div
                               className="emotion-11"
                               title="Cookie Dough"
@@ -2486,6 +2527,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2508,7 +2550,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_5"
                         >
-                          <div>
+                          <div
+                            aria-label="chip_66"
+                          >
                             <div
                               className="emotion-11"
                               title="Buttered Pecan"
@@ -2517,6 +2561,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2532,10 +2577,12 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                         </div>
                       </span>
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-45"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="multiTextfield"
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         readOnly={false}
@@ -2544,6 +2591,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       />
                       <label
                         className="emotion-46"
+                        htmlFor="multiTextfield"
                       >
                         Multi Select
                          
@@ -2598,10 +2646,12 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       className="emotion-8"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-45"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="multiTextfield"
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         onKeyPress={[Function]}
@@ -2612,6 +2662,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       />
                       <label
                         className="emotion-58"
+                        htmlFor="multiTextfield"
                       >
                         Multi Select - Async
                          
@@ -2973,10 +3024,12 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -2987,6 +3040,7 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -3344,10 +3398,12 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3358,6 +3414,7 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -3712,10 +3769,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3726,6 +3785,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -3779,10 +3839,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     className="emotion-7"
                   >
                     <input
+                      aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
                       data-testid="input_select-input"
                       disabled={false}
+                      id="textfield"
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -3793,6 +3855,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     />
                     <label
                       className="emotion-9"
+                      htmlFor="textfield"
                     >
                       Flavour
                        
@@ -3852,10 +3915,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3866,6 +3931,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -3928,10 +3994,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3942,6 +4010,7 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Bottom positioned case
                          
@@ -4255,10 +4324,12 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -4269,6 +4340,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -4753,10 +4825,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-describedby="textfield_40_hintMessage"
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -4767,6 +4842,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Label
                          
@@ -4795,7 +4871,9 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   className="emotion-14"
                   data-testid="error-select-input"
                 >
-                  <span>
+                  <span
+                    id="textfield_40_hintMessage"
+                  >
                     Hint Message
                   </span>
                 </div>
@@ -4835,10 +4913,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-describedby="textfield_41_hintMessage"
+                        aria-invalid={true}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -4849,6 +4930,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       />
                       <label
                         className="emotion-21"
+                        htmlFor="textfield"
                       >
                         Label
                          
@@ -4885,7 +4967,9 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-28"
                     />
                   </span>
-                  <span>
+                  <span
+                    id="textfield_41_hintMessage"
+                  >
                     Error Message
                   </span>
                 </div>
@@ -5222,10 +5306,12 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5236,6 +5322,7 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Group Select
                          
@@ -5593,11 +5680,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5608,6 +5697,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -5668,11 +5758,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5683,6 +5775,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
@@ -5743,11 +5836,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
                         data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5758,6 +5853,7 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          

@@ -25,6 +25,7 @@ export type TextInputBaseProps = {
   status?: {
     type: 'normal' | 'error' | 'read-only';
     hintMessage?: string;
+    id?: string;
   };
   /** value of the input */
   value?: string | number;
@@ -60,7 +61,7 @@ const TextInputBase: FC<
       {status.type === 'error' && (
         <Icon color={tokens('textColor.errorHintColor')} name={'warning'} size={12} />
       )}
-      <span>{status.hintMessage}</span>
+      <span id={status.id}>{status.hintMessage}</span>
     </div>
   );
 

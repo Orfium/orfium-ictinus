@@ -2,7 +2,9 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { render, screen } from '../../test';
-import TextFieldShowCase, { values } from '../storyUtils/TextFieldShowcase/TextFieldShowcase';
+import TextFieldShowCase from '../storyUtils/TextFieldShowcase/TextFieldShowcase';
+
+export const values = ['Value 1', 'Value 2'];
 
 describe('Multi TextField', () => {
   let input: HTMLInputElement;
@@ -10,7 +12,7 @@ describe('Multi TextField', () => {
   let newChip: HTMLElement;
 
   beforeEach(() => {
-    render(<TextFieldShowCase />);
+    render(<TextFieldShowCase values={values} />);
   });
 
   beforeEach(() => {

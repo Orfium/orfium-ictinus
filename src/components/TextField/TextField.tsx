@@ -1,6 +1,6 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import useTheme from 'hooks/useTheme';
-import { omit } from 'lodash';
+import { omit, uniqueId } from 'lodash';
 import React, { InputHTMLAttributes, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
 
@@ -15,7 +15,7 @@ import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type InputProps = Partial<
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly' | 'disabled'>
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled'>
 >;
 
 export type TextFieldProps = {
@@ -47,14 +47,14 @@ export type TextFieldProps = {
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
-    id = undefined,
+    id = uniqueId('textfield_'),
     suffix = null,
     label,
     placeholder = '',
     isRequired = false,
     isDisabled,
     isReadOnly,
-    status,
+    status = { type: 'normal' },
     onInput,
     isMulti = false,
     tags = [],
@@ -68,6 +68,8 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
   const combinedRefs = useCombinedRefs(inputRef, ref);
 
   const isLocked = status?.type === 'read-only';
+
+  const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
 
   const suffixContent = useMemo(() => {
     if (isLocked || typeof suffix === 'string') {
@@ -104,13 +106,14 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           onKeyDown={rest.onKeyDown}
           selectedOptions={tags}
           value={rest.value}
+          status={{ ...status, id: hintMessageId }}
           ref={combinedRefs}
         />
       ) : (
-        <TextInputBase {...props}>
+        <TextInputBase {...props} status={{ ...status, id: hintMessageId }}>
           <div css={{ width: '100% ' }}>
             <input
-              readOnly={isLocked}
+              readOnly={isLocked || isReadOnly}
               css={inputStyle({ label, placeholder })}
               placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
               required={isRequired}
@@ -118,6 +121,8 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
               disabled={isDisabled || isLocked}
               onInput={onInput}
               data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
+              aria-invalid={status?.type === 'error'}
+              aria-describedby={hintMessageId}
               {...omit(rest, 'dataTestId')}
               ref={combinedRefs}
             />
