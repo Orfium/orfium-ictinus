@@ -7,6 +7,7 @@ import Button from '../../Button';
 import Card from '../../Card';
 import Chip from '../../Chip';
 import Tooltip from '../../Tooltip';
+import { Props as TooltipProps } from '../../Tooltip/Tooltip';
 import {
   customContentStyle,
   tooltipContainerStyle,
@@ -33,13 +34,14 @@ const CustomContent = () => {
   );
 };
 
-const TooltipShowcase = ({ content }: { content: string }) => {
+const TooltipShowcase = ({ content, size }: Pick<TooltipProps, 'content' | 'size'>) => {
   return (
     <div css={tooltipContainerStyle()}>
       <h2>Tooltip with text-only content</h2>
       <div css={tooltipRowStyle()}>
         <Tooltip
           content={content}
+          size={size}
           placement={'left'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
@@ -50,6 +52,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         </Tooltip>
         <Tooltip
           content={content}
+          size={size}
           placement={'right'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
@@ -63,6 +66,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
       <div css={tooltipRowStyle()}>
         <Tooltip
           content={content}
+          size={size}
           placement={'top'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}
@@ -73,6 +77,7 @@ const TooltipShowcase = ({ content }: { content: string }) => {
         </Tooltip>
         <Tooltip
           content={content}
+          size={size}
           placement={'bottom'}
           interactive={boolean('interactive', false)}
           delay={number('delay', 100)}

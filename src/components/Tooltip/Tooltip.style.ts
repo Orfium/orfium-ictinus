@@ -33,7 +33,7 @@ export const tooltipStyle =
         font-size: ${defineFontSizeBasedOnTooltipSize(size)};
         font-weight: ${theme.typography.weights.regular};
         line-height: 110%;
-        border-radius: ${theme.spacing.sm};
+        border-radius: ${theme.spacing.xsm};
         text-align: start;
         white-space: pre-wrap;
         word-break: break-word;
