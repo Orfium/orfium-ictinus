@@ -91,7 +91,8 @@ const Filter = React.forwardRef<HTMLButtonElement, Props>((props, ref) => {
     );
   }, [multi, availableMultiFilters, items, onAsyncSearch, searchValue]);
 
-  const shouldDisplayDefaultOption = searchValue === '' && !!items.length;
+  const shouldDisplayDefaultOption =
+    !searchValue || defaultValue.label.toLowerCase().includes(searchValue.toLowerCase());
 
   const handleOpen = () => {
     setSearchValue('');
