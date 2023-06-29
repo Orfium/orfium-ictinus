@@ -31,7 +31,7 @@ const Options: React.FC<Props> = ({
   const height = isForcedVirtualized ? FILTER_OPTIONS_MAX_HEIGHT : undefined;
   const defaultOption = isDefaultOptionVisible ? defaultValue : undefined;
 
-  return items.length ? (
+  return items.length || isDefaultOptionVisible ? (
     <List
       data={items.filter((option) => option.value !== defaultValue.value)}
       rowSize={'small'}
