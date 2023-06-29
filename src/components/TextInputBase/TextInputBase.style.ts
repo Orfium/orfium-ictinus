@@ -117,7 +117,6 @@ export const textFieldStyle =
       alignItems: 'center',
       verticalAlign: 'top',
       width: 'fill-available',
-      /** TODO: revisit this when TextField's add-on is implemented */
       padding: `0 0 0 ${tokens('paddingContentLeft')}`,
 
       '> div': {

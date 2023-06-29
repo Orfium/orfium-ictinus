@@ -681,6 +681,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .emotion-11>div {
@@ -802,26 +803,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   white-space: nowrap;
 }
 
-.emotion-15 {
-  min-width: 2.75rem;
-  max-width: 2.75rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
-.emotion-28 {
+.emotion-25 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -846,19 +828,19 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   flex-wrap: nowrap;
 }
 
-.emotion-29 {
+.emotion-26 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-30 {
+.emotion-27 {
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.emotion-31 {
+.emotion-28 {
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -874,25 +856,25 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   transition: background-color,border 150ms linear;
 }
 
-.emotion-31:focus-visible:not(:disabled) {
+.emotion-28:focus-visible:not(:disabled) {
   outline: #F814E1 auto 0.125rem;
 }
 
-.emotion-31:disabled {
+.emotion-28:disabled {
   opacity: 50%;
   background-color: rgba(23,91,245,0);
   cursor: not-allowed;
 }
 
-.emotion-31:hover:not(:disabled) {
+.emotion-28:hover:not(:disabled) {
   background-color: #175bf517;
 }
 
-.emotion-31:active:not(:disabled) {
+.emotion-28:active:not(:disabled) {
   background-color: rgba(23, 91, 245, 0.18);
 }
 
-.emotion-32 {
+.emotion-29 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -908,7 +890,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   gap: 0.5rem;
 }
 
-.emotion-33 {
+.emotion-30 {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -947,23 +929,23 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
   letter-spacing: 0rem;
 }
 
-.emotion-33 img {
+.emotion-30 img {
   border-radius: #c2c8ff;
   width: 100%;
   height: 100%;
 }
 
-.emotion-34 {
+.emotion-31 {
   font-weight: 500;
 }
 
-.emotion-36 {
+.emotion-33 {
   fill: #1451dc;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-36 path {
+.emotion-33 path {
   fill: #1451dc;
 }
 
@@ -1047,9 +1029,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                      
                   </label>
                 </div>
-                <div
-                  className="emotion-15"
-                />
               </div>
             </div>
           </div>
@@ -1082,9 +1061,6 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                      
                   </label>
                 </div>
-                <div
-                  className="emotion-15"
-                />
               </div>
             </div>
           </div>
@@ -1117,38 +1093,35 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                      
                   </label>
                 </div>
-                <div
-                  className="emotion-15"
-                />
               </div>
             </div>
           </div>
         </div>
         <div
-          className="emotion-28"
+          className="emotion-25"
         >
           <div
             role="button"
           >
             <div
-              className="emotion-29"
+              className="emotion-26"
               data-testid="userMenu"
             >
               <div
-                className="emotion-30"
+                className="emotion-27"
               >
                 <button
-                  className="emotion-31"
+                  className="emotion-28"
                   data-testid="button"
                   disabled={false}
                   onClick={[Function]}
                   type="button"
                 >
                   <span
-                    className="emotion-32"
+                    className="emotion-29"
                   >
                     <div
-                      className="emotion-33"
+                      className="emotion-30"
                       data-testid="_avatar"
                     >
                       <img
@@ -1158,7 +1131,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                     <span>
                       <span>
                         <span
-                          className="emotion-34"
+                          className="emotion-31"
                         >
                           Tom Cruise
                         </span>
@@ -1169,7 +1142,7 @@ exports[`Storyshots Design System/TopNavBar with Additional Tools 1`] = `
                       onClick={[Function]}
                     >
                       <span
-                        className="emotion-36"
+                        className="emotion-33"
                       />
                     </span>
                   </span>

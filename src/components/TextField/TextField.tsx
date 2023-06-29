@@ -8,6 +8,7 @@ import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import Label from '../Label';
+import { getTextInputBaseTokens } from '../TextInputBase/TextInputBase.tokens';
 import { AcceptedIconNames } from 'components/Icon/types';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import { SelectOption } from 'components/Select/Select';
@@ -64,6 +65,8 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
   } = props;
   const theme = useTheme();
 
+  const tokens = getTextInputBaseTokens(theme);
+
   const inputRef = React.useRef<HTMLInputElement>(null);
   const combinedRefs = useCombinedRefs(inputRef, ref);
 
@@ -93,6 +96,18 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     }
   };
 
+  const textInputBaseSx = useMemo(
+    () =>
+      !suffixContent
+        ? {
+            textField: {
+              paddingRight: tokens('paddingContentLeft'),
+            },
+          }
+        : {},
+    [suffixContent, tokens]
+  );
+
   return (
     <div onClick={handleClick}>
       {isMulti ? (
@@ -110,7 +125,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           ref={combinedRefs}
         />
       ) : (
-        <TextInputBase {...props} status={{ ...status, id: hintMessageId }}>
+        <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={textInputBaseSx}>
           <div css={{ width: '100% ' }}>
             <input
               readOnly={isLocked || isReadOnly}
@@ -134,7 +149,11 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
               hasError={status?.type === 'error'}
             />
           </div>
-          <div css={suffixContainerStyle()}>{suffixContent}</div>
+          {suffixContent && (
+            <div aria-hidden={!suffixContent} css={suffixContainerStyle()}>
+              {suffixContent}
+            </div>
+          )}
         </TextInputBase>
       )}
     </div>

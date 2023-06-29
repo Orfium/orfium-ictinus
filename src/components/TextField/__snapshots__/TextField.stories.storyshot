@@ -77,6 +77,7 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
   width: -moz-available;
   width: fill-available;
   padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .emotion-4>div {
@@ -198,25 +199,6 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8 {
-  min-width: 2.75rem;
-  max-width: 2.75rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
 <div
   className="emotion-0"
 >
@@ -262,9 +244,6 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
                    
                 </label>
               </div>
-              <div
-                className="emotion-8"
-              />
             </div>
           </div>
         </div>
@@ -883,7 +862,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
                 className="emotion-5"
               >
                 <input
-                  aria-describedby="textfield_79_hintMessage"
+                  aria-describedby="textfield_93_hintMessage"
                   aria-invalid={false}
                   className="emotion-6"
                   data-testid="input"
@@ -901,6 +880,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
                 </label>
               </div>
               <div
+                aria-hidden={false}
                 className="emotion-8"
               >
                 <span
@@ -919,7 +899,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
             data-testid="error"
           >
             <span
-              id="textfield_79_hintMessage"
+              id="textfield_93_hintMessage"
             >
               Message in Text Field
             </span>
@@ -1225,6 +1205,7 @@ exports[`Storyshots Design System/TextField TextField with Icons 1`] = `
                 </label>
               </div>
               <div
+                aria-hidden={false}
                 className="emotion-8"
               >
                 <img
@@ -1279,6 +1260,7 @@ exports[`Storyshots Design System/TextField TextField with Icons 1`] = `
                 </label>
               </div>
               <div
+                aria-hidden={false}
                 className="emotion-8"
               >
                 <span
@@ -1381,6 +1363,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
   width: -moz-available;
   width: fill-available;
   padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .emotion-4>div {
@@ -1502,26 +1485,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
   white-space: nowrap;
 }
 
-.emotion-8 {
-  min-width: 2.75rem;
-  max-width: 2.75rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
-.emotion-12 {
+.emotion-11 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -1539,52 +1503,52 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
   min-width: 100%;
 }
 
-.emotion-12+label {
+.emotion-11+label {
   font-size: 0.9375rem;
 }
 
-.emotion-12::-webkit-input-placeholder {
+.emotion-11::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-12::-moz-placeholder {
+.emotion-11::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-12:-ms-input-placeholder {
+.emotion-11:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-12::placeholder {
+.emotion-11::placeholder {
   color: transparent;
 }
 
-.emotion-12:focus {
+.emotion-11:focus {
   outline: none;
 }
 
-.emotion-12:focus::-webkit-input-placeholder {
+.emotion-11:focus::-webkit-input-placeholder {
   color: #54587f;
 }
 
-.emotion-12:focus::-moz-placeholder {
+.emotion-11:focus::-moz-placeholder {
   color: #54587f;
 }
 
-.emotion-12:focus:-ms-input-placeholder {
+.emotion-11:focus:-ms-input-placeholder {
   color: #54587f;
 }
 
-.emotion-12:focus::placeholder {
+.emotion-11:focus::placeholder {
   color: #54587f;
 }
 
-.emotion-12:not(:focus):placeholder-shown+label {
+.emotion-11:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-12:focus-within+label,
-.emotion-12:not(:placeholder-shown)+label {
+.emotion-11:focus-within+label,
+.emotion-11:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -1592,11 +1556,11 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
   font-weight: 700;
 }
 
-.emotion-12:focus-within+label {
+.emotion-11:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-12:disabled {
+.emotion-11:disabled {
   cursor: not-allowed;
 }
 
@@ -1645,9 +1609,6 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
                    
                 </label>
               </div>
-              <div
-                className="emotion-8"
-              />
             </div>
           </div>
         </div>
@@ -1673,7 +1634,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
               >
                 <input
                   aria-invalid={false}
-                  className="emotion-12"
+                  className="emotion-11"
                   data-testid="input"
                   disabled={false}
                   id="textfield"
@@ -1688,9 +1649,6 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
                    
                 </label>
               </div>
-              <div
-                className="emotion-8"
-              />
             </div>
           </div>
         </div>
@@ -1968,6 +1926,7 @@ exports[`Storyshots Design System/TextField TextField with Suffix 1`] = `
                 </label>
               </div>
               <div
+                aria-hidden={false}
                 className="emotion-8"
               >
                 <div
@@ -2071,6 +2030,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   width: -moz-available;
   width: fill-available;
   padding: 0 0 0 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .emotion-4>div {
@@ -2193,25 +2153,6 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
 }
 
 .emotion-8 {
-  min-width: 2.75rem;
-  max-width: 2.75rem;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  cursor: unset;
-}
-
-.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2230,7 +2171,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   letter-spacing: 0.015625rem;
 }
 
-.emotion-9 span {
+.emotion-8 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2238,7 +2179,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   padding: 0;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2263,16 +2204,16 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   background-color: #ffe7f0;
 }
 
-.emotion-10:hover {
+.emotion-9:hover {
   background-color: #ffd0e1;
 }
 
-.emotion-10:focus-within {
+.emotion-9:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #e7eefe;
 }
 
-.emotion-14 {
+.emotion-13 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2304,7 +2245,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   white-space: nowrap;
 }
 
-.emotion-16 {
+.emotion-14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2323,7 +2264,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   letter-spacing: 0.015625rem;
 }
 
-.emotion-16 span {
+.emotion-14 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2331,7 +2272,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   padding: 0;
 }
 
-.emotion-17 {
+.emotion-15 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2347,17 +2288,17 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   justify-content: center;
 }
 
-.emotion-18 {
+.emotion-16 {
   fill: #cc1255;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-18 path {
+.emotion-16 path {
   fill: #cc1255;
 }
 
-.emotion-19 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2382,22 +2323,65 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   background-color: #e7eefe;
 }
 
-.emotion-19:hover {
+.emotion-17:hover {
   background-color: #e7eefe;
 }
 
-.emotion-19:focus-within {
+.emotion-17:focus-within {
   box-shadow: 0 0 0 0.125rem #e4e7ff;
   background-color: #e7eefe;
 }
 
-.emotion-26 {
+.emotion-18 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-18>div {
+  position: relative;
+}
+
+.emotion-22 {
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-24 {
   fill: #5f6c85;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-26 path {
+.emotion-24 path {
   fill: #5f6c85;
 }
 
@@ -2430,7 +2414,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
                 className="emotion-5"
               >
                 <input
-                  aria-describedby="textfield_74_hintMessage"
+                  aria-describedby="textfield_88_hintMessage"
                   aria-invalid={false}
                   className="emotion-6"
                   data-testid="input"
@@ -2447,17 +2431,14 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
                    
                 </label>
               </div>
-              <div
-                className="emotion-8"
-              />
             </div>
           </div>
           <div
-            className="emotion-9"
+            className="emotion-8"
             data-testid="error"
           >
             <span
-              id="textfield_74_hintMessage"
+              id="textfield_88_hintMessage"
             >
               Hint in Text Field
             </span>
@@ -2475,7 +2456,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
           onClick={[Function]}
         >
           <div
-            className="emotion-10"
+            className="emotion-9"
           >
             <div
               className="emotion-4"
@@ -2484,7 +2465,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
                 className="emotion-5"
               >
                 <input
-                  aria-describedby="textfield_75_hintMessage"
+                  aria-describedby="textfield_89_hintMessage"
                   aria-invalid={true}
                   className="emotion-6"
                   data-testid="input"
@@ -2494,32 +2475,29 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
                   required={false}
                 />
                 <label
-                  className="emotion-14"
+                  className="emotion-13"
                   htmlFor="textfield"
                 >
                   Label
                    
                 </label>
               </div>
-              <div
-                className="emotion-8"
-              />
             </div>
           </div>
           <div
-            className="emotion-16"
+            className="emotion-14"
             data-testid="error"
           >
             <span
-              className="emotion-17"
+              className="emotion-15"
               onClick={[Function]}
             >
               <span
-                className="emotion-18"
+                className="emotion-16"
               />
             </span>
             <span
-              id="textfield_75_hintMessage"
+              id="textfield_89_hintMessage"
             >
               Error in Text Field
             </span>
@@ -2537,10 +2515,10 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
           onClick={[Function]}
         >
           <div
-            className="emotion-19"
+            className="emotion-17"
           >
             <div
-              className="emotion-4"
+              className="emotion-18"
             >
               <div
                 className="emotion-5"
@@ -2564,14 +2542,15 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
                 </label>
               </div>
               <div
-                className="emotion-8"
+                aria-hidden={false}
+                className="emotion-22"
               >
                 <span
-                  className="emotion-17"
+                  className="emotion-15"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-26"
+                    className="emotion-24"
                   />
                 </span>
               </div>
