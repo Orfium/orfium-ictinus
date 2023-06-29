@@ -33,6 +33,8 @@ const MultiFilter: React.FC<Props> = ({
     filterInputRef?.current?.focus();
   };
 
+  const shouldDipslayDefaultOption = Boolean(items.length && hasSelectAllOption);
+
   return (
     <div css={menuStyle()}>
       <div css={textFieldWrapper()} onClick={handleClick}>
@@ -54,7 +56,7 @@ const MultiFilter: React.FC<Props> = ({
           items={items}
           onSelect={onOptionClick}
           defaultValue={SELECT_ALL_OPTION}
-          shouldDisplayDefaultOption={hasSelectAllOption ?? false}
+          shouldDisplayDefaultOption={shouldDipslayDefaultOption}
         />
       </div>
     </div>
