@@ -1,8 +1,9 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import useTheme from 'hooks/useTheme';
-import { omit, uniqueId } from 'lodash';
+import { omit } from 'lodash';
 import React, { InputHTMLAttributes, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
+import { generateUniqueID } from 'utils/helpers';
 
 import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
@@ -48,7 +49,7 @@ export type TextFieldProps = {
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
-    id = uniqueId('textfield_'),
+    id = generateUniqueID('textfield_'),
     suffix = null,
     label,
     placeholder = '',

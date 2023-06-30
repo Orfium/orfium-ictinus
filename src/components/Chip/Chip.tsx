@@ -1,6 +1,5 @@
-import { uniqueId } from 'lodash';
 import React, { ForwardedRef, Fragment } from 'react';
-import { errorHandler, generateTestDataId } from 'utils/helpers';
+import { errorHandler, generateTestDataId, generateUniqueID } from 'utils/helpers';
 
 import { avatarStyle, chipStyle, closeIconWrapperStyle } from './Chip.style';
 import { ChipProps } from './Chip.types';
@@ -28,7 +27,7 @@ const Chip = React.forwardRef<HTMLButtonElement | HTMLDivElement, ChipProps>(
       onClear,
       children,
       badgeNumber,
-      id = uniqueId('chip_'),
+      id = generateUniqueID('chip_'),
     } = rest;
 
     errorHandler<ChipProps>(errors, { styleType, isSelected, isChecked, badgeNumber, isDisabled });

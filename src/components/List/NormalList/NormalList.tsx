@@ -1,6 +1,6 @@
 import { isUndefined } from 'lodash';
 import React from 'react';
-import { generateUniqueID } from 'utils/helpers';
+import { generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import { SelectOption } from '../../Select/Select';
@@ -54,7 +54,7 @@ const NormalList = React.forwardRef<HTMLDivElement, NormalListProps>(
           {newItems.map((item, index) =>
             (item as SelectOption)?.options ? (
               <ListItemGroup
-                key={generateUniqueID('list_item_group_' + index)}
+                key={generateUniqueKey('list_item_group_' + index)}
                 content={item}
                 size={rowSize}
                 groupIndex={index}
@@ -65,7 +65,7 @@ const NormalList = React.forwardRef<HTMLDivElement, NormalListProps>(
                 selectedItem={selectedItem}
               />
             ) : (
-              <li key={generateUniqueID('list_item' + index)}>
+              <li key={generateUniqueKey('list_item' + index)}>
                 <ListItem
                   content={item}
                   size={rowSize}

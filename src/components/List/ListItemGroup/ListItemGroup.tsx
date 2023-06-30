@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateUniqueID } from 'utils/helpers';
+import { generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import ListGroupTitle from './ListGroupTitle';
@@ -37,7 +37,7 @@ const ListItemGroup = React.forwardRef<HTMLDivElement, ListItemGroupProps>(
         />
         <ul css={listStyle({})}>
           {(content as SelectOption).options?.map((option, index) => (
-            <li key={generateUniqueID('list_item' + groupIndex + index)}>
+            <li key={generateUniqueKey('list_item' + groupIndex + index)}>
               <ListItem
                 content={option}
                 size={size}
