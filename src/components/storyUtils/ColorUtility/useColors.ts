@@ -6,7 +6,9 @@ import { validateColor } from './utils';
 const DEFAULT_COLOR = 'white';
 
 export const useColors = (defaultColor?: string) => {
+  const [colorInput, setColorInput] = useState(DEFAULT_COLOR);
   const [color, setColor] = useState(defaultColor || DEFAULT_COLOR);
+
   useEffect(() => {
     if (defaultColor !== DEFAULT_COLOR) {
       setColor(defaultColor || DEFAULT_COLOR);
@@ -21,6 +23,8 @@ export const useColors = (defaultColor?: string) => {
 
   const updateColor = useCallback((event: ChangeEvent<HTMLInputElement>) => {
     const colorInput = event.target.value;
+    setColorInput(colorInput);
+
     if (!colorInput) {
       setColor(DEFAULT_COLOR);
     }
@@ -31,6 +35,7 @@ export const useColors = (defaultColor?: string) => {
   }, []);
 
   return {
+    colorInput,
     color: {
       normal: color,
       darken: darkColor,

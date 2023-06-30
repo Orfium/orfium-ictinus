@@ -43,7 +43,7 @@ const MultiFilter: React.FC<Props> = ({
           onClearAllOptions={onClearAllOptions}
           isInteractive={false}
           value={searchValue}
-          placeholder="Search"
+          label="Search"
           isResponsive
           isLoading={isLoading}
           ref={filterInputRef}

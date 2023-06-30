@@ -22,9 +22,9 @@ export const DEFAULT_USER_MENU = {
 
 const DEFAULT_ADDITIONAL_TOOLS = (
   <>
-    <TextField />
-    <TextField />
-    <TextField />
+    <TextField label={'Label'} />
+    <TextField label={'Label'} />
+    <TextField label={'Label'} />
   </>
 );
 

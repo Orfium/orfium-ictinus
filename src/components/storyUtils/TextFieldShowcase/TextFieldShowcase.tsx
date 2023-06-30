@@ -1,43 +1,63 @@
 import React, { FC, useState } from 'react';
 
-import Box from '../../Box';
 import TextField from '../../TextField';
-import Typography from '../../Typography';
 
-const TextFieldShowcase: FC = () => {
-  const [tags, setTags] = useState<string[]>(['existing-tag-1', 'existing-tag-2']);
+type Props = {
+  values?: string[];
+};
 
-  const addTags = (tagStr: string | undefined) => {
-    setTags((tags) => (tagStr === undefined ? tags : [...tags, tagStr]));
+const TextFieldShowcase: FC<Props> = ({ values = [] }) => {
+  const [value, setValue] = useState('');
+  const [tags, setTags] = useState<string[]>(values);
+
+  const addTag = (tag: string) => {
+    setTags([...tags, tag]);
+  };
+  const removeTag = (tag: string) => {
+    setTags(tags.filter((t) => t !== tag));
   };
 
-  const removeTag = (value: string | undefined) => {
-    const newTags = tags.filter((id) => id !== value);
-    setTags([...newTags]);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setValue((event.target as HTMLInputElement).value);
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    switch (event.key) {
+      case 'Enter': {
+        if (!value) return;
+        addTag(value);
+        setValue('');
+
+        return;
+      }
+      case 'Backspace': {
+        if (value || !tags.length) return;
+        removeTag(tags[tags.length - 1]);
+
+        return;
+      }
+    }
+  };
+
+  const handleClearAll = () => {
+    setTags([]);
+    setValue('');
   };
 
   return (
-    <>
-      <Box px={'4'}>
-        <Typography variant={'headline02'}>Controlled multi TextField</Typography>
-      </Box>
-      <div style={{ width: '500px' }}>
-        <TextField
-          isMulti
-          multiValues={tags}
-          multiValuesHandler={(tags) => tags?.replace(/ /g, '').split(',')}
-          name="tags"
-          label="Tags"
-          status={{ type: 'normal' }}
-          onMultiValueCreate={addTags}
-          onMultiValueDelete={removeTag}
-          onClearAllValues={() => setTags([])}
-          sx={{
-            textField: { width: '100%' },
-          }}
-        />
-      </div>
-    </>
+    <div style={{ width: '500px' }}>
+      <TextField
+        isMulti
+        label="MultiTextField"
+        placeholder="Type and then press Enter"
+        tags={tags}
+        value={value}
+        onChange={handleChange}
+        onMultiValueDelete={removeTag}
+        onMultiValueClearAll={handleClearAll}
+        onKeyDown={handleKeyDown}
+        dataTestId="showcase"
+      />
+    </div>
   );
 };
 

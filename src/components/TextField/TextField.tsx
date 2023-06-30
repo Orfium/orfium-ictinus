@@ -1,14 +1,15 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
+import { generateUniqueID } from 'utils/helpers';
 
-import { IconWrapper } from './components/commons';
-import useMultiTextFieldUtils from './hooks/useMultiTextFieldUtils';
+import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
 import Icon from '../Icon';
 import Label from '../Label';
+import { getTextInputBaseTokens } from '../TextInputBase/TextInputBase.tokens';
 import { AcceptedIconNames } from 'components/Icon/types';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import { SelectOption } from 'components/Select/Select';
@@ -16,7 +17,7 @@ import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type InputProps = Partial<
-  Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'readOnly' | 'disabled'>
+  Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled'>
 >;
 
 export type TextFieldProps = {
@@ -34,68 +35,61 @@ export type TextFieldProps = {
   onInput?: React.EventHandler<any>;
   /** Boolean to make the input readonly. Default to false. */
   isReadOnly?: boolean;
-  /** @deprecated This is a compatibility prop that will be removed in the next version, along with the min-width value
-   * of the TextField. It will be replaced by a fullWidth prop. */
-  hasMinWidthCompat?: boolean;
-  /** If true the user can enter multiple values by pressing 'Enter' */
+  /** [For MultiTextField] If true, the user can add multiple tags as an input */
   isMulti?: boolean;
-  /** The initial multi values */
-  multiValues?: string[];
-  /** Maximum multi values */
-  maxMultiValues?: number;
-  /** A callback for when a Chip value is created */
-  onMultiValueCreate?: (value?: string) => void;
-  /** A callback for when a Chip value is deleted */
-  onMultiValueDelete?: (value?: string) => void;
-  /** A callback for when all values are deleted (the Clear All icon is clicked) */
-  onClearAllValues?: () => void;
-  /** The handler of multi values. If you pass a different handler function here it will change the way multi values are being calculated */
-  multiValuesHandler?: (tags: string) => string | string[];
+  /** [For MultiTextField] The values of the tags (chips) */
+  tags?: string[];
+  /** [For MultiTextField] A callback for when a Chip value is deleted */
+  onMultiValueDelete?: (value: string) => void;
+  /** [For MultiTextField] A callback for when all values are deleted  */
+  onMultiValueClearAll?: () => void;
 } & TextInputBaseProps &
   InputProps &
   TestProps;
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
-    id = undefined,
+    id = generateUniqueID('textfield_'),
     suffix = null,
-    prefix = null,
     label,
     placeholder = '',
     isRequired = false,
     isDisabled,
     isReadOnly,
-    status,
+    status = { type: 'normal' },
     onInput,
-    // TODO change to isMulti
     isMulti = false,
-    multiValues = [],
-    maxMultiValues,
-    onMultiValueCreate,
+    tags = [],
     onMultiValueDelete,
-    onClearAllValues,
-    multiValuesHandler = (value) => value,
+    onMultiValueClearAll = () => null,
     ...rest
   } = props;
   const theme = useTheme();
+
+  const tokens = getTextInputBaseTokens(theme);
 
   const inputRef = React.useRef<HTMLInputElement>(null);
   const combinedRefs = useCombinedRefs(inputRef, ref);
 
   const isLocked = status?.type === 'read-only';
 
-  const getIcon = (icon: AcceptedIconNames | JSX.Element | null) =>
-    icon ? (
-      typeof icon === 'string' ? (
+  const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
+
+  const suffixContent = useMemo(() => {
+    if (isLocked || typeof suffix === 'string') {
+      const iconName = isLocked ? 'lock' : suffix;
+
+      return (
         <Icon
-          name={icon as AcceptedIconNames}
-          size={24}
+          name={iconName as AcceptedIconNames}
+          size={16}
           color={theme.utils.getColor('lightGrey', 650)}
         />
-      ) : (
-        icon
-      )
-    ) : null;
+      );
+    }
+
+    return suffix;
+  }, [isLocked, suffix, theme.utils]);
 
   const handleClick = () => {
     if (!isLocked && !isDisabled) {
@@ -103,22 +97,17 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     }
   };
 
-  const {
-    inputValue,
-    values,
-    handleValueDelete,
-    handleClearAllValues,
-    handleKeyDown,
-    handleTyping,
-  } = useMultiTextFieldUtils({
-    multiValues,
-    maxMultiValues,
-    onMultiValueCreate,
-    onMultiValueDelete,
-    onClearAllValues,
-    onInput,
-    multiValuesHandler,
-  });
+  const textInputBaseSx = useMemo(
+    () =>
+      !suffixContent
+        ? {
+            textField: {
+              paddingRight: tokens('paddingContentLeft'),
+            },
+          }
+        : {},
+    [suffixContent, tokens]
+  );
 
   return (
     <div onClick={handleClick}>
@@ -126,49 +115,45 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
         <MultiTextFieldBase
           {...props}
           isTextfield
-          onOptionDelete={handleValueDelete as (option?: string | SelectOption) => void}
-          onClearAllOptions={handleClearAllValues}
+          onOptionDelete={onMultiValueDelete as (option?: string | SelectOption) => void}
+          onClearAllOptions={onMultiValueClearAll}
           label={label}
-          onInput={handleTyping}
-          onKeyDown={handleKeyDown}
-          selectedOptions={values}
-          value={inputValue}
+          onInput={onInput}
+          onKeyDown={rest.onKeyDown}
+          selectedOptions={tags}
+          value={rest.value}
+          status={{ ...status, id: hintMessageId }}
           ref={combinedRefs}
         />
       ) : (
-        <TextInputBase {...props}>
-          {prefix && <IconWrapper iconPosition={'left'}>{getIcon(prefix)}</IconWrapper>}
+        <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={textInputBaseSx}>
           <div css={{ width: '100% ' }}>
             <input
-              readOnly={isLocked}
+              readOnly={isLocked || isReadOnly}
               css={inputStyle({ label, placeholder })}
-              placeholder={
-                !label && placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label
-              }
+              placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
               required={isRequired}
               id={id}
               disabled={isDisabled || isLocked}
               onInput={onInput}
+              data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
+              aria-invalid={status?.type === 'error'}
+              aria-describedby={hintMessageId}
               {...omit(rest, 'dataTestId')}
               ref={combinedRefs}
             />
-            {label && (
-              <Label
-                htmlFor={id}
-                label={label}
-                isRequired={isRequired}
-                isAnimated={Boolean(rest.value)}
-                hasError={status?.type === 'error'}
-              />
-            )}
+            <Label
+              htmlFor={id}
+              label={label}
+              isRequired={isRequired}
+              isAnimated={Boolean(rest.value)}
+              hasError={status?.type === 'error'}
+            />
           </div>
-          {suffix && !isLocked && (
-            <IconWrapper iconPosition={'right'}>{getIcon(suffix)}</IconWrapper>
-          )}
-          {isLocked && (
-            <IconWrapper iconPosition={'right'}>
-              <Icon name="lock" size={20} color={theme.utils.getColor('lightGrey', 650)} />
-            </IconWrapper>
+          {suffixContent && (
+            <div aria-hidden={!suffixContent} css={suffixContainerStyle()}>
+              {suffixContent}
+            </div>
           )}
         </TextInputBase>
       )}

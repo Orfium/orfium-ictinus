@@ -64,7 +64,7 @@ const wrapperStyleSwitch = ({
  * in custom implementation needed eg: datepicker
  * */
 export const wrapperStyle =
-  ({ isDisabled, status, isInteractive, sx }: TextInputBaseProps) =>
+  ({ isDisabled, status, isInteractive, sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const colorScheme = theme.colorScheme;
     const isLocked = status?.type === 'read-only';
@@ -92,10 +92,6 @@ export const wrapperStyle =
       opacity: isDisabled ? theme.tokens.disabledState.get('default') : 1,
       cursor: isDisabled || isLocked ? 'not-allowed' : 'text',
       height: tokens('container'),
-      /**
-       * TODO: every Field component will have its own min-width, will need configuration once
-       * Field components start to get implemented
-       */
       minWidth: rem(MIN_WIDTH),
       ...wrapperStyleSwitch({
         theme,
@@ -110,7 +106,7 @@ export const wrapperStyle =
   };
 
 export const textFieldStyle =
-  ({ sx }: TextInputBaseProps) =>
+  ({ sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -121,7 +117,6 @@ export const textFieldStyle =
       alignItems: 'center',
       verticalAlign: 'top',
       width: 'fill-available',
-      /** TODO: revisit this when TextField's add-on is implemented */
       padding: `0 0 0 ${tokens('paddingContentLeft')}`,
 
       '> div': {
@@ -133,7 +128,7 @@ export const textFieldStyle =
   };
 
 export const inputStyle =
-  ({ label, placeholder, sx }: TextInputBaseProps) =>
+  ({ label, placeholder, sx }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -156,13 +151,16 @@ export const inputStyle =
         fontSize: theme.globals.typography.fontSize[15],
       },
 
-      '&:focus': {
-        outline: 'none',
+      '&::placeholder': {
+        color: 'transparent',
+        ...(!label && placeholder ? body02(theme) : {}),
       },
 
-      '&::placeholder': {
-        color: !label && placeholder ? tokens('textColor.inputColorAlt') : 'transparent',
-        ...(!label && placeholder ? body02(theme) : {}),
+      '&:focus': {
+        outline: 'none',
+        '&::placeholder': {
+          color: placeholder ? tokens('textColor.inputColorAlt') : 'transparent',
+        },
       },
 
       '&:not(:focus):placeholder-shown': {
@@ -192,7 +190,7 @@ export const inputStyle =
   };
 
 export const hintMessageStyle =
-  ({ status }: TextInputBaseProps) =>
+  ({ status }: Partial<TextInputBaseProps>) =>
   (theme: Theme): SerializedStyles => {
     const tokens = getTextInputBaseTokens(theme);
 
@@ -200,7 +198,7 @@ export const hintMessageStyle =
       {
         display: 'flex',
         alignItems: 'center',
-        gap: rem(4),
+        gap: tokens('hintGap'),
         color:
           status?.type === 'error'
             ? tokens('textColor.errorHintColor')

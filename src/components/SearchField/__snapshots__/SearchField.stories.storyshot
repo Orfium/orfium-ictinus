@@ -50,7 +50,7 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 2.875rem;
+  height: 3.25rem;
   min-width: 8.75rem;
   background-color: #ffffff;
 }
@@ -155,10 +155,6 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
-  outline: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
@@ -189,6 +185,26 @@ exports[`Storyshots Design System/SearchField Search Field 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -314,7 +330,7 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   user-select: none;
   opacity: 50%;
   cursor: not-allowed;
-  height: 2.875rem;
+  height: 3.25rem;
   min-width: 8.75rem;
   background-color: #ffffff;
 }
@@ -414,10 +430,6 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
-  outline: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
@@ -448,6 +460,26 @@ exports[`Storyshots Design System/SearchField Search Field disabled 1`] = `
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {
@@ -574,7 +606,7 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   user-select: none;
   opacity: 1;
   cursor: text;
-  height: 2.875rem;
+  height: 3.25rem;
   min-width: 8.75rem;
   background-color: #ffffff;
 }
@@ -679,10 +711,6 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
-  outline: none;
-}
-
 .emotion-9::-webkit-input-placeholder {
   font-family: Roboto;
   font-weight: 400;
@@ -713,6 +741,26 @@ exports[`Storyshots Design System/SearchField Search Field with placeholder 1`] 
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.015625rem;
+}
+
+.emotion-9:focus {
+  outline: none;
+}
+
+.emotion-9:focus::-webkit-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::-moz-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus:-ms-input-placeholder {
+  color: #54587f;
+}
+
+.emotion-9:focus::placeholder {
+  color: #54587f;
 }
 
 .emotion-9:not(:focus):placeholder-shown+label {

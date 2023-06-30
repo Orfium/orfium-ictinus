@@ -1,7 +1,6 @@
 import useTheme from 'hooks/useTheme';
 import React from 'react';
 import isEqual from 'react-fast-compare';
-import { getTextFieldHeight } from 'utils/size-utils';
 
 import { rem } from '../../theme/utils';
 import { TestProps } from '../../utils/types';
@@ -10,6 +9,7 @@ import { IconWrapper } from '../TextField/components/commons';
 import { TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
+import { getTextInputBaseTokens } from 'components/TextInputBase/TextInputBase.tokens';
 
 export type SearchFieldProps = {
   /** A callback that's called when the user clicks the 'clear' icon */
@@ -22,24 +22,19 @@ const SearchField = React.forwardRef<HTMLInputElement, SearchFieldProps>((props,
 
   const theme = useTheme();
 
+  const tokens = getTextInputBaseTokens(theme);
+
   const isClearVisible = (value as string).length > 0;
   const sx = {
     wrapper: {
       borderRadius: rem(100),
-      // @TODO this is a unique case for the SearchField where we dont need to use the sm height of the TextField, will change in v5
-      height: getTextFieldHeight('md'),
+      height: tokens('container'),
     },
   };
 
   return (
     <React.Fragment>
-      <TextInputBase
-        dataTestId={dataTestId}
-        isDisabled={isDisabled}
-        prefix={'search'}
-        suffix={'close'}
-        sx={sx}
-      >
+      <TextInputBase dataTestId={dataTestId} isDisabled={isDisabled} sx={sx}>
         <IconWrapper iconPosition={'left'}>
           <Icon name={'search'} size={20} color={theme.utils.getColor('lightGrey', 650)} />
         </IconWrapper>

@@ -1,6 +1,7 @@
-import { isEmpty, uniqueId } from 'lodash';
+import { isEmpty } from 'lodash';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { generateUniqueKey } from 'utils/helpers';
 
 import { breadcrumbLinkStyles, breadcrumbStyles } from './Breadcrumb.style';
 import BreadcrumbItem from './BreadcrumbItem/BreadcrumbItem';
@@ -38,7 +39,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ children, data = [] }) => {
   const getBreadcrumbItem = React.useMemo(
     // eslint-disable-next-line react/display-name
     () => (child: React.ReactNode, index: number) => {
-      const itemKey = uniqueId('data_item_');
+      const itemKey = generateUniqueKey('data_item_');
 
       const isLast = isLastItem(dataItems, index);
 

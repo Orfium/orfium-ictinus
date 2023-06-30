@@ -35,7 +35,7 @@ const SearchInput = ({ onChange, value, dataTestId, isLoading }: SearchInputProp
         onChange={onChange}
         data-testid={generateTestDataId('filter-input', dataTestId)}
         status={{ type: 'normal' }}
-        placeholder="Search"
+        label="Search"
         value={value}
         suffix={suffix}
       />

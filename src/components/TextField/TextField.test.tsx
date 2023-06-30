@@ -2,9 +2,9 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 import { render, screen } from '../../test';
-import TextField from './TextField';
+import TextFieldShowCase from '../storyUtils/TextFieldShowcase/TextFieldShowcase';
 
-const values = ['Value 1', 'Value 2'];
+export const values = ['Value 1', 'Value 2'];
 
 describe('Multi TextField', () => {
   let input: HTMLInputElement;
@@ -12,15 +12,11 @@ describe('Multi TextField', () => {
   let newChip: HTMLElement;
 
   beforeEach(() => {
-    render(
-      <div>
-        <TextField isMulti label={'Country'} multiValues={values} />
-      </div>
-    );
+    render(<TextFieldShowCase values={values} />);
   });
 
   beforeEach(() => {
-    input = screen.getByPlaceholderText('Country') as HTMLInputElement;
+    input = screen.getByTestId('input_showcase') as HTMLInputElement;
   });
 
   it('renders the initial values', async () => {

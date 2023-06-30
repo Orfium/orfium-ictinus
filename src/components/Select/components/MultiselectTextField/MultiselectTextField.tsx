@@ -2,7 +2,7 @@ import useTheme from 'hooks/useTheme';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import isEqual from 'react-fast-compare';
-import { generateUniqueID } from 'utils/helpers';
+import { generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
 import {
@@ -94,7 +94,7 @@ const MultiselectTextField = React.forwardRef<HTMLInputElement, Props & InputPro
       () => (
         <>
           {selectedOptions?.map((option, index) => (
-            <span key={generateUniqueID('chip' + index)} css={chipStyle()}>
+            <span key={generateUniqueKey('chip' + index)} css={chipStyle()}>
               <Chip
                 onClear={!(isLocked || isDisabled) ? () => onOptionDelete(option) : undefined}
                 fill="lightGrey"

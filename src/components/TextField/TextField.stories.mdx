@@ -1,5 +1,6 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
 import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import { linkTo } from '@storybook/addon-links';
 import TextField from './TextField';
 import Stack from '../storyUtils/Stack';
 import Icon from '../Icon';
@@ -7,6 +8,7 @@ import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
 import TextFieldShowcase from '../../components/storyUtils/TextFieldShowcase/TextFieldShowcase.tsx';
 import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
 
 <Meta
   title="Design System/TextField"
@@ -21,54 +23,61 @@ import { FIGMA_URL } from '../../utils/common';
   }}
 />
 
-# TextField
+<SectionHeader title={'TextField'} />
 
-A universal TextField component that can be used as the <input/> in any form.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+## Overview
 
-```js
-import { TextField } from '@orfium/ictinus';
-
-<TextField label={'label'} />;
-```
+A universal TextField component which provides a wide range of features such as statuses, inline suffixes
+such as icons and components, and a multi-input functionality with the help of the Chip component.
 
 ## Props
 
 <Props of={TextField} />
 
-# Text Field with and without Label
+## Usage
 
-Regular TextField with label options. Label that will float, placeholder and no placeholder
+<UsageGuidelines
+  guidelines={[
+    'Do not display TextFields in the same row unless they are related (e.g. “First Name” / “Last Name”)',
+    'Explicitly mark optional fields as such',
+    'When possible, try to choose input width that is relevant to the content being entered into the input field',
+    'Avoid truncating field label and input as much as possible',
+  ]}
+/>
+
+<Tip>
+  When the user needs to enter more than one individual values at a given field that are not
+  selected from a predefined list, MultiTextField is more suitable. <br />
+  (scroll down for more details)
+</Tip>
+
+## Variants
+
+### TextField with Label and Placeholder
+
+Regular TextField with label options. Label that will float, with or without Placeholder
 
 <Preview>
-  <Story name="Text Field with and without Label">
+  <Story name="TextField with Label and Placeholder">
     <Stack>
       <TextField label={'Label'} />
-      <TextField placeholder={'Placeholder'} />
-      <TextField />
+      <TextField label={'Label'} placeholder={'Placeholder'} />
     </Stack>
   </Story>
 </Preview>
 
-# Text Field Icons
+### TextField with Icons
 
-TextField with icon options right and left of the text
+TextField with icon options right of the text, either as external image or one of the available ictinus Icons.
 
 <Preview>
-  <Story name="Text Field with Icons">
+  <Story name="TextField with Icons">
     <Stack>
-      <TextField
-        label={'Label'}
-        prefix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-      />
       <TextField
         label={'Label'}
         suffix={
@@ -80,65 +89,41 @@ TextField with icon options right and left of the text
           />
         }
       />
-      <TextField
-        label={'Label'}
-        prefix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-        suffix={
-          <img
-            style={{ background: 'red' }}
-            src="https://brandmark.io/logo-rank/random/pepsi.png"
-            width="16"
-            height="16"
-          />
-        }
-      />
-      <TextField label={'Label'} suffix={<Loader type={'dots'} />} />
+      <TextField label={'Label'} suffix={'keyword'} />
     </Stack>
   </Story>
 </Preview>
 
-# TextField with prefix/suffix
+### TextField with Suffix
 
-Regular TextField with a prefix or a suffix
+Regular TextField with a Suffix element.
 
 <Preview>
-  <Story name="TextField with prefix/suffix">
+  <Story name="TextField with Suffix">
     <Stack>
-      <TextField prefix={<div style={{ color: 'gray' }}>$</div>} />
-      <TextField suffix={<div style={{ color: 'gray' }}>%</div>} />
-      <TextField
-        prefix={<div style={{ color: 'gray' }}>$</div>}
-        suffix={<div style={{ color: 'gray' }}>%</div>}
-      />
+      <TextField label={'Label'} suffix={<div style={{ color: 'gray' }}>%</div>} />
     </Stack>
   </Story>
 </Preview>
 
-# TextField disabled with label
+### Disabled TextField
 
-Regular TextField disabled with label
+Disabled TextField.
 
 <Preview>
-  <Story name="TextField disabled with label">
+  <Story name="Disabled TextField">
     <Stack>
       <TextField isDisabled label={'Label'} />
     </Stack>
   </Story>
 </Preview>
 
-# TextField with Label and Statuses
+### TextField with different Statuses
 
-Regular TextField with Label and Statuses.
+TextField with different Statuses.
 
 <Preview>
-  <Story name="TextField with label and statuses" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextField with different Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextField
         label={'Label'}
@@ -164,40 +149,24 @@ Regular TextField with Label and Statuses.
   </Story>
 </Preview>
 
-# Multi TextField
+### MultiTextField
+
+MultiTextField enables a user to enter one or individual entries as free text.
 
 <Preview>
-  <Story name="Multi TextField">
-    <div>
-      <TextField
-        isMulti
-        multiValues={['Orange', 'Citrus']}
-        label={text('Label', 'Label')}
-        locked={boolean('Locked', false)}
-        disabled={boolean('Disabled', false)}
-        hintMsg={text('Custom message', 'Press Enter to create multiple values')}
-        status={select('Status', ['hint', 'error', 'normal'], 'hint')}
-        maxMultiValues={text('maxMultiValues', 10)}
-        sx={{
-          textField: { width: '100%' },
-        }}
-      />
-    </div>
+  <Story name="MultiTextField">
     <TextFieldShowcase />
   </Story>
 </Preview>
 
-# Text Field with KNOBS
-
-Regular Text Field with KNOBS
+### Playground
 
 <Preview>
-  <Story name="Text Field with KNOBS" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextField
         label={text('Label', 'Label')}
         isDisabled={boolean('isDisabled', false)}
-        prefix={select('Prefix icon name', ['', ...Object.keys(iconSelector)], 'calendarEmpty')}
         suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
         status={{
           type: select('Status', ['error', 'normal', 'read-only'], 'normal'),

@@ -219,10 +219,13 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           disabled={false}
           role="button"
         >
-          <div>
+          <div
+            aria-label="chip__00"
+          >
             Label
           </div>
           <div
+            aria-hidden={false}
             className="emotion-4"
           >
             <span
@@ -251,7 +254,9 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           onClick={[Function]}
           role="button"
         >
-          <div>
+          <div
+            aria-label="chip__00"
+          >
             Label
           </div>
         </button>
@@ -270,7 +275,9 @@ exports[`Storyshots Design System/Chip Interactive Chips 1`] = `
           onClick={[Function]}
           role="button"
         >
-          <div>
+          <div
+            aria-label="chip__00"
+          >
             Label
           </div>
           <div
@@ -432,7 +439,9 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
           className="emotion-3"
           data-testid="chip"
         >
-          <div>
+          <div
+            aria-label="chip__00"
+          >
             Label
           </div>
         </div>
@@ -459,7 +468,9 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
               KN
             </div>
           </div>
-          <div>
+          <div
+            aria-label="chip__00"
+          >
             Label
           </div>
         </div>
@@ -488,7 +499,9 @@ exports[`Storyshots Design System/Chip Read-Only Chips 1`] = `
               />
             </div>
           </div>
-          <div>
+          <div
+            aria-label="chip__00"
+          >
             Label
           </div>
         </div>

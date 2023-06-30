@@ -12,11 +12,9 @@ import { AcceptedIconNames } from 'components/Icon/types';
 
 export type TextInputBaseProps = {
   /** The label of the text field that will be used as a placeholder and a label */
-  label?: string;
+  label: string;
   /** The placeholder of the input that will be used. This is shown if no label exists */
   placeholder?: string;
-  /** An optional prefix (element or icon-name) to show to the left */
-  prefix?: AcceptedIconNames | JSX.Element | null;
   /** An optional suffix (element or icon-name) to show to the left */
   suffix?: AcceptedIconNames | JSX.Element | null;
   /** If the text field value is required */
@@ -27,6 +25,7 @@ export type TextInputBaseProps = {
   status?: {
     type: 'normal' | 'error' | 'read-only';
     hintMessage?: string;
+    id?: string;
   };
   /** value of the input */
   value?: string | number;
@@ -43,7 +42,9 @@ export type TextInputBaseProps = {
 
 /** This Component is a wrapper for all primitives that hold text like Select, TextArea, TextInput. Here we keep the
  * logic of all the hover, focus status etc and the styling of these centralized **/
-const TextInputBase: FC<TextInputBaseProps> = ({
+const TextInputBase: FC<
+  Omit<TextInputBaseProps, 'value' | 'label' | 'placeholder' | 'suffix' | 'isRequired'>
+> = ({
   isDisabled,
   dataTestId,
   status = { type: 'normal' },
@@ -57,16 +58,10 @@ const TextInputBase: FC<TextInputBaseProps> = ({
 
   const hintMessageToShow = status.hintMessage && (
     <div data-testid={generateTestDataId('error', dataTestId)} css={hintMessageStyle({ status })}>
-      <Icon
-        color={
-          status.type === 'error'
-            ? tokens('textColor.errorHintColor')
-            : tokens('textColor.inputColorAlt')
-        }
-        name={status.type === 'error' ? 'warning' : 'info'}
-        size={12}
-      />
-      <span>{status.hintMessage}</span>
+      {status.type === 'error' && (
+        <Icon color={tokens('textColor.errorHintColor')} name={'warning'} size={12} />
+      )}
+      <span id={status.id}>{status.hintMessage}</span>
     </div>
   );
 

@@ -30,11 +30,15 @@ const useMultiTextFieldBaseUtils = ({
   const hasLabel = Boolean(label);
 
   const inputPlaceholder = useMemo(() => {
-    if (!label && placeholder && !hasValue) {
+    if (!hasValue && placeholder) {
       return isRequired ? `${placeholder} *` : placeholder;
     }
 
-    return label;
+    if (!hasValue) {
+      return label;
+    }
+
+    return undefined;
   }, [hasValue, label, placeholder, isRequired]);
 
   const iconName = useMemo(() => {

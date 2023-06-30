@@ -122,10 +122,6 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -139,6 +135,26 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -196,8 +212,9 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,9 +223,11 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -288,9 +307,12 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                     className="emotion-7"
                   >
                     <input
+                      aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
+                      data-testid="input_select-input"
                       disabled={false}
+                      id="textfield"
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -302,12 +324,14 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                     />
                     <label
                       className="emotion-9"
+                      htmlFor="textfield"
                     >
                       Flavour
                        
                     </label>
                   </div>
                   <div
+                    aria-hidden={false}
                     className="emotion-10"
                   >
                     <div
@@ -457,10 +481,6 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -474,6 +494,26 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -531,8 +571,9 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -541,9 +582,11 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -623,9 +666,12 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                     className="emotion-7"
                   >
                     <input
+                      aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
+                      data-testid="input_select-input"
                       disabled={false}
+                      id="textfield"
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -637,12 +683,14 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                     />
                     <label
                       className="emotion-9"
+                      htmlFor="textfield"
                     >
                       Flavour
                        
                     </label>
                   </div>
                   <div
+                    aria-hidden={false}
                     className="emotion-10"
                   >
                     <div
@@ -805,10 +853,6 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -822,6 +866,26 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -879,8 +943,9 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -889,9 +954,11 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -978,9 +1045,12 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -991,12 +1061,14 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -1151,10 +1223,6 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -1168,6 +1236,26 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -1225,8 +1313,9 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1235,9 +1324,11 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -1318,6 +1409,16 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   background-color: #e7eefe;
 }
 
+.emotion-46 {
+  fill: #5f6c85;
+  width: 1rem;
+  height: 1rem;
+}
+
+.emotion-46 path {
+  fill: #5f6c85;
+}
+
 <div
   className="emotion-0"
 >
@@ -1357,9 +1458,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1370,12 +1474,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -1429,9 +1535,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1442,12 +1551,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -1501,9 +1612,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1514,12 +1628,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -1577,9 +1693,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1590,12 +1709,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <span
@@ -1603,7 +1724,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-13"
+                          className="emotion-46"
                         />
                       </span>
                     </div>
@@ -1644,9 +1765,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1657,12 +1781,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <span
@@ -1670,7 +1796,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-13"
+                          className="emotion-46"
                         />
                       </span>
                     </div>
@@ -1711,9 +1837,12 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={true}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -1724,12 +1853,14 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <span
@@ -1737,7 +1868,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-13"
+                          className="emotion-46"
                         />
                       </span>
                     </div>
@@ -2004,10 +2135,6 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-45:focus {
-  outline: none;
-}
-
 .emotion-45::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2021,6 +2148,26 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
 }
 
 .emotion-45::placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus {
+  outline: none;
+}
+
+.emotion-45:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-45:focus::placeholder {
   color: transparent;
 }
 
@@ -2242,7 +2389,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_0"
                         >
-                          <div>
+                          <div
+                            aria-label="chip__00"
+                          >
                             <div
                               className="emotion-11"
                               title="Strawberry"
@@ -2251,6 +2400,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2273,7 +2423,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_1"
                         >
-                          <div>
+                          <div
+                            aria-label="chip__00"
+                          >
                             <div
                               className="emotion-11"
                               title="Banana"
@@ -2282,6 +2434,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2304,7 +2457,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_2"
                         >
-                          <div>
+                          <div
+                            aria-label="chip__00"
+                          >
                             <div
                               className="emotion-11"
                               title="Citrus"
@@ -2313,6 +2468,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2335,7 +2491,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_3"
                         >
-                          <div>
+                          <div
+                            aria-label="chip__00"
+                          >
                             <div
                               className="emotion-11"
                               title="Sorbet"
@@ -2344,6 +2502,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2366,7 +2525,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_4"
                         >
-                          <div>
+                          <div
+                            aria-label="chip__00"
+                          >
                             <div
                               className="emotion-11"
                               title="Cookie Dough"
@@ -2375,6 +2536,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2397,7 +2559,9 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                           className="emotion-10"
                           data-testid="chip-chip_5"
                         >
-                          <div>
+                          <div
+                            aria-label="chip__00"
+                          >
                             <div
                               className="emotion-11"
                               title="Buttered Pecan"
@@ -2406,6 +2570,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                             </div>
                           </div>
                           <div
+                            aria-hidden={false}
                             className="emotion-12"
                           >
                             <span
@@ -2421,18 +2586,21 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                         </div>
                       </span>
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-45"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="multiTextfield"
                         onInput={[Function]}
                         onKeyDown={[Function]}
-                        placeholder="Multi Select"
                         readOnly={false}
                         required={false}
                         value=""
                       />
                       <label
                         className="emotion-46"
+                        htmlFor="multiTextfield"
                       >
                         Multi Select
                          
@@ -2487,9 +2655,12 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       className="emotion-8"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-45"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="multiTextfield"
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         onKeyPress={[Function]}
@@ -2500,6 +2671,7 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       />
                       <label
                         className="emotion-58"
+                        htmlFor="multiTextfield"
                       >
                         Multi Select - Async
                          
@@ -2669,10 +2841,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -2686,6 +2854,26 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -2743,8 +2931,9 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2753,9 +2942,11 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -2842,9 +3033,12 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -2855,12 +3049,14 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -3020,10 +3216,6 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -3037,6 +3229,26 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -3094,8 +3306,9 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3104,9 +3317,11 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -3193,9 +3408,12 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3206,12 +3424,14 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -3368,10 +3588,6 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -3385,6 +3601,26 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -3442,8 +3678,9 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3452,9 +3689,11 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -3541,9 +3780,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3554,12 +3796,14 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -3607,9 +3851,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     className="emotion-7"
                   >
                     <input
+                      aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
+                      data-testid="input_select-input"
                       disabled={false}
+                      id="textfield"
                       onChange={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
@@ -3620,12 +3867,14 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     />
                     <label
                       className="emotion-9"
+                      htmlFor="textfield"
                     >
                       Flavour
                        
                     </label>
                   </div>
                   <div
+                    aria-hidden={false}
                     className="emotion-10"
                   >
                     <div
@@ -3679,9 +3928,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3692,12 +3944,14 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -3754,9 +4008,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -3767,12 +4024,14 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Bottom positioned case
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -3907,26 +4166,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
 }
 
 .emotion-7 {
-  line-height: 0.8;
-  height: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: unset;
-  margin-left: inherit;
-  margin-right: 0.5rem;
-}
-
-.emotion-8 {
   width: 100%;
 }
 
-.emotion-9 {
+.emotion-8 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -3944,36 +4187,52 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   min-width: 100%;
 }
 
-.emotion-9+label {
+.emotion-8+label {
   font-size: 0.9375rem;
 }
 
-.emotion-9:focus {
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
   outline: none;
 }
 
-.emotion-9::-webkit-input-placeholder {
+.emotion-8:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-9::-moz-placeholder {
+.emotion-8:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-9:-ms-input-placeholder {
+.emotion-8:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-9::placeholder {
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
-.emotion-9:not(:focus):placeholder-shown+label {
+.emotion-8:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-9:focus-within+label,
-.emotion-9:not(:placeholder-shown)+label {
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -3981,15 +4240,15 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   font-weight: 700;
 }
 
-.emotion-9:focus-within+label {
+.emotion-8:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-9:disabled {
+.emotion-8:disabled {
   cursor: not-allowed;
 }
 
-.emotion-10 {
+.emotion-9 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -4021,42 +4280,10 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   white-space: nowrap;
 }
 
-.emotion-11 {
-  line-height: 0.8;
-  height: 1rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
-}
-
-.emotion-12 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.emotion-13 {
-  padding: 0.125rem;
+.emotion-10 {
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4069,16 +4296,7 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
   -ms-flex-pack: center;
   -webkit-justify-content: center;
   justify-content: center;
-}
-
-.emotion-14 {
-  fill: #5f6c85;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-14 path {
-  fill: #5f6c85;
+  cursor: unset;
 }
 
 <div
@@ -4120,98 +4338,13 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                     <div
                       className="emotion-7"
                     >
-                      <img
-                        height="16"
-                        src="https://brandmark.io/logo-rank/random/pepsi.png"
-                        style={
-                          Object {
-                            "background": "red",
-                          }
-                        }
-                        width="16"
-                      />
-                    </div>
-                    <div
-                      className="emotion-8"
-                    >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
-                        className="emotion-9"
+                        className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
-                        onChange={[Function]}
-                        onInput={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Flavour"
-                        readOnly={false}
-                        required={false}
-                        size="md"
-                        value="Chocolate"
-                      />
-                      <label
-                        className="emotion-10"
-                      >
-                        Flavour
-                         
-                      </label>
-                    </div>
-                    <div
-                      className="emotion-11"
-                    >
-                      <div
-                        className="emotion-12"
-                      >
-                        <span
-                          className="emotion-13"
-                          data-testid="select-right-icon"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-14"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-3"
-            onClick={[Function]}
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                onClick={[Function]}
-              >
-                <div
-                  className="emotion-5"
-                  data-testid="select-input"
-                >
-                  <div
-                    className="emotion-6"
-                  >
-                    <div
-                      className="emotion-8"
-                    >
-                      <input
-                        autoComplete="off"
-                        className="emotion-9"
-                        disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -4221,98 +4354,16 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                         value="Chocolate"
                       />
                       <label
-                        className="emotion-10"
-                      >
-                        Flavour
-                         
-                      </label>
-                    </div>
-                    <div
-                      className="emotion-11"
-                    >
-                      <img
-                        height="16"
-                        src="https://brandmark.io/logo-rank/random/pepsi.png"
-                        style={
-                          Object {
-                            "background": "red",
-                          }
-                        }
-                        width="16"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-3"
-            onClick={[Function]}
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                onClick={[Function]}
-              >
-                <div
-                  className="emotion-5"
-                  data-testid="select-input"
-                >
-                  <div
-                    className="emotion-6"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <img
-                        height="16"
-                        src="https://brandmark.io/logo-rank/random/pepsi.png"
-                        style={
-                          Object {
-                            "background": "red",
-                          }
-                        }
-                        width="16"
-                      />
-                    </div>
-                    <div
-                      className="emotion-8"
-                    >
-                      <input
-                        autoComplete="off"
                         className="emotion-9"
-                        disabled={false}
-                        onChange={[Function]}
-                        onInput={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Flavour"
-                        readOnly={false}
-                        required={false}
-                        value="Chocolate"
-                      />
-                      <label
-                        className="emotion-10"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
-                      className="emotion-11"
+                      aria-hidden={false}
+                      className="emotion-10"
                     >
                       <img
                         height="16"
@@ -4468,10 +4519,6 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -4485,6 +4532,26 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -4542,8 +4609,9 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4552,9 +4620,11 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -4628,17 +4698,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   padding: 0;
 }
 
-.emotion-16 {
-  fill: #54587f;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-16 path {
-  fill: #54587f;
-}
-
-.emotion-19 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4663,16 +4723,16 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   background-color: #ffe7f0;
 }
 
-.emotion-19:hover {
+.emotion-17:hover {
   background-color: #ffd0e1;
 }
 
-.emotion-19:focus-within {
+.emotion-17:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #e7eefe;
 }
 
-.emotion-23 {
+.emotion-21 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -4704,7 +4764,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   white-space: nowrap;
 }
 
-.emotion-28 {
+.emotion-26 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -4723,7 +4783,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-28 span {
+.emotion-26 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -4731,13 +4791,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
   padding: 0;
 }
 
-.emotion-30 {
+.emotion-28 {
   fill: #cc1255;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-30 path {
+.emotion-28 path {
   fill: #cc1255;
 }
 
@@ -4781,9 +4841,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-describedby="textfield__00_hintMessage"
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -4794,12 +4858,14 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -4823,14 +4889,8 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   data-testid="error-select-input"
                 >
                   <span
-                    className="emotion-12"
-                    onClick={[Function]}
+                    id="textfield__00_hintMessage"
                   >
-                    <span
-                      className="emotion-16"
-                    />
-                  </span>
-                  <span>
                     Hint Message
                   </span>
                 </div>
@@ -4860,7 +4920,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                 onClick={[Function]}
               >
                 <div
-                  className="emotion-19"
+                  className="emotion-17"
                   data-testid="select-input"
                 >
                   <div
@@ -4870,9 +4930,13 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-describedby="textfield__00_hintMessage"
+                        aria-invalid={true}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -4882,13 +4946,15 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                         value=""
                       />
                       <label
-                        className="emotion-23"
+                        className="emotion-21"
+                        htmlFor="textfield"
                       >
                         Label
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -4908,7 +4974,7 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                   </div>
                 </div>
                 <div
-                  className="emotion-28"
+                  className="emotion-26"
                   data-testid="error-select-input"
                 >
                   <span
@@ -4916,10 +4982,12 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     onClick={[Function]}
                   >
                     <span
-                      className="emotion-30"
+                      className="emotion-28"
                     />
                   </span>
-                  <span>
+                  <span
+                    id="textfield__00_hintMessage"
+                  >
                     Error Message
                   </span>
                 </div>
@@ -5064,10 +5132,6 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -5081,6 +5145,26 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -5138,8 +5222,9 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5148,9 +5233,11 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -5237,9 +5324,12 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5250,12 +5340,14 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Group Select
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -5415,10 +5507,6 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   font-size: 0.9375rem;
 }
 
-.emotion-8:focus {
-  outline: none;
-}
-
 .emotion-8::-webkit-input-placeholder {
   color: transparent;
 }
@@ -5432,6 +5520,26 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 }
 
 .emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
   color: transparent;
 }
 
@@ -5489,8 +5597,9 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
 }
 
 .emotion-10 {
-  line-height: 0.8;
-  height: 1rem;
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -5499,9 +5608,11 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
   cursor: unset;
-  margin-left: 0.5rem;
-  margin-right: 0;
 }
 
 .emotion-11 {
@@ -5588,10 +5699,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5602,12 +5716,14 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -5662,10 +5778,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5676,12 +5795,14 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
@@ -5736,10 +5857,13 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         creatable={false}
+                        data-testid="input_select-input"
                         disabled={false}
+                        id="textfield"
                         onChange={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
@@ -5750,12 +5874,14 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       />
                       <label
                         className="emotion-9"
+                        htmlFor="textfield"
                       >
                         Flavour
                          
                       </label>
                     </div>
                     <div
+                      aria-hidden={false}
                       className="emotion-10"
                     >
                       <div
