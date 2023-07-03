@@ -1,8 +1,10 @@
 import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
-import { boolean, select, text, withKnobs } from '@storybook/addon-knobs';
+import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs';
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
+import TextAreaShowcase from '../../components/storyUtils/TextAreaShowcase/TextAreaShowcase.tsx';
 import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
 
 <Meta
   title="Design System/TextArea"
@@ -23,71 +25,113 @@ import { FIGMA_URL } from '../../utils/common';
   }}
 />
 
-# TextArea
+<SectionHeader title={'TextArea'} />
 
-A universal TextArea component that the input component for any forms.
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
 
-## Usage
+# Overview
 
-```js
-import { TextArea } from '@orfium/ictinus';
-
-<TextArea placeholder={'label'} />;
-```
+A universal TextArea component used for the case where large string of text is needed as an input.
 
 ## Props
 
 <Props of={TextArea} />
 
-# Text Area Sizing
+## Usage
 
-Regular TextArea and how to change size with cols and rows
+<UsageGuidelines
+  guidelines={[
+    'If you need to enter a short string of text in a single line, use text input instead',
+    'TextArea hint may be either text (on the left) or character counter (on the right)',
+  ]}
+/>
+
+## Variants
+
+### TextArea with labels
+
+TextArea with label, with or without placeholder
+
+<Preview>
+  <Story name="TextArea with labels">
+    <Stack>
+      <TextArea label={'Label'} cols={10} rows={5} isResizeEnabled={false} />
+      <TextArea
+        label={'Label'}
+        cols={10}
+        rows={5}
+        placeholder={'Placeholder'}
+        isResizeEnabled={false}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+### Resizable TextArea
+
+TextArea and how to change size with cols and rows
 
 <Preview>
   <Story name="Text Area Sizes">
     <Stack>
-      <TextArea placeholder={'Label'} cols={10} rows={10} />
-      <TextArea placeholder={'Label'} cols={35} rows={20} />
+      <TextArea label={'Label'} cols={10} rows={5} />
     </Stack>
   </Story>
 </Preview>
 
-# TextArea disabled with label
+### TextArea with Counter
 
-Regular TextArea disabled with label
+TextArea with maximum characters indicated by a counter.
+
+<Tip>
+  TextArea is a controlled component, so in order for the counter to work, the value prop must be
+  passed to the component.
+</Tip>
 
 <Preview>
-  <Story name="TextArea disabled with label">
+  <Story name="TextArea with Counter">
     <Stack>
-      <TextArea isDisabled placeholder={'Label'} />
+      <TextAreaShowcase />
     </Stack>
   </Story>
 </Preview>
 
-# TextArea with Label and Statuses
+### TextArea Statuses
 
-Regular TextArea with Label and Statuses. Error and Hint are shown below for all 3 types filled, outlined, elevated
+TextArea with 3 available statuses: Normal, Error and Read-only.
 
 <Preview>
-  <Story name="TextArea with label and statuses" parameters={{ decorators: [withKnobs] }}>
+  <Story name="TextArea Statuses" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <Stack>
         <TextArea
-          placeholder={'Label'}
+          label={'Label'}
+          cols={10}
+          rows={5}
+          isResizeEnabled={false}
           status={{
             type: 'normal',
             hintMessage: text('Custom Hint Message', 'Hint in Text Area'),
           }}
         />
         <TextArea
-          placeholder={'Label'}
+          label={'Label'}
+          cols={10}
+          rows={5}
+          isResizeEnabled={false}
           status={{
             type: 'error',
             hintMessage: text('Custom Error Message', 'Error in Text Area'),
           }}
         />
         <TextArea
-          placeholder={'Label'}
+          label={'Label'}
+          cols={10}
+          rows={5}
+          isResizeEnabled={false}
           status={{
             type: 'read-only',
           }}
@@ -97,18 +141,29 @@ Regular TextArea with Label and Statuses. Error and Hint are shown below for all
   </Story>
 </Preview>
 
-# Text Area with KNOBS
+### Disabled TextArea
 
-Regular Text Area with KNOBS
+Regular TextArea disabled with label
 
 <Preview>
-  <Story name="Text Area with KNOBS" parameters={{ decorators: [withKnobs] }}>
+  <Story name="Disabled TextArea">
+    <Stack>
+      <TextArea isDisabled label={'Label'} cols={10} rows={5} />
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
     <Stack>
       <TextArea
         placeholder={text('Label', 'Label')}
         isDisabled={boolean('isDisabled', false)}
+        isResizeEnabled={boolean('isResizeEnabled', true)}
         status={{
-          type: select('status', ['error', 'normal'], 'normal'),
+          type: select('status', ['error', 'normal', 'read-only'], 'normal'),
           hintMessage: text('custom hint message', 'Hint in Text Area'),
         }}
       />
