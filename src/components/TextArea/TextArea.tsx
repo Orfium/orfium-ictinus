@@ -35,7 +35,7 @@ export type Props = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-};
+} & Pick<HTMLTextAreaElement, 'cols' | 'rows'>;
 
 const TextArea = React.forwardRef<HTMLTextAreaElement, Props & TestProps>((props, ref) => {
   const {
