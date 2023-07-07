@@ -3,6 +3,7 @@ import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
 import React, { InputHTMLAttributes, useMemo } from 'react';
 import isEqual from 'react-fast-compare';
+import InputMask from 'react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
 
 import { suffixContainerStyle } from './TextField.style';
@@ -19,6 +20,8 @@ import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 export type InputProps = Partial<
   Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled'>
 >;
+
+type MaskProps = { mask?: never } | { mask?: string | (string | RegExp)[]; placeholder?: never };
 
 export type TextFieldProps = {
   /** The id of the text field that will be used as for in label too */
@@ -44,6 +47,7 @@ export type TextFieldProps = {
   /** [For MultiTextField] A callback for when all values are deleted  */
   onMultiValueClearAll?: () => void;
 } & TextInputBaseProps &
+  MaskProps &
   InputProps &
   TestProps;
 
@@ -62,6 +66,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     tags = [],
     onMultiValueDelete,
     onMultiValueClearAll = () => null,
+    mask,
     ...rest
   } = props;
   const theme = useTheme();
@@ -109,6 +114,24 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     [suffixContent, tokens]
   );
 
+  const inputProps = {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    readOnly: isLocked || isReadOnly,
+    css: inputStyle({ label, placeholder }),
+    placeholder: placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    required: isRequired,
+    id: id,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    disabled: isDisabled || isLocked,
+    onInput: onInput,
+    'data-testid': rest.dataTestId ? `input_${rest.dataTestId}` : 'input',
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    'aria-invalid': status?.type === 'error',
+    'aria-describedby': hintMessageId,
+    ...omit(rest, 'dataTestId'),
+  };
+
   return (
     <div onClick={handleClick}>
       {isMulti ? (
@@ -128,20 +151,11 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
       ) : (
         <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={textInputBaseSx}>
           <div css={{ width: '100% ' }}>
-            <input
-              readOnly={isLocked || isReadOnly}
-              css={inputStyle({ label, placeholder })}
-              placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
-              required={isRequired}
-              id={id}
-              disabled={isDisabled || isLocked}
-              onInput={onInput}
-              data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
-              aria-invalid={status?.type === 'error'}
-              aria-describedby={hintMessageId}
-              {...omit(rest, 'dataTestId')}
-              ref={combinedRefs}
-            />
+            {mask ? (
+              <InputMask {...inputProps} mask={mask} maskChar={' '} inputRef={combinedRefs} />
+            ) : (
+              <input {...inputProps} ref={combinedRefs} />
+            )}
             <Label
               htmlFor={id}
               label={label}
