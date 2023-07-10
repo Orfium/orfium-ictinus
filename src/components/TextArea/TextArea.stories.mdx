@@ -3,8 +3,9 @@ import { boolean, select, text, withKnobs, number } from '@storybook/addon-knobs
 import TextArea from './TextArea';
 import Stack from '../storyUtils/Stack';
 import TextAreaShowcase from '../../components/storyUtils/TextAreaShowcase/TextAreaShowcase.tsx';
-import { FIGMA_URL } from '../../utils/common';
+import { FIGMA_URL, Function } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
+import { useState } from 'react';
 
 <Meta
   title="Design System/TextArea"
@@ -94,7 +95,23 @@ TextArea with maximum characters indicated by a counter.
 <Preview>
   <Story name="TextArea with Counter">
     <Stack>
-      <TextAreaShowcase />
+      <Function>
+        {() => {
+          const [value, setValue] = useState('');
+          const handleChange = (e) => setValue(e.target.value);
+          return (
+            <TextArea
+              label={'Label'}
+              value={value}
+              onChange={handleChange}
+              cols={10}
+              rows={5}
+              isResizeEnabled={false}
+              maxCharacters={10}
+            />
+          );
+        }}
+      </Function>
     </Stack>
   </Story>
 </Preview>

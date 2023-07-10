@@ -229,11 +229,13 @@ exports[`Storyshots Design System/TextArea Disabled TextArea 1`] = `
               className="emotion-5"
             >
               <textarea
+                aria-multiline={true}
                 className="emotion-6"
                 cols={10}
                 disabled={true}
                 placeholder="Label"
                 required={false}
+                role="textbox"
                 rows={5}
               />
               <label
@@ -527,10 +529,12 @@ exports[`Storyshots Design System/TextArea Playground 1`] = `
               className="emotion-5"
             >
               <textarea
+                aria-multiline={true}
                 className="emotion-6"
                 disabled={false}
                 placeholder="Label "
                 required={false}
+                role="textbox"
               />
               <label
                 className="emotion-7"
@@ -788,11 +792,13 @@ exports[`Storyshots Design System/TextArea Text Area Sizes 1`] = `
               className="emotion-5"
             >
               <textarea
+                aria-multiline={true}
                 className="emotion-6"
                 cols={10}
                 disabled={false}
                 placeholder="Label"
                 required={false}
+                role="textbox"
                 rows={5}
               />
               <label
@@ -1236,11 +1242,13 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
                   className="emotion-6"
                 >
                   <textarea
+                    aria-multiline={true}
                     className="emotion-7"
                     cols={10}
                     disabled={false}
                     placeholder="Label"
                     required={false}
+                    role="textbox"
                     rows={5}
                   />
                   <label
@@ -1278,11 +1286,13 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
                   className="emotion-6"
                 >
                   <textarea
+                    aria-multiline={true}
                     className="emotion-7"
                     cols={10}
                     disabled={false}
                     placeholder="Label"
                     required={false}
+                    role="textbox"
                     rows={5}
                   />
                   <label
@@ -1328,12 +1338,14 @@ exports[`Storyshots Design System/TextArea TextArea Statuses 1`] = `
                   className="emotion-6"
                 >
                   <textarea
+                    aria-multiline={true}
                     className="emotion-7"
                     cols={10}
                     disabled={true}
                     placeholder="Label"
                     readOnly={true}
                     required={false}
+                    role="textbox"
                     rows={5}
                   />
                   <label
@@ -1617,6 +1629,7 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
               className="emotion-5"
             >
               <textarea
+                aria-multiline={true}
                 className="emotion-6"
                 cols={10}
                 disabled={false}
@@ -1624,6 +1637,7 @@ exports[`Storyshots Design System/TextArea TextArea with Counter 1`] = `
                 onChange={[Function]}
                 placeholder="Label"
                 required={false}
+                role="textbox"
                 rows={5}
                 value=""
               />
@@ -1966,11 +1980,13 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
               className="emotion-5"
             >
               <textarea
+                aria-multiline={true}
                 className="emotion-6"
                 cols={10}
                 disabled={false}
                 placeholder="Label"
                 required={false}
+                role="textbox"
                 rows={5}
               />
               <label
@@ -2000,11 +2016,13 @@ exports[`Storyshots Design System/TextArea TextArea with labels 1`] = `
               className="emotion-5"
             >
               <textarea
+                aria-multiline={true}
                 className="emotion-11"
                 cols={10}
                 disabled={false}
                 placeholder="Placeholder "
                 required={false}
+                role="textbox"
                 rows={5}
               />
               <label

@@ -34,7 +34,7 @@ export type TextAreaProps = {
   onKeyDown?: React.KeyboardEventHandler<HTMLTextAreaElement | HTMLInputElement>;
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
-} & Pick<HTMLTextAreaElement, 'cols' | 'rows'> &
+} & React.HTMLProps<HTMLTextAreaElement> &
   Pick<TextInputBaseProps, 'status' | 'label'> &
   TestProps;
 
@@ -74,6 +74,8 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>((props, re
       <TextInputBase {...props} sx={sx}>
         <div css={{ width: '100%' }}>
           <textarea
+            role="textbox"
+            aria-multiline={true}
             readOnly={isLocked || isReadOnly}
             css={baseInputStyle({
               placeholder,
