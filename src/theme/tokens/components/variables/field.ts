@@ -170,6 +170,11 @@ const field = {
     type: 'spacing',
     description: 'Sets spacing between icon and hint text',
   },
+  paddingVertical: {
+    value: '{spacing.6}',
+    type: 'spacing',
+    description: 'Sets top and bottom padding for text area',
+  },
 } as const;
 
 export default field;
