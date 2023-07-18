@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import useCombinedRefs from 'hooks/useCombinedRefs';
+import React, { forwardRef, useEffect, useRef } from 'react';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
-import { SelectOption } from '../../Select';
+import { SelectOption } from '../../types';
 import List from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
@@ -10,14 +11,14 @@ import { TextInputBaseProps } from 'components/TextInputBase';
 export type SelectMenuProps = {
   filteredOptions: SelectOption[];
   handleOptionClick: (option: SelectOption) => void;
-  selectedOption: string | number;
+  selectedOption: SelectOption;
   isLoading?: boolean;
   isVirtualized?: boolean;
   searchTerm?: string;
   hasSelectAllOption?: boolean;
 } & Pick<TextInputBaseProps, 'status'>;
 
-const SelectMenu: React.FC<SelectMenuProps> = (props) => {
+const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) => {
   const {
     filteredOptions,
     handleOptionClick,
@@ -27,7 +28,8 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
     searchTerm,
     hasSelectAllOption = false,
   } = props;
-  const myRef = useRef<HTMLDivElement>(null);
+  const myRef = useRef<HTMLUListElement>(null);
+  const combinedRefs = useCombinedRefs(myRef, ref);
 
   const executeScroll = () => myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
 
@@ -38,10 +40,10 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
   const renderOptions = () =>
     filteredOptions.length > 0 ? (
       <List
+        ref={combinedRefs}
         data={filteredOptions}
         rowSize={'small'}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
-        ref={myRef}
         handleOptionClick={handleOptionClick}
         searchTerm={searchTerm}
         selectedItem={selectedOption}
@@ -52,7 +54,7 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
     );
 
   return (
-    <div css={menuStyle(props)}>
+    <div css={menuStyle(props)} tabIndex={-1}>
       {isLoading ? (
         <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>Loading...</div>
       ) : (
@@ -60,6 +62,8 @@ const SelectMenu: React.FC<SelectMenuProps> = (props) => {
       )}
     </div>
   );
-};
+});
+
+SelectMenu.displayName = 'SelectMenu';
 
 export default SelectMenu;

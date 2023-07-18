@@ -1,7 +1,7 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import useTheme from 'hooks/useTheme';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes, useMemo } from 'react';
+import React, { InputHTMLAttributes, useMemo, useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import { generateUniqueID } from 'utils/helpers';
 
@@ -12,7 +12,7 @@ import Label from '../Label';
 import { getTextInputBaseTokens } from '../TextInputBase/TextInputBase.tokens';
 import { AcceptedIconNames } from 'components/Icon/types';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
@@ -49,7 +49,7 @@ export type TextFieldProps = {
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
-    id = generateUniqueID('textfield_'),
+    id: userDefinedId,
     suffix = null,
     label,
     placeholder = '',
@@ -65,6 +65,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     ...rest
   } = props;
   const theme = useTheme();
+  const id = useRef(userDefinedId || generateUniqueID('textfield_')).current;
 
   const tokens = getTextInputBaseTokens(theme);
 

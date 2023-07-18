@@ -2,17 +2,11 @@ import { css, SerializedStyles } from '@emotion/react';
 import { transition } from 'theme/functions';
 import { rem } from 'theme/utils';
 
-export const selectWrapper =
-  ({ isSearchable }: { isSearchable: boolean }) =>
-  (): SerializedStyles =>
-    css`
-      position: relative;
-      min-width: ${rem(150)};
-
-      * {
-        cursor: ${!isSearchable && 'pointer'};
-      }
-    `;
+export const selectWrapper = () => (): SerializedStyles =>
+  css`
+    position: relative;
+    min-width: ${rem(150)};
+  `;
 
 export const suffixContainer = (isOpen: boolean, isSearchable: boolean) => (): SerializedStyles =>
   css`

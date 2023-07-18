@@ -23,9 +23,9 @@ export type MenuProps = {
   /** Items that are being declared as menu options */
   items?: string[];
   /** Returns the items selected on the menu */
-  selectedItem?: string | null;
+  selectedItem?: string | number | null;
   /** A callback that is being triggered when an items has been clicked */
-  onSelect: (option: string) => void;
+  onSelect: (option: string | number) => void;
   /** The text of the button to show - defaults to "More" */
   buttonText: React.ReactNode;
   /** Define if the button is in disabled state */
@@ -80,11 +80,11 @@ const Menu: React.FC<MenuProps> = (props) => {
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                data={items}
+                data={items.map((item) => ({ value: item, label: item }))}
                 rowSize={'small'}
-                handleOptionClick={(option: string) => {
+                handleOptionClick={(option) => {
                   setIsOpen(false);
-                  onSelect(option);
+                  onSelect(option.value);
                 }}
               />
             )}

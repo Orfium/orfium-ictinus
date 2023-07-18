@@ -284,11 +284,12 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
       className="emotion-2"
     >
       <div
-        role="button"
+        onBlur={[Function]}
       >
         <div
           className="emotion-3"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="emotion-4"
@@ -307,24 +308,26 @@ exports[`Storyshots Design System/Select Async Select 1`] = `
                     className="emotion-7"
                   >
                     <input
+                      aria-controls="select__00"
+                      aria-expanded={false}
                       aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
                       data-testid="input_select-input"
                       disabled={false}
-                      id="textfield"
-                      onChange={[Function]}
+                      id="textfield__00"
+                      onClick={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Flavour"
                       readOnly={false}
                       required={false}
-                      value=""
+                      role="combobox"
                     />
                     <label
                       className="emotion-9"
-                      htmlFor="textfield"
+                      htmlFor="textfield__00"
                     >
                       Flavour
                        
@@ -643,11 +646,12 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
       className="emotion-2"
     >
       <div
-        role="button"
+        onBlur={[Function]}
       >
         <div
           className="emotion-3"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="emotion-4"
@@ -666,24 +670,26 @@ exports[`Storyshots Design System/Select Async Select with min characters 1`] = 
                     className="emotion-7"
                   >
                     <input
+                      aria-controls="select__00"
+                      aria-expanded={false}
                       aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
                       data-testid="input_select-input"
                       disabled={false}
-                      id="textfield"
-                      onChange={[Function]}
+                      id="textfield__00"
+                      onClick={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
                       onKeyPress={[Function]}
                       placeholder="Flavour"
                       readOnly={false}
                       required={false}
-                      value=""
+                      role="combobox"
                     />
                     <label
                       className="emotion-9"
-                      htmlFor="textfield"
+                      htmlFor="textfield__00"
                     >
                       Flavour
                        
@@ -751,10 +757,6 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
 .emotion-3 {
   position: relative;
   min-width: 9.375rem;
-}
-
-.emotion-3 * {
-  cursor: pointer;
 }
 
 .emotion-4 {
@@ -921,10 +923,10 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
   color: #5f6c85;
@@ -1022,11 +1024,12 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -1045,23 +1048,26 @@ exports[`Storyshots Design System/Select Disabled option with helper text 1`] = 
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={true}
                         required={false}
-                        value=""
+                        role="combobox"
+                        value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -1291,10 +1297,10 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
   color: #5f6c85;
@@ -1375,7 +1381,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   fill: #5f6c85;
 }
 
-.emotion-39 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1400,22 +1406,22 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
   background-color: #e7eefe;
 }
 
-.emotion-39:hover {
+.emotion-16:hover {
   background-color: #e7eefe;
 }
 
-.emotion-39:focus-within {
+.emotion-16:focus-within {
   box-shadow: 0 0 0 0.125rem #e4e7ff;
   background-color: #e7eefe;
 }
 
-.emotion-46 {
+.emotion-23 {
   fill: #5f6c85;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-46 path {
+.emotion-23 path {
   fill: #5f6c85;
 }
 
@@ -1436,10 +1442,11 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -1458,23 +1465,26 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
-                        value=""
+                        role="combobox"
+                        value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -1513,10 +1523,11 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -1525,7 +1536,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                 onClick={[Function]}
               >
                 <div
-                  className="emotion-5"
+                  className="emotion-16"
                   data-testid="select-input"
                 >
                   <div
@@ -1535,181 +1546,26 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={true}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
-                        value=""
+                        role="combobox"
+                        value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
-                      >
-                        Flavour
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-10"
-                    >
-                      <div
-                        className="emotion-11"
-                      >
-                        <span
-                          className="emotion-12"
-                          data-testid="select-right-icon"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-13"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                onClick={[Function]}
-              >
-                <div
-                  className="emotion-5"
-                  data-testid="select-input"
-                >
-                  <div
-                    className="emotion-6"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <input
-                        aria-invalid={false}
-                        autoComplete="off"
-                        className="emotion-8"
-                        data-testid="input_select-input"
-                        disabled={true}
-                        id="textfield"
-                        onChange={[Function]}
-                        onInput={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Flavour"
-                        readOnly={false}
-                        required={false}
-                        value=""
-                      />
-                      <label
-                        className="emotion-9"
-                        htmlFor="textfield"
-                      >
-                        Flavour
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-10"
-                    >
-                      <div
-                        className="emotion-11"
-                      >
-                        <span
-                          className="emotion-12"
-                          data-testid="select-right-icon"
-                          onClick={[Function]}
-                        >
-                          <span
-                            className="emotion-13"
-                          />
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="emotion-2"
-    >
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                onClick={[Function]}
-              >
-                <div
-                  className="emotion-39"
-                  data-testid="select-input"
-                >
-                  <div
-                    className="emotion-6"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <input
-                        aria-invalid={false}
-                        autoComplete="off"
-                        className="emotion-8"
-                        data-testid="input_select-input"
-                        disabled={true}
-                        id="textfield"
-                        onChange={[Function]}
-                        onInput={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Flavour"
-                        readOnly={false}
-                        required={false}
-                        value=""
-                      />
-                      <label
-                        className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -1724,151 +1580,7 @@ exports[`Storyshots Design System/Select Disabled/Locked Select 1`] = `
                         onClick={[Function]}
                       >
                         <span
-                          className="emotion-46"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                onClick={[Function]}
-              >
-                <div
-                  className="emotion-39"
-                  data-testid="select-input"
-                >
-                  <div
-                    className="emotion-6"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <input
-                        aria-invalid={false}
-                        autoComplete="off"
-                        className="emotion-8"
-                        data-testid="input_select-input"
-                        disabled={true}
-                        id="textfield"
-                        onChange={[Function]}
-                        onInput={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Flavour"
-                        readOnly={false}
-                        required={false}
-                        value=""
-                      />
-                      <label
-                        className="emotion-9"
-                        htmlFor="textfield"
-                      >
-                        Flavour
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-10"
-                    >
-                      <span
-                        className="emotion-12"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-46"
-                        />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        style={
-          Object {
-            "margin": 5,
-          }
-        }
-      >
-        <div
-          role="button"
-        >
-          <div
-            className="emotion-3"
-          >
-            <div
-              className="emotion-4"
-            >
-              <div
-                onClick={[Function]}
-              >
-                <div
-                  className="emotion-39"
-                  data-testid="select-input"
-                >
-                  <div
-                    className="emotion-6"
-                  >
-                    <div
-                      className="emotion-7"
-                    >
-                      <input
-                        aria-invalid={false}
-                        autoComplete="off"
-                        className="emotion-8"
-                        data-testid="input_select-input"
-                        disabled={true}
-                        id="textfield"
-                        onChange={[Function]}
-                        onInput={[Function]}
-                        onKeyDown={[Function]}
-                        placeholder="Flavour"
-                        readOnly={false}
-                        required={false}
-                        value=""
-                      />
-                      <label
-                        className="emotion-9"
-                        htmlFor="textfield"
-                      >
-                        Flavour
-                         
-                      </label>
-                    </div>
-                    <div
-                      aria-hidden={false}
-                      className="emotion-10"
-                    >
-                      <span
-                        className="emotion-12"
-                        onClick={[Function]}
-                      >
-                        <span
-                          className="emotion-46"
+                          className="emotion-23"
                         />
                       </span>
                     </div>
@@ -2361,11 +2073,12 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
         className="emotion-3"
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-4"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-5"
@@ -2586,21 +2299,25 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                         </div>
                       </span>
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-45"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="multiTextfield"
+                        id="multiTextfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value=""
                       />
                       <label
                         className="emotion-46"
-                        htmlFor="multiTextfield"
+                        htmlFor="multiTextfield__00"
                       >
                         Multi Select
                          
@@ -2634,11 +2351,12 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
         className="emotion-3"
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-4"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-5"
@@ -2655,23 +2373,26 @@ exports[`Storyshots Design System/Select MultiSelect 1`] = `
                       className="emotion-8"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-45"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="multiTextfield"
+                        id="multiTextfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         onKeyPress={[Function]}
                         placeholder="Multi Select - Async"
                         readOnly={false}
                         required={false}
-                        value=""
+                        role="combobox"
                       />
                       <label
                         className="emotion-58"
-                        htmlFor="multiTextfield"
+                        htmlFor="multiTextfield__00"
                       >
                         Multi Select - Async
                          
@@ -2739,10 +2460,6 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
 .emotion-3 {
   position: relative;
   min-width: 9.375rem;
-}
-
-.emotion-3 * {
-  cursor: pointer;
 }
 
 .emotion-4 {
@@ -2909,10 +2626,10 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
   color: #5f6c85;
@@ -3010,11 +2727,12 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -3033,23 +2751,26 @@ exports[`Storyshots Design System/Select Not Searchable Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={true}
                         required={false}
-                        value=""
+                        role="combobox"
+                        value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -3284,10 +3005,10 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transform: translate(0.1875rem, 0);
-  -moz-transform: translate(0.1875rem, 0);
-  -ms-transform: translate(0.1875rem, 0);
-  transform: translate(0.1875rem, 0);
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
   font-size: 0.875rem;
   font-weight: 400;
   color: #5f6c85;
@@ -3385,11 +3106,12 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -3408,23 +3130,26 @@ exports[`Storyshots Design System/Select Select with Highlight 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
-                        value=""
+                        role="combobox"
+                        value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -3757,11 +3482,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -3780,23 +3506,26 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -3828,11 +3557,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
         </div>
       </div>
       <div
-        role="button"
+        onBlur={[Function]}
       >
         <div
           className="emotion-3"
           onClick={[Function]}
+          onKeyDown={[Function]}
         >
           <div
             className="emotion-4"
@@ -3851,23 +3581,26 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                     className="emotion-7"
                   >
                     <input
+                      aria-controls="select__00"
+                      aria-expanded={false}
                       aria-invalid={false}
                       autoComplete="off"
                       className="emotion-8"
                       data-testid="input_select-input"
                       disabled={false}
-                      id="textfield"
-                      onChange={[Function]}
+                      id="textfield__00"
+                      onClick={[Function]}
                       onInput={[Function]}
                       onKeyDown={[Function]}
                       placeholder="Flavour"
                       readOnly={false}
                       required={false}
+                      role="combobox"
                       value="Chocolate"
                     />
                     <label
                       className="emotion-9"
-                      htmlFor="textfield"
+                      htmlFor="textfield__00"
                     >
                       Flavour
                        
@@ -3905,11 +3638,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -3928,23 +3662,26 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -3985,11 +3722,12 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -4008,23 +3746,26 @@ exports[`Storyshots Design System/Select Select with edge case 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Bottom positioned case"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Bottom positioned case
                          
@@ -4316,11 +4057,12 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -4339,23 +4081,26 @@ exports[`Storyshots Design System/Select Select with icon and size 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -4818,11 +4563,12 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -4841,24 +4587,27 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
                         aria-describedby="textfield__00_hintMessage"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Label
                          
@@ -4907,11 +4656,12 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -4930,24 +4680,26 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
                         aria-describedby="textfield__00_hintMessage"
+                        aria-expanded={false}
                         aria-invalid={true}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Label"
                         readOnly={false}
                         required={false}
-                        value=""
+                        role="combobox"
                       />
                       <label
                         className="emotion-21"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Label
                          
@@ -4989,6 +4741,423 @@ exports[`Storyshots Design System/Select Select with label and statuses 1`] = `
                     id="textfield__00_hintMessage"
                   >
                     Error Message
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/Select Select with uncontrolled state 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.emotion-3 {
+  position: relative;
+  min-width: 9.375rem;
+}
+
+.emotion-4 {
+  overflow: inherit;
+  text-overflow: inherit;
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.emotion-4 #unique-tooltip-id {
+  display: none!important;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
+  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  border-radius: 0.25rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 1;
+  cursor: text;
+  height: 3.25rem;
+  min-width: 8.75rem;
+  background-color: #ffffff;
+}
+
+.emotion-5:hover {
+  background-color: #e7eefe;
+}
+
+.emotion-5:focus-within {
+  box-shadow: 0 0 0 0.125rem #175bf5;
+  background-color: #e7eefe;
+}
+
+.emotion-6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: top;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  padding: 0 0 0 0.75rem;
+}
+
+.emotion-6>div {
+  position: relative;
+}
+
+.emotion-7 {
+  width: 100%;
+}
+
+.emotion-8 {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  background: transparent;
+  border: none;
+  color: #212332;
+  display: block;
+  position: relative;
+  top: 0.4375rem;
+  z-index: 1;
+  text-overflow: ellipsis;
+  width: 0;
+  min-width: 100%;
+}
+
+.emotion-8+label {
+  font-size: 0.9375rem;
+}
+
+.emotion-8::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8::placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-8:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.emotion-8:focus::placeholder {
+  color: transparent;
+}
+
+.emotion-8:not(:focus):placeholder-shown+label {
+  font-weight: normal;
+}
+
+.emotion-8:focus-within+label,
+.emotion-8:not(:placeholder-shown)+label {
+  -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -35%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -35%) scale(0.8);
+  transform: translate(0.1875rem, -35%) scale(0.8);
+  font-weight: 700;
+}
+
+.emotion-8:focus-within+label {
+  color: #1451dc;
+}
+
+.emotion-8:disabled {
+  cursor: not-allowed;
+}
+
+.emotion-9 {
+  -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
+  transition: transform 0.25s,opacity 0.25s ease-in-out;
+  transform-origin: 0 0;
+  line-height: normal;
+  width: 100%;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transform: translate(0.1875rem, -95%) scale(0.8);
+  -moz-transform: translate(0.1875rem, -95%) scale(0.8);
+  -ms-transform: translate(0.1875rem, -95%) scale(0.8);
+  transform: translate(0.1875rem, -95%) scale(0.8);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #5f6c85;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  white-space: nowrap;
+}
+
+.emotion-10 {
+  min-width: 2.75rem;
+  max-width: 2.75rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  cursor: unset;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.emotion-12 {
+  padding: 0.125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-13 {
+  fill: #5f6c85;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.emotion-13 path {
+  fill: #5f6c85;
+}
+
+.emotion-14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.25rem;
+  color: #54587f;
+  padding: 0.5rem 0 0;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-14 span {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding: 0;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        style={
+          Object {
+            "margin": 5,
+          }
+        }
+      >
+        <div
+          onBlur={[Function]}
+        >
+          <div
+            className="emotion-3"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <div
+              className="emotion-4"
+            >
+              <div
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-5"
+                  data-testid="select-input"
+                >
+                  <div
+                    className="emotion-6"
+                  >
+                    <div
+                      className="emotion-7"
+                    >
+                      <input
+                        aria-controls="select__00"
+                        aria-describedby="textfield__00_hintMessage"
+                        aria-expanded={false}
+                        aria-invalid={false}
+                        autoComplete="off"
+                        className="emotion-8"
+                        data-testid="input_select-input"
+                        disabled={false}
+                        id="textfield__00"
+                        onClick={[Function]}
+                        onInput={[Function]}
+                        onKeyDown={[Function]}
+                        placeholder="Label"
+                        readOnly={false}
+                        required={false}
+                        role="combobox"
+                        value="Chocolate"
+                      />
+                      <label
+                        className="emotion-9"
+                        htmlFor="textfield__00"
+                      >
+                        Label
+                         
+                      </label>
+                    </div>
+                    <div
+                      aria-hidden={false}
+                      className="emotion-10"
+                    >
+                      <div
+                        className="emotion-11"
+                      >
+                        <span
+                          className="emotion-12"
+                          data-testid="select-right-icon"
+                          onClick={[Function]}
+                        >
+                          <span
+                            className="emotion-13"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="emotion-14"
+                  data-testid="error-select-input"
+                >
+                  <span
+                    id="textfield__00_hintMessage"
+                  >
+                    This is a select with uncontrolled value, see code for more
                   </span>
                 </div>
               </div>
@@ -5301,11 +5470,12 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -5324,23 +5494,26 @@ exports[`Storyshots Design System/Select Simple Group Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Group Select"
                         readOnly={false}
                         required={false}
-                        value="Option 1"
+                        role="combobox"
+                        value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Group Select
                          
@@ -5676,11 +5849,12 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -5699,24 +5873,26 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
-                        creatable={false}
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -5755,11 +5931,12 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -5778,24 +5955,26 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
-                        creatable={false}
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          
@@ -5834,11 +6013,12 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
         }
       >
         <div
-          role="button"
+          onBlur={[Function]}
         >
           <div
             className="emotion-3"
             onClick={[Function]}
+            onKeyDown={[Function]}
           >
             <div
               className="emotion-4"
@@ -5857,24 +6037,26 @@ exports[`Storyshots Design System/Select Simple Select 1`] = `
                       className="emotion-7"
                     >
                       <input
+                        aria-controls="select__00"
+                        aria-expanded={false}
                         aria-invalid={false}
                         autoComplete="off"
                         className="emotion-8"
-                        creatable={false}
                         data-testid="input_select-input"
                         disabled={false}
-                        id="textfield"
-                        onChange={[Function]}
+                        id="textfield__00"
+                        onClick={[Function]}
                         onInput={[Function]}
                         onKeyDown={[Function]}
                         placeholder="Flavour"
                         readOnly={false}
                         required={false}
+                        role="combobox"
                         value="Chocolate"
                       />
                       <label
                         className="emotion-9"
-                        htmlFor="textfield"
+                        htmlFor="textfield__00"
                       >
                         Flavour
                          

@@ -7,7 +7,7 @@ import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
 import { isSelected } from '../utils';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 
 export type ListItemGroupProps = {
   /** Size of the ListItem (translates to height) */

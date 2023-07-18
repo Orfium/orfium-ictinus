@@ -12,7 +12,7 @@ interface Props extends TopAppBarProps {
 
 export const DEFAULT_USER_MENU = {
   userName: 'Tom Cruise',
-  onSelect: (selectedItem: string) => {
+  onSelect: (selectedItem: string | number) => {
     alert(selectedItem);
   },
   items: ['My Profile', 'Settings', 'Billing', 'Notifications', 'Logout'],

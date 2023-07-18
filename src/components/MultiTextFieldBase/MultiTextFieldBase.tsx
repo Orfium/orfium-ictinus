@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { merge } from 'lodash';
+import { last, merge } from 'lodash';
 import omit from 'lodash/omit';
 import React, { useMemo } from 'react';
 import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
@@ -18,14 +18,14 @@ import {
 import Chip from 'components/Chip';
 import Label from 'components/Label';
 import Loader from 'components/Loader';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 import { InputProps, TextFieldProps } from 'components/TextField/TextField';
 import TextInputBase from 'components/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
 export type Props = {
   /** the values of the MultiTextField if MultiTextField is controlled */
-  selectedOptions?: SelectOption[] | string[];
+  selectedOptions: SelectOption[] | string[];
   /** Callback fired when the `input` value typed is changed */
   onInput?: React.EventHandler<any>;
   /** Value of the `input` element */
@@ -135,7 +135,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
             {chips}
             <input
               readOnly={isLocked || isReadOnly}
-              onKeyDown={handleKeyDown}
+              onKeyDown={handleKeyDown(last<SelectOption | string>(selectedOptions))}
               css={inputStyle({
                 placeholder,
                 label,

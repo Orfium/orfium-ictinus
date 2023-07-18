@@ -13,13 +13,13 @@ import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
-import List from 'components/List';
+import List, { ListItemType } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
 
 export type DropdownButtonProps = TestProps & {
   /** The Dropdown Items' CTA */
-  onOptionSelect: (option: string) => void;
+  onOptionSelect: (option: string | number) => void;
   /** The type of the Dropdown Button */
   type?: PrimitiveButtonTypes;
   /** The Button's CTA */
@@ -57,9 +57,9 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
 
   /** The CTA for the Options inside the Dropdown */
   const handleOptionClick = useCallback(
-    (option: string) => {
+    (option: ListItemType) => {
       setIsOpen(false);
-      onOptionSelect(option);
+      onOptionSelect(option.value);
     },
     [onOptionSelect]
   );
@@ -106,7 +106,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                data={items}
+                data={items.map((item) => ({ value: item, label: item }))}
                 rowSize={'small'}
                 handleOptionClick={handleOptionClick}
                 dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}

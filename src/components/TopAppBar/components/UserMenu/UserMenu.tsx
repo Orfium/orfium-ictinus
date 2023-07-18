@@ -8,7 +8,7 @@ export type UserMenuProps = {
   items: string[];
   userName: string;
   userAvatar: { src: string; letter: string; color?: AvatarColors };
-  onSelect: (selectedItem: string) => void;
+  onSelect: (selectedItem: string | number) => void;
 } & { isDark?: boolean };
 
 const UserMenu: FC<UserMenuProps> = ({ items, userAvatar, userName, onSelect, isDark = false }) => (

@@ -3,9 +3,9 @@ import Highlighter from 'react-highlight-words';
 
 import { listLabel, listLabelHelperText, listLabelWithHelper } from './List.style';
 import { ListItemType } from './types';
-import { FilterOption } from '../Filter/types';
+import { FilterOption } from '../Filter';
 import Icon from '../Icon';
-import { SelectOption } from '../Select/Select';
+import { SelectOption } from '../Select';
 
 /** For this amount of List Items the list of Filter will be non-virtualized */
 export const MAX_NON_VIRTUALIZED_ITEMS_FILTER = 6;
@@ -26,45 +26,16 @@ export const isSelected = ({
     return false;
   }
   const checkIfItemHasValue = (item: ListItemType) => {
-    /**
-     * Check if list item is not react element because it can be
-     * and also checks if its object with property 'value'
-     * @TODO Typescript 4.4 will solve this in one constant
-     * **/
-    if (
-      item &&
-      !React.isValidElement(item) &&
-      typeof item === 'object' &&
-      !Array.isArray(item) &&
-      'value' in item &&
-      item?.value
-    ) {
-      return item.value;
-    }
-
-    return item;
+    return item.value;
   };
-  const itemValue =
-    typeof item === 'string' || typeof item === 'number' ? item : checkIfItemHasValue(item);
-  const selectedItemValue =
-    typeof selectedItem === 'string' || typeof selectedItem === 'number'
-      ? selectedItem
-      : checkIfItemHasValue(selectedItem);
+  const itemValue = checkIfItemHasValue(item);
+  const selectedItemValue = selectedItem ? checkIfItemHasValue(selectedItem) : null;
 
   return itemValue === selectedItemValue;
 };
 
 const renderLabelWithHelperText = (content: SelectOption | FilterOption) => {
-  if (
-    content &&
-    !React.isValidElement(content) &&
-    typeof content === 'object' &&
-    !Array.isArray(content) &&
-    'label' in content &&
-    content?.label &&
-    'helperText' in content &&
-    content?.helperText
-  ) {
+  if (content?.label && 'helperText' in content && content?.helperText) {
     return (
       <div css={listLabelWithHelper}>
         <div css={listLabel}>{content.label}</div>
@@ -77,15 +48,7 @@ const renderLabelWithHelperText = (content: SelectOption | FilterOption) => {
 };
 
 export const renderContent = (content: ListItemType, searchTerm?: string) => {
-  if (
-    searchTerm &&
-    content &&
-    !React.isValidElement(content) &&
-    typeof content === 'object' &&
-    !Array.isArray(content) &&
-    'label' in content &&
-    content?.label
-  ) {
+  if (searchTerm && 'label' in content && content?.label) {
     return (
       <Highlighter
         highlightClassName="search-text"
@@ -97,14 +60,7 @@ export const renderContent = (content: ListItemType, searchTerm?: string) => {
     );
   }
 
-  if (
-    content &&
-    !React.isValidElement(content) &&
-    typeof content === 'object' &&
-    !Array.isArray(content) &&
-    'label' in content &&
-    content?.label
-  ) {
+  if ('label' in content && content?.label) {
     return (
       <>
         <div css={listLabel}>{renderLabelWithHelperText(content)}</div>

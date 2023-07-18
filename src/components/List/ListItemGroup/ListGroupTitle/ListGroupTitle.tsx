@@ -4,7 +4,7 @@ import { TestProps } from 'utils/types';
 import { contentStyle, listGroupTitleStyle } from './ListGroupTitle.style';
 import { ListItemType, ListRowSize } from 'components/List/types';
 import { renderContent } from 'components/List/utils';
-import { SelectOption } from 'components/Select/Select';
+import { SelectOption } from 'components/Select';
 
 export type ListGroupTitleProps = {
   /** Size of the ListGroupTitle (translates to height) */

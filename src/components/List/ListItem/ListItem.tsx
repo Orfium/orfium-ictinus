@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react';
+import React from 'react';
+import { Item } from 'react-aria-components';
 import { TestProps } from 'utils/types';
 
 import { listItemStyle, contentStyle } from './ListItem.style';
@@ -24,7 +25,8 @@ export type ListItemProps = {
   handleOptionClick?: SelectHandlerType;
   /** Determines the left padding */
   isGroupItem?: boolean;
-} & TestProps;
+} & TestProps &
+  Omit<React.LiHTMLAttributes<HTMLLIElement>, 'value'>;
 
 const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
   (
@@ -39,24 +41,17 @@ const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
       searchTerm,
       dataTestId,
       isGroupItem,
+      ...rest
     },
     ref
   ) => {
-    const handleListItemSelect = useCallback(() => {
-      if (content && handleOptionClick && !isDisabled) {
-        handleOptionClick(content as never);
-      }
-    }, [content, isDisabled, handleOptionClick]);
-
     return (
-      <div
-        css={listItemStyle({ size, isSelected, isHighlighted, isDisabled, isGroupItem })}
+      <Item
+        {...rest}
+        css={listItemStyle({ size, isHighlighted, isDisabled, isGroupItem })}
         ref={isSelected ? ref : null}
-        onClick={handleListItemSelect}
-        onMouseDown={(event) => {
-          event.preventDefault();
-        }}
         data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
+        textValue={content.value.toString()}
       >
         <div css={contentStyle()}>
           {
@@ -64,7 +59,7 @@ const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
             renderContent(content, searchTerm)
           }
         </div>
-      </div>
+      </Item>
     );
   }
 );

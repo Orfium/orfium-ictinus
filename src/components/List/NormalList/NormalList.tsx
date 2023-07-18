@@ -1,14 +1,13 @@
-import { isUndefined } from 'lodash';
 import React from 'react';
+import { ListBox } from 'react-aria-components';
 import { generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
-import { SelectOption } from '../../Select/Select';
+import { SelectOption } from '../../Select';
 import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
 import ListItemGroup from '../ListItemGroup';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
-import { isSelected } from '../utils';
 
 type NormalListProps = {
   items: ListItemType[];
@@ -30,7 +29,7 @@ type NormalListProps = {
   isSearchable?: boolean;
 } & TestProps;
 
-const NormalList = React.forwardRef<HTMLDivElement, NormalListProps>(
+const NormalList = React.forwardRef<HTMLUListElement, NormalListProps>(
   (
     {
       items,
@@ -43,14 +42,43 @@ const NormalList = React.forwardRef<HTMLDivElement, NormalListProps>(
       searchTerm,
       handleOptionClick,
       dataTestId,
+      ...rest
     },
     ref
   ) => {
     const newItems = defaultOption ? [defaultOption, ...items] : items;
 
+    const selectedOption = newItems.find((item) => item.value === selectedItem?.value);
+
     return (
       <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
-        <ul css={listStyle({ width, height, isSearchable })}>
+        <ListBox
+          ref={ref as React.Ref<HTMLDivElement>}
+          css={listStyle({ width, height, isSearchable })}
+          selectionMode="single"
+          {...rest}
+          selectedKeys={
+            selectedOption !== undefined && selectedOption !== null
+              ? new Set([selectedOption.value])
+              : undefined
+          }
+          disabledKeys={
+            new Set(items.filter((option) => option.isDisabled).map((option) => option.value))
+          }
+          onSelectionChange={(keys) => {
+            const optionFound = newItems.find(
+              (item) => String(item.value) === String([...keys][0])
+            ) as ListItemType;
+            optionFound &&
+              handleOptionClick &&
+              handleOptionClick(
+                optionFound.isCreated
+                  ? { ...optionFound, label: String(optionFound.value) }
+                  : optionFound
+              );
+          }}
+          aria-label={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
+        >
           {newItems.map((item, index) =>
             (item as SelectOption)?.options ? (
               <ListItemGroup
@@ -58,39 +86,30 @@ const NormalList = React.forwardRef<HTMLDivElement, NormalListProps>(
                 content={item}
                 size={rowSize}
                 groupIndex={index}
-                ref={ref}
                 searchTerm={searchTerm}
                 dataTestId={dataTestId}
                 handleOptionClick={handleOptionClick}
                 selectedItem={selectedItem}
               />
             ) : (
-              <li key={generateUniqueKey('list_item' + index)}>
-                <ListItem
-                  content={item}
-                  size={rowSize}
-                  index={index}
-                  ref={ref}
-                  isHighlighted={Boolean(defaultOption && index === 0)}
-                  searchTerm={searchTerm}
-                  isDisabled={(item as SelectOption)?.isDisabled}
-                  dataTestId={
-                    defaultOption && index === 0
-                      ? dataTestId ?? 'ictinus_list' + '_default_option'
-                      : dataTestId
-                  }
-                  handleOptionClick={handleOptionClick}
-                  isSelected={
-                    defaultOption && index === 0
-                      ? isUndefined(selectedItem) ||
-                        isSelected({ item: defaultOption, selectedItem })
-                      : isSelected({ item, selectedItem })
-                  }
-                />
-              </li>
+              <ListItem
+                key={generateUniqueKey('list_item' + index)}
+                id={String(item.value)}
+                content={item}
+                size={rowSize}
+                index={index}
+                isHighlighted={Boolean(defaultOption && index === 0)}
+                searchTerm={searchTerm}
+                isDisabled={(item as SelectOption)?.isDisabled}
+                dataTestId={
+                  defaultOption && index === 0
+                    ? dataTestId ?? 'ictinus_list' + '_default_option'
+                    : dataTestId
+                }
+              />
             )
           )}
-        </ul>
+        </ListBox>
       </div>
     );
   }

@@ -1,12 +1,12 @@
 import React from 'react';
 
 import List from '../List';
-import { ListProps } from '../List/List';
-import { SelectOption } from '../Select/Select';
+import { ListProps } from '../List';
+import { SelectOption } from '../Select';
 
 interface Props extends Omit<ListProps, 'data'> {
   itemsCount: number;
-  isListGroup: boolean;
+  isListGroup?: boolean;
 }
 
 const ListShowcase: React.FC<Props> = ({
@@ -34,6 +34,7 @@ const ListShowcase: React.FC<Props> = ({
 
   return (
     <List
+      id={'listshowcase'}
       data={items}
       rowSize={rowSize}
       width={width}

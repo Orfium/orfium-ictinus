@@ -28,9 +28,10 @@ export type ListProps = {
   handleOptionClick?: SelectHandlerType;
   /** Defines if this is searchable list or not **/
   isSearchable?: boolean;
-} & TestProps;
+} & TestProps &
+  React.InputHTMLAttributes<HTMLUListElement>;
 
-const List = React.forwardRef<HTMLDivElement, ListProps>(
+const List = React.forwardRef<HTMLUListElement, ListProps>(
   (
     {
       data,
@@ -44,6 +45,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
       searchTerm,
       handleOptionClick,
       dataTestId,
+      ...rest
     },
     ref
   ) => {
@@ -61,6 +63,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
             searchTerm={searchTerm}
             handleOptionClick={handleOptionClick}
             dataTestId={dataTestId}
+            {...rest}
           />
         ) : (
           <NormalList
@@ -75,6 +78,7 @@ const List = React.forwardRef<HTMLDivElement, ListProps>(
             searchTerm={searchTerm}
             handleOptionClick={handleOptionClick}
             dataTestId={dataTestId}
+            {...rest}
           />
         )}
       </div>

@@ -2,6 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
 
 import { Props as MultiTextFieldBase } from './MultiTextFieldBase';
+import { SelectOption } from '../Select';
 import Icon from 'components/Icon';
 import { TextFieldProps } from 'components/TextField/TextField';
 
@@ -57,15 +58,16 @@ const useMultiTextFieldBaseUtils = ({
     return undefined;
   }, [hasValue, isTextfield, isLocked]);
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (value === '' && event.key === 'Backspace') {
-      onOptionDelete();
-    }
+  const handleKeyDown =
+    (option?: SelectOption | string) => (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (value === '' && event.key === 'Backspace') {
+        onOptionDelete(option);
+      }
 
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
-  };
+      if (onKeyDown) {
+        onKeyDown(event);
+      }
+    };
 
   const icon = useMemo(() => {
     const handleClick = () => {

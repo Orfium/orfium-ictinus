@@ -15,8 +15,8 @@ import Month from '../../../Month/Month';
 import { Range } from '../../OverlayComponent';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import { SelectOption } from 'components/Select';
 import SelectMenu from 'components/Select/components/SelectMenu';
-import { SelectOption } from 'components/Select/Select';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 
 type MonthWrapperProps = {
@@ -98,7 +98,7 @@ const MonthWrapper = ({
                     setDate(date.year(Number(e.value)));
                     setIsOpen(false);
                   }}
-                  selectedOption={date.format('YYYY')}
+                  selectedOption={{ value: date.format('YYYY'), label: date.format('YYYY') }}
                 />
               )}
             </div>

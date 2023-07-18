@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 import { container, wrapper } from './MultiSelectShowcase.style';
-import Select from '../../Select';
-import { SelectOption } from '../../Select/Select';
+import Select, { SelectOption } from '../../Select';
 
 type Props = {
   isDisabled?: boolean;
@@ -32,7 +31,7 @@ const selectedOptions = [
   { value: 'buttered_pecan', label: 'Buttered Pecan' },
 ];
 
-export const dummyUnrefinedData = new Array(15).fill(undefined).map((__, index) => ({
+export const dummyUndefinedData = new Array(15).fill(undefined).map((__, index) => ({
   value: index,
   label: `Test option ${index}`,
 }));
@@ -42,13 +41,15 @@ const SelectShowcase: React.FC<Props> = ({
   hasSelectAllOption = false,
   isCreatable = false,
 }) => {
-  const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUnrefinedData);
+  const [asyncOptions, setAsyncOptions] = useState<SelectOption[]>(dummyUndefinedData);
   const [isLoading, setIsLoading] = React.useState(false);
+  const [value, setValue] = React.useState<SelectOption[]>(selectedOptions);
+  const [value2, setValue2] = React.useState<SelectOption[]>();
 
   const mockedApiCall = (term: string) => {
     new Promise<SelectOption[]>((resolve) => {
       setTimeout(() => {
-        resolve(dummyUnrefinedData);
+        resolve(dummyUndefinedData);
         setIsLoading(false);
       }, 1500);
     }).then((values) => {
@@ -64,7 +65,8 @@ const SelectShowcase: React.FC<Props> = ({
           isMulti
           label={'Multi Select'}
           options={options}
-          selectedOptions={selectedOptions}
+          selectedOption={value}
+          onChange={setValue}
           isDisabled={isDisabled}
           hasSelectAllOption={hasSelectAllOption}
           isCreatable={isCreatable}
@@ -82,6 +84,8 @@ const SelectShowcase: React.FC<Props> = ({
           isDisabled={isDisabled}
           hasSelectAllOption={hasSelectAllOption}
           isCreatable={isCreatable}
+          selectedOption={value2}
+          onChange={setValue2}
         />
       </div>
     </div>

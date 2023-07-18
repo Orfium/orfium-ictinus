@@ -3,7 +3,7 @@ import { VariableSizeList as VList } from 'react-window';
 import { CSSProperties } from 'styled-components';
 import { TestProps } from 'utils/types';
 
-import { SelectOption } from '../../Select/Select';
+import { SelectOption } from '../../Select';
 import { listStyle } from '../List.style';
 import ListItem from '../ListItem';
 import ListItemGroup from '../ListItemGroup';
@@ -28,7 +28,7 @@ type VirtualizedListProps = {
   handleOptionClick?: SelectHandlerType;
 } & TestProps;
 
-const VirtualizedList = React.forwardRef<HTMLDivElement, VirtualizedListProps>(
+const VirtualizedList = React.forwardRef<HTMLUListElement, VirtualizedListProps>(
   (
     {
       items,
@@ -70,7 +70,6 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, VirtualizedListProps>(
                 size={rowSize}
                 content={data[index]}
                 groupIndex={index}
-                ref={ref}
                 searchTerm={searchTerm}
                 dataTestId={dataTestId}
                 handleOptionClick={handleOptionClick}
@@ -82,7 +81,6 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, VirtualizedListProps>(
               size={rowSize}
               content={data[index]}
               index={index}
-              ref={ref}
               isDisabled={(data[index] as SelectOption)?.isDisabled}
               isSelected={isSelected({ item: data[index], selectedItem })}
               searchTerm={searchTerm}
@@ -97,6 +95,8 @@ const VirtualizedList = React.forwardRef<HTMLDivElement, VirtualizedListProps>(
 
     return (
       <VList
+        // @ts-ignore
+        ref={ref}
         data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
         height={customHeight || rowSize === 'normal' ? MAX_LARGE_HEIGHT : MAX_SMALL_HEIGHT}
         width={customWidth || '100%'}
