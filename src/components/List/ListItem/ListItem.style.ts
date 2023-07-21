@@ -6,28 +6,42 @@ import { ListRowSize } from '../types';
 
 export const listItemStyle =
   ({
-    size,
+    isGroupItem = false,
     isHighlighted,
     isDisabled,
-    isGroupItem,
   }: {
-    size: ListRowSize;
+    isGroupItem?: boolean;
     isHighlighted: boolean;
     isDisabled: boolean;
-    isGroupItem?: boolean;
   }) =>
-  (theme: Theme): SerializedStyles =>
-    css`
-      height: ${size === 'normal' ? rem(56) : rem(46)};
-      font-size: ${theme.globals.typography.fontSize.get(size === 'normal' ? '4' : '3')};
+  (theme: Theme): SerializedStyles => {
+    const padding = css`0 ${theme.globals.spacing.get('6')} 0px ${theme.globals.spacing.get('6')}`;
+    const itemHeight = rem(56);
+
+    return css`
+      min-height: ${isGroupItem ? undefined : itemHeight};
+      color: ${theme.tokens.textColor.get('light.primary')};
+      font-size: ${theme.globals.typography.fontSize.get('4')};
       background-color: ${theme.globals.colors.white};
       display: flex;
-      align-items: center;
-      padding: 0px ${theme.globals.spacing.get('6')} 0px
-        ${isGroupItem ? theme.globals.spacing.get('9') : theme.globals.spacing.get('6')};
-      cursor: pointer;
+      flex-direction: column;
+      //align-items: center;
+      padding: ${isGroupItem ? undefined : padding};
+      font-weight: ${isGroupItem ? 'bold' : 'initial'};
 
       ${isHighlighted && 'font-weight: 500;'}
+      &[role='option'] {
+        cursor: pointer;
+      }
+
+      > span {
+        align-items: center;
+        display: flex;
+        // move styling inside span which is the header when section
+        min-height: ${itemHeight};
+        padding: ${padding};
+        color: ${theme.tokens.textColor.get('light.secondary')};
+      }
 
       &[data-focus-visible] {
         background-color: ${theme.utils.getColor('lightGrey', 50)};
@@ -51,7 +65,7 @@ export const listItemStyle =
         font-weight: bold;
       }
 
-      &:hover {
+      &[role='option']:hover {
         background-color: ${theme.utils.getColor('lightGrey', 50)};
       }
 
@@ -61,6 +75,7 @@ export const listItemStyle =
         cursor: not-allowed;
     `}
     `;
+  };
 
 export const contentStyle = (): SerializedStyles => css`
   white-space: nowrap;
@@ -70,6 +85,7 @@ export const contentStyle = (): SerializedStyles => css`
   flex: 1;
   flex-direction: row;
   display: flex;
+  align-items: center;
   > div {
     flex: 1;
   }

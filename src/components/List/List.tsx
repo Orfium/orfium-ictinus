@@ -1,11 +1,12 @@
+import { Item, Section } from '@react-stately/collections';
 import React, { memo } from 'react';
 import isEqual from 'react-fast-compare';
 import { TestProps } from 'utils/types';
 
-import { wrapperStyle } from './List.style';
-import NormalList from './NormalList';
+import { listStyle, wrapperStyle } from './List.style';
+import { ListBox } from './ListBox';
 import { ListItemType, ListRowSize, SelectHandlerType } from './types';
-import VirtualizedList from './VirtualizedList';
+import { SelectOption } from '../Select';
 
 export type ListProps = {
   /** Data for the list */
@@ -14,7 +15,7 @@ export type ListProps = {
   rowSize: ListRowSize;
   /** Width of the list */
   width?: number;
-  /** Height of the list */
+  /** Height of the list when you use it as virtualized */
   height?: number;
   /** Virtualized list option */
   isVirtualized?: boolean;
@@ -49,38 +50,60 @@ const List = React.forwardRef<HTMLUListElement, ListProps>(
     },
     ref
   ) => {
+    const newItems = defaultOption ? [{ ...defaultOption, isDefaultOption: true }, ...data] : data;
+
+    const selectedOption = newItems.find((item) => item.value === selectedItem?.value);
+
     return (
       <div css={wrapperStyle({ width, isSearchable })}>
-        {isVirtualized ? (
-          <VirtualizedList
-            items={data}
-            rowSize={rowSize}
-            customWidth={width}
-            customHeight={height}
-            ref={ref}
-            selectedItem={selectedItem}
-            defaultOption={defaultOption}
-            searchTerm={searchTerm}
-            handleOptionClick={handleOptionClick}
-            dataTestId={dataTestId}
-            {...rest}
-          />
-        ) : (
-          <NormalList
-            items={data}
-            rowSize={rowSize}
-            width={width}
+        <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
+          <ListBox
+            ref={ref as React.Ref<HTMLUListElement>}
+            selectionMode="single"
+            items={newItems.map((item) => ({ ...item, id: item.value }))}
+            // @ts-ignore // hack to work skip the logic
+            isVirtualized={true}
+            isVirtualizationEnabled={isVirtualized}
+            css={listStyle({ width, height, isSearchable })}
             height={height}
-            ref={ref}
-            selectedItem={selectedItem}
-            isSearchable={isSearchable}
-            defaultOption={defaultOption}
-            searchTerm={searchTerm}
-            handleOptionClick={handleOptionClick}
-            dataTestId={dataTestId}
             {...rest}
-          />
-        )}
+            selectedKeys={
+              selectedOption !== undefined && selectedOption !== null
+                ? new Set([selectedOption.value])
+                : undefined
+            }
+            disabledKeys={
+              new Set(data.filter((option) => option.isDisabled).map((option) => option.value))
+            }
+            onSelectionChange={(keys) => {
+              const optionFound = newItems.find(
+                (item) => String(item.value) === String([...keys][0])
+              ) as ListItemType;
+              optionFound &&
+                handleOptionClick &&
+                handleOptionClick(
+                  optionFound.isCreated
+                    ? { ...optionFound, label: String(optionFound.value) }
+                    : optionFound
+                );
+            }}
+            aria-label={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}
+          >
+            {/* This has to be part of Aria collection. That is why we use explicit Item component from Aria*/}
+            {(item: SelectOption) => {
+              return item.options && item.options.length > 0 ? (
+                <Section key={item.value} items={item.options} title={item.label}>
+                  {/*{(item: SelectOption) => <Item>{item.label}</Item>}*/}
+                  {item.options.map((sectionItem) => (
+                    <Item key={sectionItem.value}>{sectionItem.label}</Item>
+                  ))}
+                </Section>
+              ) : (
+                <Item key={item.value}>{item.label}</Item>
+              );
+            }}
+          </ListBox>
+        </div>
       </div>
     );
   }

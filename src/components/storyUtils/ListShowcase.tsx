@@ -1,3 +1,4 @@
+import uniqueId from 'lodash/uniqueId';
 import React from 'react';
 
 import List from '../List';
@@ -25,8 +26,8 @@ const ListShowcase: React.FC<Props> = ({
         label: (isListGroup ? 'Group ' : 'Item ') + index,
         options: isListGroup
           ? [
-              { value: index, label: 'Option 1 of Group ' + index },
-              { value: index, label: 'Option 2 of Group ' + index },
+              { value: uniqueId(), label: 'Option 1 of Group ' + index },
+              { value: uniqueId(), label: 'Option 2 of Group ' + index },
             ]
           : undefined,
       };

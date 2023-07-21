@@ -41,12 +41,25 @@ List component.
 <Preview>
   <Story name="List">
     <ListShowcase
-      itemsCount={number('itemsCount', 50)}
+      itemsCount={number('itemsCount', 5)}
       rowSize={select('rowSize', ['small', 'normal'], 'normal')}
-      width={number('width', 650)}
-      height={number('height', 650)}
       isVirtualized={boolean('isVirtualized', false)}
       isListGroup={boolean('isListGroup', false)}
+    />
+  </Story>
+</Preview>
+
+### Group List
+
+Group List component.
+
+<Preview>
+  <Story name="Group List">
+    <ListShowcase
+      itemsCount={number('itemsCount', 5)}
+      rowSize={select('rowSize', ['small', 'normal'], 'normal')}
+      isVirtualized={boolean('isVirtualized', false)}
+      isListGroup={boolean('isListGroup', true)}
     />
   </Story>
 </Preview>
@@ -58,7 +71,7 @@ Virtualized List component for large amounts of items.
 <Preview>
   <Story name="Virtualized List">
     <ListShowcase
-      itemsCount={number('itemsCount', 6500)}
+      itemsCount={number('itemsCount', 1000)}
       rowSize={select('rowSize', ['small', 'normal'], 'normal')}
       width={number('width', 650)}
       height={number('height', 650)}
@@ -103,9 +116,7 @@ Virtualized List component for large amounts of items.
       ]}
       defaultOption={{ value: '', label: 'All' }}
       rowSize={select('rowSize', ['small', 'normal'], 'normal')}
-      width={number('width', 650)}
-      height={number('height', 650)}
-      isVirtualized={boolean('isVirtualized', true)}
+      isVirtualized={boolean('isVirtualized', false)}
     />
   </Story>
 </Preview>

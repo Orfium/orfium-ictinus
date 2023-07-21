@@ -367,6 +367,8 @@ describe('Multi Select', () => {
     userEvent.click(selectInput);
     userEvent.click(screen.getByTestId('ictinus_list_default_option'));
 
+    screen.debug();
+
     chips = await screen.findAllByTestId(/chip-chip_/);
 
     expect(chips.length).toEqual(dropdownList.length);

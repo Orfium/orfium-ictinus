@@ -47,3 +47,8 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+
+jest.mock('@react-aria/ssr/dist/main', () => ({
+  ...jest.requireActual('@react-aria/ssr/dist/main'),
+  useSSRSafeId: () => 'react-aria-generated-id',
+}));

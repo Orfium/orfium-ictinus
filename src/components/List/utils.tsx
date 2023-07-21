@@ -47,7 +47,13 @@ const renderLabelWithHelperText = (content: SelectOption | FilterOption) => {
   return content.label;
 };
 
-export const renderContent = (content: ListItemType, searchTerm?: string) => {
+export const RenderContent = ({
+  content,
+  searchTerm,
+}: {
+  content: ListItemType;
+  searchTerm?: string;
+}) => {
   if (searchTerm && 'label' in content && content?.label) {
     return (
       <Highlighter
@@ -60,14 +66,10 @@ export const renderContent = (content: ListItemType, searchTerm?: string) => {
     );
   }
 
-  if ('label' in content && content?.label) {
-    return (
-      <>
-        <div css={listLabel}>{renderLabelWithHelperText(content)}</div>
-        {content?.iconProps && <Icon {...content.iconProps} />}
-      </>
-    );
-  }
-
-  return content;
+  return (
+    <>
+      <div css={listLabel}>{renderLabelWithHelperText(content)}</div>
+      {content?.iconProps && <Icon {...content.iconProps} />}
+    </>
+  );
 };

@@ -12,7 +12,9 @@ const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'banana', label: 'Banana' },
-  { value: 'citrus', label: 'Citrus' },
+  { value: 'citrus2', label: 'Citrus2' },
+  { value: 'citrus3', label: 'Citrus3' },
+  { value: 'citrus4', label: 'Citrus4' },
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
 ];
 const optionsWithHelperInDisabled = [
@@ -122,6 +124,7 @@ Simple select component with clearable data and searchable input
               selectedOption={selectedOption}
               onChange={setSelectedOption}
               isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
             />
           );
         }}

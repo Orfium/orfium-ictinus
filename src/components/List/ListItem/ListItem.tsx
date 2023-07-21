@@ -4,15 +4,11 @@ import { TestProps } from 'utils/types';
 
 import { listItemStyle, contentStyle } from './ListItem.style';
 import { ListItemType, ListRowSize, SelectHandlerType } from '../types';
-import { renderContent } from '../utils';
+import { RenderContent } from '../utils';
 
 export type ListItemProps = {
-  /** Size of the ListItem (translates to height) */
-  size: ListRowSize;
   /** Content of the ListItem */
   content: ListItemType;
-  /** Index, for test-id calculation */
-  index: number | string;
   /** Selected state */
   isSelected?: boolean;
   /** Whether the text of the ListItem is highlighted or not. eg: Filter - Default Value */
@@ -21,45 +17,31 @@ export type ListItemProps = {
   isDisabled?: boolean;
   /** Search Term to be highlighted in list items */
   searchTerm?: string;
-  /** Option Click handler for SelectOption[] data case */
-  handleOptionClick?: SelectHandlerType;
-  /** Determines the left padding */
+  /** Determines if the item is a header of a section */
   isGroupItem?: boolean;
 } & TestProps &
   Omit<React.LiHTMLAttributes<HTMLLIElement>, 'value'>;
 
-const ListItem = React.forwardRef<HTMLDivElement, ListItemProps>(
+const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(
   (
-    {
-      size,
-      content,
-      index,
-      isSelected = false,
-      isHighlighted = false,
-      isDisabled = false,
-      handleOptionClick,
-      searchTerm,
-      dataTestId,
-      isGroupItem,
-      ...rest
-    },
+    { content, isDisabled = false, isHighlighted = false, searchTerm, dataTestId, ...rest },
     ref
   ) => {
     return (
-      <Item
+      <li
         {...rest}
-        css={listItemStyle({ size, isHighlighted, isDisabled, isGroupItem })}
-        ref={isSelected ? ref : null}
-        data-testid={dataTestId ?? 'ictinus_list' + ('_item_' + index)}
-        textValue={content.value.toString()}
+        css={listItemStyle({ isHighlighted, isDisabled })}
+        ref={ref}
+        data-testid={String(
+          dataTestId ?? content.isDefaultOption
+            ? 'ictinus_list' + '_default_option'
+            : 'ictinus_list' + ('_item_' + content.value)
+        ).replace(/ /g, '_')}
       >
         <div css={contentStyle()}>
-          {
-            /** @TODO latest version typescript 4.4 is solving this as a constant */
-            renderContent(content, searchTerm)
-          }
+          <RenderContent content={content} searchTerm={searchTerm} />
         </div>
-      </Item>
+      </li>
     );
   }
 );

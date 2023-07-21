@@ -31,7 +31,9 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
   const myRef = useRef<HTMLUListElement>(null);
   const combinedRefs = useCombinedRefs(myRef, ref);
 
-  const executeScroll = () => myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
+  const executeScroll = () =>
+    myRef.current?.scrollIntoView &&
+    myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
 
   useEffect(() => {
     executeScroll();
