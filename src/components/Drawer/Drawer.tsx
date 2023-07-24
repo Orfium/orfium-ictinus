@@ -23,7 +23,7 @@ const Drawer: React.FC<DrawerProps> = (props) => {
 
   return (
     <div
-      css={drawerContainerStyle(props.isExpanded, breakpoints.des1200, !breakpoints.des1440)}
+      css={drawerContainerStyle(props.isExpanded, breakpoints.des1200)}
       onMouseEnter={() => isSmallDesktop && props.setExpanded(true)}
       onMouseLeave={() => isSmallDesktop && props.setExpanded(false)}
       data-testid={'sidebar'}
