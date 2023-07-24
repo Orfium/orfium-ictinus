@@ -7,6 +7,7 @@ import Icon from '../Icon';
 import iconSelector from '../Icon/assets/iconSelector';
 import Loader from '../Loader';
 import TextFieldShowcase from '../../components/storyUtils/TextFieldShowcase/TextFieldShowcase.tsx';
+import MaskedTextFieldShowCase from '../../components/storyUtils/MaskedTextFieldShowCase/MaskedTextFieldShowCase.tsx';
 import { FIGMA_URL } from '../../utils/common';
 import SectionHeader from '../../storybook/SectionHeader';
 
@@ -67,6 +68,40 @@ Regular TextField with label options. Label that will float, with or without Pla
     <Stack>
       <TextField label={'Label'} />
       <TextField label={'Label'} placeholder={'Placeholder'} />
+    </Stack>
+  </Story>
+</Preview>
+
+### Masked TextField
+
+TextField with mask option. When used, placeholder prop is not available.
+The mask rules are the following:
+
+<UsageGuidelines
+  guidelines={[
+    " '9' => [0-9] (Numeric)",
+    " 'a' => [A-Za-z] (Alphabetical)",
+    " '*' => [A-Za-z0-9] (Alphanumeric)",
+  ]}
+/>
+
+<Tip>
+  In case number 9 is needed as a constant inside the mask, use '\9'. For example Georgian phone
+  number format would be +\9\9\9 999 999999 (example: +999 123 123456){' '}
+</Tip>
+
+<Preview>
+  <Story name="Masked TextField (DontTest)">
+    <Stack>
+      <MaskedTextFieldShowCase
+        mask={text('Mask', '+(999) 999')}
+        isDisabled={boolean('isDisabled', false)}
+        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
+        status={{
+          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+          hintMessage: text('Hint/Error message', 'Message in Text Field'),
+        }}
+      />
     </Stack>
   </Story>
 </Preview>

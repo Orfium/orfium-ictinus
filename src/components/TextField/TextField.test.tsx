@@ -1,8 +1,9 @@
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import { render, screen } from '../../test';
+import { fireEvent, render, screen } from '../../test';
 import TextFieldShowCase from '../storyUtils/TextFieldShowcase/TextFieldShowcase';
+import MaskedTextFieldShowCase from '../storyUtils/MaskedTextFieldShowCase/MaskedTextFieldShowCase';
 
 export const values = ['Value 1', 'Value 2'];
 
@@ -45,5 +46,29 @@ describe('Multi TextField', () => {
   it('deletes a chip when Backspace is pressed', async () => {
     userEvent.type(input, '{backspace}');
     expect(screen.queryByTestId('chip-chip_1')).not.toBeInTheDocument();
+  });
+});
+
+describe('Masked TextField', () => {
+  let input: HTMLInputElement;
+
+  beforeEach(() => {
+    render(<MaskedTextFieldShowCase mask={'+(999)'} />);
+  });
+
+  beforeEach(() => {
+    input = screen.getByTestId('input') as HTMLInputElement;
+  });
+
+  it('shows the mask as a placeholder when focused', async () => {
+    input.focus();
+
+    expect(input.value).toEqual('+(   )');
+  });
+
+  it('formats the input correctly according to the mask', async () => {
+    fireEvent.change(input, { target: { value: '123' } });
+
+    expect(input.value).toEqual('+(123)');
   });
 });
