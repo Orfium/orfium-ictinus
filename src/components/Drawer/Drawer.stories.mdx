@@ -24,7 +24,6 @@ import { FIGMA_URL } from '../../utils/common';
         url: `${FIGMA_URL}?node-id=3456%3A101617`,
       },
     ],
-    chromatic: { delay: 2000 },
   }}
 />
 
@@ -39,6 +38,10 @@ import { Drawer } from '@orfium/ictinus';
 
 <Drawer expanded={expanded} menuItems={menuItems} />;
 ```
+
+<b>Important tip: </b>
+
+When rendering the Drawer component, the parent component should have `position: relative` in order for the Drawer to align correcly since it has `position: absolute`.
 
 ## Props
 

@@ -5,7 +5,7 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 
 export const drawerContainerStyle =
-  (isExpanded: boolean, isDesktop: boolean) =>
+(isExpanded: boolean, isDesktop: boolean, isSmallDesktop: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};
@@ -17,6 +17,6 @@ export const drawerContainerStyle =
       height: 100%;
       min-height: 100%;
       z-index: 100;
-      position: relative;
+      position: ${isSmallDesktop ? 'absolute' : 'relative'};
       border-right: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 200)};
     `;
