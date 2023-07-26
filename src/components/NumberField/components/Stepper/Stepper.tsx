@@ -20,6 +20,7 @@ const Stepper: React.FC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
         css={buttonWrapperStyle()}
         data-testid={`${dataTestId}_increment`}
       >
+        {/** @TODO add tokens instead of hex color */}
         <Icon name="triangleUp" color="#54587F" size={12} />
       </Button>
       <Button
@@ -28,6 +29,7 @@ const Stepper: React.FC<Props> = ({ isDisabled, dataTestIdPrefix }) => {
         css={buttonWrapperStyle()}
         data-testid={`${dataTestId}_decrement`}
       >
+        {/** @TODO add tokens instead of hex color */}
         <Icon name="triangleDown" color="#54587F" size={12} />
       </Button>
     </div>

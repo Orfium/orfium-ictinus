@@ -1,16 +1,12 @@
-import useCombinedRefs from 'hooks/useCombinedRefs';
-import useTheme from 'hooks/useTheme';
+import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes, useMemo } from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import isEqual from 'react-fast-compare';
 import { generateUniqueID } from 'utils/helpers';
 
 import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
-import Icon from '../Icon';
 import Label from '../Label';
-import { getTextInputBaseTokens } from '../TextInputBase/TextInputBase.tokens';
-import { AcceptedIconNames } from 'components/Icon/types';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import { SelectOption } from 'components/Select/Select';
 import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
@@ -64,53 +60,24 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     onMultiValueClearAll = () => null,
     ...rest
   } = props;
-  const theme = useTheme();
 
-  const tokens = getTextInputBaseTokens(theme);
-
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const combinedRefs = useCombinedRefs(inputRef, ref);
-
-  const isLocked = status?.type === 'read-only';
-
-  const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
-
-  const suffixContent = useMemo(() => {
-    if (isLocked || typeof suffix === 'string') {
-      const iconName = isLocked ? 'lock' : suffix;
-
-      return (
-        <Icon
-          name={iconName as AcceptedIconNames}
-          size={16}
-          color={theme.utils.getColor('lightGrey', 650)}
-        />
-      );
-    }
-
-    return suffix;
-  }, [isLocked, suffix, theme.utils]);
-
-  const handleClick = () => {
-    if (!isLocked && !isDisabled) {
-      combinedRefs.current?.focus();
-    }
-  };
-
-  const textInputBaseSx = useMemo(
-    () =>
-      !suffixContent
-        ? {
-            textField: {
-              paddingRight: tokens('paddingContentLeft'),
-            },
-          }
-        : {},
-    [suffixContent, tokens]
-  );
+  const {
+    isLocked,
+    hintMessageId,
+    handleContainerClick,
+    textInputBaseSx,
+    suffixContent,
+    combinedRefs,
+  } = useFieldUtils({
+    id,
+    suffix,
+    status,
+    isDisabled,
+    ref,
+  });
 
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleContainerClick}>
       {isMulti ? (
         <MultiTextFieldBase
           {...props}
@@ -126,7 +93,11 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           ref={combinedRefs}
         />
       ) : (
-        <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={textInputBaseSx}>
+        <TextInputBase
+          {...props}
+          status={{ ...status, id: hintMessageId }}
+          sx={textInputBaseSx(!suffixContent)}
+        >
           <div css={{ width: '100% ' }}>
             <input
               readOnly={isLocked || isReadOnly}

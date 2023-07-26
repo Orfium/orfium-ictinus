@@ -1,20 +1,27 @@
-import useCombinedRefs from 'hooks/useCombinedRefs';
-import { useTheme } from 'index';
+import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash';
-import React, { useMemo } from 'react';
-import { NumberField as ReactAriaNumberField, Group, Input,  } from 'react-aria-components';
+import React from 'react';
+import { NumberField as ReactAriaNumberField, Group, Input } from 'react-aria-components';
 import { generateUniqueID } from 'utils/helpers';
 
 import Stepper from './components/Stepper/Stepper';
+import { groupStyles } from './NumberField.style';
 import { TextFieldProps } from '../TextField/TextField';
-import { getTextInputBaseTokens } from '../TextInputBase/TextInputBase.tokens';
-import Icon, { AcceptedIconNames } from 'components/Icon';
 import Label from 'components/Label';
 import { suffixContainerStyle } from 'components/TextField/TextField.style';
 import TextInputBase from 'components/TextInputBase/TextInputBase';
 import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 
-export type NumberFieldProps = Omit<TextFieldProps, 'mask' | 'maskChar' | 'value' | 'onChange'> & {
+export type NumberFieldProps = Omit<
+  TextFieldProps,
+  | 'mask'
+  | 'maskChar'
+  | 'value'
+  | 'onChange'
+  | 'isMulti'
+  | 'onMultiValueClearAll'
+  | 'onMultiValueDelete'
+> & {
   /** Callback fired when the `input` is changed. */
   onChange?: (value: number) => void;
   /** The value of the `input` element. */
@@ -52,52 +59,28 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
     ...rest
   } = props;
 
-  const theme = useTheme();
-  const tokens = getTextInputBaseTokens(theme);
-
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const combinedRefs = useCombinedRefs(inputRef, ref);
-
-  const isLocked = status?.type === 'read-only';
-  const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
-
-  const handleClick = () => {
-    if (!isLocked && !isDisabled) {
-      combinedRefs.current?.focus();
-    }
-  };
-
-  const suffixContent = useMemo(() => {
-    if (isLocked || typeof suffix === 'string') {
-      const iconName = isLocked ? 'lock' : suffix;
-
-      return (
-        <Icon
-          name={iconName as AcceptedIconNames}
-          size={16}
-          color={theme.utils.getColor('lightGrey', 650)}
-        />
-      );
-    }
-
-    return suffix;
-  }, [isLocked, suffix, theme.utils]);
-
-  const textInputBaseSx = useMemo(
-    () =>
-      !suffixContent && !hasStepper
-        ? {
-            textField: {
-              paddingRight: tokens('paddingContentLeft'),
-            },
-          }
-        : {},
-    [hasStepper, suffixContent, tokens]
-  );
+  const {
+    isLocked,
+    hintMessageId,
+    handleContainerClick,
+    suffixContent,
+    combinedRefs,
+    textInputBaseSx,
+  } = useFieldUtils({
+    id,
+    suffix,
+    status,
+    isDisabled,
+    ref,
+  });
 
   return (
-    <div onClick={handleClick}>
-      <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={textInputBaseSx}>
+    <div onClick={handleContainerClick}>
+      <TextInputBase
+        {...props}
+        status={{ ...status, id: hintMessageId }}
+        sx={textInputBaseSx(!suffixContent && !hasStepper)}
+      >
         <div css={{ width: '100%' }}>
           <ReactAriaNumberField
             value={value}
@@ -107,7 +90,7 @@ const NumberField = React.forwardRef<HTMLInputElement, NumberFieldProps>((props,
             minValue={minValue}
             maxValue={maxValue}
           >
-            <Group>
+            <Group css={hasStepper ? groupStyles() : {}}>
               <Input
                 id={id}
                 readOnly={isLocked || isReadOnly}

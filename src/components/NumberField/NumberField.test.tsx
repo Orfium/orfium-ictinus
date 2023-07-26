@@ -49,6 +49,22 @@ describe('NumberField', () => {
     expect(input).toHaveValue('12.00');
   });
 
+  it('increases and decreases the number through keyboard', async () => {
+    renderNumberField({ step: 0.5, hasStepper: true });
+    input = screen.getByTestId('input') as HTMLInputElement;
+
+    userEvent.type(input, '12.00');
+    userEvent.click(document.body);
+
+    userEvent.click(input);
+
+    userEvent.type(input, '{arrowup}');
+    expect(input).toHaveValue('12.50');
+
+    userEvent.type(input, '{arrowdown}');
+    expect(input).toHaveValue('12.00');
+  });
+
   it('it rejects number input outside min and max given', async () => {
     renderNumberField({ minValue: 10, maxValue: 20 });
     input = screen.getByTestId('input') as HTMLInputElement;

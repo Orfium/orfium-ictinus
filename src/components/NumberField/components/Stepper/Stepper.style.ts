@@ -8,6 +8,7 @@ export const stepperContainerStyle = (): SerializedStyles => {
   return css`
     display: flex;
     flex-direction: column;
+    /** @TODO add tokens instead of rem */
     width: ${rem(44)};
     position: absolute;
     right: 0;

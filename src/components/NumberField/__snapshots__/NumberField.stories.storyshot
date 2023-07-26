@@ -93,7 +93,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -111,52 +111,52 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: transparent;
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
+.emotion-7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::-moz-placeholder {
+.emotion-7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus:-ms-input-placeholder {
+.emotion-7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::placeholder {
+.emotion-7:focus::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -164,15 +164,15 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   font-weight: 700;
 }
 
-.emotion-6:focus-within+label {
+.emotion-7:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -204,7 +204,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   white-space: nowrap;
 }
 
-.emotion-11 {
+.emotion-13 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -222,52 +222,52 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   min-width: 100%;
 }
 
-.emotion-11+label {
+.emotion-13+label {
   font-size: 0.9375rem;
 }
 
-.emotion-11::-webkit-input-placeholder {
+.emotion-13::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-11::-moz-placeholder {
+.emotion-13::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-11:-ms-input-placeholder {
+.emotion-13:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-11::placeholder {
+.emotion-13::placeholder {
   color: transparent;
 }
 
-.emotion-11:focus {
+.emotion-13:focus {
   outline: none;
 }
 
-.emotion-11:focus::-webkit-input-placeholder {
+.emotion-13:focus::-webkit-input-placeholder {
   color: #54587f;
 }
 
-.emotion-11:focus::-moz-placeholder {
+.emotion-13:focus::-moz-placeholder {
   color: #54587f;
 }
 
-.emotion-11:focus:-ms-input-placeholder {
+.emotion-13:focus:-ms-input-placeholder {
   color: #54587f;
 }
 
-.emotion-11:focus::placeholder {
+.emotion-13:focus::placeholder {
   color: #54587f;
 }
 
-.emotion-11:not(:focus):placeholder-shown+label {
+.emotion-13:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-11:focus-within+label,
-.emotion-11:not(:placeholder-shown)+label {
+.emotion-13:focus-within+label,
+.emotion-13:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -275,11 +275,11 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
   font-weight: 700;
 }
 
-.emotion-11:focus-within+label {
+.emotion-13:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-11:disabled {
+.emotion-13:disabled {
   cursor: not-allowed;
 }
 
@@ -315,7 +315,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -337,7 +337,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -361,7 +361,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -397,7 +397,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -419,7 +419,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-11"
+                      className="emotion-13"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -443,7 +443,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label and Placeho
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -554,7 +554,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -572,52 +572,52 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: transparent;
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
+.emotion-7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::-moz-placeholder {
+.emotion-7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus:-ms-input-placeholder {
+.emotion-7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::placeholder {
+.emotion-7:focus::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -625,15 +625,15 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   font-weight: 700;
 }
 
-.emotion-6:focus-within+label {
+.emotion-7:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -665,7 +665,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -684,7 +684,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   letter-spacing: 0.015625rem;
 }
 
-.emotion-8 span {
+.emotion-9 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -692,7 +692,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   padding: 0;
 }
 
-.emotion-9 {
+.emotion-10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -717,16 +717,16 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   background-color: #ffe7f0;
 }
 
-.emotion-9:hover {
+.emotion-10:hover {
   background-color: #ffd0e1;
 }
 
-.emotion-9:focus-within {
+.emotion-10:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
   background-color: #e7eefe;
 }
 
-.emotion-13 {
+.emotion-15 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -758,7 +758,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   white-space: nowrap;
 }
 
-.emotion-14 {
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -777,7 +777,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   letter-spacing: 0.015625rem;
 }
 
-.emotion-14 span {
+.emotion-16 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -785,7 +785,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   padding: 0;
 }
 
-.emotion-15 {
+.emotion-17 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -801,17 +801,17 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   justify-content: center;
 }
 
-.emotion-16 {
+.emotion-18 {
   fill: #cc1255;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-16 path {
+.emotion-18 path {
   fill: #cc1255;
 }
 
-.emotion-17 {
+.emotion-19 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -836,16 +836,16 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   background-color: #e7eefe;
 }
 
-.emotion-17:hover {
+.emotion-19:hover {
   background-color: #e7eefe;
 }
 
-.emotion-17:focus-within {
+.emotion-19:focus-within {
   box-shadow: 0 0 0 0.125rem #e4e7ff;
   background-color: #e7eefe;
 }
 
-.emotion-18 {
+.emotion-20 {
   position: relative;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -865,11 +865,11 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   padding: 0 0 0 0.75rem;
 }
 
-.emotion-18>div {
+.emotion-20>div {
   position: relative;
 }
 
-.emotion-22 {
+.emotion-25 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -888,17 +888,17 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   cursor: unset;
 }
 
-.emotion-24 {
+.emotion-27 {
   fill: #5f6c85;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-24 path {
+.emotion-27 path {
   fill: #5f6c85;
 }
 
-.emotion-25 {
+.emotion-28 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -923,7 +923,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
   background-color: #ffffff;
 }
 
-.emotion-25:focus-within {
+.emotion-28:focus-within {
   box-shadow: 0 0 0 0.125rem transparent;
 }
 
@@ -959,7 +959,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -982,7 +982,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -1006,7 +1006,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -1018,7 +1018,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
             </div>
           </div>
           <div
-            className="emotion-8"
+            className="emotion-9"
             data-testid="error"
           >
             <span
@@ -1040,7 +1040,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
           onClick={[Function]}
         >
           <div
-            className="emotion-9"
+            className="emotion-10"
           >
             <div
               className="emotion-4"
@@ -1052,7 +1052,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -1075,7 +1075,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -1099,7 +1099,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       value=""
                     />
                     <label
-                      className="emotion-13"
+                      className="emotion-15"
                       htmlFor="numberfield"
                     >
                       Label
@@ -1111,15 +1111,15 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
             </div>
           </div>
           <div
-            className="emotion-14"
+            className="emotion-16"
             data-testid="error"
           >
             <span
-              className="emotion-15"
+              className="emotion-17"
               onClick={[Function]}
             >
               <span
-                className="emotion-16"
+                className="emotion-18"
               />
             </span>
             <span
@@ -1141,10 +1141,10 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
           onClick={[Function]}
         >
           <div
-            className="emotion-17"
+            className="emotion-19"
           >
             <div
-              className="emotion-18"
+              className="emotion-20"
             >
               <div
                 className="emotion-5"
@@ -1153,7 +1153,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -1175,7 +1175,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={true}
                       id="numberfield"
@@ -1199,7 +1199,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -1210,14 +1210,14 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
               </div>
               <div
                 aria-hidden={false}
-                className="emotion-22"
+                className="emotion-25"
               >
                 <span
-                  className="emotion-15"
+                  className="emotion-17"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-24"
+                    className="emotion-27"
                   />
                 </span>
               </div>
@@ -1236,7 +1236,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
           onClick={[Function]}
         >
           <div
-            className="emotion-25"
+            className="emotion-28"
           >
             <div
               className="emotion-4"
@@ -1248,7 +1248,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -1270,7 +1270,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={true}
                       id="numberfield"
@@ -1294,7 +1294,7 @@ exports[`Storyshots Design System/NumberField NumberField with Label, Placeholde
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -1404,7 +1404,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -1422,52 +1422,52 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: transparent;
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
+.emotion-7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::-moz-placeholder {
+.emotion-7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus:-ms-input-placeholder {
+.emotion-7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::placeholder {
+.emotion-7:focus::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -1475,15 +1475,15 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   font-weight: 700;
 }
 
-.emotion-6:focus-within+label {
+.emotion-7:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -1515,7 +1515,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-9 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -1566,7 +1566,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -1588,7 +1588,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -1612,7 +1612,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -1623,7 +1623,7 @@ exports[`Storyshots Design System/NumberField NumberField with min and max value
               </div>
               <div
                 aria-hidden={false}
-                className="emotion-8"
+                className="emotion-9"
               >
                 <div
                   style={
@@ -1737,7 +1737,7 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -1755,52 +1755,52 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: transparent;
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
+.emotion-7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::-moz-placeholder {
+.emotion-7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus:-ms-input-placeholder {
+.emotion-7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::placeholder {
+.emotion-7:focus::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -1808,15 +1808,15 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
   font-weight: 700;
 }
 
-.emotion-6:focus-within+label {
+.emotion-7:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -1880,7 +1880,7 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -1902,7 +1902,7 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -1926,7 +1926,7 @@ exports[`Storyshots Design System/NumberField NumberField with number format 1`]
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -2036,7 +2036,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -2054,52 +2054,52 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: transparent;
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
+.emotion-7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::-moz-placeholder {
+.emotion-7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus:-ms-input-placeholder {
+.emotion-7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::placeholder {
+.emotion-7:focus::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -2107,15 +2107,15 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   font-weight: 700;
 }
 
-.emotion-6:focus-within+label {
+.emotion-7:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2147,7 +2147,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-9 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -2166,7 +2166,11 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   cursor: unset;
 }
 
-.emotion-14 {
+.emotion-13 {
+  width: calc(100% - 2.75rem);
+}
+
+.emotion-16 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2181,17 +2185,17 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   z-index: 1;
 }
 
-.emotion-15 {
+.emotion-17 {
   background: transparent;
   border: none;
   height: calc(3.25rem / 2);
 }
 
-.emotion-15:hover {
+.emotion-17:hover {
   cursor: pointer;
 }
 
-.emotion-16 {
+.emotion-18 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2207,13 +2211,13 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
   justify-content: center;
 }
 
-.emotion-17 {
+.emotion-19 {
   fill: #54587F;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.emotion-17 path {
+.emotion-19 path {
   fill: #54587F;
 }
 
@@ -2249,7 +2253,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -2271,7 +2275,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -2295,7 +2299,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -2306,7 +2310,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
               </div>
               <div
                 aria-hidden={false}
-                className="emotion-8"
+                className="emotion-9"
               >
                 <div
                   style={
@@ -2345,7 +2349,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-13"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -2367,7 +2371,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -2391,20 +2395,20 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
                        
                     </label>
                     <div
-                      className="emotion-14"
+                      className="emotion-16"
                     >
                       <button
                         aria-controls="react-aria-generated-id"
                         aria-label="Increase"
                         aria-labelledby={null}
-                        className="emotion-15"
+                        className="emotion-17"
                         data-testid="number_increment"
                         disabled={false}
                         id={null}
@@ -2427,11 +2431,11 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                         type="button"
                       >
                         <span
-                          className="emotion-16"
+                          className="emotion-18"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-17"
+                            className="emotion-19"
                           />
                         </span>
                       </button>
@@ -2439,7 +2443,7 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                         aria-controls="react-aria-generated-id"
                         aria-label="Decrease"
                         aria-labelledby={null}
-                        className="emotion-15"
+                        className="emotion-17"
                         data-testid="number_decrement"
                         disabled={false}
                         id={null}
@@ -2462,11 +2466,11 @@ exports[`Storyshots Design System/NumberField NumberField with suffix or Stepper
                         type="button"
                       >
                         <span
-                          className="emotion-16"
+                          className="emotion-18"
                           onClick={[Function]}
                         >
                           <span
-                            className="emotion-17"
+                            className="emotion-19"
                           />
                         </span>
                       </button>
@@ -2575,7 +2579,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   width: 100%;
 }
 
-.emotion-6 {
+.emotion-7 {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -2593,52 +2597,52 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   min-width: 100%;
 }
 
-.emotion-6+label {
+.emotion-7+label {
   font-size: 0.9375rem;
 }
 
-.emotion-6::-webkit-input-placeholder {
+.emotion-7::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::-moz-placeholder {
+.emotion-7::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:-ms-input-placeholder {
+.emotion-7:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6::placeholder {
+.emotion-7::placeholder {
   color: transparent;
 }
 
-.emotion-6:focus {
+.emotion-7:focus {
   outline: none;
 }
 
-.emotion-6:focus::-webkit-input-placeholder {
+.emotion-7:focus::-webkit-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::-moz-placeholder {
+.emotion-7:focus::-moz-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus:-ms-input-placeholder {
+.emotion-7:focus:-ms-input-placeholder {
   color: transparent;
 }
 
-.emotion-6:focus::placeholder {
+.emotion-7:focus::placeholder {
   color: transparent;
 }
 
-.emotion-6:not(:focus):placeholder-shown+label {
+.emotion-7:not(:focus):placeholder-shown+label {
   font-weight: normal;
 }
 
-.emotion-6:focus-within+label,
-.emotion-6:not(:placeholder-shown)+label {
+.emotion-7:focus-within+label,
+.emotion-7:not(:placeholder-shown)+label {
   -webkit-transform: translate(0.1875rem, -35%) scale(0.8);
   -moz-transform: translate(0.1875rem, -35%) scale(0.8);
   -ms-transform: translate(0.1875rem, -35%) scale(0.8);
@@ -2646,15 +2650,15 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   font-weight: 700;
 }
 
-.emotion-6:focus-within+label {
+.emotion-7:focus-within+label {
   color: #1451dc;
 }
 
-.emotion-6:disabled {
+.emotion-7:disabled {
   cursor: not-allowed;
 }
 
-.emotion-7 {
+.emotion-8 {
   -webkit-transition: -webkit-transform 0.25s,opacity 0.25s ease-in-out;
   transition: transform 0.25s,opacity 0.25s ease-in-out;
   transform-origin: 0 0;
@@ -2686,7 +2690,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   white-space: nowrap;
 }
 
-.emotion-8 {
+.emotion-9 {
   min-width: 2.75rem;
   max-width: 2.75rem;
   overflow: hidden;
@@ -2705,7 +2709,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   cursor: unset;
 }
 
-.emotion-9 {
+.emotion-10 {
   padding: 0.125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2721,17 +2725,17 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   justify-content: center;
 }
 
-.emotion-10 {
+.emotion-11 {
   fill: #5f6c85;
   width: 1rem;
   height: 1rem;
 }
 
-.emotion-10 path {
+.emotion-11 path {
   fill: #5f6c85;
 }
 
-.emotion-11 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2750,7 +2754,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
   letter-spacing: 0.015625rem;
 }
 
-.emotion-11 span {
+.emotion-12 span {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
@@ -2790,7 +2794,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
                   className="react-aria-NumberField"
                 >
                   <div
-                    className="react-aria-Group"
+                    className="emotion-6"
                     onBlur={[Function]}
                     onFocus={[Function]}
                     onMouseEnter={[Function]}
@@ -2813,7 +2817,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
                       aria-valuetext={null}
                       autoComplete="off"
                       autoCorrect="off"
-                      className="emotion-6"
+                      className="emotion-7"
                       data-testid="input"
                       disabled={false}
                       id="numberfield"
@@ -2837,7 +2841,7 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
                       value=""
                     />
                     <label
-                      className="emotion-7"
+                      className="emotion-8"
                       htmlFor="numberfield"
                     >
                       Label
@@ -2848,21 +2852,21 @@ exports[`Storyshots Design System/NumberField Playground 1`] = `
               </div>
               <div
                 aria-hidden={false}
-                className="emotion-8"
+                className="emotion-9"
               >
                 <span
-                  className="emotion-9"
+                  className="emotion-10"
                   onClick={[Function]}
                 >
                   <span
-                    className="emotion-10"
+                    className="emotion-11"
                   />
                 </span>
               </div>
             </div>
           </div>
           <div
-            className="emotion-11"
+            className="emotion-12"
             data-testid="error"
           >
             <span
