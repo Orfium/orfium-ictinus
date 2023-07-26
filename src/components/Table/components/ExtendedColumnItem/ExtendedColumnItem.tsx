@@ -2,7 +2,7 @@ import useTheme from 'hooks/useTheme';
 import React from 'react';
 
 import { ExtendedColumn, Sort } from '../../types';
-import { isItemString } from '../../utils';
+import { hasTooltipOrSortingKey, isItemString } from '../../utils';
 import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
@@ -17,14 +17,8 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
   const theme = useTheme();
 
   const itemContentLowerCase = !isItemString(item)
-    ? item.content.sortingKey
-        .trim()
-        .toLowerCase()
-        .replace(/ /g, '_')
-    : item
-        .trim()
-        .toLowerCase()
-        .replace(/ /g, '_');
+    ? item.content.sortingKey.trim().toLowerCase().replace(/ /g, '_')
+    : item.trim().toLowerCase().replace(/ /g, '_');
 
   const sortingItem = () =>
     //TODO: Remove type check when backwards-compatibility is removed
@@ -89,9 +83,15 @@ const ExtendedColumnItem: React.FC<Props> = ({ item, sorting, isNumerical }) => 
     isNumerical ? [sortingItem(), tooltipItem()] : [tooltipItem(), sortingItem()];
 
   //TODO: Remove type check when backwards-compatibility is removed
-  return isItemString(item) ? (
-    <div css={contentStyles()}>{item}</div>
-  ) : (
+  if (isItemString(item)) {
+    return <div css={contentStyles()}>{item}</div>;
+  }
+
+  if (!hasTooltipOrSortingKey(item)) {
+    return <div css={contentStyles()}>{item.content.label}</div>;
+  }
+
+  return (
     <div data-testid={`header_${itemContentLowerCase}`} css={containerStyles('8')}>
       <span css={contentStyles()}>{item.content.label}</span>
 
