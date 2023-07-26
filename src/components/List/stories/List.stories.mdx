@@ -1,0 +1,140 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import { select, number, boolean } from '@storybook/addon-knobs';
+import ListShowcase from '../../storyUtils/ListShowcase';
+import List, { ListSection, ListItemText, ListItem } from '../index';
+import { FIGMA_URL, Function } from '../../../utils/common';
+import SectionHeader from '../../../storybook/SectionHeader';
+import { useState } from 'react';
+
+<Meta
+  title="Design System/List/List"
+  component={List}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'List',
+        url: `${FIGMA_URL}?node-id=22406-71589`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'List'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [References](#references)
+
+## Overview
+
+The List component is a versatile UI element used to display a collection of items. The List component provides flexibility and customization options to suit various user interface needs.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'It can render ONLY individual ListItem components or group items using ListSection',
+    'The List can be used as standalone list, Select, Filter or Menu',
+    'Height is mandatory when is virtual list as the height needs to be caluclated in order to do the proper virtualization',
+  ]}
+/>
+
+```js
+import { List } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return <List>{/* Add ListSection(s) or ListItem(s) here */}</List>;
+};
+```
+
+## Props
+
+<Props of={List} />
+
+## Variants
+
+### List
+
+<Preview>
+  <Story name="List">
+    <Function>
+      {() => {
+        return (
+          <List label={'list'}>
+            {new Array(7).fill(undefined).map((__, index) => {
+              return (
+                <ListItem key={`Item ${index}`}>
+                  <ListItemText>Item {index}</ListItemText>
+                </ListItem>
+              );
+            })}
+          </List>
+        );
+      }}
+    </Function>
+  </Story>
+</Preview>
+
+### Group List
+
+<Preview>
+  <Story name="Group List">
+    <Function>
+      {() => {
+        return (
+          <List label={'group list'}>
+            {new Array(3).fill(undefined).map((__, index) => {
+              return (
+                <ListSection key={`Group_${index}`} title={`Group ${index}`}>
+                  <ListItem key={`Group_${index}_1`}>
+                    <ListItemText>Item 1</ListItemText>
+                  </ListItem>
+                  <ListItem key={`Group_${index}_2`}>
+                    <ListItemText>Item 2</ListItemText>
+                  </ListItem>
+                </ListSection>
+              );
+            })}
+          </List>
+        );
+      }}
+    </Function>
+  </Story>
+</Preview>
+
+### Virtualized List with knobs
+
+Virtualized List component for large amounts of items.
+
+<Preview>
+  <Story name="Virtualized List">
+    <Function>
+      {() => {
+        return (
+          <List label={'list'} height={450} isVirtualized={true}>
+            {new Array(1000).fill(undefined).map((__, index) => {
+              return (
+                <ListItem key={`Item ${index}`}>
+                  <ListItemText>Item {index}</ListItemText>
+                </ListItem>
+              );
+            })}
+          </List>
+        );
+      }}
+    </Function>
+  </Story>
+</Preview>
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](?path=/docs/design-system-list-list--list)
+- [ListSection](?path=/docs/design-system-list-listsection--normal-list-section)
+- [ListItem](?path=/docs/design-system-list-listitem--list-item-compilations)
+- [ListItemText](?path=/docs/design-system-list-listitemtext--list-item-text-normal)
+- [ListItemAction](?path=/docs/design-system-list-listitemaction--page)

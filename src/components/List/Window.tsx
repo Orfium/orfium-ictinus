@@ -1,4 +1,3 @@
-import { mergeProps } from '@react-aria/utils';
 import useElementSize from 'hooks/useElementSize';
 import { throttle } from 'lodash';
 import React, { forwardRef } from 'react';
@@ -14,6 +13,11 @@ export type WindowProps = {
 
 const bufferedItems = 5;
 
+/**
+ * Custom component to implement virtualization of a Ul list
+ * We used a custom solution in order to provide a semantically correct UL list with accessibility (aria) included.
+ * Other solutions such as react-window etc couldn't override to use UL lists and pass with ...rest properties
+ * */
 const Window = forwardRef<HTMLUListElement, WindowProps>(
   ({ rowHeight, children, gap = 0, isVirtualizationEnabled = true, ...rest }, ref) => {
     const [containerRef, { height: containerHeight }] = useElementSize<HTMLUListElement>();
@@ -23,18 +27,7 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
     // get the children to be renderd
     const visibleChildren = React.useMemo(() => {
       if (!isVirtualizationEnabled) {
-        return children.map((child, index) =>
-          React.cloneElement(child, {
-            // style: {
-            //   position: 'absolute',
-            //   top: index * rowHeight + index * gap,
-            //   height: rowHeight,
-            //   left: 0,
-            //   right: 0,
-            //   lineHeight: `${rowHeight}px`,
-            // },
-          })
-        );
+        return children.map((child, index) => React.cloneElement(child, {}));
       }
       const startIndex = Math.max(Math.floor(scrollPosition / rowHeight) - bufferedItems, 0);
       const endIndex = Math.min(
@@ -63,6 +56,7 @@ const Window = forwardRef<HTMLUListElement, WindowProps>(
             setScrollPosition(e.target.scrollTop);
           },
           50,
+          // eslint-disable-next-line @typescript-eslint/naming-convention
           { leading: false }
         ),
       []

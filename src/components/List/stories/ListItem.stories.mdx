@@ -1,0 +1,145 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import List, { ListItem, ListItemAction, ListItemText } from '../index';
+import { FIGMA_URL, Function } from '../../../utils/common';
+import SectionHeader from '../../../storybook/SectionHeader';
+import Radio from '../../Radio';
+import CheckBox from '../../CheckBox';
+import Switch from '../../Switch';
+import Avatar from '../../Avatar';
+import Box from '../../Box';
+import { useState } from 'react';
+
+<Meta
+  title="Design System/List/ListItem"
+  component={ListItem}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'ListItem',
+        url: `${FIGMA_URL}?node-id=22406-71589`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'ListItem'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [References](#references)
+
+## Overview
+
+The ListItem component represents an individual item in the List. It can contain either ListItemText or ListItemAction, both, or custom component.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    '`normal` rowSize items can only show secondary help text',
+    'Use as versatile elements to serve as individual options on single or multi selection dropdown menus and lists',
+    `If the children are not plain text, then the textValue prop must also be set to a plain text representation, which will be used to identify clean text by List and ListItem.`,
+  ]}
+/>
+
+```js
+import { List, ListItem } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <List>
+      <ListItem>...</ListItem>
+      <ListItem>...</ListItem>
+    </List>
+  );
+};
+```
+
+## Props
+
+<Props of={ListItem} />
+
+## Variants
+
+### List Item Compilations
+
+<Preview>
+  <Story name="List Item Compilations">
+    <Function>
+      {() => {
+        const [selectedKeys, setSelectedKeys] = useState(new Set());
+        return (
+          <>
+            <Box mb={'3'}>
+              <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
+                <ListItem key={'1'}>
+                  <ListItemAction>
+                    <Radio isChecked={selectedKeys.has(`1`)} />
+                  </ListItemAction>
+                  <ListItemText>Option Radio</ListItemText>
+                </ListItem>
+              </List>
+            </Box>
+            <Box mb={'3'}>
+              <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
+                <ListItem key={'2'} textValue={'Option Checkbox'}>
+                  <ListItemAction>
+                    <CheckBox isFilled={false} isChecked={selectedKeys.has(`2`)} />
+                  </ListItemAction>
+                  <ListItemText>Option Checkbox</ListItemText>
+                </ListItem>
+              </List>
+            </Box>
+            <Box mb={'3'}>
+              <List label={'list'} selectedKeys={selectedKeys} onSelectionChange={setSelectedKeys}>
+                <ListItem key={'3'} textValue={'Option Switch'}>
+                  <ListItemText>Option Switch</ListItemText>
+                  <ListItemAction>
+                    <Switch isChecked={selectedKeys.has(`3`)} onChange={() => {}} />
+                  </ListItemAction>
+                </ListItem>
+              </List>
+            </Box>
+            <Box mb={'3'}>
+              <List label={'list'} selectedKeys={selectedKeys}>
+                <ListItem key={'4'} textValue={'Option Icon/Avatar'}>
+                  <ListItemAction>
+                    <Avatar size={1} color={'blue'} iconName={'user'} />
+                  </ListItemAction>
+                  <ListItemText>Option Icon/Avatar</ListItemText>
+                </ListItem>
+              </List>
+            </Box>
+            <Box mb={'3'}>
+              <List label={'list'} selectedKeys={selectedKeys}>
+                <ListItem key={'5'} textValue={'Text Only'}>
+                  <ListItemText description={'Secondary Help Text'}>Text only</ListItemText>
+                </ListItem>
+              </List>
+            </Box>
+            <Box mb={'3'}>
+              <List label={'list'} selectedKeys={selectedKeys}>
+                <ListItem key={'6'} rowSize={'compact'}>
+                  <ListItemText>Compact size item</ListItemText>
+                </ListItem>
+              </List>
+            </Box>
+          </>
+        );
+      }}
+    </Function>
+  </Story>
+</Preview>
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](?path=/docs/design-system-list-list--list)
+- [ListSection](?path=/docs/design-system-list-listsection--normal-list-section)
+- [ListItem](?path=/docs/design-system-list-listitem--list-item-compilations)
+- [ListItemText](?path=/docs/design-system-list-listitemtext--list-item-text-normal)
+- [ListItemAction](?path=/docs/design-system-list-listitemaction--page)

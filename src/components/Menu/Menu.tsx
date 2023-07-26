@@ -1,21 +1,18 @@
 import useTheme from 'hooks/useTheme';
-import { useTypeColorToColorMatch } from 'hooks/useTypeColorToColorMatch';
-import { isEmpty } from 'lodash';
+import { flatMap, isEmpty } from 'lodash';
 import * as React from 'react';
 import { EventProps } from 'utils/common';
-import { AcceptedColorComponentTypes } from 'utils/themeFunctions';
 
 import { wrapperStyle } from './Menu.style';
 import { TestProps } from '../../utils/types';
 import Button from '../Button';
-import { defineBackgroundColor } from '../Button/utils';
-import Icon from '../Icon';
 import { AcceptedIconNames } from '../Icon/types';
+import { SELECT_ALL_OPTION } from '../Select/constants';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
-import Avatar, { AvatarColors } from 'components/Avatar';
+import { AvatarColors } from 'components/Avatar';
 import { ButtonTypes } from 'components/Button/Button.types';
-import List from 'components/List';
+import List, { ListItem, ListItemText } from 'components/List';
 
 export type MenuProps = {
   /** the color of the button based on our colors eg. red-500 */
@@ -80,13 +77,20 @@ const Menu: React.FC<MenuProps> = (props) => {
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                data={items.map((item) => ({ value: item, label: item }))}
-                rowSize={'small'}
-                handleOptionClick={(option) => {
+                label={'filter-options'}
+                onSelectionChange={(keys) => {
                   setIsOpen(false);
-                  onSelect(option.value);
+                  const keyFound = String([...keys][0]);
+                  const optionFound = items.find((o) => o === keyFound);
+                  optionFound && onSelect(optionFound);
                 }}
-              />
+              >
+                {items.map((item) => (
+                  <ListItem key={item} rowSize={'compact'}>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                ))}
+              </List>
             )}
           </div>
         )}

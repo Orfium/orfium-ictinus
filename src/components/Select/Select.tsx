@@ -1,5 +1,5 @@
 import useKeyboard from 'hooks/useKeyboarEvents';
-import { differenceBy } from 'lodash';
+import { differenceBy, head } from 'lodash';
 import debounce from 'lodash/debounce';
 import React, { useCallback, useMemo, useRef, useState } from 'react';
 import isEqual from 'react-fast-compare';
@@ -51,9 +51,12 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
           setIsOpen(true);
           // set on diff thread to wait to open
           setTimeout(() => {
-            const firstChild = listRef.current?.firstChild;
-            if (firstChild instanceof HTMLElement && typeof firstChild.focus === 'function') {
-              firstChild.focus();
+            const options = listRef.current?.querySelectorAll('[role="option"]');
+            if (options && options?.length > 0) {
+              const firstOption = head(options);
+              if (firstOption instanceof HTMLElement && typeof firstOption.focus === 'function') {
+                firstOption.focus();
+              }
             }
           }, 0);
         },

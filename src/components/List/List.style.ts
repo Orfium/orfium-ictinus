@@ -30,7 +30,7 @@ export const listStyle =
       margin-bottom: 0;
       border-radius: ${isSearchable ? 'initial' : theme.globals.spacing.get('3')};
       width: ${width ? rem(width) : '100%'};
-      height: ${height ? rem(height) : '100%'};
+      height: ${height ? rem(height) : 'auto'};
       overflow: auto;
       overflow-x: hidden;
       background: #fff;

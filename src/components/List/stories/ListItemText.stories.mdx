@@ -1,0 +1,120 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs';
+import List, { ListItemText, ListItem } from '../index';
+import { FIGMA_URL, Function } from '../../../utils/common';
+import SectionHeader from '../../../storybook/SectionHeader';
+import Stack from '../../storyUtils/Stack';
+
+<Meta
+  title="Design System/List/ListItemText"
+  component={ListItemText}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        name: 'ListItemAction',
+        url: `${FIGMA_URL}?node-id=22406-71589`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'ListItemText'} />
+
+- [Overview](#overview)
+- [Usage](#usage)
+- [Props](#props)
+- [Variants](#variants)
+- [References](#references)
+
+## Overview
+
+The ListItemText component is used within a ListItem to display textual content with a primary and a secondary text.
+
+## Usage
+
+<UsageGuidelines
+  guidelines={['Secondary text must only be used when `normal` rowSize is used by `<ListItem>`']}
+/>
+
+```js
+import { List, ListItem, ListItemText } from '@orfium/ictinus';
+
+const MyComponent = () => {
+  return (
+    <List>
+      <ListItem>
+        <ListItemText>Item 1</ListItemText>
+      </ListItem>
+      <ListItem>
+        <ListItemText description="This is a secondary text on this item">Item 2</ListItemText>
+      </ListItem>
+    </List>
+  );
+};
+```
+
+## Props
+
+<Props of={ListItemText} />
+
+## Variants
+
+### ListItemText normal
+
+<Preview>
+  <Story name="ListItemText normal">
+    <Stack>
+      <Function>
+        {() => {
+          return (
+            <List label={'ListItem'}>
+              <ListItem>
+                <ListItemText>Item 1</ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText>Item 2</ListItemText>
+              </ListItem>
+            </List>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### ListItemText with secondary text
+
+<Preview>
+  <Story name="ListItemText with secondary text">
+    <Stack>
+      <Function>
+        {() => {
+          return (
+            <List label={'ListItem with secondary text'}>
+              <ListItem>
+                <ListItemText description={'This is a secondary text on this item'}>
+                  Item 1
+                </ListItemText>
+              </ListItem>
+              <ListItem>
+                <ListItemText description={'This is a secondary text on this item'}>
+                  Item 2
+                </ListItemText>
+              </ListItem>
+            </List>
+          );
+        }}
+      </Function>
+    </Stack>
+  </Story>
+</Preview>
+
+### References
+
+All references for a complete `<List>` with all component mentioned throughout the `<List>` section.
+
+- [List](?path=/docs/design-system-list-list--list)
+- [ListSection](?path=/docs/design-system-list-listsection--normal-list-section)
+- [ListItem](?path=/docs/design-system-list-listitem--list-item-compilations)
+- [ListItemText](?path=/docs/design-system-list-listitemtext--list-item-text-normal)
+- [ListItemAction](?path=/docs/design-system-list-listitemaction--page)

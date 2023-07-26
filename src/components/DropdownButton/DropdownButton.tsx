@@ -13,7 +13,7 @@ import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
-import List, { ListItemType } from 'components/List';
+import List, { ListItem, ListItemText, ListItemType } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
 
@@ -57,9 +57,9 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
 
   /** The CTA for the Options inside the Dropdown */
   const handleOptionClick = useCallback(
-    (option: ListItemType) => {
+    (option: string | number) => {
       setIsOpen(false);
-      onOptionSelect(option.value);
+      onOptionSelect(option);
     },
     [onOptionSelect]
   );
@@ -106,11 +106,21 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                data={items.map((item) => ({ value: item, label: item }))}
-                rowSize={'small'}
-                handleOptionClick={handleOptionClick}
+                label={'dropdown-button'}
+                onSelectionChange={(keys) => {
+                  setIsOpen(false);
+                  const keyFound = String([...keys][0]);
+                  const optionFound = items.find((o) => o === keyFound);
+                  optionFound && handleOptionClick(optionFound);
+                }}
                 dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}
-              />
+              >
+                {items.map((item) => (
+                  <ListItem key={item} rowSize={'compact'}>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                ))}
+              </List>
             )}
           </div>
         )}
