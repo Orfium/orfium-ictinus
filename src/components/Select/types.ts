@@ -17,7 +17,6 @@ export type SelectOptionBase = {
   tooltipInfo?: string;
   options?: SelectOption[];
   isCreated?: boolean;
-  isDefaultOption?: boolean;
 };
 
 export type SelectOption = SelectOptionBase & SelectOptionValues;
