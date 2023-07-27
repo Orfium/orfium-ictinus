@@ -1,0 +1,1282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Design System/List/List Group List 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-3 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.emotion-4 {
+  background-color: white;
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-4 . {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-4[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-4[role='option']:hover {
+  background-color: #f3f5f8;
+  cursor: pointer;
+}
+
+.emotion-4[data-focus-visible] {
+  background-color: #f3f5f8;
+}
+
+.emotion-4[aria-selected='true'] {
+  background-color: #e7eefe;
+}
+
+.emotion-4[aria-selected='true'] . {
+  color: #1451dc;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4[aria-selected='true'][data-focus-visible] {
+  background-color: #f3f5f8;
+}
+
+.emotion-6 {
+  color: #212332;
+  font-size: 1rem;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-6 strong {
+  font-weight: bold;
+}
+
+.emotion-6 span {
+  display: block;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        data-testid="ictinus_list"
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        >
+          <ul
+            aria-labelledby="react-aria-generated-id"
+            className="emotion-3"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyDownCapture={[Function]}
+            onMouseDown={[Function]}
+            onScroll={[Function]}
+            role="listbox"
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "listStyle": "none",
+                "overflowY": "auto",
+                "padding": 0,
+                "position": "relative",
+              }
+            }
+            tabIndex={0}
+          >
+            <li
+              className="emotion-4 "
+              role="presentation"
+            >
+              <span
+                id="react-aria-generated-id"
+                role="presentation"
+              >
+                Group 0
+              </span>
+              <ul
+                aria-labelledby="react-aria-generated-id"
+                role="group"
+                style={
+                  Object {
+                    "listStyle": "none",
+                    "padding": 0,
+                  }
+                }
+              >
+                <li
+                  aria-selected={false}
+                  className="emotion-4 "
+                  data-key="Group_0_1"
+                  data-testid="ictinus_list_item_Group_0_1"
+                  id="react-aria-generated-id-option-Group_0_1"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6 "
+                  >
+                    <span>
+                      Item 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected={false}
+                  className="emotion-4 "
+                  data-key="Group_0_2"
+                  data-testid="ictinus_list_item_Group_0_2"
+                  id="react-aria-generated-id-option-Group_0_2"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6 "
+                  >
+                    <span>
+                      Item 2
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li
+              className="emotion-4 "
+              role="presentation"
+            >
+              <span
+                id="react-aria-generated-id"
+                role="presentation"
+              >
+                Group 1
+              </span>
+              <ul
+                aria-labelledby="react-aria-generated-id"
+                role="group"
+                style={
+                  Object {
+                    "listStyle": "none",
+                    "padding": 0,
+                  }
+                }
+              >
+                <li
+                  aria-selected={false}
+                  className="emotion-4 "
+                  data-key="Group_1_1"
+                  data-testid="ictinus_list_item_Group_1_1"
+                  id="react-aria-generated-id-option-Group_1_1"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6 "
+                  >
+                    <span>
+                      Item 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected={false}
+                  className="emotion-4 "
+                  data-key="Group_1_2"
+                  data-testid="ictinus_list_item_Group_1_2"
+                  id="react-aria-generated-id-option-Group_1_2"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6 "
+                  >
+                    <span>
+                      Item 2
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li
+              className="emotion-4 "
+              role="presentation"
+            >
+              <span
+                id="react-aria-generated-id"
+                role="presentation"
+              >
+                Group 2
+              </span>
+              <ul
+                aria-labelledby="react-aria-generated-id"
+                role="group"
+                style={
+                  Object {
+                    "listStyle": "none",
+                    "padding": 0,
+                  }
+                }
+              >
+                <li
+                  aria-selected={false}
+                  className="emotion-4 "
+                  data-key="Group_2_1"
+                  data-testid="ictinus_list_item_Group_2_1"
+                  id="react-aria-generated-id-option-Group_2_1"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6 "
+                  >
+                    <span>
+                      Item 1
+                    </span>
+                  </div>
+                </li>
+                <li
+                  aria-selected={false}
+                  className="emotion-4 "
+                  data-key="Group_2_2"
+                  data-testid="ictinus_list_item_Group_2_2"
+                  id="react-aria-generated-id-option-Group_2_2"
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  onDragStart={[Function]}
+                  onDragStartCapture={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyUp={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  onTouchCancel={[Function]}
+                  onTouchEnd={[Function]}
+                  onTouchMove={[Function]}
+                  onTouchStart={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  <div
+                    className="emotion-6 "
+                  >
+                    <span>
+                      Item 2
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/List/List List 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-3 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.emotion-4 {
+  background-color: white;
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-4 . {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-4[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-4[role='option']:hover {
+  background-color: #f3f5f8;
+  cursor: pointer;
+}
+
+.emotion-4[data-focus-visible] {
+  background-color: #f3f5f8;
+}
+
+.emotion-4[aria-selected='true'] {
+  background-color: #e7eefe;
+}
+
+.emotion-4[aria-selected='true'] . {
+  color: #1451dc;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4[aria-selected='true'][data-focus-visible] {
+  background-color: #f3f5f8;
+}
+
+.emotion-5 {
+  color: #212332;
+  font-size: 1rem;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 strong {
+  font-weight: bold;
+}
+
+.emotion-5 span {
+  display: block;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        data-testid="ictinus_list"
+      >
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        >
+          <ul
+            aria-labelledby="react-aria-generated-id"
+            className="emotion-3"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyDownCapture={[Function]}
+            onMouseDown={[Function]}
+            onScroll={[Function]}
+            role="listbox"
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "listStyle": "none",
+                "overflowY": "auto",
+                "padding": 0,
+                "position": "relative",
+              }
+            }
+            tabIndex={0}
+          >
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 0"
+              data-testid="ictinus_list_item_Item_0"
+              id="react-aria-generated-id-option-Item0"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  0
+                </span>
+              </div>
+            </li>
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 1"
+              data-testid="ictinus_list_item_Item_1"
+              id="react-aria-generated-id-option-Item1"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  1
+                </span>
+              </div>
+            </li>
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 2"
+              data-testid="ictinus_list_item_Item_2"
+              id="react-aria-generated-id-option-Item2"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  2
+                </span>
+              </div>
+            </li>
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 3"
+              data-testid="ictinus_list_item_Item_3"
+              id="react-aria-generated-id-option-Item3"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  3
+                </span>
+              </div>
+            </li>
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 4"
+              data-testid="ictinus_list_item_Item_4"
+              id="react-aria-generated-id-option-Item4"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  4
+                </span>
+              </div>
+            </li>
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 5"
+              data-testid="ictinus_list_item_Item_5"
+              id="react-aria-generated-id-option-Item5"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  5
+                </span>
+              </div>
+            </li>
+            <li
+              aria-selected={false}
+              className="emotion-4 "
+              data-key="Item 6"
+              data-testid="ictinus_list_item_Item_6"
+              id="react-aria-generated-id-option-Item6"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  6
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Design System/List/List Virtualized List 1`] = `
+.emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+  padding: 0.25rem;
+}
+
+.emotion-1 {
+  margin: 1rem;
+}
+
+.emotion-2 {
+  border: 1px solid #e7ebf2;
+  border-radius: 0.25rem;
+  width: undefinedpx;
+}
+
+.emotion-3 {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 28.125rem;
+  overflow: auto;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.emotion-4 {
+  background-color: white;
+  opacity: 1;
+  cursor: initial;
+}
+
+.emotion-4 . {
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4 span[role='presentation'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+  font-weight: 700;
+}
+
+.emotion-4[role='option'] {
+  padding: 0 0.75rem;
+  min-height: 3.25rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 0.75rem;
+}
+
+.emotion-4[role='option']:hover {
+  background-color: #f3f5f8;
+  cursor: pointer;
+}
+
+.emotion-4[data-focus-visible] {
+  background-color: #f3f5f8;
+}
+
+.emotion-4[aria-selected='true'] {
+  background-color: #e7eefe;
+}
+
+.emotion-4[aria-selected='true'] . {
+  color: #1451dc;
+  font-family: Roboto;
+  font-weight: 500;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  letter-spacing: 0.015625rem;
+}
+
+.emotion-4[aria-selected='true'][data-focus-visible] {
+  background-color: #f3f5f8;
+}
+
+.emotion-5 {
+  color: #212332;
+  font-size: 1rem;
+  font-weight: initial;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: inherit;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.emotion-5 strong {
+  font-weight: bold;
+}
+
+.emotion-5 span {
+  display: block;
+}
+
+<div
+  className="emotion-0"
+>
+  <div
+    className="emotion-1"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        data-testid="ictinus_list"
+      >
+        <div
+          style={
+            Object {
+              "height": 450,
+            }
+          }
+        >
+          <ul
+            aria-labelledby="react-aria-generated-id"
+            className="emotion-3"
+            id="react-aria-generated-id"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyDownCapture={[Function]}
+            onMouseDown={[Function]}
+            onScroll={[Function]}
+            role="listbox"
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "column",
+                "height": "100%",
+                "listStyle": "none",
+                "overflowY": "auto",
+                "padding": 0,
+                "position": "relative",
+              }
+            }
+            tabIndex={0}
+          >
+            <li
+              aria-posinset={1}
+              aria-selected={false}
+              aria-setsize={1000}
+              className="emotion-4 "
+              data-key="Item 0"
+              data-testid="ictinus_list_item_Item_0"
+              id="react-aria-generated-id-option-Item0"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              style={
+                Object {
+                  "height": 56,
+                  "left": 0,
+                  "lineHeight": "56px",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  0
+                </span>
+              </div>
+            </li>
+            <li
+              aria-posinset={2}
+              aria-selected={false}
+              aria-setsize={1000}
+              className="emotion-4 "
+              data-key="Item 1"
+              data-testid="ictinus_list_item_Item_1"
+              id="react-aria-generated-id-option-Item1"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              style={
+                Object {
+                  "height": 56,
+                  "left": 0,
+                  "lineHeight": "56px",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 56,
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  1
+                </span>
+              </div>
+            </li>
+            <li
+              aria-posinset={3}
+              aria-selected={false}
+              aria-setsize={1000}
+              className="emotion-4 "
+              data-key="Item 2"
+              data-testid="ictinus_list_item_Item_2"
+              id="react-aria-generated-id-option-Item2"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              style={
+                Object {
+                  "height": 56,
+                  "left": 0,
+                  "lineHeight": "56px",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 112,
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  2
+                </span>
+              </div>
+            </li>
+            <li
+              aria-posinset={4}
+              aria-selected={false}
+              aria-setsize={1000}
+              className="emotion-4 "
+              data-key="Item 3"
+              data-testid="ictinus_list_item_Item_3"
+              id="react-aria-generated-id-option-Item3"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              style={
+                Object {
+                  "height": 56,
+                  "left": 0,
+                  "lineHeight": "56px",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 168,
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  3
+                </span>
+              </div>
+            </li>
+            <li
+              aria-posinset={5}
+              aria-selected={false}
+              aria-setsize={1000}
+              className="emotion-4 "
+              data-key="Item 4"
+              data-testid="ictinus_list_item_Item_4"
+              id="react-aria-generated-id-option-Item4"
+              onBlur={[Function]}
+              onClick={[Function]}
+              onDragStart={[Function]}
+              onDragStartCapture={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchCancel={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="option"
+              style={
+                Object {
+                  "height": 56,
+                  "left": 0,
+                  "lineHeight": "56px",
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 224,
+                }
+              }
+              tabIndex={-1}
+            >
+              <div
+                className="emotion-5 "
+              >
+                <span>
+                  Item 
+                  4
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

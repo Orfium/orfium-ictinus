@@ -1,5 +1,5 @@
 import useTheme from 'hooks/useTheme';
-import { flatMap, isEmpty } from 'lodash';
+import { head, isEmpty } from 'lodash';
 import * as React from 'react';
 import { EventProps } from 'utils/common';
 
@@ -7,7 +7,6 @@ import { wrapperStyle } from './Menu.style';
 import { TestProps } from '../../utils/types';
 import Button from '../Button';
 import { AcceptedIconNames } from '../Icon/types';
-import { SELECT_ALL_OPTION } from '../Select/constants';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import { optionsStyle, MenuPositionAllowed } from '../utils/DropdownOptions';
 import { AvatarColors } from 'components/Avatar';
@@ -80,7 +79,7 @@ const Menu: React.FC<MenuProps> = (props) => {
                 label={'filter-options'}
                 onSelectionChange={(keys) => {
                   setIsOpen(false);
-                  const keyFound = String([...keys][0]);
+                  const keyFound = String(head(Array.from(keys)));
                   const optionFound = items.find((o) => o === keyFound);
                   optionFound && onSelect(optionFound);
                 }}

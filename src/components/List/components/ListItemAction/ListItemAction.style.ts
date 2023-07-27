@@ -7,5 +7,4 @@ export const listItemActionWrapper = () => (): SerializedStyles =>
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    //min-width: ${rem(36)};
   `;

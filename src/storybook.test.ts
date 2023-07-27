@@ -38,7 +38,11 @@ function createNodeMock(story: Story) {
       return htmlDivElementRefMock;
     }
 
-    if (story.name === 'List') {
+    /** React-Aria bypass with the extra props needed **/
+    if (
+      element.props?.role === 'listbox' ||
+      element.props['data-testid']?.includes('ictinus_list')
+    ) {
       return {
         ...element,
         setProps: () => {},

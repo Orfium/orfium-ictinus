@@ -7,7 +7,7 @@ import { AriaListBoxProps, useListBoxSection } from 'react-aria';
 import { TestProps } from 'utils/types';
 
 import ListItemWrapper from './components/ListItemWrapper/ListItemWrapper';
-import { listItemWrapperStyle } from './components/ListItemWrapper/ListItemWrapper.style';
+import { ListItemWrapperStyled } from './components/ListItemWrapper/ListItemWrapper.style';
 import { listStyle, wrapperStyle } from './List.style';
 import { ListSelected, ListSelection } from './types';
 import Window from './Window';
@@ -56,6 +56,9 @@ const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
   // @ts-ignore
   const { listBoxProps } = useListBox(props, state, combinedRefs);
 
+  const firstKey = state.collection.getFirstKey();
+  const first = firstKey ? state.collection.getItem(firstKey) : null;
+
   return (
     <div css={wrapperStyle({ width })}>
       <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
@@ -65,10 +68,10 @@ const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
             css={listStyle({ width, height })}
             id={listBoxProps.id}
             isVirtualizationEnabled={isVirtualized}
-            rowHeight={40}
+            rowHeight={first?.props.rowSize === 'compact' ? 40 : 56}
             ref={combinedRefs}
           >
-            {[...state.collection].map((item) => {
+            {Array.from(state.collection).map((item) => {
               return item.type === 'section' ? (
                 <ListBoxSection key={item.key} section={item} state={state} />
               ) : (
@@ -117,12 +120,10 @@ function ListBoxSection({ section, state }: any) {
 
   return (
     <>
-      <li
+      <ListItemWrapperStyled
         {...itemProps}
-        css={listItemWrapperStyle({
-          rowSize: section.props?.rowSize || 'normal',
-          isDisabled: false,
-        })}
+        rowSize={section.props?.rowSize || 'normal'}
+        isDisabled={false}
       >
         {section.rendered && (
           <span {...headingProps} id={headingProps.id}>
@@ -148,7 +149,7 @@ function ListBoxSection({ section, state }: any) {
             />
           ))}
         </ul>
-      </li>
+      </ListItemWrapperStyled>
     </>
   );
 }

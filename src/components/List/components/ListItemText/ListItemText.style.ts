@@ -1,7 +1,9 @@
 import styled from '@emotion/styled';
-import { rem } from 'theme/utils';
 
-export const ListItemTextWrapper = styled.div<{ isGroupItem?: boolean; isHighlighted: boolean }>`
+export const ListItemTextWrapper = styled('div', { target: '' })<{
+  isGroupItem?: boolean;
+  isHighlighted: boolean;
+}>`
   color: ${({ theme }) => theme.tokens.textColor.get('light.primary')};
   font-size: ${({ theme }) => theme.globals.typography.fontSize.get('4')};
   font-weight: ${({ isGroupItem, isHighlighted }) =>

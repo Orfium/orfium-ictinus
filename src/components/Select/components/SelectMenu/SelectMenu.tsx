@@ -1,5 +1,5 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
-import { flatMap } from 'lodash';
+import { flatMap, head } from 'lodash';
 import uniqueId from 'lodash/uniqueId';
 import React, { forwardRef, useEffect, useRef } from 'react';
 
@@ -47,15 +47,14 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
         label={uniqueId('menu_list')}
         ref={combinedRefs}
         height={5 * 40}
-        // rowSize={'small'}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
         onSelectionChange={(keys) => {
-          const keyFound = String([...keys][0]);
+          const keyFound = String(head(Array.from(keys)));
           if (keyFound === SELECT_ALL_OPTION.value) {
             handleOptionClick(SELECT_ALL_OPTION);
           } else {
             const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
-              (o) => o.value === keyFound
+              (o) => String(o.value) === keyFound
             );
             optionFound && handleOptionClick(optionFound);
           }
@@ -79,7 +78,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
               <ListSection key={option.value} title={option.value} rowSize={'compact'}>
                 {option.options.map((o) => (
                   <ListItem key={o.value} textValue={o.label}>
-                    <ListItemText>{o.label}</ListItemText>
+                    <ListItemText description={o.helperText}>{o.label}</ListItemText>
                   </ListItem>
                 ))}
               </ListSection>
@@ -88,7 +87,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
 
           return (
             <ListItem key={option.value} textValue={option.label} rowSize={'compact'}>
-              <ListItemText>{option.label}</ListItemText>
+              <ListItemText description={option.helperText}>{option.label}</ListItemText>
             </ListItem>
           );
         })}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TestProps } from 'utils/types';
 
-import { listItemWrapperStyle } from './ListItemWrapper.style';
+import { ListItemWrapperStyled } from './ListItemWrapper.style';
 import { ListRowSize } from '../../types';
 
 export type ListItemProps = {
@@ -32,18 +32,15 @@ const ListItemWrapper = React.forwardRef<HTMLLIElement, ListItemProps>(
     ref
   ) => {
     return (
-      <li
+      <ListItemWrapperStyled
+        data-testid={`ictinus_list_item_${rest['data-key'].replace(/ /g, '_')}`}
         {...rest}
-        css={listItemWrapperStyle({ rowSize, isDisabled })}
+        rowSize={rowSize}
+        isDisabled={isDisabled}
         ref={ref}
-        // data-testid={String(
-        //   dataTestId ?? content.isDefaultOption
-        //     ? 'ictinus_list' + '_default_option'
-        //     : 'ictinus_list' + ('_item_' + content.value)
-        // ).replace(/ /g, '_')}
       >
         {children}
-      </li>
+      </ListItemWrapperStyled>
     );
   }
 );

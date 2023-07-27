@@ -1,5 +1,6 @@
 import { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
+import { head } from 'lodash';
 import React, { useCallback } from 'react';
 import { TestProps } from 'utils/types';
 
@@ -109,7 +110,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
                 label={'dropdown-button'}
                 onSelectionChange={(keys) => {
                   setIsOpen(false);
-                  const keyFound = String([...keys][0]);
+                  const keyFound = String(head(Array.from(keys)));
                   const optionFound = items.find((o) => o === keyFound);
                   optionFound && handleOptionClick(optionFound);
                 }}

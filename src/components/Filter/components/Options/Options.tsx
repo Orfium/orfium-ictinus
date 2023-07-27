@@ -1,4 +1,4 @@
-import { flatMap } from 'lodash';
+import { flatMap, head } from 'lodash';
 import React from 'react';
 
 import { emptyStyle } from './Options.style';
@@ -39,12 +39,12 @@ const Options: React.FC<Props> = ({
       selectedKeys={selectedItem ? [selectedItem.value] : []}
       disabledKeys={items.filter((o) => o.isDisabled).map((o) => o.value)}
       onSelectionChange={(keys) => {
-        const keyFound = String([...keys][0]);
+        const keyFound = String(head(Array.from(keys)));
         if (keyFound === SELECT_ALL_OPTION.value) {
           onSelect(SELECT_ALL_OPTION);
         } else {
           const optionFound = flatMap(items, (o) => o.options || o).find(
-            (o) => o.value === keyFound
+            (o) => String(o.value) === keyFound
           );
           optionFound && onSelect(optionFound);
         }
