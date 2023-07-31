@@ -6,7 +6,7 @@ import React, { forwardRef, useEffect, useRef } from 'react';
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../types';
 import List, { ListItem, ListItemText, ListSection } from 'components/List';
-import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
+import { COMPACT_LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 import { TextInputBaseProps } from 'components/TextInputBase';
 
@@ -32,7 +32,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
   } = props;
   const myRef = useRef<HTMLUListElement>(null);
   const combinedRefs = useCombinedRefs(myRef, ref);
-  const minListHeightWithCompactListItem = 5 * 40; // 40 is the height of compact list item and we want to show 5 on render
+  const minListHeightWithCompactListItem = 5 * COMPACT_LIST_ITEM_HEIGHT; // 40 is the height of compact list item and we want to show 5 on render
 
   const executeScroll = () =>
     myRef.current?.scrollIntoView &&

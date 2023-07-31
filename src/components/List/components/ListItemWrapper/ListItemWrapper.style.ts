@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { rem } from 'theme/utils';
 
 import { ListRowSize } from '../../types';
+import { COMPACT_LIST_ITEM_HEIGHT, NORMAL_LIST_ITEM_HEIGHT } from '../../utils';
 import { ListItemTextWrapper } from '../ListItemText/ListItemText.style';
 import { body02, label02, body03, label03 } from 'components/Typography/Typography.config.styles';
 
@@ -11,7 +12,7 @@ export const ListItemWrapperStyled = styled('li', { target: '' })<{
   isDisabled: boolean;
 }>(({ rowSize, isDisabled, theme }) => {
   const isCompact = rowSize === 'compact';
-  const height = isCompact ? rem(40) : rem(52);
+  const height = isCompact ? rem(COMPACT_LIST_ITEM_HEIGHT) : rem(NORMAL_LIST_ITEM_HEIGHT);
   const padding = css`0 ${theme.globals.spacing.get('5')}`;
   const itemTypographyStyle = isCompact ? body03(theme) : body02(theme);
 
