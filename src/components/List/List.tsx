@@ -29,6 +29,7 @@ export type ListProps = {
   disabledKeys?: ListSelected;
   /** Is the actual `key` of the item e.g `<Item key={'item_1'} />` is the `item_1` */
   selectedKeys?: ListSelected;
+  // @TODO fix this on Select/Filter part as this only affect those
   // /** Search Term to be highlighted in list items */
   // searchTerm?: string;
   // /** Defines if this is searchable list or not **/
