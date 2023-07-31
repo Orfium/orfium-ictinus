@@ -32,6 +32,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
   } = props;
   const myRef = useRef<HTMLUListElement>(null);
   const combinedRefs = useCombinedRefs(myRef, ref);
+  const minListHeightWithCompactListItem = 5 * 40; // 40 is the height of compact list item and we want to show 5 on render
 
   const executeScroll = () =>
     myRef.current?.scrollIntoView &&
@@ -46,7 +47,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
       <List
         label={uniqueId('menu_list')}
         ref={combinedRefs}
-        height={5 * 40}
+        height={minListHeightWithCompactListItem}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
         onSelectionChange={(keys) => {
           const keyFound = String(head(Array.from(keys)));
