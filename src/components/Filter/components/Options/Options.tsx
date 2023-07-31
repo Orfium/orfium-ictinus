@@ -1,11 +1,11 @@
 import { flatMap, head } from 'lodash';
-import React from 'react';
+import React, { useCallback } from 'react';
 
 import { emptyStyle } from './Options.style';
 import { SELECT_ALL_OPTION } from '../../../Select/constants';
 import { FilterOption } from '../../types';
 import { FILTER_OPTIONS_MAX_HEIGHT } from 'components/Filter/utils';
-import List, { ListItem, ListItemText } from 'components/List';
+import List, { ListItem, ListItemText, ListSelection } from 'components/List';
 import { MAX_NON_VIRTUALIZED_ITEMS_FILTER } from 'components/List/utils';
 
 export interface Props {
@@ -32,23 +32,27 @@ const Options: React.FC<Props> = ({
 
   const height = isForcedVirtualized ? FILTER_OPTIONS_MAX_HEIGHT : undefined;
   const defaultOption = isDefaultOptionVisible ? defaultValue : undefined;
+  const onSelectionChange = useCallback(
+    (keys: ListSelection) => {
+      const keyFound = String(head(Array.from(keys)));
+      if (keyFound === SELECT_ALL_OPTION.value) {
+        onSelect(SELECT_ALL_OPTION);
+      } else {
+        const optionFound = flatMap(items, (o) => o.options || o).find(
+          (o) => String(o.value) === keyFound
+        );
+        optionFound && onSelect(optionFound);
+      }
+    },
+    [items, onSelect]
+  );
 
   return items.length ? (
     <List
       label={'filter-options'}
       selectedKeys={selectedItem ? [selectedItem.value] : []}
       disabledKeys={items.filter((o) => o.isDisabled).map((o) => o.value)}
-      onSelectionChange={(keys) => {
-        const keyFound = String(head(Array.from(keys)));
-        if (keyFound === SELECT_ALL_OPTION.value) {
-          onSelect(SELECT_ALL_OPTION);
-        } else {
-          const optionFound = flatMap(items, (o) => o.options || o).find(
-            (o) => String(o.value) === keyFound
-          );
-          optionFound && onSelect(optionFound);
-        }
-      }}
+      onSelectionChange={onSelectionChange}
       isVirtualized={isVirtualized && isForcedVirtualized}
       height={height}
       dataTestId={dataTestId}

@@ -14,7 +14,7 @@ import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
-import List, { ListItem, ListItemText, ListItemType } from 'components/List';
+import List, { ListItem, ListItemText, ListItemType, ListSelection } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
 
@@ -68,6 +68,16 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
   /** The CTA for the IconButton and the ClickAwayListener */
   const handleIconButtonClick = useCallback(() => setIsOpen(!isOpen), [isOpen]);
 
+  const onSelectionChange = useCallback(
+    (keys: ListSelection) => {
+      setIsOpen(false);
+      const keyFound = String(head(Array.from(keys)));
+      const optionFound = items?.find((o) => o === keyFound);
+      optionFound && handleOptionClick(optionFound);
+    },
+    [handleOptionClick, items]
+  );
+
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
       <div css={wrapperStyle()}>
@@ -108,12 +118,7 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
             {items && (
               <List
                 label={'dropdown-button'}
-                onSelectionChange={(keys) => {
-                  setIsOpen(false);
-                  const keyFound = String(head(Array.from(keys)));
-                  const optionFound = items.find((o) => o === keyFound);
-                  optionFound && handleOptionClick(optionFound);
-                }}
+                onSelectionChange={onSelectionChange}
                 dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}
               >
                 {items.map((item) => (
