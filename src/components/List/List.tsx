@@ -15,6 +15,7 @@ import useCombinedRefs from '../../hooks/useCombinedRefs';
 import { SelectOption } from '../Select';
 
 export type ListProps = {
+  /** The label that describes the List, useful to determine aria and accessibility of the list  */
   label: string;
   /** Width of the list */
   width?: number;
