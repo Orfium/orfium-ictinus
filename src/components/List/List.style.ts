@@ -33,7 +33,7 @@ export const listStyle =
       height: ${height ? rem(height) : 'auto'};
       overflow: auto;
       overflow-x: hidden;
-      background: #fff;
+      background: ${theme.globals.colors.white};
     `;
 
 export const listLabelHelperText = (theme: Theme): SerializedStyles => css`
