@@ -12,7 +12,9 @@ const options = [
   { value: 'chocolate', label: 'Chocolate' },
   { value: 'strawberry', label: 'Strawberry' },
   { value: 'banana', label: 'Banana' },
-  { value: 'citrus', label: 'Citrus' },
+  { value: 'citrus2', label: 'Citrus2' },
+  { value: 'citrus3', label: 'Citrus3' },
+  { value: 'citrus4', label: 'Citrus4' },
   { value: 'vanilla', label: 'Vanilla', isDisabled: true },
 ];
 const optionsWithHelperInDisabled = [
@@ -24,16 +26,16 @@ const optionsWithHelperInDisabled = [
 ];
 const groupOptions = [
   {
-    value: 'group1',
-    label: 'Group 1',
+    value: 'Sweet',
+    label: 'Sweets',
     options: [
-      { value: '1', label: 'Option 1' },
+      { value: '1', label: 'Chocolate' },
       { value: '2', label: 'Option 2' },
     ],
   },
   {
-    value: 'group2',
-    label: 'Group 2',
+    value: 'Sour',
+    label: 'Sour',
     options: [{ value: '3', label: 'Option 3' }],
   },
   { value: '4', label: 'Option 4' },
@@ -79,18 +81,14 @@ const defaultValue = options[0];
 
 <SectionHeader title={'Select'} />
 
-## Overview
-
-A universal Select component that is a clickable element that can hold many forms.
-
 - [Overview](#overview)
 - [Props](#props)
 - [Usage](#usage)
 - [Variants](#variants)
 
-## Props
+## Overview
 
-<Props of={Select} />
+A universal Select component that is a clickable element that can hold many forms.
 
 ## Usage
 
@@ -102,6 +100,10 @@ A universal Select component that is a clickable element that can hold many form
     `If you need to enter more than one values from a predefine list and as free text, use multiselect instead`,
   ]}
 />
+
+## Props
+
+<Props of={Select} />
 
 ## Variants
 
@@ -122,6 +124,7 @@ Simple select component with clearable data and searchable input
               selectedOption={selectedOption}
               onChange={setSelectedOption}
               isCreatable={boolean('isCreatable', false)}
+              isVirtualized={boolean('isVirtualized', true)}
             />
           );
         }}

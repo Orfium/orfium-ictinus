@@ -1,10 +1,12 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
+import { flatMap, head } from 'lodash';
+import uniqueId from 'lodash/uniqueId';
 import React, { forwardRef, useEffect, useRef } from 'react';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../types';
-import List from 'components/List';
-import { MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
+import List, { ListItem, ListItemText, ListSection } from 'components/List';
+import { COMPACT_LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 import { TextInputBaseProps } from 'components/TextInputBase';
 
@@ -30,8 +32,11 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
   } = props;
   const myRef = useRef<HTMLUListElement>(null);
   const combinedRefs = useCombinedRefs(myRef, ref);
+  const minListHeightWithCompactListItem = 5 * COMPACT_LIST_ITEM_HEIGHT; // 40 is the height of compact list item and we want to show 5 on render
 
-  const executeScroll = () => myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
+  const executeScroll = () =>
+    myRef.current?.scrollIntoView &&
+    myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
 
   useEffect(() => {
     executeScroll();
@@ -40,15 +45,54 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
   const renderOptions = () =>
     filteredOptions.length > 0 ? (
       <List
+        label={uniqueId('menu_list')}
         ref={combinedRefs}
-        data={filteredOptions}
-        rowSize={'small'}
+        height={minListHeightWithCompactListItem}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
-        handleOptionClick={handleOptionClick}
-        searchTerm={searchTerm}
-        selectedItem={selectedOption}
-        defaultOption={hasSelectAllOption ? SELECT_ALL_OPTION : undefined}
-      />
+        onSelectionChange={(keys) => {
+          const keyFound = String(head(Array.from(keys)));
+          if (keyFound === SELECT_ALL_OPTION.value) {
+            handleOptionClick(SELECT_ALL_OPTION);
+          } else {
+            const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
+              (o) => String(o.value) === keyFound
+            );
+            optionFound && handleOptionClick(optionFound);
+          }
+        }}
+        // searchTerm={searchTerm}
+        selectedKeys={[selectedOption.value]}
+        disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
+      >
+        {hasSelectAllOption ? (
+          <ListItem
+            key={SELECT_ALL_OPTION.value}
+            textValue={SELECT_ALL_OPTION.label}
+            rowSize={'compact'}
+          >
+            <ListItemText>{SELECT_ALL_OPTION.label}</ListItemText>
+          </ListItem>
+        ) : null}
+        {filteredOptions.map((option) => {
+          if (option.options && option.options?.length > 0) {
+            return (
+              <ListSection key={option.value} title={option.value} rowSize={'compact'}>
+                {option.options.map((o) => (
+                  <ListItem key={o.value} textValue={o.label}>
+                    <ListItemText description={o.helperText}>{o.label}</ListItemText>
+                  </ListItem>
+                ))}
+              </ListSection>
+            );
+          }
+
+          return (
+            <ListItem key={option.value} textValue={option.label} rowSize={'compact'}>
+              <ListItemText description={option.helperText}>{option.label}</ListItemText>
+            </ListItem>
+          );
+        })}
+      </List>
     ) : (
       <div css={optionStyle({ isSelected: false, hasNoResultsExist: true })}>No options</div>
     );

@@ -1,5 +1,6 @@
 import { ClickEvent } from 'hooks/useLoading';
 import useTheme from 'hooks/useTheme';
+import { head } from 'lodash';
 import React, { useCallback } from 'react';
 import { TestProps } from 'utils/types';
 
@@ -13,7 +14,7 @@ import { generateTestDataId } from '../../utils/helpers';
 import Button from 'components/Button';
 import { PrimitiveButtonTypes } from 'components/Button/Button.types';
 import IconButton from 'components/IconButton';
-import List, { ListItemType } from 'components/List';
+import List, { ListItem, ListItemText, ListItemType, ListSelection } from 'components/List';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
 import { MenuPositionAllowed, optionsStyle } from 'components/utils/DropdownOptions';
 
@@ -57,15 +58,25 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
 
   /** The CTA for the Options inside the Dropdown */
   const handleOptionClick = useCallback(
-    (option: ListItemType) => {
+    (option: string | number) => {
       setIsOpen(false);
-      onOptionSelect(option.value);
+      onOptionSelect(option);
     },
     [onOptionSelect]
   );
 
   /** The CTA for the IconButton and the ClickAwayListener */
   const handleIconButtonClick = useCallback(() => setIsOpen(!isOpen), [isOpen]);
+
+  const onSelectionChange = useCallback(
+    (keys: ListSelection) => {
+      setIsOpen(false);
+      const keyFound = String(head(Array.from(keys)));
+      const optionFound = items?.find((o) => o === keyFound);
+      optionFound && handleOptionClick(optionFound);
+    },
+    [handleOptionClick, items]
+  );
 
   return (
     <ClickAwayListener onClick={() => setIsOpen(false)}>
@@ -106,11 +117,16 @@ const DropdownButton = React.forwardRef<HTMLButtonElement, DropdownButtonProps>(
           <div css={optionsStyle({ menuPosition })(theme)}>
             {items && (
               <List
-                data={items.map((item) => ({ value: item, label: item }))}
-                rowSize={'small'}
-                handleOptionClick={handleOptionClick}
+                label={'dropdown-button'}
+                onSelectionChange={onSelectionChange}
                 dataTestId={generateTestDataId('dropdown-button-options', dataTestPrefixId)}
-              />
+              >
+                {items.map((item) => (
+                  <ListItem key={item} rowSize={'compact'}>
+                    <ListItemText>{item}</ListItemText>
+                  </ListItem>
+                ))}
+              </List>
             )}
           </div>
         )}

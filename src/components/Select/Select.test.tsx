@@ -4,6 +4,7 @@ import React from 'react';
 import { render, screen, selectDropdownOption, waitFor } from '../../test';
 import StatefulSelect from './StatefulSelect';
 import { fireEvent } from '@testing-library/react';
+import { SELECT_ALL_OPTION } from './constants';
 
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
@@ -58,8 +59,6 @@ describe('Generic Select', () => {
       selectInput = screen.getByPlaceholderText('Country') as HTMLInputElement;
       await selectDropdownOption(selectInput, dropdownList[1].label);
 
-      screen.debug();
-      debugger;
       expect(handleSubmit).toHaveBeenCalledTimes(1);
     });
 
@@ -365,7 +364,7 @@ describe('Multi Select', () => {
 
   it('selects all options when Select All is clicked', async () => {
     userEvent.click(selectInput);
-    userEvent.click(screen.getByTestId('ictinus_list_default_option'));
+    userEvent.click(screen.getByTestId(`ictinus_list_item_${SELECT_ALL_OPTION.value}`));
 
     chips = await screen.findAllByTestId(/chip-chip_/);
 
