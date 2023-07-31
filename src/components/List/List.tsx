@@ -8,7 +8,7 @@ import { TestProps } from 'utils/types';
 
 import ListItemWrapper from './components/ListItemWrapper/ListItemWrapper';
 import { ListItemWrapperStyled } from './components/ListItemWrapper/ListItemWrapper.style';
-import { listStyle, wrapperStyle } from './List.style';
+import { groupedUlStyle, listStyle, wrapperStyle } from './List.style';
 import { ListSelected, ListSelection } from './types';
 import Window from './Window';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
@@ -144,14 +144,7 @@ function ListBoxSection({ section, state }: any) {
             {section.rendered}
           </span>
         )}
-        <ul
-          {...groupProps}
-          aria-labelledby={groupProps['aria-labelledby']}
-          style={{
-            padding: 0,
-            listStyle: 'none',
-          }}
-        >
+        <ul {...groupProps} aria-labelledby={groupProps['aria-labelledby']} css={groupedUlStyle}>
           {[...section.childNodes].map((node) => (
             <Option
               key={node.key}
