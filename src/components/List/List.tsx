@@ -38,6 +38,11 @@ export type ListProps = {
   TestProps &
   Omit<React.InputHTMLAttributes<HTMLUListElement>, 'onChange'>;
 
+/**
+ * This is the List component that uses the Window underneath for every UL.
+ * Because this component uses the React-Aria abstraction for the List it will also contain the Option and ListBoxSection below
+ * as a masked layer to the actual subcomponents
+ * */
 const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
   const {
     width,
@@ -88,6 +93,9 @@ const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
 });
 List.displayName = 'List';
 
+/**
+ * The Option overlay component for React-Aria. The actual subcomponent rendered is the `ListItemWrapper`
+ */
 function Option({ item, state, style }: { item: any; state: any; style?: any }) {
   // Get props for the option element
   const ref = React.useRef(null);
@@ -114,6 +122,10 @@ function Option({ item, state, style }: { item: any; state: any; style?: any }) 
   );
 }
 
+/**
+ * The Group overlay component for React-Aria. The actual subcomponent rendered is the `Option` which will render
+ * `ListItemWrapper` at the end.
+ */
 function ListBoxSection({ section, state }: any) {
   const { itemProps, headingProps, groupProps } = useListBoxSection({
     heading: section.rendered,
