@@ -1,0 +1,172 @@
+import { Meta, Preview, Props, Story } from '@storybook/addon-docs';
+import { boolean, number, select, text, withKnobs } from '@storybook/addon-knobs';
+import { linkTo } from '@storybook/addon-links';
+import NumberField from './NumberField';
+import Stack from '../storyUtils/Stack';
+import Icon from '../Icon';
+import iconSelector from '../Icon/assets/iconSelector';
+import Loader from '../Loader';
+import { FIGMA_URL } from '../../utils/common';
+import SectionHeader from '../../storybook/SectionHeader';
+
+<Meta
+  title="Design System/NumberField"
+  component={NumberField}
+  parameters={{
+    design: [
+      {
+        type: 'figma',
+        url: `${FIGMA_URL}?node-id=10019%3A116505`,
+      },
+    ],
+  }}
+/>
+
+<SectionHeader title={'NumberField'} />
+
+- [Overview](#overview)
+- [Props](#props)
+- [Usage](#usage)
+- [Variants](#variants)
+
+## Overview
+
+A universal NumberField that only allows for numerical characters, designed to handle numerical data entry.
+
+## Props
+
+<Props of={NumberField} />
+
+## Usage
+
+<UsageGuidelines
+  guidelines={[
+    'Number input may be an absolute number or decimals',
+    'Number field may feature suffix (e.g. “%”) or increments',
+    'It also supports input masking to enforce a specific format for the numeric input',
+    'If the user is required to enter non-numeric data, such as text or dates use TextField or DatePicker instead.',
+  ]}
+/>
+
+## Variants
+
+### NumberField with number format
+
+Formatting options for the value displayed in the number field can be configured based on
+[Intl.NumberFormatOptions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat)
+
+<Preview>
+  <Story name="NumberField with number format">
+    <Stack>
+      <NumberField
+        label={'Label'}
+        formatOptions={{
+          minimumFractionDigits: number('minimumFractionDigits', 2),
+          maximumFractionDigits: number('maximumFractionDigits', 2),
+        }}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+### NumberField with suffix or Stepper
+
+NumberField can either have custom suffix (as in TextField) or a stepper with increment and decrement buttons. Step defaults to 1 if not provided.
+
+<Preview>
+  <Story name="NumberField with suffix or Stepper">
+    <Stack>
+      <NumberField label={'Label'} suffix={<div style={{ color: 'gray' }}>%</div>} />
+      <NumberField label={'Label'} hasStepper step={number('Step', undefined)} />
+    </Stack>
+  </Story>
+</Preview>
+
+## NumberField with min and max values
+
+NumberField can have min and max values provided as props.
+
+<Preview>
+  <Story name="NumberField with min and max values">
+    <Stack>
+      <NumberField
+        label={'Label'}
+        minValue={number('minValue', undefined)}
+        maxValue={number('maxValue', undefined)}
+        suffix={<div style={{ color: 'gray' }}>%</div>}
+      />
+    </Stack>
+  </Story>
+</Preview>
+
+### NumberField with Label and Placeholder
+
+NumberField with label options. Label that will float, with or without Placeholder
+
+<Preview>
+  <Story name="NumberField with Label and Placeholder">
+    <Stack>
+      <NumberField label={'Label'} />
+      <NumberField label={'Label'} placeholder={'Placeholder'} />
+    </Stack>
+  </Story>
+</Preview>
+
+### NumberField with Statuses
+
+NumberField inherits all TextField statuses behavior.
+
+<Preview>
+  <Story name="NumberField with Label, Placeholder and Statuses">
+    <Stack>
+      <NumberField
+        label={'Label'}
+        status={{
+          type: 'normal',
+          hintMessage: text('Custom Hint Message', 'Hint in Text Field'),
+        }}
+      />
+      <NumberField
+        label={'Label'}
+        status={{
+          type: 'error',
+          hintMessage: text('Custom Error Message', 'Error in Text Field'),
+        }}
+      />
+      <NumberField
+        label={'Label'}
+        status={{
+          type: 'read-only',
+        }}
+      />
+      <NumberField label={'Label'} isDisabled />
+    </Stack>
+  </Story>
+</Preview>
+
+### Playground
+
+<Preview>
+  <Story name="Playground" parameters={{ decorators: [withKnobs] }}>
+    <Stack>
+      <NumberField
+        label={text('Label', 'Label')}
+        isDisabled={boolean('isDisabled', false)}
+        isRequired={boolean('isRequired', false)}
+        hasStepper={boolean('hasStepper', false)}
+        minValue={number('minValue', undefined)}
+        maxValue={number('maxValue', undefined)}
+        step={number('step', undefined)}
+        formatOptions={{
+          minimumFractionDigits: number('minimumFractionDigits', 2),
+          maximumFractionDigits: number('maximumFractionDigits', 2),
+        }}
+        suffix={select('Suffix icon name', ['', ...Object.keys(iconSelector)], 'info')}
+        status={{
+          type: select('Status', ['error', 'normal', 'read-only'], 'normal'),
+          hintMessage: text('Hint/Error message', 'Message in Number Field'),
+        }}
+      />
+    </Stack>
+  </Story>
+</Preview>

@@ -335,6 +335,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 isDisabled={isDisabled}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
+                placeholder={undefined}
                 onClick={() => setIsOpen(true)}
                 status={status}
                 value={textFieldValue}

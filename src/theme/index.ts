@@ -12,7 +12,7 @@ const defaultTheme = (theming: ColorScheme): Theme => {
     colorScheme: theming,
     overrides,
     tokens: {
-      ...get(tokens, theming, 'semantic'),
+      ...get(tokens, theming || 'semantic', tokens.semantic),
     },
     utils: {
       getColor: getColor(globals.colors),

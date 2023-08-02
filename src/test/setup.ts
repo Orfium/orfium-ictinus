@@ -27,6 +27,11 @@ jest.mock(
   })
 );
 
+jest.mock('@react-aria/ssr/dist/main', () => ({
+  ...jest.requireActual('@react-aria/ssr/dist/main'),
+  useSSRSafeId: () => 'react-aria-generated-id',
+}));
+
 // because scrollIntoView doesn't exist in jest
 window.HTMLElement.prototype.scrollIntoView = function () {};
 

@@ -1,16 +1,13 @@
-import useCombinedRefs from 'hooks/useCombinedRefs';
-import useTheme from 'hooks/useTheme';
+import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes, useMemo, useRef } from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import isEqual from 'react-fast-compare';
+import InputMask from 'react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
 
 import { suffixContainerStyle } from './TextField.style';
 import { TestProps } from '../../utils/types';
-import Icon from '../Icon';
 import Label from '../Label';
-import { getTextInputBaseTokens } from '../TextInputBase/TextInputBase.tokens';
-import { AcceptedIconNames } from 'components/Icon/types';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import { SelectOption } from 'components/Select';
 import TextInputBase, { TextInputBaseProps } from 'components/TextInputBase';
@@ -19,6 +16,8 @@ import { inputStyle } from 'components/TextInputBase/TextInputBase.style';
 export type InputProps = Partial<
   Omit<InputHTMLAttributes<HTMLInputElement>, 'readOnly' | 'disabled'>
 >;
+
+type MaskProps = { mask?: never } | { mask?: string | (string | RegExp)[]; placeholder?: never };
 
 export type TextFieldProps = {
   /** The id of the text field that will be used as for in label too */
@@ -44,12 +43,13 @@ export type TextFieldProps = {
   /** [For MultiTextField] A callback for when all values are deleted  */
   onMultiValueClearAll?: () => void;
 } & TextInputBaseProps &
+  MaskProps &
   InputProps &
   TestProps;
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
-    id: userDefinedId,
+    id = generateUniqueID('textfield_'),
     suffix = null,
     label,
     placeholder = '',
@@ -62,56 +62,45 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     tags = [],
     onMultiValueDelete,
     onMultiValueClearAll = () => null,
+    mask,
     ...rest
   } = props;
-  const theme = useTheme();
-  const id = useRef(userDefinedId || generateUniqueID('textfield_')).current;
 
-  const tokens = getTextInputBaseTokens(theme);
+  const {
+    isLocked,
+    hintMessageId,
+    handleContainerClick,
+    textInputBaseSx,
+    suffixContent,
+    combinedRefs,
+  } = useFieldUtils({
+    id,
+    suffix,
+    status,
+    isDisabled,
+    ref,
+  });
 
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const combinedRefs = useCombinedRefs(inputRef, ref);
-
-  const isLocked = status?.type === 'read-only';
-
-  const hintMessageId = status?.hintMessage ? status?.id ?? `${id}_hintMessage` : undefined;
-
-  const suffixContent = useMemo(() => {
-    if (isLocked || typeof suffix === 'string') {
-      const iconName = isLocked ? 'lock' : suffix;
-
-      return (
-        <Icon
-          name={iconName as AcceptedIconNames}
-          size={16}
-          color={theme.utils.getColor('lightGrey', 650)}
-        />
-      );
-    }
-
-    return suffix;
-  }, [isLocked, suffix, theme.utils]);
-
-  const handleClick = () => {
-    if (!isLocked && !isDisabled) {
-      combinedRefs.current?.focus();
-    }
+  const inputProps = {
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    readOnly: isLocked || isReadOnly,
+    css: inputStyle({ label, placeholder }),
+    placeholder: placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    required: isRequired,
+    id: id,
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    disabled: isDisabled || isLocked,
+    onInput: onInput,
+    'data-testid': rest.dataTestId ? `input_${rest.dataTestId}` : 'input',
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    'aria-invalid': status?.type === 'error',
+    'aria-describedby': hintMessageId,
+    ...omit(rest, 'dataTestId'),
   };
 
-  const textInputBaseSx = useMemo(
-    () =>
-      !suffixContent
-        ? {
-            textField: {
-              paddingRight: tokens('paddingContentLeft'),
-            },
-          }
-        : {},
-    [suffixContent, tokens]
-  );
-
   return (
-    <div onClick={handleClick}>
+    <div onClick={handleContainerClick}>
       {isMulti ? (
         <MultiTextFieldBase
           {...props}
@@ -127,22 +116,23 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           ref={combinedRefs}
         />
       ) : (
-        <TextInputBase {...props} status={{ ...status, id: hintMessageId }} sx={textInputBaseSx}>
+        <TextInputBase
+          {...props}
+          status={{ ...status, id: hintMessageId }}
+          sx={textInputBaseSx(!suffixContent)}
+        >
           <div css={{ width: '100% ' }}>
-            <input
-              readOnly={isLocked || isReadOnly}
-              css={inputStyle({ label, placeholder })}
-              placeholder={placeholder ? `${placeholder} ${isRequired ? '*' : ''}` : label}
-              required={isRequired}
-              id={id}
-              disabled={isDisabled || isLocked}
-              onInput={onInput}
-              data-testid={rest.dataTestId ? `input_${rest.dataTestId}` : 'input'}
-              aria-invalid={status?.type === 'error'}
-              aria-describedby={hintMessageId}
-              {...omit(rest, 'dataTestId')}
-              ref={combinedRefs}
-            />
+            {mask ? (
+              <InputMask
+                {...inputProps}
+                mask={mask}
+                maskChar={' '}
+                inputRef={combinedRefs}
+                dangerouslySetInnerHTML={undefined}
+              />
+            ) : (
+              <input {...inputProps} ref={combinedRefs} />
+            )}
             <Label
               htmlFor={id}
               label={label}
