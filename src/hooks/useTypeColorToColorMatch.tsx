@@ -74,10 +74,10 @@ const calculateTypesShadeAndColors = (
 /** @TODO revisit this provider and remove if obsolete */
 const TypeColorToColorMatchProvider: React.FC = ({ children }) => {
   const theme = useTheme();
-  const types = pick(theme.globals.colors, mainTypes);
+  const types = pick(theme.globals.oldColors, mainTypes);
 
   const typesShadesColor = React.useMemo(() => {
-    return calculateTypesShadeAndColors(types, theme.globals.colors.flat);
+    return calculateTypesShadeAndColors(types, theme.globals.oldColors.flat);
   }, [types, theme]);
 
   /** @TODO revisit this and remove if obsolete */

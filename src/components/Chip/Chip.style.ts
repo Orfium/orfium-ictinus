@@ -29,7 +29,7 @@ export const chipStyle =
       padding: ${theme.globals.spacing.get('3')} ${theme.globals.spacing.get('4')};
       background-color: ${customFilled
         ? theme.utils.getColor(fill, 50)
-        : theme.globals.colors.white};
+        : theme.globals.oldColors.white};
       color: ${theme.utils.getAAColorFromSwatches(fill, 50)};
       border: ${rem(1)} solid
         ${customFilled ? theme.utils.getColor(fill, 550) : theme.utils.getColor('lightGrey', 200)};

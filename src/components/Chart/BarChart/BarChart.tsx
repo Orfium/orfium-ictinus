@@ -60,7 +60,7 @@ const CustomYAxisTick = ({ colors, y, width, payload }: YAxisProp) => {
   const fill =
     typeof payload.value === 'string' && colors[payload.value]
       ? colors[payload.value]
-      : theme.globals.colors.black;
+      : theme.globals.oldColors.black;
 
   return (
     <g>
@@ -77,8 +77,8 @@ const BarChart: React.FC<BarChartProps> = ({ data }) => {
   const theme = useTheme();
 
   const barColors = useMemo(
-    () => getBarColors(data, theme.globals.colors.flat.darkBlue[100]),
-    [data, theme.globals.colors.flat.darkBlue]
+    () => getBarColors(data, theme.globals.oldColors.flat.darkBlue[100]),
+    [data, theme.globals.oldColors.flat.darkBlue]
   );
 
   const findMaxInData = useCallback((operator) => max(data.map(operator)), [data]);

@@ -19,6 +19,6 @@ export const cardElevation = (
   radius?: SpacingKey | undefined
 ): SerializedStyles => css`
   box-shadow: ${theme.globals.elevation[elevated]};
-  background: ${isTransparent ? 'transparent' : theme.globals.colors.white};
+  background: ${isTransparent ? 'transparent' : theme.globals.oldColors.white};
   border-radius: ${radius ? theme.globals.spacing.get(radius) : 0};
 `;

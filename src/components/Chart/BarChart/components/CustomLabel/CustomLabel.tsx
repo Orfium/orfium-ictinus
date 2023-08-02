@@ -13,7 +13,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ colors, value, x, y, width, h
   const theme = useTheme();
   const xValue = x && width ? x + width + xValueBase : xValueBase;
   const yValue = y && height ? y + height / divisor : 0;
-  const fill = index && colors[index] ? colors[index] : theme.globals.colors.black;
+  const fill = index && colors[index] ? colors[index] : theme.globals.oldColors.black;
 
   return (
     <text x={xValue} y={yValue}>

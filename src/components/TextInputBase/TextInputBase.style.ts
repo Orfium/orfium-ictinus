@@ -31,7 +31,7 @@ const wrapperStyleSwitch = ({
   const borderConfig = textInputConfig.types[colorScheme].outlined.border;
 
   const backgroundColor =
-    colorScheme === 'dark' ? theme.utils.getColor('darkGrey', 700) : theme.globals.colors.white;
+    colorScheme === 'dark' ? theme.utils.getColor('darkGrey', 700) : theme.globals.oldColors.white;
   const borderColorName = !hasError
     ? borderConfig.color.pressed.name
     : borderConfig.color.error.name;
@@ -152,7 +152,7 @@ export const inputStyle =
       border: 'none',
       color:
         theme.colorScheme === 'dark' || isDark
-          ? theme.globals.colors.white
+          ? theme.globals.oldColors.white
           : theme.utils.getColor('darkGrey', 850),
       display: 'block',
       position: 'relative',
