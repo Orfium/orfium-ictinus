@@ -23,10 +23,10 @@ export const avatarStyle =
       height: ${tokens(`size.${size}` as AvatarTokens)};
       border-radius: ${tokens('borderRadius')};
       border: ${tokens('borderWidth')} solid;
-      border-color: ${tokens('color.borderColor')};
+      border-color: ${tokens(`borderColor.${color}` as AvatarTokens)};
       box-sizing: border-box;
-      background-color: ${tokens(`color.${color}.backgroundColor` as AvatarTokens)};
-      color: ${tokens(`color.${color}.foregroundColor` as AvatarTokens)};
+      background-color: ${tokens(`backgroundColor.${color}` as AvatarTokens)};
+      color: ${tokens(`textColor.${color}` as AvatarTokens)};
       overflow: hidden;
       position: relative;
       align-items: center;
@@ -40,7 +40,7 @@ export const avatarStyle =
       letter-spacing: ${get(typographyTokens(`${size}` as AvatarTextTokens), 'letterSpacing')};
 
       img {
-        border-radius: ${tokens('color.borderColor')};
+        border-radius: ${tokens('borderRadius')};
         width: 100%;
         height: 100%;
       }

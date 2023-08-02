@@ -60,12 +60,12 @@ Avatar with icon
 <Preview>
   <Story name="Avatar with icon">
     <Stack>
-      <Avatar size={1} color={'blue'} iconName={'user'} />
-      <Avatar size={2} color={'blue'} iconName={'alert'} />
-      <Avatar size={3} color={'blue'} iconName={'clock'} />
-      <Avatar size={4} color={'blue'} iconName={'earnings'} />
-      <Avatar size={5} color={'blue'} iconName={'settings'} />
-      <Avatar size={6} color={'blue'} iconName={'view'} />
+      <Avatar size={1} color={'purple'} iconName={'user'} />
+      <Avatar size={2} color={'purple'} iconName={'alert'} />
+      <Avatar size={3} color={'purple'} iconName={'clock'} />
+      <Avatar size={4} color={'purple'} iconName={'earnings'} />
+      <Avatar size={5} color={'purple'} iconName={'settings'} />
+      <Avatar size={6} color={'purple'} iconName={'view'} />
     </Stack>
   </Story>
 </Preview>
@@ -77,22 +77,22 @@ Avatar with letter
 <Preview>
   <Story name="Avatar with letter">
     <Stack>
-      <Avatar size={1} color={'blue'}>
+      <Avatar size={1} color={'purple'}>
         JN
       </Avatar>
-      <Avatar size={2} color={'blue'}>
+      <Avatar size={2} color={'purple'}>
         JN
       </Avatar>
-      <Avatar size={3} color={'blue'}>
+      <Avatar size={3} color={'purple'}>
         JN
       </Avatar>
-      <Avatar size={4} color={'blue'}>
+      <Avatar size={4} color={'purple'}>
         JN
       </Avatar>
-      <Avatar size={5} color={'blue'}>
+      <Avatar size={5} color={'purple'}>
         JN
       </Avatar>
-      <Avatar size={6} color={'blue'}>
+      <Avatar size={6} color={'purple'}>
         JN
       </Avatar>
     </Stack>
@@ -137,30 +137,18 @@ Avatar Playground
     <Stack>
       <Avatar
         size={select('size', [1, 2, 3, 4, 5, 6], 1)}
-        color={select(
-          'color',
-          ['red', 'magenta', 'purple', 'blue', 'darkBlue', 'teal', 'orange'],
-          'red'
-        )}
+        color={select('color', ['blue', 'teal', 'purple', 'red', 'orange'], 'blue')}
       >
         JN
       </Avatar>
       <Avatar
         size={select('size', [1, 2, 3, 4, 5, 6], 1)}
         src={'https://mui.com/static/images/avatar/1.jpg'}
-        color={select(
-          'color',
-          ['red', 'magenta', 'purple', 'blue', 'darkBlue', 'teal', 'orange'],
-          'red'
-        )}
+        color={select('color', ['blue', 'teal', 'purple', 'red', 'orange'], 'blue')}
       />
       <Avatar
         size={select('size', [1, 2, 3, 4, 5, 6], 1)}
-        color={select(
-          'color',
-          ['red', 'magenta', 'purple', 'blue', 'darkBlue', 'teal', 'orange'],
-          'red'
-        )}
+        color={select('color', ['blue', 'teal', 'purple', 'red', 'orange'], 'blue')}
       />
     </Stack>
   </Story>

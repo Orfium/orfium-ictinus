@@ -1,6 +1,6 @@
 import { DivProps } from '../../utils/common';
 
-export type AvatarColors = 'red' | 'magenta' | 'purple' | 'blue' | 'darkBlue' | 'teal' | 'orange';
+export type AvatarColors = 'blue' | 'teal' | 'purple' | 'red' | 'orange';
 
 export type AvatarSizes = 1 | 2 | 3 | 4 | 5 | 6;
 
