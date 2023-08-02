@@ -1,7 +1,7 @@
 export const tokensObject = {
   colorToken: {
     type: 'color',
-    value: '{colors.blue.500}',
+    value: '{colors.red.1}',
   },
   hexToken: {
     type: 'color',
