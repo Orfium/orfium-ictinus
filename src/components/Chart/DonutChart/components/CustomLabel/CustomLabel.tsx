@@ -27,7 +27,7 @@ const CustomLabel: React.FC<CustomLabelProps> = ({ viewBox, value, units }) => {
           dy="-7"
           alignmentBaseline="middle"
           fontSize={theme.globals.typography.fontSize.get('4')}
-          fill={theme.globals.colors.black}
+          fill={theme.globals.oldColors.black}
         >
           {value}
         </tspan>

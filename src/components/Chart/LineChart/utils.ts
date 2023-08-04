@@ -21,7 +21,7 @@ export const colorPicker = ({
   uniqueKeyNames,
   color,
 }: ColorPickerProps): Record<string, string> => {
-  const colorSample = sampleSize(theme.globals.colors.flat, uniqueKeyNames.length);
+  const colorSample = sampleSize(theme.globals.oldColors.flat, uniqueKeyNames.length);
 
   return uniqueKeyNames.reduce<Record<string, string>>((acc, key, index) => {
     const definedColor =

@@ -250,7 +250,7 @@ export const menuStyle = () => (theme: Theme) => {
     border: ${rem(borderConfig.width)} solid
       ${theme.utils.getColor(borderConfig.color.default.name, borderConfig.color.default.shade)};
     border-radius: ${theme.globals.spacing.get('3')};
-    background-color: ${theme.globals.colors.white};
+    background-color: ${theme.globals.oldColors.white};
     box-shadow: ${theme.globals.elevation['02']};
     z-index: 500;
     overflow: hidden;

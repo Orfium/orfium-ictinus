@@ -30,7 +30,7 @@ export const cardContainer =
       box-sizing: border-box;
       max-height: ${rem(294)};
       border-radius: ${rem(8)};
-      background: ${theme.globals.colors.white};
+      background: ${theme.globals.oldColors.white};
       ${snackbarContainerPerType(type, styleType, theme)};
     `;
 

@@ -20,8 +20,8 @@ export const optionStyle =
       padding: ${theme.globals.spacing.get('6')};
       font-size: ${theme.globals.typography.fontSize.get(size === 'md' ? '4' : '3')};
       background-color: ${isSelected
-        ? darken(0.07, theme.globals.colors.white)
-        : theme.globals.colors.white};
+        ? darken(0.07, theme.globals.oldColors.white)
+        : theme.globals.oldColors.white};
       cursor: default;
       color: ${hasNoResultsExist ? theme.utils.getColor('lightGrey', 750) : 'initial'};
       text-align: ${hasNoResultsExist ? 'center' : 'initial'};
@@ -30,7 +30,7 @@ export const optionStyle =
       overflow-x: hidden;
 
       &:hover {
-        background-color: ${darken(0.03, theme.globals.colors.white)};
+        background-color: ${darken(0.03, theme.globals.oldColors.white)};
       }
     `;
   };
@@ -39,7 +39,7 @@ export const menuStyle =
   ({ status, size, isVirtualized }: SelectMenuProps & Omit<TextFieldProps, 'ref'>) =>
   (theme: Theme): SerializedStyles =>
     css`
-      background-color: ${theme.globals.colors.white};
+      background-color: ${theme.globals.oldColors.white};
       border-radius: 4px;
       box-shadow: ${theme.globals.elevation['02']};
       top: ${status !== 'normal' ? '70%' : '110%'};

@@ -2,17 +2,15 @@ import { css, SerializedStyles } from '@emotion/react';
 import { Theme } from 'theme';
 import { rem } from 'theme/utils';
 
-export const tickStyle =
-  (fill: string) =>
-  (): SerializedStyles =>
-    css`
-      width: inherit;
-      height: inherit;
-      color: ${fill};
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    `;
+export const tickStyle = (fill: string) => (): SerializedStyles =>
+  css`
+    width: inherit;
+    height: inherit;
+    color: ${fill};
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  `;
 
 export const tooltipStyle =
   () =>
@@ -22,7 +20,7 @@ export const tooltipStyle =
       position: fixed;
       top: -33%;
       left: 106%;
-      color: ${theme.globals.colors.white};
+      color: ${theme.globals.oldColors.white};
       background-color: ${theme.utils.getColor('darkGrey', 750)};
       opacity: 90%;
       border-radius: ${theme.globals.spacing.get('3')};

@@ -13,12 +13,12 @@ const topAppBarWrapper =
       ${flexCenter};
       position: relative;
       justify-content: space-between;
-      background-color: ${isDark ? theme.globals.colors.black : theme.globals.colors.white};
+      background-color: ${isDark ? theme.globals.oldColors.black : theme.globals.oldColors.white};
       height: ${rem(DEFAULT_NAVBAR_HEIGHT)};
       padding: 0 ${theme.globals.spacing.get('6')};
       box-shadow: ${theme.globals.elevation['02']};
       > *:not(:last-of-type) {
-        color: ${isDark ? theme.globals.colors.white : theme.utils.getColor('darkGrey', 850)};
+        color: ${isDark ? theme.globals.oldColors.white : theme.utils.getColor('darkGrey', 850)};
       }
     `;
 
