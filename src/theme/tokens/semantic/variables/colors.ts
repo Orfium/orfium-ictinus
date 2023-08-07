@@ -189,7 +189,7 @@ const colors = {
     },
   },
   textColor: {
-    primary: {
+    light: {
       primary: {
         value: '{colors.neutral.4}',
         type: 'color',

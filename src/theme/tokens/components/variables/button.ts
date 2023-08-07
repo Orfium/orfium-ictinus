@@ -43,7 +43,7 @@ const button = {
     },
     textColor: {
       type: 'color',
-      value: '{sem.colors.textColor.primary.active}',
+      value: '{sem.colors.textColor.light.active}',
       description: 'Sets text and icon color for secondary button',
     },
   },
@@ -66,7 +66,7 @@ const button = {
       },
     },
     textColor: {
-      value: '{sem.colors.textColor.primary.active}',
+      value: '{sem.colors.textColor.light.active}',
       type: 'color',
       description: 'Sets text and icon color tertiary button',
     },
@@ -115,7 +115,7 @@ const button = {
     },
     textColor: {
       type: 'color',
-      value: '{sem.colors.textColor.primary.error}',
+      value: '{sem.colors.textColor.light.error}',
       description: 'Sets text and icon color for danger button',
     },
   },
@@ -139,7 +139,7 @@ const button = {
     },
     textColor: {
       type: 'color',
-      value: '{sem.colors.textColor.primary.primary}',
+      value: '{sem.colors.textColor.light.primary}',
       description: 'Sets text and icon color for inverted button',
     },
   },
