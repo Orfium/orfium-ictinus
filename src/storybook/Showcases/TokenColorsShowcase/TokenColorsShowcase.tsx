@@ -67,7 +67,7 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
                       <div
                         css={(theme) => css`
                           ${colorStyle(theme)};
-                          background-color: ${isGlobal
+                          background: ${isGlobal
                             ? theme.globals.colors.get(
                                 `${type.key}.${state}` as DotKeys<typeof globalColorsFigma>
                               )
