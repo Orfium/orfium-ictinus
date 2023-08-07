@@ -32,7 +32,7 @@ const SpacingSizingShowcase = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: theme.tokens.palette.get('systemic.secondary.dark'),
+                backgroundColor: theme.globals.colors.get('blue.2'),
               }}
             />
             <div
@@ -47,7 +47,7 @@ const SpacingSizingShowcase = () => {
                 width: '32px',
                 height: '32px',
                 borderRadius: '50%',
-                backgroundColor: theme.tokens.palette.get('systemic.secondary.dark'),
+                backgroundColor: theme.globals.colors.get('blue.2'),
               }}
             />
           </div>
