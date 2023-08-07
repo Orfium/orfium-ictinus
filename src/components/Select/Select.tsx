@@ -12,6 +12,7 @@ import { SelectOption, SelectProps } from './types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
+import Box from '../Box';
 import Icon from '../Icon';
 import TextField from '../TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
@@ -77,7 +78,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
           }
         },
         onBackspace: () => {
-          // isSearchable && onChange(isMulti ? [] : emptyValue);
           debouncedOnChange('');
           setIsOpen(true);
         },
@@ -244,7 +244,12 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const suffixRender = useMemo(
     () => (
       <div css={suffixContainer(isOpen, isSearchable)}>
-        {isLoading && <Loader />}
+        {isLoading && (
+          <Box py={'2'} display={'flex'} alignItems={'center'}>
+            <Loader />
+          </Box>
+        )}
+
         <Icon
           size={isSearchable ? 20 : 12}
           name={suffixNameSelector}
@@ -279,9 +284,6 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
       onClick={() => {
         setIsOpen(false);
         setSearchValue('');
-      }}
-      onBlur={() => {
-        setIsOpen(false);
       }}
     >
       <div

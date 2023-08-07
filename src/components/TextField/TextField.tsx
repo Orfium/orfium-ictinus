@@ -1,6 +1,6 @@
 import useFieldUtils from 'hooks/useFieldUtils';
 import { omit } from 'lodash';
-import React, { InputHTMLAttributes } from 'react';
+import React, { InputHTMLAttributes, useRef } from 'react';
 import isEqual from 'react-fast-compare';
 import InputMask from 'react-input-mask';
 import { generateUniqueID } from 'utils/helpers';
@@ -49,7 +49,7 @@ export type TextFieldProps = {
 
 const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref) => {
   const {
-    id = generateUniqueID('textfield_'),
+    id: userDefinedId,
     suffix = null,
     label,
     placeholder = '',
@@ -65,6 +65,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
     mask,
     ...rest
   } = props;
+  const id = useRef(userDefinedId || generateUniqueID('textfield_')).current;
 
   const {
     isLocked,
@@ -121,7 +122,7 @@ const TextField = React.forwardRef<HTMLInputElement, TextFieldProps>((props, ref
           status={{ ...status, id: hintMessageId }}
           sx={textInputBaseSx(!suffixContent)}
         >
-          <div css={{ width: '100% ' }}>
+          <div css={{ display: 'flex', flex: 1 }}>
             {mask ? (
               <InputMask
                 {...inputProps}

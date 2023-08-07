@@ -1,7 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import { last, merge } from 'lodash';
 import omit from 'lodash/omit';
-import React, { useMemo } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { generateUniqueID, generateUniqueKey } from 'utils/helpers';
 import { TestProps } from 'utils/types';
 
@@ -52,7 +52,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       status = { type: 'normal' },
       isReadOnly,
       label,
-      id = generateUniqueID('multiTextfield_'),
+      id: userDefinedId,
       placeholder,
       isRequired = false,
       onOptionDelete,
@@ -65,6 +65,7 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       sx,
       ...rest
     } = props;
+    const id = useRef(userDefinedId || generateUniqueID('multiTextfield_')).current;
 
     const theme = useTheme();
     const hasValue = Boolean(value || (selectedOptions?.length && selectedOptions?.length > 0));
@@ -91,7 +92,10 @@ const MultiTextFieldBase = React.forwardRef<HTMLInputElement, Props & InputProps
       () => (
         <>
           {selectedOptions?.map((option: any, index: number) => (
-            <span key={generateUniqueKey('chip' + index)} css={chipStyle()}>
+            <span
+              key={generateUniqueKey('chip' + (typeof option === 'string' ? option : option.label))}
+              css={chipStyle()}
+            >
               <Chip
                 onClear={
                   !(status?.type === 'read-only' || isDisabled)

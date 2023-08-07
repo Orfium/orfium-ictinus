@@ -70,7 +70,7 @@ const List = React.forwardRef<HTMLUListElement, ListProps>((props, ref) => {
   return (
     <div css={wrapperStyle({ width })}>
       <div data-testid={dataTestId ? `${dataTestId}_list` : 'ictinus_list'}>
-        <div style={{ height: height || '100%' }}>
+        <div style={{ height: isVirtualized && height ? height : '100%' }}>
           <Window
             {...listBoxProps}
             css={listStyle({ width, height })}

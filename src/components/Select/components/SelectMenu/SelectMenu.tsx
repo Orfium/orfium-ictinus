@@ -1,11 +1,11 @@
 import useCombinedRefs from 'hooks/useCombinedRefs';
 import { flatMap, head } from 'lodash';
 import uniqueId from 'lodash/uniqueId';
-import React, { forwardRef, useEffect, useRef } from 'react';
+import React, { forwardRef, useCallback, useEffect, useRef } from 'react';
 
 import { menuStyle, optionStyle } from './SelectMenu.style';
 import { SelectOption } from '../../types';
-import List, { ListItem, ListItemText, ListSection } from 'components/List';
+import List, { ListItem, ListItemText, ListSection, ListSelection } from 'components/List';
 import { COMPACT_LIST_ITEM_HEIGHT, MAX_NON_VIRTUALIZED_ITEMS_SELECT } from 'components/List/utils';
 import { SELECT_ALL_OPTION } from 'components/Select/constants';
 import { TextInputBaseProps } from 'components/TextInputBase';
@@ -38,6 +38,21 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
     myRef.current?.scrollIntoView &&
     myRef.current?.scrollIntoView({ block: 'nearest', inline: 'start' });
 
+  const onSelectionChange = useCallback(
+    (keys: ListSelection) => {
+      const keyFound = String(head(Array.from(keys)));
+      if (keyFound === SELECT_ALL_OPTION.value) {
+        handleOptionClick(SELECT_ALL_OPTION);
+      } else {
+        const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
+          (o) => String(o.value) === keyFound
+        );
+        optionFound && handleOptionClick(optionFound);
+      }
+    },
+    [filteredOptions, handleOptionClick]
+  );
+
   useEffect(() => {
     executeScroll();
   }, [selectedOption]);
@@ -49,17 +64,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
         ref={combinedRefs}
         height={minListHeightWithCompactListItem}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
-        onSelectionChange={(keys) => {
-          const keyFound = String(head(Array.from(keys)));
-          if (keyFound === SELECT_ALL_OPTION.value) {
-            handleOptionClick(SELECT_ALL_OPTION);
-          } else {
-            const optionFound = flatMap(filteredOptions, (o) => o.options || o).find(
-              (o) => String(o.value) === keyFound
-            );
-            optionFound && handleOptionClick(optionFound);
-          }
-        }}
+        onSelectionChange={onSelectionChange}
         // searchTerm={searchTerm}
         selectedKeys={[selectedOption.value]}
         disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
