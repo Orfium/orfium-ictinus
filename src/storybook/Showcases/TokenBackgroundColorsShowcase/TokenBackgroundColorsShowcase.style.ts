@@ -17,7 +17,7 @@ export const colorStyle = (theme: Theme): SerializedStyles =>
     width: 80px;
     height: 80px;
     margin: 0 15px;
-    border: 1px solid ${theme.tokens.borderColor.get('decorative.muted')};
+    border: 1px solid ${theme.tokens.colors.get('borderColor.decorative.muted')};
     border-radius: 100%;
   `;
 
