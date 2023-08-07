@@ -13,7 +13,7 @@ const Preview: FC<PreviewProps> = ({ children, isInverted }) => {
   return (
     <SBPreview
       css={{
-        background: theme.tokens.backgroundColor.get(isInverted ? 'invertedDark' : 'tintedDark'),
+        background: theme.tokens.colors.get(isInverted ? 'backgroundColor.inverted' : 'backgroundColor.tinted'),
       }}
     >
       {children}
