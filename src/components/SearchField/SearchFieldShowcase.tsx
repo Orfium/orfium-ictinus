@@ -19,6 +19,7 @@ const SearchFieldShowcase = ({
         value={value}
         onChange={(e: any) => setValue(e.target.value)}
         onClear={() => setValue('')}
+        label={''}
       />
     </Stack>
   );

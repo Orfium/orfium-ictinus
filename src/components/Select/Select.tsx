@@ -1,97 +1,32 @@
+import useKeyboard from 'hooks/useKeyboarEvents';
+import { differenceBy, head } from 'lodash';
 import debounce from 'lodash/debounce';
-import React, { InputHTMLAttributes, useEffect, useMemo, KeyboardEvent } from 'react';
+import React, { useCallback, useMemo, useRef, useState } from 'react';
 import isEqual from 'react-fast-compare';
-import { generateTestDataId } from 'utils/helpers';
+import { generateTestDataId, generateUniqueID } from 'utils/helpers';
 
 import SelectMenu from './components/SelectMenu/SelectMenu';
-import useMultiselectUtils from './hooks/useMultiselectUtils';
+import { SELECT_ALL_OPTION } from './constants';
 import { suffixContainer, selectWrapper } from './Select.style';
+import { SelectOption, SelectProps } from './types';
 import useCombinedRefs from '../../hooks/useCombinedRefs';
 import useTheme from '../../hooks/useTheme';
 import { ChangeEvent } from '../../utils/common';
-import { TestProps } from '../../utils/types';
-import Icon, { OwnProps as IconProps } from '../Icon';
+import Box from '../Box';
+import Icon from '../Icon';
 import TextField from '../TextField';
-import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import handleSearch from '../utils/handleSearch';
 import Loader from 'components/Loader';
 import MultiTextFieldBase from 'components/MultiTextFieldBase/MultiTextFieldBase';
 import PositionInScreen from 'components/utils/PositionInScreen';
 
-export type SelectOptionValues = {
-  value: string | number;
-  label: string;
-  iconProps?: IconProps;
-};
-
-export type SelectOption = {
-  isDisabled?: boolean;
-  helperText?: string;
-  tooltipInfo?: string;
-  options?: SelectOption[];
-  isCreated?: boolean;
-} & SelectOptionValues;
-
-type InputProps = Partial<Omit<InputHTMLAttributes<HTMLInputElement>, 'size'>>;
-
-export type SelectProps = {
-  /** The function that is used to return the selected options */
-  handleSelectedOption?: (selectedOption: SelectOption) => void;
-  /** the default value of the select if needed */
-  /** TODO: defaultValue is duplication of selectedOption*/
-  defaultValue?: SelectOption;
-  /** the value of the select if select is controlled */
-  selectedOption?: SelectOption;
-  /** Options for the select dropdown */
-  options: SelectOption[];
-  /** if the component is used asynchronously */
-  isAsync?: boolean;
-  /** the function to fetch new options */
-  asyncSearch?: (term: string) => void;
-  /** after how many characters to start searching (default = 0) */
-  minCharactersToSearch?: number;
-  /** if searched text should be highlighted in available options */
-  hasHighlightSearch?: boolean;
-  /** if the options are searchable */
-  isSearchable?: boolean;
-  /** data-testid suffix */
-  dataTestId?: string;
-  /** if component is loading */
-  isLoading?: boolean;
-  /** if options list is virtualized */
-  isVirtualized?: boolean;
-  /** A callback that's called when the user clicks the 'clear' icon of the (Single) Select, or the 'clear all' button of the MultiSelect */
-  onClear?: () => void;
-  /** A callback that's called when the user clicks the 'clear' icon of a specific Chip in MultiSelect */
-  onOptionDelete?: (option: SelectOption) => void;
-  /** If true the user can select multiple options */
-  isMulti?: boolean;
-  /** The selected options in case of multiSelect */
-  /** @TODO merge selectedOption with selectedOptions in v5 */
-  selectedOptions?: SelectOption[];
-  /**
-   * If true, then in the case of a searched option that is not found in the Options list of MultiSelect,
-   * the user can create this option.
-   * */
-  isCreatable?: boolean;
-  /** Whether the MultiSelect should have a Select All option */
-  hasSelectAllOption?: boolean;
-} & TextFieldProps &
-  InputProps &
-  TestProps;
-
-const emptyValue = { label: '', value: '' };
-// Mocks onChange to avoid readonly warning for TextField Component
-
-const ON_CHANGE_MOCK = () => {};
+export const emptyValue: SelectOption = { label: '', value: '' };
 
 const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const {
-    handleSelectedOption = () => {},
-    defaultValue = undefined,
-    selectedOption = emptyValue,
-    isMulti = false,
+    selectedOption,
+    isMulti,
     options,
     isAsync = false,
     isLoading = false,
@@ -103,66 +38,105 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     isVirtualized = false,
     isDisabled,
     dataTestId,
-    onClear,
-    onOptionDelete,
-    selectedOptions = [],
+    onChange,
     isCreatable = false,
     hasSelectAllOption = false,
     ...restInputProps
   } = props;
-  const theme = useTheme();
-  const [isOpen, setIsOpen] = React.useState(false);
-  const inputRef = React.useRef<HTMLInputElement>(null);
-  const combinedRefs = useCombinedRefs(inputRef, ref);
 
-  const initialValue = defaultValue ?? selectedOption;
+  const listRef = useRef<HTMLUListElement | null>(null);
+  const { keyboardProps } = useKeyboard({
+    events: {
+      keydown: {
+        onArrowDown: () => {
+          setIsOpen(true);
+          // set on diff thread to wait to open
+          setTimeout(() => {
+            const options = listRef.current?.querySelectorAll('[role="option"]');
+            if (options && options?.length > 0) {
+              const firstOption = head(options);
+              if (firstOption instanceof HTMLElement && typeof firstOption.focus === 'function') {
+                firstOption.focus();
+              }
+            }
+          }, 0);
+        },
+        onEscape: () => {
+          combinedRefs?.current?.blur();
+          setIsOpen(false);
 
-  const [inputValue, setInputValue] = React.useState(defaultValue || selectedOption);
-  const [searchValue, setSearchValue] = React.useState('');
-
-  const textFieldValue = searchValue || inputValue.label;
-
-  const {
-    multiSelectedOptions,
-    availableMultiSelectOptions,
-    handleOptionDelete,
-    handleClearAllOptions,
-    handleMultiSelectOptionClick,
-  } = useMultiselectUtils({
-    selectedOptions,
-    options,
-    setOpen: setIsOpen,
-    setSearchValue,
-    isSearchable,
-    onClear,
-    onOptionDelete,
-    isMulti,
+          handleIconClick();
+        },
+        onEnter: (text) => {
+          if (text.length > 0) {
+            setTimeout(() => {
+              const firstChild = listRef.current?.firstChild;
+              if (firstChild instanceof HTMLElement && typeof firstChild.click === 'function') {
+                firstChild.click();
+              }
+            }, 0);
+          }
+        },
+        onBackspace: () => {
+          debouncedOnChange('');
+          setIsOpen(true);
+        },
+        onAlphaNumerical: () => {
+          if (isSearchable) {
+            setIsOpen(true);
+          }
+        },
+      },
+    },
   });
 
-  useEffect(() => {
-    setInputValue(initialValue);
-  }, [initialValue]);
+  const { keyboardProps: menuKeyboardProps } = useKeyboard({
+    events: {
+      keydown: {
+        onEscape: () => {
+          setIsOpen(false);
+          combinedRefs.current?.focus();
+        },
+      },
+    },
+  });
+
+  const theme = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const combinedRefs = useCombinedRefs(inputRef, ref);
+
+  const [searchValue, setSearchValue] = useState('');
+
+  const textFieldValue = Array.isArray(selectedOption)
+    ? searchValue
+    : searchValue || selectedOption?.label;
 
   const handleOptionClick = (option: SelectOption) => {
-    if (isMulti) {
-      handleMultiSelectOptionClick(option);
-    } else {
-      if (option.isCreated) {
-        setInputValue({ ...option, label: option.value.toString() });
-      } else {
-        setInputValue(option);
-      }
-
+    if (!isMulti) {
       setIsOpen(false);
     }
 
     if (isSearchable) {
       setSearchValue('');
     }
-    handleSelectedOption(option);
+
+    if (onChange && selectedOption) {
+      if (isMulti) {
+        if (isEqual(option, SELECT_ALL_OPTION)) {
+          onChange(options.filter((o) => !o.isDisabled));
+        } else {
+          onChange([...selectedOption, option]);
+        }
+      } else {
+        onChange(option);
+      }
+    }
+    combinedRefs.current?.focus();
   };
 
-  const debouncedOnChange = React.useCallback(
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const debouncedOnChange = useCallback(
     debounce((term) => {
       asyncSearch(term);
     }, 400),
@@ -188,11 +162,14 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
         minCharactersToSearch,
       });
     },
-    [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch, open]
+    [debouncedOnChange, isAsync, isSearchable, minCharactersToSearch]
   );
 
   const filteredOptions = useMemo(() => {
-    const optionsToBeFiltered = isMulti ? availableMultiSelectOptions : options;
+    const optionsToBeFiltered =
+      isMulti && Array.isArray(selectedOption)
+        ? differenceBy(options, selectedOption, 'value')
+        : options;
     const finalOptions: SelectOption[] = [];
 
     if (isAsync) {
@@ -237,35 +214,42 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     }
 
     return finalOptions;
-  }, [isAsync, isMulti, availableMultiSelectOptions, options, isCreatable, searchValue]);
+  }, [isMulti, options, selectedOption, isAsync, isCreatable, searchValue]);
 
   const suffixNameSelector = useMemo(() => {
-    if (isSearchable) {
-      return searchValue || inputValue.value ? 'close' : 'search';
+    if (isSearchable && !Array.isArray(selectedOption)) {
+      return searchValue || selectedOption?.value ? 'close' : 'search';
     }
 
     return 'triangleDown';
-  }, [inputValue.value, isSearchable, searchValue]);
+  }, [selectedOption, isSearchable, searchValue]);
 
   const handleIconClick = React.useCallback(() => {
     if (isSearchable && isOpen) {
       setIsOpen(!isOpen);
     }
-    if (isSearchable && (searchValue || inputValue.value)) {
+    if (isSearchable && !Array.isArray(selectedOption) && (searchValue || selectedOption?.value)) {
       setSearchValue('');
-      setInputValue(emptyValue);
-      asyncSearch('');
-
-      if (onClear) {
-        onClear();
+      if (onChange) {
+        if (isMulti) {
+          onChange([]);
+        } else {
+          onChange(emptyValue);
+        }
       }
+      asyncSearch('');
     }
-  }, [asyncSearch, inputValue.value, isSearchable, onClear, isOpen, searchValue]);
+  }, [isSearchable, isOpen, selectedOption, searchValue, onChange, asyncSearch, isMulti]);
 
   const suffixRender = useMemo(
     () => (
       <div css={suffixContainer(isOpen, isSearchable)}>
-        {isLoading && <Loader />}
+        {isLoading && (
+          <Box py={'2'} display={'flex'} alignItems={'center'}>
+            <Loader />
+          </Box>
+        )}
+
         <Icon
           size={isSearchable ? 20 : 12}
           name={suffixNameSelector}
@@ -280,10 +264,8 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 
   const handleClick = () => {
     if (!isOpen) {
-      setIsOpen(true);
       combinedRefs?.current?.focus();
     } else if (!isSearchable) {
-      setIsOpen(false);
       combinedRefs?.current?.blur();
     }
   };
@@ -295,23 +277,7 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
   const hasNoOptionsAndIsCreatable =
     isCreatable && filteredOptions.length === 1 && filteredOptions[0].isCreated;
 
-  const handleSingleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    const isBackspace = event.key === 'Backspace';
-
-    if (isBackspace) {
-      setInputValue(emptyValue);
-      debouncedOnChange('');
-    }
-  };
-
-  const handleMultiKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    const isEnter = event.key === 'Enter';
-
-    if (hasNoOptionsAndIsCreatable && isEnter) {
-      handleMultiSelectOptionClick(filteredOptions[0]);
-      setSearchValue('');
-    }
-  };
+  const selectUniqueId = useRef(generateUniqueID('select_')).current;
 
   return (
     <ClickAwayListener
@@ -322,19 +288,31 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
     >
       <div
         {...(!(isDisabled || status.type === 'read-only') && { onClick: handleClick })}
-        css={selectWrapper({ isSearchable })}
+        css={selectWrapper()}
+        {...menuKeyboardProps}
       >
         <PositionInScreen
+          id={selectUniqueId}
           isVisible={isOpen}
           hasWrapperWidth
           offsetY={8}
           parent={
             isMulti ? (
               <MultiTextFieldBase
-                selectedOptions={multiSelectedOptions}
+                selectedOptions={selectedOption as SelectOption[]}
                 onInput={handleOnInput}
-                onOptionDelete={handleOptionDelete as (option?: string | SelectOption) => void}
-                onClearAllOptions={handleClearAllOptions}
+                onOptionDelete={(option) => {
+                  const items = Array.isArray(selectedOption)
+                    ? selectedOption.filter((o) =>
+                        typeof option !== 'string' && option
+                          ? o.value !== option.value
+                          : o.value !== option
+                      )
+                    : [];
+
+                  if (onChange) onChange(items);
+                }}
+                onClearAllOptions={() => onChange && onChange([])}
                 isLoading={isLoading}
                 isDisabled={isDisabled}
                 readOnly={!isSearchable}
@@ -344,30 +322,39 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
                 value={textFieldValue}
                 ref={combinedRefs}
                 autoComplete="off"
-                onKeyDown={handleMultiKeyDown}
+                {...keyboardProps}
+                onClick={() => setIsOpen(true)}
+                role={'combobox'}
+                aria-expanded={isOpen}
+                aria-controls={selectUniqueId}
               />
             ) : (
               <TextField
                 suffix={suffixRender}
-                onKeyDown={handleSingleKeyDown}
+                {...keyboardProps}
                 onInput={handleOnInput}
-                onChange={ON_CHANGE_MOCK}
                 readOnly={!isSearchable}
                 isDisabled={isDisabled}
                 dataTestId={generateTestDataId('select-input', dataTestId)}
                 {...restInputProps}
+                placeholder={undefined}
+                onClick={() => setIsOpen(true)}
                 status={status}
                 value={textFieldValue}
                 ref={combinedRefs}
                 autoComplete="off"
+                role={'combobox'}
+                aria-expanded={isOpen}
+                aria-controls={selectUniqueId}
               />
             )
           }
         >
           <SelectMenu
+            ref={listRef}
             filteredOptions={filteredOptions}
             handleOptionClick={handleOptionClick}
-            selectedOption={inputValue.value}
+            selectedOption={isMulti || !selectedOption ? emptyValue : selectedOption}
             status={status}
             isLoading={isLoading}
             isVirtualized={isVirtualized}
@@ -381,5 +368,4 @@ const Select = React.forwardRef<HTMLInputElement, SelectProps>((props, ref) => {
 });
 
 Select.displayName = 'Select';
-
 export default React.memo(Select, isEqual);

@@ -11,16 +11,6 @@ export const wrapperStyle =
       width: ${`${width}px` || '100%'};
     `;
 
-export const listLabelWithHelper: SerializedStyles = css`
-  display: flex;
-  flex-direction: column;
-  cursor: inherit;
-`;
-
-export const listLabel: SerializedStyles = css`
-  cursor: inherit;
-`;
-
 export const listStyle =
   ({ width, height, isSearchable }: { width?: number; height?: number; isSearchable?: boolean }) =>
   (theme: Theme): SerializedStyles =>
@@ -30,14 +20,15 @@ export const listStyle =
       margin-bottom: 0;
       border-radius: ${isSearchable ? 'initial' : theme.globals.spacing.get('3')};
       width: ${width ? rem(width) : '100%'};
-      height: ${height ? rem(height) : '100%'};
+      height: ${height ? rem(height) : 'auto'};
       overflow: auto;
       overflow-x: hidden;
+      background: ${theme.globals.colors.white};
     `;
 
-export const listLabelHelperText = (theme: Theme): SerializedStyles => css`
-  font-size: ${theme.globals.typography.fontSize.get('1')};
-  font-weight: ${theme.globals.typography.fontWeight.get('regular')};
-  color: ${theme.utils.getColor('lightGrey', 650)};
-  cursor: inherit;
+export const groupedUlStyle = (): SerializedStyles => css`
+   {
+    padding: 0;
+    list-style: none;
+  }
 `;

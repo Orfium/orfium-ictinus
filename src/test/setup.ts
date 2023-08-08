@@ -3,6 +3,12 @@ import { createSerializer } from '@emotion/jest';
 
 expect.addSnapshotSerializer(createSerializer());
 
+global.ResizeObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+
 jest.mock(
   (() => {
     // This will mock the version of uuid belonging to react-tooltip
@@ -46,3 +52,8 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
+
+jest.mock('@react-aria/ssr/dist/main', () => ({
+  ...jest.requireActual('@react-aria/ssr/dist/main'),
+  useSSRSafeId: () => 'react-aria-generated-id',
+}));

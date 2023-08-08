@@ -26,7 +26,7 @@ function changeAttributeValueToStatic(
  */
 const storyTreeCrawler: (child: any) => void = (child: any) => {
   child.children.forEach((prop: any) => {
-    DYNAMIC_ATTRIBUTES_LIST.forEach(attr => {
+    DYNAMIC_ATTRIBUTES_LIST.forEach((attr) => {
       changeAttributeValueToStatic(prop, attr);
     });
 
@@ -35,19 +35,3 @@ const storyTreeCrawler: (child: any) => void = (child: any) => {
     }
   });
 };
-
-/**
- * Initializes the crawling process of the tree object.
- * @param tree
- */
-export function crawlTreeChildrenProps(tree: any) {
-  if (tree) {
-    if ('children' in tree) {
-      const treeChildren = tree.children;
-      treeChildren &&
-        treeChildren.forEach((prop: any) => {
-          storyTreeCrawler(prop);
-        });
-    }
-  }
-}

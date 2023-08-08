@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { showcaseContainer } from './EdgeCasesSelectShowcase.style';
-import Select from 'components/Select';
+import { StatefulSelect } from 'components/Select';
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -19,7 +19,7 @@ const EdgeCasesSelectShowcase: React.FC = () => {
   return (
     <div css={showcaseContainer()}>
       <div style={{ width: 250 }}>
-        <Select
+        <StatefulSelect
           label={'Flavour'}
           options={[
             ...options,
@@ -30,30 +30,30 @@ const EdgeCasesSelectShowcase: React.FC = () => {
             },
           ]}
           selectedOption={defaultValue}
-          handleSelectedOption={handleSelectedOption}
+          onChange={handleSelectedOption}
         />
       </div>
-      <Select
+      <StatefulSelect
         label={'Flavour'}
         options={options}
         selectedOption={defaultValue}
-        handleSelectedOption={handleSelectedOption}
+        onChange={handleSelectedOption}
       />
 
       <div style={{ width: 100 }}>
-        <Select
+        <StatefulSelect
           label={'Flavour'}
           options={options}
           selectedOption={defaultValue}
-          handleSelectedOption={handleSelectedOption}
+          onChange={handleSelectedOption}
         />
       </div>
       <div style={{ width: 400, position: 'absolute', bottom: '15%' }}>
-        <Select
+        <StatefulSelect
           label={'Bottom positioned case'}
           options={options}
           selectedOption={defaultValue}
-          handleSelectedOption={handleSelectedOption}
+          onChange={handleSelectedOption}
         />
       </div>
     </div>

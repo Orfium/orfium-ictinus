@@ -18,12 +18,7 @@ const DatePickerShowcase: React.FC = () => {
   return (
     <div style={{ width: '100%', height: '100%' }}>
       <h3>Reset DatePicker value (with external component)</h3>
-      <DatePicker
-        value={date}
-        inputProps={{ size: 'md', styleType: 'outlined' }}
-        isClearable
-        onChange={setDate}
-      />
+      <DatePicker value={date} isClearable onChange={setDate} />
       <Button onClick={() => setDate({ from: undefined, to: undefined })}>
         Reset DatePicker value
       </Button>
@@ -33,7 +28,6 @@ const DatePickerShowcase: React.FC = () => {
       <h3>Reset RangePicker value (with external component)</h3>
       <DatePicker
         value={dateRange}
-        inputProps={{ size: 'md', styleType: 'outlined' }}
         isRangePicker
         isClearable
         dateFormatOverride="MMM D, YYYY"

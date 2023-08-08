@@ -1,8 +1,7 @@
 import { css } from '@emotion/react';
 import React, { useState } from 'react';
 
-import Select from '../../Select';
-import { SelectOption } from '../../Select/Select';
+import Select, { SelectOption } from '../../Select';
 
 export const dummyUnrefinedData = new Array(15).fill(undefined).map((value, index) => ({
   value: index,
