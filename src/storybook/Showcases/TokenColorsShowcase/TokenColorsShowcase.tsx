@@ -32,7 +32,7 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
     ? ['blue', 'tinted', 'transparent', 'teal', 'purple', 'orange', 'red', 'neutral', 'gradient']
     : ['primary', 'secondary', 'tertiary', 'inverted', 'warning', 'upsell', 'error'];
 
-  const colorsObj = isGlobal ? globalColorsFigma : colorsFigma;
+  const colorsObj = isGlobal ? globalColorsFigma : colorsFigma.palette;
 
   // eslint-disable-next-line @typescript-eslint/ban-types
   const colors = map(pick(colorsObj as Object, colorKeys), (value, key) => ({
@@ -58,7 +58,7 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
                   .filter((state) => get(colorsObj, [type.key, state]))
                   .map((state) => (
                     <div
-                      key={`${type.key}.${state}`}
+                      key={`palette.${type.key}.${state}`}
                       css={css`
                         display: flex;
                         margin: 15px 0;
@@ -72,7 +72,7 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
                                 `${type.key}.${state}` as DotKeys<typeof globalColorsFigma>
                               )
                             : theme.tokens.colors.get(
-                                `${type.key}.${state}` as DotKeys<typeof colorsFigma>
+                                `palette.${type.key}.${state}` as DotKeys<typeof colorsFigma>
                               )};
                         `}
                       />
@@ -83,7 +83,7 @@ const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
                             {colorsObj[type.key][state].description}
                           </Typography>
                           <Typography variant={'label03'} component={'span'} type={'active'}>
-                            ${`${type.key}.${state}`}
+                            ${`palette.${type.key}.${state}`}
                           </Typography>
                           {' = '}
                           <Typography variant={'label03'} component={'span'} type={'active'}>

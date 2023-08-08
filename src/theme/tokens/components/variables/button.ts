@@ -2,17 +2,17 @@ const button = {
   primary: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.primary.main}',
+        value: '{sem.colors.palette.primary.main}',
         type: 'color',
         description: 'Sets backgroundColor for primary default button',
       },
       hover: {
-        value: '{sem.colors.primary.dark}',
+        value: '{sem.colors.palette.primary.dark}',
         type: 'color',
         description: 'Sets backgroundColor for primary hovered button',
       },
       active: {
-        value: '{sem.colors.primary.darkest}',
+        value: '{sem.colors.palette.primary.darkest}',
         type: 'color',
         description: 'Sets backgroundColor for primary active (pressed) button',
       },
@@ -26,17 +26,17 @@ const button = {
   secondary: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.secondary.main}',
+        value: '{sem.colors.palette.secondary.main}',
         type: 'color',
         description: 'Sets backgroundColor for secondary default button',
       },
       hover: {
-        value: '{sem.colors.secondary.dark}',
+        value: '{sem.colors.palette.secondary.dark}',
         type: 'color',
         description: 'Sets backgroundColor for secondary hovered button',
       },
       active: {
-        value: '{sem.colors.secondary.darkest}',
+        value: '{sem.colors.palette.secondary.darkest}',
         type: 'color',
         description: 'Sets backgroundColor for secondary active button',
       },
@@ -51,16 +51,16 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.tertiary.lightest}',
+        value: '{sem.colors.palette.tertiary.lightest}',
         description: 'Sets backgroundColor for tertiary default button',
       },
       hover: {
-        value: '{sem.colors.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.light}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary hovered button',
       },
       active: {
-        value: '{sem.colors.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.main}',
         type: 'color',
         description: 'Sets backgroundColor for tertiary active button',
       },
@@ -75,16 +75,16 @@ const button = {
     backgroundColor: {
       default: {
         type: 'color',
-        value: '{sem.colors.tertiary.lightest}',
+        value: '{sem.colors.palette.tertiary.lightest}',
         description: 'Sets backgroundColor for invertedAlt default button',
       },
       hover: {
-        value: '{sem.colors.tertiary.light}',
+        value: '{sem.colors.palette.tertiary.light}',
         type: 'color',
         description: 'Sets backgroundColor for invertedAlt hovered button',
       },
       active: {
-        value: '{sem.colors.tertiary.main}',
+        value: '{sem.colors.palette.tertiary.main}',
         type: 'color',
         description: 'Sets backgroundColor for invertedAlt active button',
       },
@@ -98,17 +98,17 @@ const button = {
   danger: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.error.lightest}',
+        value: '{sem.colors.palette.error.lightest}',
         type: 'color',
         description: 'Sets backgroundColor for danger default button',
       },
       hover: {
-        value: '{sem.colors.error.light}',
+        value: '{sem.colors.palette.error.light}',
         type: 'color',
         description: 'Sets backgroundColor for danger hovered button',
       },
       active: {
-        value: '{sem.colors.error.main}',
+        value: '{sem.colors.palette.error.main}',
         type: 'color',
         description: 'Sets backgroundColor for danger active button',
       },
@@ -122,17 +122,17 @@ const button = {
   inverted: {
     backgroundColor: {
       default: {
-        value: '{sem.colors.inverted.main}',
+        value: '{sem.colors.palette.inverted.main}',
         type: 'color',
         description: 'Sets backgroundColor for inverted default button',
       },
       hover: {
-        value: '{sem.colors.inverted.dark}',
+        value: '{sem.colors.palette.inverted.dark}',
         type: 'color',
         description: 'Sets backgroundColor for inverted hovered button',
       },
       active: {
-        value: '{sem.colors.inverted.darkest}',
+        value: '{sem.colors.palette.inverted.darkest}',
         type: 'color',
         description: 'Sets backgroundColor for inverted active (pressed) button',
       },
