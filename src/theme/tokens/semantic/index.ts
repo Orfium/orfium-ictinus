@@ -3,6 +3,7 @@ import disabledState from './disabledState';
 import icon from './icon';
 import palette from './palette';
 import state from './state';
+import typography from './typography';
 
 const semantic = {
   /** @TODO remove palette when all components are revisited for v5 */
@@ -12,6 +13,7 @@ const semantic = {
   colors,
   icon,
   state,
+  typography,
 };
 
 export default semantic;

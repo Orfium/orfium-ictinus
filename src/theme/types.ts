@@ -15,6 +15,7 @@ import { SemanticDisabledState } from './tokens/semantic/disabledState';
 import { SemanticIcon } from './tokens/semantic/icon';
 import { SemanticPalette } from './tokens/semantic/palette';
 import { SemanticState } from './tokens/semantic/state';
+import { SemanticTypography } from './tokens/semantic/typography';
 
 export type TextColorTypes = 'primary' | 'secondary' | 'light';
 export type ColorScheme = 'semantic' | 'dark';
@@ -28,12 +29,14 @@ export type ThemeConfig = {
 };
 
 export type SemanticTheme = {
+  /** @TODO remove palette when all components are revisited for v5 */
   palette: SemanticPalette;
 
   colors: SemanticColors;
   disabledState: SemanticDisabledState;
   icon: SemanticIcon;
   state: SemanticState;
+  typography: SemanticTypography;
 };
 
 /** Will add more themes in the future (e.g.: DarkTheme) */
