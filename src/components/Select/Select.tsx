@@ -310,8 +310,11 @@ const Select = React.forwardRef<HTMLInputElement, Props & InputProps & TestProps
       const isEnter = event.key === 'Enter';
 
       if (hasNoOptionsAndIsCreatable && isEnter) {
-        handleMultiSelectOptionClick(filteredOptions[0]);
+        const selectedOption = filteredOptions[0];
+
+        handleMultiSelectOptionClick(selectedOption);
         setSearchValue('');
+        handleSelectedOption(selectedOption);
       }
     };
 
