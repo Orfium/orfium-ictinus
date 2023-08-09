@@ -33,163 +33,165 @@ const colors = {
       description: 'backdrop shade, dark variant',
     },
   },
-  error: {
-    lightest: {
-      type: 'color',
-      value: '{colors.red.1}',
+  palette: {
+    error: {
+      lightest: {
+        type: 'color',
+        value: '{colors.red.1}',
+      },
+      light: {
+        type: 'color',
+        value: '{colors.red.2}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.red.3}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.red.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.red.5}',
+      },
     },
-    light: {
-      type: 'color',
-      value: '{colors.red.2}',
+    warning: {
+      lightest: {
+        type: 'color',
+        value: '{colors.orange.1}',
+      },
+      light: {
+        type: 'color',
+        value: '{colors.orange.2}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.orange.3}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.orange.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.orange.5}',
+      },
     },
-    main: {
-      type: 'color',
-      value: '{colors.red.3}',
+    primary: {
+      lightest: {
+        type: 'color',
+        value: '{colors.blue.1}',
+      },
+      light: {
+        type: 'color',
+        value: '{colors.blue.2}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.blue.3}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.blue.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.blue.5}',
+        description: 'Used to indicate active state',
+      },
     },
-    dark: {
-      type: 'color',
-      value: '{colors.red.4}',
+    secondary: {
+      lightest: {
+        type: 'color',
+        value: '{colors.tinted.1}',
+      },
+      light: {
+        type: 'color',
+        value: '{colors.tinted.2}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.tinted.3}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.tinted.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.tinted.5}',
+      },
     },
-    darkest: {
-      type: 'color',
-      value: '{colors.red.5}',
+    inverted: {
+      lightest: {
+        type: 'color',
+        value: '{colors.teal.1}',
+      },
+      light: {
+        type: 'color',
+        value: '{colors.teal.2}',
+      },
+      main: {
+        type: 'color',
+        value: '{colors.teal.3}',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.teal.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.teal.5}',
+      },
     },
-  },
-  warning: {
-    lightest: {
-      type: 'color',
-      value: '{colors.orange.1}',
+    tertiary: {
+      lightest: {
+        value: '{colors.transparent.1}',
+        type: 'color',
+      },
+      light: {
+        value: '{colors.transparent.2}',
+        type: 'color',
+      },
+      main: {
+        value: '{colors.transparent.3}',
+        type: 'color',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.transparent.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.transparent.5}',
+      },
     },
-    light: {
-      type: 'color',
-      value: '{colors.orange.2}',
-    },
-    main: {
-      type: 'color',
-      value: '{colors.orange.3}',
-    },
-    dark: {
-      type: 'color',
-      value: '{colors.orange.4}',
-    },
-    darkest: {
-      type: 'color',
-      value: '{colors.orange.5}',
-    },
-  },
-  primary: {
-    lightest: {
-      type: 'color',
-      value: '{colors.blue.1}',
-    },
-    light: {
-      type: 'color',
-      value: '{colors.blue.2}',
-    },
-    main: {
-      type: 'color',
-      value: '{colors.blue.3}',
-    },
-    dark: {
-      type: 'color',
-      value: '{colors.blue.4}',
-    },
-    darkest: {
-      type: 'color',
-      value: '{colors.blue.5}',
-      description: 'Used to indicate active state',
-    },
-  },
-  secondary: {
-    lightest: {
-      type: 'color',
-      value: '{colors.tinted.1}',
-    },
-    light: {
-      type: 'color',
-      value: '{colors.tinted.2}',
-    },
-    main: {
-      type: 'color',
-      value: '{colors.tinted.3}',
-    },
-    dark: {
-      type: 'color',
-      value: '{colors.tinted.4}',
-    },
-    darkest: {
-      type: 'color',
-      value: '{colors.tinted.5}',
-    },
-  },
-  inverted: {
-    lightest: {
-      type: 'color',
-      value: '{colors.teal.1}',
-    },
-    light: {
-      type: 'color',
-      value: '{colors.teal.2}',
-    },
-    main: {
-      type: 'color',
-      value: '{colors.teal.3}',
-    },
-    dark: {
-      type: 'color',
-      value: '{colors.teal.4}',
-    },
-    darkest: {
-      type: 'color',
-      value: '{colors.teal.5}',
-    },
-  },
-  tertiary: {
-    lightest: {
-      value: '{colors.transparent.1}',
-      type: 'color',
-    },
-    light: {
-      value: '{colors.transparent.2}',
-      type: 'color',
-    },
-    main: {
-      value: '{colors.transparent.3}',
-      type: 'color',
-    },
-    dark: {
-      type: 'color',
-      value: '{colors.transparent.4}',
-    },
-    darkest: {
-      type: 'color',
-      value: '{colors.transparent.5}',
-    },
-  },
-  upsell: {
-    lightest: {
-      value: '{colors.purple.1}',
-      type: 'color',
-    },
-    light: {
-      value: '{colors.purple.2}',
-      type: 'color',
-    },
-    main: {
-      value: '{colors.purple.3}',
-      type: 'color',
-    },
-    dark: {
-      type: 'color',
-      value: '{colors.purple.4}',
-    },
-    darkest: {
-      type: 'color',
-      value: '{colors.purple.5}',
+    upsell: {
+      lightest: {
+        value: '{colors.purple.1}',
+        type: 'color',
+      },
+      light: {
+        value: '{colors.purple.2}',
+        type: 'color',
+      },
+      main: {
+        value: '{colors.purple.3}',
+        type: 'color',
+      },
+      dark: {
+        type: 'color',
+        value: '{colors.purple.4}',
+      },
+      darkest: {
+        type: 'color',
+        value: '{colors.purple.5}',
+      },
     },
   },
   textColor: {
-    primary: {
+    light: {
       primary: {
         value: '{colors.neutral.4}',
         type: 'color',

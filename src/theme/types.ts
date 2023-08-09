@@ -10,15 +10,11 @@ import { Typography } from './globals/typography';
 import { Overrides } from './overrides';
 import { GetAAColor, GetAAColorFromSwatches, GetColor, Palette } from './palette';
 import { PaletteConfig } from './palette.config';
-import { SemanticBackDrop } from './tokens/semantic/backdrop';
-import { SemanticBackgroundColor } from './tokens/semantic/backgroundColor';
-import { SemanticBorderColor } from './tokens/semantic/borderColor';
 import { SemanticColors } from './tokens/semantic/colors';
 import { SemanticDisabledState } from './tokens/semantic/disabledState';
 import { SemanticIcon } from './tokens/semantic/icon';
 import { SemanticPalette } from './tokens/semantic/palette';
 import { SemanticState } from './tokens/semantic/state';
-import { SemanticTextColor } from './tokens/semantic/textColor';
 
 export type TextColorTypes = 'primary' | 'secondary' | 'light';
 export type ColorScheme = 'semantic' | 'dark';
@@ -32,11 +28,7 @@ export type ThemeConfig = {
 };
 
 export type SemanticTheme = {
-  backdrop: SemanticBackDrop;
-  backgroundColor: SemanticBackgroundColor;
-  borderColor: SemanticBorderColor;
   palette: SemanticPalette;
-  textColor: SemanticTextColor;
 
   colors: SemanticColors;
   disabledState: SemanticDisabledState;

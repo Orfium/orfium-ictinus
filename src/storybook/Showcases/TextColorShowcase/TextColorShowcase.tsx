@@ -1,8 +1,7 @@
 import useTheme from 'hooks/useTheme';
 import React, { useMemo } from 'react';
-import backgroundColorFigma from 'theme/tokens/semantic/variables/backgroundColor';
-import textColor from 'theme/tokens/semantic/variables/textColor';
-import { DotKeys } from 'theme/tokens/utils';
+import { SemanticColorsKey } from 'theme/tokens/semantic/colors';
+import colors from 'theme/tokens/semantic/variables/colors';
 
 import { descriptionStyle, dividerStyle } from './TextColorShowcase.style';
 import Typography, { TextColorTypes } from 'components/Typography';
@@ -14,17 +13,17 @@ const TextColorShowcase = () => {
     [key: string]: { label: string; type: string; value: string; hex: string }[];
   } = useMemo(
     () =>
-      Object.entries(textColor).reduce((acc, [key, value]) => {
+      Object.entries(colors.textColor).reduce((acc, [key, value]) => {
         acc[key] = Object.entries(value).map(([nestedKey, nestedValue]) => ({
           label: `sem.textColor.${key}.${nestedKey}`,
           type: nestedKey,
           value: nestedValue.value,
-          hex: theme.tokens.textColor.get(`${key}.${nestedKey}` as DotKeys<typeof textColor>),
+          hex: theme.tokens.colors.get(`textColor.${key}.${nestedKey}` as SemanticColorsKey),
         }));
 
         return acc;
       }, {}),
-    [theme.tokens.textColor]
+    [theme.tokens.colors]
   );
 
   return (
@@ -33,8 +32,8 @@ const TextColorShowcase = () => {
         <div
           key={`textColor_${index}`}
           css={{
-            background: theme.tokens.backgroundColor.get(
-              colorCategory as DotKeys<typeof backgroundColorFigma>
+            background: theme.tokens.colors.get(
+              `backgroundColor.${colorCategory}` as SemanticColorsKey
             ),
             width: '100%',
             padding: '16px',
@@ -63,7 +62,7 @@ const TextColorShowcase = () => {
                   {color.type}
                 </Typography>
               </div>
-              <div css={descriptionStyle(colorCategory as DotKeys<typeof backgroundColorFigma>)}>
+              <div css={descriptionStyle(colorCategory)}>
                 <Typography
                   variant={'label03'}
                   component={'span'}

@@ -1,6 +1,6 @@
 import { SpacingKey } from 'theme/globals/spacing';
-import { BackgroundColorKey } from 'theme/tokens/semantic/backgroundColor';
-import { TextColorKey } from 'theme/tokens/semantic/textColor';
+import globalColors from 'theme/tokens/semantic/variables/colors';
+import { DotKeys } from 'theme/tokens/utils';
 
 export type Responsive<T> = T | Array<T>;
 
@@ -212,13 +212,13 @@ export type WhiteSpace =
 
 export type StyledBoxProps = {
   /** Accepts all themeable color properties. */
-  color?: TextColorKey;
+  color?: DotKeys<typeof globalColors.textColor>;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment */
   backgroundAttachment?: string;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip */
   backgroundClip?: string;
   /** Accepts all themeable color properties. */
-  backgroundColor?: BackgroundColorKey;
+  backgroundColor?: DotKeys<typeof globalColors.backgroundColor>;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-image */
   backgroundImage?: string;
   /** available values: https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin */
