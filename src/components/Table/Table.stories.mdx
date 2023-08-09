@@ -59,6 +59,19 @@ import { Table } from '@orfium/ictinus';
 
 <Props of={Table} />
 
+### Disclaimer 
+
+In case of importing data produced using useMemo or external const, follow this pattern:
+
+```js
+import { Row } from '@orfium/ictinus/dist/components/Table/Table';
+...
+const data: Row<DataType> = useMemo(() => {}, []);
+//or other types of data
+```
+
+Where Row is the type from the Table, so you must import it from there.
+
 # Regular Table
 
 Regular Table with simple rows
