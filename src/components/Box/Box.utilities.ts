@@ -1,4 +1,4 @@
-import { curry, omit, pick, pickBy } from 'lodash';
+import { curry, omit, pick } from 'lodash';
 import { Theme } from 'theme';
 
 import { StyledBoxProps } from './Box.types';
@@ -125,13 +125,13 @@ export const cssResolver = curry(
       // if is horizontal padding or margin
       if (key === 'px' || key === 'mx') {
         return {
-          [cssKey]: `${theme.globals[type].get(obj[key] || '0')} 0`,
+          [cssKey]: `0 ${theme.globals[type].get(obj[key] || '0')}`,
         };
       }
       // if is vertical padding or margin
       if (key === 'py' || key === 'my') {
         return {
-          [cssKey]: `0 ${theme.globals[type].get(obj[key] || '0')}`,
+          [cssKey]: `${theme.globals[type].get(obj[key] || '0')} 0`,
         };
       }
 
