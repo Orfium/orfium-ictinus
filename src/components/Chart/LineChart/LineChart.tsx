@@ -42,7 +42,7 @@ const LineChart: React.FC<LineChartProps> = ({
 
   const colors = Object.entries(colorsPicked);
 
-  return uniqueKeyNames.length <= Object.keys(theme.globals.colors.flat).length ? (
+  return uniqueKeyNames.length <= Object.keys(theme.globals.oldColors.flat).length ? (
     <WrappedChart data={data} margin={{ top: 10, right: 20, left: 20, bottom: 50 }} aspect={1.5}>
       <defs>
         {colors.map(([dataLabel, color]) => (
@@ -93,7 +93,9 @@ const LineChart: React.FC<LineChartProps> = ({
       ))}
     </WrappedChart>
   ) : (
-    <p>You must define less than {Object.keys(theme.globals.colors.flat).length} different data</p>
+    <p>
+      You must define less than {Object.keys(theme.globals.oldColors.flat).length} different data
+    </p>
   );
 };
 

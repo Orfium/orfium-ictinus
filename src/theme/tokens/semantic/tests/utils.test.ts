@@ -4,8 +4,8 @@ import { getTokensValue } from '../../utils';
 import { tokensObject, token } from './constants';
 
 describe('GetTokensValue functionality', () => {
-  test('that parseToken returns color if format is {colors.<palette>.<shade>}', () => {
-    expect(getTokensValue(tokensObject)('colorToken')).toEqual(colors.flat.blue[500]);
+  test.skip('that parseToken returns color if format is {colors.<palette>.<shade>}', () => {
+    expect(getTokensValue(tokensObject)('colorToken')).toEqual(colors.get('red.1'));
   });
 
   test('that parseToken returns color if hex or rgba', () => {

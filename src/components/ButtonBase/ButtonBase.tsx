@@ -9,7 +9,6 @@ import { TestProps } from '../../utils/types';
 import { ButtonTypes } from 'components/Button/Button.types';
 import ButtonLoader from 'components/Button/ButtonLoader';
 import { IconButtonShape } from 'components/IconButton';
-import Typography, { TextColorTypes } from 'components/Typography';
 
 export type EventButtonProps = {
   onClick?: (event: ClickEvent) => void;
@@ -57,17 +56,6 @@ const ButtonBase = React.forwardRef<HTMLButtonElement, ButtonBaseProps>((props, 
     sx,
   } = props;
   const testIdName = `${dataTestPrefixId}button`;
-
-  const getTextType = (type: ButtonTypes): TextColorTypes => {
-    if (type === 'tertiary') {
-      return 'secondary';
-    }
-    if (type === 'danger') {
-      return 'error';
-    }
-
-    return type as TextColorTypes;
-  };
 
   return (
     <div css={buttonWrapperStyle({ isBlock })}>

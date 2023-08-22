@@ -24,7 +24,7 @@ export const listItemStyle =
       font-size: ${theme.globals.typography.fontSize.get(size === 'normal' ? '4' : '3')};
       background-color: ${isSelected
         ? theme.utils.getColor('blue', 50)
-        : theme.globals.colors.white};
+        : theme.globals.oldColors.white};
       display: flex;
       align-items: center;
       padding: 0px ${theme.globals.spacing.get('6')} 0px

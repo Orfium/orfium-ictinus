@@ -10,7 +10,7 @@ export const listGroupTitleStyle =
     css`
       height: ${size === 'normal' ? rem(56) : rem(46)};
       font-size: ${theme.globals.typography.fontSize[size === 'normal' ? '13' : '11']};
-      background-color: ${theme.globals.colors.white};
+      background-color: ${theme.globals.oldColors.white};
       color: ${theme.utils.getColor('lightGrey', 650)};
       display: flex;
       align-items: center;

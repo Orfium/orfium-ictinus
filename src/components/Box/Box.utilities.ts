@@ -1,5 +1,6 @@
 import { curry, omit, pick } from 'lodash';
 import { Theme } from 'theme';
+import { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 
 import { StyledBoxProps } from './Box.types';
 
@@ -141,12 +142,12 @@ export const cssResolver = curry(
     }
     if (type === 'color') {
       return {
-        [cssKey]: theme.tokens.textColor.get(obj[key]),
+        [cssKey]: theme.tokens.colors.get(`textColor.${obj[key]}` as SemanticColorsKey),
       };
     }
 
     return {
-      [cssKey]: theme.tokens.backgroundColor.get(obj[key]),
+      [cssKey]: theme.tokens.colors.get(`backgroundColor.${obj[key]}` as SemanticColorsKey),
     };
   }
 );
