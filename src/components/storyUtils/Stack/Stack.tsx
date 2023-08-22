@@ -12,7 +12,7 @@ const Stack: React.FC<StackProps> = ({ isVertical = false, isInverted = false, c
   return (
     <div
       css={{
-        background: isInverted ? theme.tokens.backgroundColor.get('invertedDark') : undefined,
+        background: isInverted ? theme.tokens.colors.get('backgroundColor.inverted') : undefined,
         display: 'flex',
         flexDirection: isVertical ? 'column' : 'row',
         flexWrap: 'wrap',

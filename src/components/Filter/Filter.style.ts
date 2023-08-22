@@ -246,7 +246,7 @@ export const menuStyle = () => (theme: Theme) => {
     height: auto;
     border: ${rem(1)} solid ${theme.utils.getColor('lightGrey', 200)};
     border-radius: ${theme.globals.spacing.get('3')};
-    background-color: ${theme.globals.colors.white};
+    background-color: ${theme.globals.oldColors.white};
     box-shadow: ${theme.globals.elevation['02']};
     z-index: 500;
     overflow: hidden;

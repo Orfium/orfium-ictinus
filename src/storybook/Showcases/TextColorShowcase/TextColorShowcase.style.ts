@@ -1,8 +1,6 @@
 import { css, SerializedStyles } from '@emotion/react';
 import { rem } from 'polished';
 import { Theme } from 'theme';
-import backgroundColorFigma from 'theme/tokens/semantic/variables/backgroundColor';
-import { DotKeys } from 'theme/tokens/utils';
 
 export const dividerStyle = () =>
   css({
@@ -14,15 +12,15 @@ export const dividerStyle = () =>
   });
 
 export const descriptionStyle =
-  (colorCategory: DotKeys<typeof backgroundColorFigma>) =>
+  (colorCategory: string) =>
   (theme: Theme): SerializedStyles =>
     css`
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
       gap: 4px;
-      color: ${theme.tokens.textColor.get(
-        colorCategory === 'inverted' ? 'inverted.secondary' : 'light.secondary'
+      color: ${theme.tokens.colors.get(
+        colorCategory === 'inverted' ? 'textColor.inverted.secondary' : 'textColor.light.secondary'
       )};
       font-weight: 500;
       margin-bottom: 36px;
@@ -33,7 +31,7 @@ export const descriptionStyle =
       }
       span {
         background: ${colorCategory === 'inverted'
-          ? theme.tokens.backgroundColor.get('invertedDark')
+          ? theme.tokens.colors.get('backgroundColor.inverted')
           : theme.utils.getColor('blue', 50)};
         padding: 4px;
       }

@@ -12,5 +12,5 @@ export const WrapperStyle = (theme: Theme): SerializedStyles => css`
   flex-wrap: wrap;
   align-items: start;
   justify-content: start;
-  background: ${theme.tokens.backgroundColor.get('tintedDark')};
+  background: ${theme.tokens.colors.get('backgroundColor.tinted')};
 `;

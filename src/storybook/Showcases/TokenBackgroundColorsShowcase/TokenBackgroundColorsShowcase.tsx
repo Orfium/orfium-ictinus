@@ -1,11 +1,6 @@
 import { css } from '@emotion/react';
-import useTheme from 'hooks/useTheme';
 import { get, map } from 'lodash';
 import React, { FC } from 'react';
-import backdropFigma from 'theme/tokens/semantic/variables/backdrop';
-import backgroundColorFigma from 'theme/tokens/semantic/variables/backgroundColor';
-import borderColorFigma from 'theme/tokens/semantic/variables/borderColor';
-import { DotKeys } from 'theme/tokens/utils';
 
 import {
   colorStyle,
@@ -13,6 +8,7 @@ import {
   stateWrapperStyle,
   typeWrapperStyle,
 } from './TokenBackgroundColorsShowcase.style';
+import colorsFigma from '../../../theme/tokens/semantic/variables/colors';
 import Card from 'components/Card';
 import Typography from 'components/Typography';
 
@@ -24,16 +20,8 @@ type Props = {
  * Showcase component used on colors documents of storybook such as backgroundColor, backdrop and borderColor
  */
 const TokenBackgroundColorsShowcase: FC<Props> = ({ tokenType = 'backgroundColor' }) => {
-  const typePicker = () => {
-    if (tokenType === 'backdrop') {
-      return backdropFigma;
-    }
-    if (tokenType === 'borderColor') {
-      return borderColorFigma;
-    }
+  const typePicker = () => colorsFigma[tokenType];
 
-    return backgroundColorFigma;
-  };
   const deepMap = (
     obj: any,
     outerKey?: string
@@ -78,7 +66,7 @@ const TokenBackgroundColorsShowcase: FC<Props> = ({ tokenType = 'backgroundColor
                     &:after {
                       content: '';
                       margin-top: 8px;
-                      background: ${theme.tokens.borderColor.get('decorative.muted')};
+                      background: ${theme.tokens.colors.get('borderColor.decorative.muted')};
                       height: 1px;
                     }
                   }
@@ -95,7 +83,9 @@ const TokenBackgroundColorsShowcase: FC<Props> = ({ tokenType = 'backgroundColor
                   <div
                     css={(theme) => css`
                       ${colorStyle(theme)};
-                      background-color: ${theme.tokens[tokenType].get(`${inType.key}` as never)};
+                      background-color: ${theme.tokens.colors.get(
+                        `${tokenType}.${inType.key}` as never
+                      )};
                     `}
                   />
                   <div>
