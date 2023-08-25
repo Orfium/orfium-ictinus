@@ -17,7 +17,7 @@ export const ListItemWrapperStyled = styled('li', { target: '' })<{
   const itemTypographyStyle = isCompact ? body03(theme) : body02(theme);
 
   return css`
-    background-color: ${theme.globals.colors.white};
+    background-color: ${theme.globals.oldColors.white};
     ${ListItemTextWrapper} {
       ${itemTypographyStyle};
     }
