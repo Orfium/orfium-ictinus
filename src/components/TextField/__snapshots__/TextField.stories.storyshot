@@ -42,7 +42,7 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -166,7 +166,7 @@ exports[`Storyshots Design System/TextField Disabled TextField 1`] = `
 }
 
 .emotion-6:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-6:disabled {
@@ -287,7 +287,7 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -302,12 +302,12 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
 }
 
 .emotion-2:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-2:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-2 input:focus label {
@@ -410,19 +410,19 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
 }
 
 .emotion-5:focus::-webkit-input-placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-5:focus::-moz-placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-5:focus:-ms-input-placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-5:focus::placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-5:not(:focus):placeholder-shown+label {
@@ -439,7 +439,7 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
 }
 
 .emotion-5:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-5:disabled {
@@ -501,69 +501,6 @@ exports[`Storyshots Design System/TextField MultiTextField 1`] = `
   align-items: center;
 }
 
-<<<<<<< HEAD
-=======
-.emotion-20 {
-  cursor: pointer;
-}
-
-.emotion-22 {
-  fill: #5f6c85;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.emotion-22 path {
-  fill: #5f6c85;
-}
-
-.emotion-23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #5f6c85;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 0.5rem 0 0;
-}
-
-.emotion-23 svg {
-  padding: 0 0.125rem;
-}
-
-.emotion-23 span {
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-  padding: 0 0.125rem;
-}
-
-.emotion-25 {
-  fill: #5f6c85;
-  width: 0.75rem;
-  height: 0.75rem;
-}
-
-.emotion-25 path {
-  fill: #5f6c85;
-}
-
-.emotion-26 {
-  padding: 0 0.5rem;
-}
-
-.emotion-27 {
-  font-family: Roboto;
-  font-weight: 700;
-  line-height: 2.25rem;
-  font-size: 1.75rem;
-  letter-spacing: 0rem;
-  color: #212332;
-}
-
->>>>>>> next
 <div
   className="emotion-0"
 >
@@ -669,7 +606,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -683,12 +620,12 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
 }
 
 .emotion-3:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-4 {
@@ -797,7 +734,7 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
 }
 
 .emotion-6:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-6:disabled {
@@ -890,11 +827,11 @@ exports[`Storyshots Design System/TextField Playground 1`] = `
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  color: #54587f;
+  color: #54587F;
   padding: 0.5rem 0 0;
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
 }
@@ -1027,7 +964,7 @@ exports[`Storyshots Design System/TextField TextField with Icons 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1041,12 +978,12 @@ exports[`Storyshots Design System/TextField TextField with Icons 1`] = `
 }
 
 .emotion-3:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-4 {
@@ -1155,7 +1092,7 @@ exports[`Storyshots Design System/TextField TextField with Icons 1`] = `
 }
 
 .emotion-6:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-6:disabled {
@@ -1402,7 +1339,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1416,12 +1353,12 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
 }
 
 .emotion-3:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-4 {
@@ -1531,7 +1468,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
 }
 
 .emotion-6:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-6:disabled {
@@ -1613,19 +1550,19 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
 }
 
 .emotion-11:focus::-webkit-input-placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-11:focus::-moz-placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-11:focus:-ms-input-placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-11:focus::placeholder {
-  color: #54587f;
+  color: #54587F;
 }
 
 .emotion-11:not(:focus):placeholder-shown+label {
@@ -1642,7 +1579,7 @@ exports[`Storyshots Design System/TextField TextField with Label and Placeholder
 }
 
 .emotion-11:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-11:disabled {
@@ -1785,7 +1722,7 @@ exports[`Storyshots Design System/TextField TextField with Suffix 1`] = `
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1799,12 +1736,12 @@ exports[`Storyshots Design System/TextField TextField with Suffix 1`] = `
 }
 
 .emotion-3:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-4 {
@@ -1913,7 +1850,7 @@ exports[`Storyshots Design System/TextField TextField with Suffix 1`] = `
 }
 
 .emotion-6:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-6:disabled {
@@ -2080,7 +2017,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #a2bdfb;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2094,12 +2031,12 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
 }
 
 .emotion-3:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-3:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-4 {
@@ -2209,7 +2146,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
 }
 
 .emotion-6:focus-within+label {
-  color: #1451dc;
+  color: #1552DD;
 }
 
 .emotion-6:disabled {
@@ -2258,11 +2195,11 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  color: #54587f;
+  color: #54587F;
   padding: 0.5rem 0 0;
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
 }
@@ -2287,7 +2224,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.125rem #ff73a6;
+  box-shadow: 0 0 0 0.125rem #F882AC;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2297,16 +2234,16 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   cursor: text;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #ffe7f0;
+  background-color: #FFE7F0;
 }
 
 .emotion-9:hover {
-  background-color: #ffd0e1;
+  background-color: #FFB8D1;
 }
 
 .emotion-9:focus-within {
   box-shadow: 0 0 0 0.125rem #175bf5;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-13 {
@@ -2351,11 +2288,11 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   -ms-flex-align: center;
   align-items: center;
   gap: 0.25rem;
-  color: #cc1255;
+  color: #CB205D;
   padding: 0.5rem 0 0;
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
 }
@@ -2385,13 +2322,13 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
 }
 
 .emotion-16 {
-  fill: #cc1255;
+  fill: #CB205D;
   width: 0.75rem;
   height: 0.75rem;
 }
 
 .emotion-16 path {
-  fill: #cc1255;
+  fill: #CB205D;
 }
 
 .emotion-17 {
@@ -2406,7 +2343,7 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   position: relative;
   -webkit-transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
   transition: background-color 0.25s,box-shadow 0.25s,border-color 0.25s;
-  box-shadow: 0 0 0 0.0625rem #e4e7ff;
+  box-shadow: 0 0 0 0.0625rem #b9cdfc;
   border-radius: 0.25rem;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -2416,16 +2353,16 @@ exports[`Storyshots Design System/TextField TextField with different Statuses 1`
   cursor: not-allowed;
   height: 3.25rem;
   min-width: 8.75rem;
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-17:hover {
-  background-color: #e7eefe;
+  background-color: #F5F5FF;
 }
 
 .emotion-17:focus-within {
-  box-shadow: 0 0 0 0.125rem #e4e7ff;
-  background-color: #e7eefe;
+  box-shadow: 0 0 0 0.125rem #b9cdfc;
+  background-color: #F5F5FF;
 }
 
 .emotion-18 {

@@ -4,7 +4,7 @@ export const ListItemTextWrapper = styled('div', { target: '' })<{
   isGroupItem?: boolean;
   isHighlighted: boolean;
 }>`
-  color: ${({ theme }) => theme.tokens.textColor.get('light.primary')};
+  color: ${({ theme }) => theme.tokens.colors.get('textColor.light.primary')};
   font-size: ${({ theme }) => theme.globals.typography.fontSize.get('4')};
   font-weight: ${({ isGroupItem, isHighlighted }) =>
     isGroupItem || isHighlighted ? 'bold' : 'initial'};
