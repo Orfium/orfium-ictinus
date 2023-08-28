@@ -65,23 +65,18 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
         height={minListHeightWithCompactListItem}
         isVirtualized={isVirtualized && filteredOptions.length > MAX_NON_VIRTUALIZED_ITEMS_SELECT}
         onSelectionChange={onSelectionChange}
-        // searchTerm={searchTerm}
         selectedKeys={[selectedOption.value]}
         disabledKeys={filteredOptions.filter((o) => o.isDisabled).map((o) => o.value)}
       >
         {hasSelectAllOption ? (
-          <ListItem
-            key={SELECT_ALL_OPTION.value}
-            textValue={SELECT_ALL_OPTION.label}
-            rowSize={'compact'}
-          >
+          <ListItem key={SELECT_ALL_OPTION.value} textValue={SELECT_ALL_OPTION.label}>
             <ListItemText>{SELECT_ALL_OPTION.label}</ListItemText>
           </ListItem>
         ) : null}
         {filteredOptions.map((option) => {
           if (option.options && option.options?.length > 0) {
             return (
-              <ListSection key={option.value} title={option.value} rowSize={'compact'}>
+              <ListSection key={option.value} title={option.value}>
                 {option.options.map((o) => (
                   <ListItem key={o.value} textValue={o.label}>
                     <ListItemText description={o.helperText}>{o.label}</ListItemText>
@@ -92,7 +87,7 @@ const SelectMenu = forwardRef<HTMLUListElement, SelectMenuProps>((props, ref) =>
           }
 
           return (
-            <ListItem key={option.value} textValue={option.label} rowSize={'compact'}>
+            <ListItem key={option.value} textValue={option.label}>
               <ListItemText description={option.helperText}>{option.label}</ListItemText>
             </ListItem>
           );
