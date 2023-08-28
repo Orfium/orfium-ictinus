@@ -18,7 +18,7 @@ import {
   body02,
   body03,
 } from './Typography.config.styles';
-import textColorFigma from '../../theme/tokens/semantic/variables/textColor';
+import colorsFigma from '../../theme/tokens/semantic/variables/colors';
 import { DotKeys } from '../../theme/tokens/utils';
 
 export const typographyWrapper =
@@ -56,7 +56,7 @@ export const typographyWrapper =
     };
 
     const textColorCategory = isInverted ? 'inverted' : 'light';
-    const textColor = `${textColorCategory}.${type}` as DotKeys<typeof textColorFigma>;
+    const textColor = `textColor.${textColorCategory}.${type}` as DotKeys<typeof colorsFigma>;
 
     return css`
       ${allStyles[variant](theme)};
@@ -65,6 +65,6 @@ export const typographyWrapper =
       text-decoration: ${isUnderline
         ? theme.globals.typography.textDecoration.get('link')
         : undefined};
-      color: ${theme.tokens.textColor.get(textColor)};
+      color: ${theme.tokens.colors.get(textColor)};
     `;
   };

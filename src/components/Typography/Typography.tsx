@@ -20,7 +20,7 @@ export type TypographyVariant =
 
 export type TypographyComponent = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
 
-export type TextColorTypes = 'primary' | 'secondary' | 'error' | 'success' | 'warning' | 'active';
+export type TextColorTypes = 'primary' | 'secondary' | 'error' | 'active' | 'visited';
 
 export type TypographyProps = {
   /** Type of the Typography that will affect the color of the text */

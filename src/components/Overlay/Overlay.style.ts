@@ -54,7 +54,7 @@ export const backdropStyle =
       bottom: 0;
       top: 0;
       left: 0;
-      background-color: ${transparentize(0.25, theme.globals.colors.black)};
+      background-color: ${transparentize(0.25, theme.globals.oldColors.black)};
       visibility: ${isOpen ? 'visible' : 'hidden'};
       opacity: ${isOpen ? 1 : 0};
       ${transition(0.2)}
@@ -68,7 +68,7 @@ export const overlayStyle =
       ${flex};
       flex-direction: column;
       overflow-y: auto;
-      background-color: ${theme.globals.colors.white};
+      background-color: ${theme.globals.oldColors.white};
       width: 100%;
       height: auto;
       transform: ${transformBasedOnProps(isOpen, anchor)};

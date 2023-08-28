@@ -69,7 +69,7 @@ const TableCell: React.FC<TableCellProps> = React.memo(
             left: 0,
             zIndex: 2,
             position: 'sticky',
-            background: theme.globals.colors.white,
+            background: theme.globals.oldColors.white,
             boxShadow: `inset 0px -1px 0px 0px ${getBorderColor(theme)}`,
           },
           type === 'financial' && {

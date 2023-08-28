@@ -1,6 +1,6 @@
 import { map } from 'lodash';
 import React from 'react';
-import typographyCollection from 'theme/globals/constants/typography';
+import typographyCollection from 'theme/tokens/semantic/variables/typography';
 import { parseCompositionToken } from 'theme/tokens/utils';
 
 import { TableWrapperStyle } from './TypographyTokensShowcase.style';

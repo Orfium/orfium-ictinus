@@ -23,13 +23,11 @@ export const wrapperStyle = (): SerializedStyles => {
 export const buttonSpanStyle =
   ({ type }: { type: PrimitiveButtonTypes }) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getButtonTokens(theme);
-
     /** Style for the divider in Text Dropdown Buttons with type = 'primary' | 'secondary' */
     const borderStyles =
       type !== 'tertiary'
         ? {
-            borderRight: `${tokens('borderWidth.1')} solid transparent`,
+            borderRight: `${theme.globals.borderWidth.get('1')} solid transparent`,
           }
         : {};
 
@@ -46,9 +44,9 @@ const getIconButtonActiveState = (theme: Theme, type: PrimitiveButtonTypes) => {
   const tokens = getButtonTokens(theme);
 
   return {
-    backgroundColor: tokens(`color.${type}.backgroundColor.active` as ButtonTokens),
+    backgroundColor: tokens(`${type}.backgroundColor.active` as ButtonTokens),
     ':hover:not(:disabled)': {
-      backgroundColor: tokens(`color.${type}.backgroundColor.active` as ButtonTokens),
+      backgroundColor: tokens(`${type}.backgroundColor.active` as ButtonTokens),
     },
   };
 };

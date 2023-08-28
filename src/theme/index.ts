@@ -15,9 +15,9 @@ const defaultTheme = (theming: ColorScheme): Theme => {
       ...get(tokens, theming || 'semantic', tokens.semantic),
     },
     utils: {
-      getColor: getColor(globals.colors),
-      getAAColorFromSwatches: getAAColorFromSwatches(globals.colors),
-      getAAColor: getAAColor(globals.colors),
+      getColor: getColor(globals.oldColors),
+      getAAColorFromSwatches: getAAColorFromSwatches(globals.oldColors),
+      getAAColor: getAAColor(globals.oldColors),
     },
   };
 };

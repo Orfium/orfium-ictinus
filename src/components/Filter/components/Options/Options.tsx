@@ -47,7 +47,7 @@ const Options: React.FC<Props> = ({
     [items, onSelect]
   );
 
-  return items.length ? (
+  return items.length || isDefaultOptionVisible ? (
     <List
       label={'filter-options'}
       selectedKeys={selectedItem ? [selectedItem.value] : []}

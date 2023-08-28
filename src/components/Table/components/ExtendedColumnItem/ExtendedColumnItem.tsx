@@ -3,7 +3,7 @@ import React from 'react';
 
 import { containerStyles, contentStyles } from './ExtendedColumnItem.style';
 import { ExtendedColumn, Sort } from '../../types';
-import { isItemString } from '../../utils';
+import { hasTooltipOrSortingKey, isItemString } from '../../utils';
 import Icon from 'components/Icon';
 import Tooltip from 'components/Tooltip';
 
@@ -83,9 +83,15 @@ const ExtendedColumnItem: React.FC<ExtendedColumnItemProps> = ({ item, sorting, 
     isNumerical ? [sortingItem(), tooltipItem()] : [tooltipItem(), sortingItem()];
 
   //TODO: Remove type check when backwards-compatibility is removed
-  return isItemString(item) ? (
-    <div css={contentStyles()}>{item}</div>
-  ) : (
+  if (isItemString(item)) {
+    return <div css={contentStyles()}>{item}</div>;
+  }
+
+  if (!hasTooltipOrSortingKey(item)) {
+    return <div css={contentStyles()}>{item.content.label}</div>;
+  }
+
+  return (
     <div data-testid={`header_${itemContentLowerCase}`} css={containerStyles('8')}>
       <span css={contentStyles()}>{item.content.label}</span>
 

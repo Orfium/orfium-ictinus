@@ -1,225 +1,207 @@
 const button = {
-  color: {
-    primary: {
-      backgroundColor: {
-        inactive: {
-          value: '{sem.palette.systemic.primary.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for primary inactive button',
-        },
-        hover: {
-          value: '{sem.palette.systemic.primary.light}',
-          type: 'color',
-          description: 'Sets backgroundColor for primary hovered button',
-        },
-        active: {
-          value: '{sem.palette.systemic.primary.dark}',
-          type: 'color',
-          description: 'Sets backgroundColor for primary active (pressed) button',
-        },
-      },
-      borderColor: {
+  primary: {
+    backgroundColor: {
+      default: {
+        value: '{sem.colors.palette.primary.main}',
         type: 'color',
-        value: '{sem.borderColor.decorative.transparent}',
-        description: 'Sets borderColor used for all primary button states (except focused)',
+        description: 'Sets backgroundColor for primary default button',
       },
-      textColor: {
+      hover: {
+        value: '{sem.colors.palette.primary.dark}',
         type: 'color',
-        value: '{sem.textColor.inverted.primary}',
-        description: 'Sets color used for all icons and text in a primary button',
+        description: 'Sets backgroundColor for primary hovered button',
+      },
+      active: {
+        value: '{sem.colors.palette.primary.darkest}',
+        type: 'color',
+        description: 'Sets backgroundColor for primary active (pressed) button',
       },
     },
-    secondary: {
-      backgroundColor: {
-        inactive: {
-          value: '{sem.palette.systemic.secondary.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for secondary inactive button',
-        },
-        hover: {
-          value: '{sem.palette.systemic.secondary.light}',
-          type: 'color',
-          description: 'Sets backgroundColor for secondary hovered button',
-        },
-        active: {
-          value: '{sem.palette.systemic.secondary.dark}',
-          type: 'color',
-          description: 'Sets backgroundColor for secondary active button',
-        },
-      },
-      borderColor: {
-        type: 'color',
-        value: '{sem.borderColor.decorative.transparent}',
-        description: 'Sets borderColor used for all secondary button states (except focused)',
-      },
-      textColor: {
-        type: 'color',
-        value: '{sem.textColor.light.active}',
-        description: 'Sets color used for all icons and text in a secondary button',
-      },
-    },
-    tertiary: {
-      backgroundColor: {
-        inactive: {
-          type: 'color',
-          value: '{sem.palette.systemic.transparent.light}',
-          description: 'Sets backgroundColor for tertiary inactive button',
-        },
-        hover: {
-          value: '{sem.palette.systemic.transparent.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for tertiary hovered button',
-        },
-        active: {
-          value: '{sem.palette.systemic.transparent.dark}',
-          type: 'color',
-          description: 'Sets backgroundColor for tertiary active button',
-        },
-      },
-      borderColor: {
-        type: 'color',
-        value: '{sem.borderColor.decorative.transparent}',
-        description: 'Sets borderColor used for all tertiary button states (except focused)',
-      },
-      borderColorSegmented: {
-        type: 'color',
-        value: '{sem.borderColor.decorative.muted}',
-        description:
-          'Used on the wrapper of a segmented tertiary button group and the dividers separate the buttons',
-      },
-      textColor: {
-        value: '{sem.textColor.light.active}',
-        type: 'color',
-        description: 'Sets color used for all icons and text in a tertiary button',
-      },
-    },
-    invertedAlt: {
-      borderColor: {
-        type: 'color',
-        value: '{sem.borderColor.decorative.transparent}',
-        description: 'Sets borderColor used for all invertedAlt button states (except focused)',
-      },
-      backgroundColor: {
-        inactive: {
-          type: 'color',
-          value: '{sem.palette.systemic.transparent.light}',
-          description: 'Sets backgroundColor for invertedAlt inactive button',
-        },
-        hover: {
-          value: '{sem.palette.systemic.transparent.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for invertedAlt hovered button',
-        },
-        active: {
-          value: '{sem.palette.systemic.transparent.dark}',
-          type: 'color',
-          description: 'Sets backgroundColor for invertedAlt active button',
-        },
-      },
-      textColor: {
-        value: '{sem.textColor.inverted.active}',
-        type: 'color',
-        description: 'Sets color used for all icons and text in an invertedAlt button',
-      },
-    },
-    danger: {
-      backgroundColor: {
-        inactive: {
-          value: '{sem.palette.systemic.error.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for danger inactive button',
-        },
-        hover: {
-          value: '{sem.palette.systemic.error.light}',
-          type: 'color',
-          description: 'Sets backgroundColor for danger hovered button',
-        },
-        active: {
-          value: '{sem.palette.systemic.error.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for danger active button',
-        },
-      },
-      textColor: {
-        type: 'color',
-        value: '{sem.textColor.light.error}',
-        description: 'Sets color used for all icons and text in a danger button',
-      },
-      borderColor: {
-        type: 'color',
-        value: '{sem.borderColor.decorative.transparent}',
-        description: 'Sets border color for all danger button states (except focused)',
-      },
-    },
-    focusedBorderColor: {
-      value: '{sem.borderColor.interactive.focused}',
+    textColor: {
       type: 'color',
-      description: 'Sets focused borderColor for all buttons',
-    },
-    inverted: {
-      backgroundColor: {
-        inactive: {
-          value: '{sem.palette.systemic.inverted.main}',
-          type: 'color',
-          description: 'Sets backgroundColor for inverted inactive button',
-        },
-        hover: {
-          value: '{sem.palette.systemic.inverted.light}',
-          type: 'color',
-          description: 'Sets backgroundColor for inverted hovered button',
-        },
-        active: {
-          value: '{sem.palette.systemic.inverted.dark}',
-          type: 'color',
-          description: 'Sets backgroundColor for inverted active (pressed) button',
-        },
-      },
-      borderColor: {
-        type: 'color',
-        value: '{sem.borderColor.decorative.transparent}',
-        description: 'Sets borderColor used for all inverted button states (except focused)',
-      },
-      textColor: {
-        type: 'color',
-        value: '{sem.textColor.light.primary}',
-        description: 'Sets color used for all icons and text in an inverted button',
-      },
+      value: '{sem.colors.textColor.inverted.primary}',
+      description: 'Sets text and icon color for primary button',
     },
   },
-  borderWidth: {
-    '1': {
-      value: '{borderWidth.1}',
-      type: 'borderWidth',
+  secondary: {
+    backgroundColor: {
+      default: {
+        value: '{sem.colors.palette.secondary.main}',
+        type: 'color',
+        description: 'Sets backgroundColor for secondary default button',
+      },
+      hover: {
+        value: '{sem.colors.palette.secondary.dark}',
+        type: 'color',
+        description: 'Sets backgroundColor for secondary hovered button',
+      },
+      active: {
+        value: '{sem.colors.palette.secondary.darkest}',
+        type: 'color',
+        description: 'Sets backgroundColor for secondary active button',
+      },
     },
-    '2': {
-      value: '{borderWidth.2}',
-      type: 'borderWidth',
+    textColor: {
+      type: 'color',
+      value: '{sem.colors.textColor.light.active}',
+      description: 'Sets text and icon color for secondary button',
     },
   },
-  textBorderRadius: {
-    value: '{borderRadius.2}',
-    type: 'borderRadius',
-    description: 'Sets borderRadius for text buttons and segmented button wrappers',
+  tertiary: {
+    backgroundColor: {
+      default: {
+        type: 'color',
+        value: '{sem.colors.palette.tertiary.lightest}',
+        description: 'Sets backgroundColor for tertiary default button',
+      },
+      hover: {
+        value: '{sem.colors.palette.tertiary.light}',
+        type: 'color',
+        description: 'Sets backgroundColor for tertiary hovered button',
+      },
+      active: {
+        value: '{sem.colors.palette.tertiary.main}',
+        type: 'color',
+        description: 'Sets backgroundColor for tertiary active button',
+      },
+    },
+    textColor: {
+      value: '{sem.colors.textColor.light.active}',
+      type: 'color',
+      description: 'Sets text and icon color tertiary button',
+    },
+  },
+  invertedAlt: {
+    backgroundColor: {
+      default: {
+        type: 'color',
+        value: '{sem.colors.palette.tertiary.lightest}',
+        description: 'Sets backgroundColor for invertedAlt default button',
+      },
+      hover: {
+        value: '{sem.colors.palette.tertiary.light}',
+        type: 'color',
+        description: 'Sets backgroundColor for invertedAlt hovered button',
+      },
+      active: {
+        value: '{sem.colors.palette.tertiary.main}',
+        type: 'color',
+        description: 'Sets backgroundColor for invertedAlt active button',
+      },
+    },
+    textColor: {
+      value: '{sem.colors.textColor.inverted.active}',
+      type: 'color',
+      description: 'Sets text and icon color for invertedAlt button',
+    },
+  },
+  danger: {
+    backgroundColor: {
+      default: {
+        value: '{sem.colors.palette.error.lightest}',
+        type: 'color',
+        description: 'Sets backgroundColor for danger default button',
+      },
+      hover: {
+        value: '{sem.colors.palette.error.light}',
+        type: 'color',
+        description: 'Sets backgroundColor for danger hovered button',
+      },
+      active: {
+        value: '{sem.colors.palette.error.main}',
+        type: 'color',
+        description: 'Sets backgroundColor for danger active button',
+      },
+    },
+    textColor: {
+      type: 'color',
+      value: '{sem.colors.textColor.light.error}',
+      description: 'Sets text and icon color for danger button',
+    },
+  },
+  inverted: {
+    backgroundColor: {
+      default: {
+        value: '{sem.colors.palette.inverted.main}',
+        type: 'color',
+        description: 'Sets backgroundColor for inverted default button',
+      },
+      hover: {
+        value: '{sem.colors.palette.inverted.dark}',
+        type: 'color',
+        description: 'Sets backgroundColor for inverted hovered button',
+      },
+      active: {
+        value: '{sem.colors.palette.inverted.darkest}',
+        type: 'color',
+        description: 'Sets backgroundColor for inverted active (pressed) button',
+      },
+    },
+    textColor: {
+      type: 'color',
+      value: '{sem.colors.textColor.light.primary}',
+      description: 'Sets text and icon color for inverted button',
+    },
+  },
+  borderRadius: {
+    square: {
+      value: '{borderRadius.2}',
+      type: 'borderRadius',
+      description:
+        "Sets borderRadius for textbutton, iconButton ('square' variant) and dropdown button wrapper",
+    },
+    rounded: {
+      value: '{borderRadius.5}',
+      type: 'borderRadius',
+      description: "Sets border Radius for iconButton ('round' variant)",
+    },
+    dropdownNested: {
+      value: '{borderRadius.0}',
+      type: 'borderRadius',
+      description:
+        "Sets border radius for nested 'textButton' and 'iconButton' components within a dropdownButton",
+    },
   },
   text: {
-    value: '{sem.typography.label02}',
-    type: 'typography',
+    normal: {
+      value: '{sem.typography.normal.label02}',
+      type: 'typography',
+      description: 'Sets text for text button',
+    },
+    compact: {
+      value: '{sem.typography.normal.label03}',
+      type: 'typography',
+      description: "Sets text for text button ('compact' variant)",
+    },
   },
-  iconSize: {
-    value: '{sizing.5}',
-    type: 'sizing',
-    description: 'Sets button icon size',
+  compact: {
+    iconSize: {
+      value: '{sem.icon.size.2}',
+      type: 'sizing',
+      description: "Sets size for iconButton ('compact' variant)",
+    },
+    size: {
+      value: '{sizing.7}',
+      type: 'sizing',
+      description: "Sets size for iconButton ('compact' variant)",
+    },
   },
-  wrapperBorderRadius: {
-    value: '{borderRadius.0}',
-    type: 'borderRadius',
-    description:
-      'Sets border radius for nested segmented buttons (border radius is applied to the container instead)',
+  normal: {
+    iconSize: {
+      value: '{sem.icon.size.3}',
+      type: 'sizing',
+      description: 'Sets size for iconButton icon',
+    },
+    size: {
+      value: '{sizing.9}',
+      type: 'sizing',
+      description: 'Sets size for iconButtons',
+    },
   },
-  iconBorderRadius: {
-    value: '{borderRadius.5}',
-    type: 'borderRadius',
-    description: 'Sets border Radius for icon buttons',
+  loadingBar: {
+    value: '{colors.gradient.1}',
+    type: 'color',
+    description: "Sets gradient for 'loading' bar in buttons",
   },
 } as const;
 
