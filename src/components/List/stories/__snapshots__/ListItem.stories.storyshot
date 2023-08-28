@@ -21,7 +21,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
 }
 
 .emotion-3 {
-  border: 1px solid #e7ebf2;
+  border: 0.0625rem solid #E7E8FF;
   border-radius: 0.25rem;
   width: undefinedpx;
 }
@@ -35,16 +35,16 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
   height: auto;
   overflow: auto;
   overflow-x: hidden;
-  background: white;
+  background: #ffffff;
 }
 
 .emotion-5 {
-  background-color: white;
+  background-color: rgba(84,94,255,0);
   opacity: 1;
   cursor: initial;
 }
 
-.emotion-5 . {
+.emotion-5>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -85,20 +85,20 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
 }
 
 .emotion-5[role='option']:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
   cursor: pointer;
 }
 
 .emotion-5[data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-5[aria-selected='true'] {
-  background-color: #e7eefe;
+  background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-5[aria-selected='true'] . {
-  color: #1451dc;
+.emotion-5[aria-selected='true']>div {
+  color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -107,7 +107,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
 }
 
 .emotion-5[aria-selected='true'][data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-6 {
@@ -242,7 +242,6 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
 
 .emotion-12 {
   color: #212332;
-  font-size: 1rem;
   font-weight: initial;
   white-space: nowrap;
   overflow: hidden;
@@ -439,10 +438,10 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
   height: 1.25rem;
   border-radius: 6.25rem;
   border: 0.0625rem solid;
-  border-color: #c2c8ff;
+  border-color: #b9cdfc;
   box-sizing: border-box;
-  background-color: #d0defd;
-  color: #1451dc;
+  background-color: #e7eefe;
+  color: #1249C4;
   overflow: hidden;
   position: relative;
   -webkit-align-items: center;
@@ -462,36 +461,36 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
   justify-content: center;
   font-size: 0.625rem;
   font-weight: 500;
-  line-height: 1.25rem;
-  letter-spacing: 0rem;
+  line-height: 0.875rem;
+  letter-spacing: 0.00625rem;
 }
 
 .emotion-37 img {
-  border-radius: #c2c8ff;
+  border-radius: 6.25rem;
   width: 100%;
   height: 100%;
 }
 
 .emotion-39 {
-  fill: #1451dc;
+  fill: #1249C4;
   width: 1rem;
   height: 1rem;
 }
 
 .emotion-39 path {
-  fill: #1451dc;
+  fill: #1249C4;
 }
 
 .emotion-49 {
-  background-color: white;
+  background-color: rgba(84,94,255,0);
   opacity: 1;
   cursor: initial;
 }
 
-.emotion-49 . {
+.emotion-49>div {
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
 }
@@ -509,7 +508,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
   display: flex;
   font-family: Roboto;
   font-weight: 400;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
   font-weight: 700;
@@ -529,29 +528,29 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
 }
 
 .emotion-49[role='option']:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
   cursor: pointer;
 }
 
 .emotion-49[data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-49[aria-selected='true'] {
-  background-color: #e7eefe;
+  background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-49[aria-selected='true'] . {
-  color: #1451dc;
+.emotion-49[aria-selected='true']>div {
+  color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
-  line-height: 1rem;
+  line-height: 1.125rem;
   font-size: 0.75rem;
   letter-spacing: 0.015625rem;
 }
 
 .emotion-49[aria-selected='true'][data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 <div
@@ -657,7 +656,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
                   </span>
                 </div>
                 <div
-                  className="emotion-12 "
+                  className="emotion-12"
                 >
                   <span>
                     Option Radio
@@ -770,7 +769,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
                   </span>
                 </div>
                 <div
-                  className="emotion-12 "
+                  className="emotion-12"
                 >
                   <span>
                     Option Checkbox
@@ -847,7 +846,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-12 "
+                  className="emotion-12"
                 >
                   <span>
                     Option Switch
@@ -1042,7 +1041,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
                   </div>
                 </div>
                 <div
-                  className="emotion-12 "
+                  className="emotion-12"
                 >
                   <span>
                     Option Icon/Avatar
@@ -1119,7 +1118,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-12 "
+                  className="emotion-12"
                 >
                   <span>
                     Text only
@@ -1199,7 +1198,7 @@ exports[`Storyshots Design System/List/ListItem List Item Compilations 1`] = `
                 tabIndex={-1}
               >
                 <div
-                  className="emotion-12 "
+                  className="emotion-12"
                 >
                   <span>
                     Compact size item
