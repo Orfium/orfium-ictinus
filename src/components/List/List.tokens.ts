@@ -13,7 +13,7 @@ export const getListTokens = (
   return getComponentTokens(menu, theme);
 };
 
-export const getListItemsTokens = (
+export const getListItemTokens = (
   theme: Theme
 ): ((path: ListItemTokens, fn?: (val: string) => any) => string) => {
   return getComponentTokens(listItem, theme);

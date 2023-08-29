@@ -1,12 +1,12 @@
 import { SerializedStyles, css } from '@emotion/react';
 import { Theme } from 'index';
 
-import { getListItemsTokens } from 'components/List/List.tokens';
+import { getListItemTokens } from 'components/List/List.tokens';
 
 export const listItemTextWrapperStyles =
   (isGroupItem?: boolean, isHighlighted?: boolean) =>
   (theme: Theme): SerializedStyles => {
-    const tokens = getListItemsTokens(theme);
+    const tokens = getListItemTokens(theme);
 
     return css`
       color: ${tokens('textColor.default')};
