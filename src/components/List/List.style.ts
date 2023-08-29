@@ -15,6 +15,7 @@ export const wrapperStyle =
         : `${tokens('borderWidth')} solid ${tokens('borderColor')}`};
       border-radius: ${isSearchable ? 'initial' : tokens('borderRadius')};
       width: ${`${width}px` || '100%'};
+      box-shadow: ${tokens('boxShadow')};
     `;
   };
 
