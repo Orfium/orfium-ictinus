@@ -1,28 +1,32 @@
-import styled from '@emotion/styled';
+import { SerializedStyles, css } from '@emotion/react';
+import { Theme } from 'index';
 
-export const ListItemTextWrapper = styled('div', { target: '' })<{
-  isGroupItem?: boolean;
-  isHighlighted: boolean;
-}>`
-  color: ${({ theme }) => theme.tokens.colors.get('textColor.light.primary')};
-  font-size: ${({ theme }) => theme.globals.typography.fontSize.get('4')};
-  font-weight: ${({ isGroupItem, isHighlighted }) =>
-    isGroupItem || isHighlighted ? 'bold' : 'initial'};
+import { getListItemTokens } from 'components/List/List.tokens';
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  cursor: inherit;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+export const listItemTextWrapperStyles =
+  (isGroupItem?: boolean, isHighlighted?: boolean) =>
+  (theme: Theme): SerializedStyles => {
+    const tokens = getListItemTokens(theme);
 
-  strong {
-    font-weight: bold;
-  }
+    return css`
+      color: ${tokens('textColor.default')};
+      font-weight: ${isGroupItem || isHighlighted ? 'bold' : 'initial'};
 
-  span {
-    display: block;
-  }
-`;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: inherit;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      strong {
+        font-weight: bold;
+      }
+
+      span {
+        display: block;
+      }
+    `;
+  };

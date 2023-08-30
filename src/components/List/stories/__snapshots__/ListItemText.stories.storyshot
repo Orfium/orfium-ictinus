@@ -31,9 +31,10 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
 }
 
 .emotion-3 {
-  border: 1px solid #e7ebf2;
+  border: 0.0625rem solid #E7E8FF;
   border-radius: 0.25rem;
   width: undefinedpx;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
 }
 
 .emotion-4 {
@@ -45,16 +46,16 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
   height: auto;
   overflow: auto;
   overflow-x: hidden;
-  background: white;
+  background: #ffffff;
 }
 
 .emotion-5 {
-  background-color: white;
+  background-color: rgba(84,94,255,0);
   opacity: 1;
   cursor: initial;
 }
 
-.emotion-5 . {
+.emotion-5>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -95,20 +96,20 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
 }
 
 .emotion-5[role='option']:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
   cursor: pointer;
 }
 
 .emotion-5[data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-5[aria-selected='true'] {
-  background-color: #e7eefe;
+  background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-5[aria-selected='true'] . {
-  color: #1451dc;
+.emotion-5[aria-selected='true']>div {
+  color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -117,12 +118,11 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
 }
 
 .emotion-5[aria-selected='true'][data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-6 {
   color: #212332;
-  font-size: 1rem;
   font-weight: initial;
   white-space: nowrap;
   overflow: hidden;
@@ -230,7 +230,7 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="emotion-6 "
+                    className="emotion-6"
                   >
                     <span>
                       Item 1
@@ -262,7 +262,7 @@ exports[`Storyshots Design System/List/ListItemText ListItemText normal 1`] = `
                   tabIndex={-1}
                 >
                   <div
-                    className="emotion-6 "
+                    className="emotion-6"
                   >
                     <span>
                       Item 2
@@ -310,9 +310,10 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
 }
 
 .emotion-3 {
-  border: 1px solid #e7ebf2;
+  border: 0.0625rem solid #E7E8FF;
   border-radius: 0.25rem;
   width: undefinedpx;
+  box-shadow: 0rem 0.25rem 0.5rem 0rem #10306612;
 }
 
 .emotion-4 {
@@ -324,16 +325,16 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
   height: auto;
   overflow: auto;
   overflow-x: hidden;
-  background: white;
+  background: #ffffff;
 }
 
 .emotion-5 {
-  background-color: white;
+  background-color: rgba(84,94,255,0);
   opacity: 1;
   cursor: initial;
 }
 
-.emotion-5 . {
+.emotion-5>div {
   font-family: Roboto;
   font-weight: 400;
   line-height: 1.25rem;
@@ -374,20 +375,20 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
 }
 
 .emotion-5[role='option']:hover {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
   cursor: pointer;
 }
 
 .emotion-5[data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-5[aria-selected='true'] {
-  background-color: #e7eefe;
+  background-color: rgba(84,94,255,0.06);
 }
 
-.emotion-5[aria-selected='true'] . {
-  color: #1451dc;
+.emotion-5[aria-selected='true']>div {
+  color: #1552DD;
   font-family: Roboto;
   font-weight: 500;
   line-height: 1.25rem;
@@ -396,12 +397,11 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
 }
 
 .emotion-5[aria-selected='true'][data-focus-visible] {
-  background-color: #f3f5f8;
+  background-color: rgba(84,94,255,0.06);
 }
 
 .emotion-6 {
   color: #212332;
-  font-size: 1rem;
   font-weight: initial;
   white-space: nowrap;
   overflow: hidden;
@@ -509,7 +509,7 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
                   tabIndex={-1}
                 >
                   <div
-                    className="emotion-6 "
+                    className="emotion-6"
                   >
                     <span>
                       Item 1
@@ -544,7 +544,7 @@ exports[`Storyshots Design System/List/ListItemText ListItemText with secondary 
                   tabIndex={-1}
                 >
                   <div
-                    className="emotion-6 "
+                    className="emotion-6"
                   >
                     <span>
                       Item 2

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { ListItemTextWrapper } from './ListItemText.style';
+import { listItemTextWrapperStyles } from './ListItemText.style';
 
 export type ListItemTextProps = {
   description?: string | JSX.Element;
@@ -8,10 +8,10 @@ export type ListItemTextProps = {
 
 const ListItemText: FC<ListItemTextProps> = (props) => {
   return (
-    <ListItemTextWrapper isHighlighted={false}>
+    <div css={listItemTextWrapperStyles(false, false)}>
       <span>{props.children}</span>
       {props.description && <p>{props.description}</p>}
-    </ListItemTextWrapper>
+    </div>
   );
 };
 
