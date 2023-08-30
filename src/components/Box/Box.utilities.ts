@@ -1,5 +1,6 @@
-import { curry, omit, pick, pickBy } from 'lodash';
+import { curry, omit, pick } from 'lodash';
 import { Theme } from 'theme';
+import { SemanticColorsKey } from 'theme/tokens/semantic/colors';
 
 import { StyledBoxProps } from './Box.types';
 
@@ -125,13 +126,13 @@ export const cssResolver = curry(
       // if is horizontal padding or margin
       if (key === 'px' || key === 'mx') {
         return {
-          [cssKey]: `${theme.globals[type].get(obj[key] || '0')} 0`,
+          [cssKey]: `0 ${theme.globals[type].get(obj[key] || '0')}`,
         };
       }
       // if is vertical padding or margin
       if (key === 'py' || key === 'my') {
         return {
-          [cssKey]: `0 ${theme.globals[type].get(obj[key] || '0')}`,
+          [cssKey]: `${theme.globals[type].get(obj[key] || '0')} 0`,
         };
       }
 
@@ -141,12 +142,12 @@ export const cssResolver = curry(
     }
     if (type === 'color') {
       return {
-        [cssKey]: theme.tokens.textColor.get(obj[key]),
+        [cssKey]: theme.tokens.colors.get(`textColor.${obj[key]}` as SemanticColorsKey),
       };
     }
 
     return {
-      [cssKey]: theme.tokens.backgroundColor.get(obj[key]),
+      [cssKey]: theme.tokens.colors.get(`backgroundColor.${obj[key]}` as SemanticColorsKey),
     };
   }
 );

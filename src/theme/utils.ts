@@ -97,14 +97,16 @@ export type FigmaTokensObject<T extends string | symbol> = Record<
   Record<string, string | Record<string, string>>
 >;
 
+const addPxSuffix = (val: string) => (val.endsWith('px') ? val : `${val}px`);
+
 const getFigmaTokensBoxShadowValue = <T extends string | symbol>(
   figmaTokensObject: FigmaTokensObject<T>,
   val: T
 ) => {
-  const x = rem(Number(get(figmaTokensObject, [val, 'value', 'x'], '0')));
-  const y = rem(Number(get(figmaTokensObject, [val, 'value', 'y'], '0')));
-  const blur = rem(Number(get(figmaTokensObject, [val, 'value', 'blur'], '0')));
-  const spread = rem(Number(get(figmaTokensObject, [val, 'value', 'spread'], '0')));
+  const x = rem(addPxSuffix(get(figmaTokensObject, [val, 'value', 'x'], '0')));
+  const y = rem(addPxSuffix(get(figmaTokensObject, [val, 'value', 'y'], '0')));
+  const blur = rem(addPxSuffix(get(figmaTokensObject, [val, 'value', 'blur'], '0')));
+  const spread = rem(addPxSuffix(get(figmaTokensObject, [val, 'value', 'spread'], '0')));
   const color = get(figmaTokensObject, [val, 'value', 'color'], 'transparent');
 
   return `${x} ${y} ${blur} ${spread} ${color}`;

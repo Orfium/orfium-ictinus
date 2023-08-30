@@ -37,7 +37,7 @@ export const topContainer =
   (type: AcceptedColorComponentTypes) =>
   (theme: Theme): SerializedStyles =>
     css`
-      color: ${theme.globals.colors.white};
+      color: ${theme.globals.oldColors.white};
       display: flex;
       justify-content: space-between;
       overflow: hidden;
@@ -86,5 +86,5 @@ export const expandedContainer =
       height: ${!isExpanded ? rem(0) : 'inherit'};
       font-size: ${theme.globals.typography.fontSize.get('3')};
       position: relative;
-      background: ${theme.globals.colors.white};
+      background: ${theme.globals.oldColors.white};
     `;

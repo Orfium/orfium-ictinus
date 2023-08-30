@@ -111,6 +111,7 @@ export const parameters = {
     viewports: viewPorts,
   },
   options: { showPanel: true },
+  chromatic: { delay: 2000 },
   viewMode: 'docs',
   previewTabs: {
     'storybook/docs/panel': {

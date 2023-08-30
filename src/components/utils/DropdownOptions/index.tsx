@@ -22,7 +22,7 @@ export const optionsStyle =
       min-width: ${rem(150)};
       width: 100%;
       height: auto;
-      background-color: ${theme.globals.colors.white};
+      background-color: ${theme.globals.oldColors.white};
       box-shadow: ${theme.globals.elevation['02']};
       border-radius: ${rem(4)};
       z-index: 1;

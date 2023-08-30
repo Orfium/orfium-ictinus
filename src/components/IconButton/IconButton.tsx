@@ -26,7 +26,7 @@ const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>((props, 
   const theme = useTheme();
   const tokens = getButtonTokens(theme);
 
-  const iconColor = tokens(`color.${type}.textColor` as ButtonTokens);
+  const iconColor = tokens(`${type}.textColor` as ButtonTokens);
 
   return (
     <ButtonBase

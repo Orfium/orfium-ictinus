@@ -1,10 +1,10 @@
 const boxShadow = {
   '0': {
     value: {
-      x: '0',
-      y: '0',
-      blur: '0',
-      spread: '0',
+      x: '0px',
+      y: '0px',
+      blur: '0px',
+      spread: '0px',
       color: '#',
       type: 'innerShadow',
     },
@@ -12,10 +12,10 @@ const boxShadow = {
   },
   '1': {
     value: {
-      x: '0',
-      y: '2',
-      blur: '5',
-      spread: '0',
+      x: '0px',
+      y: '2px',
+      blur: '5px',
+      spread: '0px',
       color: '#10306612',
       type: 'dropShadow',
     },
@@ -34,25 +34,37 @@ const boxShadow = {
   },
   '3': {
     value: {
+      x: '0px',
+      y: '8px',
+      blur: '16px',
+      spread: '0px',
       color: '#10306612',
       type: 'dropShadow',
-      x: '0',
-      y: '8',
-      blur: '16',
-      spread: '0',
     },
     type: 'boxShadow',
   },
   '4': {
     value: {
+      x: '0px',
+      y: '16px',
+      blur: '24px',
+      spread: '0px',
       color: '#10306612',
       type: 'dropShadow',
-      x: '0',
-      y: '16',
-      blur: '24',
-      spread: '0',
     },
     type: 'boxShadow',
+  },
+  '5': {
+    value: {
+      x: '0px',
+      y: '-2px',
+      blur: '5px',
+      spread: '0px',
+      color: '#10306612',
+      type: 'dropShadow',
+    },
+    type: 'boxShadow',
+    description: 'boxShadow used for sticky/fixed components (only token where y is negative)',
   },
 } as const;
 

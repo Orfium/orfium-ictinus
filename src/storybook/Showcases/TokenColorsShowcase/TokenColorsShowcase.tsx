@@ -1,7 +1,8 @@
 import { css } from '@emotion/react';
-import { get, map } from 'lodash';
+import { get, map, pick } from 'lodash';
 import React, { FC } from 'react';
-import paletteFigma from 'theme/tokens/semantic/variables/palette';
+import globalColorsFigma from 'theme/globals/constants/colors';
+import colorsFigma from 'theme/tokens/semantic/variables/colors';
 import { DotKeys } from 'theme/tokens/utils';
 
 import {
@@ -13,26 +14,36 @@ import {
 import Card from 'components/Card';
 import Typography from 'components/Typography';
 
+type Props = {
+  type?: 'globals' | 'tokens';
+};
+
 /**
- * Showcase component used on the `Systemic & Accent Colors` document
+ * Showcase component used on the `Colors` document
  */
-const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'systemic' }) => {
-  const states = ['light', 'main', 'dark', 'contrast'];
-  const systemics = map(paletteFigma.systemic, (value, key) => ({
+const TokenColorsShowcase: FC<Props> = ({ type = 'globals' }) => {
+  const isGlobal = type === 'globals';
+
+  const states = isGlobal
+    ? ['1', '2', '3', '4', '5']
+    : ['lightest', 'light', 'main', 'dark', 'darkest'];
+
+  const colorKeys = isGlobal
+    ? ['blue', 'tinted', 'transparent', 'teal', 'purple', 'orange', 'red', 'neutral', 'gradient']
+    : ['primary', 'secondary', 'tertiary', 'inverted', 'warning', 'upsell', 'error'];
+
+  const colorsObj = isGlobal ? globalColorsFigma : colorsFigma.palette;
+
+  // eslint-disable-next-line @typescript-eslint/ban-types
+  const colors = map(pick(colorsObj as Object, colorKeys), (value, key) => ({
     key,
-    category: 'systemic',
-    ...value,
-  }));
-  const accents = map(paletteFigma.accents, (value, key) => ({
-    key,
-    category: 'accents',
     ...value,
   }));
 
   return (
     <div css={{}}>
       <Card elevated={'03'} radius={'4'}>
-        {(type === 'systemic' ? systemics : accents).map((type: any) => (
+        {colors.map((type) => (
           <div key={type.key} css={typeWrapperStyle}>
             <div
               css={css`
@@ -44,10 +55,10 @@ const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'sys
               </Typography>
               <div css={stateWrapperStyle}>
                 {states
-                  .filter((state) => get(paletteFigma, [type.category, type.key, state]))
+                  .filter((state) => get(colorsObj, [type.key, state]))
                   .map((state) => (
                     <div
-                      key={`${type.category}.${type.key}.${state}`}
+                      key={`palette.${type.key}.${state}`}
                       css={css`
                         display: flex;
                         margin: 15px 0;
@@ -56,23 +67,27 @@ const TokenColorsShowcase: FC<{ type: 'systemic' | 'accents' }> = ({ type = 'sys
                       <div
                         css={(theme) => css`
                           ${colorStyle(theme)};
-                          background-color: ${theme.tokens.palette.get(
-                            `${type.category}.${type.key}.${state}` as DotKeys<typeof paletteFigma>
-                          )};
+                          background: ${isGlobal
+                            ? theme.globals.colors.get(
+                                `${type.key}.${state}` as DotKeys<typeof globalColorsFigma>
+                              )
+                            : theme.tokens.colors.get(
+                                `palette.${type.key}.${state}` as DotKeys<typeof colorsFigma>
+                              )};
                         `}
                       />
                       <div>
                         <Typography isBold>{state}</Typography>
                         <div css={descriptionStyle}>
                           <Typography variant={'body02'} type={'secondary'}>
-                            {paletteFigma[type.category][type.key][state].description}
+                            {colorsObj[type.key][state].description}
                           </Typography>
                           <Typography variant={'label03'} component={'span'} type={'active'}>
-                            ${`${type.category}.${type.key}.${state}`}
+                            ${`palette.${type.key}.${state}`}
                           </Typography>
                           {' = '}
                           <Typography variant={'label03'} component={'span'} type={'active'}>
-                            {paletteFigma[type.category][type.key][state].value}
+                            {colorsObj[type.key][state].value}
                           </Typography>
                         </div>
                       </div>

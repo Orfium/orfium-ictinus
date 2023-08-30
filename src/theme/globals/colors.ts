@@ -1,6 +1,15 @@
-import { paletteConfig } from 'theme/palette.config';
-import { enhancePaletteWithShades } from 'theme/utils';
+import colorsFigma from './constants/colors';
+import { DotKeys } from '../tokens/utils';
+import { getTokensValue } from '../tokens/utils/semantic';
 
-const colors = enhancePaletteWithShades(paletteConfig);
+export type ColorsKey = DotKeys<typeof colorsFigma>;
+
+export type Colors = {
+  get: (val: ColorsKey, fn?: (val: string) => unknown) => string;
+};
+
+const colors: Colors = {
+  get: getTokensValue(colorsFigma),
+};
 
 export default colors;

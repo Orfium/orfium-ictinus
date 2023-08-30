@@ -79,6 +79,18 @@ const sizing = {
     value: '92px',
     type: 'sizing',
   },
+  '20': {
+    value: '100px',
+    type: 'sizing',
+  },
+  '21': {
+    value: '120px',
+    type: 'sizing',
+  },
+  '22': {
+    value: '140px',
+    type: 'sizing',
+  },
 } as const;
 
 export default sizing;

@@ -31,36 +31,37 @@ export const buttonBaseStyle =
     const textButtonTokens = getTextButtonTokens(theme);
 
     const baseButtonStyles = {
-      color: tokens(`color.${type}.textColor` as ButtonTokens),
+      color: tokens(`${type}.textColor` as ButtonTokens),
       width: isBlock ? '100%' : undefined,
       backgroundColor: tokens(
-        `color.${type}.backgroundColor.${isLoading ? 'active' : 'inactive'}` as ButtonTokens
+        `${type}.backgroundColor.${isLoading ? 'active' : 'default'}` as ButtonTokens
       ),
       padding: isIconButton
         ? iconButtonTokens('padding')
-        : `${textButtonTokens('paddingVertical')} ${textButtonTokens('paddingHorizontal')}`,
+        : `${textButtonTokens('normal.paddingVertical')} ${textButtonTokens(
+            'normal.paddingHorizontal'
+          )}`,
 
       borderRadius:
         isIconButton && shape === 'circle'
-          ? tokens('iconBorderRadius')
-          : tokens('textBorderRadius'),
+          ? tokens('borderRadius.rounded')
+          : tokens('borderRadius.square'),
       border: 'none',
       cursor: 'pointer',
       transition: 'background-color,border 150ms linear',
 
       ':focus-visible:not(:disabled)': {
-        outline: `${tokens('color.focusedBorderColor')} auto ${tokens('borderWidth.2')}`,
+        backgroundColor: tokens(`${type}.backgroundColor.hover` as ButtonTokens),
       },
       ':disabled': {
         opacity: theme.tokens.disabledState.get('default'),
-        backgroundColor: tokens(`color.${type}.backgroundColor.inactive` as ButtonTokens),
         cursor: 'not-allowed',
       },
       ':hover:not(:disabled)': {
-        backgroundColor: tokens(`color.${type}.backgroundColor.hover` as ButtonTokens),
+        backgroundColor: tokens(`${type}.backgroundColor.hover` as ButtonTokens),
       },
       ':active:not(:disabled)': {
-        backgroundColor: tokens(`color.${type}.backgroundColor.active` as ButtonTokens),
+        backgroundColor: tokens(`${type}.backgroundColor.active` as ButtonTokens),
       },
     };
 

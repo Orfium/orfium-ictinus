@@ -5,7 +5,7 @@ import { rem } from 'theme/utils';
 import { Theme } from '../../theme';
 
 export const drawerContainerStyle =
-  (isExpanded: boolean, isDesktop: boolean, isSmallDesktop: boolean) =>
+(isExpanded: boolean, isDesktop: boolean, isSmallDesktop: boolean) =>
   (theme: Theme): SerializedStyles =>
     css`
       ${transition(0.2)};

@@ -23,7 +23,7 @@ export const listStyle =
       height: ${height ? rem(height) : 'auto'};
       overflow: auto;
       overflow-x: hidden;
-      background: ${theme.globals.colors.white};
+      background: ${theme.globals.oldColors.white};
     `;
 
 export const groupedUlStyle = (): SerializedStyles => css`

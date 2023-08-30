@@ -3,12 +3,12 @@ const avatarText = {
     value: {
       fontFamily: '{fontFamily.roboto}',
       fontWeight: '{fontWeight.medium}',
-      lineHeight: '{lineHeight.4}',
+      lineHeight: '{lineHeight.1}',
       fontSize: '{fontSize.1}',
-      letterSpacing: '{letterSpacing.0}',
+      letterSpacing: '{letterSpacing.1}',
     },
     type: 'typography',
-    description: 'used for the smallest avatar size with initials',
+    description: 'used for the extra small avatar size with initials',
   },
   '2': {
     value: {
@@ -19,6 +19,7 @@ const avatarText = {
       letterSpacing: '{letterSpacing.2}',
     },
     type: 'typography',
+    description: 'used for the small avatar size with initials',
   },
   '3': {
     value: {
@@ -29,6 +30,7 @@ const avatarText = {
       letterSpacing: '{letterSpacing.2}',
     },
     type: 'typography',
+    description: 'used for the medium avatar size with initials',
   },
   '4': {
     value: {
@@ -39,6 +41,7 @@ const avatarText = {
       letterSpacing: '{letterSpacing.1}',
     },
     type: 'typography',
+    description: 'used for the large avatar size with initials',
   },
   '5': {
     value: {
@@ -49,6 +52,7 @@ const avatarText = {
       letterSpacing: '{letterSpacing.0}',
     },
     type: 'typography',
+    description: 'used for the extra large avatar size with initials',
   },
   '6': {
     value: {
@@ -59,6 +63,7 @@ const avatarText = {
       letterSpacing: '{letterSpacing.0}',
     },
     type: 'typography',
+    description: 'used for the extra extra large avatar size with initials',
   },
 } as const;
 

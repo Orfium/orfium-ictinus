@@ -41,11 +41,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => 
       <span css={buttonSpanStyle()}>
         {hasAvatar && <Avatar src={avatar?.src}>{avatar?.label}</Avatar>}
         {iconLeftName && !hasAvatar && (
-          <Icon name={iconLeftName} color={tokens(`color.${type}.textColor` as ButtonTokens)} />
+          <Icon name={iconLeftName} color={tokens(`${type}.textColor` as ButtonTokens)} />
         )}
         <span>{children}</span>
         {iconRightName && (
-          <Icon name={iconRightName} color={tokens(`color.${type}.textColor` as ButtonTokens)} />
+          <Icon name={iconRightName} color={tokens(`${type}.textColor` as ButtonTokens)} />
         )}
       </span>
     </ButtonBase>

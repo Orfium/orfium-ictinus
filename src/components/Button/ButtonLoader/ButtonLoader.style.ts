@@ -20,8 +20,8 @@ export const barWrapperStyle =
       width: '100%',
       height: rem(4),
       overflow: 'hidden',
-      borderTopLeftRadius: tokens('textBorderRadius'),
-      borderTopRightRadius: tokens('textBorderRadius'),
+      borderTopLeftRadius: tokens('borderRadius.square'),
+      borderTopRightRadius: tokens('borderRadius.square'),
       position: 'relative',
 
       ':before': {

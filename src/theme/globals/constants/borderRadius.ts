@@ -1,6 +1,6 @@
 const borderRadius = {
   '0': {
-    value: '0px',
+    value: '0 px',
     type: 'borderRadius',
     description: 'Corner radius = 0px',
   },
