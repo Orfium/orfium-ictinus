@@ -13,6 +13,7 @@ const useFieldUtils = ({
   status,
   isDisabled,
   ref,
+  sx,
 }: Partial<TextFieldProps> & { ref: React.ForwardedRef<HTMLInputElement> }) => {
   const theme = useTheme();
   const tokens = getTextInputBaseTokens(theme);
@@ -52,12 +53,13 @@ const useFieldUtils = ({
           textField: {
             paddingRight: tokens('paddingContentLeft'),
           },
+          ...sx,
         };
       }
 
-      return {};
+      return { ...sx };
     },
-    [tokens]
+    [sx, tokens]
   );
 
   return {
