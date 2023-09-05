@@ -2,83 +2,15 @@ import React, { useCallback, memo, useMemo, useState } from 'react';
 import isEqual from 'react-fast-compare';
 import { Dayjs } from 'utils/date';
 
+import { extraOptions } from './constants';
 import { datePickerStyles } from './DatePicker.style';
+import { DatePickerProps } from './DatePicker.types';
 import DatePickInput from './DatePickInput';
 import OverlayComponent, { Range } from './OverlayComponent/OverlayComponent';
-import { currentDay, initDates } from './utils';
+import { initDates } from './utils';
 import { TestProps } from '../../utils/types';
-import { FilterType, StyleType } from '../Filter/types';
-import { TextFieldProps } from '../TextField/TextField';
 import ClickAwayListener from '../utils/ClickAwayListener';
 import PositionInScreen from '../utils/PositionInScreen';
-
-export type DisabledDates = {
-  daysOfWeek?: number[];
-  days?: Date[];
-  after?: Date;
-  before?: Date;
-};
-
-export type DateRange = { from: Date | undefined; to: Date | undefined };
-
-export type DatePickerProps = {
-  /** This property is to define if this is a day picker or a day range picker */
-  isRangePicker?: boolean;
-  /** A callback to return user selection */
-  onChange?: (range: DateRange) => void;
-  /** Option to disable some dates */
-  disableDates?: DisabledDates;
-  /** Value to define if needed an initial state or to handle it externally */
-  value: DateRange;
-  /** Props of the TextField input */
-  inputProps?: TextFieldProps;
-  /** The format of the date displayed in the input field */
-  dateFormatOverride?: DateFormatType;
-  /** if the datepicker can be clear with backspace */
-  isClearable?: boolean;
-  /** if the datepicker's default date is today instead of placeholder text */
-  /** @deprecated This prop is being deprecated and is not used as you can manipulate date from value, will be removed in the future **/
-  isDefaultNow?: boolean;
-  /** Style properties for the DatePicker with a filter base */
-  filterConfig?: {
-    /** The type of the filter button's palette - defaults to "primary" */
-    buttonType?: 'primary' | 'secondary';
-    /** Defines the style type of the filter button */
-    styleType?: StyleType;
-    /** This property defines the Filter's type */
-    filterType?: FilterType;
-  };
-};
-
-export type ExtraOption = { value: string; label: string; dates: Dayjs[] };
-
-export type DateFormatType =
-  | 'MM/DD/YYYY'
-  | 'DD/MM/YYYY'
-  | 'MMMM D, YYYY'
-  | 'dddd, MMMM D, YYYY'
-  | 'M/D/YYYY'
-  | 'MMM D, YYYY'
-  | 'ddd, MMM D, YYYY'
-  | 'DD MMM YYYY';
-
-export const extraOptions: ExtraOption[] = [
-  {
-    value: 'last-7-days',
-    label: 'Last 7 days',
-    dates: [currentDay.subtract(7, 'day'), currentDay],
-  },
-  {
-    value: 'last-30-days',
-    label: 'Last 30 days',
-    dates: [currentDay.subtract(30, 'day'), currentDay],
-  },
-  {
-    value: 'custom',
-    label: 'Custom',
-    dates: [currentDay],
-  },
-];
 
 const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   isRangePicker = false,
@@ -89,6 +21,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
   dateFormatOverride = undefined,
   isClearable = false,
   filterConfig,
+  hasOptions,
   dataTestId,
 }) => {
   const value = useMemo(() => initDates(initialValue || {}), [initialValue]);
@@ -162,7 +95,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
     setIsOpen(false);
   }, []);
 
-  const handleFocus = useCallback(() => {
+  const handleIconClick = useCallback(() => {
     setIsOpen(true);
   }, []);
 
@@ -215,7 +148,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
             selectedDay={value}
             inputProps={inputProps}
             dateFormatOverride={dateFormatOverride}
-            handleFocus={handleFocus}
+            handleIconClick={handleIconClick}
             handleClear={handleClear}
             isOpen={isOpen}
             dataTestId={dataTestId}
@@ -233,6 +166,7 @@ const DatePicker: React.FC<DatePickerProps & TestProps> = ({
             disabledDates={disableDates}
             onCancel={onCancel}
             onApply={onApply}
+            hasOptions={hasOptions}
           />
         </div>
       </PositionInScreen>

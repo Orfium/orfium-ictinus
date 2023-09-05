@@ -1,4 +1,3 @@
-import useTheme from 'hooks/useTheme';
 import { range } from 'lodash';
 import React, { useMemo, useState } from 'react';
 import { Dayjs } from 'utils/date';
@@ -10,11 +9,11 @@ import {
   monthHeaderWrapperStyle,
   monthWrapperStyle,
 } from './MonthWrapper.style';
-import { DisabledDates } from '../../../DatePicker';
+import { DisabledDates } from '../../../DatePicker.types';
 import Month from '../../../Month/Month';
 import { Range } from '../../OverlayComponent';
 import Button from 'components/Button';
-import Icon from 'components/Icon';
+import IconButton from 'components/IconButton/IconButton';
 import { SelectOption } from 'components/Select';
 import SelectMenu from 'components/Select/components/SelectMenu';
 import ClickAwayListener from 'components/utils/ClickAwayListener';
@@ -54,7 +53,6 @@ const MonthWrapper = ({
 }: MonthWrapperProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const theme = useTheme();
   const years = useMemo(() => generateArrayOfYears(date), [date]);
 
   return (
@@ -62,14 +60,11 @@ const MonthWrapper = ({
       <div css={monthWrapperStyle()}>
         <div css={monthHeaderWrapperStyle()}>
           {(showedArrows === 'left' || showedArrows === 'both') && (
-            <div
-              onClick={() => handleArrow('back')}
-              css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}
-            >
-              <Icon
-                name={'chevronSmallLeft'}
-                color={theme.utils.getColor('darkGrey', 850)}
-                size={25}
+            <div css={monthHeaderNavigationIconWrapperStyle({ position: 'left' })}>
+              <IconButton
+                name={'triangleLeft'}
+                type="tertiary"
+                onClick={() => handleArrow('back')}
               />
             </div>
           )}
@@ -79,17 +74,14 @@ const MonthWrapper = ({
               setIsOpen(false);
             }}
           >
-            <div css={monthHeaderTitleWrapperStyle({ isRangePicker })}>
+            <div css={monthHeaderTitleWrapperStyle()}>
               <div css={monthHeaderTitleStyle({ isRangePicker })}>
-                {!isRangePicker ? (
-                  <Button onClick={() => setIsOpen(!isOpen)} iconRightName={'triangleDown'}>
-                    {date.format('MMMM')} {date.format('YYYY')}
-                  </Button>
-                ) : (
-                  <div>
-                    {date.format('MMMM')} {date.format('YYYY')}
-                  </div>
-                )}
+                <Button
+                  onClick={!isRangePicker ? () => setIsOpen(!isOpen) : undefined}
+                  type="tertiary"
+                >
+                  {date.format('MMMM')} {date.format('YYYY')}
+                </Button>
               </div>
               {isOpen && (
                 <SelectMenu
@@ -99,18 +91,16 @@ const MonthWrapper = ({
                     setIsOpen(false);
                   }}
                   selectedOption={{ value: date.format('YYYY'), label: date.format('YYYY') }}
+                  sx={{ top: '124%' }}
                 />
               )}
             </div>
             {(showedArrows === 'right' || showedArrows === 'both') && (
-              <div
-                onClick={() => handleArrow('forward')}
-                css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}
-              >
-                <Icon
-                  name={'chevronSmallRight'}
-                  color={theme.utils.getColor('darkGrey', 850)}
-                  size={25}
+              <div css={monthHeaderNavigationIconWrapperStyle({ position: 'right' })}>
+                <IconButton
+                  name={'triangleRight'}
+                  type="tertiary"
+                  onClick={() => handleArrow('forward')}
                 />
               </div>
             )}
